@@ -28,3 +28,9 @@ endmap
 
 map golden_arrow_classic
 endmap
+
+map golden_arrow_classic
+endmap
+
+map corsair
+endmap
