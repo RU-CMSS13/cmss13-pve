@@ -31,10 +31,10 @@
 
 /obj/item/ammo_magazine/sentry/wy
 	name = "H20 ammo drum (10x42mm Caseless)"
-	desc = "An ammo drum of 200 10x42mm caseless rounds for the WY 202-GMA1 Smart Sentry. Just feed it into the sentry gun's ammo port when its ammo is depleted."
+	desc = "An ammo drum of 400 10x42mm caseless rounds for the WY 202-GMA1 Smart Sentry with duplex technology. Just feed it into the sentry gun's ammo port when its ammo is depleted."
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/wy.dmi'
 	icon_state = "wy22e5"
-	max_rounds = 200
+	max_rounds = 400
 	default_ammo = /datum/ammo/bullet/turret/wy
 
 /obj/item/ammo_magazine/sentry/shotgun

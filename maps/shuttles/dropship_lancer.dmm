@@ -42,8 +42,9 @@
 	},
 /area/shuttle/lancers)
 "i" = (
-/obj/structure/machinery/door/airlock/almayer/generic{
-	dir = 2
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/lifeboat{
+	name = "docking hatch";
+	locked = 0
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -165,8 +166,12 @@
 	},
 /area/shuttle/lancers)
 "R" = (
-/turf/closed/shuttle/ert{
-	icon_state = "stan2"
+/obj/item/weapon/shield/riot,
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
 	},
 /area/shuttle/lancers)
 "S" = (
@@ -245,13 +250,13 @@ A
 A
 A
 B
-u
 m
-m
-u
 m
 m
 u
+m
+m
+m
 E
 x
 x
@@ -270,8 +275,8 @@ F
 F
 F
 F
-F
 d
+u
 u
 u
 u
@@ -290,12 +295,12 @@ a
 a
 h
 a
-a
 P
 F
 F
 F
-R
+F
+F
 A
 A
 A
@@ -310,12 +315,12 @@ F
 F
 F
 F
-F
 U
 u
 u
 u
-i
+u
+u
 A
 A
 A
@@ -325,13 +330,13 @@ A
 A
 A
 B
-u
 e
-e
-u
 e
 e
 u
+e
+e
+R
 N
 W
 W

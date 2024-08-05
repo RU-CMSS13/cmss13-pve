@@ -96,7 +96,8 @@
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_2
 
 /datum/ammo/bullet/turret/wy
-	damage = 45
+	damage = 25
+	bonus_projectiles_amount = 1
 	penetration = -ARMOR_PENETRATION_TIER_1
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_2
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_2
