@@ -142,7 +142,7 @@
 	role_comm_title = "FL"
 
 /datum/equipment_preset/uscm/pfc/fl/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/lightpack/upp
+	var/back_item = /obj/item/storage/backpack/lightpack
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine
 
@@ -193,7 +193,7 @@
 	faction = FACTION_UPP
 
 /datum/equipment_preset/uscm/sg/upp/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/lightpack/upp
+	var/back_item = /obj/item/storage/backpack/lightpack
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine
 
@@ -226,7 +226,7 @@
 	role_comm_title = "MG"
 
 /datum/equipment_preset/uscm/sg/fl/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/lightpack/upp
+	var/back_item = /obj/item/storage/backpack/lightpack
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine
 
@@ -281,7 +281,7 @@
 	role_comm_title = "RJ"
 
 /datum/equipment_preset/uscm/rto/fl/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/marine/satchel
+	var/back_item = /obj/item/storage/backpack/lightpack
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine
 
@@ -528,7 +528,7 @@
 	role_comm_title = "Srg"
 
 /datum/equipment_preset/uscm/medic/fl/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/lightpack/upp
+	var/back_item = /obj/item/storage/backpack/lightpack
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine/medic/upp
 
@@ -597,7 +597,7 @@
 	access = list(ACCESS_ILLEGAL_PIRATE, ACCESS_ILLEGAL_PIRATE_PREP, ACCESS_ILLEGAL_PIRATE_TEAMLEAD)
 
 /datum/equipment_preset/uscm/tl/fl/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/lightpack/upp
+	var/back_item = /obj/item/storage/backpack/lightpack
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine
 
@@ -708,7 +708,7 @@
 	role_comm_title = "MAA"
 
 /datum/equipment_preset/uscm/leader/fl/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/lightpack/upp
+	var/back_item = /obj/item/storage/backpack/lightpack
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
