@@ -138,6 +138,13 @@
 	icon_state = "UPP uac_sentry_handheld"
 	defense_type = /obj/structure/machinery/defenses/sentry/upp
 
+/obj/item/defenses/handheld/sentry/wy
+	name = "handheld WY 202-GMA1 smart sentry"
+	desc = "A compact version of the Weyland-Yutani defenses. Designed for deployment in the field."
+	icon = 'icons/obj/structures/machinery/defenses/wy_defenses.dmi'
+	icon_state = "WY uac_sentry_handheld"
+	defense_type = /obj/structure/machinery/defenses/sentry/wy
+
 // FLAMER BASE AND UPGRADES
 /obj/item/defenses/handheld/sentry/flamer
 	name = "handheld UA 42-F sentry flamer"

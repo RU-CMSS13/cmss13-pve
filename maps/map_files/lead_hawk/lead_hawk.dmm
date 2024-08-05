@@ -191,6 +191,10 @@
 	},
 /area/lead_hawk/hangar)
 "bX" = (
+/obj/structure/closet/crate/green,
+/obj/item/ammo_magazine/sentry/wy,
+/obj/item/ammo_magazine/sentry/wy,
+/obj/item/defenses/handheld/sentry/wy,
 /turf/open/floor/corsat{
 	dir = 6;
 	icon_state = "yellow"
