@@ -15,6 +15,7 @@
 #define SQUAD_UPP "Red Dawn"
 #define SQUAD_PMCPLT "AZURE-15"
 #define SQUAD_LRRP "Snake Eaters"
+#define SQUAD_MERC "Freelancer"
 
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"
@@ -40,6 +41,13 @@
 #define JOB_SQUAD_RTO "Radio Telephone Operator"
 #define JOB_SQUAD_MARINE_FORECON "FORECON Rifleman"
 #define JOB_SQUAD_SMARTGUN_FORECON "FORECON Smartgunner"
+
+#define JOB_RTO_FL "Radio Jockey"
+#define JOB_SQUAD_TEAM_LEADER_FL "Cutthroat"
+#define JOB_SQUAD_LEADER_FL "Master at Arms"
+#define JOB_SQUAD_SMARTGUN_FL "Gunner"
+#define JOB_SQUAD_MEDIC_FL "Surgeon"
+#define JOB_SQUAD_RIFLEMAN_FL "Merc"
 
 var/global/list/job_squad_roles = JOB_SQUAD_ROLES_LIST
 
