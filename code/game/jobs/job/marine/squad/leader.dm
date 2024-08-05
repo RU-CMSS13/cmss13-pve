@@ -70,10 +70,32 @@ AddTimelock(/datum/job/marine/leader, list(
 	squad = SQUAD_UPP
 	job = /datum/job/marine/leader/ai/upp
 
+
+/datum/job/marine/leader/ai/pmc
+	title = JOB_PMCPLAT_LEADER
+	gear_preset = /datum/equipment_preset/uscm/pmc/sl
+	gear_preset_secondary = /datum/equipment_preset/uscm/pmc/sl
+
+/obj/effect/landmark/start/marine/leader/pmc
+	name = JOB_PMCPLAT_LEADER
+	squad = SQUAD_PMCPLT
+	job = /datum/job/marine/leader/ai/pmc
+
 /obj/effect/landmark/start/marine/leader/forecon
 	name = JOB_SQUAD_LEADER_FORECON
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/leader/ai/forecon
+
+/datum/job/marine/leader/ai/fl
+	title = JOB_SQUAD_LEADER_FL
+	gear_preset = /datum/equipment_preset/uscm/leader/fl
+
+
+/obj/effect/landmark/start/marine/leader/fl
+	name = JOB_SQUAD_LEADER_FL
+	squad = SQUAD_MERC
+	job = /datum/job/marine/leader/ai/fl
+
 
 #undef SSGT_VARIANT
 #undef GYSGT_VARIANT

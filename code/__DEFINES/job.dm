@@ -13,7 +13,9 @@
 #define SQUAD_SOF "SOF"
 #define SQUAD_CBRN "CBRN"
 #define SQUAD_UPP "Red Dawn"
+#define SQUAD_PMCPLT "AZURE-15"
 #define SQUAD_LRRP "Snake Eaters"
+#define SQUAD_MERC "Freelancer"
 
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"
@@ -39,6 +41,13 @@
 #define JOB_SQUAD_RTO "Radio Telephone Operator"
 #define JOB_SQUAD_MARINE_FORECON "FORECON Rifleman"
 #define JOB_SQUAD_SMARTGUN_FORECON "FORECON Smartgunner"
+
+#define JOB_RTO_FL "Radio Jockey"
+#define JOB_SQUAD_TEAM_LEADER_FL "Cutthroat"
+#define JOB_SQUAD_LEADER_FL "Master at Arms"
+#define JOB_SQUAD_SMARTGUN_FL "Gunner"
+#define JOB_SQUAD_MEDIC_FL "Surgeon"
+#define JOB_SQUAD_RIFLEMAN_FL "Merc"
 
 var/global/list/job_squad_roles = JOB_SQUAD_ROLES_LIST
 
@@ -225,6 +234,16 @@ var/global/list/job_command_roles = JOB_COMMAND_ROLES_LIST
 #define JOB_WY_GOON_RESEARCHER "WY Research Consultant"
 
 #define JOB_WY_GOON_LIST list(JOB_WY_GOON, JOB_WY_GOON_LEAD)
+
+////-------- PMC PLATOON --------//
+
+#define JOB_PMCPLAT_OW "OVERWATCH"
+#define JOB_PMCPLAT_LEADER "Operations Leader"
+#define JOB_PMCPLAT_FTL "Team Leader"
+#define JOB_PMCPLAT_SG "Heavy Weapons Specialist"
+#define JOB_PMCPLAT_STANDARD "Tactical Unit"
+#define JOB_PMCPLAT_MEDIC "Medical Specialist"
+
 
 //---- Contractors ----//
 #define JOB_CONTRACTOR "VAIPO Mercenary"

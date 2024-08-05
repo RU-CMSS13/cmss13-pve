@@ -95,6 +95,13 @@
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_2
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_2
 
+/datum/ammo/bullet/turret/wy
+	damage = 25
+	bonus_projectiles_amount = 1
+	penetration = -ARMOR_PENETRATION_TIER_1
+	accuracy_var_low = PROJECTILE_VARIANCE_TIER_2
+	accuracy_var_high = PROJECTILE_VARIANCE_TIER_2
+
 /datum/ammo/bullet/turret/dumb
 	icon_state = "bullet"
 	flags_ammo_behavior = AMMO_BALLISTIC

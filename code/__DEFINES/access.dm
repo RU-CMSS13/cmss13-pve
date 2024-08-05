@@ -70,7 +70,13 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 
 ///The generic "I'm a bad guy" access
 #define ACCESS_ILLEGAL_PIRATE 120
-
+#define ACCESS_ILLEGAL_PIRATE_PREP 121
+#define ACCESS_ILLEGAL_PIRATE_SMARTGUNNER 122
+#define ACCESS_ILLEGAL_PIRATE_TEAMLEAD 123
+#define ACCESS_ILLEGAL_PIRATE_SENIOR_LEAD 124
+#define ACCESS_ILLEGAL_PIRATE_MEDICAL 125
+#define ACCESS_ILLEGAL_PIRATE_CO 126
+///I have no fucking clue what im doing send help -Godson
 //=================================================
 
 //Weyland Yutani access levels (200-229)
@@ -86,6 +92,10 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 ///WY access given to field executives, like a marine liaison.
 #define ACCESS_WY_EXEC 207
 
+//theta
+#define ACCESS_PMC_SQUAD_ONE 208
+#define ACCESS_PMC_SQUAD_TWO 209
+
 #define ACCESS_WY_PMC 210
 #define ACCESS_WY_PMC_TL 211
 #define ACCESS_WY_ARMORY 212
@@ -95,6 +105,9 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 #define ACCESS_WY_LEADERSHIP 215
 ///Senior leadership, the highest ranks
 #define ACCESS_WY_SENIOR_LEAD 216
+
+#define ACCESS_PMC_GUNNER 217
+
 
 //=================================================
 
@@ -208,3 +221,5 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 #define ACCESS_LIST_CLF_BASE "CLF (Basic)"
 ///All access levels associated with CLF
 #define ACCESS_LIST_CLF_ALL "CLF (ALL)"
+
+#define ACCESS_LIST_FL_PLATOON "FL (platoon)"

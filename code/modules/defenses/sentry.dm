@@ -779,5 +779,29 @@
 	firing_sound = 'sound/weapons/gun_m56d_auto.ogg'
 	ammo = new /obj/item/ammo_magazine/sentry/upp
 
+/obj/structure/machinery/defenses/sentry/wy
+	name = "\improper WY 202-GMA1 Smart Sentry"
+	desc = "A deployable, fully-automated turret with AI targeting capabilities used by the PMC. Armed by expansive bullets"
+	icon = 'icons/obj/structures/machinery/defenses/wy_defenses.dmi'
+	icon_state = "wy_defense_base"
+	icon_on = "wy_defense_base"
+	icon_off = "wy_defense_base_off"
+	fire_delay = 1
+	health = 100
+	health_max = 100
+	damage_mult = 1.5
+	hack_time = 25 SECONDS
+	sentry_range = 6
+	omni_directional = TRUE
+	defense_type = "WY"
+	handheld_type = /obj/item/defenses/handheld/sentry/wy
+	ammo = new /obj/item/ammo_magazine/sentry/wy
+	choice_categories = list(
+		SENTRY_CATEGORY_IFF = list(FACTION_PMC, FACTION_HUMAN),
+	)
+	selected_categories = list(
+		SENTRY_CATEGORY_IFF = FACTION_PMC,
+	)
+
 #undef SENTRY_FIREANGLE
 #undef SENTRY_RANGE

@@ -82,6 +82,17 @@
 	squad = SQUAD_UPP
 	job = /datum/job/marine/standard/ai/upp
 
+
+/datum/job/marine/standard/ai/pmc
+	title = JOB_PMCPLAT_STANDARD
+	gear_preset = /datum/equipment_preset/uscm/pmc
+	gear_preset_secondary = /datum/equipment_preset/uscm/pmc
+
+/obj/effect/landmark/start/marine/pmc
+	name = JOB_PMCPLAT_STANDARD
+	squad = SQUAD_PMCPLT
+	job = /datum/job/marine/standard/ai/pmc
+
 /obj/effect/landmark/start/marine/forecon
 	name = JOB_SQUAD_MARINE_FORECON
 	squad = SQUAD_LRRP
@@ -92,5 +103,27 @@
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/standard/ai/rto
 
+/datum/job/marine/standard/ai/fl
+	title = JOB_SQUAD_RIFLEMAN_FL
+	gear_preset = /datum/equipment_preset/uscm/pfc/fl
+
+
+/obj/effect/landmark/start/marine/fl
+	name = JOB_SQUAD_RIFLEMAN_FL
+	squad = SQUAD_MERC
+	job = /datum/job/marine/standard/ai/fl
+
+/datum/job/command/bridge/ai/fl
+	title = JOB_RTO_FL
+	gear_preset = /datum/equipment_preset/uscm/rto/fl
+
+/obj/effect/landmark/start/bridge/fl
+	name = JOB_RTO_FL
+	squad = SQUAD_MERC
+	icon_state = "so_spawn"
+	job = /datum/job/command/bridge/ai/fl
+
+
 #undef PVT_VARIANT
 #undef PFC_VARIANT
+

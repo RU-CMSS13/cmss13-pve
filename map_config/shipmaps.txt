@@ -23,8 +23,15 @@ endmap
 map chapaev
 endmap
 
+
+map lead_hawk
+endmap
+
 map rover
 endmap
 
 map golden_arrow_classic
+endmap
+
+map corsair
 endmap
