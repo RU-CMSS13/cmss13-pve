@@ -11,6 +11,7 @@
 	icon_state = "off-0"
 	desc = "A Westingland S-52 Fusion Reactor.  Takes fuels cells and converts them to power for the ship.  Also produces a large amount of heat."
 	directwired = 0  //Requires a cable directly underneath
+	is_on = FALSE
 	unslashable = TRUE
 	unacidable = TRUE   //NOPE.jpg
 	anchored = TRUE
@@ -19,7 +20,6 @@
 
 	var/power_gen_percent = 0 //50,000W at full capacity
 	var/buildstate = 0 //What state of building it are we on, 0-3, 1 is "broken", the default
-	var/is_on = TRUE  //Is this damn thing on or what?
 	var/fail_rate = FALSE //% chance of failure each fail_tick check
 	var/cur_tick = 0 //Tick updater
 
