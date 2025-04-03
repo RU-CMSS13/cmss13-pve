@@ -1,0 +1,40 @@
+/area/
+	var/daytime_affected = TRUE
+
+/area/Initialize(mapload, ...)
+	icon = null
+	layer = AREAS_LAYER
+	uid = ++global_uid
+	. = ..()
+	GLOB.active_areas += src
+	GLOB.all_areas += src
+	reg_in_areas_in_z()
+	if(is_mainship_level(z))
+		GLOB.ship_areas += src
+		daytime_affected = FALSE
+	if(ceiling > CEILING_GLASS)
+		daytime_affected = FALSE
+	update_base_lighting()
+
+/client/proc/gm_lighting()
+	set name = "Change Daytime"
+	set category = "Game Master.Extras"
+
+	if(!check_rights(R_ADMIN))
+		return
+	var/list/lightturfs
+	var/light_str = input(usr, "Set the light power.", "Daytime Brightness", "0.3") as null|num
+	var/daytime_color = input(usr, "Please select the color to use.", "Daytime Color") as color|null
+	var/time = input(usr, "Please enter your time to animate light in seconds", "Time") as null|num
+	var/confirm = tgui_alert(usr, "Are you sure you wish to change daytime on the map to this settings?", "Confirm", list("Yes", "No"), 1 HOURS)
+	if(confirm != "Yes")
+		return FALSE
+	message_admins("[key_name(usr)] changed lighting on map to [daytime_color] color with [light_str] strength with animation time [time].")
+	lightturfs = block(locate(world.maxx, world.maxy, 2), locate(1, 1, 2))
+	for(var/atom/A as anything in lightturfs)
+		if(istype(A.loc,/area/))
+			var/area/targeted = A.loc
+			if(!targeted.daytime_affected)
+				lightturfs -= A
+	for(var/turf/T as anything in lightturfs)
+		animate(T.set_light, daytime_color, time * 10)
