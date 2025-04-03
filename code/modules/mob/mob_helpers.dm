@@ -123,7 +123,7 @@ GLOBAL_LIST_INIT(limb_types_by_name, list(
 	var/message_length = length(message)
 	var/index = 1
 	while(index <= message_length)
-		var/char = copytext(message, index, index + 1)
+		var/char = copytext_char(message, index, index + 1)
 		if(char == " " || prob(clear_char_probability))
 			output_message += char
 		else
@@ -280,7 +280,7 @@ GLOBAL_LIST_INIT(limb_types_by_name, list(
 	var/returntext = ""
 	for(var/i = 1, i <= length(t), i++)
 
-		var/letter = copytext(t, i, i+1)
+		var/letter = copytext_char(t, i, i+1)
 		if(prob(50))
 			if(p >= 70)
 				letter = ""

@@ -40,8 +40,8 @@
 		var/index = split_phrase.Find(word) //Find the word in the split phrase so we can replace it.
 
 		//Search for dipthongs (two letters that make one sound.)
-		var/first_sound = copytext(word,1,3)
-		var/first_letter = copytext(word,1,2)
+		var/first_sound = copytext_char(word,1,3)
+		var/first_letter = copytext_char(word,1,2)
 		if(lowertext(first_sound) in list("ch","th","sh"))
 			first_letter = first_sound
 
@@ -69,8 +69,8 @@
 			if(i > 1)
 				result += "-"
 		return result
-	var/firstletter = copytext(phrase,1,2)
-	var/secondletter = copytext(phrase,2,3)
+	var/firstletter = copytext_char(phrase,1,2)
+	var/secondletter = copytext_char(phrase,2,3)
 	result = firstletter
 	for(,i > 0,i--)
 		result += "-"+secondletter
