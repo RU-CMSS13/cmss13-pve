@@ -7175,17 +7175,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge,
 /area/canyon32B/interior/bunker/overwatch)
-"QX" = (
-/obj/structure/machinery/door/poddoor/railing{
-	id = "Northern Gate";
-	dir = 2
-	},
-/obj/structure/machinery/door/poddoor/railing{
-	id = "Northern Gate";
-	dir = 2
-	},
-/turf/open/asphalt,
-/area/canyon32B/exterior/checkpoint)
 "QZ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/trash/cigbutt,
@@ -52583,7 +52572,7 @@ Zx
 RL
 MA
 Zx
-QX
+Nl
 Au
 vJ
 Au
