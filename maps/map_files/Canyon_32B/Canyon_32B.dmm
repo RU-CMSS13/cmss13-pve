@@ -7761,17 +7761,6 @@
 	},
 /turf/open/gm/dirt2,
 /area/canyon32B/OOB)
-"Uj" = (
-/obj/structure/platform{
-	dir = 4;
-	pixel_y = 16
-	},
-/obj/structure/platform{
-	dir = 4;
-	pixel_y = 16
-	},
-/turf/open/floor/prison/floor_plate,
-/area/canyon32B/exterior/checkpoint)
 "Uk" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -50187,7 +50176,7 @@ cO
 na
 tX
 Nj
-Uj
+Nj
 rU
 tX
 Vh
@@ -51386,7 +51375,7 @@ Fw
 RL
 Fw
 Fw
-QX
+Nl
 Au
 Au
 Au
