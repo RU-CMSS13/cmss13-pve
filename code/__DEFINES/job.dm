@@ -17,6 +17,7 @@
 #define SQUAD_UPP "Red Dawn"
 #define SQUAD_PMCPLT "AZURE-15"
 #define SQUAD_LRRP "Snake Eaters"
+#define SQUAD_MERC "Freelancer" //RUCM ADD
 
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"
@@ -459,3 +460,11 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 ///For denying certain traits being applied to people. ie. bad leg
 ///'Grunt' lists are for people who wouldn't logically get the bad leg trait, ie. UPP marine counterparts.
 #define JOB_ERT_GRUNT_LIST list(DUTCH_JOB_LIST, RIOT_JOB_LIST, PROVOST_JOB_LIST, CMB_GRUNT_LIST, CLF_JOB_LIST, UPP_JOB_GRUNT_LIST, UPP_COMMANDO_JOB_LIST, CONTRACTOR_JOB_LIST, ROLES_WY_GOONS, ROLES_WY_PMC_ALL)
+
+//-------- MERC RUCM --------//
+#define JOB_RTO_FL "Radio Jockey (RTO)"
+#define JOB_SQUAD_TEAM_LEADER_FL "Bruiser (FTL)"
+#define JOB_SQUAD_LEADER_FL "Warlord (PltSgt)"
+#define JOB_SQUAD_SMARTGUN_FL "Gunner (Smartgunner)"
+#define JOB_SQUAD_MEDIC_FL "Surgeon (Corpsman)"
+#define JOB_SQUAD_RIFLEMAN_FL "Merc (Rifleman)"
