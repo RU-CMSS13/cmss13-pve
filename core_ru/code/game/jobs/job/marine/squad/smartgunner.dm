@@ -1,7 +1,6 @@
 /datum/job/marine/smartgunner/ai/lancer
 	title = JOB_SQUAD_SMARTGUN_FL
 	gear_preset = /datum/equipment_preset/uscm/lancer/smartgunner
-	job_options = null
 
 /obj/effect/landmark/start/marine/smartgunner/lancer
 	name = JOB_SQUAD_SMARTGUN_FL
