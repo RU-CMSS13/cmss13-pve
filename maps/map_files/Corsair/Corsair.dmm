@@ -1,7 +1,37 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/effect/landmark/start/marine/smartgunner/lancer,
+/turf/open/floor/carpet,
+/area/golden_arrow/dorms)
+"ab" = (
+/obj/effect/landmark/start/marine/tl/lancer,
+/turf/open/floor/carpet,
+/area/golden_arrow/dorms)
 "ac" = (
 /obj/structure/machinery/door/airlock/almayer/generic,
 /turf/open/floor/kutjevo/fake_wood,
+/area/golden_arrow/dorms)
+"ad" = (
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
+/obj/effect/landmark/start/marine/leader/lancer,
+/turf/open/floor/carpet,
+/area/golden_arrow/dorms)
+"ae" = (
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
+/obj/effect/landmark/start/marine/medic/lancer,
+/turf/open/floor/carpet,
+/area/golden_arrow/dorms)
+"af" = (
+/obj/effect/landmark/start/bridge/lancer,
+/turf/open/floor/carpet,
+/area/golden_arrow/dorms)
+"ag" = (
+/obj/effect/landmark/start/marine/lancer,
+/turf/open/floor/carpet,
 /area/golden_arrow/dorms)
 "an" = (
 /turf/open/floor/almayer_hull{
@@ -119,10 +149,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/cryo_cells)
-"fl" = (
-/obj/effect/landmark/start/bridge/lancer,
-/turf/open/floor/kutjevo/fake_wood,
-/area/golden_arrow/dorms)
 "fm" = (
 /obj/structure/machinery/cm_vending/sorted/medical/no_access,
 /obj/effect/decal/cleanable/cobweb,
@@ -137,10 +163,6 @@
 	icon_state = "orange_tile"
 	},
 /area/golden_arrow/canteen)
-"fz" = (
-/obj/effect/landmark/start/marine/tl/ai/lancer,
-/turf/open/floor/kutjevo/fake_wood,
-/area/golden_arrow/dorms)
 "fB" = (
 /obj/structure/machinery/light/small{
 	dir = 1;
@@ -224,10 +246,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/squad_one)
-"jx" = (
-/obj/effect/landmark/start/marine/leader/lancer,
-/turf/open/floor/kutjevo/fake_wood,
-/area/golden_arrow/dorms)
 "jF" = (
 /obj/structure/bed/chair/office/light,
 /turf/open/floor/almayer{
@@ -247,10 +265,6 @@
 /obj/item/clothing/suit/storage/marine/faction/freelancer,
 /obj/item/clothing/shoes/marine/knife,
 /obj/item/storage/backpack/marine/satchel/rto,
-/turf/open/floor/kutjevo/fake_wood,
-/area/golden_arrow/dorms)
-"kM" = (
-/obj/effect/landmark/start/marine/medic/lancer,
 /turf/open/floor/kutjevo/fake_wood,
 /area/golden_arrow/dorms)
 "kS" = (
@@ -7157,11 +7171,11 @@ Os
 Yg
 iY
 YS
-jx
+YS
 Yg
 iY
 YS
-fz
+YS
 bv
 Xf
 Xf
@@ -7258,7 +7272,7 @@ le
 WD
 Yg
 ZL
-fl
+YS
 Wa
 Yg
 kD
@@ -7463,9 +7477,9 @@ bM
 Ph
 bM
 bM
-bM
-Ph
-bM
+af
+ad
+aa
 bM
 bM
 Ay
@@ -7565,9 +7579,9 @@ bM
 pF
 bM
 bM
-bM
-pF
-bM
+ag
+ae
+ab
 bM
 bM
 bv
@@ -7871,7 +7885,7 @@ Zj
 Yg
 iY
 YS
-kM
+YS
 Yg
 iY
 YS
@@ -7976,7 +7990,7 @@ YS
 Wa
 Yg
 YS
-jx
+YS
 Wa
 bv
 Xf
