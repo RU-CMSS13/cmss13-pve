@@ -1,0 +1,588 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aK" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "28"
+	},
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "28"
+	},
+/area/shuttle/lancer)
+"aS" = (
+/turf/open/shuttle/dropship/light_grey_bottom_left,
+/area/shuttle/lancer)
+"bz" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/lancer)
+"bN" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "17"
+	},
+/turf/template_noop,
+/area/shuttle/lancer)
+"bW" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "4"
+	},
+/turf/template_noop,
+/area/shuttle/lancer)
+"de" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "83"
+	},
+/area/shuttle/lancer)
+"eF" = (
+/obj/structure/shuttle/part/typhoon/gunpod_prop,
+/turf/template_noop,
+/area/shuttle/lancer)
+"fT" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "38"
+	},
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "34"
+	},
+/area/shuttle/lancer)
+"gp" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "37"
+	},
+/area/shuttle/lancer)
+"gE" = (
+/obj/structure/bed/chair/vehicle/dropship_cockpit/copilot{
+	dir = 1;
+	pixel_x = -8;
+	layer = 5
+	},
+/obj/structure/machinery/computer/shuttle/dropship/flight/small{
+	pixel_y = 8;
+	pixel_x = -16;
+	dir = 4
+	},
+/obj/structure/machinery/computer/overwatch/toc{
+	pixel_y = 14
+	},
+/obj/structure/machinery/computer/railgun/toc{
+	pixel_y = 14;
+	pixel_x = 7
+	},
+/turf/open/shuttle/dropship/light_grey_top_left,
+/area/shuttle/lancer)
+"ha" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "2"
+	},
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "2"
+	},
+/turf/template_noop,
+/area/shuttle/lancer)
+"hD" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "48"
+	},
+/area/shuttle/lancer)
+"iJ" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_y = 26;
+	pixel_x = 8
+	},
+/obj/structure/extinguisher_cabinet/lifeboat{
+	pixel_y = 27;
+	pixel_x = -4
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/lancer)
+"lu" = (
+/turf/open/shuttle/dropship/light_grey_top_left,
+/area/shuttle/lancer)
+"nq" = (
+/turf/template_noop,
+/area/space)
+"oj" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "40"
+	},
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "40";
+	density = 0;
+	layer = 4.2
+	},
+/turf/template_noop,
+/area/shuttle/lancer)
+"oR" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_y = -5
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/lancer)
+"qJ" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "16"
+	},
+/turf/template_noop,
+/area/shuttle/lancer)
+"rx" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "20"
+	},
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "16"
+	},
+/turf/template_noop,
+/area/shuttle/lancer)
+"tE" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "91"
+	},
+/obj/effect/attach_point/electronics/midway,
+/turf/template_noop,
+/area/shuttle/lancer)
+"uR" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/lancer)
+"vT" = (
+/obj/structure/platform_decoration{
+	dir = 4
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/lancer)
+"wK" = (
+/obj/docking_port/mobile/marine_dropship/lancer,
+/turf/open/shuttle/dropship/light_grey_bottom_right,
+/area/shuttle/lancer)
+"ya" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 2
+	},
+/obj/structure/machinery/door/airlock/hatch/cockpit/three{
+	dir = 1
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
+/area/shuttle/lancer)
+"zj" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "103"
+	},
+/area/shuttle/lancer)
+"zk" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_y = 26;
+	pixel_x = -8
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/lancer)
+"zo" = (
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/lancer)
+"zI" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "39"
+	},
+/turf/template_noop,
+/area/shuttle/lancer)
+"zY" = (
+/turf/closed/shuttle/typhoon/transparent{
+	icon_state = "97a"
+	},
+/area/shuttle/lancer)
+"AA" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "21"
+	},
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "17"
+	},
+/turf/template_noop,
+/area/shuttle/lancer)
+"AO" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "22"
+	},
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "22"
+	},
+/area/shuttle/lancer)
+"AW" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "104"
+	},
+/area/shuttle/lancer)
+"BN" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "47"
+	},
+/area/shuttle/lancer)
+"BY" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "41";
+	density = 0;
+	layer = 4.2
+	},
+/turf/template_noop,
+/area/shuttle/lancer)
+"Dr" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "6"
+	},
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "6"
+	},
+/turf/template_noop,
+/area/shuttle/lancer)
+"DT" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 2
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = -1
+	},
+/obj/structure/machinery/door/airlock/hatch/cockpit/three{
+	dir = 1
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
+/area/shuttle/lancer)
+"DU" = (
+/obj/structure/shuttle/part/typhoon/transparent/nosecone{
+	icon_state = "100"
+	},
+/turf/template_noop,
+/area/shuttle/lancer)
+"DY" = (
+/turf/closed/shuttle/typhoon/transparent{
+	icon_state = "89a"
+	},
+/area/shuttle/lancer)
+"ED" = (
+/obj/structure/platform_decoration{
+	dir = 8
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/lancer)
+"EJ" = (
+/obj/structure/shuttle/part/midway/transparent,
+/obj/structure/shuttle/part/typhoon/transparent,
+/turf/template_noop,
+/area/shuttle/lancer)
+"Fo" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "33"
+	},
+/turf/template_noop,
+/area/shuttle/lancer)
+"Fz" = (
+/obj/structure/machinery/door/airlock/hatch/cockpit/three{
+	dir = 1
+	},
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/lancer)
+"Im" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/lancer)
+"IG" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "75"
+	},
+/area/shuttle/lancer)
+"IW" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "27"
+	},
+/turf/template_noop,
+/area/shuttle/lancer)
+"Jh" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "77"
+	},
+/area/shuttle/lancer)
+"MA" = (
+/obj/structure/machinery/computer/dropship_weapons/midway/small{
+	pixel_y = 8;
+	pixel_x = 16;
+	dir = 8;
+	layer = 4
+	},
+/obj/structure/machinery/computer/railgun/gatling/toc{
+	pixel_y = 13;
+	pixel_x = -7
+	},
+/obj/structure/phone_base/toc{
+	pixel_y = 13;
+	pixel_x = 11;
+	phone_id = "Typhoon Overwatch";
+	phone_category = "Overwatch";
+	name = "Typhoon overwatch telephone receiver"
+	},
+/obj/structure/bed/chair/vehicle/dropship_cockpit/pilot{
+	dir = 1;
+	pixel_x = 8;
+	layer = 5
+	},
+/turf/open/shuttle/dropship/light_grey_top_right,
+/area/shuttle/lancer)
+"MQ" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "3"
+	},
+/turf/template_noop,
+/area/shuttle/lancer)
+"NJ" = (
+/obj/structure/stairs/perspective,
+/obj/structure/platform{
+	dir = 4
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/lancer)
+"Ob" = (
+/turf/closed/shuttle/typhoon/transparent{
+	icon_state = "86a"
+	},
+/area/shuttle/lancer)
+"Oi" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "15"
+	},
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "26";
+	layer = 2
+	},
+/turf/template_noop,
+/area/shuttle/lancer)
+"OU" = (
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/lancer)
+"QI" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "99a";
+	layer = 2.97
+	},
+/turf/template_noop,
+/area/shuttle/lancer)
+"RV" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "36"
+	},
+/area/shuttle/lancer)
+"SN" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "84"
+	},
+/obj/effect/attach_point/electronics/midway,
+/turf/template_noop,
+/area/shuttle/lancer)
+"Ub" = (
+/obj/structure/shuttle/part/typhoon/transparent/nosecone{
+	icon_state = "102"
+	},
+/turf/template_noop,
+/area/shuttle/lancer)
+"UV" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "95a";
+	layer = 2.97
+	},
+/turf/template_noop,
+/area/shuttle/lancer)
+"VU" = (
+/turf/open/shuttle/dropship/light_grey_top_right,
+/area/shuttle/lancer)
+"Wr" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "5"
+	},
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "5"
+	},
+/turf/template_noop,
+/area/shuttle/lancer)
+"Xa" = (
+/obj/structure/machinery/camera/autoname/golden_arrow/midway{
+	dir = 4;
+	pixel_x = -23
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/lancer)
+"XV" = (
+/obj/structure/stairs/perspective,
+/obj/structure/platform{
+	dir = 8
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/lancer)
+"Yb" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "9"
+	},
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "23";
+	layer = 2
+	},
+/turf/open/space/basic,
+/area/shuttle/lancer)
+"Ym" = (
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/lancer)
+
+(1,1,1) = {"
+nq
+nq
+nq
+nq
+nq
+oj
+fT
+aK
+AO
+rx
+nq
+nq
+nq
+EJ
+"}
+(2,1,1) = {"
+nq
+nq
+SN
+IG
+RV
+RV
+RV
+RV
+Yb
+AA
+nq
+nq
+nq
+ha
+"}
+(3,1,1) = {"
+DU
+UV
+Ob
+Jh
+iJ
+uR
+Im
+uR
+BN
+RV
+RV
+RV
+zj
+MQ
+"}
+(4,1,1) = {"
+eF
+zY
+gE
+Fz
+lu
+zo
+aS
+XV
+vT
+zo
+Xa
+OU
+ya
+nq
+"}
+(5,1,1) = {"
+eF
+zY
+MA
+Fz
+VU
+zo
+wK
+NJ
+ED
+zo
+zo
+Ym
+DT
+nq
+"}
+(6,1,1) = {"
+Ub
+QI
+DY
+Jh
+zk
+bz
+oR
+bz
+hD
+gp
+gp
+gp
+AW
+bW
+"}
+(7,1,1) = {"
+nq
+nq
+tE
+de
+gp
+gp
+gp
+gp
+Oi
+qJ
+nq
+nq
+nq
+Wr
+"}
+(8,1,1) = {"
+nq
+nq
+nq
+nq
+nq
+BY
+zI
+Fo
+IW
+bN
+nq
+nq
+nq
+Dr
+"}
