@@ -5,5 +5,5 @@
 
 /obj/effect/landmark/start/marine/leader/lancer
 	name = JOB_SQUAD_LEADER_FL
-	job = JOB_SQUAD_LEADER_FL
+	job = /datum/job/marine/leader/ai/lancer
 	squad = SQUAD_MERC

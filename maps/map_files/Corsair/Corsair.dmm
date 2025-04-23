@@ -71,6 +71,7 @@
 "ar" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/landmark/start/marine/lancer,
+/obj/effect/landmark/late_join,
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
@@ -138,6 +139,7 @@
 /area/golden_arrow/cryo_cells)
 "aw" = (
 /obj/effect/landmark/start/marine/lancer,
+/obj/effect/landmark/late_join,
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
@@ -159,6 +161,7 @@
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/landmark/start/marine/lancer,
+/obj/effect/landmark/late_join,
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
@@ -219,6 +222,7 @@
 /area/golden_arrow/cryo_cells)
 "aF" = (
 /obj/effect/landmark/start/marine/smartgunner/lancer,
+/obj/effect/landmark/late_join,
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
@@ -297,6 +301,7 @@
 /area/golden_arrow/dorms)
 "aO" = (
 /obj/effect/landmark/start/bridge/lancer,
+/obj/effect/landmark/late_join,
 /turf/open/floor/kutjevo/fake_wood,
 /area/golden_arrow/dorms)
 "aP" = (
@@ -310,6 +315,7 @@
 /area/golden_arrow/dorms)
 "aQ" = (
 /obj/effect/landmark/start/marine/tl/lancer,
+/obj/effect/landmark/late_join,
 /turf/open/floor/kutjevo/fake_wood,
 /area/golden_arrow/dorms)
 "aR" = (
@@ -391,6 +397,7 @@
 	pixel_y = 20
 	},
 /obj/effect/landmark/start/marine/tl/lancer,
+/obj/effect/landmark/late_join,
 /turf/open/floor/kutjevo/fake_wood,
 /area/golden_arrow/dorms)
 "ba" = (
@@ -415,10 +422,12 @@
 /area/golden_arrow/dorms)
 "bc" = (
 /obj/effect/landmark/start/marine/leader/lancer,
+/obj/effect/landmark/late_join,
 /turf/open/floor/kutjevo/fake_wood,
 /area/golden_arrow/dorms)
 "bd" = (
 /obj/effect/landmark/start/marine/medic/lancer,
+/obj/effect/landmark/late_join,
 /turf/open/floor/kutjevo/fake_wood,
 /area/golden_arrow/dorms)
 "be" = (

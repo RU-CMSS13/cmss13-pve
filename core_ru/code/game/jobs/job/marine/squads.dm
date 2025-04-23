@@ -1,9 +1,10 @@
 /datum/squad/marine/lancer
 	name = SQUAD_MERC
 	equipment_color = "#8d8d8d"
-	chat_color = "#8d8d8d"
+	chat_color = "#424242"
 	access = list(ACCESS_ILLEGAL_PIRATE)
 	minimap_color = MINIMAP_SQUAD_LANCER
+	radio_freq = PUB_FREQ
 	use_stripe_overlay = FALSE
 	usable = TRUE
 	faction = FACTION_FREELANCER

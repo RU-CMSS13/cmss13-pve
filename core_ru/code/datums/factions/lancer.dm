@@ -11,8 +11,8 @@
 	else if(ID)
 		_role = ID.rank
 	switch(_role)
-		if(JOB_SQUAD_RTO)
-			hud_icon_state = "sd"
+		if(JOB_SO)
+			hud_icon_state = "ro"
 		if(JOB_SQUAD_LEADER)
 			hud_icon_state = "leader_a"
 		if(JOB_SQUAD_TEAM_LEADER)
@@ -32,6 +32,12 @@
 			if(JOB_SQUAD_SMARTGUN) hud_icon_state = "gun"
 			if(JOB_SQUAD_TEAM_LEADER) hud_icon_state = "tl"
 			if(JOB_SQUAD_LEADER) hud_icon_state = "leader_a"
+			if(JOB_SO) hud_icon_state = "ro"
+		if(squad.fireteam_leaders["SQ1"] == H || squad.fireteam_leaders["SQ2"] == H)
+			H.langchat_styles = "langchat_smaller_bolded"
+		else
+			H.langchat_styles = initial(H.langchat_styles)
+		H.langchat_color = H.assigned_squad.chat_color
 
 		if(!hud_icon_state) hud_icon_state = H.rank_fallback
 		if(hud_icon_state)

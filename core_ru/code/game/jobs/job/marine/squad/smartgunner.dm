@@ -5,5 +5,5 @@
 
 /obj/effect/landmark/start/marine/smartgunner/lancer
 	name = JOB_SQUAD_SMARTGUN_FL
-	job = JOB_SQUAD_SMARTGUN_FL
+	job = /datum/job/marine/smartgunner/ai/lancer
 	squad = SQUAD_MERC

@@ -2607,6 +2607,7 @@
 #include "core_ru\code\game\area\Sulaco.dm"
 #include "core_ru\code\game\jobs\job\marine\squad\staffofficer.dm"
 #include "core_ru\code\game\machinery\computer\camera_console.dm"
+#include "core_ru\code\game\objects\items\devices\radio\headset.dm"
 #include "core_ru\code\game\turfs\transit.dm"
 #include "core_ru\code\modules\shuttle\shuttles\dropship.dm"
 #include "interface\fonts.dm"
