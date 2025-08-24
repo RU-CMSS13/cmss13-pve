@@ -160,7 +160,7 @@
 
 /datum/ammo/rocket/ap/tank_towlauncher/aa
 	name = "hypervelocity missile"
-	damage = 200
+	damage = 400
 	max_range = 16
 	shell_speed = AMMO_SPEED_TIER_8
 
@@ -188,7 +188,7 @@
 	accuracy = HIT_ACCURACY_TIER_3
 	accurate_range = 32
 	max_range = 32
-	damage = 200
+	damage = 450
 	shell_speed = AMMO_SPEED_TIER_3
 
 /datum/ammo/rocket/ltb/on_hit_mob(mob/mob, obj/projectile/projectile)
