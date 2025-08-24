@@ -237,10 +237,10 @@
 	toggle_off_sound = 'sound/handling/toggle_nv2.ogg'
 
 	/// The internal battery for the visor
-	var/obj/item/cell/high/power_cell
+	var/obj/item/cell/super/power_cell
 
-	/// About 5 minutes active use charge (hypothetically)
-	var/power_use = 33
+	/// About 20 minutes active use charge (hypothetically)
+	var/power_use = 10
 
 	/// The alpha of darkness we set to for the mob while the visor is on, not completely fullbright but see-able
 	var/lighting_alpha = 100
@@ -249,7 +249,7 @@
 	var/atom/movable/nvg_light/on_light
 
 	/// Whether or not the sight uses on_light and produces light
-	var/visor_glows = TRUE
+	var/visor_glows = FALSE
 
 /obj/item/device/helmet_visor/night_vision/Initialize(mapload, ...)
 	. = ..()
@@ -275,7 +275,6 @@
 		on_light = new(attached_helmet)
 		on_light.set_light_on(TRUE)
 	START_PROCESSING(SSobj, src)
-	RegisterSignal(user, COMSIG_MOB_CHANGE_VIEW, PROC_REF(change_view))
 
 /obj/item/device/helmet_visor/night_vision/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
 	user.remove_client_color_matrix("nvg_visor", 1 SECONDS)
@@ -310,10 +309,6 @@
 	if(!.)
 		return
 
-	if(user.client?.view > 7)
-		to_chat(user, SPAN_WARNING("You cannot use [src] while using optics."))
-		return FALSE
-
 	if(!NVG_VISOR_USAGE(FALSE))
 		to_chat(user, SPAN_NOTICE("Your [src] is out of power! You'll need to recharge it."))
 		return FALSE
@@ -332,21 +327,6 @@
 		user.see_in_dark = 12
 	user.lighting_alpha = lighting_alpha
 	user.sync_lighting_plane_alpha()
-
-/obj/item/device/helmet_visor/night_vision/proc/change_view(mob/user, new_size)
-	SIGNAL_HANDLER
-	if(new_size > 7) // cannot use binos with NVO
-		var/obj/item/clothing/head/helmet/marine/attached_helmet = loc
-		if(!istype(attached_helmet))
-			return
-		deactivate_visor(attached_helmet, user)
-		to_chat(user, SPAN_NOTICE("You deactivate [src] on [attached_helmet]."))
-		playsound_client(user.client, toggle_off_sound, null, 75)
-		attached_helmet.active_visor = null
-		attached_helmet.update_icon()
-		var/datum/action/item_action/cycle_helmet_huds/cycle_action = locate() in attached_helmet.actions
-		if(cycle_action)
-			cycle_action.set_default_overlay()
 
 #undef NVG_VISOR_USAGE
 
