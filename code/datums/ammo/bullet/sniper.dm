@@ -15,8 +15,8 @@
 	accurate_range = 32
 	max_range = 32
 	scatter = 0
-	damage = 70
-	penetration= ARMOR_PENETRATION_TIER_5
+	damage = 200
+	penetration= ARMOR_PENETRATION_TIER_10
 	shell_speed = AMMO_SPEED_TIER_6
 	damage_falloff = 0
 
@@ -28,8 +28,8 @@
 
 /datum/ammo/bullet/sniper/crude
 	name = "crude sniper bullet"
-	damage = 42
-	penetration = -ARMOR_PENETRATION_TIER_2
+	damage = 60
+	penetration = -ARMOR_PENETRATION_TIER_3
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/sniper/crude/on_hit_mob(mob/M, obj/projectile/P)
@@ -38,19 +38,19 @@
 
 /datum/ammo/bullet/sniper/upp
 	name = "armor-piercing sniper bullet"
-	damage = 80
-	penetration = ARMOR_PENETRATION_TIER_6 //Instant deletion isn't fun.
+	damage = 140
+	penetration = ARMOR_PENETRATION_TIER_6 //Instant deletion isn't fun but realistic.
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/sniper/upp/heap
 	name = "high velocity armor-piercing sniper bullet"
-	damage = 110
-	penetration = ARMOR_PENETRATION_TIER_8
+	damage = 200
+	penetration = ARMOR_PENETRATION_TIER_10
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/sniper/upp/flak
 	name = "flak sniper bullet"
-	damage = 60
+	damage = 115
 	penetration = ARMOR_PENETRATION_TIER_2
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
@@ -68,7 +68,7 @@
 
 /datum/ammo/bullet/sniper/upp_pve
 	name = "high-power sniper bullet" //Now used by hAI CLF type 88 users
-	damage = 60
+	damage = 70
 	penetration = ARMOR_PENETRATION_TIER_4
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
@@ -77,7 +77,7 @@
 
 	shrapnel_chance = 0 // This isn't leaving any shrapnel.
 	accuracy = HIT_ACCURACY_TIER_8
-	damage = 125
+	damage = 250
 	shell_speed = AMMO_SPEED_TIER_8
 	penetration = ARMOR_PENETRATION_TIER_10 + ARMOR_PENETRATION_TIER_5
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge //10x99 casing pipe implies this is actually cased, so...
@@ -287,7 +287,7 @@
 
 	shrapnel_chance = 0 // This isn't leaving any shrapnel.
 	accuracy = HIT_ACCURACY_TIER_8
-	damage = 150
+	damage = 250
 	shell_speed = AMMO_SPEED_TIER_6 + AMMO_SPEED_TIER_2
 	penetration = ARMOR_PENETRATION_TIER_10 + ARMOR_PENETRATION_TIER_5
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
