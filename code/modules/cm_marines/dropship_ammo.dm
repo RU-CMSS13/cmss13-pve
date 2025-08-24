@@ -147,8 +147,8 @@
 	fire_mission_delay = 2
 	var/bullet_spread_range = 2 //how far from the real impact turf can bullets land
 	var/shrapnel_type = /datum/ammo/bullet/shrapnel/gau //For siming 30mm bullet impacts.
-	var/directhit_damage = 150 //how much damage is to be inflicted to a mob, this is here so that we can hit resting mobs.
-	var/penetration = 15 //AP value pretty much
+	var/directhit_damage = 300 //how much damage is to be inflicted to a mob, this is here so that we can hit resting mobs.
+	var/penetration = 50 //AP value pretty much
 
 /obj/structure/ship_ammo/heavygun/get_examine_text(mob/user)
 	. = ..()
@@ -204,8 +204,8 @@
 	point_cost = 325
 	fire_mission_delay = 2
 	shrapnel_type = /datum/ammo/bullet/shrapnel/gau/at
-	directhit_damage = 100 //how much damage is to be inflicted to a mob, this is here so that we can hit resting mobs.
-	penetration = 40 //AP value pretty much
+	directhit_damage = 700 //how much damage is to be inflicted to a mob, this is here so that we can hit resting mobs.
+	penetration = 50 //AP value pretty much
 
 //laser battery
 
