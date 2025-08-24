@@ -10,7 +10,7 @@
 	plasma_gain = XENO_PLASMA_GAIN_TIER_3
 	plasma_max = XENO_PLASMA_TIER_10 * 3 // PVE X3 boss edition
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_7
-	armor_deflection = XENO_ARMOR_FACTOR_TIER_5
+	armor_deflection = XENO_ARMOR_FACTOR_TIER_7
 	speed = XENO_SPEED_TIER_1
 
 	evolves_to = null
