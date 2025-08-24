@@ -5,7 +5,7 @@
 	icon_state = "helmet"
 	item_state = "helmet"
 	armor_melee = CLOTHING_ARMOR_MEDIUM
-	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIULOW
 	armor_laser = CLOTHING_ARMOR_LOW
 	armor_energy = CLOTHING_ARMOR_LOW
 	armor_bomb = CLOTHING_ARMOR_NONE
@@ -376,10 +376,10 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "helmet"
 	item_state = "helmet"
 	armor_melee = CLOTHING_ARMOR_MEDIUM
-	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
 	armor_energy = CLOTHING_ARMOR_LOW
-	armor_bomb = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bio = CLOTHING_ARMOR_MEDIUM
 	armor_rad = CLOTHING_ARMOR_LOW
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
@@ -695,7 +695,6 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	var/list/total_visors = built_in_visors + inserted_visors
 
 	if(!length(total_visors))
-		to_chat(user, SPAN_WARNING("There are no visors to swap to."))
 		return FALSE
 
 	if(active_visor)
@@ -712,11 +711,6 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 						skipped_hud = TRUE
 						continue
 
-					if(!next_visor.can_toggle(user))
-						iterator++
-						skipped_hud = TRUE
-						continue
-
 					active_visor = next_visor
 					toggle_visor(user, visor_to_deactivate, silent = TRUE) // disables the old visor
 					toggle_visor(user)
@@ -729,9 +723,6 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 	for(var/obj/item/device/helmet_visor/new_visor in total_visors)
 		if(!isnull(GLOB.huds[new_visor.hud_type]?.hudusers[user]))
-			continue
-
-		if(!new_visor.can_toggle(user))
 			continue
 
 		active_visor = new_visor
@@ -836,9 +827,9 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "An M10 marine helmet version designed for use in darkened environments. It is coated with a special anti-reflective paint."
 	icon_state = "marsoc_helmet"
 	armor_melee = CLOTHING_ARMOR_MEDIUM
-	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bomb = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_rad = CLOTHING_ARMOR_LOW
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
@@ -849,6 +840,10 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	name = "\improper M09 pattern helmet"
 	desc = "Back issue model of an older combat helmet. Uncomfortable, but the added protection is supposedly worth it. It's been wired up the same, so it still ties into the sensor matrix fine."
 	icon_state = "sl_helmet"
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_laser = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	specialty = "M11 pattern marine"
 
@@ -857,8 +852,11 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "Failed procurement, limited run successor to the old M10 Ballistic Helmet. New ceramic composites and suspension system show a remarkable increase in blunt impact resistance, while a revamped wiring structure added space for a second optic socket."
 	icon_state = "io"
 	item_state = "io"
-	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_VERYHIGHPLUS
+	armor_laser = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bomb = CLOTHING_ARMOR_HIGH
+	armor_bio = CLOTHING_ARMOR_HIGH
 	specialty = "M12 pattern"
 	max_inserted_visors = 2
 
@@ -1173,7 +1171,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "Union combat helmet Almaz. Part of protective complex Kuija-M, constructed of a thin alloy shattering plate and para-aramid underlayers. The helmet includes cheek shields for shrapnel or ricochet protection, a low resolution camera system, hearing protection, and an integrated communications system. Ports for connecting infrared visors or night vision systems are also provided."
 	icon_state = "upp_helmet"
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
 	armor_energy = CLOTHING_ARMOR_MEDIUM
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
@@ -1190,7 +1188,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "EVA-capable enclosed helmet of the UPP's Naval Infantry. Despite offering a higher armor rating, this helmet's cumbersome design kept it from retaining a larger role in the equipment of the Naval Infantry, and instead is largely reserved for heavy weapons operators and other specialist roles."
 	icon_state = "upp_helmet_heavy"
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
 	armor_energy = CLOTHING_ARMOR_MEDIUM
 	armor_bomb = CLOTHING_ARMOR_HIGH
 	armor_bio = CLOTHING_ARMOR_MEDIUM
@@ -1219,9 +1217,9 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "upp_helmet_naval"
 	item_state = "helmet"
-	armor_melee = CLOTHING_ARMOR_MEDIUM
-	armor_bullet = CLOTHING_ARMOR_HIGH
-	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
+	armor_laser = CLOTHING_ARMOR_MEDIUM
 	armor_energy = CLOTHING_ARMOR_MEDIUM
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	armor_bio = CLOTHING_ARMOR_MEDIUM
@@ -1552,14 +1550,10 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 		if(!isnull(GLOB.huds[new_visor.hud_type]?.hudusers[user]))
 			continue
 
-		if(!new_visor.can_toggle(user))
-			continue
-
 		active_visor = new_visor
 		toggle_visor(user)
 		return active_visor
 
-	to_chat(user, SPAN_WARNING("There are no visors to swap to currently."))
 	return FALSE
 
 /obj/item/clothing/head/helmet/upp/alt
