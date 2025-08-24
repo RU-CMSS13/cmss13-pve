@@ -7,8 +7,8 @@
 /datum/ammo/bullet/lever_action
 	name = "lever-action bullet"
 
-	damage = 80
-	penetration = 0
+	damage = 105
+	penetration = ARMOR_PENETRATION_TIER_3
 	accuracy = HIT_ACCURACY_TIER_1
 	shell_speed = AMMO_SPEED_TIER_6
 	accurate_range = 14
@@ -20,7 +20,7 @@
 /datum/ammo/bullet/lever_action/tracker
 	name = "tracking lever-action bullet"
 	icon_state = "redbullet"
-	damage = 70
+	damage = 90
 	penetration = ARMOR_PENETRATION_TIER_3
 	accuracy = HIT_ACCURACY_TIER_1
 	handful_state = "tracking_lever_action_bullet"
@@ -32,7 +32,7 @@
 /datum/ammo/bullet/lever_action/training
 	name = "lever-action blank"
 	icon_state = "blank"
-	damage = 70  //blanks CAN hurt you if shot very close
+	damage = 130  //blanks CAN hurt you if shot very close
 	penetration = 0
 	accuracy = HIT_ACCURACY_TIER_1
 	damage_falloff = DAMAGE_FALLOFF_BLANK //not much, though (comparatively)
@@ -53,21 +53,21 @@
 /datum/ammo/bullet/lever_action/xm88
 	name = ".458 SOCOM round"
 
-	damage = 104
-	penetration = ARMOR_PENETRATION_TIER_2
+	damage = 160
+	penetration = ARMOR_PENETRATION_TIER_7
 	accuracy = HIT_ACCURACY_TIER_1
 	shell_speed = AMMO_SPEED_TIER_6
 	accurate_range = 14
 	handful_state = "boomslang_bullet"
 
 /datum/ammo/bullet/lever_action/xm88/pen20
-	penetration = ARMOR_PENETRATION_TIER_4
+	penetration = ARMOR_PENETRATION_TIER_10
 
 /datum/ammo/bullet/lever_action/xm88/pen30
-	penetration = ARMOR_PENETRATION_TIER_6
+	penetration = ARMOR_PENETRATION_TIER_10
 
 /datum/ammo/bullet/lever_action/xm88/pen40
-	penetration = ARMOR_PENETRATION_TIER_8
+	penetration = ARMOR_PENETRATION_TIER_10
 
 /datum/ammo/bullet/lever_action/xm88/pen50
 	penetration = ARMOR_PENETRATION_TIER_10
