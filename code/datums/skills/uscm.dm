@@ -46,7 +46,7 @@ United States Colonial Marines
 /datum/skills/smartgunner
 	name = "Squad Smartgunner"
 	skills = list(
-		SKILL_CQC = SKILL_CQC_TRAINED
+		SKILL_CQC = SKILL_CQC_TRAINED,
 		SKILL_SPEC_WEAPONS = SKILL_SPEC_SMARTGUN,
 		SKILL_JTAC = SKILL_JTAC_BEGINNER,
 		SKILL_ENDURANCE = SKILL_ENDURANCE_TRAINED,
@@ -55,7 +55,7 @@ United States Colonial Marines
 /datum/skills/smartgunner/recon
 	name = "Recon Smartgunner"
 	skills = list(
-		SKILL_CQC = SKILL_CQC_TRAINED
+		SKILL_CQC = SKILL_CQC_TRAINED,
 		SKILL_SPEC_WEAPONS = SKILL_SPEC_SMARTGUN,
 		SKILL_JTAC = SKILL_JTAC_BEGINNER,
 		SKILL_ENDURANCE = SKILL_ENDURANCE_MASTER,
@@ -76,7 +76,7 @@ United States Colonial Marines
 /datum/skills/tl
 	name = "Fireteam Leader"
 	skills = list(
-		SKILL_CQC = SKILL_CQC_TRAINED
+		SKILL_CQC = SKILL_CQC_TRAINED,
 		SKILL_JTAC = SKILL_JTAC_TRAINED,
 		SKILL_LEADERSHIP = SKILL_LEAD_TRAINED,
 		SKILL_ENDURANCE = SKILL_ENDURANCE_TRAINED,
@@ -85,7 +85,7 @@ United States Colonial Marines
 /datum/skills/tl/recon
 	name = "Recon Fireteam Leader"
 	skills = list(
-		SKILL_CQC = SKILL_CQC_TRAINED
+		SKILL_CQC = SKILL_CQC_TRAINED,
 		SKILL_JTAC = SKILL_JTAC_TRAINED,
 		SKILL_LEADERSHIP = SKILL_LEAD_TRAINED,
 		SKILL_ENDURANCE = SKILL_ENDURANCE_MASTER,
