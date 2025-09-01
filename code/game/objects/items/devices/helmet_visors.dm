@@ -227,8 +227,8 @@
 #define NVG_VISOR_USAGE(delta_time) (power_cell.use(power_use * (delta_time ? delta_time : 1)))
 
 /obj/item/device/helmet_visor/night_vision
-	name = "night vision optic"
-	desc = "An insertable visor HUD into a standard USCM helmet. This type gives a form of night vision and is standard issue in units with regular funding."
+	name = "AN/NVPAV-75 visor"
+	desc = "An insertable visor HUD into a USCM helmet, a more expensive and advanced version of the standard night vision goggles M2, works a lot of time, and gives a full night vision even in a full darkness.
 	icon_state = "nvg_sight"
 	hud_type = null
 	action_icon_string = "nvg_sight_down"
@@ -237,10 +237,10 @@
 	toggle_off_sound = 'sound/handling/toggle_nv2.ogg'
 
 	/// The internal battery for the visor
-	var/obj/item/cell/super/power_cell
+	var/obj/item/cell/hyper/power_cell
 
-	/// About 20 minutes active use charge (hypothetically)
-	var/power_use = 10
+	/// About 60 minutes active use charge (hypothetically)
+	var/power_use = 5
 
 	/// The alpha of darkness we set to for the mob while the visor is on, not completely fullbright but see-able
 	var/lighting_alpha = 100
@@ -338,8 +338,8 @@
 	light_flags = LIGHT_ATTACHED
 
 /obj/item/device/helmet_visor/night_vision/marine_raider
-	name = "advanced night vision optic"
-	desc = "An insertable visor HUD into a standard USCM helmet. This type gives a form of night vision and is standard issue in special forces units."
+	name = "AN/NVPAV-76R visor"
+	desc = "An insertable visor HUD into a USCM helmet. A more advanced vesrion of the night vision firmware, has an integrated uranium battery with radiation protection, gives about ~150 years of active use."
 	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY, MOB_HUD_MEDICAL_ADVANCED)
 	helmet_overlay = "nvg_sight_right_raider"
 	power_use = 0
