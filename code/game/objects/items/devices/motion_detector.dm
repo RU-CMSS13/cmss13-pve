@@ -2,11 +2,11 @@
 #define MOTION_DETECTOR_LONG 0
 #define MOTION_DETECTOR_SHORT 1
 
-#define MOTION_DETECTOR_RANGE_LONG 14
-#define MOTION_DETECTOR_RANGE_SHORT 7
+#define MOTION_DETECTOR_RANGE_LONG 20
+#define MOTION_DETECTOR_RANGE_SHORT 10
 
 #define MOTION_DETECTOR_BASE_COOLDOWN (1 SECONDS)
-#define MOTION_DETECTOR_RANGE_LONG_MULTIPLIER 2.5
+#define MOTION_DETECTOR_RANGE_LONG_MULTIPLIER 2
 
 /obj/effect/detector_blip
 	icon = 'icons/obj/items/marine-items.dmi'
@@ -27,12 +27,12 @@
 	flags_equip_slot = SLOT_WAIST
 	inherent_traits = list(TRAIT_ITEM_NOT_IMPLANTABLE)
 	var/list/blip_pool = list()
-	var/detector_range = 14
+	var/detector_range = 20
 	var/detector_mode = MOTION_DETECTOR_LONG
 	var/ping_count = 0
 	w_class = SIZE_MEDIUM
 	var/active = 0
-	var/recycletime = 120
+	var/recycletime = 60
 	var/blip_type = "detector"
 	var/iff_signal = FACTION_MARINE
 	actions_types = list(/datum/action/item_action/toggle)
@@ -104,10 +104,10 @@
 	detector_mode = !detector_mode
 	if(detector_mode)
 		to_chat(user, SPAN_NOTICE("You switch [src] to short-range mode."))
-		detector_range = 7
+		detector_range = 10
 	else
 		to_chat(user, SPAN_NOTICE("You switch [src] to long-range mode."))
-		detector_range = 14
+		detector_range = 20
 	update_icon()
 	playsound(usr,'sound/machines/click.ogg', 15, TRUE)
 
