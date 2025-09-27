@@ -10,8 +10,8 @@
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	accuracy = HIT_ACCURACY_TIER_3
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
-	damage = 40
-	penetration= -ARMOR_PENETRATION_TIER_1
+	damage = 35
+	penetration= ARMOR_PENETRATION_TIER_1
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
 	shell_casing = /obj/effect/decal/ammo_casing
 
@@ -24,8 +24,8 @@
 /datum/ammo/bullet/pistol/tranq
 	name = "tranquilizer bullet"
 	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_IGNORE_RESIST
-	stamina_damage = 60
-	damage = 15
+	stamina_damage = 75
+	damage = 10
 
 //2020 rebalance: is supposed to counter runners and lurkers, dealing high damage to the only castes with no armor.
 //Limited by its lack of versatility and lower supply, so marines finally have an answer for flanker castes that isn't just buckshot.
@@ -41,7 +41,7 @@
 /datum/ammo/bullet/pistol/ap
 	name = "armor-piercing 9x19 bullet"
 
-	damage = 25
+	damage = 40
 	accuracy = HIT_ACCURACY_TIER_2
 	penetration= ARMOR_PENETRATION_TIER_3
 
@@ -49,7 +49,7 @@
 	name = "wall-penetrating 9x19 bullet"
 	shrapnel_chance = 0
 
-	damage = 30
+	damage = 40
 	penetration = ARMOR_PENETRATION_TIER_10
 
 /datum/ammo/bullet/pistol/ap/penetrating/set_bullet_traits()
@@ -89,7 +89,7 @@
 	sound_override = 'sound/weapons/gun_c99.ogg'
 
 	damage = 0
-	stamina_damage = 25
+	stamina_damage = 20
 	shrapnel_chance = 0
 
 // Reskinned rubber bullet used for the ES-4 CL pistol.
@@ -107,14 +107,14 @@
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	accuracy = HIT_ACCURACY_TIER_3
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
-	damage = 55
-	penetration = -ARMOR_PENETRATION_TIER_2 //bigger but slower, armor works to counter more effectively
+	damage = 65
+	penetration = ARMOR_PENETRATION_TIER_2 //bigger but slower, armor works to counter more effectively
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
 
 /datum/ammo/bullet/pistol/heavy/special //That's a spicy meataball. Hits harder, moves faster, can only be used in select guns
 	name = "supersonic heavy pistol bullet"
 	shell_speed = AMMO_SPEED_TIER_5
-	damage = 60
+	damage = 85
 	penetration = ARMOR_PENETRATION_TIER_2
 
 /datum/ammo/bullet/pistol/heavy/special/on_hit_mob(mob/entity, obj/projectile/bullet)
@@ -124,10 +124,10 @@
 
 /datum/ammo/bullet/pistol/heavy/super //Commander's variant //Not messing with this, it can retain The Funny Values
 	name = ".50 heavy pistol bullet"
-	damage = 60
+	damage = 110
 	damage_var_low = PROJECTILE_VARIANCE_TIER_8
 	damage_var_high = PROJECTILE_VARIANCE_TIER_6
-	penetration = ARMOR_PENETRATION_TIER_4
+	penetration = ARMOR_PENETRATION_TIER_7
 
 /datum/ammo/bullet/pistol/heavy/super/highimpact
 	name = ".50 high-impact pistol bullet"
@@ -138,7 +138,7 @@
 /datum/ammo/bullet/pistol/heavy/super/highimpact/ap
 	name = ".50 high-impact armor piercing pistol bullet"
 	penetration = ARMOR_PENETRATION_TIER_10
-	damage = 45
+	damage = 135
 
 /datum/ammo/bullet/pistol/heavy/super/highimpact/upp
 	name = "high-impact pistol bullet"
@@ -156,11 +156,11 @@
 
 /datum/ammo/bullet/pistol/deagle
 	name = ".50 heavy pistol bullet"
-	damage = 45
+	damage = 65
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
 	accuracy = HIT_ACCURACY_TIER_3
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
-	penetration = ARMOR_PENETRATION_TIER_2
+	penetration = ARMOR_PENETRATION_TIER_5
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_5
 
 /datum/ammo/bullet/pistol/incendiary
@@ -170,7 +170,7 @@
 	flags_ammo_behavior = AMMO_BALLISTIC
 
 	accuracy = HIT_ACCURACY_TIER_3
-	damage = 20
+	damage = 35
 
 /datum/ammo/bullet/pistol/incendiary/set_bullet_traits()
 	..()
@@ -188,7 +188,7 @@
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 
 	accuracy = HIT_ACCURACY_TIER_3
-	damage = 36
+	damage = 40
 	penetration = ARMOR_PENETRATION_TIER_2
 	damage_falloff = DAMAGE_FALLOFF_TIER_7
 
@@ -241,7 +241,7 @@
 	shrapnel_chance = 0
 	flags_ammo_behavior = AMMO_BALLISTIC
 	accuracy = HIT_ACCURACY_TIER_3
-	damage = 35
+	damage = 50
 
 /datum/ammo/bullet/pistol/squash/incendiary/set_bullet_traits()
 	..()
