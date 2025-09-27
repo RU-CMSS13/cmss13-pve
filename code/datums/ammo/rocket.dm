@@ -16,7 +16,7 @@
 	accuracy = HIT_ACCURACY_TIER_2
 	accurate_range = 7
 	max_range = 11
-	damage = 15
+	damage = 40
 	shell_speed = AMMO_SPEED_TIER_2
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_VERY_SOFT_YELLOW
@@ -61,11 +61,11 @@
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_9
 	accurate_range = 9
 	max_range = 11
-	damage = 250
+	damage = 300
 	shrapnel_chance = 5
 	shrapnel_type = /obj/item/large_shrapnel/at_rocket_dud
 	penetration= ARMOR_PENETRATION_TIER_10
-	var/vehicle_slowdown_time = 2 SECONDS
+	var/vehicle_slowdown_time = 5 SECONDS
 
 /datum/ammo/rocket/ap/on_hit_mob(mob/mob, obj/projectile/projectile)
 	var/turf/turf = get_turf(mob)
@@ -137,9 +137,9 @@
 
 /datum/ammo/rocket/ap/anti_tank
 	name = "anti-tank rocket"
-	damage = 1000
+	damage = 1500
 	damage_var_high = 100
-	vehicle_slowdown_time = 5 SECONDS
+	vehicle_slowdown_time = 10 SECONDS
 
 /datum/ammo/rocket/ap/anti_tank/on_hit_obj(obj/object, obj/projectile/projectile)
 	if(istype(object, /obj/vehicle/multitile))
@@ -160,14 +160,14 @@
 
 /datum/ammo/rocket/ap/tank_towlauncher/aa
 	name = "hypervelocity missile"
-	damage = 200
+	damage = 400
 	max_range = 16
 	shell_speed = AMMO_SPEED_TIER_8
 
 //USCM Hornet AA missile
 /datum/ammo/rocket/ap/anti_air
 	name = "hypervelocity anti-air missile"
-	damage = 250
+	damage = 450
 	max_range = 16
 	vehicle_slowdown_time = 4 SECONDS
 	shell_speed = AMMO_SPEED_TIER_8
@@ -188,7 +188,7 @@
 	accuracy = HIT_ACCURACY_TIER_3
 	accurate_range = 32
 	max_range = 32
-	damage = 200
+	damage = 1000
 	shell_speed = AMMO_SPEED_TIER_3
 
 /datum/ammo/rocket/ltb/on_hit_mob(mob/mob, obj/projectile/projectile)
@@ -288,7 +288,7 @@
 	name = "thermobaric rocket"
 	flags_ammo_behavior = AMMO_ROCKET|AMMO_STRIKES_SURFACE
 
-	damage = 100
+	damage = 170
 	max_range = 32
 	shell_speed = AMMO_SPEED_TIER_3
 
@@ -351,7 +351,7 @@
 	accuracy = HIT_ACCURACY_TIER_3
 	accurate_range = 32
 	max_range = 32
-	damage = 200
+	damage = 1000
 	shell_speed = AMMO_SPEED_TIER_3
 
 // RAILGUN CANNON
