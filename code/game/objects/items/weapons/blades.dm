@@ -243,7 +243,7 @@
 			throw_range = 6
 			hitsound = 'sound/weapons/slash.ogg'
 			attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
-			attack_speed = 9
+			attack_speed = 7
 			flags_item = CAN_DIG_SHRAPNEL
 		if("Screwdriver")
 			desc = "A trusty screwdriver for all your fastening needs."
@@ -282,7 +282,7 @@
 			throw_range = 6
 			hitsound = 'sound/weapons/slash.ogg'
 			attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
-			attack_speed = 9
+			attack_speed = 7
 			flags_item = CAN_DIG_SHRAPNEL
 		if("Corkscrew")
 			desc = "A simple corkscrew."
@@ -306,7 +306,7 @@
 	throw_range = 6
 	hitsound = 'sound/weapons/slash.ogg'
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
-	attack_speed = 9
+	attack_speed = 7
 	flags_item = CAN_DIG_SHRAPNEL
 /obj/item/weapon/swiss_army_knife/screwdriver
 	icon_state = "swiss_screwdriver"
@@ -407,7 +407,7 @@
 	throw_range = 6
 	hitsound = 'sound/weapons/slash.ogg'
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
-	attack_speed = 9
+	attack_speed = 7
 	flags_item = CAN_DIG_SHRAPNEL
 /obj/item/weapon/swiss_army_knife/corkscrew
 	icon = 'icons/obj/items/weapons/weapons.dmi'
@@ -697,19 +697,21 @@
 	throw_range = 6
 	hitsound = 'sound/weapons/slash.ogg'
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
-	attack_speed = 9
+	attack_speed = 7
 
 /obj/item/weapon/knife/marine/kabar
 	name = "\improper KA-BAR utility knife"
 	icon_state = "knife_kabar"
 	item_state = "knife_kabar"
 	desc = "An old school Marine Corps combat knife. The iconic look of the knife and its association with the Corps' cultural history has seen it remain popular among marines well after its replacement as standard-issue. Fits neatly into boot-mounted holsters, and can - in emergencies - be utilized to dig out shrapnel."
+	attack_speed = 6
 
 /obj/item/weapon/knife/marine/baker
 	name = "\improper M1 Baker-pattern fighting knife"
 	icon_state = "knife_baker"
 	item_state = "knife_baker"
 	desc = "A modern take on an older design, issued primarily to US army members & some elements of the USASF. Fits neatly into boot-mounted holsters, and can - in emergencies - be utilized to dig out shrapnel."
+	throwforce = MELEE_FORCE_TIER_10 //increased by throwspeed to roughly 80
 
 /obj/item/weapon/knife/marine/bowie
 	name = "\improper Bowie fighting knife"
@@ -722,8 +724,14 @@
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 
+/obj/item/weapon/knife/marine/bowie/kukri
+	name = "\improper Kukri utility knife"
+	icon_state = "knife_kukri"
+	desc = "A large, recurved fighting knife originating from the Indian subcontinent. Traditionally wielded by the Gurkhas of Nepal or their extrasolar colonial descendants, it's rare to see one in the hands of outsiders."
+	flags_equip_slot = SLOT_WAIST
+
 /obj/item/weapon/knife/marine/sas
 	name = "\improper Fairbairn-Sykes fighting knife"
 	icon_state = "knife_fairbairn"
 	item_state = "knife_gerber"
-	desc = "This isn't for dressing game or performing camp chores. It's for killing men and has done so successfully for a number of centuries. When all else has failed you, this knife will be in your hand, ready to execute its grim task."
+	desc = "This isn't for dressing game or performing camp chores. I
