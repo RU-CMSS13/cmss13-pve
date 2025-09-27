@@ -65,10 +65,6 @@
 /obj/item/reagent_container/blood/attack(mob/attacked_mob, mob/user)
 	. = ..()
 
-	if(attacked_mob == user)
-		to_chat(user, SPAN_WARNING("You cannot connect this to yourself!"))
-		return
-
 	if(connected_to == attacked_mob)
 		STOP_PROCESSING(SSobj, src)
 		user.visible_message("[user] detaches [src] from [connected_to].", \
