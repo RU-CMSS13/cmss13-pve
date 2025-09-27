@@ -1,10 +1,10 @@
 /datum/caste_datum/drone
 	caste_type = XENO_CASTE_DRONE
 	tier = 1
-	melee_damage_lower = XENO_DAMAGE_TIER_1
-	melee_damage_upper = XENO_DAMAGE_TIER_2
-	melee_vehicle_damage = XENO_DAMAGE_TIER_2
-	max_health = 180
+	melee_damage_lower = XENO_DAMAGE_TIER_4
+	melee_damage_upper = XENO_DAMAGE_TIER_5
+	melee_vehicle_damage = XENO_DAMAGE_TIER_3
+	max_health = 400
 	plasma_gain = XENO_PLASMA_GAIN_TIER_8
 	plasma_max = XENO_PLASMA_TIER_10
 	xeno_explosion_resistance = XENO_NO_EXPLOSIVE_ARMOR
