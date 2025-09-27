@@ -27,10 +27,10 @@
 				help_shake_act(attacking_mob)
 				return 1
 
-			if(attacking_mob.head && (attacking_mob.head.flags_inventory & COVERMOUTH) || attacking_mob.wear_mask && (attacking_mob.wear_mask.flags_inventory & COVERMOUTH) && !(attacking_mob.wear_mask.flags_inventory & ALLOWCPR))
+			if(attacking_mob.head && (attacking_mob.head.flags_inventory & COVERMOUTH) && !(attacking_mob.head.flags_inventory & ALLOWCPR) || attacking_mob.wear_mask && (attacking_mob.wear_mask.flags_inventory & COVERMOUTH) && !(attacking_mob.wear_mask.flags_inventory & ALLOWCPR))
 				to_chat(attacking_mob, SPAN_NOTICE("<B>Remove your mask!</B>"))
 				return 0
-			if(head && (head.flags_inventory & COVERMOUTH) || wear_mask && (wear_mask.flags_inventory & COVERMOUTH) && !(wear_mask.flags_inventory & ALLOWCPR))
+			if(head && (head.flags_inventory & COVERMOUTH) && !(head.flags_inventory & ALLOWCPR) || wear_mask && (wear_mask.flags_inventory & COVERMOUTH) && !(wear_mask.flags_inventory & ALLOWCPR))
 				to_chat(attacking_mob, SPAN_NOTICE("<B>Remove [src.gender==MALE?"his":"her"] mask!</B>"))
 				return 0
 			if(cpr_attempt_timer >= world.time)
@@ -88,7 +88,7 @@
 
 			var/extra_cqc_dmg = 0 //soft maximum of 5, this damage is added onto the final value depending on how much cqc skill you have
 			if(attacking_mob.skills)
-				extra_cqc_dmg = attacking_mob.skills?.get_skill_level(SKILL_CQC)
+				extra_cqc_dmg = attacking_mob.skills?.get_skill_level(SKILL_CQC) *5
 			var/raw_damage = 0 //final value, gets absorbed by the armor and then deals the leftover to the mob
 
 			var/obj/limb/affecting = get_limb(rand_zone(attacking_mob.zone_selected, 70))
@@ -149,10 +149,10 @@
 			var/disarm_chance = rand(1, 100)
 			var/attacker_skill_level = attacking_mob.skills ? attacking_mob.skills.get_skill_level(SKILL_CQC) : SKILL_CQC_MAX // No skills, so assume max
 			var/defender_skill_level = skills ? skills.get_skill_level(SKILL_CQC) : SKILL_CQC_MAX // No skills, so assume max
-			disarm_chance -= 5 * attacker_skill_level
-			disarm_chance += 5 * defender_skill_level
+			disarm_chance -= 15 * attacker_skill_level
+			disarm_chance += 15 * defender_skill_level
 
-			if(disarm_chance <= 25)
+			if(disarm_chance <= 10)
 				var/strength = 2 + max((attacker_skill_level - defender_skill_level), 0)
 				KnockDown(strength)
 				Stun(strength)
@@ -161,7 +161,7 @@
 				visible_message(SPAN_DANGER("<B>[attacking_mob] has [shove_text] [src]!</B>"), null, null, 5)
 				return
 
-			if(disarm_chance <= 60)
+			if(disarm_chance <= 25)
 				//BubbleWrap: Disarming breaks a pull
 				if(pulling)
 					visible_message(SPAN_DANGER("<b>[attacking_mob] has broken [src]'s grip on [pulling]!</B>"), null, null, 5)
