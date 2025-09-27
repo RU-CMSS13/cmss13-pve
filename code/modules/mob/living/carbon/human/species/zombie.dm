@@ -1,6 +1,6 @@
 // DEFINES
 ///Time until a zombie rises from the dead
-#define ZOMBIE_REVIVE_TIME 3 MINUTES
+#define ZOMBIE_REVIVE_TIME 90 MINUTES
 
 /datum/species/zombie
 	group = SPECIES_HUMAN
