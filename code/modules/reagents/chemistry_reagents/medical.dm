@@ -70,7 +70,7 @@
 	description = "Tramadol is a centrally acting analgesic and is considered to be a relatively safe. The analgesic potency is claimed to be about one tenth that of morphine. It is used to treat both acute and chronic pain of moderate to (moderately) severe intensity. Tramadol is generally considered as a medicinal drug with a low potential for dependence relative to morphine. Overdosing on tramadol is highly toxic."
 	reagent_state = LIQUID
 	color = "#C8A5DC"
-	custom_metabolism = AMOUNT_PER_TIME(15, 10 MINUTES) // Lasts 10 minutes for 15 units
+	custom_metabolism = AMOUNT_PER_TIME(15, 15 MINUTES) // Lasts 15 minutes for 15 units
 	overdose = REAGENTS_OVERDOSE
 	overdose_critical = REAGENTS_OVERDOSE_CRITICAL
 	chemclass = CHEM_CLASS_COMMON
@@ -82,11 +82,11 @@
 	description = "Oxycodone is an opioid agonist with addiction potential similar to that of morphine. It is approved for the treatment of patients with moderate to severe pain who are expected to need continuous opioids for an extended period of time. Overdosing on oxycodone can cause hallucinations, brain damage and be highly toxic."
 	reagent_state = LIQUID
 	color = "#E01D25"
-	custom_metabolism = AMOUNT_PER_TIME(15, 5 MINUTES) // Lasts 5 minutes for 15 units
+	custom_metabolism = AMOUNT_PER_TIME(15, 7 MINUTES) // Lasts 7 minutes for 15 units
 	overdose = MED_REAGENTS_OVERDOSE
 	overdose_critical = MED_REAGENTS_OVERDOSE_CRITICAL
 	chemclass = CHEM_CLASS_UNCOMMON
-	properties = list(PROPERTY_PAINKILLING = 8)
+	properties = list(PROPERTY_PAINKILLING = 9)
 
 /datum/reagent/medical/sterilizine
 	name = "Sterilizine"
@@ -116,7 +116,7 @@
 	overdose = REAGENTS_OVERDOSE
 	overdose_critical = REAGENTS_OVERDOSE_CRITICAL
 	chemclass = CHEM_CLASS_COMMON
-	properties = list(PROPERTY_ANTICORROSIVE = 2)
+	properties = list(PROPERTY_ANTICORROSIVE = 1)
 
 /datum/reagent/medical/dermaline
 	name = "Dermaline"
@@ -127,7 +127,7 @@
 	overdose = LOWH_REAGENTS_OVERDOSE
 	overdose_critical = LOWH_REAGENTS_OVERDOSE_CRITICAL
 	chemclass = CHEM_CLASS_UNCOMMON
-	properties = list(PROPERTY_ANTICORROSIVE = 3)
+	properties = list(PROPERTY_ANTICORROSIVE = 2)
 
 /datum/reagent/medical/dexalin
 	name = "Dexalin"
@@ -160,7 +160,7 @@
 	overdose = REAGENTS_OVERDOSE
 	overdose_critical = REAGENTS_OVERDOSE_CRITICAL
 	chemclass = CHEM_CLASS_UNCOMMON
-	properties = list(PROPERTY_NEOGENETIC = 1, PROPERTY_ANTICORROSIVE = 1, PROPERTY_ANTITOXIC = 1, PROPERTY_OXYGENATING = 1)
+	properties = list(PROPERTY_NEOGENETIC = 0.5, PROPERTY_ANTICORROSIVE = 0.5, PROPERTY_ANTITOXIC = 1, PROPERTY_OXYGENATING = 1)
 
 /datum/reagent/medical/anti_toxin
 	name = "Dylovene"
@@ -171,7 +171,7 @@
 	overdose = REAGENTS_OVERDOSE
 	overdose_critical = REAGENTS_OVERDOSE_CRITICAL
 	chemclass = CHEM_CLASS_COMMON
-	properties = list(PROPERTY_ANTITOXIC = 2, PROPERTY_ANTIHALLUCINOGENIC = 2)
+	properties = list(PROPERTY_ANTITOXIC = 2, PROPERTY_NEPHROPEUTIC = 0.1, PROPERTY_HEPATOPEUTIC = 0.1, PROPERTY_ANTIHALLUCINOGENIC = 2)
 
 /datum/reagent/medical/adminordrazine //An OP chemical for admins
 	name = "Adminordrazine"
@@ -250,7 +250,7 @@
 	overdose = REAGENTS_OVERDOSE
 	overdose_critical = REAGENTS_OVERDOSE_CRITICAL
 	chemclass = CHEM_CLASS_UNCOMMON
-	properties = list(PROPERTY_NEUROPEUTIC = 2)
+	properties = list(PROPERTY_NEUROPEUTIC = 0.1)
 
 /datum/reagent/medical/imidazoline
 	name = "Imidazoline"
@@ -261,7 +261,7 @@
 	overdose = REAGENTS_OVERDOSE
 	overdose_critical = REAGENTS_OVERDOSE_CRITICAL
 	chemclass = CHEM_CLASS_UNCOMMON
-	properties = list(PROPERTY_OCULOPEUTIC = 2)
+	properties = list(PROPERTY_OCULOPEUTIC = 0.1)
 
 /datum/reagent/medical/peridaxon
 	name = "Peridaxon"
@@ -271,7 +271,7 @@
 	color = "#C845DC"
 	overdose = LOWH_REAGENTS_OVERDOSE
 	overdose_critical = LOWH_REAGENTS_OVERDOSE_CRITICAL
-	custom_metabolism = AMOUNT_PER_TIME(1, 40 SECONDS)
+	custom_metabolism = AMOUNT_PER_TIME(1, 80 SECONDS)
 	chemclass = CHEM_CLASS_COMMON
 	properties = list(PROPERTY_ORGANSTABILIZE = 4)
 
@@ -284,7 +284,7 @@
 	overdose = REAGENTS_OVERDOSE
 	overdose_critical = REAGENTS_OVERDOSE_CRITICAL
 	chemclass = CHEM_CLASS_COMMON
-	properties = list(PROPERTY_NEOGENETIC = 2)
+	properties = list(PROPERTY_NEOGENETIC = 1)
 
 /datum/reagent/medical/meralyne
 	name = "Meralyne"
@@ -295,7 +295,7 @@
 	overdose = LOWH_REAGENTS_OVERDOSE
 	overdose_critical = LOWH_REAGENTS_OVERDOSE_CRITICAL
 	chemclass = CHEM_CLASS_UNCOMMON
-	properties = list(PROPERTY_NEOGENETIC = 3)
+	properties = list(PROPERTY_NEOGENETIC = 2)
 
 /datum/reagent/medical/adrenaline
 	name = "Epinephrine"
