@@ -302,7 +302,7 @@ Defined in conflicts.dm of the #defines folder.
 	pixel_shift_x = 14 //Below the muzzle.
 	pixel_shift_y = 18
 	hud_offset_mod = -4
-	var/pry_delay = 3 SECONDS
+	var/pry_delay = 5 SECONDS
 
 /obj/item/attachable/bayonet/Initialize(mapload, ...)
 	. = ..()
@@ -322,7 +322,7 @@ Defined in conflicts.dm of the #defines folder.
 	throwforce = MELEE_FORCE_TIER_10 //doubled by throwspeed to 100
 	throw_speed = SPEED_REALLY_FAST
 	throw_range = 7
-	pry_delay = 1 SECONDS
+	pry_delay = 3 SECONDS
 
 /obj/item/attachable/bayonet/upp/surplus
 	desc = "The standard-issue bayonet of the UPP, this one is somewhat dulled."
@@ -344,7 +344,7 @@ Defined in conflicts.dm of the #defines folder.
 	throwforce = MELEE_FORCE_TIER_10 //doubled by throwspeed to 100
 	throw_speed = SPEED_REALLY_FAST
 	throw_range = 7
-	pry_delay = 1 SECONDS
+	pry_delay = 3 SECONDS
 
 /obj/item/attachable/bayonet/van_bandolier
 	name = "\improper Fairbairn-Sykes fighting knife"
@@ -401,6 +401,7 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/extended_barrel/New()
 	..()
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_4
+	damage_mod = BULLET_DAMAGE_MULT_TIER_1
 	velocity_mod = AMMO_SPEED_TIER_1
 
 /obj/item/attachable/heavy_barrel
@@ -439,7 +440,6 @@ Defined in conflicts.dm of the #defines folder.
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_4
 	recoil_mod = -RECOIL_AMOUNT_TIER_3
 
-	damage_falloff_mod = 0.1
 	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_4
 	recoil_unwielded_mod = -RECOIL_AMOUNT_TIER_4
 
@@ -639,6 +639,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/mateba/long/New()
 	..()
+	damage_mod = BULLET_DAMAGE_MULT_TIER_2
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_4
 	scatter_mod = -SCATTER_AMOUNT_TIER_6
 	delay_mod = FIRE_DELAY_TIER_7
@@ -658,6 +659,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/mateba/short/New()
 	..()
+	damage_mod = -BULLET_DAMAGE_MULT_TIER_2
 	accuracy_mod = -HIT_ACCURACY_MULT_TIER_4
 	scatter_mod = SCATTER_AMOUNT_TIER_6
 	delay_mod = -FIRE_DELAY_TIER_7
@@ -683,7 +685,6 @@ Defined in conflicts.dm of the #defines folder.
 	..()
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_4
 	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_1
-	movement_onehanded_acc_penalty_mod = MOVEMENT_ACCURACY_PENALTY_MULT_TIER_5
 
 /obj/item/attachable/reddot/upp
 	name = "EKP-9-M Red Dot Sight"
@@ -703,7 +704,6 @@ Defined in conflicts.dm of the #defines folder.
 	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_1
 	scatter_mod = -SCATTER_AMOUNT_TIER_10
 	burst_scatter_mod = -1
-	movement_onehanded_acc_penalty_mod = MOVEMENT_ACCURACY_PENALTY_MULT_TIER_5
 
 /obj/item/attachable/reflex/upp
 	name = "PK-12 Reflex Sight"
@@ -970,12 +970,27 @@ Defined in conflicts.dm of the #defines folder.
 	icon_state = "pve-sling"
 	attach_icon = "pve-sling_a"
 	slot = "rail"
+	var/retrieval_slot = WEAR_J_STORE
 
 /obj/item/attachable/sling/New()
 	..()
 	accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_1
 	recoil_unwielded_mod = -RECOIL_AMOUNT_TIER_2
 	scatter_unwielded_mod = -SCATTER_AMOUNT_TIER_2
+
+/obj/item/attachable/magnetic_harness/can_be_attached_to_gun(mob/user, obj/item/weapon/gun/G)
+	if(SEND_SIGNAL(G, COMSIG_DROP_RETRIEVAL_CHECK) & COMPONENT_DROP_RETRIEVAL_PRESENT)
+		to_chat(user, SPAN_WARNING("[G] already has a retrieval system installed!"))
+		return FALSE
+	return ..()
+
+/obj/item/attachable/sling/Attach(obj/item/weapon/gun/G)
+	. = ..()
+	G.AddElement(/datum/element/drop_retrieval/gun, retrieval_slot)
+
+/obj/item/obj/item/attachable/sling/Detach(mob/user, obj/item/weapon/gun/detaching_gub, drop_attachment = TRUE)
+	. = ..()
+	detaching_gub.RemoveElement(/datum/element/drop_retrieval/gun, retrieval_slot)
 
 /obj/item/attachable/scope
 	name = "S8 4x telescopic scope"
@@ -1203,6 +1218,7 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/scope/mini/New()
 	..()
 	damage_falloff_scoped_buff = -0.2 //has to be negative
+	damage_mod = BULLET_DAMAGE_MULT_TIER_1
 
 /obj/item/attachable/scope/mini/apply_scoped_buff(obj/item/weapon/gun/G, mob/living/carbon/user)
 	. = ..()
@@ -1288,6 +1304,7 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/scope/pve/New()
 	..()
 	damage_falloff_scoped_buff = -0.2
+	damage_mod = BULLET_DAMAGE_MULT_TIER_1
 
 /obj/item/attachable/scope/pve/apply_scoped_buff(obj/item/weapon/gun/G, mob/living/carbon/user)
 	. = ..()
