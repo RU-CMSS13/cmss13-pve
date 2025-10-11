@@ -227,7 +227,7 @@
 #define NVG_VISOR_USAGE(delta_time) (power_cell.use(power_use * (delta_time ? delta_time : 1)))
 
 /obj/item/device/helmet_visor/night_vision
-	name = "night vision optic"
+	name = "AN/NVPAV-75 visor"
 	desc = "An insertable visor HUD into a standard USCM helmet. This type gives a form of night vision and is standard issue in units with regular funding."
 	icon_state = "nvg_sight"
 	hud_type = null
@@ -237,10 +237,10 @@
 	toggle_off_sound = 'sound/handling/toggle_nv2.ogg'
 
 	/// The internal battery for the visor
-	var/obj/item/cell/hyper/power_cell
+	var/obj/item/cell/super/power_cell
 
 	/// About 40 minutes active use charge (hypothetically)
-	var/power_use = 10
+	var/power_use = 5
 
 	/// The alpha of darkness we set to for the mob while the visor is on, not completely fullbright but see-able
 	var/lighting_alpha = 100
