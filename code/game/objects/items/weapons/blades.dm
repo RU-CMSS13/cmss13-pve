@@ -697,19 +697,21 @@
 	throw_range = 6
 	hitsound = 'sound/weapons/slash.ogg'
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
-	attack_speed = 9
+	attack_speed = 7
 
 /obj/item/weapon/knife/marine/kabar
 	name = "\improper KA-BAR utility knife"
 	icon_state = "knife_kabar"
 	item_state = "knife_kabar"
 	desc = "An old school Marine Corps combat knife. The iconic look of the knife and its association with the Corps' cultural history has seen it remain popular among marines well after its replacement as standard-issue. Fits neatly into boot-mounted holsters, and can - in emergencies - be utilized to dig out shrapnel."
+	attack_speed = 7
 
 /obj/item/weapon/knife/marine/baker
 	name = "\improper M1 Baker-pattern fighting knife"
 	icon_state = "knife_baker"
 	item_state = "knife_baker"
 	desc = "A modern take on an older design, issued primarily to US army members & some elements of the USASF. Fits neatly into boot-mounted holsters, and can - in emergencies - be utilized to dig out shrapnel."
+	attack_speed = 7
 
 /obj/item/weapon/knife/marine/bowie
 	name = "\improper Bowie fighting knife"
@@ -721,9 +723,11 @@
 	throwforce = MELEE_FORCE_WEAK
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+	attack_speed = 8
 
 /obj/item/weapon/knife/marine/sas
 	name = "\improper Fairbairn-Sykes fighting knife"
 	icon_state = "knife_fairbairn"
 	item_state = "knife_gerber"
 	desc = "This isn't for dressing game or performing camp chores. It's for killing men and has done so successfully for a number of centuries. When all else has failed you, this knife will be in your hand, ready to execute its grim task."
+	attack_speed = 7
