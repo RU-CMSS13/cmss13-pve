@@ -88,7 +88,7 @@
 
 			var/extra_cqc_dmg = 0 //soft maximum of 5, this damage is added onto the final value depending on how much cqc skill you have
 			if(attacking_mob.skills)
-				extra_cqc_dmg = attacking_mob.skills?.get_skill_level(SKILL_CQC)
+				extra_cqc_dmg = attacking_mob.skills?.get_skill_level(SKILL_CQC) *5
 			var/raw_damage = 0 //final value, gets absorbed by the armor and then deals the leftover to the mob
 
 			var/obj/limb/affecting = get_limb(rand_zone(attacking_mob.zone_selected, 70))
@@ -149,10 +149,10 @@
 			var/disarm_chance = rand(1, 100)
 			var/attacker_skill_level = attacking_mob.skills ? attacking_mob.skills.get_skill_level(SKILL_CQC) : SKILL_CQC_MAX // No skills, so assume max
 			var/defender_skill_level = skills ? skills.get_skill_level(SKILL_CQC) : SKILL_CQC_MAX // No skills, so assume max
-			disarm_chance -= 5 * attacker_skill_level
-			disarm_chance += 5 * defender_skill_level
+			disarm_chance -= 15 * attacker_skill_level
+			disarm_chance += 15 * defender_skill_level
 
-			if(disarm_chance <= 25)
+			if(disarm_chance <= 10)
 				var/strength = 2 + max((attacker_skill_level - defender_skill_level), 0)
 				KnockDown(strength)
 				Stun(strength)
