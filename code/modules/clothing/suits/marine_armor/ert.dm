@@ -6,7 +6,7 @@
 	desc = "A heavily customized suit of M3 armor. Used by Marine Raiders."
 	icon_state = "marsoc"
 	armor_melee = CLOTHING_ARMOR_HIGH
-	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
+	armor_bullet = CLOTHING_ARMOR_HIGH
 	armor_bomb = CLOTHING_ARMOR_VERYHIGH
 	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
 	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
@@ -28,8 +28,8 @@
 	name = "\improper WY tactical armor"
 	desc = "A contender for service with the Royal Marine Commandos, it is presently, exclusively, field tested by Weyland-Yutani mercenaries."
 	icon_state = "pmc_armor"
-	armor_bullet = CLOTHING_ARMOR_HIGH
-	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	storage_slots = 2
@@ -68,7 +68,7 @@
 	name = "\improper WY light tactical armor"
 	icon_state = "pmc_sniper"
 	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
 	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
 	armor_rad = CLOTHING_ARMOR_MEDIUM
@@ -106,22 +106,16 @@
 	desc = "A serious modification of the standard Armat Systems M3 armor. This variant was designed for PMC Support Units in the field, with every armor insert removed. It's designed with the idea of a high speed lifesaver in mind."
 	time_to_unequip = 0.5 SECONDS
 	time_to_equip = 1 SECONDS
-	armor_melee = CLOTHING_ARMOR_VERYLOW
-	armor_bullet = CLOTHING_ARMOR_VERYLOW
-	armor_laser = CLOTHING_ARMOR_VERYLOW
-	armor_energy = CLOTHING_ARMOR_VERYLOW
-	armor_bomb = CLOTHING_ARMOR_VERYLOW
-	armor_bio = CLOTHING_ARMOR_VERYLOW
-	armor_rad = CLOTHING_ARMOR_VERYLOW
-	armor_internaldamage = CLOTHING_ARMOR_VERYLOW
+	armor_melee = CLOTHING_ARMOR_NONE
+	armor_bullet = CLOTHING_ARMOR_NONE
+	armor_laser = CLOTHING_ARMOR_NONE
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_NONE
+	armor_bio = CLOTHING_ARMOR_NONE
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_NONE
 	storage_slots = 3
 	slowdown = SLOWDOWN_ARMOR_SUPER_LIGHT
-
-/obj/item/clothing/suit/storage/marine/veteran/pmc/corporate
-	name = "\improper M1 pattern PMC leader armor"
-	desc = "A modification of the standard Armat Systems M3 armor. Designed for high-profile security operators and corporate mercenaries in mind. This particular suit looks like it belongs to a high-ranking officer."
-	icon_state = "officer_armor"
-	item_state_slots = list(WEAR_JACKET = "officer_armor")
 
 /obj/item/clothing/suit/storage/marine/veteran/pmc/light/synth/Initialize()
 	flags_atom |= NO_NAME_OVERRIDE
@@ -135,10 +129,10 @@
 	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN|SMARTGUN_HARNESS
 	flags_bodypart_hidden = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
-	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
-	armor_laser = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_energy = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	item_state_slots = list(WEAR_JACKET = "heavy_armor")
 
@@ -148,12 +142,12 @@
 	icon_state = "commando_armor"
 	slowdown = SLOWDOWN_ARMOR_MEDIUM
 	movement_compensation = SLOWDOWN_ARMOR_VERY_HEAVY
-	armor_melee = CLOTHING_ARMOR_VERYHIGH
+	armor_melee = CLOTHING_ARMOR_HIGH
 	armor_bullet = CLOTHING_ARMOR_ULTRAHIGH
-	armor_laser = CLOTHING_ARMOR_HIGHPLUS
-	armor_energy = CLOTHING_ARMOR_HIGHPLUS
-	armor_bomb = CLOTHING_ARMOR_VERYHIGHPLUS
-	armor_rad = CLOTHING_ARMOR_HIGHPLUS
+	armor_laser = CLOTHING_ARMOR_MEDIUM
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_VERYHIGH
+	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
 	item_state_slots = list(WEAR_JACKET = "commando_armor")
@@ -167,10 +161,9 @@
 	movement_compensation = SLOWDOWN_ARMOR_VERY_HEAVY
 	armor_melee = CLOTHING_ARMOR_VERYHIGH
 	armor_bullet = CLOTHING_ARMOR_ULTRAHIGH
-	armor_laser = CLOTHING_ARMOR_HIGHPLUS
-	armor_energy = CLOTHING_ARMOR_HIGHPLUS
-	armor_bomb = CLOTHING_ARMOR_VERYHIGHPLUS
-	armor_rad = CLOTHING_ARMOR_HIGHPLUS
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_VERYHIGH
+	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 	flags_inventory = BLOCK_KNOCKDOWN
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
@@ -247,14 +240,14 @@
 	min_cold_protection_temperature = HELMET_MIN_COLD_PROT
 	max_heat_protection_temperature = HELMET_MAX_HEAT_PROT
 	blood_overlay_type = "armor"
-	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
-	armor_laser = CLOTHING_ARMOR_MEDIUM
-	armor_energy = CLOTHING_ARMOR_MEDIUM
-	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	armor_bio = CLOTHING_ARMOR_MEDIUM
 	armor_rad = CLOTHING_ARMOR_MEDIUM
-	armor_internaldamage = CLOTHING_ARMOR_HIGH
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 	slowdown = SLOWDOWN_ARMOR_MEDIUM
 	movement_compensation = SLOWDOWN_ARMOR_LIGHT
 
@@ -267,11 +260,11 @@
 	slowdown = SLOWDOWN_ARMOR_MEDIUM
 	flags_inventory = BLOCKSHARPOBJ
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_energy = CLOTHING_ARMOR_MEDIUM
-	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
 	armor_rad = CLOTHING_ARMOR_HIGHPLUS
-	armor_internaldamage = CLOTHING_ARMOR_HIGH
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	flags_inventory = BLOCKSHARPOBJ
 	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE)
 	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
@@ -293,12 +286,12 @@
 	flags_inventory = BLOCKSHARPOBJ|SMARTGUN_HARNESS
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
 	armor_melee = CLOTHING_ARMOR_HIGH
-	armor_bullet = CLOTHING_ARMOR_VERYHIGH
-	armor_laser = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_energy = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_MEDIUM
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
+	armor_internaldamage = CLOTHING_ARMOR_HIGH
 	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE)
 	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
 	specialty = "\improper 6B91-2 pattern"
@@ -364,7 +357,7 @@
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
 	slowdown = SLOWDOWN_ARMOR_LIGHT
 	armor_melee = CLOTHING_ARMOR_MEDIUM
-	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
 	armor_bomb = CLOTHING_ARMOR_LOW
 	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
 	armor_rad = CLOTHING_ARMOR_LOW
@@ -757,13 +750,12 @@
 //================//=ROYAL MARINES=\\====================================\\
 //=======================================================================\\
 
-/obj/item/clothing/suit/marine/veteran/royal_marine
-	name = "\improper Kestrel armoured cuirass"
-	desc = "Standard RMC issue Kestrel Personal Armor designed by Weyland-Yutani subsidary, Lindenthal-Ehrenfeld Militärindustrie. Advanced composite ballistic armor of the latest generation, integral biomonitoring system, and brackets for a load carrying system as well as the TNR Shoulder Lamp."
-	icon_state = "rmc_standard"
-	item_state = "rmc_standard"
+/obj/item/clothing/suit/storage/marine/veteran/royal_marine
+	name = "kestrel armoured vest"
+	desc = "A customizable personal armor system used by the Three World Empire's Royal Marines Commandos. Designers from a Weyland Yutani subsidary, Lindenthal-Ehrenfeld Militärindustrie, iterated on the USCMC's M3 pattern personal armor in their Tokonigara lab to create an armor systemed to suit the unique needs of the Three World Empire's smaller but better equipped Royal Marines."
+	icon_state = "rmc_light"
+	item_state = "rmc_light"
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
-	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	allowed = list(
 		/obj/item/weapon/gun,
 		/obj/item/tank/emergency_oxygen,
@@ -779,36 +771,43 @@
 		/obj/item/attachable/bayonet,
 		/obj/item/device/motiondetector,
 		/obj/item/device/walkman,
-		/obj/item/storage/belt/marine/rmc,
-		/obj/item/storage/belt/medical/rmc,
-		/obj/item/storage/belt/gun/l905,
-		/obj/item/storage/belt/gun/mortarbelt/rmc,
-		/obj/item/storage/backpack/general_belt/rmc,
-		/obj/item/storage/belt/gun/flaregun,
 	)
-	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT)
 
-/obj/item/clothing/suit/marine/veteran/royal_marine/heavy
-//Just the normal armor with attachies
+/obj/item/clothing/suit/storage/marine/veteran/royal_marine/light //RMC Rifleman Armor
+	icon_state = "rmc_light"
+	item_state = "rmc_light"
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_MEDIUM
+	slowdown = SLOWDOWN_ARMOR_LIGHT
 
-/obj/item/clothing/suit/marine/veteran/royal_marine/heavy/Initialize(mapload)
-	. = ..()
-	var/obj/item/clothing/accessory/twepads/shoulders = new()
-	src.attach_accessory(null, shoulders, TRUE)
-	var/obj/item/clothing/accessory/twepads/legs/greaves = new()
-	src.attach_accessory(null, greaves, TRUE)
+/obj/item/clothing/suit/storage/marine/veteran/royal_marine/light/team_leader //RMC TL & LT Armor
+	name = "kestrel armoured carry vest"
+	icon_state = "rmc_light_padded"
+	item_state = "rmc_light_padded"
+	storage_slots = 7
 
-/obj/item/clothing/suit/marine/veteran/royal_marine/smartgun //Smartgun Spec Armor
-	name = "\improper Kestrel GPMG harness"
-	desc = "Standard RMC issue Kestrel Personal Armor designed by Weyland-Yutani subsidary, Lindenthal-Ehrenfeld Militärindustrie. This version features the support armature for the L58A3 weapons system, which significantly limits what additional storage equipment can be clipped to the armor. Advanced composite ballistic armor of the latest generation, integral biomonitoring system, and brackets for a load carrying system as well as the TNR Shoulder Lamp."
+/obj/item/clothing/suit/storage/marine/veteran/royal_marine/smartgun //Smartgun Spec Armor
+	name = "kestrel armoured smartgun harness"
 	icon_state = "rmc_smartgun"
 	item_state = "rmc_smartgun"
-	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN|SMARTGUN_HARNESS
-	allowed = list(
-		/obj/item/weapon/gun/smartgun/rmc,
-	)
+
+/obj/item/clothing/suit/storage/marine/veteran/royal_marine/pointman //Pointman Spec Armor
+	name = "kestrel pointman armour"
+	desc = "A heavier version of the armor system used by the Three World Empire's Royal Marines Commandos. Designers from a Weyland Yutani subsidary, Lindenthal-Ehrenfeld Militärindustrie, iterated on the USCMC's M3 pattern personal armor in their Tokonigara lab to create an armor systemed to suit the unique needs of the Three World Empire's smaller but better equipped Royal Marines."
+	icon_state = "rmc_pointman"
+	item_state = "rmc_pointman"
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
+	armor_bomb = CLOTHING_ARMOR_HIGHPLUS
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	storage_slots = 7
+	slowdown = SLOWDOWN_ARMOR_LOWHEAVY
+	movement_compensation = SLOWDOWN_ARMOR_MEDIUM
 
 /atom/movable/marine_light
 	light_system = DIRECTIONAL_LIGHT
@@ -820,10 +819,10 @@
 	icon_state = "cbrn"
 	item_state = "cbrn"
 	slowdown = SLOWDOWN_ARMOR_HEAVY
-	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
-	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_LOW
 	armor_rad =CLOTHING_ARMOR_MEDIUMLOW
 	armor_internaldamage = CLOTHING_ARMOR_LOW
 	flags_marine_armor = NO_FLAGS
@@ -841,57 +840,3 @@
 	armor_bio = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
-
-//Mercs
-/obj/item/clothing/suit/storage/marine/veteran/merc
-	name = "DP TAC-PACK Gen II armored vest"
-	desc = "A decent armored vest used by better funded insurgencies and mercenary groups, able to take some small arm hits before going down. Made by Davis Proprietary."
-	icon = 'icons/obj/items/clothing/cm_suits.dmi'
-	item_icons = list(
-		WEAR_JACKET = 'icons/mob/humans/onmob/suit_1.dmi'
-	)
-	icon_state = "merc_medium"
-	item_state = "merc_medium"
-	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bullet = CLOTHING_ARMOR_MEDIUM
-	armor_laser = CLOTHING_ARMOR_LOW
-	armor_energy = CLOTHING_ARMOR_LOW
-	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bio = CLOTHING_ARMOR_MEDIUM
-	armor_rad = CLOTHING_ARMOR_NONE
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS|BODY_FLAG_GROIN
-
-/obj/item/clothing/suit/storage/marine/veteran/merc/light
-	name = "DP TAC-PACK Gen I-L armored vest"
-	desc = "A slightly less armored vest which prioritises freedom of movement and mobility over actual armour. Made by Davis Proprietary."
-	icon = 'icons/obj/items/clothing/cm_suits.dmi'
-	item_icons = list(
-		WEAR_JACKET = 'icons/mob/humans/onmob/suit_1.dmi'
-	)
-	icon_state = "merc_light"
-	item_state = "merc_light"
-	armor_melee = CLOTHING_ARMOR_LOW
-	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bomb = CLOTHING_ARMOR_LOW
-	flags_armor_protection = BODY_FLAG_CHEST
-
-/obj/item/clothing/suit/storage/marine/veteran/merc/heavy
-	name = "DP TAC-PACK Gen IV-H armored vest"
-	desc = "A much heavier armored vest built off the other two previous versions under GEN II and GEN I, sporting much heavier armor plates and better coverage of parts, allowing users to resist a lot of damage before going down. Made by Davis Proprietary."
-	icon = 'icons/obj/items/clothing/cm_suits.dmi'
-	item_icons = list(
-		WEAR_JACKET = 'icons/mob/humans/onmob/suit_1.dmi'
-	)
-	icon_state = "merc_heavy"
-	item_state = "merc_heavy"
-	armor_melee = CLOTHING_ARMOR_HIGH
-	armor_bullet = CLOTHING_ARMOR_HIGH
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
-	armor_bomb = CLOTHING_ARMOR_VERYHIGH
-	flags_inventory = BLOCK_KNOCKDOWN
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_FEET|BODY_FLAG_ARMS|BODY_FLAG_HANDS
-	slowdown = SLOWDOWN_ARMOR_HEAVY
-	time_to_unequip = 20
-	time_to_equip = 20
-
