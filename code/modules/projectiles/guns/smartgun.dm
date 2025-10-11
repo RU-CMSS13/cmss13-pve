@@ -356,12 +356,12 @@
 		ammo = ammo_secondary
 		to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s ammo preparation procedures. You now fire armor-piercing rounds, offering greater penetration against armored targets compared to other rounds.")
 		balloon_alert(user, "firing armor-piercing")
-		drain += 50
+		drain += 100
 	else if(ammo == ammo_secondary)
 		ammo = ammo_tertiary
 		to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s ammo preparation procedures. You now fire impact-detonating rounds, which stagger most human-sized hostiles on hit and slow them down.")
 		balloon_alert(user, "firing impact-detonating")
-		drain += 10
+		drain += 25
 	else
 		ammo = ammo_primary
 		to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s ammo preparation procedures. You now fire highly precise rounds. These rounds are accurate and cost less power to operate.")
@@ -386,11 +386,11 @@
 	TAT.update_icon()
 	if(iff_enabled)
 		add_bullet_trait(BULLET_TRAIT_ENTRY_ID("iff", /datum/element/bullet_trait_iff))
-		drain += 10
+		drain += 20
 		MD.iff_signal = initial(MD.iff_signal)
 	if(!iff_enabled)
 		remove_bullet_trait("iff")
-		drain -= 10
+		drain -= 20
 		MD.iff_signal = null
 	SEND_SIGNAL(src, COMSIG_GUN_IFF_TOGGLED, iff_enabled)
 
@@ -429,9 +429,9 @@
 	playsound(loc,'sound/machines/click.ogg', 25, 1)
 	recoil_compensation = !recoil_compensation
 	if(recoil_compensation)
-		drain += 50
+		drain += 75
 	else
-		drain -= 50
+		drain -= 75
 	recalculate_attachment_bonuses() //Includes set_gun_config_values() as well as attachments.
 
 /obj/item/weapon/gun/smartgun/proc/toggle_accuracy_improvement(mob/user)
@@ -439,9 +439,9 @@
 	playsound(loc,'sound/machines/click.ogg', 25, 1)
 	accuracy_improvement = !accuracy_improvement
 	if(accuracy_improvement)
-		drain += 50
+		drain += 75
 	else
-		drain -= 50
+		drain -= 75
 	recalculate_attachment_bonuses()
 /*
 /obj/item/weapon/gun/smartgun/proc/toggle_auto_fire(mob/user)
@@ -457,11 +457,11 @@
 
 /obj/item/weapon/gun/smartgun/proc/auto_fire()
 	if(auto_fire)
-		drain += 150
+		drain += 200
 		if(!motion_detector)
 			START_PROCESSING(SSobj, src)
 	if(!auto_fire)
-		drain -= 150
+		drain -= 200
 		if(!motion_detector)
 			STOP_PROCESSING(SSobj, src)
 
@@ -590,11 +590,11 @@
 
 /obj/item/weapon/gun/smartgun/proc/motion_detector()
 	if(motion_detector)
-		drain += 15
+		drain += 50
 		if(!auto_fire)
 			START_PROCESSING(SSobj, src)
 	if(!motion_detector)
-		drain -= 15
+		drain -= 50
 		if(!auto_fire)
 			STOP_PROCESSING(SSobj, src)
 */
