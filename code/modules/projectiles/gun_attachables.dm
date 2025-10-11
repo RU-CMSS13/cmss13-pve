@@ -978,20 +978,6 @@ Defined in conflicts.dm of the #defines folder.
 	recoil_unwielded_mod = -RECOIL_AMOUNT_TIER_2
 	scatter_unwielded_mod = -SCATTER_AMOUNT_TIER_2
 
-/obj/item/attachable/magnetic_harness/can_be_attached_to_gun(mob/user, obj/item/weapon/gun/G)
-	if(SEND_SIGNAL(G, COMSIG_DROP_RETRIEVAL_CHECK) & COMPONENT_DROP_RETRIEVAL_PRESENT)
-		to_chat(user, SPAN_WARNING("[G] already has a retrieval system installed!"))
-		return FALSE
-	return ..()
-
-/obj/item/attachable/sling/Attach(obj/item/weapon/gun/G)
-	. = ..()
-	G.AddElement(/datum/element/drop_retrieval/gun, retrieval_slot)
-
-/obj/item/obj/item/attachable/sling/Detach(mob/user, obj/item/weapon/gun/detaching_gub, drop_attachment = TRUE)
-	. = ..()
-	detaching_gub.RemoveElement(/datum/element/drop_retrieval/gun, retrieval_slot)
-
 /obj/item/attachable/scope
 	name = "S8 4x telescopic scope"
 	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi'
