@@ -28,7 +28,7 @@
 	flags_ammo_behavior = AMMO_IGNORE_ARMOR|AMMO_HITS_TARGET_TURF
 
 	max_range = 6
-	damage = 35
+	damage = 40
 
 /datum/ammo/flamethrower/set_bullet_traits()
 	. = ..()
@@ -355,7 +355,7 @@
 	accuracy = HIT_ACCURACY_TIER_MAX
 	accurate_range = 12
 	max_range = 7
-	damage = 35
+	damage = 170
 	shell_speed = AMMO_SPEED_TIER_2
 
 /datum/ammo/rifle/sharp/on_embed(mob/embedded_mob, obj/limb/target_organ)
