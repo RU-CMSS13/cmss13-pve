@@ -24,7 +24,6 @@
 	flesh_color = "#907E4A"
 	speech_sounds = list('sound/voice/pred_click1.ogg', 'sound/voice/pred_click2.ogg')
 	speech_chance = 100
-	damage = 50
 	death_message = "clicks in agony and falls still, motionless and completely lifeless..."
 	darksight = 5
 	default_lighting_alpha = LIGHTING_PLANE_ALPHA_YAUTJA
