@@ -89,7 +89,7 @@
 	scatter = SCATTER_AMOUNT_TIER_8
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
 	scatter_unwielded = SCATTER_AMOUNT_TIER_2
-	damage_mult = BASE_BULLET_DAMAGE_MULT
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_5
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
 
 
@@ -161,7 +161,7 @@
 	scatter = SCATTER_AMOUNT_TIER_9
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
 	scatter_unwielded = SCATTER_AMOUNT_TIER_2
-	damage_mult = BASE_BULLET_DAMAGE_MULT
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_7
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
 	damage_falloff_mult = 0
 	fa_max_scatter = SCATTER_AMOUNT_TIER_5
@@ -274,6 +274,7 @@
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/scope/pve,
@@ -377,6 +378,7 @@
 	scatter = SCATTER_AMOUNT_TIER_10
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
 	scatter_unwielded = SCATTER_AMOUNT_TIER_4
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_3
 
 /obj/item/weapon/gun/rifle/m41aMK1/elite/unloaded
 	current_mag = null
@@ -388,6 +390,7 @@
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/flashlight,
+		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/scope/pve,
 		/obj/item/attachable/attached_gun/grenade/mk1,
@@ -549,6 +552,7 @@
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/scope/pve,
+		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/sling,
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/verticalgrip, // Under
@@ -591,7 +595,7 @@
 	scatter = SCATTER_AMOUNT_TIER_8
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_8
 	scatter_unwielded = SCATTER_AMOUNT_TIER_2
-	damage_mult = BASE_BULLET_DAMAGE_MULT
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_5
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
 	fa_max_scatter = SCATTER_AMOUNT_TIER_8
 
