@@ -290,7 +290,7 @@
 
 /datum/ammo/bullet/rifle/heavy/heap/sniper
 	name = "high explosive armor-piercing sniper bullet"
-	damage = 90 //match-grade munitions developing better velocity from the rifle
+	damage = 150 //match-grade munitions developing better velocity from the rifle
 	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_SNIPER|AMMO_IGNORE_COVER
 
 	accurate_range_min = 4
@@ -304,8 +304,8 @@
 /datum/ammo/bullet/rifle/heavy/incendiary
 	name = "incendiary sniper bullet"
 	damage_type = BRUTE
-	damage = 60
-	penetration = ARMOR_PENETRATION_TIER_4
+	damage = 150
+	penetration = ARMOR_PENETRATION_TIER_10
 	shrapnel_chance = 0
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
 	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_SNIPER|AMMO_IGNORE_COVER
@@ -338,7 +338,7 @@
 /datum/ammo/bullet/rifle/heavy/flak
 	name = "flak sniper bullet"
 	damage_type = BRUTE
-	damage = 55
+	damage = 150
 	damage_var_high = PROJECTILE_VARIANCE_TIER_8 //Documenting old code: This converts to a variance of 96-109% damage. -Kaga
 	penetration = 0
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
@@ -381,16 +381,16 @@
 	flags_ammo_behavior = AMMO_BALLISTIC
 	accurate_range_min = 4
 
-	damage = 55
+	damage = 95
 	scatter = -SCATTER_AMOUNT_TIER_8
-	penetration= ARMOR_PENETRATION_TIER_7
+	penetration= ARMOR_PENETRATION_TIER_5
 	shell_speed = AMMO_SPEED_TIER_7
 
 /datum/ammo/bullet/rifle/heavy/spec/incendiary
 	name = "high velocity incendiary 10x28 bullet"
 	flags_ammo_behavior = AMMO_BALLISTIC
 
-	damage = 40
+	damage = 95
 	accuracy = HIT_ACCURACY_TIER_4
 	penetration= ARMOR_PENETRATION_TIER_5
 
@@ -404,9 +404,9 @@
 	name = "high velocity impact 10x28 bullet"
 	flags_ammo_behavior = AMMO_BALLISTIC
 
-	damage = 40
+	damage = 95
 	accuracy = -HIT_ACCURACY_TIER_2
-	penetration = ARMOR_PENETRATION_TIER_10
+	penetration = ARMOR_PENETRATION_TIER_5
 
 /datum/ammo/bullet/rifle/heavy/spec/impact/on_hit_mob(mob/M, obj/projectile/P)
 	knockback(M, P, 32) // Can knockback basically at max range max range is 24 tiles...
@@ -437,8 +437,8 @@
 /datum/ammo/bullet/rifle/upp
 	name = "10x27 bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
-	damage = 50
-	penetration = ARMOR_PENETRATION_TIER_2
+	damage = 65
+	penetration = ARMOR_PENETRATION_TIER_3
 	accuracy = HIT_ACCURACY_TIER_3
 	shell_speed = AMMO_SPEED_TIER_6
 	effective_range_max = 10
@@ -452,12 +452,12 @@
 
 /datum/ammo/bullet/rifle/upp/ap
 	name = "armor-piercing 10x27 bullet"
-	damage = 43
-	penetration = ARMOR_PENETRATION_TIER_8
+	damage = 70
+	penetration = ARMOR_PENETRATION_TIER_7
 
 /datum/ammo/bullet/rifle/upp/ap/penetrating
 	name = "wall-penerating 10x27 bullet"
-	damage = 40
+	damage = 70
 	penetration = ARMOR_PENETRATION_TIER_10
 
 /datum/ammo/bullet/rifle/upp/ap/penetrating/set_bullet_traits()
@@ -469,8 +469,8 @@
 /datum/ammo/bullet/rifle/upp/heap
 	name = "high-explosive armor-piercing 10x27 bullet"
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
-	damage = 55
-	penetration = ARMOR_PENETRATION_TIER_8
+	damage = 90
+	penetration = ARMOR_PENETRATION_TIER_7
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_3
 
 /datum/ammo/bullet/rifle/upp/heap/mg
@@ -504,7 +504,7 @@
 
 /datum/ammo/bullet/rifle/upp/heap/mg/penetrating
 	name = "wall-penerating 10x27 bullet"
-	damage = 40
+	damage = 70
 	penetration = ARMOR_PENETRATION_TIER_10
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "bullet_blue"
@@ -559,8 +559,8 @@
 
 /datum/ammo/bullet/rifle/ag80/ap
 	name = "armor-piercing 9.7x16 bullet"
-	damage = 30
-	penetration = ARMOR_PENETRATION_TIER_7 // not as good as 10x24 AP but still impressive for calibre size
+	damage = 40
+	penetration = ARMOR_PENETRATION_TIER_4 // not as good as 10x24 AP but still impressive for calibre size
 
 /datum/ammo/bullet/rifle/ag80/rubber
 	name = "rubber 9.7x16 bullet"
@@ -571,8 +571,8 @@
 /datum/ammo/bullet/rifle/ag80/heap
 	name = "high-explosive armor-piercing 9.7x16 bullet"
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
-	damage = 45 //big damage, doesn't actually blow up because thats stupid.
-	penetration = ARMOR_PENETRATION_TIER_6
+	damage = 50 //big damage, doesn't actually blow up because thats stupid.
+	penetration = ARMOR_PENETRATION_TIER_4
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2 //thinner round should have less shrap potential vs the 10x24, no?
 
 /datum/ammo/bullet/rifle/ag80/heap/tracer
@@ -582,10 +582,10 @@
 
 /datum/ammo/bullet/rifle/lw317
 	name = "6x38 bullet"
-	damage = 35
-	penetration = ARMOR_PENETRATION_TIER_1
+	damage = 50
+	penetration = ARMOR_PENETRATION_TIER_2
 
 /datum/ammo/bullet/rifle/lw317/ap
 	name = "armor-piercing 6x38 bullet"
-	damage = 30
-	penetration = ARMOR_PENETRATION_TIER_5
+	damage = 55
+	penetration = ARMOR_PENETRATION_TIER_4
