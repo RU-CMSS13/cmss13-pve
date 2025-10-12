@@ -28,7 +28,7 @@
 
 /datum/ammo/bullet/sniper/crude
 	name = "crude sniper bullet"
-	damage = 42
+	damage = 50
 	penetration = -ARMOR_PENETRATION_TIER_2
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
@@ -38,20 +38,20 @@
 
 /datum/ammo/bullet/sniper/upp
 	name = "armor-piercing sniper bullet"
-	damage = 250
-	penetration = ARMOR_PENETRATION_TIER_10 //Instant deletion is fun.
+	damage = 200
+	penetration = ARMOR_PENETRATION_TIER_10 //Instant deletion isn't fun.
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/sniper/upp/heap
 	name = "high velocity armor-piercing sniper bullet"
-	damage = 300
+	damage = 250
 	penetration = ARMOR_PENETRATION_TIER_10
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/sniper/upp/flak
 	name = "flak sniper bullet"
-	damage = 300
-	penetration = ARMOR_PENETRATION_TIER_10
+	damage = 240
+	penetration = ARMOR_PENETRATION_TIER_7
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/sniper/upp/flak/on_hit_mob(mob/M,obj/projectile/P)
@@ -69,7 +69,7 @@
 /datum/ammo/bullet/sniper/upp_pve
 	name = "high-power sniper bullet" //Now used by hAI CLF type 88 users
 	damage = 180
-	penetration = ARMOR_PENETRATION_TIER_10
+	penetration = ARMOR_PENETRATION_TIER_9
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/sniper/anti_materiel
