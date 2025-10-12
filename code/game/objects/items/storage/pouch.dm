@@ -1270,7 +1270,7 @@
 /obj/item/storage/pouch/tools
 	name = "tools pouch"
 	desc = "It's designed to hold maintenance tools - screwdriver, wrench, cable coil, etc. It also has a hook for an entrenching tool or light replacer."
-	storage_slots = 5
+	storage_slots = 6
 	max_w_class = SIZE_MEDIUM
 	icon_state = "tools"
 	can_hold = list(
@@ -1305,7 +1305,7 @@
 	name = "tactical tools pouch"
 	desc = "This particular toolkit full of sharp, heavy objects was designed for breaking into things rather than fixing them. Still does the latter pretty well, though."
 	icon_state = "soctools"
-	storage_slots = 8
+	storage_slots = 9
 
 /obj/item/storage/pouch/tools/full/fill_preset_inventory()
 	new /obj/item/tool/screwdriver(src)

@@ -8,7 +8,7 @@
 	name = "revolver bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 
-	damage = 75
+	damage = 90
 	penetration = ARMOR_PENETRATION_TIER_3
 	accuracy = HIT_ACCURACY_TIER_2
 	shell_casing = /obj/effect/decal/ammo_casing
@@ -21,7 +21,7 @@
 
 /datum/ammo/bullet/revolver/marksman
 	name = "marksman revolver bullet"
-	damage = 90
+	damage = 95
 	shrapnel_chance = 0
 	damage_falloff = 0
 	accurate_range = 12
@@ -30,7 +30,7 @@
 /datum/ammo/bullet/revolver/heavy
 	name = "heavy revolver bullet"
 
-	damage = 80
+	damage = 95
 	penetration = ARMOR_PENETRATION_TIER_4
 	accuracy = HIT_ACCURACY_TIER_3
 
@@ -40,7 +40,7 @@
 
 /datum/ammo/bullet/revolver/incendiary
 	name = "incendiary revolver bullet"
-	damage = 75
+	damage = 95
 
 /datum/ammo/bullet/revolver/incendiary/set_bullet_traits()
 	..()
@@ -83,7 +83,7 @@
 	name = "heavy revolver bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	penetration = ARMOR_PENETRATION_TIER_1
-	damage = 70
+	damage = 95
 
 
 /datum/ammo/bullet/revolver/upp/shrapnel

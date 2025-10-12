@@ -241,6 +241,8 @@
 	armor_variation = 0
 	name = "\improper M4 pattern marine armor"
 	desc = "A well tinkered and crafted hybrid of Smart-Gunner mesh and M3 pattern plates. Robust, yet nimble, with room for all your pouches."
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	storage_slots = 4
@@ -348,6 +350,7 @@
 	icon_state = "7"
 	armor_variation = 0
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
@@ -394,7 +397,7 @@
 	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
-	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_rad = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_LOW
 	storage_slots = 2
 
@@ -646,12 +649,12 @@
 	max_heat_protection_temperature = HELMET_MAX_HEAT_PROT
 	blood_overlay_type = "armor"
 	armor_melee = CLOTHING_ARMOR_MEDIUM
-	armor_bullet = CLOTHING_ARMOR_MEDIUM
-	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
-	armor_energy = CLOTHING_ARMOR_NONE
-	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_laser = CLOTHING_ARMOR_MEDIUM
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	armor_bio = CLOTHING_ARMOR_MEDIUM
-	armor_rad = CLOTHING_ARMOR_MEDIUMLOW
+	armor_rad = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	movement_compensation = SLOWDOWN_ARMOR_LIGHT
 	siemens_coefficient = 0.7
@@ -892,7 +895,7 @@
 	armor_variation = 3
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
-	armor_bomb = CLOTHING_ARMOR_HIGHPLUS
+	armor_bomb = CLOTHING_ARMOR_ULTRAHIGHPLUS
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
@@ -933,7 +936,8 @@
 	desc = "Semi-experimental body armor system similar to M3, incorporating primarily carbon fiber instead of boron carbide. \nDesigned in a lovely olive green, slightly improved protection against blunt impact and biological hazards."
 	icon_state = "7"
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 	specialty = "B12 pattern marine"

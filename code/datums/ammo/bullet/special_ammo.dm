@@ -13,7 +13,7 @@
 
 	max_range = 12
 	accuracy = HIT_ACCURACY_TIER_4
-	damage = 36
+	damage = 60
 	penetration = 0
 
 /datum/ammo/bullet/smartgun/armor_piercing
@@ -33,7 +33,7 @@
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_7
 	accurate_range = 32
 	accuracy = HIT_ACCURACY_TIER_3
-	damage = 40
+	damage = 60
 	penetration = 0
 
 /datum/ammo/bullet/smartgun/dirty/armor_piercing
@@ -41,8 +41,8 @@
 
 	accurate_range = 22
 	accuracy = HIT_ACCURACY_TIER_3
-	damage = 30
-	penetration = ARMOR_PENETRATION_TIER_7
+	damage = 65
+	penetration = ARMOR_PENETRATION_TIER_8
 	damage_armor_punch = 3
 
 /datum/ammo/bullet/smartgun/dirty/impdet
@@ -59,7 +59,7 @@
 
 /datum/ammo/bullet/smartgun/holo_target //Royal marines smartgun bullet has only diff between regular ammo is this one does holostacks
 	name = "holo-targeting smartgun bullet"
-	damage = 30
+	damage = 60
 	/// inflicts this many holo stacks per bullet hit
 	var/holo_stacks = 15
 	/// modifies the default cap limit of 100 by this amount
@@ -77,7 +77,7 @@
 
 	accurate_range = 12
 	accuracy = HIT_ACCURACY_TIER_2
-	damage = 20
+	damage = 65
 	penetration = ARMOR_PENETRATION_TIER_8
 	damage_armor_punch = 1
 
@@ -87,7 +87,7 @@
 
 	accurate_range = 12
 	accuracy = HIT_ACCURACY_TIER_2
-	damage = 25
+	damage = 40
 	penetration = ARMOR_PENETRATION_TIER_4
 
 /datum/ammo/bullet/smartgun/holo_target/impdet/on_hit_mob(mob/entity, obj/projectile/bullet)
@@ -102,8 +102,8 @@
 
 	max_range = 7
 	accuracy = HIT_ACCURACY_TIER_7
-	damage = 35
-	penetration = ARMOR_PENETRATION_TIER_1
+	damage = 60
+	penetration = ARMOR_PENETRATION_TIER_2
 
 /datum/ammo/bullet/smartgun/aa	//The base smartgun-bullet is kinda a woeful stand-in for AA cannon rounds, this should beef it up a bit more without being too OTT
 	name = "anti-aircraft bullet"
@@ -114,7 +114,7 @@
 
 	max_range = 18
 	accuracy = HIT_ACCURACY_TIER_5
-	damage = 35
+	damage = 60
 	penetration = ARMOR_PENETRATION_TIER_6
 
 /datum/ammo/bullet/turret
@@ -128,16 +128,16 @@
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_8
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_8
 	max_range = 22
-	damage = 30
-	penetration = ARMOR_PENETRATION_TIER_1
+	damage = 50
+	penetration = ARMOR_PENETRATION_TIER_2
 	damage_armor_punch = 0
 	pen_armor_punch = 0
 	shell_speed = 2*AMMO_SPEED_TIER_6
 	accuracy = HIT_ACCURACY_TIER_5
 
 /datum/ammo/bullet/turret/upp
-	damage = 45
-	penetration = ARMOR_PENETRATION_TIER_2
+	damage = 75
+	penetration = ARMOR_PENETRATION_TIER_3
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_2
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_2
 
@@ -150,7 +150,7 @@
 	icon_state = "bullet" // Keeping it bog standard with the turret but allows it to be changed
 
 	accurate_range = 12
-	damage = 40
+	damage = 100
 	penetration= ARMOR_PENETRATION_TIER_10 //Bumped the penetration to serve a different role from sentries, MGs are a bit more offensive
 	accuracy = HIT_ACCURACY_TIER_5
 
@@ -173,8 +173,8 @@
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_RED //Red bullets to indicate friendly fire restriction
 	accurate_range = 10
-	damage =  80
-	penetration = ARMOR_PENETRATION_TIER_2
+	damage =  150
+	penetration = ARMOR_PENETRATION_TIER_10
 	shell_speed = AMMO_SPEED_TIER_2
 	max_range = 15
 	effective_range_max = 7
@@ -194,21 +194,21 @@
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
 	accurate_range = 12
-	damage = 35
-	penetration = ARMOR_PENETRATION_TIER_6
+	damage = 80
+	penetration = ARMOR_PENETRATION_TIER_9
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/minigun/New()
 	..()
 	if(SSticker.mode && MODE_HAS_FLAG(MODE_FACTION_CLASH))
-		damage = 15
+		damage = 80
 	else if(SSticker.current_state < GAME_STATE_PLAYING)
 		RegisterSignal(SSdcs, COMSIG_GLOB_MODE_PRESETUP, PROC_REF(setup_hvh_damage))
 
 /datum/ammo/bullet/minigun/proc/setup_hvh_damage()
 	SIGNAL_HANDLER
 	if(MODE_HAS_FLAG(MODE_FACTION_CLASH))
-		damage = 15
+		damage = 80
 
 /datum/ammo/bullet/minigun/upp
 	icon_state = "bullet_green"
@@ -227,7 +227,7 @@
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_8
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
 	accurate_range = 12
-	damage = 45 //7.62x51 is scary
+	damage = 110 //7.62x51 is scary
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
@@ -242,6 +242,6 @@
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_8
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
 	accurate_range = 14
-	damage = 45
+	damage = 110
 	penetration = ARMOR_PENETRATION_TIER_2
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2

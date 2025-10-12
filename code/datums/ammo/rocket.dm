@@ -16,7 +16,7 @@
 	accuracy = HIT_ACCURACY_TIER_2
 	accurate_range = 7
 	max_range = 11
-	damage = 15
+	damage = 50
 	shell_speed = AMMO_SPEED_TIER_2
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_VERY_SOFT_YELLOW

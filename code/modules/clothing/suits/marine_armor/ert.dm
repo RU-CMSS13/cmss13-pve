@@ -6,9 +6,9 @@
 	desc = "A heavily customized suit of M3 armor. Used by Marine Raiders."
 	icon_state = "marsoc"
 	armor_melee = CLOTHING_ARMOR_HIGH
-	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
 	armor_bomb = CLOTHING_ARMOR_VERYHIGH
-	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 	slowdown = SLOWDOWN_ARMOR_LIGHT
@@ -28,11 +28,11 @@
 	name = "\improper WY tactical armor"
 	desc = "A contender for service with the Royal Marine Commandos, it is presently, exclusively, field tested by Weyland-Yutani mercenaries."
 	icon_state = "pmc_armor"
-	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUM
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	armor_rad = CLOTHING_ARMOR_MEDIUM
-	storage_slots = 2
+	storage_slots = 3
 	slowdown = SLOWDOWN_ARMOR_LIGHT
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	allowed = list(
@@ -68,7 +68,7 @@
 	name = "\improper WY light tactical armor"
 	icon_state = "pmc_sniper"
 	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
 	armor_rad = CLOTHING_ARMOR_MEDIUM
@@ -129,9 +129,9 @@
 	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN|SMARTGUN_HARNESS
 	flags_bodypart_hidden = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
-	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
-	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
+	armor_laser = CLOTHING_ARMOR_MEDIUM
+	armor_energy = CLOTHING_ARMOR_MEDIUM
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	item_state_slots = list(WEAR_JACKET = "heavy_armor")
@@ -142,10 +142,10 @@
 	icon_state = "commando_armor"
 	slowdown = SLOWDOWN_ARMOR_MEDIUM
 	movement_compensation = SLOWDOWN_ARMOR_VERY_HEAVY
-	armor_melee = CLOTHING_ARMOR_HIGH
-	armor_bullet = CLOTHING_ARMOR_ULTRAHIGH
-	armor_laser = CLOTHING_ARMOR_MEDIUM
-	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_melee = CLOTHING_ARMOR_HIGHPLUS
+	armor_bullet = CLOTHING_ARMOR_ULTRAHIGHPLUS
+	armor_laser = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bomb = CLOTHING_ARMOR_VERYHIGH
 	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
@@ -160,8 +160,8 @@
 	slowdown = SLOWDOWN_ARMOR_MEDIUM
 	movement_compensation = SLOWDOWN_ARMOR_VERY_HEAVY
 	armor_melee = CLOTHING_ARMOR_VERYHIGH
-	armor_bullet = CLOTHING_ARMOR_ULTRAHIGH
-	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_ULTRAHIGHPLUS
+	armor_energy = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bomb = CLOTHING_ARMOR_VERYHIGH
 	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
@@ -240,10 +240,10 @@
 	min_cold_protection_temperature = HELMET_MIN_COLD_PROT
 	max_heat_protection_temperature = HELMET_MAX_HEAT_PROT
 	blood_overlay_type = "armor"
-	armor_melee = CLOTHING_ARMOR_MEDIUM
-	armor_bullet = CLOTHING_ARMOR_MEDIUM
-	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
-	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
+	armor_laser = CLOTHING_ARMOR_MEDIUM
+	armor_energy = CLOTHING_ARMOR_MEDIUM
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	armor_bio = CLOTHING_ARMOR_MEDIUM
 	armor_rad = CLOTHING_ARMOR_MEDIUM
@@ -260,9 +260,9 @@
 	slowdown = SLOWDOWN_ARMOR_MEDIUM
 	flags_inventory = BLOCKSHARPOBJ
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_energy = CLOTHING_ARMOR_MEDIUM
-	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
+	armor_energy = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_rad = CLOTHING_ARMOR_HIGHPLUS
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	flags_inventory = BLOCKSHARPOBJ
@@ -286,9 +286,9 @@
 	flags_inventory = BLOCKSHARPOBJ|SMARTGUN_HARNESS
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
 	armor_melee = CLOTHING_ARMOR_HIGH
-	armor_bullet = CLOTHING_ARMOR_HIGH
-	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
-	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
+	armor_laser = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_HIGH
@@ -333,7 +333,7 @@
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
 	slowdown = SLOWDOWN_ARMOR_LIGHT
 	armor_melee = CLOTHING_ARMOR_MEDIUM
-	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bomb = CLOTHING_ARMOR_LOW
 	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
 	armor_rad = CLOTHING_ARMOR_LOW
@@ -357,7 +357,7 @@
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
 	slowdown = SLOWDOWN_ARMOR_LIGHT
 	armor_melee = CLOTHING_ARMOR_MEDIUM
-	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bomb = CLOTHING_ARMOR_LOW
 	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
 	armor_rad = CLOTHING_ARMOR_LOW
@@ -383,7 +383,7 @@
 	flags_inventory = BLOCKSHARPOBJ|SMARTGUN_HARNESS
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
 	armor_melee = CLOTHING_ARMOR_HIGH
-	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
 	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
 	armor_energy = CLOTHING_ARMOR_MEDIUM
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
@@ -437,7 +437,7 @@
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
-	storage_slots = 2
+	storage_slots = 4
 
 //this one is for CLF
 /obj/item/clothing/suit/storage/militia
@@ -776,8 +776,8 @@
 /obj/item/clothing/suit/storage/marine/veteran/royal_marine/light //RMC Rifleman Armor
 	icon_state = "rmc_light"
 	item_state = "rmc_light"
-	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	slowdown = SLOWDOWN_ARMOR_LIGHT

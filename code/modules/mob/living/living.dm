@@ -239,12 +239,12 @@
 				. = TRUE
 			else
 				/// If the living mob is skilled in CQC, they will get a bonus to escape the grab, 7% per skill level, or 35% if maxed out.
-				var/skill_bonus = (skills?.get_skill_level(SKILL_CQC)) * 7
+				var/skill_bonus = (skills?.get_skill_level(SKILL_CQC)) * 10
 				/// Then we need to determine if they loosen the grip or escape outright, or struggle in vain.
-				if(prob((65 - SKILL_CQC_MAX * 7) + skill_bonus)) /// At most a 65% chance to escape outright.
+				if(prob((65 - SKILL_CQC_MAX * 10) + skill_bonus)) /// At most a 65% chance to escape outright.
 					. = TRUE
 				else
-					if(prob((100 - SKILL_CQC_MAX * 7) + skill_bonus)) /// Maximum 100% to loosen the grip.
+					if(prob((100 - SKILL_CQC_MAX * 10) + skill_bonus)) /// Maximum 100% to loosen the grip.
 						visible_message(SPAN_DANGER("[src] loosens [pulledby]'s grip!"), null, null, 5)
 						pulledby.grab_level = GRAB_PASSIVE /// Loosens the grab into a passive grab, being able to escape on the next go.
 					else
