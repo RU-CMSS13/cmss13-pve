@@ -38,4 +38,4 @@ chmod +x tools/bootstrap/node  # Workaround for https://github.com/tgstation/tgs
 env TG_BOOTSTRAP_CACHE="$original_dir" TG_BOOTSTRAP_NODE_LINUX=1 CBT_BUILD_MODE="TGS" tools/bootstrap/node tools/build/build.js
 
 echo "Running changelog script..."
-tools/bootstrap/python .github/ss13_genchangelog.py html/changelogs
+python3 .github/ss13_genchangelog.py html/changelogs
