@@ -343,6 +343,7 @@
 		list("BELTS", -1, null, null),
 		list("WY-TM402 Pattern Ammo Load Rig", round(scale * 15), /obj/item/storage/belt/marine/wy, VENDOR_ITEM_REGULAR),
 		list("M276 Pattern M40 Grenade Rig", round(scale * 10), /obj/item/storage/belt/grenade, VENDOR_ITEM_REGULAR),
+		list("WY-TM406 pattern Shotgun Shell Rig", round(scale * 10), /obj/item/storage/belt/shotgun/wy, VENDOR_ITEM_REGULAR),
 		list("WY-TM892 Pattern General Pistol Holster Rig", round(scale * 15), /obj/item/storage/belt/gun/m4a3/wy, VENDOR_ITEM_REGULAR),
 		list("M276 Pattern M82F Holster Rig", round(scale * 5), /obj/item/storage/belt/gun/flaregun, VENDOR_ITEM_REGULAR),
 		list("WY-TM612 General Utility Pouch", round(scale * 15), /obj/item/storage/backpack/general_belt/wy, VENDOR_ITEM_REGULAR),
@@ -580,7 +581,6 @@
 		list("Combat Boots", round(scale * 10), /obj/item/clothing/shoes/marine/rmc/knife, VENDOR_ITEM_REGULAR),
 		list("Royal Marine Uniform", round(scale * 10), /obj/item/clothing/under/marine/veteran/royal_marine, VENDOR_ITEM_REGULAR),
 		list("Combat Gloves", round(scale * 10), /obj/item/clothing/gloves/marine, VENDOR_ITEM_REGULAR),
-		list("Mk16 Tactical Helmet", round(scale * 10), /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc, VENDOR_ITEM_REGULAR),
 		list("Tactical Beanie", round(scale * 10), /obj/item/clothing/head/beanie/royal_marine, VENDOR_ITEM_REGULAR),
 		list("Radio Headset", round(scale * 10), /obj/item/device/radio/headset/almayer/marine/solardevils/rmc, VENDOR_ITEM_REGULAR),
 
@@ -592,6 +592,8 @@
 		list("Waist Holster", round(scale * 2), /obj/item/clothing/accessory/storage/holster/waist, VENDOR_ITEM_REGULAR),
 
 		list("ARMOR", -1, null, null),
+		list("Mk16 Tactical Helmet", round(scale * 10), /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc, VENDOR_ITEM_REGULAR),
+		list("Mk10 Tactical Open Helmet", round(scale * 10), /obj/item/clothing/head/helmet/marine/veteran/pmc/rmc, VENDOR_ITEM_REGULAR),
 		list("Kestrel Armoured Cuirass", round(scale * 10), /obj/item/clothing/suit/marine/veteran/royal_marine, VENDOR_ITEM_REGULAR),
 		list("HASP armor plate", round(scale * 5), /obj/item/clothing/accessory/health/ceramic_plate/twe, VENDOR_ITEM_REGULAR),
 		list("Kestrel Shoulder Pads", round(scale * 10), /obj/item/clothing/accessory/twepads, VENDOR_ITEM_REGULAR),
@@ -612,6 +614,7 @@
 		list("Flare Pouch (Full)", floor(scale * 5), /obj/item/storage/pouch/flare/rmc/full, VENDOR_ITEM_REGULAR),
 		list("Large Magazine Pouch", floor(scale * 5), /obj/item/storage/pouch/magazine/large, VENDOR_ITEM_REGULAR),
 		list("Large General Pouch", floor(scale * 5), /obj/item/storage/pouch/general/large, VENDOR_ITEM_REGULAR),
+		list("Large Shotgun Shell Pouch", floor(scale * 5), /obj/item/storage/pouch/shotgun/large, VENDOR_ITEM_REGULAR),
 		list("Large Pistol Magazine Pouch", floor(scale * 5), /obj/item/storage/pouch/magazine/pistol/large, VENDOR_ITEM_REGULAR),
 		list("Pistol Pouch", floor(scale * 5), /obj/item/storage/pouch/pistol, VENDOR_ITEM_REGULAR),
 		list("Explosive Pouch", floor(scale * 2), /obj/item/storage/pouch/explosive, VENDOR_ITEM_REGULAR),
@@ -619,6 +622,7 @@
 
 		list("MASK", -1, null, null, null),
 		list("L7 gasmask", round(scale * 15), /obj/item/clothing/mask/gas/pmc/royal_marine, VENDOR_ITEM_REGULAR),
+		list("Balaclava", round(scale * 15), /obj/item/clothing/mask/rebreather/scarf, VENDOR_ITEM_REGULAR),
 
 		list("MISCELLANEOUS", -1, null, null, null),
 		list("Ballistic goggles", round(scale * 10), /obj/item/clothing/glasses/mgoggles/upp, VENDOR_ITEM_REGULAR),
@@ -626,6 +630,8 @@
 		list("Firearm Lubricant", round(scale * 15), /obj/item/prop/helmetgarb/gunoil, VENDOR_ITEM_REGULAR),
 		list("Bedroll", round(scale * 20), /obj/item/roller/bedroll, VENDOR_ITEM_REGULAR),
 		list("Canteen", round(scale * 20), /obj/item/reagent_container/food/drinks/flask/canteen, VENDOR_ITEM_REGULAR),
+		list("Helmet platemask", round(scale * 15), /obj/item/prop/helmetgarb/rmc_platemask, VENDOR_ITEM_REGULAR),
+		list("Helmet goggles", round(scale * 15), /obj/item/prop/helmetgarb/rmc_goggles, VENDOR_ITEM_REGULAR),
 
 		list("PATCHES", -1, null, null, null),
 		list("Marine Space Force Herculis patch", round(scale * 10), /obj/item/clothing/accessory/patch/msf_patch, VENDOR_ITEM_REGULAR),
