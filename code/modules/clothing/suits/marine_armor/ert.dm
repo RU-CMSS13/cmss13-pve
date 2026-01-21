@@ -357,6 +357,24 @@
 	var/obj/item/clothing/accessory/upppads/legs/greaves = new()
 	src.attach_accessory(null, greaves, TRUE)
 
+/obj/item/clothing/suit/marine/smartgunner/upp/light
+	name = "\improper 6B72-06 pattern UPP armor"
+	desc = "Vintage UPP armor system Vadasz. Provides basic ballistic/shrapnel protection for armor crew or rear echelon forces with wraparound soft armor and ceramic composite chestplate. Lightweight, but lacking protection class and coverage. Still issued to the Territorial Guard and People's Armed Police tactical teams, and utilized by some spetznaz. Contains compact fire control computers and an encrypted data processing unit in the lower back, as well as an armored cable to connect to the machine gun."
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
+	slowdown = SLOWDOWN_ARMOR_LOWHEAVY
+	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_LOW
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+	armor_rad = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	time_to_unequip = 10
+	time_to_equip = 10
+	flags_inventory = SMARTGUN_HARNESS
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PLATE3, ACCESSORY_SLOT_ARMOR_C, ACCESSORY_SLOT_DECORKNEE)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_ARMOR_C, ACCESSORY_SLOT_PLATE3, ACCESSORY_SLOT_DECORKNEE)
+	specialty = "\improper 6B72-06 harness"
+
 /obj/item/clothing/suit/marine/faction/UPP/CANC
 	name = "\improper Type 12 CANC armor"
 	desc = "Vintage CANC armor system. Provides basic ballistic/shrapnel protection."

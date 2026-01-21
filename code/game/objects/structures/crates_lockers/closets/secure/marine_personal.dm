@@ -110,6 +110,35 @@
 	new /obj/item/clothing/suit/storage/jacket/marine/upp/naval(src)
 	new /obj/item/clothing/suit/storage/jacket/marine/upp(src)
 
+// ==UPP FORECON== //
+
+/obj/structure/closet/secure_closet/marine_personal/grom/spawn_gear()
+	new /obj/item/clothing/under/marine/veteran/UPP(src)
+	new /obj/item/clothing/shoes/marine/upp(src)
+	new /obj/item/clothing/accessory/patch/upp/grom(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils/upp(src)
+
+/obj/structure/closet/secure_closet/marine_personal/grom/rifleman
+	job = JOB_SQUAD_MARINE
+
+/obj/structure/closet/secure_closet/marine_personal/grom/engi
+	job = JOB_SQUAD_ENGI
+
+/obj/structure/closet/secure_closet/marine_personal/grom/smartgunner
+	job = JOB_SQUAD_SMARTGUN
+
+/obj/structure/closet/secure_closet/marine_personal/grom/corpsman
+	job = JOB_SQUAD_MEDIC
+
+/obj/structure/closet/secure_closet/marine_personal/grom/squad_leader
+	job = JOB_SQUAD_TEAM_LEADER
+
+/obj/structure/closet/secure_closet/marine_personal/grom/platoon_leader
+	job = JOB_SQUAD_LEADER
+
+/obj/structure/closet/secure_closet/marine_personal/grom/rto
+	job = JOB_SQUAD_RTO_GROM
+
 // ==USCM FORECON== //
 
 /obj/structure/closet/secure_closet/marine_personal/forecon/spawn_gear()

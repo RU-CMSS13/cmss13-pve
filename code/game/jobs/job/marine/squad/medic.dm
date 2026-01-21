@@ -102,6 +102,23 @@
 	if(option == CPL_VARIANT)
 		gear_preset = gear_preset_secondary
 
+/datum/job/marine/medic/ai/grom
+	title = JOB_SQUAD_MEDIC_GROM
+	gear_preset = /datum/equipment_preset/uscm/medic/grom
+	gear_preset_secondary = /datum/equipment_preset/uscm/medic/grom/corporal
+	gear_preset_tertiary = /datum/equipment_preset/uscm/medic/grom/senior_private
+	gear_preset_quaternary = /datum/equipment_preset/uscm/medic/grom/private
+	job_options = list(PVT_VARIANT = "PVT", SR_PVT_VARIANT = "SrPVT", CPL_VARIANT = "CPL", JSGT_VARIANT = "JrSGT")
+
+/datum/job/marine/medic/ai/grom/handle_job_options(option)
+	gear_preset = initial(gear_preset)
+	if(option == PVT_VARIANT)
+		gear_preset = gear_preset_quaternary
+	if(option == SR_PVT_VARIANT)
+		gear_preset = gear_preset_tertiary
+	if(option == CPL_VARIANT)
+		gear_preset = gear_preset_secondary
+
 /datum/job/marine/medic/ai/forecon
 	title = JOB_SQUAD_MEDIC_FORECON
 	gear_preset = /datum/equipment_preset/uscm/medic/forecon
@@ -124,6 +141,10 @@
 	squad = SQUAD_UPP
 	job = /datum/job/marine/medic/ai/upp
 
+/obj/effect/landmark/start/marine/medic/grom
+	name = JOB_SQUAD_MEDIC_GROM
+	squad = SQUAD_GROM
+	job = /datum/job/marine/medic/ai/grom
 
 /datum/job/marine/medic/ai/pmc
 	title = JOB_PMCPLAT_MEDIC

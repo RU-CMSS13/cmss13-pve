@@ -321,6 +321,11 @@
 	desc = "A supply crate containing two crates of flares."
 	supplies = list(/obj/item/ammo_box/magazine/misc/flares = 2)
 
+/obj/structure/largecrate/supply/supplies/flares/upp
+	name = "Flare supply crate (x320)"
+	desc = "A supply crate containing two crates of flares."
+	supplies = list(/obj/item/ammo_box/magazine/misc/flares/upp = 2)
+
 /obj/structure/largecrate/supply/supplies/metal
 	name = "metal sheets supply crate (x200)"
 	desc = "A supply crate containing four fifty stacks of metal sheets."
@@ -350,6 +355,11 @@
 	name = "\improper W-Y brand rations crate (x60)"
 	desc = "A supply crate containing sixty W-Y brand ration packets."
 	supplies = list(/obj/item/ammo_box/magazine/misc/mre/wy = 5)
+
+/obj/structure/largecrate/supply/supplies/mre/upp
+	name = "\improper UPP MRE crate (x60)"
+	desc = "A supply crate containing sixty UPP MRE packets."
+	supplies = list(/obj/item/ammo_box/magazine/misc/mre/upp = 5)
 
 /obj/structure/largecrate/supply/supplies/wy_emergency_food
 	name = "\improper WY emergency nutrition briquettes crate (x100)"

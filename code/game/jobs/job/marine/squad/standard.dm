@@ -74,6 +74,19 @@
 	if(option == PVT_VARIANT)
 		gear_preset = gear_preset_secondary
 
+/datum/job/marine/standard/ai/grom
+	title = JOB_SQUAD_MARINE_GROM
+	total_positions = 2
+	spawn_positions = 2
+	gear_preset = /datum/equipment_preset/uscm/pfc/grom
+	gear_preset_secondary = /datum/equipment_preset/uscm/pfc/grom/private
+	job_options = list(PVT_VARIANT = "PVT", SR_PVT_VARIANT = "SrPVT")
+
+/datum/job/marine/standard/ai/grom/handle_job_options(option)
+	gear_preset = initial(gear_preset)
+	if(option == PVT_VARIANT)
+		gear_preset = gear_preset_secondary
+
 /datum/job/marine/standard/ai/forecon
 	title = JOB_SQUAD_MARINE_FORECON
 	total_positions = 2
@@ -106,11 +119,36 @@
 	if(option == LCPL_VARIANT)
 		gear_preset = gear_preset_secondary
 
+/datum/job/marine/standard/ai/rto/grom
+	total_positions = 1
+	spawn_positions = 1
+	title = JOB_SQUAD_RTO_GROM
+	gear_preset = /datum/equipment_preset/uscm/rto/grom
+	gear_preset_secondary = /datum/equipment_preset/uscm/rto/grom/lance_corporal
+	gear_preset_quaternary = /datum/equipment_preset/uscm/rto/grom/pfc
+	job_options = list(PFC_VARIANT = "PVT", LCPL_VARIANT = "SrPVT", CPL_VARIANT = "JrSGT")
+
+/datum/job/marine/standard/ai/rto/grom/handle_job_options(option)
+	gear_preset = initial(gear_preset)
+	if(option == PVT_VARIANT)
+		gear_preset = gear_preset_tertiary
+	if(option == LCPL_VARIANT)
+		gear_preset = gear_preset_secondary
+
 /obj/effect/landmark/start/marine/upp
 	name = JOB_SQUAD_MARINE_UPP
 	squad = SQUAD_UPP
 	job = /datum/job/marine/standard/ai/upp
 
+/obj/effect/landmark/start/marine/grom
+	name = JOB_SQUAD_MARINE_GROM
+	squad = SQUAD_GROM
+	job = /datum/job/marine/standard/ai/grom
+
+/obj/effect/landmark/start/marine/rto/grom
+	name = JOB_SQUAD_RTO_GROM
+	squad = SQUAD_GROM
+	job = /datum/job/marine/standard/ai/rto/grom
 
 /datum/job/marine/standard/ai/pmc
 	title = JOB_PMCPLAT_STANDARD

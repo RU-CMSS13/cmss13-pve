@@ -17,6 +17,7 @@
 #define SQUAD_ARMY "US Army"
 #define SQUAD_UPP "Red Dawn"
 #define SQUAD_UPP_2 "Golden Embers"
+#define SQUAD_GROM "Grom"
 #define SQUAD_PMCPLT "AZURE-15"
 #define SQUAD_PMCPLT_2 "VIRIDIAN-22"
 #define SQUAD_PMCPLT_SMALL "AZURE-16"
@@ -43,6 +44,14 @@
 #define JOB_SQUAD_TEAM_LEADER_UPP "Squad Sergeant"
 #define JOB_SQUAD_SMARTGUN_UPP "Machinegunner"
 #define JOB_SO_UPP "UPP Platoon Commander"
+
+#define JOB_SQUAD_MARINE_GROM "GROM Rifleman"
+#define JOB_SQUAD_ENGI_GROM "GROM Sapper"
+#define JOB_SQUAD_SMARTGUN_GROM "GROM Machinegunner"
+#define JOB_SQUAD_MEDIC_GROM "GROM Sanitar"
+#define JOB_SQUAD_RTO_GROM "GROM Radio Telephone Operator"
+#define JOB_SQUAD_TEAM_LEADER_GROM "GROM Assistant Squad Leader"
+#define JOB_SQUAD_LEADER_GROM "GROM Squad Leader"
 
 #define JOB_SQUAD_TEAM_LEADER_FORECON "Assistant Recon Squad Leader"
 #define JOB_SQUAD_LEADER_FORECON  "Recon Squad Leader"

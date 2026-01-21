@@ -689,6 +689,13 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 							S.put_marine_in_squad(H) //fav squad has a spot for us.
 							return
 
+			if(JOB_SQUAD_RTO_GROM)
+				for(var/datum/squad/S in mixed_squads)
+					if(S.usable && S.roundstart)
+						if(pref_squad_name && S.name == pref_squad_name)
+							S.put_marine_in_squad(H) //fav squad has a spot for us.
+							return
+
 						if(!lowest)
 							lowest = S
 		if(!lowest)
