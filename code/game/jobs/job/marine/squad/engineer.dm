@@ -73,6 +73,18 @@
 /datum/job/marine/engineer/ai/get_total_positions(latejoin=0)
 	return latejoin ? total_positions : spawn_positions
 
+/datum/job/marine/engineer/ai/grom
+	total_positions = 1
+	spawn_positions = 1
+	title = JOB_SQUAD_ENGI_GROM
+	gear_preset = /datum/equipment_preset/uscm/engineer/grom
+	gear_preset_secondary = /datum/equipment_preset/uscm/engineer/grom/lesser_rank
+
+/obj/effect/landmark/start/marine/engineer/grom
+	name = JOB_SQUAD_ENGI_GROM
+	squad = SQUAD_GROM
+	job = /datum/job/marine/engineer/ai/grom
+
 /datum/job/marine/engineer/ai/rmc
 	total_positions = 1
 	spawn_positions = 1
