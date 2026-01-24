@@ -545,6 +545,7 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/WY/machineguns.dmi'
 	icon_state = "l56d"
 	item_state = "l56d"
+	drain = 30	//Slightly more power effictient than the basic smartgun
 	item_icons = list(
 		WEAR_BACK = 'icons/mob/humans/onmob/clothing/suit_storage/guns_by_type/smartguns.dmi',
 		WEAR_J_STORE = 'icons/mob/humans/onmob/clothing/suit_storage/guns_by_type/smartguns.dmi',
@@ -563,6 +564,10 @@
 		/datum/action/item_action/smartgun/toggle_lethal_mode,
 		/datum/action/item_action/smartgun/toggle_recoil_compensation,
 	)
+
+/obj/item/weapon/gun/smartgun/l56a2/Initialize(mapload, ...)
+	. = ..()
+	MD.iff_signal = FACTION_PMC
 
 /obj/item/weapon/gun/smartgun/l56a2/elite
 	name = "\improper L56A2D 'Dirty' smartgun"

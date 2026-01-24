@@ -120,11 +120,6 @@
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/attached_gun/flamer/advanced,
 	)
-	random_spawn_muzzle = list(
-		/obj/item/attachable/suppressor,
-		/obj/item/attachable/bayonet/wy,
-		/obj/item/attachable/extended_barrel,
-	)
 	random_spawn_chance = 100
 
 /obj/item/weapon/gun/rifle/m41a/elite/set_gun_config_values()

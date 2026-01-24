@@ -48,8 +48,8 @@
 	gear_preset = /datum/equipment_preset/wy/manager/director
 	supervisors = "Weyland-Yutani Directorate"
 
-
 // PMCS //
+
 /datum/job/special/wey_yu/pmc
 	supervisors = "Weyland-Yutani PMC Dispatch"
 

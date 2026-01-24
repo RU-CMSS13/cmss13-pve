@@ -1091,11 +1091,11 @@ GLOBAL_LIST_EMPTY_TYPED(crewmonitor, /datum/crewmonitor)
 				JOB_PMC_MEDIC = 73,
 				JOB_PMC_STANDARD = 75,
 
-				// 70-79 W-Y Commando Combat Team
-				JOB_WY_COMMANDO_STANDARD = 70,
-				JOB_WY_COMMANDO_LEADER= 71,
-				JOB_WY_COMMANDO_GUNNER = 72,
-				JOB_WY_COMMANDO_DOGCATHER = 73,
+				// 80-89 W-Y Commando Combat Team
+				JOB_WY_COMMANDO_LEADER= 80,
+				JOB_WY_COMMANDO_GUNNER = 81,
+				JOB_WY_COMMANDO_DOGCATHER = 82,
+				JOB_WY_COMMANDO_STANDARD = 83,
 
 				// ANYTHING ELSE = UNKNOWN_JOB_ID, Unknowns/custom jobs will appear after civilians, and before stowaways
 				JOB_STOWAWAY = 999,

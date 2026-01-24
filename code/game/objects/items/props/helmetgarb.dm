@@ -438,7 +438,7 @@
 /obj/item/prop/helmetgarb/helmet_nvg/proc/change_view(mob/M, new_size)
 	SIGNAL_HANDLER
 
-	if(new_size > 7) // cannot use binos with NVG
+	if(new_size > 20)
 		toggle_nods(M)
 
 /obj/item/prop/helmetgarb/helmet_nvg/proc/break_nvg(mob/living/carbon/human/user, list/slashdata, mob/living/carbon/xenomorph/Xeno) //xenos can break NVG if aim head

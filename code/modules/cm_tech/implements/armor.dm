@@ -186,8 +186,9 @@
 /obj/item/clothing/accessory/health/ceramic_plate/twe
 	name = "HASP armor plate"
 	desc = "Hyper Advanced Shield Plate is a modular clip-on armor plate, designed to provide additional protection for RMC combat personell, gives you extremely good protection against any bullet types, stops full metal jacket, armor piercing and even HEAP rounds. This plate includes titanium and can stop even super sonic rounds."
-	icon_state = "regular2_100"
-	base_icon_state = "regular2"
+	icon_state = "rmc_armor_plate_100"
+	base_icon_state = "rmc_armor_plate"
+	overlay_state = "rmc_armor_plate_100"
 	slot = ACCESSORY_SLOT_PLATE2
 	armor_health = 350
 	armor_maxhealth = 350

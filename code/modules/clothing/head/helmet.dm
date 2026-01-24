@@ -1060,6 +1060,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
 	flags_marine_helmet = HELMET_DAMAGE_OVERLAY|HELMET_GARB_OVERLAY
+	built_in_visors = list(new /obj/item/device/helmet_visor/pmc)
+	start_down_visor_type = /obj/item/device/helmet_visor/pmc
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/rmc
 	desc = "Standard issue high molecular density polymer combat helmet used by RMC. Designed by Weyland-Yutani, initially as a hard hat, the project was eventually retrofitted into a cheap, reliable combat helmet system that incorporates a tactical camera, IFF signal transponder, and heads up display lens. Also features white/black hot IR viewing modes from the camera system."
@@ -1087,6 +1089,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
 	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR
 	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+	built_in_visors = list(new /obj/item/device/helmet_visor/pmc/alt)
+	start_down_visor_type = /obj/item/device/helmet_visor/pmc/alt
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc
 	name = "\improper Mk16 tactical helmet"
@@ -1114,6 +1118,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	light_range = 6
 	light_system = MOVABLE_LIGHT
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
+	built_in_visors = null
+	start_down_visor_type = null
 	var/atom/movable/marine_light/light_holder
 	var/flashlight_cooldown = 0 //Cooldown for toggling the light
 
@@ -1342,9 +1348,12 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 /obj/item/clothing/head/helmet/marine/veteran/pmc/corporate
 	name = "\improper WY corporate security helmet"
 	desc = "A basic skull-helm worn by corporate security assets, graded to protect your head from an unruly scientist armed with a crowbar."
-	icon = 'icons/mob/humans/onmob/contained/wy_goons.dmi'
-	icon_state = "helmet"
-	item_state = "helmet"
+	icon = 'icons/obj/items/clothing/hats/hats_by_faction/WY.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/WY.dmi'
+	)
+	icon_state = "sec_helmet"
+	item_state = "sec_helmet"
 	armor_melee = CLOTHING_ARMOR_MEDIUM
 	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
 	armor_laser = CLOTHING_ARMOR_LOW
@@ -1352,12 +1361,54 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_bomb = CLOTHING_ARMOR_NONE
 	armor_bio = CLOTHING_ARMOR_NONE
 	armor_rad = CLOTHING_ARMOR_NONE
-	contained_sprite = TRUE
+	built_in_visors = null
+	start_down_visor_type = null
+
+/obj/item/clothing/head/helmet/marine/veteran/pmc/corporate/ppo
+	icon_state = "ppo_helmet"
+	item_state = "ppo_helmet"
+
+/obj/item/clothing/head/helmet/marine/veteran/pmc/corporate/medic
+	desc = "A basic skull-helm worn by corporate security assets. This variant lacks a visor, granting the wearer a better view of any potential patients."
+	icon_state = "med_helmet"
+	item_state = "med_helmet"
+	built_in_visors = list(new /obj/item/device/helmet_visor/medical/advanced)
+	start_down_visor_type = /obj/item/device/helmet_visor/medical/advanced
+
+/obj/item/clothing/head/helmet/marine/veteran/pmc/corporate/engi
+	name = "\improper WY corporate security technician helmet"
+	icon_state = "eng_helmet"
+	item_state = "eng_helmet"
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/corporate/lead
 	desc = "A basic skull-helm worn by corporate security assets. This variant is worn by low-level guards that have too much brainmatter to fit into the old one. Or so they say."
-	icon_state = "lead_helmet"
-	item_state = "lead_helmet"
+	icon_state = "sec_lead_helmet"
+	item_state = "sec_lead_helmet"
+
+/obj/item/clothing/head/helmet/marine/veteran/pmc/corporate/kutjevo
+	desc = "A basic skull-helm worn by corporate security assets. This variant comes with a wider brim to protect the user from the harsh climate of the desert."
+	icon_state = "sec_helmet_kutjevo"
+	item_state = "sec_helmet_kutjevo"
+
+/obj/item/clothing/head/helmet/marine/veteran/pmc/corporate/kutjevo/medic
+	desc = "A basic skull-helm worn by corporate security assets. This variant comes with a wider brim to protect the user from the harsh climate of the desert and has a medical cross across the front."
+	icon_state = "sec_medic_helmet_kutjevo"
+	item_state = "sec_medic_helmet_kutjevo"
+
+/obj/item/clothing/head/helmet/marine/veteran/pmc/corporate/hybrisa
+	desc = "A basic skull-helm worn by corporate security assets. This variant has wider protective visor for work in urban enviroment."
+	icon_state = "sec_helmet_hybrisa"
+	item_state = "sec_helmet_hybrisa"
+
+/obj/item/clothing/head/helmet/marine/veteran/pmc/corporate/hybrisa/medic
+	desc = "A basic skull-helm worn by corporate security assets. This variant has wider protective visor for work in urban enviroment and has a medical cross across the front."
+	icon_state = "sec_medic_helmet_hybrisa"
+	item_state = "sec_medic_helmet_hybrisa"
+
+/obj/item/clothing/head/helmet/marine/veteran/pmc/corporate/hybrisa/lead
+	desc = "A basic skull-helm worn by corporate security assets. This variant has wider protective visor for work in urban enviroment. Also is worn by low-level guards that have too much brainmatter to fit into the old one. Or so they say."
+	icon_state = "sec_lead_helmet_hybrisa"
+	item_state = "sec_lead_helmet_hybrisa"
 
 //FIORINA / UA RIOT CONTROL HELMET//
 

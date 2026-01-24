@@ -75,14 +75,6 @@
 	prefix = "OPL."
 	pay_multiplier = 3.5
 
-
-/datum/paygrade/pmc/elitelead
-	paygrade = PAY_SHORT_PMC_ETL
-	name = "Elite Team Leader"
-	prefix = "ETML."
-	pay_multiplier = 5.5
-	officer_grade = GRADE_OFFICER
-
 /datum/paygrade/pmc/director
 	paygrade = PAY_SHORT_PMC_DIR
 	name = "Site Director"

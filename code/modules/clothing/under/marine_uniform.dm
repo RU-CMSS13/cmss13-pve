@@ -446,6 +446,10 @@
 /obj/item/clothing/under/marine/veteran/pmc
 	name = "\improper PMC fatigues"
 	desc = "A white set of fatigues, designed for private security operators. The symbol of the Weyland-Yutani corporation is emblazed on the suit."
+	icon = 'icons/obj/items/clothing/uniforms/uniforms_by_faction/WY.dmi'
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_faction/WY.dmi',
+	)
 	icon_state = "pmc_jumpsuit"
 	worn_state = "pmc_jumpsuit"
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
@@ -483,11 +487,10 @@
 	worn_state = "guard_jumpsuit"
 
 /obj/item/clothing/under/marine/veteran/pmc/apesuit
-	name = "\improper PMC apesuit uniform"
-	desc = "An armored uniform worn by Weyland-Yutani dog catchers. It is well protected while remaining light and comfortable."
+	name = "\improper W-Y commando Apesuit uniform"
+	desc = "An armored uniform worn by Weyland-Yutani elite commandos. It is well protected while remaining light and comfortable."
 	icon_state = "ape_jumpsuit"
 	worn_state = "ape_jumpsuit"
-	flags_inventory = BLOCKGASEFFECT
 
 /obj/item/clothing/under/marine/veteran/pmc/combat_android
 	name = "\improper W-Y android combat uniform"
@@ -502,21 +505,56 @@
 	worn_state = "invis_android_uniform"
 
 /obj/item/clothing/under/marine/veteran/pmc/corporate
-	name = "\improper WY corporate security uniform"
+	name = "\improper W-Y corporate security uniform"
 	desc = "An armored uniform worn by Weyland-Yutani corporate security members. This variant is commonly worn by what are known as 'goons'."
-	icon = 'icons/mob/humans/onmob/contained/wy_goons.dmi'
-	icon_state = "uniform"
-	item_state = "uniform"
-	worn_state = "uniform"
-	contained_sprite = TRUE
-	item_state_slots = null
+	icon_state = "sec_uniform"
+	worn_state = "sec_uniform"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
 
+/obj/item/clothing/under/marine/veteran/pmc/corporate/medic //TODO: make this an armband accessory instead of a jumpsuit
+	name = "\improper W-Y corporate security medic uniform"
+	desc = "An armored uniform worn by Weyland-Yutani corporate security members. This variant has a red armband denoting the wearer's medical purpose."
+	icon_state = "med_uniform"
+	item_state = "med_uniform"
+	worn_state = "med_uniform"
+
+/obj/item/clothing/under/marine/veteran/pmc/corporate/engineer //TODO: make this an armband accessory instead of a jumpsuit
+	name = "\improper W-Y corporate security engineer uniform"
+	desc = "An armored uniform worn by Weyland-Yutani corporate security members. This variant has a yellow armband denoting the wearer's technical purpose."
+	icon_state = "eng_uniform"
+	item_state = "eng_uniform"
+	worn_state = "eng_uniform"
+
 /obj/item/clothing/under/marine/veteran/pmc/corporate/lead
+	name = "\improper W-Y corporate security leader uniform"
 	desc = "An armored uniform worn by Weyland-Yutani corporate security members. This variant is commonly worn by the lead of the 'goonsquad', as they are colloquially known."
-	icon_state = "lead_uniform"
-	item_state = "lead_uniform"
-	worn_state = "lead_uniform"
+	icon_state = "sec_lead_uniform"
+	item_state = "sec_lead_uniform"
+	worn_state = "sec_lead_uniform"
+
+/obj/item/clothing/under/marine/veteran/pmc/corporate/kutjevo
+	desc = "An armored uniform worn by Weyland-Yutani corporate security members. This variant is more breathable for use in hot, dry environments."
+	icon_state = "sec_kutjevo_uniform"
+	item_state = "sec_kutjevo_uniform"
+	worn_state = "sec_kutjevo_uniform"
+
+/obj/item/clothing/under/marine/veteran/pmc/corporate/kutjevo/lead
+	desc = "An armored uniform worn by Weyland-Yutani corporate security members. This variant is more breathable for use in hot, dry environments and has gold armbands denoting the team leader."
+	icon_state = "sec_lead_kutjevo_uniform"
+	item_state = "sec_lead_kutjevo_uniform"
+	worn_state = "sec_lead_kutjevo_uniform"
+
+/obj/item/clothing/under/marine/veteran/pmc/corporate/hybrisa
+	desc = "An armored uniform worn by Weyland-Yutani corporate security members. This variant is water-repellent for extended use in rainfall."
+	icon_state = "sec_hybrisa_uniform"
+	item_state = "sec_hybrisa_uniform"
+	worn_state = "sec_hybrisa_uniform"
+
+/obj/item/clothing/under/marine/veteran/pmc/corporate/hybrisa/lead
+	desc = "An armored uniform worn by Weyland-Yutani corporate security members. This variant is water-repellent for extended use in rainfall and has gold armbands denoting the team leader."
+	icon_state = "sec_lead_hybrisa_uniform"
+	item_state = "sec_lead_hybrisa_uniform"
+	worn_state = "sec_lead_hybrisa_uniform"
 
 //=========================//UPP\\================================\\
 

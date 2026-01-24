@@ -135,8 +135,9 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 
 #define JOB_MARINE_RAIDER "Marine Raider"
 #define JOB_MARINE_RAIDER_SL "Marine Raider Team Lead"
+#define JOB_MARINE_RAIDER_MED "Marine Raider SARC"
 #define JOB_MARINE_RAIDER_CMD "Marine Raider Platoon Lead"
-#define JOB_MARINE_RAIDER_ROLES_LIST list(JOB_MARINE_RAIDER, JOB_MARINE_RAIDER_SL, JOB_MARINE_RAIDER_CMD)
+#define JOB_MARINE_RAIDER_ROLES_LIST list(JOB_MARINE_RAIDER, JOB_MARINE_RAIDER_MED, JOB_MARINE_RAIDER_SL, JOB_MARINE_RAIDER_CMD)
 
 #define JOB_HUMAN_ROLES  /datum/timelock/human
 
@@ -299,12 +300,15 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_CORPORATE_ROLES_LIST list(JOB_CORPORATE_LIAISON, JOB_WO_CORPORATE_LIAISON, JOB_DIRECTOR, JOB_PMC_DIRECTOR, JOB_DEPUTY_DIRECTOR, JOB_CHIEF_EXECUTIVE, JOB_DIVISION_MANAGER, JOB_ASSISTANT_MANAGER, JOB_EXECUTIVE_SUPERVISOR, JOB_LEGAL_SUPERVISOR, JOB_EXECUTIVE_SPECIALIST, JOB_LEGAL_SPECIALIST, JOB_SENIOR_EXECUTIVE, JOB_EXECUTIVE, JOB_JUNIOR_EXECUTIVE, JOB_TRAINEE, JOB_WY_SEC_SYNTH, JOB_WY_SEC)
 
 //-------- WY Goons --------//
-#define JOB_WY_GOON "WY Corporate Security"
-#define JOB_WY_GOON_TECH "WY Corporate Security Technician"
-#define JOB_WY_GOON_LEAD "WY Corporate Security Lead"
-#define JOB_WY_GOON_RESEARCHER "WY Research Consultant"
+#define JOB_WY_GOON "W-Y Corporate Security"
+#define JOB_WY_GOON_MEDIC "W-Y Corporate Security Medic"
+#define JOB_WY_GOON_TECH "W-Y Corporate Security Technician"
+#define JOB_WY_GOON_LEAD "W-Y Corporate Security Lead"
+#define JOB_WY_RESEARCHER "W-Y Research Consultant"
+#define JOB_WY_RESEARCH_LEAD "W-Y Senior Research Consultant"
+#define JOB_WY_GOON_SYNTH "W-Y Corporate Security Synthetic"
 
-#define ROLES_WY_GOONS list(JOB_WY_GOON_LEAD, JOB_WY_GOON_TECH, JOB_WY_GOON)
+#define ROLES_WY_GOONS list(JOB_WY_GOON_LEAD, JOB_WY_GOON_TECH, JOB_WY_GOON_MEDIC, JOB_WY_GOON, JOB_WY_RESEARCHER, JOB_WY_RESEARCH_LEAD, JOB_WY_GOON_SYNTH)
 
 ////-------- PMC PLATOON --------//
 
@@ -353,12 +357,16 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 //-------- FORECON --------//
 
 #define JOB_FORECON_CO "Reconnaissance Commander"
-#define JOB_FORECON_SL "Reconnaissance Squad Leader"
+#define JOB_FORECON_XO "Reconnaissance Officer"
 #define JOB_FORECON_SYN "Reconnaissance Synthetic"
+#define JOB_FORECON_SL "Reconnaissance Squad Leader"
 #define JOB_FORECON_SNIPER "Reconnaissance Sniper"
+#define JOB_FORECON_SPOTTER "Reconnaissance Spotter"
 #define JOB_FORECON_MARKSMAN "Reconnaissance Marksman"
 #define JOB_FORECON_SUPPORT "Reconnaissance Support Technician"
 #define JOB_FORECON_RIFLEMAN "Reconnaissance Rifleman"
+#define JOB_FORECON_RTO "Reconnaissance Radio Telephone Operator"
+#define JOB_FORECON_CORPSMAN "Reconnaissance Corpsman"
 #define JOB_FORECON_SMARTGUNNER "Reconnaissance Smartgunner"
 
 //-------- UPP --------//
@@ -421,7 +429,7 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_TWE_RMC_MARKSMAN "Scout Sniper"
 #define JOB_TWE_RMC_SMARTGUNNER "GPMG Gunner"
 #define JOB_TWE_RMC_BREACHER "Bombardment Specialist"
-#define JOB_TWE_RMC_TEAMLEADER "Team Leader"
+#define JOB_TWE_RMC_TEAMLEADER "Section 2iC"
 #define JOB_TWE_RMC_SECTIONLEADER "Section Leader"
 #define JOB_TWE_RMC_TROOPLEADER "Troop Sergeant"
 #define JOB_TWE_RMC_LIEUTENANT "Troop Commander"

@@ -83,6 +83,13 @@
 	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_bio = CLOTHING_ARMOR_GIGAHIGHPLUS
 
+/obj/item/clothing/shoes/marine/corporate
+	name = "rugged boots"
+	desc = "These synth-leather boots seem high quality when first worn, but quickly detoriate, especially in the environments the corporate security members these are issued to operate in. Still, better than nothing."
+
+/obj/item/clothing/shoes/marine/corporate/knife
+	spawn_item_type = /obj/item/attachable/bayonet
+
 /obj/item/clothing/shoes/veteran/pmc
 	name = "polished shoes"
 	desc = "The height of fashion, but these look to be woven with protective fiber."
@@ -176,6 +183,13 @@
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
+
+/obj/item/clothing/shoes/dress
+	name = "dress shoes"
+	desc = "Pre-polished fancy dress shoes. You can see your reflection in them."
+	icon_state = "laceups"
+	flags_inventory = NOSLIPPING
+	siemens_coefficient = 0.6
 
 /obj/item/clothing/shoes/marine/mopp
 	name = "\improper M3 MOPP boots"

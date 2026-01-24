@@ -154,8 +154,19 @@
 /obj/structure/closet/secure_closet/marine_personal/pmc/squad_leader
 	job = JOB_SQUAD_TEAM_LEADER
 
+/obj/structure/closet/secure_closet/marine_personal/pmc/squad_leader/spawn_gear()
+	new /obj/item/clothing/under/marine/veteran/pmc/leader(src)
+	new /obj/item/device/radio/headset/distress/pmc/platoon(src)
+	new /obj/item/clothing/shoes/veteran/pmc/knife(src)
+
 /obj/structure/closet/secure_closet/marine_personal/pmc/platoon_leader
 	job = JOB_SQUAD_LEADER
+
+/obj/structure/closet/secure_closet/marine_personal/pmc/platoon_leader/spawn_gear()
+	new /obj/item/clothing/under/marine/veteran/pmc/leader(src)
+	new /obj/item/clothing/head/cmcap/pmc/fieldleader(src)
+	new /obj/item/device/radio/headset/distress/pmc/platoon(src)
+	new /obj/item/clothing/shoes/veteran/pmc/knife(src)
 
 /obj/structure/closet/secure_closet/marine_personal/pmc/platoon_commander
 	job = JOB_SO
