@@ -15,9 +15,9 @@
 	skills = /datum/skills/pfc
 
 /datum/equipment_preset/uscm/pmc/sl
-	name = "Field Operations Leader"
+	name = "Operations Leader"
 	paygrades = list("PMC-FOL" = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "FOL"
+	role_comm_title = "OpLead"
 	access = list(ACCESS_WY_GENERAL, ACCESS_WY_SENIOR_LEAD, ACCESS_WY_ARMORY)
 	assignment = JOB_PMCPLAT_LEADER
 	rank = JOB_SQUAD_LEADER

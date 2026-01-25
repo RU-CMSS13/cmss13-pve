@@ -1292,6 +1292,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_internaldamage = CLOTHING_ARMOR_HIGH
 	flags_inventory = FULL_DECAP_PROTECTION
 	flags_inv_hide = null
+	built_in_visors = null
+	start_down_visor_type = null
 	flags_marine_helmet = HELMET_DAMAGE_OVERLAY
 	actions_types = list(/datum/action/item_action/toggle)
 	unacidable = TRUE
@@ -1396,17 +1398,21 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	item_state = "sec_medic_helmet_kutjevo"
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/corporate/hybrisa
-	desc = "A basic skull-helm worn by corporate security assets. This variant has wider protective visor for work in urban enviroment."
+	desc = "A basic skull-helm with a orange safety visor fitted. Worn by corporate security assets, graded to protect your head from an unruly scientist armed with a crowbar."
 	icon_state = "sec_helmet_hybrisa"
 	item_state = "sec_helmet_hybrisa"
 
+/obj/item/clothing/head/helmet/marine/veteran/pmc/corporate/hybrisa/brown
+	icon_state = "sec_brown_helmet_hybrisa"
+	item_state = "sec_brown_helmet_hybrisa"
+
 /obj/item/clothing/head/helmet/marine/veteran/pmc/corporate/hybrisa/medic
-	desc = "A basic skull-helm worn by corporate security assets. This variant has wider protective visor for work in urban enviroment and has a medical cross across the front."
+	desc = "A basic skull-helm with a orange safety visor fitted. Worn by corporate security assets, graded to protect your head from an unruly scientist armed with a crowbar. A medical cross is emblazoned across the front."
 	icon_state = "sec_medic_helmet_hybrisa"
 	item_state = "sec_medic_helmet_hybrisa"
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/corporate/hybrisa/lead
-	desc = "A basic skull-helm worn by corporate security assets. This variant has wider protective visor for work in urban enviroment. Also is worn by low-level guards that have too much brainmatter to fit into the old one. Or so they say."
+	desc = "A basic skull-helm with a orange safety visor fitted. Worn by corporate security assets. This variant is worn by low-level guards that have too much brainmatter to fit into the old one. Or so they say."
 	icon_state = "sec_lead_helmet_hybrisa"
 	item_state = "sec_lead_helmet_hybrisa"
 

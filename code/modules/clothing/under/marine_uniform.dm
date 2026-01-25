@@ -545,13 +545,13 @@
 	worn_state = "sec_lead_kutjevo_uniform"
 
 /obj/item/clothing/under/marine/veteran/pmc/corporate/hybrisa
-	desc = "An armored uniform worn by Weyland-Yutani corporate security members. This variant is water-repellent for extended use in rainfall."
+	desc = "An armored uniform worn by Weyland-Yutani corporate security members. This variant is commonly worn by what are known as 'goons'."
 	icon_state = "sec_hybrisa_uniform"
 	item_state = "sec_hybrisa_uniform"
 	worn_state = "sec_hybrisa_uniform"
 
 /obj/item/clothing/under/marine/veteran/pmc/corporate/hybrisa/lead
-	desc = "An armored uniform worn by Weyland-Yutani corporate security members. This variant is water-repellent for extended use in rainfall and has gold armbands denoting the team leader."
+	desc = "An armored uniform worn by Weyland-Yutani corporate security members. This variant is commonly worn by the lead of the 'goonsquad', as they are colloquially known."
 	icon_state = "sec_lead_hybrisa_uniform"
 	item_state = "sec_lead_hybrisa_uniform"
 	worn_state = "sec_lead_hybrisa_uniform"

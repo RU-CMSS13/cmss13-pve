@@ -8735,6 +8735,7 @@
 	},
 /obj/item/device/binoculars/range/designator,
 /obj/item/device/whistle,
+/obj/item/clothing/glasses/hud/sensor,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/cargo,
 /area/firefly/squad_omega)
@@ -8769,11 +8770,11 @@
 	dir = 8;
 	light_power = 0.7
 	},
-/obj/item/ammo_box/magazine/mk1/large{
+/obj/item/ammo_box/magazine/large{
 	pixel_x = -5;
 	pixel_y = -6
 	},
-/obj/item/ammo_box/magazine/mk1/large,
+/obj/item/ammo_box/magazine/large,
 /turf/open/floor/corsat/cargo,
 /area/firefly/squad_omega)
 "axm" = (
@@ -9037,9 +9038,9 @@
 /turf/open/floor/corsat/cargo,
 /area/firefly/squad_omega)
 "ayg" = (
-/obj/structure/gun_rack/m41/elite/unloaded/platoon,
+/obj/structure/gun_rack/m41a/corporate/unloaded/platoon,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/gun_rack/m41/elite/unloaded/platoon{
+/obj/structure/gun_rack/m41a/corporate/unloaded/platoon{
 	pixel_y = 27
 	},
 /turf/open/floor/corsat/cargo,
@@ -9402,12 +9403,12 @@
 /turf/open/floor/tdome/tcomms,
 /area/firefly/ares)
 "aYi" = (
-/obj/item/ammo_box/magazine/mk1/rubber{
+/obj/item/ammo_box/magazine/rubber{
 	pixel_x = -4;
 	pixel_y = -1;
 	layer = 3.2
 	},
-/obj/item/ammo_box/magazine/mk1/rubber{
+/obj/item/ammo_box/magazine/rubber{
 	pixel_x = -4;
 	pixel_y = 10;
 	layer = 3.1

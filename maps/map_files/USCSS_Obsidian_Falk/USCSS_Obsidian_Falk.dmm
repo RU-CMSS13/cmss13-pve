@@ -5832,7 +5832,8 @@
 "apL" = (
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/pmc,
 /obj/item/device/binoculars/range/designator,
-/obj/item/clothing/head/cmcap/pmc,
+/obj/item/clothing/suit/marine/veteran/pmc/leader,
+/obj/item/clothing/glasses/hud/sensor,
 /turf/open/floor/corsat/squares,
 /area/firefly/ptsgt)
 "apM" = (
@@ -8800,6 +8801,7 @@
 	},
 /obj/item/device/binoculars/range/designator,
 /obj/item/device/whistle,
+/obj/item/clothing/glasses/hud/sensor,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/cargo,
 /area/firefly/squad_omega)
@@ -8834,11 +8836,11 @@
 	dir = 8;
 	light_power = 0.7
 	},
-/obj/item/ammo_box/magazine/mk1/large{
+/obj/item/ammo_box/magazine/large{
 	pixel_x = -5;
 	pixel_y = -6
 	},
-/obj/item/ammo_box/magazine/mk1/large,
+/obj/item/ammo_box/magazine/large,
 /turf/open/floor/corsat/cargo,
 /area/firefly/squad_omega)
 "axm" = (
@@ -9126,9 +9128,9 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/squad_omega)
 "ayl" = (
-/obj/structure/gun_rack/m41/elite/unloaded/platoon,
+/obj/structure/gun_rack/m41a2/elite/unloaded/platoon,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/gun_rack/m41/elite/unloaded/platoon{
+/obj/structure/gun_rack/m41a2/elite/unloaded/platoon{
 	pixel_y = 27
 	},
 /turf/open/floor/corsat/cargo,
@@ -9490,12 +9492,12 @@
 /turf/open/floor/tdome/tcomms,
 /area/firefly/ares)
 "aYi" = (
-/obj/item/ammo_box/magazine/mk1/rubber{
+/obj/item/ammo_box/magazine/rubber{
 	pixel_x = -4;
 	pixel_y = -1;
 	layer = 3.2
 	},
-/obj/item/ammo_box/magazine/mk1/rubber{
+/obj/item/ammo_box/magazine/rubber{
 	pixel_x = -4;
 	pixel_y = 10;
 	layer = 3.1

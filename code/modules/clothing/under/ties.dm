@@ -2049,11 +2049,23 @@
 	item_state = "pmc_arms"
 	slot = ACCESSORY_SLOT_DECORARMOR
 
+/obj/item/clothing/accessory/pmcpads/light
+	name = "\improper M4 Light Shoulder Pads"
+	icon_state = "pmc_arms2"
+	item_state = "pmc_arms2"
+	slot = ACCESSORY_SLOT_DECORARMOR
+
 /obj/item/clothing/accessory/pmcpads/bracers
 	name = "\improper M4 Vambraces"
 	desc = "Attachable supplementary armor for the M4 armor system of Weyland Yutani PMC. A pair of composite ballistic vambraces to shield the forearms, with straps to ensure it doesn't ride up or down."
 	icon_state = "pmc_bracers"
 	item_state = "pmc_bracers"
+	slot = ACCESSORY_SLOT_DECORBRACER
+
+/obj/item/clothing/accessory/pmcpads/bracers/black
+	name = "\improper M4 Black Vambraces"
+	icon_state = "pmc_bracers2"
+	item_state = "pmc_bracers2"
 	slot = ACCESSORY_SLOT_DECORBRACER
 
 /obj/item/clothing/accessory/pmcpads/neckguard

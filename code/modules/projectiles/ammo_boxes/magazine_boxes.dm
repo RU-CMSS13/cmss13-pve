@@ -60,6 +60,24 @@
 /obj/item/ammo_box/magazine/heap/empty
 	empty = TRUE
 
+/obj/item/ammo_box/magazine/rubber
+	name = "magazine box (Rubber M41A X 10)"
+	overlay_ammo_type = "_rubber_mk1"
+	overlay_content = "_reg"
+	magazine_type = /obj/item/ammo_magazine/rifle/rubber
+
+/obj/item/ammo_box/magazine/large
+	name = "magazine box (M41A x 32)"
+	icon_state = "base_large"
+	overlay_ammo_type = "_reglarge"
+	overlay_gun_type = "_blank"
+	overlay_content = "_reglarge"
+	limit_per_tile = 1
+	flags_equip_slot = null
+	num_of_magazines = 32
+	var/move_delay_mult = 3
+	w_class = SIZE_MASSIVE
+
 //-----------------------M20A Rifle Mag Boxes-----------------------
 
 /obj/item/ammo_box/magazine/m20a
