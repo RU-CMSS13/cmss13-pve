@@ -6,3 +6,7 @@
 	var/category = ""
 	/// Override text for the emote to be displayed in the WJ emote panel
 	var/override_say = ""
+	var/droid_flag = WY_DROID_EMOTE
+
+/datum/emote/living/carbon/human/synthetic/colonial/wy_droid/get_sound(mob/living/user)
+	return sound
