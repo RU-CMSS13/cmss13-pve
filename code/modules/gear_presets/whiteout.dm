@@ -58,6 +58,8 @@
 
 	//ear
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/wy_android, WEAR_L_EAR)
+	//eyes
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m42_hms/m42c, WEAR_EYES)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/combat_droid, WEAR_HEAD)
 	//uniform
@@ -112,6 +114,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/wy_faction, WEAR_ACCESSORY)
 	//ear
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/wy_android, WEAR_L_EAR)
+	//eyes
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/medhud, WEAR_EYES)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/combat_droid, WEAR_HEAD)
 	//uniform
@@ -187,6 +191,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/whiteout, WEAR_IN_BACK)
 	//ear
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/wy_android, WEAR_L_EAR)
+	//eyes
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m42_hms/m42c, WEAR_EYES)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/combat_droid/dark, WEAR_HEAD)
 	//waist
@@ -226,6 +232,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/zipcuffs/small, WEAR_IN_BACK)
 	//ear
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/wy_android, WEAR_L_EAR)
+	//eyes
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m42_hms/m42c, WEAR_EYES)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/combat_droid, WEAR_HEAD)
 	//uniform
@@ -287,7 +295,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/flamer_tank/flammenwerfer, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/flamer_tank/flammenwerfer, WEAR_IN_BACK)
 
-
+	//eyes
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m42_hms/m42c, WEAR_EYES)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/wy_android, WEAR_L_EAR)
 	//head
@@ -343,6 +352,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/roller, WEAR_IN_BACK)
 	//ear
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/wy_android, WEAR_L_EAR)
+	//eyes
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/medhud, WEAR_EYES)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/combat_droid, WEAR_HEAD)
 	//uniform
@@ -418,6 +429,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/whiteout, WEAR_IN_BACK)
 	//ear
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/wy_android, WEAR_L_EAR)
+	//eyes
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m42_hms/m42c, WEAR_EYES)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/combat_droid/dark, WEAR_HEAD)
 	//waist
@@ -457,6 +470,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/zipcuffs/small, WEAR_IN_BACK)
 	//ear
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/wy_android, WEAR_L_EAR)
+	//eyes
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m42_hms/m42c, WEAR_EYES)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/combat_droid, WEAR_HEAD)
 	//uniform
