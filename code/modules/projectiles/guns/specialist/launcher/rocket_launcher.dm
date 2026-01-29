@@ -217,11 +217,6 @@
 
 /obj/item/weapon/gun/launcher/rocket/marine/handle_starting_attachment()
 	..()
-	var/obj/item/attachable/rpg_baffle/S = new(src)
-	S.flags_attach_features &= ~ATTACH_REMOVABLE
-	S.Attach(src)
-	update_attachables()
-
 	var/obj/item/attachable/scope/mini/army/scope = new(src)
 	scope.hidden = TRUE
 	scope.flags_attach_features &= ~ATTACH_REMOVABLE

@@ -1257,6 +1257,7 @@
 //waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/full/forecon(new_human), WEAR_WAIST)
 //limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/jungle/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
 //pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medkit/full/socmed, WEAR_L_STORE)
