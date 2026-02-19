@@ -1613,7 +1613,7 @@
 	light_range = 4
 	},
 /obj/structure/ladder{
-	id = engi3;
+	id = "engi3";
 	height = 1
 	},
 /turf/open/floor/strata/multi_tiles/west,
@@ -1667,7 +1667,7 @@
 	light_range = 4
 	},
 /obj/structure/ladder{
-	id = engi2;
+	id = "engi3";
 	height = 1
 	},
 /turf/open/floor/strata/floor3/east,
@@ -6022,11 +6022,8 @@
 /turf/closed/wall/upp_wall/grey/hull,
 /area/golden_arrow/hangar)
 "nh" = (
-/obj/structure/ladder{
-	id = engi2;
-	height = 1
-	},
-/turf/open/floor/strata/multi_tiles,
+/obj/structure/prop/broken_ladder,
+/turf/open/floor/corsat/marked,
 /area/golden_arrow/engineering)
 "ni" = (
 /obj/effect/decal/warning_stripes{
@@ -9517,10 +9514,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/cryo_cells)
-"Fv" = (
-/obj/structure/ladder,
-/turf/open/floor/strata/floor3,
-/area/golden_arrow/hangar)
 "FD" = (
 /obj/structure/machinery/power/smes/buildable,
 /obj/effect/decal/warning_stripes{
@@ -9690,13 +9683,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/platoon_commander_rooms)
-"Hj" = (
-/obj/structure/ladder{
-	id = engi2;
-	height = 1
-	},
-/turf/open/floor/strata/floor3,
-/area/golden_arrow/hangar)
 "Hm" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -9787,9 +9773,6 @@
 /obj/structure/cargo_container/upp/tan/left,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
-"Ic" = (
-/turf/open/space/basic,
-/area/golden_arrow/engineering)
 "Ih" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -10293,7 +10276,7 @@
 	light_range = 4
 	},
 /obj/structure/ladder{
-	id = capt1;
+	id = "engi3";
 	height = 2
 	},
 /turf/open/floor/strata/floor3/east,
@@ -11032,7 +11015,7 @@
 	pixel_y = -15
 	},
 /obj/structure/ladder{
-	id = engi2;
+	id = "engi2";
 	height = 2
 	},
 /turf/open/floor/strata/floor3,
@@ -11129,8 +11112,8 @@
 	light_range = 4
 	},
 /obj/structure/ladder{
-	id = engi3;
-	height = 2
+	id = "engi2";
+	height = 1
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/engineering)
@@ -18174,7 +18157,7 @@ bD
 bD
 bD
 aa
-Ic
+aa
 mV
 mV
 mV
@@ -22502,7 +22485,7 @@ Jf
 Jf
 Jf
 Jf
-Fv
+Jf
 Lv
 Jf
 Jf
@@ -22514,7 +22497,7 @@ Jf
 ZG
 Jf
 Jf
-Hj
+Jf
 mH
 mV
 mV
@@ -28126,7 +28109,7 @@ WL
 WL
 Md
 WL
-Fv
+Jf
 mH
 Jf
 ol
@@ -28138,7 +28121,7 @@ Jf
 TQ
 yu
 LH
-Fv
+Jf
 mH
 mV
 mV
