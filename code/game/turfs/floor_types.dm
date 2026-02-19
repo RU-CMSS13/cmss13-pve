@@ -319,6 +319,24 @@
 /turf/open/floor/plating/plating_catwalk/shiva
 	icon = 'icons/turf/floors/ice_colony/shiva_floor.dmi'
 
+/turf/open/floor/plating/plating_catwalk/corsat
+	icon = 'icons/turf/floors/corsat.dmi'
+	icon_state = "corsat_plating_catwalk"
+
+/turf/open/floor/plating/plating_catwalk/corsat/update_icon()
+	. = ..()
+	if(covered)
+		overlays += image(icon, src, "corsat_catwalk", CATWALK_LAYER)
+
+/turf/open/floor/plating/plating_catwalk/corsat_white
+	icon = 'icons/turf/floors/corsat.dmi'
+	icon_state = "corsat_plating_catwalk_alt"
+
+/turf/open/floor/plating/plating_catwalk/corsat_white/update_icon()
+	. = ..()
+	if(covered)
+		overlays += image(icon, src, "corsat_catwalk_alt", CATWALK_LAYER)
+
 /turf/open/floor/plating/plating_catwalk/aicore
 	icon = 'icons/turf/floors/aicore.dmi'
 	icon_state = "ai_plating_catwalk"
@@ -1252,6 +1270,39 @@
 /turf/open/floor/almayer/aicore/is_plasteel_floor()
 	return FALSE
 
+/turf/open/floor/almayer/aicore/white
+	icon_state = "w_ai_floor1"
+
+/turf/open/floor/almayer/aicore/white/cargo
+	icon_state = "w_ai_cargo"
+
+/turf/open/floor/almayer/aicore/white/arrow
+	icon_state = "w_ai_arrow"
+
+/turf/open/floor/almayer/aicore/white/arrow/east
+	dir = EAST
+
+/turf/open/floor/almayer/aicore/white/arrow/north
+	dir = NORTH
+
+/turf/open/floor/almayer/aicore/white/arrow/west
+	dir = WEST
+
+/turf/open/floor/almayer/aicore/white/squares
+	icon_state = "squares_white"
+
+/turf/open/floor/almayer/aicore/white/squares/east
+	dir = EAST
+
+/turf/open/floor/almayer/aicore/white/squares/north
+	dir = NORTH
+
+/turf/open/floor/almayer/aicore/white/squares/west
+	dir = WEST
+
+/turf/open/floor/almayer/aicore/white/hull
+	icon_state = "hull_white"
+
 /turf/open/floor/almayer/aicore/glowing
 	icon_state = "ai_floor2"
 	light_color = "#d69c46"
@@ -1269,6 +1320,16 @@
 
 /turf/open/floor/almayer/aicore/glowing/proc/start_emergency_light_off()
 	set_light(l_color = "#d69c46")
+
+/turf/open/floor/almayer/aicore/glowing/white
+	icon_state = "w_ai_floor2"
+	light_color = "#d69c46"
+	light_range = 3
+
+/turf/open/floor/almayer/aicore/glowing/white/alt
+	icon_state = "w_ai_floor3"
+	light_color = "#d69c46"
+	light_range = 3
 
 /turf/open/floor/almayer/aicore/no_build
 	allow_construction = FALSE

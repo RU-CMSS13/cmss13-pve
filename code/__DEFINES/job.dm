@@ -322,10 +322,10 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 ///------ PMC SMALL ==== ///
 #define JOB_PMCPLAT_SMALL_LEADER "Strike Operations Leader"
 #define JOB_PMCPLAT_SMALL_FTL "Strike Team Leader"
+#define JOB_PMCPLAT_SMALL_MEDIC "Strike Trauma Surgeon"
+#define JOB_PMCPLAT_SMALL_ENGI "Strike Technical Specialist"
 #define JOB_PMCPLAT_SMALL_SG "Strike Heavy Weapons Specialist"
 #define JOB_PMCPLAT_SMALL_STANDARD "Strike Tactical Unit"
-#define JOB_PMCPLAT_SMALL_MEDIC "Strike Medical Specialist"
-
 
 //---- Contractors ----//
 #define JOB_CONTRACTOR "VAIPO Mercenary"

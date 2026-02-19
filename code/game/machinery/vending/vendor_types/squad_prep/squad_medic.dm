@@ -293,6 +293,12 @@ GLOBAL_LIST_INIT(cm_vending_clothing_pmc_medic, list(
 
 		list("BELT", 0, null, null, null),
 		list("M276 Lifesaver Bag (Full)", 0, /obj/item/storage/belt/medical/lifesaver/wy/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("L75 Pattern Medical Storage Rig (Empty)", 0, /obj/item/storage/belt/medical/rmc, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+
+		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
+		list("UA Medical Backpack", 0, /obj/item/storage/backpack/marine/medic, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+		list("UA Medical Satchel", 0, /obj/item/storage/backpack/marine/satchel/medic, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_RECOMMENDED),
+		list("TWE Heavy-Duty Medical Rucksack", 0, /obj/item/storage/backpack/rmc/medic, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_RECOMMENDED),
 
 		list("POUCHES (CHOOSE 2)", 0, null, null, null),
 		list("Autoinjector Pouch (Full)", 0, /obj/item/storage/pouch/autoinjector/full/wy, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
@@ -305,6 +311,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_pmc_medic, list(
 		list("ACCESSORIES (CHOOSE 1)", 0, null, null, null),
 		list("Small Pouch", 0, /obj/item/clothing/accessory/storage/smallpouch/wy, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR, VENDOR_ITEM_RECOMMENDED),
 		list("Drop Pouch", 0, /obj/item/clothing/accessory/storage/droppouch/wy, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Shoulder Holster", 0, /obj/item/clothing/accessory/storage/holster, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
 		list("Waist Holster", 0, /obj/item/clothing/accessory/storage/holster/waist, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
 	))
 

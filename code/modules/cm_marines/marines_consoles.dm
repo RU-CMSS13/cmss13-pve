@@ -765,6 +765,10 @@
 /obj/structure/machinery/computer/crew/wey_yu/pmc
 	faction = FACTION_PMC
 
+/obj/structure/machinery/computer/crew/wey_yu/pmc
+	icon_state = "cmonitor"
+	density = FALSE
+
 /obj/structure/machinery/computer/crew/colony
 	faction = FACTION_COLONIST
 
