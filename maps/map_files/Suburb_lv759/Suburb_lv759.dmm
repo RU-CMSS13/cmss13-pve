@@ -46981,7 +46981,7 @@
 /area/Suburb_lv759/outdoors/landing_zone_1)
 "rXv" = (
 /obj/structure/fence/electrified{
-	dir = 4
+	dir = 1
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/Suburb_lv759/indoors/public_spaceport)
