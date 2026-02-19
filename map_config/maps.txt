@@ -69,6 +69,9 @@ endmap
 map lv759_hybrisa_prospera_repaired
 endmap
 
+map suburb_lv759
+endmap
+
 map new_varadero
 endmap
 
