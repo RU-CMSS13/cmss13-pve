@@ -3133,6 +3133,13 @@
 /turf/open/floor/corsat/box
 	icon_state = "box"
 
+/turf/open/floor/corsat/box_light
+	icon_state = "box_light"
+	light_color = "#0090ff"
+	light_on = 1
+	light_power = 2
+	light_range = 3
+
 /turf/open/floor/corsat/officetiles
 	icon_state = "officetiles"
 

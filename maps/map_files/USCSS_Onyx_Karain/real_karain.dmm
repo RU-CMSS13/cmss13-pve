@@ -1,4 +1,40 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/retrosquareslight,
+/area/space)
+"ab" = (
+/obj/structure/machinery/atm,
+/turf/closed/wall/biodome,
+/area/space)
+"ac" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/closet/firecloset,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/plate,
+/area/space)
+"ad" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/safety/ladder{
+	pixel_x = 8;
+	pixel_y = -32
+	},
+/turf/open/floor/corsat/squares,
+/area/space)
+"ae" = (
+/obj/structure/machinery/light/blue{
+	dir = 2
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/squares,
+/area/space)
 "af" = (
 /obj/structure/machinery/cryopod/big{
 	pixel_y = 16;
@@ -11,6 +47,235 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/aicore/glowing/white/alt,
 /area/space)
+"ag" = (
+/obj/item/reagent_container/glass/bucket/mopbucket{
+	pixel_x = -6;
+	pixel_y = -4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/squares,
+/area/space)
+"ah" = (
+/obj/structure/machinery/disposal,
+/obj/structure/largecrate/random/mini{
+	pixel_x = -19;
+	pixel_y = -4
+	},
+/turf/open/floor/corsat/plate,
+/area/space)
+"ai" = (
+/obj/structure/machinery/vending/generic,
+/turf/open/floor/corsat/cargo,
+/area/space)
+"aj" = (
+/obj/structure/machinery/vending/coffee,
+/turf/open/floor/corsat/cargo,
+/area/space)
+"ak" = (
+/obj/structure/machinery/door/window/northleft,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/box,
+/area/space)
+"al" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/marked,
+/area/space)
+"am" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	dir = 4
+	},
+/turf/open/floor/corsat/marked,
+/area/space)
+"an" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/closet/emcloset,
+/turf/open/floor/corsat/plate,
+/area/space)
+"ao" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating/plating_catwalk/corsat,
+/area/space)
+"ap" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/squares,
+/area/space)
+"aq" = (
+/obj/structure/largecrate/random/barrel/yellow{
+	pixel_x = -5;
+	pixel_y = 9
+	},
+/obj/item/tool/warning_cone{
+	pixel_x = 5;
+	pixel_y = -1
+	},
+/turf/open/floor/corsat/box,
+/area/space)
+"ar" = (
+/obj/item/stool{
+	pixel_x = 6;
+	pixel_y = 3
+	},
+/obj/item/tool/warning_cone{
+	layer = 4;
+	pixel_x = 3;
+	pixel_y = 19
+	},
+/obj/item/newspaper{
+	pixel_x = -11;
+	pixel_y = 4
+	},
+/obj/item/clothing/head/hybrisa/weymart{
+	pixel_x = 5;
+	pixel_y = 0
+	},
+/turf/open/floor/corsat/box,
+/area/space)
+"as" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/closet/emcloset,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/plate,
+/area/space)
+"at" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 0
+	},
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	dir = 8
+	},
+/turf/open/floor/corsat/marked,
+/area/space)
+"au" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 0
+	},
+/turf/open/floor/corsat/marked,
+/area/space)
+"av" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/machinery/door/window/southleft{
+	opacity = 1
+	},
+/turf/open/floor/corsat/box,
+/area/space)
+"aw" = (
+/obj/structure/bed/sofa/hybrisa/misc/bench{
+	pixel_x = 13;
+	pixel_y = 11
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/squares,
+/area/space)
+"ax" = (
+/obj/structure/roof/hybrisa/billboardsandsigns/billboardsmedium/billboard1{
+	pixel_y = 34;
+	lazy_nodes = 0;
+	layer = 3;
+	dir = 10
+	},
+/obj/item/toy/plush/farwa{
+	layer = 3.75;
+	pixel_x = -8;
+	pixel_y = 12;
+	anchored = 1;
+	name = "Fuzzy";
+	desc = "A toy that someone lost..."
+	},
+/turf/open/floor/corsat/squares,
+/area/space)
+"ay" = (
+/obj/structure/bed/sofa/hybrisa/misc/bench{
+	pixel_y = 11
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/squares,
+/area/space)
+"az" = (
+/obj/structure/flora/pottedplant{
+	icon_state = "pottedplant_10";
+	pixel_y = 22;
+	pixel_x = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/squares,
+/area/space)
+"aA" = (
+/obj/structure/machinery/light/blue{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/squares,
+/area/space)
+"aB" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/safety/ladder{
+	pixel_x = 8;
+	pixel_y = 32
+	},
+/turf/open/floor/corsat/squares,
+/area/space)
+"aC" = (
+/obj/structure/bedsheetbin{
+	pixel_x = -2;
+	pixel_y = 15
+	},
+/turf/open/floor/plating/plating_catwalk/corsat_white,
+/area/space)
+"aD" = (
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	pixel_y = 0
+	},
+/turf/open/floor/corsat/retrosquareslight,
+/area/space)
+"aE" = (
+/obj/structure/machinery/washing_machine{
+	pixel_x = 1;
+	pixel_y = 18;
+	density = 0
+	},
+/obj/structure/bed/chair/wood{
+	dir = 8;
+	pixel_x = 6;
+	pixel_y = 1
+	},
+/obj/structure/prop/hybrisa/misc/buildinggreebliessmall/smallvent3{
+	pixel_y = -30
+	},
+/turf/open/floor/corsat/lightplate,
+/area/space)
+"aF" = (
+/obj/structure/machinery/door/airlock/almayer/secure{
+	dir = 1;
+	req_access = list()
+	},
+/turf/open/floor/corsat/marked,
+/area/space)
 "aG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -19,11 +284,90 @@
 	},
 /turf/open/floor/almayer/aicore/white/hull,
 /area/space)
+"aH" = (
+/turf/open/floor/corsat/plate,
+/area/space)
+"aI" = (
+/obj/structure/closet/secure_closet/marine_personal/pmc{
+	pixel_x = -8;
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 4;
+	pixel_x = 1;
+	pixel_y = 0
+	},
+/turf/open/floor/corsat/plate,
+/area/space)
+"aJ" = (
+/turf/open/floor/corsat/box_light,
+/area/space)
+"aK" = (
+/turf/open/floor/hybrisa/carpet/carpetgreen,
+/area/space)
+"aL" = (
+/obj/structure/bed/hybrisa/bunkbed3{
+	dir = 4
+	},
+/turf/open/floor/hybrisa/carpet/carpetgreen,
+/area/space)
+"aM" = (
+/obj/structure/machinery/washing_machine{
+	pixel_x = -1;
+	pixel_y = 18;
+	density = 0
+	},
+/obj/structure/bed/chair/wood{
+	dir = 4;
+	pixel_x = -6;
+	pixel_y = 1
+	},
+/obj/structure/prop/hybrisa/misc/buildinggreebliessmall/smallvent3{
+	pixel_y = -30
+	},
+/turf/open/floor/corsat/lightplate,
+/area/space)
+"aN" = (
+/obj/structure/bedsheetbin{
+	pixel_x = 1;
+	pixel_y = 15
+	},
+/turf/open/floor/plating/plating_catwalk/corsat_white,
+/area/space)
+"aO" = (
+/obj/structure/closet/secure_closet/marine_personal/pmc{
+	pixel_x = -8;
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 4;
+	pixel_x = 1;
+	pixel_y = 0
+	},
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	pixel_y = 0;
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/space)
 "aP" = (
 /obj/structure/machinery/light/blue{
 	dir = 4
 	},
 /turf/open/floor/corsat/retrosquareslight,
+/area/space)
+"aQ" = (
+/obj/structure/machinery/computer/cameras/wooden_tv{
+	desc = "An old TV hooked up to a video cassette recorder, you can even use it to time shift WOW.";
+	layer = 3.2;
+	name = "Television set";
+	network = null;
+	dir = 8;
+	pixel_x = 20
+	},
+/turf/open/floor/hybrisa/carpet/carpetgreen,
 /area/space)
 "aR" = (
 /obj/structure/cable/heavyduty{
@@ -39,9 +383,209 @@
 	},
 /turf/open/floor/plating/plating_catwalk/aicore/white,
 /area/space)
+"aS" = (
+/obj/structure/closet/secure_closet/marine_personal/pmc{
+	pixel_x = -8;
+	pixel_y = -1
+	},
+/obj/structure/closet/secure_closet/marine_personal/pmc{
+	pixel_x = 7;
+	pixel_y = -1
+	},
+/turf/open/floor/corsat/plate,
+/area/space)
+"aT" = (
+/obj/structure/closet/secure_closet/marine_personal/pmc{
+	pixel_x = 7;
+	pixel_y = -1
+	},
+/obj/structure/closet/secure_closet/marine_personal/pmc{
+	pixel_x = -8;
+	pixel_y = -1
+	},
+/turf/open/floor/corsat/plate,
+/area/space)
+"aU" = (
+/turf/open/floor/corsat/green/west,
+/area/space)
+"aV" = (
+/turf/open/floor/corsat/green/east,
+/area/space)
 "aW" = (
 /obj/structure/window/framed/almayer/aicore/white,
 /turf/open/space/basic,
+/area/space)
+"aX" = (
+/obj/structure/sign/poster/corporate{
+	pixel_y = 32
+	},
+/turf/open/floor/corsat/plate,
+/area/space)
+"aY" = (
+/obj/structure/machinery/vending/walkman{
+	pixel_x = 1;
+	pixel_y = 23;
+	density = 0
+	},
+/turf/open/floor/corsat/plate,
+/area/space)
+"aZ" = (
+/turf/open/floor/corsat/greencorner,
+/area/space)
+"ba" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 4
+	},
+/turf/open/floor/hybrisa/wood/blackwood,
+/area/space)
+"bb" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/reagent_container/food/drinks/cans/coconutmilk{
+	pixel_x = 8;
+	pixel_y = 4
+	},
+/obj/structure/machinery/recharger{
+	pixel_x = -3;
+	pixel_y = 20
+	},
+/turf/open/floor/hybrisa/wood/blackwood,
+/area/space)
+"bc" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 8
+	},
+/turf/open/floor/hybrisa/wood/blackwood,
+/area/space)
+"bd" = (
+/obj/structure/bed/hybrisa/bunkbed3{
+	dir = 1
+	},
+/turf/open/floor/hybrisa/carpet/carpetgreen,
+/area/space)
+"be" = (
+/obj/structure/surface/table/reinforced/black,
+/turf/open/floor/hybrisa/wood/blackwood,
+/area/space)
+"bf" = (
+/turf/open/floor/corsat/greencorner/west,
+/area/space)
+"bg" = (
+/obj/structure/machinery/door/airlock/almayer/secure/glass{
+	dir = 1;
+	req_access = list()
+	},
+/turf/open/floor/corsat/marked,
+/area/space)
+"bh" = (
+/turf/open/floor/corsat/theta,
+/area/space)
+"bi" = (
+/obj/structure/machinery/door/airlock/almayer/secure/glass{
+	dir = 4;
+	req_access = list()
+	},
+/turf/open/floor/corsat/marked,
+/area/space)
+"bj" = (
+/turf/open/floor/hybrisa/wood/blackwood,
+/area/space)
+"bk" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/newspaper{
+	pixel_x = -7;
+	pixel_y = 6
+	},
+/obj/item/device/flashlight/lamp/on{
+	pixel_x = 7;
+	pixel_y = 16
+	},
+/turf/open/floor/hybrisa/wood/blackwood,
+/area/space)
+"bl" = (
+/obj/structure/machinery/computer/cameras/wooden_tv{
+	desc = "An old TV hooked up to a video cassette recorder, you can even use it to time shift WOW.";
+	layer = 3.2;
+	name = "Television set";
+	network = null;
+	dir = 8;
+	pixel_x = 20
+	},
+/turf/open/floor/hybrisa/wood/blackwood,
+/area/space)
+"bm" = (
+/obj/structure/machinery/computer/cameras/wooden_tv{
+	desc = "An old TV hooked up to a video cassette recorder, you can even use it to time shift WOW.";
+	layer = 3.2;
+	name = "Television set";
+	network = null;
+	dir = 4;
+	pixel_x = -20
+	},
+/turf/open/floor/hybrisa/wood/blackwood,
+/area/space)
+"bn" = (
+/turf/open/floor/corsat/greencorner/east,
+/area/space)
+"bo" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/device/cassette_tape/cargocrate{
+	pixel_x = 6;
+	pixel_y = 8
+	},
+/obj/item/tool/hand_labeler{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/turf/open/floor/hybrisa/wood/blackwood,
+/area/space)
+"bp" = (
+/turf/open/floor/corsat/greencorner/north,
+/area/space)
+"bq" = (
+/turf/open/floor/corsat/green/southeast,
+/area/space)
+"br" = (
+/obj/structure/window/framed/corsat,
+/obj/structure/machinery/door/poddoor/hybrisa/open_shutters,
+/turf/open/floor/corsat,
+/area/space)
+"bs" = (
+/turf/open/floor/corsat/green/southwest,
+/area/space)
+"bt" = (
+/turf/open/floor/corsat/green,
+/area/space)
+"bu" = (
+/turf/open/floor/corsat/green/northwest,
+/area/space)
+"bv" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk/corsat,
+/area/space)
+"bw" = (
+/turf/open/floor/corsat/green/northeast,
+/area/space)
+"bx" = (
+/turf/open/floor/corsat/green/north,
+/area/space)
+"by" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	dir = 1
+	},
+/turf/open/floor/corsat/marked,
+/area/space)
+"bz" = (
+/obj/structure/window/framed/corsat,
+/turf/open/floor/corsat,
+/area/space)
+"bA" = (
+/obj/structure/sink{
+	dir = 1;
+	pixel_y = -14
+	},
+/turf/open/floor/corsat/officetiles,
 /area/space)
 "bB" = (
 /obj/structure/ladder{
@@ -56,7 +600,348 @@
 	pixel_y = 0;
 	pixel_x = 1
 	},
+/obj/structure/sign/safety/cryo{
+	pixel_x = -17
+	},
 /turf/open/floor/corsat/lightplate,
+/area/space)
+"bC" = (
+/turf/open/floor/corsat/spiralplate,
+/area/space)
+"bD" = (
+/obj/structure/bed/chair/comfy/delta{
+	dir = 4;
+	name = "Gamma squad chair"
+	},
+/turf/open/floor/corsat/officetiles,
+/area/space)
+"bE" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/reagent_container/food/condiment/peppermill{
+	pixel_x = -5;
+	pixel_y = 6
+	},
+/obj/item/reagent_container/food/drinks/plasticcup{
+	pixel_x = 8;
+	pixel_y = 10
+	},
+/turf/open/floor/corsat/officetiles,
+/area/space)
+"bF" = (
+/obj/structure/bed/chair/comfy/charlie{
+	dir = 8;
+	name = "Omega squad chair"
+	},
+/turf/open/floor/corsat/officetiles,
+/area/space)
+"bG" = (
+/turf/open/floor/corsat/officetiles,
+/area/space)
+"bH" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/reagent_container/food/condiment/peppermill{
+	pixel_x = 4;
+	pixel_y = 5
+	},
+/turf/open/floor/corsat/officetiles,
+/area/space)
+"bI" = (
+/turf/open/floor/corsat/officesquares,
+/area/space)
+"bJ" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	dir = 4
+	},
+/turf/open/floor/corsat/marked,
+/area/space)
+"bK" = (
+/obj/structure/bed/chair/comfy/alpha{
+	dir = 4
+	},
+/turf/open/floor/corsat/officetiles,
+/area/space)
+"bL" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/reagent_container/food/condiment/saltshaker{
+	pixel_x = 4;
+	pixel_y = 9
+	},
+/obj/item/reagent_container/food/condiment/juice/orange{
+	pixel_x = -2;
+	pixel_y = -8
+	},
+/turf/open/floor/corsat/officetiles,
+/area/space)
+"bM" = (
+/obj/structure/bed/chair/comfy/bravo{
+	dir = 8;
+	name = "Sigma squad chair"
+	},
+/turf/open/floor/corsat/officetiles,
+/area/space)
+"bN" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/reagent_container/food/condiment/saltshaker{
+	pixel_x = -6;
+	pixel_y = 3
+	},
+/turf/open/floor/corsat/officetiles,
+/area/space)
+"bO" = (
+/obj/structure/prop/hybrisa/misc/urinal{
+	pixel_y = 31
+	},
+/turf/open/floor/corsat/spiralplate,
+/area/space)
+"bP" = (
+/obj/structure/machinery/disposal{
+	pixel_x = -5;
+	pixel_y = 9;
+	density = 0
+	},
+/obj/structure/sign/safety/bathmens{
+	pixel_y = -3;
+	pixel_x = -20
+	},
+/turf/open/floor/corsat/spiralplate,
+/area/space)
+"bQ" = (
+/obj/structure/sign/safety/bathwomens{
+	pixel_x = 35;
+	pixel_y = -3
+	},
+/turf/open/floor/corsat/spiralplate,
+/area/space)
+"bR" = (
+/obj/structure/janitorialcart/brown{
+	pixel_x = 0;
+	pixel_y = 10
+	},
+/obj/item/reagent_container/glass/bucket/janibucket{
+	pixel_x = 1;
+	pixel_y = 22
+	},
+/obj/item/tool/mop{
+	pixel_x = 6;
+	pixel_y = 3
+	},
+/turf/open/floor/corsat/spiralplate,
+/area/space)
+"bS" = (
+/obj/structure/surface/rack,
+/obj/item/reagent_container/spray/cleaner{
+	pixel_x = 4;
+	pixel_y = 8
+	},
+/turf/open/floor/corsat/spiralplate,
+/area/space)
+"bT" = (
+/obj/structure/toilet{
+	dir = 8;
+	pixel_y = 4
+	},
+/turf/open/floor/corsat/spiralplate,
+/area/space)
+"bU" = (
+/obj/structure/toilet{
+	pixel_x = 0;
+	pixel_y = 13
+	},
+/turf/open/floor/corsat/spiralplate,
+/area/space)
+"bV" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/storage/fancy/cigarettes/blackpack{
+	pixel_x = -7;
+	pixel_y = 19
+	},
+/obj/item/tool/lighter/zippo/black{
+	pixel_x = 5;
+	pixel_y = 16
+	},
+/obj/structure/flora/pottedplant{
+	icon_state = "pottedplant_12";
+	pixel_x = -6;
+	layer = 3.6;
+	pixel_y = 11
+	},
+/obj/item/storage/box/teabags{
+	pixel_x = 7;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/spiralplate,
+/area/space)
+"bW" = (
+/obj/structure/barricade/handrail/hybrisa/handrail{
+	dir = 4
+	},
+/turf/open/floor/corsat/spiralplate,
+/area/space)
+"bX" = (
+/obj/structure/barricade/handrail/hybrisa/handrail{
+	dir = 8
+	},
+/turf/open/floor/corsat/spiralplate,
+/area/space)
+"bY" = (
+/obj/structure/closet/secure_closet/freezer/fridge/full,
+/turf/open/floor/corsat/spiralplate,
+/area/space)
+"bZ" = (
+/obj/structure/closet/secure_closet/freezer/meat,
+/turf/open/floor/corsat/spiralplate,
+/area/space)
+"ca" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/structure/machinery/hybrisa/coffee_machine{
+	pixel_x = -5;
+	pixel_y = 9
+	},
+/obj/item/reagent_container/food/drinks/coffeecup{
+	pixel_x = -5;
+	pixel_y = 0
+	},
+/obj/item/reagent_container/food/drinks/coffeecup/wy{
+	pixel_x = 9;
+	pixel_y = 13
+	},
+/obj/item/reagent_container/food/drinks/coffeecup{
+	pixel_x = 8;
+	pixel_y = -4
+	},
+/obj/item/reagent_container/food/snacks/lemondrop{
+	pixel_x = 10;
+	pixel_y = 4
+	},
+/obj/structure/sign/poster/wylogo{
+	pixel_x = -28;
+	pixel_y = 2
+	},
+/turf/open/floor/corsat/spiralplate,
+/area/space)
+"cb" = (
+/obj/structure/machinery/light/small/blue/golden_arrow,
+/turf/open/floor/corsat/officesquares,
+/area/space)
+"cc" = (
+/obj/structure/machinery/cm_vending/sorted/marine_food,
+/obj/structure/vehicle_locker/cabinet/cups{
+	pixel_x = -28;
+	pixel_y = -29
+	},
+/turf/open/floor/corsat/marked,
+/area/space)
+"cd" = (
+/obj/structure/machinery/chem_dispenser/canteen,
+/turf/open/floor/corsat/marked,
+/area/space)
+"ce" = (
+/obj/structure/machinery/cm_vending/sorted/marine_food,
+/turf/open/floor/corsat/marked,
+/area/space)
+"cf" = (
+/obj/structure/machinery/chem_dispenser/canteen,
+/obj/structure/vehicle_locker/cabinet/utensils/flip{
+	pixel_x = 28;
+	pixel_y = -29
+	},
+/turf/open/floor/corsat/marked,
+/area/space)
+"cg" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/reagent_container/food/drinks/milk{
+	pixel_x = 2;
+	pixel_y = 15
+	},
+/obj/item/reagent_container/food/drinks/bottle/cream{
+	pixel_x = -9;
+	pixel_y = 17
+	},
+/obj/item/reagent_container/food/snacks/cookie{
+	pixel_y = 3;
+	pixel_x = -7
+	},
+/obj/item/storage/box/cups{
+	pixel_x = 6;
+	pixel_y = 3
+	},
+/turf/open/floor/corsat/spiralplate,
+/area/space)
+"ch" = (
+/obj/structure/prop/hybrisa/misc/machinery/screens/wood_clock{
+	pixel_y = 38
+	},
+/obj/structure/surface/rack,
+/obj/item/storage/donut_box{
+	pixel_y = 3
+	},
+/obj/item/storage/donut_box{
+	pixel_y = 8
+	},
+/turf/open/floor/corsat/officetiles,
+/area/space)
+"ci" = (
+/obj/structure/prop/hybrisa/misc/buildinggreebliessmall/smallvent3{
+	pixel_y = 26
+	},
+/obj/structure/reagent_dispensers/water_cooler/walk_past{
+	pixel_x = 11;
+	pixel_y = 0
+	},
+/obj/structure/flora/pottedplant{
+	icon_state = "pottedplant_22";
+	layer = 2.8;
+	pixel_x = -6;
+	pixel_y = 6
+	},
+/turf/open/floor/corsat/officetiles,
+/area/space)
+"cj" = (
+/obj/structure/machinery/vending/dinnerware{
+	pixel_x = -6;
+	density = 0;
+	pixel_y = 13
+	},
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/storage/box/powderedmilk,
+/obj/item/reagent_container/food/condiment/juice/egg,
+/obj/item/reagent_container/food/condiment/enzyme,
+/obj/item/reagent_container/food/condiment/sugar,
+/obj/structure/closet{
+	desc = "It's a fancy storage unit for long-life foodstuffs.";
+	name = "long-life foodstuff storage";
+	pixel_x = 10;
+	pixel_y = 12
+	},
+/turf/open/floor/corsat/officetiles,
+/area/space)
+"ck" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/tool/kitchen/tray{
+	pixel_y = 6
+	},
+/obj/item/tool/kitchen/knife{
+	pixel_x = -8;
+	pixel_y = 10
+	},
+/obj/item/tool/kitchen/rollingpin{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/turf/open/floor/corsat/spiralplate,
+/area/space)
+"cl" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/structure/machinery/microwave{
+	pixel_y = 15;
+	pixel_x = 5
+	},
+/turf/open/floor/corsat/spiralplate,
 /area/space)
 "cn" = (
 /obj/structure/machinery/cryopod/big/flipped{
@@ -91,18 +976,22 @@
 /turf/open/floor/corsat/lightplate,
 /area/space)
 "fh" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "NW-out";
-	pixel_y = 1;
-	pixel_x = 0
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/safety/stairs{
+	pixel_x = 8;
+	pixel_y = 32
 	},
-/turf/open/floor/corsat/plate,
+/turf/open/floor/corsat/theta,
 /area/space)
 "gp" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
 	pixel_x = 0;
 	pixel_y = 1
+	},
+/obj/structure/sign/safety/ladder{
+	pixel_x = 8;
+	pixel_y = 32
 	},
 /turf/open/floor/almayer/aicore/white,
 /area/space)
@@ -153,6 +1042,10 @@
 	pixel_y = 0;
 	pixel_x = 0
 	},
+/obj/structure/sign/safety/ladder{
+	pixel_x = 8;
+	pixel_y = -32
+	},
 /turf/open/floor/almayer/aicore/white,
 /area/space)
 "im" = (
@@ -171,16 +1064,12 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/space)
-"kf" = (
-/turf/open/floor/plating/plating_catwalk/corsat_white,
-/area/space)
 "kk" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "SE-out";
-	pixel_x = 0;
-	pixel_y = 0
+/obj/structure/sign/safety/stairs{
+	pixel_x = 8;
+	pixel_y = -32
 	},
-/turf/open/floor/corsat/plate,
+/turf/open/floor/corsat/omega,
 /area/space)
 "kE" = (
 /obj/effect/decal/warning_stripes{
@@ -235,13 +1124,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/aicore/white/arrow/east,
 /area/space)
-"ms" = (
-/obj/structure/sign/safety/ladder{
-	pixel_x = -20;
-	pixel_y = -28
-	},
-/turf/open/floor/almayer/aicore/white,
-/area/space)
 "nd" = (
 /obj/structure/bed/chair/comfy/bench/north{
 	pixel_x = -6
@@ -269,6 +1151,9 @@
 	dir = 8;
 	pixel_x = -1;
 	pixel_y = 1
+	},
+/obj/structure/sign/safety/cryo{
+	pixel_x = 32
 	},
 /turf/open/floor/corsat/lightplate,
 /area/space)
@@ -348,12 +1233,7 @@
 	},
 /area/space)
 "qS" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_x = 0;
-	pixel_y = 1
-	},
-/turf/open/floor/corsat/plate,
+/turf/open/floor/corsat/arrow_north,
 /area/space)
 "rw" = (
 /obj/structure/mirror{
@@ -523,12 +1403,7 @@
 /turf/open/floor/plating/plating_catwalk/corsat_white,
 /area/space)
 "xR" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "SW-out";
-	pixel_y = 0;
-	pixel_x = 0
-	},
-/turf/open/floor/corsat/plate,
+/turf/open/floor/corsat/omega,
 /area/space)
 "yk" = (
 /obj/effect/decal/warning_stripes{
@@ -552,13 +1427,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/aicore/white/hull,
-/area/space)
-"zm" = (
-/obj/structure/sign/safety/ladder{
-	pixel_x = 35;
-	pixel_y = 27
-	},
-/turf/open/floor/almayer/aicore/white,
 /area/space)
 "zv" = (
 /turf/open/floor/corsat/squares,
@@ -663,12 +1531,8 @@
 /turf/open/floor/plating/plating_catwalk/corsat_white,
 /area/space)
 "Fx" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "NE-out";
-	pixel_x = 0;
-	pixel_y = 1
-	},
-/turf/open/floor/corsat/plate,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/theta,
 /area/space)
 "FU" = (
 /obj/item/tool/mop{
@@ -758,9 +1622,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/aicore/white/hull,
-/area/space)
-"Hp" = (
-/turf/open/floor/plating/plating_catwalk/corsat,
 /area/space)
 "HG" = (
 /turf/closed/wall/almayer/aicore/white,
@@ -912,10 +1773,7 @@
 /turf/open/floor/almayer/aicore/glowing/white/alt,
 /area/space)
 "Sz" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/turf/open/floor/corsat/plate,
+/turf/open/floor/corsat/arrow_south,
 /area/space)
 "SE" = (
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
@@ -10377,9 +11235,9 @@ En
 En
 En
 En
+cW
 En
-En
-En
+cW
 En
 En
 En
@@ -10529,11 +11387,11 @@ En
 En
 En
 En
+cW
 En
+cW
 En
-En
-En
-En
+cW
 En
 En
 En
@@ -10675,15 +11533,15 @@ En
 En
 En
 En
-el
 En
 En
 En
 En
 En
 En
+cW
 En
-En
+cW
 En
 En
 En
@@ -11428,15 +12286,15 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+uP
+uP
+uP
+uP
+uP
+uP
+uP
+uP
 En
 En
 En
@@ -11452,7 +12310,7 @@ LA
 HG
 FU
 oA
-ms
+sy
 Nj
 kE
 GQ
@@ -11579,16 +12437,16 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+uP
+bu
+aU
+aU
+aU
+aU
+aU
+aU
+aU
 En
 En
 En
@@ -11731,16 +12589,16 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+bu
+bp
+zv
+zv
+zv
+zv
+zv
+zv
+zv
 En
 En
 En
@@ -11883,16 +12741,16 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+bx
+zv
+zv
+aZ
+aV
+bn
+zv
+aZ
+aV
 En
 En
 En
@@ -12035,16 +12893,16 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+bx
+zv
+aZ
+bq
+uP
+uP
+bi
+uP
+uP
 En
 En
 En
@@ -12056,7 +12914,7 @@ oo
 BX
 rH
 Uv
-zm
+sy
 KO
 Yd
 HG
@@ -12181,24 +13039,24 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+uP
+uP
+uP
+uP
+uP
+uP
+bx
+zv
+bt
+uP
+uP
+aH
+zv
+aH
+uP
+uP
+uP
 En
 En
 En
@@ -12333,24 +13191,24 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+bU
+by
+bI
+bI
+uP
+uP
+bx
+bv
+bt
+uP
+zv
+zv
+aJ
+zv
+zv
+aS
+uP
 En
 En
 En
@@ -12484,25 +13342,25 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+uP
+uP
+uP
+bO
+bI
+bA
+uP
+bx
+bv
+bt
+ml
+zv
+ba
+bj
+ba
+zv
+aT
+uP
 En
 En
 En
@@ -12635,27 +13493,27 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+uP
+ca
+bV
+uP
+bO
+bI
+bA
+uP
+bx
+zv
+bt
+br
+zv
+bo
+bk
+bb
+zv
+uP
+uP
+uP
 En
 En
 LA
@@ -12787,27 +13645,27 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+cg
+bI
+bI
+uP
+uP
+bJ
+uP
+uP
+bx
+zv
+bt
+br
+zv
+bc
+bj
+bc
+zv
+uP
+aC
+uP
 En
 En
 En
@@ -12939,27 +13797,27 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+ch
+cb
+uP
+uP
+bP
+bI
+bC
+by
+bx
+bv
+bt
+ml
+zv
+zv
+aJ
+zv
+zv
+aF
+aD
+uP
 En
 En
 En
@@ -13091,27 +13949,27 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+ci
+bI
+iK
+bC
+bI
+bK
+bD
+uP
+bx
+bv
+bt
+uP
+aH
+aK
+bj
+aK
+aH
+uP
+aE
+uP
 En
 En
 En
@@ -13243,27 +14101,27 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+uP
+uP
+uP
+bI
+bG
+bL
+bE
+ml
+bx
+zv
+bt
+uP
+uP
+aL
+bl
+aL
+uP
+uP
+uP
+uP
 En
 En
 En
@@ -13396,23 +14254,23 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+cc
+bC
+bI
+bG
+bM
+bF
+bz
+bx
+zv
+bt
+bh
+ml
+SE
+SE
+SE
+ml
 En
 En
 En
@@ -13548,29 +14406,29 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+cd
+bW
+bI
+bG
+bG
+bG
+bz
+bx
+bv
+bt
+Sz
+SI
+Xe
+Xe
 SE
-Hp
+En
+En
+En
+En
+En
+En
+En
 En
 En
 En
@@ -13579,8 +14437,8 @@ SE
 SE
 ml
 ml
-zv
-zv
+an
+ac
 uP
 VI
 kZ
@@ -13700,6 +14558,22 @@ En
 En
 En
 En
+uP
+ce
+bX
+bI
+bG
+bG
+bG
+bz
+bx
+bv
+bt
+Sz
+SI
+Xe
+Xe
+SE
 En
 En
 En
@@ -13707,22 +14581,6 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-ml
-kf
 En
 En
 En
@@ -13730,9 +14588,9 @@ En
 SE
 ml
 ml
+aq
 zv
-zv
-zv
+ad
 uP
 el
 el
@@ -13852,28 +14710,28 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
 uP
+cf
+bC
+bI
+bG
+bK
+bD
+bz
+bx
+zv
+bt
+bh
+ml
+SE
+SE
+SE
+ml
+En
+En
+En
+En
+En
 En
 En
 En
@@ -13882,11 +14740,11 @@ SE
 SE
 ml
 Fx
-zv
-zv
+ap
+ao
 zv
 iK
-wS
+aa
 wS
 el
 xd
@@ -14003,27 +14861,27 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+uP
+uP
+uP
+bI
+bG
+bN
+bH
+ml
+bx
+zv
+bt
+uP
+uP
+bd
+bm
+bd
+uP
+uP
+uP
+uP
 En
 En
 En
@@ -14032,11 +14890,11 @@ En
 SE
 In
 In
-SI
+at
 qS
+ap
 zv
-zv
-zv
+ae
 uP
 nL
 aP
@@ -14155,27 +15013,27 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+cj
+bI
+iK
+bC
+bI
+bM
+bF
+uP
+bx
+bv
+bt
+uP
+aH
+aK
+bj
+aK
+aH
+uP
+aM
+uP
 En
 En
 En
@@ -14184,11 +15042,11 @@ SE
 SE
 In
 In
-SI
+au
 qS
-zv
-zv
-zv
+ap
+ao
+ag
 uP
 uP
 uP
@@ -14307,27 +15165,27 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+ck
+cb
+uP
+uP
+bQ
+bI
+bC
+by
+bx
+bv
+bt
+ml
+zv
+zv
+aJ
+zv
+zv
+aF
+aD
+uP
 En
 En
 SE
@@ -14340,7 +15198,7 @@ ml
 fh
 zv
 zv
-zv
+ah
 uP
 gB
 BY
@@ -14459,27 +15317,27 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+cl
+bI
+bY
+uP
+uP
+bJ
+uP
+uP
+bx
+zv
+bt
+br
+zv
+ba
+bj
+ba
+zv
+uP
+aN
+uP
 En
 SE
 SE
@@ -14487,12 +15345,12 @@ ml
 ml
 uP
 uP
-uP
+ab
+av
+ap
 zv
-zv
-zv
-zv
-zv
+ao
+ai
 uP
 uP
 uP
@@ -14611,27 +15469,27 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+uP
+bI
+bZ
+uP
+bR
+bI
+bA
+uP
+bx
+zv
+bt
+br
+zv
+be
+be
+be
+zv
+uP
+uP
+uP
 En
 SE
 ml
@@ -14640,11 +15498,11 @@ gP
 OY
 Ot
 uP
+aw
 zv
 zv
-zv
-zv
-zv
+ap
+aj
 uP
 xw
 im
@@ -14764,25 +15622,25 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+uP
+uP
+uP
+bS
+bI
+bA
+uP
+bx
+bv
+bt
+ml
+zv
+bc
+bj
+bc
+zv
+aS
+uP
 En
 En
 SE
@@ -14792,12 +15650,12 @@ FV
 uP
 uP
 uP
+ax
+ao
 zv
-zv
-zv
-zv
-zv
-uP
+ap
+ak
+ab
 uP
 uP
 ml
@@ -14917,24 +15775,24 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+bU
+by
+bI
+bI
+uP
+uP
+bx
+bv
+bt
+uP
+zv
+zv
+aJ
+zv
+zv
+aT
+uP
 En
 En
 SE
@@ -14944,8 +15802,8 @@ wS
 Bj
 Dl
 uP
-zv
-zv
+ay
+ap
 zv
 kk
 ml
@@ -15069,24 +15927,24 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+uP
+uP
+bJ
+uP
+uP
+uP
+bx
+zv
+bt
+uP
+uP
+zv
+zv
+zv
+uP
+uP
+uP
 En
 En
 SE
@@ -15096,11 +15954,11 @@ Lw
 uP
 uP
 uP
-zv
-zv
+az
+ao
 zv
 Sz
-SI
+al
 Xe
 Xe
 SE
@@ -15223,20 +16081,20 @@ En
 En
 En
 En
+uP
+bT
+uP
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+bx
+zv
+bf
+bs
+uP
+uP
+bi
+uP
+uP
 En
 En
 En
@@ -15248,11 +16106,11 @@ el
 Rq
 bB
 uP
+aA
 zv
-zv
-zv
+ap
 Sz
-SI
+am
 Xe
 Xe
 SE
@@ -15375,20 +16233,20 @@ En
 En
 En
 En
+uP
+uP
+uP
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+bx
+zv
+zv
+bf
+aU
+bp
+zv
+bf
+aU
 En
 En
 En
@@ -15401,8 +16259,8 @@ wS
 VU
 iK
 zv
-zv
-zv
+ao
+ap
 xR
 ml
 SE
@@ -15531,16 +16389,16 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+bw
+bn
+zv
+zv
+zv
+zv
+zv
+zv
+zv
 En
 En
 En
@@ -15552,9 +16410,9 @@ MN
 el
 el
 uP
+aB
 zv
-zv
-zv
+ar
 ml
 ml
 SE
@@ -15683,16 +16541,16 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+uP
+bw
+aV
+aV
+aV
+aV
+aV
+aV
+aV
 En
 En
 En
@@ -15704,8 +16562,8 @@ ml
 df
 EM
 uP
-zv
-zv
+ac
+as
 ml
 ml
 SE
@@ -15836,15 +16694,15 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+uP
+uP
+uP
+uP
+uP
+uP
+uP
+uP
 En
 En
 En
@@ -16310,9 +17168,9 @@ En
 En
 En
 En
-cW
 En
-cW
+En
+En
 En
 En
 En
@@ -16462,11 +17320,11 @@ En
 En
 En
 En
-cW
 En
-cW
 En
-cW
+En
+En
+En
 En
 En
 En
@@ -16614,9 +17472,9 @@ En
 En
 En
 En
-cW
 En
-cW
+En
+En
 En
 En
 En
@@ -16907,12 +17765,12 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
+uP
+uP
+uP
+uP
+uP
+uP
 En
 En
 En
@@ -17059,13 +17917,13 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
+uP
+uP
+aI
+aO
+aI
+uP
+uP
 En
 En
 En
@@ -17211,15 +18069,15 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+aX
+zv
+zv
+zv
+aH
+uP
+uP
+uP
 En
 En
 En
@@ -17363,15 +18221,15 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+zv
+zv
+zv
+zv
+zv
+uP
+aC
+uP
 En
 En
 En
@@ -17515,15 +18373,15 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+bg
+zv
+aJ
+zv
+aJ
+zv
+aF
+aD
+uP
 En
 En
 En
@@ -17667,15 +18525,15 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+zv
+zv
+zv
+zv
+zv
+uP
+aE
+uP
 En
 En
 En
@@ -17819,15 +18677,15 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+aY
+aK
+aK
+aK
+aH
+uP
+uP
+uP
 En
 En
 En
@@ -17971,13 +18829,13 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
+uP
+uP
+aL
+aQ
+aL
+uP
+uP
 En
 En
 En
@@ -18123,12 +18981,12 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
+bh
+ml
+SE
+SE
+SE
+uP
 En
 En
 En
@@ -18275,11 +19133,11 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
+Sz
+SI
+Xe
+Xe
+SE
 En
 En
 En
@@ -18427,11 +19285,11 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
+Sz
+SI
+Xe
+Xe
+SE
 En
 En
 En
@@ -18579,11 +19437,11 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
+bh
+ml
+SE
+SE
+SE
 En
 En
 En
