@@ -1,4 +1,14 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aaa" = (
+/obj/structure/prop/almayer/minigun_crate{
+	layer = 6
+	},
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors/landing_zone_2)
+"aab" = (
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/indoors/caves)
 "aac" = (
 /obj/effect/decal/hybrisa/trash{
 	icon_state = "trash_6";
@@ -7,6 +17,54 @@
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/Suburb_lv759/indoors/public_spaceport/hangarbay)
+"aad" = (
+/obj/structure/prop/hybrisa/cavedecor/stalagmite4,
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/indoors/caves)
+"aae" = (
+/obj/structure/prop/hybrisa/cavedecor/stalagmite0,
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/indoors/caves)
+"aaf" = (
+/obj/structure/prop/hybrisa/cavedecor/stalagmite5,
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/indoors/caves)
+"aag" = (
+/obj/structure/flora/bush/ausbushes/ppflowers,
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors/colony_streets/Main_road)
+"aah" = (
+/obj/item/prop/alien/hugger,
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors/landing_zone_2)
+"aai" = (
+/obj/structure/prop/hybrisa/cavedecor/stalagmite3,
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/indoors/caves)
+"aaj" = (
+/obj/structure/prop/hybrisa/boulders/large_boulderdark/boulder_dark2,
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/indoors/caves)
+"aak" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/hybrisa/vehicles/Armored_Truck/WY_White,
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/Suburb_lv759/indoors/caves/Monorail)
+"aal" = (
+/obj/item/prop/alien/hugger,
+/turf/open/floor/prison,
+/area/Suburb_lv759/outdoors/landing_zone_2)
+"aam" = (
+/obj/item/toy/beach_ball/holoball{
+	pixel_x = 8;
+	pixel_y = 5
+	},
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"aan" = (
+/obj/structure/machinery/power/port_gen/pacman,
+/turf/open/floor/prison,
+/area/Suburb_lv759/outdoors/colony_streets/cottage11)
 "aao" = (
 /obj/structure/prop/power_transformer,
 /obj/structure/prop/static_tank,
@@ -19,6 +77,41 @@
 /obj/structure/blocker/invisible_wall,
 /turf/open/void,
 /area/Suburb_lv759/indoors/wy_research_complex)
+"aap" = (
+/obj/structure/prop/hybrisa/vehicles/Armored_Truck/WY_Black{
+	dir = 8;
+	pixel_y = 16
+	},
+/turf/open/shuttle/dropship/dark_grey_bottom,
+/area/Suburb_lv759/indoors/caves/Monorail)
+"aaq" = (
+/obj/effect/spawner/random/powercell,
+/turf/open/floor/prison,
+/area/Suburb_lv759/outdoors/colony_streets/cottage11)
+"aar" = (
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/prison,
+/area/Suburb_lv759/outdoors/colony_streets/cottage11)
+"aas" = (
+/obj/item/clothing/suit/marine/veteran/pmc/commando/damaged,
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/Suburb_lv759/indoors/caves/Monorail)
+"aat" = (
+/obj/item/stack/sheet/cardboard/small_stack,
+/turf/closed/wall/strata_outpost/reinforced,
+/area/Suburb_lv759/outdoors/colony_streets/cottage11)
+"aau" = (
+/obj/effect/spawner/random/gun/pmc_secondary,
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/Suburb_lv759/indoors/caves/Monorail)
+"aav" = (
+/obj/structure/prop/hybrisa/vehicles/Armored_Truck/WY_White,
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/Suburb_lv759/indoors/caves/Monorail)
+"aaw" = (
+/obj/effect/landmark/ert_spawns/groundside_xeno,
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/indoors/caves)
 "aax" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
@@ -34,19 +127,438 @@
 /obj/structure/blocker/invisible_wall,
 /turf/open/void,
 /area/Suburb_lv759/indoors/wy_research_complex)
+"aay" = (
+/obj/item/prop/colony/used_flare,
+/turf/open/shuttle/dropship/dark_grey_bottom,
+/area/Suburb_lv759/indoors/caves/Monorail)
+"aaz" = (
+/obj/effect/landmark/lizard_spawn,
+/turf/open/floor/almayer/research/containment/corner/east,
+/area/Suburb_lv759/indoors/wy_research_complex/xenobiology)
+"aaA" = (
+/turf/open/floor/almayer/research/containment/floor2/north,
+/area/Suburb_lv759/indoors/wy_research_complex/xenobiology)
+"aaB" = (
+/turf/open/floor/almayer/research/containment/corner/north,
+/area/Suburb_lv759/indoors/wy_research_complex/xenobiology)
+"aaC" = (
+/obj/effect/decal/ammo_casing/bullet{
+	icon_state = "cartridge_1_1"
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/Suburb_lv759/indoors/caves/Monorail)
+"aaD" = (
+/obj/structure/machinery/light/small/blue{
+	dir = 1
+	},
+/turf/open/floor/almayer/research/containment/corner_var1/north,
+/area/Suburb_lv759/indoors/wy_research_complex/xenobiology)
+"aaE" = (
+/obj/structure/platform{
+	layer = 3.1
+	},
+/obj/structure/blocker/invisible_wall,
+/obj/structure/largecrate/black_market/clf_supplies,
+/turf/open/floor/platebot,
+/area/Suburb_lv759/indoors/caves/Monorail)
+"aaF" = (
+/obj/structure/flora/bush/ausbushes/ppflowers,
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"aaG" = (
+/obj/structure/catwalk,
+/obj/item/prop/colony/used_flare,
+/turf/open/shuttle/dropship/dark_grey_bottom,
+/area/Suburb_lv759/indoors/caves/Monorail)
+"aaH" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/reagent_dispensers/fueltank,
+/turf/open/floor/prison,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaysoutheast)
+"aaI" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/prop/colony/used_flare,
+/turf/open/floor/prison/darkyellow2/north,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaysoutheast)
+"aaJ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/prop/colony/used_flare,
+/turf/open/floor/prison/darkyellow2/north,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaysoutheast)
+"aaK" = (
+/obj/structure/prop/hybrisa/xenobiology/small/egg,
+/turf/open/floor/strata/cyan4/west,
+/area/Suburb_lv759/indoors/caves/Monorail)
+"aaL" = (
+/obj/item/prop/alien/hugger,
+/turf/open/floor/prison,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaysoutheast)
+"aaM" = (
+/obj/item/trash/cigbutt/bcigbutt,
+/turf/open/floor/prison,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaysoutheast)
+"aaN" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/prop/colony/usedbandage{
+	dir = 10;
+	pixel_y = -12
+	},
+/turf/open/floor/prison,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaysoutheast)
+"aaO" = (
+/obj/item/trash/pistachios,
+/turf/open/floor/prison,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaysoutheast)
+"aaP" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/stack/rods,
+/turf/open/floor/prison,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaysoutheast)
+"aaQ" = (
+/obj/structure/closet/hybrisa/wy_bio,
+/turf/open/floor/strata/cyan3/east,
+/area/Suburb_lv759/indoors/caves/Monorail)
+"aaR" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/item/prop/alien/hugger,
+/turf/open/floor/prison/floor_plate,
+/area/Suburb_lv759/indoors/wy_research_complex/weaponresearchlabtesting)
+"aaS" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/prop/colony/usedbandage{
+	dir = 4;
+	pixel_x = -2;
+	pixel_y = 7
+	},
+/turf/open/floor/prison/darkyellow2,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaysoutheast)
+"aaT" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/stack/rods,
+/turf/open/floor/prison/darkyellow2,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaysoutheast)
+"aaU" = (
+/turf/open/floor/prison/darkyellow2,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaysoutheast)
+"aaV" = (
+/obj/structure/largecrate/random/barrel/red{
+	pixel_y = 12
+	},
+/obj/structure/largecrate/random/barrel/black{
+	pixel_x = -6
+	},
+/turf/open/floor/prison/darkyellow2,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaysoutheast)
+"aaW" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/stack/rods,
+/turf/open/floor/prison/darkyellow2/southwest,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaysoutheast)
+"aaX" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 8;
+	pixel_x = 6;
+	pixel_y = 6
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/prop/colony/used_flare,
+/turf/open/floor/prison,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaysoutheast)
+"aaY" = (
+/obj/effect/decal/cleanable/hybrisa/dirt,
+/obj/item/stack/sheet/metal/small_stack,
+/obj/item/stack/rods{
+	pixel_y = 14
+	},
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"aaZ" = (
+/obj/effect/decal/cleanable/hybrisa/dirt,
+/obj/item/tool/weldpack,
+/obj/effect/decal/cleanable/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/greenglow{
+	color = "#140400";
+	name = "dirt";
+	alpha = 100
+	},
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
 "aba" = (
 /obj/structure/largecrate/black_market/clf_supplies,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/asteroidfloor/north,
 /area/Suburb_lv759/indoors/public_spaceport)
+"abb" = (
+/obj/effect/decal/cleanable/hybrisa/dirt,
+/obj/effect/decal/cleanable/blood/oil/streak,
+/obj/item/tool/weldingtool,
+/obj/effect/decal/cleanable/blood/gibs/robot,
+/obj/item/stool{
+	layer = 4;
+	pixel_x = -4;
+	pixel_y = 23
+	},
+/obj/effect/decal/cleanable/hybrisa/dirt,
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"abc" = (
+/obj/effect/decal/cleanable/hybrisa/dirt,
+/obj/item/clothing/head/welding,
+/obj/item/tool/wrench{
+	pixel_x = 1;
+	pixel_y = 10
+	},
+/obj/effect/decal/cleanable/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/greenglow{
+	color = "#140400";
+	name = "dirt";
+	alpha = 100
+	},
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"abd" = (
+/obj/structure/closet/secure_closet/medical3{
+	req_access_txt = "100"
+	},
+/turf/open/floor/strata/cyan3/east,
+/area/Suburb_lv759/indoors/caves/Monorail)
+"abe" = (
+/obj/item/prop/alien/hugger,
+/turf/open/floor/dark,
+/area/Suburb_lv759/outdoors/colony_streets/cottage10)
+"abf" = (
+/obj/item/hardpoint/locomotion/van_wheels{
+	unacidable = 1
+	},
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"abg" = (
+/obj/effect/decal/cleanable/blood/oil/streak,
+/obj/structure/largecrate/random/barrel{
+	layer = 2.9;
+	pixel_x = 6;
+	pixel_y = -16
+	},
+/obj/effect/decal/cleanable/liquid_fuel,
+/obj/effect/decal/cleanable/blood/gibs/robot,
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"abh" = (
+/obj/effect/decal/cleanable/blood/gibs/robot,
+/obj/effect/vehicle_spawner/box_van/fixed{
+	dir = 8
+	},
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"abi" = (
+/obj/effect/decal/cleanable/blood/oil/streak,
+/obj/effect/decal/cleanable/liquid_fuel,
+/obj/effect/decal/cleanable/blood/gibs/robot,
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"abj" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/stack/rods,
+/turf/open/floor/prison/darkyellow2/west,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaysoutheast)
+"abk" = (
+/obj/item/trash/cigbutt/bcigbutt{
+	icon_state = "ucigbutt"
+	},
+/turf/open/floor/prison,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaysoutheast)
+"abl" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_x = 16;
+	pixel_y = -8
+	},
+/obj/item/stack/rods,
+/turf/open/floor/prison/darkyellow2/east,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaysoutheast)
+"abm" = (
+/obj/structure/closet/firecloset,
+/turf/open/floor/prison,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaysoutheast)
+"abn" = (
+/obj/structure/machinery/cryo_cell{
+	layer = 3.20
+	},
+/turf/open/floor/strata/cyan3/east,
+/area/Suburb_lv759/indoors/caves/Monorail)
+"abo" = (
+/obj/structure/machinery/power/reactor/colony,
+/turf/open/floor/podhatchfloor/north,
+/area/Suburb_lv759/indoors/wy_research_complex/weaponresearchlabtesting)
+"abp" = (
+/turf/open/floor/strata/cyan3/east,
+/area/Suburb_lv759/indoors/caves/Monorail)
+"abq" = (
+/obj/structure/pipes/standard/simple/hidden/dark{
+	dir = 4
+	},
+/obj/structure/bed/roller,
+/obj/structure/closet/bodybag{
+	icon_state = "bodybag_open"
+	},
+/turf/open/floor/prison,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaysoutheast)
+"abr" = (
+/obj/effect/decal/cleanable/blood{
+	icon_state = "mgibbl4"
+	},
+/obj/item/prop/alien/hugger,
+/turf/open/floor/prison/floor_plate,
+/area/Suburb_lv759/indoors/wy_research_complex/weaponresearchlabtesting)
+"abs" = (
+/obj/item/device/working_joe_pda,
+/turf/open/floor/prison/floor_plate,
+/area/Suburb_lv759/indoors/wy_research_complex/weaponresearchlabtesting)
+"abt" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/prop/alien/hugger,
+/turf/open/floor/prison,
+/area/Suburb_lv759/outdoors/colony_streets/cottage10)
+"abu" = (
+/obj/structure/prop/hybrisa/xenobiology/small/egg,
+/turf/open/floor/strata/cyan4/north,
+/area/Suburb_lv759/indoors/caves/Monorail)
+"abv" = (
+/obj/structure/prop/hybrisa/xenobiology/small/egg,
+/turf/open/floor/strata/cyan4,
+/area/Suburb_lv759/indoors/caves/Monorail)
 "abw" = (
 /turf/open/floor/kutjevo/colors/red/inner_corner/north,
+/area/Suburb_lv759/indoors/wy_research_complex/securityarmory)
+"abx" = (
+/obj/structure/sign/poster/pimp,
+/turf/closed/wall/strata_outpost,
+/area/Suburb_lv759/outdoors/colony_streets/garage)
+"aby" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -19;
+	pixel_y = -23
+	},
+/obj/item/toy/plush/farwa{
+	desc = "A Farwa plush doll. Once soft and comforting now just really wet.";
+	name = "Soaked farwa plush doll"
+	},
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors/colony_streets/Main_road)
+"abz" = (
+/obj/effect/decal/hybrisa/road/lines4,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_x = 16;
+	pixel_y = -8
+	},
+/obj/item/stack/rods,
+/turf/open/floor/prison/darkyellow2/west,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaysoutheast)
+"abA" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/trash/cigbutt/bcigbutt{
+	icon_state = "ucigbutt"
+	},
+/turf/open/floor/prison/darkyellow2/east,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaysoutheast)
+"abB" = (
+/obj/item/stack/rods,
+/turf/open/floor/prison/darkyellow2/east,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaysoutheast)
+"abC" = (
+/obj/structure/machinery/autodoc_console{
+	dir = 1
+	},
+/turf/open/floor/kutjevo,
+/area/Suburb_lv759/indoors/wy_research_complex/medical_annex)
+"abD" = (
+/obj/structure/girder/reinforced,
+/obj/structure/machinery/medical_pod/autodoc/unskilled,
+/turf/open/floor/almayer/fake_outerhull,
 /area/Suburb_lv759/indoors/wy_research_complex/securityarmory)
 "abE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/biodome,
 /area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
+"abF" = (
+/obj/structure/machinery/power/port_gen/pacman/mrs,
+/turf/open/floor/prison/floor_plate/southwest,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaysoutheast)
+"abG" = (
+/obj/item/trash/cigbutt/bcigbutt{
+	icon_state = "ucigbutt"
+	},
+/turf/open/floor/almayer/plating,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaycentral)
+"abH" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/trash/cigbutt/bcigbutt{
+	icon_state = "ucigbutt"
+	},
+/turf/open/floor/almayer/plating,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaycentral)
+"abI" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/trash/pistachios,
+/turf/open/floor/almayer/plating,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaycentral)
+"abJ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/stack/rods,
+/turf/open/floor/almayer/plating,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaycentral)
+"abK" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/stack/sheet/metal,
+/turf/open/floor/almayer/plating,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaycentral)
+"abL" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 5
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaycentral)
+"abM" = (
+/obj/item/toy/beach_ball/holoball,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Suburb_lv759/outdoors)
+"abN" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/stack/rods,
+/turf/open/floor/almayer/plating,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaycentral)
+"abO" = (
+/obj/effect/decal/grass_overlay/grass1/inner,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaycentral)
+"abP" = (
+/obj/structure/closet/bodybag{
+	icon_state = "bodybag_open"
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/Suburb_lv759/indoors/wy_research_complex/hangarbayshuttle)
+"abQ" = (
+/mob/living/simple_animal/lizard,
+/obj/structure/flora/grass/tallgrass/jungle/corner,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaycentral)
+"abR" = (
+/obj/structure/machinery/disposal/delivery,
+/turf/open/floor/prison/floor_plate/southwest,
+/area/Suburb_lv759/indoors/wy_research_complex/hangarbayshuttle)
+"abS" = (
+/obj/structure/sign/poster/wylogo{
+	pixel_y = 32;
+	layer = 2.9
+	},
+/turf/open/floor/kutjevo/colors/red/edge/north,
+/area/Suburb_lv759/indoors/wy_research_complex/securityarmory)
 "abT" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -59,10 +571,88 @@
 	},
 /turf/open/floor/prison,
 /area/Suburb_lv759/outdoors/colony_streets/cottage9)
+"abU" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/reagent_dispensers/water_cooler/stacks{
+	density = 0;
+	pixel_y = 16
+	},
+/turf/open/floor/prison/darkyellow2/east,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaycentral)
+"abV" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/disposal/delivery,
+/turf/open/floor/almayer/plating,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaycentral)
+"abW" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/tool/mop{
+	layer = 4;
+	pixel_x = -6;
+	pixel_y = 24
+	},
+/obj/item/reagent_container/glass/bucket{
+	layer = 7;
+	pixel_x = 6;
+	pixel_y = 8
+	},
+/turf/open/floor/almayer/plating,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaycentral)
+"abX" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/flora/pottedplant{
+	desc = "It is made of Fiberbush(tm). It contains asbestos.";
+	icon_state = "pottedplant_22";
+	name = "synthetic potted plant";
+	pixel_y = 13
+	},
+/turf/open/floor/almayer/plating,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaycentral)
+"abY" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/sentry_holder/wy{
+	pixel_y = 26
+	},
+/turf/open/floor/almayer/plating,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaycentral)
+"abZ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/flora/pottedplant{
+	icon_state = "pottedplant_29";
+	pixel_y = 7
+	},
+/turf/open/floor/almayer/plating,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaycentral)
+"aca" = (
+/obj/structure/sign/poster/safety,
+/turf/closed/wall/almayer,
+/area/Suburb_lv759/indoors/wy_research_complex/head_research_office)
 "acb" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/flora/pottedplant{
+	desc = "It is made of Fiberbush(tm). It contains asbestos.";
+	icon_state = "pottedplant_22";
+	name = "synthetic potted plant";
+	pixel_y = 2;
+	pixel_x = -8
+	},
 /turf/open/floor/almayer/plating,
 /area/Suburb_lv759/indoors/wy_research_complex/head_research_office)
+"acc" = (
+/obj/structure/prop/hybrisa/misc/machinery/screens/telescreenbroke,
+/turf/closed/wall/biodome,
+/area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
+"acd" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/hybrisa/coffee_machine,
+/turf/open/floor/almayer/blackcorner/east,
+/area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
+"ace" = (
+/turf/open/floor/almayer/black/north,
+/area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
 "acf" = (
 /obj/structure/window/framed/corsat,
 /obj/structure/curtain/colorable_transparent{
@@ -72,6 +662,70 @@
 	},
 /turf/open/floor/plating/asteroidfloor,
 /area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
+"acg" = (
+/turf/open/floor/almayer/black/northeast,
+/area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
+"ach" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/trash/cigbutt/bcigbutt{
+	icon_state = "ucigbutt"
+	},
+/turf/open/floor/almayer/blackfull/west,
+/area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
+"aci" = (
+/turf/open/floor/almayer/black/east,
+/area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
+"acj" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/prop/alien/hugger{
+	pixel_x = -7;
+	pixel_y = -5
+	},
+/turf/open/floor/corsat/squares,
+/area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
+"ack" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_x = 16;
+	pixel_y = -8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/powerloader_wreckage/jd,
+/turf/open/floor/prison,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
+"acl" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -19;
+	pixel_y = -23
+	},
+/obj/structure/flora/bush/ausbushes/var3/brflowers,
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors/colony_streets/Main_road)
+"acm" = (
+/obj/structure/sign/prop3,
+/turf/closed/wall/biodome,
+/area/Suburb_lv759/outdoors/colony_streets/cottage3)
+"acn" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/black/east,
+/area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
+"aco" = (
+/obj/effect/decal/cleanable/blood,
+/obj/item/prop/colony/usedbandage{
+	dir = 10
+	},
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"acp" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/stack/sheet/metal,
+/turf/open/floor/prison,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
+"acq" = (
+/obj/item/prop/alien/hugger,
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
 "acr" = (
 /obj/structure/window/framed/hybrisa/colony/reinforced,
 /obj/structure/machinery/door/poddoor/hybrisa/open_shutters{
@@ -79,6 +733,45 @@
 	},
 /turf/open/floor/plating,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northwest)
+"acs" = (
+/obj/item/tool/pickaxe,
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"act" = (
+/obj/item/clothing/head/hardhat,
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"acu" = (
+/obj/structure/prop/ice_colony/ground_wire,
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 4
+	},
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = -6;
+	pixel_y = 7
+	},
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"acv" = (
+/obj/structure/prop/ice_colony/ground_wire,
+/obj/structure/prop/server_equipment/laptop/on{
+	layer = 3.5;
+	pixel_y = 10
+	},
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"acw" = (
+/obj/structure/prop/ice_colony/ground_wire,
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 8
+	},
+/obj/item/lightstick/red/spoke/planted{
+	layer = 3.1;
+	pixel_x = 6;
+	pixel_y = 7
+	},
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
 "acx" = (
 /obj/structure/machinery/light/spot{
 	dir = 4;
@@ -86,11 +779,145 @@
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/Suburb_lv759/indoors/public_spaceport/vehicledeploymentbay)
+"acy" = (
+/obj/item/reagent_container/food/drinks/cans/souto{
+	icon_state = "blank_can_crushed"
+	},
+/turf/open/floor/corsat/squares,
+/area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
+"acz" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 4
+	},
+/obj/item/tool/weldingtool,
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"acA" = (
+/obj/structure/prop/dam/drill{
+	layer = 3.1;
+	pixel_x = 13;
+	pixel_y = -1
+	},
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"acB" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 8
+	},
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"acC" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/black/east,
+/area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
+"acD" = (
+/obj/item/clothing/head/welding,
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"acE" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 1
+	},
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 4
+	},
+/obj/item/lightstick/red/spoke/planted{
+	layer = 3.1;
+	pixel_x = -7;
+	pixel_y = 27
+	},
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"acF" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 1
+	},
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"acG" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 1
+	},
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 8
+	},
+/obj/item/lightstick/red/spoke/planted{
+	layer = 3.1;
+	pixel_x = 7;
+	pixel_y = 17
+	},
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"acH" = (
+/obj/item/stack/sheet/metal,
+/turf/open/floor/prison,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
+"acI" = (
+/obj/structure/pipes/standard/simple/hidden/dark,
+/obj/structure/closet/bodybag,
+/turf/open/floor/prison/floor_plate/southwest,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaynorthexit)
+"acJ" = (
+/obj/structure/ore_box,
+/obj/item/tool/weldpack{
+	pixel_y = 17
+	},
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"acK" = (
+/turf/open/floor/almayer/blackcorner,
+/area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
+"acL" = (
+/turf/open/floor/almayer/black,
+/area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
+"acM" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/emcloset,
+/turf/open/floor/prison,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
+"acN" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood/drip,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
 "acO" = (
 /obj/effect/decal/grass_overlay/grass1/inner,
 /obj/structure/flora/grass/tallgrass/jungle/corner,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaycentral)
+"acP" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood/drip,
+/turf/open/floor/prison,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
+"acQ" = (
+/obj/structure/closet/fireaxecabinet,
+/turf/closed/wall/hybrisa/research/reinforced,
+/area/Suburb_lv759/indoors/wy_research_complex/cargo)
+"acR" = (
+/obj/structure/machinery/floodlight/landing/floor,
+/turf/open/floor/plating,
+/area/Suburb_lv759/outdoors/landing_zone_1)
+"acS" = (
+/obj/effect/decal/hybrisa/road/lines4,
+/obj/item/trash/cigbutt/bcigbutt{
+	icon_state = "ucigbutt"
+	},
+/turf/open/floor/prison/darkyellow2/west,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
 "acT" = (
 /obj/effect/decal/hybrisa/dirt,
 /obj/effect/decal/hybrisa/lattice/full,
@@ -101,6 +928,28 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/colors,
 /area/Suburb_lv759/indoors/wy_research_complex/securityarmory)
+"acV" = (
+/obj/structure/closet/bodybag{
+	icon_state = "bodybag_open"
+	},
+/turf/open/floor/prison/floor_plate/southwest,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaynorthexit)
+"acW" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice8";
+	pixel_x = 16;
+	pixel_y = 24
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/cleanable/blood/drip,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
 "acX" = (
 /obj/structure/catwalk,
 /obj/structure/prop/invuln/lattice_prop{
@@ -127,6 +976,51 @@
 /obj/structure/blocker/invisible_wall,
 /turf/open/void,
 /area/Suburb_lv759/indoors/wy_research_complex)
+"acZ" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/blood/drip,
+/turf/open/floor/prison,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
+"ada" = (
+/obj/structure/barricade/handrail/strata,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 8;
+	pixel_x = 6;
+	pixel_y = 6
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood/drip,
+/turf/open/floor/prison,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
+"adb" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood/drip,
+/turf/open/floor/prison/darkyellow2/north,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
+"adc" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/random/mini/wooden,
+/turf/open/floor/prison/darkyellow2/north,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
+"add" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood/drip,
+/turf/open/floor/prison,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
+"ade" = (
+/obj/item/trash/pistachios,
+/turf/open/floor/prison,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
+"adf" = (
+/obj/effect/decal/cleanable/blood/drip,
+/turf/open/floor/prison,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
 "adg" = (
 /obj/effect/decal/hybrisa/dirt,
 /obj/structure/desertdam/decals/road_edge{
@@ -138,14 +1032,176 @@
 	},
 /turf/open/asphalt/cement/cement13,
 /area/Suburb_lv759/outdoors/colony_streets/Main_road)
+"adh" = (
+/obj/effect/decal/hybrisa/road/road_edge{
+	icon_state = "road_edge_decal3"
+	},
+/obj/effect/decal/hybrisa/road/lines3,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/doubleroad/lines2{
+	pixel_y = 4
+	},
+/obj/structure/prop/hybrisa/vehicles/Long_Truck/Blue,
+/turf/open/hybrisa/street/asphalt,
+/area/Suburb_lv759/outdoors/colony_streets/Main_road)
 "adi" = (
 /obj/structure/fence/dark,
 /turf/open/floor/plating,
 /area/Suburb_lv759/indoors/caves)
+"adj" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/emcloset,
+/turf/open/floor/prison/darkyellow2,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
+"adk" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/disposal/delivery,
+/turf/open/floor/prison/darkyellow2,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
+"adl" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/roof/hybrisa/billboardsandsigns/billboardsmedium/billboard1{
+	dir = 10;
+	pixel_y = 34;
+	lazy_nodes = 0;
+	layer = 3
+	},
+/turf/open/floor/prison/darkyellow2,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
+"adm" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/disposal/delivery,
+/turf/open/floor/prison/darkyellow2,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
+"adn" = (
+/obj/item/hybrisa/misc/trash_bag_full_prop{
+	pixel_x = 3;
+	pixel_y = 20
+	},
+/turf/open/floor/prison,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
+"ado" = (
+/obj/structure/closet/medical_wall,
+/turf/closed/wall/r_wall/biodome,
+/area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
+"adp" = (
+/obj/structure/flora/bush/ausbushes/var3/brflowers,
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors/colony_streets/Main_road)
+"adq" = (
+/obj/structure/machinery/door/airlock/multi_tile/hybrisa/personal/autoname,
+/turf/open/floor/corsat/officetiles,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"adr" = (
+/obj/structure/closet/secure_closet/engineering_personal,
+/turf/open/floor/prison,
+/area/Suburb_lv759/indoors/wy_research_complex)
+"ads" = (
+/obj/structure/machinery/light/blue{
+	dir = 8
+	},
+/obj/structure/reagent_dispensers/fueltank,
+/turf/open/floor/prison/darkbrown2/southwest,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"adt" = (
+/obj/structure/machinery/light/blue,
+/turf/open/floor/prison/darkbrown2/southeast,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"adu" = (
+/turf/open/floor/hybrisa/metal/grated/north,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"adv" = (
+/obj/structure/closet,
+/obj/item/clothing/suit/hybrisa/engineering_utility_oversuit,
+/obj/item/clothing/suit/hybrisa/engineering_utility_oversuit/alt,
+/obj/item/clothing/under/hybrisa/engineering_utility,
+/obj/item/clothing/under/hybrisa/engineering_utility/alt,
+/obj/structure/machinery/light/blue,
+/turf/open/floor/prison/darkbrown2/southwest,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
 "adw" = (
 /obj/structure/window/framed/hybrisa/colony/reinforced,
 /turf/open/floor/plating,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northwest)
+"adx" = (
+/obj/item/storage/pouch/construction,
+/obj/item/tool/surgery/synthgraft,
+/obj/effect/spawner/random/tool,
+/obj/effect/spawner/random/tech_supply,
+/obj/structure/surface/rack{
+	color = "#98a3ab"
+	},
+/turf/open/floor/prison/darkbrown2,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"ady" = (
+/obj/item/storage/pouch/electronics/full,
+/obj/item/stack/nanopaste,
+/obj/item/stack/cable_coil/green{
+	pixel_y = 12;
+	pixel_x = 8
+	},
+/obj/structure/surface/table/reinforced/prison{
+	color = "#98a3ab"
+	},
+/turf/open/floor/prison/darkbrown2,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"adz" = (
+/obj/item/stack/cable_coil{
+	pixel_y = 8;
+	pixel_x = -8
+	},
+/obj/item/stack/cable_coil/cut{
+	icon_state = "coil2"
+	},
+/obj/item/tool/weldpack/minitank{
+	pixel_x = 8;
+	pixel_y = 8
+	},
+/obj/structure/surface/table/reinforced/prison{
+	color = "#98a3ab"
+	},
+/turf/open/floor/prison/darkbrown2,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"adA" = (
+/obj/item/robot_parts/arm/l_arm,
+/obj/item/robot_parts/leg/l_leg,
+/obj/item/robot_parts/arm/r_arm,
+/obj/item/robot_parts/leg/r_leg,
+/obj/item/tool/weldingtool{
+	pixel_x = -7;
+	pixel_y = 3
+	},
+/obj/item/tool/screwdriver,
+/obj/item/tool/weldpack,
+/obj/item/storage/firstaid/synth,
+/obj/structure/pipes/standard/simple/hidden/dark,
+/obj/structure/sign/safety/restrictedarea{
+	pixel_x = 34
+	},
+/obj/structure/surface/rack{
+	color = "#98a3ab"
+	},
+/obj/structure/machinery/light/blue{
+	dir = 4
+	},
+/turf/open/floor/prison/darkbrown2/southeast,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"adB" = (
+/obj/effect/decal/cleanable/hybrisa/trash{
+	icon_state = "trash_2"
+	},
+/turf/open/floor/prison/darkbrown2/west,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"adC" = (
+/obj/item/trash/cigbutt{
+	pixel_x = -9;
+	pixel_y = -6
+	},
+/obj/effect/landmark/survivor_spawner,
+/turf/open/floor/prison/darkbrown2/east,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
 "adD" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -155,20 +1211,178 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
+"adE" = (
+/obj/structure/cable{
+	icon_state = "4-10";
+	color = "#550d0d"
+	},
+/obj/effect/decal/cleanable/hybrisa/dirt,
+/obj/item/clothing/head/hardhat{
+	pixel_x = 4;
+	pixel_y = 7
+	},
+/obj/item/stack/cable_coil/cut{
+	icon_state = "coil2";
+	color = "#550d0d"
+	},
+/turf/open/floor/prison/darkbrown2/west,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"adF" = (
+/turf/open/floor/prison/southwest,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"adG" = (
+/obj/effect/decal/cleanable/hybrisa/dirt,
+/turf/open/floor/prison/southwest,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"adH" = (
+/obj/structure/prop/hybrisa/vehicles/Box_Vans/Hyperdyne{
+	dir = 1
+	},
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"adI" = (
+/obj/structure/machinery/door/airlock/hybrisa/personal/autoname,
+/turf/open/floor/prison/southwest,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
 "adJ" = (
 /obj/structure/platform/metal/almayer/north,
 /turf/open/floor/corsat/squares,
 /area/Suburb_lv759/indoors/wy_research_complex/hangarbay)
+"adK" = (
+/turf/open/floor/prison/darkbrowncorners2/southwest,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"adL" = (
+/turf/open/floor/prison/darkbrown2,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"adM" = (
+/obj/effect/decal/cleanable/hybrisa/dirt,
+/turf/open/floor/prison/darkbrowncorners2/west,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"adN" = (
+/obj/effect/decal/cleanable/hybrisa/dirt,
+/turf/open/floor/plating/platingdmg3,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"adO" = (
+/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy4,
+/turf/open/floor/plating,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"adP" = (
+/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy2{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"adQ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/floodlight/landing/floor,
+/turf/open/floor/plating,
+/area/Suburb_lv759/outdoors/landing_zone_1)
+"adR" = (
+/obj/item/reagent_container/glass/bucket{
+	pixel_x = -11;
+	pixel_y = 1
+	},
+/obj/item/reagent_container/glass/bucket{
+	pixel_x = -4;
+	pixel_y = -3
+	},
+/turf/open/floor/prison/darkbrown2/west,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"adS" = (
+/obj/effect/landmark/survivor_spawner,
+/turf/open/floor/prison/cell_stripe/north,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
 "adT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
+"adU" = (
+/obj/item/stool{
+	pixel_x = -4;
+	pixel_y = 23
+	},
+/obj/item/tool/screwdriver{
+	layer = 3.6;
+	pixel_x = 9;
+	pixel_y = 8
+	},
+/turf/open/floor/prison/cell_stripe/north,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"adV" = (
+/obj/structure/pipes/vents/pump_hybrisa,
+/turf/open/floor/prison/southwest,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"adW" = (
+/obj/structure/cable{
+	icon_state = "1-4";
+	level = 2
+	},
+/obj/item/stack/cable_coil/cut{
+	icon_state = "coil1";
+	color = "#550d0d"
+	},
+/obj/effect/decal/cleanable/hybrisa/dirt,
+/obj/effect/decal/cleanable/hybrisa/dirt,
+/turf/open/floor/plating,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"adX" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "5-8";
+	level = 2
+	},
+/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy4,
+/turf/open/floor/plating/platingdmg3,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
 "adY" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/auto_turf/hybrisa_auto_turf/layer1,
 /area/Suburb_lv759/outdoors/colony_streets/CLF_Camp)
+"adZ" = (
+/obj/item/stack/cable_coil/orange,
+/obj/effect/decal/cleanable/generic{
+	color = "#5d524b";
+	alpha = 155
+	},
+/turf/open/floor/prison/darkbrown2/west,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"aea" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/disposalpipe/segment{
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"aeb" = (
+/obj/structure/largecrate/random/mini{
+	layer = 4;
+	pixel_x = 1;
+	pixel_y = 16
+	},
+/obj/item/reagent_container/glass/bucket/mopbucket{
+	pixel_x = 5;
+	pixel_y = -11
+	},
+/obj/item/storage/toolbox/electrical,
+/obj/item/stack/cable_coil,
+/obj/structure/sign/poster/safety{
+	pixel_y = 32
+	},
+/obj/structure/surface/rack{
+	color = "#98a3ab"
+	},
+/obj/structure/machinery/light/blue{
+	dir = 8
+	},
+/turf/open/floor/prison/darkbrown2/northwest,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"aec" = (
+/turf/open/floor/prison/darkbrown2/north,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
 "aed" = (
 /obj/effect/decal/hybrisa/trash{
 	icon_state = "trash_12";
@@ -177,6 +1391,136 @@
 	},
 /turf/open/floor/hybrisa/tile/darkgrey_bigtile,
 /area/Suburb_lv759/indoors/public_spaceport/cafeteria)
+"aee" = (
+/obj/structure/machinery/computer/communications/simple,
+/obj/structure/machinery/meter{
+	pixel_y = 32
+	},
+/obj/structure/surface/table/reinforced/prison{
+	color = "#98a3ab"
+	},
+/turf/open/floor/prison/darkbrown2/north,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"aef" = (
+/obj/effect/decal/cleanable/hybrisa/dirt,
+/obj/structure/filingcabinet{
+	density = 0;
+	pixel_x = 8;
+	pixel_y = 20
+	},
+/obj/structure/filingcabinet{
+	density = 0;
+	pixel_x = -8;
+	pixel_y = 20
+	},
+/obj/structure/pipes/vents/pump_hybrisa,
+/turf/open/floor/prison/southwest,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"aeg" = (
+/obj/structure/machinery/colony_floodlight_switch/electrified_fence_switch{
+	pixel_y = 28;
+	explo_proof = 1;
+	pixel_x = -4
+	},
+/obj/effect/decal/cleanable/hybrisa/dirt,
+/obj/effect/decal/cleanable/generic{
+	color = "#5d524b";
+	alpha = 155
+	},
+/obj/structure/largecrate/random/mini/small_case{
+	pixel_x = -9;
+	pixel_y = 10
+	},
+/obj/item/tool/screwdriver{
+	pixel_x = 5;
+	pixel_y = -4
+	},
+/turf/open/floor/prison/cell_stripe/north,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"aeh" = (
+/obj/structure/prop/hybrisa/misc/machinery/screens/multimonitormedium_on{
+	dir = 1;
+	light_color = "#00da64";
+	light_on = 1;
+	light_power = 3;
+	light_range = 5;
+	pixel_y = 32
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/big_computers/computerbrown/computer4,
+/turf/open/floor/plating,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"aei" = (
+/obj/structure/machinery/big_computers/computerbrown/computer3,
+/obj/structure/prop/hybrisa/misc/machinery/screens/multimonitorsmall_on{
+	dir = 1;
+	light_color = "#00da64";
+	light_on = 1;
+	light_power = 3;
+	light_range = 5;
+	pixel_y = 32
+	},
+/turf/open/floor/plating,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"aej" = (
+/obj/effect/decal/cleanable/hybrisa/dirt,
+/obj/item/reagent_container/glass/bucket{
+	pixel_x = -11;
+	pixel_y = 1
+	},
+/obj/structure/prop/hybrisa/misc/buildinggreebliessmall/computer{
+	light_color = "#00ff9f";
+	light_on = 1;
+	light_power = 2;
+	light_range = 3;
+	pixel_x = 2;
+	pixel_y = 8
+	},
+/obj/structure/prop/hybrisa/misc/buildinggreebliessmall/smallvent3{
+	pixel_y = 28
+	},
+/turf/open/floor/prison/darkbrown2/northwest,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"aek" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out"
+	},
+/obj/item/stack/cable_coil/cut{
+	icon_state = "coil2"
+	},
+/obj/effect/decal/cleanable/blood/gibs/robot{
+	pixel_y = 22;
+	pixel_x = -4
+	},
+/obj/effect/decal/cleanable/dirt/greenglow{
+	color = "#140400";
+	name = "dirt"
+	},
+/obj/item/stack/rods,
+/obj/structure/machinery/light/blue{
+	dir = 4
+	},
+/turf/open/floor/prison/darkbrown2/north,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"ael" = (
+/turf/closed/wall/hybrisa/colony/engineering,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"aem" = (
+/obj/effect/decal/cleanable/hybrisa/dirt,
+/obj/structure/pipes/standard/simple/hidden/dark,
+/turf/closed/wall/hybrisa/colony/engineering,
+/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
+"aen" = (
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_wall,
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/indoors/caves)
+"aeo" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/prop/alien/hugger,
+/turf/open/floor/airless/asteroidfloor,
+/area/Suburb_lv759/indoors/public_spaceport)
 "aep" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/autoname{
 	dir = 2
@@ -204,10 +1548,48 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
+"aer" = (
+/turf/open/floor/almayer/blackcorner/east,
+/area/Suburb_lv759/indoors/caves/Monorail)
+"aes" = (
+/turf/open/floor/almayer/black/north,
+/area/Suburb_lv759/indoors/caves/Monorail)
+"aet" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/black/northeast,
+/area/Suburb_lv759/indoors/caves/Monorail)
 "aeu" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/shuttle/dropship/can_surgery/light_grey_single_wide_up_to_down,
 /area/Suburb_lv759/indoors/public_spaceport/hangarbay)
+"aev" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/blackfull/west,
+/area/Suburb_lv759/indoors/caves/Monorail)
+"aew" = (
+/turf/open/floor/almayer/black/northwest,
+/area/Suburb_lv759/indoors/caves/Monorail)
+"aex" = (
+/turf/open/floor/almayer/black/east,
+/area/Suburb_lv759/indoors/caves/Monorail)
+"aey" = (
+/obj/item/paper/crumpled,
+/turf/open/floor/almayer/blackfull/west,
+/area/Suburb_lv759/indoors/caves/Monorail)
+"aez" = (
+/turf/open/floor/almayer/blackfull/west,
+/area/Suburb_lv759/indoors/caves/Monorail)
+"aeA" = (
+/turf/open/floor/almayer/black/west,
+/area/Suburb_lv759/indoors/caves/Monorail)
+"aeB" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_x = 16;
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/black/east,
+/area/Suburb_lv759/indoors/caves/Monorail)
 "aeC" = (
 /obj/item/clothing/head/hardhat/red/kelland{
 	pixel_y = 12;
@@ -216,6 +1598,36 @@
 /obj/effect/decal/hybrisa/lattice/full,
 /turf/open/auto_turf/hybrisa_auto_turf/layer2,
 /area/Suburb_lv759/indoors/caves)
+"aeD" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_x = 16;
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/blackfull/west,
+/area/Suburb_lv759/indoors/caves/Monorail)
+"aeE" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_x = 16;
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/black/west,
+/area/Suburb_lv759/indoors/caves/Monorail)
+"aeF" = (
+/obj/effect/decal/hybrisa/trash{
+	icon_state = "trash_2";
+	pixel_y = 12
+	},
+/turf/open/floor/almayer/blackfull/west,
+/area/Suburb_lv759/indoors/caves/Monorail)
+"aeG" = (
+/obj/structure/machinery/photocopier/wyphotocopier{
+	pixel_x = -2;
+	pixel_y = 2
+	},
+/turf/open/floor/almayer/black/west,
+/area/Suburb_lv759/indoors/caves/Monorail)
 "aeH" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -234,6 +1646,67 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/Suburb_lv759/outdoors/landing_zone_2)
+"aeJ" = (
+/obj/structure/cargo_container/hd/left{
+	layer = 6
+	},
+/turf/open/floor/plating/asteroidfloor/north,
+/area/Suburb_lv759/indoors/public_spaceport)
+"aeK" = (
+/obj/structure/cargo_container/hd/mid{
+	layer = 6
+	},
+/turf/open/floor/plating/asteroidfloor/north,
+/area/Suburb_lv759/indoors/public_spaceport)
+"aeL" = (
+/turf/open/floor/almayer/black,
+/area/Suburb_lv759/indoors/caves/Monorail)
+"aeM" = (
+/obj/structure/barricade/wooden,
+/turf/open/floor/prison/platingdmg3,
+/area/Suburb_lv759/outdoors)
+"aeN" = (
+/obj/structure/barricade/wooden,
+/turf/open/floor/prison/bright_clean2,
+/area/Suburb_lv759/outdoors)
+"aeO" = (
+/obj/structure/prop/invuln/fire,
+/turf/open/floor/plating,
+/area/Suburb_lv759/outdoors)
+"aeP" = (
+/obj/structure/barricade/wooden{
+	desc = "This barricade is heavily reinforced. Nothing short of blasting it open seems like it'll do the trick, that or melting the breams supporting it...";
+	dir = 8;
+	health = 25000
+	},
+/turf/open/floor/platingdmg3,
+/area/Suburb_lv759/outdoors)
+"aeQ" = (
+/obj/structure/prop/hybrisa/boulders/wide_boulderdark/wide_boulder2,
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/indoors/caves)
+"aeR" = (
+/obj/structure/prop/invuln/fire,
+/turf/open/floor/prison/bright_clean2,
+/area/Suburb_lv759/outdoors)
+"aeS" = (
+/obj/structure/prop/invuln/fire,
+/turf/open/floor/platingdmg3,
+/area/Suburb_lv759/outdoors)
+"aeT" = (
+/obj/structure/prop/vehicles/crawler{
+	dir = 8;
+	icon_state = "crawler_crate_alt2";
+	layer = 3.2
+	},
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"aeU" = (
+/obj/structure/prop/vehicles/crawler{
+	icon_state = "crawler_covered_bed"
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/Suburb_lv759/outdoors)
 "aeV" = (
 /obj/item/reagent_container/glass/bucket{
 	pixel_x = 12;
@@ -242,6 +1715,20 @@
 /obj/structure/closet/firecloset,
 /turf/open/floor/prison,
 /area/Suburb_lv759/indoors/public_spaceport/hangarbay)
+"aeW" = (
+/obj/item/prop/alien/hugger,
+/turf/open/floor/strata/floor3,
+/area/Suburb_lv759/indoors/public_spaceport)
+"aeX" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/Suburb_lv759/outdoors/colony_streets/cottage7)
+"aeY" = (
+/obj/structure/prop/hybrisa/boulders/large_boulderdark/boulder_dark3,
+/turf/open/auto_turf/hybrisa_auto_turf/layer2,
+/area/Suburb_lv759/indoors/caves)
 "aeZ" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/computer/emails{
@@ -250,27 +1737,312 @@
 	},
 /turf/open/floor/prison,
 /area/Suburb_lv759/indoors/wy_research_complex)
+"afa" = (
+/obj/item/prop/alien/hugger,
+/turf/open/floor/white,
+/area/Suburb_lv759/indoors/public_spaceport/cafeteria)
 "afb" = (
 /obj/structure/machinery/door/airlock/almayer/maint/colony/autoname{
 	dir = 1
 	},
 /turf/open/floor/almayer/blackfull/west,
 /area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
+"afc" = (
+/obj/structure/prop/hybrisa/boulders/smallboulderdark/boulder_dark2,
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/indoors/caves)
+"afd" = (
+/obj/structure/prop/hybrisa/vehicles/Long_Truck/Kelland_Mining{
+	layer = 4.2;
+	pixel_y = -6;
+	dir = 8
+	},
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors/colony_streets/Main_road)
+"afe" = (
+/obj/structure/largecrate/random/barrel{
+	layer = 5.1;
+	pixel_x = 13;
+	pixel_y = 16
+	},
+/obj/item/tool/warning_cone{
+	pixel_x = -9;
+	pixel_y = 20
+	},
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
 "aff" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/girder/reinforced,
 /turf/open/floor/almayer/fake_outerhull,
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
+"afg" = (
+/obj/item/stack/sheet/wood{
+	layer = 2
+	},
+/obj/effect/spawner/random/toolbox{
+	pixel_y = 12
+	},
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"afh" = (
+/obj/item/stack/sandbags/large_stack,
+/obj/item/stack/sandbags/large_stack,
+/obj/item/stack/sandbags/large_stack,
+/obj/item/stack/sheet/cardboard{
+	layer = 1
+	},
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"afi" = (
+/obj/structure/largecrate/random/barrel{
+	layer = 2
+	},
+/obj/effect/decal/cleanable/dirt/greenglow{
+	color = "#140400";
+	name = "dirt";
+	alpha = 100
+	},
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"afj" = (
+/obj/effect/decal/cleanable/hybrisa/dirt,
+/obj/structure/prop/hybrisa/vehicles/Small_Truck/Mining{
+	dir = 1
+	},
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"afk" = (
+/obj/item/tool/warning_cone{
+	pixel_x = 4;
+	pixel_y = 18
+	},
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"afl" = (
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/indoors/public_spaceport)
+"afm" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood/xeno,
+/turf/open/floor/almayer/fake_outerhull,
+/area/Suburb_lv759/indoors/caves/wy_research_complex_entrance)
+"afn" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/deployable{
+	damage_state = 2;
+	dir = 8;
+	health = 140;
+	icon_state = "folding_2"
+	},
+/turf/open/floor/almayer/fake_outerhull,
+/area/Suburb_lv759/indoors/caves/wy_research_complex_entrance)
+"afo" = (
+/obj/structure/largecrate/random/barrel,
+/turf/open/auto_turf/sand_white/layer0,
+/area/Suburb_lv759/outdoors)
+"afp" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/wooden{
+	desc = "This barricade is heavily reinforced. Nothing short of blasting it open seems like it'll do the trick, that or melting the breams supporting it...";
+	dir = 8;
+	health = 25000
+	},
+/turf/open/floor/almayer/fake_outerhull,
+/area/Suburb_lv759/indoors/caves/wy_research_complex_entrance)
+"afq" = (
+/obj/structure/barricade/deployable{
+	damage_state = 2;
+	dir = 8;
+	health = 140;
+	icon_state = "folding_2"
+	},
+/obj/effect/decal/ammo_casing/bullet{
+	icon_state = "cartridge_3_1"
+	},
+/obj/effect/spawner/random/gun/clf_primary,
+/turf/open/floor/almayer/fake_outerhull,
+/area/Suburb_lv759/indoors/caves/wy_research_complex_entrance)
+"afr" = (
+/obj/effect/decal/cleanable/blood/drip,
+/turf/open/floor/almayer/fake_outerhull,
+/area/Suburb_lv759/indoors/caves/wy_research_complex_entrance)
+"afs" = (
+/obj/structure/prop/hybrisa/vehicles/Armored_Truck/Blue,
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"aft" = (
+/obj/structure/largecrate/guns/russian,
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"afu" = (
+/obj/structure/barricade/deployable{
+	damage_state = 2;
+	dir = 8;
+	health = 140;
+	icon_state = "folding_2"
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/almayer/fake_outerhull,
+/area/Suburb_lv759/indoors/caves/wy_research_complex_entrance)
+"afv" = (
+/obj/structure/machinery/power/reactor/colony{
+	pixel_x = 0;
+	pixel_y = -3
+	},
+/turf/open/floor/corsat/marked,
+/area/Suburb_lv759/outdoors)
+"afw" = (
+/obj/structure/largecrate/guns/merc,
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"afx" = (
+/obj/structure/largecrate/guns,
+/turf/open/auto_turf/sand_white/layer0,
+/area/Suburb_lv759/outdoors)
+"afy" = (
+/obj/effect/decal/cleanable/blood/xeno,
+/turf/open/floor/almayer/fake_outerhull,
+/area/Suburb_lv759/indoors/caves/wy_research_complex_entrance)
+"afz" = (
+/obj/structure/barricade/wooden{
+	desc = "This barricade is heavily reinforced. Nothing short of blasting it open seems like it'll do the trick, that or melting the breams supporting it...";
+	dir = 8;
+	health = 25000
+	},
+/turf/open/floor/almayer/fake_outerhull,
+/area/Suburb_lv759/indoors/caves/wy_research_complex_entrance)
+"afA" = (
+/obj/structure/barricade/wooden{
+	dir = 4;
+	layer = 3.7
+	},
+/turf/open/floor/almayer/fake_outerhull,
+/area/Suburb_lv759/indoors/caves/wy_research_complex_entrance)
+"afB" = (
+/obj/structure/machinery/power/reactor/colony{
+	pixel_x = -2;
+	pixel_y = -3
+	},
+/turf/open/floor/corsat/marked,
+/area/Suburb_lv759/outdoors)
+"afC" = (
+/obj/structure/machinery/power/reactor/colony{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/turf/open/floor/corsat/marked,
+/area/Suburb_lv759/outdoors)
+"afD" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/deployable{
+	damage_state = 3;
+	health = 50;
+	icon_state = "folding_3";
+	dir = 4
+	},
+/turf/open/floor/almayer/fake_outerhull,
+/area/Suburb_lv759/indoors/caves/wy_research_complex_entrance)
+"afE" = (
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/almayer/fake_outerhull,
+/area/Suburb_lv759/indoors/caves/wy_research_complex_entrance)
 "afF" = (
 /obj/effect/decal/cleanable/blood{
 	pixel_x = 13
 	},
 /turf/open/floor/dark,
 /area/Suburb_lv759/indoors/caves)
+"afG" = (
+/obj/structure/barricade/deployable{
+	damage_state = 3;
+	health = 50;
+	icon_state = "folding_3";
+	dir = 4
+	},
+/obj/effect/decal/ammo_casing/bullet{
+	icon_state = "cartridge_7_1"
+	},
+/obj/effect/spawner/random/gun/clf_primary,
+/turf/open/floor/almayer/fake_outerhull,
+/area/Suburb_lv759/indoors/caves/wy_research_complex_entrance)
+"afH" = (
+/obj/structure/prop/hybrisa/vehicles/Mining_Crawlers{
+	icon_state = "mining_crawler_blank";
+	dir = 1
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/Suburb_lv759/outdoors)
+"afI" = (
+/obj/structure/barricade/handrail/hybrisa/road/plastic/red{
+	dir = 1
+	},
+/obj/item/stack/rods{
+	pixel_y = -2
+	},
+/obj/effect/decal/cleanable/dirt/greenglow{
+	color = "#140400";
+	name = "dirt";
+	alpha = 100
+	},
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/indoors/caves/wy_research_complex_entrance)
+"afJ" = (
+/obj/effect/decal/cleanable/hybrisa/dirt,
+/obj/structure/largecrate/random/barrel{
+	desc = "A red storage barrel.";
+	icon_state = "barrel_red";
+	name = "red barrel";
+	pixel_x = 10;
+	pixel_y = 16
+	},
+/obj/structure/largecrate/random/barrel{
+	desc = "A yellow storage barrel.";
+	icon_state = "barrel_yellow";
+	name = "yellow barrel";
+	pixel_y = 4
+	},
+/obj/effect/decal/cleanable/dirt/greenglow{
+	color = "#140400";
+	name = "dirt";
+	alpha = 100
+	},
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/indoors/caves/wy_research_complex_entrance)
+"afK" = (
+/obj/item/tool/warning_cone{
+	pixel_y = 17
+	},
+/obj/effect/decal/cleanable/hybrisa/dirt,
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/indoors/caves/wy_research_complex_entrance)
+"afL" = (
+/obj/structure/lz_sign/hybrisa_sign/mining,
+/obj/effect/decal/cleanable/hybrisa/dirt,
+/obj/item/tool/warning_cone{
+	layer = 2;
+	pixel_x = -20
+	},
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
+"afM" = (
+/obj/effect/decal/cleanable/hybrisa/dirt,
+/turf/open/auto_turf/hybrisa_auto_turf/layer1,
+/area/Suburb_lv759/outdoors)
 "afN" = (
 /obj/structure/largecrate/random/barrel/white,
 /turf/open/floor/almayer/test_floor5,
 /area/Suburb_lv759/indoors/public_spaceport/hangarbay)
+"afO" = (
+/obj/structure/roof/hybrisa/billboardsandsigns/billboardsmedium/billboard5{
+	dir = 9;
+	pixel_y = 34;
+	lazy_nodes = 0;
+	layer = 3
+	},
+/turf/open/floor/hybrisa/tile/darkgrey_bigtile,
+/area/Suburb_lv759/indoors/public_spaceport/cafeteria)
 "afP" = (
 /obj/item/ashtray/plastic{
 	pixel_x = 1;
@@ -298,18 +2070,63 @@
 	},
 /turf/open/floor/strata/red1,
 /area/Suburb_lv759/indoors/public_spaceport/hangarbay)
-"afQ" = (
-/obj/structure/fence{
-	icon_state = "brokenfence4"
+"afR" = (
+/obj/structure/roof/hybrisa/billboardsandsigns/billboardsmedium/billboard5{
+	pixel_y = 32;
+	lazy_nodes = 0;
+	layer = 3
 	},
-/turf/open/auto_turf/hybrisa_auto_turf/layer1,
-/area/Suburb_lv759/outdoors)
+/turf/open/floor/plating/asteroidfloor/north,
+/area/Suburb_lv759/indoors/public_spaceport)
+"afS" = (
+/obj/effect/decal/cleanable/blood/xeno,
+/obj/item/prop/colony/usedbandage{
+	dir = 4
+	},
+/turf/open/floor/prison,
+/area/Suburb_lv759/indoors/public_spaceport/hangarbay)
+"afT" = (
+/turf/open/hybrisa/street/sidewalk/southwest,
+/area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
+"afU" = (
+/obj/structure/machinery/light/blue{
+	dir = 8;
+	pixel_y = -4
+	},
+/obj/structure/ladder{
+	height = 2;
+	id = "cicladder3"
+	},
+/turf/open/floor/prison/ramptop/east,
+/area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "afV" = (
 /obj/item/storage/briefcase{
 	pixel_x = 1
 	},
 /turf/open/floor/kutjevo/multi_tiles/southeast,
 /area/Suburb_lv759/outdoors/colony_streets/cottage2)
+"afW" = (
+/turf/open/floor/prison/red/east,
+/area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
+"afX" = (
+/obj/structure/machinery/door/airlock/hybrisa/personal/autoname,
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	id = "hybrisacheckpoint_west";
+	name = "\improper Lockdown";
+	vehicle_resistant = 1;
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
+"afY" = (
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	id = "hybrisacheckpoint_bunker_north";
+	name = "\improper Lockdown";
+	vehicle_resistant = 1
+	},
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/prison/cell_stripe/north,
+/area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "agt" = (
 /obj/structure/machinery/power/smes/buildable,
 /turf/open/floor/almayer/tcomms,
@@ -418,7 +2235,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat/squares,
+/turf/open/floor/almayer/black/east,
 /area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
 "aiD" = (
 /obj/structure/machinery/door/poddoor/almayer/blended,
@@ -683,6 +2500,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply/no_boom,
+/obj/item/prop/alien/hugger,
 /turf/open/floor/kutjevo/colors/cyan/inner_corner,
 /area/Suburb_lv759/indoors/wy_research_complex/medical_annex)
 "anT" = (
@@ -931,7 +2749,7 @@
 	pixel_x = -2;
 	pixel_y = 2
 	},
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/black/east,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "aum" = (
 /obj/structure/machinery/light/spot/blue{
@@ -1137,6 +2955,11 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/vents/pump{
 	dir = 1
+	},
+/obj/structure/roof/hybrisa/billboardsandsigns/billboardsmedium/billboard5{
+	pixel_y = 32;
+	lazy_nodes = 0;
+	layer = 3
 	},
 /turf/open/floor/hybrisa/tile/tilebeigecheckered,
 /area/Suburb_lv759/indoors/wy_research_complex/dormsbedroom)
@@ -1719,7 +3542,7 @@
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "aJy" = (
 /obj/structure/machinery/computer/WYresearch,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/blackfull/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "aJA" = (
 /obj/structure/window/reinforced/ultra,
@@ -1736,7 +3559,16 @@
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaycentral)
 "aJM" = (
 /obj/structure/surface/table/woodentable/fancy,
-/turf/open/floor/prison/floor_plate,
+/obj/item/tool/stamp/weyyu,
+/obj/item/ashtray/bronze{
+	pixel_x = -7;
+	pixel_y = 4
+	},
+/obj/item/reagent_container/food/drinks/coffeecup/wy{
+	pixel_y = 6;
+	pixel_x = 8
+	},
+/turf/open/floor/almayer/blackfull/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "aJR" = (
 /obj/structure/platform{
@@ -1855,7 +3687,8 @@
 	icon_state = "trash_2";
 	pixel_y = 12
 	},
-/turf/open/floor/prison/floor_plate,
+/obj/item/paper/crumpled,
+/turf/open/floor/almayer/blackfull/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "aMj" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1946,7 +3779,7 @@
 	dir = 4;
 	pixel_y = 4
 	},
-/turf/open/floor/corsat/squares,
+/turf/open/floor/almayer/blackcorner/east,
 /area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
 "aNQ" = (
 /turf/open/floor/strata/red3/west,
@@ -2540,7 +4373,20 @@
 /turf/open/floor/prison/floor_plate/southwest,
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaysoutheast)
 "bcU" = (
-/turf/open/floor/prison/darkyellow2/west,
+/obj/structure/closet/crate,
+/obj/item/stack/sheet/metal{
+	amount = 50
+	},
+/obj/item/stack/sheet/plasteel{
+	amount = 30;
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/stack/sheet/mineral/phoron{
+	amount = 25
+	},
+/obj/item/storage/briefcase/inflatable,
+/turf/open/floor/prison/darkyellow2/southwest,
 /area/Suburb_lv759/outdoors/colony_streets/cottage11)
 "bcV" = (
 /obj/structure/cable/heavyduty{
@@ -2640,9 +4486,6 @@
 	},
 /turf/open/floor/strata/blue3/west,
 /area/Suburb_lv759/indoors/public_spaceport/hangarbay)
-"bgb" = (
-/turf/open/hybrisa/street/sidewalkfull,
-/area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "bgc" = (
 /obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 8
@@ -3012,14 +4855,11 @@
 /turf/open/floor/prison/red,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_west)
 "boQ" = (
-/obj/item/storage/belt/marine,
 /obj/structure/closet/secure_closet/guncabinet{
 	locked = 0
 	},
-/obj/item/weapon/gun/rifle/m41a/corporate/no_lock,
-/obj/item/ammo_magazine/rifle,
-/obj/item/ammo_magazine/rifle,
-/obj/item/ammo_magazine/rifle,
+/obj/item/weapon/gun/smg/fp9000/pmc,
+/obj/item/storage/belt/marine/wy/m39_pmc,
 /turf/open/floor/almayer/test_floor5,
 /area/Suburb_lv759/indoors/wy_research_complex/securityarmory)
 "boU" = (
@@ -3576,9 +5416,6 @@
 /obj/item/ammo_magazine/smg/m39,
 /turf/open/floor/almayer/black/southwest,
 /area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
-"bxL" = (
-/turf/open/floor/prison/floor_plate/southwest,
-/area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "bxQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/cm_vending/sorted/tech/comtech_tools,
@@ -3887,7 +5724,6 @@
 /obj/structure/sign/banners/twe_worn{
 	pixel_y = 32
 	},
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/hybrisa/carpet/blue_grey,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "bDx" = (
@@ -4315,6 +6151,7 @@
 /turf/open/floor/corsat/marked,
 /area/Suburb_lv759/indoors/caves/passage_to_bunker)
 "bLL" = (
+/obj/structure/machinery/floodlight,
 /turf/open/floor/prison/darkyellow2/north,
 /area/Suburb_lv759/outdoors/colony_streets/cottage11)
 "bLN" = (
@@ -4429,7 +6266,7 @@
 	layer = 8;
 	pixel_y = 35
 	},
-/turf/open/floor/almayer/blackfull/west,
+/turf/open/floor/almayer/black,
 /area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
 "bOk" = (
 /obj/structure/noticeboard{
@@ -4489,9 +6326,6 @@
 "bPf" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
 	dir = 8
-	},
-/obj/structure/flora/grass/tallgrass/jungle/corner{
-	dir = 10
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaycentral)
@@ -4980,6 +6814,7 @@
 /obj/item/ammo_magazine/rifle/m16/ap,
 /obj/item/ammo_magazine/rifle/m16,
 /obj/item/ammo_magazine/rifle/m16,
+/obj/item/weapon/gun/rifle/m16,
 /turf/open/floor/plating,
 /area/Suburb_lv759/outdoors/colony_streets/CLF_Camp)
 "bZr" = (
@@ -5577,7 +7412,7 @@
 	pixel_x = 16;
 	pixel_y = -1
 	},
-/turf/open/floor/corsat/squares,
+/turf/open/floor/strata/cyan3/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "cmq" = (
 /obj/structure/window/reinforced{
@@ -7413,7 +9248,7 @@
 /area/Suburb_lv759/outdoors/landing_zone_1)
 "cWL" = (
 /obj/structure/machinery/chem_simulator,
-/turf/open/floor/corsat/squares,
+/turf/open/floor/strata/cyan3/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "cWM" = (
 /obj/structure/girder,
@@ -8024,14 +9859,6 @@
 /obj/structure/curtain/open/medical,
 /turf/open/floor/kutjevo/colors/cyan/edge/west,
 /area/Suburb_lv759/indoors/wy_research_complex/medical_annex)
-"dgE" = (
-/obj/item/clothing/head/cmcap/wy_cap{
-	pixel_x = 24;
-	pixel_y = -4
-	},
-/obj/structure/blocker/invisible_wall,
-/turf/open/floor/hybrisa/carpet/blue_grey,
-/area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "dgQ" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
@@ -8136,6 +9963,7 @@
 /obj/structure/surface/table/holotable{
 	color = "#424a50"
 	},
+/obj/item/weapon/gun/smg/mp5,
 /turf/open/floor/plating,
 /area/Suburb_lv759/outdoors/colony_streets/CLF_Camp)
 "diV" = (
@@ -8343,14 +10171,13 @@
 /obj/structure/machinery/cm_vending/sorted/medical/blood{
 	req_access = list()
 	},
-/turf/open/floor/corsat/squares,
+/turf/open/floor/strata/cyan3/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "dnE" = (
 /obj/structure/cargo_container/arious/left,
 /turf/open/floor/plating/asteroidfloor/north,
 /area/Suburb_lv759/indoors/public_spaceport)
 "dnF" = (
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/hybrisa/carpet/rug_colorable/grey_blue/west,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "dnI" = (
@@ -8497,7 +10324,7 @@
 	icon_state = "cola_crushed"
 	},
 /obj/effect/decal/hybrisa/dirt_2,
-/turf/open/floor/corsat/squares,
+/turf/open/floor/almayer/black,
 /area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
 "dpD" = (
 /obj/item/weapon/twohanded/folded_metal_chair{
@@ -8570,7 +10397,6 @@
 /turf/closed/wall/almayer,
 /area/Suburb_lv759/indoors/wy_research_complex)
 "dqK" = (
-/obj/structure/blocker/invisible_wall,
 /obj/item/pizzabox/pizza_galaxy/meat,
 /turf/open/floor/hybrisa/carpet/blue_grey,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
@@ -8809,7 +10635,7 @@
 /obj/structure/surface/table/almayer{
 	color = "#848484"
 	},
-/turf/open/floor/corsat/squares,
+/turf/open/floor/almayer/black,
 /area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
 "dtZ" = (
 /obj/structure/surface/table/reinforced,
@@ -8834,7 +10660,6 @@
 /turf/open/floor/prison,
 /area/Suburb_lv759/indoors/wy_research_complex)
 "duO" = (
-/obj/structure/largecrate/random/case/small,
 /obj/structure/cable/white{
 	color = "#550d0d";
 	icon_state = "1-2";
@@ -8936,12 +10761,6 @@
 /obj/item/ammo_magazine/rifle/nsg23,
 /turf/open/floor/prison,
 /area/Suburb_lv759/indoors/wy_research_complex/hangarbayshuttle)
-"dvM" = (
-/obj/structure/barricade/handrail/hybrisa/road/plastic/black{
-	dir = 1
-	},
-/turf/open/hybrisa/street/sidewalkfull,
-/area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "dvU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/double,
@@ -9001,7 +10820,7 @@
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaycentral)
 "dwN" = (
 /obj/structure/prop/hybrisa/xenobiology/small/egg,
-/turf/open/floor/corsat/squares,
+/turf/open/floor/strata/cyan4/east,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "dwT" = (
 /obj/effect/decal/cleanable/dirt,
@@ -9105,7 +10924,6 @@
 /mob/living/simple_animal/hostile/retaliate/clown{
 	name = "Kloyn"
 	},
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/hybrisa/carpet/blue_grey,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "dyk" = (
@@ -10261,7 +12079,6 @@
 /area/Suburb_lv759/outdoors/colony_streets/cottage10)
 "dWm" = (
 /obj/structure/prop/ice_colony/tiger_rug,
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/hybrisa/carpet/rug_colorable/grey_blue/east,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "dWB" = (
@@ -11540,7 +13357,7 @@
 /area/Suburb_lv759/indoors/public_spaceport/hangarbay)
 "euY" = (
 /obj/structure/machinery/door/poddoor/almayer/closed{
-	id = "hybrisacheckpoint_east";
+	id = "hybrisacheckpoint_bunker_north";
 	name = "\improper Lockdown";
 	vehicle_resistant = 1
 	},
@@ -11713,7 +13530,7 @@
 "exT" = (
 /obj/structure/machinery/faxmachine/corporate/liaison,
 /obj/structure/surface/table/reinforced/prison,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/blackcorner/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "exV" = (
 /obj/structure/filingcabinet/chestdrawer{
@@ -11726,7 +13543,6 @@
 /obj/structure/prop/hybrisa/misc/machinery/screens/frame{
 	pixel_y = 32
 	},
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/hybrisa/carpet/blue_grey,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "exX" = (
@@ -11872,7 +13688,10 @@
 	pixel_y = 32;
 	layer = 2.9
 	},
-/obj/structure/blocker/invisible_wall,
+/obj/structure/ladder{
+	height = 1;
+	id = "cicladder3"
+	},
 /turf/open/floor/hybrisa/carpet/blue_grey,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "eBa" = (
@@ -11968,7 +13787,7 @@
 /obj/structure/surface/table/almayer{
 	color = "#848484"
 	},
-/turf/open/floor/corsat/squares,
+/turf/open/floor/almayer/black,
 /area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
 "eDg" = (
 /obj/effect/decal/cleanable/blood/drip,
@@ -12318,7 +14137,7 @@
 /area/Suburb_lv759/indoors/wy_research_complex/dormsbedroom)
 "eLe" = (
 /obj/structure/machinery/computer/altitude_control_console,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/blackfull/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "eLh" = (
 /obj/structure/largecrate/random/barrel{
@@ -12897,7 +14716,7 @@
 	dir = 8;
 	icon_state = "bigrollerempty_up"
 	},
-/turf/open/floor/corsat/squares,
+/turf/open/floor/strata/cyan3/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "eWV" = (
 /obj/structure/prop/hybrisa/boulders/large_boulderdark/boulder_dark1,
@@ -13019,7 +14838,6 @@
 	pixel_x = 3;
 	pixel_y = -3
 	},
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/hybrisa/carpet/blue_grey,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "eZD" = (
@@ -13074,11 +14892,7 @@
 	pixel_y = 28;
 	pixel_x = 20
 	},
-/obj/structure/machinery/light/small/blue{
-	dir = 1;
-	pixel_x = 6
-	},
-/turf/open/floor/prison/floor_plate/southwest,
+/turf/closed/wall/hybrisa/rock,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "faA" = (
 /turf/open/floor/prison,
@@ -13360,7 +15174,7 @@
 	pixel_y = 3
 	},
 /obj/item/device/defibrillator,
-/turf/open/floor/corsat/squares,
+/turf/open/floor/strata/cyan3/east,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "fgv" = (
 /obj/structure/cargo_container/hybrisa/containersextended/lightgreywyleft,
@@ -13390,7 +15204,7 @@
 	dir = 4;
 	pixel_x = -1
 	},
-/turf/open/floor/corsat/squares,
+/turf/open/floor/almayer/black/east,
 /area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
 "fhb" = (
 /obj/structure/barricade/handrail/kutjevo,
@@ -14211,7 +16025,7 @@
 /area/Suburb_lv759/indoors/wy_research_complex)
 "fxd" = (
 /obj/item/clothing/suit/storage/hybrisa/wy_Pilot,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/blackfull/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "fxf" = (
 /obj/structure/surface/table/reinforced/prison{
@@ -14235,7 +16049,10 @@
 /turf/open/floor/prison/red/north,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_west)
 "fxn" = (
-/obj/effect/decal/cleanable/blood,
+/obj/structure/machinery/cm_vending/sorted/tech/tool_storage{
+	req_one_access = list(102,104,106,200);
+	req_access = null
+	},
 /turf/open/floor/prison/darkyellow2/north,
 /area/Suburb_lv759/outdoors/colony_streets/cottage11)
 "fxF" = (
@@ -14255,7 +16072,7 @@
 /area/Suburb_lv759/outdoors/landing_zone_2)
 "fyk" = (
 /obj/structure/machinery/big_computers/messaging_server/white,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/blackcorner,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "fym" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -14922,6 +16739,10 @@
 	pixel_y = 3
 	},
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
+/obj/item/prop/colony/usedbandage{
+	dir = 10;
+	pixel_y = -12
+	},
 /turf/open/floor/almayer/plating,
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaycentral)
 "fML" = (
@@ -15163,6 +16984,9 @@
 	pixel_y = 1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/spacecash/ewallet{
+	pixel_y = 8
+	},
 /turf/open/floor/prison/floor_plate,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "fSc" = (
@@ -15433,7 +17257,7 @@
 /area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
 "fXS" = (
 /obj/structure/machinery/medical_pod/bodyscanner,
-/turf/open/floor/corsat/squares,
+/turf/open/floor/strata/cyan3/east,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "fXZ" = (
 /obj/effect/decal/siding,
@@ -15754,7 +17578,7 @@
 /obj/structure/machinery/computer/cameras{
 	dir = 4
 	},
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/black/east,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "gfz" = (
 /obj/structure/window/framed/almayer,
@@ -16380,13 +18204,6 @@
 /turf/open/floor/prison,
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
 "gsB" = (
-/obj/item/reagent_container/ld50_syringe{
-	pixel_x = -4;
-	pixel_y = 5
-	},
-/obj/structure/bed/roller/hospital_empty/bigrollerempty{
-	icon_state = "bigrollerempty_up"
-	},
 /turf/open/floor/almayer/research/containment/corner_var1/east,
 /area/Suburb_lv759/indoors/wy_research_complex/xenobiology)
 "gsD" = (
@@ -16628,7 +18445,7 @@
 /obj/effect/decal/hybrisa/trash{
 	icon_state = "trash_13"
 	},
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/blackfull/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "gxK" = (
 /obj/structure/barricade/sandbags/wired{
@@ -16640,7 +18457,7 @@
 	icon_state = "sandbag_0";
 	pixel_y = 3
 	},
-/turf/open/hybrisa/street/sidewalkfull,
+/turf/open/hybrisa/street/sidewalk/southeast,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "gxL" = (
 /obj/effect/decal/cleanable/dirt,
@@ -17647,10 +19464,6 @@
 /obj/effect/landmark/structure_spawner/xvx_hive/xeno_door,
 /turf/open/floor/prison/floor_plate,
 /area/Suburb_lv759/indoors/wy_research_complex/weaponresearchlabtesting)
-"gRf" = (
-/obj/structure/machinery/door/poddoor/hybrisa/open_shutters,
-/turf/open/floor/plating,
-/area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
 "gRj" = (
 /obj/structure/machinery/light{
 	dir = 8;
@@ -17722,7 +19535,6 @@
 	dir = 8;
 	layer = 3.25
 	},
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/hybrisa/carpet/blue_grey,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "gTa" = (
@@ -17812,7 +19624,7 @@
 /area/Suburb_lv759/outdoors/landing_zone_1)
 "gVz" = (
 /obj/structure/cargo_container/hybrisa/containersextended/blackwyleft{
-	layer = 5
+	layer = 6
 	},
 /turf/open/floor/plating/asteroidfloor/north,
 /area/Suburb_lv759/indoors/public_spaceport)
@@ -17842,7 +19654,7 @@
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaynorthexit)
 "gWi" = (
 /obj/structure/machinery/chem_dispenser,
-/turf/open/floor/corsat/squares,
+/turf/open/floor/strata/cyan3/east,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "gWI" = (
 /obj/structure/girder/displaced,
@@ -18182,6 +19994,9 @@
 /area/Suburb_lv759/indoors/wy_research_complex/hangarbay)
 "hea" = (
 /obj/effect/decal/cleanable/blood,
+/obj/item/prop/colony/usedbandage{
+	dir = 9
+	},
 /turf/open/auto_turf/hybrisa_auto_turf/layer1,
 /area/Suburb_lv759/outdoors)
 "heh" = (
@@ -18229,7 +20044,7 @@
 /area/Suburb_lv759/indoors/caves/Monorail)
 "heG" = (
 /obj/structure/machinery/power/apc/power/east,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/black/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "heM" = (
 /obj/effect/landmark/corpsespawner/hybrisa/medical_doctor_corpse,
@@ -18432,7 +20247,7 @@
 	pixel_y = 8;
 	pixel_x = 4
 	},
-/turf/open/hybrisa/street/sidewalkfull,
+/turf/open/hybrisa/street/sidewalk/northwest,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "hje" = (
 /obj/structure/bed/chair{
@@ -18900,7 +20715,7 @@
 	pixel_y = -1
 	},
 /obj/structure/machinery/smartfridge/chemistry/virology,
-/turf/open/floor/corsat/squares,
+/turf/open/floor/strata/cyan3/east,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "htz" = (
 /obj/structure/cargo_container/wy/left{
@@ -18920,11 +20735,6 @@
 	},
 /area/Suburb_lv759/indoors/public_spaceport/hangarbay)
 "hum" = (
-/obj/item/explosive/plastic/custom{
-	desc = "A tightly wrapped package of white powder.";
-	name = "white wrapped package"
-	},
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/hybrisa/carpet/blue_grey,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "hun" = (
@@ -19246,6 +21056,9 @@
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaycentral)
 "hAL" = (
 /obj/structure/flora/grass/desert/lightgrass_4,
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 1
+	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaycentral)
 "hAP" = (
@@ -19310,7 +21123,7 @@
 	dir = 1;
 	pixel_y = 6
 	},
-/turf/open/floor/corsat/squares,
+/turf/open/floor/strata/cyan3/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "hBT" = (
 /obj/effect/decal/cleanable/dirt,
@@ -19887,6 +21700,7 @@
 /obj/item/clothing/suit/storage/marine/veteran/pmc,
 /obj/item/storage/backpack/pmc,
 /obj/item/storage/box/mre/pmc,
+/obj/item/clothing/accessory/storage/webbing/m3/mag/pmc,
 /turf/open/shuttle/dropship/can_surgery,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "hPj" = (
@@ -20167,14 +21981,6 @@
 "hUr" = (
 /turf/open/floor/hybrisa/metal/bluemetal1/east,
 /area/Suburb_lv759/indoors/public_spaceport/hangarbay)
-"hUz" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2/autoname{
-	req_one_access = list(100);
-	dir = 8
-	},
-/obj/structure/blocker/invisible_wall,
-/turf/open/floor/hybrisa/carpet/blue_grey,
-/area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "hUA" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 4;
@@ -20401,6 +22207,7 @@
 /obj/structure/machinery/alarm{
 	pixel_y = 24
 	},
+/obj/structure/closet/emcloset,
 /turf/open/floor/prison,
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaysoutheast)
 "hYq" = (
@@ -20584,11 +22391,6 @@
 	},
 /turf/open/floor/almayer/cargo,
 /area/Suburb_lv759/indoors/wy_research_complex/cargo)
-"icm" = (
-/obj/structure/blocker/invisible_wall,
-/obj/structure/bed/hybrisa/bunkbed2,
-/turf/open/floor/hybrisa/carpet/blue_grey,
-/area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "icu" = (
 /obj/structure/barricade/deployable,
 /turf/open/floor/prison,
@@ -20719,15 +22521,13 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaysoutheast)
 "ieg" = (
-/obj/item/storage/belt/marine,
 /obj/structure/machinery/light/double/blue,
 /obj/structure/closet/secure_closet/guncabinet{
 	locked = 0
 	},
-/obj/item/weapon/gun/rifle/m41a/corporate/no_lock,
-/obj/item/ammo_magazine/rifle,
-/obj/item/ammo_magazine/rifle,
-/obj/item/ammo_magazine/rifle,
+/obj/item/weapon/gun/smg/fp9000/pmc,
+/obj/item/ammo_box/magazine/fp9000,
+/obj/item/storage/belt/marine/wy/m39_pmc,
 /turf/open/floor/almayer/test_floor5,
 /area/Suburb_lv759/indoors/wy_research_complex/securityarmory)
 "ieh" = (
@@ -21667,6 +23467,11 @@
 	pixel_y = 8
 	},
 /obj/item/weapon/gun/smg/mp5,
+/obj/item/prop/colony/usedbandage{
+	dir = 4;
+	pixel_x = -2;
+	pixel_y = 7
+	},
 /turf/open/floor/prison,
 /area/Suburb_lv759/indoors/public_spaceport/hangarbay)
 "ixx" = (
@@ -21681,6 +23486,10 @@
 "ixA" = (
 /obj/structure/bed/bedroll{
 	dir = 5
+	},
+/obj/item/prop/colony/usedbandage{
+	dir = 5;
+	pixel_y = 8
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/Suburb_lv759/outdoors)
@@ -21975,6 +23784,7 @@
 /area/Suburb_lv759/indoors/caves/Monorail)
 "iDt" = (
 /obj/structure/flora/grass/desert/lightgrass_5,
+/obj/structure/flora/grass/tallgrass/jungle/corner,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaycentral)
 "iDz" = (
@@ -22252,7 +24062,7 @@
 /area/Suburb_lv759/indoors/wy_research_complex/cargo)
 "iIS" = (
 /obj/structure/machinery/big_computers/computerwhite/computer1,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/blackfull/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "iIV" = (
 /obj/structure/bed/sofa/south/white/left{
@@ -23300,7 +25110,7 @@
 /area/Suburb_lv759/indoors/wy_research_complex/securityarmory)
 "jeK" = (
 /obj/structure/closet/secure_closet/medical2,
-/turf/open/floor/corsat/squares,
+/turf/open/floor/strata/cyan3/east,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "jfn" = (
 /obj/structure/cargo_container/hybrisa/containersextended/greywyright,
@@ -23556,7 +25366,6 @@
 	pixel_x = -56;
 	pixel_y = 94
 	},
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/hybrisa/carpet/rug_colorable/grey_blue/south,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "jmO" = (
@@ -23643,7 +25452,6 @@
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
 "jnZ" = (
 /obj/effect/decal/strata_decals/grime/grime2,
-/obj/structure/machinery/camera,
 /obj/structure/pipes/vents,
 /turf/open/floor/hybrisa/tile/tilebeigecheckered,
 /area/Suburb_lv759/indoors/wy_research_complex/dormsbedroom)
@@ -24059,19 +25867,11 @@
 /obj/structure/surface/table/woodentable{
 	color = "#8B7B5B"
 	},
-/obj/item/clothing/glasses/disco_fever{
-	pixel_x = 1;
-	pixel_y = 8
-	},
-/obj/item/large_shrapnel/at_rocket_dud{
-	pixel_x = -6;
-	pixel_y = 6
-	},
-/obj/item/prop/helmetgarb/gunoil,
 /obj/item/prop/helmetgarb/gunoil{
 	pixel_x = 10;
 	pixel_y = 7
 	},
+/obj/item/clothing/head/beret/royal_marine_pvp,
 /turf/open/floor/kutjevo/fake_wood,
 /area/Suburb_lv759/outdoors/colony_streets/cottage7)
 "jxH" = (
@@ -24199,17 +25999,8 @@
 /obj/structure/prop/hybrisa/furniture/tables/tableblack{
 	dir = 1
 	},
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/hybrisa/carpet/blue_grey,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
-"jAD" = (
-/obj/structure/machinery/sensortower{
-	layer = 4.9;
-	pixel_y = 9;
-	pixel_x = 4
-	},
-/turf/open/floor/plating/asteroidfloor/north,
-/area/Suburb_lv759/indoors/wy_research_complex)
 "jAG" = (
 /obj/structure/bed/chair/office/light{
 	dir = 4
@@ -24254,7 +26045,7 @@
 	layer = 2.9;
 	pixel_x = -4
 	},
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/black/east,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "jBw" = (
 /obj/structure/largecrate/supply/powerloader{
@@ -24426,7 +26217,6 @@
 /obj/structure/machinery/faxmachine/corporate{
 	pixel_y = 8
 	},
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/hybrisa/carpet/blue_grey,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "jDR" = (
@@ -24635,6 +26425,7 @@
 /turf/open/shuttle/escapepod/floor4,
 /area/Suburb_lv759/indoors/caves/passage_to_bunker)
 "jIe" = (
+/obj/structure/closet/firecloset,
 /turf/open/floor/prison/darkyellow2/southwest,
 /area/Suburb_lv759/indoors/wy_research_complex/weaponresearchlabtesting)
 "jIf" = (
@@ -25118,6 +26909,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/storage/belt/marine/wy/m39_pmc,
+/obj/effect/spawner/random/gun/pmc_primary,
 /turf/open/shuttle/dropship/dark_grey_bottom,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "jRZ" = (
@@ -25393,7 +27185,6 @@
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaysoutheast)
 "jXJ" = (
 /obj/structure/machinery/big_computers/computerblack/computer4,
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/hybrisa/carpet/blue_grey,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "jXY" = (
@@ -25975,7 +27766,6 @@
 /area/Suburb_lv759/indoors/wy_research_complex/changingroom)
 "kjW" = (
 /obj/structure/machinery/defenses/planted_flag/wy,
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/hybrisa/carpet/blue_grey,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "kkd" = (
@@ -26425,9 +28215,6 @@
 /area/Suburb_lv759/outdoors/colony_streets/Parking_space)
 "krM" = (
 /obj/structure/cargo_container/upp/mid,
-/obj/structure/prop/almayer/minigun_crate{
-	layer = 6
-	},
 /turf/open/auto_turf/hybrisa_auto_turf/layer1,
 /area/Suburb_lv759/outdoors/landing_zone_2)
 "krV" = (
@@ -26706,7 +28493,6 @@
 	density = 0
 	},
 /obj/effect/decal/cleanable/flour,
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/hybrisa/carpet/blue_grey,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "kym" = (
@@ -26716,7 +28502,7 @@
 "kyw" = (
 /obj/effect/decal/cleanable/cobweb,
 /obj/structure/prop/hybrisa/xenobiology/small/egg,
-/turf/open/floor/corsat/squares,
+/turf/open/floor/strata/cyan4,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "kyV" = (
 /obj/structure/filingcabinet{
@@ -27221,10 +29007,6 @@
 	},
 /turf/open/floor/strata/red3/north,
 /area/Suburb_lv759/indoors/public_spaceport/hangarbay)
-"kIF" = (
-/obj/structure/blocker/invisible_wall,
-/turf/open/floor/hybrisa/carpet/blue_grey,
-/area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "kII" = (
 /obj/structure/surface/table/almayer{
 	color = "#848484"
@@ -27756,6 +29538,7 @@
 /obj/item/clothing/suit/storage/marine/veteran/royal_marine/light/iasf,
 /obj/item/clothing/accessory/patch/royal_marines,
 /obj/item/clothing/suit/storage/jacket/marine/rmc/service/black,
+/obj/item/storage/belt/gun/webley/full,
 /turf/open/floor/interior/tatami,
 /area/Suburb_lv759/outdoors/colony_streets/cottage7)
 "kRo" = (
@@ -28005,7 +29788,7 @@
 /obj/structure/machinery/big_computers/messaging_server/brown{
 	dir = 1
 	},
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/blackfull/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "kVR" = (
 /obj/effect/decal/cleanable/dirt,
@@ -28079,7 +29862,7 @@
 	dir = 1;
 	icon_state = "bigrollerempty3_up"
 	},
-/turf/open/floor/corsat/squares,
+/turf/open/floor/strata/cyan3/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "kWV" = (
 /obj/structure/machinery/vending/cigarette/koorlander,
@@ -28258,7 +30041,7 @@
 /obj/item/coin/diamond,
 /obj/item/device/working_joe_pda,
 /obj/item/spacecash/c1000,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/blackfull/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "laX" = (
 /obj/effect/decal/warning_stripes{
@@ -28316,6 +30099,9 @@
 /area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
 "lbB" = (
 /obj/structure/surface/rack,
+/obj/structure/machinery/light{
+	dir = 8
+	},
 /turf/open/floor/kutjevo/tan/plate,
 /area/Suburb_lv759/outdoors/colony_streets/cottage7)
 "lbH" = (
@@ -28979,7 +30765,6 @@
 /mob/living/simple_animal/hostile/retaliate/clown{
 	name = "Kim"
 	},
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/hybrisa/carpet/blue_grey,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "lnu" = (
@@ -29284,7 +31069,6 @@
 	name = "Hanters"
 	},
 /obj/effect/decal/cleanable/flour,
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/hybrisa/carpet/blue_grey,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "lrg" = (
@@ -29442,14 +31226,14 @@
 	pixel_x = 1;
 	pixel_y = 2
 	},
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/blackfull/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "ltG" = (
 /obj/structure/machinery/optable{
 	desc = "This maybe could be used for advanced medical procedures.";
 	name = "Exam Table"
 	},
-/turf/open/floor/corsat/squares,
+/turf/open/floor/strata/cyan3/east,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "ltM" = (
 /turf/open/auto_turf/strata_grass/layer1,
@@ -29633,7 +31417,7 @@
 /obj/structure/bed/chair/office/light{
 	dir = 4
 	},
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/blackfull/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "lwO" = (
 /obj/structure/cable/heavyduty{
@@ -29675,12 +31459,12 @@
 	req_one_access = list(104,106,200,201)
 	},
 /obj/structure/pipes/standard/simple/hidden/dark,
+/obj/structure/blocker/invisible_wall,
 /obj/structure/machinery/door/poddoor/almayer/closed{
-	id = "hybrisacheckpoint_east";
+	id = "hybrisacheckpoint_bunker_north";
 	name = "\improper Lockdown";
 	vehicle_resistant = 1
 	},
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/prison/cell_stripe/north,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "lxx" = (
@@ -30051,7 +31835,7 @@
 	dir = 8;
 	icon_state = "bigrollerbloodempty_up"
 	},
-/turf/open/floor/corsat/squares,
+/turf/open/floor/strata/cyan3/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "lCP" = (
 /obj/structure/bed/bedroll,
@@ -30106,7 +31890,6 @@
 /area/Suburb_lv759/outdoors/colony_streets/cottage10)
 "lDO" = (
 /obj/effect/decal/hybrisa/WY/WYworn,
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/hybrisa/carpet/blue_grey,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "lEa" = (
@@ -31951,7 +33734,7 @@
 /obj/structure/barricade/handrail{
 	dir = 4
 	},
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/blackfull/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "mnm" = (
 /obj/structure/surface/table/almayer,
@@ -33649,7 +35432,7 @@
 /obj/structure/machinery/bioprinter{
 	stored_metal = 1000
 	},
-/turf/open/floor/corsat/squares,
+/turf/open/floor/strata/cyan3/east,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "mTl" = (
 /obj/effect/decal/cleanable/dirt,
@@ -33842,6 +35625,7 @@
 /obj/structure/closet/secure_closet/guncabinet{
 	locked = 0
 	},
+/obj/item/weapon/gun/rifle/lmg/tactical,
 /turf/open/floor/strata/floor2,
 /area/Suburb_lv759/indoors/wy_research_complex/securityarmory)
 "mXF" = (
@@ -35610,7 +37394,7 @@
 	dir = 8
 	},
 /obj/structure/bed/chair,
-/turf/open/floor/corsat/squares,
+/turf/open/floor/almayer/black/east,
 /area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
 "nIL" = (
 /obj/structure/prop/brazier/campfire,
@@ -35853,7 +37637,6 @@
 /turf/open/hybrisa/street/asphalt,
 /area/Suburb_lv759/indoors/public_spaceport)
 "nNC" = (
-/obj/structure/blocker/invisible_wall,
 /obj/structure/surface/rack,
 /obj/item/spacecash/c1000,
 /obj/item/spacecash/c1000,
@@ -36733,12 +38516,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/biodome,
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaycentral)
-"ogD" = (
-/obj/structure/flora/bush/ausbushes/var3/sunnybush{
-	pixel_y = 13
-	},
-/turf/open/auto_turf/strata_grass/layer0,
-/area/Suburb_lv759/indoors/wy_research_complex/hallwaycentral)
 "ogF" = (
 /obj/structure/machinery/computer/cameras/telescreen/entertainment,
 /obj/effect/decal/cleanable/dirt,
@@ -36932,9 +38709,6 @@
 /obj/item/device/flashlight/flare,
 /turf/open/shuttle/dropship/can_surgery/light_grey_bottom_right,
 /area/Suburb_lv759/indoors/public_spaceport/hangarbay)
-"omp" = (
-/turf/open/floor/prison/floor_plate/southwest,
-/area/Suburb_lv759/outdoors)
 "omr" = (
 /obj/structure/sign/safety/opens_up,
 /turf/closed/wall/r_wall/biodome,
@@ -37178,6 +38952,7 @@
 /obj/item/ammo_magazine/shotgun/beanbag/es7,
 /obj/item/ammo_magazine/shotgun/beanbag/es7/slug,
 /obj/item/weapon/gun/shotgun/es7,
+/obj/item/storage/belt/marine/wy/m39_pmc,
 /turf/open/floor/almayer/test_floor5,
 /area/Suburb_lv759/indoors/wy_research_complex/securityarmory)
 "opq" = (
@@ -37415,7 +39190,7 @@
 /area/Suburb_lv759/indoors/wy_research_complex/researchanddevelopment)
 "otT" = (
 /obj/structure/bed/hybrisa/hospital/hospitaldivider,
-/turf/open/floor/corsat/squares,
+/turf/open/floor/strata/cyan3/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "otX" = (
 /obj/structure/window/framed/corsat{
@@ -37562,7 +39337,7 @@
 "ovV" = (
 /obj/structure/bed/chair/comfy/hybrisa/red,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/blackfull/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "ovX" = (
 /obj/structure/machinery/light{
@@ -37822,7 +39597,7 @@
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northwest)
 "oAu" = (
 /obj/structure/machinery/vending/cola,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/black/north,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "oAQ" = (
 /obj/structure/sign/safety/high_voltage,
@@ -38027,6 +39802,7 @@
 /obj/item/clothing/under/marine/veteran/pmc/corporate/hybrisa/lead,
 /obj/item/clothing/head/helmet/marine/veteran/pmc/corporate/hybrisa/lead,
 /obj/item/clothing/suit/storage/marine/veteran/pmc/light/corporate/lead,
+/obj/item/storage/belt/gun/m4a3/wy/vp78,
 /turf/open/floor/strata/red3/north,
 /area/Suburb_lv759/indoors/wy_research_complex/securityarmory)
 "oFo" = (
@@ -38268,9 +40044,6 @@
 "oLi" = (
 /turf/open/floor/almayer/test_floor4,
 /area/Suburb_lv759/outdoors/colony_streets/cottage10)
-"oLv" = (
-/turf/closed/wall/hybrisa/colony/office,
-/area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "oLw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/hybrisa/trash{
@@ -38629,7 +40402,6 @@
 /mob/living/simple_animal/hostile/bear{
 	name = "Dodo"
 	},
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/hybrisa/carpet/blue_grey,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "oRx" = (
@@ -39843,7 +41615,7 @@
 	dir = 4;
 	pixel_y = 4
 	},
-/turf/open/floor/corsat/squares,
+/turf/open/floor/almayer/black/east,
 /area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
 "ppm" = (
 /obj/structure/desertdam/decals/loose_sand_overlay,
@@ -39913,7 +41685,7 @@
 	density = 0;
 	pixel_y = 16
 	},
-/turf/open/floor/corsat/squares,
+/turf/open/floor/almayer/black,
 /area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
 "prG" = (
 /obj/effect/decal/cleanable/dirt,
@@ -40663,7 +42435,7 @@
 /obj/structure/surface/table/woodentable/fancy,
 /obj/item/weapon/pole/fancy_cane,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/blackfull/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "pFK" = (
 /obj/structure/bed/chair/comfy{
@@ -40672,7 +42444,6 @@
 /turf/open/floor/hybrisa/tile/tilebeigecheckered,
 /area/Suburb_lv759/indoors/wy_research_complex/dormsbedroom)
 "pFV" = (
-/obj/structure/blocker/invisible_wall,
 /obj/structure/surface/table/woodentable/fancy,
 /obj/item/clothing/head/bio_hood/synth/wy_bio/alt{
 	pixel_x = -7;
@@ -41032,7 +42803,6 @@
 /area/Suburb_lv759/indoors/wy_research_complex/weaponresearchlabtesting)
 "pMW" = (
 /obj/structure/bed/hybrisa/bunkbed2,
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/hybrisa/carpet/blue_grey,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "pNx" = (
@@ -41052,6 +42822,7 @@
 /obj/structure/closet/secure_closet/security,
 /obj/item/clothing/under/marine/veteran/pmc/corporate/hybrisa,
 /obj/item/clothing/head/helmet/marine/veteran/pmc/corporate/hybrisa,
+/obj/item/storage/belt/gun/m4a3/wy/vp78,
 /turf/open/floor/strata/multi_tiles,
 /area/Suburb_lv759/indoors/public_spaceport)
 "pNN" = (
@@ -41080,9 +42851,7 @@
 /turf/open/floor/plating/platebot,
 /area/Suburb_lv759/outdoors/colony_streets/CLF_Camp)
 "pOg" = (
-/turf/closed/shuttle/ert{
-	icon_state = "wy2"
-	},
+/turf/open/floor/strata/cyan3/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "pOG" = (
 /obj/effect/decal/warning_stripes{
@@ -41719,6 +43488,10 @@
 /obj/structure/machinery/power/apc/power/north{
 	start_charge = 20
 	},
+/obj/structure/machinery/cm_vending/sorted/tech/comp_storage{
+	req_one_access = list(102,104,106,200);
+	req_access = null
+	},
 /turf/open/floor/prison/darkyellow2/northeast,
 /area/Suburb_lv759/outdoors/colony_streets/cottage11)
 "qcy" = (
@@ -41769,7 +43542,7 @@
 	pixel_y = 16
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat/squares,
+/turf/open/floor/almayer/black/east,
 /area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
 "qdd" = (
 /obj/structure/surface/table/reinforced/prison{
@@ -41947,7 +43720,6 @@
 /obj/structure/prop/hybrisa/furniture/tables/tableblack{
 	dir = 1
 	},
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/hybrisa/carpet/blue_grey,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "qgK" = (
@@ -42054,7 +43826,7 @@
 	pixel_x = 16;
 	pixel_y = -1
 	},
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/blackfull/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "qhU" = (
 /obj/effect/spider/spiderling/nogrow,
@@ -42122,7 +43894,7 @@
 	dir = 8;
 	layer = 3.25
 	},
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/blackfull/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "qjR" = (
 /obj/effect/decal/cleanable/dirt,
@@ -42184,7 +43956,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/turf/open/floor/corsat/squares,
+/turf/open/floor/almayer/black/east,
 /area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
 "qld" = (
 /obj/effect/decal/cleanable/dirt,
@@ -42390,14 +44162,13 @@
 /area/Suburb_lv759/indoors/public_spaceport/cafeteria)
 "qpN" = (
 /obj/structure/closet/hybrisa/wy_bio,
-/turf/open/floor/corsat/squares,
+/turf/open/floor/strata/cyan3/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "qpT" = (
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/open/floor/strata/multi_tiles,
 /area/Suburb_lv759/indoors/public_spaceport/hangarbay)
 "qqg" = (
-/obj/structure/blocker/invisible_wall,
 /obj/structure/closet/cabinet,
 /obj/item/clothing/under/marine/veteran/royal_marine,
 /turf/open/floor/hybrisa/carpet/blue_grey,
@@ -42696,11 +44467,11 @@
 /turf/open/floor/prison,
 /area/Suburb_lv759/indoors/wy_research_complex)
 "qxa" = (
-/obj/structure/machinery/door/airlock/multi_tile/hybrisa/personal/autoname{
-	dir = 1
-	},
 /obj/structure/pipes/standard/simple/hidden/dark{
 	dir = 4
+	},
+/obj/structure/machinery/door/airlock/multi_tile/hybrisa/personal/autoname{
+	dir = 1
 	},
 /turf/open/floor/corsat/officetiles,
 /area/Suburb_lv759/indoors/wy_research_complex/mainlabs)
@@ -42927,7 +44698,7 @@
 	pixel_x = 5;
 	pixel_y = 9
 	},
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/black/east,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "qCy" = (
 /turf/open/floor/almayer,
@@ -43028,14 +44799,14 @@
 	dir = 8
 	},
 /obj/structure/closet/hybrisa/wy_bio,
-/turf/open/floor/corsat/squares,
+/turf/open/floor/strata/cyan3/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "qEk" = (
 /obj/structure/machinery/light/double{
 	dir = 4
 	},
 /obj/structure/closet/hybrisa/wy_bio,
-/turf/open/floor/corsat/squares,
+/turf/open/floor/strata/cyan3/east,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "qEr" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -43571,7 +45342,7 @@
 	dir = 8
 	},
 /obj/structure/surface/table/reinforced/prison,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/black/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "qLY" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -43628,6 +45399,9 @@
 /obj/structure/bed/bedroll{
 	dir = 10
 	},
+/obj/item/prop/colony/usedbandage{
+	dir = 4
+	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/Suburb_lv759/outdoors)
 "qMS" = (
@@ -43662,7 +45436,7 @@
 	layer = 3.21
 	},
 /obj/effect/decal/hybrisa/trash,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/black/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "qNk" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -43770,14 +45544,8 @@
 /obj/structure/prop/hybrisa/misc/buildinggreebliessmall/smallvent3{
 	pixel_y = 28
 	},
-/obj/item/storage/pouch/magazine/pistol/pmc_vp78{
-	pixel_x = 1
-	},
-/obj/item/weapon/gun/pistol/vp78{
-	pixel_x = -4;
-	pixel_y = 5
-	},
 /obj/item/attachable/suppressor,
+/obj/item/attachable/heavy_barrel,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/Suburb_lv759/indoors/wy_research_complex/securityarmory)
 "qOd" = (
@@ -43956,6 +45724,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/power/port_gen/pacman/mrs,
 /turf/open/floor/prison/darkyellow2/west,
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
 "qSr" = (
@@ -45068,7 +46837,7 @@
 /area/Suburb_lv759/outdoors/landing_zone_2)
 "rpa" = (
 /obj/structure/machinery/vending/cigarette/wy,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/blackcorner/north,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "rpn" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -45178,16 +46947,6 @@
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice8";
-	pixel_x = 16;
-	pixel_y = 24
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice4";
-	pixel_x = -16;
-	pixel_y = 24
 	},
 /obj/structure/prop/invuln/pipe_water{
 	pixel_y = 1;
@@ -45375,14 +47134,9 @@
 	layer = 3.3
 	},
 /obj/structure/closet/crate/weapon,
-/obj/item/attachable/heavy_barrel,
-/obj/item/ammo_magazine/smg/p90,
-/obj/item/ammo_magazine/smg/p90,
-/obj/item/ammo_magazine/smg/p90,
-/obj/item/ammo_magazine/smg/p90,
-/obj/item/weapon/gun/smg/p90,
-/obj/item/ammo_magazine/smg/p90,
-/obj/item/ammo_magazine/smg/p90,
+/obj/item/ammo_magazine/smg/p90/twe,
+/obj/item/ammo_magazine/smg/p90/twe,
+/obj/item/ammo_magazine/smg/p90/twe,
 /turf/open/floor/strata/floor2,
 /area/Suburb_lv759/indoors/wy_research_complex/securityarmory)
 "ruk" = (
@@ -45472,6 +47226,7 @@
 	pixel_x = -2;
 	pixel_y = 4
 	},
+/obj/effect/spawner/random/gun/uscm_secondary,
 /turf/open/floor/prison/bright_clean2,
 /area/Suburb_lv759/outdoors)
 "rvk" = (
@@ -45770,7 +47525,6 @@
 	name = "Golden Plaque of Gratitude";
 	pixel_y = 32
 	},
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/hybrisa/carpet/blue_grey,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "rzp" = (
@@ -46182,6 +47936,9 @@
 "rHJ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/trash/cigbutt/bcigbutt{
+	icon_state = "ucigbutt"
+	},
 /turf/open/floor/corsat/squares,
 /area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
 "rHN" = (
@@ -46257,19 +48014,12 @@
 	},
 /turf/open/hybrisa/street/sidewalk/east,
 /area/Suburb_lv759/outdoors/colony_streets/Main_road)
-"rJm" = (
-/obj/structure/machinery/light{
-	dir = 8
-	},
-/turf/open/floor/prison/floor_plate,
-/area/Suburb_lv759/outdoors/colony_streets/cottage7)
 "rJv" = (
 /obj/structure/prop/ice_colony/hula_girl{
 	layer = 3.1;
 	pixel_x = 9;
 	pixel_y = 13
 	},
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/hybrisa/carpet/blue_grey,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "rJx" = (
@@ -46442,17 +48192,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply/no_boom,
 /turf/open/floor/prison,
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaysoutheast)
-"rMh" = (
-/obj/structure/machinery/washing_machine{
-	pixel_x = 0;
-	pixel_y = 7
-	},
-/obj/structure/bedsheetbin{
-	pixel_x = -8;
-	pixel_y = -10
-	},
-/turf/open/floor/prison/floor_plate,
-/area/Suburb_lv759/outdoors/colony_streets/cottage7)
 "rMk" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -46617,6 +48356,7 @@
 	pixel_y = 6
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/stack/rods,
 /turf/open/floor/prison/darkyellow2/east,
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaysoutheast)
 "rPN" = (
@@ -46718,7 +48458,7 @@
 /obj/structure/machinery/light/double{
 	dir = 8
 	},
-/turf/open/floor/corsat/squares,
+/turf/open/floor/strata/cyan3/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "rRX" = (
 /obj/structure/machinery/landinglight/ds1/delaytwo{
@@ -47482,7 +49222,7 @@
 	pixel_y = 12;
 	layer = 4.21
 	},
-/turf/open/hybrisa/street/sidewalkfull,
+/turf/open/hybrisa/street/sidewalk/west,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "skn" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
@@ -47554,6 +49294,18 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood{
+	dir = 8;
+	icon_state = "gib6";
+	layer = 4;
+	pixel_x = 12;
+	pixel_y = 3
+	},
+/obj/item/prop/colony/usedbandage{
+	dir = 4;
+	pixel_x = -2;
+	pixel_y = 7
+	},
 /turf/open/floor/prison,
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
 "sld" = (
@@ -47564,8 +49316,19 @@
 /turf/open/hybrisa/street/sidewalkcenter/east,
 /area/Suburb_lv759/outdoors/colony_streets/Main_road)
 "slq" = (
-/obj/structure/surface/table,
-/obj/item/clothing/head/welding,
+/obj/structure/closet/crate,
+/obj/item/stack/sheet/mineral/phoron{
+	amount = 25
+	},
+/obj/item/stack/sheet/plasteel{
+	amount = 30;
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/stack/sheet/metal{
+	amount = 50
+	},
+/obj/item/storage/briefcase/inflatable,
 /turf/open/floor/prison/darkyellow2/west,
 /area/Suburb_lv759/outdoors/colony_streets/cottage11)
 "sly" = (
@@ -48343,10 +50106,6 @@
 /obj/structure/blocker/invisible_wall,
 /turf/open/void,
 /area/Suburb_lv759/indoors/wy_research_complex)
-"sBs" = (
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison,
-/area/Suburb_lv759/outdoors/colony_streets/cottage11)
 "sBu" = (
 /obj/effect/decal/hybrisa/dirt,
 /obj/structure/pipes/standard/simple/hidden/dark{
@@ -48386,6 +50145,7 @@
 	pixel_y = 21;
 	density = 0
 	},
+/obj/item/storage/secure/briefcase,
 /turf/open/floor/almayer/sterile,
 /area/Suburb_lv759/indoors/wy_research_complex/researchanddevelopment)
 "sCV" = (
@@ -48456,12 +50216,12 @@
 /turf/open/floor/prison/floor_plate,
 /area/Suburb_lv759/indoors/caves/passage_to_bunker)
 "sEJ" = (
+/obj/structure/blocker/invisible_wall,
 /obj/structure/machinery/door/poddoor/almayer/closed{
-	id = "hybrisacheckpoint_east";
+	id = "hybrisacheckpoint_bunker_north";
 	name = "\improper Lockdown";
 	vehicle_resistant = 1
 	},
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/prison/cell_stripe/north,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "sEL" = (
@@ -48661,7 +50421,7 @@
 /area/Suburb_lv759/indoors/wy_research_complex/researchanddevelopment)
 "sIX" = (
 /obj/structure/machinery/iv_drip,
-/turf/open/floor/corsat/squares,
+/turf/open/floor/strata/cyan3/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "sJc" = (
 /turf/open/auto_turf/strata_grass,
@@ -49619,10 +51379,16 @@
 "taD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/drip,
+/obj/item/prop/alien/hugger,
 /turf/open/floor/kutjevo/multi_tiles/west,
 /area/Suburb_lv759/outdoors/colony_streets/cottage10)
 "tbk" = (
-/obj/structure/surface/table,
+/obj/structure/machinery/light/small/blue{
+	dir = 8
+	},
+/obj/structure/reagent_dispensers/fueltank{
+	layer = 2.9
+	},
 /turf/open/floor/prison/darkyellow2/northwest,
 /area/Suburb_lv759/outdoors/colony_streets/cottage11)
 "tbv" = (
@@ -49922,11 +51688,6 @@
 	},
 /turf/open/floor/almayer,
 /area/Suburb_lv759/indoors/public_spaceport/hangarbay)
-"tgj" = (
-/obj/structure/girder,
-/obj/effect/xenomorph/acid,
-/turf/open/floor/prison,
-/area/Suburb_lv759/indoors/wy_research_complex/securityarmory)
 "tgo" = (
 /obj/structure/machinery/light/blue,
 /turf/open/floor/almayer/fake_outerhull,
@@ -50559,7 +52320,7 @@
 /area/Suburb_lv759/indoors/wy_research_complex/cargo)
 "ttc" = (
 /obj/structure/machinery/big_computers/computerwhite/computer3,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/blackfull/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "ttr" = (
 /obj/structure/machinery/atm,
@@ -51864,7 +53625,7 @@
 /obj/structure/sign/poster/corporate{
 	pixel_y = 32
 	},
-/turf/open/floor/corsat/squares,
+/turf/open/floor/almayer/black,
 /area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
 "tTo" = (
 /obj/item/trash/tray{
@@ -51982,7 +53743,9 @@
 /turf/open/floor/corsat/squares,
 /area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
 "tVA" = (
-/obj/effect/spawner/random/tech_supply,
+/obj/structure/closet/secure_closet/engineering_welding{
+	req_one_access = list(102,104,106,200)
+	},
 /turf/open/floor/prison/darkyellow2/north,
 /area/Suburb_lv759/outdoors/colony_streets/cottage11)
 "tVC" = (
@@ -52243,12 +54006,6 @@
 	},
 /turf/open/floor/almayer/fake_outerhull,
 /area/Suburb_lv759/indoors/caves/wy_research_complex_entrance)
-"uad" = (
-/obj/structure/machinery/landinglight/ds1/delaythree{
-	dir = 8
-	},
-/turf/open/floor/plating,
-/area/Suburb_lv759/outdoors/landing_zone_1)
 "uak" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "pottedplant_18";
@@ -53124,7 +54881,7 @@
 /obj/structure/pipes/standard/manifold/visible,
 /obj/structure/surface/table,
 /obj/structure/machinery/centrifuge,
-/turf/open/floor/corsat/squares,
+/turf/open/floor/strata/cyan3/east,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "utd" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid{
@@ -53521,13 +55278,8 @@
 /area/Suburb_lv759/outdoors/colony_streets/Main_road)
 "uBo" = (
 /obj/structure/surface/rack,
-/obj/item/ammo_magazine/smg/p90,
-/obj/item/ammo_magazine/smg/p90,
-/obj/item/weapon/gun/smg/p90,
-/obj/item/ammo_magazine/smg/p90,
-/obj/item/ammo_magazine/smg/p90,
-/obj/item/ammo_magazine/smg/p90,
-/obj/item/ammo_magazine/smg/p90,
+/obj/item/weapon/gun/smg/p90/twe,
+/obj/item/weapon/gun/smg/p90/twe,
 /turf/open/floor/almayer/test_floor5,
 /area/Suburb_lv759/indoors/wy_research_complex/securityarmory)
 "uBD" = (
@@ -53873,9 +55625,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/Suburb_lv759/outdoors/colony_streets/cottage5)
 "uJL" = (
-/obj/structure/prop/hybrisa/vehicles/Colony_Crawlers/Science_1{
-	dir = 8
-	},
+/obj/structure/prop/hybrisa/vehicles/Small_Truck/Mining,
 /turf/open/floor/prison/floor_plate/southwest,
 /area/Suburb_lv759/indoors/wy_research_complex/hangarbay)
 "uJM" = (
@@ -54033,7 +55783,6 @@
 	locked = 0
 	},
 /obj/item/clothing/gloves/marine/veteran/pmc,
-/obj/item/clothing/head/helmet/marine/veteran/pmc/leader,
 /obj/item/clothing/mask/gas/pmc,
 /obj/item/clothing/suit/storage/marine/veteran/pmc,
 /obj/item/clothing/shoes/veteran/pmc,
@@ -54042,6 +55791,7 @@
 /obj/item/ammo_magazine/rifle,
 /obj/item/ammo_magazine/rifle,
 /obj/item/ammo_magazine/rifle,
+/obj/item/clothing/head/cmcap/pmc/fieldleader,
 /turf/open/floor/hybrisa/wood/redwood,
 /area/Suburb_lv759/indoors/wy_research_complex/researchanddevelopment)
 "uNz" = (
@@ -54117,7 +55867,7 @@
 	pixel_x = 2;
 	pixel_y = 1
 	},
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/black/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "uOi" = (
 /turf/open/floor/shiva/multi_tiles/west,
@@ -54215,6 +55965,7 @@
 	pixel_x = 16;
 	pixel_y = -8
 	},
+/obj/item/trash/cigbutt/bcigbutt,
 /turf/open/floor/prison/floor_plate/southwest,
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
 "uPX" = (
@@ -54280,7 +56031,7 @@
 	pixel_y = 10;
 	name = "SECRET RECORDER"
 	},
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/black/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "uRg" = (
 /obj/structure/prop/almayer/cannon_cable_connector{
@@ -54799,7 +56550,6 @@
 "vdu" = (
 /mob/living/simple_animal/cat/kitten,
 /obj/effect/decal/cleanable/flour,
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/hybrisa/carpet/blue_grey,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "vdX" = (
@@ -54819,7 +56569,6 @@
 /mob/living/simple_animal/bunny/dave{
 	dir = 4
 	},
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/hybrisa/carpet/blue_grey,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "vef" = (
@@ -55281,7 +57030,6 @@
 /turf/closed/wall/r_wall/biodome,
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaynorthexit)
 "vns" = (
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/hybrisa/carpet/rug_colorable/grey_blue/north,
 /area/Suburb_lv759/indoors/wy_security/checkpoint_northeast)
 "vnC" = (
@@ -55398,6 +57146,13 @@
 /obj/structure/surface/table/almayer{
 	color = "#848484"
 	},
+/obj/item/prop{
+	desc = "The first page reads. 'Classified Weyland Bio-Weapons Division level eight clearance required.' The rest talks about some sort of XX-121 combat stim?";
+	icon = 'icons/obj/items/paper.dmi';
+	icon_state = "folder_black";
+	name = "Weyland classified intelligence folder";
+	pixel_y = -2
+	},
 /turf/open/floor/hybrisa/wood/redwood,
 /area/Suburb_lv759/indoors/wy_research_complex/researchanddevelopment)
 "vpB" = (
@@ -55454,7 +57209,7 @@
 /area/Suburb_lv759/outdoors/colony_streets/cottage3)
 "vqF" = (
 /obj/structure/machinery/cm_vending/sorted/medical/no_access,
-/turf/open/floor/corsat/squares,
+/turf/open/floor/strata/cyan3/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "vqL" = (
 /obj/effect/decal/hybrisa/trash{
@@ -56347,7 +58102,7 @@
 	pixel_y = 6;
 	pixel_x = 5
 	},
-/turf/open/floor/almayer/blackfull/west,
+/turf/open/floor/almayer/black,
 /area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
 "vGM" = (
 /obj/effect/decal/warning_stripes{
@@ -56402,14 +58157,6 @@
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/prison/floor_plate/southwest,
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
-"vHH" = (
-/obj/structure/barricade/handrail{
-	dir = 4;
-	layer = 3.3;
-	pixel_y = 3
-	},
-/turf/open/floor/podhatchfloor/north,
-/area/Suburb_lv759/indoors/wy_research_complex/weaponresearchlabtesting)
 "vHJ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
@@ -56531,7 +58278,7 @@
 /obj/structure/machinery/light/double{
 	dir = 4
 	},
-/turf/open/floor/corsat/squares,
+/turf/open/floor/strata/cyan3/east,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "vJE" = (
 /obj/effect/decal/hybrisa/trash{
@@ -57259,6 +59006,7 @@
 "vXz" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/cobweb,
+/obj/structure/machinery/vending/coffee,
 /turf/open/floor/prison/darkyellowcorners2/west,
 /area/Suburb_lv759/indoors/wy_research_complex/head_research_office)
 "vXB" = (
@@ -57361,7 +59109,7 @@
 /obj/item/clothing/under/liaison_suit,
 /obj/item/clothing/suit/storage/snow_suit/liaison,
 /obj/item/handheld_distress_beacon/lawyer,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/black/east,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "vZN" = (
 /obj/structure/barricade/handrail{
@@ -57421,6 +59169,10 @@
 /turf/open/auto_turf/hybrisa_auto_turf/layer1,
 /area/Suburb_lv759/outdoors/colony_streets/CLF_Camp)
 "waR" = (
+/obj/structure/machinery/power/reactor/colony{
+	pixel_x = 0;
+	pixel_y = -2
+	},
 /turf/open/floor/corsat/marked,
 /area/Suburb_lv759/outdoors)
 "wbc" = (
@@ -57475,13 +59227,7 @@
 /obj/structure/machinery/light/double/blue{
 	dir = 1
 	},
-/obj/item/ammo_magazine/smg/p90,
-/obj/item/ammo_magazine/smg/p90,
-/obj/item/weapon/gun/smg/p90,
-/obj/item/ammo_magazine/smg/p90,
-/obj/item/ammo_magazine/smg/p90,
-/obj/item/ammo_magazine/smg/p90,
-/obj/item/ammo_magazine/smg/p90,
+/obj/item/ammo_box/magazine/ap,
 /turf/open/floor/strata/floor2,
 /area/Suburb_lv759/indoors/wy_research_complex/securityarmory)
 "wcu" = (
@@ -57532,7 +59278,7 @@
 /obj/structure/bed/chair/dropship/pilot{
 	dir = 1
 	},
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/black,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "wdq" = (
 /turf/open/floor/hybrisa/carpet/carpetgreen,
@@ -58081,14 +59827,13 @@
 /turf/open/void,
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaycentral)
 "wob" = (
-/obj/structure/surface/table/almayer,
 /obj/structure/machinery/light/double/blue{
 	dir = 1
 	},
 /obj/structure/prop/hybrisa/misc/redmeter{
 	pixel_y = 32
 	},
-/obj/item/ammo_magazine/flamer_tank/empty,
+/obj/structure/gun_rack/m41a/corporate/unloaded,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/Suburb_lv759/indoors/wy_research_complex/securityarmory)
 "wof" = (
@@ -58180,7 +59925,13 @@
 /obj/item/device/flashlight/lamp/green{
 	pixel_x = 3
 	},
-/turf/open/floor/prison/floor_plate,
+/obj/structure/phone_base/colony_net/rotary{
+	pixel_x = -7;
+	pixel_y = 10;
+	phone_category = "Colony-Net";
+	phone_id = "Weyland-Yutani Offices"
+	},
+/turf/open/floor/almayer/black/east,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "wqt" = (
 /obj/structure/cable/white{
@@ -58542,7 +60293,7 @@
 	pixel_y = 8
 	},
 /obj/item/folder/red,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/blackfull/west,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "wxH" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -59278,6 +61029,7 @@
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/blood/drip,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
 "wPq" = (
@@ -60182,15 +61934,7 @@
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaycentral)
 "xhO" = (
-/obj/structure/surface/rack,
-/obj/item/storage/box/gloves{
-	pixel_x = 8;
-	pixel_y = -1
-	},
-/obj/item/storage/firstaid/regular{
-	pixel_x = -3;
-	pixel_y = 15
-	},
+/obj/structure/machinery/medical_pod/autodoc/unskilled,
 /turf/open/floor/kutjevo/colors/cyan/edge/east,
 /area/Suburb_lv759/indoors/wy_research_complex/medical_annex)
 "xif" = (
@@ -60687,12 +62431,6 @@
 "xqG" = (
 /turf/open/floor/plating/platingdmg3/west,
 /area/Suburb_lv759/indoors/caves)
-"xqI" = (
-/obj/structure/machinery/door/airlock/almayer/generic{
-	dir = 2
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/Suburb_lv759/outdoors/colony_streets/cottage7)
 "xqN" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -60977,6 +62715,7 @@
 /obj/item/clothing/under/marine/veteran/pmc/corporate/hybrisa/lead,
 /obj/item/clothing/suit/storage/marine/veteran/pmc/light/corporate/lead,
 /obj/item/clothing/head/helmet/marine/veteran/pmc/corporate/hybrisa/lead,
+/obj/item/storage/belt/gun/m4a3/wy/vp78,
 /turf/open/floor/strata/multi_tiles,
 /area/Suburb_lv759/indoors/public_spaceport)
 "xxH" = (
@@ -61205,7 +62944,7 @@
 /obj/structure/surface/table/almayer{
 	color = "#848484"
 	},
-/turf/open/floor/corsat/squares,
+/turf/open/floor/almayer/black/east,
 /area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
 "xCe" = (
 /obj/effect/decal/cleanable/dirt,
@@ -61426,7 +63165,7 @@
 "xFn" = (
 /obj/effect/decal/cleanable/cobweb2/dynamic,
 /obj/structure/prop/hybrisa/xenobiology/small/egg,
-/turf/open/floor/corsat/squares,
+/turf/open/floor/strata/cyan4/north,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "xFq" = (
 /obj/structure/girder/reinforced,
@@ -61743,7 +63482,7 @@
 	dir = 1;
 	pixel_y = 26
 	},
-/turf/open/floor/corsat/squares,
+/turf/open/floor/almayer/black,
 /area/Suburb_lv759/indoors/wy_research_complex/cafeteria)
 "xLS" = (
 /obj/structure/machinery/cm_vending/sorted/tech/tool_storage,
@@ -62164,7 +63903,7 @@
 /obj/structure/bed/chair/office/light{
 	dir = 8
 	},
-/turf/open/floor/corsat/squares,
+/turf/open/floor/strata/cyan3/east,
 /area/Suburb_lv759/indoors/caves/Monorail)
 "xUG" = (
 /obj/structure/barricade/handrail/strata{
@@ -62173,12 +63912,6 @@
 	},
 /turf/open/floor/prison,
 /area/Suburb_lv759/indoors/wy_research_complex/hallwaynorth)
-"xUJ" = (
-/obj/structure/fence{
-	icon_state = "brokenfence8"
-	},
-/turf/open/auto_turf/hybrisa_auto_turf/layer1,
-/area/Suburb_lv759/outdoors)
 "xUX" = (
 /obj/structure/platform{
 	layer = 3.1
@@ -62790,6 +64523,7 @@
 /obj/item/ammo_magazine/rifle/nsg23,
 /obj/item/ammo_magazine/rifle/nsg23,
 /obj/item/weapon/gun/rifle/nsg23/no_lock,
+/obj/item/storage/belt/marine/wy/m39_pmc,
 /turf/open/floor/almayer/test_floor5,
 /area/Suburb_lv759/indoors/wy_research_complex/securityarmory)
 "yjr" = (
@@ -62955,7 +64689,7 @@
 
 (1,1,1) = {"
 tlR
-oLv
+dHH
 dHH
 dHH
 dHH
@@ -63207,16 +64941,16 @@ tlR
 "}
 (2,1,1) = {"
 tlR
-oLv
+dHH
 kyl
 oRp
 qgJ
 dyc
-kIF
+hum
 kjW
 dHH
 bSw
-bcv
+qHC
 qHC
 ufQ
 ufQ
@@ -63459,16 +65193,16 @@ tlR
 "}
 (3,1,1) = {"
 tlR
-oLv
+dHH
 vee
 lns
 eZo
 lrc
-kIF
+hum
 hum
 dHH
 bSw
-bcv
+qHC
 qHC
 ufQ
 ufQ
@@ -63711,16 +65445,16 @@ tlR
 "}
 (4,1,1) = {"
 tlR
-oLv
+dHH
 eAX
 vdu
 jAm
 jmL
 dWm
-kIF
+hum
 dHH
 bSw
-bcv
+qHC
 qHC
 tQO
 nAZ
@@ -63963,16 +65697,16 @@ tlR
 "}
 (5,1,1) = {"
 tlR
-oLv
+dHH
 exV
-kIF
+hum
 rJv
 vns
 dnF
-kIF
+hum
 dHH
 bSw
-bcv
+qHC
 qHC
 tQO
 nAZ
@@ -64202,9 +65936,9 @@ wqR
 jEK
 lRI
 fMx
-lRI
 jtF
 hxW
+lRI
 lRI
 lRI
 uCd
@@ -64215,16 +65949,16 @@ tlR
 "}
 (6,1,1) = {"
 tlR
-oLv
+dHH
 bDq
-kIF
-kIF
-kIF
+hum
+hum
+hum
 dqK
-kIF
+hum
 dHH
 bSw
-bcv
+qHC
 qHC
 jJZ
 qoy
@@ -64454,8 +66188,8 @@ tBh
 qze
 lRI
 gbw
-lRI
 hxW
+lRI
 lRI
 lRI
 lRI
@@ -64467,16 +66201,16 @@ tlR
 "}
 (7,1,1) = {"
 tlR
-oLv
+dHH
 jXJ
 gSW
-kIF
-kIF
-kIF
+hum
+hum
+hum
 lDO
-hUz
+dHH
 bSw
-bcv
+qHC
 qHC
 jJZ
 xCv
@@ -64536,7 +66270,7 @@ qZY
 iTR
 tTz
 tni
-hWt
+afa
 hWt
 hWt
 tni
@@ -64694,7 +66428,7 @@ llH
 aDj
 nKi
 jPQ
-nKi
+aal
 nKi
 dXd
 nKi
@@ -64719,16 +66453,16 @@ tlR
 "}
 (8,1,1) = {"
 tlR
-oLv
+dHH
 rzd
 jDQ
 dqK
-kIF
-kIF
-kIF
-kIF
+hum
+hum
+hum
+dHH
 bSw
-bcv
+qHC
 qHC
 jJZ
 qoy
@@ -64971,16 +66705,16 @@ tlR
 "}
 (9,1,1) = {"
 tlR
-oLv
+dHH
 pMW
-kIF
-kIF
-dgE
-kIF
-kIF
+hum
+hum
+hum
+hum
+hum
 dHH
 bSw
-bcv
+qHC
 qHC
 jJZ
 xCv
@@ -65223,16 +66957,16 @@ tlR
 "}
 (10,1,1) = {"
 tlR
-oLv
-icm
-kIF
-kIF
+dHH
+pMW
+hum
+hum
 pFV
 qqg
 nNC
 dHH
 bSw
-bcv
+qHC
 qHC
 tQO
 rrq
@@ -65342,7 +67076,7 @@ tfm
 dEu
 hcd
 dNk
-kAO
+acR
 uTg
 kAO
 vHJ
@@ -65362,7 +67096,7 @@ kAO
 kAO
 kAO
 uTg
-kAO
+acR
 nay
 xAK
 evm
@@ -65475,7 +67209,7 @@ tlR
 "}
 (11,1,1) = {"
 tlR
-oLv
+dHH
 dHH
 dHH
 dHH
@@ -65484,7 +67218,7 @@ dHH
 dHH
 dHH
 bSw
-bcv
+qHC
 qHC
 tQO
 nAZ
@@ -65512,7 +67246,7 @@ pzt
 cnh
 vHe
 eKx
-mEe
+afO
 mEe
 mEe
 mEe
@@ -65736,7 +67470,7 @@ nmP
 nmP
 nmP
 bSw
-bcv
+qHC
 qHC
 tQO
 nAZ
@@ -65988,7 +67722,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 ufQ
 ufQ
@@ -66077,7 +67811,7 @@ wqk
 wrK
 tJF
 wrK
-cPY
+aeJ
 hgI
 wrK
 wrK
@@ -66240,7 +67974,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 ufQ
 ufQ
@@ -66329,7 +68063,7 @@ eoq
 lJj
 tJF
 wrK
-tpy
+aeK
 fZM
 wrK
 tJF
@@ -66492,7 +68226,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 ufQ
 ufQ
@@ -66744,7 +68478,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 tQO
 nAZ
@@ -66847,7 +68581,7 @@ wrK
 wls
 wrK
 cCB
-xDu
+ltQ
 xjT
 wLY
 gVw
@@ -66996,7 +68730,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 tQO
 nAZ
@@ -67228,7 +68962,7 @@ lRI
 lRI
 lRI
 lRI
-txV
+lRI
 liS
 njh
 lRI
@@ -67248,7 +68982,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 jJZ
 qoy
@@ -67480,7 +69214,7 @@ lRI
 lRI
 lRI
 lRI
-lJG
+lRI
 pbi
 fnJ
 liS
@@ -67500,7 +69234,7 @@ nmP
 nmP
 bSw
 bSw
-afQ
+qHC
 qHC
 jJZ
 xCv
@@ -67732,8 +69466,8 @@ lRI
 oFj
 lRI
 nLY
-lRI
-lRI
+txV
+aaa
 pEq
 bSw
 bSw
@@ -67752,7 +69486,7 @@ nmP
 nmP
 bSw
 bSw
-xUJ
+qHC
 qHC
 jJZ
 qoy
@@ -67862,7 +69596,7 @@ tfm
 fPG
 hwQ
 cOl
-kAO
+acR
 uTg
 kAO
 kAO
@@ -67882,7 +69616,7 @@ kAO
 kAO
 kAO
 uTg
-kAO
+acR
 gwJ
 hcd
 evm
@@ -67984,7 +69718,7 @@ lRI
 hND
 lRI
 krM
-lRI
+lJG
 lRI
 bSw
 bSw
@@ -68004,7 +69738,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 jJZ
 xCv
@@ -68256,7 +69990,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 tQO
 rrq
@@ -68508,7 +70242,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 tQO
 nAZ
@@ -68760,7 +70494,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 tQO
 nAZ
@@ -68844,7 +70578,7 @@ wrK
 vlR
 wrK
 wrK
-tpy
+aeK
 imC
 wrK
 tJF
@@ -69012,7 +70746,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 ufQ
 ufQ
@@ -69264,7 +70998,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 ufQ
 ufQ
@@ -69516,7 +71250,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 ufQ
 ufQ
@@ -69768,7 +71502,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 tQO
 nAZ
@@ -70020,7 +71754,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 tQO
 nAZ
@@ -70272,7 +72006,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 jJZ
 qoy
@@ -70358,7 +72092,7 @@ wrK
 wrK
 wrK
 wrK
-tpy
+tXG
 imC
 chC
 wrK
@@ -70524,7 +72258,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 jJZ
 xCv
@@ -70634,7 +72368,7 @@ hRX
 ggY
 hcd
 dNk
-kAO
+acR
 uTg
 kAO
 vHJ
@@ -70654,7 +72388,7 @@ kAO
 kAO
 kAO
 uTg
-kAO
+acR
 nay
 xAK
 ePd
@@ -70776,7 +72510,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 jJZ
 qoy
@@ -70799,7 +72533,7 @@ bFN
 cwz
 oZh
 icu
-fIY
+afS
 oZh
 oZh
 vkt
@@ -70896,7 +72630,7 @@ kAO
 kAO
 kAO
 kAO
-vHJ
+kAO
 kAO
 kAO
 kAO
@@ -71028,7 +72762,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 jJZ
 xCv
@@ -71149,7 +72883,7 @@ kAO
 kAO
 kAO
 kAO
-vHJ
+kAO
 kAO
 kAO
 kAO
@@ -71280,7 +73014,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 tQO
 rrq
@@ -71398,7 +73132,6 @@ kAO
 kAO
 kAO
 kAO
-vHJ
 kAO
 kAO
 kAO
@@ -71408,7 +73141,8 @@ kAO
 kAO
 kAO
 kAO
-vHJ
+kAO
+kAO
 kAO
 kAO
 gEl
@@ -71532,7 +73266,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 tQO
 nAZ
@@ -71647,20 +73381,20 @@ kAO
 kAO
 kAO
 kAO
-vHJ
-vHJ
 kAO
 kAO
 kAO
 kAO
-vHJ
-vHJ
-vHJ
 kAO
 kAO
 kAO
 kAO
-vHJ
+kAO
+kAO
+kAO
+kAO
+kAO
+kAO
 kAO
 kAO
 emC
@@ -71784,7 +73518,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 tQO
 nAZ
@@ -71898,20 +73632,20 @@ kAO
 kAO
 kAO
 kAO
-vHJ
-vHJ
 kAO
 kAO
 kAO
 kAO
 kAO
 kAO
-vHJ
 kAO
 kAO
 kAO
 kAO
-vHJ
+kAO
+kAO
+kAO
+kAO
 kAO
 kAO
 kAO
@@ -72036,7 +73770,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 ufQ
 ufQ
@@ -72157,14 +73891,14 @@ kAO
 kAO
 kAO
 kAO
-vHJ
 kAO
 kAO
 kAO
 kAO
-vHJ
 kAO
-vHJ
+kAO
+kAO
+kAO
 kAO
 kAO
 cdx
@@ -72288,7 +74022,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 ufQ
 ufQ
@@ -72403,9 +74137,6 @@ kAO
 kAO
 kAO
 kAO
-vHJ
-vHJ
-vHJ
 kAO
 kAO
 kAO
@@ -72416,7 +74147,10 @@ kAO
 kAO
 kAO
 kAO
-vHJ
+kAO
+kAO
+kAO
+kAO
 kAO
 kAO
 gEl
@@ -72494,9 +74228,9 @@ bSw
 bSw
 bSw
 lRI
-bSw
-bSw
-bSw
+qHC
+qHC
+qHC
 fxY
 kLk
 cPz
@@ -72540,7 +74274,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 ufQ
 ufQ
@@ -72567,7 +74301,7 @@ vhI
 vHe
 vHe
 vHe
-wrK
+afR
 wWL
 wrK
 wrK
@@ -72655,14 +74389,14 @@ kAO
 kAO
 kAO
 kAO
-vHJ
-vHJ
 kAO
 kAO
 kAO
 kAO
 kAO
-vHJ
+kAO
+kAO
+kAO
 kAO
 kAO
 kAO
@@ -72746,8 +74480,8 @@ bSw
 bSw
 bSw
 bSw
-bSw
-bSw
+qHC
+qHC
 lRI
 fxY
 dPv
@@ -72792,7 +74526,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 tQO
 nAZ
@@ -72908,14 +74642,14 @@ vHJ
 kAO
 kAO
 kAO
-vHJ
-vHJ
 kAO
 kAO
 kAO
 kAO
 kAO
-ils
+kAO
+kAO
+kAO
 kAO
 kAO
 kAO
@@ -72999,7 +74733,7 @@ bSw
 bSw
 bSw
 bSw
-bSw
+qHC
 lRI
 fxY
 dPv
@@ -73044,7 +74778,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 tQO
 nAZ
@@ -73154,7 +74888,7 @@ hRX
 ggY
 hwQ
 cOl
-kAO
+acR
 uTg
 kAO
 kAO
@@ -73174,7 +74908,7 @@ kAO
 kAO
 kAO
 uTg
-kAO
+acR
 gwJ
 xAK
 evm
@@ -73250,7 +74984,7 @@ bSw
 bSw
 bSw
 bSw
-bSw
+qHC
 lRI
 lRI
 fxY
@@ -73296,7 +75030,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 jJZ
 qoy
@@ -73425,7 +75159,7 @@ qda
 fzf
 fzf
 fzf
-uad
+fzf
 lUs
 luk
 pQS
@@ -73548,7 +75282,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 jJZ
 xCv
@@ -73800,7 +75534,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 jJZ
 qoy
@@ -74052,7 +75786,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 jJZ
 xCv
@@ -74304,7 +76038,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 tQO
 rrq
@@ -74556,7 +76290,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 tQO
 nAZ
@@ -74808,7 +76542,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 tQO
 nAZ
@@ -75060,7 +76794,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 ufQ
 ufQ
@@ -75312,7 +77046,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 ufQ
 ufQ
@@ -75564,7 +77298,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 ufQ
 ufQ
@@ -75816,7 +77550,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 tQO
 nAZ
@@ -75926,7 +77660,7 @@ hRX
 ggY
 hcd
 aEf
-vHJ
+adQ
 vHJ
 ils
 ils
@@ -75946,7 +77680,7 @@ kAO
 kAO
 kAO
 kAO
-kAO
+acR
 gwJ
 xAK
 ePd
@@ -76031,7 +77765,7 @@ qHC
 qHC
 qHC
 qHC
-qHC
+fNl
 qHC
 qHC
 qHC
@@ -76068,7 +77802,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 tQO
 nAZ
@@ -76320,7 +78054,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 jJZ
 qoy
@@ -76572,7 +78306,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 jJZ
 xCv
@@ -76761,7 +78495,7 @@ rmN
 cJS
 brB
 cJS
-cJS
+abt
 cJS
 lDL
 qHC
@@ -76824,7 +78558,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 jJZ
 qoy
@@ -77076,7 +78810,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 jJZ
 xCv
@@ -77328,7 +79062,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 tQO
 rrq
@@ -77551,7 +79285,7 @@ qHC
 qHC
 qHC
 lRI
-lRI
+aah
 iYP
 lRI
 lRI
@@ -77580,7 +79314,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 tQO
 nAZ
@@ -77787,7 +79521,7 @@ qHC
 qHC
 qHC
 qHC
-qHC
+aaF
 qHC
 qHC
 oYf
@@ -77832,7 +79566,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 qHC
 tQO
 nAZ
@@ -78084,7 +79818,7 @@ nmP
 nmP
 nmP
 bSw
-bcv
+qHC
 qHC
 ufQ
 ufQ
@@ -78131,7 +79865,7 @@ rtB
 qMn
 sPo
 yiX
-yiX
+afl
 yiX
 yiX
 yiX
@@ -78336,7 +80070,7 @@ nmP
 nmP
 nmP
 bSw
-bcv
+qHC
 qHC
 ufQ
 ufQ
@@ -78446,7 +80180,7 @@ hRX
 ggY
 hwQ
 cOl
-vHJ
+adQ
 kAO
 vHJ
 kAO
@@ -78466,7 +80200,7 @@ kAO
 kAO
 kAO
 kAO
-kAO
+acR
 gwJ
 xAK
 evm
@@ -78588,7 +80322,7 @@ nmP
 nmP
 nmP
 bSw
-bcv
+qHC
 qHC
 ufQ
 ufQ
@@ -78659,7 +80393,7 @@ qHQ
 npS
 hyZ
 hyZ
-hyZ
+aeW
 say
 gHa
 qHQ
@@ -78733,7 +80467,7 @@ qHC
 qHC
 qHC
 qHC
-aFC
+acm
 dTZ
 rgG
 rxD
@@ -78786,7 +80520,7 @@ qHC
 qHC
 lDL
 vMY
-drI
+abe
 mQj
 vBm
 lDL
@@ -78840,7 +80574,7 @@ nmP
 nmP
 nmP
 bSw
-bcv
+qHC
 qHC
 tQO
 nAZ
@@ -78889,7 +80623,7 @@ sPo
 yiX
 yiX
 yiX
-yiX
+afl
 yiX
 yiX
 yiX
@@ -79056,7 +80790,7 @@ qHC
 qHC
 pCU
 qHC
-qHC
+aam
 qHC
 qHC
 oFs
@@ -79092,7 +80826,7 @@ nmP
 nmP
 nmP
 bSw
-bcv
+qHC
 qHC
 tQO
 nAZ
@@ -79256,7 +80990,7 @@ iMj
 qHC
 iMj
 iMj
-iMj
+abM
 fyN
 fyN
 iMj
@@ -79344,7 +81078,7 @@ nmP
 nmP
 nmP
 bSw
-bcv
+qHC
 qHC
 jJZ
 qoy
@@ -79393,7 +81127,7 @@ sPo
 yiX
 yiX
 yiX
-yiX
+afl
 yiX
 yiX
 yiX
@@ -79443,7 +81177,7 @@ wrK
 wrK
 qHQ
 pQG
-ryt
+aeo
 cAv
 cAv
 cAv
@@ -79596,7 +81330,7 @@ nmP
 nmP
 nmP
 bSw
-bcv
+qHC
 qHC
 jJZ
 xCv
@@ -79642,7 +81376,7 @@ cGm
 rtB
 qMn
 sPo
-yiX
+afl
 yiX
 yiX
 yiX
@@ -79848,8 +81582,8 @@ nmP
 nmP
 nmP
 bSw
-bcv
-bcv
+qHC
+qHC
 jJZ
 qoy
 lUj
@@ -79895,7 +81629,7 @@ rtB
 qMn
 sPo
 jdL
-yiX
+afl
 yiX
 jdL
 yiX
@@ -80101,7 +81835,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 jJZ
 xCv
 lUj
@@ -80353,7 +82087,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 tQO
 rrq
 dbp
@@ -80605,7 +82339,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 tQO
 nAZ
 dbp
@@ -80857,7 +82591,7 @@ nmP
 nmP
 bSw
 bSw
-bcv
+qHC
 tQO
 nAZ
 dbp
@@ -81556,7 +83290,7 @@ qHC
 qHC
 qHC
 qHC
-qHC
+aaF
 qHC
 qHC
 qHC
@@ -82313,9 +84047,9 @@ oYf
 qHC
 oYf
 qHC
-oYf
 qHC
-qHC
+abf
+aaY
 oYf
 fyN
 fyN
@@ -82565,9 +84299,9 @@ qHC
 qHC
 qHC
 qHC
-gkT
-qHC
-qHC
+vaN
+abg
+aaZ
 qHC
 fyN
 fyN
@@ -82818,8 +84552,8 @@ dbe
 oNv
 dbe
 dbe
-qHC
-qHC
+abh
+abb
 qHC
 fyN
 qHC
@@ -83070,8 +84804,8 @@ pho
 wWj
 bEQ
 dbe
-qHC
-qHC
+abi
+abc
 qHC
 qHC
 qHC
@@ -84023,7 +85757,7 @@ qML
 lgG
 gXa
 qHC
-hea
+aco
 oYf
 qHC
 qHC
@@ -84067,7 +85801,7 @@ qHC
 qHC
 qHC
 qHC
-dbe
+abx
 bxQ
 vyl
 vyl
@@ -84433,7 +86167,7 @@ qyy
 qHC
 qHC
 qHC
-qHC
+fNl
 qHC
 qHC
 qHC
@@ -84635,8 +86369,8 @@ nmP
 nmP
 nmP
 qGT
-omp
-omp
+bSw
+bSw
 bSw
 bSw
 bSw
@@ -84888,8 +86622,8 @@ rtR
 rtR
 rtR
 fas
-bxL
-bxL
+qyf
+qyf
 qyf
 tcK
 tcK
@@ -85009,13 +86743,13 @@ gBd
 gti
 xBq
 tNr
-quw
+adh
 cBR
 gwB
 wPV
 gBd
 gBd
-gBd
+aag
 gBd
 gBd
 gBd
@@ -85137,10 +86871,10 @@ xQq
 xQq
 xQq
 xQq
-tuE
+afU
 rtR
-bxL
-qyf
+tgP
+tgP
 tgP
 tgP
 pfc
@@ -85167,7 +86901,7 @@ pfc
 pfc
 gBd
 gBd
-gBd
+adp
 dPF
 gBd
 dPF
@@ -85384,8 +87118,8 @@ tlR
 (90,1,1) = {"
 tlR
 eud
+afW
 kVC
-hfL
 hfL
 uvf
 uvf
@@ -85394,7 +87128,7 @@ rtR
 hjc
 skj
 ueT
-ueT
+afT
 pfc
 pfc
 qlE
@@ -85618,7 +87352,7 @@ gBd
 gBd
 oPC
 gBd
-gBd
+aag
 gBd
 gBd
 oML
@@ -85636,7 +87370,7 @@ tlR
 (91,1,1) = {"
 tlR
 eud
-rtR
+afX
 rtR
 rtR
 rtR
@@ -85644,8 +87378,8 @@ rtR
 rtR
 rtR
 yeP
-dvM
-bgb
+uox
+hJo
 gxK
 kkT
 xXy
@@ -86391,7 +88125,7 @@ tlR
 "}
 (94,1,1) = {"
 tlR
-sEJ
+afY
 jWW
 mPT
 mPT
@@ -87807,7 +89541,7 @@ aig
 aig
 rNW
 aig
-aig
+acl
 aig
 aig
 aig
@@ -87847,7 +89581,7 @@ uHl
 uHl
 aig
 aig
-aig
+aby
 aig
 rNW
 aig
@@ -87969,7 +89703,7 @@ gBd
 gBd
 dPF
 dPF
-gBd
+afd
 gBd
 gBd
 gBd
@@ -88030,7 +89764,7 @@ cNo
 gBd
 gBd
 gBd
-gBd
+adp
 gBd
 gBd
 gti
@@ -88075,7 +89809,7 @@ gBd
 gBd
 gBd
 gBd
-gBd
+aag
 gBd
 gBd
 gBd
@@ -88191,7 +89925,7 @@ pfc
 pfc
 gBd
 gBd
-gBd
+adp
 gBd
 gBd
 gBd
@@ -88494,7 +90228,7 @@ gBd
 gBd
 gBd
 gBd
-gBd
+dPF
 gBd
 oML
 gBd
@@ -88742,12 +90476,12 @@ bcv
 bcv
 haU
 qHC
-qHC
-qHC
-qHC
-qHC
-qHC
-qHC
+fyN
+fyN
+aeT
+fyN
+fyN
+fyN
 haU
 bcv
 bcv
@@ -88779,7 +90513,7 @@ qHC
 qHC
 qHC
 qHC
-qHC
+adH
 qHC
 haU
 bcv
@@ -88802,11 +90536,11 @@ bcv
 haU
 qHC
 qHC
+acJ
+acD
 qHC
-qHC
-qHC
-qHC
-qHC
+act
+acq
 qHC
 qHC
 qHC
@@ -88973,9 +90707,9 @@ bSw
 bSw
 bSw
 bSw
-qHC
-qHC
-qHC
+afk
+afi
+afe
 fyN
 fyN
 qHC
@@ -88995,10 +90729,10 @@ qHC
 haU
 qHC
 qHC
+fyN
 qHC
-qHC
-qHC
-qHC
+oYf
+fyN
 qHC
 haU
 qHC
@@ -89055,9 +90789,9 @@ haU
 qHC
 qHC
 qHC
-qHC
-qHC
-qHC
+acE
+acz
+acu
 qHC
 qHC
 qHC
@@ -89226,8 +90960,8 @@ bSw
 bSw
 bSw
 qHC
-qHC
-qHC
+afj
+afg
 fyN
 qHC
 qHC
@@ -89247,11 +90981,11 @@ qHC
 qHC
 qHC
 qHC
-qHC
-qHC
-qHC
-qHC
-qHC
+fyN
+oYf
+fyN
+fyN
+oYf
 qHC
 qHC
 qHC
@@ -89307,9 +91041,9 @@ qHC
 qHC
 qHC
 qHC
-qHC
-qHC
-qHC
+acF
+acA
+acv
 qHC
 qHC
 bSw
@@ -89479,7 +91213,7 @@ bSw
 bSw
 qHC
 qHC
-fyN
+afh
 qHC
 fyN
 qHC
@@ -89500,8 +91234,8 @@ qHC
 qHC
 qHC
 qHC
-qHC
-qHC
+fyN
+fyN
 qHC
 qHC
 bSw
@@ -89559,10 +91293,10 @@ qHC
 qHC
 qHC
 qHC
-qHC
-qHC
-qHC
-qHC
+acG
+acB
+acw
+acs
 bSw
 bSw
 bSw
@@ -89751,11 +91485,11 @@ qHC
 qHC
 qHC
 qHC
+fyN
+fyN
+oYf
 qHC
-qHC
-qHC
-qHC
-qHC
+oYf
 bSw
 bSw
 bSw
@@ -89812,7 +91546,7 @@ qHC
 qHC
 qHC
 qHC
-qHC
+acq
 qHC
 qHC
 bSw
@@ -90002,12 +91736,12 @@ qHC
 qHC
 qHC
 qHC
+aeU
+qHC
+fyN
 qHC
 qHC
-qHC
-qHC
-qHC
-qHC
+fyN
 bSw
 bSw
 bSw
@@ -90141,7 +91875,7 @@ qHC
 oYf
 qHC
 qHC
-osc
+aat
 tbk
 slq
 bcU
@@ -90256,9 +91990,9 @@ qHC
 qHC
 qHC
 qHC
-qHC
-qHC
-qHC
+oYf
+fyN
+fyN
 qHC
 qHC
 bSw
@@ -90396,7 +92130,7 @@ qHC
 osc
 bLL
 mRo
-mRo
+qSF
 wwV
 qHC
 qHC
@@ -90507,9 +92241,9 @@ qHC
 qHC
 qHC
 qHC
-fyN
-fyN
 oYf
+qHC
+qHC
 qHC
 qHC
 qHC
@@ -90647,8 +92381,8 @@ bSw
 qHC
 osc
 bLL
-mRo
-mRo
+aaq
+qSF
 mRo
 qHC
 oYf
@@ -90759,7 +92493,7 @@ qHC
 fyN
 qHC
 fyN
-oYf
+fyN
 fyN
 qHC
 fyN
@@ -90896,11 +92630,11 @@ qHC
 qHC
 qHC
 qHC
-bSw
+qHC
 osc
 tVA
-sBs
 mRo
+aan
 osc
 qHC
 qHC
@@ -90978,7 +92712,7 @@ hYx
 oHZ
 aAK
 xXz
-waR
+afB
 hBq
 waR
 gZe
@@ -91272,7 +93006,7 @@ haU
 lNZ
 vLW
 qLa
-qLa
+aeP
 jgF
 qHC
 oYf
@@ -91403,7 +93137,7 @@ bSw
 qHC
 osc
 fxn
-mRo
+aar
 imb
 osc
 osc
@@ -91482,9 +93216,9 @@ mbB
 oHZ
 sxd
 eTO
-waR
+afC
 hBq
-waR
+afv
 myx
 sxd
 oHZ
@@ -91629,7 +93363,7 @@ iCq
 iCq
 iCq
 iCq
-iCq
+naM
 iCq
 iCq
 iCq
@@ -91775,7 +93509,7 @@ fTU
 qLa
 rNb
 haU
-mHM
+aeO
 mHM
 mwe
 mwe
@@ -91846,8 +93580,8 @@ unl
 fIV
 unl
 kZT
-bZC
-tgj
+kZT
+kZT
 kZT
 kZT
 ene
@@ -92024,7 +93758,7 @@ qHC
 dyw
 kTY
 rNb
-qLa
+aeS
 qds
 qLa
 mHM
@@ -92265,7 +93999,7 @@ fyN
 fyN
 fyN
 oYf
-qHC
+oYf
 qHC
 qHC
 qHC
@@ -92279,7 +94013,7 @@ rvi
 mwe
 hQb
 qLa
-mwe
+aeR
 mwe
 mHM
 mHM
@@ -92517,9 +94251,9 @@ oYf
 fyN
 qHC
 qHC
-qHC
-qHC
-qHC
+fyN
+fyN
+oYf
 qHC
 qHC
 qHC
@@ -92530,12 +94264,12 @@ haU
 haU
 haU
 pGV
-mwe
+aeR
 mHM
 mHM
+aeO
 mHM
-mHM
-qbp
+aeM
 qHC
 qHC
 qHC
@@ -92769,9 +94503,9 @@ oYf
 qHC
 qHC
 qHC
-qHC
-qHC
-qHC
+fyN
+oYf
+fyN
 qHC
 qHC
 qHC
@@ -92787,7 +94521,7 @@ qbp
 mHM
 mHM
 mwe
-mwe
+aeN
 qHC
 qHC
 qHC
@@ -92806,7 +94540,7 @@ qHC
 qHC
 qHC
 qHC
-qHC
+aaF
 qHC
 tfR
 srV
@@ -92858,7 +94592,7 @@ unl
 unl
 unl
 kZT
-bQh
+abS
 fez
 aGs
 aIz
@@ -93024,7 +94758,7 @@ qHC
 qHC
 qHC
 qHC
-qHC
+oYf
 qHC
 qHC
 qHC
@@ -93274,7 +95008,7 @@ gYn
 gYn
 gYn
 gYn
-gYn
+aeX
 gYn
 gYn
 qHC
@@ -93287,7 +95021,7 @@ kTY
 qds
 rNb
 qHC
-mwe
+aeR
 mwe
 tFn
 mwe
@@ -93525,8 +95259,8 @@ gYn
 kJR
 izU
 gYn
-rMh
-rJm
+ihl
+mMA
 lbB
 gYn
 qHC
@@ -93753,7 +95487,7 @@ qHC
 qHC
 qHC
 qHC
-qHC
+afs
 qHC
 fyN
 fyN
@@ -93780,7 +95514,7 @@ byx
 ihl
 fFx
 mMA
-xqI
+gYn
 qHC
 qHC
 qHC
@@ -93895,7 +95629,7 @@ jgi
 jgi
 jgi
 iCq
-iCq
+tFP
 iCq
 iCq
 iCq
@@ -94004,9 +95738,9 @@ fyN
 qHC
 fyN
 qHC
-qHC
+afw
 fyN
-fyN
+afo
 qHC
 qHC
 qHC
@@ -94256,9 +95990,9 @@ qHC
 qHC
 fyN
 qHC
-fyN
+afx
 qHC
-qHC
+pCU
 qHC
 qHC
 qHC
@@ -94432,7 +96166,7 @@ iCq
 iCq
 iCq
 iCq
-iCq
+uzu
 iCq
 iCq
 iCq
@@ -94509,7 +96243,7 @@ fyN
 qHC
 qHC
 qHC
-qHC
+aft
 qHC
 qHC
 qHC
@@ -94653,6 +96387,21 @@ jgi
 jgi
 iCq
 iCq
+khM
+iCq
+jgi
+jgi
+jgi
+jgi
+jgi
+jgi
+iCq
+iCq
+iCq
+iCq
+iCq
+iCq
+iCq
 iCq
 iCq
 jgi
@@ -94661,30 +96410,15 @@ jgi
 jgi
 jgi
 jgi
-iCq
-iCq
-iCq
-iCq
-iCq
-iCq
-iCq
-iCq
-iCq
-jgi
-jgi
-jgi
-jgi
-jgi
-jgi
 jgi
 jgi
 jgi
 iCq
 iCq
 iCq
+uzu
 iCq
-iCq
-iCq
+uzu
 iCq
 iCq
 iCq
@@ -94761,7 +96495,7 @@ qHC
 qHC
 qHC
 fyN
-fyN
+qHC
 qHC
 qHC
 qHC
@@ -94933,10 +96667,10 @@ jgi
 jgi
 iCq
 iCq
-iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
+uzu
 iCq
 iCq
 iCq
@@ -95144,7 +96878,7 @@ eyU
 iID
 ixT
 kZT
-cLU
+abD
 kZT
 cSK
 kZT
@@ -95185,9 +96919,9 @@ jgi
 jgi
 iCq
 iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
 iCq
 iCq
 iCq
@@ -95408,7 +97142,7 @@ weW
 weW
 jgi
 jgi
-iCq
+nWp
 iCq
 iCq
 iCq
@@ -95436,9 +97170,9 @@ jgi
 jgi
 iCq
 iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
 tmN
 iCq
 iCq
@@ -95512,7 +97246,7 @@ oYf
 qHC
 qHC
 qHC
-fyN
+afo
 qHC
 qHC
 qHC
@@ -95687,9 +97421,9 @@ jgi
 jgi
 jgi
 rEg
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
 iCq
 iCq
 iCq
@@ -95764,8 +97498,8 @@ qHC
 fyN
 fyN
 qHC
-fyN
-qHC
+afH
+vGe
 qHC
 qHC
 qHC
@@ -96517,7 +98251,7 @@ qHC
 saR
 aXl
 qHC
-wDn
+mkT
 wEB
 chJ
 chJ
@@ -96676,7 +98410,7 @@ hQo
 hQo
 iCq
 iCq
-iCq
+tFP
 iCq
 iCq
 iCq
@@ -96767,7 +98501,7 @@ qHC
 saR
 aXl
 qHC
-wDn
+mkT
 qHC
 qHC
 chJ
@@ -97198,8 +98932,8 @@ iCq
 iCq
 iCq
 iCq
-iCq
-iCq
+uzu
+uzu
 iCq
 iCq
 jgi
@@ -97448,8 +99182,8 @@ iCq
 iCq
 iCq
 uIS
-iCq
-iCq
+uzu
+uzu
 iCq
 iCq
 iCq
@@ -97525,8 +99259,8 @@ qHC
 qHC
 qHC
 qHC
-qHC
-chJ
+afL
+afI
 chJ
 chJ
 chJ
@@ -97669,7 +99403,7 @@ nON
 vYI
 ftN
 lnw
-rcb
+abC
 xHe
 ftN
 obP
@@ -97699,9 +99433,9 @@ fGo
 iCq
 iCq
 iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
 vvj
 iCq
 iCq
@@ -97777,8 +99511,8 @@ qHC
 qHC
 qHC
 qHC
-qHC
-chJ
+afM
+afJ
 chJ
 oZa
 oZa
@@ -97951,11 +99685,11 @@ fGo
 iCq
 iCq
 iCq
-tYP
+aaw
 iCq
+uzu
 iCq
-iCq
-iCq
+uzu
 iCq
 jgi
 jgi
@@ -98030,7 +99764,7 @@ qHC
 qHC
 qHC
 qHC
-chJ
+afK
 oZa
 oZa
 oZa
@@ -98144,7 +99878,7 @@ mYw
 mYw
 mYw
 mYw
-mYw
+aca
 cXg
 lho
 myC
@@ -98203,11 +99937,11 @@ iCq
 iCq
 iCq
 iCq
+uzu
+uzu
+uzu
 iCq
-iCq
-iCq
-iCq
-iCq
+uzu
 tiS
 vsF
 jgi
@@ -98456,10 +100190,10 @@ iCq
 iCq
 iCq
 tmN
-iCq
+uzu
 iCq
 vsF
-iCq
+uzu
 tiS
 iCq
 iCq
@@ -98615,7 +100349,7 @@ jgi
 jgi
 jgi
 jgi
-qGT
+reU
 nXg
 tjA
 hZa
@@ -98708,10 +100442,10 @@ iCq
 iCq
 vvj
 iCq
+uzu
 iCq
 iCq
-iCq
-iCq
+uzu
 fGo
 fGo
 iCq
@@ -98838,7 +100572,7 @@ iCq
 iCq
 iCq
 iCq
-iCq
+uzu
 iCq
 iCq
 jgi
@@ -98963,7 +100697,7 @@ iCq
 iCq
 iCq
 iCq
-iCq
+uzu
 dqr
 fGo
 tmN
@@ -99066,7 +100800,7 @@ jgi
 iCq
 iCq
 iCq
-iCq
+aeY
 iCq
 iCq
 iCq
@@ -99090,7 +100824,7 @@ jgi
 iCq
 iCq
 tmN
-iCq
+uzu
 iCq
 iCq
 jgi
@@ -99342,7 +101076,7 @@ jgi
 jgi
 iCq
 iCq
-iCq
+uzu
 iCq
 iCq
 jgi
@@ -99470,11 +101204,11 @@ iCq
 iCq
 tiS
 tYP
-iCq
-iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
+uzu
+uzu
 iCq
 jgi
 jgi
@@ -99594,7 +101328,7 @@ jgi
 jgi
 iCq
 iCq
-iCq
+uzu
 iCq
 iCq
 jgi
@@ -99697,9 +101431,9 @@ gzl
 pxe
 dHR
 iKR
-hhs
-hhs
-hhs
+abo
+abo
+abo
 wlj
 dHR
 nxD
@@ -99723,11 +101457,11 @@ fGo
 jgi
 jgi
 iCq
-iCq
-iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
+uzu
+aai
 fGo
 jgi
 jgi
@@ -99826,7 +101560,7 @@ iCq
 iCq
 iCq
 iCq
-iCq
+iVg
 jgi
 jgi
 jgi
@@ -99846,8 +101580,8 @@ jgi
 jgi
 dqr
 fGo
-fGo
-iCq
+aen
+uzu
 iCq
 jgi
 jgi
@@ -99947,8 +101681,8 @@ xNT
 vIF
 gzl
 lps
-dHR
-uuS
+abs
+abr
 fbT
 fbT
 sqU
@@ -99977,9 +101711,9 @@ jgi
 tmN
 iCq
 vvj
+uzu
 iCq
-iCq
-tmN
+aab
 tiS
 iCq
 iCq
@@ -100099,7 +101833,7 @@ fGo
 fGo
 fGo
 fGo
-tiS
+riH
 rvV
 qaN
 jgi
@@ -100201,9 +101935,9 @@ gzl
 tRj
 dHR
 iKR
-vHH
-vHH
-vHH
+abo
+abo
+abo
 wlj
 dHR
 soE
@@ -100230,8 +101964,8 @@ iCq
 iCq
 iCq
 iCq
-iCq
-iCq
+uzu
+uzu
 tiS
 iCq
 iCq
@@ -100351,8 +102085,8 @@ qaN
 jgi
 jgi
 iCq
-iCq
-iCq
+uzu
+uzu
 iCq
 jgi
 jgi
@@ -100424,7 +102158,7 @@ fiE
 ahO
 fiE
 fiE
-fiE
+abN
 fiE
 fiE
 fEo
@@ -100482,7 +102216,7 @@ iCq
 iCq
 iCq
 iCq
-iCq
+uzu
 vsF
 fGo
 fGo
@@ -100580,7 +102314,7 @@ jgi
 iCq
 iCq
 iCq
-iCq
+uIS
 iCq
 iCq
 kvd
@@ -100603,8 +102337,8 @@ jgi
 jgi
 jgi
 iCq
-vvj
-iCq
+uzu
+uzu
 iCq
 iCq
 jgi
@@ -100678,7 +102412,7 @@ hBE
 fiE
 fiE
 fiE
-fiE
+abK
 fiE
 fiE
 fiE
@@ -100856,8 +102590,8 @@ jgi
 jgi
 iCq
 iCq
-iCq
-iCq
+uzu
+uzu
 iCq
 iCq
 iCq
@@ -101063,7 +102797,7 @@ fCv
 eJF
 aRH
 eJF
-dPf
+afm
 fCv
 fCv
 jgi
@@ -101108,9 +102842,9 @@ jgi
 jgi
 jgi
 iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
 tmN
 iCq
 iCq
@@ -101360,12 +103094,12 @@ jgi
 jgi
 jgi
 jgi
-iCq
-iCq
-iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
+uzu
+uzu
+uzu
 iCq
 iCq
 jgi
@@ -101615,9 +103349,9 @@ jgi
 iCq
 iCq
 vvj
+uzu
 iCq
-iCq
-iCq
+uzu
 iCq
 iCq
 tiS
@@ -101687,7 +103421,7 @@ kfp
 hEW
 dWN
 hBE
-bnm
+abJ
 uAh
 opd
 mjz
@@ -101753,7 +103487,7 @@ iCq
 iCq
 iCq
 iCq
-iCq
+uzu
 iCq
 iCq
 jgi
@@ -101816,7 +103550,7 @@ fCv
 fCv
 fCv
 fCv
-eJF
+afy
 oZa
 oZa
 oZa
@@ -101871,10 +103605,10 @@ iCq
 iCq
 iCq
 iCq
-iCq
-tiS
-iCq
-iCq
+uzu
+riH
+uzu
+uzu
 iCq
 iCq
 iCq
@@ -101925,7 +103659,7 @@ ckf
 maX
 muZ
 grW
-uRl
+abU
 uRl
 uRl
 uRl
@@ -101933,7 +103667,7 @@ uRl
 uRl
 ffG
 fiE
-fiE
+abK
 fiE
 fiE
 hBE
@@ -101975,7 +103709,7 @@ sPd
 sNl
 vRT
 stF
-vRT
+aaR
 pDJ
 gzl
 cLU
@@ -102001,11 +103735,11 @@ jgi
 jgi
 jgi
 iCq
+uzu
 iCq
-iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
 iCq
 iCq
 jgi
@@ -102120,13 +103854,13 @@ iCq
 iCq
 iCq
 qoQ
+uzu
 iCq
 iCq
 iCq
-iCq
-fGo
-iCq
-iCq
+aen
+uzu
+uzu
 tmN
 iCq
 iCq
@@ -102183,7 +103917,7 @@ fiE
 fiE
 fiE
 fiE
-fiE
+abN
 fiE
 hBE
 fiE
@@ -102254,9 +103988,9 @@ jgi
 jgi
 iCq
 iCq
-tmN
-iCq
-iCq
+aab
+uzu
+uzu
 iCq
 iCq
 iCq
@@ -102372,15 +104106,15 @@ iCq
 iCq
 iCq
 iCq
+uzu
+uzu
+iCq
+uzu
+riH
+uzu
 iCq
 iCq
-iCq
-iCq
-tiS
-iCq
-iCq
-iCq
-iCq
+uzu
 iCq
 tiS
 iCq
@@ -102438,7 +104172,7 @@ hBE
 fEo
 hBE
 fiE
-fiE
+abK
 fEo
 fiE
 hBE
@@ -102506,9 +104240,9 @@ jgi
 iCq
 iCq
 iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
 iCq
 iCq
 khM
@@ -102610,9 +104344,9 @@ iCq
 iCq
 iCq
 iCq
-iCq
-iCq
-khM
+uzu
+uzu
+aeQ
 iCq
 iCq
 iCq
@@ -102622,19 +104356,19 @@ tiS
 iCq
 iCq
 iCq
-iCq
-iCq
-iCq
-iCq
-iCq
-iCq
-tiS
-iCq
-iCq
+uzu
+uzu
+uzu
 iCq
 iCq
 iCq
 tiS
+iCq
+iCq
+uzu
+uzu
+uzu
+riH
 iCq
 iCq
 iCq
@@ -102701,7 +104435,7 @@ fNn
 ejK
 ejK
 kao
-fiE
+abH
 bnm
 fEo
 nzv
@@ -102734,7 +104468,7 @@ kqx
 kqx
 kqx
 gid
-tIw
+aaH
 btT
 hDQ
 rMY
@@ -102757,11 +104491,11 @@ jgi
 jgi
 iCq
 iCq
+uzu
+uzu
+uzu
 iCq
-iCq
-iCq
-iCq
-iCq
+uzu
 iCq
 iCq
 jgi
@@ -102864,8 +104598,8 @@ iCq
 iCq
 iCq
 iCq
-iCq
-iCq
+uzu
+uzu
 iCq
 iCq
 iCq
@@ -102874,8 +104608,8 @@ fGo
 iCq
 iCq
 iCq
-iCq
-iCq
+uzu
+uzu
 iCq
 hkG
 hkG
@@ -102886,9 +104620,9 @@ hkG
 iCq
 iCq
 fGo
-fGo
-wMx
-iCq
+aen
+aae
+uzu
 iCq
 iCq
 iCq
@@ -102928,7 +104662,7 @@ ckf
 bWd
 gPc
 urP
-bWd
+ack
 cqp
 adT
 bWd
@@ -103161,7 +104895,7 @@ sES
 sES
 eZD
 kSp
-kSp
+acS
 eZD
 qup
 qup
@@ -103262,7 +104996,7 @@ jgi
 naM
 iCq
 iCq
-iCq
+uzu
 iCq
 iCq
 iCq
@@ -103328,10 +105062,10 @@ fCv
 fCv
 fCv
 fCv
-eJF
-eJF
-dPf
-dPf
+afz
+afu
+afp
+afn
 fCv
 fCv
 iCq
@@ -103350,7 +105084,7 @@ jgi
 jgi
 iCq
 iCq
-iCq
+tFP
 iCq
 iCq
 iCq
@@ -103369,8 +105103,8 @@ jgi
 jgi
 jgi
 iCq
-iCq
-iCq
+uzu
+uzu
 iCq
 iCq
 iCq
@@ -103385,7 +105119,7 @@ hkG
 mrf
 mVS
 mVS
-jAD
+mVS
 hkG
 iCq
 iCq
@@ -103478,7 +105212,7 @@ tIw
 tIw
 rjI
 vIl
-tIw
+abq
 wNk
 wNk
 aLs
@@ -103513,8 +105247,8 @@ jgi
 iCq
 iCq
 tmN
-iCq
-iCq
+uzu
+uzu
 iCq
 iCq
 iCq
@@ -103621,7 +105355,7 @@ jgi
 jgi
 jgi
 iCq
-iCq
+uzu
 iCq
 iCq
 iCq
@@ -103664,7 +105398,7 @@ awM
 imu
 cKL
 aAF
-oql
+acW
 qWo
 dkx
 iUE
@@ -103764,9 +105498,9 @@ jgi
 jgi
 iCq
 iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
 jgi
 jgi
 jgi
@@ -103844,23 +105578,23 @@ tmN
 iCq
 iCq
 iCq
+uzu
+uzu
 iCq
 iCq
 iCq
 iCq
+uzu
+uzu
+iCq
+iCq
+uzu
+uzu
 iCq
 iCq
 iCq
 iCq
-iCq
-iCq
-iCq
-iCq
-iCq
-iCq
-iCq
-iCq
-iCq
+uzu
 iCq
 iCq
 iCq
@@ -103872,8 +105606,8 @@ jgi
 jgi
 jgi
 iCq
-iCq
-iCq
+uzu
+uzu
 iCq
 jgi
 jgi
@@ -103913,7 +105647,7 @@ eod
 urP
 ndy
 gED
-asm
+acZ
 coq
 kcX
 eWJ
@@ -104016,8 +105750,8 @@ jgi
 tiS
 tiS
 tiS
-tiS
-tiS
+riH
+riH
 jgi
 jgi
 jgi
@@ -104079,14 +105813,14 @@ jgi
 jgi
 jgi
 fCv
-fCv
+tYd
 eJF
 eJF
 cJg
 oZa
 veT
 oZa
-eJF
+afq
 eJF
 fCv
 oct
@@ -104096,25 +105830,25 @@ iCq
 iCq
 iCq
 iCq
+uzu
+uzu
+uzu
 iCq
 iCq
 iCq
-iCq
-iCq
-iCq
-iCq
-iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
+uzu
+uzu
 iCq
 iCq
 iCq
 tmN
-iCq
-iCq
-wMx
-iCq
+uzu
+uzu
+aae
+uzu
 iCq
 fGo
 fGo
@@ -104123,8 +105857,8 @@ iCq
 iCq
 iCq
 tiS
-tmN
-iCq
+aab
+uzu
 iCq
 jgi
 jgi
@@ -104164,7 +105898,7 @@ ckf
 eod
 urP
 srG
-nVf
+ada
 xOp
 kcX
 tuf
@@ -104268,8 +106002,8 @@ iCq
 iCq
 iCq
 iCq
-iCq
-iCq
+uzu
+uzu
 jgi
 jgi
 jgi
@@ -104331,9 +106065,9 @@ jgi
 jgi
 jgi
 fCv
-fCv
+tYd
 eJF
-eJF
+afr
 oZa
 oZa
 veT
@@ -104350,24 +106084,24 @@ iCq
 qaN
 iCq
 iCq
-iCq
-iCq
-tmN
-iCq
-iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+aab
+uzu
+uzu
+uzu
+uzu
+uzu
 iCq
 fGo
 fGo
 iCq
 iCq
 iCq
-iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
+uzu
 iCq
 iCq
 iCq
@@ -104424,7 +106158,7 @@ tuf
 aff
 tuf
 kcX
-wAt
+acN
 gcC
 hpl
 rFO
@@ -104519,9 +106253,9 @@ mDJ
 iCq
 iCq
 iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
 jgi
 jgi
 jgi
@@ -104590,7 +106324,7 @@ dPf
 oZa
 veT
 eJF
-eJF
+afr
 eJF
 fCv
 fCv
@@ -104602,14 +106336,14 @@ iCq
 iCq
 iCq
 iCq
+afc
+uzu
+uzu
 iCq
 iCq
-iCq
-iCq
-iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
 iCq
 fGo
 fGo
@@ -104617,9 +106351,9 @@ iCq
 iCq
 iCq
 iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
 iCq
 iCq
 iCq
@@ -104667,7 +106401,7 @@ kcX
 ckf
 eod
 ckf
-ndy
+adb
 nVf
 fmM
 kcX
@@ -104771,8 +106505,8 @@ btT
 iCq
 iCq
 iCq
-iCq
-iCq
+uzu
+uzu
 iCq
 iCq
 jgi
@@ -104838,7 +106572,7 @@ fCv
 fCv
 eJF
 eJF
-eJF
+afr
 eJF
 oka
 eJF
@@ -104852,16 +106586,16 @@ jgi
 jgi
 iCq
 iCq
+uzu
+uzu
+uzu
+uzu
+uzu
 iCq
 iCq
+uzu
 iCq
-iCq
-iCq
-iCq
-iCq
-iCq
-iCq
-tmN
+aab
 iCq
 iCq
 iCq
@@ -104869,8 +106603,8 @@ iCq
 iCq
 fGo
 fGo
-iCq
-tmN
+uzu
+aab
 iCq
 iCq
 iCq
@@ -104928,7 +106662,7 @@ coq
 cMi
 mbe
 urP
-xOp
+acP
 gcC
 mSG
 qkm
@@ -105023,8 +106757,8 @@ dFD
 iCq
 iCq
 iCq
-iCq
-iCq
+uzu
+uzu
 iCq
 jgi
 jgi
@@ -105110,7 +106844,7 @@ iCq
 iCq
 iCq
 iCq
-iCq
+uzu
 iCq
 iCq
 iCq
@@ -105121,7 +106855,7 @@ iCq
 iCq
 fGo
 fGo
-iCq
+uzu
 iCq
 iCq
 jgi
@@ -105211,8 +106945,8 @@ fiE
 fiE
 rFb
 ltM
-acO
-tdU
+abO
+ubI
 hHK
 wnr
 mSp
@@ -105275,7 +107009,7 @@ jgi
 iVg
 iCq
 tmN
-iCq
+uzu
 iCq
 iCq
 jgi
@@ -105340,9 +107074,9 @@ jgi
 jgi
 fCv
 fCv
-eJF
-eJF
-dPf
+afA
+afE
+afD
 eJF
 tYd
 tYd
@@ -105463,10 +107197,10 @@ hBE
 hBE
 rFb
 mgN
-ubI
-iDt
 tdU
-seI
+iDt
+mow
+abL
 mSp
 hBE
 hBE
@@ -105593,9 +107327,9 @@ jgi
 fCv
 fCv
 eJF
+afG
 eJF
-eJF
-eJF
+afA
 fCv
 fCv
 fCv
@@ -105674,7 +107408,7 @@ jgi
 kcX
 ckf
 eod
-urP
+add
 eqQ
 gED
 wAt
@@ -105716,9 +107450,9 @@ fiE
 qld
 tRM
 bPf
-tdU
+ubI
 hAL
-mow
+tdU
 wKf
 hBE
 hBE
@@ -106123,8 +107857,8 @@ jgi
 iCq
 iCq
 iCq
-iCq
-iCq
+uzu
+uzu
 jgi
 jgi
 iCq
@@ -106190,22 +107924,22 @@ gny
 mOL
 poU
 xkv
-gpk
+acK
 qdb
-rHJ
+acC
 fgW
 xBU
 nIG
-ktn
-ktn
-vMt
+acn
+acn
+aci
 qkY
 vMt
-ktn
+acn
 ail
 poY
-vMt
-vMt
+aci
+aci
 aNB
 cUz
 dAh
@@ -106283,9 +108017,9 @@ jgi
 iCq
 iCq
 iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
 jgi
 jgi
 jgi
@@ -106374,11 +108108,11 @@ jgi
 iCq
 iCq
 iCq
+uzu
+uzu
+uzu
 iCq
-iCq
-iCq
-iCq
-iCq
+uzu
 iCq
 iCq
 iCq
@@ -106458,8 +108192,8 @@ cFy
 gpk
 aYP
 hqG
-gpk
-ktn
+acg
+acd
 wRS
 fiE
 fiE
@@ -106533,11 +108267,11 @@ jgi
 jgi
 iCq
 iCq
+uzu
 iCq
-iCq
-wMx
-iCq
-iCq
+aae
+uzu
+uzu
 jgi
 jgi
 jgi
@@ -106627,9 +108361,9 @@ iCq
 iCq
 iCq
 iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
 iCq
 iCq
 iCq
@@ -106674,15 +108408,15 @@ ase
 ovh
 nvA
 hkG
-rBt
+hkG
 jgi
 jgi
 jgi
-jgi
+opq
 kcX
-ckf
+adn
 eod
-ckf
+ade
 srG
 gED
 wAt
@@ -106711,7 +108445,7 @@ idi
 syd
 hqG
 vMt
-vMt
+ace
 gFj
 fiE
 fiE
@@ -106785,10 +108519,10 @@ iCq
 iCq
 iCq
 tmN
-iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
+uzu
 iCq
 iCq
 jgi
@@ -106878,9 +108612,9 @@ jgi
 iCq
 iCq
 iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
 iCq
 tmN
 iCq
@@ -106925,7 +108659,7 @@ mpb
 wcN
 amF
 czC
-mWl
+adr
 hkG
 kcX
 kcX
@@ -106963,7 +108697,7 @@ grt
 hvI
 gpk
 gpk
-vMt
+ace
 eTE
 fiE
 hBE
@@ -106975,7 +108709,7 @@ fiE
 fiE
 vjF
 acO
-tdU
+ubI
 cQL
 fjV
 cfR
@@ -107037,10 +108771,10 @@ iCq
 iCq
 iCq
 iCq
-iCq
-iCq
-iCq
-naM
+uzu
+uzu
+uzu
+aad
 iCq
 iCq
 iCq
@@ -107130,7 +108864,7 @@ iCq
 iCq
 iCq
 iCq
-iCq
+uzu
 iCq
 iCq
 iCq
@@ -107198,7 +108932,7 @@ gny
 qFl
 qFl
 jJh
-gpk
+acL
 gpk
 vMt
 gpk
@@ -107213,7 +108947,7 @@ fAv
 gpk
 ktn
 ktn
-ktn
+acj
 gpk
 xyy
 jBx
@@ -107227,7 +108961,7 @@ hBE
 hBE
 qld
 ubI
-wsR
+abQ
 rwV
 dSb
 ltM
@@ -107289,10 +109023,10 @@ iCq
 iCq
 vVj
 iCq
-iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
+uzu
 iCq
 iCq
 iCq
@@ -107438,7 +109172,7 @@ czC
 kDb
 ckf
 leR
-ckf
+acH
 srG
 gED
 wAt
@@ -107484,7 +109218,7 @@ jcc
 lGq
 ltM
 mSp
-hBE
+abG
 hBE
 hBE
 wTt
@@ -107541,11 +109275,11 @@ iCq
 iCq
 iCq
 iCq
-iCq
-iCq
-iVg
-iCq
-iCq
+uzu
+uzu
+aaf
+uzu
+uzu
 iCq
 iCq
 jgi
@@ -107691,7 +109425,7 @@ czC
 ckf
 leR
 ckf
-ndy
+adb
 nVf
 wAt
 kcX
@@ -107793,8 +109527,8 @@ iCq
 jgi
 jgi
 lQQ
-iCq
-iCq
+uzu
+uzu
 iCq
 iCq
 iCq
@@ -107957,7 +109691,7 @@ cUz
 xLK
 vNY
 nLz
-vMt
+acy
 gpk
 gpk
 gpk
@@ -107970,7 +109704,7 @@ gpk
 sSI
 tVs
 hqG
-hqG
+ach
 mIF
 fsF
 tIO
@@ -108194,7 +109928,7 @@ pfA
 czC
 trr
 inH
-ckf
+adf
 srG
 nVf
 xOp
@@ -108488,8 +110222,8 @@ osp
 vjF
 lGq
 jJx
-fOT
-tdU
+abO
+ubI
 rwV
 mSp
 hBE
@@ -108498,7 +110232,7 @@ hBE
 wDE
 qCy
 mSp
-hBE
+abG
 hBE
 cog
 eCF
@@ -108554,7 +110288,7 @@ jgi
 vsF
 iCq
 iCq
-iCq
+uzu
 iCq
 iCq
 jgi
@@ -108806,7 +110540,7 @@ jgi
 jgi
 tiS
 fGo
-tiS
+riH
 fGo
 jgi
 jgi
@@ -108980,8 +110714,8 @@ bpM
 tgy
 hLL
 jJh
-jJh
-fiE
+acc
+abV
 hBE
 hQD
 wJG
@@ -108992,7 +110726,7 @@ fiE
 rFb
 oov
 fOT
-ogD
+ubI
 rwV
 hVk
 mSp
@@ -109058,7 +110792,7 @@ jgi
 jgi
 iCq
 iCq
-iCq
+uzu
 jgi
 jgi
 jgi
@@ -109113,7 +110847,7 @@ jgi
 iCq
 iCq
 iCq
-iCq
+iVg
 iCq
 iCq
 iCq
@@ -109233,7 +110967,7 @@ jJh
 jJh
 tZu
 jJh
-fiE
+abW
 fiE
 doi
 fiE
@@ -109284,7 +111018,7 @@ wNk
 coj
 lYR
 oCw
-vIl
+aaL
 wfZ
 wNk
 jgi
@@ -109309,8 +111043,8 @@ jgi
 jgi
 jgi
 iCq
-iCq
-iCq
+uzu
+uzu
 iCq
 jgi
 jgi
@@ -109560,9 +111294,9 @@ jgi
 jgi
 jgi
 jgi
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
 iCq
 jgi
 jgi
@@ -109718,7 +111452,7 @@ aXr
 xra
 wPq
 kcX
-xnk
+kcX
 kcX
 jnP
 jnP
@@ -109737,7 +111471,7 @@ kHl
 kHl
 kHl
 mFU
-fiE
+abX
 fiE
 eJt
 otl
@@ -109812,8 +111546,8 @@ jgi
 jgi
 jgi
 jgi
-iCq
-iCq
+uzu
+uzu
 iCq
 naM
 jgi
@@ -109904,7 +111638,7 @@ uwx
 iCq
 vvj
 iCq
-iCq
+tFP
 tmN
 iCq
 fGo
@@ -109970,7 +111704,7 @@ mdH
 aQM
 vwc
 kcX
-cCQ
+unl
 unl
 tzR
 kVe
@@ -110222,7 +111956,7 @@ aeq
 guo
 xOp
 kcX
-cCQ
+unl
 unl
 gbx
 wjn
@@ -110408,8 +112142,8 @@ dci
 wiw
 lhF
 iCq
-iCq
-iCq
+uzu
+uzu
 iCq
 iCq
 iCq
@@ -110474,7 +112208,7 @@ kcX
 kcX
 wRL
 coq
-cCQ
+unl
 unl
 sCH
 fYP
@@ -110658,9 +112392,9 @@ jgi
 jgi
 tCA
 vvj
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
 iCq
 iCq
 nWp
@@ -110726,7 +112460,7 @@ rJB
 kcX
 wAt
 coq
-cCQ
+unl
 unl
 leV
 oWV
@@ -110745,7 +112479,7 @@ bBU
 gJA
 ogG
 cEQ
-bnm
+abY
 hBE
 rkt
 pWP
@@ -110814,7 +112548,7 @@ iCq
 iCq
 iCq
 iCq
-iCq
+uzu
 iCq
 iCq
 iCq
@@ -110910,10 +112644,10 @@ qbR
 wMx
 iCq
 iCq
-iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
+uzu
 iCq
 iCq
 jgi
@@ -110977,7 +112711,7 @@ rTE
 cqp
 coq
 wAt
-ckf
+kcX
 unl
 unl
 ahs
@@ -111065,8 +112799,8 @@ iCq
 iCq
 iCq
 iCq
-iCq
-iCq
+uzu
+aaj
 iCq
 iCq
 iCq
@@ -111161,11 +112895,11 @@ jgi
 qbR
 iCq
 vvj
-iCq
-iCq
+uzu
+uzu
 iCq
 sCw
-iCq
+uzu
 iCq
 iCq
 qbR
@@ -111219,7 +112953,7 @@ wcN
 azm
 eod
 ckf
-srG
+adc
 gED
 asm
 kcX
@@ -111317,8 +113051,8 @@ iCq
 iCq
 iCq
 tmN
-iCq
-iCq
+uzu
+uzu
 tmN
 iCq
 iCq
@@ -111412,8 +113146,8 @@ jgi
 jgi
 iCq
 iCq
-iCq
-iCq
+uzu
+uzu
 iCq
 iCq
 iCq
@@ -111552,7 +113286,7 @@ wNk
 hgU
 akh
 oCw
-vIl
+aaM
 lrY
 wNk
 jgi
@@ -111567,9 +113301,9 @@ iCq
 iCq
 iCq
 iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
 iCq
 iCq
 iCq
@@ -111731,7 +113465,7 @@ ckf
 ckf
 cET
 jDR
-kcX
+oxl
 jlF
 ckf
 vBZ
@@ -111820,8 +113554,8 @@ iCq
 iCq
 iCq
 iCq
-iCq
-iCq
+uzu
+uzu
 iCq
 iCq
 iCq
@@ -111884,7 +113618,7 @@ iCq
 iCq
 iCq
 iCq
-iCq
+tFP
 iCq
 iCq
 iCq
@@ -112005,7 +113739,7 @@ qkl
 qkl
 qkl
 qkl
-fEo
+abZ
 wkr
 fiE
 nNT
@@ -112073,7 +113807,7 @@ iCq
 iCq
 iCq
 iCq
-iCq
+uzu
 jgi
 tiS
 tiS
@@ -112237,7 +113971,7 @@ cqp
 urP
 coq
 bEB
-urP
+acM
 unl
 unl
 cBV
@@ -112288,7 +114022,7 @@ tRU
 grD
 grD
 tRU
-grD
+abA
 grD
 rah
 urE
@@ -112396,7 +114130,7 @@ tiS
 iCq
 iCq
 iCq
-iCq
+iVg
 iCq
 iCq
 iCq
@@ -112476,7 +114210,7 @@ jgi
 jgi
 jgi
 jgi
-kcX
+ado
 inH
 ckf
 srG
@@ -112806,7 +114540,7 @@ dMC
 gUe
 oyS
 ler
-dMC
+abj
 dMC
 bDR
 ler
@@ -112919,7 +114653,7 @@ iCq
 iCq
 iCq
 iCq
-iCq
+khM
 iCq
 iCq
 xqG
@@ -113058,14 +114792,14 @@ vIl
 wNk
 wNk
 vIl
-vIl
+abk
 vIl
 wNk
 hOg
 bjW
 rfg
 sfP
-wfZ
+aaI
 wNk
 jgi
 jgi
@@ -113285,7 +115019,7 @@ jQe
 hBE
 hBE
 fiE
-fEo
+abI
 fiE
 hBE
 bBI
@@ -113315,7 +115049,7 @@ dsV
 arJ
 hBz
 sdU
-jxg
+aaS
 bBj
 mit
 wNk
@@ -113499,7 +115233,7 @@ wAt
 urP
 ckf
 ckf
-ckf
+acH
 ckf
 ckf
 ckf
@@ -113568,7 +115302,7 @@ dWJ
 vRx
 wSP
 oLW
-tIw
+aaN
 wfZ
 wNk
 jgi
@@ -113645,7 +115379,7 @@ jgi
 vsF
 iCq
 iCq
-iCq
+tFP
 iCq
 iCq
 iCq
@@ -113812,7 +115546,7 @@ eFM
 eFM
 hjW
 hpP
-vIl
+abm
 maB
 xmy
 gyI
@@ -114070,7 +115804,7 @@ dsl
 tIw
 dWJ
 kYZ
-ckl
+aaX
 oCw
 tIw
 wfZ
@@ -114087,13 +115821,13 @@ iCq
 iCq
 iCq
 iCq
-iCq
+uzu
 iCq
 tFP
 jgi
 jgi
 iCq
-iCq
+uzu
 iCq
 jgi
 jgi
@@ -114227,7 +115961,7 @@ jgi
 jgi
 jgi
 jgi
-pKF
+vXa
 uoH
 uoH
 uoH
@@ -114334,18 +116068,18 @@ jgi
 jgi
 jgi
 jgi
+rEg
+iCq
+iCq
+iCq
+uzu
+uzu
 iCq
 iCq
 iCq
 iCq
 iCq
-iCq
-iCq
-iCq
-iCq
-iCq
-iCq
-iCq
+uzu
 iCq
 jgi
 jgi
@@ -114479,7 +116213,7 @@ jgi
 jgi
 jgi
 jgi
-pKF
+vXa
 qKY
 bTf
 fQs
@@ -114589,15 +116323,15 @@ jgi
 iCq
 iCq
 iCq
+uzu
+uzu
+uzu
 iCq
 iCq
 iCq
 iCq
-iCq
-iCq
-iCq
-iCq
-iCq
+uzu
+uzu
 iCq
 jgi
 jgi
@@ -114682,7 +116416,7 @@ iCq
 tYP
 iCq
 iCq
-iCq
+kvd
 iCq
 wsz
 xIE
@@ -114731,8 +116465,8 @@ jgi
 jgi
 jgi
 jgi
-pKF
-gRf
+vXa
+qKY
 tNP
 xIb
 pMf
@@ -114763,7 +116497,7 @@ cqp
 cqp
 adT
 cqp
-cqp
+acp
 cqp
 cqp
 urP
@@ -114841,15 +116575,15 @@ jgi
 iCq
 iCq
 iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
 jgi
 jgi
 jgi
 iCq
-iCq
-iCq
+uzu
+uzu
 tmN
 jgi
 jgi
@@ -114929,7 +116663,7 @@ ato
 qbR
 iCq
 iCq
-iCq
+kvd
 iCq
 iCq
 iCq
@@ -114983,7 +116717,7 @@ jgi
 jgi
 jgi
 jgi
-pKF
+vXa
 qKY
 vQt
 qNq
@@ -115093,14 +116827,14 @@ iCq
 iCq
 iCq
 tmN
-iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
+naM
 jgi
 jgi
 jgi
-iCq
+uzu
 iCq
 iCq
 jgi
@@ -115235,8 +116969,8 @@ jgi
 jgi
 jgi
 jgi
+tiF
 qKY
-gRf
 uUY
 kpG
 uka
@@ -115344,9 +117078,9 @@ iCq
 iCq
 iCq
 iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
 iCq
 iCq
 jgi
@@ -115487,7 +117221,7 @@ jgi
 jgi
 jgi
 jgi
-pKF
+vXa
 qKY
 pIe
 rOK
@@ -115596,9 +117330,9 @@ iCq
 iCq
 iCq
 iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
 iCq
 iCq
 iCq
@@ -115739,8 +117473,8 @@ jgi
 jgi
 jgi
 jgi
-pKF
-gRf
+vXa
+qKY
 rgb
 oCP
 uEM
@@ -115848,8 +117582,8 @@ iCq
 iCq
 iCq
 iCq
-iCq
-iCq
+uzu
+uzu
 iCq
 iCq
 iCq
@@ -115936,7 +117670,7 @@ jgi
 vsF
 iCq
 iCq
-iCq
+tFP
 iCq
 iCq
 iCq
@@ -115991,7 +117725,7 @@ jgi
 jgi
 jgi
 ckW
-pKF
+vXa
 qKY
 wqt
 hrO
@@ -116089,7 +117823,7 @@ uuQ
 akh
 oOM
 bFA
-lrY
+aaJ
 wNk
 jgi
 jgi
@@ -116104,10 +117838,10 @@ iCq
 iCq
 iCq
 iCq
-iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
+uzu
 iCq
 iCq
 rEg
@@ -116243,8 +117977,8 @@ jgi
 jgi
 jgi
 ckW
-pKF
-gRf
+vXa
+qKY
 dBW
 lQA
 gAf
@@ -116268,7 +118002,7 @@ jvY
 mlU
 icl
 qhs
-ooU
+acQ
 vsZ
 ixN
 lfS
@@ -116350,6 +118084,7 @@ jgi
 iCq
 iCq
 iCq
+uzu
 iCq
 iCq
 iCq
@@ -116357,10 +118092,9 @@ iCq
 iCq
 iCq
 iCq
-iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
 iCq
 jgi
 jgi
@@ -116495,7 +118229,7 @@ jgi
 jgi
 jgi
 jgi
-pKF
+vXa
 qKY
 nZh
 fXt
@@ -116509,7 +118243,7 @@ qxa
 qKY
 qKY
 kcX
-inH
+adj
 urP
 srG
 nVf
@@ -116602,7 +118336,7 @@ jgi
 iCq
 iCq
 iCq
-iCq
+uzu
 iCq
 jgi
 jgi
@@ -116610,9 +118344,9 @@ jgi
 iCq
 iCq
 iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
 jgi
 jgi
 jgi
@@ -116747,11 +118481,11 @@ jgi
 jgi
 jgi
 ckW
+vXa
 pKF
 pKF
 pKF
-pKF
-pKF
+adI
 qKY
 qKY
 pKF
@@ -116761,7 +118495,7 @@ uYE
 qKY
 qKY
 xnk
-inH
+adk
 urP
 srG
 nVf
@@ -116853,8 +118587,8 @@ jgi
 iCq
 iCq
 iCq
-iCq
-iCq
+uzu
+uzu
 jgi
 jgi
 jgi
@@ -116862,9 +118596,9 @@ jgi
 jgi
 jgi
 iCq
-tmN
-iCq
-iCq
+aab
+uzu
+uzu
 iCq
 jgi
 jgi
@@ -117000,12 +118734,12 @@ jgi
 jgi
 jgi
 tiF
-tiF
-tiF
-tiF
-vXa
-vXa
-vXa
+ael
+aeb
+adR
+adF
+adB
+ads
 qKY
 ewC
 pZB
@@ -117095,7 +118829,7 @@ jgi
 wNk
 uuQ
 akh
-jxg
+aaT
 tIw
 wfZ
 wNk
@@ -117104,9 +118838,9 @@ jgi
 jgi
 iCq
 iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
 jgi
 jgi
 jgi
@@ -117114,8 +118848,8 @@ jgi
 jgi
 jgi
 iCq
-iCq
-iCq
+uzu
+uzu
 iCq
 qaN
 jgi
@@ -117251,13 +118985,13 @@ jgi
 jgi
 jgi
 jgi
-jgi
-jgi
-jgi
-jgi
-ckW
-jgi
-jgi
+tiF
+aem
+aec
+adS
+adK
+adC
+adt
 mZL
 vxW
 vxW
@@ -117356,8 +119090,8 @@ jgi
 iCq
 iCq
 iCq
-iCq
-iCq
+uzu
+uzu
 jgi
 jgi
 jgi
@@ -117366,8 +119100,8 @@ jgi
 jgi
 jgi
 iCq
-iCq
-iCq
+uzu
+uzu
 iCq
 iCq
 iCq
@@ -117503,14 +119237,14 @@ jgi
 jgi
 jgi
 jgi
-jgi
-jgi
-jgi
-jgi
-jgi
-jgi
-jgi
-qKY
+tiF
+ael
+aee
+adU
+adL
+adu
+adu
+adq
 vxW
 vxW
 vxW
@@ -117608,19 +119342,19 @@ jgi
 iCq
 iCq
 iCq
+uzu
+iCq
+jgi
+jgi
+jgi
+jgi
+jgi
+jgi
+jgi
 iCq
 iCq
-jgi
-jgi
-jgi
-jgi
-jgi
-jgi
-jgi
-iCq
-iCq
-iCq
-iCq
+uzu
+uzu
 iCq
 iCq
 iCq
@@ -117755,14 +119489,14 @@ jgi
 jgi
 jgi
 jgi
-jgi
-jgi
-jgi
-jgi
-jgi
-jgi
-jgi
-qKY
+tiF
+ael
+aef
+adV
+adL
+adu
+adu
+iEZ
 jhH
 vxW
 uYE
@@ -117860,7 +119594,7 @@ jgi
 iCq
 iCq
 iCq
-iCq
+uzu
 iCq
 jgi
 jgi
@@ -117872,8 +119606,8 @@ jgi
 iCq
 iCq
 iCq
-iCq
-iCq
+uzu
+uzu
 iCq
 iCq
 iCq
@@ -118007,13 +119741,13 @@ jgi
 jgi
 jgi
 jgi
-jgi
-jgi
-jgi
-jgi
-jgi
-jgi
-jgi
+tiF
+ael
+aeg
+adF
+adM
+adE
+adv
 qKY
 rKT
 rzs
@@ -118103,7 +119837,7 @@ jgi
 wNk
 uuQ
 nfe
-jxg
+aaT
 tIw
 wfZ
 wNk
@@ -118124,11 +119858,11 @@ jgi
 iCq
 iCq
 iCq
-iCq
-iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
+uzu
+uzu
 iCq
 iCq
 jgi
@@ -118259,13 +119993,13 @@ jgi
 jgi
 jgi
 jgi
-jgi
-jgi
-jgi
-jgi
-jgi
-jgi
-jgi
+tiF
+ael
+aeh
+adW
+adN
+adF
+adx
 qKY
 qKY
 qKY
@@ -118376,12 +120110,12 @@ jgi
 iCq
 jgi
 iCq
-iCq
+uzu
 iCq
 jgi
 jgi
 tmN
-iCq
+uzu
 iCq
 iCq
 jgi
@@ -118511,20 +120245,20 @@ jgi
 jgi
 jgi
 jgi
-jgi
-jgi
-jgi
-jgi
-jgi
-jgi
-jgi
+tiF
+ael
+aei
+adX
+adO
+adG
+ady
+qKY
 tiF
 tiF
 tiF
 tiF
 tiF
-tiF
-kcX
+oxl
 leR
 urP
 eSb
@@ -118629,7 +120363,7 @@ jgi
 jgi
 jgi
 iCq
-tmN
+aab
 iCq
 jgi
 iCq
@@ -118763,14 +120497,14 @@ jgi
 jgi
 jgi
 jgi
-jgi
-jgi
-jgi
-jgi
-jgi
-jgi
-jgi
-jgi
+tiF
+ael
+aej
+adZ
+adP
+adG
+adz
+qKY
 jgi
 jgi
 jgi
@@ -118881,11 +120615,11 @@ jgi
 jgi
 jgi
 iCq
+uzu
+uzu
 iCq
 iCq
-iCq
-iCq
-iCq
+uzu
 iCq
 iCq
 jgi
@@ -119015,14 +120749,14 @@ jgi
 jgi
 jgi
 jgi
-jgi
-jgi
-jgi
-jgi
-jgi
-jgi
-jgi
-jgi
+tiF
+ael
+aek
+aea
+adF
+adG
+adA
+qKY
 jgi
 jgi
 jgi
@@ -119133,11 +120867,11 @@ jgi
 jgi
 jgi
 kvd
-iCq
-iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
+uzu
+uzu
 iCq
 iCq
 tFP
@@ -119267,21 +121001,21 @@ jgi
 jgi
 jgi
 jgi
-jgi
-jgi
-jgi
-jgi
-jgi
-jgi
-jgi
-jgi
+tiF
+qKY
+qKY
+qKY
+qKY
+qKY
+qKY
+qKY
 jgi
 jgi
 jgi
 jgi
 jgi
 kcX
-inH
+adl
 urP
 ndy
 nVf
@@ -119385,12 +121119,12 @@ jgi
 jgi
 jgi
 jgi
-iCq
-iCq
-iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
+uzu
+uzu
+uzu
 tmN
 iCq
 jgi
@@ -119638,11 +121372,11 @@ jgi
 jgi
 jgi
 iCq
-iCq
-iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
+uzu
+uzu
 iCq
 iCq
 iCq
@@ -119890,12 +121624,12 @@ jgi
 jgi
 jgi
 iCq
-iCq
-iCq
-iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
+uzu
+uzu
+uzu
 iCq
 iCq
 jgi
@@ -120143,12 +121877,12 @@ jgi
 jgi
 iCq
 iCq
+uzu
+uzu
+uzu
 iCq
-iCq
-iCq
-iCq
-iCq
-iCq
+uzu
+uzu
 iCq
 jgi
 jgi
@@ -120395,12 +122129,12 @@ jgi
 jgi
 jgi
 iCq
+uzu
+uzu
 iCq
 iCq
 iCq
-iCq
-iCq
-iCq
+uzu
 iCq
 jgi
 jgi
@@ -120648,7 +122382,7 @@ kQU
 jgi
 iCq
 iCq
-iCq
+uzu
 iCq
 iCq
 iCq
@@ -120899,8 +122633,8 @@ xuY
 emz
 iCq
 iCq
-iCq
-iCq
+uzu
+uzu
 tmN
 iCq
 iCq
@@ -121150,10 +122884,10 @@ jDD
 xuY
 emz
 iCq
-iCq
-iCq
-iCq
-iCq
+uzu
+uzu
+uzu
+uzu
 iCq
 iCq
 jgi
@@ -121405,7 +123139,7 @@ jgi
 iCq
 iCq
 iCq
-iCq
+uzu
 iCq
 jgi
 jgi
@@ -121657,8 +123391,8 @@ jgi
 iCq
 iCq
 iCq
-iCq
-iCq
+uzu
+uzu
 iCq
 jgi
 jgi
@@ -121884,13 +123618,13 @@ wNk
 uuQ
 nfe
 oCw
-vIl
+aaO
 wfZ
 wNk
 rDU
 kQU
-oUI
-dGK
+aaD
+aaz
 dWH
 fup
 oYy
@@ -121909,8 +123643,8 @@ jgi
 iCq
 iCq
 tmN
-iCq
-iCq
+uzu
+uzu
 iCq
 jgi
 jgi
@@ -122141,8 +123875,8 @@ wfZ
 wNk
 rDU
 kQU
-jIr
-fqi
+aaA
+aaA
 sWG
 hsb
 oYy
@@ -122162,8 +123896,8 @@ iCq
 iCq
 iCq
 iCq
-iCq
-iCq
+uzu
+uzu
 qaN
 jgi
 jgi
@@ -122394,7 +124128,7 @@ wNk
 rDU
 kQU
 gsB
-ddy
+aaB
 dWH
 bwQ
 oYy
@@ -122414,8 +124148,8 @@ iCq
 iCq
 iCq
 iCq
-iCq
-iCq
+uzu
+uzu
 iCq
 jgi
 jgi
@@ -122668,7 +124402,7 @@ jgi
 iCq
 iCq
 iCq
-iCq
+uzu
 jgi
 jgi
 jgi
@@ -123143,7 +124877,7 @@ jgi
 wNk
 uuQ
 ckl
-oCw
+aaU
 vIl
 wfZ
 wNk
@@ -123647,7 +125381,7 @@ jgi
 wNk
 vRx
 ozl
-oCw
+aaV
 tIw
 wfZ
 wNk
@@ -123855,7 +125589,7 @@ jRs
 tyP
 hNk
 jRs
-jRs
+abR
 hNk
 hNk
 aqs
@@ -124112,7 +125846,7 @@ oSD
 ibR
 wqI
 kUG
-kUG
+abP
 kUG
 kUG
 jgb
@@ -124131,10 +125865,7 @@ tRU
 urE
 urE
 tRU
-urE
-urE
-tRU
-urE
+abB
 urE
 tRU
 urE
@@ -124146,13 +125877,16 @@ tRU
 urE
 urE
 tRU
+urE
+urE
+abl
 urE
 urE
 tRU
 grD
 kKM
 dVv
-tIw
+aaP
 wfZ
 wNk
 rDU
@@ -124335,7 +126069,7 @@ lfU
 oLf
 gqu
 oLf
-lfU
+acI
 vkq
 lfU
 oLf
@@ -124637,7 +126371,7 @@ yiN
 gEn
 yiN
 yiN
-gEn
+abz
 yiN
 yiN
 gEn
@@ -124655,7 +126389,7 @@ yiN
 gEn
 dMC
 uOc
-xxH
+aaW
 gFP
 lrY
 wNk
@@ -124833,7 +126567,7 @@ sxY
 rnB
 xTi
 bSO
-oeN
+acV
 xTi
 oeN
 oeN
@@ -124879,7 +126613,7 @@ rjI
 xvs
 xvs
 rjI
-xvs
+abF
 rjI
 xvs
 xvs
@@ -125077,7 +126811,7 @@ gOQ
 aJC
 jgi
 kcX
-oCq
+adm
 urP
 ndy
 hFy
@@ -126676,7 +128410,7 @@ sIg
 sIg
 fQk
 dhp
-mRN
+aaE
 wap
 avG
 fUS
@@ -126813,13 +128547,13 @@ fyk
 gfp
 qCq
 jBv
-aoK
+aex
 vZD
-heu
+aeB
 aui
 wqm
-aoK
-aoK
+aex
+aer
 xTu
 cvU
 aoK
@@ -127061,17 +128795,17 @@ oSh
 oSh
 pUm
 ttc
-aoK
-aoK
+aeL
+aez
 qjO
-aoK
-aoK
+aez
+aez
 laz
-heu
+aeD
 ovV
 aJM
-aoK
-aoK
+aey
+aes
 jjI
 dwb
 jRJ
@@ -127161,7 +128895,7 @@ wNS
 uEi
 iQw
 lSN
-dwN
+abu
 tzM
 nCt
 tzM
@@ -127177,7 +128911,7 @@ pvp
 vpn
 tzM
 tzM
-dwN
+aaK
 wNS
 ppu
 pHW
@@ -127313,17 +129047,17 @@ oSh
 oSh
 pUm
 eLe
-aoK
-aoK
+aeL
+aez
 ltD
-aoK
-aoK
+aez
+aez
 aMe
-heu
+aeD
 wxy
 pFJ
-aoK
-pJT
+aez
+aet
 dSC
 txN
 nCe
@@ -127431,7 +129165,7 @@ eXV
 eXV
 eXV
 mib
-grJ
+aaG
 grJ
 oNi
 wWN
@@ -127566,16 +129300,16 @@ oSh
 pUm
 iIS
 wdm
-aoK
-aoK
-aMe
-aoK
-aoK
-heu
-aoK
-aoK
-pJT
-pJT
+aez
+aez
+aeF
+aez
+aez
+aeD
+aez
+aez
+aev
+aev
 aoK
 hwI
 hQN
@@ -127689,13 +129423,13 @@ mOC
 pnl
 eXV
 eXV
+aau
 eXV
 eXV
 eXV
 eXV
 eXV
-eXV
-whB
+aak
 cdn
 whB
 eXV
@@ -127817,17 +129551,17 @@ oSh
 oSh
 pUm
 eLe
-aoK
+aeL
 fxd
-aoK
-aoK
-aoK
+aez
+aez
+aez
 mmU
 qhR
 gxA
-pJT
-pJT
-aoK
+aev
+aev
+aew
 aoK
 txN
 xNb
@@ -127938,12 +129672,12 @@ mib
 grJ
 grJ
 bvj
-eXV
+aaC
 cwB
 eXV
+aav
 eXV
-eXV
-eXV
+aas
 eXV
 yhB
 eXV
@@ -128069,16 +129803,16 @@ oSh
 oSh
 pUm
 aJy
-aoK
+aeL
 lwN
-aoK
-aoK
-aoK
+aez
+aez
+aez
 kVM
-heu
-aoK
-aoK
-aoK
+aeD
+aez
+aez
+aez
 oAu
 lSN
 xYs
@@ -128169,7 +129903,7 @@ wNS
 jol
 vlj
 nlX
-dwN
+abv
 tzM
 uXE
 tzM
@@ -128196,7 +129930,7 @@ mEf
 mEf
 mEf
 mEf
-mEf
+aap
 toF
 kHO
 mEf
@@ -128324,13 +130058,13 @@ jIE
 exT
 uOg
 qLW
-aui
+aeG
 qNd
 uQX
-heu
-aoK
+aeE
+aeA
 heG
-aoK
+aeA
 rpa
 lSN
 tWl
@@ -128427,23 +130161,23 @@ fXS
 jeK
 mTi
 ltG
-tzM
-kIt
+abp
+abn
 uta
 fgr
-oLy
+abd
 gWi
 xUD
 htu
 qEk
-qpN
-dwN
+aaQ
+aaK
 jMN
 dhp
 mRN
 mWF
 mEf
-mEf
+aay
 mEf
 mEf
 kHO
