@@ -410,10 +410,11 @@
 		list("Tactical Helmet", round(scale * 15), /obj/item/clothing/head/helmet/marine/veteran/pmc/guard, VENDOR_ITEM_REGULAR),
 		list("Tactical Cap", round(scale * 15), /obj/item/clothing/head/cmcap/weyyu/guard, VENDOR_ITEM_REGULAR),
 
-		list("Tactical Heavy Armor", 2, /obj/item/clothing/suit/marine/veteran/pmc/guard/heavy, VENDOR_ITEM_REGULAR),
+		list("Tactical Heavy Armor", round(max(1,(scale * 0.5))), /obj/item/clothing/suit/marine/veteran/pmc/guard/heavy, VENDOR_ITEM_REGULAR),
 		list("Tactical Armor", round(scale * 15), /obj/item/clothing/suit/marine/veteran/pmc/guard, VENDOR_ITEM_REGULAR),
 		list("Tactical Light Armor", round(scale * 10), /obj/item/clothing/suit/marine/veteran/pmc/light/bulletproof/guard, VENDOR_ITEM_REGULAR),
 
+		list("HASP armor plate", round(scale * 5), /obj/item/clothing/accessory/health/ceramic_plate/twe, VENDOR_ITEM_REGULAR),
 		list("M4 Pattern Light Pads", round(scale * 10), /obj/item/clothing/accessory/pmcpads/light, VENDOR_ITEM_REGULAR),
 		list("M4 Pattern Black Vambraces", round(scale * 10), /obj/item/clothing/accessory/pmcpads/bracers/black, VENDOR_ITEM_REGULAR),
 		list("M4 Pattern Lap Panel", round(scale * 10), /obj/item/clothing/accessory/pmcpads/crotch, VENDOR_ITEM_REGULAR),
