@@ -1056,6 +1056,17 @@
 	var/obj/item/clothing/accessory/paint/medic/wy/black/paint = new()
 	src.attach_accessory(null, paint, TRUE)
 
+/obj/item/clothing/suit/marine/veteran/pmc/guard/smartgunner
+	name = "\improper M4 pattern PMC guard gunner armor"
+	desc = "A modification of the standard Armat Systems M3 armor. Hooked up with harnesses and straps allowing the user to carry an M56 Smartgun."
+	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN|SMARTGUN_HARNESS
+	allowed = list(
+		/obj/item/storage/backpack/general_belt,
+		/obj/item/storage/belt/gun,
+		/obj/item/weapon/gun/smartgun,
+		/obj/item/weapon/gun/smartgun/dirty,
+	)
+
 /obj/item/clothing/suit/marine/veteran/pmc/guard/vest
 	name = "\improper M4 pattern PMC guard bulletproof armor"
 	icon_state = "guard_vest"

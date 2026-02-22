@@ -542,3 +542,54 @@
 	new /obj/item/storage/pouch/construction/low_grade_full(src)
 	new /obj/item/storage/pouch/electronics/full(src)
 	new /obj/item/clothing/glasses/welding(src)
+
+// PMC Small Squad
+
+/obj/item/storage/box/kit/mini_pyro/pmc
+	name = "\improper M240 Pyrotechnician Support Kit"
+	pro_case_overlay = "flamer"
+
+/obj/item/storage/box/kit/mini_pyro/pmc/fill_preset_inventory()
+	new /obj/item/weapon/gun/flamer/unloaded(src)
+	new /obj/item/weapon/gun/flamer/underextinguisher(src)
+	new /obj/item/tool/extinguisher/mini(src)
+	new /obj/item/storage/pouch/flamertank(src)
+	new /obj/item/storage/box/guncase/heavy/fuel/pmc(src)
+
+/obj/item/storage/box/kit/grenadier
+	name = "\improper M92 Grenadier Kit"
+	icon_state = "pro_case_large"
+	pro_case_overlay = "dots"
+
+/obj/item/storage/box/kit/grenadier/fill_preset_inventory()
+	new /obj/item/weapon/gun/launcher/grenade/m92/scoped(src)
+	new /obj/item/storage/box/packet/rmc/mini/incen(src)
+	new /obj/item/storage/box/packet/rmc/mini/squash(src)
+	new /obj/item/storage/box/packet/rmc/mini/gas(src)
+
+/obj/item/storage/box/kit/comissar
+	name = "\improper Comissar Kit"
+	icon_state = "pro_case_large"
+	pro_case_overlay = "jtac"
+
+/obj/item/storage/box/kit/comissar/fill_preset_inventory()
+	new /obj/item/weapon/gun/revolver/mateba/special(src)
+	new /obj/item/storage/belt/gun/mateba(src)
+	new /obj/item/ammo_magazine/revolver/mateba(src)
+	new /obj/item/ammo_magazine/revolver/mateba(src)
+	new /obj/item/ammo_magazine/revolver/mateba(src)
+	new /obj/item/ammo_magazine/revolver/mateba(src)
+	new /obj/item/ammo_magazine/revolver/mateba(src)
+	new /obj/item/ammo_magazine/revolver/mateba(src)
+
+/obj/item/storage/box/kit/shotgunner
+	name = "\improper Shotgunner Kit"
+	icon_state = "pro_case_large"
+	pro_case_overlay = "pursuit"
+
+/obj/item/storage/box/kit/shotgunner/fill_preset_inventory()
+	new /obj/item/weapon/gun/shotgun/es7/tactical(src)
+	new /obj/item/ammo_magazine/shotgun/beanbag/es7(src)
+	new /obj/item/ammo_magazine/shotgun/beanbag/es7(src)
+	new /obj/item/ammo_magazine/shotgun/beanbag/es7/slug(src)
+	new /obj/item/ammo_magazine/shotgun/beanbag/es7/slug(src)

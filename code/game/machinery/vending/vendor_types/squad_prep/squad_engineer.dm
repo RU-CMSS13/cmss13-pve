@@ -217,26 +217,29 @@ GLOBAL_LIST_INIT(cm_vending_clothing_engi, list(
 // PMC Strikeforce technician vendors
 
 GLOBAL_LIST_INIT(cm_vending_clothing_pmc_engi, list(
-		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
-		list("Lightweight Technician Welderpack", 0, /obj/item/storage/backpack/marine/engineerpack/ert, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
-		list("TWE Engineering Backpack", 0, /obj/item/storage/backpack/marine/engineerpack/satchel/rmc, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
-		list("UA Technician Welder-Satchel", 0, /obj/item/storage/backpack/marine/engineerpack/satchel, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
-		list("UA Technician Welder Chestrig", 0, /obj/item/storage/backpack/marine/engineerpack/welder_chestrig, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+		list("STANDARD EQUIPMENT", 0, null, null, null),
+		list("Engineer Apparel", 0, list(/obj/item/clothing/under/marine/veteran/pmc/engineer, /obj/item/clothing/gloves/marine/veteran/pmc/black, /obj/item/clothing/shoes/veteran/pmc/knife), MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 
-		list("TOOL STORAGE (CHOOSE 1)", 0, null, null, null),
-		list("Tactical Tools Pouch (Full)", 0, /obj/item/storage/pouch/tools/tactical/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
-		list("Tool Webbing (Full)", 0, /obj/item/clothing/accessory/storage/tool_webbing/tactical, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
-		list("M276 Toolbelt Rig (Full)", 0, /obj/item/storage/belt/utility/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_MANDATORY),
-		list("M277 Pattern Construction Rig", 0, /obj/item/storage/belt/utility/construction, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
-		list("M276 Pattern Combat Toolbelt Rig", 0, /obj/item/storage/belt/gun/utility, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("BACKPACK", 0, null, null, null),
+		list("Technician Welderpack", 0, /obj/item/storage/backpack/marine/engineerpack/ert/pmc, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_RECOMMENDED),
+
+		list("HELMET", 0, null, null, null),
+		list("Mk16 Engineer Helmet", 0, /obj/item/clothing/head/helmet/marine/veteran/pmc/enclosed/engineer, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_RECOMMENDED),
+
+		list("ARMOR (CHOOSE 1)", 0, null, null, null),
+		list("Engineer Armor", 0, /obj/item/clothing/suit/marine/veteran/pmc/engineer, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_RECOMMENDED),
+		list("Reinforced Engineer Armor", 0, /obj/item/clothing/suit/marine/veteran/pmc/engineer/heavy, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
+
+		list("POUCHES (CHOOSE 2)", 0, null, null, null),
+		list("Tactical Tools Pouch (Full)", 0, /obj/item/storage/pouch/tools/tactical/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Construction Pouch (Full)", 0, /obj/item/storage/pouch/construction/full/wy, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Explosive Pouch (Full)", 0, /obj/item/storage/pouch/explosive/C4, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 
 		list("ACCESSORIES (CHOOSE 1)", 0, null, null, null),
-		list("Black Webbing Vest", 0, /obj/item/clothing/accessory/storage/black_vest, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
-		list("Webbing", 0, /obj/item/clothing/accessory/storage/webbing, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
-		list("Drop Pouch", 0, /obj/item/clothing/accessory/storage/droppouch, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
-		list("Small Pouch", 0, /obj/item/clothing/accessory/storage/smallpouch/rmc, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
-		list("Shoulder Holster", 0, /obj/item/clothing/accessory/storage/holster, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
 		list("Waist Holster", 0, /obj/item/clothing/accessory/storage/holster/waist, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Small Pouch", 0, /obj/item/clothing/accessory/storage/smallpouch/wy, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Drop Pouch", 0, /obj/item/clothing/accessory/storage/droppouch/wy, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Tool Webbing (Full)", 0, /obj/item/clothing/accessory/storage/tool_webbing/tactical, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
 	))
 
 /obj/structure/machinery/cm_vending/clothing/engi/pmc

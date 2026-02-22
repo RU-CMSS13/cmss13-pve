@@ -211,3 +211,142 @@ GLOBAL_LIST_INIT(cm_vending_clothing_leader, list(
 		/obj/item/tool/extinguisher/mini,
 		/obj/item/storage/box/zipcuffs,
 	)
+
+// PMC Small Squad
+
+// gear
+
+/obj/effect/essentials_set/leader/pmc
+	spawned_gear_list = list(
+		/obj/item/explosive/plastic,
+		/obj/item/device/binoculars/range/designator,
+		/obj/item/storage/box/flare/signal,
+		/obj/item/tool/extinguisher/mini,
+		/obj/item/storage/box/zipcuffs,
+	)
+
+GLOBAL_LIST_INIT(cm_vending_gear_leader_pmc, list(
+		list("SQUAD LEADER KIT (CHOOSE 1)", 0, null, null, null),
+		list("Essential SL Kit", 0, /obj/effect/essentials_set/leader/pmc, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+
+		list("SQUAD KIT (CHOOSE 1, for yourself or your squad)", 0, null, null, null),
+		list("M240A1 Pyrotechnician Support Kit", 0, /obj/item/storage/box/kit/mini_pyro/pmc, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
+		list("M92 Grenadier Kit", 0, /obj/item/storage/box/kit/grenadier, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
+		list("M42C Sniper Kit", 0, /obj/item/storage/box/guncase/m42c/heap, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
+		list("Shotgunner Kit", 0, /obj/item/storage/box/kit/shotgunner, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
+		list("Comissar Kit", 0, /obj/item/storage/box/kit/comissar, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
+
+		list("UTILITIES", 0, null, null, null),
+		list("Whistle", 3, /obj/item/device/whistle, null, VENDOR_ITEM_REGULAR),
+		list("Fire Extinguisher (Portable)", 3, /obj/item/tool/extinguisher/mini, null, VENDOR_ITEM_REGULAR),
+		list("Motion Detector", 5, /obj/item/device/motiondetector/hacked/pmc, null, VENDOR_ITEM_REGULAR),
+
+		list("HELMET OPTICS", 0, null, null, null),
+		list("Medical Helmet Optic", 10, /obj/item/device/helmet_visor/medical, null, VENDOR_ITEM_RECOMMENDED),
+		list("Night Vision Optic", 40, /obj/item/device/helmet_visor/night_vision, null, VENDOR_ITEM_REGULAR),
+
+		list("ENGINEERING SUPPLIES", 0, null, null, null),
+		list("Metal x10", 5, /obj/item/stack/sheet/metal/small_stack, null, VENDOR_ITEM_RECOMMENDED),
+		list("Plasteel x10", 7, /obj/item/stack/sheet/plasteel/small_stack, null, VENDOR_ITEM_RECOMMENDED),
+		list("Plastic explosive", 5, /obj/item/explosive/plastic, null, VENDOR_ITEM_RECOMMENDED),
+		list("Breaching Charge", 7, /obj/item/explosive/plastic/breaching_charge, null, VENDOR_ITEM_RECOMMENDED),
+		list("Sandbags x25", 10, /obj/item/stack/sandbags_empty/half, null, VENDOR_ITEM_RECOMMENDED),
+		list("Tactical Tools Pouch (Full)", 20, /obj/item/storage/pouch/tools/tactical/full, null, VENDOR_ITEM_REGULAR),
+
+		list("EXPLOSIVES", 0, null, null, null),
+		list("M12 Blast Grenade", 10, /obj/item/explosive/grenade/high_explosive/pmc, null, VENDOR_ITEM_REGULAR),
+		list("G2 Electroshock Grenade Packet (x3 grenades)",  10, /obj/item/storage/box/packet/sebb, null, VENDOR_ITEM_REGULAR),
+		list("M20A2P Mine Box (x5 mines)", 15, /obj/item/storage/box/explosive_mines/pmc, null, VENDOR_ITEM_REGULAR),
+		list("M40 HEDP Grenade Box (x25 grenades)", 15, /obj/item/ammo_box/magazine/nade_box, null, VENDOR_ITEM_REGULAR),
+		list("M40 Super HEDP Grenade Box (x25 grenades)", 40, /obj/item/ammo_box/magazine/nade_box/super, null, VENDOR_ITEM_REGULAR),
+		list("M72A2 HIPF Starshell Grenade Box (x25 grenades)", 10, /obj/item/ammo_box/magazine/nade_box/flare, null, VENDOR_ITEM_REGULAR),
+		list("M47 HSDP Grenade Box (x25 grenades)", 10, /obj/item/ammo_box/magazine/nade_box/smoke, null, VENDOR_ITEM_REGULAR),
+
+		list("MEDICAL SUPPLIES", 0, null, null, null),
+		list("Burn Kit", 2, /obj/item/stack/medical/advanced/ointment, null, VENDOR_ITEM_REGULAR),
+		list("Trauma Kit", 2, /obj/item/stack/medical/advanced/bruise_pack, null, VENDOR_ITEM_REGULAR),
+		list("Advanced Firstaid Kit", 12, /obj/item/storage/firstaid/softpack/adv, null, VENDOR_ITEM_REGULAR),
+		list("Medical Splints", 1, /obj/item/stack/medical/splint, null, VENDOR_ITEM_REGULAR),
+
+		list("Injector (Bicaridine)", 1, /obj/item/reagent_container/hypospray/autoinjector/bicaridine, null, VENDOR_ITEM_REGULAR),
+		list("Injector (Dexalin+)", 1, /obj/item/reagent_container/hypospray/autoinjector/dexalinp, null, VENDOR_ITEM_REGULAR),
+		list("Injector (Inaprovaline)", 1, /obj/item/reagent_container/hypospray/autoinjector/inaprovaline, null, VENDOR_ITEM_REGULAR),
+		list("Injector (Kelotane)", 1, /obj/item/reagent_container/hypospray/autoinjector/kelotane, null, VENDOR_ITEM_REGULAR),
+		list("Injector (Oxycodone)", 2, /obj/item/reagent_container/hypospray/autoinjector/oxycodone, null, VENDOR_ITEM_REGULAR),
+		list("Injector (Tramadol)", 1, /obj/item/reagent_container/hypospray/autoinjector/tramadol, null, VENDOR_ITEM_REGULAR),
+		list("Injector (Tricord)", 1, /obj/item/reagent_container/hypospray/autoinjector/tricord, null, VENDOR_ITEM_REGULAR),
+
+		list("Health Diagnostic Equipment", 4, /obj/item/device/healthanalyzer/soul, null, VENDOR_ITEM_REGULAR),
+		list("Roller Bed", 2, /obj/item/roller, null, VENDOR_ITEM_REGULAR),
+
+		list("PRIMARY AMMUNITION", 0, null, null, null),
+		list("M41A MK1 LEAP Magazine (10x24mm)", 6, /obj/item/ammo_magazine/rifle/m41aMK1/ap, null, VENDOR_ITEM_REGULAR),
+		list("M41A MK1 Incendiary Magazine (10x24mm)", 6, /obj/item/ammo_magazine/rifle/m41aMK1/incendiary, null, VENDOR_ITEM_REGULAR),
+		list("M41A MK1 Wall-Penetrating Magazine (10x24mm)", 12, /obj/item/ammo_magazine/rifle/m41aMK1/penetrating, null, VENDOR_ITEM_REGULAR),
+		list("M41A MK1 HEAP Magazine (10x24mm)", 18, /obj/item/ammo_magazine/rifle/m41aMK1/heap, null, VENDOR_ITEM_REGULAR),
+
+		list("SIDEARM AMMUNITION", 0, null, null, null),
+		list("Mateba Speed Loader (.454)", 6, /obj/item/ammo_magazine/revolver/mateba, null, VENDOR_ITEM_REGULAR),
+		list("High Impact Mateba Speed Loader (.454)", 12, /obj/item/ammo_magazine/revolver/mateba/highimpact, null, VENDOR_ITEM_REGULAR),
+		list("High Impact Armor-Piercing Mateba Speed Loader (.454)", 16, /obj/item/ammo_magazine/revolver/mateba/highimpact/ap, null, VENDOR_ITEM_REGULAR),
+
+		list("SPECIAL AMMUNITION", 0, null, null, null),
+		list("M240 Incinerator Tank (Napthal)", 3, /obj/item/ammo_magazine/flamer_tank, null, VENDOR_ITEM_REGULAR),
+		list("M240 Incinerator Tank (B-Gel)", 6, /obj/item/ammo_magazine/flamer_tank/gellied, null, VENDOR_ITEM_REGULAR),
+		list("M240 Incinerator Tank (EX)", 12, /obj/item/ammo_magazine/flamer_tank/EX, null, VENDOR_ITEM_REGULAR),
+	))
+
+/obj/structure/machinery/cm_vending/gear/leader/pmc
+	name = "\improper WeyTech Squad Leader Gear Rack"
+	desc = "An automated gear rack for Squad Leaders."
+	icon_state = "sl_gear"
+	show_points = TRUE
+	vendor_role = list(JOB_SQUAD_LEADER)
+	req_access = list(ACCESS_WY_SENIOR_LEAD)
+	vendor_theme = VENDOR_THEME_COMPANY
+
+/obj/structure/machinery/cm_vending/gear/leader/pmc/get_listed_products(mob/user)
+	return GLOB.cm_vending_gear_leader_pmc
+
+// clothing
+
+GLOBAL_LIST_INIT(cm_vending_clothing_leader_pmc, list(
+		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
+		list("Leader Apparel", 0, list(/obj/item/clothing/under/marine/veteran/pmc/leader/commando/leader, /obj/item/clothing/gloves/marine/veteran/pmc/black, /obj/item/clothing/shoes/veteran/pmc/knife, /obj/item/clothing/head/cmcap/weyyu/guard/lead), MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("Guard Leader Armor", 0, /obj/item/clothing/suit/marine/veteran/pmc/leader/guard, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
+
+		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
+		list("Expedition Leader Backpack", 0, /obj/item/storage/backpack/pmc/backpack/commando/leader, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_RECOMMENDED),
+		list("Radio Telephone Backpack", 0, /obj/item/storage/backpack/pmc/backpack/rto_broken, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+
+		list("BELT (CHOOSE 1)", 0, null, null, null),
+		list("WY-TM612 General Utility Pouch", 0, /obj/item/storage/backpack/general_belt/wy, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("M276 Pattern M82F Holster Rig", 0, /obj/item/storage/belt/gun/flaregun, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("WY-TM625 Lifesaver Bag (Full)", 0, /obj/item/storage/belt/medical/lifesaver/wy/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("WY-TM402 Pattern Ammo Load Rig", 0, /obj/item/storage/belt/marine/wy, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("WY-TM406 pattern Shotgun Shell Rig", 0, /obj/item/storage/belt/shotgun/wy, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("WY-TM892 Pattern General Pistol Holster Rig", 0, /obj/item/storage/belt/gun/m4a3/wy, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+
+		list("POUCHES (CHOOSE 2)", 0, null, null, null),
+		list("Autoinjector Pouch (Refillable Injectors)", 0, /obj/item/storage/pouch/autoinjector/full/wy, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Large General Pouch", 0, /obj/item/storage/pouch/general/large/wy, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Large Magazine Pouch", 0, /obj/item/storage/pouch/magazine/large/wy, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Large Shotgun Shell Pouch", 0, /obj/item/storage/pouch/shotgun/large, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Large Pistol Magazine Pouch", 0, /obj/item/storage/pouch/magazine/pistol/large, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+
+		list("ACCESSORIES (CHOOSE 1)", 0, null, null, null),
+		list("Waist Holster", 0, /obj/item/clothing/accessory/storage/holster/waist, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Small Pouch", 0, /obj/item/clothing/accessory/storage/smallpouch/wy, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Drop Pouch", 0, /obj/item/clothing/accessory/storage/droppouch/wy, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+	))
+
+/obj/structure/machinery/cm_vending/clothing/leader/pmc
+	name = "\improper ColMarTech Squad Leader Equipment Rack"
+	desc = "An automated rack hooked up to a colossal storage of Squad Leader standard-issue equipment."
+	icon_state = "pmc_gear"
+	req_access = list(ACCESS_WY_SENIOR_LEAD)
+	vendor_role = list(JOB_SQUAD_LEADER)
+	vendor_theme = VENDOR_THEME_COMPANY
+
+/obj/structure/machinery/cm_vending/clothing/leader/pmc/get_listed_products(mob/user)
+	return GLOB.cm_vending_clothing_leader_pmc

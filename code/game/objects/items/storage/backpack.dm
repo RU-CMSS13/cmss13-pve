@@ -1140,6 +1140,9 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 /obj/item/storage/backpack/pmc/backpack/commando/leader
 	icon_state = "commando_leader_backpack"
 
+/obj/item/storage/backpack/pmc/backpack/commando/leader/medic
+	name = "\improper W-Y medical backpack"
+
 /obj/item/storage/backpack/pmc/backpack/commando/apesuit
 	name = "Dog Catcher bag"
 	desc = "A heavy-duty bag carried by Weyland-Yutani Dog Catchers."
@@ -1151,7 +1154,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	icon_state = "pmc_welderpack"
 	flags_atom = FPRINT
 	worn_accessible = TRUE
-	max_fuel = 180
+	max_fuel = 210
 
 /obj/item/storage/backpack/combat_droid
 	name = "combat android powerpack"

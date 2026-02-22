@@ -231,10 +231,10 @@
 
 /obj/structure/gun_rack/m41a/elite/unloaded
 	initial_stored = 5
-	populate_type = /obj/item/weapon/gun/rifle/m41a/elite/unloaded
+	populate_type = /obj/item/weapon/gun/rifle/m41aMK1/elite/unloaded
 
 /obj/structure/gun_rack/m41a/elite/unloaded/platoon
-	populate_type = /obj/item/weapon/gun/rifle/m41a/elite/unloaded/platoon
+	populate_type = /obj/item/weapon/gun/rifle/m41aMK1/elite/unloaded/platoon
 
 /obj/structure/gun_rack/m41a2/elite
 	name = "W-Y M41A2 MK2 pulse rifle rack"

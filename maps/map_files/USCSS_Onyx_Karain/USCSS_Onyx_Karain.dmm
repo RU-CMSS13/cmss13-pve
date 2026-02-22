@@ -1455,13 +1455,9 @@
 /area/firefly/cryo_cell)
 "aee" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_box/magazine/nade_box/smoke/red{
-	pixel_y = 5
-	},
-/obj/item/ammo_box/magazine/nade_box/smoke/green{
-	pixel_y = 11
+/obj/item/device/motiondetector/hacked/pmc{
+	pixel_x = -1;
+	pixel_y = 8
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_omega)
@@ -1497,9 +1493,16 @@
 /obj/effect/landmark/late_join/small_pmc,
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)
+"aem" = (
+/obj/structure/machinery/door_control/brbutton{
+	id = "hsarmory";
+	name = "armory"
+	},
+/turf/open/space/basic,
+/area/firefly/cafeteria)
 "aen" = (
-/obj/structure/closet/secure_closet/marine_personal/pmc/platoon_commander,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal/pmc/engineer,
 /turf/open/floor/corsat/plate,
 /area/firefly/cryo_cell)
 "aeo" = (
@@ -1557,6 +1560,10 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
+"aeu" = (
+/obj/item/storage/backpack/clown,
+/turf/open/floor/corsat/squares,
+/area/firefly/squad_omega)
 "aev" = (
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/firefly/briefing)
@@ -1577,14 +1584,14 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)
 "aey" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_box/magazine/m39/ext,
-/obj/item/ammo_box/magazine/m39/ext,
-/obj/item/ammo_box/magazine/m39/pve,
-/obj/item/ammo_box/magazine/m39/pve,
-/turf/open/floor/corsat/plate,
+/obj/item/clothing/glasses/hud/sensor,
+/obj/item/device/whistle,
+/obj/item/device/binoculars/range/designator,
+/obj/structure/closet/secure_closet{
+	name = "team leader locker";
+	req_access_txt = "208;211"
+	},
+/turf/open/floor/corsat/cargo,
 /area/firefly/squad_omega)
 "aez" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -1606,6 +1613,18 @@
 "aeB" = (
 /turf/open/floor/corsat/arrow_south,
 /area/firefly/cafeteria)
+"aeC" = (
+/obj/item/tool/stamp/clown,
+/turf/open/floor/corsat/squares,
+/area/firefly/squad_omega)
+"aeD" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1;
+	pixel_y = 0
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/squad_omega)
 "aeE" = (
 /turf/closed/wall/r_wall/biodome,
 /area/firefly/medical)
@@ -1683,6 +1702,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/purple/north,
 /area/firefly/medical)
+"aeR" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "hsarmory";
+	name = "\improper High Security Armory";
+	needs_power = 0
+	},
+/turf/open/floor/corsat/marked,
+/area/firefly/squad_omega)
 "aeS" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
@@ -1767,18 +1795,6 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/corsat/sterileplate,
 /area/firefly/medical)
-"afh" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
-/area/firefly/ptsgt)
-"afi" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/heavy/fuel/pmc,
-/obj/item/storage/box/guncase/heavy/motiondetectors/pmc{
-	pixel_y = 7
-	},
-/turf/open/floor/corsat/plate,
-/area/firefly/squad_omega)
 "afj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/double/blue/golden_arrow{
@@ -2172,17 +2188,6 @@
 "agg" = (
 /turf/open/floor/corsat/whitecorner,
 /area/firefly/hangar)
-"agh" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_box/magazine/vp70{
-	pixel_y = 8
-	},
-/obj/item/ammo_box/magazine/vp70{
-	pixel_y = -2
-	},
-/turf/open/floor/corsat/plate,
-/area/firefly/squad_omega)
 "agi" = (
 /turf/closed/shuttle/elevator{
 	dir = 10
@@ -2802,7 +2807,12 @@
 /area/firefly/supply)
 "ahZ" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
-	name = "\improper A-15 Overwatch Office"
+	name = "\improper A-15 Overwatch Office";
+	req_one_access = list(216, 100)
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	name = "\improper Owerwatch Office Shutters";
+	id = "ow"
 	},
 /turf/open/floor/corsat/marked,
 /area/firefly/briefing)
@@ -3388,18 +3398,8 @@
 /turf/open/floor/corsat/yellow,
 /area/firefly/supply)
 "ajy" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_box/magazine/nade_box{
-	pixel_y = 6;
-	layer = 3.2
-	},
-/obj/item/ammo_box/magazine/nade_box{
-	pixel_y = 12;
-	layer = 3.2;
-	pixel_x = 3
-	},
-/turf/open/floor/corsat/plate,
+/obj/item/coin/clown,
+/turf/open/floor/corsat/squares,
 /area/firefly/squad_omega)
 "ajz" = (
 /obj/structure/stairs/perspective{
@@ -4117,34 +4117,12 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
 "alt" = (
-/obj/structure/machinery/light/double/blue/golden_arrow,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/crate/ammo/alt,
-/obj/item/weapon/gun/smg/m39/elite/pve{
-	current_mag = null;
-	pixel_y = 9
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 1;
+	pixel_x = 1
 	},
-/obj/item/weapon/gun/smg/m39/elite/pve{
-	current_mag = null;
-	pixel_y = 3
-	},
-/obj/item/weapon/gun/smg/m39/elite/pve{
-	current_mag = null;
-	pixel_y = -3
-	},
-/obj/item/weapon/gun/smg/m39/elite/pve{
-	current_mag = null;
-	pixel_y = 9
-	},
-/obj/item/weapon/gun/smg/m39/elite/pve{
-	current_mag = null;
-	pixel_y = 3
-	},
-/obj/item/weapon/gun/smg/m39/elite/pve{
-	current_mag = null;
-	pixel_y = -3
-	},
-/turf/open/floor/corsat/cargo,
+/turf/open/floor/corsat/squares,
 /area/firefly/squad_omega)
 "alu" = (
 /obj/structure/bed/chair/office/dark,
@@ -4193,37 +4171,13 @@
 	},
 /turf/open/floor/corsat/yellow/east,
 /area/firefly/engineer)
-"alB" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/crate/ammo/alt,
-/obj/item/weapon/gun/smg/m39/elite/pve{
-	current_mag = null;
-	pixel_y = 9
-	},
-/obj/item/weapon/gun/smg/m39/elite/pve{
-	current_mag = null;
-	pixel_y = 3
-	},
-/obj/item/weapon/gun/smg/m39/elite/pve{
-	current_mag = null;
-	pixel_y = -3
-	},
-/obj/item/weapon/gun/smg/m39/elite/pve{
-	current_mag = null;
-	pixel_y = 9
-	},
-/obj/item/weapon/gun/smg/m39/elite/pve{
-	current_mag = null;
-	pixel_y = 3
-	},
-/obj/item/weapon/gun/smg/m39/elite/pve{
-	current_mag = null;
-	pixel_y = -3
-	},
-/turf/open/floor/corsat/cargo,
-/area/firefly/squad_omega)
 "alC" = (
-/turf/open/floor/corsat/cargo,
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	layer = 2.5;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/plate,
 /area/firefly/squad_omega)
 "alD" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -4919,8 +4873,14 @@
 /turf/open/floor/corsat/arrow_north,
 /area/firefly/hangar)
 "anv" = (
-/obj/structure/machinery/light/double/blue/golden_arrow,
-/turf/open/floor/corsat/cargo,
+/obj/structure/machinery/power/apc/almayer/hardened/south,
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 2;
+	color = "#E10600";
+	pixel_y = -1
+	},
+/turf/open/floor/corsat/squares,
 /area/firefly/squad_omega)
 "anw" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5208,6 +5168,13 @@
 	},
 /turf/open/floor/corsat/white/east,
 /area/firefly/cafeteria)
+"aoo" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/squad_omega)
 "aop" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1;
@@ -5416,6 +5383,9 @@
 	},
 /turf/open/floor/corsat/red/west,
 /area/firefly/cafeteria)
+"aoO" = (
+/turf/open/floor/corsat/box,
+/area/firefly/squad_omega)
 "aoP" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/white/east,
@@ -5491,13 +5461,26 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/white/east,
 /area/firefly/cafeteria)
+"aoY" = (
+/obj/item/clothing/under/marine/ucf_clown,
+/turf/open/floor/corsat/squares,
+/area/firefly/squad_omega)
 "aoZ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/dark_sterile,
 /area/firefly/cafeteria)
+"apa" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1;
+	pixel_y = 0
+	},
+/obj/item/clothing/shoes/clown_shoes,
+/turf/open/floor/corsat/squares,
+/area/firefly/squad_omega)
 "apb" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat/plate,
+/obj/item/clothing/mask/gas/clown_hat,
+/turf/open/floor/corsat/squares,
 /area/firefly/squad_omega)
 "apc" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
@@ -5797,10 +5780,8 @@
 /turf/open/floor/corsat/brown/east,
 /area/firefly/briefing)
 "apL" = (
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/pmc,
-/obj/item/device/binoculars/range/designator,
-/obj/item/clothing/head/cmcap/pmc,
-/turf/open/floor/corsat/squares,
+/obj/structure/machinery/cm_vending/gear/leader/pmc,
+/turf/open/floor/corsat/plate,
 /area/firefly/ptsgt)
 "apM" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5968,12 +5949,6 @@
 	},
 /turf/open/floor/corsat/white/east,
 /area/firefly/cafeteria)
-"aqf" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/m42c/heap,
-/turf/open/floor/corsat/squares,
-/area/firefly/squad_omega)
 "aqg" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/squares,
@@ -6605,6 +6580,10 @@
 "arK" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	name = "\improper Owerwatch Office Shutters";
+	id = "ow"
+	},
 /turf/open/floor/corsat/marked,
 /area/firefly/briefing)
 "arL" = (
@@ -6628,17 +6607,8 @@
 /turf/closed/wall/r_wall/biodome,
 /area/firefly/cafeteria)
 "arN" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 8;
-	light_power = 0.7
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_box/magazine/nade_box/flare{
-	pixel_x = 1
-	},
-/obj/item/weapon/gun/launcher/grenade/m92,
-/turf/open/floor/corsat/plate,
+/obj/item/reagent_container/food/snacks/clownburger,
+/turf/open/floor/corsat/squares,
 /area/firefly/squad_omega)
 "arO" = (
 /obj/structure/machinery/light/double/blue/golden_arrow,
@@ -7133,7 +7103,7 @@
 	dir = 8;
 	light_power = 0.7
 	},
-/turf/open/floor/corsat/arrow_south,
+/turf/open/floor/corsat/squares,
 /area/firefly/ptsgt)
 "atb" = (
 /obj/effect/decal/cleanable/dirt,
@@ -7174,6 +7144,10 @@
 /obj/item/attachable/scope/pve,
 /turf/open/floor/carpet,
 /area/firefly/ptsgt)
+"atg" = (
+/obj/item/card/data/clown,
+/turf/open/floor/corsat/squares,
+/area/firefly/squad_omega)
 "ath" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
@@ -7207,8 +7181,8 @@
 "atl" = (
 /obj/structure/machinery/door/airlock/almayer/generic/glass{
 	name = "\improper Operation Leader";
-	req_one_access_txt = "216";
-	dir = 1
+	dir = 1;
+	req_one_access = list(216)
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/corsat/marked,
@@ -7355,12 +7329,10 @@
 /turf/open/floor/corsat/purple/east,
 /area/firefly/ares)
 "atG" = (
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 8;
-	light_power = 0.7
+/mob/living/simple_animal/hostile/retaliate/clown{
+	name = "The Man Who Lives Behind Walls"
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat/plate,
+/turf/open/floor/corsat/squares,
 /area/firefly/squad_omega)
 "atH" = (
 /obj/effect/decal/warning_stripes{
@@ -7389,10 +7361,6 @@
 	},
 /turf/open/floor/corsat/purple/northeast,
 /area/firefly/ares)
-"atK" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat/cargo,
-/area/firefly/squad_omega)
 "atL" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/corsat/squares,
@@ -8032,13 +8000,6 @@
 	},
 /turf/open/floor/corsat/red/southwest,
 /area/firefly/cafeteria)
-"avi" = (
-/obj/structure/platform,
-/obj/structure/closet/crate/ammo/alt,
-/obj/item/storage/box/explosive_mines/pmc,
-/obj/item/storage/box/explosive_mines/pmc,
-/turf/open/floor/corsat/brown,
-/area/firefly/briefing)
 "avj" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 4;
@@ -8095,14 +8056,30 @@
 /obj/item/clothing/gloves/marine/veteran/pmc/apesuit,
 /turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
-"avr" = (
-/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc/apesuit,
-/turf/open/floor/corsat/squares,
-/area/firefly/cafeteria)
 "avs" = (
 /obj/item/clothing/suit/marine/veteran/pmc/apesuit,
 /turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
+"avt" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1;
+	pixel_y = 0
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/squad_omega)
+"avu" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out"
+	},
+/turf/open/floor/corsat/plate,
+/area/firefly/squad_omega)
+"avv" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 9
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/squad_omega)
 "avw" = (
 /obj/item/clothing/head/helmet/marine/veteran/pmc/apesuit,
 /turf/open/floor/corsat/squares,
@@ -8111,6 +8088,40 @@
 /obj/item/device/encryptionkey/commando,
 /turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
+"avy" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/box/guncase/nsg23_marine/pve{
+	pixel_x = 0;
+	pixel_y = 14
+	},
+/obj/item/storage/box/guncase/nsg23_marine/pve{
+	pixel_x = 0;
+	pixel_y = 18
+	},
+/obj/item/storage/box/guncase/nsg23_marine/pve{
+	pixel_x = 0;
+	pixel_y = 22
+	},
+/obj/item/ammo_box/magazine/nsg23/large{
+	pixel_x = 0;
+	pixel_y = -4
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8;
+	light_power = 0.7
+	},
+/turf/open/floor/corsat/plate,
+/area/firefly/squad_omega)
+"avz" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 6
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/squad_omega)
+"avA" = (
+/obj/structure/closet/secure_closet/marine_personal/pmc/platoon_commander,
+/turf/open/floor/corsat/plate,
+/area/firefly/cryo_cell)
 "avB" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/corsat/squares,
@@ -8129,8 +8140,8 @@
 /turf/open/floor/corsat/arrow_east,
 /area/firefly/supply)
 "avE" = (
-/obj/structure/closet/secure_closet/marine_personal/pmc/rifleman,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal/pmc/squad_leader,
 /turf/open/floor/corsat/plate,
 /area/firefly/cryo_cell)
 "avF" = (
@@ -8426,7 +8437,10 @@
 /turf/open/floor/tdome/tcomms,
 /area/firefly/ares)
 "awn" = (
-/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair/wood{
+	pixel_x = 5;
+	pixel_y = 6
+	},
 /turf/open/floor/corsat/squares,
 /area/firefly/squad_omega)
 "awo" = (
@@ -8541,6 +8555,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
+"awz" = (
+/obj/structure/surface/rack{
+	color = "#6b675e";
+	layer = 2.79
+	},
+/obj/item/storage/belt/gun/m39,
+/obj/item/storage/belt/gun/m39,
+/turf/open/floor/corsat/cargo,
+/area/firefly/squad_omega)
 "awA" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -8554,11 +8577,7 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
 "awB" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 4;
-	light_power = 0.7
-	},
+/obj/structure/gun_rack/m41a/elite/unloaded/platoon,
 /turf/open/floor/corsat/cargo,
 /area/firefly/squad_omega)
 "awC" = (
@@ -8657,6 +8676,30 @@
 	},
 /turf/open/floor/corsat/white,
 /area/firefly/hangar)
+"awO" = (
+/obj/structure/gun_rack/m41a/elite/unloaded/platoon,
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	dir = 1
+	},
+/turf/open/floor/corsat/cargo,
+/area/firefly/squad_omega)
+"awP" = (
+/obj/structure/machinery/cm_vending/clothing/leader/pmc,
+/turf/open/floor/corsat/plate,
+/area/firefly/ptsgt)
+"awQ" = (
+/obj/structure/machinery/door/airlock/almayer/engineering/glass{
+	dir = 1;
+	no_panel = 1;
+	not_weldable = 1;
+	req_one_access = list(204)
+	},
+/turf/open/floor/corsat/marked,
+/area/firefly/squad_omega)
+"awR" = (
+/obj/structure/machinery/cm_vending/gear/engi/pmc,
+/turf/open/floor/corsat/plate,
+/area/firefly/squad_omega)
 "awS" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
@@ -8679,66 +8722,86 @@
 	},
 /turf/open/floor/corsat/yellow/southwest,
 /area/firefly/supply)
+"awU" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/two,
+/turf/open/floor/corsat/marked,
+/area/firefly/briefing)
+"awV" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/three,
+/turf/open/floor/corsat/marked,
+/area/firefly/briefing)
 "awW" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
-"awX" = (
-/obj/structure/closet/secure_closet/marine_personal/pmc/squad_leader,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat/plate,
-/area/firefly/cryo_cell)
 "awY" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_box/magazine/nade_box/smoke{
-	pixel_y = 9;
-	pixel_x = 2
+/obj/item/ammo_box/magazine/m39/pve{
+	pixel_x = 3;
+	pixel_y = 8
+	},
+/obj/item/ammo_box/magazine/m39/pve{
+	pixel_x = 1;
+	pixel_y = -1
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_omega)
+"awZ" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/four,
+/turf/open/floor/corsat/marked,
+/area/firefly/briefing)
 "axa" = (
-/obj/structure/surface/rack{
-	color = "#6b675e";
-	layer = 2.79
+/obj/item/weapon/gun/smg/m39/elite/pve{
+	current_mag = null;
+	pixel_y = 9
 	},
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 4;
-	light_power = 0.7
+/obj/item/weapon/gun/smg/m39/elite/pve{
+	current_mag = null;
+	pixel_y = 3
 	},
-/obj/item/storage/large_holster/m39,
-/obj/item/storage/large_holster/m39,
-/obj/item/storage/large_holster/m39,
-/obj/item/storage/large_holster/m39,
-/obj/item/storage/large_holster/m39,
-/obj/item/storage/large_holster/m39,
-/obj/item/storage/large_holster/m39,
-/obj/item/storage/large_holster/m39,
-/obj/item/storage/large_holster/m39,
-/obj/item/storage/large_holster/m39,
-/turf/open/floor/corsat/plate,
+/obj/item/weapon/gun/smg/m39/elite/pve{
+	current_mag = null;
+	pixel_y = -3
+	},
+/obj/structure/closet/crate/ammo/alt{
+	name = "M39B/3 crate"
+	},
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	dir = 4
+	},
+/turf/open/floor/corsat/cargo,
 /area/firefly/squad_omega)
 "axb" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 8;
-	light_power = 0.7
-	},
-/turf/open/floor/corsat/cargo,
-/area/firefly/squad_omega)
-"axe" = (
+/obj/item/weapon/gun/smartgun/dirty,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/clothing/suit/marine/veteran/pmc/guard/smartgunner,
+/obj/item/storage/belt/gun/smartgunner/pmc,
+/obj/item/storage/pouch/magazine/large/pmc_sg,
+/obj/item/smartgun_battery,
+/obj/item/smartgun_battery,
+/obj/item/smartgun_battery,
+/obj/item/clothing/glasses/night/m56_goggles/pmc,
 /obj/structure/closet/secure_closet{
-	name = "team leader locker";
-	req_access_txt = "208;211"
+	name = "heavy weapons specialist locker";
+	req_access_txt = "208;217"
 	},
-/obj/item/device/binoculars/range/designator,
-/obj/item/device/whistle,
-/obj/item/clothing/glasses/hud/sensor,
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/cargo,
 /area/firefly/squad_omega)
+"axc" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/five,
+/turf/open/floor/corsat/marked,
+/area/firefly/briefing)
+"axd" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/six,
+/turf/open/floor/corsat/marked,
+/area/firefly/briefing)
 "axf" = (
 /obj/structure/platform{
 	dir = 1
@@ -8757,6 +8820,14 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/briefing)
+"axi" = (
+/obj/structure/window/framed/corsat,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	name = "\improper Owerwatch Office Shutters";
+	id = "ow"
+	},
+/turf/open/floor/corsat/marked,
+/area/firefly/briefing)
 "axk" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
@@ -8764,40 +8835,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/squares,
 /area/firefly/briefing)
-"axl" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 8;
-	light_power = 0.7
-	},
-/obj/item/ammo_box/magazine/large{
-	pixel_x = -5;
-	pixel_y = -6
-	},
-/obj/item/ammo_box/magazine/large,
-/turf/open/floor/corsat/cargo,
-/area/firefly/squad_omega)
-"axm" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/nsg23_marine/pve,
-/obj/item/storage/box/guncase/nsg23_marine/pve{
-	pixel_y = 6
-	},
-/obj/item/storage/box/guncase/nsg23_marine/pve{
-	pixel_y = 12
-	},
-/obj/item/storage/box/guncase/nsg23_marine/pve{
-	pixel_y = 18
-	},
-/obj/item/storage/box/guncase/nsg23_marine/pve{
-	pixel_y = 24
-	},
-/turf/open/floor/corsat/plate,
-/area/firefly/squad_omega)
-"axn" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat/arrow_north,
-/area/firefly/squad_omega)
 "axo" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
@@ -8844,8 +8881,6 @@
 /area/firefly/cafeteria)
 "axv" = (
 /obj/structure/closet/secure_closet/marine_personal/pmc/platoon_leader,
-/obj/item/clothing/head/cmcap/pmc
-/obj/item/clothing/under/marine/veteran/pmc/leader,
 /obj/item/clothing/shoes/veteran/pmc/knife,
 /obj/item/device/radio/headset/distress/pmc/platoon,
 /turf/open/floor/corsat/cargo,
@@ -8972,18 +9007,26 @@
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/firefly/cafeteria)
 "axN" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/nsg23,
-/obj/item/ammo_box/magazine/nsg23,
-/obj/item/ammo_box/magazine/nsg23,
-/obj/item/ammo_box/magazine/nsg23,
+/obj/item/storage/box/packet/smoke{
+	pixel_x = -2;
+	pixel_y = 10
+	},
+/obj/item/storage/box/packet/smoke/green{
+	pixel_x = 2;
+	pixel_y = 3
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 2;
+	light_power = 0.7
+	},
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_omega)
 "axO" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/crate/ammo/alt,
+/obj/item/ammo_box/magazine/nade_box,
+/obj/structure/closet/crate/ammo/alt/flame{
+	name = "explosives crate"
+	},
 /turf/open/floor/corsat/cargo,
 /area/firefly/squad_omega)
 "axP" = (
@@ -9016,34 +9059,20 @@
 /turf/open/floor/corsat/green/east,
 /area/firefly/cafeteria)
 "ayf" = (
-/obj/structure/closet/secure_closet{
-	name = "heavy weapons specialist locker";
-	req_access_txt = "208;217"
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/mk1/large{
+	pixel_y = 3
 	},
-/obj/item/weapon/gun/smartgun/dirty,
-/obj/item/smartgun_battery,
-/obj/item/clothing/suit/marine/veteran/pmc/smartgun,
-/obj/item/clothing/head/helmet/marine/veteran/pmc/gunner,
-/obj/item/clothing/glasses/night/m56_goggles/no_nightvision,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_magazine/smartgun,
-/obj/item/ammo_magazine/smartgun,
-/obj/item/ammo_magazine/smartgun,
-/obj/item/ammo_magazine/smartgun,
-/obj/item/ammo_magazine/smartgun,
-/obj/item/ammo_magazine/smartgun,
-/obj/item/storage/belt/gun/smartgunner/pmc,
-/obj/item/storage/pouch/magazine/large/pmc_sg,
-/obj/item/smartgun_battery,
-/turf/open/floor/corsat/cargo,
+/obj/item/ammo_box/magazine/mk1/large{
+	pixel_y = 9
+	},
+/turf/open/floor/corsat/plate,
 /area/firefly/squad_omega)
 "ayg" = (
-/obj/structure/gun_rack/m41a/corporate/unloaded/platoon,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/gun_rack/m41a/corporate/unloaded/platoon{
-	pixel_y = 27
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	dir = 1
 	},
-/turf/open/floor/corsat/cargo,
+/turf/open/floor/corsat/arrow_east,
 /area/firefly/squad_omega)
 "azd" = (
 /obj/effect/decal/warning_stripes{
@@ -10701,12 +10730,18 @@
 	pixel_x = 7
 	},
 /obj/structure/machinery/door_control{
-	pixel_y = 2;
-	pixel_x = 6;
+	pixel_y = 0;
+	pixel_x = 7;
 	id = "squadarmory";
 	name = "gear lockers door-control"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door_control{
+	pixel_y = 0;
+	pixel_x = -6;
+	id = "ow";
+	name = "Owerwatch Shutters Control"
+	},
 /turf/open/floor/wood/ship,
 /area/firefly/co)
 "cpJ" = (
@@ -11215,13 +11250,14 @@
 /turf/open/floor/corsat/sterileplate,
 /area/firefly/medical)
 "cUT" = (
-/obj/item/storage/surgical_case/regular{
-	pixel_y = -3
-	},
 /obj/item/roller{
 	pixel_y = 10
 	},
 /obj/structure/surface/table/reinforced/prison,
+/obj/item/storage/surgical_case/elite/commando{
+	pixel_x = 0;
+	pixel_y = -1
+	},
 /turf/open/floor/corsat/purple,
 /area/firefly/medical)
 "cVj" = (
@@ -11600,7 +11636,10 @@
 /obj/structure/phone_base{
 	name = "Maintenance Wing Communications Receiver";
 	pixel_x = -25;
-	pixel_y = 2
+	pixel_y = 2;
+	dir = 4;
+	phone_category = "Karain";
+	phone_id = "Maintenance Wing Communications Receiver"
 	},
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_full"
@@ -13291,8 +13330,8 @@
 /obj/structure/phone_base{
 	pixel_y = 31;
 	name = "Supply Wing Communications Receiver";
-	phone_category = "Golden Arrow";
-	phone_id = "Supply Bay";
+	phone_category = "Karain";
+	phone_id = "Supply Wing Communications Receiver";
 	pixel_x = -6;
 	layer = 6
 	},
@@ -14120,7 +14159,9 @@
 /obj/structure/phone_base{
 	name = "Synthetic Preparations Communications Receiver";
 	pixel_x = -11;
-	pixel_y = 33
+	pixel_y = 33;
+	phone_category = "Karain";
+	phone_id = "Synthetic Preparations Communications Receiver"
 	},
 /turf/open/floor/corsat/red/north,
 /area/firefly/supply)
@@ -14318,7 +14359,9 @@
 	name = "Power Substation Communications Receiver";
 	pixel_x = -8;
 	pixel_y = 26;
-	layer = 7
+	layer = 7;
+	phone_category = "Karain";
+	phone_id = "Power Substation Communications Receiver"
 	},
 /turf/open/floor/corsat/yellow/north,
 /area/firefly/engineer)
@@ -14357,7 +14400,9 @@
 /obj/structure/phone_base{
 	name = "Firing Range Communications Receiver";
 	pixel_x = 4;
-	pixel_y = 30
+	pixel_y = 30;
+	phone_category = "Karain";
+	phone_id = "Firing Range Communications Receiver"
 	},
 /obj/structure/machinery/camera/autoname/golden_arrow,
 /obj/effect/decal/cleanable/dirt,
@@ -15780,8 +15825,7 @@
 "hPi" = (
 /obj/structure/machinery/door/airlock/almayer/medical/glass/colony{
 	dir = 1;
-	req_one_access = null;
-	req_one_access_txt = "202";
+	req_one_access = list(202);
 	name = "\improper Medical Specialist Preparations"
 	},
 /turf/open/floor/corsat/marked,
@@ -16355,7 +16399,9 @@
 /obj/structure/phone_base{
 	name = "Azure-15 Armory Communications Receiver";
 	pixel_x = -8;
-	pixel_y = 30
+	pixel_y = 30;
+	phone_category = "Karain";
+	phone_id = "Azure-15 Armory Communications Receiver"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/brown/north,
@@ -19855,6 +19901,10 @@
 "muu" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/window/framed/corsat,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	name = "\improper Owerwatch Office Shutters";
+	id = "ow"
+	},
 /turf/open/floor/corsat/marked,
 /area/firefly/briefing)
 "muE" = (
@@ -20079,10 +20129,6 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/briefing)
-"mHM" = (
-/obj/structure/closet/secure_closet/marine_personal/pmc/squad_leader,
-/turf/open/floor/corsat/plate,
-/area/firefly/cryo_cell)
 "mIE" = (
 /turf/open/floor/carpet11_12,
 /area/firefly/briefing)
@@ -20466,9 +20512,8 @@
 /turf/open/floor/corsat/yellow/north,
 /area/firefly/supply)
 "njp" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/power/apc/almayer/hardened/east,
-/turf/open/floor/corsat/arrow_north,
+/obj/structure/machinery/cm_vending/clothing/engi/pmc,
+/turf/open/floor/corsat/plate,
 /area/firefly/squad_omega)
 "nkJ" = (
 /obj/effect/spawner/random/warhead{
@@ -21929,7 +21974,9 @@
 /obj/structure/phone_base{
 	name = "Operations Wing Communications Receiver";
 	pixel_x = -8;
-	pixel_y = 30
+	pixel_y = 30;
+	phone_category = "Karain";
+	phone_id = "Operations Wing Communications Receiver"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/blue/northeast,
@@ -24646,8 +24693,8 @@
 /turf/open/floor/corsat/marked,
 /area/firefly/supply)
 "rNE" = (
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/pmc,
-/turf/open/floor/corsat/squares,
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/pmc/small,
+/turf/open/floor/corsat/plate,
 /area/firefly/briefing)
 "rQA" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -25312,23 +25359,6 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/supply)
-"sHJ" = (
-/obj/structure/gun_rack/flamer/unloaded{
-	pixel_x = -9
-	},
-/obj/structure/gun_rack/flamer/empty{
-	pixel_x = -9;
-	pixel_y = 27
-	},
-/obj/structure/gun_rack/flamer/empty{
-	pixel_x = 9
-	},
-/obj/structure/gun_rack/flamer/empty{
-	pixel_x = 9;
-	pixel_y = 27
-	},
-/turf/open/floor/corsat/cargo,
-/area/firefly/squad_omega)
 "sHY" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/brown,
@@ -25504,10 +25534,8 @@
 /turf/open/floor/corsat/greenwhite/north,
 /area/firefly/supply)
 "sQd" = (
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/pmc{
-	req_access = null
-	},
-/turf/open/floor/corsat/squares,
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/pmc/small,
+/turf/open/floor/corsat/plate,
 /area/firefly/briefing)
 "sQh" = (
 /obj/structure/prop/static_tank/fuel{
@@ -26125,6 +26153,10 @@
 	pixel_y = 10
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/roller/surgical{
+	pixel_x = 10;
+	pixel_y = 0
+	},
 /turf/open/floor/corsat/purple/southwest,
 /area/firefly/medical)
 "txE" = (
@@ -26720,7 +26752,9 @@
 /obj/structure/phone_base{
 	name = "Re-Entry Vehicle Bay Communications Receiver";
 	pixel_x = 7;
-	pixel_y = 9
+	pixel_y = 9;
+	phone_category = "Karain";
+	phone_id = "Re-Entry Vehicle Bay Communications Receiver"
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/supply)
@@ -29361,8 +29395,8 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/supply)
 "xkb" = (
-/obj/structure/machinery/prop/almayer/CICmap/table/horizontal,
-/turf/open/floor/corsat/squares,
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/one,
+/turf/open/floor/corsat/marked,
 /area/firefly/briefing)
 "xkr" = (
 /obj/structure/machinery/ares/cpu{
@@ -30032,12 +30066,12 @@
 /turf/open/floor/corsat/plate,
 /area/firefly/supply)
 "yaY" = (
-/obj/structure/machinery/cm_vending/clothing/medic/pmc{
-	req_access = list(202);
-	pixel_y = 20;
-	density = 0
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/cm_vending/clothing/medic/pmc/small{
+	req_access = list(202);
+	density = 0;
+	pixel_y = 20
+	},
 /turf/open/floor/corsat/purple/north,
 /area/firefly/medical)
 "ybz" = (
@@ -30083,7 +30117,13 @@
 /obj/structure/phone_base{
 	name = "Medical Wing Communications Receiver";
 	pixel_x = -8;
-	pixel_y = 31
+	pixel_y = 31;
+	phone_category = "Karain";
+	phone_id = "Medical Wing Communications Receiver"
+	},
+/obj/item/storage/surgical_tray{
+	pixel_x = 2;
+	pixel_y = 4
 	},
 /turf/open/floor/corsat/purple/north,
 /area/firefly/medical)
@@ -35923,7 +35963,7 @@ acQ
 acQ
 acQ
 adw
-aoj
+axD
 aKv
 aoE
 anL
@@ -36247,13 +36287,13 @@ aeV
 aeV
 aeV
 adw
-axD
+avA
 aKv
 aoE
 anL
-awX
+hAk
 adA
-mHM
+aok
 aKv
 aoE
 anL
@@ -36377,7 +36417,7 @@ fDZ
 acQ
 avw
 avs
-avr
+adk
 avn
 avo
 acQ
@@ -39009,8 +39049,8 @@ dgH
 amY
 asT
 acQ
-fDZ
-fDZ
+adI
+adI
 acQ
 axB
 acQ
@@ -39171,8 +39211,8 @@ vfz
 amY
 aoM
 acQ
-fDZ
-fDZ
+adI
+adI
 acQ
 amN
 axy
@@ -39333,8 +39373,8 @@ rVT
 amY
 gwc
 acQ
-fDZ
-fDZ
+aem
+adI
 acQ
 amN
 axw
@@ -41273,10 +41313,10 @@ hrd
 vbd
 gBh
 aeg
-sHJ
+awp
 atG
 arN
-afi
+awp
 aeg
 kZG
 qti
@@ -41435,10 +41475,10 @@ adm
 qaQ
 aoU
 aeg
-xNL
+atg
 apb
-awn
-agh
+aeu
+awp
 aeg
 aoA
 apX
@@ -41593,13 +41633,13 @@ afd
 afd
 afd
 afd
-asY
+afd
 vwG
 aoU
-xNL
-alC
-awt
-awn
+aeg
+awp
+aoY
+aeC
 ajy
 aeg
 kgp
@@ -41755,13 +41795,13 @@ atd
 ata
 apQ
 apL
-asY
+afd
 vvF
 aps
-xNL
-alC
-awt
-awn
+aeg
+avt
+apa
+aeD
 alt
 aeg
 gwE
@@ -41915,16 +41955,16 @@ atl
 ath
 lLq
 atb
-xNL
-xNL
-xNL
+apQ
+awP
+aeg
+aeg
 aeg
 aeg
 xNL
-alC
-awt
-awp
-alB
+aeR
+aeR
+xNL
 aeg
 enr
 avf
@@ -42077,15 +42117,15 @@ afd
 ati
 atf
 axq
+afd
+afd
 aeg
-axl
-axe
 ayf
-alC
+avy
 axb
-awt
-awt
-awp
+avu
+aoo
+aoo
 alC
 aeg
 ejr
@@ -42237,17 +42277,17 @@ aqM
 afz
 atm
 atj
-afh
+axo
 aeg
 axo
-axm
-awt
-awt
-apb
-apb
-awt
-awt
-apb
+aeg
+awz
+awp
+awp
+awp
+awp
+awp
+awp
 anv
 aeg
 aeg
@@ -42400,17 +42440,17 @@ afz
 atm
 atj
 axo
-ayg
-axn
 awp
 awp
-awt
-awn
+awQ
 awp
-awt
 awp
-awn
-aqf
+aoO
+atL
+aoO
+awp
+aoO
+awp
 aey
 aeg
 avb
@@ -42563,15 +42603,15 @@ afd
 nKy
 axo
 ayg
-axn
+aww
+xNL
+awO
 awp
-awn
-awt
-atL
+avz
+avv
 awp
-awt
-awn
-awn
+awp
+awp
 awn
 axN
 aeg
@@ -42724,14 +42764,14 @@ afz
 afd
 atk
 axo
-ayg
+awR
 njp
-alC
+xNL
 awB
-atK
+awt
 axg
 aww
-atK
+awt
 axO
 axa
 awY
@@ -43361,7 +43401,7 @@ arP
 aeF
 dYO
 aei
-aei
+awZ
 xkb
 aqg
 ojo
@@ -43523,8 +43563,8 @@ rSm
 aeF
 eIg
 aei
-aei
-aei
+axc
+awU
 aei
 arj
 agc
@@ -43685,8 +43725,8 @@ agH
 aeF
 mJZ
 aei
-aei
-aei
+axd
+awV
 aei
 sRw
 kmA
@@ -44330,7 +44370,7 @@ hTk
 iIj
 mQX
 ajQ
-agb
+axi
 gBa
 arF
 agR
@@ -44346,7 +44386,7 @@ eYU
 xts
 vMO
 aei
-avi
+axP
 tPr
 jrb
 kts

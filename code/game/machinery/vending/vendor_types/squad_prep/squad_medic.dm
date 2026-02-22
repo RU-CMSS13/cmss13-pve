@@ -323,6 +323,42 @@ GLOBAL_LIST_INIT(cm_vending_clothing_pmc_medic, list(
 /obj/structure/machinery/cm_vending/clothing/medic/pmc/get_listed_products(mob/user)
 	return GLOB.cm_vending_clothing_pmc_medic
 
+// PMC Small Squad
+
+GLOBAL_LIST_INIT(cm_vending_clothing_pmc_small_medic, list(
+		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
+		list("Medic Apparel", 0, list(/obj/item/clothing/shoes/veteran/pmc/knife, /obj/item/clothing/under/marine/veteran/pmc/guard, /obj/item/clothing/gloves/marine/veteran/pmc/black), MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("Guard Medic Armor", 0, /obj/item/clothing/suit/marine/veteran/pmc/guard/medic, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
+
+		list("BELT", 0, null, null, null),
+		list("M276 Lifesaver Bag (Full)", 0, /obj/item/storage/belt/medical/lifesaver/wy/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("L75 Pattern Medical Storage Rig (Empty)", 0, /obj/item/storage/belt/medical/rmc, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+
+		list("BACKPACK", 0, null, null, null),
+		list("Medic Expedition Backpack", 0, /obj/item/storage/backpack/pmc/backpack/commando/leader/medic, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+
+		list("POUCHES (CHOOSE 2)", 0, null, null, null),
+		list("Autoinjector Pouch (Full)", 0, /obj/item/storage/pouch/autoinjector/full/wy, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Medical Kit Pouch (Full)", 0, /obj/item/storage/pouch/medkit/wy/full_advanced, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Pressurized Reagent Canister Pouch (Bicaridine)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/bicaridine, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Pressurized Reagent Canister Pouch (Kelotane)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/kelotane, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Pressurized Reagent Canister Pouch (Tricordrazine)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/tricordrazine, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Vial Pouch (Full)", 0, /obj/item/storage/pouch/vials/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+
+		list("ACCESSORIES (CHOOSE 1)", 0, null, null, null),
+		list("Webbing Vest, Surgical", 0, /obj/item/clothing/accessory/storage/surg_vest/blue/equipped, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR, VENDOR_ITEM_REGULAR),
+		list("Drop Pouch, Surgical", 0, /obj/item/clothing/accessory/storage/surg_vest/drop_black/equipped, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("M3-R Corpsman Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/recon/medic/marsoc, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED),
+	))
+
+/obj/structure/machinery/cm_vending/clothing/medic/pmc/small
+	name = "\improper WeyTech Medical Gear Rack"
+	icon_state = "pmc_gear"
+	vendor_theme = VENDOR_THEME_COMPANY
+
+/obj/structure/machinery/cm_vending/clothing/medic/pmc/small/get_listed_products(mob/user)
+	return GLOB.cm_vending_clothing_pmc_small_medic
+
 // RMC med-vendor
 
 /obj/effect/essentials_set/rmcmedic
