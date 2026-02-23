@@ -210,6 +210,7 @@ GLOBAL_LIST_INIT(admin_verbs_server, list(
 	/client/proc/cmd_debug_del_all,
 	/datum/admins/proc/togglejoin,
 	/client/proc/toggle_cdn,
+	/client/proc/toggle_admin_only_observe,
 	/datum/admins/proc/toggle_intro,
 ))
 
@@ -683,6 +684,16 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		to_chat(usr, SPAN_BOLDNOTICE("You disabled admin stealth mode."))
 
 	prefs.save_preferences()
+
+GLOBAL_VAR_INIT(admin_only_observe, FALSE)
+
+/client/proc/toggle_admin_only_observe()
+	set name = "Toggle Admin Only Observe"
+	set category = "Server"
+	if(!check_rights(R_SERVER)) return
+	GLOB.admin_only_observe = !GLOB.admin_only_observe
+	message_admins("[key_name_admin(usr)] toggled admin-only observe [GLOB.admin_only_observe ? "ON" : "OFF"].")
+	log_admin("[key_name(usr)] toggled admin-only observe [GLOB.admin_only_observe ? "ON" : "OFF"].")
 
 #undef MAX_WARNS
 #undef AUTOBANTIME

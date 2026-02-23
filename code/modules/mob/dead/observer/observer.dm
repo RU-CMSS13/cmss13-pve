@@ -1236,9 +1236,13 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		else
 			. += "Time To Start: SOON"
 
-		. += "Players: [SSticker.totalPlayers]"
-		if(client.admin_holder)
-			. += "Players Ready: [SSticker.totalPlayersReady]"
+		. += "Number of players: [SSticker.totalPlayers]"
+		. += "Players Ready: [SSticker.totalPlayersReady]"
+		. += ""
+		if(SSticker.totalPlayers > 0)
+			. += "Players:"
+			for(var/mob/new_player/p in GLOB.new_player_list)
+				. += "[p.key] - [p.ready ? "Ready" : "Not Ready"] [(p.ready && p.get_ready_job()) ? "(as [p.job_title])" : ""]"
 
 	. += ""
 
