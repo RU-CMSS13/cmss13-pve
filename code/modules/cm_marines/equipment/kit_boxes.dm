@@ -567,12 +567,12 @@
 	new /obj/item/storage/box/packet/rmc/mini/squash(src)
 	new /obj/item/storage/box/packet/rmc/mini/gas(src)
 
-/obj/item/storage/box/kit/comissar
+/obj/item/storage/box/kit/mateba
 	name = "\improper Comissar Kit"
 	icon_state = "pro_case_large"
 	pro_case_overlay = "jtac"
 
-/obj/item/storage/box/kit/comissar/fill_preset_inventory()
+/obj/item/storage/box/kit/mateba/fill_preset_inventory()
 	new /obj/item/weapon/gun/revolver/mateba/special(src)
 	new /obj/item/storage/belt/gun/mateba(src)
 	new /obj/item/ammo_magazine/revolver/mateba(src)

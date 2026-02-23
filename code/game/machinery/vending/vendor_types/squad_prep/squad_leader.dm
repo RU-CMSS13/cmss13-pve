@@ -234,7 +234,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_leader_pmc, list(
 		list("M92 Grenadier Kit", 0, /obj/item/storage/box/kit/grenadier, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
 		list("M42C Sniper Kit", 0, /obj/item/storage/box/guncase/m42c/heap, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
 		list("Shotgunner Kit", 0, /obj/item/storage/box/kit/shotgunner, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
-		list("Comissar Kit", 0, /obj/item/storage/box/kit/comissar, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
+		list("Mateba Kit", 0, /obj/item/storage/box/kit/mateba, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
 
 		list("UTILITIES", 0, null, null, null),
 		list("Whistle", 3, /obj/item/device/whistle, null, VENDOR_ITEM_REGULAR),
@@ -243,7 +243,6 @@ GLOBAL_LIST_INIT(cm_vending_gear_leader_pmc, list(
 
 		list("HELMET OPTICS", 0, null, null, null),
 		list("Medical Helmet Optic", 10, /obj/item/device/helmet_visor/medical, null, VENDOR_ITEM_RECOMMENDED),
-		list("Night Vision Optic", 40, /obj/item/device/helmet_visor/night_vision, null, VENDOR_ITEM_REGULAR),
 
 		list("ENGINEERING SUPPLIES", 0, null, null, null),
 		list("Metal x10", 5, /obj/item/stack/sheet/metal/small_stack, null, VENDOR_ITEM_RECOMMENDED),
@@ -329,10 +328,11 @@ GLOBAL_LIST_INIT(cm_vending_clothing_leader_pmc, list(
 
 		list("POUCHES (CHOOSE 2)", 0, null, null, null),
 		list("Autoinjector Pouch (Refillable Injectors)", 0, /obj/item/storage/pouch/autoinjector/full/wy, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
-		list("Large General Pouch", 0, /obj/item/storage/pouch/general/large/wy, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
-		list("Large Magazine Pouch", 0, /obj/item/storage/pouch/magazine/large/wy, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Large General Pouch", 0, /obj/item/storage/pouch/general/large/wy, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Large Magazine Pouch", 0, /obj/item/storage/pouch/magazine/large/wy, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("Large Shotgun Shell Pouch", 0, /obj/item/storage/pouch/shotgun/large, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 		list("Large Pistol Magazine Pouch", 0, /obj/item/storage/pouch/magazine/pistol/large, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Tactical Tools Pouch (Full)", 0, /obj/item/storage/pouch/tools/tactical/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 
 		list("ACCESSORIES (CHOOSE 1)", 0, null, null, null),
 		list("Waist Holster", 0, /obj/item/clothing/accessory/storage/holster/waist, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
