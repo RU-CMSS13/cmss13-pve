@@ -2230,6 +2230,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 	character.f_style = f_style
 
 	character.origin = origin
+	character.accent_prefix = GLOB.origins[origin].tag_icon // RU PVE ADDITION
 	character.personal_faction = faction
 	character.religion = religion
 
