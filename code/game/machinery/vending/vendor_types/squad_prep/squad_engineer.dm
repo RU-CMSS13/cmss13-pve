@@ -234,6 +234,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_pmc_engi, list(
 		list("Tactical Tools Pouch (Full)", 0, /obj/item/storage/pouch/tools/tactical/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("Construction Pouch (Full)", 0, /obj/item/storage/pouch/construction/full/wy, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 		list("Explosive Pouch (Full)", 0, /obj/item/storage/pouch/explosive/C4, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Electronics Pouch (Full)", 0, /obj/item/storage/pouch/electronics/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 
 		list("ACCESSORIES (CHOOSE 1)", 0, null, null, null),
 		list("Waist Holster", 0, /obj/item/clothing/accessory/storage/holster/waist, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
@@ -263,6 +264,12 @@ GLOBAL_LIST_INIT(cm_vending_clothing_pmc_engi, list(
 GLOBAL_LIST_INIT(cm_vending_gear_engi_pmc, list(
 		list("ENGINEERING EQUIPMENT (MANDATORY)", 0, null, null, null),
 		list("Essential Engineering EQUIPMENT", 0, /obj/effect/essentials_set/pmcengi, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+
+		list("HANDHELD DEFENSE (CHOOSE 1)", 0, null, null, null),
+		list("21S Tesla Coil", 0, /obj/item/defenses/handheld/tesla_coil, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_MANDATORY),
+		list("WY Planted Flag", 0, /obj/structure/machinery/defenses/planted_flag/wy, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_MANDATORY),
+		list("WY 202-GMA1 Smart Sentry", 0, /obj/item/defenses/handheld/sentry/wy, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_MANDATORY),
+		list("WY 2-ADT-A3 Heavy Sentry", 0, /obj/item/defenses/handheld/sentry/wy/heavy, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_MANDATORY),
 
 		list("ADDITIONAL ENGINEERING SUPPLIES", 0, null, null, null),
 		list("Airlock Circuit Board", 1, /obj/item/circuitboard/airlock, null, VENDOR_ITEM_REGULAR),

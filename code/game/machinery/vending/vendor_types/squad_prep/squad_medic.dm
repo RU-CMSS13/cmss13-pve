@@ -329,6 +329,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_pmc_small_medic, list(
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("Medic Apparel", 0, list(/obj/item/clothing/shoes/veteran/pmc/knife, /obj/item/clothing/under/marine/veteran/pmc/guard, /obj/item/clothing/gloves/marine/veteran/pmc/black), MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 		list("Guard Medic Armor", 0, /obj/item/clothing/suit/marine/veteran/pmc/guard/medic, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
+		list("M3-R Corpsman Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/recon/medic/marsoc, MARINE_CAN_BUY_PAINT, VENDOR_ITEM_RECOMMENDED),
 
 		list("BELT", 0, null, null, null),
 		list("M276 Lifesaver Bag (Full)", 0, /obj/item/storage/belt/medical/lifesaver/wy/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
@@ -348,7 +349,6 @@ GLOBAL_LIST_INIT(cm_vending_clothing_pmc_small_medic, list(
 		list("ACCESSORIES (CHOOSE 1)", 0, null, null, null),
 		list("Webbing Vest, Surgical", 0, /obj/item/clothing/accessory/storage/surg_vest/blue/equipped, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR, VENDOR_ITEM_REGULAR),
 		list("Drop Pouch, Surgical", 0, /obj/item/clothing/accessory/storage/surg_vest/drop_black/equipped, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
-		list("M3-R Corpsman Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/recon/medic/marsoc, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED),
 	))
 
 /obj/structure/machinery/cm_vending/clothing/medic/pmc/small
