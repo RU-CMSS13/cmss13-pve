@@ -210,7 +210,7 @@ GLOBAL_LIST_INIT(admin_verbs_server, list(
 	/client/proc/cmd_debug_del_all,
 	/datum/admins/proc/togglejoin,
 	/client/proc/toggle_cdn,
-	/client/proc/toggle_admin_only_observe,
+	/client/proc/toggle_admin_only_observe, // RU-PVE
 	/datum/admins/proc/toggle_intro,
 ))
 
@@ -362,7 +362,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		add_verb(src, /client/proc/togglebuildmodeself)
 		add_verb(src, /client/proc/toggle_game_master)
 		add_verb(src, /client/proc/open_resin_panel)
-		add_verb(src, /client/proc/roll_dices)
+		add_verb(src, /client/proc/roll_dices) // RU-PVE
 		add_verb(src, /client/proc/open_sound_panel)
 		add_verb(src, /client/proc/toggle_join_xeno)
 		add_verb(src, /client/proc/admin_marine_announcement)
@@ -407,7 +407,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		/client/proc/togglebuildmodeself,
 		/client/proc/toggle_game_master,
 		/client/proc/open_resin_panel,
-		/client/proc/roll_dices,
+		/client/proc/roll_dices, // RU-PVE
 		/client/proc/open_sound_panel,
 		/client/proc/toggle_join_xeno,
 		/client/proc/game_master_rename_platoon,
@@ -687,6 +687,8 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 
 	prefs.save_preferences()
 
+// RU-PVE START
+
 GLOBAL_VAR_INIT(admin_only_observe, FALSE)
 
 /client/proc/toggle_admin_only_observe()
@@ -696,6 +698,8 @@ GLOBAL_VAR_INIT(admin_only_observe, FALSE)
 	GLOB.admin_only_observe = !GLOB.admin_only_observe
 	message_admins("[key_name_admin(usr)] toggled admin-only observe [GLOB.admin_only_observe ? "ON" : "OFF"].")
 	log_admin("[key_name(usr)] toggled admin-only observe [GLOB.admin_only_observe ? "ON" : "OFF"].")
+
+// RU-PVE END
 
 #undef MAX_WARNS
 #undef AUTOBANTIME

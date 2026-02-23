@@ -2,7 +2,7 @@
 /mob/new_player
 	var/ready = FALSE
 	var/spawning = FALSE//Referenced when you want to delete the new_player later on in the code.
-	var/job_title = ""
+	var/job_title = "" // RU-PVE
 
 	invisibility = 101
 
@@ -29,6 +29,8 @@
 		client.player_entity.update_panel_data(null)
 		new_player_panel_proc()
 
+// RU-PVE START
+
 /mob/new_player/proc/get_ready_job()
 	var/prime_job = src.client.prefs.get_job_by_priority(PRIME_PRIORITY)
 	var/high_job = src.client.prefs.get_job_by_priority(HIGH_PRIORITY)
@@ -41,6 +43,8 @@
 		return FALSE
 
 	return TRUE
+
+// RU-PVE END
 
 /mob/new_player/proc/new_player_panel_proc(refresh = FALSE)
 	if(!client)
@@ -136,9 +140,11 @@
 			if(alert(src,"Are you sure you wish to observe? When you observe, you will not be able to join as marine. It might also take some time to become a xeno or responder!","Player Setup","Yes","No") == "Yes")
 				if(!client)
 					return TRUE
+				// RU-PVE START
 				if(GLOB.admin_only_observe && !check_rights(R_ADMIN, 0))
 					to_chat(src, FONT_SIZE_LARGE(SPAN_DEADSAY("<b>Observation has been disabled by the Game Master.</b>")))
 					return FALSE
+				// RU-PVE END
 				if(!client.prefs?.preview_dummy)
 					client.prefs.update_preview_icon()
 				var/mob/dead/observer/observer = new /mob/dead/observer(get_turf(pick(GLOB.latejoin)), client.prefs.preview_dummy)
@@ -488,7 +494,7 @@
 		. += "Time To Start: DELAYED"
 	else
 		. += "Time To Start: SOON"
-
+// RU-PVE EDIT START
 	. += "Number of players: [SSticker.totalPlayers]"
 	. += "Players Ready: [SSticker.totalPlayersReady]"
 	. += ""
@@ -496,3 +502,4 @@
 		. += "Players:"
 		for(var/mob/new_player/p in GLOB.new_player_list)
 			. += "[p.key] - [p.ready ? "Ready" : "Not Ready"] [(p.ready && p.get_ready_job()) ? "(as [p.job_title])" : ""]"
+// RU-PVE EDIT END
