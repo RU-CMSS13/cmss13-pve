@@ -71,23 +71,19 @@
 
 /datum/action/xeno_action/activable/xeno_spit/ai
 	default_ai_action = TRUE
-	ai_prob_chance = 70
+	ai_prob_chance = 80
 	xeno_cooldown = 8 SECONDS
 
 /datum/action/xeno_action/activable/xeno_spit/ai/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
-	/// Short-circuit. Will return the last thing checked or FALSE if it fails at any step.
-	/// We do not need to check for distance here as the tailstab itself will do that; that distance being 2.
-	return DT_PROB(ai_prob_chance, delta_time) && (get_dist(parent, parent.current_target) <= 7) && !check_for_obstacles_projectile(parent, parent.current_target, GLOB.ammo_list[/datum/ammo/xeno/acid]) && use_ability_async(parent.current_target)
+	return DT_PROB(ai_prob_chance, delta_time) && (get_dist(parent, parent.current_target) <= 7) && !check_for_obstacles_projectile(parent, parent.current_target, GLOB.ammo_list[/datum/ammo/xeno/acid/spatter]) && use_ability_async(parent.current_target)
 
 /datum/action/xeno_action/activable/spray_acid/spitter/ai
 	default_ai_action = TRUE
-	ai_prob_chance = 50
+	ai_prob_chance = 40
 	xeno_cooldown = 16 SECONDS
 
 /datum/action/xeno_action/activable/spray_acid/spitter/ai/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
-	/// Short-circuit. Will return the last thing checked or FALSE if it fails at any step.
-	/// We do not need to check for distance here as the tailstab itself will do that; that distance being 2.
-	return DT_PROB(ai_prob_chance, delta_time) && (get_dist(parent, parent.current_target) <= 7) && !check_for_obstacles_projectile(parent, parent.current_target) && use_ability_async(parent.current_target)
+	return DT_PROB(ai_prob_chance, delta_time) && (get_dist(parent, parent.current_target) <= 4) && !check_for_obstacles_projectile(parent, parent.current_target) && use_ability_async(parent.current_target)
 
 /proc/check_for_obstacles_projectile(mob/firer, mob/target, datum/ammo/ammo_datum)
 	var/list/turf/path = get_line(firer, target, include_start_atom = FALSE)

@@ -45,9 +45,9 @@
 		/datum/action/xeno_action/onclick/xeno_resting,
 		/datum/action/xeno_action/onclick/regurgitate,
 		/datum/action/xeno_action/watch_xeno,
-		/datum/action/xeno_action/activable/tail_stab/slam,
+		/datum/action/xeno_action/activable/tail_stab/slam/ai,
 		/datum/action/xeno_action/onclick/toggle_crest,
-		/datum/action/xeno_action/activable/headbutt,
+		/datum/action/xeno_action/activable/headbutt/ai,
 		/datum/action/xeno_action/onclick/tail_sweep,
 		/datum/action/xeno_action/activable/fortify,
 		/datum/action/xeno_action/onclick/tacmap,
@@ -95,3 +95,22 @@
 	if(bound_xeno.crest_defense && bound_xeno.health > 0)
 		bound_xeno.icon_state = "[bound_xeno.get_strain_icon()] Defender Crest"
 		return TRUE
+
+/datum/action/xeno_action/activable/tail_stab/slam/ai
+	default_ai_action = TRUE
+	ai_prob_chance = 50 //So they are not spamming it quite as often.
+	charge_time = null /// nahh
+	xeno_cooldown = 15 SECONDS
+
+/datum/action/xeno_action/activable/tail_stab/slam/ai/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
+	return DT_PROB(ai_prob_chance, delta_time) && use_ability_async(parent.current_target)
+
+/datum/action/xeno_action/activable/headbutt/ai
+	default_ai_action = TRUE
+	ai_prob_chance = 35
+	xeno_cooldown = 10 SECONDS
+
+/datum/action/xeno_action/activable/headbutt/ai/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
+	if(DT_PROB(ai_prob_chance, delta_time))
+		parent.dir = parent.ai_movement_handler.home_turf ? get_dir(parent, parent.ai_movement_handler.home_turf) : pick(NORTH, SOUTH, EAST, WEST) /// Pick at random if there is no valid direction.
+		use_ability_async(parent.current_target)
