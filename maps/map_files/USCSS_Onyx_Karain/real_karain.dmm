@@ -943,6 +943,9 @@
 	},
 /turf/open/floor/corsat/spiralplate,
 /area/space)
+"cm" = (
+/turf/open/floor/plating/plating_catwalk/corsat,
+/area/space)
 "cn" = (
 /obj/structure/machinery/cryopod/big/flipped{
 	pixel_y = 16;
@@ -955,9 +958,279 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/aicore/glowing/white/alt,
 /area/space)
+"co" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 2;
+	light_power = 0.7
+	},
+/turf/open/floor/hybrisa/carpet/rug_colorable/black/east,
+/area/space)
+"cp" = (
+/obj/structure/bed/chair/comfy/hybrisa/black{
+	dir = 1;
+	layer = 3.1;
+	pixel_y = 12;
+	buckling_y = 12
+	},
+/turf/open/floor/hybrisa/carpet/rug_colorable/black/northwest,
+/area/space)
+"cq" = (
+/obj/structure/bed/chair/comfy/hybrisa/black{
+	dir = 1;
+	layer = 3.1;
+	pixel_y = 12;
+	buckling_y = 12
+	},
+/obj/item/storage/briefcase{
+	layer = 3;
+	pixel_x = 8;
+	pixel_y = 16
+	},
+/turf/open/floor/hybrisa/carpet/rug_colorable/black/northwest,
+/area/space)
+"cr" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 2;
+	light_power = 0.7
+	},
+/turf/open/floor/hybrisa/carpet/rug_colorable/black/west,
+/area/space)
+"cs" = (
+/obj/structure/machinery/door/airlock/multi_tile/hybrisa/black_double/solid{
+	dir = 2
+	},
+/turf/open/floor/corsat/officetiles,
+/area/space)
+"ct" = (
+/obj/structure/bed/chair/comfy/hybrisa/black{
+	dir = 4
+	},
+/turf/open/floor/hybrisa/carpet/rug_colorable/black/southeast,
+/area/space)
+"cu" = (
+/obj/structure/prop/hybrisa/furniture/tables/tableblack{
+	dir = 1
+	},
+/obj/item/paper{
+	pixel_x = 10;
+	pixel_y = 8
+	},
+/obj/item/tool/pen/fountain{
+	pixel_y = 7;
+	pixel_x = 10
+	},
+/obj/item/storage/fancy/cigar/matchbook/exec_select{
+	pixel_x = -6;
+	pixel_y = 10
+	},
+/turf/open/floor/hybrisa/carpet/carpetblack,
+/area/space)
+"cv" = (
+/obj/item/reagent_container/food/drinks/coffeecup/wy{
+	pixel_x = 5;
+	pixel_y = 13
+	},
+/turf/open/floor/hybrisa/carpet/carpetblack,
+/area/space)
+"cw" = (
+/obj/structure/bed/chair/comfy/hybrisa/black{
+	dir = 8
+	},
+/turf/open/floor/hybrisa/carpet/rug_colorable/black/southwest,
+/area/space)
+"cx" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/structure/machinery/faxmachine/corporate{
+	pixel_x = -1;
+	pixel_y = 3
+	},
+/turf/open/floor/hybrisa/wood/blackwood,
+/area/space)
+"cy" = (
+/turf/open/floor/hybrisa/carpet/rug_colorable/black/south,
+/area/space)
+"cz" = (
+/obj/structure/bed/chair/comfy/hybrisa/black,
+/turf/open/floor/hybrisa/carpet/rug_colorable/black/northeast,
+/area/space)
+"cA" = (
+/turf/open/floor/hybrisa/carpet/rug_colorable/black/north,
+/area/space)
+"cB" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/folder/black{
+	pixel_x = -5;
+	pixel_y = -11
+	},
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	dir = 4
+	},
+/turf/open/floor/hybrisa/wood/blackwood,
+/area/space)
+"cC" = (
+/obj/structure/platform_decoration/metal/almayer/west,
+/turf/open/floor/corsat/greencorner/east,
+/area/space)
+"cD" = (
+/obj/structure/platform/metal/almayer/north,
+/turf/open/floor/corsat/green/north,
+/area/space)
+"cE" = (
+/obj/structure/platform_decoration/metal/almayer/east,
+/turf/open/floor/corsat/greencorner/north,
+/area/space)
+"cF" = (
+/obj/structure/filingcabinet{
+	density = 0;
+	pixel_x = -8;
+	pixel_y = 20
+	},
+/obj/structure/filingcabinet{
+	density = 0;
+	pixel_x = 8;
+	pixel_y = 20
+	},
+/turf/open/floor/hybrisa/wood/blackwood,
+/area/space)
+"cG" = (
+/obj/structure/filingcabinet/chestdrawer{
+	density = 0;
+	pixel_y = 18;
+	layer = 3.21
+	},
+/turf/open/floor/hybrisa/wood/blackwood,
+/area/space)
+"cH" = (
+/obj/structure/machinery/photocopier/wyphotocopier,
+/turf/open/floor/hybrisa/wood/blackwood,
+/area/space)
+"cI" = (
+/turf/open/floor/corsat/retrosquares,
+/area/space)
+"cJ" = (
+/obj/structure/platform/metal/almayer/east,
+/turf/open/floor/corsat/green/east,
+/area/space)
+"cK" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	layer = 3.8
+	},
+/turf/open/gm/grass/grass1/weedable,
+/area/space)
+"cL" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	layer = 3.8
+	},
+/turf/open/gm/grass/grass1/weedable,
+/area/space)
+"cM" = (
+/obj/structure/platform/metal/almayer/west,
+/turf/open/floor/corsat/green/west,
+/area/space)
+"cN" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/reagent_container/food/drinks/flask/vacuumflask{
+	pixel_y = 20;
+	pixel_x = -7
+	},
+/obj/item/reagent_container/food/drinks/coffeecup/wy{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/ashtray/bronze{
+	icon_state = "ashtray_full_bl";
+	pixel_x = 13;
+	pixel_y = 8
+	},
+/obj/item/trash/cigbutt{
+	pixel_x = 15;
+	pixel_y = 7
+	},
+/turf/open/floor/hybrisa/wood/blackwood,
+/area/space)
+"cO" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/paper_bin{
+	pixel_x = 8;
+	pixel_y = 9
+	},
+/obj/item/tool/pen,
+/obj/item/reagent_container/food/drinks/coffeecup/wy{
+	pixel_x = -5;
+	pixel_y = 11
+	},
+/turf/open/floor/hybrisa/wood/blackwood,
+/area/space)
+"cP" = (
+/obj/structure/window/framed/corsat/hull,
+/turf/open/floor/corsat,
+/area/space)
+"cQ" = (
+/obj/structure/bed/sofa/vert/grey/bot,
+/turf/open/floor/corsat/retrosquares,
+/area/space)
+"cR" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/open/gm/grass/grass1/weedable,
+/area/space)
+"cS" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/open/gm/grass/grass1/weedable,
+/area/space)
+"cT" = (
+/obj/structure/bed/sofa/vert/grey,
+/turf/open/floor/corsat/retrosquares,
+/area/space)
+"cU" = (
+/obj/structure/bed/sofa/vert/grey/top,
+/turf/open/floor/corsat/retrosquares,
+/area/space)
+"cV" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/open/gm/grass/grass1/weedable,
+/area/space)
 "cW" = (
 /obj/structure/closet/secure_closet/marine_personal/pmc,
 /turf/open/space/basic,
+/area/space)
+"cX" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/open/gm/grass/grass1/weedable,
+/area/space)
+"cY" = (
+/obj/structure/platform_decoration/metal/almayer,
+/turf/open/floor/corsat/greencorner,
+/area/space)
+"cZ" = (
+/obj/structure/platform/metal/almayer,
+/turf/open/floor/corsat/green,
+/area/space)
+"da" = (
+/obj/structure/platform_decoration/metal/almayer/north,
+/turf/open/floor/corsat/greencorner/west,
+/area/space)
+"db" = (
+/turf/open/floor/corsat,
 /area/space)
 "df" = (
 /obj/structure/machinery/shower{
@@ -11063,14 +11336,14 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+uP
+cP
+cP
+cP
+cP
+uP
+uP
 En
 En
 En
@@ -11215,14 +11488,14 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+cI
+cI
+cI
+cI
+cI
+cI
+uP
 En
 En
 En
@@ -11367,14 +11640,14 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+cI
+cU
+cT
+cT
+cQ
+cI
+uP
 En
 En
 En
@@ -11517,18 +11790,18 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+uP
+uP
+cI
+cI
+cI
+cI
+cI
+cI
+uP
+uP
+uP
 En
 En
 En
@@ -11668,20 +11941,20 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+uP
+bu
+aU
+aU
+aU
+aU
+aU
+aU
+aU
+aU
+bs
+uP
+uP
 En
 En
 En
@@ -11820,20 +12093,20 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+bu
+bp
+zv
+cm
+zv
+zv
+zv
+zv
+cm
+zv
+bf
+bs
+uP
 En
 En
 En
@@ -11972,20 +12245,20 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+bx
+zv
+cY
+cJ
+cJ
+cJ
+cJ
+cJ
+cJ
+cC
+zv
+bt
+uP
 En
 En
 En
@@ -12124,20 +12397,20 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+bx
+zv
+cZ
+cV
+cR
+cR
+cR
+cR
+cK
+cD
+zv
+bt
+uP
 En
 En
 En
@@ -12274,27 +12547,27 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
 uP
 uP
 uP
+bx
+zv
+cZ
+cX
+cS
+cS
+cS
+cS
+cL
+cD
+zv
+bt
 uP
 uP
-uP
-uP
-uP
-uP
+En
+En
+En
+En
 En
 En
 En
@@ -12421,32 +12694,32 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+uP
+uP
+uP
 uP
 uP
 bu
 aU
+bp
+zv
+da
+cM
+cM
+cM
+cM
+cM
+cM
+cE
+zv
+bf
 aU
 aU
-aU
-aU
-aU
-aU
+En
+En
+En
+En
 En
 En
 En
@@ -12572,33 +12845,33 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+uP
+db
+db
+db
 uP
 bu
 bp
 zv
 zv
+cm
 zv
 zv
+cm
 zv
 zv
+cm
 zv
+zv
+cm
+zv
+zv
+cm
+En
+En
+En
+En
 En
 En
 En
@@ -12724,24 +12997,12 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
 uP
+db
+db
+db
+db
+SI
 bx
 zv
 zv
@@ -12751,6 +13012,18 @@ bn
 zv
 aZ
 aV
+aV
+aV
+aV
+bn
+zv
+zv
+aZ
+aV
+En
+En
+En
+En
 En
 En
 En
@@ -12876,23 +13149,11 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
+uP
+db
+db
+db
+db
 uP
 bx
 zv
@@ -12903,6 +13164,18 @@ uP
 bi
 uP
 uP
+aH
+aH
+uP
+uP
+bG
+cs
+uP
+uP
+En
+En
+En
+En
 En
 En
 En
@@ -13027,18 +13300,6 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
 uP
 uP
 uP
@@ -13057,6 +13318,18 @@ aH
 uP
 uP
 uP
+uP
+cF
+bj
+bj
+bj
+uP
+En
+En
+En
+En
+En
+En
 En
 En
 En
@@ -13179,18 +13452,6 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
 uP
 bU
 by
@@ -13209,6 +13470,18 @@ zv
 zv
 aS
 uP
+cN
+bj
+cy
+ct
+co
+uP
+En
+En
+En
+En
+En
+En
 En
 En
 En
@@ -13330,18 +13603,6 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
 uP
 uP
 uP
@@ -13361,6 +13622,18 @@ ba
 zv
 aT
 uP
+cO
+bj
+cz
+cu
+cp
+uP
+En
+En
+En
+En
+En
+En
 En
 En
 En
@@ -13481,18 +13754,6 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
 uP
 uP
 ca
@@ -13514,6 +13775,18 @@ zv
 uP
 uP
 uP
+bj
+cz
+cv
+cq
+uP
+En
+En
+En
+En
+En
+En
+En
 En
 En
 LA
@@ -13633,18 +13906,6 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
 uP
 cg
 bI
@@ -13666,6 +13927,18 @@ zv
 uP
 aC
 uP
+bj
+cA
+cw
+cr
+uP
+En
+En
+En
+En
+En
+En
+En
 En
 En
 En
@@ -13785,18 +14058,6 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
 uP
 ch
 cb
@@ -13818,6 +14079,18 @@ zv
 aF
 aD
 uP
+cG
+bj
+bj
+bj
+uP
+En
+En
+En
+En
+En
+En
+En
 En
 En
 En
@@ -13937,18 +14210,6 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
 uP
 ci
 bI
@@ -13970,6 +14231,18 @@ aH
 uP
 aE
 uP
+cH
+cB
+cx
+uP
+uP
+En
+En
+En
+En
+En
+En
+En
 En
 En
 En
@@ -14089,18 +14362,6 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
 uP
 uP
 uP
@@ -14122,6 +14383,18 @@ uP
 uP
 uP
 uP
+uP
+uP
+uP
+uP
+En
+En
+En
+En
+En
+En
+En
+En
 En
 En
 En
@@ -14242,18 +14515,6 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
 uP
 cc
 bC
@@ -14271,6 +14532,18 @@ SE
 SE
 SE
 ml
+En
+En
+En
+uP
+En
+En
+En
+En
+En
+En
+En
+En
 En
 En
 En
@@ -14394,18 +14667,6 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
 uP
 cd
 bW
@@ -14422,6 +14683,18 @@ SI
 Xe
 Xe
 SE
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
 En
 En
 En
@@ -14546,18 +14819,6 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
 uP
 ce
 bX
@@ -14574,6 +14835,18 @@ SI
 Xe
 Xe
 SE
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
 En
 En
 En
@@ -14698,18 +14971,6 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
 uP
 cf
 bC
@@ -14727,6 +14988,18 @@ SE
 SE
 SE
 ml
+En
+En
+En
+uP
+En
+En
+En
+En
+En
+En
+En
+En
 En
 En
 En
@@ -14849,18 +15122,6 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
 uP
 uP
 uP
@@ -14882,6 +15143,18 @@ uP
 uP
 uP
 uP
+uP
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
 En
 En
 En
@@ -15001,18 +15274,6 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
 uP
 cj
 bI
@@ -15034,6 +15295,18 @@ aH
 uP
 aM
 uP
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
 En
 En
 En
@@ -15153,18 +15426,6 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
 uP
 ck
 cb
@@ -15186,6 +15447,18 @@ zv
 aF
 aD
 uP
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
 En
 En
 SE
@@ -15305,18 +15578,6 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
 uP
 cl
 bI
@@ -15338,6 +15599,18 @@ zv
 uP
 aN
 uP
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
 En
 SE
 SE
@@ -15457,18 +15730,6 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
 uP
 uP
 bI
@@ -15490,6 +15751,18 @@ zv
 uP
 uP
 uP
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
 En
 SE
 ml
@@ -15610,18 +15883,6 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
 uP
 uP
 uP
@@ -15641,6 +15902,18 @@ bc
 zv
 aS
 uP
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
 En
 En
 SE
@@ -15763,18 +16036,6 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
 uP
 bU
 by
@@ -15793,6 +16054,18 @@ zv
 zv
 aT
 uP
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
 En
 En
 SE
@@ -15915,18 +16188,6 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
 uP
 uP
 uP
@@ -15945,6 +16206,18 @@ zv
 uP
 uP
 uP
+uP
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
 En
 En
 SE
@@ -16069,18 +16342,6 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
 uP
 bT
 uP
@@ -16095,6 +16356,18 @@ uP
 bi
 uP
 uP
+aH
+aH
+uP
+En
+En
+En
+En
+En
+En
+En
+En
+En
 En
 En
 En
@@ -16221,18 +16494,6 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
 uP
 uP
 uP
@@ -16247,6 +16508,18 @@ bp
 zv
 bf
 aU
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
 En
 En
 En
@@ -16377,18 +16650,6 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
 uP
 bw
 bn
@@ -16399,6 +16660,18 @@ zv
 zv
 zv
 zv
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
 En
 En
 En
@@ -16529,18 +16802,6 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
 uP
 uP
 bw
@@ -16551,6 +16812,18 @@ aV
 aV
 aV
 aV
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
 En
 En
 En
@@ -16682,18 +16955,6 @@ En
 En
 En
 En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
-En
 uP
 uP
 uP
@@ -16703,6 +16964,18 @@ uP
 uP
 uP
 uP
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
+En
 En
 En
 En

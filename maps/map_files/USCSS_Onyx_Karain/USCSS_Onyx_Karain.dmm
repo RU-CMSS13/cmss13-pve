@@ -1560,10 +1560,6 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
-"aeu" = (
-/obj/item/storage/backpack/clown,
-/turf/open/floor/corsat/squares,
-/area/firefly/squad_omega)
 "aev" = (
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/firefly/briefing)
@@ -1613,10 +1609,6 @@
 "aeB" = (
 /turf/open/floor/corsat/arrow_south,
 /area/firefly/cafeteria)
-"aeC" = (
-/obj/item/tool/stamp/clown,
-/turf/open/floor/corsat/squares,
-/area/firefly/squad_omega)
 "aeD" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -1795,6 +1787,17 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/corsat/sterileplate,
 /area/firefly/medical)
+"afh" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/turf/open/floor/corsat/plate,
+/area/firefly/squad_omega)
+"afi" = (
+/obj/structure/surface/rack{
+	color = "#6b675e";
+	layer = 2.79
+	},
+/turf/open/floor/corsat/cargo,
+/area/firefly/squad_omega)
 "afj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/double/blue/golden_arrow{
@@ -3397,10 +3400,6 @@
 /obj/structure/largecrate/random/barrel/true_random,
 /turf/open/floor/corsat/yellow,
 /area/firefly/supply)
-"ajy" = (
-/obj/item/coin/clown,
-/turf/open/floor/corsat/squares,
-/area/firefly/squad_omega)
 "ajz" = (
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_full"
@@ -4122,7 +4121,7 @@
 	pixel_y = 1;
 	pixel_x = 1
 	},
-/turf/open/floor/corsat/squares,
+/turf/open/floor/corsat/plate,
 /area/firefly/squad_omega)
 "alu" = (
 /obj/structure/bed/chair/office/dark,
@@ -5266,7 +5265,7 @@
 	dir = 4;
 	light_power = 0.7
 	},
-/turf/open/floor/corsat/arrow_north,
+/turf/open/floor/corsat/red/northeast,
 /area/firefly/cafeteria)
 "aoA" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5461,27 +5460,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/white/east,
 /area/firefly/cafeteria)
-"aoY" = (
-/obj/item/clothing/under/marine/ucf_clown,
-/turf/open/floor/corsat/squares,
-/area/firefly/squad_omega)
 "aoZ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/dark_sterile,
 /area/firefly/cafeteria)
-"apa" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1;
-	pixel_y = 0
-	},
-/obj/item/clothing/shoes/clown_shoes,
-/turf/open/floor/corsat/squares,
-/area/firefly/squad_omega)
-"apb" = (
-/obj/item/clothing/mask/gas/clown_hat,
-/turf/open/floor/corsat/squares,
-/area/firefly/squad_omega)
 "apc" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
 	dir = 1;
@@ -6607,8 +6589,12 @@
 /turf/closed/wall/r_wall/biodome,
 /area/firefly/cafeteria)
 "arN" = (
-/obj/item/reagent_container/food/snacks/clownburger,
-/turf/open/floor/corsat/squares,
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8;
+	light_power = 0.7
+	},
+/turf/open/floor/corsat/plate,
 /area/firefly/squad_omega)
 "arO" = (
 /obj/structure/machinery/light/double/blue/golden_arrow,
@@ -7144,10 +7130,6 @@
 /obj/item/attachable/scope/pve,
 /turf/open/floor/carpet,
 /area/firefly/ptsgt)
-"atg" = (
-/obj/item/card/data/clown,
-/turf/open/floor/corsat/squares,
-/area/firefly/squad_omega)
 "ath" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
@@ -7328,12 +7310,6 @@
 	},
 /turf/open/floor/corsat/purple/east,
 /area/firefly/ares)
-"atG" = (
-/mob/living/simple_animal/hostile/retaliate/clown{
-	name = "The Man Who Lives Behind Walls"
-	},
-/turf/open/floor/corsat/squares,
-/area/firefly/squad_omega)
 "atH" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out"
@@ -8066,7 +8042,7 @@
 	pixel_x = 1;
 	pixel_y = 0
 	},
-/turf/open/floor/corsat/squares,
+/turf/open/floor/corsat/plate,
 /area/firefly/squad_omega)
 "avu" = (
 /obj/effect/decal/warning_stripes{
@@ -10493,10 +10469,12 @@
 /turf/open/floor/corsat/plate,
 /area/firefly/supply)
 "caD" = (
-/obj/structure/pipes/vents/pump,
 /obj/structure/disposalpipe/segment{
 	dir = 4;
 	icon_state = "pipe-c"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 6
 	},
 /turf/open/floor/corsat/arrow_west,
 /area/firefly/cafeteria)
@@ -41313,10 +41291,10 @@ hrd
 vbd
 gBh
 aeg
-awp
-atG
+afh
 arN
-awp
+arN
+afh
 aeg
 kZG
 qti
@@ -41475,10 +41453,10 @@ adm
 qaQ
 aoU
 aeg
-atg
-apb
-aeu
+afi
 awp
+awp
+afi
 aeg
 aoA
 apX
@@ -41637,10 +41615,10 @@ afd
 vwG
 aoU
 aeg
+afi
 awp
-aoY
-aeC
-ajy
+awp
+afi
 aeg
 kgp
 apX
@@ -41800,7 +41778,7 @@ vvF
 aps
 aeg
 avt
-apa
+aeD
 aeD
 alt
 aeg
