@@ -350,7 +350,7 @@
 		list("Lightweight Expedition Pack", round(scale * 15), /obj/item/storage/backpack/pmc/backpack, VENDOR_ITEM_REGULAR),
 
 		list("RESTRICTED BACKPACKS", -1, null, null),
-		list("Radio Telephone Backpack", round(max(1,(scale * 0.5))), /obj/item/storage/backpack/marine/satchel/rto, VENDOR_ITEM_REGULAR),
+		list("Radio Telephone Backpack", round(max(1,(scale * 0.5))), /obj/item/storage/backpack/marine/satchel/rto/pmc_net, VENDOR_ITEM_REGULAR),
 
 		list("BELTS", -1, null, null),
 		list("WY-TM402 Pattern Ammo Load Rig", round(scale * 15), /obj/item/storage/belt/marine/wy, VENDOR_ITEM_REGULAR),
