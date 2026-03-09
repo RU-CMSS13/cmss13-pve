@@ -1746,6 +1746,17 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/royal_marines, WEAR_ACCESSORY)
 
+/datum/equipment_preset/proc/add_iasf_uniform(mob/living/carbon/human/new_human)
+	var/obj/item/clothing/under/marine/veteran/iasf/uniform = new()
+	var/random_uniform = rand(1,10)
+	switch(random_uniform)
+		if(1)
+			uniform.roll_suit_jacket(new_human)
+		if(2)
+			uniform.roll_suit_sleeves(new_human)
+	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/twe, WEAR_ACCESSORY)
+
 /datum/equipment_preset/proc/add_canc_uniform(mob/living/carbon/human/new_human)
 	if(!istype(new_human))
 		return

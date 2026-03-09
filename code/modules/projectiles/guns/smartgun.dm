@@ -686,6 +686,9 @@
 /obj/item/weapon/gun/smartgun/rmc/unloaded
 	current_mag = null
 
+/obj/item/weapon/gun/smartgun/rmc/iasf
+	current_mag = /obj/item/ammo_magazine/smartgun
+
 /obj/item/weapon/gun/smartgun/silenced
 	name = "XM56A4 smartgun"
 	desc = "An experimental smartgun variant currently undergoing field testing. This model is outfitted with integrated suppressor and modified internal mechanism."

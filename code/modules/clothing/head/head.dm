@@ -1022,3 +1022,25 @@
 /obj/item/clothing/head/beret/royal_marine_pvp/team_leader
 	icon_state = "rmc_beret_tl"
 	item_state = "rmc_beret_tl"
+
+//=IASF=\\
+
+/obj/item/clothing/head/cmcap/royal_marine/iasf
+	name = "\improper IASF beret"
+	desc = "A distinctive crimson beret worn by the Imperial Armed Space Force."
+	icon_state = "beret_iasf"
+	item_state = "beret_iasf"
+	icon = 'icons/obj/items/clothing/hats/hats_by_faction/TWE.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/TWE.dmi',
+	)
+
+/obj/item/clothing/head/cmcap/royal_marine/iasf/tl
+	icon_state = "beret_iasf_tl"
+	item_state = "beret_iasf_tl"
+
+/obj/item/clothing/head/cmcap/royal_marine/iasf/commander_cap
+	name = "IASF officer's service cap"
+	desc = "A distinguished service cap worn by officers of the Imperial Armed Space Force. Featuring a crimson band, gold IASF emblem, and a black patent peak, it reflects the discipline and authority of the Empire’s airborne command."
+	icon_state = "iasf_co_cap"
+	item_state = "iasf_co_cap"

@@ -2070,6 +2070,7 @@
 	storage_slots = 5
 	can_hold = list(
 		/obj/item/ammo_magazine/rifle/nsg23,
+		/obj/item/ammo_magazine/rifle/rmc_f90,
 		/obj/item/ammo_magazine/sniper,
 		/obj/item/ammo_magazine/pistol/vp78,
 		/obj/item/ammo_magazine/pistol/vp70,
