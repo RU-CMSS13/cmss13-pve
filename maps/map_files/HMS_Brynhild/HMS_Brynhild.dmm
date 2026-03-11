@@ -3122,7 +3122,6 @@
 	},
 /obj/structure/closet/secure_closet/rmc_troop_sergeant{
 	pixel_y = 15;
-	pixel_x = -5
 	pixel_x = -8
 	},
 /obj/item/clothing/glasses/hud/health{
@@ -17988,7 +17987,7 @@
 /obj/item/ammo_box/magazine/shotgun/buckshot{
 	pixel_x = -2;
 	pixel_y = 8
-},
+	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury_station)
 "RA" = (
