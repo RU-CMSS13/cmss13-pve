@@ -23,33 +23,56 @@
 	var/smallest_distance = INFINITY
 
 	/// FOV dirs for if our target is out of base world.view range
-	var/list/dir_cone = reverse_nearby_direction(reverse_direction(tied_human.dir))
-	var/rear_view_penalty = scope_vision ? view_distance / 7 - 1 : 0
+	var/list/dir_cone
+	var/rear_view_penalty = 0
+	if(scope_vision)
+		dir_cone = reverse_nearby_direction(reverse_direction(tied_human.dir))
+		rear_view_penalty = view_distance / 7 - 1
 
-	var/list/view_list = list()
-	for(var/mob/living/viewing_mob in view(view_distance, tied_human))
-		if(viewing_mob == tied_human)
+	for(var/atom/movable/potential_target in view(view_distance, tied_human))
+		if(potential_target == tied_human)
 			continue
 
-		if(!has_nightvision && (get_dist(viewing_mob, tied_human) > 1))
-			for(var/turf/open/nearby_turf in range(1, viewing_mob))
-				if(nearby_turf.luminosity || (nearby_turf.dynamic_lumcount >= 1))
-					view_list += viewing_mob
-					break
-		else
-			view_list += viewing_mob
+		var/is_mob = istype(potential_target, /mob/living)
+		var/is_vehicle = !is_mob && istype(potential_target, /obj/vehicle/multitile)
+		var/is_defense = !is_mob && !is_vehicle && istype(potential_target, /obj/structure/machinery/defenses)
 
-	for(var/mob/living/carbon/potential_target as anything in view_list)
-		if(!can_target(potential_target))
+		if(!is_mob && !is_vehicle && !is_defense)
 			continue
 
 		var/distance = get_dist(tied_human, potential_target)
+
 		if(scope_vision && (distance > 7) && !(get_dir(tied_human, potential_target) in dir_cone))
 			continue
 
-		var/rear_view_check = scope_vision && (get_dir(tied_human, potential_target) in reverse_nearby_direction(tied_human.dir))
-		if(rear_view_check && (distance > view_distance - rear_view_penalty))
-			continue
+		if(is_mob)
+			if(!has_nightvision && (distance > 1))
+				var/seen = FALSE
+				for(var/turf/T in range(1, potential_target))
+					if(T.luminosity || (T.dynamic_lumcount >= 1))
+						seen = TRUE
+						break
+				if(!seen)
+					continue
+
+			var/rear_view_check = scope_vision && (get_dir(tied_human, potential_target) in reverse_nearby_direction(tied_human.dir))
+			if(rear_view_check && (distance > view_distance - rear_view_penalty))
+				continue
+
+			if(!can_target(potential_target))
+				continue
+
+		else if(is_vehicle)
+			var/obj/vehicle/multitile/vehicle = potential_target
+			if(vehicle.health <= 0)
+				continue
+			if(faction_check(vehicle))
+				continue
+
+		else if(is_defense)
+			var/obj/structure/machinery/defenses/defense = potential_target
+			if(tied_human.faction in defense.faction_group)
+				continue
 
 		viable_targets += potential_target
 
@@ -59,88 +82,21 @@
 		closest_target = potential_target
 		smallest_distance = distance
 
-	for(var/obj/vehicle/multitile/potential_vehicle_target as anything in GLOB.all_multi_vehicles)
-		if(tied_human.z != potential_vehicle_target.z) //todo: make this work
-			continue
-
-		if(!(tied_human in viewers(view_distance, potential_vehicle_target)))
-			continue
-
-		var/distance = get_dist(tied_human, potential_vehicle_target)
-
-		// Vehicles are big and lousy, no need to consider our rear view penalty
-		if(distance > view_distance)
-			continue
-
-		if(scope_vision && (distance > 7) && !(get_dir(tied_human, potential_vehicle_target) in dir_cone))
-			continue
-
-		if(faction_check(potential_vehicle_target))
-			continue
-
-		if(iszombie(tied_human))
-			var/list/valid_targets = list()
-			for(var/mob/living/carbon/potential_target in potential_vehicle_target.interior.get_passengers())
-				if(!can_target(potential_target))
-					continue
-
-				valid_targets += potential_target
-
-			if(!length(valid_targets))
-				continue
-
-		else
-			if(potential_vehicle_target.health <= 0)
-				continue
-
-		viable_targets += potential_vehicle_target
-
-		if(smallest_distance <= distance)
-			continue
-
-		closest_target = potential_vehicle_target
-		smallest_distance = distance
-
-	for(var/obj/structure/machinery/defenses/potential_defense_target as anything in GLOB.all_active_defenses)
-		if(tied_human.z != potential_defense_target.z)
-			continue
-
-		if(tied_human.faction in potential_defense_target.faction_group)
-			continue
-
-		if(!(tied_human in viewers(view_distance, potential_defense_target)))
-			continue
-
-		var/distance = get_dist(tied_human, potential_defense_target)
-
-		// Let's just not rear check a loud ass CLANK CLANK CLANK servo sentry
-		if(distance > view_distance)
-			continue
-
-		if(scope_vision && (distance > 7) && !(get_dir(tied_human, potential_defense_target) in dir_cone))
-			continue
-
-		viable_targets += potential_defense_target
-
-		if(smallest_distance <= distance)
-			continue
-
-		closest_target = potential_defense_target
-		smallest_distance = distance
-
 	var/extra_check_distance = round(smallest_distance * EXTRA_CHECK_DISTANCE_MULTIPLIER)
 
-	if(extra_check_distance < 1)
+	if(extra_check_distance < 1 || !length(viable_targets))
 		return closest_target
 
-	var/list/extra_checked = orange(extra_check_distance, closest_target)
-
-	var/list/final_targets = extra_checked & viable_targets
+	var/list/final_targets = list()
+	for(var/atom/movable/target as anything in viable_targets)
+		if(target == closest_target)
+			continue
+		if(get_dist(target, closest_target) <= extra_check_distance)
+			final_targets += target
 
 	return length(final_targets) ? pick(final_targets) : closest_target
 
-
-/datum/human_ai_brain/proc/can_target(mob/living/carbon/target)
+/datum/human_ai_brain/proc/can_target(mob/living/target)
 	if(!istype(target))
 		return FALSE
 
@@ -156,25 +112,47 @@
 	if(HAS_TRAIT(target, TRAIT_CLOAKED) && get_dist(tied_human, target) > cloak_visible_range)
 		return FALSE
 
-	if(!friendly_check(target) && !iszombie(tied_human))
+	if(!path_check(target))
 		return FALSE
 
 	return TRUE
 
 /// Given a target, checks if there are any (not laying down) friendlies in a line between the AI and the target
-/datum/human_ai_brain/proc/friendly_check(atom/target)
-	var/list/turf_list = get_line(get_turf(tied_human), get_turf(target))
-	turf_list.Cut(1, 2) // starting turf
+
+/datum/human_ai_brain/proc/path_check(atom/target)
+	var/list/turf_list = get_line(get_turf(tied_human), get_turf(target), FALSE)
 	for(var/turf/tile in turf_list)
-		if(istype(tile, /turf/closed))
-			return TRUE
-
-		for(var/mob/living/carbon/human/possible_friendly in tile)
-			if(possible_friendly.body_position == LYING_DOWN)
-				continue
-
-			if(faction_check(possible_friendly))
+		if(tile.density)
+			return FALSE
+		for(var/atom/movable/obstacle in tile)
+			if(obstacle.density && obstacle != target && obstacle != tied_human && !istype(obstacle, /mob))
+				if(istype(obstacle, /obj/structure/window) || istype(obstacle, /obj/structure/grille) || istype(obstacle, /obj/structure/barricade))
+					continue
 				return FALSE
+	turf_list.Cut(1, 2) // starting turf
+	var/list/checked_turfs = list()
+	for(var/i in 1 to length(turf_list))
+		var/turf/tile = turf_list[i]
+		if(!checked_turfs[tile])
+			checked_turfs[tile] = TRUE
+			for(var/mob/living/carbon/human/possible_friendly in tile)
+				if(possible_friendly.body_position == LYING_DOWN)
+					continue
+				if(faction_check(possible_friendly))
+					return FALSE
+
+		if(i <= 3)
+			continue
+
+		for(var/turf/neighbor in tile.AdjacentTurfs())
+			if(checked_turfs[neighbor])
+				continue
+			checked_turfs[neighbor] = TRUE
+			for(var/mob/living/carbon/human/possible_friendly in neighbor)
+				if(possible_friendly.body_position == LYING_DOWN)
+					continue
+				if(faction_check(possible_friendly))
+					return FALSE
 	return TRUE
 
 #undef EXTRA_CHECK_DISTANCE_MULTIPLIER
