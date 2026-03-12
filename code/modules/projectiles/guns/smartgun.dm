@@ -688,6 +688,10 @@
 
 /obj/item/weapon/gun/smartgun/rmc/iasf
 	current_mag = /obj/item/ammo_magazine/smartgun
+	ammo = /obj/item/ammo_magazine/smartgun
+	ammo_primary = /datum/ammo/bullet/rifle/heavy/tracer //Toggled ammo type
+	ammo_secondary = /datum/ammo/bullet/rifle/heavy/ap/tracer ///Toggled ammo type
+	ammo_tertiary = /datum/ammo/bullet/rifle/heavy/impdet
 
 /obj/item/weapon/gun/smartgun/silenced
 	name = "XM56A4 smartgun"

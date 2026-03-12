@@ -34,11 +34,9 @@
 		if(JOB_TWE_IASF_LIEUTENANT)
 			hud_icon_state = "lieutenant"
 		if(JOB_TWE_IASF_CAPTAIN)
-			hud_icon_state = "commander"
+			hud_icon_state = "captain"
 		if(JOB_TWE_IASF_MAJOR)
 			hud_icon_state = "major"
-		if (JOB_TWE_IASF_COMMANDER)
-			hud_icon_state = "commander"
 		if (JOB_TWE_IASF_GENERAL)
 			hud_icon_state = "general"
 		if (JOB_TWE_IASF_SYNTH)
