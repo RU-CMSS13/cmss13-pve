@@ -41,27 +41,33 @@
 /// Returns TRUE if the target is friendly/neutral to us
 /// This is THE hottest proc that Human AI invokes, so please be careful in adding more to it
 /datum/human_ai_brain/proc/faction_check(atom/target)
-	var/my_faction = tied_human.faction
-	var/target_faction
-
 	if(ismob(target))
 		var/mob/mob_target = target
-		target_faction = mob_target.faction
-	else if(istype(target, /obj/vehicle/multitile))
+
+		if(mob_target.faction == tied_human.faction)
+			return TRUE
+
+		if(mob_target.faction in friendly_factions)
+			return TRUE
+
+		if(mob_target.faction in neutral_factions)
+			return TRUE
+	if(istype(target, /obj/vehicle/multitile))
 		var/obj/vehicle/multitile/vehicle_target = target
-		target_faction = vehicle_target.vehicle_faction
-	else if(isdefenses(target))
+		if(vehicle_target.vehicle_faction == tied_human.faction)
+			return TRUE
+
+		if(vehicle_target.vehicle_faction in friendly_factions)
+			return TRUE
+
+		if(vehicle_target.vehicle_faction in neutral_factions)
+			return TRUE
+	if(isdefenses(target))
 		var/obj/structure/machinery/defenses/defense_target = target
-		return (my_faction in defense_target.faction_group)
-	else
+		if(tied_human.faction in defense_target.faction_group)
+			return TRUE
 		return FALSE
 
-	if(target_faction == my_faction)
-		return TRUE
-	if(target_faction in friendly_factions)
-		return TRUE
-	if(target_faction in neutral_factions)
-		return TRUE
 	return FALSE
 
 /// Removes neutral faction status from a given faction
@@ -161,6 +167,16 @@
 
 /// Tells the AI to unwield *something*, prioritizing melee
 /datum/human_ai_brain/proc/unholster_any_weapon()
+	if(iszombie(tied_human))
+		var/cur_hand = tied_human.get_active_hand()
+		if(isnull(cur_hand)) //Check if we have a hand. If not try the other one? Claws are stuck to hands so if this is null we've lost the hand
+			var/obj/limb/hand/r_hand/right_hand	= tied_human.get_limb("r_hand")
+			var/obj/limb/hand/l_hand/left_hand = tied_human.get_limb("l_hand")
+			if(!(left_hand.status & LIMB_DESTROYED) || !(right_hand.status & LIMB_DESTROYED)) //We have hands?
+				tied_human.swap_hand()
+				cur_hand = tied_human.get_active_hand()
+			else
+				return FALSE
 	if(unholster_melee())
 		tied_human.a_intent_change(INTENT_GRAB)
 		return TRUE

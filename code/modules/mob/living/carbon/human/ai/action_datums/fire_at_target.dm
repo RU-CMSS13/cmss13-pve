@@ -3,7 +3,6 @@
 	action_flags = ACTION_USING_HANDS
 	var/rounds_burst_fired = 0
 	var/currently_firing
-	var/list/watched_turfs = list()
 
 /datum/ai_action/fire_at_target/get_weight(datum/human_ai_brain/brain)
 	if(!brain.in_combat)
@@ -41,17 +40,9 @@
 /datum/ai_action/fire_at_target/proc/stop_firing(datum/human_ai_brain/brain)
 	currently_firing = FALSE
 	rounds_burst_fired = 0
-	clear_watched_turfs()
 
 	UnregisterSignal(brain.tied_human, COMSIG_MOB_FIRED_GUN)
 	brain.primary_weapon?.set_target(null)
-
-/datum/ai_action/fire_at_target/proc/clear_watched_turfs()
-	if(!length(watched_turfs))
-		return
-	for(var/turf/T as anything in watched_turfs)
-		UnregisterSignal(T, COMSIG_TURF_ENTERED)
-	watched_turfs.Cut()
 
 /datum/ai_action/fire_at_target/trigger_action()
 	. = ..()
@@ -82,9 +73,6 @@
 	if((get_dist(tied_human, target_turf) > gun_data.maximum_range) && !should_fire_offscreen)
 		return ONGOING_ACTION_COMPLETED
 
-	if(!firing_line_check(brain, target_turf))
-		return ONGOING_ACTION_COMPLETED
-
 	tied_human.face_atom(target_turf)
 	tied_human.a_intent_change(INTENT_HARM)
 
@@ -102,7 +90,7 @@
 	primary_weapon?.start_fire(object = target_turf, bypass_checks = TRUE)
 	return ONGOING_ACTION_UNFINISHED
 
-/datum/ai_action/fire_at_target/proc/firing_line_check(datum/human_ai_brain/brain, atom/target, listen = FALSE)
+/datum/ai_action/fire_at_target/proc/firing_line_check(datum/human_ai_brain/brain, atom/target)
 	var/mob/living/carbon/tied_human = brain.tied_human
 	var/list/turf_list = get_line(get_turf(tied_human), get_turf(target))
 	for(var/turf/tile in turf_list)
@@ -122,59 +110,17 @@
 			else if((tile_dist > 3) && thing.projectile_coverage >= PROJECTILE_COVERAGE_MEDIUM)
 				return FALSE
 
-	if(listen)
-		clear_watched_turfs()
-
-	var/list/checked_turfs = list()
-	for(var/i in 2 to length(turf_list))
-		var/turf/tile = turf_list[i]
-		var/tile_dist = get_dist(tied_human, tile)
-		if(tile_dist > brain.view_distance)
-			continue
-
-		var/list/turfs_to_check = list(tile)
-		if(i > 4)
-			for(var/turf/neighbor in tile.AdjacentTurfs())
-				turfs_to_check += neighbor
-
-		for(var/turf/T as anything in turfs_to_check)
-			if(checked_turfs[T])
+		for(var/mob/living/carbon/human/possible_friendly in tile)
+			if(possible_friendly == tied_human)
 				continue
-			checked_turfs[T] = TRUE
 
-			if(listen)
-				RegisterSignal(T, COMSIG_TURF_ENTERED, PROC_REF(cheap_friendly_check))
-				watched_turfs += T
+			if(possible_friendly.body_position == LYING_DOWN)
+				continue
 
-			for(var/mob/living/possible_friendly in T)
-				if(possible_friendly == tied_human)
-					continue
-
-				if(possible_friendly.body_position == LYING_DOWN)
-					continue
-
-				if(brain.faction_check(possible_friendly))
-					return FALSE
+			if(brain.faction_check(possible_friendly))
+				return FALSE
 
 	return TRUE
-
-/datum/ai_action/fire_at_target/proc/cheap_friendly_check(datum/source, atom/movable/entering)
-	SIGNAL_HANDLER
-	if(!brain)
-		return
-	if(entering == brain.tied_human)
-		return
-
-	if(!istype(entering, /mob/living))
-		return
-
-	var/mob/living/H = entering
-	if(H.body_position == LYING_DOWN)
-		return
-
-	if(brain.faction_check(H))
-		stop_firing(brain)
-		qdel(src)
 
 /datum/ai_action/fire_at_target/proc/on_gun_fire(datum/source, obj/item/weapon/gun/fired)
 	SIGNAL_HANDLER
@@ -242,9 +188,8 @@
 		currently_firing = FALSE
 		return
 
-	if(!firing_line_check(brain, shoot_next, listen = TRUE))
+	if(!firing_line_check(brain, shoot_next))
 		stop_firing(brain)
-		qdel(src)
 		return
 
 	if(istype(brain.primary_weapon, /obj/item/weapon/gun/shotgun))
