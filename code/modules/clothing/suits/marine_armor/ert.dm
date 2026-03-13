@@ -327,7 +327,7 @@
 		/obj/item/ammo_magazine,
 		/obj/item/explosive/mine,
 		/obj/item/attachable/bayonet,
-		/obj/item/weapon/gun,
+		/obj/item/weapon/gun/pkp,
 		/obj/item/storage/backpack/general_belt,
 		/obj/item/device/motiondetector,
 		/obj/item/device/walkman,

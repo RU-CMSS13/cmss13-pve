@@ -9128,9 +9128,9 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/squad_omega)
 "ayl" = (
-/obj/structure/gun_rack/m41a2/elite/unloaded/platoon,
+/obj/structure/gun_rack/m41a2_elite/unloaded/platoon,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/gun_rack/m41a2/elite/unloaded/platoon{
+/obj/structure/gun_rack/m41a2_elite/unloaded/platoon{
 	pixel_y = 27
 	},
 /turf/open/floor/corsat/cargo,

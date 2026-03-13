@@ -658,6 +658,8 @@
 //--------------------------------------------------------
 // Type 97 UPP automatic shotgun (H&K CAWS)
 
+#define CAWS_MAGAZINE_JAM_CHANCE 1
+
 /obj/item/ammo_magazine/rifle/caws
 	name = "\improper Type 97 magazine (12g)"
 	desc = "A 12 gauge automatic shotgun magazine."
@@ -671,6 +673,7 @@
 	max_rounds = 20
 	gun_type = /obj/item/weapon/gun/rifle/caws
 	transfer_handful_amount = 5
+	var/jam_chance = CAWS_MAGAZINE_JAM_CHANCE
 
 /obj/item/ammo_magazine/rifle/caws/slug
 	name = "\improper Type 97 slug magazine (12g)"
@@ -709,3 +712,5 @@
 	desc = "A 12 gauge automatic shotgun magazine loaded with flechettes."
 	default_ammo = /datum/ammo/bullet/shotgun/flechette/special
 	ammo_band_color = AMMO_BAND_COLOR_IMPACT
+
+#undef CAWS_MAGAZINE_JAM_CHANCE

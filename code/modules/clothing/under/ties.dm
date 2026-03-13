@@ -2249,6 +2249,16 @@
 	new /obj/item/ammo_magazine/rifle/heap(src)
 	new /obj/item/ammo_magazine/rifle/heap(src)
 
+/obj/item/clothing/accessory/storage/webbing/m3/mag/pmc/preseteight
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/pmc/eight
+
+/obj/item/storage/internal/accessory/webbing/m3mag/pmc/eight/fill_preset_inventory()
+	new /obj/item/ammo_magazine/smg/m39(src)
+	new /obj/item/ammo_magazine/smg/m39(src)
+	new /obj/item/ammo_magazine/smg/m39(src)
+	new /obj/item/ammo_magazine/smg/m39(src)
+	new /obj/item/ammo_magazine/smg/m39(src)
+
 /obj/item/clothing/accessory/storage/webbing/m3/recon/shotgun/pmc
 	name = "\improper 41 Pattern Shell Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to Weyland Yutani PMC armor. This webbing is fitted for 12 gauge shotgun shells."

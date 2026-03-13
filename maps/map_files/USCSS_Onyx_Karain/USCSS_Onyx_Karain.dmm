@@ -9038,9 +9038,9 @@
 /turf/open/floor/corsat/cargo,
 /area/firefly/squad_omega)
 "ayg" = (
-/obj/structure/gun_rack/m41a/corporate/unloaded/platoon,
+/obj/structure/gun_rack/m41a_corporate/unloaded/platoon,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/gun_rack/m41a/corporate/unloaded/platoon{
+/obj/structure/gun_rack/m41a_corporate/unloaded/platoon{
 	pixel_y = 27
 	},
 /turf/open/floor/corsat/cargo,

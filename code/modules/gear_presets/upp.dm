@@ -14,21 +14,18 @@
 	var/last_name
 	//gender checks
 	if(new_human.gender == MALE)
-		if(prob(40))
+		if(prob(25))
 			first_name = "[capitalize(randomly_generate_chinese_word(1))]"
 		else
 			first_name = "[pick(GLOB.first_names_male_upp)]"
 		new_human.f_style = pick("3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache")
 	else
-		if(prob(40))
+		if(prob(25))
 			first_name = "[capitalize(randomly_generate_chinese_word(1))]"
 		else
 			first_name = "[pick(GLOB.first_names_female_upp)]"
 	//surname
-	if(prob(35))
-		last_name = "[capitalize(randomly_generate_chinese_word(pick(20;1, 80;2)))]"
-	else
-		last_name = "[pick(GLOB.last_names_upp)]"
+	last_name = "[pick(GLOB.last_names_upp)]"
 	//put them together
 	random_name = "[first_name] [last_name]"
 
@@ -1948,6 +1945,9 @@
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/smartgunner/upp/full, WEAR_WAIST)
 
+	var/obj/item/device/internal_implant/subdermal_armor/implant = new()
+	implant.on_implanted(new_human)
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/upp/rifleman/heavy // OH NO, IT'S JOHN UPP JUNIOR!!
@@ -1989,6 +1989,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full, WEAR_R_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp/full, WEAR_WAIST)
+
+	var/obj/item/device/internal_implant/subdermal_armor/implant = new()
+	implant.on_implanted(new_human)
 
 //*****************************************************************************************************/
 
@@ -2034,6 +2037,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full, WEAR_R_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp/caws, WEAR_WAIST)
+
+	var/obj/item/device/internal_implant/subdermal_armor/implant = new()
+	implant.on_implanted(new_human)
 
 //*****************************************************************************************************/
 // UPP SOF - SPACE OPERATIONAL FORCE
