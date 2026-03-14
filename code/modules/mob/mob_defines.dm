@@ -198,8 +198,6 @@
 
 	var/recently_grabbed = 0 //used as a cooldown for item grabs
 
-	var/recently_grabbed = 0 //used as a cooldown for item grabs
-
 	///Color matrices to be applied to the client window. Assoc. list.
 	var/list/client_color_matrices
 
