@@ -1790,6 +1790,74 @@
 	attachable_offset = list("muzzle_x" = 34, "muzzle_y" = 17,"rail_x" = 13, "rail_y" = 24, "under_x" = 23, "under_y" = 14, "stock_x" = 15, "stock_y" = 13, "side_rail_x" = 24, "side_rail_y" = 17)
 
 //-------------------------------------------------------
+//UPP TYPE 78 DMR
+//Meant to be used with 10x27mm HV ammo, but can still load regular ammo if necessary
+/obj/item/weapon/gun/rifle/spp
+	name = "\improper SPP-48M Marksman Rifle"
+	desc = "Produced by the Serbian 'Primary Manufacturing Union' as part of a collective arms development program in 2168, the SPP-48M, 'Ramonda' as it was nicknamed, is a 10x27mm caseless pulse-action designated marksman rifle, in a bullpup configuration, developed for use by the UPP Army and Space Operating Forces. The 'Ramonda' proves exceptionally popular with frontline infantry units and internal garrisons alike, thanks to its compact design and powerful calibre, allowing it to perform in both wide open colonial expanses and the interior of UPP habitations in equal measure."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
+	icon_state = "spp"
+	item_state = "spp"
+	mouse_pointer = 'icons/effects/mouse_pointer/sniper_mouse.dmi'
+
+	fire_sound = 'sound/weapons/gun_spp.ogg'
+	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
+	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
+
+	current_mag = /obj/item/ammo_magazine/rifle/spp
+	attachable_allowed = list(
+		/obj/item/attachable/magnetic_harness, // Rail
+		/obj/item/attachable/sling,
+		/obj/item/attachable/scope/upp,
+		/obj/item/attachable/scope/mini/upp,
+		/obj/item/attachable/reddot/upp,
+		/obj/item/attachable/reflex/upp,
+		/obj/item/attachable/suppressor, // Muzzle
+		/obj/item/attachable/bayonet/upp,
+		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/heavy_barrel,
+		/obj/item/attachable/attached_gun/grenade/type71/ag80, // underbarrel
+		/obj/item/attachable/attached_gun/grenade/type71/ag80/preloaded,
+		/obj/item/attachable/verticalgrip/upp,
+		/obj/item/attachable/angledgrip/upp,
+		/obj/item/attachable/lasersight/upp, // Side Rail
+		/obj/item/attachable/flashlight,
+		)
+
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	wield_delay = WIELD_DELAY_VERY_FAST
+	aim_slowdown = SLOWDOWN_ADS_QUICK
+
+/obj/item/weapon/gun/rifle/spp/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/attachie = new /obj/item/attachable/stock/spp(src)
+	attachie.flags_attach_features &= ~ATTACH_REMOVABLE
+	attachie.Attach(src)
+	update_attachable(attachie.slot)
+
+	var/obj/item/attachable/scope/variable_zoom/integrated/sppsight = new(src)
+	sppsight.flags_attach_features &= ~ATTACH_REMOVABLE
+	sppsight.hidden = TRUE
+	sppsight.Attach(src)
+	update_attachable(sppsight.slot)
+
+/obj/item/weapon/gun/rifle/spp/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 17,"rail_x" = 10, "rail_y" = 23, "under_x" = 20, "under_y" = 12, "stock_x" = 12, "stock_y" = 14, "side_rail_x" = 19, "side_rail_y" = 17)
+
+
+/obj/item/weapon/gun/rifle/spp/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_4)
+	set_burst_amount(0)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_5
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2 // long barrel for better velocity
+	recoil_unwielded = RECOIL_AMOUNT_TIER_1
+	recoil = RECOIL_AMOUNT_TIER_4
+	damage_falloff_mult = 0
+	scatter = SCATTER_AMOUNT_TIER_8
+
+//-------------------------------------------------------
 //UPP AK-4047 RIFLE
 
 /obj/item/weapon/gun/rifle/ak4047

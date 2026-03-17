@@ -1011,8 +1011,8 @@
 	health = 250
 	health_max = 250 // UPP strong
 	handheld_type = /obj/item/defenses/handheld/sentry/upp
-	fire_delay = 0.2 SECONDS
-	damage_mult = 1.1
+	fire_delay = 0.15 SECONDS
+	damage_mult = 1.15
 	accuracy_mult = 0.75 // Much less ammo and ROF, every shot counts
 	firing_sound = 'sound/weapons/gun_type71.ogg'
 	ammo = new /obj/item/ammo_magazine/sentry/upp

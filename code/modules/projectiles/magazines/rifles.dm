@@ -362,6 +362,39 @@
 	ammo_band_color = AMMO_BAND_COLOR_RUBBER
 
 //-------------------------------------------------------
+//UPP SPP-48M DMR
+
+/obj/item/ammo_magazine/rifle/spp
+	name = "\improper SPP-48M magazine (10x27mm)"
+	desc = "A 10x27mm high-capacity casket magazine for the SPP-48M rifle."
+	caliber = "10x27mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "spp"
+	ammo_band_icon = "+spp_band"
+	ammo_band_icon_empty = "+spp_band_e"
+	default_ammo = /datum/ammo/bullet/rifle/upp
+	max_rounds = 25
+	gun_type = /obj/item/weapon/gun/rifle/spp
+
+/obj/item/ammo_magazine/rifle/spp/ap
+	name = "\improper SPP-48M AP magazine (10x27mm)"
+	desc = "A 10x27mm high-capacity casket magazine containing armor piercing rounds for the SPP-48M rifle."
+	default_ammo = /datum/ammo/bullet/rifle/upp/ap
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/rifle/spp/ap/penetrating
+	name = "\improper SPP-48M AP magazine (10x27mm)"
+	desc = "A 10x27mm high-capacity casket magazine containing armor piercing rounds for the SPP-48M rifle."
+	default_ammo = /datum/ammo/bullet/rifle/upp/ap/penetrating
+	ammo_band_color = AMMO_BAND_COLOR_PENETRATING
+
+/obj/item/ammo_magazine/rifle/spp/heap
+	name = "\improper SPP-48M HEAP magazine (10x27mm)"
+	desc = "A 10x27mm high-capacity casket magazine containing the standard high explosive armor piercing rounds for the SPP-48M rifle."
+	default_ammo = /datum/ammo/bullet/rifle/upp/heap
+	ammo_band_color = AMMO_BAND_COLOR_HEAP
+
+//-------------------------------------------------------
 //UPP - Norcomm AK-4047 RIFLE
 
 /obj/item/ammo_magazine/rifle/ak4047
