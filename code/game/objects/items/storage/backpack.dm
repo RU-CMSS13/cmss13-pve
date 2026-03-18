@@ -505,10 +505,17 @@
 /obj/item/storage/backpack/molle/army
 	name = "\improper M1 MOLLE Satchel"
 	desc = "Tactical satchel manufactured by one of the Alphatech subsidiaries. Very lightweight beltbag variant that utilizes UA standard MOLLE fastening systems. Standard issue pack for US army troopers."
+	icon_state = "MOLLEbeltbag"
+	item_state = "MOLLEbeltbag"
+	worn_accessible = TRUE
+	max_storage_space = 15
 
 /obj/item/storage/backpack/molle/backpack/army
 	name = "\improper M2 MOLLE Backpack"
 	desc = "Tactical backpack manufactured by one of the Alphatech subsidiaries. Very lightweight backpack that utilizes UA standard MOLLE fastening systems, which allows easy access and optimal weight distribution. Standard issue heavy duty pack for US army troopers."
+	icon_state = "MOLLEbackpack"
+	item_state = "MOLLEbackpack"
+	max_storage_space = 21
 
 /obj/item/storage/backpack/marine/satchel/standard
 	has_gamemode_skin = FALSE
