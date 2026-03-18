@@ -9583,7 +9583,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "E"
 	},
-/obj/item/weapon/gun/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
 /turf/open/floor/asteroidplating,
 /area/desert_dam/exterior/valley/valley_crashsite)
 "aLv" = (
@@ -13062,7 +13062,7 @@
 /area/desert_dam/building/water_treatment_two/control_room)
 "aYC" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/gun/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
 /turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/building/water_treatment_two/control_room)
 "aYD" = (
@@ -14135,7 +14135,7 @@
 /obj/effect/decal/sand_overlay/sand1{
 	dir = 1
 	},
-/obj/item/weapon/gun/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
 /turf/open/asphalt/cement_sunbleached/cement_sunbleached18,
 /area/desert_dam/exterior/valley/valley_medical)
 "bck" = (
@@ -33662,7 +33662,7 @@
 /area/desert_dam/building/security/armory)
 "cJv" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
 /turf/open/floor/prison/darkredfull2,
 /area/desert_dam/building/security/armory)
 "cJw" = (
