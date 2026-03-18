@@ -285,6 +285,14 @@
 /obj/structure/ladder/rope/update_icon()
 	return
 
+/obj/structure/ladder/multiz/LateInitialize()
+	. = ..()
+
+	up = locate(/obj/structure/ladder) in SSmapping.get_turf_above(get_turf(src))
+	down = locate(/obj/structure/ladder) in SSmapping.get_turf_below(get_turf(src))
+
+	update_icon()
+
 /obj/structure/ladder/maintenance
 	name = "maintenance ladder"
 	desc = "The hatch itself is the door to the underground. Though it looks like it the hatch itself is light enough to not be an issue!"
