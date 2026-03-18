@@ -26,6 +26,7 @@
 
 /turf
 	icon = 'icons/turf/floors/floors.dmi'
+	plane = TURF_PLANE
 	var/intact_tile = 1 //used by floors to distinguish floor with/without a floortile(e.g. plating).
 	var/can_bloody = TRUE //Can blood spawn on this turf?
 	var/list/linked_pylons
@@ -134,7 +135,7 @@
 	vis_flags = VIS_HIDE
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
-/obj/vis_contents_holder/Initialize(mapload, vis, offset)
+/obj/vis_contents_holder/Initialize(mapload, vis, offset, backdrop = TRUE)
 	. = ..()
 	plane -= offset
 	vis_contents += GLOB.openspace_backdrop_one_for_all
