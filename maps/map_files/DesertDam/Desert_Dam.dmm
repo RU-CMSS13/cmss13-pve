@@ -14304,7 +14304,7 @@
 /turf/open/floor/plating,
 /area/desert_dam/building/water_treatment_two/hallway)
 "bcL" = (
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /turf/open/floor/prison/bright_clean2/southwest,
 /area/desert_dam/building/medical/morgue)
 "bcM" = (
@@ -14339,7 +14339,7 @@
 /turf/open/gm/river/desert/deep/covered,
 /area/desert_dam/exterior/river/riverside_central_north)
 "bcR" = (
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /turf/open/floor/prison/sterile_white/west,
 /area/desert_dam/building/medical/morgue)
 "bcS" = (
@@ -36862,7 +36862,7 @@
 /area/desert_dam/exterior/valley/valley_medical)
 "cZK" = (
 /obj/structure/pipes/standard/simple/hidden/green,
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /turf/open/floor/prison/sterile_white/west,
 /area/desert_dam/building/medical/morgue)
 "cZP" = (
