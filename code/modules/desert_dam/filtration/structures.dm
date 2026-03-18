@@ -34,6 +34,14 @@
 /turf/open/floor/plating/catwalk/rusted/ex_act()
 	return
 
+/turf/open/floor/plating/catwalk/lattice
+	desc = "A sturdy metal lattice catwalk, perfect for walking over hazardous areas."
+	icon = 'icons/obj/structures/props/smoothlattice.dmi'
+	icon_state = "lattice0"
+
+/turf/open/floor/plating/catwalk/lattice/ex_act()
+	return
+
 /turf/open/floor/coagulation
 	name = "coagulation"
 	icon = 'icons/turf/floors/coagulation.dmi'

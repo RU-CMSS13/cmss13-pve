@@ -1256,8 +1256,28 @@
 	basestate = "uppwall_window"
 	window_frame = /obj/structure/window_frame/upp/green
 
+/obj/structure/window/framed/upp/green/hull
+	icon_state = "uppwall_window0"
+	basestate = "uppwall_window"
+	desc = "A glass window. Something tells you this one is somehow indestructible."
+	not_damageable = TRUE
+	not_deconstructable = TRUE
+	unslashable = TRUE
+	unacidable = TRUE
+	health = 1000000
+
 /obj/structure/window/framed/upp/grey
 	icon = 'icons/turf/walls/upp_grey_windows.dmi'
 	icon_state = "uppwall_window0"
 	basestate = "uppwall_window"
 	window_frame = /obj/structure/window_frame/upp/grey
+
+/obj/structure/window/framed/upp/grey/hull
+	icon_state = "uppwall_window0"
+	basestate = "uppwall_window"
+	desc = "A glass window. Something tells you this one is somehow indestructible."
+	not_damageable = TRUE
+	not_deconstructable = TRUE
+	unslashable = TRUE
+	unacidable = TRUE
+	health = 1000000
