@@ -8,9 +8,9 @@
 	/// The 'height' of the ladder. higher numbers are considered physically higher
 	var/height = 0
 	/// The ladder below this one
-	var/obj/structure/ladder/down = null
+	var/obj/structure/ladder/down
 	/// The ladder above this one
-	var/obj/structure/ladder/up = null
+	var/obj/structure/ladder/up
 	anchored = TRUE
 	unslashable = TRUE
 	unacidable = TRUE
