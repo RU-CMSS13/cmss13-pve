@@ -59,6 +59,9 @@
 #define MAP_OIL_DEPOT "Oil Depot"
 #define MAP_DERELICT_ALMAYER_INFESTED "Infested Almayer"
 
+#define MAP_NAVALIS "Navalis Platform 13"//multiz version
+#define MAP_NAVALIS_SINGLE "Navalis Platform 13 (singlez)" //singlez version
+
 #define GAMEMODE_WHISKEY_OUTPOST "Whiskey Outpost"
 #define GAMEMODE_HIVE_WARS "Hive Wars"
 
