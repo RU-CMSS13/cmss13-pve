@@ -169,6 +169,11 @@
 	html_link = ""
 	color = "cyan"
 
+/obj/item/map/tyrargo_rift
+	name = "\improper Tyrargo Rift map"
+	desc = "A labeled blueprint of the UA city Tyrargo Rift"
+	html_link = "images/7/79/Tyrargo_Rift.png"
+
 /obj/item/map/lv_671
 	name = "\improper LV-671 Map"
 	desc = "An orbital scan printout of the LV-671 colony."
@@ -224,6 +229,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_TAIPEI = new /obj/item/map/taipei(),
 		MAP_REDEMPTION_VALLEY = new /obj/item/map/lazarus_landing_map(),
 		MAP_BINHAI_SUPPLY_STATION = new /obj/item/map/FOP_map(),
+		MAP_TYRARGO_RIFT = new /obj/item/map/tyrargo_rift(),
 		MAP_LV_671 = new /obj/item/map/lv_671(),
 		MAP_OIL_DEPOT = new /obj/item/map/oil_depot(),
 		MAP_DERELICT_ALMAYER_INFESTED = new /obj/item/map/almayer/infested()
