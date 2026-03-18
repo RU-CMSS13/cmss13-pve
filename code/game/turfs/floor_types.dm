@@ -354,6 +354,10 @@
 	name = "catwalk"
 	desc = "Cats really don't like these things."
 
+/turf/open/floor/plating/catwalk/Initialize(mapload, ...)
+	ADD_TRAIT(src, TURF_Z_TRANSPARENT_TRAIT, TRAIT_SOURCE_INHERENT)
+
+	. = ..()
 
 /turf/open/floor/almayer
 	icon = 'icons/turf/almayer.dmi'
