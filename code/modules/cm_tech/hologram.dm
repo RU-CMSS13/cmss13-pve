@@ -136,6 +136,18 @@ GLOBAL_LIST_EMPTY_TYPED(hologram_list, /mob/hologram)
 	. = ..()
 
 /mob/hologram/look_up/handle_move(mob/M, oldLoc, direct)
+
+	if(!isturf(M.loc) || HAS_TRAIT(src, TRAIT_ABILITY_BURROWED))
+		qdel(src)
+		return
+
+	if(isturf(M.loc) && isturf(oldLoc))
+		var/turf/mob_turf = M.loc
+		var/turf/old_mob_turf = oldLoc
+		if(mob_turf.z != old_mob_turf.z)
+			qdel(src)
+			return
+
 	var/turf/new_turf = get_step(loc, direct)
 	forceMove(new_turf)
 
