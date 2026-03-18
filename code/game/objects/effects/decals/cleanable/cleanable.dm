@@ -87,6 +87,7 @@ GLOBAL_LIST_EMPTY(cleanable_decal_cache)
 		overlayed_image.pixel_y = pixel_y
 	if(color)
 		overlayed_image.color = color
+
 	cleanable_turf.overlays += overlayed_image
 	moveToNullspace() // This obj should not be on the turf for performance
 

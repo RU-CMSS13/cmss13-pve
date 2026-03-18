@@ -167,6 +167,7 @@
 	opacity = FALSE
 
 /obj/structure/stairs/multiz
+	icon_state = "multiz"
 	var/direction
 	layer = OBJ_LAYER // Cannot be obstructed by weeds
 	var/list/blockers = list()
