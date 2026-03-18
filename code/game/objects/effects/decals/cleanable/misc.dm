@@ -45,6 +45,12 @@
 	allow_this_to_overlap = TRUE
 	cleanable_type = CLEANABLE_SPLATTER
 
+/obj/effect/decal/cleanable/dirt/alt_dirt
+	icon_state = "stain"
+
+/obj/effect/decal/cleanable/dirt/alt_dirt/stain
+	icon_state = "stain_alt"
+
 /obj/effect/decal/cleanable/flour
 	name = "flour"
 	desc = "It's still good. Four second rule!"
