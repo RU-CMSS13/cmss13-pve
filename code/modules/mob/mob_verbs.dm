@@ -227,7 +227,17 @@
 	set name = "Look Up"
 	set category = "IC"
 
-	stop_looking_multiz()
+	if(observed_atom)
+		QDEL_NULL(observed_atom)
+		return
+
+	if(!client)
+		return
+
+	if(client.view != world.view)
+		to_chat(src, SPAN_WARNING("You cannot look up while zoomed!"))
+		return
+
 
 	if(HAS_TRAIT(src, TRAIT_ABILITY_BURROWED))
 		to_chat(src, SPAN_WARNING("We cannot look up here, we are burrowed!"))
@@ -246,10 +256,3 @@
 	var/mob/hologram/look_up/observed_hologram = new(above, src)
 
 	observed_atom = observed_hologram
-
-/mob/living/proc/stop_looking_multiz()
-	if(!observed_atom)
-		return
-	var/atom/to_delete = observed_atom
-	observed_atom = null
-	qdel(to_delete)
