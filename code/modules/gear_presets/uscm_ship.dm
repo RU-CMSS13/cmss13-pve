@@ -977,6 +977,13 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/pilot/flight(new_human), WEAR_BODY)
 	..()
 
+/datum/equipment_preset/uscm_ship/dp/ai
+	name = "USCM Dropship Pilot"
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
+
+/datum/equipment_preset/uscm_ship/dp/ai/load_gear(mob/living/carbon/human/new_human)
+	return
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm_ship/dcc

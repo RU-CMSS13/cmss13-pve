@@ -208,7 +208,7 @@
 /datum/equipment_preset/survivor/navalis/clf_wet_ops
 	name = "Survivor - CLF Special Forces (Template Base)"
 	flags = EQUIPMENT_PRESET_EXTRA
-	skills = /datum/skills/clf
+	skills = /datum/skills/clf_special_forces/regular
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_JAPANESE)
 	faction = FACTION_CLF
 	faction_group = list(FACTION_CLF, FACTION_SURVIVOR)
@@ -265,7 +265,7 @@
 	assignment = "CLF Field Technician"
 	rank = JOB_CLF_ENGI
 	role_comm_title = "TECH."
-	skills = /datum/skills/clf/combat_engineer
+	skills = /datum/skills/clf_special_forces/regular/combat_engineer
 
 
 /datum/equipment_preset/survivor/navalis/clf_wet_ops/tech/load_gear(mob/living/carbon/human/new_human)
@@ -311,7 +311,7 @@
 	assignment = "CLF Field Medic"
 	rank = JOB_CLF_MEDIC
 	role_comm_title = "MED."
-	skills = /datum/skills/clf/combat_medic
+	skills = /datum/skills/clf_special_forces/regular/combat_medic
 
 /datum/equipment_preset/survivor/navalis/clf_wet_ops/medic/load_gear(mob/living/carbon/human/new_human)
 	var/random_helm = rand(1,2)
@@ -362,7 +362,7 @@
 	assignment = "CLF Field Specialist"
 	rank = JOB_CLF_SPECIALIST
 	role_comm_title = "SPEC."
-	skills = /datum/skills/clf/specialist
+	skills = /datum/skills/clf_special_forces/regular/specialist
 
 /datum/equipment_preset/survivor/navalis/clf_wet_ops/spec/load_gear(mob/living/carbon/human/new_human)
 
@@ -391,7 +391,7 @@
 	assignment = "CLF Cell Leader"
 	rank = JOB_CLF_LEADER
 	role_comm_title = "LEAD."
-	skills = /datum/skills/clf/leader
+	skills = /datum/skills/clf_special_forces/regular/team_leader
 
 /datum/equipment_preset/survivor/navalis/clf_wet_ops/leader/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/clf/leader, WEAR_BODY)
