@@ -97,7 +97,6 @@
 /obj/item/device/helmet_visor/ua/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
 	. = ..()
 
-	user.client.mouse_pointer_icon = initial(user.client.mouse_pointer_icon)
 	user.client.color = initial(user.client.color)
 	user.clear_fullscreen("optic", 0.5 SECONDS)
 	REMOVE_TRAIT(user, TRAIT_HUD_SIGHT, src)
@@ -118,7 +117,6 @@
 /obj/item/device/helmet_visor/upp/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
 	. = ..()
 
-	user.client.mouse_pointer_icon = initial(user.client.mouse_pointer_icon)
 	user.client.color = initial(user.client.color)
 	user.clear_fullscreen("optic", 0.5 SECONDS)
 	REMOVE_TRAIT(user, TRAIT_HUD_SIGHT, src)
@@ -139,7 +137,6 @@
 /obj/item/device/helmet_visor/twe/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
 	. = ..()
 
-	user.client.mouse_pointer_icon = initial(user.client.mouse_pointer_icon)
 	user.client.color = initial(user.client.color)
 	user.clear_fullscreen("optic", 0.5 SECONDS)
 	REMOVE_TRAIT(user, TRAIT_HUD_SIGHT, src)
@@ -161,7 +158,6 @@
 /obj/item/device/helmet_visor/pmc/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
 	. = ..()
 
-	user.client.mouse_pointer_icon = initial(user.client.mouse_pointer_icon)
 	user.client.color = initial(user.client.color)
 	user.clear_fullscreen("optic", 0.5 SECONDS)
 	REMOVE_TRAIT(user, TRAIT_HUD_SIGHT, src)
