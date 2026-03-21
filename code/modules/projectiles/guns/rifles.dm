@@ -200,10 +200,10 @@
 
 /obj/item/weapon/gun/rifle/m41a/corporate/detainer //for chem ert
 	current_mag = /obj/item/ammo_magazine/rifle
+	random_rail_chance = 50
 	random_spawn_rail = list(
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
 	)
 	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/lasersight)
 
