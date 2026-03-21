@@ -257,3 +257,81 @@ GLOBAL_LIST_INIT(cm_vending_clothing_dropship_crew_chief, list(
 	if(user.job == JOB_DROPSHIP_PILOT)
 		return GLOB.cm_vending_clothing_pilot_officer
 	return ..()
+
+// RMC pilot-vendor
+
+/obj/structure/machinery/cm_vending/clothing/pilot_officer/rmc
+	name = "\improper WeyTech Aircrew Equipment Rack"
+	desc = "An automated rack hooked up to a colossal storage of Aircrew standard-issue equipment."
+	icon_state = "rmc_gear"
+	req_access = list(ACCESS_TWE_FLIGHT)
+	vendor_role = list(JOB_TWE_RMC_PILOT)
+	vendor_theme = VENDOR_THEME_COMPANY
+
+/obj/structure/machinery/cm_vending/clothing/pilot_officer/rmc/get_listed_products(mob/user)
+	return GLOB.cm_vending_clothing_rmc_pilot
+
+GLOBAL_LIST_INIT(cm_vending_clothing_rmc_pilot, list(
+		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
+		list("Gloves", 0, /obj/item/clothing/gloves/marine/brown, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
+		list("PH-4 Flight Helmet", 0, /obj/item/clothing/head/helmet/marine/veteran/royal_marine/pilot, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_MANDATORY),
+		list("Lightweight RMC Backpack", 0,/obj/item/storage/backpack/rmc/light, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_MANDATORY),
+		list("TWE MRE", 0, /obj/item/storage/box/mre/twe, MARINE_CAN_BUY_MRE, VENDOR_ITEM_MANDATORY),
+
+		list("ARMOR (CHOOSE 1)", 0, null, null, null),
+		list("Goshawk Airborne Vest", 0, /obj/item/clothing/suit/storage/marine/veteran/royal_marine/light/iasf, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
+
+		list("PERSONAL SIDEARM (CHOOSE 1)", 0, null, null, null),
+		list("VP70 Combat Pistol", 0, /obj/item/weapon/gun/pistol/vp70/unloaded, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_REGULAR),
+		list("L165A1 Combat Pistol", 0, /obj/item/weapon/gun/pistol/vp78/rmc/unloaded, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_REGULAR),
+		list("FN-TWE P90 Submachinegun", 0, /obj/item/weapon/gun/smg/p90/twe, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_REGULAR),
+
+		list("BELT (CHOOSE 1)", 0, null, null, null),
+		list("L26 Pattern General Utility Belt", 0,/obj/item/storage/backpack/general_belt/rmc, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("L70 Pattern Ammo Load Rig", 0, /obj/item/storage/belt/marine/rmc, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("L165 Gunbelt", 0, /obj/item/storage/belt/gun/l905, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("L75 Pattern Medical Storage Rig (Empty)", 0, /obj/item/storage/belt/medical/rmc, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+
+		list("POUCHES (CHOOSE 2)", 0, null, null, null),
+		list("Autoinjector Pouch", 0, /obj/item/storage/pouch/autoinjector, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Medical Kit Pouch", 0, /obj/item/storage/pouch/medkit, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Pressurized Reagent Canister Pouch (Bicaridine)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/bicaridine, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Pressurized Reagent Canister Pouch (Kelotane)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/kelotane, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Pressurized Reagent Canister Pouch (Tricordrazine)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/tricordrazine, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Vial Pouch (Full)", 0, /obj/item/storage/pouch/vials/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Large General Pouch", 0, /obj/item/storage/pouch/general/large, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Large Magazine Pouch", 0, /obj/item/storage/pouch/magazine/large, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Large Pistol Magazine Pouch", 0, /obj/item/storage/pouch/magazine/pistol/large, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+
+		list("ACCESSORIES (CHOOSE 1)", 0, null, null, null),
+		list("Drop Pouch", 0, /obj/item/clothing/accessory/storage/droppouch/rmc, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Small Pouch", 0, /obj/item/clothing/accessory/storage/smallpouch/rmc, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED),
+		list("Shoulder Holster", 0, /obj/item/clothing/accessory/storage/holster, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Waist Holster", 0, /obj/item/clothing/accessory/storage/holster/waist, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+
+		list("GLASSES (CHOOSE 1)", 0, null, null, null),
+		list("Aviator Shades", 0, /obj/item/clothing/glasses/sunglasses/aviator, MARINE_CAN_BUY_GLASSES, VENDOR_ITEM_REGULAR),
+		list("Sunglasses", 0, /obj/item/clothing/glasses/sunglasses, MARINE_CAN_BUY_GLASSES, VENDOR_ITEM_REGULAR),
+		list("Medical HUD Glasses", 0, /obj/item/clothing/glasses/hud/health, MARINE_CAN_BUY_GLASSES, VENDOR_ITEM_RECOMMENDED),
+
+		list("MASK (CHOOSE 1)", 0, null, null, null),
+		list("L7 Gasmask", 0, /obj/item/clothing/mask/gas/pmc/royal_marine, MARINE_CAN_BUY_MASK, VENDOR_ITEM_REGULAR),
+		list("Heat Absorbent Coif", 0, /obj/item/clothing/mask/rebreather/scarf, MARINE_CAN_BUY_MASK, VENDOR_ITEM_REGULAR),
+
+		list("AMMUNITION", 0, null, null, null),
+		list("VP70 Extended Magazine (9x19mm)", 7, /obj/item/ammo_magazine/pistol/vp70/extended, null, VENDOR_ITEM_REGULAR),
+		list("VP70 AP Magazine (9x19mm)", 7, /obj/item/ammo_magazine/pistol/vp70/ap, null, VENDOR_ITEM_REGULAR),
+		list("VP70 Incendiary Magazine (9x19mm)", 9, /obj/item/ammo_magazine/pistol/vp70/incendiary, null, VENDOR_ITEM_REGULAR),
+		list("VP78 Incendiary Magazine (9x19mm)", 9, /obj/item/ammo_magazine/pistol/vp78/incendiary, null, VENDOR_ITEM_REGULAR),
+		list("VP78 HEAP Magazine (9x19mm)", 22, /obj/item/ammo_magazine/pistol/vp78/heap, null, VENDOR_ITEM_REGULAR),
+		list("VP78 Toxic Magazine (9x19mm)", 7, /obj/item/ammo_magazine/pistol/vp78/toxin, null, VENDOR_ITEM_REGULAR),
+		list("FN-TWE P90 AP magazine (5.7×28mm)", 7, /obj/item/ammo_magazine/smg/p90/twe, null, VENDOR_ITEM_REGULAR),
+
+		list("UTILITIES", 0, null, null, null),
+		list("Fire Extinguisher (portable)", 1, /obj/item/tool/extinguisher/mini, null, VENDOR_ITEM_REGULAR),
+		list("Large General Pouch", 2, /obj/item/storage/pouch/general/large, null, VENDOR_ITEM_REGULAR),
+		list("Large Magazine Pouch", 5, /obj/item/storage/pouch/magazine/large, null, VENDOR_ITEM_REGULAR),
+		list("Machete Scabbard (Full)", 2, /obj/item/storage/large_holster/machete/full, null, VENDOR_ITEM_REGULAR),
+		list("Machete Pouch (Full)", 4, /obj/item/storage/pouch/machete/full, null, VENDOR_ITEM_REGULAR),
+		list("Motion Detector", 2, /obj/item/device/motiondetector/hacked/twe, null, VENDOR_ITEM_RECOMMENDED)
+	))

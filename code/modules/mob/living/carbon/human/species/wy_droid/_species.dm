@@ -1,6 +1,6 @@
 // Synth used for W-Y Deathsquads
 /datum/species/synthetic/colonial/wy_droid
-	name = SYNTH_COMBAT
+	name = SYNTH_WY_COMBAT
 	name_plural = "WY Combat Androids"
 	uses_skin_color = FALSE
 	special_body_types = FALSE

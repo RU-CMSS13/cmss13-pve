@@ -228,3 +228,6 @@
 
 /obj/structure/closet/secure_closet/marine_personal/rmc/troop_commander
 	job = JOB_TWE_RMC_LIEUTENANT
+
+/obj/structure/closet/secure_closet/marine_personal/rmc/pilot
+	job = JOB_TWE_RMC_PILOT
