@@ -274,8 +274,8 @@
 	name = "high-explosive armor-piercing pistol bullet"
 
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
-	damage = 50
-	penetration = ARMOR_PENETRATION_TIER_10
+	damage = 65
+	penetration = ARMOR_PENETRATION_TIER_5
 
 /datum/ammo/bullet/pistol/squash/rubber
 	name = "rubber squash-head pistol bullet"

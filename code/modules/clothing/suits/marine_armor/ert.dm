@@ -1296,6 +1296,19 @@
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	item_state_slots = list(WEAR_JACKET = "heavy_armor")
 	allowed = list(
+		/obj/item/tank/emergency_oxygen,
+		/obj/item/device/flashlight,
+		/obj/item/storage/fancy/cigarettes,
+		/obj/item/tool/lighter,
+		/obj/item/storage/bible,
+		/obj/item/attachable/bayonet,
+		/obj/item/storage/belt/marine/smartgunner,
+		/obj/item/storage/backpack/general_belt,
+		/obj/item/storage/large_holster/machete,
+		/obj/item/storage/large_holster/m39,
+		/obj/item/storage/belt/gun,
+		/obj/item/device/motiondetector,
+		/obj/item/device/walkman,
 		/obj/item/weapon/gun/smartgun,
 		/obj/item/weapon/gun/smartgun/dirty,
 	)
@@ -1499,10 +1512,6 @@
 	armor_bomb = CLOTHING_ARMOR_HIGHPLUS
 	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
 	item_state_slots = list(WEAR_JACKET = "commando_armor_sg")
-	allowed = list(
-		/obj/item/weapon/gun/smartgun,
-		/obj/item/weapon/gun/smartgun/dirty,
-	)
 	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PLATE2, ACCESSORY_SLOT_PONCHO)
 	restricted_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PLATE2)
 

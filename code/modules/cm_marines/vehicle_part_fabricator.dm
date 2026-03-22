@@ -212,7 +212,7 @@
 /obj/structure/machinery/part_fabricator/dropship/get_point_store()
 	return GLOB.supply_controller.dropship_points
 
-/obj/structure/machinery/part_fabricator/dropship/add_to_point_store(number = 1)
+/obj/structure/machinery/part_fabricator/dropship/add_to_point_store(number = 28) //18 * 28 = 504 points per minute
 	GLOB.supply_controller.dropship_points += number
 
 /obj/structure/machinery/part_fabricator/dropship/spend_point_store(number = 1)
