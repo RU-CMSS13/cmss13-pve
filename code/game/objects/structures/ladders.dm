@@ -391,3 +391,23 @@
 	name = "ladder"
 	desc = "A sturdy metal ladder, made from an unknown metal, adorned with glowing runes."
 	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'
+
+/obj/structure/ladder/rope
+	name = "rope"
+	desc = "A sturdy rope."
+	icon = 'icons/obj/structures/props/almayer_props.dmi'
+	icon_state = "rope"
+
+/obj/structure/ladder/rope/update_icon()
+	return
+
+/obj/structure/ladder/maintenance
+	name = "maintenance ladder"
+	desc = "The hatch itself is the door to the underground. Though it looks like it the hatch itself is light enough to not be an issue!"
+	icon = 'icons/obj/structures/structures.dmi'
+	icon_state = "hatchclosed"
+	color = "#666633"
+	pixel_y = 7
+
+/obj/structure/ladder/maintenance/update_icon()
+	return

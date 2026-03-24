@@ -45025,7 +45025,7 @@
 	layer = 5
 	},
 /obj/structure/surface/rack,
-/obj/item/storage/backpack/commando,
+/obj/item/storage/backpack/pmc/backpack/commando,
 /turf/open/floor/prison/darkpurple2/east,
 /area/white_antre/indoors/underground_level/gonzo)
 "cho" = (

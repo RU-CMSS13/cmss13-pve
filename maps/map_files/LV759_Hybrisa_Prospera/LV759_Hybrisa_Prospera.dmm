@@ -99905,7 +99905,7 @@
 	pixel_x = -4;
 	pixel_y = -2
 	},
-/obj/item/clothing/under/marine/veteran/UPP{
+/obj/item/clothing/under/marine/veteran/upp{
 	pixel_x = 7;
 	pixel_y = 8
 	},
