@@ -702,6 +702,7 @@
 	/obj/item/ammo_magazine/pistol/vp78/toxin,
 	/obj/item/ammo_magazine/pistol/vp78/penetrating,
 	/obj/item/ammo_magazine/pistol/vp78/incendiary,
+	/obj/item/ammo_magazine/pistol/vp78/heap,
 	/obj/item/ammo_magazine/pistol/vp78/rubber,
 	)
 
