@@ -22,6 +22,9 @@ endmap
 map bigredv2
 endmap
 
+map bigred_multiz
+endmap
+
 map prison_station_fop
 endmap
 
