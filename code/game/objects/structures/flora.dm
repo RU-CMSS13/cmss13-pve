@@ -109,8 +109,19 @@ PLANT_CUT_MACHETE = 3 = Needs at least a machete to be cut down
 	name = "pine tree"
 	icon = 'icons/obj/structures/props/pinetrees.dmi'
 	icon_state = "pine_1"
+	icon_tag = "pine"
+	variations = 3
 
-/obj/structure/flora/tree/pine/xmas
+/obj/structure/flora/tree/pine/pine_1
+	icon_state = "pine_1"
+
+/obj/structure/flora/tree/pine/pine_2
+	icon_state = "pine_2"
+
+/obj/structure/flora/tree/pine/pine_3
+	icon_state = "pine_3"
+
+/obj/structure/flora/tree/xmas
 	name = "xmas tree"
 	icon = 'icons/obj/structures/props/pinetrees.dmi'
 	icon_state = "pine_c"
