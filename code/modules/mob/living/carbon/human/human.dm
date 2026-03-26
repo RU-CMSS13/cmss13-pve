@@ -1019,7 +1019,7 @@
 	set name = "View Crew Manifest"
 	set category = "IC"
 
-	if(job in GLOB.ROLES_USCM)
+	if((job in GLOB.ROLES_USCM) || (job in GLOB.ROLES_RMCTROOP))
 		var/dat = GLOB.data_core.get_manifest()
 		show_browser(src, dat, "Crew Manifest", "manifest", width = 400, height = 750)
 	else
