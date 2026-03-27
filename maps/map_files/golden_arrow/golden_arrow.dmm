@@ -790,7 +790,7 @@
 /turf/open/floor/almayer/edge/smooth/corner/west,
 /area/golden_arrow/hangar)
 "abG" = (
-/obj/structure/machinery/cm_vending/clothing/pilot_officer,
+/obj/structure/machinery/cm_vending/clothing/pilot_officer/ai,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/pilot_room)
 "abH" = (

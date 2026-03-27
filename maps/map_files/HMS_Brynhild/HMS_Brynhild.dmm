@@ -17172,7 +17172,7 @@
 /turf/open/floor/almayer/aicore/glowing,
 /area/hms_brynhild/ai_interface)
 "Nx" = (
-/obj/structure/machinery/cm_vending/clothing/pilot_officer/rmc,
+/obj/structure/machinery/cm_vending/clothing/pilot_officer/ai/rmc,
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury_station)
 "Ny" = (
