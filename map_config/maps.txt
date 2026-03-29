@@ -19,6 +19,9 @@ endmap
 map lv624_repaired
 endmap
 
+map lv624_lazarus_landing
+endmap
+
 map bigredv2
 endmap
 
