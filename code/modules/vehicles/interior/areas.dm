@@ -104,3 +104,7 @@
 /area/interior/vehicle/humvee/transport
 	name = "\improper vehicle interior"
 	icon_state = "apc"
+
+/area/interior/vehicle/uppvan/ridgeway
+	name = "\improper Ridgeway interior"
+	icon_state = "ridgeway"
