@@ -141,3 +141,7 @@
 /datum/map_template/interior/humvee/humvee_transport
 	name = "JTMV-Utility"
 	interior_id = "humvee_transport"
+
+/datum/map_template/interior/twe_tank
+	name = "FV150 Cavalry Tank"
+	interior_id = "twe_tank"

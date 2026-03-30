@@ -108,3 +108,7 @@
 /area/interior/vehicle/uppvan/ridgeway
 	name = "\improper Ridgeway interior"
 	icon_state = "ridgeway"
+
+/area/interior/vehicle/twe_tank
+	name = "\improper TWE tank interior"
+	icon_state = "tank"
