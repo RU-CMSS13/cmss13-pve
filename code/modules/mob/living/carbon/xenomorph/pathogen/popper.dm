@@ -78,6 +78,11 @@
 	. = ..()
 	make_pathogen_speaker()
 
+/mob/living/carbon/xenomorph/popper/death(cause, gibbed)
+	. = ..()
+	if(prob(10))
+		new /obj/effect/pathogen/spore_cloud(loc)
+
 /mob/living/carbon/xenomorph/popper/start_pulling(atom/movable/AM)
 	return
 
