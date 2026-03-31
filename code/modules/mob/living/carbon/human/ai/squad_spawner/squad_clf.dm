@@ -87,10 +87,3 @@
 		/datum/equipment_preset/rebel/soldier = 2,
 		/datum/equipment_preset/rebel/medic = 1,
 	)
-
-/datum/human_ai_squad_preset/clf/canc
-	name = "CANC Rebel, Patrol"
-	ai_to_spawn = list(
-		/datum/equipment_preset/canc/remnant/leader = 1,
-		/datum/equipment_preset/canc/remnant = 2,
-	)

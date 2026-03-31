@@ -2238,3 +2238,24 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	item_state = "rmc_helm2"
 	desc = "A common helmet used by various blue-collar professions in the TWE."
 
+/obj/item/clothing/head/helmet/marine/snowman
+	name = "reinforced snowsuit hood"
+	desc = "Thick detachable hood of the snowsuit for extreme cold enviroment. Inner layers it seems, are reinforced with kevlar."
+	icon_state = "s_ghillie_coif"
+	item_state = "s_ghillie_coif"
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+
+/obj/item/clothing/head/radiation/armoured
+
+	name = "reinforced radiation hood"
+	desc = "A hood with radiation protective properties and strong kevlar layer beneath. Label: Made with lead, do not eat insulation"
+	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_LOW
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT

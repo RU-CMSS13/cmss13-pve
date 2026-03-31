@@ -1887,7 +1887,7 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 /datum/equipment_preset/proc/add_upp_weapon(mob/living/carbon/human/new_human) // meant for the better equipped TG
 	if(!istype(new_human))
 		return
-	var/random_upp_weapon = rand(1,5)
+	var/random_upp_weapon = rand(1,4)
 	switch(random_upp_weapon)
 		if(1, 2, 3)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71(new_human), WEAR_J_STORE)
@@ -1901,6 +1901,3 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_BELT)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_BELT)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_BELT)
-		if(5)
-			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/type23/riot, WEAR_J_STORE)
-			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/shotgun/upp/heavybeanbag, WEAR_WAIST)
