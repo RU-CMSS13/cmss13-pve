@@ -676,6 +676,16 @@
 	if(slot == WEAR_BODY || slot == WEAR_JACKET)
 		user.update_hair()
 
+/obj/item/clothing/accessory/clf_cape
+	name = "torn CLF flag"
+	desc = "A torn up CLF flag with a pin that allows it to be worn as a cape."
+	icon_state = "clf_cape"
+	accessory_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/ties.dmi',
+		WEAR_JACKET = 'icons/mob/humans/onmob/ties.dmi'
+	)
+	slot = ACCESSORY_SLOT_PONCHO
+
 /obj/item/clothing/accessory/bomb //Suicide vesst
 	name = "explosive vest"
 	desc = "Used by absolute madmen to cause terror and fear against others, haphazardly put together with C4 and a standard webbing vest."
