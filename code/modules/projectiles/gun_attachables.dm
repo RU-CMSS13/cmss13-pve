@@ -3699,7 +3699,9 @@ Defined in conflicts.dm of the #defines folder.
 	name = "\improper GP-45 grenade launcher"
 	icon_state = "grenade-ag80"
 	attach_icon = "grenade-ag80_a"
-	has_breech = TRUE
+	pixel_shift_x = 20
+	pixel_shift_y = 15
+	has_breech = FALSE
 
 /obj/item/attachable/attached_gun/grenade/type71/ag80/preloaded
 
@@ -3877,7 +3879,7 @@ Defined in conflicts.dm of the #defines folder.
 	current_rounds = 5
 	ammo = /datum/ammo/bullet/shotgun/buckshot/masterkey
 	slot = "under"
-	pixel_shift_y = 18
+	pixel_shift_y = 17
 	fire_sound = 'sound/weapons/gun_shotgun_u7.ogg'
 	gun_activate_sound = 'sound/weapons/handling/gun_u7_activate.ogg'
 	flags_attach_features = ATTACH_REMOVABLE|ATTACH_ACTIVATION|ATTACH_PROJECTILE|ATTACH_RELOADABLE|ATTACH_WEAPON
@@ -4307,7 +4309,6 @@ Defined in conflicts.dm of the #defines folder.
 	wield_delay_mod = WIELD_DELAY_FAST
 	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
 	scatter_mod = SCATTER_AMOUNT_TIER_9
-	recoil_mod = RECOIL_AMOUNT_TIER_5
 
 /obj/item/attachable/bipod/Attach(obj/item/weapon/gun/gun, mob/user)
 	..()
@@ -4368,7 +4369,6 @@ Defined in conflicts.dm of the #defines folder.
 	bipod_deployed = FALSE
 	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
 	scatter_mod = SCATTER_AMOUNT_TIER_9
-	recoil_mod = RECOIL_AMOUNT_TIER_5
 	burst_scatter_mod = 0
 	//if we are no longer on full auto, don't bother switching back to the old firemode
 	if(full_auto_switch && gun.gun_firemode == GUN_FIREMODE_AUTOMATIC && gun.gun_firemode != old_firemode)
@@ -4503,6 +4503,21 @@ Defined in conflicts.dm of the #defines folder.
 	attachment_action_type = /datum/action/item_action/toggle
 
 /obj/item/attachable/bipod/integral/New()
+	..()
+
+	delay_mod = 0
+	wield_delay_mod = WIELD_DELAY_FAST
+	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
+	scatter_mod = SCATTER_AMOUNT_TIER_9
+	fa_scatter_peak_mod = 15 //fifteen more shots until you hit max scatter
+
+/obj/item/attachable/bipod/integral/pkp
+	name = "QYJ-72 bipod"
+	desc = "An integral bipod for the QYJ-72 Machine Gun."
+	icon_state = "bipod"
+	attach_icon = "uppmg_bipod_a"
+
+/obj/item/attachable/bipod/integral/pkp/New()
 	..()
 
 	delay_mod = 0

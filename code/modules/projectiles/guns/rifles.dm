@@ -674,7 +674,7 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "ag80"
 	item_state = "ag80"
-	fire_sound = "gun_pulse"
+	fire_sound = "gun_ag80"
 	reload_sound = 'sound/weapons/handling/m41_reload.ogg'
 	unload_sound = 'sound/weapons/handling/m41_unload.ogg'
 	current_mag = /obj/item/ammo_magazine/rifle/ag80
@@ -705,7 +705,7 @@
 	start_automatic = TRUE
 
 /obj/item/weapon/gun/rifle/ag80/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 18,"rail_x" = 12, "rail_y" = 22, "under_x" = 21, "under_y" = 17, "stock_x" = 22, "stock_y" = 14, "side_rail_x" = 23, "side_rail_y" = 16)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 18,"rail_x" = 12, "rail_y" = 22, "under_x" = 24, "under_y" = 15, "stock_x" = 22, "stock_y" = 14, "side_rail_x" = 23, "side_rail_y" = 18)
 
 /obj/item/weapon/gun/rifle/ag80/set_gun_config_values()
 	..()
@@ -724,9 +724,6 @@
 /obj/item/weapon/gun/rifle/ag80/unloaded
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 	current_mag = null
-
-/obj/item/weapon/gun/rifle/ag80/unloaded/platoon
-	starting_attachment_types = list(/obj/item/attachable/stock/rifle/ag80/collapsible, /obj/item/attachable/attached_gun/grenade/type71/ag80, /obj/item/attachable/sling)
 
 //M20A Harrington rifle
 //=================================================
@@ -1482,7 +1479,7 @@
 
 	reload_sound = 'sound/weapons/handling/hpr_reload.ogg'
 	unload_sound = 'sound/weapons/handling/hpr_unload.ogg'
-	fire_sound = "gun_pulse"
+	fire_sound = 'sound/weapons/gun_hpr.ogg'
 	aim_slowdown = SLOWDOWN_ADS_LMG
 	accepted_ammo = list(
 		/obj/item/ammo_magazine/hpr_box,
@@ -1630,7 +1627,7 @@
 	icon_state = "type71"
 	item_state = "type71"
 
-	fire_sound = 'sound/weapons/gun_type71.ogg'
+	fire_sound = 'sound/weapons/gun_type71_new.ogg'
 	reload_sound = 'sound/weapons/handling/m41_reload.ogg'
 	unload_sound = 'sound/weapons/handling/m41_unload.ogg'
 	current_mag = /obj/item/ammo_magazine/rifle/type71
@@ -1659,7 +1656,7 @@
 	start_automatic = TRUE
 
 /obj/item/weapon/gun/rifle/type71/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 17,"rail_x" = 10, "rail_y" = 23, "under_x" = 23, "under_y" = 14, "stock_x" = 11, "stock_y" = 13, "side_rail_x" = 19, "side_rail_y" = 19)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 17,"rail_x" = 10, "rail_y" = 23, "under_x" = 23, "under_y" = 12, "stock_x" = 11, "stock_y" = 13, "side_rail_x" = 19, "side_rail_y" = 19)
 
 /obj/item/weapon/gun/rifle/type71/set_gun_config_values()
 	..()
@@ -1684,7 +1681,7 @@
 
 /obj/item/weapon/gun/rifle/type71/flamer
 	name = "\improper Type 71-F pulse rifle"
-	desc = "This appears to be a less common variant of the Type 71 with an integrated flamethrower that seems especially powerful."
+	desc = "The service rifle of the UPP, the Type 71 is an ergonomic, lightweight pulse rifle chambered in 10x27mm, packing a harder punch than the USCM M41A which balances out a lower firerate. Despite lackluster precision, an integrated recoil-dampening mechanism makes the rifle surprisingly controllable in bursts. This variant features an integrated incinerator unit."
 	attachable_allowed = list(
 		/obj/item/attachable/magnetic_harness, // Rail
 		/obj/item/attachable/sling,
@@ -1754,6 +1751,9 @@
 
 /obj/item/weapon/gun/rifle/type71/carbine/unloaded
 	current_mag = null
+
+/obj/item/weapon/gun/rifle/type71/carbine/assault
+	starting_attachment_types = list(/obj/item/attachable/stock/type71, /obj/item/attachable/bayonet/upp, /obj/item/attachable/verticalgrip/upp)
 
 //-------------------------------------------------------
 //UPP TYPE 73 RIFLE
@@ -1851,11 +1851,11 @@
 	set_burst_amount(0)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_5
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
-	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2 // long barrel for better velocity
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_8 // long barrel and modified gas chamber for extra oomph
 	recoil_unwielded = RECOIL_AMOUNT_TIER_1
-	recoil = RECOIL_AMOUNT_TIER_4
+	recoil = RECOIL_AMOUNT_TIER_5
 	damage_falloff_mult = 0
-	scatter = SCATTER_AMOUNT_TIER_8
+	scatter = SCATTER_AMOUNT_TIER_9
 
 //-------------------------------------------------------
 //UPP AK-4047 RIFLE

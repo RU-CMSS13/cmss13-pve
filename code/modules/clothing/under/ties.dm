@@ -1789,7 +1789,7 @@
 	name = "\improper M3 Pattern Small Pouch Webbing"
 	desc = "A set of M3 pattern webbing fully outfitted with pouches and pockets to carry a whole array of small items."
 	icon_state = "m3webbingsmall"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/plus
 	slot = ACCESSORY_SLOT_M3UTILITY
 
 //Pre-load for MARSOC props
@@ -1937,6 +1937,9 @@
 		/obj/item/bodybag,
 	)
 
+/obj/item/storage/internal/accessory/black_vest/m3generic/plus // RU-CM PVE edit
+	storage_slots = 6
+
 //Pre-load for MARSOC props
 /obj/item/clothing/accessory/storage/webbing/m3/recon/medic/marsoc
 	icon_state = "armywebbing"
@@ -2015,7 +2018,7 @@
 	slot = ACCESSORY_SLOT_M3UTILITY
 
 /obj/item/storage/internal/accessory/webbing/m3mag/upp
-	storage_slots = 5
+	storage_slots = 4
 	can_hold = list(
 		/obj/item/attachable/bayonet,
 		/obj/item/device/flashlight/flare,
@@ -2041,7 +2044,7 @@
 	name = "\improper Type 78 Pattern Small Pouch Webbing"
 	desc = "A set of UPP webbing fully outfitted with pouches and pockets to carry a while array of small items."
 	icon_state = "upp_webbing_small"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/plus
 	flags_atom = NO_SNOW_TYPE
 	slot = ACCESSORY_SLOT_M3UTILITY
 
@@ -2049,9 +2052,18 @@
 	name = "\improper Type 78 Pattern Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to UPP armor. This one is the slimmed down model designed for general purpose storage."
 	icon_state = "upp_webbing_large"
-	hold = /obj/item/storage/internal/accessory/webbing/m3generic
+	hold = /obj/item/storage/internal/accessory/webbing/m3generic/plus
 	flags_atom = NO_SNOW_TYPE
 	slot = ACCESSORY_SLOT_M3UTILITY
+
+/obj/item/storage/internal/accessory/webbing/m3generic/plus
+	bypass_w_limit = list(
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/smg,
+		/obj/item/ammo_magazine/sniper,
+		/obj/item/ammo_magazine/plasma,
+		/obj/item/ammo_magazine/flamer_tank, // RU-CM PVE edit
+	)
 
 //===========================//CUSTOM RMC ARMOR WEBBING\\================================\\
 

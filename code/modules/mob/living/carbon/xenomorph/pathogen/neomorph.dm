@@ -2,8 +2,8 @@
 	caste_type = PATHOGEN_CREATURE_NEOMORPH
 	tier = 2
 
-	melee_damage_lower = XENO_DAMAGE_TIER_4
-	melee_damage_upper = XENO_DAMAGE_TIER_5
+	melee_damage_lower = XENO_DAMAGE_TIER_3
+	melee_damage_upper = XENO_DAMAGE_TIER_4
 	melee_vehicle_damage = XENO_DAMAGE_TIER_4
 	max_health = XENO_HEALTH_TIER_5
 	plasma_gain = XENO_PLASMA_GAIN_TIER_8
@@ -90,10 +90,10 @@
 	return
 
 /datum/action/xeno_action/activable/pounce/runner/neomorph
-	xeno_cooldown = 5 SECONDS
+	xeno_cooldown = 4 SECONDS
 	knockdown = FALSE // Should we knock down the target?
 	knockdown_duration = 1
-	slash = TRUE // Do we slash upon reception?
-	freeze_self = TRUE // Should we freeze ourselves after the lunge?
+	slash = FALSE // Do we slash upon reception?
+	freeze_self = FALSE // Should we freeze ourselves after the lunge?
 	freeze_time = 0
 	can_be_shield_blocked = TRUE // Some legacy stuff, self explanatory

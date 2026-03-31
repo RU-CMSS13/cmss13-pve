@@ -703,7 +703,7 @@
 	ammo_band_icon_empty = "+caws_band_e"
 	w_class = SIZE_MEDIUM
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot
-	max_rounds = 20
+	max_rounds = 15
 	gun_type = /obj/item/weapon/gun/rifle/caws
 	transfer_handful_amount = 5
 	var/jam_chance = CAWS_MAGAZINE_JAM_CHANCE

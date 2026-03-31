@@ -1163,6 +1163,18 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	can_hold = list(/obj/item/ammo_magazine/flamer_tank, /obj/item/tool/extinguisher)
 	storage_flags = STORAGE_FLAGS_POUCH
 
+/obj/item/storage/backpack/marine/engineerpack/flamethrower/upp
+	name = "\improper UPP Pyrotechnician ROB-6 fueltank"
+	desc = "UPPAC standard issue 'Rancevyj Ognemetnyj Bak', or 'Back-mounted Flamer Tank', old back rig that holds fuel in massive square shaped tank, with highly-pressured canister below it. A small regulator sits on the side of rig, compatible with refillment of all flamethrowers used by UPPAC. Tho due to the size, it cannot hold additional regular tanks, like it's American counterpart."
+	icon_state = "upp_flamethrower_backpack"
+	item_state = "upp_flamethrower_backpack"
+	max_fuel = 800
+	has_gamemode_skin = FALSE
+	max_storage_space = 15
+	storage_slots = 1
+	worn_accessible = TRUE
+	can_hold = list(/obj/item/weapon/gun/flamer/upp, /obj/item/ammo_magazine/flamer_tank/upp)
+
 //----------OTHER FACTIONS AND ERTS----------
 
 /obj/item/storage/backpack/lightpack

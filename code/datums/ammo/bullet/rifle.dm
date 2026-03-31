@@ -615,18 +615,20 @@
 	damage_falloff = 0
 	flags_ammo_behavior = AMMO_BALLISTIC
 	accurate_range_min = 4
+	effective_range_max = 24
+	max_range = 32
 
-	damage = 110 // 121 with x1.1 damage mod.
+	damage = 75 // 105 with x1.4 damage mod.
 	scatter = -SCATTER_AMOUNT_TIER_8
-	penetration= ARMOR_PENETRATION_TIER_6
+	penetration= ARMOR_PENETRATION_TIER_4
 	shell_speed = AMMO_SPEED_TIER_7
 
 /datum/ammo/bullet/rifle/upp/spec/incendiary
 	name = "high velocity incendiary 10x27 bullet"
 	flags_ammo_behavior = AMMO_BALLISTIC
 
-	damage = 100 // 110 with x1.1 damage mod.
-	penetration= ARMOR_PENETRATION_TIER_6
+	damage = 70 // 98 with x1.4 damage mod.
+	penetration= ARMOR_PENETRATION_TIER_4
 
 /datum/ammo/bullet/rifle/upp/spec/incendiary/set_bullet_traits()
 	. = ..()
@@ -638,9 +640,9 @@
 	name = "high velocity explosive 10x27 bullet"
 	flags_ammo_behavior = AMMO_BALLISTIC
 
-	damage = 150 // 165 with x1.1 damage mod.
+	damage = 125 // 175 with x1.4 damage mod.
 	accuracy = HIT_ACCURACY_TIER_2
-	penetration = ARMOR_PENETRATION_TIER_6
+	penetration = ARMOR_PENETRATION_TIER_4
 	damage_armor_punch = 5
 
 /datum/ammo/bullet/rifle/upp/spec/explosive/on_hit_mob(mob/M, obj/projectile/P)
@@ -666,7 +668,7 @@
 /datum/ammo/bullet/rifle/upp/spec/du
 	name = "high velocity depleted uranium 10x27 bullet"
 
-	damage = 110 // 121 with x1.1 damage mod. + 15 tox DoT
+	damage = 120 // 168 with x1.4 damage mod. + 10 tox DoT
 	penetration = ARMOR_PENETRATION_TIER_8 //DU's a heavy armour-piercing kind of material
 	accuracy = HIT_ACCURACY_TIER_4
 	scatter = -SCATTER_AMOUNT_TIER_8
@@ -678,11 +680,11 @@
 	))
 
 /datum/ammo/bullet/rifle/upp/spec/du/on_hit_mob(mob/target, obj/projectile/fired_proj)
-	target.AddComponent(/datum/component/status_effect/toxic_buildup, toxic_buildup = 15, toxic_buildup_dissipation = 0.3, max_buildup = 75)
-	knockback(target, fired_proj, 16) // Can knockback out to 2/3rds-range
+	target.AddComponent(/datum/component/status_effect/toxic_buildup, toxic_buildup = 10, toxic_buildup_dissipation = 0.3, max_buildup = 50)
+	knockback(target, fired_proj, 8) // Can knockback out to 2/3rds-range
 	if(target.mob_size >= MOB_SIZE_BIG)
 		var/mob/living/L = target
-		L.apply_armoured_damage(damage*1.3, ARMOR_BULLET, BRUTE, null, penetration) // As bugs don't take toxin damage, this should give it a little more oomf versus them
+		L.apply_armoured_damage(damage*1.25, ARMOR_BULLET, BRUTE, null, penetration) // As bugs don't take toxin damage, this should give it a little more oomf versus them
 
 //10X31 AK500
 /datum/ammo/bullet/rifle/heavy/upp

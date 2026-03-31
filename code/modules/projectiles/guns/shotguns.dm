@@ -464,6 +464,7 @@ can cause issues with ammo types getting mixed up during the burst.
 /obj/item/weapon/gun/shotgun/type23/unloaded/stored
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/unloaded
 	starting_attachment_types = null
+	flags_gun_features = /obj/item/weapon/gun/shotgun/type23::flags_gun_features |GUN_TRIGGER_SAFETY
 
 /obj/item/weapon/gun/shotgun/type23/slug
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/slug
@@ -1523,7 +1524,9 @@ can cause issues with ammo types getting mixed up during the burst.
 		/obj/item/attachable/reddot/upp,
 		/obj/item/attachable/reflex/upp,
 		/obj/item/attachable/suppressor, // Muzzle // CAWS BARREL
-		/obj/item/attachable/verticalgrip/upp, // underbarrel
+		/obj/item/attachable/attached_gun/grenade/type71/ag80, // underbarrel
+		/obj/item/attachable/attached_gun/grenade/type71/ag80/preloaded,
+		/obj/item/attachable/verticalgrip/upp,
 		/obj/item/attachable/angledgrip/upp,
 		/obj/item/attachable/lasersight/upp, // Side Rail
 		/obj/item/attachable/flashlight,
@@ -1551,7 +1554,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
 
 /obj/item/weapon/gun/rifle/caws/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 35, "muzzle_y" = 16,"rail_x" = 15, "rail_y" = 22,	 "under_x" = 26, "under_y" = 12, "stock_x" = 15, "stock_y" = 13, "side_rail_x" = 25, "side_rail_y" = 17)
+	attachable_offset = list("muzzle_x" = 35, "muzzle_y" = 16,"rail_x" = 15, "rail_y" = 22,	 "under_x" = 27, "under_y" = 12, "stock_x" = 15, "stock_y" = 13, "side_rail_x" = 25, "side_rail_y" = 17)
 
 /obj/item/weapon/gun/rifle/caws/stored
 	current_mag = null

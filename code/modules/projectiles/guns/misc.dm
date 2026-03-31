@@ -180,9 +180,18 @@
 	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_CAN_POINTBLANK|GUN_AUTO_EJECTOR|GUN_SPECIALIST|GUN_AMMO_COUNTER
 	gun_category = GUN_CATEGORY_HEAVY
 	attachable_allowed = list(
-		/obj/item/attachable/pkpbarrel,
-		/obj/item/attachable/stock/pkpstock,
-	)
+		/obj/item/attachable/magnetic_harness, // Rail
+		/obj/item/attachable/sling,
+		/obj/item/attachable/scope/pve,
+		/obj/item/attachable/scope/mini/upp,
+		/obj/item/attachable/reddot/upp,
+		/obj/item/attachable/reflex/upp,
+		/obj/item/attachable/pkpbarrel, // Muzzle
+		/obj/item/attachable/bipod/integral/pkp, // Under
+		/obj/item/attachable/stock/pkpstock, // Stock
+		/obj/item/attachable/lasersight/upp, // Side Rail
+		/obj/item/attachable/flashlight,
+		)
 	var/cover_open = FALSE //if the gun's feed-cover is open or not.
 
 
@@ -198,12 +207,10 @@
 	pkpstock.Attach(src)
 	update_attachable(pkpstock.slot)
 
-	//invisible mag harness
-	var/obj/item/attachable/magnetic_harness/Integrated = new(src)
-	Integrated.hidden = TRUE
-	Integrated.flags_attach_features &= ~ATTACH_REMOVABLE
-	Integrated.Attach(src)
-	update_attachable(Integrated.slot)
+	var/obj/item/attachable/bipod = new /obj/item/attachable/bipod/integral/pkp(src)
+	bipod.flags_attach_features &= ~ATTACH_REMOVABLE
+	bipod.Attach(src)
+	update_attachable(bipod.slot)
 
 /obj/item/weapon/gun/pkp/Initialize(mapload, spawn_empty)
 	. = ..()
@@ -211,7 +218,7 @@
 		load_into_chamber()
 
 /obj/item/weapon/gun/pkp/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 34, "muzzle_y" = 18,"rail_x" = 5, "rail_y" = 5, "under_x" = 39, "under_y" = 7, "stock_x" = 10, "stock_y" = 13)
+	attachable_offset = list("muzzle_x" = 37, "muzzle_y" = 18,"rail_x" = 3, "rail_y" = 22, "under_x" = 32, "under_y" = 16, "stock_x" = 10, "stock_y" = 13, "side_rail_x" = 23, "side_rail_y" = 20)
 
 
 /obj/item/weapon/gun/pkp/set_gun_config_values()
@@ -221,13 +228,15 @@
 	burst_delay = FIRE_DELAY_TIER_LMG
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT
-	fa_scatter_peak = FULL_AUTO_SCATTER_PEAK_TIER_4
-	fa_max_scatter = SCATTER_AMOUNT_TIER_7
-	scatter = SCATTER_AMOUNT_TIER_10
+	fa_scatter_peak = FULL_AUTO_SCATTER_PEAK_TIER_5
+	fa_max_scatter = SCATTER_AMOUNT_TIER_2
+	scatter = SCATTER_AMOUNT_TIER_8
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_9
 	scatter_unwielded = SCATTER_AMOUNT_TIER_10
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_AMOUNT_TIER_5
+	aim_slowdown = SLOWDOWN_ADS_LMG
+	wield_delay = WIELD_DELAY_SLOW
 	empty_sound = 'sound/weapons/gun_empty.ogg'
 
 /obj/item/weapon/gun/pkp/clicked(mob/user, list/mods)
@@ -287,6 +296,30 @@
 	var/iff_enabled = TRUE
 	var/requires_harness = TRUE
 
+/obj/item/weapon/gun/pkp/iff/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/attachie = new /obj/item/attachable/pkpbarrel(src)
+	attachie.flags_attach_features &= ~ATTACH_REMOVABLE
+	attachie.Attach(src)
+	update_attachable(attachie.slot)
+
+	var/obj/item/attachable/pkpstock = new /obj/item/attachable/stock/pkpstock(src)
+	pkpstock.flags_attach_features &= ~ATTACH_REMOVABLE
+	pkpstock.Attach(src)
+	update_attachable(pkpstock.slot)
+
+	var/obj/item/attachable/bipod = new /obj/item/attachable/bipod/integral/pkp(src)
+	bipod.flags_attach_features &= ~ATTACH_REMOVABLE
+	bipod.Attach(src)
+	update_attachable(bipod.slot)
+
+//invisible mag harness
+	var/obj/item/attachable/magnetic_harness/Integrated = new(src)
+	Integrated.hidden = TRUE
+	Integrated.flags_attach_features &= ~ATTACH_REMOVABLE
+	Integrated.Attach(src)
+	update_attachable(Integrated.slot)
+
 /obj/item/weapon/gun/pkp/iff/able_to_fire(mob/living/user)
 	. = ..()
 	if(.)
@@ -340,8 +373,11 @@
 		remove_bullet_trait("iff")
 	SEND_SIGNAL(src, COMSIG_GUN_IFF_TOGGLED, iff_enabled)
 
-/obj/item/weapon/gun/pkp/iff/standard_fmj
-	current_mag = /obj/item/ammo_magazine/pkp/standard_fmj
+/obj/item/weapon/gun/pkp/iff/ap
+	current_mag = /obj/item/ammo_magazine/pkp/ap
+
+/obj/item/weapon/gun/pkp/iff/heap
+	current_mag = /obj/item/ammo_magazine/pkp/heap
 
 /obj/effect/syringe_gun_dummy
 	name = ""
