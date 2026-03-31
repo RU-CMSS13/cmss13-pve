@@ -5492,7 +5492,7 @@
 	pixel_x = 10;
 	pixel_y = -2
 	},
-/obj/item/ammo_magazine/rifle/nsg23/extended{
+/obj/item/ammo_magazine/rifle/nsg23{
 	pixel_x = 13;
 	pixel_y = -17
 	},
@@ -17916,7 +17916,7 @@
 /turf/open/floor/hybrisa/carpet/rug_colorable/pink/west,
 /area/lv759/indoors/apartment/westbedrooms)
 "bZs" = (
-/obj/structure/prop/hybrisa/Factory/Conveyor_belt{
+/obj/structure/prop/hybrisa/factory/conveyor_belt{
 	layer = 2
 	},
 /obj/structure/prop/hybrisa/vehicles/Meridian/Shell,
@@ -31272,7 +31272,7 @@
 /turf/open/auto_turf/hybrisa_auto_turf/layer1,
 /area/lv759/outdoors/caveplateau)
 "dVU" = (
-/obj/structure/prop/hybrisa/Factory/Conveyor_belt{
+/obj/structure/prop/hybrisa/factory/conveyor_belt{
 	layer = 2
 	},
 /obj/structure/prop/hybrisa/vehicles/Meridian/Shell{
@@ -39009,7 +39009,7 @@
 /turf/open/floor/hybrisa/tile/tilebeige,
 /area/lv759/indoors/landing_zone_2/kmcc_hub_cargo)
 "feN" = (
-/obj/structure/prop/hybrisa/Factory/Robotic_arm{
+/obj/structure/prop/hybrisa/factory/robotic_arm{
 	dir = 4;
 	layer = 4.2;
 	pixel_y = 7;
@@ -43347,7 +43347,7 @@
 /turf/open/floor/plating/platingdmg3/west,
 /area/lv759/indoors/meridian/meridian_maintenance)
 "fLX" = (
-/obj/structure/prop/hybrisa/Factory/Robotic_arm{
+/obj/structure/prop/hybrisa/factory/robotic_arm{
 	layer = 4.2;
 	pixel_y = 7;
 	level = 5
@@ -50625,7 +50625,7 @@
 	dir = 1;
 	pixel_y = 22
 	},
-/obj/structure/prop/hybrisa/Factory/Conveyor_belt{
+/obj/structure/prop/hybrisa/factory/conveyor_belt{
 	layer = 2
 	},
 /obj/structure/prop/invuln/lattice_prop{
@@ -65732,7 +65732,7 @@
 /turf/open/hybrisa/street/sidewalkcenter/north,
 /area/lv759/outdoors/colony_streets/north_street)
 "jdZ" = (
-/obj/structure/prop/hybrisa/Factory/Robotic_arm/Flipped{
+/obj/structure/prop/hybrisa/factory/robotic_arm/flipped{
 	dir = 1;
 	pixel_x = -7;
 	pixel_y = 7
@@ -74236,7 +74236,7 @@
 /turf/open/hybrisa/street/asphalt,
 /area/lv759/bunker/checkpoint)
 "krK" = (
-/obj/structure/prop/hybrisa/Factory/Robotic_arm/Flipped{
+/obj/structure/prop/hybrisa/factory/robotic_arm/flipped{
 	pixel_y = 7
 	},
 /obj/effect/decal/warning_stripes{
@@ -91196,7 +91196,7 @@
 /turf/open/floor/almayer/silver/west,
 /area/lv759/indoors/wy_research_complex/hallwaycentral)
 "mRa" = (
-/obj/structure/prop/hybrisa/Factory/Robotic_arm/Flipped{
+/obj/structure/prop/hybrisa/factory/robotic_arm/flipped{
 	dir = 4;
 	pixel_x = -7;
 	pixel_y = 7
@@ -99905,7 +99905,7 @@
 	pixel_x = -4;
 	pixel_y = -2
 	},
-/obj/item/clothing/under/marine/veteran/UPP{
+/obj/item/clothing/under/marine/veteran/upp{
 	pixel_x = 7;
 	pixel_y = 8
 	},
@@ -107451,7 +107451,7 @@
 /area/lv759/outdoors/colony_streets/north_east_street_LZ)
 "pnC" = (
 /obj/structure/machinery/light/spot/blue,
-/obj/structure/prop/hybrisa/Factory/Conveyor_belt{
+/obj/structure/prop/hybrisa/factory/conveyor_belt{
 	layer = 2
 	},
 /obj/structure/prop/invuln/lattice_prop{
@@ -118104,7 +118104,7 @@
 /turf/open/hybrisa/street/underground_unweedable,
 /area/lv759/bunker/gonzo)
 "qSt" = (
-/obj/structure/prop/hybrisa/Factory/Conveyor_belt{
+/obj/structure/prop/hybrisa/factory/conveyor_belt{
 	layer = 2
 	},
 /turf/open/floor/almayer/fake_outerhull,
@@ -136873,7 +136873,7 @@
 /turf/open/floor/prison/darkbrown2/west,
 /area/lv759/indoors/mining_outpost/vehicledeployment)
 "tEA" = (
-/obj/structure/prop/hybrisa/Factory/Robotic_arm{
+/obj/structure/prop/hybrisa/factory/robotic_arm{
 	dir = 8;
 	layer = 4.2;
 	pixel_y = 7;
@@ -141526,7 +141526,7 @@
 /turf/open/hybrisa/street/sidewalk/north,
 /area/lv759/outdoors/colony_streets/north_west_street)
 "uoL" = (
-/obj/structure/prop/hybrisa/Factory/Robotic_arm/Flipped{
+/obj/structure/prop/hybrisa/factory/robotic_arm/flipped{
 	dir = 8;
 	pixel_y = 7
 	},
@@ -162564,7 +162564,7 @@
 /turf/open/auto_turf/hybrisa_auto_turf/layer2,
 /area/lv759/indoors/caves/south_east_caves)
 "xtv" = (
-/obj/structure/prop/hybrisa/Factory/Robotic_arm{
+/obj/structure/prop/hybrisa/factory/robotic_arm{
 	dir = 1;
 	layer = 4.2;
 	pixel_y = 7;

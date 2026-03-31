@@ -224,6 +224,9 @@
 	default_ammo = /datum/ammo/bullet/rifle/heavy/tracer
 	gun_type = /obj/item/weapon/gun/smartgun
 
+/obj/item/ammo_magazine/smartgun/empty
+	current_rounds = 0
+
 /obj/item/ammo_magazine/smartgun/dirty
 	name = "irradiated smartgun drum"
 	desc = "What at first glance appears to be a standard 500 round M56 Smartgun drum, is actually a drum loaded with irradiated rounds, providing an extra 'oomph' to to its bullets. The magazine itself is slightly modified to only fit in M56T smartguns, and is marked with a red X."
@@ -263,7 +266,7 @@
 /obj/item/ammo_magazine/rocket
 	name = "\improper 60mm hypervelocity high explosive rocket"
 	desc = "A rocket tube loaded with a HE warhead. Deals high damage to soft targets on direct hit and stuns most targets in a 5-meter-wide area for a short time. Has decreased effect on heavily armored targets."
-	caliber = "rocket"
+	caliber = "60mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
 	icon_state = "rocket"
 
@@ -338,7 +341,7 @@
 	if(current_rounds <= 0)
 		name = "\improper [caliber] spent rocket tube"
 		icon_state = "rocket_e"
-		desc = "Spent rocket tube for a launcher. Activate in hand to disassemble for metal."
+		desc = "Spent rocket tube from a launcher. Activate in hand to disassemble for metal."
 		add_to_garbage(src)
 	else
 		icon_state = initial(icon_state)
@@ -589,24 +592,30 @@
 
 /obj/item/ammo_magazine/rifle/sharp
 	name = "sharp rifle magazine"
-	icon_state = "sharprifle"
+	icon_state = "sharp_explosive_mag"
 	item_state = "sharprifle"
 
+	caliber = "Dart"
 	w_class = SIZE_MEDIUM
 	max_rounds = 10
 	default_ammo = /datum/ammo/rifle/sharp/explosive
 	gun_type = /obj/item/weapon/gun/rifle/sharp
-	flags_magazine = NO_FLAGS
-
+	transfer_handful_amount = 5
 	description_ammo = "darts"
 
 /obj/item/ammo_magazine/rifle/sharp/explosive
 	name = "\improper 9X-E sticky explosive dart magazine"
-	desc = "A specialized sticky explosive dart magazine."
+	desc = "A specialized sticky explosive dart magazine for the SHARP rifle."
+
+/obj/item/ammo_magazine/rifle/sharp/incendiary
+	name = "\improper 9X-I sticky incendiary dart magazine"
+	desc = "A specialized incendiary dart magazine for the SHARP rifle."
+	icon_state = "sharp_incendiary_mag"
+	default_ammo = /datum/ammo/rifle/sharp/incendiary
 
 /obj/item/ammo_magazine/rifle/sharp/track
 	name = "\improper 9X-T sticky tracking dart magazine"
-	desc = "A specialized tracking dart magazine."
+	desc = "A specialized tracking dart magazine for the SHARP rifle."
 	icon_state = "sharprifle_tracker"
 	default_ammo = /datum/ammo/rifle/sharp/track
 
@@ -615,6 +624,6 @@
 
 /obj/item/ammo_magazine/rifle/sharp/flechette
 	name = "\improper 9X-F flechette dart magazine"
-	desc = "A specialized flechette dart magazine."
-	icon_state = "sharprifle_flechette"
+	desc = "A specialized flechette dart magazine for the SHARP rifle."
+	icon_state = "sharp_flechette_mag"
 	default_ammo = /datum/ammo/rifle/sharp/flechette

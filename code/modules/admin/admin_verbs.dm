@@ -55,6 +55,8 @@ GLOBAL_LIST_INIT(admin_verbs_default, list(
 	/client/proc/rejuvenate_all_humans_in_view,
 	/client/proc/rejuvenate_all_revivable_humans_in_view,
 	/client/proc/rejuvenate_all_xenos_in_view,
+	/client/proc/toggle_frozen_in_view,
+	/client/proc/toggle_unfrozen_in_view,
 	/datum/admins/proc/togglesleep,
 	/datum/admins/proc/sleepall,
 	/datum/admins/proc/wakeall,
@@ -106,7 +108,7 @@ GLOBAL_LIST_INIT(admin_verbs_admin, list(
 	/client/proc/toggle_hear_radio, /*toggles whether we hear the radio*/
 	/client/proc/event_panel,
 	/client/proc/free_slot, /*frees slot for chosen job*/
-	/client/proc/modify_slot,
+	/client/proc/modify_job_slot,
 	/client/proc/cmd_admin_rejuvenate,
 	/client/proc/cmd_admin_remove_clamp,
 	/client/proc/cmd_admin_repair_multitile,
@@ -502,7 +504,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		else
 			message_admins("[key_name_admin(src)] has warned [warned_ckey] (DC). They have [MAX_WARNS-P.warning_count] strikes remaining.")
 
-/client/proc/give_disease(mob/T as mob in GLOB.mob_list) // -- Giacom
+/client/proc/give_disease(mob/target as mob in GLOB.mob_list) // -- Giacom
 	set category = "Admin.Fun"
 	set name = "Give Disease (old)"
 	set desc = "Gives a (tg-style) Disease to a mob."
@@ -512,10 +514,17 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 	var/datum/disease/D = tgui_input_list(usr, "Choose the disease to give to that guy", "ACHOO", disease_names)
 	if(!D) return
 	var/path = text2path("/datum/disease/[D]")
-	T.contract_disease(new path, 1)
+	target.contract_disease(new path, 1)
 
-	message_admins("[key_name_admin(usr)] gave [key_name(T)] the disease [D].")
+	message_admins("[key_name_admin(usr)] gave [key_name(target)] the disease [D].")
 
+/client/proc/remove_all_disease(mob/target as mob in GLOB.mob_list)
+	set category = "Admin.Fun"
+	set name = "Remove All Diseases"
+	set desc = "Removes All Diseases from a mob."
+	QDEL_LIST(target.viruses)
+
+	message_admins("[key_name_admin(usr)] removed all disease from [key_name(target)].")
 
 /client/proc/object_talk(msg as text) // -- TLE
 	set category = "Admin.Events"
