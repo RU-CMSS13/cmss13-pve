@@ -417,3 +417,12 @@
 		data += list(H.get_tgui_info())
 
 	return data
+
+//wolfpack
+/obj/item/hardpoint/holder/tank_turret/wolfpack
+	accepted_hardpoints = list(
+		// primaries
+		/obj/item/hardpoint/primary/cannon/wolfpack,
+		// secondaries
+	)
+	icon = 'icons/obj/vehicles/apc_wolfpack.dmi'
