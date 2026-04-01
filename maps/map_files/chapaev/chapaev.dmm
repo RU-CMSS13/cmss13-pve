@@ -3792,9 +3792,11 @@
 	pixel_y = 16;
 	can_block_movement = 0
 	},
-/obj/item/reagent_container/glass/rag{
+/obj/item/reagent_container/glass/rag/polishing_rag{
 	pixel_y = 12;
-	pixel_x = 4
+	name = "towel";
+	desc = "A hygiene towel made of soft fabric. The fibers are significantly worn out, and even have a smell hint of leftover sweat.";
+	color = "#1affff"
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/cryo_cells)
@@ -4662,10 +4664,10 @@
 	color = "#8B9490"
 	},
 /obj/item/storage/belt/gun/bizon{
-	pixel_y = 5
+	pixel_y = 8
 	},
 /obj/item/storage/box/guncase/heavy/smg/type64{
-	pixel_y = 2
+	pixel_y = 5
 	},
 /obj/item/ammo_box/magazine/type64{
 	pixel_y = 8
@@ -4677,9 +4679,14 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
-/obj/item/storage/box/guncase/heavy/motiondetectors/upp,
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
 /obj/item/storage/box/guncase/heavy/motiondetectors/upp{
-	pixel_y = 8;
+	pixel_y = 3
+	},
+/obj/item/storage/box/guncase/heavy/motiondetectors/upp{
+	pixel_y = 10;
 	layer = 3.2
 	},
 /turf/open/floor/strata/multi_tiles,
@@ -4698,10 +4705,10 @@
 	color = "#8B9490"
 	},
 /obj/item/storage/box/guncase/heavy/sentryupp{
-	pixel_y = 2
+	pixel_y = 5
 	},
 /obj/item/storage/box/guncase/heavy/sentryupp{
-	pixel_y = 10;
+	pixel_y = 12;
 	layer = 3.03
 	},
 /turf/open/floor/strata/multi_tiles,
@@ -5206,13 +5213,19 @@
 	pixel_y = -10;
 	can_block_movement = 0
 	},
-/obj/item/reagent_container/glass/rag{
-	pixel_x = -5;
-	pixel_y = -14
+/obj/item/reagent_container/glass/rag/polishing_rag{
+	pixel_y = -10;
+	name = "towel";
+	desc = "A hygiene towel made of soft fabric. The fibers are significantly worn out, and even have a smell hint of leftover sweat.";
+	color = "#1affff";
+	pixel_x = -4
 	},
-/obj/item/reagent_container/glass/rag{
-	pixel_x = 5;
-	pixel_y = -14
+/obj/item/reagent_container/glass/rag/polishing_rag{
+	pixel_y = -10;
+	name = "towel";
+	desc = "A hygiene towel made of soft fabric. The fibers are significantly worn out, and even have a smell hint of leftover sweat.";
+	color = "#1affff";
+	pixel_x = 4
 	},
 /obj/item/stack/medical/ointment{
 	pixel_x = 5
@@ -8468,7 +8481,7 @@
 	color = "#8B9490"
 	},
 /obj/item/storage/box/guncase/heavy/sniper/svd_iff{
-	pixel_y = 2
+	pixel_y = 5
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
@@ -11156,9 +11169,12 @@
 	pixel_y = -10;
 	can_block_movement = 0
 	},
-/obj/item/reagent_container/glass/rag{
-	pixel_x = 4;
-	pixel_y = -4
+/obj/item/reagent_container/glass/rag/polishing_rag{
+	pixel_y = -8;
+	name = "towel";
+	desc = "A hygiene towel made of soft fabric. The fibers are significantly worn out, and even have a smell hint of leftover sweat.";
+	color = "#1affff";
+	pixel_x = 4
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/cryo_cells)
@@ -11241,9 +11257,12 @@
 	pixel_y = 16;
 	can_block_movement = 0
 	},
-/obj/item/reagent_container/glass/rag{
-	pixel_y = 14;
-	pixel_x = -4
+/obj/item/reagent_container/glass/rag/polishing_rag{
+	pixel_y = 20;
+	name = "towel";
+	desc = "A hygiene towel made of soft fabric. The fibers are significantly worn out, and even have a smell hint of leftover sweat.";
+	color = "#1affff";
+	pixel_x = 2
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/cryo_cells)

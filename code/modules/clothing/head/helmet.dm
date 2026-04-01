@@ -1925,6 +1925,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	anti_hug = 6
 	force = 20
 	flags_atom = NO_NAME_OVERRIDE
+	built_in_visors = list(new /obj/item/device/helmet_visor/upp_heavy)
+	start_down_visor_type = /obj/item/device/helmet_visor/upp_heavy
 	specialty = "6B83 helmet"
 
 /obj/item/clothing/head/helmet/upp/frogmen

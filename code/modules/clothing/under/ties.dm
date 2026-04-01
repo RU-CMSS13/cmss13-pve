@@ -1991,7 +1991,7 @@
 	hold = /obj/item/storage/internal/accessory/black_vest/m56/preset
 
 /obj/item/storage/internal/accessory/black_vest/m56
-	storage_slots = 4
+	storage_slots = 5
 
 /obj/item/storage/internal/accessory/black_vest/m56/preset/fill_preset_inventory()
 	new /obj/item/storage/box/mre(src)
@@ -2007,7 +2007,7 @@
 	hold = /obj/item/storage/internal/accessory/black_vest/m56/grenade
 
 /obj/item/storage/internal/accessory/black_vest/m56/grenade
-	storage_slots = 5
+	storage_slots = 6
 	can_hold = list(
 		/obj/item/explosive/grenade/high_explosive,
 		/obj/item/explosive/grenade/high_explosive/super,
@@ -2083,6 +2083,40 @@
 		/obj/item/ammo_magazine/plasma,
 		/obj/item/ammo_magazine/flamer_tank, // RU-CM PVE edit
 	)
+
+//Partial Pre-load For Props
+//===
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppmags/type71
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/upp/type71
+
+/obj/item/storage/internal/accessory/webbing/m3mag/upp/type71/fill_preset_inventory()
+	new /obj/item/ammo_magazine/rifle/type71(src)
+	new /obj/item/ammo_magazine/rifle/type71(src)
+	new /obj/item/ammo_magazine/rifle/type71(src)
+	new /obj/item/ammo_magazine/rifle/type71(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/upp_juggernaut
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/plus/upp_juggernaut
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/plus/upp_juggernaut/fill_preset_inventory()
+	new /obj/item/smartgun_battery/upp(src)
+	new /obj/item/smartgun_battery/upp(src)
+	new /obj/item/ammo_magazine/pistol/t73(src)
+	new /obj/item/ammo_magazine/pistol/t73(src)
+	new /obj/item/storage/box/mre/upp(src)
+	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/upp_breacher
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/plus/upp_breacher
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/plus/upp_breacher/fill_preset_inventory()
+	new /obj/item/explosive/plastic/breaching_charge(src)
+	new /obj/item/explosive/plastic/breaching_charge(src)
+	new /obj/item/explosive/plastic/breaching_charge(src)
+	new /obj/item/explosive/plastic(src)
+	new /obj/item/explosive/plastic(src)
+	new /obj/item/explosive/plastic(src)
 
 //===========================//CUSTOM RMC ARMOR WEBBING\\================================\\
 
