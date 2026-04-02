@@ -36,10 +36,6 @@
 	pixel_y = 12;
 	pixel_x = 7
 	},
-/obj/item/toy/handcard/aceofspades{
-	pixel_x = -8;
-	pixel_y = -3
-	},
 /turf/open/shuttle/vehicle/floor_1_3,
 /area/interior/vehicle/apc/movie)
 "d" = (
@@ -120,7 +116,7 @@
 	phone_category = "Vehicles";
 	phone_id = "M577A3 Armoured Personnel Carrier";
 	pixel_y = 11;
-	pixel_x = 11
+	pixel_x = 7
 	},
 /turf/open/shuttle/vehicle/floor_1_4,
 /area/interior/vehicle/apc/movie)
@@ -292,21 +288,9 @@
 	pixel_y = -10
 	},
 /obj/structure/prop/ice_colony/hula_girl{
-	pixel_y = 9;
-	pixel_x = -12;
+	pixel_y = 10;
+	pixel_x = -11;
 	layer = 3.5
-	},
-/obj/item/ashtray/plastic{
-	pixel_y = 6;
-	pixel_x = 10
-	},
-/obj/item/trash/cigbutt{
-	pixel_y = 13;
-	pixel_x = 10
-	},
-/obj/item/tool/pen/red/clicky{
-	pixel_y = 8;
-	pixel_x = 2
 	},
 /turf/open/shuttle/vehicle/floor_2,
 /area/interior/vehicle/apc/movie)
@@ -368,13 +352,6 @@
 	icon_state = "intersection_2";
 	opacity = 0;
 	pixel_y = -20
-	},
-/obj/item/ammo_box/magazine/mk1/large/ap/empty{
-	pixel_y = 3
-	},
-/obj/item/toy/deck{
-	pixel_x = 6;
-	pixel_y = -1
 	},
 /turf/open/shuttle/vehicle,
 /area/space)
