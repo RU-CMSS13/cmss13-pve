@@ -105,6 +105,7 @@
 	name = "KKV-66M visor"
 	desc = "The KKV-66M \"Geist\" is an augmented-reality Heads Up Display developed by Germany. Standard for all helmets in use by the UPP's armed forces."
 	icon_state = "hud_sight_orange"
+	action_icon_string = "hud_sight_orange"
 	helmet_overlay = "meson_sight_right"
 	hud_type = list(MOB_HUD_FACTION_UPP)
 
@@ -177,7 +178,7 @@
 	icon_state = "med_sight"
 	hud_type = list(MOB_HUD_MEDICAL_BASIC)
 	action_icon_string = "med_sight_down"
-	helmet_overlay = "med_sight_right"
+	helmet_overlay = "med_sight_left"
 
 /obj/item/device/helmet_visor/medical/army
 	name = "AN/MPAV-71A visor"
@@ -188,7 +189,7 @@
 /obj/item/device/helmet_visor/medical/advanced
 	name = "AN/MAV-72 visor"
 	desc = "The guts of a Medical-Augmented-Viewer HUD unit. Links to the biomonitors of allied personnel and provides detailed information for those able to comprehend it."
-	helmet_overlay = "med_sight_right"
+	helmet_overlay = "med_sight_left"
 	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY, MOB_HUD_MEDICAL_ADVANCED)
 
 /obj/item/device/helmet_visor/medical/advanced/pmc

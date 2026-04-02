@@ -57,7 +57,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "People's Territorial Guard Rifleman"
 	role_comm_title = "PTG-RFN"
-	paygrades = list(PAY_SHORT_UE1 = JOB_PLAYTIME_TIER_0, PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_1)
+	paygrades = list(PAY_SHORT_UE1 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/pfc
 	access = list(ACCESS_UPP_GENERAL, ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND)
 
@@ -345,7 +345,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "People's Territorial Guard Rifleman"
 	role_comm_title = "PTG-RFN"
-	paygrades = list(PAY_SHORT_UE1 = JOB_PLAYTIME_TIER_0, PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_1)
+	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_1)
 	skills = /datum/skills/pfc
 	access = list(ACCESS_UPP_GENERAL, ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND)
 
@@ -1931,7 +1931,7 @@
 	//uniform
 	add_upp_uniform(new_human)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/smartgunner/upp/heavy/nodrop, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/smartgunner/upp/heavy/nostrip, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppsmall/upp_juggernaut, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/large_holster/machete/arnold/weak, WEAR_J_STORE)
 	//limbs
@@ -1976,7 +1976,7 @@
 	//uniform
 	add_upp_uniform(new_human)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/heavy/nodrop, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/heavy/nostrip, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppmags/type71, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71/carbine/assault, WEAR_J_STORE)
 	//limbs
@@ -2023,7 +2023,7 @@
 	//uniform
 	add_upp_uniform(new_human)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/heavy/nodrop, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/heavy/nostrip, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppsmall/upp_breacher, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/caws, WEAR_J_STORE)
 	//limbs
@@ -2061,7 +2061,7 @@
 	//uniform
 	add_upp_uniform(new_human)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/smartgunner/upp/heavy/nodrop, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/smartgunner/upp/heavy/nostrip, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pkp/iff, WEAR_J_STORE)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)

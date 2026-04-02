@@ -5214,11 +5214,11 @@
 	can_block_movement = 0
 	},
 /obj/item/reagent_container/glass/rag/polishing_rag{
-	pixel_y = -10;
 	name = "towel";
 	desc = "A hygiene towel made of soft fabric. The fibers are significantly worn out, and even have a smell hint of leftover sweat.";
 	color = "#1affff";
-	pixel_x = -4
+	pixel_x = -6;
+	pixel_y = -4
 	},
 /obj/item/reagent_container/glass/rag/polishing_rag{
 	pixel_y = -10;
@@ -5228,7 +5228,8 @@
 	pixel_x = 4
 	},
 /obj/item/stack/medical/ointment{
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 4
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/cryo_cells)
