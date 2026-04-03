@@ -659,30 +659,42 @@
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	flags_inventory = null
 
+/obj/item/clothing/head/cmcap/upp/Initialize(mapload)
+	. = ..()
+	if(!(flags_atom & NO_SNOW_TYPE))
+		select_gamemode_skin(type)
+	update_icon()
+
+
 /obj/item/clothing/head/cmcap/upp/civi
 	name = "\improper UL2c cap"
 	icon_state = "upp_cap_civi"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/upp/boonie
 	name = "\improper UL5 hat"
 	desc = "Standard issue soft brimmed hat for Territorial Guard units stationed in areas with extreme heat."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "upp_boonie"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/upp/boonie/canc
 	name = "\improper boonie hat"
 	desc = "A boonie hat in CANC uniform colors."
 	icon_state = "canc_boonie"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/upp/beret/guerilla
 	name = "\improper red beret"
 	desc = "A red beret popular with communist revolutionaries."
 	icon_state = "upp_beret_revolution"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/upp/peaked
 	name = "\improper UL3 peaked cap"
 	desc = "Standard issue peaked service cap of the UPP's military."
 	icon_state = "upp_peaked"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/upp/peaked/police
 	name = "\improper UL3 PaP peaked cap"
@@ -702,6 +714,7 @@
 	var/tied = FALSE
 	var/original_state = "upp_ushanka"
 	flags_inv_hide = HIDEEARS
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/upp/ushanka/verb/flaps_up()
 	set name = "Tie Up/Down"
@@ -734,24 +747,28 @@
 	desc = "Standard issue beret of the UPP's military."
 	icon_state = "upp_beret"
 	item_state = "upp_beret"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/upp/beret/army
 	name = "\improper UL3 Army beret"
 	desc = "A well-made beret worn by reservists of the UPP armed forces. It signifies their continued commitment to the cause, even while not on active duty, and serves as a symbol of unity and service."
 	icon_state = "upp_army_beret"
 	item_state = "upp_army_beret"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/upp/beret/naval
 	name = "\improper UL4 Naval Infantry beret"
 	desc = "A black beret worn by the UPP's Naval Infantry. Wear it with pride."
 	icon_state = "upp_beret_naval"
 	item_state = "upp_beret_naval"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/upp/beret/sof
 	name = "\improper UL5 Space Operations Force beret"
 	desc = "A finely crafted beret worn by members of the UPP Space Operations Forces. It signifies service in the void, from deep-space missions to planetary operations, and is a mark of discipline and camaraderie among its wearers."
 	icon_state = "sof_beret"
 	item_state = "sof_beret"
+	flags_atom = NO_SNOW_TYPE
 
 //==========================//PROTECTIVE\\===============================\\
 //=======================================================================\\
