@@ -290,7 +290,7 @@
 
 /datum/ammo/bullet/rifle/heavy/upp_smartgun
 	name = "12.7x40 bullet"
-	damage = 75 //giant fuck off bullet
+	damage = 90 //giant fuck off bullet
 	damage_falloff = 0
 
 /datum/ammo/bullet/rifle/heavy/upp_smartgun/on_hit_mob(mob/target, obj/projectile/fired_proj)
@@ -298,7 +298,7 @@
 
 /datum/ammo/bullet/rifle/heavy/upp_smartgun/ap
 	name = "12.7x40 armor-piercing bullet"
-	damage = 75
+	damage = 90
 	penetration = ARMOR_PENETRATION_TIER_10
 
 /datum/ammo/bullet/rifle/heavy/upp_smartgun/flak
@@ -629,7 +629,7 @@
 	name = "high velocity incendiary 10x27 bullet"
 	flags_ammo_behavior = AMMO_BALLISTIC
 
-	damage = 70 // 98 with x1.4 damage mod.
+	damage = 75 // 105 with x1.4 damage mod.
 	penetration= ARMOR_PENETRATION_TIER_4
 
 /datum/ammo/bullet/rifle/upp/spec/incendiary/set_bullet_traits()
