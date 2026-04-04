@@ -14,7 +14,7 @@
 
 	accurate_range = 7
 	max_range = 14
-	damage = 110
+	damage = 100
 	penetration = ARMOR_PENETRATION_TIER_4
 	damage_var_low = PROJECTILE_VARIANCE_TIER_10
 	damage_var_high = PROJECTILE_VARIANCE_TIER_1
@@ -29,7 +29,7 @@
 		var/mob/living/carbon/xenomorph/target = living_mob
 		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
 		target.KnockDown(3.5)
-		target.Stun(3.5)
+		target.Stun(2.5)
 		target.Slow(5)
 	else
 		if(!isyautja(living_mob)) //Not predators.
@@ -45,14 +45,14 @@
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
 	accurate_range = 10
 	max_range = 18
-	damage = 130
+	damage = 125
 	damage_armor_punch = 5
-	penetration = ARMOR_PENETRATION_TIER_8
+	penetration = ARMOR_PENETRATION_TIER_5
 	firing_freq_offset = SOUND_FREQ_LOW
 
 /datum/ammo/bullet/shotgun/slug/special/on_hit_mob(mob/M,obj/projectile/P)
-	knockback(M, P, 7)
-	pushback(M, P, 7)
+	knockback(M, P, 5)
+	pushback(M, P, 5)
 
 /datum/ammo/bullet/shotgun/slug/es7
 	name = "electrostatic solid slug"
@@ -63,7 +63,7 @@
 	hit_effect_color = "#00aeff"
 	sound_override = 'sound/weapons/gun_es7lethal.ogg'
 	damage = 90
-	penetration = ARMOR_PENETRATION_TIER_8
+	penetration = ARMOR_PENETRATION_TIER_6
 	accuracy = HIT_ACCURACY_TIER_5
 
 /datum/ammo/bullet/shotgun/beanbag
@@ -125,7 +125,7 @@
 
 	accuracy = -HIT_ACCURACY_TIER_2
 	max_range = 12
-	damage = 110
+	damage = 100
 	penetration= ARMOR_PENETRATION_TIER_4
 	handful_state = "incendiary_slug"
 
@@ -204,7 +204,7 @@
 
 /datum/ammo/bullet/shotgun/flechette/special/on_hit_mob(mob/M,obj/projectile/P)
 	M.AddComponent(/datum/component/status_effect/toxic_buildup, toxic_buildup = 15, toxic_buildup_dissipation = 0.3, max_buildup = 75)
-	knockback(M, P, 5)
+	knockback(M, P, 2)
 	if(M.mob_size >= MOB_SIZE_BIG)
 		var/mob/living/L = M
 		L.apply_armoured_damage(damage*1.3, ARMOR_BULLET, BRUTE, null, penetration) // As bugs don't take toxin damage, this should give it a little more oomf versus them
@@ -269,8 +269,8 @@
 		target.Slow(4)
 	else
 		if(!isyautja(living_mob)) //Not predators.
-			living_mob.KnockDown(3)
-			living_mob.Stun(3)
+			living_mob.KnockDown(2)
+			living_mob.Stun(2)
 			living_mob.Slow(5)
 			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
 		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)

@@ -307,6 +307,7 @@
 
 	var/previous_brute = brute_dam
 	var/previous_burn = burn_dam
+	var/previous_bonebreak = (status & LIMB_BROKEN)
 
 	var/is_ff = FALSE
 	if(istype(attack_source) && attack_source.faction == owner.faction)
@@ -402,7 +403,7 @@
 
 	if(!iszombie(owner))
 		if(previous_brute > 0 && !is_ff && body_part != BODY_FLAG_CHEST && body_part != BODY_FLAG_GROIN && !no_limb_loss && !no_perma_damage && !no_bone_break)
-			if(CONFIG_GET(flag/limbs_can_break) && brute_dam >= max_damage * CONFIG_GET(number/organ_health_multiplier) && (status & LIMB_BROKEN))
+			if(CONFIG_GET(flag/limbs_can_break) && brute_dam >= max_damage * CONFIG_GET(number/organ_health_multiplier) && (previous_bonebreak || (status & (LIMB_ROBOT|LIMB_SYNTHSKIN)))) //delimbable only if broken before this hit or we're a robot limb (synths do not fracture)
 				var/cut_prob = brute/max_damage * 5
 				if(prob(cut_prob))
 					limb_delimb(damage_source)

@@ -43,7 +43,7 @@
 /datum/ammo/bullet/pistol/ap
 	name = "armor-piercing 9x19 bullet"
 
-	damage = 45
+	damage = 40
 	accuracy = HIT_ACCURACY_TIER_2
 	penetration= ARMOR_PENETRATION_TIER_4
 	effective_range_max = 5
@@ -151,7 +151,7 @@
 /datum/ammo/bullet/pistol/heavy/super/highimpact/ap
 	name = ".50 high-impact armor piercing pistol bullet"
 	penetration = ARMOR_PENETRATION_TIER_10
-	damage = 130
+	damage = 110
 	effective_range_max = 5
 
 /datum/ammo/bullet/pistol/heavy/super/highimpact/upp
@@ -218,7 +218,7 @@
 
 	accuracy = HIT_ACCURACY_TIER_2
 	damage = 60
-	penetration = ARMOR_PENETRATION_TIER_5
+	penetration = ARMOR_PENETRATION_TIER_4
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_1
 	effective_range_max = 5 //hopefully this fixes the damage woes.
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
@@ -314,7 +314,7 @@
 	flags_ammo_behavior = AMMO_BALLISTIC
 
 	accuracy = HIT_ACCURACY_TIER_8
-	damage = 30
+	damage = 40
 	penetration = 20
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
 	effective_range_max = 5

@@ -32,7 +32,7 @@
 /datum/ammo/bullet/revolver/heavy
 	name = "heavy revolver bullet"
 
-	damage = 80
+	damage = 90
 	effective_range_max = 5
 	penetration = ARMOR_PENETRATION_TIER_6
 	accuracy = HIT_ACCURACY_TIER_3
@@ -160,7 +160,7 @@
 /datum/ammo/bullet/revolver/mateba/highimpact/ap
 	name = ".454 heavy high-impact armor piercing revolver bullet"
 	penetration = ARMOR_PENETRATION_TIER_10
-	damage = 140
+	damage = 130
 
 /datum/ammo/bullet/revolver/mateba/highimpact/New()
 	..()
@@ -171,7 +171,7 @@
 
 /datum/ammo/bullet/revolver/mateba/highimpact/explosive //if you ever put this in normal gameplay, i am going to scream
 	name = ".454 heavy explosive revolver bullet"
-	damage = 200
+	damage = 150
 	damage_var_low = PROJECTILE_VARIANCE_TIER_10
 	damage_var_high = PROJECTILE_VARIANCE_TIER_1
 	penetration = ARMOR_PENETRATION_TIER_10

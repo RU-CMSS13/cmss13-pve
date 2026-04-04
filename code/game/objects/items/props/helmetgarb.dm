@@ -132,7 +132,7 @@
 /obj/item/prop/helmetgarb/helmet_nvg/Initialize(mapload, ...)
 	. = ..()
 	if(shape != NVG_SHAPE_COSMETIC)
-		AddComponent(/datum/component/cell, cell_max_charge, TRUE, charge_drain = 8)
+		AddComponent(/datum/component/cell, cell_max_charge, TRUE, charge_drain = 2)
 		RegisterSignal(src, COMSIG_CELL_TRY_RECHARGING, PROC_REF(cell_try_recharge))
 		RegisterSignal(src, COMSIG_CELL_OUT_OF_CHARGE, PROC_REF(on_power_out))
 
@@ -469,18 +469,21 @@
 /obj/item/prop/helmetgarb/helmet_nvg/cosmetic/break_nvg(mob/living/carbon/human/user, list/slashdata, mob/living/carbon/xenomorph/Xeno)
 	return
 
-/obj/item/prop/helmetgarb/helmet_nvg/cosmetic/larp //something that better fits for the USCM
-	name = "old M1 multi-spectrum visor"
-	desc = "A failed prototype for next generation HUD optics for the Colonial Marines that was surpased by the current issue integrated IR optic, this flip down visor offers a full visor suite with multi-spectrum capabilities. A really cool piece until you realize you are one headbang away from losing night capability."
+/obj/item/prop/helmetgarb/helmet_nvg/thermal //something that better fits for the USCM
+	name = "M4 thermal-spectrum visor"
+	desc = "A prototype for next generation HUD optics for the Colonial Marines, this flip down visor offers a full night vision with thermal vision in one piece."
 	icon_state = "larp"
 	active_powered_icon_state = "larp_down_powered"
 	active_icon_state = "larp_down"
 	inactive_icon_state = "larp"
+	shape = NVG_SHAPE_FINE
+	cell_max_charge = 5000
 
 
 /obj/item/prop/helmetgarb/helmet_nvg/marsoc //for Marine Raiders
 	name = "\improper Tactical M3 night vision goggles"
 	desc = "With an integrated self-recharging battery, nothing can stop you. Put them on your helmet and press the button and it's go-time."
+	shape = NVG_SHAPE_FINE
 	cell_max_charge = -1
 
 #undef NVG_SHAPE_COSMETIC

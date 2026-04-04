@@ -1,8 +1,8 @@
 /datum/caste_datum/soldier
 	caste_type = XENO_CASTE_SOLDIER
 	tier = 2
-	melee_damage_lower = XENO_DAMAGE_TIER_9
-	melee_damage_upper = XENO_DAMAGE_TIER_9
+	melee_damage_lower = XENO_DAMAGE_TIER_8
+	melee_damage_upper = XENO_DAMAGE_TIER_7
 	melee_vehicle_damage = XENO_DAMAGE_TIER_5
 	max_health = XENO_HEALTH_TIER_6
 	plasma_gain = XENO_PLASMA_GAIN_TIER_8

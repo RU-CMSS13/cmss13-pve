@@ -211,3 +211,40 @@ GLOBAL_LIST_INIT(cm_vending_clothing_leader, list(
 		/obj/item/tool/extinguisher/mini,
 		/obj/item/storage/box/zipcuffs,
 	)
+
+GLOBAL_LIST_INIT(cm_vending_clothing_leaderplatoon, list(
+		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
+		list("M09 Helmet", 0, /obj/item/clothing/head/helmet/marine/leader, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
+		list("Leader Kit", 0, /obj/effect/essentials_set/leader, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+
+		list("SIDEARM (CHOOSE 1)", 0, null, null, null),
+		list("VP78M6", 0, /obj/item/weapon/gun/pistol/vp78m6, MARINE_CAN_BUY_KIT, VENDOR_ITEM_RECOMMENDED),
+		list("M4A4", 0, /obj/item/weapon/gun/pistol/m4a3/m4a4, MARINE_CAN_BUY_KIT, VENDOR_ITEM_RECOMMENDED),
+
+		list("BELT (CHOOSE 1)", 0, null, null, null),
+		list("M276 Lifesaver Bag", 0, /obj/item/storage/belt/medical/lifesaver, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 Medical Storage Rig", 0, /obj/item/storage/belt/medical, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 Shotgun Shell Loading Rig", 0, /obj/item/storage/belt/shotgun, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 Toolbelt Rig (Full)", 0, /obj/item/storage/belt/utility/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 Pattern Combat Toolbelt Rig", 0, /obj/item/storage/belt/gun/utility, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+
+		list("POUCHES (CHOOSE 2)", 0, null, null, null),
+		list("Autoinjector Pouch (Full)", 0, /obj/item/storage/pouch/autoinjector/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Large General Pouch", 0, /obj/item/storage/pouch/general/large, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Large Magazine Pouch", 0, /obj/item/storage/pouch/magazine/large, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Large Shotgun Shell Pouch", 0, /obj/item/storage/pouch/shotgun/large, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+
+		list("WEBBINGS (CHOOSE 1)", 0, null, null, null),
+		list("M3-R Pattern Magazine Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/recon, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED),
+		list("M3-R Pattern Grenade Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/recon/m40, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED),
+		list("M3-R Pattern Shell Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/recon/shotgun, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED),
+	))
+
+/obj/structure/machinery/cm_vending/clothing/leaderplatoon
+	name = "\improper ColMarTech Squad Leader Equipment Rack"
+	desc = "An automated rack hooked up to a colossal storage of Squad Leader standard-issue equipment."
+	req_access = list(ACCESS_MARINE_LEADER)
+	vendor_role = list(JOB_SQUAD_LEADER)
+
+/obj/structure/machinery/cm_vending/clothing/leaderplatoon/get_listed_products(mob/user)
+	return GLOB.cm_vending_clothing_leaderplatoon

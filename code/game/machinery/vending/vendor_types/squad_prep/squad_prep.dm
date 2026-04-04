@@ -810,6 +810,7 @@
 		list("Rail Flashlight", round(scale * 5), /obj/item/attachable/flashlight, VENDOR_ITEM_REGULAR),
 		list("Two-point Sling", round(scale * 5), /obj/item/attachable/sling, VENDOR_ITEM_REGULAR),
 		list("M13 Fighting Knife", round(scale * 25), /obj/item/weapon/knife/marine, VENDOR_ITEM_REGULAR),
+		list("M5 Bayonet", round(scale * 5), /obj/item/attachable/bayonet, VENDOR_ITEM_REGULAR),
 		)
 
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/upp
@@ -937,6 +938,7 @@
 		list("Rail Flashlight", round(scale * 5), /obj/item/attachable/flashlight, VENDOR_ITEM_REGULAR),
 		list("Two-point Sling", round(scale * 5), /obj/item/attachable/sling, VENDOR_ITEM_REGULAR),
 		list("M13 Fighting Knife", round(scale * 5), /obj/item/weapon/knife/marine, VENDOR_ITEM_REGULAR),
+		list("M5 Bayonet", round(scale * 5), /obj/item/attachable/bayonet, VENDOR_ITEM_REGULAR),
 		)
 
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/pmc

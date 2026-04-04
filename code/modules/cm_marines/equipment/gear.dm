@@ -212,8 +212,8 @@
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal1/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 30)
-	bitesize = 6
+	reagents.add_reagent("nutriment", 50)
+	bitesize = 10
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal2
 	name = "\improper mechanically prepared meal (ham and potatoes)"
@@ -353,7 +353,7 @@
 
 /obj/item/reagent_container/food/snacks/mre_pack/upp/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 40)
+	reagents.add_reagent("nutriment", 50)
 
 /obj/item/reagent_container/food/snacks/mre_pack/upp/meal1
 	name = "\improper UPP Prepared Meal (Chow mein)"

@@ -165,7 +165,7 @@
 /datum/reagent/medical/anti_toxin
 	name = "Dylovene"
 	id = "anti_toxin"
-	description = "General use anti-toxin, that neutralizes most toxins in the bloodstream. Commonly used in many advanced chemicals. Can be used as a mild anti-hallucinogen and to reduce tiredness."
+	description = "General use anti-toxin, that neutralizes most toxins in the bloodstream, also fixing your liver and kidneys. Commonly used in many advanced chemicals. Can be used as a mild anti-hallucinogen and to reduce tiredness."
 	reagent_state = LIQUID
 	color = "#3EA72A" // rgb: 62, 167, 42 changed to be slightly darker to differentiate from oxycodone autoinjectors
 	overdose = REAGENTS_OVERDOSE
@@ -274,7 +274,7 @@
 	overdose_critical = LOWH_REAGENTS_OVERDOSE_CRITICAL
 	custom_metabolism = AMOUNT_PER_TIME(1, 120 SECONDS)
 	chemclass = CHEM_CLASS_COMMON
-	properties = list(PROPERTY_ORGANSTABILIZE = 3, PROPERTY_CARDIOPEUTIC = 0.25, PROPERTY_HEPATOPEUTIC = 0.25, PROPERTY_NEPHROPEUTIC = 0.25, PROPERTY_PNEUMOPEUTIC = 0.25)
+	properties = list(PROPERTY_ORGANSTABILIZE = 3, PROPERTY_CARDIOPEUTIC = 0.25, PROPERTY_PNEUMOPEUTIC = 0.25)
 
 /datum/reagent/medical/bicaridine // yes it cures IB, it's located in some other part of wound code for whatever reason
 	name = "Bicaridine"

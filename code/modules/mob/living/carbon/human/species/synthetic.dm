@@ -14,7 +14,7 @@
 
 	bloodsplatter_type = /obj/effect/temp_visual/dir_setting/bloodsplatter/synthsplatter
 
-	total_health = 150 //same health as regular humans
+	total_health = 150
 
 	cold_level_1 = -1
 	cold_level_2 = -1
