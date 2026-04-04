@@ -1857,11 +1857,11 @@
 
 /obj/item/weapon/gun/rifle/spp/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_4)
+	set_fire_delay(FIRE_DELAY_TIER_5)
 	set_burst_amount(0)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_5
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
-	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_8 // long barrel and modified gas chamber for extra oomph
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_1 // long barrel and modified gas chamber for extra oomph
 	recoil_unwielded = RECOIL_AMOUNT_TIER_1
 	recoil = RECOIL_AMOUNT_TIER_5
 	damage_falloff_mult = 0
