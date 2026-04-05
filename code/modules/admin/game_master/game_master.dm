@@ -74,6 +74,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 		/obj/structure/pipes/vents = /datum/game_master_submenu/ambush/vents,
 		/obj/structure/tunnel = /datum/game_master_submenu/ambush/tunnels,
 		/mob/living/carbon/human = /datum/game_master_submenu/infest,
+		/obj/structure/ladder = /datum/game_master_submenu/ambush/ladders,
 	)
 
 	/// List of current submenus
@@ -362,6 +363,15 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 /datum/game_master/proc/InterceptClickOn(mob/user, params, atom/object)
 
 	var/list/modifiers = params2list(params)
+
+	if(istype(object, /obj/structure/ladder/hatch))
+		var/obj/structure/ladder/ladder_ref = object
+		if(LAZYACCESS(modifiers, CTRL_CLICK))
+			ladder_ref.toggle_hatch()
+			return TRUE
+		else if (LAZYACCESS(modifiers, ALT_CLICK))
+			ladder_ref.toggle_lock(ladder_ref.id)
+			return TRUE
 
 	switch(current_click_intercept_action)
 		if(SPAWN_CLICK_INTERCEPT_ACTION)

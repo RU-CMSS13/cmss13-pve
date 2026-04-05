@@ -271,12 +271,12 @@
 		to_chat(M, SPAN_WARNING("[src] ended unexpectedly, so we return back up."))
 	return XENO_NO_DELAY_ACTION
 
-/obj/structure/tunnel/proc/animate_crawl(speed = 3, loop_amount = -1, sections = 4)
-	animate(src, pixel_x = rand(-2,2), pixel_y = rand(-2,2), time = speed, loop = loop_amount, easing = JUMP_EASING)
+/obj/structure/proc/animate_crawl(speed = 3, loop_amount = -1, sections = 4)
+	animate(src, pixel_x = rand(initial(pixel_x) - 2, initial(pixel_x) + 2), pixel_y = rand(initial(pixel_y) - 2, initial(pixel_y) + 2), time = speed, loop = loop_amount, easing = JUMP_EASING)
 	for(var/i in 1 to sections)
-		animate(pixel_x = rand(-2,2), pixel_y = rand(-2,2), time = speed, easing = JUMP_EASING)
+		animate(pixel_x = rand(initial(pixel_x) - 2, initial(pixel_x) + 2), pixel_y = rand(initial(pixel_y) - 2, initial(pixel_y) + 2), time = speed, easing = JUMP_EASING)
 
-/obj/structure/tunnel/proc/animate_crawl_reset()
+/obj/structure/proc/animate_crawl_reset()
 	animate(src, pixel_x = initial(pixel_x), pixel_y = initial(pixel_y), easing = JUMP_EASING)
 
 /obj/structure/tunnel/maint_tunnel
