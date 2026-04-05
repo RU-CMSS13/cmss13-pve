@@ -5,7 +5,7 @@
 	amount = 15
 	},
 /obj/effect/decal/hybrisa/dirt,
-/turf/open/floor/brown_dirt/random_rocks,
+/turf/open/gm/brown_dirt/random_rocks,
 /area/template_noop)
 "c" = (
 /obj/effect/decal/hybrisa/dirt,
@@ -49,7 +49,7 @@
 /area/template_noop)
 "w" = (
 /obj/effect/decal/hybrisa/dirt,
-/turf/open/floor/brown_dirt/random_rocks,
+/turf/open/gm/brown_dirt/random_rocks,
 /area/template_noop)
 "x" = (
 /obj/effect/decal/large_stain{
@@ -86,7 +86,7 @@
 "T" = (
 /obj/effect/decal/hybrisa/dirt,
 /obj/effect/decal/hybrisa/dirt,
-/turf/open/floor/brown_dirt/random_rocks_alt{
+/turf/open/gm/brown_dirt/random_rocks_alt{
 	dir = 6
 	},
 /area/template_noop)

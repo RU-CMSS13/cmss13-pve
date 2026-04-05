@@ -68,7 +68,7 @@
 /turf/open/floor/prison/cell_stripe,
 /area/lazarus/landing_zones/lz2)
 "x" = (
-/turf/open/floor/brown_dirt/random_rocks_alt{
+/turf/open/gm/brown_dirt/random_rocks_alt{
 	dir = 6
 	},
 /area/lazarus/landing_zones/lz2)

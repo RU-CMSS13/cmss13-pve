@@ -59,7 +59,7 @@
 /turf/open/auto_turf/lv_sand/layer0,
 /area/lazarus/ground/jungle/south_west_jungle)
 "iB" = (
-/turf/open/floor/brown_dirt/random_rocks,
+/turf/open/gm/brown_dirt/random_rocks,
 /area/lazarus/ground/jungle/south_west_jungle)
 "iX" = (
 /obj/effect/hunter/ancient_temple/tile_edge_corner,
@@ -182,7 +182,7 @@
 /area/lazarus/ground/jungle/south_west_jungle)
 "zb" = (
 /obj/structure/flora/bush/ausbushes/var3/sparsegrass,
-/turf/open/floor/brown_dirt/random_rocks_alt,
+/turf/open/gm/brown_dirt/random_rocks_alt,
 /area/lazarus/ground/jungle/south_west_jungle)
 "zp" = (
 /obj/effect/landmark/monkey_spawn,
@@ -199,7 +199,7 @@
 /turf/open/auto_turf/lv_grass/layer0,
 /area/lazarus/ground/jungle/south_west_jungle)
 "Bj" = (
-/turf/open/floor/brown_dirt/random_rocks_alt,
+/turf/open/gm/brown_dirt/random_rocks_alt,
 /area/lazarus/ground/jungle/south_west_jungle)
 "Bq" = (
 /obj/structure/flora/jungle/vines/dead/light_3,

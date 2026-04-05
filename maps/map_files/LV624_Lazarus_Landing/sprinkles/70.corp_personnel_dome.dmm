@@ -78,7 +78,7 @@
 /area/lazarus/ground/jungle/west_central_jungle)
 "bL" = (
 /obj/item/trash/cigbutt,
-/turf/open/floor/brown_dirt/random_rocks_alt{
+/turf/open/gm/brown_dirt/random_rocks_alt{
 	dir = 6
 	},
 /area/lazarus/ground/colony/west_tcomms_road)
@@ -265,7 +265,7 @@
 /area/lazarus/secure_storage)
 "ey" = (
 /obj/structure/flora/bush/ausbushes/var3/sparsegrass,
-/turf/open/floor/brown_dirt/random_rocks_alt{
+/turf/open/gm/brown_dirt/random_rocks_alt{
 	dir = 6
 	},
 /area/lazarus/ground/jungle/west_central_jungle)
@@ -330,7 +330,7 @@
 	pixel_x = 4;
 	pixel_y = -24
 	},
-/turf/open/floor/brown_dirt/random_rocks_alt{
+/turf/open/gm/brown_dirt/random_rocks_alt{
 	dir = 6
 	},
 /area/lazarus/landing_zones/lz2)
@@ -385,7 +385,7 @@
 /area/lazarus/ground/colony/west_tcomms_road)
 "gE" = (
 /obj/item/trash/cigbutt,
-/turf/open/floor/brown_dirt/random_rocks_alt{
+/turf/open/gm/brown_dirt/random_rocks_alt{
 	dir = 6
 	},
 /area/lazarus/landing_zones/lz2)
@@ -437,7 +437,7 @@
 	pixel_x = -10;
 	pixel_y = 7
 	},
-/turf/open/floor/brown_dirt/random_rocks,
+/turf/open/gm/brown_dirt/random_rocks,
 /area/lazarus/ground/jungle/south_central_jungle)
 "iA" = (
 /obj/structure/flora/grass/tallgrass/jungle_alt_2/corner{
@@ -659,7 +659,7 @@
 /area/lazarus/secure_storage)
 "nW" = (
 /obj/structure/cargo_container/hybrisa/containersextended/whitewyright,
-/turf/open/floor/brown_dirt/random_rocks_alt{
+/turf/open/gm/brown_dirt/random_rocks_alt{
 	dir = 6
 	},
 /area/lazarus/ground/colony/west_tcomms_road)
@@ -873,7 +873,7 @@
 /area/lazarus/secure_storage)
 "qN" = (
 /obj/structure/fence/dark,
-/turf/open/floor/brown_dirt/random_rocks,
+/turf/open/gm/brown_dirt/random_rocks,
 /area/lazarus/ground/colony/west_tcomms_road)
 "qW" = (
 /obj/effect/hybrisa/misc/fake/wire/blue{
@@ -915,7 +915,7 @@
 /turf/open/floor/prison/white2/west,
 /area/lazarus/secure_storage)
 "rz" = (
-/turf/open/floor/brown_dirt/random_rocks,
+/turf/open/gm/brown_dirt/random_rocks,
 /area/lazarus/ground/jungle/south_central_jungle)
 "rK" = (
 /obj/structure/disposalpipe/segment{
@@ -950,14 +950,14 @@
 	pixel_x = 11;
 	pixel_y = -24
 	},
-/turf/open/floor/brown_dirt/random_rocks,
+/turf/open/gm/brown_dirt/random_rocks,
 /area/lazarus/landing_zones/lz2)
 "sr" = (
 /obj/structure/flora/jungle/vines/blue/light_1,
 /turf/closed/wall/lv_outpost,
 /area/lazarus/ground/colony/west_tcomms_road)
 "sB" = (
-/turf/open/floor/brown_dirt/random_rocks,
+/turf/open/gm/brown_dirt/random_rocks,
 /area/lazarus/ground/colony/west_tcomms_road)
 "sC" = (
 /obj/structure/disposalpipe/segment{
@@ -1059,7 +1059,7 @@
 /turf/open/auto_turf/lv_grass/layer1,
 /area/lazarus/ground/jungle/south_west_jungle)
 "ur" = (
-/turf/open/floor/brown_dirt/random_rocks_alt{
+/turf/open/gm/brown_dirt/random_rocks_alt{
 	dir = 6
 	},
 /area/lazarus/ground/colony/west_tcomms_road)
@@ -1393,7 +1393,7 @@
 /area/lazarus/ground/colony/west_tcomms_road)
 "Bc" = (
 /obj/effect/decal/ammo_casing,
-/turf/open/floor/brown_dirt/random_rocks_alt{
+/turf/open/gm/brown_dirt/random_rocks_alt{
 	dir = 6
 	},
 /area/lazarus/ground/colony/west_tcomms_road)
@@ -1443,7 +1443,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lazarus/secure_storage)
 "Ci" = (
-/turf/open/floor/brown_dirt/random_rocks,
+/turf/open/gm/brown_dirt/random_rocks,
 /area/lazarus/landing_zones/lz2)
 "Cj" = (
 /obj/structure/flora/jungle/vines/dead/light_2,
@@ -1929,7 +1929,7 @@
 /area/lazarus/secure_storage)
 "LI" = (
 /obj/structure/cargo_container/hybrisa/containersextended/whitewyleft,
-/turf/open/floor/brown_dirt/random_rocks,
+/turf/open/gm/brown_dirt/random_rocks,
 /area/lazarus/ground/colony/west_tcomms_road)
 "LR" = (
 /turf/open/auto_turf/lv_grass/layer1,
@@ -2498,7 +2498,7 @@
 /area/lazarus/secure_storage)
 "WU" = (
 /obj/structure/largecrate/random/barrel/blue,
-/turf/open/floor/brown_dirt/random_rocks_alt{
+/turf/open/gm/brown_dirt/random_rocks_alt{
 	dir = 6
 	},
 /area/lazarus/ground/colony/west_tcomms_road)
@@ -2518,7 +2518,7 @@
 /turf/template_noop,
 /area/template_noop)
 "Xe" = (
-/turf/open/floor/brown_dirt/random_rocks_alt{
+/turf/open/gm/brown_dirt/random_rocks_alt{
 	dir = 6
 	},
 /area/lazarus/ground/jungle/south_central_jungle)
@@ -2608,7 +2608,7 @@
 	},
 /obj/structure/machinery/light/small/blue,
 /obj/item/trash/cigbutt,
-/turf/open/floor/brown_dirt/random_rocks_alt{
+/turf/open/gm/brown_dirt/random_rocks_alt{
 	dir = 6
 	},
 /area/lazarus/secure_storage)
@@ -2641,7 +2641,7 @@
 /area/strata/interior/out_of_bounds)
 "YR" = (
 /obj/item/tool/warning_cone,
-/turf/open/floor/brown_dirt/random_rocks_alt{
+/turf/open/gm/brown_dirt/random_rocks_alt{
 	dir = 6
 	},
 /area/lazarus/landing_zones/lz2)

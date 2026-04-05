@@ -849,7 +849,7 @@
 /turf/open/floor/plating/prison,
 /area/template_noop)
 "Mz" = (
-/turf/open/floor/brown_dirt/random_rocks,
+/turf/open/gm/brown_dirt/random_rocks,
 /area/template_noop)
 "MZ" = (
 /obj/item/shard,

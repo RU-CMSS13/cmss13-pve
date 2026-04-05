@@ -4,7 +4,7 @@
 /turf/open/auto_turf/lv_grass/layer0,
 /area/template_noop)
 "aE" = (
-/turf/open/floor/brown_dirt/random_rocks_alt{
+/turf/open/gm/brown_dirt/random_rocks_alt{
 	dir = 6
 	},
 /area/template_noop)
@@ -26,7 +26,7 @@
 /turf/open/auto_turf/lv_sand/layer0,
 /area/template_noop)
 "ef" = (
-/turf/open/floor/brown_dirt/random_rocks,
+/turf/open/gm/brown_dirt/random_rocks,
 /area/template_noop)
 "eW" = (
 /obj/structure/flora/jungle/vines/dead/light_1,
@@ -34,7 +34,7 @@
 /area/template_noop)
 "fw" = (
 /obj/structure/fence/dark/overgrown,
-/turf/open/floor/brown_dirt/random_rocks_alt{
+/turf/open/gm/brown_dirt/random_rocks_alt{
 	dir = 6
 	},
 /area/template_noop)
@@ -74,7 +74,7 @@
 /turf/open/auto_turf/lv_grass/layer0,
 /area/template_noop)
 "oW" = (
-/turf/open/floor/brown_dirt/random_rocks_alt,
+/turf/open/gm/brown_dirt/random_rocks_alt,
 /area/template_noop)
 "pp" = (
 /obj/structure/flora/bush/ausbushes/var3/sparsegrass,
@@ -98,7 +98,7 @@
 /area/template_noop)
 "sP" = (
 /obj/structure/fence/dark,
-/turf/open/floor/brown_dirt/random_rocks,
+/turf/open/gm/brown_dirt/random_rocks,
 /area/template_noop)
 "sR" = (
 /obj/structure/flora/jungle/vines/dead/light_3,

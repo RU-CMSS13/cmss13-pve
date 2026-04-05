@@ -27,10 +27,10 @@
 /area/template_noop)
 "e" = (
 /obj/structure/flora/bush/ausbushes/var3/sparsegrass,
-/turf/open/floor/brown_dirt/random_rocks,
+/turf/open/gm/brown_dirt/random_rocks,
 /area/template_noop)
 "f" = (
-/turf/open/floor/brown_dirt/random_rocks,
+/turf/open/gm/brown_dirt/random_rocks,
 /area/template_noop)
 "h" = (
 /obj/structure/sign/safety/analysis_lab{
@@ -59,14 +59,14 @@
 	pixel_y = 9;
 	pixel_x = -7
 	},
-/turf/open/floor/brown_dirt/random_rocks_alt{
+/turf/open/gm/brown_dirt/random_rocks_alt{
 	dir = 6
 	},
 /area/template_noop)
 "n" = (
 /obj/effect/landmark/corpsespawner/scientist,
 /obj/effect/decal/cleanable/blood,
-/turf/open/floor/brown_dirt/random_rocks,
+/turf/open/gm/brown_dirt/random_rocks,
 /area/template_noop)
 "o" = (
 /obj/structure/flora/bush/ausbushes/var3/sparsegrass,
@@ -113,7 +113,7 @@
 /obj/effect/landmark/objective_landmark/science,
 /obj/effect/landmark/objective_landmark/science,
 /obj/effect/landmark/objective_landmark/science,
-/turf/open/floor/brown_dirt/random_rocks,
+/turf/open/gm/brown_dirt/random_rocks,
 /area/template_noop)
 "x" = (
 /turf/closed/wall/lv_outpost/white,
@@ -161,7 +161,7 @@
 	pixel_x = 7;
 	pixel_y = 32
 	},
-/turf/open/floor/brown_dirt/random_rocks,
+/turf/open/gm/brown_dirt/random_rocks,
 /area/template_noop)
 "I" = (
 /obj/structure/barricade/handrail/wire,
@@ -249,7 +249,7 @@
 /turf/open/auto_turf/lv_sand/layer0,
 /area/template_noop)
 "Y" = (
-/turf/open/floor/brown_dirt/random_rocks_alt{
+/turf/open/gm/brown_dirt/random_rocks_alt{
 	dir = 6
 	},
 /area/template_noop)

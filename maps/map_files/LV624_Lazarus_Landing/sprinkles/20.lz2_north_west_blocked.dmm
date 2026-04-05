@@ -81,7 +81,7 @@
 /area/lazarus/landing_zones/lz2)
 "x" = (
 /obj/structure/flora/bush/ausbushes/var3/sparsegrass,
-/turf/open/floor/brown_dirt/random_rocks_alt{
+/turf/open/gm/brown_dirt/random_rocks_alt{
 	dir = 6
 	},
 /area/lazarus/landing_zones/lz2)

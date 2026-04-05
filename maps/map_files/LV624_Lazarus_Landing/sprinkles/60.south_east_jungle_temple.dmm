@@ -47,7 +47,7 @@
 /turf/open/auto_turf/lv_grass/layer1,
 /area/lazarus/ground/jungle/south_east_jungle)
 "iL" = (
-/turf/open/floor/brown_dirt/random_rocks_alt,
+/turf/open/gm/brown_dirt/random_rocks_alt,
 /area/lazarus/ground/jungle/south_east_jungle)
 "kt" = (
 /obj/effect/decal/lv_decals/red_mud_corner{
@@ -112,7 +112,7 @@
 /area/lazarus/ground/jungle/south_east_jungle)
 "sP" = (
 /obj/structure/flora/bush/ausbushes/var3/sparsegrass,
-/turf/open/floor/brown_dirt/random_rocks_alt,
+/turf/open/gm/brown_dirt/random_rocks_alt,
 /area/lazarus/ground/jungle/south_east_jungle)
 "tz" = (
 /obj/structure/flora/jungle/vines/dead/light_3,
@@ -160,7 +160,7 @@
 /turf/open/floor/ancient_temple/damaged/damage_7,
 /area/lazarus/ground/jungle/south_east_jungle)
 "yt" = (
-/turf/open/floor/brown_dirt/random_rocks,
+/turf/open/gm/brown_dirt/random_rocks,
 /area/lazarus/ground/jungle/south_east_jungle)
 "yJ" = (
 /obj/structure/flora/jungle/vines/blue/light_2,
@@ -345,7 +345,7 @@
 "Vx" = (
 /obj/structure/flora/bush/ausbushes/var3/sparsegrass,
 /obj/structure/flora/jungle/vines/dead/light_1,
-/turf/open/floor/brown_dirt/random_rocks,
+/turf/open/gm/brown_dirt/random_rocks,
 /area/lazarus/ground/jungle/south_east_jungle)
 "VW" = (
 /obj/effect/hunter/ancient_temple/tile_edge_corner/tile_edge_corner_4,
@@ -360,7 +360,7 @@
 "WF" = (
 /obj/structure/flora/bush/ausbushes/var3/sparsegrass,
 /obj/structure/flora/jungle/vines/dead/light_2,
-/turf/open/floor/brown_dirt/random_rocks_alt,
+/turf/open/gm/brown_dirt/random_rocks_alt,
 /area/lazarus/ground/jungle/south_east_jungle)
 "XP" = (
 /obj/effect/hunter/ancient_temple/tile_edge_corner,
@@ -372,7 +372,7 @@
 "XQ" = (
 /obj/structure/flora/bush/ausbushes/var3/sparsegrass,
 /obj/structure/flora/jungle/vines/dead/light_1,
-/turf/open/floor/brown_dirt/random_rocks_alt,
+/turf/open/gm/brown_dirt/random_rocks_alt,
 /area/lazarus/ground/jungle/south_east_jungle)
 "Yk" = (
 /obj/structure/platform_decoration/stone/ancient_temple/north,
