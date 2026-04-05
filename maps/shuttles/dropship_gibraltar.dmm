@@ -1,10 +1,5 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
-/obj/effect/attach_point/fuel/gibraltar{
-	pixel_x = -16;
-	pixel_y = 6;
-	layer = 2.1
-	},
 /obj/structure/machinery/light/dropship/green{
 	dir = 4
 	},
@@ -13,11 +8,6 @@
 	},
 /area/shuttle/gibraltar)
 "ab" = (
-/obj/effect/attach_point/fuel/gibraltar{
-	pixel_x = -16;
-	pixel_y = 6;
-	layer = 2.1
-	},
 /obj/structure/machinery/light/dropship/red{
 	dir = 8
 	},

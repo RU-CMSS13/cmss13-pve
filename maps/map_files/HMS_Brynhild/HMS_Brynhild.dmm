@@ -6545,12 +6545,6 @@
 /obj/item/device/defibrillator/upgraded,
 /turf/open/floor/prison/floor_plate,
 /area/hms_brynhild/medical)
-"ne" = (
-/obj/structure/sign/calendar/twe{
-	pixel_x = 32
-	},
-/turf/open/floor/prison/bright_clean,
-/area/hms_brynhild/armoury_station)
 "nf" = (
 /obj/structure/roof/cargocrane_tracks/cross{
 	pixel_y = 14
@@ -6585,6 +6579,13 @@
 /obj/item/tool/kitchen/can_opener,
 /turf/open/floor/almayer/dark_sterile,
 /area/hms_brynhild/canteen)
+"ni" = (
+/obj/structure/machinery/door_control{
+	name = "pilot";
+	id = "pilot"
+	},
+/turf/open/floor/prison,
+/area/hms_brynhild/supply)
 "nj" = (
 /obj/structure/reagent_dispensers/fueltank{
 	layer = 2.97
@@ -6972,11 +6973,9 @@
 /turf/open/floor/prison,
 /area/hms_brynhild/lower_hangar)
 "nZ" = (
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 2;
+/obj/structure/machinery/door/poddoor/almayer/locked{
 	name = "\improper Hangar Lockdown Blast Door";
-	closed_layer = 3.3;
-	open_layer = 3.3
+	id = "pilot"
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/supply)
@@ -9893,11 +9892,9 @@
 /obj/structure/roof/cargocrane_tracks/vertical{
 	pixel_y = 14
 	},
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 2;
+/obj/structure/machinery/door/poddoor/almayer/locked{
 	name = "\improper Hangar Lockdown Blast Door";
-	closed_layer = 3.3;
-	open_layer = 3.3
+	id = "pilot"
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/supply)
@@ -13046,11 +13043,9 @@
 	icon_state = "1-2"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 2;
+/obj/structure/machinery/door/poddoor/almayer/locked{
 	name = "\improper Hangar Lockdown Blast Door";
-	closed_layer = 3.3;
-	open_layer = 3.3
+	id = "pilot"
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/supply)
@@ -13505,9 +13500,6 @@
 "Dq" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
-	},
-/obj/structure/flora/pottedplant{
-	icon_state = "pottedplant_10"
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury_station)
@@ -16110,9 +16102,6 @@
 /obj/structure/closet/secure_closet/marine_personal/rmc/troop_leader{
 	pixel_x = 8
 	},
-/obj/structure/closet/secure_closet/marine_personal/rmc/pilot{
-	pixel_x = -8
-	},
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/cryo_cells)
 "Ke" = (
@@ -17172,7 +17161,7 @@
 /turf/open/floor/almayer/aicore/glowing,
 /area/hms_brynhild/ai_interface)
 "Nx" = (
-/obj/structure/machinery/cm_vending/clothing/pilot_officer/ai/rmc,
+/obj/structure/surface/table/reinforced/black,
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury_station)
 "Ny" = (
@@ -28349,7 +28338,7 @@ dM
 SZ
 CE
 Dq
-ne
+VA
 kB
 VA
 Jr
@@ -33006,8 +32995,8 @@ BP
 BP
 BP
 BP
-BP
-BP
+AQ
+ni
 AQ
 AQ
 AQ

@@ -799,8 +799,6 @@
 			num_engineers++
 		if(JOB_TWE_RMC_TROOPLEADER)
 			assignment = JOB_TWE_RMC_TROOPLEADER
-		if(JOB_TWE_RMC_PILOT)
-			assignment = JOB_TWE_RMC_PILOT
 
 	RegisterSignal(M, COMSIG_PARENT_QDELETING, PROC_REF(personnel_deleted), override = TRUE)
 	if(assignment != JOB_SQUAD_LEADER)
