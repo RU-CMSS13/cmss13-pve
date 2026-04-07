@@ -27,7 +27,7 @@
 		list("M37A2 Pump Shotgun", floor(scale * 30), /obj/item/weapon/gun/shotgun/pump, VENDOR_ITEM_REGULAR),
 		list("M39 Submachinegun", floor(scale * 60), /obj/item/weapon/gun/smg/m39, VENDOR_ITEM_REGULAR),
 		list("M41A Pulse Rifle MK2", floor(scale * 60), /obj/item/weapon/gun/rifle/m41a, VENDOR_ITEM_REGULAR),
-		list("M49A Battle Rifle", floor(scale * 20), /obj/item/weapon/gun/rifle/m49a, VENDOR_ITEM_REGULAR),
+		list("M49 Battle Rifle", floor(scale * 20), /obj/item/weapon/gun/rifle/m49a, VENDOR_ITEM_REGULAR),
 
 		list("SIDEARMS", -1, null, null),
 		list("VP70 Combat Pistol", floor(scale * 50), /obj/item/weapon/gun/pistol/vp70, VENDOR_ITEM_REGULAR),
