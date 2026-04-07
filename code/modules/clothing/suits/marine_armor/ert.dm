@@ -1474,7 +1474,7 @@
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 	slowdown = SLOWDOWN_ARMOR_LIGHT
 	uniform_restricted = list(/obj/item/clothing/under/colonist/clf)
-	flags_atom = NO_NAME_OVERRIDE
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/suit/storage/marine/veteran/ua_riot/clf/jacket
 	name = "\improper camouflaged hunter gear rig"
