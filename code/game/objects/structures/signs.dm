@@ -131,10 +131,12 @@
 	name = "\improper United Americas flag"
 	desc = "A flag of the United Americas. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
 	icon_state = "uaflag"
+
 /obj/structure/sign/banners/united_americas_worn
 	name = "\improper United Americas flag"
 	desc = "A very worn flag of the United Americas. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
 	icon_state = "uaflag_worn"
+
 //============//
 //  Flags    //
 //==========//
@@ -187,6 +189,14 @@
 	name = "\improper Worn Brazil flag"
 	desc = "A flag of Brazil. Inspires patriotism, fear, but not revulsion, everybody likes Brazil."
 	icon_state = "brazilflag_worn"
+/obj/structure/sign/banners/clf_flag
+	name = "\improper Colonial Liberation Front flag"
+	desc = "A flag of the Colonial Liberation Front. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
+	icon_state = "clfflag"
+/obj/structure/sign/banners/clf_worn
+	name = "\improper Worn Colonial Liberation Front flag"
+	desc = "A very worn flag of the Colonial Liberation Front. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
+	icon_state = "clfflag_worn"
 //=====================//
 // SEMIOTIC STANDARD  //
 //===================//
@@ -761,3 +771,39 @@
 	icon_state = "calendar_ua"
 	desc = "Classic office decoration and a place to stare at maniacally, has a vertically placed UA flag and some army symbolics."
 	calendar_faction = FACTION_MARINE
+
+//===================//
+//      Con-Am Faction Symbol     //
+//=================//
+
+/obj/structure/sign/conam
+	name = "\improper Con-Am Poster"
+	desc = "A symbol of the Con-Am corporation. Oozes a proud confidence of Con-Am, despite its mounting real world troubles."
+	icon_state = "conam_symbol"
+
+/obj/structure/sign/conam/variant1
+	icon_state = "conam_logo_1"
+
+/obj/structure/sign/conam/variant1/damage1
+	icon_state = "conam_logo_1_damage"
+
+/obj/structure/sign/conam/variant1/damage2
+	icon_state = "conam_logo_1_damage_1"
+
+/obj/structure/sign/conam/variant2
+	icon_state = "conam_logo_2"
+
+/obj/structure/sign/conam/variant2/damage1
+	icon_state = "conam_logo_2_damage"
+
+/obj/structure/sign/conam/variant2/damage2
+	icon_state = "conam_logo_2_damage_1"
+
+/obj/structure/sign/conam/variant3
+	icon_state = "conam_logo_3"
+
+/obj/structure/sign/conam/variant3/damage1
+	icon_state = "conam_logo_3_damage"
+
+/obj/structure/sign/conam/variant3/damage2
+	icon_state = "conam_logo_3_damage_1"

@@ -19,6 +19,9 @@ endmap
 map lv624_repaired
 endmap
 
+map lv624_lazarus_landing
+endmap
+
 map bigredv2
 endmap
 
@@ -87,7 +90,20 @@ endmap
 map white_antre_research_facility
 endmap
 
+map conam_81_abyssal
+	maxplayers 85
+endmap
+
+map cape_river
+endmap
+
 map whiskey_outpost_v2
+endmap
+
+map lv522_chances_claim_lukes_landing
+endmap
+
+map lv522_lukes_landing
 endmap
 
 map lv295_blacksite
