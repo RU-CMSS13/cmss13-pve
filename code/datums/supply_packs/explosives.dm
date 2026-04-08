@@ -15,7 +15,7 @@
 		/obj/item/explosive/grenade/metal_foam,
 		/obj/item/explosive/grenade/metal_foam,
 	)
-	cost = 40
+	cost = 80
 	containertype = /obj/structure/closet/crate/explosives
 	containername = "\improper explosives crate (WARNING)"
 	group = "Explosives"
@@ -26,7 +26,7 @@
 		/obj/item/storage/box/explosive_mines,
 		/obj/item/storage/box/explosive_mines,
 	)
-	cost = 30
+	cost = 50
 	containertype = /obj/structure/closet/crate/explosives
 	containername = "\improper explosive mine boxes crate (WARNING)"
 	group = "Explosives"
@@ -73,7 +73,7 @@
 		/obj/item/storage/box/packet/incendiary,
 		/obj/item/storage/box/packet/incendiary,
 	)
-	cost = 40
+	cost = 20
 	containertype = /obj/structure/closet/crate/explosives
 	containername = "\improper explosive M40 HIDP incendiary grenades crate (WARNING)"
 	group = "Explosives"
@@ -89,24 +89,13 @@
 	containername = "\improper explosive M40 HEDP grenades crate (WARNING)"
 	group = "Explosives"
 
-/datum/supply_packs/explosives_sebb
-	name = "G2 electroshock grenades crate (x6)"
-	contains = list(
-		/obj/item/storage/box/packet/sebb,
-		/obj/item/storage/box/packet/sebb,
-	)
-	cost = 30
-	containertype = /obj/structure/closet/crate/explosives
-	containername = "\improper G2 electroshock grenades crate (WARNING)"
-	group = "Explosives"
-
 
 /datum/supply_packs/explosives_hedp
 	name = "M40 HEDP blast grenade box crate (x25)"
 	contains = list(
 		/obj/item/ammo_box/magazine/nade_box,
 	)
-	cost = 100
+	cost = 70
 	containertype = /obj/structure/closet/crate/explosives
 	containername = "\improper explosive HEDP grenade crate (WARNING)"
 	group = "Explosives"
@@ -127,7 +116,7 @@
 	contains = list(
 		/obj/item/ammo_box/magazine/nade_box/phophorus,
 	)
-	cost = 100
+	cost = 75
 	containertype = /obj/structure/closet/crate/explosives
 	containername = "\improper CCDP grenade crate (WARNING)"
 	group = "Explosives"

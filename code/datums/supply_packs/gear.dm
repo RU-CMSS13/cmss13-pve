@@ -1,15 +1,13 @@
 // add all the gear in this group.
 
 /datum/supply_packs/binocs
-	name = "Mixed Binoculars Crate (x2 per, x6 total)"
+	name = "Mixed Binoculars Crate ( x4 total)"
 	cost = 20
 	containertype = /obj/structure/closet/crate/green
 	containername = "Mixed Binoculars Crate"
 	group = "Gear"
 	contains = list(
 		/obj/item/device/binoculars/range/designator,
-		/obj/item/device/binoculars/range/designator,
-		/obj/item/device/binoculars/range,
 		/obj/item/device/binoculars/range,
 		/obj/item/device/binoculars,
 		/obj/item/device/binoculars,
@@ -28,10 +26,9 @@
 
 
 /datum/supply_packs/motiondetector
-	name = "Motion Detector (x2)"
+	name = "Motion Detector "
 	contains = list(
-		/obj/item/device/motiondetector,
-		/obj/item/device/motiondetector,
+		/obj/item/storage/box/guncase/heavy/motiondetectors
 					)
 	cost = 40
 	containertype = /obj/structure/closet/crate/supply
@@ -49,46 +46,4 @@
 	cost = 60
 	containertype = /obj/structure/closet/crate/ammo
 	containername = "signal flare pack crate"
-	group = "Gear"
-
-/datum/supply_packs/fulton
-	name = "fulton recovery device crate (x4)"
-	contains = list(
-		/obj/item/stack/fulton,
-		/obj/item/stack/fulton,
-		/obj/item/stack/fulton,
-		/obj/item/stack/fulton,
-	)
-	cost = 20
-	containertype = /obj/structure/closet/crate/ammo
-	containername = "fulton recovery device crate"
-	group = "Gear"
-
-/datum/supply_packs/parachute
-	name = "parachute crate (x20)"
-	contains = list(
-		/obj/item/parachute,
-		/obj/item/parachute,
-		/obj/item/parachute,
-		/obj/item/parachute,
-		/obj/item/parachute,
-		/obj/item/parachute,
-		/obj/item/parachute,
-		/obj/item/parachute,
-		/obj/item/parachute,
-		/obj/item/parachute,
-		/obj/item/parachute,
-		/obj/item/parachute,
-		/obj/item/parachute,
-		/obj/item/parachute,
-		/obj/item/parachute,
-		/obj/item/parachute,
-		/obj/item/parachute,
-		/obj/item/parachute,
-		/obj/item/parachute,
-		/obj/item/parachute,
-	)
-	cost = 40
-	containertype = /obj/structure/closet/crate/supply
-	containername = "parachute crate"
 	group = "Gear"

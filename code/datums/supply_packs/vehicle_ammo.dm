@@ -12,7 +12,7 @@
 		/obj/item/ammo_magazine/hardpoint/ltb_cannon,
 		/obj/item/ammo_magazine/hardpoint/ltb_cannon,
 	)
-	cost = 30
+	cost = 50
 	containertype = /obj/structure/closet/crate/ammo
 	containername = "LTB cannon ammo crate"
 	group = "Vehicle Ammo"

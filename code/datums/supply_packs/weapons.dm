@@ -13,7 +13,7 @@
 	contains = list(
 		/obj/item/storage/box/guncase/m2c,
 	)
-	cost = 60
+	cost = 80
 	containertype = /obj/structure/closet/crate/weapon
 	containername = "M2C Machine Gun Crate"
 	group = "Weapons"
@@ -26,53 +26,9 @@
 		/obj/item/storage/backpack/marine/engineerpack/flamethrower/kit,
 		/obj/item/storage/backpack/marine/engineerpack/flamethrower/kit,
 	)
-	cost = 40
+	cost = 80
 	containertype = /obj/structure/closet/crate/ammo/alt/flame
 	containername = "M240 Incinerator crate"
-	group = "Weapons"
-
-/datum/supply_packs/grenade_launchers
-	name = "M79 Grenade Launcher Crate (x2 Guncases)"
-	contains = list(
-		/obj/item/storage/box/guncase/m79,
-		/obj/item/storage/box/guncase/m79,
-	)
-	cost = 40
-	containertype = /obj/structure/closet/crate/weapon
-	containername = "M79 grenade launcher crate"
-	group = "Weapons"
-
-/datum/supply_packs/mou53
-	name = "MOU-53 Break Action Shotgun Crate (x2)"
-	contains = list(
-		/obj/item/storage/box/guncase/mou53,
-		/obj/item/storage/box/guncase/mou53,
-	)
-	cost = 30
-	containertype = /obj/structure/closet/crate/weapon
-	containername = "MOU-53 Break Action Shotgun Crate"
-	group = "Weapons"
-
-/datum/supply_packs/xm51
-	name = "XM51 Breaching Scattergun Crate (x2)"
-	contains = list(
-		/obj/item/storage/box/guncase/xm51,
-		/obj/item/storage/box/guncase/xm51,
-	)
-	cost = 30
-	containertype = /obj/structure/closet/crate/weapon
-	containername = "XM51 Breaching Scattergun Crate"
-	group = "Weapons"
-
-/datum/supply_packs/smartpistol
-	name = "SU-6 Smart Pistol Crate (x2)"
-	contains = list(
-		/obj/item/storage/box/guncase/smartpistol,
-		/obj/item/storage/box/guncase/smartpistol,
-	)
-	cost = 30
-	containertype = /obj/structure/closet/crate/weapon
-	containername = "SU-6 Smart Pistol Crate"
 	group = "Weapons"
 
 /datum/supply_packs/vp78
@@ -94,7 +50,7 @@
 		/obj/item/ammo_magazine/rifle/m41aMK1,
 	)
 	name = "M41A MK1 Rifle Crate (x2 MK1, x2 magazines)"
-	cost = 40
+	cost = 20
 	containertype = /obj/structure/closet/crate/weapon
 	containername = "M41A MK1 Rifle Crate"
 	group = "Weapons"
@@ -105,20 +61,20 @@
 		/obj/item/storage/box/guncase/lmg,
 	)
 	name = "M41AE2 HPR crate (HPR x2, HPR ammo box x2)"
-	cost = 40
+	cost = 80
 	containertype = /obj/structure/closet/crate/weapon
 	containername = "\improper M41AE2 HPR crate"
 	group = "Weapons"
 
-/datum/supply_packs/gun/xm88
+
 	contains = list(
-		/obj/item/storage/box/guncase/xm88,
-		/obj/item/storage/box/guncase/xm88,
+		/obj/item/prop/folded_anti_tank_sadar,
+		/obj/item/prop/folded_anti_tank_sadar,
 	)
-	name = "XM88 Heavy Rifle crate (XM88 x2)"
-	cost = 40
+	name = "M83 SADAR Anti-Tank RPG crate (M83 SADAR x2)"
+	cost = 80
 	containertype = /obj/structure/closet/crate/weapon
-	containername = "\improper XM88 Heavy Rifle crate"
+	containername = "\improper M83 SADAR"
 	group = "Weapons"
 
 /* Uncomment me if it's decided to let the m707 be purchasable through req
@@ -129,6 +85,7 @@
 	containertype = /obj/structure/closet/crate/secure/vulture
 	containername = "M707 crate"
 	group = "Weapons"
+
 */
 
 /datum/supply_packs/gun/merc

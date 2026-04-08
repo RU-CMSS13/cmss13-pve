@@ -10,7 +10,7 @@
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reddot,
 	)
-	cost = 30
+	cost = 40
 	containertype = /obj/structure/closet/crate
 	containername = "red-dot sight attachment crate"
 	group = "Attachments"
@@ -21,7 +21,7 @@
 		/obj/item/attachable/scope,
 		/obj/item/attachable/scope,
 	)
-	cost = 30
+	cost = 40
 	containertype = /obj/structure/closet/crate
 	containername = "scope attachment crate"
 	group = "Attachments"
@@ -32,25 +32,11 @@
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/scope/mini,
 	)
-	cost = 30
+	cost = 40
 	containertype = /obj/structure/closet/crate
 	containername = "mini scope attachment crate"
 	group = "Attachments"
 
-/datum/supply_packs/rail_magneticharness
-	name = "magnetic harness attachment crate (x6)"
-	contains = list(
-		/obj/item/attachable/magnetic_harness,
-		/obj/item/attachable/magnetic_harness,
-		/obj/item/attachable/magnetic_harness,
-		/obj/item/attachable/magnetic_harness,
-		/obj/item/attachable/magnetic_harness,
-		/obj/item/attachable/magnetic_harness,
-	)
-	cost = 30
-	containertype = /obj/structure/closet/crate
-	containername = "magnetic harness attachment crate"
-	group = "Attachments"
 
 /datum/supply_packs/muzzle_suppressor
 	name = "suppressor attachment crate (x8)"
@@ -64,7 +50,7 @@
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/suppressor,
 	)
-	cost = 30
+	cost = 50
 	containertype = /obj/structure/closet/crate
 	containername = "suppressor attachment crate"
 	group = "Attachments"
@@ -79,7 +65,7 @@
 		/obj/item/attachable/extended_barrel,
 		/obj/item/attachable/extended_barrel,
 	)
-	cost = 30
+	cost = 50
 	containertype = /obj/structure/closet/crate
 	containername = "extended barrel attachment crate"
 	group = "Attachments"
@@ -111,7 +97,7 @@
 		/obj/item/attachable/angledgrip,
 		/obj/item/attachable/angledgrip,
 	)
-	cost = 30
+	cost = 60
 	containertype = /obj/structure/closet/crate
 	containername = "foregrip attachment crate"
 	group = "Attachments"

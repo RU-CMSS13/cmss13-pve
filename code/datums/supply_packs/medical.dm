@@ -135,8 +135,7 @@
 		/obj/item/storage/box/czsp/medic_upgraded_kits,
 		/obj/item/storage/box/czsp/medic_upgraded_kits,
 	)
-	cost = 0
-	buyable = FALSE
+	cost = 150
 	containertype = /obj/structure/closet/crate/medical
 	containername = "upgraded medical equipment crate"
 	group = "Medical"

@@ -8,7 +8,7 @@
 		/obj/item/storage/pouch/general,
 		/obj/item/storage/pouch/general,
 	)
-	cost = 20
+	cost = 60
 	containertype = /obj/structure/closet/crate
 	containername = "Large Pouch"
 	group = "Clothing"
@@ -30,33 +30,6 @@
 //---------------------------------------------
 //HOLSTERS & WEBBING BELOW THIS LINE
 //---------------------------------------------
-
-/datum/supply_packs/webbing_brown_black
-	name = "Brown And Black Webbing Crate (x2 each)"
-	contains = list(
-		/obj/item/clothing/accessory/storage/black_vest/brown_vest,
-		/obj/item/clothing/accessory/storage/black_vest/brown_vest,
-		/obj/item/clothing/accessory/storage/black_vest,
-		/obj/item/clothing/accessory/storage/black_vest,
-	)
-	cost = 20
-	containertype = /obj/structure/closet/crate/green
-	containername = "Brown And Black Webbing Crate"
-	group = "Clothing"
-
-/datum/supply_packs/webbing_large
-	name = "Webbing Crate (x4)"
-	contains = list(
-		/obj/item/clothing/accessory/storage/webbing,
-		/obj/item/clothing/accessory/storage/webbing,
-		/obj/item/clothing/accessory/storage/webbing,
-		/obj/item/clothing/accessory/storage/webbing,
-	)
-	cost = 20
-	containertype = /obj/structure/closet/crate/green
-	containername = "Webbing Crate"
-	group = "Clothing"
-
 /datum/supply_packs/drop_pouches
 	name = "Drop Pouch Crate (x4)"
 	contains = list(
@@ -65,7 +38,7 @@
 		/obj/item/clothing/accessory/storage/droppouch,
 		/obj/item/clothing/accessory/storage/droppouch,
 	)
-	cost = 20
+	cost = 10
 	containertype = /obj/structure/closet/crate/green
 	containername = "Drop Pouch Crate"
 	group = "Clothing"
@@ -94,18 +67,6 @@
 	cost = 20
 	containertype = /obj/structure/closet/crate/green
 	containername = "Shoulder Holster Crate"
-	group = "Clothing"
-
-/datum/supply_packs/gunslinger_holster
-	contains = list(
-		/obj/item/storage/belt/gun/m44/gunslinger,
-		/obj/item/storage/belt/gun/m44/gunslinger,
-	)
-	name = "Red Ranger Cowboy Gunbelt Crate (x2)"
-	cost = 20
-	contraband = 1
-	containertype = /obj/structure/closet/crate
-	containername = "Cowboy Costume Crate"
 	group = "Clothing"
 
 /datum/supply_packs/officer_outfits//lmao this shit is so hideously out of date
