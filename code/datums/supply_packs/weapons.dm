@@ -61,7 +61,7 @@
 		/obj/item/storage/box/guncase/lmg,
 	)
 	name = "M41AE2 HPR crate (HPR x2, HPR ammo box x2)"
-	cost = 80
+	cost = 60
 	containertype = /obj/structure/closet/crate/weapon
 	containername = "\improper M41AE2 HPR crate"
 	group = "Weapons"
@@ -72,7 +72,7 @@
 		/obj/item/prop/folded_anti_tank_sadar,
 	)
 	name = "M83 SADAR Anti-Tank RPG crate (M83 SADAR x2)"
-	cost = 80
+	cost = 60
 	containertype = /obj/structure/closet/crate/weapon
 	containername = "\improper M83 SADAR"
 	group = "Weapons"
