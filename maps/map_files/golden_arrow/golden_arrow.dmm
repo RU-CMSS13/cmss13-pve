@@ -803,7 +803,8 @@
 /turf/open/floor/almayer/edge/smooth/corner/west,
 /area/golden_arrow/hangar)
 "abG" = (
-/obj/structure/machinery/cm_vending/clothing/pilot_officer/ai,
+/obj/structure/closet/secure_closet/security/cargo,
+/obj/item/storage/belt/gun/m4a3/army,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/pilot_room)
 "abH" = (
@@ -817,12 +818,8 @@
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/golden_arrow/hangar)
 "abI" = (
-/obj/structure/surface/rack,
 /obj/structure/machinery/light/small/red,
-/obj/item/clothing/head/helmet/upp/marinepilot/tex{
-	pixel_x = 3;
-	pixel_y = 11
-	},
+/obj/structure/machinery/computer/supplycomp,
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/pilot_room)
 "abJ" = (
@@ -1003,15 +1000,11 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/pilot_room)
 "acd" = (
-/obj/structure/closet/secure_closet/pilot_officer{
-	pixel_x = -8;
-	pixel_y = -1;
-	req_access = list(22)
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 1
 	},
+/obj/structure/closet/secure_closet/cargotech,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/pilot_room)
 "ace" = (
@@ -1107,14 +1100,13 @@
 /turf/open/floor/almayer/edge/southwest,
 /area/golden_arrow/dorms)
 "acl" = (
-/obj/structure/machinery/door/airlock/almayer/generic{
-	dir = 2;
-	name = "\improper Pilot Room";
-	req_one_access_txt = "19;12;22"
-	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
+	},
+/obj/structure/machinery/door/airlock/almayer/generic{
+	dir = 1;
+	name = "Cargo room"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/pilot_room)
@@ -4151,11 +4143,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
 "alI" = (
-/obj/structure/surface/table/almayer,
-/obj/item/weapon/straight_razor{
-	pixel_x = -5;
-	pixel_y = -5
-	},
+/obj/structure/machinery/computer/supplycomp,
 /turf/open/floor/almayer/edge/smooth/southwest,
 /area/golden_arrow/platoon_commander_rooms)
 "alK" = (
@@ -19731,6 +19719,7 @@
 	pixel_x = -2;
 	id = "largebay"
 	},
+/obj/structure/machinery/computer/ordercomp,
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "nrp" = (
@@ -21252,13 +21241,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
-"smh" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/machinery/computer/supplycomp,
-/turf/open/floor/almayer/edge/smooth/north,
-/area/golden_arrow/supply)
 "soC" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -22362,9 +22344,9 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/lower_cargo)
 "whI" = (
-/obj/effect/landmark/supply_elevator,
-/turf/open/floor/corsat,
-/area/golden_arrow/cargo_shuttle/lower)
+/obj/structure/machinery/computer/ordercomp,
+/turf/open/floor/almayer/edge/smooth/north,
+/area/golden_arrow/supply)
 "wmF" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -28561,7 +28543,7 @@ fbw
 cGQ
 cGQ
 cGQ
-whI
+cGQ
 cGQ
 cGQ
 aPy
@@ -31472,7 +31454,7 @@ byz
 gjS
 aOp
 nzo
-smh
+aej
 ahl
 ahl
 ahl
@@ -31826,7 +31808,7 @@ byz
 aAu
 aho
 oFX
-aLe
+whI
 ahl
 ahl
 ahl
