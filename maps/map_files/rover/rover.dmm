@@ -342,16 +342,15 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "aK" = (
-/obj/docking_port/stationary/trijent_elevator/shipmap_elevator/cargo{
-	id = "garrow_cargo_elevator_storage";
-	name = "Cargo Elevator Storage";
-	roundstart_template = /datum/map_template/shuttle/trijent_elevator/golden_arrow/cargo;
-	elevator_network = "ArrowCargo";
-	airlock_area = /area/golden_arrow/cargo_shuttle/lower;
-	airlock_exit = "north"
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door_control{
+	id = "cargolock";
+	name = "GM cargo lock control";
+	pixel_y = -24;
+	needs_power = 0
 	},
-/turf/open/floor/corsat,
-/area/golden_arrow/cargo_shuttle/lower)
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "aL" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -439,16 +438,13 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "aV" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
 	},
 /obj/effect/decal/warning_stripes{
-	icon_state = "NW-out";
-	layer = 2.5;
-	pixel_y = 1;
-	pixel_x = -1
+	icon_state = "cargo_arrow";
+	dir = 1
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
@@ -492,14 +488,11 @@
 /turf/closed/wall/almayer/outer/gear,
 /area/golden_arrow/cargo_shuttle/upper)
 "bd" = (
-/obj/structure/sign/safety/rewire{
-	pixel_x = 32
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow"
 	},
 /obj/structure/machinery/door/poddoor/railing{
 	id = "garrow_elevator_upper"
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo_arrow"
 	},
 /turf/open/floor/almayer/edge,
 /area/golden_arrow/cargo_shuttle/upper)
@@ -544,15 +537,17 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "bh" = (
-/obj/docking_port/stationary/trijent_elevator/shipmap_elevator/cargo{
-	id = "garrow_cargo_elevator_upper";
-	name = "Cargo Elevator Upper";
-	elevator_network = "ArrowCargo";
-	airlock_exit = "north";
-	airlock_area = /area/golden_arrow/cargo_shuttle/upper
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	dir = 4
 	},
-/turf/open/floor/almayer/empty/golden_arrow,
-/area/golden_arrow/cargo_shuttle/upper)
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "bi" = (
 /turf/open/floor/almayer/empty/golden_arrow,
 /area/golden_arrow/cargo_shuttle/upper)
@@ -754,12 +749,9 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
 "bF" = (
-/obj/structure/largecrate/random/case,
-/obj/structure/largecrate/supply/ammo/m41amk1/forecon{
-	pixel_y = 10
-	},
-/turf/open/floor/almayer/mono,
-/area/golden_arrow/hangar)
+/obj/effect/landmark/supply_elevator,
+/turf/open/floor/almayer/empty/golden_arrow,
+/area/golden_arrow/cargo_shuttle/upper)
 "bG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -6512,7 +6504,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "Wh" = (
-/obj/structure/largecrate/supply/supplies/mre,
+/obj/structure/machinery/computer/supplycomp,
 /turf/open/floor/almayer/test_floor5,
 /area/golden_arrow/supply)
 "Wi" = (
@@ -10189,12 +10181,12 @@ Un
 sL
 TX
 bc
-bi
-bi
-bi
-bi
-bi
-bh
+bb
+bb
+bb
+bb
+bb
+bb
 bc
 bC
 cZ
@@ -10291,12 +10283,12 @@ HV
 FF
 TX
 bk
-bi
-bi
-bi
-bi
-bi
-bi
+bb
+bb
+bb
+bb
+bb
+bb
 bb
 TX
 aS
@@ -10393,7 +10385,7 @@ HV
 FF
 TX
 bb
-bi
+bb
 bi
 bi
 bi
@@ -10495,7 +10487,7 @@ ID
 Js
 TX
 bb
-bi
+bb
 bi
 bi
 bi
@@ -10597,10 +10589,10 @@ px
 FF
 TX
 bb
+bb
 bi
 bi
-bi
-bi
+bF
 bi
 bi
 Dr
@@ -10699,17 +10691,17 @@ HV
 FF
 TX
 bb
+bb
 bi
 bi
 bi
 bi
 bi
-bi
-bd
+Dr
 ba
 aU
 fo
-au
+aK
 ys
 yw
 FZ
@@ -10801,14 +10793,14 @@ aL
 rY
 TX
 bb
-bi
-bi
-bi
-bi
-bi
-bi
 bb
-TX
+bi
+bi
+bi
+bi
+bi
+bd
+ba
 aV
 fo
 au
@@ -10903,15 +10895,15 @@ TX
 TX
 TX
 bc
-bi
-bi
-bi
-bi
-bi
-bi
-bc
-bF
-WJ
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+TX
+bh
 aH
 WJ
 ys
@@ -15604,7 +15596,7 @@ aN
 aN
 aN
 aN
-aK
+aN
 az
 cT
 ci

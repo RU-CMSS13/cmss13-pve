@@ -15,6 +15,7 @@
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	attack_speed = 9
 
+
 /obj/item/weapon/sword/claymore
 	name = "claymore"
 	desc = "What are you standing around staring at this for? Get to killing!"

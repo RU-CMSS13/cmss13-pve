@@ -13,16 +13,6 @@
 	var/datum/supply_packs/reference_package
 
 //===================================
-// Rounds
-/datum/supply_packs_asrs/ammo_rounds_box_rifle
-	reference_package = /datum/supply_packs/ammo_rounds_box_rifle
-	cost = ASRS_MEDIUM_WEIGHT
-
-/datum/supply_packs_asrs/ammo_rounds_box_rifle_ap
-	reference_package = /datum/supply_packs/ammo_rounds_box_rifle_ap
-	cost = ASRS_LOW_WEIGHT
-
-//===================================
 // Magazines
 /datum/supply_packs_asrs/gun/ammo_hpr
 	reference_package = /datum/supply_packs/ammo_hpr
@@ -73,36 +63,6 @@
 	reference_package = /datum/supply_packs/ammo_napalm
 	cost = ASRS_VERY_LOW_WEIGHT
 
-/datum/supply_packs_asrs/ammo_napalm_gel
-	reference_package = /datum/supply_packs/ammo_napalm_gel
-	cost = ASRS_VERY_LOW_WEIGHT
-
-/datum/supply_packs_asrs/ammo_flamer_mixed
-	reference_package = /datum/supply_packs/ammo_flamer_mixed
-	cost = ASRS_VERY_LOW_WEIGHT
 
 
-//===================================
-// Misc supplies
-/datum/supply_packs_asrs/flares
-	reference_package = /datum/supply_packs/flares
-	cost = ASRS_LOW_WEIGHT
 
-/datum/supply_packs_asrs/mre
-	reference_package = /datum/supply_packs/mre
-	cost = ASRS_VERY_LOW_WEIGHT
-
-/datum/supply_packs_asrs/flashlights
-	reference_package = /datum/supply_packs/flashlights
-	cost = ASRS_VERY_LOW_WEIGHT
-
-/datum/supply_packs_asrs/batteries
-	reference_package = /datum/supply_packs/batteries
-	cost = ASRS_VERY_LOW_WEIGHT
-
-// ============================
-// FOOD POOL - for Mess Tech gradual supplies throughout the round
-/datum/supply_packs_asrs/ingredient
-	reference_package = /datum/supply_packs/ingredient
-	pool = ASRS_POOL_FOOD
-	cost = ASRS_VERY_LOW_WEIGHT
