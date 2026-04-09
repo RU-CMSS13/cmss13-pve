@@ -21,6 +21,12 @@
 		list("Engineer Kit", 1, /obj/item/storage/toolkit/empty, null, VENDOR_ITEM_REGULAR),
 		list("Tactical Prybar", 5, /obj/item/tool/crowbar/tactical, null, VENDOR_ITEM_REGULAR),
         list("Tactical Tools Pouch", 20, /obj/item/storage/pouch/tools/tactical/full, null, VENDOR_ITEM_REGULAR),
+        list("Large Backpack", 25, /obj/item/storage/backpack/marine/satchel/big, null, VENDOR_ITEM_REGULAR),
+		list("Large Backpack", 25, /obj/item/storage/backpack/lightpack, null, VENDOR_ITEM_REGULAR),
+		list("Tesla Coil", 20, /obj/item/defenses/handheld/tesla_coil/stun, null, VENDOR_ITEM_REGULAR),
+
+
+
 
 		list("FIRSTAID KITS", 0, null, null, null),
 		list("Advanced Firstaid Kit", 6, /obj/item/storage/firstaid/softpack/adv, null, VENDOR_ITEM_REGULAR),
