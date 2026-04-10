@@ -63,6 +63,7 @@
 		list("Health Diagnostic Equipment", 2, /obj/item/device/healthanalyzer/soul, null, VENDOR_ITEM_REGULAR),
 		list("Surgical Line", 3, /obj/item/tool/surgery/surgical_line, null, VENDOR_ITEM_REGULAR),
 		list("Synth-Graft", 3, /obj/item/tool/surgery/synthgraft, null, VENDOR_ITEM_REGULAR),
+		list("Portable Dialysis Machine", 15, /obj/item/tool/portadialysis, null, VENDOR_ITEM_REGULAR),
 
 		list("OTHER SUPPLIES", 0, null, null, null),
 		list("Binoculars", 5,/obj/item/device/binoculars, null, VENDOR_ITEM_REGULAR),
@@ -72,7 +73,9 @@
 		list("Motion Detector", 3, /obj/item/device/motiondetector, null, VENDOR_ITEM_REGULAR),
 		list("Space Cleaner", 1, /obj/item/reagent_container/spray/cleaner, null, VENDOR_ITEM_REGULAR),
 		list("Whistle", 2, /obj/item/device/whistle, null, VENDOR_ITEM_REGULAR),
-		list("Machete Scabbard (Full)", 2, /obj/item/storage/large_holster/machete/full, null, VENDOR_ITEM_REGULAR)
+		list("Machete Scabbard (Full)", 2, /obj/item/storage/large_holster/machete/full, null, VENDOR_ITEM_REGULAR),
+		list("Crew Monitor", 10, /obj/item/tool/crew_monitor, null, VENDOR_ITEM_REGULAR),
+		list("Compact Nailgun kit", 10, /obj/effect/essentials_set/cnailgun, null, VENDOR_ITEM_REGULAR)
 	)
 
 //------------CLOTHING VENDOR---------------
@@ -218,6 +221,11 @@ GLOBAL_LIST_INIT(cm_vending_clothing_synth_snowflake, list(
 	list("expensive suit", 12, /obj/item/clothing/under/hybrisa/wy_exec_suit_uniform/jacket, null, VENDOR_ITEM_REGULAR),
 	list("Paramedic uniform", 12, /obj/item/clothing/under/hybrisa/paramedic, null, VENDOR_ITEM_REGULAR),
 	list("engineering utility uniform", 12, /obj/item/clothing/under/hybrisa/engineering_utility, null, VENDOR_ITEM_REGULAR),
+	list("expensive suit", 12, /obj/item/clothing/under/hybrisa/wy_exec_suit_uniform, null, VENDOR_ITEM_REGULAR),
+	list("engineering utility uniform", 12, /obj/item/clothing/under/hybrisa/engineering_utility/alt, null, VENDOR_ITEM_REGULAR),
+	list("scientist's utility jumpsuit", 12, /obj/item/clothing/under/rank/scientist/hybrisa, null, VENDOR_ITEM_REGULAR),
+
+
 
 	list("GLASSES", 0, null, null, null),
 	list("HealthMate HUD", 12, /obj/item/clothing/glasses/hud/health, null, VENDOR_ITEM_REGULAR),
@@ -227,6 +235,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_synth_snowflake, list(
 	list("Security HUD Glasses", 12, /obj/item/clothing/glasses/sunglasses/sechud, null, VENDOR_ITEM_REGULAR),
 	list("Sunglasses", 12, /obj/item/clothing/glasses/sunglasses, null, VENDOR_ITEM_REGULAR),
 	list("Welding Goggles", 12, /obj/item/clothing/glasses/welding, null, VENDOR_ITEM_REGULAR),
+	list("Security HUD Glasses (blue)", 12, /obj/item/clothing/glasses/sunglasses/sechud/blue, null, VENDOR_ITEM_REGULAR),
 
 	list("SHOES", 0, null, null, null),
 	list("Boots", 12, /obj/item/clothing/shoes/marine, null, VENDOR_ITEM_REGULAR),
@@ -258,7 +267,8 @@ GLOBAL_LIST_INIT(cm_vending_clothing_synth_snowflake, list(
 	list("MP Cap", 12, /obj/item/clothing/head/beret/marine/mp/mpcap, null, VENDOR_ITEM_REGULAR),
 	list("Req Cap", 12, /obj/item/clothing/head/cmcap/khaki, null, VENDOR_ITEM_REGULAR),
 	list("Officer Cap", 12, /obj/item/clothing/head/cmcap/bridge, null, VENDOR_ITEM_REGULAR),
-	list("Bio Hood", 12, /obj/item/clothing/head/bio_hood/synth, null, VENDOR_ITEM_REGULAR),
+	list("WY cap", 12, /obj/item/clothing/head/cmcap/wy_cap, null, VENDOR_ITEM_REGULAR),
+	list("Cap (blue) ", 12, /obj/item/clothing/head/cmcap/corrections, null, VENDOR_ITEM_REGULAR),
 	list("Fedora", 12, /obj/item/clothing/head/fedora, null, VENDOR_ITEM_REGULAR),
 
 	list("HELMET", 0, null, null, null),
