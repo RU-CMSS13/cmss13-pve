@@ -1165,6 +1165,8 @@
 
 /obj/item/clothing/suit/marine/veteran/pmc/light/heavy/Initialize(mapload)
 	. = ..()
+	var/obj/item/clothing/accessory/pmcpads/light/shoulders = new()
+	src.attach_accessory(null, shoulders, TRUE)
 	var/obj/item/clothing/accessory/pmcpads/greaves/greaves = new()
 	src.attach_accessory(null, greaves, TRUE)
 	var/obj/item/clothing/accessory/pmcpads/neckguard/neckguard = new()
