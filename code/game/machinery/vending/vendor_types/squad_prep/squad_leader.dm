@@ -255,9 +255,8 @@ GLOBAL_LIST_INIT(cm_vending_clothing_leaderpmc, list(
 		list("Leader Kit", 0, /obj/effect/essentials_set/leader, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 
 		list("SIDEARM (CHOOSE 1)", 0, null, null, null),
-		list("VP78M6", 0, /obj/item/weapon/gun/pistol/vp78m6, MARINE_CAN_BUY_KIT, VENDOR_ITEM_RECOMMENDED),
-		list("SU6", 0, /obj/item/storage/belt/gun/smartpistol/full, MARINE_CAN_BUY_KIT, VENDOR_ITEM_RECOMMENDED),
-		list("HG44", 0, /obj/item/storage/belt/gun/m4a3/highpower/automag/tactical, MARINE_CAN_BUY_KIT, VENDOR_ITEM_RECOMMENDED),
+		list("VP78M6", 0, /obj/item/weapon/gun/pistol/vp78m6, /obj/item/ammo_box/magazine/vp78, MARINE_CAN_BUY_KIT, VENDOR_ITEM_RECOMMENDED),
+		list("HG44", 0, /obj/item/storage/belt/gun/m4a3/highpower/automag/tactical, /obj/item/ammo_box/magazine/mk45, MARINE_CAN_BUY_KIT, VENDOR_ITEM_RECOMMENDED),
 
 		list("BELT (CHOOSE 1)", 0, null, null, null),
 		list("M276 Lifesaver Bag", 0, /obj/item/storage/belt/medical/lifesaver/wy, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
@@ -266,16 +265,11 @@ GLOBAL_LIST_INIT(cm_vending_clothing_leaderpmc, list(
 		list("M276 Toolbelt Rig (Full)", 0, /obj/item/storage/belt/utility/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("M276 Pattern Combat Toolbelt Rig", 0, /obj/item/storage/belt/gun/utility, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 
-		list("AMMO Pistol (CHOOSE 1)", 0, null, null, null),
-		list("HG44", 0, /obj/item/ammo_box/magazine/mk45, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
-		list("VP78M6", 0, /obj/item/ammo_box/magazine/vp78/rmc, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
-		list("SU6", 0, /obj/item/ammo_box/magazine/su6, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
-
 		list("OTHER SUPPLIES", 0, null, null, null),
 		list("Rangefinder", 3, /obj/item/device/binoculars/range, null,  VENDOR_ITEM_REGULAR),
 		list("Laser Designator", 5, /obj/item/device/binoculars/range/designator, null, VENDOR_ITEM_RECOMMENDED),
-		list("MK2 AP", 8, /obj/item/ammo_magazine/rifle/ap, null, VENDOR_ITEM_REGULAR),
-		list("MK2 EXT", 3, /obj/item/ammo_magazine/rifle/extended, null, VENDOR_ITEM_REGULAR),
+		list("MK2 AP", 10, /obj/item/ammo_magazine/rifle/ap, null, VENDOR_ITEM_REGULAR),
+		list("MK2 EXT", 8, /obj/item/ammo_magazine/rifle/extended, null, VENDOR_ITEM_REGULAR),
 		list("Motion Detector", 5, /obj/item/device/motiondetector, null, VENDOR_ITEM_RECOMMENDED),
 		list("Space Cleaner", 2, /obj/item/reagent_container/spray/cleaner, null, VENDOR_ITEM_REGULAR),
 		list("Whistle", 1, /obj/item/device/whistle, null, VENDOR_ITEM_REGULAR),
@@ -291,3 +285,42 @@ GLOBAL_LIST_INIT(cm_vending_clothing_leaderpmc, list(
 
 /obj/structure/machinery/cm_vending/clothing/leaderpmc/get_listed_products(mob/user)
 	return GLOB.cm_vending_clothing_leaderpmc
+
+GLOBAL_LIST_INIT(cm_vending_clothing_leaderupp, list(
+		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
+		list("Advanced Armor Kit", 0, list (/obj/item/clothing/accessory/health/ceramic_plate/upp, ), MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("Leader Kit", 0, /obj/effect/essentials_set/leaderupp, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+
+		list("SIDEARM (CHOOSE 1)", 0, null, null, null),
+		list("T74", 0, list (/obj/item/weapon/gun/pistol/t73/leader, /obj/item/ammo_magazine/pistol/t73_impact, ),  MARINE_CAN_BUY_KIT, VENDOR_ITEM_RECOMMENDED),
+		list("NPZ92", 0, /obj/item/weapon/gun/pistol/np92/suppressed, MARINE_CAN_BUY_KIT, VENDOR_ITEM_RECOMMENDED),
+
+		list("BELT (CHOOSE 1)", 0, null, null, null),
+		list("M276 Lifesaver Bag", 0, /obj/item/storage/belt/medical/lifesaver/upp, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 Medical Storage Rig", 0, /obj/item/storage/belt/medical/upp, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 Toolbelt Rig (Full)", 0, /obj/item/storage/belt/utility/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 Pattern Combat Toolbelt Rig", 0, /obj/item/storage/belt/gun/utility, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+
+	))
+
+/obj/structure/machinery/cm_vending/clothing/leaderupp
+
+	name = "\improper UnTech Surplus Vendor Leader Equipment Rack"
+	desc = "An automated rack hooked up to a colossal storage of Squad Leader standard-issue equipment."
+	req_access = list(ACCESS_UPP_ARMORY)
+	icon_state = "upp_gear"
+	vendor_role = list(JOB_SQUAD_LEADER)
+
+/obj/structure/machinery/cm_vending/clothing/leaderupp/get_listed_products(mob/user)
+	return GLOB.cm_vending_clothing_leaderupp
+
+/obj/effect/essentials_set/leaderupp
+	spawned_gear_list = list(
+		/obj/item/device/binoculars/range/designator/upp,
+		/obj/item/tool/extinguisher/mini,
+		/obj/item/storage/box/zipcuffs,
+		/obj/item/weapon/gun/rifle/ak4047/unloaded/platoon,
+		/obj/item/ammo_box/magazine/ak4047,
+		/obj/item/storage/pouch/magazine/large,
+		/obj/item/deployable_beacon/red,
+	)

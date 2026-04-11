@@ -1614,7 +1614,7 @@
 	},
 /obj/structure/ladder{
 	id = engi3;
-	height = 1
+	height = 2
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
@@ -1668,7 +1668,7 @@
 	},
 /obj/structure/ladder{
 	id = engi2;
-	height = 1
+	height = 2
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
@@ -4952,29 +4952,7 @@
 /turf/closed/wall/upp_wall/grey/hull,
 /area/golden_arrow/medical)
 "kQ" = (
-/obj/structure/closet/secure_closet{
-	name = "Platoon Sergeant locker";
-	req_access_txt = "240"
-	pixel_x = -8;
-	can_block_movement = 0
-	},
-/obj/item/tool/crowbar/tactical,
-/obj/item/storage/box/zipcuffs/small,
-/obj/item/device/binoculars/range/designator/upp,
-/obj/item/deployable_beacon/red,
-/obj/item/device/whistle,
-/obj/item/weapon/gun/rifle/ak4047/unloaded/platoon,
-/obj/item/ammo_magazine/rifle/ak4047,
-/obj/item/ammo_magazine/rifle/ak4047,
-/obj/item/ammo_magazine/rifle/ak4047,
-/obj/item/ammo_magazine/rifle/ak4047,
-/obj/item/ammo_magazine/rifle/ak4047,
-/obj/item/ammo_magazine/rifle/ak4047,
-/obj/item/ammo_magazine/rifle/ak4047,
-/obj/item/ammo_magazine/rifle/ak4047,
-/obj/item/ammo_magazine/rifle/ak4047,
-/obj/item/ammo_magazine/rifle/ak4047,
-/obj/item/storage/pouch/magazine/large,
+/obj/structure/machinery/cm_vending/clothing/leaderupp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "kR" = (
@@ -6008,13 +5986,6 @@
 	},
 /turf/closed/wall/upp_wall/grey/hull,
 /area/golden_arrow/hangar)
-"nh" = (
-/obj/structure/ladder{
-	id = engi2;
-	height = 1
-	},
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/engineering)
 "ni" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -9679,7 +9650,7 @@
 /area/golden_arrow/platoon_commander_rooms)
 "Hj" = (
 /obj/structure/ladder{
-	id = engi2;
+	id = capt2;
 	height = 1
 	},
 /turf/open/floor/strata/floor3,
@@ -10280,8 +10251,8 @@
 	light_range = 4
 	},
 /obj/structure/ladder{
-	id = capt1;
-	height = 2
+	id = engi2;
+	height = 1
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/engineering)
@@ -11019,7 +10990,7 @@
 	pixel_y = -15
 	},
 /obj/structure/ladder{
-	id = engi2;
+	id = capt2;
 	height = 2
 	},
 /turf/open/floor/strata/floor3,
@@ -11117,7 +11088,7 @@
 	},
 /obj/structure/ladder{
 	id = engi3;
-	height = 2
+	height = 1
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/engineering)
@@ -26468,7 +26439,7 @@ aa
 aa
 aa
 TA
-nh
+sZ
 aa
 mV
 mV
