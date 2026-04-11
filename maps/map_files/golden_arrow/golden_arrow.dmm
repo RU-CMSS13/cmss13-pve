@@ -14671,10 +14671,10 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/motor_pool)
 "aVO" = (
-/obj/structure/closet/secure_closet/platoon_sergeant,
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/structure/machinery/cm_vending/clothing/leaderplatoon,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
 "aVP" = (

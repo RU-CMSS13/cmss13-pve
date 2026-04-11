@@ -214,7 +214,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_leader, list(
 
 GLOBAL_LIST_INIT(cm_vending_clothing_leaderplatoon, list(
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
-		list("M09 Helmet", 0, /obj/item/clothing/head/helmet/marine/leader, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
+		list("Advanced Armor Kit", 0, list (/obj/item/clothing/accessory/health/ceramic_plate/marine, /obj/item/clothing/head/helmet/marine/leader, /obj/item/clothing/suit/marine/medium/rto/md), MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 		list("Leader Kit", 0, /obj/effect/essentials_set/leader, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 
 		list("SIDEARM (CHOOSE 1)", 0, null, null, null),
