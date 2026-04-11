@@ -87,6 +87,22 @@
 		WEAR_FACE = 'icons/mob/humans/onmob/head_1.dmi'
 	)
 
+/obj/item/clothing/mask/gas/pve_mopp/upp
+	name = "\improper OP-4M ShMB/4 gasmask"
+	desc = "The UPP ShMB/4 gasmask mask includes a full covering cowl that securely attaches to the OP-4M suit. It is capable of protecting of a variety of radiological and biological threats."
+	icon = 'icons/obj/items/clothing/masks.dmi'
+	icon_state = "upp_cbrn_hood"
+	item_state = "upp_cbrn_hood"
+	item_icons = list(
+		WEAR_FACE = 'icons/mob/humans/onmob/mask.dmi'
+	)
+
+/obj/item/clothing/mask/gas/pve_mopp/upp/alt
+	name = "\improper OP-4M PMK/5 gasmask"
+	desc = "The UPP PMK/5 gasmask mask includes a full covering cowl that securely attaches to the OP-4M suit, and additional ventilation system strapped on the back of the hood. It is capable of protecting of a variety of radiological and biological threats."
+	icon_state = "upp_cbrn_hood_alt"
+	item_state = "upp_cbrn_hood_alt"
+
 /obj/item/clothing/mask/gas/pmc
 	name = "\improper tactical filtration mask"
 	desc = "A sophisticated filtration mask being tested for the military market but presently limited to Weyland-Yutani tactical teams."
