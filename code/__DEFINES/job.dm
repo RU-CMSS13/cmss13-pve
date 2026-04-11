@@ -24,6 +24,7 @@
 #define SQUAD_IASF "IASF"
 #define SQUAD_LRRP "Snake Eaters"
 #define SQUAD_LRRP_2 "Ocelot Grapplers"
+#define SQUAD_MERC "Freelancer"
 
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"
@@ -537,6 +538,14 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define BD_MERCS_JOB_LIST list(JOB_MERCENARY_GRUNT, JOB_MERCENARY_PILOT, JOB_MERCENARY_SENTINEL, JOB_MERCENARY_SUPERVISOR, JOB_MERCENARY_BULWARK, JOB_MERCENARY_SYNTH, JOB_MERCENARY_INFILTRATOR, JOB_MERCENARY_OFFICER)
 
 #define TIS_JOB_LIST list(JOB_TIS_SA, JOB_TIS_IO)
+
+//-------- MERC RUCM --------//
+#define JOB_SO_FL "Bartender (Staff Officer)"
+#define JOB_SQUAD_TEAM_LEADER_FL "Bruiser (FTL)"
+#define JOB_SQUAD_LEADER_FL "Warlord (PltSgt)"
+#define JOB_SQUAD_SMARTGUN_FL "Gunner (Smartgunner)"
+#define JOB_SQUAD_MEDIC_FL "Surgeon (Corpsman)"
+#define JOB_SQUAD_RIFLEMAN_FL "Merc (Rifleman)"
 //-------- UACG -------//
 #define JOB_UACG_RIFLE "Colonial Militiaman"
 #define JOB_UACG_TECH "Colonial Militiaman Technician"

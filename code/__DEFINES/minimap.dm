@@ -72,6 +72,7 @@ GLOBAL_LIST_INIT(all_minimap_flags, bitfield2list(MINIMAP_FLAG_ALL))
 #define MINIMAP_AREA_GLASS "#80a0b0ee"
 #define MINIMAP_AREA_MINING "#4d3619e7"
 
+
 #define MINIMAP_SQUAD_UNKNOWN "#d8d8d8"
 #define MINIMAP_SQUAD_ALPHA "#4148c8"
 #define MINIMAP_SQUAD_BRAVO "#fbc70e"
@@ -82,6 +83,7 @@ GLOBAL_LIST_INIT(all_minimap_flags, bitfield2list(MINIMAP_FLAG_ALL))
 #define MINIMAP_SQUAD_SOF "#400000"
 #define MINIMAP_SQUAD_INTEL "#053818"
 #define MINIMAP_SQUAD_UPP "#B22222"
+#define MINIMAP_SQUAD_LANCER "#a5a5a5"
 #define MINIMAP_SQUAD_RMC "#aa740f"
 #define MINIMAP_SQUAD_PMC "#ccffe9"
 #define MINIMAP_SQUAD_ARMY "#349c30"
