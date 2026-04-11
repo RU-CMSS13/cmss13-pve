@@ -9,10 +9,10 @@
 	plasma_max = XENO_PLASMA_TIER_2
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_1
 	armor_deflection = XENO_NO_ARMOR
-	max_health = XENO_HEALTH_TIER_1
+	max_health = XENO_HEALTH_TIER_3
 	evasion = XENO_EVASION_HIGH
 	speed = XENO_SPEED_RUNNER
-	attack_delay = -4
+	attack_delay = -1
 
 	available_strains = list()
 	behavior_delegate_type = /datum/behavior_delegate/pathogen_base/sprinter
