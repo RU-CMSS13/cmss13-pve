@@ -2,11 +2,11 @@
 	faction = FACTION_IASF
 
 /datum/human_ai_squad_preset/iasf/rifleteam
-	name = "TWE, IASF Assault Group"
+	name = "TWE, IASF Patrol"
 	desc = "TWE IASF patrol armed with F903 rifles and carrying IFAKs containing gauze, ointment and injectors."
 	ai_to_spawn = list(
 		/datum/equipment_preset/iasf/leader/lesser = 1,
-		/datum/equipment_preset/iasf/standard = 1,
+		/datum/equipment_preset/iasf/standard = 2,
 	)
 
 /datum/human_ai_squad_preset/iasf/gunteam
@@ -18,17 +18,26 @@
 	)
 
 /datum/human_ai_squad_preset/iasf/squad
-	name = "TWE, IASF Section"
-	desc = "TWE IASF patrol armed with 3 F903 rifles and an L58A3 smartgun, and carrying IFAKs containing gauze, ointment and injectors."
+	name = "TWE, IASF Squad (MG)"
+	desc = "TWE IASF patrol armed with F903 rifles and an L58A3 smartgun, and carrying IFAKs containing gauze, ointment and injectors."
 	ai_to_spawn = list(
 		/datum/equipment_preset/iasf/leader = 1,
-		/datum/equipment_preset/iasf/standard = 2,
+		/datum/equipment_preset/iasf/standard = 3,
 		/datum/equipment_preset/iasf/machinegun = 1,
+	)
+
+/datum/human_ai_squad_preset/iasf/squad_marksman
+	name = "TWE, IASF Squad (Marksman)"
+	desc = "TWE IASF patrol armed with F903 rifles and an L58A3 smartgun, and carrying IFAKs containing gauze, ointment and injectors."
+	ai_to_spawn = list(
+		/datum/equipment_preset/iasf/leader = 1,
+		/datum/equipment_preset/iasf/standard = 3,
+		/datum/equipment_preset/iasf/sniper = 1,
 	)
 
 /datum/human_ai_squad_preset/iasf/support
 	name = "TWE, IASF Support Group"
-	desc = "TWE IASF specialist team armed with F903 rifles, carrying ample medical & engineering supplies."
+	desc = "TWE IASF specialist team armed with P90 SMG and F903 rifle, carrying ample medical & engineering supplies."
 	ai_to_spawn = list(
 		/datum/equipment_preset/iasf/medic = 1,
 		/datum/equipment_preset/iasf/engineer = 1,
@@ -40,5 +49,5 @@
 	ai_to_spawn = list(
 		/datum/equipment_preset/iasf/lieutenant = 1,
 		/datum/equipment_preset/iasf/troopsergeant = 1,
-		/datum/equipment_preset/iasf/standard = 1,
+		/datum/equipment_preset/iasf/standard = 2,
 	)

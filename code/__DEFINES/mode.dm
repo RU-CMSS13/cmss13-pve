@@ -285,7 +285,6 @@ DEFINE_BITFIELD(whitelist_status, list(
 #define FACTION_CONTRACTOR "VAI"
 #define FACTION_MARSHAL "Colonial Marshal"
 #define FACTION_NSPA "NSPA"
-#define FACTION_IASF "Imperial Armed Space Force"
 #define FACTION_PAP "People's Armed Police"
 #define FACTION_HYPERDYNE "Hyperdyne Corporation"
 #define FACTION_CONAM "Con-Amalagated Corporation"

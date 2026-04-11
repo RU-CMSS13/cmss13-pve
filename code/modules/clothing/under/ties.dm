@@ -2194,6 +2194,7 @@
 		/obj/item/ammo_magazine/pistol/vp78,
 		/obj/item/ammo_magazine/pistol/vp70,
 		/obj/item/ammo_magazine/smg/m39,
+		/obj/item/ammo_magazine/smg/p90,
 	)
 
 //Partial Pre-load For Props
