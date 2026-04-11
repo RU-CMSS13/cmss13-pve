@@ -5830,10 +5830,10 @@
 /turf/open/floor/corsat/brown/east,
 /area/firefly/briefing)
 "apL" = (
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/pmc,
 /obj/item/device/binoculars/range/designator,
 /obj/item/clothing/suit/marine/veteran/pmc/leader,
 /obj/item/clothing/glasses/hud/sensor,
+/obj/structure/machinery/cm_vending/clothing/leaderpmc,
 /turf/open/floor/corsat/squares,
 /area/firefly/ptsgt)
 "apM" = (

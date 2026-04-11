@@ -266,10 +266,19 @@ GLOBAL_LIST_INIT(cm_vending_clothing_leaderpmc, list(
 		list("M276 Toolbelt Rig (Full)", 0, /obj/item/storage/belt/utility/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("M276 Pattern Combat Toolbelt Rig", 0, /obj/item/storage/belt/gun/utility, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 
-		list("AMMO PISTOL (CHOOSE 1)", 0, null, null, null),
-		list("HG44", 0, /obj/item/ammo_magazine/pistol/highpower/automag, /obj/item/ammo_magazine/pistol/highpower/automag, /obj/item/ammo_magazine/pistol/highpower/automag, /obj/item/ammo_magazine/pistol/highpower/automag, /obj/item/ammo_magazine/pistol/highpower/automag, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("AMMO Pistol (CHOOSE 1)", 0, null, null, null),
+		list("HG44", 0, /obj/item/ammo_box/magazine/mk45, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("VP78M6", 0, /obj/item/ammo_box/magazine/vp78/rmc, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("SU6", 0, /obj/item/ammo_box/magazine/su6, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+
+		list("OTHER SUPPLIES", 0, null, null, null),
+		list("Rangefinder", 3, /obj/item/device/binoculars/range, null,  VENDOR_ITEM_REGULAR),
+		list("Laser Designator", 5, /obj/item/device/binoculars/range/designator, null, VENDOR_ITEM_RECOMMENDED),
+		list("MK2 AP", 8, /obj/item/ammo_magazine/rifle/ap, null, VENDOR_ITEM_REGULAR),
+		list("MK2 EXT", 3, /obj/item/ammo_magazine/rifle/extended, null, VENDOR_ITEM_REGULAR),
+		list("Motion Detector", 5, /obj/item/device/motiondetector, null, VENDOR_ITEM_RECOMMENDED),
+		list("Space Cleaner", 2, /obj/item/reagent_container/spray/cleaner, null, VENDOR_ITEM_REGULAR),
+		list("Whistle", 1, /obj/item/device/whistle, null, VENDOR_ITEM_REGULAR),
 	))
 
 /obj/structure/machinery/cm_vending/clothing/leaderpmc
@@ -277,6 +286,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_leaderpmc, list(
 	name = "\improper WYTech Operation Leader Equipment Rack"
 	desc = "An automated rack hooked up to a colossal storage of Squad Leader standard-issue equipment."
 	req_access = list(ACCESS_WY_ARMORY)
+	icon_state = "pmc_gear"
 	vendor_role = list(JOB_SQUAD_LEADER)
 
 /obj/structure/machinery/cm_vending/clothing/leaderpmc/get_listed_products(mob/user)
