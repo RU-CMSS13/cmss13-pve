@@ -248,3 +248,36 @@ GLOBAL_LIST_INIT(cm_vending_clothing_leaderplatoon, list(
 
 /obj/structure/machinery/cm_vending/clothing/leaderplatoon/get_listed_products(mob/user)
 	return GLOB.cm_vending_clothing_leaderplatoon
+
+GLOBAL_LIST_INIT(cm_vending_clothing_leaderpmc, list(
+		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
+		list("Advanced Armor Kit", 0, list (/obj/item/clothing/accessory/health/ceramic_plate/twe/wy, /obj/item/clothing/head/helmet/marine/veteran/pmc/leader, /obj/item/clothing/suit/marine/veteran/pmc/leader), MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("Leader Kit", 0, /obj/effect/essentials_set/leader, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+
+		list("SIDEARM (CHOOSE 1)", 0, null, null, null),
+		list("VP78M6", 0, /obj/item/weapon/gun/pistol/vp78m6, MARINE_CAN_BUY_KIT, VENDOR_ITEM_RECOMMENDED),
+		list("SU6", 0, /obj/item/storage/belt/gun/smartpistol/full, MARINE_CAN_BUY_KIT, VENDOR_ITEM_RECOMMENDED),
+		list("HG44", 0, /obj/item/storage/belt/gun/m4a3/highpower/automag/tactical, MARINE_CAN_BUY_KIT, VENDOR_ITEM_RECOMMENDED),
+
+		list("BELT (CHOOSE 1)", 0, null, null, null),
+		list("M276 Lifesaver Bag", 0, /obj/item/storage/belt/medical/lifesaver/wy, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 Medical Storage Rig", 0, /obj/item/storage/belt/medical, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 Shotgun Shell Loading Rig", 0, /obj/item/storage/belt/shotgun/wy, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 Toolbelt Rig (Full)", 0, /obj/item/storage/belt/utility/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 Pattern Combat Toolbelt Rig", 0, /obj/item/storage/belt/gun/utility, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+
+		list("AMMO PISTOL (CHOOSE 1)", 0, null, null, null),
+		list("HG44", 0, /obj/item/ammo_magazine/pistol/highpower/automag, /obj/item/ammo_magazine/pistol/highpower/automag, /obj/item/ammo_magazine/pistol/highpower/automag, /obj/item/ammo_magazine/pistol/highpower/automag, /obj/item/ammo_magazine/pistol/highpower/automag, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("VP78M6", 0, /obj/item/ammo_box/magazine/vp78/rmc, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("SU6", 0, /obj/item/ammo_box/magazine/su6, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+	))
+
+/obj/structure/machinery/cm_vending/clothing/leaderpmc
+
+	name = "\improper WYTech Operation Leader Equipment Rack"
+	desc = "An automated rack hooked up to a colossal storage of Squad Leader standard-issue equipment."
+	req_access = list(ACCESS_WY_ARMORY)
+	vendor_role = list(JOB_SQUAD_LEADER)
+
+/obj/structure/machinery/cm_vending/clothing/leaderpmc/get_listed_products(mob/user)
+	return GLOB.cm_vending_clothing_leaderpmc
