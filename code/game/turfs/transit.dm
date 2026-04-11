@@ -485,7 +485,3 @@
 /turf/open/space/transit/east/shuttlespace_ew15
 	auto_space_icon = FALSE
 	icon_state = "speedspace_ew_15"
-
-/turf/open/space/transit/dropship/lancer
-	shuttle_tag = DROPSHIP_LANCER
-	dir = SOUTH

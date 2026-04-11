@@ -16,7 +16,6 @@
 #define CAMERA_NET_GIBRALTAR "Gibraltar"
 #define CAMERA_NET_COLONY "Colony"
 #define CAMERA_NET_ARES "ARES"
-#define CAMERA_NET_LANCER "Lancer"
 
 #define CAMERA_NET_MILITARY "Military"
 #define CAMERA_NET_OVERWATCH "Overwatch"

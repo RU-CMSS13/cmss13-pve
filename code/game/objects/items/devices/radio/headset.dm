@@ -1499,9 +1499,3 @@
 	volume = RADIO_VOLUME_QUIET
 	has_hud = TRUE
 	hud_type = MOB_HUD_FACTION_MARINE
-
-/obj/item/device/radio/headset/almayer/marine/solardevils/lancer
-	name = "Freelancer headset"
-	desc = "A special headset used by Freelancer squad."
-	has_hud = TRUE
-	frequency = PUB_FREQ
