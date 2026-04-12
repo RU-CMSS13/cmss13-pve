@@ -1637,7 +1637,7 @@
 	icon_state = "type71"
 	item_state = "type71"
 
-	fire_sound = 'sound/weapons/gun_type71_new.ogg'
+	fire_sound = 'sound/weapons/gun_type71.ogg'
 	reload_sound = 'sound/weapons/handling/m41_reload.ogg'
 	unload_sound = 'sound/weapons/handling/m41_unload.ogg'
 	current_mag = /obj/item/ammo_magazine/rifle/type71
