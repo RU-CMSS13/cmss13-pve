@@ -779,7 +779,7 @@
 	penetration = ARMOR_PENETRATION_TIER_1
 
 /datum/ammo/bullet/rifle/f90 // Fancy sci-fi caliber replacer for F90 AUG, instead of just 5.56mm
-	name = "5.5x50mm bullet"
+	name = "5.5x50 bullet"
 	damage = 35
 	penetration = ARMOR_PENETRATION_TIER_1 // It's not caseless 10x24mm
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
@@ -791,5 +791,5 @@
 
 /datum/ammo/bullet/rifle/f90/heap
 	name = "high-explosive armor-piercing 5.5x50 bullet"
-	damage = 50
+	damage = 55
 	penetration = ARMOR_PENETRATION_TIER_6
