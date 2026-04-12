@@ -159,7 +159,7 @@
 	dual_purpose = FALSE
 	throw_range = 6
 	underslug_launchable = FALSE
-	explosion_power = 200
+	explosion_power = 120
 	shrapnel_count = 48
 	arm_sound = 'sound/weapons/pinpull.ogg'
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
@@ -282,7 +282,7 @@
 	hand_throwable = FALSE
 	dangerous = TRUE
 	underslug_launchable = TRUE
-	flame_level = BURN_TIME_TIER_3
+	flame_level = BURN_TIME_TIER_2
 	burn_level = BURN_LEVEL_TIER_3
 	flameshape = FLAMESHAPE_DEFAULT
 	radius = 2
@@ -1397,7 +1397,7 @@
 	icon_state = "rmc_grenade_fire"
 	item_state = "grenade_fire"
 	caliber = "30mm"
-	flame_level = BURN_TIME_TIER_2
+	flame_level = BURN_TIME_TIER_1
 	burn_level = BURN_LEVEL_TIER_8
 	radius = 3
 	fire_type = FIRE_VARIANT_DEFAULT
@@ -1466,7 +1466,7 @@
 	icon_state = "grenade_20mm_inc"
 	item_state = "grenade_fire"
 	caliber = "20mm"
-	flame_level = BURN_TIME_TIER_2
+	flame_level = BURN_TIME_TIER_1
 	burn_level = BURN_LEVEL_TIER_8
 	flameshape = FLAMESHAPE_IRREGULAR
 	radius = 2

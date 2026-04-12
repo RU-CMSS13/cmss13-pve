@@ -26,7 +26,7 @@
 	bonus_overlay = "m41a_ex"
 
 /obj/item/ammo_magazine/rifle/incendiary
-	name = "\improper M41A LE incendiary magazine (10x24mm)"
+	name = "\improper M41A incendiary magazine (10x24mm)"
 	desc = "A 10mm assault rifle magazine."
 	default_ammo = /datum/ammo/bullet/rifle/incendiary
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
@@ -116,7 +116,7 @@
 
 /obj/item/ammo_magazine/rifle/m41aMK1/incendiary
 	name = "\improper M41A MK1 incendiary magazine (10x24mm)"
-	desc = "A long rectangular box magazine for the M41A. Holds 99 caseless Light Explosive Incendiary 10x24mm rounds."
+	desc = "A long rectangular box magazine for the M41A. Holds 99 caseless Incendiary 10x24mm rounds."
 	default_ammo = /datum/ammo/bullet/rifle/incendiary
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
 
@@ -307,7 +307,7 @@
 	ammo_band_icon = "+type71_band"
 	ammo_band_icon_empty = "+type71_band_e"
 	default_ammo = /datum/ammo/bullet/rifle/upp
-	max_rounds = 50
+	max_rounds = 60
 	gun_type = /obj/item/weapon/gun/rifle/type71
 
 /obj/item/ammo_magazine/rifle/type71/rubber

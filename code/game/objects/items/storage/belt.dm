@@ -1035,7 +1035,7 @@
 
 /obj/item/storage/belt/marine/upp/black/full/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
-		new /obj/item/ammo_magazine/rifle/ak4047(src)
+		new /obj/item/ammo_magazine/rifle/type71(src)
 
 /obj/item/storage/belt/marine/wy
 	name = "\improper WY-TM402 pattern ammo load rig"

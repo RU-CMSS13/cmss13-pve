@@ -381,10 +381,10 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "helmet"
 	item_state = "helmet"
 	armor_melee = CLOTHING_ARMOR_MEDIUM
-	armor_bullet = CLOTHING_ARMOR_VERYHIGH
-	armor_laser = CLOTHING_ARMOR_MEDIUM
-	armor_energy = CLOTHING_ARMOR_MEDIUM
-	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_LOW
 	armor_bio = CLOTHING_ARMOR_MEDIUM
 	armor_rad = CLOTHING_ARMOR_LOW
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
@@ -840,9 +840,9 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "An M10 marine helmet version designed for use in darkened environments. It is coated with a special anti-reflective paint."
 	icon_state = "marsoc_helmet"
 	armor_melee = CLOTHING_ARMOR_MEDIUM
-	armor_bullet = CLOTHING_ARMOR_VERYHIGH
-	armor_laser = CLOTHING_ARMOR_MEDIUM
-	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_LOW
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_rad = CLOTHING_ARMOR_LOW
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
@@ -853,10 +853,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "Back issue model of an older combat helmet. Uncomfortable, but the added protection is supposedly worth it. It's been wired up the same, so it still ties into the sensor matrix fine."
 	icon_state = "sl_helmet"
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
-	armor_laser = CLOTHING_ARMOR_MEDIUM
-	armor_energy = CLOTHING_ARMOR_MEDIUM
-	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	flags_atom = NO_NAME_OVERRIDE
 
@@ -866,10 +864,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "io"
 	item_state = "io"
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bullet = CLOTHING_ARMOR_VERYHIGHPLUS
-	armor_laser = CLOTHING_ARMOR_MEDIUM
-	armor_energy = CLOTHING_ARMOR_MEDIUM
-	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	flags_atom = NO_NAME_OVERRIDE
 	max_inserted_visors = 2
@@ -901,12 +897,12 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "Helmet and faceplate component of the B18 armor system. Nanobonded carbonfiber laminated with ultrahigh molecular density polymer, with an integral rebreather and heads up display."
 	icon_state = "pyro_helmet"
 	item_state = "pyro_helmet"
-	armor_melee = CLOTHING_ARMOR_VERYHIGH
-	armor_bullet = CLOTHING_ARMOR_GIGAHIGH
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
 	armor_bomb = CLOTHING_ARMOR_ULTRAHIGH
 	armor_bio = CLOTHING_ARMOR_HIGH
 	armor_rad = CLOTHING_ARMOR_HIGH
-	armor_internaldamage = CLOTHING_ARMOR_VERYHIGHPLUS
+	armor_internaldamage = CLOTHING_ARMOR_HIGH
 	unacidable = TRUE
 	anti_hug = 6
 	force = 20
@@ -919,7 +915,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "grenadier_helmet"
 	item_state = "grenadier_helmet"
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bomb = CLOTHING_ARMOR_ULTRAHIGH
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_rad = CLOTHING_ARMOR_HIGH
@@ -1053,7 +1049,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "Partially due to old stocks, partially due to preference. USCM MARSOC commando ballistic helmet, customized and updated to mission requirements."
 	icon_state = "marsoc_helmet"
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bullet = CLOTHING_ARMOR_VERYHIGHPLUS
+	armor_bullet = CLOTHING_ARMOR_HIGH
 	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	flags_atom = NO_NAME_OVERRIDE
@@ -1078,12 +1074,11 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "Standard issue high molecular density polymer combat helmet used by Weyland Yutani's elite tactical teams. Designed by Weyland-Yutani, initially as a hard hat, the project was eventually retrofitted into a cheap, reliable combat helmet system that incorporates a tactical camera, IFF signal transponder, and heads up display lens. Also features white/black hot IR viewing modes from the camera system."
 	icon_state = "pmc_helmet"
 	flags_armor_protection = BODY_FLAG_HEAD
-	armor_melee = CLOTHING_ARMOR_HIGH
-	armor_bullet = CLOTHING_ARMOR_VERYHIGHPLUS
-	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
-	armor_bio = CLOTHING_ARMOR_MEDIUM
-	armor_internaldamage = CLOTHING_ARMOR_HIGH
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+	armor_internaldamage = CLOTHING_ARMOR_LOW
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
@@ -1255,10 +1250,10 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "commando_helmet"
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
 	armor_melee = CLOTHING_ARMOR_HIGH
-	armor_bullet = CLOTHING_ARMOR_ULTRAHIGHPLUS
+	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
 	armor_bio = CLOTHING_ARMOR_HIGH
-	armor_bomb = CLOTHING_ARMOR_VERYHIGH
-	armor_internaldamage = CLOTHING_ARMOR_VERYHIGH
+	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_internaldamage = CLOTHING_ARMOR_HIGH
 	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR
 	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
 	clothing_traits = list(TRAIT_EAR_PROTECTION)
@@ -1511,7 +1506,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "Union combat helmet Almaz. Part of protective complex Kuija-M, constructed of a thin alloy shattering plate and para-aramid underlayers. The helmet includes cheek shields for shrapnel or ricochet protection, a low resolution camera system, hearing protection, and an integrated communications system. Ports for connecting infrared visors or night vision systems are also provided."
 	icon_state = "upp_helmet"
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
+	armor_bullet = CLOTHING_ARMOR_HIGH
 	armor_energy = CLOTHING_ARMOR_MEDIUM
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
@@ -1540,15 +1535,16 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "An older version of the UPP Army's 6B82 combat helmet, still worn by certain units on planets the UPP deems less important."
 	icon_state = "upp_army_helmet"
 
-/obj/item/clothing/head/helmet/marine/veteran/upp/heavy/sof
+/obj/item/clothing/head/helmet/marine/veteran/upp/sof
 	name = "\improper CCC5-L composite helmet"
 	desc = "A UPP-manufactured combat helmet with a distinctive spherical design. Made from a reinforced polymer composite, it offers ballistic protection while incorporating an integrated HUD, encrypted comms, and a rebreather system. Its limited visor visibility is a tradeoff for enhanced durability."
 	icon_state = "sof_helmet"
-	armor_melee = CLOTHING_ARMOR_HIGHPLUS
-	armor_bullet = CLOTHING_ARMOR_ULTRAHIGHPLUS
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
 	armor_energy = CLOTHING_ARMOR_MEDIUM
-	armor_bomb = CLOTHING_ARMOR_HIGH
-	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_HIGH
 	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR
 	flags_inv_hide = HIDEEARS|HIDEALLHAIR
@@ -1563,7 +1559,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "upp_helmet_naval"
 	item_state = "helmet"
 	armor_melee = CLOTHING_ARMOR_MEDIUM
-	armor_bullet = CLOTHING_ARMOR_ULTRAHIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
 	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
 	armor_energy = CLOTHING_ARMOR_MEDIUM
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
@@ -1913,13 +1909,12 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	name = "\improper 6B83 heavy helmet"
 	desc = "EVA-capable enclosed helmet of the UPP's Naval Infantry. Despite offering a higher armor rating, this helmet's cumbersome design kept it from retaining a larger role in the equipment of the Naval Infantry, and instead is largely reserved for heavy weapons operators and other specialist roles. Usually carried alongside with 6B99-2 heavy assault armor."
 	icon_state = "upp_helmet_heavy"
-	armor_melee = CLOTHING_ARMOR_VERYHIGH
-	armor_bullet = CLOTHING_ARMOR_GIGAHIGH
-	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_VERYHIGH
 	armor_bomb = CLOTHING_ARMOR_ULTRAHIGH
 	armor_bio = CLOTHING_ARMOR_HIGH
 	armor_rad = CLOTHING_ARMOR_HIGHPLUS
-	armor_internaldamage = CLOTHING_ARMOR_VERYHIGHPLUS
+	armor_internaldamage = CLOTHING_ARMOR_VERYHIGH
 	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
 	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR
 	anti_hug = 6
@@ -1934,14 +1929,13 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = " UPPA reconnaissance new helmet for multiple environments, and used mostly for NVG/IR system placement. Made using fabric-polymer technology, making it much lighter in comparison to the standard issue 6B82, sacrificing overall protection. A tactical datalink and A/V feeds are provided, alongside facilities for an infrared imager complex. Surprisingly comfortable. The fabric utilized for this model is rubbery and colored after the standard paint coating of UPP armor."
 	icon_state = "upp_helmet_frogmen"
 	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
-	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
-	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
 	armor_rad = CLOTHING_ARMOR_LOW
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 	specialty = "6B84 helmet"
+	max_inserted_visors = 2
 
 /obj/item/clothing/head/helmet/marine/veteran/van_bandolier
 	name = "pith helmet"
@@ -2176,12 +2170,12 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	)
 	icon_state = "rmc_helm1"
 	item_state = "rmc_helm1"
-	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bullet = CLOTHING_ARMOR_VERYHIGHPLUS
-	armor_energy = CLOTHING_ARMOR_MEDIUM
-	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bio = CLOTHING_ARMOR_HIGHPLUS
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_LOW
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = NO_FLAGS
@@ -2219,11 +2213,11 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "rmc_helm_br"
 	item_state = "rmc_helm_br"
 	armor_melee = CLOTHING_ARMOR_HIGH
-	armor_bullet = CLOTHING_ARMOR_VERYHIGHPLUS
+	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
 	armor_energy = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bio = CLOTHING_ARMOR_MEDIUM
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_LOW
 	clothing_traits = list(TRAIT_EAR_PROTECTION)
 
 /obj/item/clothing/head/helmet/space/pressure/rmc

@@ -87,7 +87,7 @@
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_11)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
-	set_burst_delay(FIRE_DELAY_TIER_LMG)
+	set_burst_delay(FIRE_DELAY_TIER_11)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_6 + 2*HIT_ACCURACY_MULT_TIER_1
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
 	scatter = SCATTER_AMOUNT_TIER_8
@@ -125,7 +125,7 @@
 /obj/item/weapon/gun/rifle/m41a/elite/set_gun_config_values()
 	set_fire_delay(FIRE_DELAY_TIER_11)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
-	set_burst_delay(FIRE_DELAY_TIER_LMG)
+	set_burst_delay(FIRE_DELAY_TIER_11)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_10 + 2*HIT_ACCURACY_MULT_TIER_1
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
 	scatter = SCATTER_AMOUNT_TIER_10
@@ -304,7 +304,7 @@
 	scatter = SCATTER_AMOUNT_TIER_10
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
 	scatter_unwielded = SCATTER_AMOUNT_TIER_2
-	damage_mult = BASE_BULLET_DAMAGE_MULT
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
 	damage_falloff_mult = 0
 	fa_max_scatter = SCATTER_AMOUNT_TIER_7
@@ -349,13 +349,13 @@
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_10)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
-	set_burst_delay(FIRE_DELAY_TIER_LMG)
+	set_burst_delay(FIRE_DELAY_TIER_12)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_10
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
 	scatter = SCATTER_AMOUNT_TIER_9
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
 	scatter_unwielded = SCATTER_AMOUNT_TIER_2
-	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2
+	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
 	damage_falloff_mult = 0
 	fa_max_scatter = SCATTER_AMOUNT_TIER_5
@@ -543,7 +543,7 @@
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_11)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
-	set_burst_delay(FIRE_DELAY_TIER_LMG)
+	set_burst_delay(FIRE_DELAY_TIER_11)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
 	scatter = SCATTER_AMOUNT_TIER_9
@@ -621,7 +621,7 @@
 /obj/item/weapon/gun/rifle/m41aMK1/elite/set_gun_config_values()
 	set_fire_delay(FIRE_DELAY_TIER_11)
 	set_burst_amount(BURST_AMOUNT_TIER_2)
-	set_burst_delay(FIRE_DELAY_TIER_SMG2)
+	set_burst_delay(FIRE_DELAY_TIER_LMG)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_10
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
 	scatter = SCATTER_AMOUNT_TIER_10
@@ -719,8 +719,8 @@
 /obj/item/weapon/gun/rifle/ag80/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_10)
-	set_burst_amount(BURST_AMOUNT_TIER_2)
-	set_burst_delay(FIRE_DELAY_TIER_11)
+	set_burst_amount(BURST_AMOUNT_TIER_3)
+	set_burst_delay(FIRE_DELAY_TIER_10)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_10
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
 	scatter = SCATTER_AMOUNT_TIER_10
@@ -898,7 +898,7 @@
 
 /obj/item/weapon/gun/rifle/m46c/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_LMG)
+	set_fire_delay(FIRE_DELAY_TIER_11)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
 	set_burst_delay(FIRE_DELAY_TIER_12)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
@@ -1538,8 +1538,8 @@
 /obj/item/weapon/gun/rifle/lmg/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_LMG)
-	set_burst_amount(BURST_AMOUNT_TIER_3)
-	set_burst_delay(FIRE_DELAY_TIER_SMG2)
+	set_burst_amount(BURST_AMOUNT_TIER_4)
+	set_burst_delay(FIRE_DELAY_TIER_LMG)
 	//hopefully, this will give it some reason to not just hold down trigger? Long lethal bursts.
 	fa_scatter_peak = FULL_AUTO_SCATTER_PEAK_TIER_2
 	fa_max_scatter = SCATTER_AMOUNT_TIER_1
@@ -1672,7 +1672,7 @@
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_9)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
-	set_burst_delay(FIRE_DELAY_TIER_10)
+	set_burst_delay(FIRE_DELAY_TIER_9)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
 	scatter = SCATTER_AMOUNT_TIER_8
@@ -1746,7 +1746,7 @@
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_10)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
-	set_burst_delay(FIRE_DELAY_TIER_11)
+	set_burst_delay(FIRE_DELAY_TIER_10)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_8
 	scatter = SCATTER_AMOUNT_TIER_7
@@ -1785,7 +1785,7 @@
 
 /obj/item/weapon/gun/rifle/type71/carbine/commando/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_10)
+	set_fire_delay(FIRE_DELAY_TIER_11)
 	set_burst_delay(FIRE_DELAY_TIER_12)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_7
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
@@ -1872,7 +1872,7 @@
 
 /obj/item/weapon/gun/rifle/ak4047
 	name = "\improper AK-4047 pulse assault rifle"
-	desc = "The UPP answer to the M41A MK2 Pulse Rifle, the AK-4047 is a reliable and powerful substitute chambered in 10x27mm. While it lacks the precision of smaller M41A caliber, the AK-4047 is sturdier than the USCMC weapon. Thrown it off a cliff and leave underwater for a month, and you will be able to still fire it with no issues."
+	desc = "Being the UPP outdated Pulse Rifle, the AK-4047 is a reliable and powerful substitute chambered in 10x27mm. While it lacks the precision of smaller M41A caliber, the AK-4047 is sturdier than the USCMC weapon. Throw it off a cliff and leave underwater for a month, and you will be able to still fire it with no issues."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "ak4047"
 	item_state = "ak4047"
@@ -1926,13 +1926,14 @@
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_10)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
-	set_burst_delay(FIRE_DELAY_TIER_11)
+	set_burst_delay(FIRE_DELAY_TIER_10)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_8
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_6
 	scatter = SCATTER_AMOUNT_TIER_10
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
 	scatter_unwielded = SCATTER_AMOUNT_TIER_4
 	recoil_unwielded = RECOIL_AMOUNT_TIER_3
+	damage_mult = BASE_BULLET_DAMAGE_MULT - BULLET_DAMAGE_MULT_TIER_4
 	damage_falloff_mult = 0
 
 /obj/item/weapon/gun/rifle/ak4047/unloaded
