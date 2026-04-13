@@ -2315,3 +2315,64 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "sec_helmet"
 	item_state = "sec_helmet"
 	flags_inv_hide = HIDETOPHAIR
+
+// - - CMB SWAT - - //
+
+/obj/item/clothing/head/CMB/beret
+	name = "\improper CMB Riot Control Unit beret"
+	desc = "A dark beret with a badge that has a word 'MARSHAL' representing justice, authority, and protection in the outer rim. The laws of the Earth stretch beyond the Sol."
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/head_0.dmi',
+	)
+	icon = 'icons/obj/items/clothing/hats.dmi'
+	icon_state = "cmb_beret"
+	armor_energy = CLOTHING_ARMOR_HIGH
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_LOW
+	armor_melee = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
+
+/obj/item/clothing/head/CMB/beret/marshal
+	name = "\improper CMB Riot Control Unit Marshal beret"
+	icon_state = "cmb_sheriff_beret"
+	armor_energy = CLOTHING_ARMOR_HIGH
+	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+
+/obj/item/clothing/head/helmet/marine/veteran/cmb
+	name = "M11R pattern CMB Riot helmet"
+	desc = "A CMB variant of the standard M10 pattern. The front plate is reinforced. This one is a lot more tight fitting, also protects from flashbangs."
+	icon_state = "cmb_helmet"
+	icon = 'icons/obj/items/clothing/hats.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/head_0.dmi',
+	)
+	armor_energy = CLOTHING_ARMOR_HIGH
+	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bio = CLOTHING_ARMOR_LOW
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	flags_marine_helmet = HELMET_GARB_OVERLAY|HELMET_DAMAGE_OVERLAY
+	clothing_traits = list(TRAIT_EAR_PROTECTION)
+	built_in_visors = list(new /obj/item/device/helmet_visor/security)
+/*
+/obj/item/clothing/head/helmet/marine/veteran/cmb/Initialize()
+	. = ..()
+	AddElement(/datum/element/corp_label/armat)
+*/
+/obj/item/clothing/head/helmet/marine/veteran/cmb/engi
+	built_in_visors = list(new /obj/item/device/helmet_visor/security, new /obj/item/device/helmet_visor/welding_visor)
+
+/obj/item/clothing/head/helmet/marine/veteran/cmb/spec
+	name = "M11R-S pattern CMB SWAT helmet"
+	icon_state = "cmb_elite_helmet"
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_bio = CLOTHING_ARMOR_HIGH
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	built_in_visors = list(new /obj/item/device/helmet_visor/security, new /obj/item/device/helmet_visor/night_vision)

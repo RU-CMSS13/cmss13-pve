@@ -1221,6 +1221,45 @@
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
 
+/obj/item/weapon/gun/rifle/m16/m16a5
+	name = "\improper M16A5 rifle"
+	desc = "Modernized version of M16 platform rifle, probably originated from the bottomless stockpiles of the UA when they switched to a newer design. It is chambered in 5.56x45mm."
+	desc_lore = "The M16A5, introduced in 2016, has become something of a timeless classic in UA territory. The design rights for the gun and its many related platforms came into Armat ownership after their acquisition of Colt, and it's remained a surprisingly lucrative patent since then. While dated, the weapon's ease of use and more conventional rounds have made it popular among minimally-trained colonists and isolated units alike, being much easier to self-produce replacement parts and ammunition for than more advanced alternatives like pulse rifles and caseless ammunition. Subsequently, it remains a common sight on many colonies, and even in the reserve armories of some USCMC vessels like the Sulaco, partly from tradition and partly because of the sheer surplus supply of rifles that's lasted nearly two centuries."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/CMB.dmi'
+	icon_state = "m16a5"
+	item_state = "m16a5"
+	attachable_allowed = list(
+		/obj/item/attachable/suppressor,
+		/obj/item/attachable/bayonet,
+		/obj/item/attachable/bayonet/upp,
+		/obj/item/attachable/bayonet/co2,
+		/obj/item/attachable/bayonet/wy,
+		/obj/item/attachable/bayonet/rmc,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/angledgrip,
+		/obj/item/attachable/flashlight/grip,
+		/obj/item/attachable/gyro,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/bipod,
+		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/compensator,
+		/obj/item/attachable/burstfire_assembly,
+		/obj/item/attachable/attached_gun/grenade,
+		/obj/item/attachable/attached_gun/flamer,
+		/obj/item/attachable/attached_gun/flamer/advanced,
+		/obj/item/attachable/attached_gun/extinguisher,
+		/obj/item/attachable/attached_gun/shotgun,
+		/obj/item/attachable/lasersight,
+	)
+
+/obj/item/weapon/gun/rifle/m16/m16a5/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 34, "muzzle_y" = 17 ,"rail_x" = 11, "rail_y" = 20, "under_x" = 24, "under_y" = 14, "stock_x" = 15, "stock_y" = 14)
+
+/obj/item/weapon/gun/rifle/m16/m16a5/handle_starting_attachment()
+
 /obj/item/weapon/gun/rifle/m16/grenadier
 	name = "\improper M16 grenadier rifle"
 	desc = "The little worn and faded sticker on the lower receiver claims that this is a Mustang Special, Little Friend Edition. Point is, it's an M16 repro with an irremovable M203 underslung. 40mm, careful where you point it."
@@ -1335,6 +1374,25 @@
 	scatter_unwielded = SCATTER_AMOUNT_TIER_4
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
+
+/obj/item/weapon/gun/rifle/xm177/car15a3
+	name = "\improper CAR-15A3 carbine"
+	desc = "Modernized version of the XM177, developed for limited use by special forces and Office of the Colonial Marshals. The short length inhibits the attachment of most underbarrel attachments, and the barrel moderator prohibits the attachment of all muzzle devices."
+	desc_lore = null
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/CMB.dmi'
+	icon_state = "car15a3"
+	item_state = "car15a3"
+
+	attachable_allowed = list(
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/lasersight,
+	)
+
+/obj/item/weapon/gun/rifle/xm177/car15a3/handle_starting_attachment()
 
 //-------------------------------------------------------
 //AR10 rifle
