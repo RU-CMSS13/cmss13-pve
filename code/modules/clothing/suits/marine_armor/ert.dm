@@ -1516,13 +1516,13 @@
 		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/CMB.dmi'
 	)
 	icon_state = "cmb_heavy_armor"
-	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
 	armor_energy = CLOTHING_ARMOR_HIGH
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bomb = CLOTHING_ARMOR_HIGH
 	armor_rad = CLOTHING_ARMOR_LOW
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_internaldamage = CLOTHING_ARMOR_HIGH
 	storage_slots = 3
 
 
@@ -1563,7 +1563,7 @@
 	name = "\improper M4R pattern CMB light armor"
 	icon_state = "cmb_light_armor"
 	armor_melee = CLOTHING_ARMOR_MEDIUM
-	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
 
 	slowdown = SLOWDOWN_ARMOR_LIGHT
 	item_state_slots = list(WEAR_JACKET = "cmb_light_armor")
@@ -1571,9 +1571,11 @@
 /obj/item/clothing/suit/storage/marine/veteran/cmb/spec
 	name = "\improper M4R-S pattern CMB SWAT armor"
 	icon_state = "cmb_elite_armor"
-	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_VERYHIGHPLUS
+	armor_bomb = CLOTHING_ARMOR_HIGHPLUS
 	armor_bio = CLOTHING_ARMOR_MEDIUM
-	armor_internaldamage = CLOTHING_ARMOR_HIGH
+	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
+	armor_melee = CLOTHING_ARMOR_HIGH
 
 	slowdown = SLOWDOWN_ARMOR_LIGHT
 	item_state_slots = list(WEAR_JACKET = "cmb_elite_armor")
@@ -1582,7 +1584,7 @@
 	name = "\improper M4R pattern CMB Marshal armor"
 	icon_state = "cmb_sheriff_armor"
 	desc = "A custom fit variation of the CMB Riot armor, intended to be worn the Marshals themselves, has a golden lining with rank insignia. Has an additional layer of lightweight protective materials."
-	armor_bullet = CLOTHING_ARMOR_HIGH
-	armor_bomb = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_VERYHIGH
+	armor_bomb = CLOTHING_ARMOR_HIGHPLUS
 
 	item_state_slots = list(WEAR_JACKET = "cmb_sheriff_armor")

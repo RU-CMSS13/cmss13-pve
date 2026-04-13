@@ -1256,7 +1256,7 @@
 	)
 
 /obj/item/weapon/gun/rifle/m16/m16a5/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 34, "muzzle_y" = 17 ,"rail_x" = 11, "rail_y" = 20, "under_x" = 24, "under_y" = 14, "stock_x" = 15, "stock_y" = 14)
+	attachable_offset = list("muzzle_x" = 34, "muzzle_y" = 17 ,"rail_x" = 11, "rail_y" = 20, "under_x" = 24, "under_y" = 14, "stock_x" = 15, "stock_y" = 14, "side_rail_x" = 21, "side_rail_y" = 15, "sling_x" = 9, "sling_y" = 20)
 
 /obj/item/weapon/gun/rifle/m16/m16a5/handle_starting_attachment()
 
@@ -1393,6 +1393,9 @@
 	)
 
 /obj/item/weapon/gun/rifle/xm177/car15a3/handle_starting_attachment()
+
+/obj/item/weapon/gun/rifle/xm177/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 18,"rail_x" = 9, "rail_y" = 20, "under_x" = 20, "under_y" = 13, "stock_x" = 15, "stock_y" = 14, "side_rail_x" = 21, "side_rail_y" = 15, "sling_x" = 9, "sling_y" = 20)
 
 //-------------------------------------------------------
 //AR10 rifle

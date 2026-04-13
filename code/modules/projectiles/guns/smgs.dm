@@ -329,7 +329,7 @@
 		)
 
 /obj/item/weapon/gun/smg/mp5/mp5a5/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 26, "muzzle_y" = 17,"rail_x" = 8, "rail_y" = 19, "under_x" = 19, "under_y" = 13, "stock_x" = 39, "stock_y" = 11)
+	attachable_offset = list("muzzle_x" = 26, "muzzle_y" = 17,"rail_x" = 8, "rail_y" = 19, "under_x" = 19, "under_y" = 13, "stock_x" = 39, "stock_y" = 11, "side_rail_x" = 21, "side_rail_y" = 15, "sling_x" = 9, "sling_y" = 20)
 
 //-------------------------------------------------------
 //MP27, based on the MP27, based on the M7.
