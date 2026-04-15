@@ -819,7 +819,6 @@
 /area/golden_arrow/hangar)
 "abI" = (
 /obj/structure/machinery/light/small/red,
-/obj/structure/machinery/computer/supplycomp,
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/pilot_room)
 "abJ" = (
@@ -4143,7 +4142,6 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
 "alI" = (
-/obj/structure/machinery/computer/supplycomp,
 /turf/open/floor/almayer/edge/smooth/southwest,
 /area/golden_arrow/platoon_commander_rooms)
 "alK" = (
@@ -7228,6 +7226,7 @@
 	pixel_x = 3;
 	pixel_y = -1
 	},
+/obj/item/storage/box/spec/rocketeer,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
 "awN" = (
@@ -16121,20 +16120,13 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "bHc" = (
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	light_power = 0.3;
-	dir = 8
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
 	},
-/obj/item/clothing/under/marine/veteran/pmc/guard,
-/obj/item/clothing/shoes/veteran/pmc,
-/obj/item/clothing/gloves/marine/veteran/pmc,
-/obj/item/device/radio/headset/distress/pmc,
-/obj/item/storage/box/mre/pmc,
-/obj/item/clothing/head/cmcap/weyyu/guard,
-/obj/structure/closet/cabinet/hybrisa/metal,
-/obj/item/storage/belt/gun/m4a3/wy/es4,
-/turf/open/floor/hybrisa/wood/blackwood,
-/area/golden_arrow/dorms)
+/turf/open/floor/almayer,
+/area/golden_arrow/platoon_commander_rooms)
 "bKv" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -16206,6 +16198,12 @@
 /obj/structure/machinery/status_display,
 /turf/closed/wall/almayer,
 /area/golden_arrow/cryo_cells)
+"bTo" = (
+/obj/structure/flora/bush/ausbushes/var3/sparsegrass{
+	layer = 2
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/space)
 "bUF" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -16570,6 +16568,10 @@
 	},
 /turf/open/floor/almayer/edge/smooth/endcap_left/west,
 /area/golden_arrow/supply)
+"dsr" = (
+/obj/structure/machinery/cm_vending/clothing/staff_officer,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "duL" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable/heavyduty{
@@ -16930,6 +16932,16 @@
 "ewl" = (
 /turf/open/floor/almayer/edge/smooth/corner/north,
 /area/golden_arrow/briefing)
+"ews" = (
+/mob/living/simple_animal/lizard/lexi,
+/obj/item/toy/plush/rock{
+	desc = "A rock, what-for lying on and throwing and such.";
+	name = "rock";
+	pixel_y = 9
+	},
+/obj/structure/flora/bush/ausbushes/var3/sparsegrass,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/space)
 "exa" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -17182,6 +17194,9 @@
 	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/lower_cargo)
+"ffH" = (
+/turf/open/auto_turf/strata_grass/layer1,
+/area/space)
 "fiL" = (
 /obj/structure/filingcabinet/chestdrawer{
 	density = 0;
@@ -17387,17 +17402,8 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
 "fKS" = (
-/obj/item/stack/medical/bruise_pack,
-/obj/item/stack/medical/bruise_pack,
-/obj/item/stack/medical/ointment,
-/obj/item/stack/medical/splint,
-/obj/item/reagent_container/hypospray/autoinjector/tricord,
-/obj/item/storage/pouch/survival/full/black,
 /obj/structure/disposalpipe/segment{
 	dir = 4
-	},
-/obj/structure/closet/medical_wall{
-	pixel_y = 32
 	},
 /turf/open/floor/hybrisa/wood/blackwood,
 /area/golden_arrow/dorms)
@@ -18502,6 +18508,14 @@
 	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/lower_cargo)
+"jCK" = (
+/obj/item/device/flashlight/lamp/on{
+	pixel_x = 15;
+	pixel_y = 19
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/space)
 "jHP" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -19719,7 +19733,6 @@
 	pixel_x = -2;
 	id = "largebay"
 	},
-/obj/structure/machinery/computer/ordercomp,
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "nrp" = (
@@ -19907,6 +19920,13 @@
 /obj/structure/prop/server_equipment/yutani_server,
 /turf/open/floor/hybrisa/wood/blackwood,
 /area/golden_arrow/dorms)
+"nUk" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.7
+	},
+/obj/structure/machinery/cm_vending/gear/staff_officer_armory,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "nUJ" = (
 /obj/structure/cargo_container/uscm/right{
 	color = "#898988";
@@ -20280,16 +20300,23 @@
 	req_access = null
 	},
 /obj/item/weapon/gun/rifle/m41a/corporate/unloaded,
-/obj/item/ammo_box/magazine/le,
-/obj/item/storage/pouch/magazine/large/wy/pmc_m41a,
 /obj/item/device/overwatch_camera/pmc,
 /obj/item/clothing/suit/marine/veteran/pmc/light/bulletproof/guard,
+/obj/item/ammo_box/magazine,
+/obj/item/storage/pouch/magazine/large/wy/pmc_m41a,
 /obj/item/clothing/mask/gas/pmc/balaclava,
 /obj/item/clothing/accessory/storage/webbing/m3/mag/pmc,
-/obj/item/clothing/accessory/pmcpads/neckguard,
-/obj/item/storage/backpack/pmc,
 /obj/item/storage/pouch/firstaid/ert/wy,
+/obj/item/clothing/accessory/pmcpads/neckguard,
 /obj/item/clothing/accessory/storage/smallpouch/wy,
+/obj/item/storage/backpack/pmc,
+/obj/item/clothing/under/marine/veteran/pmc/guard,
+/obj/item/storage/belt/gun/m4a3/wy/es4,
+/obj/item/storage/box/mre/pmc,
+/obj/item/clothing/gloves/marine/veteran/pmc,
+/obj/item/clothing/shoes/veteran/pmc,
+/obj/item/clothing/head/cmcap/weyyu/guard,
+/obj/item/device/radio/headset/distress/pmc,
 /turf/open/floor/hybrisa/wood/blackwood,
 /area/golden_arrow/dorms)
 "pgO" = (
@@ -20562,6 +20589,14 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/medical)
+"pZQ" = (
+/obj/structure/machinery/door/window/ultra{
+	dir = 2;
+	pixel_x = 0;
+	pixel_y = 0
+	},
+/turf/open/floor/hybrisa/wood/blackwood,
+/area/golden_arrow/dorms)
 "qba" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/briefing)
@@ -20615,6 +20650,9 @@
 	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/supply)
+"qhl" = (
+/turf/open/beach/sand,
+/area/space)
 "qiA" = (
 /obj/structure/cable/heavyduty/west_east,
 /turf/open/floor/almayer,
@@ -21879,8 +21917,9 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
 "uzJ" = (
-/obj/structure/machinery/door/airlock/multi_tile/hybrisa/personal/autoname{
-	dir = 1
+/obj/structure/machinery/door/airlock/multi_tile/hybrisa/personal{
+	dir = 1;
+	name = "WY office"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
@@ -22164,6 +22203,10 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
+"vEa" = (
+/obj/structure/window/reinforced/ultra,
+/turf/open/floor/hybrisa/wood/blackwood,
+/area/golden_arrow/dorms)
 "vFy" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -22344,9 +22387,9 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/lower_cargo)
 "whI" = (
-/obj/structure/machinery/computer/ordercomp,
-/turf/open/floor/almayer/edge/smooth/north,
-/area/golden_arrow/supply)
+/obj/structure/machinery/light/double/blue/golden_arrow,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/space)
 "wmF" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -22620,8 +22663,8 @@
 	pixel_y = 5
 	},
 /obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 4;
-	light_power = 0.7
+	light_power = 0.3;
+	dir = 4
 	},
 /turf/open/floor/hybrisa/wood/blackwood,
 /area/golden_arrow/dorms)
@@ -26353,7 +26396,7 @@ cZf
 pdN
 xPp
 aRI
-bHc
+xPp
 qJG
 avb
 aEG
@@ -27424,9 +27467,9 @@ mur
 kKz
 tPk
 avb
-aEG
-aEG
-aEG
+aDh
+aDh
+aDh
 aEG
 aEG
 aEG
@@ -27600,10 +27643,10 @@ mxV
 qsz
 otk
 mxV
-avb
-aEG
-aEG
-aEG
+vEa
+ews
+jCK
+aDh
 aEG
 aEG
 aEG
@@ -27777,10 +27820,10 @@ iey
 mxV
 mxV
 mxV
-avb
-aEG
-aEG
-aEG
+pZQ
+qhl
+bTo
+aDh
 aEG
 aEG
 aEG
@@ -27954,10 +27997,10 @@ bbd
 xjq
 gcM
 dMH
-avb
-aEG
-aEG
-aEG
+vEa
+ffH
+whI
+aDh
 aEG
 aEG
 aEG
@@ -31808,7 +31851,7 @@ byz
 aAu
 aho
 oFX
-whI
+aLe
 ahl
 ahl
 ahl
@@ -33425,8 +33468,8 @@ aoz
 aaX
 aeW
 aeW
-aeW
-aeW
+bHc
+bHc
 aEo
 aEo
 kXG
@@ -33602,8 +33645,8 @@ aba
 aaY
 akb
 akb
-akb
-akb
+dsr
+nUk
 aEo
 aEo
 aVi
