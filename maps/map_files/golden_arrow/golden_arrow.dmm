@@ -16203,7 +16203,7 @@
 	layer = 2
 	},
 /turf/open/auto_turf/strata_grass/layer1,
-/area/space)
+/area/golden_arrow/dorms)
 "bUF" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -16941,7 +16941,7 @@
 	},
 /obj/structure/flora/bush/ausbushes/var3/sparsegrass,
 /turf/open/auto_turf/strata_grass/layer1,
-/area/space)
+/area/golden_arrow/dorms)
 "exa" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -17196,7 +17196,7 @@
 /area/golden_arrow/lower_cargo)
 "ffH" = (
 /turf/open/auto_turf/strata_grass/layer1,
-/area/space)
+/area/golden_arrow/dorms)
 "fiL" = (
 /obj/structure/filingcabinet/chestdrawer{
 	density = 0;
@@ -18515,7 +18515,7 @@
 	},
 /obj/structure/machinery/light/double/blue/golden_arrow,
 /turf/open/auto_turf/strata_grass/layer1,
-/area/space)
+/area/golden_arrow/dorms)
 "jHP" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -20652,7 +20652,7 @@
 /area/golden_arrow/supply)
 "qhl" = (
 /turf/open/beach/sand,
-/area/space)
+/area/golden_arrow/dorms)
 "qiA" = (
 /obj/structure/cable/heavyduty/west_east,
 /turf/open/floor/almayer,
@@ -22389,7 +22389,7 @@
 "whI" = (
 /obj/structure/machinery/light/double/blue/golden_arrow,
 /turf/open/auto_turf/strata_grass/layer1,
-/area/space)
+/area/golden_arrow/dorms)
 "wmF" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -27467,9 +27467,9 @@ mur
 kKz
 tPk
 avb
-aDh
-aDh
-aDh
+avb
+avb
+avb
 aEG
 aEG
 aEG
@@ -27646,7 +27646,7 @@ mxV
 vEa
 ews
 jCK
-aDh
+avb
 aEG
 aEG
 aEG
@@ -27823,7 +27823,7 @@ mxV
 pZQ
 qhl
 bTo
-aDh
+avb
 aEG
 aEG
 aEG
@@ -28000,7 +28000,7 @@ dMH
 vEa
 ffH
 whI
-aDh
+avb
 aEG
 aEG
 aEG
@@ -28175,9 +28175,9 @@ avb
 avb
 avb
 avb
-auh
-auh
-auh
+avb
+avb
+avb
 auh
 aEG
 aEG
