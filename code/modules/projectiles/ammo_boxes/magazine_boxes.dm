@@ -579,6 +579,15 @@
 /obj/item/ammo_box/magazine/type71/heap/empty
 	empty = TRUE
 
+/obj/item/ammo_box/magazine/type71/incendiary
+	name = "magazine box (Type71 Incendiary x 14)"
+	overlay_ammo_type = "_type71_incen"
+	overlay_content = "_type71_incen"
+	magazine_type = /obj/item/ammo_magazine/rifle/type71/incendiary
+
+/obj/item/ammo_box/magazine/type71/incendiary/empty
+	empty = TRUE
+
 //-----------------------LARGE Type 71 Rifle Mag Boxes-----------------------
 /obj/item/ammo_box/magazine/type71/large
 	name = "magazine box (Type 71 x 32)"
@@ -631,7 +640,7 @@
 
 /obj/item/ammo_box/magazine/ag80
 	name = "magazine box (AG80 x 10)"
-	icon_state = "base_type71"
+	icon_state = "base_type64"
 	flags_equip_slot = SLOT_BACK
 	overlay_ammo_type = "_type71_reg"
 	overlay_gun_type = "_ag80"
@@ -731,8 +740,8 @@
 
 /obj/item/ammo_box/magazine/ak4047/incendiary
 	name = "magazine box (AK-4047 Incen x 14)"
-	overlay_ammo_type = "_type71_incend"
-	overlay_content = "_type71_incend"
+	overlay_ammo_type = "_type71_incen"
+	overlay_content = "_type71_incen"
 	magazine_type = /obj/item/ammo_magazine/rifle/ak4047/incendiary
 
 /obj/item/ammo_box/magazine/ak4047/incendiary/empty
@@ -754,7 +763,7 @@
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/spp/ap
-	name = "magazine box (AP SPP-48M x 16)"
+	name = "magazine box (SPP-48M AP x 16)"
 	overlay_ammo_type = "_type71_ap"
 	overlay_content = "_type71_ap"
 	magazine_type = /obj/item/ammo_magazine/rifle/spp/ap
@@ -763,10 +772,19 @@
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/spp/heap
-	name = "magazine box (HEAP SPP-48M x 16)"
+	name = "magazine box (SPP-48M HEAP x 16)"
 	overlay_ammo_type = "_type71_heap"
 	overlay_content = "_type71_heap"
 	magazine_type = /obj/item/ammo_magazine/rifle/spp/heap
+
+/obj/item/ammo_box/magazine/spp/incendiary
+	name = "magazine box (SPP-48M Incen x 16)"
+	overlay_ammo_type = "_type71_incen"
+	overlay_content = "_type71_incen"
+	magazine_type = /obj/item/ammo_magazine/rifle/spp/incendiary
+
+/obj/item/ammo_box/magazine/spp/incendiary/empty
+	empty = TRUE
 
 /obj/item/ammo_box/magazine/spp/hv/empty
 	empty = TRUE
@@ -782,7 +800,7 @@
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/spp/hv/explosive
-	name = "magazine box (HV Explosive SPP-48M x 10)"
+	name = "magazine box (SPP-48M HV Explosive x 10)"
 	overlay_ammo_type = "_type71_expl"
 	overlay_content = "_type71_expl"
 	magazine_type = /obj/item/ammo_magazine/rifle/spp/high_velocity/explosive
@@ -790,17 +808,17 @@
 /obj/item/ammo_box/magazine/spp/hv/explosive/empty
 	empty = TRUE
 
-/obj/item/ammo_box/magazine/spp/hv/incen
-	name = "magazine box (HV Incen SPP-48M x 10)"
+/obj/item/ammo_box/magazine/spp/hv/incendiary
+	name = "magazine box (SPP-48M HV Incen x 10)"
 	overlay_ammo_type = "_type71_incen"
 	overlay_content = "_type71_incen"
 	magazine_type = /obj/item/ammo_magazine/rifle/spp/high_velocity/incendiary
 
-/obj/item/ammo_box/magazine/spp/hv/incen/empty
+/obj/item/ammo_box/magazine/spp/hv/incendiary/empty
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/spp/hv/toxic
-	name = "magazine box (HV DU SPP-48M x 10)"
+	name = "magazine box (SPP-48M HV DU x 10)"
 	overlay_ammo_type = "_type71_toxin"
 	overlay_content = "_type71_incen"
 	magazine_type = /obj/item/ammo_magazine/rifle/spp/high_velocity/toxic

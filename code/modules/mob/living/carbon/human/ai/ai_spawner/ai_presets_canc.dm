@@ -63,7 +63,7 @@
 
 /datum/human_ai_equipment_preset/canc/marksman
 	name = "CANC Squad Marksman"
-	desc = "Type 88 DMR and a dream, make them pay for the Dog War."
+	desc = "LW/RS-317 carbine and a dream, make them pay for the Dog War."
 	path = /datum/equipment_preset/canc/remnant/marksman
 
 /datum/human_ai_equipment_preset/canc/combat_android
@@ -103,7 +103,7 @@
 
 /datum/human_ai_equipment_preset/canc/marksman_snowman
 	name = "Snowman CANC Squad Marksman"
-	desc = "Type 88 DMR and a dream, make them pay for the Dog War."
+	desc = "LW/RS-317 carbine and a dream, make them pay for the Dog War."
 	path = /datum/equipment_preset/canc/remnant/marksman/snowman
 
 /datum/human_ai_equipment_preset/canc/combat_android_snowman

@@ -616,7 +616,7 @@
 	effective_range_max = 24
 	max_range = 32
 
-	damage = 85 // 89 with x1.05 damage mod.
+	damage = 60 // 63 with x1.05 damage mod.
 	scatter = -SCATTER_AMOUNT_TIER_8
 	penetration= ARMOR_PENETRATION_TIER_6
 	shell_speed = AMMO_SPEED_TIER_7
@@ -625,8 +625,8 @@
 	name = "high velocity incendiary 10x27 bullet"
 	flags_ammo_behavior = AMMO_BALLISTIC
 
-	damage = 85 // 89 with x1.05 damage mod.
-	penetration= ARMOR_PENETRATION_TIER_6
+	damage = 45 // 47.25 with x1.05 damage mod.
+	penetration= ARMOR_PENETRATION_TIER_4
 
 /datum/ammo/bullet/rifle/upp/spec/incendiary/set_bullet_traits()
 	. = ..()
@@ -638,7 +638,7 @@
 	name = "high velocity explosive 10x27 bullet"
 	flags_ammo_behavior = AMMO_BALLISTIC
 
-	damage = 110 // 115 with x1.05 damage mod.
+	damage = 45 // 47.25 with x1.05 damage mod.
 	accuracy = HIT_ACCURACY_TIER_2
 	penetration = ARMOR_PENETRATION_TIER_4
 	damage_armor_punch = 5
@@ -666,8 +666,8 @@
 /datum/ammo/bullet/rifle/upp/spec/du
 	name = "high velocity depleted uranium 10x27 bullet"
 
-	damage = 85 // 89 with x1.05 damage mod. + 10 tox DoT
-	penetration = ARMOR_PENETRATION_TIER_9 //DU's a heavy armour-piercing kind of material
+	damage = 45 // 47.25 with x1.05 damage mod. + 10 tox DoT
+	penetration = ARMOR_PENETRATION_TIER_8 //DU's a heavy armour-piercing kind of material
 	accuracy = HIT_ACCURACY_TIER_4
 	scatter = -SCATTER_AMOUNT_TIER_8
 

@@ -1318,6 +1318,11 @@ Defined in conflicts.dm of the #defines folder.
 	name = "1P93 2x Optic"
 	desc = "Mild update of a 2159 UPP design. Holds zero in all conditions, antiglint grid prevents glare, but the reticle is unfortunately cluttered and busy. Reduces RoF and increases wield time, boosts accuracy while scoped."
 
+/obj/item/attachable/scope/mini/upp/type73
+	name = "1P86 1.5x Optic"
+	zoom_offset = 4
+	dynamic_aim_slowdown = SLOWDOWN_ADS_NONE
+
 /obj/item/attachable/scope/mini/flaregun
 	wield_delay_mod = 0
 	dynamic_aim_slowdown = SLOWDOWN_ADS_MINISCOPE_DYNAMIC

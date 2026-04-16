@@ -185,7 +185,7 @@
 	desc = "A magazine of high velocity rounds for use in the later-model SPP-48M marksman rifles of UPPAC."
 	icon_state = "spp_hv"
 	default_ammo = /datum/ammo/bullet/rifle/upp/spec
-	max_rounds = 25
+	max_rounds = 30
 	gun_type = /obj/item/weapon/gun/rifle/spp
 	ammo_band_icon = "+spp_hv_band"
 	ammo_band_icon_empty = "+spp_hv_band_e"

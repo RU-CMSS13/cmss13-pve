@@ -184,7 +184,7 @@
 /obj/item/ammo_box/rounds/ag80
 	name = "\improper rifle ammunition box (9.7x16mm)"
 	desc = "A 9.7x16mm ammunition box. Used to refill AG80 magazines. It comes with a leather strap allowing to wear it on the back."
-	icon_state = "base_type71"
+	icon_state = "base_type64"
 	overlay_gun_type = "_rounds_type71"
 	overlay_content = "_type71_reg"
 	caliber = "9.7x16mm"

@@ -334,6 +334,12 @@
 	default_ammo = /datum/ammo/bullet/rifle/upp/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
+/obj/item/ammo_magazine/rifle/type71/incendiary
+	name = "\improper Type 71 incendiary magazine (10x27mm)"
+	desc = "A 10x27mm high-capacity casket magazine containing incendiary rounds for the Type 71 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/upp/incendiary
+	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
+
 //-------------------------------------------------------
 //UPP AG80 RIFLE
 
@@ -379,7 +385,7 @@
 	ammo_band_icon = "+spp_band"
 	ammo_band_icon_empty = "+spp_band_e"
 	default_ammo = /datum/ammo/bullet/rifle/upp
-	max_rounds = 25
+	max_rounds = 30
 	gun_type = /obj/item/weapon/gun/rifle/spp
 
 /obj/item/ammo_magazine/rifle/spp/ap
@@ -400,18 +406,24 @@
 	default_ammo = /datum/ammo/bullet/rifle/upp/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
+/obj/item/ammo_magazine/rifle/spp/incendiary
+	name = "\improper SPP-48M incendiary magazine (10x27mm)"
+	desc = "A 10x27mm high-capacity casket magazine containing incendiary rounds for the SPP-48M rifle."
+	default_ammo = /datum/ammo/bullet/rifle/upp/incendiary
+	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
+
 //-------------------------------------------------------
 //UPP - Norcomm AK-4047 RIFLE
 
 /obj/item/ammo_magazine/rifle/ak4047
 	name = "\improper AK-4047 magazine (10x27mm)"
-	desc = "A rugged and reliable 45-round magazine designed for the AK-4047 series assault rifle. Built for durability, it can withstand harsh conditions and keep firing even in the worst environments."
+	desc = "A rugged and reliable 40-round magazine designed for the AK-4047 series assault rifle. Built for durability, it can withstand harsh conditions and keep firing even in the worst environments."
 	caliber = "10x27mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "ak4047"
 	w_class = SIZE_MEDIUM
 	default_ammo = /datum/ammo/bullet/rifle/upp
-	max_rounds = 45
+	max_rounds = 40
 	gun_type = /obj/item/weapon/gun/rifle/ak4047
 	ammo_band_icon = "+ak4047_band"
 	ammo_band_icon_empty = "+ak4047_band_e"
