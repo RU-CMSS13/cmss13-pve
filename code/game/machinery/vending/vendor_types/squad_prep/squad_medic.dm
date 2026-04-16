@@ -223,8 +223,8 @@ GLOBAL_LIST_INIT(cm_vending_clothing_upp_medic, list(
 		list("Essential Medical Set", 0, /obj/effect/essentials_set/medic/upp, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 
 		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
-		list("Medical Backpack", 0, /obj/item/storage/backpack/marine/medic/upp, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
-		list("Medical Satchel", 0, /obj/item/storage/backpack/lightpack/upp, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_RECOMMENDED),
+		list("Medical Backpack", 0, /obj/item/storage/backpack/marine/upp/medic, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_RECOMMENDED),
+		list("Medical Satchel", 0, /obj/item/storage/backpack/lightpack/upp, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
 
 		list("BELT (CHOOSE 1)", 0, null, null, null),
 		list("Type 41 Lifesaver Bag (Full)", 0, /obj/item/storage/belt/medical/lifesaver/upp/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),

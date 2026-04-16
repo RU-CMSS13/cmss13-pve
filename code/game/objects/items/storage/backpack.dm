@@ -463,10 +463,6 @@
 /obj/item/storage/backpack/marine/medic/standard
 	has_gamemode_skin = FALSE
 
-/obj/item/storage/backpack/marine/medic/upp
-	name = "\improper UPP corpsman backpack"
-	desc = "Uncommon issue backpack worn by UPP medics from isolated sectors. You can swear you can see a faded USCM symbol."
-
 /obj/item/storage/backpack/marine/tech
 	name = "\improper USCM technician backpack"
 	desc = "A standard-issue backpack worn by USCM technicians."
@@ -1348,6 +1344,21 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	worn_accessible = TRUE
 	max_fuel = 180
 	max_storage_space = 12
+
+/obj/item/storage/backpack/marine/upp
+	name = "\improper UCBP4 combat backpack"
+	desc = "A UPP military standard-issue Union Combat BackPack MK4. Very robust and heavy."
+	icon_state = "marinepack_upp"
+	item_state = "marinepack_upp"
+	max_storage_space = 24
+	bag_open_time = 3 SECONDS
+
+/obj/item/storage/backpack/marine/upp/medic
+	name = "\improper UCBP4-M sanitar backpack"
+	desc = "A UPP military standard-issue Union Combat BackPack MK4. Very robust and heavy. Carried by UPP medics for extra supply carriage. Has a better layout within, which eases access to the inner storage."
+	icon_state = "marinepack_medic_upp"
+	item_state = "marinepack_medic_upp"
+	bag_open_time = 2 SECONDS
 
 /obj/item/storage/backpack/marine/satchel/scout_cloak/upp
 	name = "\improper V86 Thermal Cloak"

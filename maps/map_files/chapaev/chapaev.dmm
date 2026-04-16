@@ -5120,6 +5120,8 @@
 "lf" = (
 /obj/item/ammo_box/magazine/type71,
 /obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/ag80,
 /obj/item/ammo_box/magazine/ag80,
 /obj/item/ammo_box/magazine/ag80,
 /obj/structure/closet/crate/secure/upp/alt,
@@ -5377,9 +5379,10 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/closet/crate/secure/upp,
 /obj/item/ammo_box/magazine/nade_box/upp,
-/obj/item/ammo_box/magazine/nade_box/upp/ugl,
-/obj/item/ammo_box/magazine/nade_box/upp/ugl/canister,
-/obj/item/ammo_box/magazine/nade_box/upp/ugl/incen,
+/obj/item/ammo_box/magazine/nade_box/upp,
+/obj/item/ammo_box/magazine/nade_box/upp,
+/obj/item/ammo_box/magazine/nade_box/upp,
+/obj/item/ammo_box/magazine/nade_box/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "lH" = (
@@ -5451,6 +5454,10 @@
 /area/golden_arrow/medical)
 "lN" = (
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/closet/crate/secure/upp,
+/obj/item/ammo_box/magazine/nade_box/upp/ugl,
+/obj/item/ammo_box/magazine/nade_box/upp/ugl/canister,
+/obj/item/ammo_box/magazine/nade_box/upp/ugl/incen,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "lP" = (
@@ -5540,16 +5547,24 @@
 "mc" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/ammo_box/magazine/shotgun/upp/buckshot{
-	pixel_y = 0;
-	pixel_x = 0
-	},
-/obj/item/ammo_box/magazine/shotgun/upp{
-	pixel_y = 15;
-	pixel_x = 0
+	pixel_y = -6;
+	pixel_x = -5
 	},
 /obj/item/ammo_box/magazine/shotgun/upp/dragonsbreath{
-	pixel_y = -15;
-	pixel_x = 0
+	pixel_y = -13;
+	pixel_x = 3
+	},
+/obj/item/ammo_box/magazine/shotgun/upp{
+	pixel_y = -20;
+	pixel_x = -4
+	},
+/obj/item/storage/box/guncase/heavy/shotgun/type23{
+	pixel_y = 15
+	},
+/obj/item/storage/box/guncase/heavy/shotgun/type23{
+	pixel_y = 22;
+	pixel_x = 1;
+	layer = 3.03
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
@@ -5619,18 +5634,6 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/medical)
-"mj" = (
-/obj/item/storage/box/guncase/heavy/shotgun/type23{
-	pixel_y = 6
-	},
-/obj/item/storage/box/guncase/heavy/shotgun/type23{
-	pixel_y = 13;
-	pixel_x = 1;
-	layer = 3.03
-	},
-/obj/structure/surface/table/reinforced/almayer_B,
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/prep_hallway)
 "ml" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -15318,7 +15321,7 @@ jU
 jU
 mr
 mo
-mj
+mo
 mc
 lN
 lG
