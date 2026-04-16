@@ -1881,11 +1881,11 @@
 
 /obj/item/weapon/gun/rifle/ak4047
 	name = "\improper AK-4047 pulse assault rifle"
-	desc = "Being the UPP outdated Pulse Rifle, the AK-4047 is a reliable and powerful substitute chambered in 10x27mm. While it lacks the precision of smaller M41A caliber, the AK-4047 is sturdier than the USCMC weapon. Throw it off a cliff and leave underwater for a month, and you will be able to still fire it with no issues. It usually can be seen as export on outer colonies in hands of mercenaries, or looted by the insurgents."
+	desc = "Being the UPP outdated Pulse Rifle, the AK-4047 is a reliable and powerful substitute chambered in 10x24mm. While it lacks the precision of smaller M41A caliber, the AK-4047 is sturdier than the USCMC weapon. Throw it off a cliff and leave underwater for a month, and you will be able to still fire it with no issues. It usually can be seen as export on outer colonies in hands of mercenaries, or looted by the insurgents."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "ak4047"
 	item_state = "ak4047"
-	fire_sound = 'sound/weapons/gun_type71.ogg'
+	fire_sound = 'sound/weapons/gun_ak4047.ogg'
 	reload_sound = 'sound/weapons/handling/m41_reload.ogg'
 	unload_sound = 'sound/weapons/handling/m41_unload.ogg'
 	current_mag = /obj/item/ammo_magazine/rifle/ak4047
@@ -1933,16 +1933,16 @@
 
 /obj/item/weapon/gun/rifle/ak4047/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_9)
+	set_fire_delay(FIRE_DELAY_TIER_10)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
-	set_burst_delay(FIRE_DELAY_TIER_9)
+	set_burst_delay(FIRE_DELAY_TIER_10)
 	accuracy_mult = BASE_ACCURACY_MULT
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_6
 	scatter = SCATTER_AMOUNT_TIER_6
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
 	scatter_unwielded = SCATTER_AMOUNT_TIER_4
 	recoil_unwielded = RECOIL_AMOUNT_TIER_1
-	damage_mult = BASE_BULLET_DAMAGE_MULT - BULLET_DAMAGE_MULT_TIER_4
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_1
 	damage_falloff_mult = 1
 
 /obj/item/weapon/gun/rifle/ak4047/unloaded
