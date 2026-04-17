@@ -1823,7 +1823,7 @@
 	item_state = "spp"
 	mouse_pointer = 'icons/effects/mouse_pointer/sniper_mouse.dmi'
 
-	fire_sound = 'sound/weapons/gun_spp.ogg'
+	fire_sound = 'sound/weapons/gun_mg.ogg'
 	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
 	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
 
