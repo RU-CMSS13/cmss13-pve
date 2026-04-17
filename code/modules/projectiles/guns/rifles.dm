@@ -613,11 +613,7 @@
 	wield_delay = WIELD_DELAY_FAST
 	map_specific_decoration = FALSE
 	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible,/obj/item/attachable/attached_gun/grenade/mk1)
-	random_spawn_chance = 100
-	random_spawn_rail = list(
-		/obj/item/attachable/reddot,
-		/obj/item/attachable/reflex,
-	)
+
 /obj/item/weapon/gun/rifle/m41aMK1/elite/set_gun_config_values()
 	set_fire_delay(FIRE_DELAY_TIER_11)
 	set_burst_amount(BURST_AMOUNT_TIER_2)
@@ -667,6 +663,14 @@
 	random_muzzle_chance = 50
 	random_spawn_muzzle = list(
 		/obj/item/attachable/suppressor,
+	)
+
+/obj/item/weapon/gun/rifle/m41aMK1/elite/pmc
+
+	random_spawn_chance = 100
+	random_spawn_rail = list(
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
 	)
 
 /obj/item/weapon/gun/rifle/m41aMK1/elite/whiteout

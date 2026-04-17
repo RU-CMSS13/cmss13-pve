@@ -1987,7 +1987,7 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 		return
 	var/random_upp_weapon = rand(1,10)
 	switch(random_upp_weapon)
-		if(1, 7)
+		if(1,2,3,4,5,6,7)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71(new_human), WEAR_J_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp, WEAR_WAIST)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_BELT)
