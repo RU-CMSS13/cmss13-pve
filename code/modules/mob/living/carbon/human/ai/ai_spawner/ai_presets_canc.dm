@@ -16,20 +16,15 @@
 	desc = "CANC Remnant Force rifleman, Random Rifle"
 	path = /datum/equipment_preset/canc/remnant
 
-/datum/human_ai_equipment_preset/canc/rifleman/lowhear
+/datum/human_ai_equipment_preset/canc/rifleman/lowgear
 	name = "CANC Squad Rifleman (Uniform And Pistol, No armour)"
 	desc = "CANC Remnant Force rifleman, Random Rifle"
 	path = /datum/equipment_preset/canc/remnant/lowgear
 
-/datum/human_ai_equipment_preset/canc/rifleman/lowhear/rifle
+/datum/human_ai_equipment_preset/canc/rifleman/lowgear/rifle
 	name = "CANC Squad Rifleman (Uniform And Rifle, No armour)"
 	desc = "CANC Remnant Force rifleman, Random Rifle"
 	path = /datum/equipment_preset/canc/remnant/lowgear/rifle
-
-/datum/human_ai_equipment_preset/canc/rifleman/lowhear/rifle/rad
-	name = "CANC Squad Rifleman (Uniform And Rifle, Radsuit)"
-	desc = "CANC Remnant Force rifleman, Random Rifle"
-	path = /datum/equipment_preset/canc/remnant/lowgear/rifle/rad
 
 /datum/human_ai_equipment_preset/canc/machinegunner
 	name = "CANC Squad Machinegunner"
@@ -99,7 +94,7 @@
 /datum/human_ai_equipment_preset/canc/officer_snowman
 	name = "Snowman CANC Officer"
 	desc = "CANC Remnant Force officer, Random Rifle"
-	path = /datum/equipment_preset/canc/remnant/officer
+	path = /datum/equipment_preset/canc/remnant/officer/snowman
 
 /datum/human_ai_equipment_preset/canc/marksman_snowman
 	name = "Snowman CANC Squad Marksman"
@@ -111,3 +106,7 @@
 	desc = "A CANC Combat Android, these are illegal and should be used sparingly."
 	path = /datum/equipment_preset/synth/working_joe/upp/combat/canc/snowman
 
+/datum/human_ai_equipment_preset/canc/rifleman_rad
+	name = "CANC Squad Rifleman (Uniform And Rifle, Radsuit)"
+	desc = "CANC Remnant Force rifleman, Random Rifle. (P.S. If you want to use the rest of the radsuited loadouts, to not bloat the spawn menu with them due of their rare use, use 'Add Preset' and select 'Radsuit' CANC loadouts you need)"
+	path = /datum/equipment_preset/canc/remnant/rad

@@ -1880,6 +1880,10 @@
 	damage_falloff_mult = 0
 	scatter = SCATTER_AMOUNT_TIER_9
 
+/obj/item/weapon/gun/rifle/spp/unloaded
+	current_mag = null
+	flags_gun_features = /obj/item/weapon/gun/rifle/spp::flags_gun_features | GUN_TRIGGER_SAFETY
+
 //-------------------------------------------------------
 //UPP AK-4047 RIFLE
 

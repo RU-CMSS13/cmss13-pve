@@ -1181,6 +1181,8 @@
 	flags_inventory = BLOCKSHARPOBJ|SMARTGUN_HARNESS
 
 /obj/item/clothing/suit/marine/smartgunner/upp/canc/snowman
+	name = "\improper Reinforced snowsuit"
+	desc = "A standard snow suit with extra plates beneath it. It can protect the wearer not only from extreme cold, but from the random bullet too."
 	icon = 'icons/obj/items/clothing/cm_suits.dmi'
 	icon_state = "s_ghillie_armor"
 
@@ -1215,3 +1217,17 @@
 	. = ..()
 	var/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/webbing = new()
 	src.attach_accessory(null, webbing, TRUE)
+
+/obj/item/clothing/suit/marine/smartgunner/upp/canc/rad
+	name = "Reinforced Radiation suit"
+	desc = "A suit that protects against radiation and has extra plates beneath it in case of gunfire. Label: Made with lead, do not eat insulation."
+	icon_state = "rad"
+	item_state = "rad_suit"
+	icon = 'icons/obj/items/clothing/suits.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/suit_0.dmi'
+	)
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
