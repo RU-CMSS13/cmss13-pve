@@ -72,9 +72,8 @@
 
 	return ..()
 
-
 /obj/item/hardpoint/support/smoke_launcher/twe_tank
-	name = "\improper M-39T-TWE Smoke Discharger"
+	name = "\improper L-39T Smoke Discharger"
 	desc = "A support module for the FV150, based off those used by the UA for their vehicles."
 	icon = 'icons/obj/vehicles/hardpoints/twe_tank.dmi'
 
@@ -82,7 +81,7 @@
 	disp_icon = "tank"
 
 	firing_arc = 150
-	ammo = new /obj/item/ammo_magazine/hardpoint/turret_smoke
+	ammo = new /obj/item/ammo_magazine/hardpoint/turret_smoke/twe
 	max_clips = 5
 
 	scatter = 3

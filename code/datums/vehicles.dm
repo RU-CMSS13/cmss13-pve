@@ -78,6 +78,18 @@
 	name = "Van"
 	interior_id = "van"
 
+/datum/map_template/interior/humvee
+	name = "JTMV-HWC"
+	interior_id = "humvee"
+
+/datum/map_template/interior/humvee/humvee_medical
+	name = "JTMV-Ambulance"
+	interior_id = "humvee_medical"
+
+/datum/map_template/interior/humvee/humvee_transport
+	name = "JTMV-Utility"
+	interior_id = "humvee_transport"
+
 /datum/map_template/interior/uppvan
 	name = "UPP Van"
 	interior_id = "uppvan"
@@ -133,22 +145,6 @@
 /datum/map_template/interior/uppapc
 	name = "ZSL-68"
 	interior_id = "uppapc"
-
-/datum/map_template/interior/humvee
-	name = "JTMV-HWC"
-	interior_id = "humvee"
-
-/datum/map_template/interior/humvee/humvee_medical
-	name = "JTMV-Ambulance"
-	interior_id = "humvee_medical"
-
-/datum/map_template/interior/humvee/humvee_transport
-	name = "JTMV-Utility"
-	interior_id = "humvee_transport"
-
-/datum/map_template/interior/twe_tank
-	name = "FV150 Cavalry Tank"
-	interior_id = "twe_tank"
 
 /datum/map_template/interior/twe_tank
 	name = "FV150 Cavalry Tank"

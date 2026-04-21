@@ -1,6 +1,6 @@
 /obj/vehicle/multitile/twe_apc
 	name = "Type 200/FCV ‘Senshi’ Light APC"
-	desc = "The Type 200/FCV ‘Senshi’ Light APC is a 6m long, 6m wide, 8m tall support vehicle for the RMC. Based off the original FV150 Light Cavalry Tank design, it's interior has been expanded at the cost of a lack of turret. Entrance on the back."
+	desc = "The Type 200/FCV ‘Senshi’ Light APC is a 6m long, 6m wide, 8m tall support vehicle for the RMC. Based off the original FV150 Light Cavalry Tank design, it's interior space has been expanded thanks to the lack of turret basket & autoloader systems. Entrance on the back."
 
 	icon = 'icons/obj/vehicles/twe_tank.dmi'
 	icon_state = "apc_base"
@@ -219,7 +219,7 @@
 
 /obj/vehicle/multitile/twe_apc/command
 	name = "Type 200/FCV-C ‘Senshi’ Command Light APC"
-	desc = "The Type 200/FCV-C ‘Senshi’ Command Light APC is a 6m long, 6m wide, 8m tall support vehicle for the RMC. Based off the original FV150Light Cavalry Tank design, it's interior has been expanded at the cost of a lack of turret. Entrance on the back."
+	desc = "The Type 200/FCV ‘Senshi’ Light APC is a 6m long, 6m wide, 8m tall support vehicle for the RMC. Based off the original FV150 Light Cavalry Tank design, it's interior space has been expanded thanks to the lack of turret basket & autoloader systems. Entrance on the back."
 
 	icon = 'icons/obj/vehicles/twe_tank.dmi'
 	icon_state = "apc_command_base"
@@ -234,7 +234,7 @@
 
 	interior_map = /datum/map_template/interior/twe_apc/command
 
-	passengers_slots = 2
+	passengers_slots = 3
 	revivable_dead_slots = 1
 	xenos_slots = 1
 

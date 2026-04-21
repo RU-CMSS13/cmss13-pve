@@ -3,10 +3,9 @@
 /turf/open/void/vehicle,
 /area/space)
 "k" = (
-/obj/effect/landmark/interior/spawn/vehicle_driver_seat/armor{
-	dir = 4;
-	pixel_x = 8;
-	pixel_y = 3
+/obj/structure/bed/chair/vehicle{
+	dir = 1;
+	pixel_x = -4
 	},
 /turf/open/shuttle/vehicle/floor_2,
 /area/interior/vehicle/twe_apc/command)
@@ -28,19 +27,25 @@
 /turf/open/shuttle/vehicle/floor_2,
 /area/interior/vehicle/twe_apc/command)
 "s" = (
-/obj/structure/vehicle_locker/tank/twe{
-	pixel_y = 34;
-	pixel_x = -3;
-	layer = 2.99
-	},
-/obj/effect/landmark/interior/spawn/weapons_loader{
-	pixel_y = 12
-	},
 /obj/effect/landmark/interior/spawn/interior_camera{
 	dir = 5;
 	layer = 3.2;
-	pixel_x = 15;
+	pixel_x = 12;
 	pixel_y = 37
+	},
+/obj/structure/vehicle_locker/tank/twe{
+	pixel_y = 32;
+	pixel_x = 9;
+	layer = 2.99
+	},
+/obj/structure/vehicle_locker/tank/twe{
+	pixel_y = 23;
+	pixel_x = 9;
+	layer = 2.99
+	},
+/obj/effect/landmark/interior/spawn/weapons_loader{
+	pixel_y = 4;
+	pixel_x = 7
 	},
 /turf/open/shuttle/vehicle/floor_2,
 /area/interior/vehicle/twe_apc/command)
@@ -54,18 +59,29 @@
 	name = "back entrance marker";
 	tag = "rear"
 	},
+/obj/structure/bed/chair/vehicle{
+	dir = 1;
+	pixel_x = 12
+	},
 /obj/structure/prop/vehicle/twe_tank/apc{
-	pixel_x = -8;
-	pixel_y = -20
+	pixel_y = -19;
+	pixel_x = -6
 	},
 /turf/open/shuttle/vehicle/floor_2,
 /area/interior/vehicle/twe_apc/command)
 "G" = (
+/obj/effect/landmark/interior/spawn/vehicle_driver_seat/armor/twe{
+	dir = 4;
+	pixel_y = 5;
+	buckling_y = 5;
+	buckling_x = -6;
+	pixel_x = -6
+	},
 /turf/open/shuttle/vehicle/floor_2,
 /area/interior/vehicle/twe_apc/command)
 "R" = (
 /obj/structure/phone_base{
-	pixel_x = -11;
+	pixel_x = -9;
 	phone_category = "Vehicles";
 	name = "APC Telephone";
 	phone_id = "FV150-C Light Command APC";
@@ -73,15 +89,16 @@
 	},
 /obj/structure/surface/table/reinforced/toc/east{
 	pixel_y = 11;
-	density = 0
+	density = 0;
+	pixel_x = -6
 	},
 /obj/structure/extinguisher_cabinet/lifeboat{
-	pixel_x = 15;
+	pixel_x = 16;
 	pixel_y = 32
 	},
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med/lifeboat{
 	name = "Vehicle NanoMed";
-	pixel_x = 3;
+	pixel_x = 5;
 	pixel_y = 32
 	},
 /turf/open/shuttle/vehicle/floor_2,
@@ -89,7 +106,11 @@
 "U" = (
 /obj/structure/machinery/computer/overwatch/twe{
 	pixel_y = -8;
-	icon_state = "overwatch"
+	pixel_x = -7
+	},
+/obj/structure/machinery/prop/almayer/CICmap/computer{
+	pixel_y = -8;
+	pixel_x = 10
 	},
 /turf/open/void/vehicle,
 /area/interior/vehicle/twe_apc/command)

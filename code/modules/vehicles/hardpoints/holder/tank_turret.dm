@@ -382,6 +382,7 @@
 	ammo = new /obj/item/ammo_magazine/hardpoint/flare_launcher
 	max_clips = 2
 	use_muzzle_flash = FALSE
+	allowed_seat = VEHICLE_GUNNER
 
 	// big beefy chonk of metal
 	health = 1500

@@ -13,6 +13,10 @@
 	name = "tank interior"
 	icon_state = "tank"
 
+/area/interior/vehicle/uppvan/ridgeway
+	name = "\improper Ridgeway interior"
+	icon_state = "ridgeway"
+
 /area/interior/vehicle/apc
 	name = "\improper APC interior"
 	icon_state = "apc"
@@ -61,6 +65,18 @@
 	name = "armored van interior"
 	icon_state = "van"
 
+/area/interior/vehicle/humvee
+	name = "\improper vehicle interior"
+	icon_state = "apc"
+
+/area/interior/vehicle/humvee/medical
+	name = "\improper vehicle interior"
+	icon_state = "apc"
+
+/area/interior/vehicle/humvee/transport
+	name = "\improper vehicle interior"
+	icon_state = "apc"
+
 /area/interior/vehicle/arc
 	name = "\improper M540 ARC interior"
 	icon_state = "arc"
@@ -92,22 +108,6 @@
 /area/interior/vehicle/uppvan/prisoner
 	name = "\improper UPP van prisoner interior"
 	icon_state = "upp_van_prisoner"
-
-/area/interior/vehicle/humvee
-	name = "\improper vehicle interior"
-	icon_state = "apc"
-
-/area/interior/vehicle/humvee/medical
-	name = "\improper vehicle interior"
-	icon_state = "apc"
-
-/area/interior/vehicle/humvee/transport
-	name = "\improper vehicle interior"
-	icon_state = "apc"
-
-/area/interior/vehicle/uppvan/ridgeway
-	name = "\improper Ridgeway interior"
-	icon_state = "ridgeway"
 
 /area/interior/vehicle/twe_tank
 	name = "\improper TWE tank interior"

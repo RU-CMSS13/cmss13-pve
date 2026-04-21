@@ -1,7 +1,7 @@
 /obj/vehicle/multitile/tank/twe_tank
 	name = "FV150 ‘Hobelar’ Light Cavalry Tank"
-	desc = "The FV150 ‘Hobelar’ Light Cavalry Tank is a 6m long, 6m wide, 8m tall support vehicle for the RMC. Originally procured for the Special Air Service operations as an Airborne tank this model has been made into a RMC vehicle with a change of symbol and technological design. Entrance at the back."
-	desc_lore = "A unwieldy pillar of the TWE's arsenal, the FV150 initially began it's lifespan in the late 2170s as Weyland-Yutani subsidiary Southfield Motors' entry into the Light Fighting Vehicle Programme -- a competition held by the Empire's Special Air Service (SAS) in search of a lightweight vehicle to support and supplement the firepower of the otherwise lightly-equipped paratroopers. Despite facing incredibly stiff competition from other entries at the programme's final stages -- Most notable of which was the Lockmart Industries FV580 (a tankette variant of the M577A3) and the Alphatech Industries XV40 (a up-armored version of the XT-37 fast-attack vehicle) -- it was the FV150 that was ultimately  chosen to be procured by the SAS. Such a choice did not come without it's fair share of consequences, however. As accusations of corruption and favoritism almost immediately sprang up on account of the TWE's inexplicable connections (and dependence) on the Weyland-Yutani Corproation. The resulting string of committee hearings, political resignations, and media backlash would be remembered as one of the most devastating political scandals that the Empire has ever faced. The FV150's reputation in the field was just as equally mixed. With the initial production run concluded just before the official conclusion of the Australia Wars, SAS FV150s quickly found themselves muddled in everything from para-drop raids to insurgent ambushes. Although the fighting vehicle was initially appreciated as a light tank (with no thanks to it's 75mm autocannon), it's complete inability to resist any attack more powerful than common rifle fire compelled SAS command into a more reserved doctrine in the face of mounting casualties. During the last months of the war, it was no uncommon sight to see burned-out wrecks of FV150s on major roadways and particularly volatile areas of the Australian Outback as a sign of recent SAS activity, and FV-150 crews were have said to be more prone to mental disorders related to paranoia than any other deployed member of the Imperial Armed Forces. Shortly after the conclusion of the Australia Wars, the FV150 was also picked to become a supplementary fire support/reconnaissance vehicle in the Royal Marines Commando (RMC) after a rather brisk set of field trials. The final production run of the FV150 concluded in early 2183, with most of the surviving vehicles having been fitted with the 'B' model upgrade."
+	desc = "The FV150 ‘Hobelar’ Light Cavalry Tank is a 6m long, 6m wide, 8m tall support vehicle for the RMC. Originally procured for the Special Air Service operations as an Airborne tank, this model has been made into a support vehicle for the Royal Marines thanks to a change of symbol and technological design. Entrance at the back."
+	desc_lore = "An unwieldy pillar of the TWE's arsenal, the FV150 initially began it's lifespan in the late 2170s as Weyland-Yutani subsidiary Southfield Motors' entry into the Light Fighting Vehicle Programme, a competition held by the Empire's Special Air Service (SAS) in search of a lightweight vehicle to support and supplement the firepower of the otherwise lightly-equipped paratroopers. \n Despite facing incredibly stiff competition from other entries at the programme's final stages, most notable of which was the Lockmart Industries FV580 (a tankette variant of the M577A3) and the Alphatech Industries XV40 (a up-armored version of the XT-37 fast-attack vehicle), it was the FV150 that was ultimately chosen to be procured by the SAS. \n Such a choice did not come without it's fair share of consequences, however. Accusations of corruption and favoritism almost immediately sprang up on account of the TWE's inexplicable connections (and dependence) on the Weyland-Yutani Corproation. The resulting string of committee hearings, political resignations, and media backlash would be remembered as one of the most devastating political scandals that the Empire has ever faced. \n The FV150's reputation in the field was just as equally mixed. With the initial production run concluded just before the official conclusion of the Australia Wars, SAS FV150s quickly found themselves muddled in everything from para-drop raids to insurgent ambushes. \n Although the fighting vehicle was initially appreciated as a light tank (with no thanks to it's 45mm autocannon), it's complete inability to resist any attack more powerful than common rifle fire compelled SAS command into a more reserved doctrine in the face of mounting casualties. During the last months of the war, it was no uncommon sight to see burned-out wrecks of FV150s on major roadways and particularly volatile areas of the Australian Outback as a sign of recent SAS activity, and FV-150 crews were have said to be more prone to mental disorders related to paranoia than any other deployed member of the Imperial Armed Forces. \n Shortly after the conclusion of the Australia Wars, the FV150 was also picked to become a supplementary fire support/reconnaissance vehicle in the Royal Marines Commando (RMC) after a rather brisk set of field trials. The final production run of the FV150 concluded in late 2181, with most of the surviving vehicles having been fitted with the 'B' model upgrade."
 
 	icon = 'icons/obj/vehicles/twe_tank.dmi'
 	icon_state = "tank_base"
@@ -60,14 +60,14 @@
 	dmg_multipliers = list(
 		"all" = 1,
 		"acid" = 1.8,
-		"slash" = 1.1,
-		"bullet" = 0.6,
-		"explosive" = 0.8,
-		"blunt" = 0.8,
+		"slash" = 0.8,
+		"bullet" = 0.5,
+		"explosive" = 0.6,
+		"blunt" = 0.5,
 		"abstract" = 1,
 	)
 
-	explosive_resistance = 150
+	explosive_resistance = 300
 	wall_ram_damage = 150
 	vehicle_ram_multiplier = VEHICLE_TRAMPLE_DAMAGE_APC_REDUCTION
 
@@ -122,6 +122,7 @@
 	else if(seat == VEHICLE_GUNNER)
 		add_verb(M.client, list(
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
+			/obj/vehicle/multitile/proc/toggle_gyrostabilizer,
 		))
 
 /obj/vehicle/multitile/tank/twe_tank/remove_seated_verbs(mob/living/M, seat)
@@ -143,6 +144,7 @@
 	else if(seat == VEHICLE_GUNNER)
 		remove_verb(M.client, list(
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
+			/obj/vehicle/multitile/proc/toggle_gyrostabilizer,
 		))
 
 //Called when players try to move vehicle
