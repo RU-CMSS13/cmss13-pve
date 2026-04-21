@@ -2874,7 +2874,7 @@ Defined in conflicts.dm of the #defines folder.
 	size_mod = 0
 
 /obj/item/attachable/type73suppressor
-	name = "Type 73 Integrated Suppressor"
+	name = "Type 71MS Integrated Suppressor"
 	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
 	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
 	icon_state = "type73_suppressor"

@@ -1773,7 +1773,7 @@
 //UPP TYPE 73 RIFLE
 
 /obj/item/weapon/gun/rifle/type71/carbine/commando
-	name = "\improper Type 71M 'Commando' pulse rifle"
+	name = "\improper Type 71MS 'Commando' pulse rifle"
 	desc = "A much rarer variant of the Type 71, this version contains an integrated suppressor, integrated scope, and extensive fine-tuning. Many parts have been replaced, filed down, and improved upon. As a result, this variant is rarely seen outside of commando units."
 	icon_state = "type73"
 	item_state = "type73"
@@ -1790,7 +1790,7 @@
 /obj/item/weapon/gun/rifle/type71/carbine/commando/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_10)
-	set_burst_delay(FIRE_DELAY_TIER_11)
+	set_burst_delay(FIRE_DELAY_TIER_LMG)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_7
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
 	scatter = SCATTER_AMOUNT_TIER_8
