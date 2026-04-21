@@ -927,14 +927,6 @@
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/handful/shotgun/buckshot(src)
 
-/obj/item/storage/belt/marine/svd/fill_preset_inventory() // SVD
-	for(var/i in 1 to storage_slots)
-		new /obj/item/ammo_magazine/sniper/svd(src)
-
-/obj/item/storage/belt/marine/svd/pve/fill_preset_inventory() // SVD
-	for(var/i in 1 to storage_slots)
-		new /obj/item/ammo_magazine/sniper/svd/pve(src)
-
 /obj/item/storage/belt/marine/smartgunner
 	name = "\improper M280 pattern smartgunner drum belt"
 	desc = "Despite the fact that 1. drum magazines are incredibly non-ergonomical, and 2. require incredibly precise machining in order to fit universally (spoiler, they don't, adding further to the myth of 'Smartgun Personalities'), the USCM decided to issue a modified marine belt (more formally known by the designation M280) with hooks and dust covers (overly complex for the average jarhead) for the M56B system's drum munitions. When the carry catch on the drum isn't getting stuck in the oiled up velcro, the rig actually does do a decent job at holding a plentiful amount of drums. But at the end of the day, compared to standard rigs... it sucks, but isn't that what being a Marine is all about?"
@@ -1041,6 +1033,14 @@
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/rifle/caws(src)
 
+/obj/item/storage/belt/marine/upp/svd/fill_preset_inventory() // SVD
+	for(var/i in 1 to storage_slots)
+		new /obj/item/ammo_magazine/sniper/svd(src)
+
+/obj/item/storage/belt/marine/upp/svd/pve/fill_preset_inventory() // SVD
+	for(var/i in 1 to storage_slots)
+		new /obj/item/ammo_magazine/sniper/svd/pve(src)
+
 /obj/item/storage/belt/marine/upp/black
 	icon_state = "upp_black_belt"
 	item_state = "upp_black_belt"
@@ -1051,7 +1051,7 @@
 
 /obj/item/storage/belt/marine/upp/black/full/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
-		new /obj/item/ammo_magazine/rifle/ak4047(src)
+		new /obj/item/ammo_magazine/rifle/type71(src)
 
 /obj/item/storage/belt/marine/wy
 	name = "\improper WY-TM402 pattern ammo load rig"
@@ -1172,6 +1172,10 @@
 /obj/item/storage/belt/shotgun/upp/heavyslug/fill_preset_inventory()
 	for(var/i in 1 to storage_slots)
 		new /obj/item/ammo_magazine/handful/shotgun/heavy/slug(src)
+
+/obj/item/storage/belt/shotgun/upp/heavyflech/fill_preset_inventory()
+	for(var/i in 1 to storage_slots)
+		new /obj/item/ammo_magazine/handful/shotgun/heavy/flechette(src)
 
 /obj/item/storage/belt/shotgun/upp/heavybeanbag/fill_preset_inventory()
 	for(var/i in 1 to storage_slots)

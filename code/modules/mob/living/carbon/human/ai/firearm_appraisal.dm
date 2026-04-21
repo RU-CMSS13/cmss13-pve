@@ -235,3 +235,13 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 		/obj/item/weapon/gun/revolver,
 	)
 	primary_weight = 1
+
+/datum/firearm_appraisal/autoshotgun
+	burst_amount_max = 2
+	minimum_range = 1
+	optimal_range = 1 // point-blank our beloved
+	maximum_range = 4
+	gun_types = list(
+		/obj/item/weapon/gun/rifle/caws,
+	)
+	primary_weight = 5

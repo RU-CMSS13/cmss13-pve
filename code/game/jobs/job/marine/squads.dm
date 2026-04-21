@@ -455,10 +455,10 @@
 
 /datum/squad/iasf
 	name = SQUAD_IASF
-	equipment_color = "#9a1228"
-	chat_color = "#9a1228"
+	equipment_color = "#cf2d48"
+	chat_color = "#cf2d48"
 	radio_freq = IASF_FREQ
-	minimap_color = "##9a1228"
+	minimap_color = "#cf2d48"
 	use_stripe_overlay = FALSE
 	faction = FACTION_IASF
 	active = TRUE

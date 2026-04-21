@@ -254,6 +254,7 @@
 
 		list("BACKPACK", -1, null, null, null),
 		list("UPP Satchel", round(scale * 15), /obj/item/storage/backpack/lightpack/upp, VENDOR_ITEM_REGULAR),
+		list("UPP Backpack", round(scale * 15), /obj/item/storage/backpack/marine/upp, VENDOR_ITEM_REGULAR),
 
 		list("RESTRICTED BACKPACKS", -1, null, null),
 		list("Radio Telephone Backpack", round(max(1,(scale * 0.5))), /obj/item/storage/backpack/marine/satchel/rto/upp_net, VENDOR_ITEM_REGULAR),

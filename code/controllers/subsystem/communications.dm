@@ -296,7 +296,7 @@ SUBSYSTEM_DEF(radio)
 		"[WY_FREQ]" = "wyradio",
 		"[VAI_FREQ]" = "vairadio",
 		"[RMC_FREQ]" = "rmcradio",
-		"[IASF_FREQ]" = "rubyred",
+		"[IASF_FREQ]" = "iasfradio",
 		"[CIA_FREQ]" = "ciaradio",
 		"[CMB_FREQ]" = "cmbradio",
 		"[ASF_FREQ]" = "usasfradio",

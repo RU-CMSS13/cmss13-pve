@@ -1849,7 +1849,7 @@
 	name = "\improper M3 Pattern Small Pouch Webbing"
 	desc = "A set of M3 pattern webbing fully outfitted with pouches and pockets to carry a whole array of small items."
 	icon_state = "m3webbingsmall"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/plus
 	slot = ACCESSORY_SLOT_M3UTILITY
 
 //Pre-load for MARSOC props
@@ -2010,6 +2010,22 @@
 		/obj/item/bodybag,
 	)
 
+/obj/item/storage/internal/accessory/black_vest/m3generic/plus // RU-CM PVE edit
+	storage_slots = 6
+
+//Pre-load for MARSOC props
+/obj/item/clothing/accessory/storage/webbing/m3/recon/medic/marsoc
+	icon_state = "armywebbing"
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/recon/marsoc
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/recon/marsoc/fill_preset_inventory()
+	new /obj/item/storage/surgical_case/regular(src)
+	new /obj/item/tool/surgery/surgical_line(src)
+	new /obj/item/tool/surgery/synthgraft(src)
+	new /obj/item/storage/syringe_case/regular(src)
+	new /obj/item/reagent_container/blood/OMinus(src)
+	new /obj/item/reagent_container/blood/OMinus(src)
+
 /obj/item/clothing/accessory/storage/webbing/m56
 	name = "\improper Clip-on Pouch"
 	desc = "A clip on synth-leather pouch designed to house a small collection of items for M56 weapon operators."
@@ -2029,7 +2045,7 @@
 	hold = /obj/item/storage/internal/accessory/black_vest/m56/preset
 
 /obj/item/storage/internal/accessory/black_vest/m56
-	storage_slots = 4
+	storage_slots = 5
 
 /obj/item/storage/internal/accessory/black_vest/m56/preset/fill_preset_inventory()
 	new /obj/item/storage/box/mre(src)
@@ -2045,7 +2061,7 @@
 	hold = /obj/item/storage/internal/accessory/black_vest/m56/grenade
 
 /obj/item/storage/internal/accessory/black_vest/m56/grenade
-	storage_slots = 5
+	storage_slots = 6
 	can_hold = list(
 		/obj/item/explosive/grenade/high_explosive,
 		/obj/item/explosive/grenade/high_explosive/super,
@@ -2075,7 +2091,7 @@
 	slot = ACCESSORY_SLOT_M3UTILITY
 
 /obj/item/storage/internal/accessory/webbing/m3mag/upp
-	storage_slots = 5
+	storage_slots = 4
 	can_hold = list(
 		/obj/item/attachable/bayonet,
 		/obj/item/device/flashlight/flare,
@@ -2101,7 +2117,7 @@
 	name = "\improper Type 78 Pattern Small Pouch Webbing"
 	desc = "A set of UPP webbing fully outfitted with pouches and pockets to carry a while array of small items."
 	icon_state = "upp_webbing_small"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/plus
 	flags_atom = NO_SNOW_TYPE
 	slot = ACCESSORY_SLOT_M3UTILITY
 
@@ -2109,9 +2125,52 @@
 	name = "\improper Type 78 Pattern Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to UPP armor. This one is the slimmed down model designed for general purpose storage."
 	icon_state = "upp_webbing_large"
-	hold = /obj/item/storage/internal/accessory/webbing/m3generic
+	hold = /obj/item/storage/internal/accessory/webbing/m3generic/plus
 	flags_atom = NO_SNOW_TYPE
 	slot = ACCESSORY_SLOT_M3UTILITY
+
+/obj/item/storage/internal/accessory/webbing/m3generic/plus
+	bypass_w_limit = list(
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/smg,
+		/obj/item/ammo_magazine/sniper,
+		/obj/item/ammo_magazine/plasma,
+		/obj/item/ammo_magazine/flamer_tank, // RU-CM PVE edit
+	)
+
+//Partial Pre-load For Props
+//===
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppmags/type71
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/upp/type71
+
+/obj/item/storage/internal/accessory/webbing/m3mag/upp/type71/fill_preset_inventory()
+	new /obj/item/ammo_magazine/rifle/type71(src)
+	new /obj/item/ammo_magazine/rifle/type71(src)
+	new /obj/item/ammo_magazine/rifle/type71(src)
+	new /obj/item/ammo_magazine/rifle/type71(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/upp_juggernaut
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/plus/upp_juggernaut
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/plus/upp_juggernaut/fill_preset_inventory()
+	new /obj/item/smartgun_battery/upp(src)
+	new /obj/item/smartgun_battery/upp(src)
+	new /obj/item/ammo_magazine/pistol/t73(src)
+	new /obj/item/ammo_magazine/pistol/t73(src)
+	new /obj/item/storage/box/mre/upp(src)
+	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/upp_breacher
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/plus/upp_breacher
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/plus/upp_breacher/fill_preset_inventory()
+	new /obj/item/explosive/plastic/breaching_charge(src)
+	new /obj/item/explosive/plastic/breaching_charge(src)
+	new /obj/item/explosive/plastic/breaching_charge(src)
+	new /obj/item/explosive/plastic(src)
+	new /obj/item/explosive/plastic(src)
+	new /obj/item/explosive/plastic(src)
 
 //===========================//CUSTOM RMC ARMOR WEBBING\\================================\\
 
@@ -2135,6 +2194,7 @@
 		/obj/item/ammo_magazine/pistol/vp78,
 		/obj/item/ammo_magazine/pistol/vp70,
 		/obj/item/ammo_magazine/smg/m39,
+		/obj/item/ammo_magazine/smg/p90,
 	)
 
 //Partial Pre-load For Props
