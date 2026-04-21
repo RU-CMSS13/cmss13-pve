@@ -76,6 +76,7 @@ Radiochat range: 1441 to 1489 (most devices refuse to be tune to other frequency
 #define MERC_FREQ 1212
 #define VAI_FREQ 1215
 #define RMC_FREQ 1216
+#define IASF_FREQ 1218
 #define CMB_FREQ 1220
 #define ASF_FREQ 1224
 #define CIA_FREQ 1225
@@ -123,6 +124,7 @@ Radiochat range: 1441 to 1489 (most devices refuse to be tune to other frequency
 #define PVST_FREQ 1473
 #define CBRN_FREQ 1474
 #define FORECON_FREQ 1475
+#define ARMY_FREQ 1476
 
 //Ship department channels
 #define SENTRY_FREQ 1480
@@ -162,6 +164,7 @@ GLOBAL_LIST_INIT(radiochannels, list(
 	RADIO_CHANNEL_UA_GUARD = GRD_FREQ,
 	RADIO_CHANNEL_DUTCH_DOZEN = DUT_FREQ,
 	RADIO_CHANNEL_ROYAL_MARINE = RMC_FREQ,
+	RADIO_CHANNEL_IASF = IASF_FREQ,
 	RADIO_CHANNEL_CIA = CIA_FREQ,
 	RADIO_CHANNEL_MERC = MERC_FREQ,
 
@@ -187,6 +190,7 @@ GLOBAL_LIST_INIT(radiochannels, list(
 	SQUAD_CBRN = CBRN_FREQ,
 	SQUAD_FORECON = FORECON_FREQ,
 	SQUAD_SOLAR = SOF_FREQ,
+	SQUAD_ARMY = ARMY_FREQ,
 
 	RADIO_CHANNEL_ALAMO = DS1_FREQ,
 	RADIO_CHANNEL_NORMANDY = DS2_FREQ,
@@ -224,7 +228,7 @@ GLOBAL_LIST_INIT(radiochannels, list(
 ))
 
 // Response Teams
-#define ERT_FREQS list(VAI_FREQ, DUT_FREQ, YAUT_FREQ, CMB_FREQ, RMC_FREQ, MERC_FREQ)
+#define ERT_FREQS list(VAI_FREQ, DUT_FREQ, YAUT_FREQ, CMB_FREQ, RMC_FREQ, MERC_FREQ, IASF_FREQ)
 
 // UPP Frequencies
 #define UPP_FREQS list(UPP_FREQ, UPP_CMD_FREQ, UPP_ENGI_FREQ, UPP_MED_FREQ, UPP_CCT_FREQ, UPP_KDO_FREQ, UPP_GRD_FREQ)
@@ -292,6 +296,7 @@ SUBSYSTEM_DEF(radio)
 		"[WY_FREQ]" = "wyradio",
 		"[VAI_FREQ]" = "vairadio",
 		"[RMC_FREQ]" = "rmcradio",
+		"[IASF_FREQ]" = "iasfradio",
 		"[CIA_FREQ]" = "ciaradio",
 		"[CMB_FREQ]" = "cmbradio",
 		"[ASF_FREQ]" = "usasfradio",
@@ -307,6 +312,7 @@ SUBSYSTEM_DEF(radio)
 		"[CBRN_FREQ]" = "hcradio",
 		"[FORECON_FREQ]" = "hcradio",
 		"[SOF_FREQ]" = "hcradio",
+		"[ARMY_FREQ]" = "hcradio",
 		"[HC_FREQ]" = "hcradio",
 		"[PVST_FREQ]" = "pvstradio",
 		"[COLONY_FREQ]" = "deptradio",

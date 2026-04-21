@@ -2,7 +2,7 @@
 #define GLOBAL_STATUS_MULTIPLIER 20 // each in-code unit is worth 20ds of duration
 
 #define HEALTH_THRESHOLD_DEAD -200
-#define HEALTH_THRESHOLD_CRIT -100
+#define HEALTH_THRESHOLD_CRIT -50
 
 //Some mob defines below
 #define AI_CAMERA_LUMINOSITY 6
@@ -132,18 +132,20 @@
 #define XENO_HIVE_BRAVO "xeno_hive_bravo"
 #define XENO_HIVE_CHARLIE "xeno_hive_charlie"
 #define XENO_HIVE_DELTA "xeno_hive_delta"
+#define XENO_HIVE_K_SERIES "xeno_hive_k_series"
 #define XENO_HIVE_FERAL "xeno_hive_feral"
 #define XENO_HIVE_TAMED "xeno_hive_tamed"
 #define XENO_HIVE_MUTATED "xeno_hive_mutated"
 #define XENO_HIVE_FORSAKEN "xeno_hive_forsaken"
 #define XENO_HIVE_YAUTJA "xeno_hive_yautja"
 #define XENO_HIVE_RENEGADE "xeno_hive_renegade"
+#define XENO_HIVE_ZETA "xeno_hive_zeta"
 
 #define XENO_HIVE_PATHOGEN "xeno_hive_pathogen"
 
 #define XENO_HIVE_TUTORIAL "xeno_hive_tutorial"
 
-#define ALL_XENO_HIVES list(XENO_HIVE_NORMAL, XENO_HIVE_CORRUPTED, XENO_HIVE_ALPHA, XENO_HIVE_BRAVO, XENO_HIVE_CHARLIE, XENO_HIVE_DELTA, XENO_HIVE_FERAL, XENO_HIVE_TAMED, XENO_HIVE_MUTATED, XENO_HIVE_FORSAKEN, XENO_HIVE_YAUTJA, XENO_HIVE_RENEGADE, XENO_HIVE_TUTORIAL, XENO_HIVE_PATHOGEN)
+#define ALL_XENO_HIVES list(XENO_HIVE_NORMAL, XENO_HIVE_CORRUPTED, XENO_HIVE_ALPHA, XENO_HIVE_BRAVO, XENO_HIVE_CHARLIE, XENO_HIVE_DELTA, XENO_HIVE_K_SERIES, XENO_HIVE_FERAL, XENO_HIVE_TAMED, XENO_HIVE_MUTATED, XENO_HIVE_FORSAKEN, XENO_HIVE_YAUTJA, XENO_HIVE_RENEGADE, XENO_HIVE_TUTORIAL, XENO_HIVE_ZETA, XENO_HIVE_PATHOGEN)
 
 //=================================================
 
@@ -264,6 +266,11 @@
 #define ACTION_BLUE_POWER_UP 16
 #define ACTION_PURPLE_POWER_UP 17
 
+#define BUSY_ICON_CLIMBING 18
+
+#define EMOTE_ICON_WALLBOOSTING 19
+
+
 //defins for datum/hud
 
 #define HUD_STYLE_STANDARD 1
@@ -299,6 +306,7 @@
 #define EMOTING_HEADBUTT   (1<<2)
 #define EMOTING_TAIL_SWIPE (1<<3)
 #define EMOTING_ROCK_PAPER_SCISSORS (1<<4)
+#define EMOTING_WALL_BOOSTING (1<<5)
 
 //forcesay types
 #define SUDDEN 0

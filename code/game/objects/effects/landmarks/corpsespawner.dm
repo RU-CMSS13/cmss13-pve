@@ -32,6 +32,10 @@
 	name = "Corpse - Prisoner"
 	equip_path = /datum/equipment_preset/corpse/prisoner
 
+/obj/effect/landmark/corpsespawner/chef
+	name = "Chef"
+	equip_path = /datum/equipment_preset/corpse/chef
+
 /obj/effect/landmark/corpsespawner/riot
 	name = "Corpse - Security Guard, UA Colonial Guard"
 	equip_path = /datum/equipment_preset/corpse/riot
@@ -44,9 +48,33 @@
 	name = "Corpse - Doctor, Scrubs"
 	equip_path = /datum/equipment_preset/corpse/doctor/scrubs
 
+/obj/effect/landmark/corpsespawner/scientist
+	name = "Scientist"
+	equip_path = /datum/equipment_preset/corpse/scientist
+
+/obj/effect/landmark/corpsespawner/engineer
+	name = "Engineer"
+	equip_path = /datum/equipment_preset/corpse/engineer
+
 /obj/effect/landmark/corpsespawner/security
 	name = "Corpse - Security Guard, Wey-Yu"
 	equip_path = /datum/equipment_preset/colonist/corpse/security
+
+/obj/effect/landmark/corpsespawner/security/liaison
+	name = "Corporate Liaison"
+	equip_path = /datum/equipment_preset/corpse/liaison
+
+/obj/effect/landmark/corpsespawner/administrator
+	name = "Colony Administrator"
+	equip_path = /datum/equipment_preset/corpse/administrator
+
+/obj/effect/landmark/corpsespawner/clf
+	name = "Colonial Liberation Front Soldier"
+	equip_path = /datum/equipment_preset/corpse/clf
+
+/obj/effect/landmark/corpsespawner/miner
+	name = "Shaft Miner"
+	equip_path = /datum/equipment_preset/corpse/miner
 
 //FORECON
 /obj/effect/landmark/corpsespawner/forecon_spotter
@@ -77,6 +105,10 @@
 /obj/effect/landmark/corpsespawner/hybrisa/civilian_office/burst
 	name = "Corpse - Burst - Civilian - Office Worker"
 	equip_path = /datum/equipment_preset/corpse/hybrisa/civilian_office/burst
+
+/obj/effect/landmark/corpsespawner/wygoon
+	name = "Weyland-Yutani Corporate Security Officer"
+	equip_path = /datum/equipment_preset/corpse/pmc/goon
 
 // Weymart
 
@@ -175,3 +207,65 @@
 	equip_path = /datum/equipment_preset/corpse/hybrisa/scientist_xenoarchaeologist/burst
 
 //*****************************************************************************************************/
+
+///US Army Corpses///
+
+// Army Trooper //
+
+/obj/effect/landmark/corpsespawner/tyrargo/us_army_trooper
+	name = "Corpse - US Army - Trooper"
+	equip_path = /datum/equipment_preset/corpse/tyrargo/us_army_trooper
+
+/obj/effect/landmark/corpsespawner/tyrargo/us_army_trooper/burst
+	name = "Corpse - Burst - US Army - Trooper"
+	equip_path = /datum/equipment_preset/corpse/tyrargo/us_army_trooper/burst
+
+/obj/effect/landmark/corpsespawner/tyrargo/us_army_medic
+	name = "Corpse - US Army - Trooper"
+	equip_path = /datum/equipment_preset/corpse/tyrargo/us_army_medic
+
+/obj/effect/landmark/corpsespawner/tyrargo/us_army_medic/burst
+	name = "Corpse - Burst - US Army - Trooper"
+	equip_path = /datum/equipment_preset/corpse/tyrargo/us_army_medic/burst
+
+///CM specific jobs///
+
+/obj/effect/landmark/corpsespawner/colonist //default is a colonist
+	name = "Colonist"
+	equip_path = /datum/equipment_preset/corpse/colonist
+
+/obj/effect/landmark/corpsespawner/colonist/burst
+	name = "Burst Colonist"
+	equip_path = /datum/equipment_preset/corpse/colonist/burst
+
+/obj/effect/landmark/corpsespawner/colonist/kutjevo
+	name = "Colonist Kutjevo"
+	equip_path = /datum/equipment_preset/corpse/colonist/kutjevo
+
+/obj/effect/landmark/corpsespawner/colonist/kutjevo/burst
+	name = "Burst Colonist Kutjevo"
+	equip_path = /datum/equipment_preset/corpse/colonist/kutjevo/burst
+
+/obj/effect/landmark/corpsespawner/colonist/random
+	name = "Colonist Random"
+	equip_path = /datum/equipment_preset/corpse/colonist/random
+
+/obj/effect/landmark/corpsespawner/colonist/random/burst
+	name = "Burst Colonist Random"
+	equip_path = /datum/equipment_preset/corpse/colonist/random/burst
+
+/obj/effect/landmark/corpsespawner/ua_riot
+	name = "UA Officer"
+	equip_path = /datum/equipment_preset/corpse/ua_riot
+
+/obj/effect/landmark/corpsespawner/ua_riot/burst
+	name = "Burst UA Officer"
+	equip_path = /datum/equipment_preset/corpse/ua_riot/burst
+
+/obj/effect/landmark/corpsespawner/wy/manager
+	name = "Corporate Supervisor"
+	equip_path = /datum/equipment_preset/corpse/wy/manager
+
+/obj/effect/landmark/corpsespawner/wy/manager/burst
+	name = "Burst Corporate Supervisor"
+	equip_path = /datum/equipment_preset/corpse/wy/manager/burst

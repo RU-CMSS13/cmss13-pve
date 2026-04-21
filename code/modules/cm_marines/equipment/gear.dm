@@ -212,8 +212,8 @@
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal1/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 30)
-	bitesize = 6
+	reagents.add_reagent("nutriment", 50)
+	bitesize = 10
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal2
 	name = "\improper mechanically prepared meal (ham and potatoes)"
@@ -353,7 +353,7 @@
 
 /obj/item/reagent_container/food/snacks/mre_pack/upp/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 40)
+	reagents.add_reagent("nutriment", 50)
 
 /obj/item/reagent_container/food/snacks/mre_pack/upp/meal1
 	name = "\improper UPP Prepared Meal (Chow mein)"
@@ -519,7 +519,7 @@
 /obj/item/device/overwatch_camera/twe
 	name = "OOCUHM Cam-Gear"
 	desc = "Operational Oversight Camera Unit, Head-Mounted. Usually nicknamed \"Ooks\" or \"Big Brother\" by the marine commandos that wear them, the TWE-manufactured camera unit & eyepiece allows both command oversight of operations and display of an augmented reality 'Heads-Up-Display' to the wearer."
-	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY)
+	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY, MOB_HUD_FACTION_IASF)
 	icon_state = "rmc_overwatch_gear"
 	item_state = "rmc_overwatch_gear"
 

@@ -83,6 +83,14 @@
 	initial_stored = 0
 	allowed_type = /obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon
 
+/obj/structure/gun_rack/arc
+	name = "rotary cannon ammo storage compartment"
+	icon_state = "boyars"
+	desc = "A small compartment that stores ammunition for the ARC's 'Bleihagel RE-RE850 Frontal Rotary Cannon'."
+	max_stored = 2
+	initial_stored = 0
+	allowed_type = /obj/item/ammo_magazine/hardpoint/arc_sentry
+
 /obj/structure/gun_rack/apc/boyars
 	name = "dual cannon ammo storage compartment"
 	icon_state = "boyars"
@@ -151,7 +159,7 @@
 	max_stored = 2
 	initial_stored = 2
 	allowed_type = /obj/item/weapon/gun/shotgun/combat
-	populate_type = /obj/item/weapon/gun/shotgun/combat
+	populate_type = /obj/item/weapon/gun/shotgun/combat/unloaded //Todo after Ody's op; make this into a /unloaded subtype of rack instead
 
 /obj/structure/gun_rack/mk221/empty
 	initial_stored = 0
@@ -218,25 +226,7 @@
 /obj/structure/gun_rack/nsg/Empty
 	initial_stored = 0
 
-/obj/structure/gun_rack/m41a/elite
-	name = "M41A2 pulse rifle rack"
-	icon_state = "m41a_elite"
-	max_stored = 5
-	initial_stored = 5
-	allowed_type = /obj/item/weapon/gun/rifle/m41aMK1/elite
-	populate_type = /obj/item/weapon/gun/rifle/m41aMK1/elite
-
-/obj/structure/gun_rack/m41a/elite/empty
-	initial_stored = 0
-
-/obj/structure/gun_rack/m41a/elite/unloaded
-	initial_stored = 5
-	populate_type = /obj/item/weapon/gun/rifle/m41a/elite/unloaded
-
-/obj/structure/gun_rack/m41a/elite/unloaded/platoon
-	populate_type = /obj/item/weapon/gun/rifle/m41a/elite/unloaded/platoon
-
-/obj/structure/gun_rack/m41a2/elite
+/obj/structure/gun_rack/m41a2_elite
 	name = "W-Y M41A2 MK2 pulse rifle rack"
 	icon_state = "m41a2_elite"
 	max_stored = 5
@@ -244,17 +234,17 @@
 	allowed_type = /obj/item/weapon/gun/rifle/m41a/elite
 	populate_type = /obj/item/weapon/gun/rifle/m41a/elite
 
-/obj/structure/gun_rack/m41a2/elite/empty
+/obj/structure/gun_rack/m41a2_elite/empty
 	initial_stored = 0
 
-/obj/structure/gun_rack/m41a2/elite/unloaded
+/obj/structure/gun_rack/m41a2_elite/unloaded
 	initial_stored = 5
 	populate_type = /obj/item/weapon/gun/rifle/m41a/elite/unloaded
 
-/obj/structure/gun_rack/m41a2/elite/unloaded/platoon
+/obj/structure/gun_rack/m41a2_elite/unloaded/platoon
 	populate_type = /obj/item/weapon/gun/rifle/m41a/elite/unloaded/platoon
 
-/obj/structure/gun_rack/m41a/corporate
+/obj/structure/gun_rack/m41a_corporate
 	name = "W-Y M41A MK2 pulse rifle rack"
 	icon_state = "m41a_white"
 	max_stored = 5
@@ -262,12 +252,12 @@
 	allowed_type = /obj/item/weapon/gun/rifle/m41a/corporate
 	populate_type = /obj/item/weapon/gun/rifle/m41a/corporate
 
-/obj/structure/gun_rack/m41a/corporate/empty
+/obj/structure/gun_rack/m41a_corporate/empty
 	initial_stored = 0
 
-/obj/structure/gun_rack/m41a/corporate/unloaded
+/obj/structure/gun_rack/m41a_corporate/unloaded
 	initial_stored = 5
 	populate_type = /obj/item/weapon/gun/rifle/m41a/corporate/unloaded
 
-/obj/structure/gun_rack/m41a/corporate/unloaded/platoon
+/obj/structure/gun_rack/m41a_corporate/unloaded/platoon
 	populate_type = /obj/item/weapon/gun/rifle/m41a/corporate/unloaded/platoon

@@ -27,7 +27,7 @@
 	desc = "A magazine of rounds for the M41AE2 Heavy Pulse Rifle."
 	caliber = "10x24mm"
 	icon_state = "m41ae2"
-	default_ammo = /datum/ammo/bullet/rifle/tracer
+	default_ammo = /datum/ammo/bullet/rifle
 	max_rounds = 300
 	gun_type = /obj/item/weapon/gun/rifle/lmg
 	flags_magazine = AMMUNITION_REFILLABLE|AMMUNITION_SLAP_TRANSFER
@@ -39,7 +39,7 @@
 /obj/item/ammo_magazine/hpr_box/holo_target
 	name = "\improper M41AE2 ammo box (10x24mm holo-target)"
 	desc = "A magazine of holo-target rounds for the M41AE2 Heavy Pulse Rifle."
-	default_ammo = /datum/ammo/bullet/rifle/holo_target/tracer
+	default_ammo = /datum/ammo/bullet/rifle/holo_target
 	max_rounds = 300
 	ammo_band_color = AMMO_BAND_COLOR_HOLOTARGETING
 
@@ -47,7 +47,7 @@
 /obj/item/ammo_magazine/hpr_box/ap
 	name = "\improper M41AE2 AP ammo box (10x24mm)"
 	desc = "A magazine of steelcore armor piercing rounds for the M41AE2 Heavy Pulse Rifle."
-	default_ammo = /datum/ammo/bullet/rifle/ap/tracer
+	default_ammo = /datum/ammo/bullet/rifle/ap
 	max_rounds = 300
 	gun_type = /obj/item/weapon/gun/rifle/lmg
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
@@ -55,7 +55,7 @@
 /obj/item/ammo_magazine/hpr_box/heap
 	name = "\improper M41AE2 HEAP ammo box (10x24mm)"
 	desc = "A magazine of M903 armor piercing high explosive rounds for the M41AE2 Heavy Pulse Rifle."
-	default_ammo = /datum/ammo/bullet/rifle/heap/tracer
+	default_ammo = /datum/ammo/bullet/rifle/heap
 	max_rounds = 300
 	gun_type = /obj/item/weapon/gun/rifle/lmg
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
@@ -80,21 +80,23 @@
 	gun_type = /obj/item/weapon/gun/m60
 
 /obj/item/ammo_magazine/pkp
-	name = "QYJ-72 ammo box (10x27mm HEAP)"
-	desc = "A 250 round box of HEAP ammunition for the UPP's standard GPMG, the QYJ-72. Chambered in 10x27mm."
+	name = "QYJ-72 ammo box (10x27mm)"
+	desc = "A 250 round box of ammunition for the UPP's standard GPMG, the QYJ-72. Chambered in 10x27mm."
 	caliber = "10x27mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "qjy72"
 	ammo_band_icon = "+qjy72_band"
-	ammo_band_icon = "+qjy72_band_e"
+	ammo_band_icon_empty = "+qjy72_band_e"
 	matter = list("metal" = 10000)
-	default_ammo = /datum/ammo/bullet/rifle/upp/heap/tracer
+	w_class = SIZE_MEDIUM
+	default_ammo = /datum/ammo/bullet/rifle/upp
 	max_rounds = 250
 	reload_delay = 12
 	gun_type = /obj/item/weapon/gun/pkp
+	flags_magazine = AMMUNITION_REFILLABLE|AMMUNITION_SLAP_TRANSFER
 
 /obj/item/ammo_magazine/pkp/verb/turn_into_regular()
-	set name = "Turn into a 10x27mm HEAP box"
+	set name = "Turn into a 10x27mm box"
 	set category = "Object"
 	set src in usr
 	if(current_rounds < 1)
@@ -102,14 +104,21 @@
 		empty_mag.current_rounds = 0
 		empty_mag.update_icon()
 		qdel(src)
-		to_chat(usr, "You configure the springs inside the [src] for reloading with HEAP 10x27mm rounds")
+		to_chat(usr, "You configure the springs inside the [src] for reloading with 10x27mm rounds")
 	else
-		to_chat(usr, "The [src] needs to be empty before you can configure it for reloading with HEAP 10x27mm rounds")
+		to_chat(usr, "The [src] needs to be empty before you can configure it for reloading with 10x27mm rounds")
 
-/obj/item/ammo_magazine/pkp/standard_fmj
-	name = "QYJ-72 ammo box (10x27mm)"
-	desc = "A 250 round box of ammunition for the UPP's standard GPMG, the QYJ-72. Chambered in 10x27mm."
-	default_ammo = /datum/ammo/bullet/rifle/upp/tracer
+/obj/item/ammo_magazine/pkp/ap
+	name = "QYJ-72 ammo box (10x27mm AP)"
+	desc = "A 250 round box of AP ammunition for the UPP's standard GPMG, the QYJ-72. Chambered in 10x27mm."
+	default_ammo = /datum/ammo/bullet/rifle/upp/ap
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/pkp/heap
+	name = "QYJ-72 ammo box (10x27mm HEAP)"
+	desc = "A 250 round box of HEAP ammunition for the UPP's standard GPMG, the QYJ-72. Chambered in 10x27mm."
+	default_ammo = /datum/ammo/bullet/rifle/upp/heap
+	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
 /obj/item/ammo_magazine/pkp/super_tracer
 	name = "QYJ-72 ammo box (10x27mm magnesium tracer HEAP)"
@@ -121,7 +130,6 @@
 	name = "QYJ-72 ammo box (10x27mm wall-penetrating)"
 	desc = "A 250 round box of wall-penetrating ammunition for the UPP's standard GPMG, the QYJ-72. Chambered in 10x27mm."
 	default_ammo = /datum/ammo/bullet/rifle/upp/heap/tracer/penetrating
-	reload_delay = 6
 	ammo_band_color = AMMO_BAND_COLOR_PENETRATING
 
 //rocket launchers

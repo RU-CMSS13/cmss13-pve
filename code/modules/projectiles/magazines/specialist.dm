@@ -17,7 +17,7 @@
 
 /obj/item/ammo_magazine/sniper/basic
 	name = "\improper M42A magazine (10x28mm)"
-	desc = "A magazine of M250 10x28mm ammunition. Not as effective as the match-grade kind, but still brings the hurt. An aimed shot with it will temporarily blind the targe and kindle the blaze further."
+	desc = "A magazine of M250 10x28mm ammunition. Not as effective as the match-grade kind, but still brings the hurt. An aimed shot with it will deal higher damage."
 	default_ammo = /datum/ammo/bullet/rifle/heavy
 	ammo_band_color = AMMO_BAND_COLOR_RUBBER
 
@@ -178,6 +178,41 @@
 	ammo_band_color = AMMO_BAND_COLOR_TOXIN
 
 //-------------------------------------------------------
+//UPP SPP-48M DMR
+//Meant to be used with 10x27mm HV ammo, but can still load regular ammo if necessary
+/obj/item/ammo_magazine/rifle/spp/high_velocity
+	name = "\improper SPP-48M HV magazine (10x27mm)"
+	desc = "A magazine of high velocity rounds for use in the later-model SPP-48M marksman rifles of UPPAC."
+	icon_state = "spp_hv"
+	default_ammo = /datum/ammo/bullet/rifle/upp/spec
+	max_rounds = 30
+	gun_type = /obj/item/weapon/gun/rifle/spp
+	ammo_band_icon = "+spp_hv_band"
+	ammo_band_icon_empty = "+spp_hv_band_e"
+	ammo_band_color = AMMO_BAND_COLOR_HIGH_IMPACT
+
+/obj/item/ammo_magazine/rifle/spp/high_velocity/incendiary
+	name = "\improper SPP-48M HV incendiary magazine (10x27mm)"
+	desc = "A magazine of high velocity incendiary rounds for use in the later-model SPP-48M marksman rifles of UPPAC."
+	default_ammo = /datum/ammo/bullet/rifle/upp/spec/incendiary
+	gun_type = /obj/item/weapon/gun/rifle/spp
+	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
+
+/obj/item/ammo_magazine/rifle/spp/high_velocity/explosive
+	name = "\improper SPP-48M HV explosive magazine (10x27mm)"
+	desc = "A magazine of high velocity explosive rounds for use in the later-model SPP-48M marksman rifles of UPPAC."
+	default_ammo = /datum/ammo/bullet/rifle/upp/spec/explosive
+	gun_type = /obj/item/weapon/gun/rifle/spp
+	ammo_band_color = AMMO_BAND_COLOR_EXPLOSIVE
+
+/obj/item/ammo_magazine/rifle/spp/high_velocity/toxic
+	name = "\improper SPP-48M HV depleted uranium magazine (10x27mm)"
+	desc = "A magazine of high velocity wall-penetrating, body-penetrating, toxic 10x27mm rounds for use in the later-model SPP-48M marksman rifles of UPPAC."
+	default_ammo = /datum/ammo/bullet/rifle/upp/spec/du
+	gun_type = /obj/item/weapon/gun/rifle/spp
+	ammo_band_color = AMMO_BAND_COLOR_TOXIN
+
+//-------------------------------------------------------
 //SMARTGUN
 /obj/item/ammo_magazine/smartgun
 	name = "smartgun drum"
@@ -189,6 +224,9 @@
 	default_ammo = /datum/ammo/bullet/rifle/heavy/tracer
 	gun_type = /obj/item/weapon/gun/smartgun
 
+/obj/item/ammo_magazine/smartgun/empty
+	current_rounds = 0
+
 /obj/item/ammo_magazine/smartgun/dirty
 	name = "irradiated smartgun drum"
 	desc = "What at first glance appears to be a standard 500 round M56 Smartgun drum, is actually a drum loaded with irradiated rounds, providing an extra 'oomph' to to its bullets. The magazine itself is slightly modified to only fit in M56T smartguns, and is marked with a red X."
@@ -198,7 +236,7 @@
 
 /obj/item/ammo_magazine/smartgun/holo_targeting
 	name = "holotargeting smartgun drum"
-	desc = "Holotargeting rounds for use in the royal marines commando L58A3 smartgun. The drum itself is designed to only fit in L58A3 smartguns, and is marked with a blue X."
+	desc = "Gyrojet-assisted holotargeting rounds for use in the royal marines commando L58A3 smartgun. The drum itself is designed to only fit in L58A3 smartguns, and is marked with a blue X."
 	icon_state = "m56_drum_holo"
 	default_ammo = /datum/ammo/bullet/rifle/heavy/holo_target
 	gun_type = /obj/item/weapon/gun/smartgun/rmc
@@ -228,7 +266,7 @@
 /obj/item/ammo_magazine/rocket
 	name = "\improper 60mm hypervelocity high explosive rocket"
 	desc = "A rocket tube loaded with a HE warhead. Deals high damage to soft targets on direct hit and stuns most targets in a 5-meter-wide area for a short time. Has decreased effect on heavily armored targets."
-	caliber = "rocket"
+	caliber = "60mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
 	icon_state = "rocket"
 
@@ -303,7 +341,7 @@
 	if(current_rounds <= 0)
 		name = "\improper [caliber] spent rocket tube"
 		icon_state = "rocket_e"
-		desc = "Spent rocket tube for a launcher. Activate in hand to disassemble for metal."
+		desc = "Spent rocket tube from a launcher. Activate in hand to disassemble for metal."
 		add_to_garbage(src)
 	else
 		icon_state = initial(icon_state)
@@ -554,24 +592,30 @@
 
 /obj/item/ammo_magazine/rifle/sharp
 	name = "sharp rifle magazine"
-	icon_state = "sharprifle"
+	icon_state = "sharp_explosive_mag"
 	item_state = "sharprifle"
 
+	caliber = "Dart"
 	w_class = SIZE_MEDIUM
 	max_rounds = 10
 	default_ammo = /datum/ammo/rifle/sharp/explosive
 	gun_type = /obj/item/weapon/gun/rifle/sharp
-	flags_magazine = NO_FLAGS
-
+	transfer_handful_amount = 5
 	description_ammo = "darts"
 
 /obj/item/ammo_magazine/rifle/sharp/explosive
 	name = "\improper 9X-E sticky explosive dart magazine"
-	desc = "A specialized sticky explosive dart magazine."
+	desc = "A specialized sticky explosive dart magazine for the SHARP rifle."
+
+/obj/item/ammo_magazine/rifle/sharp/incendiary
+	name = "\improper 9X-I sticky incendiary dart magazine"
+	desc = "A specialized incendiary dart magazine for the SHARP rifle."
+	icon_state = "sharp_incendiary_mag"
+	default_ammo = /datum/ammo/rifle/sharp/incendiary
 
 /obj/item/ammo_magazine/rifle/sharp/track
 	name = "\improper 9X-T sticky tracking dart magazine"
-	desc = "A specialized tracking dart magazine."
+	desc = "A specialized tracking dart magazine for the SHARP rifle."
 	icon_state = "sharprifle_tracker"
 	default_ammo = /datum/ammo/rifle/sharp/track
 
@@ -580,6 +624,6 @@
 
 /obj/item/ammo_magazine/rifle/sharp/flechette
 	name = "\improper 9X-F flechette dart magazine"
-	desc = "A specialized flechette dart magazine."
-	icon_state = "sharprifle_flechette"
+	desc = "A specialized flechette dart magazine for the SHARP rifle."
+	icon_state = "sharp_flechette_mag"
 	default_ammo = /datum/ammo/rifle/sharp/flechette

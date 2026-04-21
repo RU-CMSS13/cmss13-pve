@@ -673,8 +673,22 @@
 /obj/item/device/radio/headset/almayer/marine/solardevils/seclead
 	initial_keys = list(/obj/item/device/encryptionkey/squadlead)
 
+	inbuilt_tracking_options = list(
+		"Platoon Commander" = TRACKER_PLTCO,
+		"A-Section Sergeant" = TRACKER_ASL,
+		"B-Section Sergeant" = TRACKER_BSL,
+		"Landing Zone" = TRACKER_LZ
+	)
+
 /obj/item/device/radio/headset/almayer/marine/solardevils/pltco
 	initial_keys = list(/obj/item/device/encryptionkey/bravo, /obj/item/device/encryptionkey/squadlead)
+
+	inbuilt_tracking_options = list(
+		"Platoon Commander" = TRACKER_PLTCO,
+		"A-Section Sergeant" = TRACKER_ASL,
+		"B-Section Sergeant" = TRACKER_BSL,
+		"Landing Zone" = TRACKER_LZ
+	)
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/forecon
 	name = "USCM SOF headset"
@@ -713,6 +727,21 @@
 	)
 	locate_setting = TRACKER_RMCSL
 
+/obj/item/device/radio/headset/almayer/marine/solardevils/rmc/hq
+	name = "Royal Marine Commando command headset"
+	desc = "A special headset used by the commanders of the TWE's elite Royal Marine Commandos."
+	initial_keys = list(/obj/item/device/encryptionkey/command)
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/rmc/iasf
+	name = "IASF headset"
+	desc = "A robust headset used by the TWE's Imperial Armed Space Force."
+	icon_state = "rmc_headset"
+	item_state = "rmc_headset"
+	minimap_type = MINIMAP_FLAG_TWE
+	frequency = IASF_FREQ
+	has_hud = TRUE
+	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_IASF, MOB_HUD_FACTION_WY)
+
 /obj/item/device/radio/headset/almayer/marine/solardevils/foxtrot
 	frequency = CRYO_FREQ
 
@@ -722,8 +751,15 @@
 	icon_state = "upp_headset"
 	item_state = "upp_headset"
 	frequency = UPP_FREQ
+	misc_tracking = TRUE
 	minimap_type = MINIMAP_FLAG_UPP
 	hud_type = list(MOB_HUD_FACTION_UPP)
+	inbuilt_tracking_options = list(
+		"Platoon Commander" = TRACKER_PLTCO,
+		"Platoon Sergeant" = TRACKER_SL,
+		"Squad Sergeant" = TRACKER_FTL,
+		"Landing Zone" = TRACKER_LZ
+	)
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/upp/synth
 	name = "UPP synth headset"
@@ -1115,6 +1151,7 @@
 	inbuilt_tracking_options = list(
 		"Overwatch" = TRACKER_PLTCO,
 		"AZURE 15 Operation Leader" = TRACKER_PSL,
+		"VIRIDIAN 22 Operation Leader" = TRACKER_P2SL,
 		"AZURE 16 Strike Operation Leader" = TRACKER_PSSL,
 		"Landing Zone" = TRACKER_LZ
 	)
@@ -1126,6 +1163,13 @@
 	desc = "A special headset & HUD unit used to PMC Overwatch. Channels are as follows: #p - general, #y - WY,  #z - command, #f - medical, #e - engineering, #o - JTAC."
 	initial_keys = list(/obj/item/device/encryptionkey/pmc/command)
 
+	inbuilt_tracking_options = list(
+		"Overwatch" = TRACKER_PLTCO,
+		"AZURE 15 Operation Leader" = TRACKER_PSL,
+		"VIRIDIAN 22 Operation Leader" = TRACKER_P2SL,
+		"AZURE 16 Strike Operation Leader" = TRACKER_PSSL,
+		"Landing Zone" = TRACKER_LZ
+	)
 
 /obj/item/device/radio/headset/distress/cbrn
 	name = "\improper CBRN headset"
@@ -1191,7 +1235,7 @@
 	initial_keys = list(/obj/item/device/encryptionkey/colony, /obj/item/device/encryptionkey/pmc/command, /obj/item/device/encryptionkey/commando)
 
 //UPP Headsets
-/obj/item/device/radio/headset/distress/UPP
+/obj/item/device/radio/headset/distress/upp
 	name = "UPP Naval Infantry headset"
 	desc = "A special headset used by UPP military."
 	frequency = UPP_FREQ
@@ -1199,38 +1243,38 @@
 	hud_type = list(MOB_HUD_FACTION_UPP)
 	minimap_type = MINIMAP_FLAG_UPP
 
-/obj/item/device/radio/headset/distress/UPP/territorial
+/obj/item/device/radio/headset/distress/upp/territorial
 	name = "UPP Territorial Guard headset"
 	desc = "A special headset used by the UPP's Territorial Guard. Lacks access to Naval Infantry channels. Also provides local colony comms. To access the colony channel use :o."
 	frequency = UPP_GRD_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/colony)
 
-/obj/item/device/radio/headset/distress/UPP/cct
+/obj/item/device/radio/headset/distress/upp/cct
 	name = "UPP-CCT headset"
 	desc = "A special headset used by UPP military. Channels are as follows: :o - colony, #j - combat controller, #n engineering."
 	initial_keys = list(/obj/item/device/encryptionkey/colony, /obj/item/device/encryptionkey/upp/engi)
 
-/obj/item/device/radio/headset/distress/UPP/medic
+/obj/item/device/radio/headset/distress/upp/medic
 	name = "UPP-MED headset"
 	desc = "A special headset used by UPP military. Channels are as follows: :o - colony, #m - medical."
 	initial_keys = list(/obj/item/device/encryptionkey/colony, /obj/item/device/encryptionkey/upp/medic)
 
-/obj/item/device/radio/headset/distress/UPP/command
+/obj/item/device/radio/headset/distress/upp/command
 	name = "UPP-CMD headset"
 	desc = "A special headset used by UPP military. Channels are as follows: :o - colony, #j - combat controller, #n - engineering, #m - medical, #v - command, #u - UPP general."
 	initial_keys = list(/obj/item/device/encryptionkey/colony, /obj/item/device/encryptionkey/upp/command)
 
-/obj/item/device/radio/headset/distress/UPP/kdo
+/obj/item/device/radio/headset/distress/upp/kdo
 	name = "UPP-Kdo headset"
 	desc = "A specialist headset used by UPP kommandos. Channels are as follows: #j - combat controller, #u - UPP general, #T - kommandos."
 	initial_keys = /obj/item/device/encryptionkey/upp/kdo
 
-/obj/item/device/radio/headset/distress/UPP/kdo/medic
+/obj/item/device/radio/headset/distress/upp/kdo/medic
 	name = "UPP-KdoM headset"
 	desc = "A specialist headset used by UPP kommandos. Channels are as follows: :o - colony, #j - combat controller, #m - medical #u - UPP general, #T - kommandos."
 	initial_keys = list(/obj/item/device/encryptionkey/upp/kdo, /obj/item/device/encryptionkey/colony)
 
-/obj/item/device/radio/headset/distress/UPP/kdo/command
+/obj/item/device/radio/headset/distress/upp/kdo/command
 	name = "UPP-KdoC headset"
 	desc = "A specialist headset used by UPP kommandos. Channels are as follows: :o - colony, #j - combat controller, #n - engineering, #m - medical, #v - command, #u - UPP general, #T - kommandos."
 	initial_keys = list(/obj/item/device/encryptionkey/upp/kdo, /obj/item/device/encryptionkey/colony, /obj/item/device/encryptionkey/upp/command)
@@ -1445,3 +1489,13 @@
 	frequency = MERC_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/colony)
 	ignore_z = TRUE
+
+/obj/item/device/radio/headset/almayer/sof/survivor_army
+	name = "US Army headset"
+	desc = "Issued exclusively to Army troopers."
+	icon_state = "soc_headset"
+	frequency = ARMY_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/soc/army)
+	volume = RADIO_VOLUME_QUIET
+	has_hud = TRUE
+	hud_type = MOB_HUD_FACTION_MARINE

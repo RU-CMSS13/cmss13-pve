@@ -26,7 +26,7 @@
 	bonus_overlay = "m41a_ex"
 
 /obj/item/ammo_magazine/rifle/incendiary
-	name = "\improper M41A LE incendiary magazine (10x24mm)"
+	name = "\improper M41A incendiary magazine (10x24mm)"
 	desc = "A 10mm assault rifle magazine."
 	default_ammo = /datum/ammo/bullet/rifle/incendiary
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
@@ -42,6 +42,9 @@
 	desc = "A 10mm armor piercing high explosive magazine."
 	default_ammo = /datum/ammo/bullet/rifle/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
+
+/obj/item/ammo_magazine/rifle/heap/empty
+	current_rounds = 0
 
 /obj/item/ammo_magazine/rifle/ap
 	name = "\improper M41A LEAP magazine (10x24mm)"
@@ -113,7 +116,7 @@
 
 /obj/item/ammo_magazine/rifle/m41aMK1/incendiary
 	name = "\improper M41A MK1 incendiary magazine (10x24mm)"
-	desc = "A long rectangular box magazine for the M41A. Holds 99 caseless Light Explosive Incendiary 10x24mm rounds."
+	desc = "A long rectangular box magazine for the M41A. Holds 99 caseless Incendiary 10x24mm rounds."
 	default_ammo = /datum/ammo/bullet/rifle/incendiary
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
 
@@ -178,6 +181,9 @@
 	desc = "A magazine of high explosive armor piercing 10x28mm rounds for use in the M49A battle rifle."
 	default_ammo = /datum/ammo/bullet/rifle/heavy/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
+
+/obj/item/ammo_magazine/rifle/m49a/heap/empty
+	current_rounds = 0
 
 /obj/item/ammo_magazine/rifle/m49a/penetrating
 	name = "\improper M49A wall-penetrating magazine (10x28mm)"
@@ -301,7 +307,7 @@
 	ammo_band_icon = "+type71_band"
 	ammo_band_icon_empty = "+type71_band_e"
 	default_ammo = /datum/ammo/bullet/rifle/upp
-	max_rounds = 50
+	max_rounds = 60
 	gun_type = /obj/item/weapon/gun/rifle/type71
 
 /obj/item/ammo_magazine/rifle/type71/rubber
@@ -327,6 +333,12 @@
 	desc = "A 10x27mm high-capacity casket magazine containing the standard high explosive armor piercing rounds for the Type 71 rifle."
 	default_ammo = /datum/ammo/bullet/rifle/upp/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
+
+/obj/item/ammo_magazine/rifle/type71/incendiary
+	name = "\improper Type 71 incendiary magazine (10x27mm)"
+	desc = "A 10x27mm high-capacity casket magazine containing incendiary rounds for the Type 71 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/upp/incendiary
+	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
 
 //-------------------------------------------------------
 //UPP AG80 RIFLE
@@ -360,6 +372,80 @@
 	desc = "A 9.7x16mm high-capacity magazine for the AG80 rifle. This one is loaded with less-than lethal rubber rounds."
 	default_ammo = /datum/ammo/bullet/rifle/ag80/rubber //need to reference the actual ammo designed for the carbine
 	ammo_band_color = AMMO_BAND_COLOR_RUBBER
+
+//-------------------------------------------------------
+//UPP SPP-48M DMR
+
+/obj/item/ammo_magazine/rifle/spp
+	name = "\improper SPP-48M magazine (10x27mm)"
+	desc = "A 10x27mm high-capacity casket magazine for the SPP-48M rifle."
+	caliber = "10x27mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "spp"
+	ammo_band_icon = "+spp_band"
+	ammo_band_icon_empty = "+spp_band_e"
+	default_ammo = /datum/ammo/bullet/rifle/upp
+	max_rounds = 30
+	gun_type = /obj/item/weapon/gun/rifle/spp
+
+/obj/item/ammo_magazine/rifle/spp/ap
+	name = "\improper SPP-48M AP magazine (10x27mm)"
+	desc = "A 10x27mm high-capacity casket magazine containing armor piercing rounds for the SPP-48M rifle."
+	default_ammo = /datum/ammo/bullet/rifle/upp/ap
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/rifle/spp/ap/penetrating
+	name = "\improper SPP-48M AP magazine (10x27mm)"
+	desc = "A 10x27mm high-capacity casket magazine containing armor piercing rounds for the SPP-48M rifle."
+	default_ammo = /datum/ammo/bullet/rifle/upp/ap/penetrating
+	ammo_band_color = AMMO_BAND_COLOR_PENETRATING
+
+/obj/item/ammo_magazine/rifle/spp/heap
+	name = "\improper SPP-48M HEAP magazine (10x27mm)"
+	desc = "A 10x27mm high-capacity casket magazine containing the standard high explosive armor piercing rounds for the SPP-48M rifle."
+	default_ammo = /datum/ammo/bullet/rifle/upp/heap
+	ammo_band_color = AMMO_BAND_COLOR_HEAP
+
+/obj/item/ammo_magazine/rifle/spp/incendiary
+	name = "\improper SPP-48M incendiary magazine (10x27mm)"
+	desc = "A 10x27mm high-capacity casket magazine containing incendiary rounds for the SPP-48M rifle."
+	default_ammo = /datum/ammo/bullet/rifle/upp/incendiary
+	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
+
+//-------------------------------------------------------
+//UPP - Norcomm AK-4047 RIFLE
+
+/obj/item/ammo_magazine/rifle/ak4047
+	name = "\improper AK-4047 magazine (10x24mm)"
+	desc = "A rugged and reliable 40-round magazine designed for the AK-4047 series assault rifle. Built for durability, it can withstand harsh conditions and keep firing even in the worst environments."
+	caliber = "10x24mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "ak4047"
+	w_class = SIZE_MEDIUM
+	default_ammo = /datum/ammo/bullet/rifle
+	max_rounds = 40
+	gun_type = /obj/item/weapon/gun/rifle/ak4047
+	ammo_band_icon = "+ak4047_band"
+	ammo_band_icon_empty = "+ak4047_band_e"
+
+/obj/item/ammo_magazine/rifle/ak4047/ap
+	name = "\improper AK-4047 AP magazine (10x24mm)"
+	desc = "A 10x24mm magazine containing armor piercing rounds for the AK-4047 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/ap
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/rifle/ak4047/heap
+	name = "\improper AK-4047 HEAP magazine (10x24mm)"
+	desc = "A 10x24mm magazine containing the standard high explosive armor piercing rounds for the AK-4047 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/heap
+	ammo_band_color = AMMO_BAND_COLOR_HEAP
+
+/obj/item/ammo_magazine/rifle/ak4047/incendiary
+	name = "\improper AK-4047 incendiary magazine (10x24mm)"
+	desc = "A 10x24mm assault rifle magazine containing the incendiary rounds for the AK-4047 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/incendiary
+	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
+
 //-------------------------------------------------------
 //CANC LW-317 RIFLE
 
@@ -502,13 +588,13 @@
 /obj/item/ammo_magazine/rifle/nsg23/ap
 	name = "\improper NSG 23 armor-piercing magazine (8.5x33mm)"
 	desc = "A high-capacity drum magazine designed to fit the NSG 23 & L23A1 assault rifles. This one is loaded with armor piercing rounds."
-	default_ammo = /datum/ammo/bullet/rifle/ap
+	default_ammo = /datum/ammo/bullet/rifle/ap/twe
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
 /obj/item/ammo_magazine/rifle/nsg23/heap
 	name = "\improper NSG 23 HEAP magazine (8.5x33mm)"
 	desc = "A high-capacity drum magazine designed to fit the NSG 23 & L23A1 assault rifles. This one is loaded with armor-piercing explosive tipped rounds."
-	default_ammo = /datum/ammo/bullet/rifle/heap
+	default_ammo = /datum/ammo/bullet/rifle/heap/twe
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
 //--------------------------------------------------------
@@ -544,46 +630,61 @@
 	default_ammo =  /datum/ammo/bullet/sniper/anti_materiel/vulture/holo_target
 	ammo_band_color = AMMO_BAND_COLOR_HOLOTARGETING
 
+/obj/item/ammo_magazine/rifle/boltaction/vulture/terror
+	name = "\improper M707 cursed magazine (20x102mm)"
+	desc = "A magazine for the M707 anti-matieriel rifle. Contains two... Something, inside."
+	default_ammo = /datum/ammo/xeno_container/king
+	max_rounds = 2
+
 //=ROYAL MARINES=\\
 
 /obj/item/ammo_magazine/rifle/rmc_f90
-	name = "\improper F903 magazine (10x24mm)"
-	desc = "A 10mm assault rifle magazine used by the royal marines."
-	caliber = "10x24mm"
+	name = "\improper F903 magazine (5.5x50mm)"
+	desc = "A 5.5x50mm assault rifle magazine used by the Imperial Armed Space Force."
+	caliber = "5.5x50mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/twe_ammo.dmi'
 	icon_state = "aug"
 	item_state = "aug"
 	w_class = SIZE_MEDIUM
-	default_ammo = /datum/ammo/bullet/rifle
-	max_rounds = 30
+	default_ammo = /datum/ammo/bullet/rifle/f90
+	max_rounds = 45
 	gun_type = /obj/item/weapon/gun/rifle/rmc_f90
 	ammo_band_icon = "+aug_band"
 	ammo_band_icon_empty = "+aug_band_e"
 
+/obj/item/ammo_magazine/rifle/rmc_f90/ap
+	name = "\improper F903 AP magazine (5.5x50mm)"
+	desc = "A 5.5x50mm armor piercing high explosive assault rifle magazine used by the Imperial Armed Space Force."
+	default_ammo = /datum/ammo/bullet/rifle/f90/ap
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/rifle/rmc_f90/heap
+	name = "\improper F903 HEAP magazine (5.5x50mm)"
+	desc = "A 5.5x50mm armor piercing high explosive assault rifle magazine used by the Imperial Armed Space Force."
+	default_ammo = /datum/ammo/bullet/rifle/f90/heap
+	ammo_band_color = AMMO_BAND_COLOR_HEAP
+
 /obj/item/ammo_magazine/rifle/rmc_f90/marksman
-	name = "\improper F903A1 Marksman magazine (10x24mm)"
-	desc = "A 10mm armor-piercing assault rifle magazine used by the royal marines."
+	name = "\improper F903A1 Marksman magazine (5.5x50mm)"
+	desc = "A 5.5x50mm assault rifle magazine used by the Imperial Armed Space Force."
 	icon_state = "aug_dmr"
 	item_state = "aug_dmr"
-	default_ammo = /datum/ammo/bullet/rifle/ap
+	default_ammo = /datum/ammo/bullet/rifle/f90
 	gun_type = /obj/item/weapon/gun/rifle/rmc_f90/scope
-	max_rounds = 20
-	ammo_band_color = AMMO_BAND_COLOR_AP
+	max_rounds = 30
 	ammo_band_icon = "+aug_dmr_band"
 	ammo_band_icon_empty = "+aug_dmr_band_e"
 
-/obj/item/ammo_magazine/rifle/rmc_f90/heap
-	name = "\improper F903 HEAP magazine (10x24mm)"
-	desc = "A 10mm armor piercing high explosive assault rifle magazine used by the royal marines."
-	default_ammo = /datum/ammo/bullet/rifle/heap
-	ammo_band_color = AMMO_BAND_COLOR_HEAP
+/obj/item/ammo_magazine/rifle/rmc_f90/marksman/ap
+	name = "\improper F903A1 AP Marksman magazine (5.5x50mm)"
+	desc = "A 5.5x50mm armor piercing assault rifle magazine used by the Imperial Armed Space Force."
+	default_ammo = /datum/ammo/bullet/rifle/f90/ap
+	ammo_band_color = AMMO_BAND_COLOR_AP
 
 /obj/item/ammo_magazine/rifle/rmc_f90/marksman/heap
-	name = "\improper F903A1 Marksman magazine (10x24mm)"
-	desc = "A 10mm armor piercing high explosive assault rifle magazine used by the royal marines."
-	icon_state = "aug_dmr"
-	item_state = "aug_dmr"
-	default_ammo = /datum/ammo/bullet/rifle/heap
+	name = "\improper F903A1 HEAP Marksman magazine (5.5x50mm)"
+	desc = "A 5.5x50mm armor piercing high explosive assault rifle magazine used by the Imperial Armed Space Force."
+	default_ammo = /datum/ammo/bullet/rifle/f90/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
 //--------------------------------------------------------
@@ -610,3 +711,63 @@
 	default_ammo = /datum/ammo/bullet/rifle/isr
 	max_rounds = 80
 	gun_type = /obj/item/weapon/gun/rifle/isr
+
+//--------------------------------------------------------
+// Type 97 UPP automatic shotgun (H&K CAWS)
+
+#define CAWS_MAGAZINE_JAM_CHANCE 1
+
+/obj/item/ammo_magazine/rifle/caws
+	name = "\improper Type 97 magazine (12g)"
+	desc = "A 12 gauge automatic shotgun magazine."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "caws"
+	caliber = "12g"
+	ammo_band_icon = "+caws_band"
+	ammo_band_icon_empty = "+caws_band_e"
+	w_class = SIZE_MEDIUM
+	default_ammo = /datum/ammo/bullet/shotgun/buckshot
+	max_rounds = 15
+	gun_type = /obj/item/weapon/gun/rifle/caws
+	transfer_handful_amount = 5
+	var/jam_chance = CAWS_MAGAZINE_JAM_CHANCE
+
+/obj/item/ammo_magazine/rifle/caws/slug
+	name = "\improper Type 97 slug magazine (12g)"
+	desc = "A 12 gauge automatic shotgun magazine loaded with slugs."
+	default_ammo = /datum/ammo/bullet/shotgun/slug
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/rifle/caws/flechette
+	name = "\improper Type 97 flechette magazine (12g)"
+	desc = "A 12 gauge automatic shotgun magazine loaded with flechettes."
+	default_ammo = /datum/ammo/bullet/shotgun/flechette
+	ammo_band_color = AMMO_BAND_COLOR_IMPACT
+
+/obj/item/ammo_magazine/rifle/caws/incendiary
+	name = "\improper Type 97 incendiary slug magazine (12g)"
+	desc = "A 12 gauge automatic shotgun magazine loaded with incendiary slugs."
+	default_ammo = /datum/ammo/bullet/shotgun/incendiary
+	ammo_band_color = AMMO_BAND_COLOR_HOLLOWPOINT
+
+/obj/item/ammo_magazine/rifle/caws/special
+	name = "\improper Type 97 magazine (12g Magnum)"
+	desc = "A 12 gauge automatic shotgun magazine."
+	icon_state = "caws_special"
+	ammo_band_icon = "+caws_special_band"
+	ammo_band_icon_empty = "+caws_special_band_e"
+	default_ammo = /datum/ammo/bullet/shotgun/buckshot/special
+
+/obj/item/ammo_magazine/rifle/caws/special/slug
+	name = "\improper Type 97 slug magazine (12g Magnum)"
+	desc = "A 12 gauge automatic shotgun magazine loaded with slugs."
+	default_ammo = /datum/ammo/bullet/shotgun/slug/special
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/rifle/caws/special/flechette
+	name = "\improper Type 97 flechette magazine (12g DU)"
+	desc = "A 12 gauge automatic shotgun magazine loaded with flechettes."
+	default_ammo = /datum/ammo/bullet/shotgun/flechette/special
+	ammo_band_color = AMMO_BAND_COLOR_IMPACT
+
+#undef CAWS_MAGAZINE_JAM_CHANCE

@@ -81,8 +81,8 @@
 	switch(random_pistol)
 		if(0)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/l54(new_human.back), WEAR_IN_BACK)
-			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol(new_human), WEAR_IN_BACK)
-			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol(new_human), WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/l54(new_human), WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/l54(new_human), WEAR_IN_BACK)
 
 		if(1)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/highpower(new_human), WEAR_IN_BACK)
@@ -468,9 +468,9 @@
 	if(prob(65))
 		add_facewrap(new_human)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/guerilla(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/upp/beret/guerilla(new_human), WEAR_HEAD)
 	//uniform
-	var/obj/item/clothing/under/marine/veteran/UPP/uniform = new()
+	var/obj/item/clothing/under/marine/veteran/upp/uniform = new()
 	var/random_uniform = rand(1,2)
 	switch(random_uniform)
 		if(1)
@@ -605,9 +605,9 @@
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/rebel_twe(new_human), WEAR_L_EAR)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/guerilla(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/upp/beret/guerilla(new_human), WEAR_HEAD)
 	//uniform
-	var/obj/item/clothing/under/marine/veteran/UPP/uniform = new()
+	var/obj/item/clothing/under/marine/veteran/upp/uniform = new()
 	var/random_uniform = rand(1,2)
 	switch(random_uniform)
 		if(1)

@@ -40,7 +40,7 @@ can cause issues with ammo types getting mixed up during the burst.
 
 /obj/item/weapon/gun/shotgun/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_5)
+	set_fire_delay(FIRE_DELAY_TIER_3)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_10
 	scatter = SCATTER_AMOUNT_TIER_6
@@ -198,7 +198,7 @@ can cause issues with ammo types getting mixed up during the burst.
 
 
 /obj/item/weapon/gun/shotgun/merc/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 31, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 21, "under_x" = 17, "under_y" = 14, "stock_x" = 17, "stock_y" = 14)
+	attachable_offset = list("muzzle_x" = 31, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 21, "under_x" = 17, "under_y" = 14, "stock_x" = 17, "stock_y" = 14, "sling_x" = 10, "sling_y" = 21)
 
 
 /obj/item/weapon/gun/shotgun/merc/set_gun_config_values()
@@ -280,7 +280,7 @@ can cause issues with ammo types getting mixed up during the burst.
 		load_into_chamber()
 
 /obj/item/weapon/gun/shotgun/es7/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 41, "muzzle_y" = 19, "rail_x" = 17, "rail_y" = 21, "under_x" = 34, "under_y" = 13, "stock_x" = 11, "stock_y" = 13.)
+	attachable_offset = list("muzzle_x" = 41, "muzzle_y" = 19, "rail_x" = 17, "rail_y" = 21, "under_x" = 34, "under_y" = 13, "stock_x" = 11, "stock_y" = 13, "sling_x" = 17, "sling_y" = 21.)
 
 /obj/item/weapon/gun/shotgun/es7/set_gun_config_values()
 	..()
@@ -336,11 +336,11 @@ can cause issues with ammo types getting mixed up during the burst.
 		load_into_chamber()
 
 /obj/item/weapon/gun/shotgun/combat/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 11, "rail_y" = 21, "under_x" = 22, "under_y" = 14, "stock_x" = 11, "stock_y" = 13, "side_rail_x" = 23, "side_rail_y" = 17)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 11, "rail_y" = 21, "under_x" = 22, "under_y" = 14, "stock_x" = 11, "stock_y" = 13, "side_rail_x" = 23, "side_rail_y" = 17, "sling_x" = 11, "sling_y" = 21)
 
 /obj/item/weapon/gun/shotgun/combat/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_9)
+	set_fire_delay(FIRE_DELAY_TIER_6)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_10
 	scatter = SCATTER_AMOUNT_TIER_6
@@ -392,7 +392,7 @@ can cause issues with ammo types getting mixed up during the burst.
 /obj/item/weapon/gun/shotgun/combat/marsoc/handle_starting_attachment()
 
 /obj/item/weapon/gun/shotgun/combat/marsoc/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 21, "under_x" = 14, "under_y" = 16, "stock_x" = 14, "stock_y" = 16, "side_rail_x" = 25, "side_rail_y" = 18)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 21, "under_x" = 14, "under_y" = 16, "stock_x" = 14, "stock_y" = 16, "side_rail_x" = 25, "side_rail_y" = 18, "sling_x" = 10, "sling_y" = 21)
 
 /obj/item/weapon/gun/shotgun/combat/marsoc/set_gun_config_values()
 	..()
@@ -415,7 +415,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "type23_tactical"
 	item_state = "type23_tactical"
-	fire_sound = 'sound/weapons/gun_type23.ogg'
+	fire_sound = 'sound/weapons/gun_shotgun_heavy2.ogg'
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23
 	attachable_allowed = list(
 		/obj/item/attachable/reddot, // Rail
@@ -445,7 +445,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	starting_attachment_types = list(/obj/item/attachable/stock/type23)
 
 /obj/item/weapon/gun/shotgun/type23/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 13, "rail_y" = 21, "under_x" = 24, "under_y" = 15, "stock_x" = -1, "stock_y" = 17, "side_rail_x" = 25, "side_rail_y" = 18)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 13, "rail_y" = 21, "under_x" = 24, "under_y" = 15, "stock_x" = -1, "stock_y" = 17, "side_rail_x" = 25, "side_rail_y" = 18, "sling_x" = 13, "sling_y" = 21)
 
 /obj/item/weapon/gun/shotgun/type23/set_gun_config_values()
 	..()
@@ -464,6 +464,7 @@ can cause issues with ammo types getting mixed up during the burst.
 /obj/item/weapon/gun/shotgun/type23/unloaded/stored
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/unloaded
 	starting_attachment_types = null
+	flags_gun_features = /obj/item/weapon/gun/shotgun/type23::flags_gun_features |GUN_TRIGGER_SAFETY
 
 /obj/item/weapon/gun/shotgun/type23/slug
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/slug
@@ -477,7 +478,14 @@ can cause issues with ammo types getting mixed up during the burst.
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "type23_wood"
 	item_state = "type23_wood"
-	fire_sound = 'sound/weapons/gun_type23.ogg'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/items_lefthand_1.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/items_righthand_1.dmi',
+		WEAR_BACK = 'icons/mob/humans/onmob/back.dmi',
+		WEAR_J_STORE = 'icons/mob/humans/onmob/suit_slot.dmi'
+	)
+
+	fire_sound = 'sound/weapons/gun_shotgun_heavy2.ogg'
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23
 	attachable_allowed = list(/obj/item/attachable/stock/type23/wood)
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG
@@ -486,11 +494,11 @@ can cause issues with ammo types getting mixed up during the burst.
 	starting_attachment_types = list(/obj/item/attachable/stock/type23/wood)
 
 /obj/item/weapon/gun/shotgun/pump/type23/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 13, "rail_y" = 21, "under_x" = 24, "under_y" = 15, "stock_x" = 16, "stock_y" = 15, "side_rail_x" = 25, "side_rail_y" = 18)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 13, "rail_y" = 21, "under_x" = 24, "under_y" = 15, "stock_x" = 16, "stock_y" = 15, "side_rail_x" = 25, "side_rail_y" = 18, "sling_x" = 13, "sling_y" = 21)
 
 /obj/item/weapon/gun/shotgun/pump/type23/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_8)
+	set_fire_delay(FIRE_DELAY_TIER_1)
 	accuracy_mult = BASE_ACCURACY_MULT
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT
 	scatter = SCATTER_AMOUNT_TIER_4
@@ -504,6 +512,9 @@ can cause issues with ammo types getting mixed up during the burst.
 
 /obj/item/weapon/gun/shotgun/pump/type23/slug
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/slug
+
+/obj/item/weapon/gun/shotgun/pump/type23/flechette
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/flechette
 
 /obj/item/weapon/gun/shotgun/pump/type23/riot
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/riot
@@ -542,7 +553,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	additional_fire_group_delay = 1.5 SECONDS
 
 /obj/item/weapon/gun/shotgun/double/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 11, "rail_y" = 20, "under_x" = 15, "under_y" = 14, "stock_x" = 13, "stock_y" = 14, "side_rail_x" = 23, "side_rail_y" = 17)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 11, "rail_y" = 20, "under_x" = 15, "under_y" = 14, "stock_x" = 13, "stock_y" = 14, "side_rail_x" = 23, "side_rail_y" = 17, "sling_x" = 11, "sling_y" = 20)
 
 /obj/item/weapon/gun/shotgun/double/set_gun_config_values()
 	..()
@@ -706,7 +717,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	update_icon()
 
 /obj/item/weapon/gun/shotgun/double/upp/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 9, "rail_y" = 22, "under_x" = 15, "under_y" = 14, "stock_x" = 16, "stock_y" = 15, "side_rail_x" = 23, "side_rail_y" = 17, "special_x" = 35, "special_y" = 17)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 9, "rail_y" = 22, "under_x" = 15, "under_y" = 14, "stock_x" = 16, "stock_y" = 15, "side_rail_x" = 23, "side_rail_y" = 17, "special_x" = 35, "special_y" = 17, "sling_x" = 9, "sling_y" = 22)
 
 /obj/item/weapon/gun/shotgun/double/damaged
 	name = "semi-sawn-off Spearhead Rival 78"
@@ -734,7 +745,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG
 
 /obj/item/weapon/gun/shotgun/double/sawn/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 19, "rail_x" = 11, "rail_y" = 20, "under_x" = 15, "under_y" = 14,  "stock_x" = 18, "stock_y" = 16, "side_rail_x" = 19, "side_rail_y" = 16)
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 19, "rail_x" = 11, "rail_y" = 20, "under_x" = 15, "under_y" = 14,  "stock_x" = 18, "stock_y" = 16, "side_rail_x" = 19, "side_rail_y" = 16, "sling_x" = 11, "sling_y" = 20)
 
 /obj/item/weapon/gun/shotgun/double/sawn/set_gun_config_values()
 	..()
@@ -865,7 +876,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	civilian_usable_override = FALSE
 
 /obj/item/weapon/gun/shotgun/double/mou53/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 11, "rail_y" = 21, "under_x" = 17, "under_y" = 15, "stock_x" = 10, "stock_y" = 9, "side_rail_x" = 20, "side_rail_y" = 17) //Weird stock values, make sure any new stock matches the old sprite placement in the .dmi
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 11, "rail_y" = 21, "under_x" = 17, "under_y" = 15, "stock_x" = 10, "stock_y" = 9, "side_rail_x" = 20, "side_rail_y" = 17, "sling_x" = 11, "sling_y" = 21) //Weird stock values, make sure any new stock matches the old sprite placement in the .dmi
 
 
 /obj/item/weapon/gun/shotgun/double/mou53/set_gun_config_values()
@@ -973,7 +984,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	recoil_unwielded = RECOIL_OFF
 
 /obj/item/weapon/gun/shotgun/double/twobore/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 21,"rail_x" = 15, "rail_y" = 22, "under_x" = 21, "under_y" = 16, "stock_x" = 0, "stock_y" = 16)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 21,"rail_x" = 15, "rail_y" = 22, "under_x" = 21, "under_y" = 16, "stock_x" = 0, "stock_y" = 16, "sling_x" = 15, "sling_y" = 22)
 
 /obj/item/weapon/gun/shotgun/double/twobore/proc/brace(mob/living/carbon/human/user)
 	RegisterSignal(user, COMSIG_MOVABLE_MOVED, PROC_REF(unbrace), user)
@@ -1181,6 +1192,14 @@ can cause issues with ammo types getting mixed up during the burst.
 		/obj/item/attachable/stock/shotgun,
 		/obj/item/attachable/sling,
 	)
+	map_specific_decoration = FALSE
+	item_icons = list(
+		WEAR_L_HAND = 'icons/obj/items/weapons/guns/guns_by_map/jungle/guns_lefthand.dmi',
+		WEAR_R_HAND = 'icons/obj/items/weapons/guns/guns_by_map/jungle/guns_righthand.dmi',
+		WEAR_BACK = 'icons/obj/items/weapons/guns/guns_by_map/jungle/back.dmi',
+		WEAR_J_STORE = 'icons/obj/items/weapons/guns/guns_by_map/jungle/suit_slot.dmi'
+	)
+	//Someone was a hack and didn't port all the onmobs to the generic files
 
 /obj/item/weapon/gun/shotgun/pump/Initialize(mapload, spawn_empty)
 	. = ..()
@@ -1189,13 +1208,13 @@ can cause issues with ammo types getting mixed up during the burst.
 
 
 /obj/item/weapon/gun/shotgun/pump/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 20, "under_y" = 14, "stock_x" = 20, "stock_y" = 14, "side_rail_x" = 25, "side_rail_y" = 18)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 20, "under_y" = 14, "stock_x" = 20, "stock_y" = 14, "side_rail_x" = 25, "side_rail_y" = 18, "sling_x" = 12, "sling_y" = 20)
 
 
 /obj/item/weapon/gun/shotgun/pump/set_gun_config_values()
 	..()
 	set_burst_amount(BURST_AMOUNT_TIER_1)
-	set_fire_delay(FIRE_DELAY_TIER_7)
+	set_fire_delay(FIRE_DELAY_TIER_3)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_10
 	scatter = SCATTER_AMOUNT_TIER_6
@@ -1274,8 +1293,17 @@ can cause issues with ammo types getting mixed up during the burst.
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/unloaded
 
 /obj/item/weapon/gun/shotgun/pump/stock
-	starting_attachment_types = list(/obj/item/attachable/stock/shotgun)
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/unloaded
+	desc = "A classic Ithaca 37 hunting shotgun, complete with a traditional, albeit well-worn, wooden stock. The full-length barrel & magazine tube lets this fit six shells and one chambered."
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/unloaded/full_length
+	starting_attachment_types = list(/obj/item/attachable/shotgun_barrel)
+
+/obj/item/weapon/gun/shotgun/pump/stock/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/stock/shotgun/integratedstock = new(src)
+	integratedstock.flags_attach_features &= ~ATTACH_REMOVABLE
+	integratedstock.Attach(src)
+	update_attachable(integratedstock.slot)
+
 
 //-------------------------------------------------------
 
@@ -1333,6 +1361,13 @@ can cause issues with ammo types getting mixed up during the burst.
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "hg3712"
 	item_state = "hg3712"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/items_lefthand_1.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/items_righthand_1.dmi',
+		WEAR_BACK = 'icons/mob/humans/onmob/back.dmi',
+		WEAR_J_STORE = 'icons/mob/humans/onmob/suit_slot.dmi'
+	)
+
 	fire_sound = 'sound/weapons/gun_shotgun_small.ogg'
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/cmb
 	attachable_allowed = list(
@@ -1351,12 +1386,12 @@ can cause issues with ammo types getting mixed up during the burst.
 
 
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 31, "muzzle_y" = 17,"rail_x" = 8, "rail_y" = 21, "under_x" = 22, "under_y" = 15, "stock_x" = 24, "stock_y" = 10, "side_rail_x" = 27, "side_rail_y" = 17)
+	attachable_offset = list("muzzle_x" = 31, "muzzle_y" = 17,"rail_x" = 8, "rail_y" = 21, "under_x" = 22, "under_y" = 15, "stock_x" = 24, "stock_y" = 10, "side_rail_x" = 27, "side_rail_y" = 17, "sling_x" = 8, "sling_y" = 21)
 
 
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_7)
+	set_fire_delay(FIRE_DELAY_TIER_1)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_10
 	scatter = SCATTER_AMOUNT_TIER_6
@@ -1425,12 +1460,12 @@ can cause issues with ammo types getting mixed up during the burst.
 	COOLDOWN_DECLARE(allow_pump)
 
 /obj/item/weapon/gun/rifle/xm51/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 34, "muzzle_y" = 18, "rail_x" = 12, "rail_y" = 20, "under_x" = 24, "under_y" = 13, "stock_x" = 15, "stock_y" = 16)
+	attachable_offset = list("muzzle_x" = 34, "muzzle_y" = 18, "rail_x" = 12, "rail_y" = 20, "under_x" = 24, "under_y" = 13, "stock_x" = 15, "stock_y" = 16, "sling_x" = 12, "sling_y" = 20)
 
 /obj/item/weapon/gun/rifle/xm51/set_gun_config_values()
 	..()
 	set_burst_amount(BURST_AMOUNT_TIER_1)
-	set_fire_delay(FIRE_DELAY_TIER_7)
+	set_fire_delay(FIRE_DELAY_TIER_5)
 	accuracy_mult = BASE_ACCURACY_MULT + 2*HIT_ACCURACY_MULT_TIER_8
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_8
 	recoil = RECOIL_AMOUNT_TIER_4
@@ -1497,3 +1532,123 @@ can cause issues with ammo types getting mixed up during the burst.
 
 /obj/item/weapon/gun/rifle/xm51/military/withstock
 	starting_attachment_types = list(/obj/item/attachable/stock/xm51/military)
+
+//-------------------------------------------------------
+// Type-97 UPP automatic shotgun (H&K CAWS)
+
+/obj/item/weapon/gun/rifle/caws // supposed to be used by HAI, to not have jam chance (see lower)
+	name = "\improper Type 97M automatic shotgun"
+	desc = "An experimental magazine fed automatic shotgun developed by the UPP, designed for extreme close encounters. While firing a smaller gauge than the more common KS-29/4 (12g compared to 8g) the Type-97 makes up for this with a superior automatic fire-rate and reduced felt recoil, even when firing in long bursts. While more controllable, it remains cumbersome to most common soldiers, however few would deny its effectiveness in close-quarters-battle. This model was modified to have lower rate of fire, but with significantly less chance of jamming."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
+	icon_state = "caws"
+	item_state = "caws"
+	mouse_pointer = 'icons/effects/mouse_pointer/shotgun_mouse.dmi'
+
+	fire_sound = 'sound/weapons/gun_caws.ogg'
+	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
+	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
+	force = 20
+	starting_attachment_types = list(/obj/item/attachable/cawsbarrel)
+	current_mag = /obj/item/ammo_magazine/rifle/caws
+	attachable_allowed = list(
+		/obj/item/attachable/magnetic_harness, // Rail
+		/obj/item/attachable/sling,
+		/obj/item/attachable/scope/upp,
+		/obj/item/attachable/scope/mini/upp,
+		/obj/item/attachable/reddot/upp,
+		/obj/item/attachable/reflex/upp,
+		/obj/item/attachable/suppressor, // Muzzle // CAWS BARREL
+		/obj/item/attachable/attached_gun/grenade/type71/ag80, // underbarrel
+		/obj/item/attachable/attached_gun/grenade/type71/ag80/preloaded,
+		/obj/item/attachable/verticalgrip/upp,
+		/obj/item/attachable/angledgrip/upp,
+		/obj/item/attachable/lasersight/upp, // Side Rail
+		/obj/item/attachable/flashlight,
+	)
+	flags_equip_slot = SLOT_BACK
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
+	gun_category = GUN_CATEGORY_SHOTGUN
+	aim_slowdown = SLOWDOWN_ADS_RIFLE
+	wield_delay = WIELD_DELAY_VERY_SLOW // VERY heavy, need to commit to the fight beforehand
+	start_automatic = TRUE
+	map_specific_decoration = FALSE
+
+/obj/item/weapon/gun/rifle/caws/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_7)
+	set_burst_amount(BURST_AMOUNT_TIER_3)
+	set_burst_delay(FIRE_DELAY_TIER_9)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
+	scatter = SCATTER_AMOUNT_TIER_8
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_9
+	scatter_unwielded = SCATTER_AMOUNT_TIER_3
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_4
+	recoil_unwielded = RECOIL_AMOUNT_TIER_2
+
+/obj/item/weapon/gun/rifle/caws/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 35, "muzzle_y" = 16,"rail_x" = 15, "rail_y" = 22,	 "under_x" = 27, "under_y" = 12, "stock_x" = 15, "stock_y" = 13, "side_rail_x" = 25, "side_rail_y" = 17, "sling_x" = 15, "sling_y" = 22)
+
+/obj/item/weapon/gun/rifle/caws/stored
+	current_mag = null
+	flags_gun_features = /obj/item/weapon/gun/rifle/caws::flags_gun_features | GUN_TRIGGER_SAFETY
+
+#define CAWS_UNJAM_CHANCE 65
+
+/obj/item/weapon/gun/rifle/caws/auto // meant to be used by players, has a jam chance you need to have in mind when fighting
+	name = "\improper Type 97 automatic shotgun"
+	desc = "An experimental magazine fed automatic shotgun developed by the UPP, designed for extreme close encounters. While firing a smaller gauge than the more common KS-29/4 (12g compared to 8g) the Type-97 makes up for this with a superior automatic fire-rate and reduced felt recoil, even when firing in long bursts. While more controllable, it remains cumbersome to most common soldiers, however few would deny its effectiveness in close-quarters-battle."
+	var/jammed = FALSE
+
+/obj/item/weapon/gun/rifle/caws/auto/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_8)
+	set_burst_amount(BURST_AMOUNT_TIER_3)
+	set_burst_delay(FIRE_DELAY_TIER_10)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
+	scatter = SCATTER_AMOUNT_TIER_8
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_9
+	scatter_unwielded = SCATTER_AMOUNT_TIER_3
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_4
+	recoil_unwielded = RECOIL_AMOUNT_TIER_2
+
+/obj/item/weapon/gun/rifle/caws/auto/Fire(atom/target, mob/living/user, params, reflex = 0, dual_wield)
+	var/obj/item/ammo_magazine/rifle/caws/caws_mag =  current_mag
+	if(jammed)
+		if(world.time % 3)
+			playsound(src, 'sound/weapons/handling/gun_jam_click.ogg', 35, TRUE)
+			to_chat(user, SPAN_WARNING("Your gun is jammed! Mash Unique-Action to unjam it!"))
+			balloon_alert(user, "*jammed*")
+		return NONE
+	else if(prob(caws_mag.jam_chance))
+		jammed = TRUE
+		playsound(src, 'sound/weapons/handling/gun_jam_initial_click.ogg', 50, FALSE)
+		user.visible_message(SPAN_DANGER("[src] makes a noticeable clicking noise!"), SPAN_HIGHDANGER("\The [src] suddenly jams and refuses to fire! Mash Unique-Action to unjam it."))
+		balloon_alert(user, "*jammed*")
+		return NONE
+	else
+		return ..()
+
+/obj/item/weapon/gun/rifle/caws/auto/unique_action(mob/user)
+	if(jammed)
+		if(prob(CAWS_UNJAM_CHANCE))
+			to_chat(user, SPAN_GREEN("You successfully unjam \the [src]!"))
+			playsound(src, 'sound/weapons/handling/gun_jam_rack_success.ogg', 50, FALSE)
+			jammed = FALSE
+			cock_cooldown += 1 SECONDS //so they dont accidentally cock a bullet away
+			balloon_alert(user, "*unjammed!*")
+		else
+			to_chat(user, SPAN_NOTICE("You start wildly racking the bolt back and forth attempting to unjam \the [src]!"))
+			playsound(src, "gun_jam_rack", 50, FALSE)
+			balloon_alert(user, "*rack*")
+		return
+	. = ..()
+
+#undef CAWS_UNJAM_CHANCE
+
+/obj/item/weapon/gun/rifle/caws/auto/stored
+	current_mag = null
+	flags_gun_features = /obj/item/weapon/gun/rifle/caws::flags_gun_features | GUN_TRIGGER_SAFETY

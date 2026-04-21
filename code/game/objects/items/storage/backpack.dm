@@ -463,10 +463,6 @@
 /obj/item/storage/backpack/marine/medic/standard
 	has_gamemode_skin = FALSE
 
-/obj/item/storage/backpack/marine/medic/upp
-	name = "\improper UPP corpsman backpack"
-	desc = "Uncommon issue backpack worn by UPP medics from isolated sectors. You can swear you can see a faded USCM symbol."
-
 /obj/item/storage/backpack/marine/tech
 	name = "\improper USCM technician backpack"
 	desc = "A standard-issue backpack worn by USCM technicians."
@@ -495,6 +491,27 @@
 	storage_slots = null
 	max_storage_space = 15
 	xeno_types = null
+
+/obj/item/storage/backpack/marine/satchel/army // I hate Steelpoint why they even need this subtype
+	name = "\improper US Army satchel"
+
+/obj/item/storage/backpack/marine/satchel/big/army
+	name = "\improper US Army logistics IMP backpack"
+
+/obj/item/storage/backpack/molle/army
+	name = "\improper M1 MOLLE Satchel"
+	desc = "Tactical satchel manufactured by one of the Alphatech subsidiaries. Very lightweight beltbag variant that utilizes UA standard MOLLE fastening systems. Standard issue pack for US army troopers."
+	icon_state = "MOLLEbeltbag"
+	item_state = "MOLLEbeltbag"
+	worn_accessible = TRUE
+	max_storage_space = 15
+
+/obj/item/storage/backpack/molle/backpack/army
+	name = "\improper M2 MOLLE Backpack"
+	desc = "Tactical backpack manufactured by one of the Alphatech subsidiaries. Very lightweight backpack that utilizes UA standard MOLLE fastening systems, which allows easy access and optimal weight distribution. Standard issue heavy duty pack for US army troopers."
+	icon_state = "MOLLEbackpack"
+	item_state = "MOLLEbackpack"
+	max_storage_space = 21
 
 /obj/item/storage/backpack/marine/satchel/standard
 	has_gamemode_skin = FALSE
@@ -538,6 +555,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	flags_item = ITEM_OVERRIDE_NORTHFACE
 
 	var/phone_category = PHONE_MARINE
+	var/phone_icon // for unique handset icon_state
 	var/list/networks_receive = list(FACTION_MARINE)
 	var/list/networks_transmit = list(FACTION_MARINE)
 
@@ -546,7 +564,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 /obj/item/storage/backpack/marine/satchel/rto/Initialize()
 	. = ..()
 
-	AddComponent(/datum/component/phone, phone_category = phone_category, networks_receive = networks_receive, networks_transmit = networks_transmit, overlay_interactable = TRUE)
+	AddComponent(/datum/component/phone, phone_category = phone_category, networks_receive = networks_receive, networks_transmit = networks_transmit, overlay_interactable = TRUE, phone_icon = phone_icon)
 	RegisterSignal(src, COMSIG_ATOM_PHONE_PICKED_UP, PROC_REF(phone_picked_up))
 	RegisterSignal(src, COMSIG_ATOM_PHONE_HUNG_UP, PROC_REF(phone_hung_up))
 	RegisterSignal(src, COMSIG_ATOM_PHONE_RINGING, PROC_REF(phone_ringing))
@@ -581,22 +599,99 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	icon_state = PHONE_ON_BASE_UNIT_ICON_STATE
 
 /obj/item/storage/backpack/marine/satchel/rto/upp_net
-	name = "\improper UPP Radio Telephone Pack"
+	name = "\improper R-559 'Bagulnik' Radio Telephone Pack"
+	icon_state = "upp_rto_backpack"
+	item_state = "upp_rto_backpack"
+	phone_icon = "upp_rpb_phone"
 	networks_receive = list(FACTION_UPP)
 	networks_transmit = list(FACTION_UPP)
+	actions_types = list(/datum/action/item_action/rto_pack/use_phone/upp)
+
+/datum/action/item_action/rto_pack/use_phone/upp/New(mob/living/user, obj/item/holder)
+	..()
+	name = "Use Phone"
+	button.name = name
+	button.overlays.Cut()
+	var/image/phone_overlay = image('icons/obj/items/misc.dmi', button, "upp_rpb_phone")
+	button.overlays += phone_overlay
+
+/datum/action/item_action/rto_pack/use_phone/upp/action_activate()
+	. = ..()
+	for(var/obj/item/storage/backpack/marine/satchel/rto/upp_net/radio_backpack in owner)
+		SEND_SIGNAL(radio_backpack, COMSIG_ATOM_PHONE_BUTTON_USE, user = owner)
+		return
 
 /obj/item/storage/backpack/marine/satchel/rto/small
 	name = "\improper USCM Small Radio Telephone Pack"
 	max_storage_space = 10
 
-/obj/item/storage/backpack/marine/satchel/rto/small/upp_net
-	name = "\improper UPP Radio Telephone Pack"
-	networks_receive = list(FACTION_UPP)
-	networks_transmit = list(FACTION_UPP)
-	phone_category = PHONE_UPP_SOLDIER
+/obj/item/storage/backpack/marine/satchel/rto/upp_net/small
+	name = "\improper R-559 'Bagulnik' Small Radio Telephone Pack"
+	max_storage_space = 10
 
 /obj/item/storage/backpack/marine/satchel/rto/io
 	phone_category = PHONE_IO
+
+/obj/item/storage/backpack/marine/satchel/rto/twe_net
+	name = "\improper Wireless Set No.207 Radio Telephone Pack"
+	icon_state = "rmc_rto_backpack"
+	item_state = "rmc_rto_backpack"
+	phone_icon = "rmc_rpb_phone"
+	networks_receive = list(FACTION_TWE)
+	networks_transmit = list(FACTION_TWE)
+	actions_types = list(/datum/action/item_action/rto_pack/use_phone/twe)
+	max_storage_space = 18
+	worn_accessible = FALSE
+	bag_open_time = 2 SECONDS
+
+/datum/action/item_action/rto_pack/use_phone/twe/New(mob/living/user, obj/item/holder)
+	..()
+	name = "Use Phone"
+	button.name = name
+	button.overlays.Cut()
+	var/image/phone_overlay = image('icons/obj/items/misc.dmi', button, "rmc_rpb_phone")
+	button.overlays += phone_overlay
+
+/datum/action/item_action/rto_pack/use_phone/twe/action_activate()
+	. = ..()
+	for(var/obj/item/storage/backpack/marine/satchel/rto/twe_net/radio_backpack in owner)
+		SEND_SIGNAL(radio_backpack, COMSIG_ATOM_PHONE_BUTTON_USE, user = owner)
+		return
+
+/obj/item/storage/backpack/marine/satchel/rto/twe_net/small
+	name = "\improper Wireless Set No.207 Small Radio Telephone Pack"
+	max_storage_space = 14
+
+/obj/item/storage/backpack/marine/satchel/rto/pmc_net
+	name = "\improper Wireless Set No.208 Radio Telephone Pack"
+	icon_state = "pmc_rto_backpack"
+	item_state = "pmc_rto_backpack"
+	phone_icon = "pmc_rpb_phone"
+	networks_receive = list(FACTION_PMC)
+	networks_transmit = list(FACTION_PMC)
+	actions_types = list(/datum/action/item_action/rto_pack/use_phone/pmc)
+	max_storage_space = 24
+	worn_accessible = FALSE
+	bag_open_time = 2 SECONDS
+
+/datum/action/item_action/rto_pack/use_phone/pmc/New(mob/living/user, obj/item/holder)
+	..()
+	name = "Use Phone"
+	button.name = name
+	button.overlays.Cut()
+	var/image/phone_overlay = image('icons/obj/items/misc.dmi', button, "pmc_rpb_phone")
+	button.overlays += phone_overlay
+
+/datum/action/item_action/rto_pack/use_phone/pmc/action_activate()
+	. = ..()
+	for(var/obj/item/storage/backpack/marine/satchel/rto/pmc_net/radio_backpack in owner)
+		SEND_SIGNAL(radio_backpack, COMSIG_ATOM_PHONE_BUTTON_USE, user = owner)
+		return
+
+/obj/item/storage/backpack/marine/satchel/rto/pmc_net/small
+	name = "\improper Wireless Set No.208 Small Radio Telephone Pack"
+	max_storage_space = 18
+
 
 /obj/item/storage/backpack/marine/smock
 	name = "\improper M3 sniper's smock"
@@ -998,7 +1093,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	item_state = "satchel_marine_welder"
 	max_storage_space = 12
 	has_gamemode_skin = FALSE
-	max_fuel = 100
+	max_fuel = 210
 	worn_accessible = TRUE
 
 /obj/item/storage/backpack/marine/engineerpack/welder_chestrig
@@ -1008,7 +1103,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	item_state = "welder_chestrig"
 	max_storage_space = 12
 	has_gamemode_skin = FALSE
-	max_fuel = 100
+	max_fuel = 210
 	worn_accessible = TRUE
 
 // Pyrotechnician Spec backpack fuel tank
@@ -1085,6 +1180,18 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	can_hold = list(/obj/item/ammo_magazine/flamer_tank, /obj/item/tool/extinguisher)
 	storage_flags = STORAGE_FLAGS_POUCH
 
+/obj/item/storage/backpack/marine/engineerpack/flamethrower/upp
+	name = "\improper UPP Pyrotechnician ROB-6 fueltank"
+	desc = "UPPAC standard issue 'Rancevyj Ognemetnyj Bak', or 'Back-mounted Flamer Tank', old back rig that holds fuel in massive square shaped tank, with highly-pressured canister below it. A small regulator sits on the side of rig, compatible with refillment of all flamethrowers used by UPPAC. Tho due to the size, it cannot hold additional regular tanks, like it's American counterpart."
+	icon_state = "upp_flamethrower_backpack"
+	item_state = "upp_flamethrower_backpack"
+	max_fuel = 1000
+	has_gamemode_skin = FALSE
+	max_storage_space = 3
+	storage_slots = 1
+	worn_accessible = TRUE
+	can_hold = list(/obj/item/ammo_magazine/flamer_tank/upp, /obj/item/tool/extinguisher)
+
 //----------OTHER FACTIONS AND ERTS----------
 
 /obj/item/storage/backpack/lightpack
@@ -1096,13 +1203,32 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 /obj/item/storage/backpack/lightpack/five_slot
 	max_storage_space = 15
 
+/obj/item/storage/backpack/lightpack/black
+	icon_state = "ERT_satchel_black"
+
+/obj/item/storage/backpack/lightpack/black/five_slot
+	max_storage_space = 15
+
 /obj/item/storage/backpack/marine/engineerpack/ert
 	name = "\improper lightweight technician welderpack"
-	desc = "A small, lightweight pack for expeditions and short-range operations. Features a small fueltank for quick blowtorch refueling."
+	desc = "A small, lightweight pack for expeditions and short-range operations. Features a compact fueltank for quick blowtorch refueling."
 	icon_state = "ERT_satchel_welder"
 	has_gamemode_skin = FALSE
 	worn_accessible = TRUE
-	max_fuel = 180
+	max_fuel = 210
+	max_storage_space = 12
+
+/obj/item/storage/backpack/marine/engineerpack/ert/four_slot
+	max_fuel = 100
+	max_storage_space = 12
+
+/obj/item/storage/backpack/marine/engineerpack/ert/black
+	icon_state = "ERT_satchel_welder_black"
+	max_storage_space = 20
+
+/obj/item/storage/backpack/marine/engineerpack/ert/black/four_slot
+	max_fuel = 100
+	max_storage_space = 12
 
 /obj/item/storage/backpack/pmc
 	name = "\improper W-Y combat pack"
@@ -1121,14 +1247,6 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	icon_state = "pmc_backpack"
 	max_storage_space = 24
 	worn_accessible = FALSE
-
-/obj/item/storage/backpack/pmc/backpack/rto_broken
-	name = "\improper Broken WY Radio Telephone Pack"
-	desc = "A heavy-duty extended-pack, used for telecommunications between central command. Commonly carried by RTOs. This one bears the logo of Weyland Yutani and internal systems seem to completely fried and broken."
-	icon_state = "pmc_broken_rto"
-	item_state = "pmc_broken_rto"
-	flags_atom = FPRINT
-	flags_item = ITEM_OVERRIDE_NORTHFACE
 
 /obj/item/storage/backpack/pmc/backpack/commando
 	name = "\improper W-Y Commando combat backpack"
@@ -1227,6 +1345,21 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	max_fuel = 180
 	max_storage_space = 12
 
+/obj/item/storage/backpack/marine/upp
+	name = "\improper UCBP4 combat backpack"
+	desc = "A UPP military standard-issue Union Combat BackPack MK4. Very robust and heavy."
+	icon_state = "marinepack_upp"
+	item_state = "marinepack_upp"
+	max_storage_space = 24
+	bag_open_time = 3 SECONDS
+
+/obj/item/storage/backpack/marine/upp/medic
+	name = "\improper UCBP4-M sanitar backpack"
+	desc = "A UPP military standard-issue Union Combat BackPack MK4. Very robust and heavy. Carried by UPP medics for extra supply carriage. Has a better layout within, which eases access to the inner storage."
+	icon_state = "marinepack_medic_upp"
+	item_state = "marinepack_medic_upp"
+	bag_open_time = 2 SECONDS
+
 /obj/item/storage/backpack/marine/satchel/scout_cloak/upp
 	name = "\improper V86 Thermal Cloak"
 	desc = "A thermo-optic camouflage cloak commonly used by UPP commando units."
@@ -1275,7 +1408,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	icon_state = "backpack_sapper"
 	item_state = "backpack_sapper"
 	max_storage_space = 18
-	max_fuel = 150
+	max_fuel = 100
 	worn_accessible = TRUE
 
 /obj/item/storage/backpack/rmc/light
@@ -1344,3 +1477,12 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 /obj/item/storage/backpack/marine/satchel/intel/chestrig/army
 	name = "\improper Army expedition chestrig"
 	desc = "A heavy-duty IMP based chestrig, can quickly be accessed with only one hand. Usually issued to intelligence officers."
+
+/obj/item/storage/backpack/marine/medic/imp
+	name = "\improper lightweight medical IMP backpack"
+	desc = "A variant of the standard-issue pack of the USCM and US Army forces, has a red cross drawn on it. Designed to lug gear into the battlefield using the Intuitive Mounting Point system on M3 & M4 pattern armor."
+	icon_state = "imp_medic"
+	item_state = "imp_medic"
+	icon = 'icons/mob/humans/onmob/contained/medical_imp.dmi'
+	contained_sprite = TRUE
+	has_gamemode_skin = FALSE

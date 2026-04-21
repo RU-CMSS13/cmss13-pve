@@ -115,7 +115,7 @@
 			. += "Primary Objective: [html_decode(assigned_squad.primary_objective)]"
 		if(assigned_squad.secondary_objective)
 			. += "Secondary Objective: [html_decode(assigned_squad.secondary_objective)]"
-	if(job in GLOB.ROLES_USCM)
+	if((job in GLOB.ROLES_USCM) || (job in GLOB.ROLES_RMCTROOP))
 		. += ""
 		. += "<a href='byond://?MapView=1'>View Tactical Map</a>"
 	if(mobility_aura)
@@ -886,7 +886,7 @@
 		return NEUTER
 	return gender
 
-/mob/living/carbon/human/revive(keep_viruses)
+/mob/living/carbon/human/revive(keep_viruses, is_zombie = FALSE)
 	var/obj/limb/head/h = get_limb("head")
 	if(QDELETED(h))
 		h = get_limb("synthetic head")
@@ -1019,11 +1019,18 @@
 	set name = "View Crew Manifest"
 	set category = "IC"
 
-	if(job in GLOB.ROLES_USCM)
+	if((job in GLOB.ROLES_USCM) || (job in GLOB.ROLES_RMCTROOP))
 		var/dat = GLOB.data_core.get_manifest()
 		show_browser(src, dat, "Crew Manifest", "manifest", width = 400, height = 750)
 	else
 		to_chat(usr, SPAN_WARNING("You have no access to [MAIN_SHIP_NAME] crew manifest."))
+
+/mob/living/carbon/human/look_up()
+	if(is_zoomed)
+		to_chat(src, SPAN_WARNING("You cannot look up while zoomed!"))
+		return
+
+	. = ..()
 
 /mob/living/carbon/human/proc/set_species(new_species, default_color)
 	if(!new_species)
@@ -1198,11 +1205,15 @@
 			var/obj/structure/machinery/computer/shuttle_control/C = SSticker.mode.active_lz
 			if(!C) //no LZ selected
 				hud_used.locate_leader.icon_state = "trackoff"
-			else if(C.z != src.z || get_dist(src,C) < 1)
+			else if(!SSmapping.same_z_map(src.z, C.z) || get_dist(src,C) < 1)
 				hud_used.locate_leader.icon_state = "trackondirect_lz"
 			else
 				hud_used.locate_leader.setDir(Get_Compass_Dir(src,C))
 				hud_used.locate_leader.icon_state = "trackon_lz"
+				if(C.z > z)
+					hud_used.locate_leader.overlays |= image('icons/mob/hud/screen1.dmi', "up")
+				if(C.z < z)
+					hud_used.locate_leader.overlays |= image('icons/mob/hud/screen1.dmi', "down")
 			return
 		if(TRACKER_FTL)
 			if(assigned_squad)
@@ -1238,17 +1249,21 @@
 		return
 
 	var/atom/tracking_atom = H
-	if(tracking_atom.z != src.z && SSinterior.in_interior(tracking_atom))
+	if(tracking_atom.z != z && SSinterior.in_interior(tracking_atom))
 		var/datum/interior/interior = SSinterior.get_interior_by_coords(tracking_atom.x, tracking_atom.y, tracking_atom.z)
 		var/atom/exterior = interior.exterior
 		if(exterior)
 			tracking_atom = exterior
 
-	if(tracking_atom.z != src.z || get_dist(src, tracking_atom) < 1 || src == tracking_atom)
+	if(!SSmapping.same_z_map(z, tracking_atom.z) || get_dist(src, tracking_atom) < 1 || src == tracking_atom)
 		hud_used.locate_leader.icon_state = "trackondirect[tracking_suffix]"
 	else
 		hud_used.locate_leader.setDir(Get_Compass_Dir(src, tracking_atom))
 		hud_used.locate_leader.icon_state = "trackon[tracking_suffix]"
+		if(tracking_atom.z > z)
+			hud_used.locate_leader.overlays |= image('icons/mob/hud/human_bronze.dmi', "up")
+		if(tracking_atom.z < z)
+			hud_used.locate_leader.overlays |= image('icons/mob/hud/human_bronze.dmi', "down")
 
 /mob/living/carbon/proc/locate_nearest_nuke()
 	if(!GLOB.bomb_set) return
@@ -1277,17 +1292,14 @@
 /mob/living/carbon/human/update_sight()
 	if(SEND_SIGNAL(src, COMSIG_HUMAN_UPDATE_SIGHT) & COMPONENT_OVERRIDE_UPDATE_SIGHT) return
 
-	sight &= ~BLIND // Never have blind on by default
-
 	lighting_alpha = default_lighting_alpha
-	sight &= ~(SEE_TURFS|SEE_MOBS|SEE_OBJS|SEE_BLACKNESS)
+	sight &= ~(SEE_MOBS|SEE_OBJS|BLIND)
+
 	see_in_dark = species.darksight
 	sight |= species.flags_sight
-	if(glasses)
-		process_glasses(glasses)
+	process_glasses(glasses)
 
-	if(!(sight & SEE_TURFS) && !(sight & SEE_MOBS) && !(sight & SEE_OBJS))
-		sight |= SEE_BLACKNESS
+	sight |= (SEE_BLACKNESS|SEE_TURFS)
 
 	SEND_SIGNAL(src, COMSIG_HUMAN_POST_UPDATE_SIGHT)
 	sync_lighting_plane_alpha()
@@ -1438,6 +1450,9 @@
 /mob/living/carbon/human/synthetic/combat/Initialize(mapload)
 	. = ..(mapload, SYNTH_COMBAT)
 
+/mob/living/carbon/human/synthetic/combat/wy/Initialize(mapload)
+	. = ..(mapload, SYNTH_WY_COMBAT)
+
 /mob/living/carbon/human/synthetic/infiltrator/Initialize(mapload)
 	. = ..(mapload, SYNTH_INFILTRATOR)
 
@@ -1462,7 +1477,7 @@
 		visible_message(SPAN_DANGER("[src] rolls on the floor, trying to put themselves out!"), \
 			SPAN_NOTICE("You stop, drop, and roll!"), null, 5)
 
-	if(istype(get_turf(src), /turf/open/gm/river))
+	if(istype(get_turf(src), /turf/open/gm/river) || (/obj/effect/blocker/water in loc))
 		ExtinguishMob()
 
 	if(fire_stacks > 0)
@@ -1734,3 +1749,9 @@
 
 	return .
 
+// RU PVE ADDITION
+
+/mob/living/carbon/human/get_accent_icon()
+	if(accent_prefix && accent_prefix != "")
+		return "[icon2html('icons/accent_tags.dmi', GLOB.clients, accent_prefix)] "
+	return ""

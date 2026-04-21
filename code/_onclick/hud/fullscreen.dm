@@ -131,6 +131,9 @@
 /atom/movable/screen/fullscreen/flash/noise/nvg
 	alpha = 5
 
+/atom/movable/screen/fullscreen/flash/noise/optic
+	alpha = 20
+
 /atom/movable/screen/fullscreen/crit
 	icon_state = "passage"
 	layer = FULLSCREEN_CRIT_LAYER
@@ -260,3 +263,8 @@
 	layer = LIGHTING_PRIMARY_LAYER
 	blend_mode = BLEND_ADD
 	show_when_dead = TRUE
+
+// RU PVE ADDITION
+
+/mob/proc/get_accent_icon()
+	return ""

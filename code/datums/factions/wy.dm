@@ -1,10 +1,8 @@
 /datum/faction/wy
 	name = "Weyland-Yutani Corporation"
 	faction_tag = FACTION_WY
-	base_icon_file = 'icons/mob/hud/marine_hud.dmi'
 
 /datum/faction/wy/modify_hud_holder(image/holder, mob/living/carbon/human/H)
-	var/icon/override_icon_file
 	var/hud_icon_state
 	var/obj/item/card/id/ID = H.get_idcard()
 	var/_role
@@ -13,8 +11,10 @@
 	else if(ID)
 		_role = ID.rank
 	switch(_role)
+/* //who?
 		if(JOB_CORPORATE_BODYGUARD)
 			hud_icon_state = "liaison_guard"
+*/
 		if(JOB_WY_GOON)
 			hud_icon_state = "goon_normal"
 		if(JOB_WY_GOON_LEAD)
@@ -39,8 +39,8 @@
 			hud_icon_state = "junior_exec"
 		if(JOB_CORPORATE_LIAISON)
 			hud_icon_state = "exec"
-			if(id_card && id_card.paygrade)
-				switch(id_card.paygrade)
+			if(ID && ID.paygrade)
+				switch(ID.paygrade)
 					if(PAY_SHORT_WYC2)
 						hud_icon_state = "junior_exec"
 					if(PAY_SHORT_WYC4)
@@ -66,4 +66,4 @@
 		if(JOB_DIRECTOR)
 			hud_icon_state = "director"
 	if(hud_icon_state)
-		holder.overlays += image(override_icon_file ? override_icon_file : base_icon_file, user, "wy_[hud_icon_state]")
+		holder.overlays += image('icons/mob/hud/marine_hud.dmi', H, "wy_[hud_icon_state]")

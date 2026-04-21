@@ -2,6 +2,7 @@
 	/// What items the AI considers when trying to heal brute damage
 	var/static/list/brute_heal_items = list(
 		/obj/item/stack/medical/advanced/bruise_pack,
+		/obj/item/reagent_container/hypospray/autoinjector/meralyne,
 		/obj/item/reagent_container/hypospray/autoinjector/bicaridine,
 		/obj/item/reagent_container/hypospray/autoinjector/tricord,
 		/obj/item/storage/pill_bottle/bicaridine,
@@ -14,6 +15,7 @@
 	/// What items the AI considers when trying to heal burn damage
 	var/static/list/burn_heal_items = list(
 		/obj/item/stack/medical/advanced/ointment,
+		/obj/item/reagent_container/hypospray/autoinjector/dermaline,
 		/obj/item/reagent_container/hypospray/autoinjector/kelotane,
 		/obj/item/reagent_container/hypospray/autoinjector/tricord,
 		/obj/item/storage/pill_bottle/kelotane,

@@ -273,6 +273,8 @@
 		new_human.age = minimum_age
 
 /datum/equipment_preset/proc/load_rank(mob/living/carbon/human/new_human, client/mob_client)//Beagle-Code
+	if(isnull(paygrades))
+		return null
 	if(paygrades.len == 1)
 		return paygrades[1]
 	var/playtime
@@ -330,7 +332,7 @@
 		ID.blood_type = new_human.blood_type
 	else
 		ID.blood_type = null
-	ID.paygrade = load_rank(new_human, mob_client) || ID.paygrade
+	ID.paygrade = load_rank(new_human, mob_client)
 	var/datum/money_account/acct = create_account(new_human, rand(30, 50), GLOB.paygrades[ID.paygrade])
 	ID.associated_account_number = acct.account_number
 	ID.uniform_sets = uniform_sets
@@ -362,6 +364,7 @@
 		new_human.name = origin.correct_name(new_human.name, new_human.gender)
 	if(origin_override)
 		new_human.origin = origin_override
+		new_human.accent_prefix = GLOB.origins[origin_override].tag_icon // RU PVE ADDITION
 	load_skills(new_human, mob_client) //skills are set before equipment because of skill restrictions on certain clothes.
 	load_languages(new_human, mob_client)
 	load_age(new_human, mob_client)
@@ -624,6 +627,87 @@ GLOBAL_LIST_EMPTY(personal_closets)
 	flags = EQUIPMENT_PRESET_EXTRA
 	idtype = null
 
+/datum/equipment_preset/proc/spawn_rebel_uniform(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/uniformpath = pick(
+		/obj/item/clothing/under/colonist/clf,
+		)
+	new_human.equip_to_slot_or_del(new uniformpath, WEAR_BODY)
+
+
+/datum/equipment_preset/proc/spawn_rebel_suit(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/suitpath = pick(
+		/obj/item/clothing/suit/storage/militia,
+		/obj/item/clothing/suit/storage/militia/vest,
+		/obj/item/clothing/suit/storage/militia/brace,
+		/obj/item/clothing/suit/storage/militia/partial,
+		/obj/item/clothing/suit/armor/bulletproof,
+		/obj/item/clothing/suit/armor/vest,
+		)
+	new_human.equip_to_slot_or_del(new suitpath, WEAR_JACKET)
+
+
+/datum/equipment_preset/proc/spawn_rebel_helmet(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/helmetpath = pick(
+		/obj/item/clothing/head/militia,
+		/obj/item/clothing/head/militia/bucket,
+		/obj/item/clothing/head/helmet,
+		/obj/item/clothing/head/helmet/skullcap,
+		/obj/item/clothing/head/helmet/swat,
+		/obj/item/clothing/head/hardhat,
+		/obj/item/clothing/head/welding,
+		/obj/item/clothing/head/bandana,
+		/obj/item/clothing/head/headband/red,
+		/obj/item/clothing/head/headband/rebel,
+		/obj/item/clothing/head/headband/rambo,
+		)
+	new_human.equip_to_slot_or_del(new helmetpath, WEAR_HEAD)
+
+
+/datum/equipment_preset/proc/spawn_rebel_shoes(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/shoespath = pick(
+		/obj/item/clothing/shoes/black,
+		/obj/item/clothing/shoes/brown,
+		/obj/item/clothing/shoes/laceup,
+		/obj/item/clothing/shoes/leather,
+		/obj/item/clothing/shoes/combat,
+		/obj/item/clothing/shoes/swat,
+		)
+	new_human.equip_to_slot_or_del(new shoespath, WEAR_FEET)
+
+
+/datum/equipment_preset/proc/spawn_rebel_gloves(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/glovespath = pick(
+		/obj/item/clothing/gloves/black,
+		/obj/item/clothing/gloves/swat,
+		/obj/item/clothing/gloves/combat,
+		/obj/item/clothing/gloves/botanic_leather,
+		)
+	new_human.equip_to_slot_or_del(new glovespath, WEAR_HANDS)
+
+
+/datum/equipment_preset/proc/spawn_rebel_belt(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/beltpath = pick(
+		/obj/item/storage/belt/utility/full,
+		/obj/item/storage/belt/knifepouch,
+		/obj/item/storage/belt/gun/flaregun/full,
+		/obj/item/storage/backpack/general_belt,
+		/obj/item/storage/large_holster/katana/full,
+		/obj/item/storage/large_holster/machete/full,
+		/obj/item/storage/belt/marine)
+	new_human.equip_to_slot_or_del(new beltpath, WEAR_WAIST)
+
 
 /datum/equipment_preset/proc/add_rebel_ua_uniform(mob/living/carbon/human/new_human)
 	if(!istype(new_human))
@@ -666,7 +750,7 @@ GLOBAL_LIST_EMPTY(personal_closets)
 		/obj/item/clothing/under/colonist/boilersuit/white,
 		/obj/item/clothing/under/colonist/workwear/blue,
 		/obj/item/clothing/under/colonist/workwear/khaki,
-		/obj/item/clothing/under/marine/veteran/UPP,
+		/obj/item/clothing/under/marine/veteran/upp,
 		)
 	var/obj/item/clothing/under/uniform = new uniformpath
 	var/random_uniform = rand(1,2)
@@ -754,7 +838,7 @@ GLOBAL_LIST_EMPTY(personal_closets)
 		/obj/item/clothing/head/headband/rebel,
 		/obj/item/clothing/head/headband/rebel,
 		/obj/item/clothing/head/headband/rebel,
-		/obj/item/clothing/head/uppcap/beret/guerilla,
+		/obj/item/clothing/head/cmcap/upp/beret/guerilla,
 		/obj/item/clothing/head/helmet/marine/veteran/royal_marine,
 		)
 	new_human.equip_to_slot_or_del(new helmetpath, WEAR_HEAD)
@@ -845,6 +929,7 @@ GLOBAL_LIST_INIT(rebel_twe_rifles, list(
 	/obj/item/weapon/gun/rifle/rmc_f90 = /obj/item/ammo_magazine/rifle/rmc_f90,
 	/obj/item/weapon/gun/rifle/rmc_f90 = /obj/item/ammo_magazine/rifle/rmc_f90,
 	/obj/item/weapon/gun/rifle/rmc_f90/a_grip = /obj/item/ammo_magazine/rifle/rmc_f90,
+	/obj/item/weapon/gun/rifle/ak4047 = /obj/item/ammo_magazine/rifle/ak4047,
 	))
 
 GLOBAL_LIST_INIT(rebel_twe_pistols, list(
@@ -874,7 +959,7 @@ GLOBAL_LIST_INIT(rebel_twe_pistols, list(
 
 	return TRUE
 
-/datum/equipment_preset/proc/add_rebel_twe_rifle(atom/M, ammo_amount = 4)
+/datum/equipment_preset/proc/add_rebel_twe_rifle(atom/M, ammo_amount = 3)
 	if(!M)
 		return
 
@@ -1582,14 +1667,14 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 	var/maybeberet = pick(
 		/obj/item/clothing/head/helmet/upp,
 		/obj/item/clothing/head/helmet/upp/alt,
-		/obj/item/clothing/head/uppcap/beret/naval,
+		/obj/item/clothing/head/cmcap/upp/beret/naval,
 	)
 	new_human.equip_to_slot_or_del(new maybeberet, WEAR_HEAD)
 
 /datum/equipment_preset/proc/add_upp_uniform(mob/living/carbon/human/new_human)
 	if(!istype(new_human))
 		return
-	var/obj/item/clothing/under/marine/veteran/UPP/uniform = new()
+	var/obj/item/clothing/under/marine/veteran/upp/uniform = new()
 	var/random_uniform = rand(1,4)
 	switch(random_uniform)
 		if(1)
@@ -1745,6 +1830,25 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/royal_marines, WEAR_ACCESSORY)
 
+/datum/equipment_preset/proc/add_rmc_md(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/md_chance = rand(1,3)
+	switch(md_chance)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector/hacked/twe(new_human), WEAR_IN_BACK)
+
+/datum/equipment_preset/proc/add_iasf_uniform(mob/living/carbon/human/new_human)
+	var/obj/item/clothing/under/marine/veteran/iasf/uniform = new()
+	var/random_uniform = rand(1,10)
+	switch(random_uniform)
+		if(1)
+			uniform.roll_suit_jacket(new_human)
+		if(2)
+			uniform.roll_suit_sleeves(new_human)
+	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/twe, WEAR_ACCESSORY)
+
 /datum/equipment_preset/proc/add_canc_uniform(mob/living/carbon/human/new_human)
 	if(!istype(new_human))
 		return
@@ -1760,7 +1864,7 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 /datum/equipment_preset/proc/add_canc_rifle(mob/living/carbon/human/new_human)
 	if(!istype(new_human))
 		return
-	var/random_canc_rifle = rand(1,5)
+	var/random_canc_rifle = rand(1,6)
 	switch(random_canc_rifle)
 		if(1, 2, 3)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/lw317(new_human), WEAR_J_STORE)
@@ -1769,17 +1873,23 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/lw317, WEAR_IN_BELT)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/lw317, WEAR_IN_BELT)
 		if(4)
-			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/mar40/carbine, WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/mar40(new_human), WEAR_J_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp, WEAR_WAIST)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BELT)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BELT)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BELT)
 		if(5)
-			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/mar40, WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/mar40/carbine(new_human), WEAR_J_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp, WEAR_WAIST)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BELT)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BELT)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BELT)
+		if(6)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71/carbine, WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp, WEAR_WAIST)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_BELT)
 
 /datum/equipment_preset/proc/add_canc_rifle_newblood(mob/living/carbon/human/new_human)
 	if(!istype(new_human))
@@ -1799,6 +1909,22 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BELT)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BELT)
 
+/datum/equipment_preset/proc/add_canc_rifle_medic(mob/living/carbon/human/new_human) // meant to be used on medic with mag pouch in R slot
+	if(!istype(new_human))
+		return
+	var/random_canc_rifle_medic = rand(1,2)
+	switch(random_canc_rifle_medic)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/pps43, WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/pps43, WEAR_IN_R_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/pps43, WEAR_IN_R_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/pps43, WEAR_IN_R_STORE)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/bizon, WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/bizon, WEAR_IN_R_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/bizon, WEAR_IN_R_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/bizon, WEAR_IN_R_STORE)
+
 /datum/equipment_preset/proc/add_rebel_upp_helmet(mob/living/carbon/human/new_human)
 	if(!istype(new_human))
 		return
@@ -1814,8 +1940,8 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 		/obj/item/clothing/head/headband/rebel,
 		/obj/item/clothing/head/headband/rebel,
 		/obj/item/clothing/head/headband/rebel,
-		/obj/item/clothing/head/uppcap/beret/guerilla,
-		/obj/item/clothing/head/helmet/marine/veteran/UPP/old,
+		/obj/item/clothing/head/cmcap/upp/beret/guerilla,
+		/obj/item/clothing/head/helmet/marine/veteran/upp/old,
 		)
 	new_human.equip_to_slot_or_del(new helmetpath, WEAR_HEAD)
 
@@ -1855,3 +1981,40 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 		/obj/item/clothing/glasses/sunglasses/aviator,
 	)
 	new_human.equip_to_slot_or_del(new helmeteyewearpath, WEAR_IN_HELMET)
+
+/datum/equipment_preset/proc/add_army_eyewear(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/eyewearpath = rand(1,8)
+	switch(eyewearpath)
+		if(1, 2, 3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange, WEAR_EYES)
+		if(4, 5)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big, WEAR_EYES)
+		if(6)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/classic, WEAR_EYES)
+		if(7)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/aviator, WEAR_EYES)
+		if(8)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses, WEAR_EYES)
+
+/datum/equipment_preset/proc/add_upp_weapon(mob/living/carbon/human/new_human) // meant for the better equipped TG
+	if(!istype(new_human))
+		return
+	var/random_upp_weapon = rand(1,10)
+	switch(random_upp_weapon)
+		if(1,2,3,4,5,6,7)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71(new_human), WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp, WEAR_WAIST)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_BELT)
+		if(8, 9)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71/carbine, WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp, WEAR_WAIST)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_BELT)
+		if(10)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/type23/flechette, WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/shotgun/upp/heavyflech, WEAR_WAIST)

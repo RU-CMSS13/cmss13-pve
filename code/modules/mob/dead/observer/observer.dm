@@ -525,10 +525,20 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 /mob/living/proc/do_ghost()
 	if(stat == DEAD)
-		if(mind && mind.player_entity)
+			// RU-PVE START
+		if(GLOB.admin_only_observe && !check_rights(R_ADMIN, 0))
+			to_chat(src, FONT_SIZE_LARGE(SPAN_DEADSAY("<b>Observation has been disabled by the Game Master.</b>")))
+			return
+		// RU-PVE END
+		else if(mind && mind.player_entity)
 			mind.player_entity.update_panel_data(GLOB.round_statistics)
 		ghostize(TRUE)
 	else
+		// RU-PVE START
+		if(GLOB.admin_only_observe && !check_rights(R_ADMIN, 0))
+			to_chat(src, FONT_SIZE_LARGE(SPAN_DEADSAY("<b>Observation has been disabled by the Game Master.</b>")))
+			return
+		// RU-PVE END
 		var/list/options = list("Ghost", "Stay in body")
 		if(check_other_rights(client, R_MOD, FALSE))
 			options = list("Aghost") + options
@@ -647,6 +657,25 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 	forceMove(tree.entrance)
 
+/mob/dead/observer/verb/teleport_z_up()
+	set category = "Ghost.Movement"
+	set name = "Move Up"
+	set desc = "Move up a z level"
+
+	var/turf/above = SSmapping.get_turf_above(get_turf(src))
+
+	if(above)
+		usr.forceMove(above)
+
+/mob/dead/observer/verb/teleport_z_down()
+	set category = "Ghost.Movement"
+	set name = "Move Down"
+	set desc = "Move down a z level"
+
+	var/turf/below = SSmapping.get_turf_below(get_turf(src))
+
+	if(below)
+		usr.forceMove(below)
 
 /mob/dead/observer/verb/dead_teleport_area()
 	set category = "Ghost"
@@ -1236,9 +1265,17 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		else
 			. += "Time To Start: SOON"
 
-		. += "Players: [SSticker.totalPlayers]"
-		if(client.admin_holder)
-			. += "Players Ready: [SSticker.totalPlayersReady]"
+// RU-PVE EDIT START
+
+		. += "Number of players: [SSticker.totalPlayers]"
+		. += "Players Ready: [SSticker.totalPlayersReady]"
+		. += ""
+		if(SSticker.totalPlayers > 0)
+			. += "Players:"
+			for(var/mob/new_player/p in GLOB.new_player_list)
+				. += "[p.key] - [p.ready ? "Ready" : "Not Ready"] [(p.ready && p.get_ready_job()) ? "(as [p.job_title])" : ""]"
+
+// RU-PVE EDIT END
 
 	. += ""
 

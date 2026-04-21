@@ -131,12 +131,13 @@
 //================================================
 */
 /obj/item/explosive/grenade/high_explosive/frag
-	name = "\improper M40 HEFA grenade"
-	desc = "High-Explosive Fragmenting-Antipersonnel. A small, but deceptively strong fragmentation grenade that has been phasing out the M15 fragmentation grenades alongside the M40 HEDP. Capable of being loaded in the M92 Launcher, or thrown by hand."
+	name = "\improper M26 HEFA grenade"
+	desc = "High-Explosive Fragmentation/Antipersonnel. An aging, but still effective, fragmentation grenade that was the first offering in the 30mm grenade market. Capable of being loaded in compatible launchers, or thrown by hand."
 	icon_state = "grenade_hefa"
 	item_state = "grenade_hefa"
+	shrapnel_type = /datum/ammo/bullet/shrapnel/jagged
 	explosion_power = 40
-	shrapnel_count = 48
+	shrapnel_count = 24
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 
 /obj/item/explosive/grenade/high_explosive/frag/toy
@@ -159,7 +160,7 @@
 	dual_purpose = FALSE
 	throw_range = 6
 	underslug_launchable = FALSE
-	explosion_power = 200
+	explosion_power = 120
 	shrapnel_count = 48
 	arm_sound = 'sound/weapons/pinpull.ogg'
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
@@ -282,7 +283,7 @@
 	hand_throwable = FALSE
 	dangerous = TRUE
 	underslug_launchable = TRUE
-	flame_level = BURN_TIME_TIER_3
+	flame_level = BURN_TIME_TIER_2
 	burn_level = BURN_LEVEL_TIER_3
 	flameshape = FLAMESHAPE_DEFAULT
 	radius = 2
@@ -1397,7 +1398,7 @@
 	icon_state = "rmc_grenade_fire"
 	item_state = "grenade_fire"
 	caliber = "30mm"
-	flame_level = BURN_TIME_TIER_2
+	flame_level = BURN_TIME_TIER_1
 	burn_level = BURN_LEVEL_TIER_8
 	radius = 3
 	fire_type = FIRE_VARIANT_DEFAULT
@@ -1466,7 +1467,7 @@
 	icon_state = "grenade_20mm_inc"
 	item_state = "grenade_fire"
 	caliber = "20mm"
-	flame_level = BURN_TIME_TIER_2
+	flame_level = BURN_TIME_TIER_1
 	burn_level = BURN_LEVEL_TIER_8
 	flameshape = FLAMESHAPE_IRREGULAR
 	radius = 2

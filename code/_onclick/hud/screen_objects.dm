@@ -251,6 +251,30 @@
 	icon_state = "gun_unique"
 	gun_proc_ref = TYPE_VERB_REF(/obj/item/weapon/gun, use_unique_action)
 
+/atom/movable/screen/action
+	var/proc_ref
+
+/atom/movable/screen/action/shift_layer_up
+	name = "Shift layer up"
+	icon_state = "action_up"
+	proc_ref = TYPE_VERB_REF(/mob/living, shift_layer_up)
+
+/atom/movable/screen/action/shift_layer_down
+	name = "Shift layer down"
+	icon_state = "action_down"
+	proc_ref = TYPE_VERB_REF(/mob/living, shift_layer_down)
+
+/atom/movable/screen/action/roll_dice
+	name = "Roll Dice"
+	icon_state = "roll_dice"
+	proc_ref = TYPE_VERB_REF(/mob/living/carbon/human, roll_dice_ic)
+
+/atom/movable/screen/action/clicked(mob/user)
+	. = ..()
+	if(.)
+		return
+	if(proc_ref)
+		INVOKE_ASYNC(user, proc_ref)
 
 /atom/movable/screen/clicked(mob/user, list/mods)
 	if(!user)
@@ -293,6 +317,9 @@
 
 /atom/movable/screen/inventory/proc/handle_dropped_on(atom/dropped_on, atom/dropping, client/user)
 	SIGNAL_HANDLER
+
+	if(!isliving(user.mob))
+		return
 
 	if(slot_id != WEAR_L_HAND && slot_id != WEAR_R_HAND)
 		return

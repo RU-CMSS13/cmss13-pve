@@ -471,7 +471,7 @@
 
 /obj/item/clothing/accessory/patch/army/armor
 	name = "Army Armor patch"
-	desc = "A fire-resistant shoulder patch, worn by the men and women of the 32nd Armor Brigade."
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the 32nd Armor Regiment."
 	icon_state = "armorpatch"
 
 /obj/item/clothing/accessory/patch/cmb/brazil_police
@@ -548,7 +548,56 @@
 	desc = "A fire-resistant ribbon, awarded to those marines who have completed selective training at the top of their class at the USCMC Topographic Navigation Course."
 	icon_state = "topography_honor"
 
+/obj/item/clothing/accessory/patch/army/armor
+	name = "Army Armor patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the 32nd Armor Brigade."
+	icon_state = "armorpatch"
+
 //misc
+/obj/item/clothing/accessory/patch/cec_patch
+	name = "CEC patch"
+	desc = "An old, worn and faded fire-resistant circular patch with a gold star on a split orange and red background. Once worn by members of the Cosmos Exploration Corps (CEC), a division of the UPP dedicated to exploration, resource assessment, and establishing colonies on new worlds. The patch serves as a reminder of the CEC's daring missions aboard aging starships, a symbol of perseverance in the face of adversity."
+	icon_state = "cecpatch"
+	item_state_slots = list(WEAR_AS_GARB = "cecpatch")
+
+/obj/item/clothing/accessory/patch/freelancer_patch
+	name = "Freelancer's Guild patch"
+	desc = "A fire-resistant circular patch featuring a white skull on a vertically split black and blue background. Worn by a skilled mercenary of the Freelancers, a well-equipped group for hire across the outer colonies, known for their professionalism and neutrality. This patch is a personal memento from the wearer’s time with the group, representing a life spent navigating the dangerous world of mercenary contracts."
+	icon_state = "mercpatch"
+	item_state_slots = list(WEAR_AS_GARB = "mercpatch")
+
+/obj/item/clothing/accessory/patch/merc_patch
+	name = "Old Freelancer's Guild patch"
+	desc = "A faded old, worn fire-resistant circular patch featuring a white skull on a vertically split black and red background. Worn by a well-equipped mercenary group for hire across the outer colonies, known for their professionalism and neutrality. The current owner’s connection to the patch is unclear—whether it was once earned as part of service, kept as a memento, or simply found, disconnected from its original wearer."
+	icon_state = "mercpatch_red"
+	item_state_slots = list(WEAR_AS_GARB = "mercpatch_red")
+
+/obj/item/clothing/accessory/patch/medic_patch
+	name = "Field Medic patch"
+	desc = "A circular patch featuring a red cross on a white background with a bold red outline. Universally recognized as a symbol of aid and neutrality, it is worn by medics across the colonies. Whether a sign of true medical expertise, a keepsake, or merely a decoration, its presence offers a glimmer of hope in dire times."
+	icon_state = "medicpatch"
+
+/obj/item/clothing/accessory/patch/clf_patch
+	name = "CLF patch"
+	desc = "A circular, fire-resistant patch with a white border. The design features three white stars and a tricolor background: green, black, and red, symbolizing the Colonial Liberation Front's fight for independence and unity. This patch is worn by CLF fighters as a badge of defiance against corporate and governmental oppression, representing their struggle for a free and self-determined colonial future. Though feared and reviled by some, it remains a powerful symbol of resistance and revolution."
+	icon_state = "clfpatch"
+
+/obj/item/clothing/accessory/patch/msf_patch
+	name = "Marine Space Force Herculis patch"
+	desc = "A fire-resistant shoulder patch, depicting the logo of Marine Space Force III, Herculis, deployed throughout the Anglo-Japanese arm from the outer veil to the ICSC Network, this patch is often worn by any general assigned to the MSF Herculis, US Space Command and UA Allied Command Generals often have their own patches."
+	icon_state = "msfpatch"
+
+/obj/item/clothing/accessory/patch/hyperdyne_patch
+	name = "Hyperdyne Corporation patch"
+	desc = "A sleek corporate patch bearing the logo of the Hyperdyne Corporation—one of the most powerful conglomerates. Known for synthetic production, AI research, and deep-space logistics. Wearing this patch implies loyalty to profit over people."
+	icon_state = "hyperdynepatch"
+
+/obj/item/clothing/accessory/patch/conam_patch
+	name = "Con-Amalagated Corporation patch"
+	desc = "A colorful corporate patch bearing the logo of the Con-Amalagated Corporation. Once a powerful conglomerate within the Sol System, now relegated to a middle-power on the verge of financial collapse. This patch is popular amongst collectors due to its color scheme."
+	icon_state = "conampatch"
+
+// Misc
 
 /obj/item/clothing/accessory/dogtags
 	name = "Attachable Dogtags"
@@ -593,6 +642,49 @@
 /obj/item/clothing/accessory/poncho/green/army
 	name = "Well-worn Poncho"
 	desc = "The standard poncho has variations for every climate. Custom fitted to be attached to M3 & M4 armor variants, it is comfortable and warms or cools as needed. A trooper couldn't ask for more. Affectionately referred to as a \"woobie\"."
+
+/obj/item/clothing/accessory/poncho/green/raicoat
+	name = "Rain Poncho"
+	desc = "Apparently this one is used more in particularly tropical climates."
+	icon_state = "r_poncho"
+
+/obj/item/clothing/accessory/poncho/green/raicoat/on_attached(obj/item/clothing/S, mob/living/carbon/human/user)
+	. = ..()
+	RegisterSignal(S, COMSIG_ITEM_EQUIPPED, PROC_REF(on_suit_equipped))
+	RegisterSignal(S, COMSIG_ITEM_UNEQUIPPED, PROC_REF(on_suit_unequipped))
+	if(ishuman(S.loc))
+		var/mob/living/carbon/human/H = S.loc
+		if(H.w_uniform == S || H.wear_suit == S)
+			H.remove_overlay(HAIR_LAYER)
+
+/obj/item/clothing/accessory/poncho/green/raicoat/on_removed(mob/living/carbon/human/user, obj/item/clothing/S)
+	. = ..()
+	UnregisterSignal(S, list(COMSIG_ITEM_EQUIPPED, COMSIG_ITEM_UNEQUIPPED))
+	if(ishuman(S.loc))
+		var/mob/living/carbon/human/H = S.loc
+		if(H.w_uniform == S || H.wear_suit == S)
+			H.apply_overlay(HAIR_LAYER)
+			H.update_hair()
+
+/obj/item/clothing/accessory/poncho/green/raicoat/proc/on_suit_equipped(datum/source, mob/living/carbon/human/user, slot)
+	SIGNAL_HANDLER
+	if(slot == WEAR_BODY || slot == WEAR_JACKET)
+		user.remove_overlay(HAIR_LAYER)
+
+/obj/item/clothing/accessory/poncho/green/raicoat/proc/on_suit_unequipped(datum/source, mob/living/carbon/human/user, slot)
+	SIGNAL_HANDLER
+	if(slot == WEAR_BODY || slot == WEAR_JACKET)
+		user.update_hair()
+
+/obj/item/clothing/accessory/clf_cape
+	name = "torn CLF flag"
+	desc = "A torn up CLF flag with a pin that allows it to be worn as a cape."
+	icon_state = "clf_cape"
+	accessory_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/ties.dmi',
+		WEAR_JACKET = 'icons/mob/humans/onmob/ties.dmi'
+	)
+	slot = ACCESSORY_SLOT_PONCHO
 
 /obj/item/clothing/accessory/bomb //Suicide vesst
 	name = "explosive vest"
@@ -1095,6 +1187,7 @@
 	var/obj/item/weapon/gun/current_gun
 	var/sheatheSound = 'sound/weapons/gun_pistol_sheathe.ogg'
 	var/drawSound = 'sound/weapons/gun_pistol_draw.ogg'
+	storage_slots = 4
 	storage_flags = STORAGE_ALLOW_QUICKDRAW|STORAGE_FLAGS_POUCH
 	can_hold = list(
 
@@ -1559,6 +1652,20 @@
 	item_state = "upp_crotch"
 	slot = ACCESSORY_SLOT_DECORGROIN
 
+/obj/item/clothing/accessory/upppads/bracers_sof
+	name = "\improper CCC5-L Arm Plates"
+	desc = "A pair of composite ballistic vambraces to shield the forearms, with straps to ensure it doesn't ride up or down. designed for the CCC5-L armor system."
+	icon_state = "upp_sof_bracers"
+	item_state = "upp_sof_bracers"
+	slot = ACCESSORY_SLOT_DECORBRACER
+
+/obj/item/clothing/accessory/upppads/kneepads_sof
+	name = "\improper CCC5-L Kneepads"
+	desc = "High impact ruggedized outer shell and polymer internals protect from shrapnel as well as low power ballistics. designed for the CCC5-L armor system."
+	icon_state = "upp_sof_thighguards"
+	item_state = "upp_sof_thighguards"
+	slot = ACCESSORY_SLOT_DECORKNEE
+
 //===========================//TWE CUSTOM ARMOR PLATES\\================================\\
 
 /obj/item/clothing/accessory/twepads
@@ -1742,7 +1849,7 @@
 	name = "\improper M3 Pattern Small Pouch Webbing"
 	desc = "A set of M3 pattern webbing fully outfitted with pouches and pockets to carry a whole array of small items."
 	icon_state = "m3webbingsmall"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/plus
 	slot = ACCESSORY_SLOT_M3UTILITY
 
 //Pre-load for MARSOC props
@@ -1866,9 +1973,22 @@
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon/medic
 	name = "\improper M3-R Pattern Corpsman Webbing"
-	desc = "A large pouch with M3-R Pattern webbing clips designed to house surgical tools for Corpsmen attached to FORECON units, where field hospitals are not readily available."
+	desc = "A large pouch with M3-R Pattern webbing clips designed to house medical equipment for Corpsmen attached to FORECON units, where resupply isn't readily available."
 	icon_state = "m3rwebbingmedic"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/recon
+
+//Pre-load for MARSOC props
+/obj/item/clothing/accessory/storage/webbing/m3/recon/medic/marsoc
+	icon_state = "armywebbing"
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/recon/marsoc
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/recon/marsoc/fill_preset_inventory()
+	new /obj/item/storage/surgical_case/regular(src)
+	new /obj/item/tool/surgery/surgical_line(src)
+	new /obj/item/tool/surgery/synthgraft(src)
+	new /obj/item/storage/syringe_case/regular(src)
+	new /obj/item/reagent_container/blood/OMinus(src)
+	new /obj/item/reagent_container/blood/OMinus(src)
 
 /obj/item/storage/internal/accessory/black_vest/m3generic
 	cant_hold = list(
@@ -1889,6 +2009,9 @@
 		/obj/item/reagent_container/blood,
 		/obj/item/bodybag,
 	)
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/plus // RU-CM PVE edit
+	storage_slots = 6
 
 //Pre-load for MARSOC props
 /obj/item/clothing/accessory/storage/webbing/m3/recon/medic/marsoc
@@ -1922,7 +2045,7 @@
 	hold = /obj/item/storage/internal/accessory/black_vest/m56/preset
 
 /obj/item/storage/internal/accessory/black_vest/m56
-	storage_slots = 4
+	storage_slots = 5
 
 /obj/item/storage/internal/accessory/black_vest/m56/preset/fill_preset_inventory()
 	new /obj/item/storage/box/mre(src)
@@ -1938,7 +2061,7 @@
 	hold = /obj/item/storage/internal/accessory/black_vest/m56/grenade
 
 /obj/item/storage/internal/accessory/black_vest/m56/grenade
-	storage_slots = 5
+	storage_slots = 6
 	can_hold = list(
 		/obj/item/explosive/grenade/high_explosive,
 		/obj/item/explosive/grenade/high_explosive/super,
@@ -1968,7 +2091,7 @@
 	slot = ACCESSORY_SLOT_M3UTILITY
 
 /obj/item/storage/internal/accessory/webbing/m3mag/upp
-	storage_slots = 5
+	storage_slots = 4
 	can_hold = list(
 		/obj/item/attachable/bayonet,
 		/obj/item/device/flashlight/flare,
@@ -1994,7 +2117,7 @@
 	name = "\improper Type 78 Pattern Small Pouch Webbing"
 	desc = "A set of UPP webbing fully outfitted with pouches and pockets to carry a while array of small items."
 	icon_state = "upp_webbing_small"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/plus
 	flags_atom = NO_SNOW_TYPE
 	slot = ACCESSORY_SLOT_M3UTILITY
 
@@ -2002,9 +2125,52 @@
 	name = "\improper Type 78 Pattern Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to UPP armor. This one is the slimmed down model designed for general purpose storage."
 	icon_state = "upp_webbing_large"
-	hold = /obj/item/storage/internal/accessory/webbing/m3generic
+	hold = /obj/item/storage/internal/accessory/webbing/m3generic/plus
 	flags_atom = NO_SNOW_TYPE
 	slot = ACCESSORY_SLOT_M3UTILITY
+
+/obj/item/storage/internal/accessory/webbing/m3generic/plus
+	bypass_w_limit = list(
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/smg,
+		/obj/item/ammo_magazine/sniper,
+		/obj/item/ammo_magazine/plasma,
+		/obj/item/ammo_magazine/flamer_tank, // RU-CM PVE edit
+	)
+
+//Partial Pre-load For Props
+//===
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppmags/type71
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/upp/type71
+
+/obj/item/storage/internal/accessory/webbing/m3mag/upp/type71/fill_preset_inventory()
+	new /obj/item/ammo_magazine/rifle/type71(src)
+	new /obj/item/ammo_magazine/rifle/type71(src)
+	new /obj/item/ammo_magazine/rifle/type71(src)
+	new /obj/item/ammo_magazine/rifle/type71(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/upp_juggernaut
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/plus/upp_juggernaut
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/plus/upp_juggernaut/fill_preset_inventory()
+	new /obj/item/smartgun_battery/upp(src)
+	new /obj/item/smartgun_battery/upp(src)
+	new /obj/item/ammo_magazine/pistol/t73(src)
+	new /obj/item/ammo_magazine/pistol/t73(src)
+	new /obj/item/storage/box/mre/upp(src)
+	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/upp_breacher
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/plus/upp_breacher
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/plus/upp_breacher/fill_preset_inventory()
+	new /obj/item/explosive/plastic/breaching_charge(src)
+	new /obj/item/explosive/plastic/breaching_charge(src)
+	new /obj/item/explosive/plastic/breaching_charge(src)
+	new /obj/item/explosive/plastic(src)
+	new /obj/item/explosive/plastic(src)
+	new /obj/item/explosive/plastic(src)
 
 //===========================//CUSTOM RMC ARMOR WEBBING\\================================\\
 
@@ -2023,10 +2189,12 @@
 	storage_slots = 5
 	can_hold = list(
 		/obj/item/ammo_magazine/rifle/nsg23,
+		/obj/item/ammo_magazine/rifle/rmc_f90,
 		/obj/item/ammo_magazine/sniper,
 		/obj/item/ammo_magazine/pistol/vp78,
 		/obj/item/ammo_magazine/pistol/vp70,
 		/obj/item/ammo_magazine/smg/m39,
+		/obj/item/ammo_magazine/smg/p90,
 	)
 
 //Partial Pre-load For Props
@@ -2107,6 +2275,15 @@
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/pmc/one
 
 /obj/item/storage/internal/accessory/black_vest/m3generic/pmc/one/fill_preset_inventory()
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/pmc/presettwo
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/pmc/two
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/pmc/two/fill_preset_inventory()
+	new /obj/item/ammo_magazine/pistol/vp78/incendiary(src)
 	new /obj/item/ammo_magazine/pistol/vp78/incendiary(src)
 	new /obj/item/ammo_magazine/pistol/vp78/incendiary(src)
 	new /obj/item/smartgun_battery(src)
@@ -2191,6 +2368,16 @@
 	new /obj/item/ammo_magazine/rifle/heap(src)
 	new /obj/item/ammo_magazine/rifle/heap(src)
 	new /obj/item/ammo_magazine/rifle/heap(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/mag/pmc/preseteight
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/pmc/eight
+
+/obj/item/storage/internal/accessory/webbing/m3mag/pmc/eight/fill_preset_inventory()
+	new /obj/item/ammo_magazine/smg/m39(src)
+	new /obj/item/ammo_magazine/smg/m39(src)
+	new /obj/item/ammo_magazine/smg/m39(src)
+	new /obj/item/ammo_magazine/smg/m39(src)
+	new /obj/item/ammo_magazine/smg/m39(src)
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon/shotgun/pmc
 	name = "\improper 41 Pattern Shell Webbing"

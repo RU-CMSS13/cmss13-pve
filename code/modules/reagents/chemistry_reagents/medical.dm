@@ -165,13 +165,13 @@
 /datum/reagent/medical/anti_toxin
 	name = "Dylovene"
 	id = "anti_toxin"
-	description = "General use anti-toxin, that neutralizes most toxins in the bloodstream. Commonly used in many advanced chemicals. Can be used as a mild anti-hallucinogen and to reduce tiredness."
+	description = "General use anti-toxin, that neutralizes most toxins in the bloodstream, also fixing your liver and kidneys. Commonly used in many advanced chemicals. Can be used as a mild anti-hallucinogen and to reduce tiredness."
 	reagent_state = LIQUID
 	color = "#3EA72A" // rgb: 62, 167, 42 changed to be slightly darker to differentiate from oxycodone autoinjectors
 	overdose = REAGENTS_OVERDOSE
 	overdose_critical = REAGENTS_OVERDOSE_CRITICAL
 	chemclass = CHEM_CLASS_COMMON
-	properties = list(PROPERTY_ANTITOXIC = 2, PROPERTY_NEPHROPEUTIC = 0.2, PROPERTY_HEPATOPEUTIC = 0.2, PROPERTY_ANTIHALLUCINOGENIC = 2)
+	properties = list(PROPERTY_ANTITOXIC = 2, PROPERTY_NEPHROPEUTIC = 0.25, PROPERTY_HEPATOPEUTIC = 0.25, PROPERTY_ANTIHALLUCINOGENIC = 2)
 
 /datum/reagent/medical/adminordrazine //An OP chemical for admins
 	name = "Adminordrazine"
@@ -250,7 +250,7 @@
 	overdose = REAGENTS_OVERDOSE
 	overdose_critical = REAGENTS_OVERDOSE_CRITICAL
 	chemclass = CHEM_CLASS_UNCOMMON
-	properties = list(PROPERTY_NEUROPEUTIC = 0.2)
+	properties = list(PROPERTY_NEUROPEUTIC = 1)
 
 /datum/reagent/medical/imidazoline
 	name = "Imidazoline"
@@ -262,7 +262,7 @@
 	overdose = REAGENTS_OVERDOSE
 	overdose_critical = REAGENTS_OVERDOSE_CRITICAL
 	chemclass = CHEM_CLASS_UNCOMMON
-	properties = list(PROPERTY_OCULOPEUTIC = 0.2)
+	properties = list(PROPERTY_OCULOPEUTIC = 1)
 
 /datum/reagent/medical/peridaxon
 	name = "Peridaxon"
@@ -272,9 +272,9 @@
 	color = "#403142" // rgb: 64, 49, 66
 	overdose = LOWH_REAGENTS_OVERDOSE
 	overdose_critical = LOWH_REAGENTS_OVERDOSE_CRITICAL
-	custom_metabolism = AMOUNT_PER_TIME(1, 180 SECONDS)
+	custom_metabolism = AMOUNT_PER_TIME(1, 120 SECONDS)
 	chemclass = CHEM_CLASS_COMMON
-	properties = list(PROPERTY_ORGANSTABILIZE = 3, PROPERTY_CARDIOPEUTIC = 0.25, PROPERTY_HEPATOPEUTIC = 0.25, PROPERTY_NEPHROPEUTIC = 0.25, PROPERTY_PNEUMOPEUTIC = 0.25)
+	properties = list(PROPERTY_ORGANSTABILIZE = 3, PROPERTY_CARDIOPEUTIC = 0.25, PROPERTY_PNEUMOPEUTIC = 0.25)
 
 /datum/reagent/medical/bicaridine // yes it cures IB, it's located in some other part of wound code for whatever reason
 	name = "Bicaridine"
@@ -312,16 +312,16 @@
 	flags = REAGENT_TYPE_MEDICAL | REAGENT_SCANNABLE
 
 /datum/reagent/medical/adrenaline_concentrated
-	name = "Concentrated Adrenaline"
+	name = "Concentrated S-Adrenaline"
 	id = "adrenaline_concentrated"
-	description = "A natural muscle and heart stimulant that is in a high concerntration. Useful for restarting the heart and preventing unconciousness but in this concentrated form it will cause minor suffocation. Overdosing may stress the heart and cause tissue damage."
+	description = "A natural muscle and heart stimulant that is in a high concerntration mixed with exteme amount of healing compounds. Useful for restarting the heart and preventing unconciousness but in this concentrated form it will cause minor suffocation. Overdosing may stress the heart and cause tissue damage."
 	reagent_state = LIQUID
 	color = "#FFE702" // Yellow-ish
 	overdose = LOWM_REAGENTS_OVERDOSE
 	overdose_critical = LOWM_REAGENTS_OVERDOSE_CRITICAL
 	custom_metabolism = AMOUNT_PER_TIME(1, 10 SECONDS)
 	chemclass = CHEM_CLASS_COMMON
-	properties = list(PROPERTY_PAINKILLING = 10, PROPERTY_ELECTROGENETIC = 6, PROPERTY_OXYGENATING = 3, PROPERTY_REVITALIZING = 1, PROPERTY_INTRAVENOUS = 1, PROPERTY_CARDIOTOXIC = 2.5)
+	properties = list(PROPERTY_PAINKILLING = 10, PROPERTY_ELECTROGENETIC = 6, PROPERTY_OXYGENATING = 3, PROPERTY_REVITALIZING = 1, PROPERTY_INTRAVENOUS = 1, PROPERTY_CARDIOTOXIC = 2.5, PROPERTY_DEFIBRILLATING = 1, PROPERTY_NEOGENETIC = 4, PROPERTY_ANTICORROSIVE = 4)
 	flags = REAGENT_TYPE_MEDICAL | REAGENT_SCANNABLE
 
 /datum/reagent/medical/ultrazine

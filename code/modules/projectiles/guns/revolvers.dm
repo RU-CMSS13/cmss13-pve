@@ -461,7 +461,7 @@
 	icon_state = "zhnk72"
 	item_state = "zhnk72"
 
-	fire_sound = 'sound/weapons/gun_kt42.ogg'
+	fire_sound = "gun_zhnk"
 	reload_sound = 'sound/weapons/handling/pkd_speed_load.ogg'
 	cocked_sound = 'sound/weapons/handling/pkd_cock.wav'
 	unload_sound = 'sound/weapons/handling/pkd_open_chamber.ogg'
@@ -491,8 +491,8 @@
 	accuracy_mult = BASE_ACCURACY_MULT
 	scatter = SCATTER_AMOUNT_TIER_6
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_4
-	recoil = 0
-	recoil_unwielded = 0
+	recoil = RECOIL_AMOUNT_TIER_5
+	recoil_unwielded = RECOIL_AMOUNT_TIER_4
 
 /obj/item/weapon/gun/revolver/upp/shrapnel
 	current_mag = /obj/item/ammo_magazine/internal/revolver/upp/shrapnel

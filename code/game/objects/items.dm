@@ -219,14 +219,15 @@
 	var/msg = pick("is destroyed by the blast!", "is obliterated by the blast!", "shatters as the explosion engulfs it!", "disintegrates in the blast!", "perishes in the blast!", "is mangled into uselessness by the blast!")
 	explosion_throw(severity, explosion_direction)
 	switch(severity)
-		if(0 to EXPLOSION_THRESHOLD_LOW)
+		if(0 to EXPLOSION_THRESHOLD_MLOW)
 			if(prob(5))
 				if(!indestructible)
 					visible_message(SPAN_DANGER(SPAN_UNDERLINE("\The [src] [msg]")))
 					deconstruct(FALSE)
-		if(EXPLOSION_THRESHOLD_LOW to EXPLOSION_THRESHOLD_MEDIUM)
-			if(prob(50))
+		if(EXPLOSION_THRESHOLD_MLOW to EXPLOSION_THRESHOLD_MEDIUM)
+			if(prob(30))
 				if(!indestructible)
+					visible_message(SPAN_DANGER(SPAN_UNDERLINE("\The [src] [msg]")))
 					deconstruct(FALSE)
 		if(EXPLOSION_THRESHOLD_MEDIUM to INFINITY)
 			if(!indestructible)
@@ -717,7 +718,12 @@ cases. Override_icon_state should be a list.*/
 			if(WEAR_IN_HELMET)
 				if(human.head)
 					var/obj/item/clothing/head/helmet/marine/helmet = human.head
+					var/obj/item/clothing/head/helmet/upp/helmetupp = human.head
 					if(istype(helmet) && helmet.pockets)//not all helmuts have pockits
+						var/obj/item/storage/internal/internal_storage = helmet.pockets
+						if(internal_storage.can_be_inserted(src, human, TRUE))
+							return TRUE
+					if(istype(helmetupp) && helmet.pockets)//not all helmuts have pockits
 						var/obj/item/storage/internal/internal_storage = helmet.pockets
 						if(internal_storage.can_be_inserted(src, human, TRUE))
 							return TRUE
@@ -834,6 +840,7 @@ cases. Override_icon_state should be a list.*/
 /obj/item/proc/zoom(mob/living/user, tileoffset = 11, viewsize = 12, keep_zoom = 0) //tileoffset is client view offset in the direction the user is facing. viewsize is how far out this thing zooms. 7 is normal view
 	if(!user)
 		return
+	QDEL_NULL(user.observed_atom)
 	var/zoom_device = zoomdevicename ? "\improper [zoomdevicename] of [src]" : "\improper [src]"
 
 	for(var/obj/item/I in user.contents)

@@ -8,9 +8,10 @@
 	name = "revolver bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 
-	damage = 75
-	penetration = ARMOR_PENETRATION_TIER_5
+	damage = 60
+	penetration = ARMOR_PENETRATION_TIER_2
 	accuracy = HIT_ACCURACY_TIER_2
+	effective_range_max = 5
 	shell_casing = /obj/effect/decal/ammo_casing
 
 /datum/ammo/bullet/revolver/on_hit_mob(mob/entity, obj/projectile/bullet)
@@ -21,7 +22,7 @@
 
 /datum/ammo/bullet/revolver/marksman
 	name = "marksman revolver bullet"
-	damage = 90
+	damage = 55
 	shrapnel_chance = 0
 	damage_falloff = 0
 	accurate_range = 12
@@ -30,8 +31,8 @@
 /datum/ammo/bullet/revolver/heavy
 	name = "heavy revolver bullet"
 
-	damage = 80
-	penetration = ARMOR_PENETRATION_TIER_6
+	damage = 35
+	penetration = ARMOR_PENETRATION_TIER_4
 	accuracy = HIT_ACCURACY_TIER_3
 
 /datum/ammo/bullet/revolver/heavy/on_hit_mob(mob/entity, obj/projectile/bullet)
@@ -40,7 +41,7 @@
 
 /datum/ammo/bullet/revolver/incendiary
 	name = "incendiary revolver bullet"
-	damage = 75
+	damage = 40
 
 /datum/ammo/bullet/revolver/incendiary/set_bullet_traits()
 	..()
@@ -135,10 +136,10 @@
 /datum/ammo/bullet/revolver/mateba
 	name = ".454 heavy revolver bullet"
 
-	damage = 130
+	damage = 60
 	damage_var_low = PROJECTILE_VARIANCE_TIER_8
 	damage_var_high = PROJECTILE_VARIANCE_TIER_6
-	penetration = ARMOR_PENETRATION_TIER_5
+	penetration = ARMOR_PENETRATION_TIER_4
 
 /datum/ammo/bullet/revolver/mateba/highimpact
 	name = ".454 heavy high-impact revolver bullet"
@@ -149,7 +150,7 @@
 /datum/ammo/bullet/revolver/mateba/highimpact/ap
 	name = ".454 heavy high-impact armor piercing revolver bullet"
 	penetration = ARMOR_PENETRATION_TIER_10
-	damage = 140
+	damage = 45
 
 /datum/ammo/bullet/revolver/mateba/highimpact/New()
 	..()
@@ -160,7 +161,7 @@
 
 /datum/ammo/bullet/revolver/mateba/highimpact/explosive //if you ever put this in normal gameplay, i am going to scream
 	name = ".454 heavy explosive revolver bullet"
-	damage = 200
+	damage = 100
 	damage_var_low = PROJECTILE_VARIANCE_TIER_10
 	damage_var_high = PROJECTILE_VARIANCE_TIER_1
 	penetration = ARMOR_PENETRATION_TIER_10

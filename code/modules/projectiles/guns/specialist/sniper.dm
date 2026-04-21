@@ -520,10 +520,10 @@
 	name = "\improper Type 88 designated marksman rifle"
 	desc = "The standard issue DMR of the UPP, the Type 88 is sought after by competitive shooters and terrorists alike for its high degree of accuracy. Typically loaded with armor-piercing 7.62x54mmR rounds in a 12 round magazine."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
-	icon_state = "type88"
-	item_state = "type88"
+	icon_state = "type88_u"
+	item_state = "type88_u"
 
-	fire_sound = 'sound/weapons/gun_mg.ogg'
+	fire_sound = "gun_svd"
 	current_mag = /obj/item/ammo_magazine/sniper/svd
 	attachable_allowed = list(
 		//Muzzle,
@@ -634,6 +634,8 @@
 
 
 /obj/item/weapon/gun/rifle/sniper/svd/pve
+	icon_state = "type88"
+	item_state = "type88"
 	current_mag = /obj/item/ammo_magazine/sniper/svd/pve
 
 /obj/item/weapon/gun/rifle/sniper/rmc
@@ -692,6 +694,7 @@
 	AddComponent(/datum/component/iff_fire_prevention)
 
 //---ability actions--\\
+
 /datum/action/item_action/rmcdmr/action_activate()
 	. = ..()
 	var/obj/item/weapon/gun/rifle/sniper/rmc/smartrifle = holder_item
@@ -724,6 +727,7 @@
 	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
 
 // -- ability actions procs -- \\
+
 /obj/item/weapon/gun/rifle/sniper/rmc/proc/toggle_iff(mob/user)
 	iff_enabled = !iff_enabled
 	to_chat(usr, SPAN_NOTICE("[icon2html(src, usr)] You [iff_enabled? "enable": "disable"] the IFF on [src]."))

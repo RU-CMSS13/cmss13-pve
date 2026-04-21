@@ -14,6 +14,7 @@
 	anchored = TRUE
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	layer = ABOVE_MOB_LAYER + 0.1 //above mobs and barricades
+	flags_atom = NO_ZFALL
 	var/amount = 2
 	var/spread_speed = 1 //time in decisecond for a smoke to spread one tile.
 	var/time_to_live = 8
@@ -97,6 +98,7 @@
 		return
 
 	var/turf/start_turf = get_turf(src)
+	var/list/turfs_to_spread = list()
 	if(!start_turf)
 		return
 	for(var/i in GLOB.cardinals)
@@ -111,7 +113,31 @@
 				qdel(foundsmoke)
 			else
 				continue
-		var/obj/effect/particle_effect/smoke/smoke = new type(cur_turf, amount, cause_data)
+		turfs_to_spread += cur_turf
+
+	var/turf/below = SSmapping.get_turf_below(loc)
+	var/turf/above = SSmapping.get_turf_above(loc)
+	if(below && istype(loc,/turf/open_space))
+		var/obj/effect/particle_effect/smoke/foundsmoke = locate() in below
+		if(foundsmoke)
+			if(foundsmoke.smokeranking <= src.smokeranking)
+				qdel(foundsmoke)
+				turfs_to_spread += below
+		else
+			turfs_to_spread += below
+
+
+	if(above && istype(above,/turf/open_space))
+		var/obj/effect/particle_effect/smoke/foundsmoke = locate() in above
+		if(foundsmoke)
+			if(foundsmoke.smokeranking <= src.smokeranking)
+				qdel(foundsmoke)
+				turfs_to_spread += above
+		else
+			turfs_to_spread += above
+
+	for(var/turf/spread in turfs_to_spread)
+		var/obj/effect/particle_effect/smoke/smoke = new type(spread, amount, cause_data)
 		smoke.setDir(pick(GLOB.cardinals))
 		smoke.time_to_live = time_to_live
 		if(smoke.amount > 0)
@@ -505,8 +531,8 @@
 		to_chat(creature, SPAN_WARNING("Your training protects you from the tear gas!"))
 	else
 		to_chat(creature, SPAN_WARNING("You feel the sting of the tear gas!"))
-		creature.AdjustEyeBlur(25)
-		creature.AdjustEyeBlind(10)
+		creature.AdjustEyeBlur(2)
+		creature.AdjustEyeBlind(1)
 
 	creature.emote("scream")
 	creature.apply_effect(3, SLOW)
@@ -661,6 +687,10 @@
 		msg = "You are consumed by the harmless gas, it is hard to navigate in!"
 		creature.apply_effect(SLOW,1)
 	to_chat(creature, SPAN_DANGER(msg))
+
+/obj/effect/particle_effect/smoke/xeno_weak/transparent
+	alpha = 100
+	color = "#ad5f3f"
 
 /obj/effect/particle_effect/smoke/xeno_weak_fire
 	time_to_live = 16
@@ -843,6 +873,9 @@
 
 /datum/effect_system/smoke_spread/xeno_weaken
 	smoke_type = /obj/effect/particle_effect/smoke/xeno_weak
+
+/datum/effect_system/smoke_spread/xeno_weaken/transparent
+	smoke_type = /obj/effect/particle_effect/smoke/xeno_weak/transparent
 
 /datum/effect_system/smoke_spread/xeno_extinguish_fire
 	smoke_type = /obj/effect/particle_effect/smoke/xeno_weak_fire

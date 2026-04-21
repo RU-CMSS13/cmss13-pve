@@ -79,8 +79,8 @@
 // ==UPP== //
 
 /obj/structure/closet/secure_closet/marine_personal/upp/spawn_gear()
-	new /obj/item/clothing/head/uppcap/beret/naval(src)
-	new /obj/item/clothing/under/marine/veteran/UPP(src)
+	new /obj/item/clothing/head/cmcap/upp/beret/naval(src)
+	new /obj/item/clothing/under/marine/veteran/upp(src)
 	new /obj/item/clothing/shoes/marine/upp(src)
 	new /obj/item/device/radio/headset/almayer/marine/solardevils/upp(src)
 
@@ -103,8 +103,8 @@
 	job = JOB_SO
 
 /obj/structure/closet/secure_closet/marine_personal/upp/platoon_commander/spawn_gear()
-	new /obj/item/clothing/head/uppcap/beret/naval(src)
-	new /obj/item/clothing/under/marine/veteran/UPP/naval(src)
+	new /obj/item/clothing/head/cmcap/upp/beret/naval(src)
+	new /obj/item/clothing/under/marine/veteran/upp/naval(src)
 	new /obj/item/clothing/shoes/marine/upp(src)
 	new /obj/item/device/radio/headset/almayer/marine/solardevils/upp(src)
 	new /obj/item/clothing/suit/storage/jacket/marine/upp/naval(src)
@@ -186,11 +186,17 @@
 	new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc(src)
 	new /obj/item/clothing/shoes/marine/rmc/knife(src)
 
+/obj/structure/closet/secure_closet/marine_personal/rmc/troop_leader/spawn_gear()
+	new /obj/item/clothing/head/cmcap/royal_marine(src)
+	new /obj/item/clothing/under/marine/veteran/royal_marine(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc/hq(src)
+	new /obj/item/clothing/shoes/marine/rmc/knife(src)
+
 /obj/structure/closet/secure_closet/marine_personal/rmc/troop_commander/spawn_gear()
 	new /obj/item/clothing/head/cmcap/royal_marine(src)
 	new /obj/item/clothing/under/marine/veteran/royal_marine/lt(src)
 	new /obj/item/clothing/accessory/ranks/rmc/o1(src)
-	new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc/hq(src)
 	new /obj/item/clothing/shoes/marine/rmc/knife(src)
 
 /obj/structure/closet/secure_closet/marine_personal/rmc/rifleman

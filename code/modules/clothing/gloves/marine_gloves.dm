@@ -20,6 +20,10 @@
 	armor_rad = CLOTHING_ARMOR_NONE
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 
+/obj/item/clothing/gloves/marine/army
+	name = "army combat gloves"
+	desc = "Standard issue army tactical gloves. It reads: 'knit by Army Widows Association'."
+
 /obj/item/clothing/gloves/marine/fingerless
 	name = "fingerless combat gloves"
 	desc = "A pair of black combat gloves with the finger coverings cut off. No longer insulated from electrical shocks, nor wholly capable of protecting from shrapnel, at least your hands won't be quiet as sweaty all the time now though."
@@ -48,12 +52,15 @@
 	icon_state = "black"
 	item_state = "bgloves"
 	armor_melee = CLOTHING_ARMOR_VERYHIGH
-	armor_bullet = CLOTHING_ARMOR_ULTRAHIGH
+	armor_bullet = CLOTHING_ARMOR_GIGAHIGH
 	armor_laser = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bomb = CLOTHING_ARMOR_ULTRAHIGH
 	armor_rad = CLOTHING_ARMOR_ULTRAHIGH
 	armor_internaldamage = CLOTHING_ARMOR_ULTRAHIGH
 	unacidable = TRUE
+
+/obj/item/clothing/gloves/marine/specialist/upp
+	name = "\improper 6B99 defensive gauntlets"
 
 /obj/item/clothing/gloves/marine/M3G
 	name = "\improper M3-G4 Grenadier gloves"
@@ -74,6 +81,12 @@
 	desc = "M2 MOPP gloves to protect your insides from nerve gas and deadly chemicals. You'd probably feel safer if there was duct tape wrapped around these."
 	icon_state = "cbrn"
 	item_state = "cbrn"
+
+/obj/item/clothing/gloves/marine/pve_mopp/upp
+	name = "\improper BL-3M gloves"
+	desc = "UPP standard issue OZK gloves to protect your insides from nerve gas and deadly chemicals."
+	icon_state = "cbrn_alt"
+	item_state = "cbrn_alt"
 
 /obj/item/clothing/gloves/marine/veteran/pmc
 	name = "\improper WY PMC gloves"

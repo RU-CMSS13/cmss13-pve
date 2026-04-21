@@ -41,6 +41,14 @@
 /obj/item/clothing/shoes/marine/knife
 	spawn_item_type = /obj/item/weapon/knife/marine
 
+/obj/item/clothing/shoes/marine/army
+	name = "army combat boots"
+	desc = "Standard issue combat boots for combat scenarios or combat situations. All combat, all the time."
+
+/obj/item/clothing/shoes/marine/army/knife
+	icon_state = "marine_jungle"
+	spawn_item_type = /obj/item/attachable/bayonet
+
 /obj/item/clothing/shoes/marine/brown
 	icon_state = "marine_brown"
 	desc = "A pair of standard issue brown United States Colonial Marine combat boots."
@@ -82,6 +90,12 @@
 	item_state = "cbrn"
 	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_bio = CLOTHING_ARMOR_GIGAHIGHPLUS
+
+/obj/item/clothing/shoes/marine/pve_mopp/upp
+	name = "\improper BcH-2M boots"
+	desc = "UPP standard issue OZK boots excel at keeping viscera or other biological contaminants away from your feet."
+	icon_state = "cbrn_alt"
+	item_state = "cbrn_alt"
 
 /obj/item/clothing/shoes/marine/corporate
 	name = "rugged boots"
@@ -132,6 +146,7 @@
 	armor_bio = CLOTHING_ARMOR_HIGH
 	siemens_coefficient = 0.2
 	unacidable = TRUE
+	var/booted = FALSE
 
 /obj/item/clothing/shoes/veteran/pmc/commando/knife
 	spawn_item_type = /obj/item/attachable/bayonet/wy

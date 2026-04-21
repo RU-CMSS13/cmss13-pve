@@ -81,21 +81,89 @@
 /obj/item/device/helmet_visor/proc/get_helmet_examine_text()
 	return SPAN_NOTICE("\A [name] is flipped down.")
 
+/obj/item/device/helmet_visor/ua
+	name = "AN/PAV-70 visor"
+	desc = "The guts of a Personal-Augmented-Viewer HUD unit. Fitted as-standard in almost all helmets in use by UA forces."
+	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY)
+
+//fucking mess
+/obj/item/device/helmet_visor/ua/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+	. = ..()
+
+	user.client.color = "#E0FFFF"
+	user.overlay_fullscreen("optic", /atom/movable/screen/fullscreen/flash/noise/optic)
+	ADD_TRAIT(user, TRAIT_HUD_SIGHT, src)
+
+/obj/item/device/helmet_visor/ua/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+	. = ..()
+
+	user.client.color = initial(user.client.color)
+	user.clear_fullscreen("optic", 0.5 SECONDS)
+	REMOVE_TRAIT(user, TRAIT_HUD_SIGHT, src)
+
 /obj/item/device/helmet_visor/upp
 	name = "KKV-66M visor"
 	desc = "The KKV-66M \"Geist\" is an augmented-reality Heads Up Display developed by Germany. Standard for all helmets in use by the UPP's armed forces."
+	icon_state = "hud_sight_orange"
+	action_icon_string = "hud_sight_orange"
+	helmet_overlay = "meson_sight_right"
 	hud_type = list(MOB_HUD_FACTION_UPP)
 
+//fucking mess
+/obj/item/device/helmet_visor/upp/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+	. = ..()
+
+	user.client.color = "#fff1e0"
+	user.overlay_fullscreen("optic", /atom/movable/screen/fullscreen/flash/noise/optic)
+	ADD_TRAIT(user, TRAIT_HUD_SIGHT, src)
+
+/obj/item/device/helmet_visor/upp/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+	. = ..()
+
+	user.client.color = initial(user.client.color)
+	user.clear_fullscreen("optic", 0.5 SECONDS)
+	REMOVE_TRAIT(user, TRAIT_HUD_SIGHT, src)
+
 /obj/item/device/helmet_visor/twe
-	name = "squad optic"
-	desc = "An insertable visor HUD into a standard RMC helmet."
-	hud_type = list(MOB_HUD_FACTION_TWE)
+	name = "HBS visor"
+	desc = "One of the older programm visors issued to the IASF forces of Three World Empire. Provides a basic amount of information."
+	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_IASF)
+
+//fucking mess
+/obj/item/device/helmet_visor/twe/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+	. = ..()
+
+	user.client.color = "#E0FFFF"
+	user.overlay_fullscreen("optic", /atom/movable/screen/fullscreen/flash/noise/optic)
+	ADD_TRAIT(user, TRAIT_HUD_SIGHT, src)
+
+/obj/item/device/helmet_visor/twe/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+	. = ..()
+
+	user.client.color = initial(user.client.color)
+	user.clear_fullscreen("optic", 0.5 SECONDS)
+	REMOVE_TRAIT(user, TRAIT_HUD_SIGHT, src)
 
 /obj/item/device/helmet_visor/pmc
 	name = "C/PAV-Mk.1 visor"
 	desc = "The guts of a Personal-Augmented-Viewer HUD unit. Modified by corporate technicians to display relevant information."
 	hud_type = list(MOB_HUD_FACTION_WY, MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_PMC)
 	helmet_overlay = "hud_sight_right"
+
+//fucking mess
+/obj/item/device/helmet_visor/pmc/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+	. = ..()
+
+	user.client.color = "#E0FFFF"
+	user.overlay_fullscreen("optic", /atom/movable/screen/fullscreen/flash/noise/optic)
+	ADD_TRAIT(user, TRAIT_HUD_SIGHT, src)
+
+/obj/item/device/helmet_visor/pmc/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+	. = ..()
+
+	user.client.color = initial(user.client.color)
+	user.clear_fullscreen("optic", 0.5 SECONDS)
+	REMOVE_TRAIT(user, TRAIT_HUD_SIGHT, src)
 
 /obj/item/device/helmet_visor/pmc/alt
 	name = "C/PAV-Mk.2 visor"
@@ -110,7 +178,7 @@
 	icon_state = "med_sight"
 	hud_type = list(MOB_HUD_MEDICAL_BASIC)
 	action_icon_string = "med_sight_down"
-	helmet_overlay = "med_sight_right"
+	helmet_overlay = "med_sight_left"
 
 /obj/item/device/helmet_visor/medical/army
 	name = "AN/MPAV-71A visor"
@@ -121,7 +189,7 @@
 /obj/item/device/helmet_visor/medical/advanced
 	name = "AN/MAV-72 visor"
 	desc = "The guts of a Medical-Augmented-Viewer HUD unit. Links to the biomonitors of allied personnel and provides detailed information for those able to comprehend it."
-	helmet_overlay = "med_sight_right"
+	helmet_overlay = "med_sight_left"
 	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY, MOB_HUD_MEDICAL_ADVANCED)
 
 /obj/item/device/helmet_visor/medical/advanced/pmc
@@ -130,7 +198,7 @@
 /obj/item/device/helmet_visor/medical/advanced/rmc
 	name = "HBVS visor"
 	desc = "One of the few successful components from the otherwise disastrous Commando Upgrade Program ran in the mid 2170s, the head-mounted, biomonitor vision system comes as standard in all RMC helmets."
-	hud_type = list(MOB_HUD_FACTION_WY, MOB_HUD_FACTION_TWE, MOB_HUD_MEDICAL_ADVANCED)
+	hud_type = list(MOB_HUD_FACTION_WY, MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_IASF, MOB_HUD_MEDICAL_ADVANCED)
 	icon_state = "hud_sight"
 	action_icon_string = "hud_sight_down"
 	helmet_overlay = "hud_sight_full"
@@ -335,6 +403,12 @@
 	if(!.)
 		return
 
+/*
+	if(user.client?.view > 7)
+		to_chat(user, SPAN_WARNING("You cannot use [src] while using optics."))
+		return FALSE
+*/
+
 	if(!NVG_VISOR_USAGE(FALSE))
 		to_chat(user, SPAN_NOTICE("Your [src] is out of power! You'll need to recharge it."))
 		return FALSE
@@ -353,6 +427,21 @@
 		user.see_in_dark = 12
 	user.lighting_alpha = lighting_alpha
 	user.sync_lighting_plane_alpha()
+
+/obj/item/device/helmet_visor/night_vision/proc/change_view(mob/user, new_size)
+	SIGNAL_HANDLER
+	if(new_size > 20) // cannot use loooong-range optics with NVO
+		var/obj/item/clothing/head/helmet/marine/attached_helmet = loc
+		if(!istype(attached_helmet))
+			return
+		deactivate_visor(attached_helmet, user)
+		to_chat(user, SPAN_NOTICE("You deactivate [src] on [attached_helmet]."))
+		playsound_client(user.client, toggle_off_sound, null, 75)
+		attached_helmet.active_visor = null
+		attached_helmet.update_icon()
+		var/datum/action/item_action/cycle_helmet_huds/cycle_action = locate() in attached_helmet.actions
+		if(cycle_action)
+			cycle_action.set_default_overlay()
 
 #undef NVG_VISOR_USAGE
 
@@ -391,7 +480,7 @@
 /obj/item/device/helmet_visor/night_vision/marine_raider/rmc
 	name = "HIBVS night-sight visor"
 	desc = "A heavily modified version of the standard HBVS, that offers infrared night-vision capabilities alongside the existent biomonitoring systems."
-	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY, MOB_HUD_MEDICAL_ADVANCED)
+	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY, MOB_HUD_FACTION_IASF, MOB_HUD_MEDICAL_ADVANCED)
 	helmet_overlay = "nvg_sight_rmc"
 	power_use = 0
 	visor_glows = FALSE
@@ -470,3 +559,25 @@
 	icon_state = "po_visor_yellow"
 	action_icon_string = "po_visor_yellow_down"
 	helmet_overlay = "po_visor_yellow_marine"
+
+/obj/item/device/helmet_visor/upp_heavy
+	name = "KKV-71M visor"
+	desc = "The KKV-71M \"Reaper\" is an augmented-reality Heads Up Display with health monitor developed by Germany, for the new series of heavily armored UPPAC equipment, in this case - 6B83 enclosed helmet."
+	icon_state = "hud_sight_red"
+	action_icon_string = "hud_sight_red"
+	helmet_overlay = "hud_sight_upp_heavy"
+	hud_type = list(MOB_HUD_FACTION_UPP, MOB_HUD_MEDICAL_BASIC)
+
+/obj/item/device/helmet_visor/upp_heavy/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+	. = ..()
+
+	user.client.color = "#ffd9d9"
+	user.overlay_fullscreen("optic", /atom/movable/screen/fullscreen/flash/noise/optic)
+	ADD_TRAIT(user, TRAIT_HUD_SIGHT, src)
+
+/obj/item/device/helmet_visor/upp_heavy/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+	. = ..()
+
+	user.client.color = initial(user.client.color)
+	user.clear_fullscreen("optic", 0.5 SECONDS)
+	REMOVE_TRAIT(user, TRAIT_HUD_SIGHT, src)

@@ -21,14 +21,13 @@
 	aim_slowdown = SLOWDOWN_ADS_INCINERATOR
 	current_mag = /obj/item/ammo_magazine/flamer_tank
 	start_automatic = TRUE
-	light_range = 2
+	light_range = 3
 	light_power = 0.5
 	light_system = MOVABLE_LIGHT
 	light_color = LIGHT_COLOR_CANDLE
 	var/lit = FALSE
 
 	attachable_allowed = list( //give it some flexibility.
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/sling,
 		/obj/item/attachable/attached_gun/extinguisher,
@@ -52,7 +51,7 @@
 	gun_safety_handle()
 
 /obj/item/weapon/gun/flamer/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 0, "muzzle_y" = 0, "rail_x" = 11, "rail_y" = 20, "under_x" = 21, "under_y" = 14, "stock_x" = 0, "stock_y" = 0, "side_rail_x" = 24, "side_rail_y" = 19)
+	attachable_offset = list("muzzle_x" = 0, "muzzle_y" = 0, "rail_x" = 11, "rail_y" = 20, "under_x" = 21, "under_y" = 14, "stock_x" = 0, "stock_y" = 0, "side_rail_x" = 11, "side_rail_y" = 19)
 
 /obj/item/weapon/gun/flamer/x_offset_by_attachment_type(attachment_type)
 	switch(attachment_type)
@@ -389,7 +388,6 @@
 	name = "\improper M240A3 incinerator unit"
 	desc = "A next-generation incinerator unit, the M240A3 is much lighter and dextrous than its predecessors thanks to the ceramic alloy construction. It can be slinged over a belt and usually comes equipped with EX-type fuel."
 	attachable_allowed = list(
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/attached_gun/extinguisher,
 	)
@@ -461,7 +459,6 @@
 	var/obj/item/storage/large_holster/fuelpack/fuelpack
 
 	attachable_allowed = list(
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/attached_gun/extinguisher,
 	)
@@ -577,6 +574,9 @@
 	unload_sound = 'sound/weapons/handling/flamer_unload.ogg'
 	reload_sound = 'sound/weapons/handling/flamer_reload.ogg'
 	current_mag = /obj/item/ammo_magazine/flamer_tank/upp
+
+/obj/item/weapon/gun/flamer/upp/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 0, "muzzle_y" = 0, "rail_x" = 11, "rail_y" = 23, "under_x" = 21, "under_y" = 14, "stock_x" = 0, "stock_y" = 0, "side_rail_x" = 11, "side_rail_y" = 21)
 
 /obj/item/weapon/gun/flamer/upp/unloaded
 	current_mag = null
@@ -758,6 +758,11 @@
 
 	RegisterSignal(SSdcs, COMSIG_GLOB_WEATHER_CHANGE, PROC_REF(update_in_weather_status))
 
+	var/turf/current_turf = get_turf(src)
+	if(istype(current_turf, /turf/open_space))
+		var/turf/open_space/current_open_turf = current_turf
+		current_open_turf.check_fall(src)
+
 /obj/flamer_fire/Destroy()
 	STOP_PROCESSING(SSobj, src)
 	to_call = null
@@ -791,6 +796,7 @@
 	if(!istype(M))
 		return
 
+	var/mob_ignited = FALSE
 	var/sig_result = SEND_SIGNAL(M, COMSIG_LIVING_FLAMER_CROSSED, tied_reagent)
 	var/burn_damage = floor(burnlevel * 0.5)
 	switch(fire_variant)
@@ -811,9 +817,11 @@
 	if(!(sig_result & COMPONENT_NO_IGNITE) && burn_damage)
 		switch(fire_variant)
 			if(FIRE_VARIANT_TYPE_B) //Armor Shredding Greenfire, super easy to pat out. 50 duration -> 10 stacks (1 pat/resist)
-				M.TryIgniteMob(floor(tied_reagent.durationfire / 5), tied_reagent)
+				if(M.TryIgniteMob(floor(tied_reagent.durationfire / 5), tied_reagent))
+					mob_ignited = TRUE
 			else
-				M.TryIgniteMob(tied_reagent.durationfire, tied_reagent)
+				if(M.TryIgniteMob(tied_reagent.durationfire, tied_reagent))
+					mob_ignited = TRUE
 
 	if(sig_result & COMPONENT_NO_BURN && !tied_reagent.fire_penetrating)
 		burn_damage = 0
@@ -822,17 +830,18 @@
 		to_chat(M, SPAN_DANGER("[isxeno(M) ? "We" : "You"] step over the flames."))
 		return
 
-	M.last_damage_data = weapon_cause_data
-	M.apply_damage(burn_damage, BURN) //This makes fire stronk.
+	if(mob_ignited)
+		M.last_damage_data = weapon_cause_data
+		M.apply_damage(burn_damage, BURN) //This makes fire stronk.
 
-	var/variant_burn_msg = null
-	switch(fire_variant) //Fire variant special message appends.
-		if(FIRE_VARIANT_TYPE_B)
-			if(isxeno(M))
-				var/mob/living/carbon/xenomorph/X = M
-				X.armor_deflection?(variant_burn_msg=" We feel the flames weakening our exoskeleton!"):(variant_burn_msg=" You feel the flaming chemicals eating into your body!")
-	to_chat(M, SPAN_DANGER("You are burned![variant_burn_msg?"[variant_burn_msg]":""]"))
-	M.updatehealth()
+		var/variant_burn_msg = null
+		switch(fire_variant) //Fire variant special message appends.
+			if(FIRE_VARIANT_TYPE_B)
+				if(isxeno(M))
+					var/mob/living/carbon/xenomorph/X = M
+					X.armor_deflection?(variant_burn_msg=" We feel the flames weakening our exoskeleton!"):(variant_burn_msg=" You feel the flaming chemicals eating into your body!")
+		to_chat(M, SPAN_DANGER("You are burned![variant_burn_msg?"[variant_burn_msg]":""]"))
+		M.updatehealth()
 
 /obj/flamer_fire/proc/update_flame()
 	if(burnlevel < 15 && flame_icon != "dynamic")
@@ -964,6 +973,10 @@
 			if(CEILING_IS_PROTECTED(picked_area?.ceiling, get_ceiling_protection_level(aerial_flame_level)))
 				continue
 		fire_spread_recur(picked_turf, cause_data, spread_power, direction, fire_lvl, burn_lvl, f_color, burn_sprite, aerial_flame_level)
+
+// So it doens't do the spinny animation
+/obj/flamer_fire/onZImpact(turf/impact_turf, height)
+	return
 
 /obj/item/weapon/gun/flamer/flammenwerfer3
 	name = "\improper Flammenwerfer 3 Heavy Incineration Unit"

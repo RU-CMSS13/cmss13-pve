@@ -21,6 +21,7 @@
 #define SQUAD_PMCPLT_2 "VIRIDIAN-22"
 #define SQUAD_PMCPLT_SMALL "AZURE-16"
 #define SQUAD_RMC "Gamma Troop"
+#define SQUAD_IASF "IASF"
 #define SQUAD_LRRP "Snake Eaters"
 #define SQUAD_LRRP_2 "Ocelot Grapplers"
 
@@ -226,11 +227,16 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 
 //-------- USASF --------//
 #define JOB_NAVY_CREWMAN "USASF Crewman"
+#define JOB_NAVY_MP "USASF Men At Arms"
+#define JOB_NAVY_SF "USASF Security Forces Rifleman"
+#define JOB_NAVY_SFL "USASF Security Forces Team Leader"
 #define JOB_NAVY_MEDIC "USASF Hospital Corpsman"
 #define JOB_NAVY_ENGI "USASF Engineering Technician"
 #define JOB_NAVY_SKITTLE "USASF Flight-Deck Crewman"
 #define JOB_NAVY_JTAC "USASF Orbital Fire-Support Liason Officer"
 #define JOB_NAVY_PARA_TECH "USASF Para-Rescue Support Technician"
+#define JOB_NAVY_PARA_MED "USASF Para-Rescue Medical Technician"
+#define JOB_NAVY_PARA_LEAD "USASF Para-Rescue Team Leader"
 #define JOB_NAVY_SYNTH "USASF Support Synthetic"
 #define JOB_NAVY_PILOT "USASF Pilot"
 #define JOB_NAVY_CHIEF_ENGINEER "USASF Engineering Duty Officer"
@@ -327,6 +333,25 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_PMCPLAT_SMALL_MEDIC "Strike Medical Specialist"
 
 
+//-------- Con-Amalagated --------//
+
+#define JOB_CA_SEC "HC Security Guard"
+#define JOB_CA_SEC_SYNTH "HC Security Guard Synthetic"
+#define JOB_CA_TRAINEE "Corporate Trainee"
+#define JOB_CA_JUNIOR_EXECUTIVE "Corporate Junior Executive"
+#define JOB_CA_CORPORATE_LIAISON "Corporate Liaison"
+#define JOB_CA_EXECUTIVE "Corporate Executive"
+#define JOB_CA_SENIOR_EXECUTIVE "Corporate Senior Executive"
+#define JOB_CA_EXECUTIVE_SPECIALIST "Corporate Executive Specialist"
+#define JOB_CA_LEGAL_SPECIALIST "Corporate Legal Specialist"
+#define JOB_CA_EXECUTIVE_SUPERVISOR "Corporate Executive Supervisor"
+#define JOB_CA_LEGAL_SUPERVISOR "Corporate Legal Supervisor"
+#define JOB_CA_ASSISTANT_MANAGER "Corporate Assistant Manager"
+#define JOB_CA_DIVISION_MANAGER "Corporate Division Manager"
+#define JOB_CA_CHIEF_EXECUTIVE "Corporate Chief Executive"
+#define JOB_CA_DEPUTY_DIRECTOR "HC Deputy Director"
+#define JOB_CA_DIRECTOR "HC Director"
+
 //---- Contractors ----//
 #define JOB_CONTRACTOR "VAIPO Mercenary"
 #define JOB_CONTRACTOR_ST "VAIPO Mercenary"
@@ -380,6 +405,13 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_FORECON_RTO "Reconnaissance Radio Telephone Operator"
 #define JOB_FORECON_CORPSMAN "Reconnaissance Corpsman"
 #define JOB_FORECON_SMARTGUNNER "Reconnaissance Smartgunner"
+
+//-------- US ARMY --------//
+
+#define JOB_ARMY_CO "US Army Commander"
+#define JOB_ARMY_SYN "US Army Synthetic"
+
+#define JOB_ARMY_LIST list(JOB_ARMY_TROOPER, JOB_ARMY_ENGI, JOB_ARMY_MEDIC, JOB_ARMY_MARKSMAN, JOB_ARMY_SMARTGUNNER, JOB_ARMY_SNCO, JOB_ARMY_CO, JOB_ARMY_SYN)
 
 //-------- UPP --------//
 #define JOB_UPP "Naval Infantry Rifleman"
@@ -446,8 +478,30 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_TWE_RMC_TROOPLEADER "Troop Sergeant"
 #define JOB_TWE_RMC_LIEUTENANT "Troop Commander"
 #define JOB_TWE_RMC_COMMANDER "Squadron Commander"
+#define JOB_TWE_RMC_PILOT "Aircrewman"
 
-#define TWE_COMMANDO_JOB_LIST list(JOB_TWE_RMC_RIFLEMAN, JOB_TWE_RMC_MEDIC, JOB_TWE_RMC_ENGI, JOB_TWE_RMC_BREACHER, JOB_TWE_RMC_SMARTGUNNER, JOB_TWE_RMC_MARKSMAN ,JOB_TWE_RMC_TEAMLEADER, JOB_TWE_RMC_SECTIONLEADER, JOB_TWE_RMC_TROOPLEADER, JOB_TWE_RMC_LIEUTENANT, JOB_TWE_RMC_COMMANDER,)
+#define TWE_COMMANDO_JOB_LIST list(JOB_TWE_RMC_RIFLEMAN, JOB_TWE_RMC_MEDIC, JOB_TWE_RMC_ENGI, JOB_TWE_RMC_BREACHER, JOB_TWE_RMC_SMARTGUNNER, JOB_TWE_RMC_MARKSMAN ,JOB_TWE_RMC_TEAMLEADER, JOB_TWE_RMC_SECTIONLEADER, JOB_TWE_RMC_TROOPLEADER, JOB_TWE_RMC_LIEUTENANT, JOB_TWE_RMC_COMMANDER, JOB_TWE_RMC_PILOT)
+
+//-------- IASF --------//
+
+#define JOB_TWE_IASF_RIFLEMAN "IASF Trooper"
+#define JOB_TWE_IASF_SNIPER "IASF Scout Sniper"
+#define JOB_TWE_IASF_PILOT "IASF Fleet Air Arm"
+#define JOB_TWE_IASF_SMARTGUNNER "IASF GPMG Gunner"
+#define JOB_TWE_IASF_SPECIALIST "IASF Specialist"
+#define JOB_TWE_IASF_ENGI "IASF Combat Engineer"
+#define JOB_TWE_IASF_MEDIC "IASF Combat Medical Technician"
+#define JOB_TWE_IASF_TEAM_LEADER "IASF Section 2iC"
+#define JOB_TWE_IASF_SECTION_LEADER "IASF Section Leader"
+#define JOB_TWE_IASF_TROOP_LEADER "IASF Troop Sergeant"
+#define JOB_TWE_IASF_LIEUTENANT "IASF Lieutenant"
+#define JOB_TWE_IASF_CAPTAIN "IASF Captain"
+#define JOB_TWE_IASF_MAJOR "IASF Major"
+#define JOB_TWE_IASF_GENERAL "IASF General"
+
+#define JOB_TWE_IASF_SYNTH "IASF Support Synth"
+
+#define TWE_IASF_JOB_LIST list(JOB_TWE_IASF_RIFLEMAN, JOB_TWE_IASF_ENGI, JOB_TWE_IASF_MEDIC, JOB_TWE_IASF_PILOT, JOB_TWE_IASF_SMARTGUNNER, JOB_TWE_IASF_SPECIALIST, JOB_TWE_IASF_SNIPER , JOB_TWE_IASF_TEAM_LEADER, JOB_TWE_IASF_SECTION_LEADER, JOB_TWE_IASF_TROOP_LEADER, JOB_TWE_IASF_LIEUTENANT, JOB_TWE_IASF_CAPTAIN, JOB_TWE_IASF_MAJOR, JOB_TWE_IASF_GENERAL)
 
 //-------- PROVOST --------//
 #define JOB_PROVOST_ENFORCER "Provost Enforcer"

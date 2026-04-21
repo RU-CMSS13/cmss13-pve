@@ -14,8 +14,8 @@
 
 	accurate_range = 7
 	max_range = 14
-	damage = 110
-	penetration = ARMOR_PENETRATION_TIER_4
+	damage = 90
+	penetration = ARMOR_PENETRATION_TIER_6
 	damage_var_low = PROJECTILE_VARIANCE_TIER_10
 	damage_var_high = PROJECTILE_VARIANCE_TIER_1
 	damage_armor_punch = 2
@@ -29,7 +29,7 @@
 		var/mob/living/carbon/xenomorph/target = living_mob
 		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
 		target.KnockDown(3.5)
-		target.Stun(3.5)
+		target.Stun(2.5)
 		target.Slow(5)
 	else
 		if(!isyautja(living_mob)) //Not predators.
@@ -39,6 +39,21 @@
 			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
 		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
 
+/datum/ammo/bullet/shotgun/slug/special
+	name = "shotgun slug, USCM magnum load"
+	handful_state = "special_slug"
+	headshot_state = HEADSHOT_OVERLAY_HEAVY
+	accurate_range = 10
+	max_range = 18
+	damage = 110
+	damage_armor_punch = 5
+	penetration = ARMOR_PENETRATION_TIER_8
+	firing_freq_offset = SOUND_FREQ_LOW
+
+/datum/ammo/bullet/shotgun/slug/special/on_hit_mob(mob/M,obj/projectile/P)
+	knockback(M, P, 5)
+	pushback(M, P, 5)
+
 /datum/ammo/bullet/shotgun/slug/es7
 	name = "electrostatic solid slug"
 	icon_state = "bullet_blue"
@@ -47,8 +62,8 @@
 	sound_bounce = "energy_bounce"
 	hit_effect_color = "#00aeff"
 	sound_override = 'sound/weapons/gun_es7lethal.ogg'
-	damage = 90
-	penetration = ARMOR_PENETRATION_TIER_8
+	damage = 75
+	penetration = ARMOR_PENETRATION_TIER_7
 	accuracy = HIT_ACCURACY_TIER_5
 
 /datum/ammo/bullet/shotgun/beanbag
@@ -110,8 +125,8 @@
 
 	accuracy = -HIT_ACCURACY_TIER_2
 	max_range = 12
-	damage = 110
-	penetration= ARMOR_PENETRATION_TIER_4
+	damage = 60
+	penetration= ARMOR_PENETRATION_TIER_2
 	handful_state = "incendiary_slug"
 
 /datum/ammo/bullet/shotgun/incendiary/set_bullet_traits()
@@ -141,12 +156,11 @@
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
 	max_range = 12
-	damage = 50
+	damage = 30
 	damage_var_low = PROJECTILE_VARIANCE_TIER_8
 	damage_var_high = PROJECTILE_VARIANCE_TIER_8
-	penetration = ARMOR_PENETRATION_TIER_5
+	penetration = ARMOR_PENETRATION_TIER_7
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_3
-	handful_state = "flechette_shell"
 	multiple_handful_name = TRUE
 
 /datum/ammo/bullet/shotgun/flechette/on_hit_mob(mob/M,obj/projectile/P)
@@ -159,14 +173,63 @@
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
 	max_range = 12
-	damage = 50
+	damage = 30
 	damage_var_low = PROJECTILE_VARIANCE_TIER_8
 	damage_var_high = PROJECTILE_VARIANCE_TIER_8
-	penetration = ARMOR_PENETRATION_TIER_5
+	penetration = ARMOR_PENETRATION_TIER_7
 	scatter = SCATTER_AMOUNT_TIER_5
 
 /datum/ammo/bullet/shotgun/flechette_spread/awesome
+	damage = 80
+
+/datum/ammo/bullet/shotgun/flechette/special
+	name = "flechette shell, USCM DU type"
+	handful_state = "special_dart"
+	bonus_projectiles_type = /datum/ammo/bullet/shotgun/flechette_spread/special
+	max_range = 14
 	damage = 50
+	damage_var_low = PROJECTILE_VARIANCE_TIER_10
+	damage_var_high = PROJECTILE_VARIANCE_TIER_5
+	penetration = ARMOR_PENETRATION_TIER_9
+	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_5
+
+/datum/ammo/bullet/shotgun/flechette/special/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
+	))
+
+/datum/ammo/bullet/shotgun/flechette/special/on_hit_mob(mob/M,obj/projectile/P)
+	M.AddComponent(/datum/component/status_effect/toxic_buildup, toxic_buildup = 15, toxic_buildup_dissipation = 0.3, max_buildup = 75)
+	knockback(M, P, 2)
+	if(M.mob_size >= MOB_SIZE_BIG)
+		var/mob/living/L = M
+		L.apply_armoured_damage(damage*1.3, ARMOR_BULLET, BRUTE, null, penetration) // As bugs don't take toxin damage, this should give it a little more oomf versus them
+
+/datum/ammo/bullet/shotgun/flechette_spread/special
+	name = "additional DU flechette"
+	icon_state = "flechette"
+
+	accuracy_var_low = PROJECTILE_VARIANCE_TIER_5
+	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
+	max_range = 14
+	damage = 45
+	damage_var_low = PROJECTILE_VARIANCE_TIER_10
+	damage_var_high = PROJECTILE_VARIANCE_TIER_5
+	penetration = ARMOR_PENETRATION_TIER_9
+	scatter = SCATTER_AMOUNT_TIER_5
+
+/datum/ammo/bullet/shotgun/flechette_spread/special/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
+	))
+
+/datum/ammo/bullet/shotgun/flechette_spread/special/on_hit_mob(mob/M,obj/projectile/P)
+	M.AddComponent(/datum/component/status_effect/toxic_buildup, toxic_buildup = 10, toxic_buildup_dissipation = 0.3, max_buildup = 75)
+	if(M.mob_size >= MOB_SIZE_BIG)
+		var/mob/living/L = M
+		L.apply_armoured_damage(damage*1.2, ARMOR_BULLET, BRUTE, null, penetration) // As bugs don't take toxin damage, this should give it a little more oomf versus them
 
 /datum/ammo/bullet/shotgun/buckshot
 	name = "buckshot shell"
@@ -180,7 +243,7 @@
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_5
 	accurate_range = 7
 	max_range = 9
-	damage = 70
+	damage = 50
 	damage_var_low = PROJECTILE_VARIANCE_TIER_10
 	damage_var_high = PROJECTILE_VARIANCE_TIER_1
 	penetration = ARMOR_PENETRATION_TIER_1
@@ -202,8 +265,8 @@
 		target.Slow(4)
 	else
 		if(!isyautja(living_mob)) //Not predators.
-			living_mob.KnockDown(3)
-			living_mob.Stun(3)
+			living_mob.KnockDown(2)
+			living_mob.Stun(2)
 			living_mob.Slow(5)
 			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
 		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
@@ -214,7 +277,7 @@
 	shell_casing = /obj/effect/decal/ammo_casing/redshell
 	handful_type = /obj/item/ammo_magazine/handful/shotgun/buckshot/incendiary
 	bonus_projectiles_type = /datum/ammo/bullet/shotgun/spread/incendiary
-	damage = 70
+	damage = 40
 	shell_speed = AMMO_SPEED_TIER_1
 
 /datum/ammo/bullet/shotgun/buckshot/incendiary/set_bullet_traits()
@@ -233,7 +296,7 @@
 
 	accurate_range = 8
 	max_range = 8
-	damage = 90
+	damage = 60
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_8
 	firing_freq_offset = SOUND_FREQ_LOW
 
@@ -241,7 +304,7 @@
 /datum/ammo/bullet/shotgun/buckshot/masterkey
 	bonus_projectiles_type = /datum/ammo/bullet/shotgun/spread/masterkey
 
-	damage = 80
+	damage = 55
 
 /datum/ammo/bullet/shotgun/spread
 	name = "additional buckshot"
@@ -251,7 +314,7 @@
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
 	accurate_range = 4
 	max_range = 6
-	damage = 90
+	damage = 50
 	damage_var_low = PROJECTILE_VARIANCE_TIER_8
 	damage_var_high = PROJECTILE_VARIANCE_TIER_8
 	penetration = ARMOR_PENETRATION_TIER_1
@@ -261,7 +324,7 @@
 	pen_armor_punch = 0
 
 /datum/ammo/bullet/shotgun/spread/masterkey
-	damage = 80
+	damage = 20
 
 /datum/ammo/bullet/shotgun/spread/on_hit_mob(mob/M,obj/projectile/P)
 	knockback(M, P, 3)
@@ -290,7 +353,7 @@
 
 /datum/ammo/bullet/shotgun/spread/incendiary
 	name = "additional incendiary buckshot"
-	damage = 70
+	damage = 40
 	shell_speed = AMMO_SPEED_TIER_1
 
 /datum/ammo/bullet/shotgun/spread/incendiary/set_bullet_traits()

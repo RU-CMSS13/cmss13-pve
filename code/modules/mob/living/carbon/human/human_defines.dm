@@ -50,6 +50,7 @@
 	var/origin = ""
 	var/personal_faction = ""
 	var/religion = ""
+	var/accent_prefix = "" // RU PVE ADDITION
 
 	//Equipment slots
 	var/obj/item/clothing/suit/wear_suit = null
@@ -169,6 +170,9 @@
 
 	/// Stored image references associated with focus-fire.
 	var/image/focused_fire_marker
+
+	// Are we currently using inherent zoom vision?
+	var/is_zoomed = FALSE
 
 /client/var/cached_human_playtime
 

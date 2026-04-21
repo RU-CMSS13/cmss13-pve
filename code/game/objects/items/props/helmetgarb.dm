@@ -132,7 +132,7 @@
 /obj/item/prop/helmetgarb/helmet_nvg/Initialize(mapload, ...)
 	. = ..()
 	if(shape != NVG_SHAPE_COSMETIC)
-		AddComponent(/datum/component/cell, cell_max_charge, TRUE, charge_drain = 8)
+		AddComponent(/datum/component/cell, cell_max_charge, TRUE, charge_drain = 2)
 		RegisterSignal(src, COMSIG_CELL_TRY_RECHARGING, PROC_REF(cell_try_recharge))
 		RegisterSignal(src, COMSIG_CELL_OUT_OF_CHARGE, PROC_REF(on_power_out))
 
@@ -313,7 +313,7 @@
 
 	user.add_client_color_matrix("nvg", 99, color_matrix_multiply(color_matrix_saturation(0), color_matrix_from_string("#7aff7a")))
 	user.overlay_fullscreen("nvg", /atom/movable/screen/fullscreen/flash/noise/nvg)
-	user.overlay_fullscreen("nvg_blur", /atom/movable/screen/fullscreen/brute/nvg, 3)
+	//user.overlay_fullscreen("nvg_blur", /atom/movable/screen/fullscreen/brute/nvg, 3)
 	playsound(user, 'sound/handling/toggle_nv1.ogg', 25)
 	nightvision = TRUE
 	user.update_sight()
@@ -343,7 +343,7 @@
 	if(nightvision)
 		attached_mob.remove_client_color_matrix("nvg", 1 SECONDS)
 		attached_mob.clear_fullscreen("nvg", 0.5 SECONDS)
-		attached_mob.clear_fullscreen("nvg_blur", 0.5 SECONDS)
+		//attached_mob.clear_fullscreen("nvg_blur", 0.5 SECONDS)
 		playsound(attached_mob, 'sound/handling/toggle_nv2.ogg', 25)
 		nightvision = FALSE
 
@@ -406,9 +406,11 @@
 		to_chat(user, SPAN_WARNING("You cannot use \the [src] when they are hidden."))
 		return
 
+/*
 	if(user.client.view > 7 && shape != NVG_SHAPE_COSMETIC)
 		to_chat(user, SPAN_WARNING("You cannot use \the [src] while using optics."))
 		return
+*/
 
 	activated = !activated
 
@@ -467,18 +469,21 @@
 /obj/item/prop/helmetgarb/helmet_nvg/cosmetic/break_nvg(mob/living/carbon/human/user, list/slashdata, mob/living/carbon/xenomorph/Xeno)
 	return
 
-/obj/item/prop/helmetgarb/helmet_nvg/cosmetic/larp //something that better fits for the USCM
-	name = "old M1 multi-spectrum visor"
-	desc = "A failed prototype for next generation HUD optics for the Colonial Marines that was surpased by the current issue integrated IR optic, this flip down visor offers a full visor suite with multi-spectrum capabilities. A really cool piece until you realize you are one headbang away from losing night capability."
+/obj/item/prop/helmetgarb/helmet_nvg/thermal //something that better fits for the USCM
+	name = "M4 thermal-spectrum visor"
+	desc = "A prototype for next generation HUD optics for the Colonial Marines, this flip down visor offers a full night vision with thermal vision in one piece."
 	icon_state = "larp"
 	active_powered_icon_state = "larp_down_powered"
 	active_icon_state = "larp_down"
 	inactive_icon_state = "larp"
+	shape = NVG_SHAPE_FINE
+	cell_max_charge = 5000
 
 
 /obj/item/prop/helmetgarb/helmet_nvg/marsoc //for Marine Raiders
 	name = "\improper Tactical M3 night vision goggles"
 	desc = "With an integrated self-recharging battery, nothing can stop you. Put them on your helmet and press the button and it's go-time."
+	shape = NVG_SHAPE_FINE
 	cell_max_charge = -1
 
 #undef NVG_SHAPE_COSMETIC
@@ -638,4 +643,10 @@
 	name = "RMC 14 pattern goggles"
 	desc = "The complimentary, but not necessary googles, attachable to Mk10 open combat helmets. An additional protection to the eyes, be it a cold wind, or a spit from a rioting civilian. It's a true talent to be able to see through them easily, without HUD visor."
 	icon_state = "rmc_goggles"
+	flags_obj = OBJ_NO_HELMET_BAND
+
+/obj/item/prop/helmetgarb/frogmen_veil
+	name = "Frogmen tactical veil"
+	desc = "A net veil, most of the times used by special forces to break up the silhouette of the soldier at long ranges. And also it's very creepy to see one when fighting on the other side."
+	icon_state = "veil_frogmen"
 	flags_obj = OBJ_NO_HELMET_BAND

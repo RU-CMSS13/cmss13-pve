@@ -212,7 +212,7 @@
 
 /obj/item/reagent_container/glass/bottle/antitoxin
 	name = "\improper Dylovene bottle"
-	desc = "A small glossy bottle of dylovene, the new broadspectrum antitoxic."
+	desc = "A small glossy bottle of dylovene, the new broadspectrum antitoxic, heals liver and kidneys."
 	icon = 'icons/obj/items/chemistry.dmi'
 	icon_state = "bottle7"
 	amount_per_transfer_from_this = 150

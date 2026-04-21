@@ -89,6 +89,25 @@
 	display_maptext = TRUE
 	maptext_label = "Tc"
 
+/obj/item/reagent_container/hypospray/autoinjector/tricord/random_amount
+
+/obj/item/reagent_container/hypospray/autoinjector/tricord/random_amount/Initialize()
+	. = ..()
+	var/amount = rand(1, 6)
+	switch(amount)
+		if(1)
+			reagents.add_reagent("tricordrazine", -45)
+			uses_left = 0
+			update_icon()
+		if(2 , 3)
+			reagents.add_reagent("tricordrazine", -30)
+			uses_left = 1
+			update_icon()
+		if(4 , 5)
+			reagents.add_reagent("tricordrazine", -15)
+			uses_left = 2
+			update_icon()
+
 /obj/item/reagent_container/hypospray/autoinjector/tricord/skillless
 	name = "tricordrazine EZ autoinjector"
 	desc = "An EZ autoinjector loaded with 3 doses of 15u of Tricordrazine, a weak general use medicine for treating damage. You can refill it at Wey-Med vending machines and it does not require any training to use."
@@ -147,6 +166,25 @@
 	display_maptext = TRUE
 	maptext_label = "Tr"
 
+/obj/item/reagent_container/hypospray/autoinjector/tramadol/random_amount
+
+/obj/item/reagent_container/hypospray/autoinjector/tramadol/random_amount/Initialize()
+	. = ..()
+	var/amount = rand(1, 6)
+	switch(amount)
+		if(1)
+			reagents.add_reagent("tramadol", -45)
+			uses_left = 0
+			update_icon()
+		if(2 , 3)
+			reagents.add_reagent("tramadol", -30)
+			uses_left = 1
+			update_icon()
+		if(4 , 5)
+			reagents.add_reagent("tramadol", -15)
+			uses_left = 2
+			update_icon()
+
 /obj/item/reagent_container/hypospray/autoinjector/tramadol/skillless
 	name = "tramadol EZ autoinjector"
 	desc = "An EZ autoinjector loaded with 3 doses of 15u of Tramadol, a weak but effective painkiller for normal wounds. You can refill it at Wey-Med vending machines and it doesn't require any training to use."
@@ -180,6 +218,25 @@
 	display_maptext = TRUE
 	maptext_label = "Kl"
 
+/obj/item/reagent_container/hypospray/autoinjector/kelotane/random_amount
+
+/obj/item/reagent_container/hypospray/autoinjector/kelotane/random_amount/Initialize()
+	. = ..()
+	var/amount = rand(1, 6)
+	switch(amount)
+		if(1)
+			reagents.add_reagent("kelotane", -45)
+			uses_left = 0
+			update_icon()
+		if(2 , 3)
+			reagents.add_reagent("kelotane", -30)
+			uses_left = 1
+			update_icon()
+		if(4 , 5)
+			reagents.add_reagent("kelotane", -15)
+			uses_left = 2
+			update_icon()
+
 /obj/item/reagent_container/hypospray/autoinjector/kelotane/skillless
 	name = "kelotane EZ autoinjector"
 	desc = "An EZ autoinjector loaded with 3 doses of 15u of Kelotane, a common burn medicine. Doesn't require any training to use. You can refill it at Wey-Med vending machines."
@@ -204,6 +261,25 @@
 	display_maptext = TRUE
 	maptext_label = "Bi"
 
+/obj/item/reagent_container/hypospray/autoinjector/bicaridine/random_amount
+
+/obj/item/reagent_container/hypospray/autoinjector/bicaridine/random_amount/Initialize()
+	. = ..()
+	var/amount = rand(1, 6)
+	switch(amount)
+		if(1)
+			reagents.add_reagent("bicaridine", -45)
+			uses_left = 0
+			update_icon()
+		if(2 , 3)
+			reagents.add_reagent("bicaridine", -30)
+			uses_left = 1
+			update_icon()
+		if(4 , 5)
+			reagents.add_reagent("bicaridine", -15)
+			uses_left = 2
+			update_icon()
+
 /obj/item/reagent_container/hypospray/autoinjector/bicaridine/skillless
 	name = "bicaridine EZ autoinjector"
 	desc = "An EZ autoinjector loaded with 3 doses of 15u of Bicaridine, a common brute and circulatory damage medicine. Doesn't require any training to use."
@@ -222,7 +298,7 @@
 /obj/item/reagent_container/hypospray/autoinjector/antitoxin
 	name = "dylovene autoinjector"
 	chemname = "anti_toxin"
-	desc = "An autoinjector loaded with 3 doses of 15u of Dylovene, a common toxin damage medicine. You can refill it at Wey-Med vending machines."
+	desc = "An autoinjector loaded with 3 doses of 15u of Dylovene, anti-toxin medicine, heals liver and kidneys. You can refill it at Wey-Med vending machines."
 	amount_per_transfer_from_this = REAGENTS_OVERDOSE * INJECTOR_PERCENTAGE_OF_OD
 	volume = (REAGENTS_OVERDOSE * INJECTOR_PERCENTAGE_OF_OD) * INJECTOR_USES
 	display_maptext = TRUE
@@ -230,13 +306,13 @@
 
 /obj/item/reagent_container/hypospray/autoinjector/antitoxin/skillless
 	name = "dylovene EZ autoinjector"
-	desc = "An EZ autoinjector loaded with 3 doses of 15u of Dylovene, a common toxin damage medicine. Doesn't require any training to use. You can refill it at Wey-Med vending machines."
+	desc = "An EZ autoinjector loaded with 3 doses of 15u of Dylovene, anti-toxin medicine, heals liver and kidneys. Doesn't require any training to use. You can refill it at Wey-Med vending machines."
 	icon_state = "emptyskill"
 	skilllock = SKILL_MEDICAL_DEFAULT
 
 /obj/item/reagent_container/hypospray/autoinjector/antitoxin/skillless/one_use
 	name = "single-use dylovene EZ autoinjector"
-	desc = "An EZ autoinjector loaded with a single dose of 15u of Dylovene, a common toxin damage medicine. You cannot refill it, but it doesn't require any training to use."
+	desc = "An EZ autoinjector loaded with a single dose of 15u of Dylovene, anti-toxin medicine, heals liver and kidneys. You cannot refill it, but it doesn't require any training to use."
 	icon_state = "empty_oneuse"
 	autoinjector_type = "autoinjector_oneuse"
 	volume = 15
@@ -281,7 +357,7 @@
 
 /obj/item/reagent_container/hypospray/autoinjector/emergency
 	name = "emergency autoinjector (CAUTION)"
-	desc = "An autoinjector loaded with a single dose of 77u of a special cocktail of chemicals, to be used in life-threatening situations. Doesn't require any training to use."
+	desc = "An autoinjector loaded with a single dose of 70u of a special cocktail of chemicals, to be used in life-threatening situations. Doesn't require any training to use."
 	icon_state = "empty_emergency"
 	chemname = "emergency"
 	autoinjector_type = "autoinjector_oneuse"
@@ -297,9 +373,11 @@
 
 /obj/item/reagent_container/hypospray/autoinjector/emergency/Initialize()
 	. = ..()
-	reagents.add_reagent("bicaridine", REAGENTS_OVERDOSE-1)
-	reagents.add_reagent("kelotane", REAGENTS_OVERDOSE-1)
-	reagents.add_reagent("oxycodone", MED_REAGENTS_OVERDOSE-1)
+	reagents.add_reagent("bicaridine", 15)
+	reagents.add_reagent("kelotane", 15)
+	reagents.add_reagent("oxycodone", 10)
+	reagents.add_reagent("inaprovaline", 15)
+	reagents.add_reagent("dexalin", 15)
 	update_icon()
 
 /obj/item/reagent_container/hypospray/autoinjector/black_goo_cure

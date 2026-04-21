@@ -82,8 +82,8 @@
 
 /obj/item/weapon/gun/smg/m39/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_SMG2)
-	set_burst_delay(FIRE_DELAY_TIER_SMG2)
+	set_fire_delay(FIRE_DELAY_TIER_SMG)
+	set_burst_delay(FIRE_DELAY_TIER_SMG)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
 	accuracy_mult = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_5
@@ -113,11 +113,17 @@
 	starting_attachment_types = list(/obj/item/attachable/stock/smg)
 
 /obj/item/weapon/gun/smg/m39/tactical
-	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible,/obj/item/attachable/reflex,/obj/item/attachable/verticalgrip,/obj/item/attachable/suppressor)
+	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible, /obj/item/attachable/reflex, /obj/item/attachable/verticalgrip)
 
 /obj/item/weapon/gun/smg/m39/tactical/ap
-	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible,/obj/item/attachable/reflex,/obj/item/attachable/verticalgrip)
+	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible, /obj/item/attachable/reflex, /obj/item/attachable/verticalgrip)
 	current_mag = /obj/item/ammo_magazine/smg/m39/ap
+
+/obj/item/weapon/gun/smg/m39/army
+	starting_attachment_types = list(/obj/item/attachable/stock/smg, /obj/item/attachable/reflex, /obj/item/attachable/extended_barrel, /obj/item/attachable/lasersight)
+
+/obj/item/weapon/gun/smg/m39/army/heap
+	current_mag = /obj/item/ammo_magazine/smg/m39/heap
 
 //-------------------------------------------------------
 
@@ -152,7 +158,7 @@
 
 /obj/item/weapon/gun/smg/m39/elite/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_SMG2)
+	set_fire_delay(FIRE_DELAY_TIER_SMG)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_7
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT
 	scatter = SCATTER_AMOUNT_TIER_9
@@ -220,6 +226,9 @@
 	desc = "A Weyland-Yutani creation, this M-39 comes equipped in corporate white. Chambered in 9x19mm. This one had its IFF electronics removed."
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 
+/obj/item/weapon/gun/smg/m39/corporate/crewman
+	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible, /obj/item/attachable/lasersight)
+
 /obj/item/weapon/gun/smg/m39/elite/whiteout//attachies + heap mag for whiteout.
 	starting_attachment_types = list(/obj/item/attachable/stock/smg, /obj/item/attachable/suppressor, /obj/item/attachable/angledgrip, /obj/item/attachable/magnetic_harness)
 	current_mag = /obj/item/ammo_magazine/smg/m39/heap
@@ -262,7 +271,7 @@
 
 
 /obj/item/weapon/gun/smg/mp5/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 17,"rail_x" = 12, "rail_y" = 19, "under_x" = 23, "under_y" = 15, "stock_x" = 28, "stock_y" = 17, "side_rail_x" = 27, "side_rail_y" = 17)
+	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 17,"rail_x" = 12, "rail_y" = 19, "under_x" = 23, "under_y" = 15, "stock_x" = 28, "stock_y" = 17, "side_rail_x" = 27, "side_rail_y" = 17, "sling_x" = 12, "sling_y" = 19)
 
 /obj/item/weapon/gun/smg/mp5/set_gun_config_values()
 	..()
@@ -321,7 +330,7 @@
 
 
 /obj/item/weapon/gun/smg/mp27/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 23, "under_y" = 16, "stock_x" = 28, "stock_y" = 17, "side_rail_x" = 26, "side_rail_y" = 17)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 23, "under_y" = 16, "stock_x" = 28, "stock_y" = 17, "side_rail_x" = 26, "side_rail_y" = 17, "sling_x" = 12, "sling_y" = 20)
 
 /obj/item/weapon/gun/smg/mp27/set_gun_config_values()
 	..()
@@ -355,7 +364,7 @@
 	var/jammed = FALSE
 
 /obj/item/weapon/gun/smg/ppsh/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 17,"rail_x" = 15, "rail_y" = 19, "under_x" = 26, "under_y" = 15, "stock_x" = 18, "stock_y" = 15, "side_rail_x" = 18, "side_rail_y" = 16)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 17,"rail_x" = 15, "rail_y" = 19, "under_x" = 26, "under_y" = 15, "stock_x" = 18, "stock_y" = 15, "side_rail_x" = 18, "side_rail_y" = 16, "sling_x" = 15, "sling_y" = 19)
 
 /obj/item/weapon/gun/smg/ppsh/set_gun_config_values()
 	..()
@@ -460,7 +469,7 @@
 	)
 
 /obj/item/weapon/gun/smg/pps43/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 20,"rail_x" = 20, "rail_y" = 24, "under_x" = 25, "under_y" = 17, "stock_x" = 26, "stock_y" = 15, "side_rail_x" = 23, "side_rail_y" = 19)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 20,"rail_x" = 20, "rail_y" = 24, "under_x" = 25, "under_y" = 17, "stock_x" = 26, "stock_y" = 15, "side_rail_x" = 23, "side_rail_y" = 19, "sling_x" = 20, "sling_y" = 24)
 
 /obj/item/weapon/gun/smg/pps43/set_gun_config_values()
 	..()
@@ -493,23 +502,25 @@
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
 	wield_delay = WIELD_DELAY_MIN
 	attachable_allowed = list(
-		/obj/item/attachable/suppressor, // Barrel
-		/obj/item/attachable/extended_barrel,
-		/obj/item/attachable/heavy_barrel,
-		/obj/item/attachable/compensator,
-		/obj/item/attachable/reddot, // Rail
-		/obj/item/attachable/reflex,
+		/obj/item/attachable/magnetic_harness, // Rail
+		/obj/item/attachable/sling,
+		/obj/item/attachable/reddot/upp,
 		/obj/item/attachable/reflex/upp,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/scope/mini_iff,
 		/obj/item/attachable/scope/pve,
-		/obj/item/attachable/lasersight, // Under
-		/obj/item/attachable/lasersight/upp,
-		/obj/item/attachable/burstfire_assembly,
+		/obj/item/attachable/scope/mini/upp,
+		/obj/item/attachable/suppressor, // Barrel
+		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/heavy_barrel,
+		/obj/item/attachable/compensator,
+		/obj/item/attachable/burstfire_assembly, // under
+		/obj/item/attachable/lasersight/upp, // Side Rail
+		/obj/item/attachable/flashlight,
 		)
 
 /obj/item/weapon/gun/smg/bizon/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 20,"rail_x" = 18, "rail_y" = 23, "under_x" = 26, "under_y" = 15, "stock_x" = 26, "stock_y" = 15, "side_rail_x" = 27, "side_rail_y" = 18)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 20,"rail_x" = 18, "rail_y" = 23, "under_x" = 26, "under_y" = 15, "stock_x" = 26, "stock_y" = 15, "side_rail_x" = 20, "side_rail_y" = 18, "sling_x" = 18, "sling_y" = 23)
 
 /obj/item/weapon/gun/smg/bizon/set_gun_config_values()
 	..()
@@ -566,7 +577,7 @@
 	aim_slowdown = SLOWDOWN_ADS_NONE
 
 /obj/item/weapon/gun/smg/mac15/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 21,"rail_x" = 13, "rail_y" = 24, "under_x" = 19, "under_y" = 18, "stock_x" = 22, "stock_y" = 16, "side_rail_x" = 22, "side_rail_y" = 20)
+	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 21,"rail_x" = 13, "rail_y" = 24, "under_x" = 19, "under_y" = 18, "stock_x" = 22, "stock_y" = 16, "side_rail_x" = 22, "side_rail_y" = 20, "sling_x" = 13, "sling_y" = 24)
 
 /obj/item/weapon/gun/smg/mac15/set_gun_config_values()
 	..()
@@ -615,7 +626,7 @@
 	var/jammed = FALSE
 
 /obj/item/weapon/gun/smg/uzi/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 12, "rail_y" = 22, "under_x" = 22, "under_y" = 16, "stock_x" = 22, "stock_y" = 16, "side_rail_x" = 23, "side_rail_y" = 18)
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 12, "rail_y" = 22, "under_x" = 22, "under_y" = 16, "stock_x" = 22, "stock_y" = 16, "side_rail_x" = 23, "side_rail_y" = 18, "sling_x" = 12, "sling_y" = 22)
 
 /obj/item/weapon/gun/smg/uzi/set_gun_config_values()
 	..()
@@ -706,7 +717,7 @@
 	update_attachable(S.slot)
 
 /obj/item/weapon/gun/smg/fp9000/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 20, "rail_y" = 21, "under_x" = 26, "under_y" = 16, "stock_x" = 22, "stock_y" = 16, "side_rail_x" = 25, "side_rail_y" = 17)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 20, "rail_y" = 21, "under_x" = 26, "under_y" = 16, "stock_x" = 22, "stock_y" = 16, "side_rail_x" = 25, "side_rail_y" = 17, "sling_x" = 20, "sling_y" = 21)
 
 /obj/item/weapon/gun/smg/fp9000/set_gun_config_values()
 	..()
@@ -843,8 +854,7 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "p90"
 	item_state = "p90"
-
-	fire_sound = 'sound/weapons/p90.ogg'
+	fire_sound = "gun_p90"
 	current_mag = /obj/item/ammo_magazine/smg/p90
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor, // Barrel
@@ -857,10 +867,10 @@
 		/obj/item/attachable/scope/mini,
 		)
 
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ANTIQUE
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ANTIQUE|GUN_AUTO_EJECT_CASINGS
 
 /obj/item/weapon/gun/smg/p90/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 17,"rail_x" = 22, "rail_y" = 24, "under_x" = 23, "under_y" = 15, "stock_x" = 28, "stock_y" = 17)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 17,"rail_x" = 22, "rail_y" = 24, "under_x" = 23, "under_y" = 15, "stock_x" = 28, "stock_y" = 17, "sling_x" = 22, "sling_y" = 24)
 
 /obj/item/weapon/gun/smg/p90/set_gun_config_values()
 	..()
@@ -872,7 +882,6 @@
 	scatter = SCATTER_AMOUNT_TIER_4
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_7
 	scatter_unwielded = SCATTER_AMOUNT_TIER_3
-	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_4
 	recoil_unwielded = RECOIL_AMOUNT_TIER_5
 	fa_max_scatter = SCATTER_AMOUNT_TIER_10 + 0.5
 
@@ -882,12 +891,12 @@
 
 /obj/item/weapon/gun/smg/p90/twe
 	name = "\improper FN-TWE P90 submachinegun"
-	desc = "A variation of the FN P90 submachine gun. Used by mercenaries and royal marines commandos. This weapon only accepts the AP variation of the 5.7×28mm rounds."
+	desc = "A variation of the FN P90 submachine gun with auto-ejection system. Used by mercenaries and royal marines commandos. Only accepts the AP variation of the 5.7×28mm rounds. This one is painted in TWE's purple-blue camouflage."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
 	icon_state = "p90_twe"
 	item_state = "p90_twe"
 
-	fire_sound = 'sound/weapons/p90.ogg'
+	fire_sound = "gun_p90"
 	current_mag = /obj/item/ammo_magazine/smg/p90/twe
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor, // Barrel
@@ -898,12 +907,14 @@
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/lasersight, // Side Rail
+		/obj/item/attachable/flashlight,
 		)
 
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ANTIQUE
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AUTO_EJECT_CASINGS
 
 /obj/item/weapon/gun/smg/p90/twe/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 17,"rail_x" = 22, "rail_y" = 24, "under_x" = 23, "under_y" = 15, "stock_x" = 28, "stock_y" = 17)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 17,"rail_x" = 22, "rail_y" = 24, "under_x" = 23, "under_y" = 15, "stock_x" = 28, "stock_y" = 17, "side_rail_x" = 23, "side_rail_y" = 16, "sling_x" = 22, "sling_y" = 24)
 
 /obj/item/weapon/gun/smg/p90/twe/set_gun_config_values()
 	..()
@@ -915,6 +926,5 @@
 	scatter = SCATTER_AMOUNT_TIER_4
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_7
 	scatter_unwielded = SCATTER_AMOUNT_TIER_3
-	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_4
 	recoil_unwielded = RECOIL_AMOUNT_TIER_5
 	fa_max_scatter = SCATTER_AMOUNT_TIER_10 + 0.5

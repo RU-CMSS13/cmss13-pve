@@ -280,7 +280,7 @@
 /obj/item/weapon/gun/Initialize(mapload, spawn_empty) //You can pass on spawn_empty to make the sure the gun has no bullets or mag or anything when created.
 	. = ..() //This only affects guns you can get from vendors for now. Special guns spawn with their own things regardless.
 	base_gun_icon = icon_state
-	attachable_overlays = list("muzzle" = null, "rail" = null, "side_rail" = null, "under" = null, "stock" = null, "mag" = null, "special" = null)
+	attachable_overlays = list("muzzle" = null, "rail" = null, "side_rail" = null, "under" = null, "stock" = null, "mag" = null, "sling" = null, "special" = null)
 	muzzle_flash = new(src, muzzleflash_iconstate)
 
 	LAZYSET(item_state_slots, WEAR_BACK, item_state)
@@ -1766,6 +1766,8 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 			skill_accuracy = -1
 		else
 			skill_accuracy = user.skills.get_skill_level(SKILL_FIREARMS)
+		if(HAS_TRAIT(user, TRAIT_HUD_SIGHT))
+			skill_accuracy += 1
 		if(skill_accuracy)
 			gun_accuracy_mult += skill_accuracy * HIT_ACCURACY_MULT_TIER_3 // Accuracy mult increase/decrease per level is equal to attaching/removing a red dot sight
 
@@ -1801,6 +1803,9 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 			playsound(user, actual_sound, 25, firing_sndfreq)
 
 /obj/item/weapon/gun/proc/simulate_scatter(obj/projectile/projectile_to_fire, atom/target, turf/curloc, turf/targloc, mob/user, bullets_fired = 1)
+	if(curloc.z != targloc.z)
+		return target
+
 	var/fire_angle = Get_Angle(curloc, targloc)
 	var/total_scatter_angle = projectile_to_fire.scatter
 
@@ -2099,7 +2104,7 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 	SIGNAL_HANDLER
 
 	var/list/modifiers = params2list(params)
-	if(modifiers[SHIFT_CLICK] || modifiers[MIDDLE_CLICK] || modifiers[RIGHT_CLICK] || modifiers[BUTTON4] || modifiers[BUTTON5])
+	if(modifiers[CTRL_CLICK] || modifiers[SHIFT_CLICK] || modifiers[MIDDLE_CLICK] || modifiers[RIGHT_CLICK] || modifiers[BUTTON4] || modifiers[BUTTON5])
 		return FALSE
 
 	// Don't allow doing anything else if inside a container of some sort, like a locker.

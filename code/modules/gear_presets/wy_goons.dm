@@ -3,8 +3,7 @@
 	faction = FACTION_WY
 	rank = FACTION_WY
 	idtype = /obj/item/card/id/silver/cl
-	faction_group = list(FACTION_WY)
-	origin_override = ORIGIN_WY_SEC
+	faction_group = FACTION_LIST_WY
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_JAPANESE)
 	minimap_background = "background_goon"
 	var/uniform_type = /obj/item/clothing/under/marine/veteran/pmc/corporate
@@ -57,8 +56,8 @@
 	var/obj/item/clothing/under/uniform = new_human.w_uniform
 	if(istype(uniform))
 		uniform.has_sensor = UNIFORM_HAS_SENSORS
+		uniform.sensor_faction = FACTION_WY
 	return ..()
-
 
 /datum/equipment_preset/goon/standard
 	name = "Weyland-Yutani Corporate Security Goon"
