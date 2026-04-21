@@ -131,12 +131,13 @@
 //================================================
 */
 /obj/item/explosive/grenade/high_explosive/frag
-	name = "\improper M40 HEFA grenade"
-	desc = "High-Explosive Fragmenting-Antipersonnel. A small, but deceptively strong fragmentation grenade that has been phasing out the M15 fragmentation grenades alongside the M40 HEDP. Capable of being loaded in the M92 Launcher, or thrown by hand."
+	name = "\improper M26 HEFA grenade"
+	desc = "High-Explosive Fragmentation/Antipersonnel. An aging, but still effective, fragmentation grenade that was the first offering in the 30mm grenade market. Capable of being loaded in compatible launchers, or thrown by hand."
 	icon_state = "grenade_hefa"
 	item_state = "grenade_hefa"
+	shrapnel_type = /datum/ammo/bullet/shrapnel/jagged
 	explosion_power = 40
-	shrapnel_count = 48
+	shrapnel_count = 24
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 
 /obj/item/explosive/grenade/high_explosive/frag/toy

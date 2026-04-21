@@ -1454,3 +1454,12 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 /obj/item/storage/backpack/marine/satchel/intel/chestrig/army
 	name = "\improper Army expedition chestrig"
 	desc = "A heavy-duty IMP based chestrig, can quickly be accessed with only one hand. Usually issued to intelligence officers."
+
+/obj/item/storage/backpack/marine/medic/imp
+	name = "\improper lightweight medical IMP backpack"
+	desc = "A variant of the standard-issue pack of the USCM and US Army forces, has a red cross drawn on it. Designed to lug gear into the battlefield using the Intuitive Mounting Point system on M3 & M4 pattern armor."
+	icon_state = "imp_medic"
+	item_state = "imp_medic"
+	icon = 'icons/mob/humans/onmob/contained/medical_imp.dmi'
+	contained_sprite = TRUE
+	has_gamemode_skin = FALSE

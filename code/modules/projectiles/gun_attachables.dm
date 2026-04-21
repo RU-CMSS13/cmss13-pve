@@ -1400,7 +1400,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/scope/mini/army
 	desc = "An ARMAT S4 scope, type designation AN/PVQ-45. 2x magnification optic, increases accuracy while scoped, decreases RoF and increased wield speed."
-	zoom_offset = 4
+	zoom_offset = 6
 
 //Mini-scope for the scout rifle
 

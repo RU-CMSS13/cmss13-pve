@@ -83,7 +83,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/engi(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new rankpin_type(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/mpsec(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/MP(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/MP/navy(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/usasf/full(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/m4a3(new_human), WEAR_IN_R_STORE)
@@ -341,7 +341,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf/helljumper(new_human), WEAR_ACCESSORY)
 //Armor, webbing & weapon
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/medium/rto/navy(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/recon/mk1(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/mag/mk1(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/navy/tactical(new_human), WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator/sergeant(new_human), WEAR_IN_BELT)
@@ -370,7 +370,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf/helljumper(new_human), WEAR_ACCESSORY)
 //Armor, webbing & weapon
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/medium/rto/navy(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/recon/mk1(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/mag/mk1(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/navy/tactical(new_human), WEAR_J_STORE)
 //Role specific
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/engine(new_human), WEAR_ACCESSORY)
@@ -397,7 +397,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf/helljumper(new_human), WEAR_ACCESSORY)
 //Armor, webbing & weapon
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/medium/rto/navy(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/recon/mk1(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/mag/mk1(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/navy/tactical(new_human), WEAR_J_STORE)
 //Role specific
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/medgreen(new_human), WEAR_ACCESSORY)

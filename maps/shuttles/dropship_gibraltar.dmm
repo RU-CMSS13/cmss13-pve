@@ -168,7 +168,7 @@
 	pixel_x = 22
 	},
 /obj/effect/attach_point/crew_weapon/gibraltar/floor{
-	attach_id = 7;
+	attach_id = 8;
 	pixel_x = -1;
 	pixel_y = -2
 	},

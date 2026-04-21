@@ -363,6 +363,7 @@
 /obj/item/weapon/gun/rifle/nsg23/rmc/Initialize(mapload, spawn_empty)
 	. = ..()
 	if(current_mag && current_mag.current_rounds > 0) load_into_chamber()
+	do_toggle_firemode()
 
 /obj/item/weapon/gun/rifle/nsg23/rmc/unloaded
 	current_mag = null
@@ -2038,9 +2039,22 @@
 	starting_attachment_types = list(/obj/item/attachable/scope/variable_zoom, /obj/item/attachable/extended_barrel)
 
 /obj/item/weapon/gun/rifle/m49a/army
-	desc = "The M49A battle rifle is a designated marksman rifle used by multiple branches of the UA armed forces. Sporting a bullpup configuration, the M49A battle rifle is perfect for reconnaissance and fire support teams."
-	current_mag = /obj/item/ammo_magazine/rifle/m49a/ap
+	name = "\improper M49A3 battle rifle"
+	desc = "A modification of the M49A battle rifle by US Army armorers, the A3 model features hexagonal rifling, an improved fire-control-group and redesigned cyclic system enabling it to fire fully automatic. Predominantly seen in the hands of US Army marksmen."
+	current_mag = /obj/item/ammo_magazine/rifle/m49a/ext
 	starting_attachment_types = list(/obj/item/attachable/scope/mini/army, /obj/item/attachable/extended_barrel, /obj/item/attachable/angledgrip)
+	start_semiauto = TRUE
+	start_automatic = TRUE
+
+/obj/item/weapon/gun/rifle/m49a/army/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_6)
+	fa_scatter_peak = FULL_AUTO_SCATTER_PEAK_TIER_1
+	fa_max_scatter = SCATTER_AMOUNT_TIER_9
+
+/obj/item/weapon/gun/rifle/m49a/army/Initialize(mapload, ...)
+	. = ..()
+	do_toggle_firemode()
 
 /obj/item/weapon/gun/rifle/m49a/army/full
 	current_mag = /obj/item/ammo_magazine/rifle/m49a/heap

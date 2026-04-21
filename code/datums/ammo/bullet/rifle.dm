@@ -257,7 +257,7 @@
 
 /datum/ammo/bullet/rifle/heavy/holo_target //Royal marines smartgun bullet, less damage, holo-target effect & range-limited knock/pushback
 	name = "holo-targeting 10x28 bullet"
-	damage = 50
+	damage = 25
 	/// inflicts this many holo stacks per bullet hit
 	var/holo_stacks = 25
 	/// modifies the default cap limit of 100 by this amount
@@ -273,15 +273,15 @@
 /datum/ammo/bullet/rifle/heavy/holo_target/ap
 	name = "holo-targetting armor-piercing 10x28 bullet"
 	icon_state = "bullet"
-	damage = 50
-	penetration = ARMOR_PENETRATION_TIER_7
+	damage = 20
+	penetration = ARMOR_PENETRATION_TIER_8
 
 /datum/ammo/bullet/rifle/heavy/holo_target/impdet
 	name = "holo-targetting impact-detonating 10x28 bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	holo_stacks = 50 //holo's all over targets, or something
-	damage = 50
-	penetration = ARMOR_PENETRATION_TIER_3
+	damage = 20
+	penetration = -ARMOR_PENETRATION_TIER_2
 	damage_falloff = DAMAGE_FALLOFF_TIER_5
 
 /datum/ammo/bullet/rifle/heavy/holo_target/impdet/on_hit_mob(mob/entity, obj/projectile/bullet)
