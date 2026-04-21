@@ -46,9 +46,9 @@
 		/datum/action/xeno_action/onclick/regurgitate,
 		/datum/action/xeno_action/watch_xeno,
 		/datum/action/xeno_action/activable/tail_stab/slam/ai,
-		/datum/action/xeno_action/onclick/toggle_crest,
+		/datum/action/xeno_action/onclick/toggle_crest/ai,
 		/datum/action/xeno_action/activable/headbutt/ai,
-		/datum/action/xeno_action/onclick/tail_sweep,
+		/datum/action/xeno_action/onclick/tail_sweep/ai,
 		/datum/action/xeno_action/activable/fortify,
 		/datum/action/xeno_action/onclick/tacmap,
 	)
@@ -102,15 +102,58 @@
 	charge_time = null /// nahh
 	xeno_cooldown = 15 SECONDS
 
-/datum/action/xeno_action/activable/tail_stab/slam/ai/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
-	return DT_PROB(ai_prob_chance, delta_time) && use_ability_async(parent.current_target)
+/datum/action/xeno_action/activable/tail_stab/slam/ai/process_ai(mob/living/carbon/xenomorph/using_xeno, delta_time)
+	if(DT_PROB(ai_prob_chance, delta_time))
+		use_ability_async(using_xeno.current_target)
 
 /datum/action/xeno_action/activable/headbutt/ai
 	default_ai_action = TRUE
-	ai_prob_chance = 35
+	ai_prob_chance = 30
 	xeno_cooldown = 10 SECONDS
 
-/datum/action/xeno_action/activable/headbutt/ai/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
+/datum/action/xeno_action/activable/headbutt/ai/process_ai(mob/living/carbon/xenomorph/using_xeno, delta_time)
 	if(DT_PROB(ai_prob_chance, delta_time))
-		parent.dir = parent.ai_movement_handler.home_turf ? get_dir(parent, parent.ai_movement_handler.home_turf) : pick(NORTH, SOUTH, EAST, WEST) /// Pick at random if there is no valid direction.
-		use_ability_async(parent.current_target)
+		using_xeno.dir = using_xeno.ai_movement_handler.home_turf ? get_dir(using_xeno, using_xeno.ai_movement_handler.home_turf) : pick(NORTH, SOUTH, EAST, WEST) /// Pick at random if there is no valid direction.
+		use_ability_async(using_xeno.current_target)
+
+/datum/action/xeno_action/onclick/toggle_crest/ai
+	action_type = XENO_ACTION_CLICK
+	default_ai_action = TRUE
+
+/datum/action/xeno_action/onclick/toggle_crest/ai/process_ai(mob/living/carbon/xenomorph/using_xeno, delta_time)
+	var/should_defend = FALSE
+
+	if(using_xeno.current_target && get_dist(using_xeno, using_xeno.current_target) < 4)
+		should_defend = TRUE
+
+	if(should_defend != using_xeno.crest_defense)
+		if(!using_xeno.action_busy)
+			use_ability_async()
+
+/datum/action/xeno_action/onclick/tail_sweep/ai
+	action_type = XENO_ACTION_CLICK
+	default_ai_action = TRUE
+	xeno_cooldown = 12 SECONDS
+
+	var/list/humans_near = list()
+
+/datum/action/xeno_action/onclick/tail_sweep/ai/process_ai(mob/living/carbon/xenomorph/using_xeno, delta_time)
+	humans_near.Cut()
+
+	for(var/mob/living/carbon/human/inrange in view(using_xeno))
+		if(get_dist(using_xeno, inrange) < 5 && inrange.stat != DEAD)
+			humans_near |= inrange
+
+	if(!DT_PROB(ai_prob_chance, delta_time))
+		return
+
+	if(length(humans_near) < 3)
+		return
+
+	if(get_dist(using_xeno, using_xeno.current_target) <= 2)
+		return
+
+	if(using_xeno.action_busy)
+		return
+
+	use_ability_async()
