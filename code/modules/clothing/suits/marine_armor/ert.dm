@@ -399,6 +399,10 @@
 	restricted_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_ARMOR_C, ACCESSORY_SLOT_PLATE3)
 	specialty = "\improper 6B99-2 pattern"
 
+/obj/item/clothing/suit/marine/faction/upp/heavy/nostrip
+	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN|CANTSTRIP
+	desc = "An extreme sidegrade of 6B92 armor, with the intent to increase soldier's survivability as much, as possible. An ablative layers of composite armor weighting more than 100 pounds, supported by the servo-assisters in each limb, and powered by the baterries for 24 hours of estimated work. Due to the lack of powerful heat dispersion system, the suit becomes an oven to it's owner, and each step takes more and more strenght even with servo-assisters. Yet still, it is the best answer to the question of life and death. Looks like this suit is tighly bolts in with the body. You'll most likely be able to take it off yourself, but don't have hope to strip it from the deadman."
+
 /obj/item/clothing/suit/marine/smartgunner/upp/heavy
 	name = "\improper 6B99-4 pattern UPP heavy assault armor"
 	desc = "An extreme sidegrade of 6B92 armor, with the intent to increase soldier's survivability as much, as possible. An ablative layers of composite armor weighting more than 100 pounds, supported by the servo-assisters in each limb, and powered by the baterries for 24 hours of estimated work. This model kept the advanced computery and wire placement for the work with heavy machineguns without making suit itself too much heavy for the use. An extreme heat and bulkiness tho are still an issue."
@@ -419,6 +423,10 @@
 	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PLATE3, ACCESSORY_SLOT_ARMOR_C)
 	restricted_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_ARMOR_C, ACCESSORY_SLOT_PLATE3)
 	specialty = "\improper 6B99-4 pattern"
+
+/obj/item/clothing/suit/marine/smartgunner/upp/heavy/nostrip
+	flags_inventory = BLOCKSHARPOBJ|SMARTGUN_HARNESS|BLOCK_KNOCKDOWN|CANTSTRIP
+	desc = "An extreme sidegrade of 6B92 armor, with the intent to increase soldier's survivability as much, as possible. An ablative layers of composite armor weighting more than 100 pounds, supported by the servo-assisters in each limb, and powered by the baterries for 24 hours of estimated work. This model kept the advanced computery and wire placement for the work with heavy machineguns without making suit itself too much heavy for the use. An extreme heat and bulkiness tho are still an issue. Looks like this suit is tighly bolts in with the body. You'll most likely be able to take it off yourself, but don't have hope to strip it from the deadman."
 
 /obj/item/clothing/suit/marine/faction/upp/canc
 	name = "\improper Type 12 CANC armor"
@@ -1157,6 +1165,8 @@
 
 /obj/item/clothing/suit/marine/veteran/pmc/light/heavy/Initialize(mapload)
 	. = ..()
+	var/obj/item/clothing/accessory/pmcpads/light/shoulders = new()
+	src.attach_accessory(null, shoulders, TRUE)
 	var/obj/item/clothing/accessory/pmcpads/greaves/greaves = new()
 	src.attach_accessory(null, greaves, TRUE)
 	var/obj/item/clothing/accessory/pmcpads/neckguard/neckguard = new()

@@ -267,4 +267,4 @@
 // RU PVE ADDITION
 
 /mob/proc/get_accent_icon()
-    return ""
+	return ""

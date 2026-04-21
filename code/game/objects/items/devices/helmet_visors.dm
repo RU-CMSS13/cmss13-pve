@@ -104,13 +104,16 @@
 /obj/item/device/helmet_visor/upp
 	name = "KKV-66M visor"
 	desc = "The KKV-66M \"Geist\" is an augmented-reality Heads Up Display developed by Germany. Standard for all helmets in use by the UPP's armed forces."
+	icon_state = "hud_sight_orange"
+	action_icon_string = "hud_sight_orange"
+	helmet_overlay = "meson_sight_right"
 	hud_type = list(MOB_HUD_FACTION_UPP)
 
 //fucking mess
 /obj/item/device/helmet_visor/upp/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
 	. = ..()
 
-	user.client.color = "#E0FFFF"
+	user.client.color = "#fff1e0"
 	user.overlay_fullscreen("optic", /atom/movable/screen/fullscreen/flash/noise/optic)
 	ADD_TRAIT(user, TRAIT_HUD_SIGHT, src)
 
@@ -175,7 +178,7 @@
 	icon_state = "med_sight"
 	hud_type = list(MOB_HUD_MEDICAL_BASIC)
 	action_icon_string = "med_sight_down"
-	helmet_overlay = "med_sight_right"
+	helmet_overlay = "med_sight_left"
 
 /obj/item/device/helmet_visor/medical/army
 	name = "AN/MPAV-71A visor"
@@ -186,7 +189,7 @@
 /obj/item/device/helmet_visor/medical/advanced
 	name = "AN/MAV-72 visor"
 	desc = "The guts of a Medical-Augmented-Viewer HUD unit. Links to the biomonitors of allied personnel and provides detailed information for those able to comprehend it."
-	helmet_overlay = "med_sight_right"
+	helmet_overlay = "med_sight_left"
 	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY, MOB_HUD_MEDICAL_ADVANCED)
 
 /obj/item/device/helmet_visor/medical/advanced/pmc
@@ -556,3 +559,25 @@
 	icon_state = "po_visor_yellow"
 	action_icon_string = "po_visor_yellow_down"
 	helmet_overlay = "po_visor_yellow_marine"
+
+/obj/item/device/helmet_visor/upp_heavy
+	name = "KKV-71M visor"
+	desc = "The KKV-71M \"Reaper\" is an augmented-reality Heads Up Display with health monitor developed by Germany, for the new series of heavily armored UPPAC equipment, in this case - 6B83 enclosed helmet."
+	icon_state = "hud_sight_red"
+	action_icon_string = "hud_sight_red"
+	helmet_overlay = "hud_sight_upp_heavy"
+	hud_type = list(MOB_HUD_FACTION_UPP, MOB_HUD_MEDICAL_BASIC)
+
+/obj/item/device/helmet_visor/upp_heavy/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+	. = ..()
+
+	user.client.color = "#ffd9d9"
+	user.overlay_fullscreen("optic", /atom/movable/screen/fullscreen/flash/noise/optic)
+	ADD_TRAIT(user, TRAIT_HUD_SIGHT, src)
+
+/obj/item/device/helmet_visor/upp_heavy/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+	. = ..()
+
+	user.client.color = initial(user.client.color)
+	user.clear_fullscreen("optic", 0.5 SECONDS)
+	REMOVE_TRAIT(user, TRAIT_HUD_SIGHT, src)

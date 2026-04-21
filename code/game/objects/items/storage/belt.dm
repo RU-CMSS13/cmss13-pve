@@ -281,6 +281,22 @@
 	new /obj/item/tool/surgery/surgical_line(src)
 	new /obj/item/tool/surgery/synthgraft(src)
 
+/obj/item/storage/belt/medical/parajumper/fill_preset_inventory()
+	new /obj/item/storage/pill_bottle/merabica(src)
+	new /obj/item/storage/pill_bottle/dexalinplus(src)
+	new /obj/item/storage/pill_bottle/antitox(src)
+	new /obj/item/storage/pill_bottle/keloderm(src)
+	new /obj/item/storage/pill_bottle/inaprovaline(src)
+	new /obj/item/storage/pill_bottle/imialk(src)
+	new /obj/item/storage/pill_bottle/peridaxon(src)
+	new /obj/item/storage/pill_bottle/iron(src)
+	new /obj/item/storage/pill_bottle/tricord(src)
+	new /obj/item/roller/surgical(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated(src)
+	new /obj/item/device/defibrillator/compact_adv(src)
+
 /obj/item/storage/belt/medical/get_examine_text()
 	. = ..()
 	. += SPAN_NOTICE("The belt is currently set to [mode ? "take pills directly from bottles": "NOT take pills directly from bottles"].")
@@ -911,14 +927,6 @@
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/handful/shotgun/buckshot(src)
 
-/obj/item/storage/belt/marine/svd/fill_preset_inventory() // SVD
-	for(var/i in 1 to storage_slots)
-		new /obj/item/ammo_magazine/sniper/svd(src)
-
-/obj/item/storage/belt/marine/svd/pve/fill_preset_inventory() // SVD
-	for(var/i in 1 to storage_slots)
-		new /obj/item/ammo_magazine/sniper/svd/pve(src)
-
 /obj/item/storage/belt/marine/smartgunner
 	name = "\improper M280 pattern smartgunner drum belt"
 	desc = "Despite the fact that 1. drum magazines are incredibly non-ergonomical, and 2. require incredibly precise machining in order to fit universally (spoiler, they don't, adding further to the myth of 'Smartgun Personalities'), the USCM decided to issue a modified marine belt (more formally known by the designation M280) with hooks and dust covers (overly complex for the average jarhead) for the M56B system's drum munitions. When the carry catch on the drum isn't getting stuck in the oiled up velcro, the rig actually does do a decent job at holding a plentiful amount of drums. But at the end of the day, compared to standard rigs... it sucks, but isn't that what being a Marine is all about?"
@@ -1024,6 +1032,14 @@
 /obj/item/storage/belt/marine/upp/caws/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/rifle/caws(src)
+
+/obj/item/storage/belt/marine/upp/svd/fill_preset_inventory() // SVD
+	for(var/i in 1 to storage_slots)
+		new /obj/item/ammo_magazine/sniper/svd(src)
+
+/obj/item/storage/belt/marine/upp/svd/pve/fill_preset_inventory() // SVD
+	for(var/i in 1 to storage_slots)
+		new /obj/item/ammo_magazine/sniper/svd/pve(src)
 
 /obj/item/storage/belt/marine/upp/black
 	icon_state = "upp_black_belt"
@@ -1156,6 +1172,10 @@
 /obj/item/storage/belt/shotgun/upp/heavyslug/fill_preset_inventory()
 	for(var/i in 1 to storage_slots)
 		new /obj/item/ammo_magazine/handful/shotgun/heavy/slug(src)
+
+/obj/item/storage/belt/shotgun/upp/heavyflech/fill_preset_inventory()
+	for(var/i in 1 to storage_slots)
+		new /obj/item/ammo_magazine/handful/shotgun/heavy/flechette(src)
 
 /obj/item/storage/belt/shotgun/upp/heavybeanbag/fill_preset_inventory()
 	for(var/i in 1 to storage_slots)
@@ -2763,6 +2783,7 @@
 	item_state = "s_mortarbelt"
 	w_class = SIZE_HUGE
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	w_class = SIZE_HUGE
 	max_w_class = SIZE_HUGE
 	has_gamemode_skin = FALSE
 	holster_slots = list(

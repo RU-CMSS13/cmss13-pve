@@ -1283,3 +1283,32 @@
 				var/image/source_image = image(icon, "+caws_mag")
 				source_image.pixel_x = 4
 				overlays += source_image
+
+/obj/item/storage/box/guncase/heavy/spp
+	name = "\improper SPP-48M marksman case"
+	desc = "A case for storing a SPP-48M marksman rifle."
+	icon_state = "uppsppcase"
+	storage_slots = 9
+	can_hold = list(/obj/item/weapon/gun/rifle/spp, /obj/item/ammo_magazine/rifle/spp/high_velocity, /obj/item/ammo_magazine/rifle/spp/high_velocity/explosive, /obj/item/ammo_magazine/rifle/spp/high_velocity/incendiary, /obj/item/ammo_magazine/rifle/spp/high_velocity/toxic)
+	max_w_class = SIZE_HUGE
+
+/obj/item/storage/box/guncase/heavy/spp/fill_preset_inventory()
+	new /obj/item/weapon/gun/rifle/spp/unloaded(src)
+	new /obj/item/ammo_magazine/rifle/spp/high_velocity(src)
+	new /obj/item/ammo_magazine/rifle/spp/high_velocity(src)
+	new /obj/item/ammo_magazine/rifle/spp/high_velocity(src)
+	new /obj/item/ammo_magazine/rifle/spp/high_velocity(src)
+	new /obj/item/ammo_magazine/rifle/spp/high_velocity/toxic(src)
+	new /obj/item/ammo_magazine/rifle/spp/high_velocity/toxic(src)
+	new /obj/item/ammo_magazine/rifle/spp/high_velocity/explosive(src)
+	new /obj/item/ammo_magazine/rifle/spp/high_velocity/incendiary(src)
+
+/obj/item/storage/box/guncase/heavy/spp/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays += image(src.icon, "uppbigcase_lid_open")
+	else
+		overlays += image(src.icon, "uppsppcase_lid")
+		return
+	if(locate(/obj/item/weapon/gun/rifle/spp) in src.contents)
+		overlays += image(src.icon, "+spp")
