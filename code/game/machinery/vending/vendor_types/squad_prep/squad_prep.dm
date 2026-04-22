@@ -370,6 +370,8 @@
 
 		list("MASK", -1, null, null, null),
 		list("ShMB/4 Gas Mask", round(scale * 10), /obj/item/clothing/mask/gas/military/upp, VENDOR_ITEM_REGULAR),
+		list("Heat Absorbent Coif - Tan", round(scale * 5), /obj/item/clothing/mask/rebreather/scarf/tan, VENDOR_ITEM_REGULAR),
+		list("Heat Absorbent Coif - Black", round(scale * 5), /obj/item/clothing/mask/rebreather/scarf, VENDOR_ITEM_REGULAR),
 		list("Tactical Wrap - Tan", round(scale * 5), /obj/item/clothing/mask/rebreather/scarf/tacticalmask/tan, VENDOR_ITEM_REGULAR),
 		list("Tactical Wrap - Black", round(scale * 5), /obj/item/clothing/mask/rebreather/scarf/tacticalmask/black, VENDOR_ITEM_REGULAR),
 		list("Tactical Wrap - Grey", floor(scale * 5), /obj/item/clothing/mask/rebreather/scarf/tacticalmask, VENDOR_ITEM_REGULAR),
