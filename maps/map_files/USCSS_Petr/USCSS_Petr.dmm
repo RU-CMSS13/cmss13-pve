@@ -36,6 +36,7 @@
 "dF" = (/obj/structure/surface/rack,/obj/item/device/radio/intercom{freerange = 1; pixel_x = -30},/obj/item/reagent_container/food/drinks/cans/souto/classic,/turf/open/floor/prison/floor_plate,/area/space)
 "dG" = (/obj/structure/machinery/power/reactor,/obj/effect/decal/strata_decals/catwalk/prison,/obj/effect/decal/warning_stripes/asteroid,/obj/effect/decal/hybrisa/dirt_2,/turf/open/floor/shiva/radiator_tile2,/area/space)
 "dN" = (/obj/structure/bookcase{icon_state = "book-5"; name = "law and engineering manuals bookcase"; opacity = 0; pixel_y = 17; density = 0},/turf/open/floor/strata/fake_wood,/area/space)
+"ef" = (/obj/effect/landmark/start/marine/fl,/turf/open/floor/station/metal/floor/alt3/west,/area/space)
 "ez" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delayone{dir = 4},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
 "eA" = (/obj/structure/machinery/cryopod/big{dir = 2; layer = 3.1; pixel_x = -12},/turf/open/floor/station/metal/floor/east,/area/space)
 "eG" = (/obj/structure/machinery/door/airlock/multi_tile/hybrisa/generic/autoname{locked = 1},/turf/open/floor/prison,/area/space)
@@ -147,6 +148,8 @@
 "rz" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delayone{dir = 4},/turf/open/floor/almayer/plate,/area/space)
 "rC" = (/obj/structure/surface/table/woodentable{color = "#8B7B5B"},/obj/item/weapon/dart/green{pixel_x = -3; pixel_y = -1},/obj/item/weapon/dart/green{pixel_y = 5; pixel_x = 5},/obj/item/weapon/dart/green{pixel_x = -2; pixel_y = -7},/turf/open/floor/hybrisa/carpet/carpetbeige,/area/space)
 "rE" = (/obj/structure/cargo_container/trijent/right,/turf/open/floor/prison,/area/space)
+"rQ" = (/obj/structure/prop/invuln/lattice_prop{dir = 8; icon_state = "lattice12"; pixel_x = 16; pixel_y = 18},/obj/effect/landmark/start/marine/fl,/turf/open/floor/station/metal/floor/alt3/west,/area/space)
+"sc" = (/obj/effect/landmark/start/marine/tl/ai/fl,/turf/open/floor/station/metal/floor/alt3/west,/area/space)
 "se" = (/obj/item/trash/buritto,/turf/open/floor/strata/fake_wood,/area/space)
 "sl" = (/obj/structure/surface/table/woodentable{color = "#8B7B5B"},/obj/item/reagent_container/food/drinks/shaker{pixel_x = 7; pixel_y = 5},/obj/item/spacecash/c10,/turf/open/floor/strata/fake_wood_red,/area/space)
 "sq" = (/obj/structure/bed/chair{dir = 8; pixel_x = 7; pixel_y = 7},/turf/open/floor/prison/floor_plate,/area/space)
@@ -156,6 +159,7 @@
 "sE" = (/obj/structure/machinery/light,/obj/structure/gun_rack/m20a,/turf/open/floor/prison,/area/space)
 "sF" = (/obj/structure/machinery/landinglight/ds1{dir = 1},/turf/open/floor/almayer/plate,/area/space)
 "sJ" = (/obj/structure/largecrate/random/case/small,/turf/open/floor/hybrisa/tile/darkbrown_bigtile/southwest,/area/space)
+"tl" = (/obj/structure/prop/invuln/lattice_prop{dir = 8; icon_state = "lattice12"; pixel_x = 16; pixel_y = 18},/obj/effect/landmark/start/marine/leader/fl,/turf/open/floor/station/metal/floor/alt3/west,/area/space)
 "tu" = (/obj/structure/closet/crate/weapon/training/l42a,/turf/open/floor/prison,/area/space)
 "ty" = (/turf/open/floor/hybrisa/tile/tilewhite,/area/space)
 "tC" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delaytwo{dir = 4},/turf/open/floor/almayer/plate,/area/space)
@@ -256,6 +260,7 @@
 "DT" = (/obj/structure/machinery/landinglight/ds1/delayone{dir = 4},/turf/open/floor/almayer/plate,/area/space)
 "Ed" = (/turf/open/floor/dark,/area/space)
 "Ej" = (/obj/item/stool{icon_state = "stool_alt"; pixel_x = 2; pixel_y = 3},/turf/open/floor/strata/fake_wood,/area/space)
+"El" = (/obj/effect/landmark/start/bridge/fl,/turf/open/floor/station/metal/floor/alt3/west,/area/space)
 "En" = (/obj/structure/machinery/cm_vending/sorted/tech/electronics_storage,/obj/structure/machinery/light,/turf/open/floor/hybrisa/tile/darkbrown_bigtile,/area/space)
 "Ey" = (/obj/item/prop/magazine/dirty{pixel_x = 5; pixel_y = 3},/obj/structure/machinery/light/small{dir = 8; pixel_y = -15},/turf/open/floor/prison/floor_plate,/area/space)
 "EV" = (/obj/effect/decal/hybrisa/dirt_2,/turf/open/floor/hybrisa/tile/darkbrown_bigtile/west,/area/space)
@@ -313,6 +318,7 @@
 "Lr" = (/obj/structure/closet/crate/green,/obj/item/ammo_box/magazine/vp78,/obj/item/ammo_box/magazine/m20a,/obj/item/ammo_box/magazine/m20a,/obj/item/ammo_box/magazine/shotgun/buckshot,/obj/item/ammo_magazine/shotgun/incendiary,/obj/item/ammo_box/magazine/shotgun,/turf/open/floor/prison,/area/space)
 "Lv" = (/obj/effect/decal/hybrisa/dirt_2,/obj/effect/decal/hybrisa/dirt_2,/turf/open/floor/hybrisa/tile/tilewhite,/area/space)
 "Lz" = (/obj/structure/surface/rack,/obj/item/tool/wet_sign,/obj/structure/sign/poster/io{pixel_y = 35},/turf/open/floor/hybrisa/tile/tilewhitecheckered,/area/space)
+"LB" = (/obj/effect/landmark/start/marine/medic/fl,/turf/open/floor/station/metal/floor/alt3/west,/area/space)
 "LE" = (/obj/structure/cargo_container/trijent/left,/turf/open/floor/prison,/area/space)
 "LN" = (/turf/open/floor/prison/floor_plate_alt/west,/area/space)
 "LR" = (/obj/item/device/flashlight/lamp/tripod/grey,/turf/open/floor/prison,/area/space)
@@ -323,6 +329,7 @@
 "Mu" = (/obj/structure/machinery/door/poddoor/almayer/locked{dir = 4; name = "\improper Hangar Lockdown Blast Door"},/turf/open/space/basic,/area/space)
 "ME" = (/obj/structure/closet/cryo{name = "Heavy gunner"},/obj/item/weapon/gun/pkp,/obj/item/ammo_magazine/pkp/standard_fmj,/obj/item/ammo_magazine/pkp/standard_fmj,/obj/item/ammo_magazine/pkp/standard_fmj,/obj/item/ammo_magazine/pkp/standard_fmj,/obj/item/ammo_magazine/pkp/standard_fmj,/obj/item/ammo_box/rounds/pkp,/turf/open/floor/prison,/area/space)
 "MM" = (/obj/structure/cargo_container/ferret/mid,/turf/open/floor/prison,/area/space)
+"MT" = (/obj/effect/landmark/start/marine/sg/fl,/turf/open/floor/station/metal/floor/alt3/west,/area/space)
 "MZ" = (/obj/structure/bed/chair{can_buckle = 0; dir = 4},/turf/open/floor/strata/fake_wood,/area/space)
 "Nd" = (/turf/open/floor/green/south,/area/space)
 "Ne" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delayone{dir = 8},/turf/open/floor/almayer/plate,/area/space)
@@ -425,6 +432,7 @@
 "Zy" = (/obj/structure/machinery/medical_pod/bodyscanner{pixel_y = 6},/turf/open/floor/almayer/test_floor4,/area/space)
 "ZN" = (/turf/open/floor/hybrisa/tile/darkbrown_bigtile/east,/area/space)
 "ZP" = (/obj/structure/reagent_dispensers/beerkeg/alt,/obj/structure/machinery/light/small,/turf/open/floor/prison/floor_plate,/area/space)
+"ZV" = (/obj/effect/decal/hybrisa/dirt_2,/obj/effect/landmark/start/marine/tl/ai/fl,/turf/open/floor/station/metal/floor/alt3/west,/area/space)
 "ZW" = (/turf/open/floor/plating/prison,/area/space)
 
 (1,1,1) = {"
@@ -493,12 +501,12 @@ HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKqzFVxEUIQFHCtycnWRcnHCQQXTXTYbHCVuhPwdtGHCHC
 HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKBKBKBKBKBKHCAyHCHCHCHCHCcfPqHCHKHCHCHCbnHCHCXTMEXTXTszszUNXTHCXTXTXTCOZWZWZWZWZWZWZWZWZWZWZWYnXTXTQMBKBKBKBKBKBKBKXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
 HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKTwUTHCHCHCtHbGKAEXfIiNiNHCHCUTeRHCszszXTXTXTXTXTXTHCXTXTXTUwZWZWZWZWZWZWZWZWZWZWZWmuXTXTXTMuXTgCkiCMPXBKXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
 HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKvFTzHCHCHCdbjOxwtYxwuXHCHCHCTzTzHCsEhEJlbeypLrvMQQHCXTXTXTDTZWZWZWZWZWZWZWZWZWZWvtvSXTXTXTcIXTXTkikiPXBKXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
-HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKBKUTTzHCHCuNxwxwqFnaUFxwWNHCHCTzUTBKBKBKBKBKBKBKBKBKBKXTXTXTvdZWZWZWZWZWZWZWZWZWZWZWPuXTXTXTcIXTXTXTXTXTBKXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
-HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKeJTzTzHCSPxwxwxwBKBKxwtYxweAHCTzTzymBKHpHpHpHpHpHpHpBKzVuTXTddsFNsbIXDClxxbIoisFsFAlfDXTXTXTcIXTXTbbMMpVBKXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
-HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKEyUTUTHCWmGdbhdidididiGdGdCsHCDfTzUTBKHpHpHpHpHpHpHpBKLEHVrEXTXTXTXTXTXTXTXTXTXTXTXTXTXTXTXTcIXTXTXTXTXTBKXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
-HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKUTUTUTHCSPxwtYylBKBKxwtYxweAHCuIUTSgBKHpHpHpHpHpHpHpBKBKPfGcHgQQXTXTXTXTQQXTXTXTXTXTQQXTXTXTMuXTQQnkhKhTBKXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
-HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKKnHCBHHCHCCCxwtYtYxwxwtEtYxwKrHCHCBHHCBKBKHpHpHpHpHpHpHpBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
-HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKgaUTUTUTHCHCuNxwtYtYtYtYtYWNHCHCdFTzTzRBBKHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
+HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKBKUTTzHCHCuNElxwqFnaUFefWNHCHCTzUTBKBKBKBKBKBKBKBKBKBKXTXTXTvdZWZWZWZWZWZWZWZWZWZWZWPuXTXTXTcIXTXTXTXTXTBKXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
+HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKeJTzTzHCSPefxwxwBKBKxwtYefeAHCTzTzymBKHpHpHpHpHpHpHpBKzVuTXTddsFNsbIXDClxxbIoisFsFAlfDXTXTXTcIXTXTbbMMpVBKXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
+HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKEyUTUTHCWmrQbhdidididiGdtlCsHCDfTzUTBKHpHpHpHpHpHpHpBKLEHVrEXTXTXTXTXTXTXTXTXTXTXTXTXTXTXTXTcIXTXTXTXTXTBKXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
+HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKUTUTUTHCSPxwtYylBKBKxwtYLBeAHCuIUTSgBKHpHpHpHpHpHpHpBKBKPfGcHgQQXTXTXTXTQQXTXTXTXTXTQQXTXTXTMuXTQQnkhKhTBKXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
+HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKKnHCBHHCHCCCMTtYtYxwxwtEtYMTKrHCHCBHHCBKBKHpHpHpHpHpHpHpBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
+HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKgaUTUTUTHCHCuNsctYtYtYtYZVWNHCHCdFTzTzRBBKHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
 HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKLNTzTzUTHCHCiNDExwxwtYxwSlHCHCHCUTUTuOAwBKHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
 HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKOQTzTzTzHCHCHCHCfZyEfSkWHCHCHCHCTzTzlXmbBKHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
 HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKBKZeTzTzHCrvHCFTFJGktKHCHCIWHCHCUTTzUTBKBKHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
