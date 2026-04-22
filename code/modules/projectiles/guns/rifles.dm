@@ -1813,6 +1813,10 @@
 /obj/item/weapon/gun/rifle/type71/carbine/commando/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 35, "muzzle_y" = 16,"rail_x" = 13, "rail_y" = 23, "under_x" = 25, "under_y" = 13, "stock_x" = 15, "stock_y" = 13, "side_rail_x" = 24, "side_rail_y" = 17, "sling_x" = 16, "sling_y" = 19)
 
+/obj/item/weapon/gun/rifle/type71/carbine/commando/unloaded
+	current_mag = null
+	flags_gun_features = /obj/item/weapon/gun/rifle/spp::flags_gun_features | GUN_TRIGGER_SAFETY
+
 //-------------------------------------------------------
 //UPP TYPE 78 DMR
 //Meant to be used with 10x27mm HV ammo, but can still load regular ammo if necessary

@@ -11,6 +11,11 @@
 	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work. Has been given actual armor for incoming attack. Equipped with Type-71, Type-71 carbine, and sometimes, Type-23 on beanbags."
 	path = /datum/equipment_preset/upp/militia/plus
 
+/datum/human_ai_equipment_preset/upp/militia/rto
+	name = "UPP People's Territorial Guardsman RTO"
+	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work. This one is a radio transmissions operator."
+	path = /datum/equipment_preset/upp/militia/rto
+
 /datum/human_ai_equipment_preset/upptg/militia/at
 	name = "UPP People's Territorial Guardsman Anti-Tank"
 	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work. This one has an AT launcher."

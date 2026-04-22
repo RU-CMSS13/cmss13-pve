@@ -759,6 +759,10 @@
 	icon_state = "sof_beret"
 	item_state = "sof_beret"
 
+/obj/item/clothing/head/cmcap/upp/beret/sof/recon
+	name = "\improper UL6 Recon Infantry beret"
+	desc = "A red beret worn by the UPP-SOF \"Rozbójnik\" Group. Wear it with pride."
+
 //==========================//PROTECTIVE\\===============================\\
 //=======================================================================\\
 
