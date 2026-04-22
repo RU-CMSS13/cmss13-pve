@@ -590,6 +590,7 @@
 	has_sensor = UNIFORM_HAS_SENSORS
 	sensor_faction = FACTION_UPP
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
+	flags_atom = NO_NAME_OVERRIDE
 
 /obj/item/clothing/under/marine/veteran/upp/boiler
 	name = "\improper UPP operations boilersuit"
@@ -597,6 +598,7 @@
 	icon_state = "upp_boiler"
 	worn_state = "upp_boiler"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/under/marine/veteran/upp/pap
 	name = "\improper PaP service uniform"
@@ -606,6 +608,7 @@
 	has_sensor = UNIFORM_HAS_SENSORS
 	sensor_faction = FACTION_LIST_UPP_COLONY
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/under/marine/veteran/upp/service
 	name = "\improper UPP service uniform"
@@ -613,6 +616,7 @@
 	icon_state = "upp_uniform_service"
 	worn_state = "upp_uniform_service"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/under/marine/veteran/upp/naval
 	name = "\improper UPP naval infantry uniform"
@@ -622,6 +626,7 @@
 	worn_state = "upp_uniform_naval"
 	flags_jumpsuit = UNIFORM_SLEEVE_CUT
 	valid_accessory_slots = list(ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_HOLSTER)
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/under/marine/veteran/canc
 	name = "\improper CANC fatigues"
@@ -633,6 +638,7 @@
 	has_sensor = UNIFORM_HAS_SENSORS
 	sensor_faction = FACTION_CANC
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 // UPP Army / Territorial Guard
 
@@ -642,12 +648,14 @@
 	icon_state = "upp_army_green_uniform"
 	worn_state = "upp_army_green_uniform"
 	suit_restricted = FALSE
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/under/marine/veteran/upp/army/alt
 	name = "\improper UPP army fatigues"
 	desc = "It's a set of standard-issue UPP Armed Collective combat fatigues with prolonged coat featuring venlar armor inserts at critical areas to protect from blades and low caliber ballistics. This particular set sports the standard pattern of the UPP Army uniform."
 	icon_state = "upp_army_yellow_uniform"
 	worn_state = "upp_army_yellow_uniform"
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 // UPP SOF
 
@@ -657,6 +665,7 @@
 	icon_state = "sof_uniform"
 	worn_state = "sof_uniform"
 	flags_jumpsuit = FALSE
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 //=========================//Freelancer\\================================\\
 

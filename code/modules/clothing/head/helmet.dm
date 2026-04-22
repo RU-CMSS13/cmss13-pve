@@ -1513,6 +1513,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_rad = CLOTHING_ARMOR_MEDIUMLOW
 	armor_internaldamage = CLOTHING_ARMOR_HIGH
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	flags_atom = NO_NAME_OVERRIDE
 	clothing_traits = list(TRAIT_EAR_PROTECTION)
 	flags_marine_helmet = HELMET_SQUAD_OVERLAY|HELMET_GARB_OVERLAY|HELMET_DAMAGE_OVERLAY
 	built_in_visors = list(new /obj/item/device/helmet_visor/upp)
@@ -1526,6 +1527,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	item_state = "helmet"
 	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = NONE
+	flags_atom = NO_NAME_OVERRIDE
 	clothing_traits = null
 	flags_marine_helmet = HELMET_DAMAGE_OVERLAY
 	specialty = "6B68 helmet"
@@ -1534,6 +1536,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	name = "\improper 6B77 combat helmet"
 	desc = "An older version of the UPP Army's 6B82 combat helmet, still worn by certain units on planets the UPP deems less important."
 	icon_state = "upp_army_helmet"
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/head/helmet/marine/veteran/upp/sof
 	name = "\improper CCC5-L composite helmet"
@@ -1548,6 +1551,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_internaldamage = CLOTHING_ARMOR_HIGH
 	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR
 	flags_inv_hide = HIDEEARS|HIDEALLHAIR
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 //==========================//UPP\\=================================\\
 //=======================================================================\\
@@ -1637,6 +1641,10 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 			var/datum/action/item_action/cycle_helmet_huds/cycle_action = locate() in actions
 			if(cycle_action)
 				cycle_action.set_action_overlay(active_visor)
+
+	if(!(flags_atom & NO_SNOW_TYPE))
+		select_gamemode_skin(type)
+	update_icon()
 
 /obj/item/clothing/head/helmet/upp/Destroy(force)
 	helmet_overlays = null
@@ -1934,6 +1942,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
 	armor_rad = CLOTHING_ARMOR_LOW
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	flags_atom = NO_NAME_OVERRIDE
 	specialty = "6B84 helmet"
 	max_inserted_visors = 2
 

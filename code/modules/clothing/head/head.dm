@@ -665,40 +665,53 @@
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	flags_inventory = null
 
+/obj/item/clothing/head/cmcap/upp/Initialize(mapload)
+	. = ..()
+	if(!(flags_atom & NO_SNOW_TYPE))
+		select_gamemode_skin(type)
+	update_icon()
+
 /obj/item/clothing/head/cmcap/upp/civi
 	name = "\improper UL2c cap"
 	icon_state = "upp_cap_civi"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/upp/boonie
 	name = "\improper UL5 hat"
 	desc = "Standard issue soft brimmed hat for Territorial Guard units stationed in areas with extreme heat."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "upp_boonie"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/upp/boonie/canc
 	name = "\improper boonie hat"
 	desc = "A boonie hat in CANC uniform colors."
 	icon_state = "canc_boonie"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/upp/beret/guerilla
 	name = "\improper red beret"
 	desc = "A red beret popular with communist revolutionaries."
 	icon_state = "upp_beret_revolution"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/upp/peaked
 	name = "\improper UL3 peaked cap"
 	desc = "Standard issue peaked service cap of the UPP's military."
 	icon_state = "upp_peaked"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/upp/peaked/police
 	name = "\improper UL3 PaP peaked cap"
 	desc = "Standard issue peaked cap of the People's Armed Police."
 	icon_state = "upp_peaked_police"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/upp/peaked/mss
 	name = "\improper UL3 MSS peaked cap"
 	desc = "Standard issue peaked cap of the Ministry of Space Security."
 	icon_state = "upp_peaked_mss"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/upp/ushanka
 	name = "\improper UL2 ushanka"
@@ -708,6 +721,7 @@
 	var/tied = FALSE
 	var/original_state = "upp_ushanka"
 	flags_inv_hide = HIDEEARS
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/upp/ushanka/verb/flaps_up()
 	set name = "Tie Up/Down"
@@ -740,6 +754,7 @@
 	desc = "Standard issue beret of the UPP's military."
 	icon_state = "upp_beret"
 	item_state = "upp_beret"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/upp/beret/army
 	name = "\improper UL3 Army beret"

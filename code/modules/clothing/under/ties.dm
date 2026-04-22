@@ -1638,6 +1638,12 @@
 	item_state = "upp_arms"
 	slot = ACCESSORY_SLOT_DECORARMOR
 
+/obj/item/clothing/accessory/upppads/Initialize(mapload)
+	. = ..()
+	if(!(flags_atom & NO_SNOW_TYPE))
+		select_gamemode_skin(type)
+	update_icon()
+
 /obj/item/clothing/accessory/upppads/legs
 	name = "\improper 6B90 Leg Guards"
 	desc = "A set of leg greaves designed for the 6B90 armor system."
@@ -1658,6 +1664,7 @@
 	icon_state = "upp_sof_bracers"
 	item_state = "upp_sof_bracers"
 	slot = ACCESSORY_SLOT_DECORBRACER
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/accessory/upppads/kneepads_sof
 	name = "\improper CCC5-L Kneepads"
@@ -1665,6 +1672,7 @@
 	icon_state = "upp_sof_thighguards"
 	item_state = "upp_sof_thighguards"
 	slot = ACCESSORY_SLOT_DECORKNEE
+	flags_atom = NO_SNOW_TYPE
 
 //===========================//TWE CUSTOM ARMOR PLATES\\================================\\
 
