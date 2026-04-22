@@ -442,6 +442,8 @@
 /obj/item/clothing/accessory/patch/upp/recon
 	name = "UPP 'Rozbójnik' Group patch"
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the 'Rozbójnik' Group who specialise in reconnaissance operations."
+	icon = 'icons/obj/items/clothing/upp_foreconpatch.dmi'
+	accessory_icons = list(WEAR_BODY = 'icons/mob/humans/onmob/upp_foreconpatch.dmi', WEAR_JACKET = 'icons/mob/humans/onmob/upp_foreconpatch.dmi')
 	icon_state = "uppreconpatch"
 
 /obj/item/clothing/accessory/patch/upp/naval
