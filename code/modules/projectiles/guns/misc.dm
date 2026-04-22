@@ -298,21 +298,6 @@
 
 /obj/item/weapon/gun/pkp/iff/handle_starting_attachment()
 	..()
-	var/obj/item/attachable/attachie = new /obj/item/attachable/pkpbarrel(src)
-	attachie.flags_attach_features &= ~ATTACH_REMOVABLE
-	attachie.Attach(src)
-	update_attachable(attachie.slot)
-
-	var/obj/item/attachable/pkpstock = new /obj/item/attachable/stock/pkpstock(src)
-	pkpstock.flags_attach_features &= ~ATTACH_REMOVABLE
-	pkpstock.Attach(src)
-	update_attachable(pkpstock.slot)
-
-	var/obj/item/attachable/bipod = new /obj/item/attachable/bipod/integral/pkp(src)
-	bipod.flags_attach_features &= ~ATTACH_REMOVABLE
-	bipod.Attach(src)
-	update_attachable(bipod.slot)
-
 //invisible mag harness
 	var/obj/item/attachable/magnetic_harness/Integrated = new(src)
 	Integrated.hidden = TRUE
@@ -368,30 +353,6 @@
 	desc = "The QYJ-72-IM is an experimental variant of common UPP GPMG featuring IFF capabilities which were developed by reverse-engineering USCM smartweapons. Aside from that, it has also had some internal parts stripped down to make it easier to deploy with recon units, sacrficing some performance in the process. It's still quite heavy and will overheat quickly, but the platform is able to lay down range unprecedented amounts of lead. \n<b>Alt-click it to open the feed cover and allow for reloading.</b>"
 	actions_types = list(/datum/action/item_action/toggle_iff_pkp)
 	requires_harness = FALSE
-
-/obj/item/weapon/gun/pkp/iff/para/handle_starting_attachment()
-	..()
-	var/obj/item/attachable/attachie = new /obj/item/attachable/pkpbarrel(src)
-	attachie.flags_attach_features &= ~ATTACH_REMOVABLE
-	attachie.Attach(src)
-	update_attachable(attachie.slot)
-
-	var/obj/item/attachable/pkpstock = new /obj/item/attachable/stock/pkpstock(src)
-	pkpstock.flags_attach_features &= ~ATTACH_REMOVABLE
-	pkpstock.Attach(src)
-	update_attachable(pkpstock.slot)
-
-	var/obj/item/attachable/bipod = new /obj/item/attachable/bipod/integral/pkp(src)
-	bipod.flags_attach_features &= ~ATTACH_REMOVABLE
-	bipod.Attach(src)
-	update_attachable(bipod.slot)
-
-//invisible mag harness
-	var/obj/item/attachable/magnetic_harness/Integrated = new(src)
-	Integrated.hidden = TRUE
-	Integrated.flags_attach_features &= ~ATTACH_REMOVABLE
-	Integrated.Attach(src)
-	update_attachable(Integrated.slot)
 
 /obj/item/weapon/gun/pkp/iff/para/set_gun_config_values()
 	..()
