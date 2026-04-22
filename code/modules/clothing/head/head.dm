@@ -666,13 +666,6 @@
 	flags_inventory = null
 	flags_atom = null
 
-/obj/item/clothing/head/cmcap/upp/Initialize(mapload)
-	. = ..()
-	if(!(flags_atom & NO_SNOW_TYPE))
-		select_gamemode_skin(type)
-	update_icon()
-
-
 /obj/item/clothing/head/cmcap/upp/civi
 	name = "\improper UL2c cap"
 	icon_state = "upp_cap_civi"
