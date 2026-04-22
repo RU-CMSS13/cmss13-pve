@@ -82,6 +82,12 @@
 	icon_state = "cbrn"
 	item_state = "cbrn"
 
+/obj/item/clothing/gloves/marine/pve_mopp/upp
+	name = "\improper BL-3M gloves"
+	desc = "UPP standard issue OZK gloves to protect your insides from nerve gas and deadly chemicals."
+	icon_state = "cbrn_alt"
+	item_state = "cbrn_alt"
+
 /obj/item/clothing/gloves/marine/veteran/pmc
 	name = "\improper WY PMC gloves"
 	desc = "Standard issue kevlon fiber gloves manufactured for and by Weyland-Yutani PMC dispatch division."

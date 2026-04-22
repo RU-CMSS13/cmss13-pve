@@ -21,11 +21,18 @@
 		"<span class='notice'>[msg_self]</span>"
 	)
 
+	//send this msg to all admins
+	for(var/client/X in GLOB.admins)
+		if(!CLIENT_IS_STAFF(X))
+			continue
+		if(X.prefs.toggles_sound & SOUND_ADMINHELP)
+			SEND_SOUND(X, sound('sound/effects/data-transmission.ogg'))
+
 	// Log for admins
 	log_admin("[src] rolled a dice: [(action_text && length(action_text)) ? action_text : "no action"] → [result]")
 
 	// Show in admin chat with jump option
-	message_admins("[src] rolled a dice: [(action_text && length(action_text)) ? action_text : "no action"] → [result] [ADMIN_JMP(src)]", 1)
+	message_admins(SPAN_BOLDWARNING("[src] rolled a dice: [(action_text && length(action_text)) ? action_text : "no action"] → [result] [ADMIN_JMP(src)]"))
 
 	return result
 

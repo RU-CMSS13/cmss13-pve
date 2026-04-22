@@ -26,7 +26,7 @@
 	bonus_overlay = "m41a_ex"
 
 /obj/item/ammo_magazine/rifle/incendiary
-	name = "\improper M41A LE incendiary magazine (10x24mm)"
+	name = "\improper M41A incendiary magazine (10x24mm)"
 	desc = "A 10mm assault rifle magazine."
 	default_ammo = /datum/ammo/bullet/rifle/incendiary
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
@@ -116,7 +116,7 @@
 
 /obj/item/ammo_magazine/rifle/m41aMK1/incendiary
 	name = "\improper M41A MK1 incendiary magazine (10x24mm)"
-	desc = "A long rectangular box magazine for the M41A. Holds 99 caseless Light Explosive Incendiary 10x24mm rounds."
+	desc = "A long rectangular box magazine for the M41A. Holds 99 caseless Incendiary 10x24mm rounds."
 	default_ammo = /datum/ammo/bullet/rifle/incendiary
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
 
@@ -307,7 +307,7 @@
 	ammo_band_icon = "+type71_band"
 	ammo_band_icon_empty = "+type71_band_e"
 	default_ammo = /datum/ammo/bullet/rifle/upp
-	max_rounds = 50
+	max_rounds = 60
 	gun_type = /obj/item/weapon/gun/rifle/type71
 
 /obj/item/ammo_magazine/rifle/type71/rubber
@@ -333,6 +333,12 @@
 	desc = "A 10x27mm high-capacity casket magazine containing the standard high explosive armor piercing rounds for the Type 71 rifle."
 	default_ammo = /datum/ammo/bullet/rifle/upp/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
+
+/obj/item/ammo_magazine/rifle/type71/incendiary
+	name = "\improper Type 71 incendiary magazine (10x27mm)"
+	desc = "A 10x27mm high-capacity casket magazine containing incendiary rounds for the Type 71 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/upp/incendiary
+	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
 
 //-------------------------------------------------------
 //UPP AG80 RIFLE
@@ -368,37 +374,76 @@
 	ammo_band_color = AMMO_BAND_COLOR_RUBBER
 
 //-------------------------------------------------------
+//UPP SPP-48M DMR
+
+/obj/item/ammo_magazine/rifle/spp
+	name = "\improper SPP-48M magazine (10x27mm)"
+	desc = "A 10x27mm high-capacity casket magazine for the SPP-48M rifle."
+	caliber = "10x27mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "spp"
+	ammo_band_icon = "+spp_band"
+	ammo_band_icon_empty = "+spp_band_e"
+	default_ammo = /datum/ammo/bullet/rifle/upp
+	max_rounds = 30
+	gun_type = /obj/item/weapon/gun/rifle/spp
+
+/obj/item/ammo_magazine/rifle/spp/ap
+	name = "\improper SPP-48M AP magazine (10x27mm)"
+	desc = "A 10x27mm high-capacity casket magazine containing armor piercing rounds for the SPP-48M rifle."
+	default_ammo = /datum/ammo/bullet/rifle/upp/ap
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/rifle/spp/ap/penetrating
+	name = "\improper SPP-48M AP magazine (10x27mm)"
+	desc = "A 10x27mm high-capacity casket magazine containing armor piercing rounds for the SPP-48M rifle."
+	default_ammo = /datum/ammo/bullet/rifle/upp/ap/penetrating
+	ammo_band_color = AMMO_BAND_COLOR_PENETRATING
+
+/obj/item/ammo_magazine/rifle/spp/heap
+	name = "\improper SPP-48M HEAP magazine (10x27mm)"
+	desc = "A 10x27mm high-capacity casket magazine containing the standard high explosive armor piercing rounds for the SPP-48M rifle."
+	default_ammo = /datum/ammo/bullet/rifle/upp/heap
+	ammo_band_color = AMMO_BAND_COLOR_HEAP
+
+/obj/item/ammo_magazine/rifle/spp/incendiary
+	name = "\improper SPP-48M incendiary magazine (10x27mm)"
+	desc = "A 10x27mm high-capacity casket magazine containing incendiary rounds for the SPP-48M rifle."
+	default_ammo = /datum/ammo/bullet/rifle/upp/incendiary
+	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
+
+//-------------------------------------------------------
 //UPP - Norcomm AK-4047 RIFLE
 
 /obj/item/ammo_magazine/rifle/ak4047
-	name = "\improper AK-4047 magazine (10x27mm)"
-	desc = "A rugged and reliable 45-round magazine designed for the AK-4047 series assault rifle. Built for durability, it can withstand harsh conditions and keep firing even in the worst environments."
-	caliber = "10x27mm"
+	name = "\improper AK-4047 magazine (10x24mm)"
+	desc = "A rugged and reliable 40-round magazine designed for the AK-4047 series assault rifle. Built for durability, it can withstand harsh conditions and keep firing even in the worst environments."
+	caliber = "10x24mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "ak4047"
 	w_class = SIZE_MEDIUM
-	default_ammo = /datum/ammo/bullet/rifle/upp
-	max_rounds = 45
+	default_ammo = /datum/ammo/bullet/rifle
+	max_rounds = 40
 	gun_type = /obj/item/weapon/gun/rifle/ak4047
 	ammo_band_icon = "+ak4047_band"
 	ammo_band_icon_empty = "+ak4047_band_e"
 
 /obj/item/ammo_magazine/rifle/ak4047/ap
-	name = "\improper AK-4047 AP magazine (10x27mm)"
-	desc = "A 10x27mm magazine containing armor piercing rounds for the AK-4047 rifle."
-	default_ammo = /datum/ammo/bullet/rifle/upp/ap
+	name = "\improper AK-4047 AP magazine (10x24mm)"
+	desc = "A 10x24mm magazine containing armor piercing rounds for the AK-4047 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/ap
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
 /obj/item/ammo_magazine/rifle/ak4047/heap
-	name = "\improper AK-4047 HEAP magazine (10x27mm)"
-	desc = "A 10x27mm magazine containing the standard high explosive armor piercing rounds for the AK-4047 rifle."
-	default_ammo = /datum/ammo/bullet/rifle/upp/heap
+	name = "\improper AK-4047 HEAP magazine (10x24mm)"
+	desc = "A 10x24mm magazine containing the standard high explosive armor piercing rounds for the AK-4047 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
 /obj/item/ammo_magazine/rifle/ak4047/incendiary
-	name = "\improper AK-4047 incendiary magazine (10x27mm)"
-	desc = "A 10x27mm assault rifle magazine containing the incendiary rounds for the AK-4047 rifle."
-	default_ammo = /datum/ammo/bullet/rifle/upp/incendiary
+	name = "\improper AK-4047 incendiary magazine (10x24mm)"
+	desc = "A 10x24mm assault rifle magazine containing the incendiary rounds for the AK-4047 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/incendiary
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
 
 //-------------------------------------------------------
@@ -682,7 +727,7 @@
 	ammo_band_icon_empty = "+caws_band_e"
 	w_class = SIZE_MEDIUM
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot
-	max_rounds = 20
+	max_rounds = 15
 	gun_type = /obj/item/weapon/gun/rifle/caws
 	transfer_handful_amount = 5
 	var/jam_chance = CAWS_MAGAZINE_JAM_CHANCE

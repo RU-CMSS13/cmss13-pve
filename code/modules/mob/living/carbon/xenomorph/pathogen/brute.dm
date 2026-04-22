@@ -2,8 +2,8 @@
 	caste_type = PATHOGEN_CREATURE_BRUTE
 	tier = 3
 
-	melee_damage_lower = XENO_DAMAGE_TIER_9
-	melee_damage_upper = XENO_DAMAGE_TIER_9
+	melee_damage_lower = XENO_DAMAGE_TIER_6
+	melee_damage_upper = XENO_DAMAGE_TIER_7
 	melee_vehicle_damage = XENO_DAMAGE_TIER_8
 	max_health = XENO_HEALTH_TIER_14
 	plasma_gain = XENO_PLASMA_GAIN_TIER_8
@@ -11,7 +11,7 @@
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_10
 	armor_deflection = XENO_ARMOR_TIER_3
 	evasion = XENO_EVASION_NONE
-	speed = XENO_SPEED_TIER_5
+	speed = XENO_SPEED_TIER_4
 
 	attack_delay = 0 // VERY high slash damage, but attacks relatively slowly
 

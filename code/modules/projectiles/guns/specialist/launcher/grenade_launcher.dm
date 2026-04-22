@@ -268,6 +268,7 @@
 	name = "\improper M92 grenade launcher"
 	desc = "A heavy, 8-shot grenade launcher used by the Colonial Marines for area denial and big explosions."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	fire_sound = 'sound/weapons/gun_gl_new.ogg'
 	icon_state = "m92"
 	item_state = "m92"
 	unacidable = TRUE

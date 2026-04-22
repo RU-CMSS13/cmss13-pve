@@ -204,6 +204,15 @@
 
 	return data
 
+/obj/item/device/binoculars/range/rmc
+	desc = "A pair of advanced binoculars with a rapid rangefinding function. Ctrl + Click turf to acquire it's coordinates. Ctrl + Click rangefinder to stop lasing."
+
+	cooldown_duration = 80
+	target_acquisition_delay = 30
+	icon_state = "binoculars_civ"
+	uses_camo = FALSE
+	range_laser_overlay = "binoculars_range_civ"
+
 //LASER DESIGNATOR with ability to acquire coordinates and CAS lasing support
 /obj/item/device/binoculars/range/designator
 	name = "laser designator"

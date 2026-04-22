@@ -2,13 +2,13 @@
 	caste_type = PATHOGEN_CREATURE_NEOMORPH
 	tier = 2
 
-	melee_damage_lower = XENO_DAMAGE_TIER_5
+	melee_damage_lower = XENO_DAMAGE_TIER_4
 	melee_damage_upper = XENO_DAMAGE_TIER_4
 	melee_vehicle_damage = XENO_DAMAGE_TIER_4
 	max_health = XENO_HEALTH_TIER_6
 	plasma_gain = XENO_PLASMA_GAIN_TIER_8
 	plasma_max = XENO_PLASMA_TIER_4
-	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_1
+	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_2
 	armor_deflection = XENO_NO_ARMOR
 	evasion = XENO_EVASION_LOW
 	speed = XENO_SPEED_TIER_9
@@ -49,6 +49,7 @@
 	inherent_verbs = list(
 		/mob/living/carbon/xenomorph/proc/vent_crawl,
 	)
+	gib_chance = 100
 	claw_type = CLAW_TYPE_SHARP
 
 	tackle_min = 2
@@ -89,10 +90,10 @@
 	return
 
 /datum/action/xeno_action/activable/pounce/runner/neomorph
-	xeno_cooldown = 5 SECONDS
+	xeno_cooldown = 4 SECONDS
 	knockdown = TRUE // Should we knock down the target?
 	knockdown_duration = 1
-	slash = TRUE // Do we slash upon reception?
-	freeze_self = TRUE // Should we freeze ourselves after the lunge?
+	slash = FALSE // Do we slash upon reception?
+	freeze_self = FALSE // Should we freeze ourselves after the lunge?
 	freeze_time = 5
 	can_be_shield_blocked = TRUE // Some legacy stuff, self explanatory

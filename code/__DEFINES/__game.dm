@@ -20,7 +20,8 @@
 
 
 #define MAP_ICE_COLONY "Ice Colony" // Highpop only
-#define MAP_LV_624 "LV-624"
+#define MAP_LV_624 "LV-624" // Classic LV
+#define MAP_LV_624_LAZARUS_LANDING "LV-624 Lazarus Landing" // LV revamp still lowpop.
 #define MAP_LV_624_REPAIRED "LV-624 Repaired"
 #define MAP_BIG_RED "Solaris Ridge"
 #define MAP_PRISON_STATION "Fiorina Cellblocks"
@@ -42,8 +43,12 @@
 #define MAP_NEW_VARADERO_REPAIRED "New Varadero Repaired"
 #define MAP_TYRARGO_RIFT "Tyrargo Rift"
 #define MAP_WHITE_ANTRE_RESEARCH_FACILITY "White Antre Research Facility"
+#define MAP_CONAM_81_ABYSSAL "Con-Am 81 'Abyssal'"
+#define MAP_CAPE_RIVER "Cape River Mining Colony"
 #define MAP_CHINOOK "Chinook 91 GSO" //admin level
 #define MAP_DERELICT_ALMAYER "Derelict Almayer"
+#define MAP_LV522_LUKES_LANDING "LV-522 Lukes Landing"
+#define MAP_LV522_CHANCES_CLAIM_LUKES_LANDING "LV-522 Chances Claim & Lukes Landing"
 #define MAP_TAIPEI_STATION "Taipei Station"
 #define MAP_LV295_BLACKSITE "LV295 Blacksite"
 #define MAP_SI391_SEKHMET "SI-391 Sekhmet Swamp"
@@ -289,6 +294,7 @@
 /// Blocks mortar placement, lasing, and medevac
 #define CEILING_PROTECTION_TIER_1 1
 #define CEILING_METAL 1.1
+#define CEILING_SANDSTONE_ALLOW_CAS 1.2
 
 /// Blocks CAS signals, supply drops, fultoning, and mortar fire
 #define CEILING_PROTECTION_TIER_2 2
@@ -413,6 +419,10 @@
 #define WALL_AICORE "aiwall"
 #define WALL_UPP_GREEN "uppwall_interior"
 #define WALL_UPP_GREY "uppwall_interior"
+#define WALL_UPP_SHIP "uppwall_interior"
+#define WALL_UPP_BASE "uppwall"
+#define WALL_LV_BASE "lvwall"
+#define WALL_ANCIENT_BASE "ancient_stone"
 
 //Defines for dropship weapon gimbals
 #define GIMBAL_LEFT -1

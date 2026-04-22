@@ -463,10 +463,6 @@
 /obj/item/storage/backpack/marine/medic/standard
 	has_gamemode_skin = FALSE
 
-/obj/item/storage/backpack/marine/medic/upp
-	name = "\improper UPP corpsman backpack"
-	desc = "Uncommon issue backpack worn by UPP medics from isolated sectors. You can swear you can see a faded USCM symbol."
-
 /obj/item/storage/backpack/marine/tech
 	name = "\improper USCM technician backpack"
 	desc = "A standard-issue backpack worn by USCM technicians."
@@ -1184,6 +1180,18 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	can_hold = list(/obj/item/ammo_magazine/flamer_tank, /obj/item/tool/extinguisher)
 	storage_flags = STORAGE_FLAGS_POUCH
 
+/obj/item/storage/backpack/marine/engineerpack/flamethrower/upp
+	name = "\improper UPP Pyrotechnician ROB-6 fueltank"
+	desc = "UPPAC standard issue 'Rancevyj Ognemetnyj Bak', or 'Back-mounted Flamer Tank', old back rig that holds fuel in massive square shaped tank, with highly-pressured canister below it. A small regulator sits on the side of rig, compatible with refillment of all flamethrowers used by UPPAC. Tho due to the size, it cannot hold additional regular tanks, like it's American counterpart."
+	icon_state = "upp_flamethrower_backpack"
+	item_state = "upp_flamethrower_backpack"
+	max_fuel = 1000
+	has_gamemode_skin = FALSE
+	max_storage_space = 3
+	storage_slots = 1
+	worn_accessible = TRUE
+	can_hold = list(/obj/item/ammo_magazine/flamer_tank/upp, /obj/item/tool/extinguisher)
+
 //----------OTHER FACTIONS AND ERTS----------
 
 /obj/item/storage/backpack/lightpack
@@ -1337,6 +1345,21 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	max_fuel = 180
 	max_storage_space = 12
 
+/obj/item/storage/backpack/marine/upp
+	name = "\improper UCBP4 combat backpack"
+	desc = "A UPP military standard-issue Union Combat BackPack MK4. Very robust and heavy."
+	icon_state = "marinepack_upp"
+	item_state = "marinepack_upp"
+	max_storage_space = 24
+	bag_open_time = 3 SECONDS
+
+/obj/item/storage/backpack/marine/upp/medic
+	name = "\improper UCBP4-M sanitar backpack"
+	desc = "A UPP military standard-issue Union Combat BackPack MK4. Very robust and heavy. Carried by UPP medics for extra supply carriage. Has a better layout within, which eases access to the inner storage."
+	icon_state = "marinepack_medic_upp"
+	item_state = "marinepack_medic_upp"
+	bag_open_time = 2 SECONDS
+
 /obj/item/storage/backpack/marine/satchel/scout_cloak/upp
 	name = "\improper V86 Thermal Cloak"
 	desc = "A thermo-optic camouflage cloak commonly used by UPP commando units."
@@ -1454,3 +1477,12 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 /obj/item/storage/backpack/marine/satchel/intel/chestrig/army
 	name = "\improper Army expedition chestrig"
 	desc = "A heavy-duty IMP based chestrig, can quickly be accessed with only one hand. Usually issued to intelligence officers."
+
+/obj/item/storage/backpack/marine/medic/imp
+	name = "\improper lightweight medical IMP backpack"
+	desc = "A variant of the standard-issue pack of the USCM and US Army forces, has a red cross drawn on it. Designed to lug gear into the battlefield using the Intuitive Mounting Point system on M3 & M4 pattern armor."
+	icon_state = "imp_medic"
+	item_state = "imp_medic"
+	icon = 'icons/mob/humans/onmob/contained/medical_imp.dmi'
+	contained_sprite = TRUE
+	has_gamemode_skin = FALSE

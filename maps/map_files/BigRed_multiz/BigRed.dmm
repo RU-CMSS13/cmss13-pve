@@ -584,6 +584,7 @@
 /turf/open/floor/plating/warnplate,
 /area/bigredv2/outside/space_port)
 "aci" = (
+/turf/open/floor/asteroidwarning,
 /area/bigredv2/outside/filtration_cave_cas)
 "acj" = (
 /obj/structure/machinery/light/double/blue{
@@ -661,7 +662,7 @@
 /obj/structure/machinery/sensortower{
 	pixel_x = -9
 	},
-/turf/open/floor/asteroidwarning,
+/turf/open/floor/asteroidfloor,
 /area/bigredv2/outside/filtration_cave_cas)
 "acz" = (
 /turf/open/floor/whitegreen/north,
@@ -1648,7 +1649,8 @@
 /turf/open/floor/white,
 /area/bigredv2/caves/lambda/xenobiology)
 "agm" = (
-/turf/open/gm/river)
+/turf/open/gm/river,
+/area/bigredv2/outside/engineering)
 "agn" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 5
@@ -20668,7 +20670,8 @@
 /turf/open/floor/dark,
 /area/bigredv2/outside/filtration_plant)
 "bmE" = (
-/turf/closed/wall/solaris/reinforced/hull)
+/turf/closed/wall/solaris/reinforced/hull,
+/area/bigredv2/outside/engineering)
 "bmF" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/dark,
@@ -54255,8 +54258,6 @@
 	},
 /turf/open/floor/white,
 /area/bigredv2/secondfloor/indoors/medical)
-"uZy" = (
-/turf/closed/wall/solaris/reinforced)
 "uZG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/trash/cigbutt{
@@ -57750,8 +57751,6 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/asphalt/cement_sunbleached/cement_sunbleached1,
 /area/bigredv2/outside/s)
-"ykR" = (
-/turf/closed/wall/mineral/uranium)
 "ykW" = (
 /obj/effect/decal/cleanable/blood/drip{
 	pixel_x = -3;
@@ -72910,7 +72909,7 @@ rIl
 bmE
 agm
 agm
-ykR
+dTF
 agm
 agm
 agm
@@ -72918,7 +72917,7 @@ agm
 agm
 agm
 agm
-ykR
+dTF
 agm
 bmE
 rIl
@@ -73344,7 +73343,7 @@ rIl
 bmE
 agm
 agm
-ykR
+dTF
 agm
 agm
 agm
@@ -73352,7 +73351,7 @@ agm
 agm
 agm
 agm
-ykR
+dTF
 agm
 bmE
 rIl
@@ -73778,15 +73777,15 @@ rIl
 bmE
 bmE
 agm
-ykR
+dTF
 agm
 agm
-uZy
-uZy
-uZy
+axX
+axX
+axX
 agm
 agm
-ykR
+dTF
 agm
 bmE
 rIl
@@ -73997,11 +73996,11 @@ bmE
 agm
 agm
 agm
-uZy
-uZy
-uZy
-uZy
-uZy
+axX
+axX
+axX
+axX
+axX
 agm
 agm
 agm
@@ -74212,15 +74211,15 @@ rIl
 bmE
 bmE
 agm
-ykR
+dTF
 agm
-uZy
-uZy
-uZy
-uZy
-uZy
+axX
+axX
+axX
+axX
+axX
 agm
-ykR
+dTF
 agm
 bmE
 rIl
@@ -74431,11 +74430,11 @@ bmE
 agm
 agm
 agm
-uZy
-uZy
-uZy
-uZy
-uZy
+axX
+axX
+axX
+axX
+axX
 agm
 agm
 agm
@@ -74646,15 +74645,15 @@ rIl
 bmE
 bmE
 agm
-ykR
+dTF
 agm
 agm
-uZy
-uZy
-uZy
+axX
+axX
+axX
 agm
 agm
-ykR
+dTF
 agm
 bmE
 rIl
@@ -75080,7 +75079,7 @@ rIl
 bmE
 agm
 agm
-ykR
+dTF
 agm
 agm
 agm
@@ -75088,7 +75087,7 @@ agm
 agm
 agm
 agm
-ykR
+dTF
 agm
 bmE
 rIl
@@ -75514,7 +75513,7 @@ rIl
 bmE
 agm
 agm
-ykR
+dTF
 agm
 agm
 agm
@@ -75522,7 +75521,7 @@ agm
 agm
 agm
 agm
-ykR
+dTF
 agm
 bmE
 rIl

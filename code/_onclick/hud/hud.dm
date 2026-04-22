@@ -49,6 +49,8 @@
 	var/atom/movable/screen/layer_up
 	var/atom/movable/screen/layer_down
 
+	var/atom/movable/screen/roll_dice
+
 	var/atom/movable/screen/zone_sel/zone_sel
 	var/atom/movable/screen/pull_icon
 	var/atom/movable/screen/throw_icon
@@ -153,6 +155,8 @@
 
 	layer_up = null
 	layer_down = null
+
+	roll_dice = null
 
 	zone_sel = null
 	pull_icon = null

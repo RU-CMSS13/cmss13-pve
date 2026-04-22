@@ -816,30 +816,109 @@
 	autoname = TRUE
 	opacity = TRUE
 	glass = FALSE
+
 /obj/structure/machinery/door/airlock/multi_tile/upp_green
 	name = "Airlock"
 	icon = 'icons/obj/structures/doors/upp/2x1upp_green.dmi'
 	opacity = FALSE
 	glass = FALSE
+	req_access = list()
+	req_one_access = list(ACCESS_UPP_GENERAL)
+
+/obj/structure/machinery/door/airlock/multi_tile/upp_green/autoname
+	autoname = TRUE
 
 /obj/structure/machinery/door/airlock/multi_tile/upp_green/glass
 	name = "Glass Airlock"
 	icon = 'icons/obj/structures/doors/upp/2x1upp_glass_green.dmi'
 	glass = TRUE
 
+/obj/structure/machinery/door/airlock/multi_tile/upp_green/glass/autoname
+	autoname = TRUE
 
 /obj/structure/machinery/door/airlock/multi_tile/upp_grey
 	name = "Airlock"
 	icon = 'icons/obj/structures/doors/upp/2x1upp_grey.dmi'
 	opacity = FALSE
 	glass = FALSE
+	req_access = list()
+	req_one_access = list(ACCESS_UPP_GENERAL)
+
+/obj/structure/machinery/door/airlock/multi_tile/upp_grey/autoname
+	autoname = TRUE
 
 /obj/structure/machinery/door/airlock/multi_tile/upp_grey/glass
 	name = "Glass Airlock"
 	icon = 'icons/obj/structures/doors/upp/2x1upp_glass_grey.dmi'
 	glass = TRUE
 
+/obj/structure/machinery/door/airlock/multi_tile/upp_grey/glass/autoname
+	autoname = TRUE
+
 /obj/structure/machinery/door/airlock/multi_tile/upp_utility
 	name = "Airlock"
 	icon = 'icons/obj/structures/doors/upp/2x1upp_utility.dmi'
 	openspeed = 6
+	req_access = list()
+	req_one_access = list(ACCESS_UPP_GENERAL)
+
+/obj/structure/machinery/door/airlock/multi_tile/upp_utility/autoname
+	autoname = TRUE
+
+/obj/structure/machinery/door/airlock/multi_tile/upp/eng/autoname
+	autoname = TRUE
+
+/obj/structure/machinery/door/airlock/multi_tile/upp/eng_solid
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/upp/upp_2x1enggreendoor.dmi'
+	opacity = TRUE
+	glass = FALSE
+	req_one_access = list(ACCESS_UPP_ENGINEERING, ACCESS_UPP_LEADERSHIP)
+
+/obj/structure/machinery/door/airlock/multi_tile/upp/eng_solid/autoname
+	autoname = TRUE
+
+// ------ LV Generic Grey Double Door ------ //
+
+/obj/structure/machinery/door/airlock/multi_tile/lv_double
+	openspeed = 4
+
+/obj/structure/machinery/door/airlock/multi_tile/lv_double
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/light_grey_double_glass_door.dmi'
+	opacity = FALSE
+	glass = TRUE
+	req_access = null
+
+/obj/structure/machinery/door/airlock/multi_tile/lv_double/autoname
+	autoname = TRUE
+
+/obj/structure/machinery/door/airlock/multi_tile/lv_double/solid
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/light_grey_double_solid_door.dmi'
+	opacity = TRUE
+	glass = FALSE
+	req_access = null
+
+/obj/structure/machinery/door/airlock/multi_tile/lv_double/solid/autoname
+	autoname = TRUE
+
+/obj/structure/machinery/door/airlock/multi_tile/lv_double/dark_grey/solid
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/2x1_dark_grey_airlock.dmi'
+	opacity = TRUE
+	glass = FALSE
+	req_access = null
+
+/obj/structure/machinery/door/airlock/multi_tile/lv_double/dark_grey/solid/autoname
+	autoname = TRUE
+
+/obj/structure/machinery/door/airlock/multi_tile/lv_double/light_grey/solid
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/2x1_light_grey_airlock.dmi'
+	opacity = TRUE
+	glass = FALSE
+	req_access = null
+
+/obj/structure/machinery/door/airlock/multi_tile/lv_double/light_grey/solid/autoname
+	autoname = TRUE

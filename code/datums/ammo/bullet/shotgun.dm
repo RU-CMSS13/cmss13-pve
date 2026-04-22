@@ -14,8 +14,8 @@
 
 	accurate_range = 7
 	max_range = 14
-	damage = 100
-	penetration = ARMOR_PENETRATION_TIER_4
+	damage = 90
+	penetration = ARMOR_PENETRATION_TIER_6
 	damage_var_low = PROJECTILE_VARIANCE_TIER_10
 	damage_var_high = PROJECTILE_VARIANCE_TIER_1
 	damage_armor_punch = 2
@@ -45,9 +45,9 @@
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
 	accurate_range = 10
 	max_range = 18
-	damage = 125
+	damage = 110
 	damage_armor_punch = 5
-	penetration = ARMOR_PENETRATION_TIER_5
+	penetration = ARMOR_PENETRATION_TIER_8
 	firing_freq_offset = SOUND_FREQ_LOW
 
 /datum/ammo/bullet/shotgun/slug/special/on_hit_mob(mob/M,obj/projectile/P)
@@ -62,8 +62,8 @@
 	sound_bounce = "energy_bounce"
 	hit_effect_color = "#00aeff"
 	sound_override = 'sound/weapons/gun_es7lethal.ogg'
-	damage = 90
-	penetration = ARMOR_PENETRATION_TIER_6
+	damage = 75
+	penetration = ARMOR_PENETRATION_TIER_7
 	accuracy = HIT_ACCURACY_TIER_5
 
 /datum/ammo/bullet/shotgun/beanbag
@@ -125,8 +125,8 @@
 
 	accuracy = -HIT_ACCURACY_TIER_2
 	max_range = 12
-	damage = 100
-	penetration= ARMOR_PENETRATION_TIER_4
+	damage = 60
+	penetration= ARMOR_PENETRATION_TIER_2
 	handful_state = "incendiary_slug"
 
 /datum/ammo/bullet/shotgun/incendiary/set_bullet_traits()
@@ -156,10 +156,10 @@
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
 	max_range = 12
-	damage = 50
+	damage = 30
 	damage_var_low = PROJECTILE_VARIANCE_TIER_8
 	damage_var_high = PROJECTILE_VARIANCE_TIER_8
-	penetration = ARMOR_PENETRATION_TIER_5
+	penetration = ARMOR_PENETRATION_TIER_7
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_3
 	multiple_handful_name = TRUE
 
@@ -173,17 +173,14 @@
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
 	max_range = 12
-	damage = 50
+	damage = 30
 	damage_var_low = PROJECTILE_VARIANCE_TIER_8
 	damage_var_high = PROJECTILE_VARIANCE_TIER_8
-	penetration = ARMOR_PENETRATION_TIER_5
+	penetration = ARMOR_PENETRATION_TIER_7
 	scatter = SCATTER_AMOUNT_TIER_5
 
 /datum/ammo/bullet/shotgun/flechette_spread/awesome
-	damage = 50
-	max_range = 5
-	damage_var_low = PROJECTILE_VARIANCE_TIER_10
-	damage_var_high = PROJECTILE_VARIANCE_TIER_5
+	damage = 80
 
 /datum/ammo/bullet/shotgun/flechette/special
 	name = "flechette shell, USCM DU type"
@@ -216,7 +213,7 @@
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_5
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
 	max_range = 14
-	damage = 50
+	damage = 45
 	damage_var_low = PROJECTILE_VARIANCE_TIER_10
 	damage_var_high = PROJECTILE_VARIANCE_TIER_5
 	penetration = ARMOR_PENETRATION_TIER_9
@@ -246,7 +243,7 @@
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_5
 	accurate_range = 7
 	max_range = 9
-	damage = 70
+	damage = 50
 	damage_var_low = PROJECTILE_VARIANCE_TIER_10
 	damage_var_high = PROJECTILE_VARIANCE_TIER_1
 	penetration = ARMOR_PENETRATION_TIER_1
@@ -259,7 +256,6 @@
 
 /datum/ammo/bullet/shotgun/buckshot/on_hit_mob(mob/M,obj/projectile/P)
 	knockback(M, P, 3)
-
 /datum/ammo/bullet/shotgun/buckshot/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
@@ -281,7 +277,7 @@
 	shell_casing = /obj/effect/decal/ammo_casing/redshell
 	handful_type = /obj/item/ammo_magazine/handful/shotgun/buckshot/incendiary
 	bonus_projectiles_type = /datum/ammo/bullet/shotgun/spread/incendiary
-	damage = 70
+	damage = 40
 	shell_speed = AMMO_SPEED_TIER_1
 
 /datum/ammo/bullet/shotgun/buckshot/incendiary/set_bullet_traits()
@@ -300,7 +296,7 @@
 
 	accurate_range = 8
 	max_range = 8
-	damage = 90
+	damage = 60
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_8
 	firing_freq_offset = SOUND_FREQ_LOW
 
@@ -308,7 +304,7 @@
 /datum/ammo/bullet/shotgun/buckshot/masterkey
 	bonus_projectiles_type = /datum/ammo/bullet/shotgun/spread/masterkey
 
-	damage = 80
+	damage = 55
 
 /datum/ammo/bullet/shotgun/spread
 	name = "additional buckshot"
@@ -318,7 +314,7 @@
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
 	accurate_range = 4
 	max_range = 6
-	damage = 90
+	damage = 50
 	damage_var_low = PROJECTILE_VARIANCE_TIER_8
 	damage_var_high = PROJECTILE_VARIANCE_TIER_8
 	penetration = ARMOR_PENETRATION_TIER_1
@@ -328,7 +324,7 @@
 	pen_armor_punch = 0
 
 /datum/ammo/bullet/shotgun/spread/masterkey
-	damage = 80
+	damage = 20
 
 /datum/ammo/bullet/shotgun/spread/on_hit_mob(mob/M,obj/projectile/P)
 	knockback(M, P, 3)
@@ -357,7 +353,7 @@
 
 /datum/ammo/bullet/shotgun/spread/incendiary
 	name = "additional incendiary buckshot"
-	damage = 70
+	damage = 40
 	shell_speed = AMMO_SPEED_TIER_1
 
 /datum/ammo/bullet/shotgun/spread/incendiary/set_bullet_traits()

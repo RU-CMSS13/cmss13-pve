@@ -15,8 +15,8 @@
 	accurate_range = 32
 	max_range = 32
 	scatter = 0
-	damage = 250
-	penetration= ARMOR_PENETRATION_TIER_10
+	damage = 70
+	penetration= ARMOR_PENETRATION_TIER_5
 	shell_speed = AMMO_SPEED_TIER_6
 	damage_falloff = 0
 
@@ -38,20 +38,20 @@
 
 /datum/ammo/bullet/sniper/upp
 	name = "armor-piercing sniper bullet"
-	damage = 200
-	penetration = ARMOR_PENETRATION_TIER_10 //Instant deletion isn't fun.
+	damage = 80
+	penetration = ARMOR_PENETRATION_TIER_6 //Instant deletion isn't fun.
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/sniper/upp/heap
 	name = "high velocity armor-piercing sniper bullet"
-	damage = 250
-	penetration = ARMOR_PENETRATION_TIER_10
+	damage = 110
+	penetration = ARMOR_PENETRATION_TIER_8
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/sniper/upp/flak
 	name = "flak sniper bullet"
-	damage = 195
-	penetration = ARMOR_PENETRATION_TIER_10
+	damage = 60
+	penetration = ARMOR_PENETRATION_TIER_2
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/sniper/upp/flak/on_hit_mob(mob/M,obj/projectile/P)
@@ -79,7 +79,7 @@
 	accuracy = HIT_ACCURACY_TIER_10
 	accurate_range = 48
 	max_range = 48 //Overpen through half a colony amuses me greatly
-	damage = 550
+	damage = 190
 	shell_speed = AMMO_SPEED_TIER_HITSCAN
 	penetration = ARMOR_PENETRATION_TIER_10 + ARMOR_PENETRATION_TIER_5
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge //10x99 casing pipe implies this is actually cased, so...
@@ -245,7 +245,7 @@
 	))
 
 /datum/ammo/bullet/sniper/anti_materiel/vulture
-	damage = 1000 // Fully intended to vaporize anything smaller than a mini cooper
+	damage = 400 // Fully intended to vaporize anything smaller than a mini cooper
 	accurate_range_min = 0
 	handful_state = "vulture_bullet"
 	sound_hit = 'sound/bullets/bullet_vulture_impact.ogg'
@@ -289,7 +289,7 @@
 
 	shrapnel_chance = 0 // This isn't leaving any shrapnel.
 	accuracy = HIT_ACCURACY_TIER_8
-	damage = 550
+	damage = 150
 	shell_speed = AMMO_SPEED_TIER_6 + AMMO_SPEED_TIER_2
 	penetration = ARMOR_PENETRATION_TIER_10 + ARMOR_PENETRATION_TIER_5
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge

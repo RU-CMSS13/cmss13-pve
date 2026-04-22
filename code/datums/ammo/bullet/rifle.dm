@@ -6,10 +6,10 @@
 
 //====== 10X24 Pulse Rifle
 /datum/ammo/bullet/rifle
-	name = "Light-Explosive 10x24 bullet"
+	name = "light-explosive 10x24 bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
-	damage = 45
-	penetration = ARMOR_PENETRATION_TIER_2
+	damage = 40
+	penetration = ARMOR_PENETRATION_TIER_1
 	accurate_range = 16
 	accuracy = HIT_ACCURACY_TIER_4
 	scatter = SCATTER_AMOUNT_TIER_10
@@ -20,7 +20,7 @@
 
 /datum/ammo/bullet/rifle/holo_target
 	name = "holo-targeting 10x24 bullet"
-	damage = 45
+	damage = 30
 	/// inflicts this many holo stacks per bullet hit
 	var/holo_stacks = 10
 	/// modifies the default cap limit of 100 by this amount
@@ -35,7 +35,7 @@
 
 /datum/ammo/bullet/rifle/holo_target/hunting
 	name = "holo-targeting 10x24 bullet"
-	damage = 45
+	damage = 25
 	holo_stacks = 15
 
 /datum/ammo/bullet/rifle/holo_target/tracer
@@ -63,10 +63,10 @@
 
 
 /datum/ammo/bullet/rifle/ap
-	name = "Light-Explosive Armor-Piercing 10x24 bullet"
+	name = "light-explosive armor-piercing 10x24 bullet"
 
-	damage = 45
-	penetration = ARMOR_PENETRATION_TIER_6
+	damage = 30
+	penetration = ARMOR_PENETRATION_TIER_8
 
 /datum/ammo/bullet/rifle/ap/tracer
 	icon_state = "bullet_red"
@@ -103,7 +103,7 @@
 	name = "wall-penetrating 10x24 bullet"
 	shrapnel_chance = 0
 
-	damage = 50
+	damage = 35
 	penetration = ARMOR_PENETRATION_TIER_10
 
 /datum/ammo/bullet/rifle/ap/penetrating/set_bullet_traits()
@@ -123,8 +123,8 @@
 /datum/ammo/bullet/rifle/heap
 	name = "high-explosive armor-piercing 10x24 bullet"
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
-	damage = 65//big damage, doesn't actually blow up because thats stupid.
-	penetration = ARMOR_PENETRATION_TIER_6
+	damage = 55//big damage, doesn't actually blow up because thats stupid.
+	penetration = ARMOR_PENETRATION_TIER_8
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_3
 
 /datum/ammo/bullet/rifle/heap/tracer
@@ -139,11 +139,11 @@
 	shrapnel_chance = 0
 
 /datum/ammo/bullet/rifle/incendiary
-	name = " Light-Explosive Incendiary 10x24 bullet"
+	name = "incendiary 10x24 bullet"
 	damage_type = BURN
 	shrapnel_chance = 0
 	flags_ammo_behavior = AMMO_BALLISTIC
-	damage = 45
+	damage = 30
 	shell_speed = AMMO_SPEED_TIER_4
 	accuracy = -HIT_ACCURACY_TIER_2
 	damage_falloff = DAMAGE_FALLOFF_TIER_10
@@ -160,7 +160,7 @@
 /datum/ammo/bullet/rifle/heavy
 	name = "10x28 bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
-	damage = 50
+	damage = 55
 	penetration = ARMOR_PENETRATION_TIER_3
 	accuracy = HIT_ACCURACY_TIER_3
 	shell_speed = AMMO_SPEED_TIER_6
@@ -176,7 +176,7 @@
 
 /datum/ammo/bullet/rifle/heavy/rmcdmr
 	name = "8.88x51 squash-head bullet"
-	damage = 95
+	damage = 60
 	penetration = ARMOR_PENETRATION_TIER_6
 	accuracy = HIT_ACCURACY_TIER_3
 	shell_speed = AMMO_SPEED_TIER_7
@@ -202,7 +202,7 @@
 /datum/ammo/bullet/rifle/heavy/ap
 	name = "armor-piercing 10x28 bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
-	damage = 50
+	damage = 40
 	penetration = ARMOR_PENETRATION_TIER_7
 
 /datum/ammo/bullet/rifle/heavy/ap/tracer
@@ -211,11 +211,11 @@
 	bullet_light_color = COLOR_SOFT_RED
 
 /datum/ammo/bullet/rifle/heavy/impdet
-	name = "Impact-Detonating 10x28 bullet"
+	name = "impact-detonating 10x28 bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
-	damage = 50
-	penetration = ARMOR_PENETRATION_TIER_3
-	damage_falloff = DAMAGE_FALLOFF_TIER_9
+	damage = 40
+	penetration = -ARMOR_PENETRATION_TIER_2
+	damage_falloff = DAMAGE_FALLOFF_TIER_5
 	icon_state = "bullet_red"
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_RED
@@ -227,7 +227,7 @@
 	name = "high explosive armor-piercing 10x28 bullet"
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
 	damage = 70
-	penetration = ARMOR_PENETRATION_TIER_7
+	penetration = ARMOR_PENETRATION_TIER_10
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_3
 
 /datum/ammo/bullet/rifle/heavy/heap/tracer
@@ -240,24 +240,24 @@
 /datum/ammo/bullet/rifle/heavy/dirty
 	name = "irradiated 10x28 bullet"
 	debilitate = list(0,0,0,3,0,0,0,1)
-	damage = 55
+	damage = 60
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_7
 
 /datum/ammo/bullet/rifle/heavy/ap/dirty
 	name = "irradiated armor-piercing 10x28 bullet"
 	debilitate = list(0,0,0,3,0,0,0,1)
-	damage = 55
+	damage = 45
 
 /datum/ammo/bullet/rifle/heavy/impdet/dirty
 	name = "irradiated impact-detonating 10x28 bullet"
-	damage = 55
+	damage = 45
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_7
 
 // RMC Smartgun
 
 /datum/ammo/bullet/rifle/heavy/holo_target //Royal marines smartgun bullet, less damage, holo-target effect & range-limited knock/pushback
 	name = "holo-targeting 10x28 bullet"
-	damage = 50
+	damage = 25
 	/// inflicts this many holo stacks per bullet hit
 	var/holo_stacks = 25
 	/// modifies the default cap limit of 100 by this amount
@@ -273,15 +273,15 @@
 /datum/ammo/bullet/rifle/heavy/holo_target/ap
 	name = "holo-targetting armor-piercing 10x28 bullet"
 	icon_state = "bullet"
-	damage = 50
-	penetration = ARMOR_PENETRATION_TIER_7
+	damage = 20
+	penetration = ARMOR_PENETRATION_TIER_8
 
 /datum/ammo/bullet/rifle/heavy/holo_target/impdet
 	name = "holo-targetting impact-detonating 10x28 bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	holo_stacks = 50 //holo's all over targets, or something
-	damage = 50
-	penetration = ARMOR_PENETRATION_TIER_3
+	damage = 20
+	penetration = -ARMOR_PENETRATION_TIER_2
 	damage_falloff = DAMAGE_FALLOFF_TIER_5
 
 /datum/ammo/bullet/rifle/heavy/holo_target/impdet/on_hit_mob(mob/entity, obj/projectile/bullet)
@@ -290,7 +290,7 @@
 
 /datum/ammo/bullet/rifle/heavy/upp_smartgun
 	name = "12.7x40 bullet"
-	damage = 75 //giant fuck off bullet
+	damage = 90 //giant fuck off bullet
 	damage_falloff = 0
 
 /datum/ammo/bullet/rifle/heavy/upp_smartgun/on_hit_mob(mob/target, obj/projectile/fired_proj)
@@ -299,12 +299,12 @@
 /datum/ammo/bullet/rifle/heavy/upp_smartgun/ap
 	name = "12.7x40 armor-piercing bullet"
 	damage = 75
-	penetration = ARMOR_PENETRATION_TIER_10
+	penetration = ARMOR_PENETRATION_TIER_8
 
 /datum/ammo/bullet/rifle/heavy/upp_smartgun/flak
 	name = "12.7x40 flak bullet" //the gun makes the round detonate really early or something
-	damage = 40
-	penetration = ARMOR_PENETRATION_TIER_3
+	damage = 20
+	penetration = -ARMOR_PENETRATION_TIER_2
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_3
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
@@ -317,8 +317,8 @@
 
 /datum/ammo/bullet/rifle/heavy/upp/flak_spread
 	name = "12.7x40 flak"
-	damage = 25
-	penetration = ARMOR_PENETRATION_TIER_3
+	damage = 15
+	penetration = -ARMOR_PENETRATION_TIER_2
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
 	damage_var_low = PROJECTILE_VARIANCE_TIER_8
@@ -333,7 +333,7 @@
 
 /datum/ammo/bullet/rifle/heavy/heap/sniper
 	name = "high explosive armor-piercing sniper bullet"
-	damage = 250 //match-grade munitions developing better velocity from the rifle
+	damage = 90 //match-grade munitions developing better velocity from the rifle
 	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_SNIPER|AMMO_IGNORE_COVER
 
 	accurate_range_min = 4
@@ -347,8 +347,8 @@
 /datum/ammo/bullet/rifle/heavy/incendiary
 	name = "incendiary sniper bullet"
 	damage_type = BRUTE
-	damage = 240
-	penetration = ARMOR_PENETRATION_TIER_10
+	damage = 60
+	penetration = ARMOR_PENETRATION_TIER_4
 	shrapnel_chance = 0
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
 	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_SNIPER|AMMO_IGNORE_COVER
@@ -381,7 +381,7 @@
 /datum/ammo/bullet/rifle/heavy/flak
 	name = "flak sniper bullet"
 	damage_type = BRUTE
-	damage = 220
+	damage = 55
 	damage_var_high = PROJECTILE_VARIANCE_TIER_8 //Documenting old code: This converts to a variance of 96-109% damage. -Kaga
 	penetration = 0
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
@@ -404,8 +404,6 @@
 			if(target.mob_size >= MOB_SIZE_BIG)
 				slow_duration = 4
 		M.adjust_effect(slow_duration, SUPERSLOW)
-		burst(get_turf(M),P,damage_type, 2 , 2)
-		burst(get_turf(M),P,damage_type, 1 , 2 , 0)
 		L.apply_armoured_damage(damage, ARMOR_BULLET, BRUTE, null, penetration)
 		to_chat(P.firer, SPAN_WARNING("Bullseye!"))
 	else
@@ -426,7 +424,7 @@
 	flags_ammo_behavior = AMMO_BALLISTIC
 	accurate_range_min = 4
 
-	damage = 90
+	damage = 65
 	scatter = -SCATTER_AMOUNT_TIER_8
 	penetration= ARMOR_PENETRATION_TIER_7
 	shell_speed = AMMO_SPEED_TIER_7
@@ -435,8 +433,8 @@
 	name = "high velocity incendiary 10x28 bullet"
 	flags_ammo_behavior = AMMO_BALLISTIC
 
-	damage = 90
-	penetration= ARMOR_PENETRATION_TIER_7
+	damage = 50
+	penetration= ARMOR_PENETRATION_TIER_5
 
 /datum/ammo/bullet/rifle/heavy/spec/incendiary/set_bullet_traits()
 	. = ..()
@@ -448,9 +446,9 @@
 	name = "high velocity explosive 10x28 bullet"
 	flags_ammo_behavior = AMMO_BALLISTIC
 
-	damage = 120
+	damage = 50
 	accuracy = HIT_ACCURACY_TIER_2
-	penetration = ARMOR_PENETRATION_TIER_8
+	penetration = ARMOR_PENETRATION_TIER_5
 	damage_armor_punch = 5
 
 /datum/ammo/bullet/rifle/heavy/spec/explosive/on_hit_mob(mob/M, obj/projectile/P)
@@ -462,8 +460,6 @@
 		if(target.mob_size >= MOB_SIZE_BIG)
 			slow_duration = 2 // Crushers & such are still a threat, recovering much quicker
 		M.adjust_effect(slow_duration, SUPERSLOW)
-		burst(get_turf(M),P,damage_type, 2 , 2)
-		burst(get_turf(M),P,damage_type, 1 , 2 , 0)
 		L.apply_armoured_damage(damage, ARMOR_BULLET, BRUTE, null, penetration)
 	else
 		M.adjust_effect(slow_duration, SUPERSLOW)
@@ -478,7 +474,7 @@
 /datum/ammo/bullet/rifle/heavy/spec/du
 	name = "high velocity depleted uranium 10x28 bullet"
 
-	damage = 90 //Overall same damage as base rounds, but 15 tox DoT
+	damage = 50 //Overall same damage as base rounds, but 15 tox DoT
 	penetration = ARMOR_PENETRATION_TIER_10 //DU's a heavy armour-piercing kind of material
 	accuracy = HIT_ACCURACY_TIER_4
 	scatter = -SCATTER_AMOUNT_TIER_8
@@ -507,8 +503,8 @@
 /datum/ammo/bullet/rifle/upp
 	name = "10x27 bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
-	damage = 55
-	penetration = ARMOR_PENETRATION_TIER_3
+	damage = 50
+	penetration = ARMOR_PENETRATION_TIER_2
 	accuracy = HIT_ACCURACY_TIER_3
 	shell_speed = AMMO_SPEED_TIER_6
 	effective_range_max = 10
@@ -527,12 +523,12 @@
 
 /datum/ammo/bullet/rifle/upp/ap
 	name = "armor-piercing 10x27 bullet"
-	damage = 55
-	penetration = ARMOR_PENETRATION_TIER_7
+	damage = 43
+	penetration = ARMOR_PENETRATION_TIER_8
 
 /datum/ammo/bullet/rifle/upp/ap/penetrating
 	name = "wall-penerating 10x27 bullet"
-	damage = 60
+	damage = 40
 	penetration = ARMOR_PENETRATION_TIER_10
 
 /datum/ammo/bullet/rifle/upp/ap/penetrating/set_bullet_traits()
@@ -544,8 +540,8 @@
 /datum/ammo/bullet/rifle/upp/heap
 	name = "high-explosive armor-piercing 10x27 bullet"
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
-	damage = 75
-	penetration = ARMOR_PENETRATION_TIER_7
+	damage = 55
+	penetration = ARMOR_PENETRATION_TIER_8
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_3
 
 /datum/ammo/bullet/rifle/upp/heap/tracer
@@ -579,7 +575,7 @@
 
 /datum/ammo/bullet/rifle/upp/heap/tracer/penetrating
 	name = "wall-penerating 10x27 bullet"
-	damage = 70
+	damage = 40
 	penetration = ARMOR_PENETRATION_TIER_10
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "bullet_blue"
@@ -599,7 +595,7 @@
 	damage_type = BURN
 	shrapnel_chance = 0
 	flags_ammo_behavior = AMMO_BALLISTIC
-	damage = 55
+	damage = 37
 	shell_speed = AMMO_SPEED_TIER_4
 	accuracy = -HIT_ACCURACY_TIER_2
 	damage_falloff = DAMAGE_FALLOFF_TIER_9
@@ -609,6 +605,84 @@
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary)
 	))
+
+//UPP High velocity 10x27 SPP-48M DMR
+/datum/ammo/bullet/rifle/upp/spec
+	name = "high velocity 10x27 bullet"
+	shrapnel_chance = 0
+	damage_falloff = 0
+	flags_ammo_behavior = AMMO_BALLISTIC
+	accurate_range_min = 4
+	effective_range_max = 24
+	max_range = 32
+
+	damage = 60 // 63 with x1.05 damage mod.
+	scatter = -SCATTER_AMOUNT_TIER_8
+	penetration= ARMOR_PENETRATION_TIER_6
+	shell_speed = AMMO_SPEED_TIER_7
+
+/datum/ammo/bullet/rifle/upp/spec/incendiary
+	name = "high velocity incendiary 10x27 bullet"
+	flags_ammo_behavior = AMMO_BALLISTIC
+
+	damage = 45 // 47.25 with x1.05 damage mod.
+	penetration= ARMOR_PENETRATION_TIER_4
+
+/datum/ammo/bullet/rifle/upp/spec/incendiary/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary, /datum/reagent/napalm/high_damage)
+	))
+
+/datum/ammo/bullet/rifle/upp/spec/explosive
+	name = "high velocity explosive 10x27 bullet"
+	flags_ammo_behavior = AMMO_BALLISTIC
+
+	damage = 45 // 47.25 with x1.05 damage mod.
+	accuracy = HIT_ACCURACY_TIER_2
+	penetration = ARMOR_PENETRATION_TIER_4
+	damage_armor_punch = 5
+
+/datum/ammo/bullet/rifle/upp/spec/explosive/on_hit_mob(mob/M, obj/projectile/P)
+	knockback(M, P, 6) // Can knockback out to 1/4th-range
+	var/slow_duration = 7
+	var/mob/living/L = M
+	if(isxeno(M))
+		var/mob/living/carbon/xenomorph/target = M
+		if(target.mob_size >= MOB_SIZE_BIG)
+			slow_duration = 2 // Crushers & such are still a threat, recovering much quicker
+		M.adjust_effect(slow_duration, SUPERSLOW)
+		L.apply_armoured_damage(damage, ARMOR_BULLET, BRUTE, null, penetration)
+	else
+		M.adjust_effect(slow_duration, SUPERSLOW)
+		burst(get_turf(M),P,damage_type, 2 , 2)
+		burst(get_turf(M),P,damage_type, 1 , 2 , 0)
+
+/datum/ammo/bullet/rifle/upp/spec/explosive/on_near_target(turf/T, obj/projectile/P)
+	burst(T,P,damage_type, 2 , 4)
+	burst(T,P,damage_type, 1 , 2, 0)
+	return 1
+
+/datum/ammo/bullet/rifle/upp/spec/du
+	name = "high velocity depleted uranium 10x27 bullet"
+
+	damage = 45 // 47.25 with x1.05 damage mod. + 10 tox DoT
+	penetration = ARMOR_PENETRATION_TIER_8 //DU's a heavy armour-piercing kind of material
+	accuracy = HIT_ACCURACY_TIER_4
+	scatter = -SCATTER_AMOUNT_TIER_8
+
+/datum/ammo/bullet/rifle/upp/spec/du/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
+	))
+
+/datum/ammo/bullet/rifle/upp/spec/du/on_hit_mob(mob/target, obj/projectile/fired_proj)
+	target.AddComponent(/datum/component/status_effect/toxic_buildup, toxic_buildup = 10, toxic_buildup_dissipation = 0.3, max_buildup = 50)
+	knockback(target, fired_proj, 8) // Can knockback out to 2/3rds-range
+	if(target.mob_size >= MOB_SIZE_BIG)
+		var/mob/living/L = target
+		L.apply_armoured_damage(damage*1.25, ARMOR_BULLET, BRUTE, null, penetration) // As bugs don't take toxin damage, this should give it a little more oomf versus them
 
 //10X31 AK500
 /datum/ammo/bullet/rifle/heavy/upp
@@ -623,12 +697,12 @@
 
 /datum/ammo/bullet/rifle/m16
 	name = "5.56x45 rifle bullet"
-	damage = 40
+	damage = 35
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/rifle/m16/ap
 	name = "armor-piercing 5.56x45 rifle bullet"
-	damage = 40
+	damage = 30
 	penetration = ARMOR_PENETRATION_TIER_5
 
 /datum/ammo/bullet/rifle/ar10
@@ -640,27 +714,25 @@
 
 /datum/ammo/bullet/rifle/twe
 	name = "8.5x33 bullet"
-	damage = 50
-	penetration = ARMOR_PENETRATION_TIER_3
+	damage = 36
+	penetration = ARMOR_PENETRATION_TIER_2
 	accurate_range = 20
 
 /datum/ammo/bullet/rifle/ap/twe
 	name = "armor-piercing 8.5x33 bullet"
-	damage = 50
-	penetration = ARMOR_PENETRATION_TIER_7
 
 /datum/ammo/bullet/rifle/heap/twe
 	name = "high-explosive armor-piercing 8.5x33 bullet"
-	damage = 70
-	penetration = ARMOR_PENETRATION_TIER_7
+	damage = 50
+	penetration = ARMOR_PENETRATION_TIER_9
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_4
 
 //9.7x16 AG80
 
 /datum/ammo/bullet/rifle/ag80
 	name = "9.7x16 bullet"
-	damage = 40
-	penetration = ARMOR_PENETRATION_TIER_2 // shouldn't be higher pen than 10x24
+	damage = 35
+	penetration = ARMOR_PENETRATION_TIER_1 // shouldn't be higher pen than 10x24
 
 /datum/ammo/bullet/rifle/ag80/tracer
 	icon_state = "bullet_green"
@@ -669,8 +741,8 @@
 
 /datum/ammo/bullet/rifle/ag80/ap
 	name = "armor-piercing 9.7x16 bullet"
-	damage = 40
-	penetration = ARMOR_PENETRATION_TIER_6 // not as good as 10x24 AP but still impressive for calibre size
+	damage = 30
+	penetration = ARMOR_PENETRATION_TIER_7 // not as good as 10x24 AP but still impressive for calibre size
 
 /datum/ammo/bullet/rifle/ag80/rubber
 	name = "rubber 9.7x16 bullet"
@@ -681,7 +753,7 @@
 /datum/ammo/bullet/rifle/ag80/heap
 	name = "high-explosive armor-piercing 9.7x16 bullet"
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
-	damage = 55 //big damage, doesn't actually blow up because thats stupid.
+	damage = 45 //big damage, doesn't actually blow up because thats stupid.
 	penetration = ARMOR_PENETRATION_TIER_6
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2 //thinner round should have less shrap potential vs the 10x24, no?
 
@@ -692,32 +764,32 @@
 
 /datum/ammo/bullet/rifle/lw317
 	name = "6x38 bullet"
-	damage = 45
-	penetration = ARMOR_PENETRATION_TIER_2
+	damage = 35
+	penetration = ARMOR_PENETRATION_TIER_1
 
 /datum/ammo/bullet/rifle/lw317/ap
 	name = "armor-piercing 6x38 bullet"
-	damage = 45
-	penetration = ARMOR_PENETRATION_TIER_6
+	damage = 30
+	penetration = ARMOR_PENETRATION_TIER_5
 
 /datum/ammo/bullet/rifle/isr
 	name = "heavy 9.2x34mm bullet"
 
-	damage = 60
-	penetration = ARMOR_PENETRATION_TIER_3
+	damage = 35
+	penetration = ARMOR_PENETRATION_TIER_1
 
 /datum/ammo/bullet/rifle/f90 // Fancy sci-fi caliber replacer for F90 AUG, instead of just 5.56mm
-	name = "5.5x50mm bullet"
-	damage = 45
-	penetration = ARMOR_PENETRATION_TIER_1 // It's not caseless 10x24mm LE
+	name = "5.5x50 bullet"
+	damage = 35
+	penetration = ARMOR_PENETRATION_TIER_1 // It's not caseless 10x24mm
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/rifle/f90/ap
-	name = "armor-piercing 5.5x50mm bullet"
-	damage = 45
+	name = "armor-piercing 5.5x50 bullet"
+	damage = 30
 	penetration = ARMOR_PENETRATION_TIER_5
 
 /datum/ammo/bullet/rifle/f90/heap
-	name = "high-explosive armor-piercing 5.5x50mm bullet"
-	damage = 65
+	name = "high-explosive armor-piercing 5.5x50 bullet"
+	damage = 55
 	penetration = ARMOR_PENETRATION_TIER_6

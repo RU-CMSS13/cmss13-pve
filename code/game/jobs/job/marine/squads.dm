@@ -455,10 +455,10 @@
 
 /datum/squad/iasf
 	name = SQUAD_IASF
-	equipment_color = "#9a1228"
-	chat_color = "#9a1228"
+	equipment_color = "#cf2d48"
+	chat_color = "#cf2d48"
 	radio_freq = IASF_FREQ
-	minimap_color = "##9a1228"
+	minimap_color = "#cf2d48"
 	use_stripe_overlay = FALSE
 	faction = FACTION_IASF
 	active = TRUE
@@ -799,8 +799,6 @@
 			num_engineers++
 		if(JOB_TWE_RMC_TROOPLEADER)
 			assignment = JOB_TWE_RMC_TROOPLEADER
-		if(JOB_TWE_RMC_PILOT)
-			assignment = JOB_TWE_RMC_PILOT
 
 	RegisterSignal(M, COMSIG_PARENT_QDELETING, PROC_REF(personnel_deleted), override = TRUE)
 	if(assignment != JOB_SQUAD_LEADER)

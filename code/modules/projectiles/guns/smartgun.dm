@@ -505,7 +505,7 @@
 /obj/item/weapon/gun/smartgun/dirty
 	name = "\improper M56A3 'Dirty' smartgun"
 	desc = "The actual firearm in the 4-piece M56A3 Smartgun System. Ruggedized electronics and a slightly lighter frame are the only differences between this and the standard UA-issue A2 model.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
-	flags_equip_slot = SLOT_BACK|SLOT_BLOCK_SUIT_STORE
+	flags_equip_slot = NO_FLAGS
 	flags_gun_features = GUN_WY_RESTRICTED|GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY
 	flags_item = TWOHANDED|SMARTGUNNER_BACKPACK_OVERRIDE
 	drain = 30	//Slightly more power effictient than the basic model
@@ -643,7 +643,7 @@
 
 /obj/item/weapon/gun/smartgun/rmc
 	name = "\improper L58A3 smartgun"
-	desc = "The actual firearm in the L58A3 'Smart' General Purpose Machine Gun System. A heavily modified variant of the UA's M56 system, it is used by the Three World Empires Royal Marines Commando units to offer supporting fire for their sections.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
+	desc = "The actual firearm in the L58A3 'Smart' General Purpose Machine Gun System. A heavily modified variant of the UA's M56 system that fires gyrojet-assisted 10x28mm rounds, it is used by the Three World Empires Royal Marines Commando units to offer supporting fire for their sections.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
 	current_mag = /obj/item/ammo_magazine/smartgun/holo_targeting
 	ammo = /obj/item/ammo_magazine/smartgun/holo_targeting
 	ammo_primary = /datum/ammo/bullet/rifle/heavy/holo_target //Toggled ammo type
@@ -684,17 +684,37 @@
 		scatter = SCATTER_AMOUNT_TIER_6
 		recoil = RECOIL_AMOUNT_TIER_3
 	damage_mult = BASE_BULLET_DAMAGE_MULT
+	damage_buildup_mult = DAMAGE_BUILDUP_TIER_2
 
 //For the RMC ship, giving them access to weapons early but no ammo
 /obj/item/weapon/gun/smartgun/rmc/unloaded
 	current_mag = null
 
-/obj/item/weapon/gun/smartgun/rmc/iasf
+/obj/item/weapon/gun/smartgun/rmc/iasf // Meant to be weakened version for HAI
+	name = "\improper L58A1 smartgun"
+	desc = "A heavily modified variant of the UA's M56 system, it was first smartgun ever used by the Three World Empires Royal Marines Commando units to offer supporting fire for their sections. Nowdays it's been replaced with L58A3 model, due to it's proven low efficiency. But it can be still found in the hands of Imperial Armed Space Forces.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
 	current_mag = /obj/item/ammo_magazine/smartgun
 	ammo = /obj/item/ammo_magazine/smartgun
 	ammo_primary = /datum/ammo/bullet/rifle/heavy/tracer //Toggled ammo type
 	ammo_secondary = /datum/ammo/bullet/rifle/heavy/ap/tracer ///Toggled ammo type
 	ammo_tertiary = /datum/ammo/bullet/rifle/heavy/impdet
+
+/obj/item/weapon/gun/smartgun/rmc/iasf/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_11)
+	fa_scatter_peak = FULL_AUTO_SCATTER_PEAK_TIER_8
+	fa_max_scatter = SCATTER_AMOUNT_TIER_9
+	if(accuracy_improvement)
+		accuracy_mult += HIT_ACCURACY_MULT_TIER_3
+	else
+		accuracy_mult += HIT_ACCURACY_MULT_TIER_1
+	if(recoil_compensation)
+		scatter = SCATTER_AMOUNT_TIER_10
+		recoil = RECOIL_OFF
+	else
+		scatter = SCATTER_AMOUNT_TIER_6
+		recoil = RECOIL_AMOUNT_TIER_3
+	damage_mult = BASE_BULLET_DAMAGE_MULT - BULLET_DAMAGE_MULT_TIER_5
 
 /obj/item/weapon/gun/smartgun/silenced
 	name = "XM56A4 smartgun"
