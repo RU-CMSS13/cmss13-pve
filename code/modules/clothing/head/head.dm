@@ -664,12 +664,14 @@
 	flags_cold_protection = BODY_FLAG_HEAD
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	flags_inventory = null
+	flags_atom = null
 
 /obj/item/clothing/head/cmcap/upp/Initialize(mapload)
 	. = ..()
 	if(!(flags_atom & NO_SNOW_TYPE))
 		select_gamemode_skin(type)
 	update_icon()
+
 
 /obj/item/clothing/head/cmcap/upp/civi
 	name = "\improper UL2c cap"
