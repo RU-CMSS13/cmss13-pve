@@ -171,6 +171,12 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 ///Senior leadership, the highest ranks
 #define ACCESS_TWE_SENIOR_LEAD 310
 
+#define ACCESS_ILLEGAL_PIRATE_PREP 121
+#define ACCESS_ILLEGAL_PIRATE_SMARTGUNNER 122
+#define ACCESS_ILLEGAL_PIRATE_TEAMLEAD 123
+#define ACCESS_ILLEGAL_PIRATE_SENIOR_LEAD 124
+#define ACCESS_ILLEGAL_PIRATE_MEDICAL 125
+#define ACCESS_ILLEGAL_PIRATE_CO 126
 //=================================================
 
 // Yautja Access Levels

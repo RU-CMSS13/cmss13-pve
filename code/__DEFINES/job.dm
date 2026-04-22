@@ -24,6 +24,7 @@
 #define SQUAD_IASF "IASF"
 #define SQUAD_LRRP "Snake Eaters"
 #define SQUAD_LRRP_2 "Ocelot Grapplers"
+#define SQUAD_MERC "Freelancer"
 
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"
@@ -51,6 +52,13 @@
 #define JOB_SQUAD_RTO "Recon Radio Telephone Operator"
 #define JOB_SQUAD_MARINE_FORECON "Recon Rifleman"
 #define JOB_SQUAD_SMARTGUN_FORECON "Recon Smartgunner"
+
+#define JOB_RTO_FL "Radio Jockey"
+#define JOB_SQUAD_TEAM_LEADER_FL "Cutthroat"
+#define JOB_SQUAD_LEADER_FL "Master at Arms"
+#define JOB_SQUAD_SMARTGUN_FL "Gunner"
+#define JOB_SQUAD_MEDIC_FL "Surgeon"
+#define JOB_SQUAD_RIFLEMAN_FL "Merc"
 
 GLOBAL_LIST_INIT(job_squad_roles, JOB_SQUAD_ROLES_LIST)
 

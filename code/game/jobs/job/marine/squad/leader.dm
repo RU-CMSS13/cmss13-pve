@@ -136,3 +136,13 @@ OverrideTimelock(/datum/job/marine/leader, list(
 #undef SRSGT_VARIANT
 #undef CAPTAIN_VARIANT
 #undef MAJOR_VARIANT
+
+/datum/job/marine/leader/ai/fl
+	title = JOB_SQUAD_LEADER_FL
+	gear_preset = /datum/equipment_preset/uscm/leader/fl
+
+
+/obj/effect/landmark/start/marine/leader/fl
+	name = JOB_SQUAD_LEADER_FL
+	squad = SQUAD_MERC
+	job = /datum/job/marine/leader/ai/fl

@@ -165,6 +165,8 @@
 	squad = SQUAD_RMC
 	job = /datum/job/marine/medic/ai/rmc
 
+
+
 #undef SGT_VARIANT
 #undef JSGT_VARIANT
 #undef CPL_VARIANT
@@ -172,3 +174,13 @@
 #undef PFC_VARIANT
 #undef SR_PVT_VARIANT
 #undef PVT_VARIANT
+
+/datum/job/marine/medic/ai/fl
+	title = JOB_SQUAD_MEDIC_FL
+	gear_preset = /datum/equipment_preset/uscm/medic/fl
+
+
+/obj/effect/landmark/start/marine/medic/fl
+	name = JOB_SQUAD_MEDIC_FL
+	squad = SQUAD_MERC
+	job = /datum/job/marine/medic/ai/fl
