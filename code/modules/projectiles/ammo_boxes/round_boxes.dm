@@ -167,21 +167,24 @@
 	max_bullet_amount = 1500
 	caliber = "10x27mm"
 
+/obj/item/ammo_box/rounds/pkp/ap
+	name = "large rifle ammunition box (10x27mm AP)"
+	desc = "A 10x27mm large ammunition box. Used to mostly to refill Type 71 and QYJ-72 AP magazines. It comes with a leather strap allowing to wear it on the back."
+	overlay_content = "_type71_ap"
+	default_ammo = /datum/ammo/bullet/rifle/upp/ap
+
 /obj/item/ammo_box/rounds/pkp/heap
 	name = "large rifle ammunition box (10x27mm HEAP)"
-	desc = "A 10x27mm large ammunition box. Used to mostly to refill Type 71 and QYJ-72 HEAP  magazines. It comes with a leather strap allowing to wear it on the back."
-	icon_state = "base_type71"
-	overlay_gun_type = "_rounds_type71"
+	desc = "A 10x27mm large ammunition box. Used to mostly to refill Type 71 and QYJ-72 HEAP magazines. It comes with a leather strap allowing to wear it on the back."
 	overlay_content = "_type71_heap"
-	default_ammo = /datum/ammo/bullet/rifle/upp/heap/tracer
-	caliber = "10x27mm"
+	default_ammo = /datum/ammo/bullet/rifle/upp/heap
 
 //----------------9.7x16mm Ammunition Boxes (for UPP AG80)------------------
 
 /obj/item/ammo_box/rounds/ag80
 	name = "\improper rifle ammunition box (9.7x16mm)"
 	desc = "A 9.7x16mm ammunition box. Used to refill AG80 magazines. It comes with a leather strap allowing to wear it on the back."
-	icon_state = "base_type71"
+	icon_state = "base_type64"
 	overlay_gun_type = "_rounds_type71"
 	overlay_content = "_type71_reg"
 	caliber = "9.7x16mm"

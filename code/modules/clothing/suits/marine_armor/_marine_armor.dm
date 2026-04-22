@@ -1017,7 +1017,7 @@
 	icon_state = "xarmor"
 	icon = 'icons/mob/humans/onmob/contained/b18_armor.dmi'
 	armor_melee = CLOTHING_ARMOR_HIGH
-	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
 	armor_bomb = CLOTHING_ARMOR_VERYHIGH
 	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
 	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
@@ -1170,3 +1170,64 @@
 	armor_internaldamage = CLOTHING_ARMOR_NONE
 	time_to_unequip = 10
 	time_to_equip = 10
+
+//==================Warm and protective snowsuit==================\\
+
+/obj/item/clothing/suit/marine/snowman
+	name = "\improper Reinforced snowsuit"
+	desc = "A standard snow suit with extra plates beneath it. It can protect the wearer not only from extreme cold, but from the random bullet too."
+	icon = 'icons/obj/items/clothing/cm_suits.dmi'
+	icon_state = "s_ghillie_armor"
+	flags_inventory = BLOCKSHARPOBJ|SMARTGUN_HARNESS
+
+/obj/item/clothing/suit/marine/smartgunner/upp/canc/snowman
+	name = "\improper Reinforced snowsuit"
+	desc = "A standard snow suit with extra plates beneath it. It can protect the wearer not only from extreme cold, but from the random bullet too."
+	icon = 'icons/obj/items/clothing/cm_suits.dmi'
+	icon_state = "s_ghillie_armor"
+
+/obj/item/clothing/suit/marine/snowman/canc
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+
+/obj/item/clothing/suit/marine/snowman/canc/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/webbing = new()
+	src.attach_accessory(null, webbing, TRUE)
+
+/obj/item/clothing/suit/marine/armoured_rad
+	name = "Reinforced Radiation suit"
+	desc = "A suit that protects against radiation and has extra plates beneath it in case of gunfire. Label: Made with lead, do not eat insulation."
+	icon_state = "rad"
+	item_state = "rad_suit"
+	icon = 'icons/obj/items/clothing/suits.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/suit_0.dmi'
+	)
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+
+/obj/item/clothing/suit/marine/armoured_rad/canc
+
+/obj/item/clothing/suit/marine/armoured_rad/canc/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/webbing = new()
+	src.attach_accessory(null, webbing, TRUE)
+
+/obj/item/clothing/suit/marine/smartgunner/upp/canc/rad
+	name = "Reinforced Radiation suit"
+	desc = "A suit that protects against radiation and has extra plates beneath it in case of gunfire. Label: Made with lead, do not eat insulation."
+	icon_state = "rad"
+	item_state = "rad_suit"
+	icon = 'icons/obj/items/clothing/suits.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/suit_0.dmi'
+	)
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT

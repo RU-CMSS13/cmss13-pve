@@ -1920,6 +1920,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	anti_hug = 6
 	force = 20
 	flags_atom = NO_NAME_OVERRIDE
+	built_in_visors = list(new /obj/item/device/helmet_visor/upp_heavy)
+	start_down_visor_type = /obj/item/device/helmet_visor/upp_heavy
 	specialty = "6B83 helmet"
 
 /obj/item/clothing/head/helmet/upp/frogmen
@@ -2254,16 +2256,32 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 //=USASF & ARMY=\\
 
 /obj/item/clothing/head/helmet/marine/tech/tanker/para
-	name = "\improper MK25 para-rescue helmet"
+	name = "\improper M50-N para-rescue helmet"
 	desc = "A heavily modified USCM tanker helmet used by members of the USASF para-rescue units for it's compact design and adequate protection. Camera on the side and biometric transmitter ties into the sensor matrix."
-	built_in_visors = list(new /obj/item/device/helmet_visor/medical/army)
+	built_in_visors = list(new /obj/item/device/helmet_visor/medical/advanced)
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	contained_sprite = TRUE
+	item_state = "para_helmet"
+	icon_state = "para_helmet"
+	icon = 'icons/mob/humans/onmob/contained/navy_helmets.dmi'
 
 /obj/item/clothing/head/helmet/marine/rto/navy
-	name = "\improper M12 pattern naval-deployment helmet"
-	desc = "Whilst the USCMC ultimately didn't adopt it, the USASF were more than happy to replace their aging stock of M09 helmets for personnel whose duties saw them deploy off-ship."
+	name = "\improper M12-N pattern helmet"
+	desc = "Whilst the USCMC ultimately didn't adopt it, the USASF were more than happy to replace their aging stock of M09 helmets with their own variant of the M12 helmet. Issued to personnel whose duties saw them at risk of suffering cranial injuries from more than low-hanging bulkhead coaming."
 	built_in_visors = list(new /obj/item/device/helmet_visor/medical/army)
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	contained_sprite = TRUE
+	item_state = "navy_helmet"
+	icon_state = "navy_helmet"
+	icon = 'icons/mob/humans/onmob/contained/navy_helmets.dmi'
+
+/obj/item/clothing/head/helmet/marine/MP/navy
+	name = "\improper M09-N pattern MAA helmet"
+	desc = "A variant of the M09 Pattern Helmet worn by Masters-At-Arms of the USASF. In the process of being phased out, this bucket will still keep your brains intact as well as the newer models."
+	icon_state = "u_mp_helmet"
+	item_state = "u_mp_helmet"
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	built_in_visors = list(new /obj/item/device/helmet_visor/security)
 
 /obj/item/clothing/head/helmet/marine/rto/army
 	name = "\improper Personal Head Armor System helmet"
@@ -2286,6 +2304,28 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	item_state = "rmc_helm2"
 	desc = "A common helmet used by various blue-collar professions in the TWE."
 
+/obj/item/clothing/head/helmet/marine/snowman
+	name = "reinforced snowsuit hood"
+	desc = "Thick detachable hood of the snowsuit for extreme cold enviroment. Inner layers it seems, are reinforced with kevlar."
+	icon_state = "s_ghillie_coif"
+	item_state = "s_ghillie_coif"
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+
+/obj/item/clothing/head/radiation/armoured
+
+	name = "reinforced radiation hood"
+	desc = "A hood with radiation protective properties and strong kevlar layer beneath. Label: Made with lead, do not eat insulation"
+	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_LOW
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+
 //===========================//CLF - SPECIAL FORCES\\================================\\
 //=====================================================================\\
 
@@ -2303,7 +2343,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_internaldamage = CLOTHING_ARMOR_HIGH
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	clothing_traits = list(TRAIT_EAR_PROTECTION)
-	flags_atom = NO_NAME_OVERRIDE
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/head/helmet/marine/veteran/clf/heavy
 	name = "\improper repainted reinforced M10 pattern helmet"

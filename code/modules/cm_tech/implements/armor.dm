@@ -136,7 +136,6 @@ GLOBAL_LIST_EMPTY(armor_plate_data)
 	desc = "Advanced Small Arms Protective Plate is a modular clip-on armor plate, designed to provide additional protection for USCMC combat personell, gives you extremely good protection against any bullet types, stops full metal jacket, armor piercing and even HEAP rounds."
 	icon_state = "armor_plate_100"
 	base_icon_state = "armor_plate"
-	overlay_state = "armor_plate_100"
 	slot = ACCESSORY_SLOT_PLATE
 
 /obj/item/clothing/accessory/health/ceramic_plate/twe
@@ -144,13 +143,11 @@ GLOBAL_LIST_EMPTY(armor_plate_data)
 	desc = "Hyper Advanced Shield Plate is a modular clip-on armor plate, designed to provide additional protection for RMC combat personell, gives you extremely good protection against any bullet types, stops full metal jacket, armor piercing and even HEAP rounds. This plate includes titanium and can stop even super sonic rounds."
 	icon_state = "rmc_armor_plate_100"
 	base_icon_state = "rmc_armor_plate"
-	overlay_state = "rmc_armor_plate_100"
 	slot = ACCESSORY_SLOT_PLATE2
 
 /obj/item/clothing/accessory/health/ceramic_plate/twe/wy
 	desc = "Hyper Advanced Shield Plate is a modular clip-on armor plate, designed to provide additional protection for RMC combat personell, though this one has been painted white for service with Weyland Yutani's elite tactical teams. gives you extremely good protection against any bullet types, stops full metal jacket, armor piercing and even HEAP rounds. This plate includes titanium and can stop even super sonic rounds."
 	icon_state = "pmc_armor_plate_100"
-	overlay_state = "pmc_armor_plate_100"
 	base_icon_state = "pmc_armor_plate"
 
 /obj/item/clothing/accessory/health/ceramic_plate/upp
@@ -158,13 +155,7 @@ GLOBAL_LIST_EMPTY(armor_plate_data)
 	desc = "Titanium Nanocrystalline Alloy Plate is a modular clip-on armor plate, designed to provide additional protection for UPP combat personell, gives you extremely good protection against any bullet types, stops full metal jacket, armor piercing and even HEAP rounds. This plate can stop almost any firearm rounds and have highest protection."
 	icon_state = "upp_armor_plate_100"
 	base_icon_state = "upp_armor_plate"
-	overlay_state = "upp_armor_plate_100"
 	slot = ACCESSORY_SLOT_PLATE3
-
-/obj/item/clothing/accessory/health/ceramic_plate/upp/sof
-	icon_state = "upp_sof_armor_plate_100"
-	base_icon_state = "upp_sof_armor_plate"
-	overlay_state = "upp_sof_armor_plate_100"
 
 /obj/item/clothing/accessory/health/scrap
 	name = "scrap metal"

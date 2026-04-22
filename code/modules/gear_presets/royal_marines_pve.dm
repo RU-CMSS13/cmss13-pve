@@ -84,12 +84,3 @@
 	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_HEVWEAPPREP)
 	assignment = JOB_TWE_RMC_BREACHER
 	rank = JOB_TWE_RMC_BREACHER
-
-/datum/equipment_preset/uscm/rmc/pilot
-	name = "Royal Marine Commando, Aircrewman"
-	paygrades = list(PAY_SHORT_RMOW = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "RM AC"
-	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_WY_FLIGHT, ACCESS_TWE_FLIGHT)
-	assignment = JOB_TWE_RMC_PILOT
-	rank = JOB_TWE_RMC_PILOT
-	skills = /datum/skills/rmc/aircrewman

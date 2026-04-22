@@ -17,7 +17,7 @@
 
 /obj/item/ammo_magazine/sniper/basic
 	name = "\improper M42A magazine (10x28mm)"
-	desc = "A magazine of M250 10x28mm ammunition. Not as effective as the match-grade kind, but still brings the hurt. An aimed shot with it will temporarily blind the targe and kindle the blaze further."
+	desc = "A magazine of M250 10x28mm ammunition. Not as effective as the match-grade kind, but still brings the hurt. An aimed shot with it will deal higher damage."
 	default_ammo = /datum/ammo/bullet/rifle/heavy
 	ammo_band_color = AMMO_BAND_COLOR_RUBBER
 
@@ -178,6 +178,41 @@
 	ammo_band_color = AMMO_BAND_COLOR_TOXIN
 
 //-------------------------------------------------------
+//UPP SPP-48M DMR
+//Meant to be used with 10x27mm HV ammo, but can still load regular ammo if necessary
+/obj/item/ammo_magazine/rifle/spp/high_velocity
+	name = "\improper SPP-48M HV magazine (10x27mm)"
+	desc = "A magazine of high velocity rounds for use in the later-model SPP-48M marksman rifles of UPPAC."
+	icon_state = "spp_hv"
+	default_ammo = /datum/ammo/bullet/rifle/upp/spec
+	max_rounds = 30
+	gun_type = /obj/item/weapon/gun/rifle/spp
+	ammo_band_icon = "+spp_hv_band"
+	ammo_band_icon_empty = "+spp_hv_band_e"
+	ammo_band_color = AMMO_BAND_COLOR_HIGH_IMPACT
+
+/obj/item/ammo_magazine/rifle/spp/high_velocity/incendiary
+	name = "\improper SPP-48M HV incendiary magazine (10x27mm)"
+	desc = "A magazine of high velocity incendiary rounds for use in the later-model SPP-48M marksman rifles of UPPAC."
+	default_ammo = /datum/ammo/bullet/rifle/upp/spec/incendiary
+	gun_type = /obj/item/weapon/gun/rifle/spp
+	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
+
+/obj/item/ammo_magazine/rifle/spp/high_velocity/explosive
+	name = "\improper SPP-48M HV explosive magazine (10x27mm)"
+	desc = "A magazine of high velocity explosive rounds for use in the later-model SPP-48M marksman rifles of UPPAC."
+	default_ammo = /datum/ammo/bullet/rifle/upp/spec/explosive
+	gun_type = /obj/item/weapon/gun/rifle/spp
+	ammo_band_color = AMMO_BAND_COLOR_EXPLOSIVE
+
+/obj/item/ammo_magazine/rifle/spp/high_velocity/toxic
+	name = "\improper SPP-48M HV depleted uranium magazine (10x27mm)"
+	desc = "A magazine of high velocity wall-penetrating, body-penetrating, toxic 10x27mm rounds for use in the later-model SPP-48M marksman rifles of UPPAC."
+	default_ammo = /datum/ammo/bullet/rifle/upp/spec/du
+	gun_type = /obj/item/weapon/gun/rifle/spp
+	ammo_band_color = AMMO_BAND_COLOR_TOXIN
+
+//-------------------------------------------------------
 //SMARTGUN
 /obj/item/ammo_magazine/smartgun
 	name = "smartgun drum"
@@ -201,7 +236,7 @@
 
 /obj/item/ammo_magazine/smartgun/holo_targeting
 	name = "holotargeting smartgun drum"
-	desc = "Holotargeting rounds for use in the royal marines commando L58A3 smartgun. The drum itself is designed to only fit in L58A3 smartguns, and is marked with a blue X."
+	desc = "Gyrojet-assisted holotargeting rounds for use in the royal marines commando L58A3 smartgun. The drum itself is designed to only fit in L58A3 smartguns, and is marked with a blue X."
 	icon_state = "m56_drum_holo"
 	default_ammo = /datum/ammo/bullet/rifle/heavy/holo_target
 	gun_type = /obj/item/weapon/gun/smartgun/rmc

@@ -343,6 +343,11 @@
 	layer_down.screen_loc = ui_datum.ui_layer_down
 	static_inventory += layer_down
 
+	roll_dice = new /atom/movable/screen/action/roll_dice()
+	roll_dice.icon = ui_datum.ui_style_icon
+	roll_dice.screen_loc = ui_datum.ui_roll_dice
+	static_inventory += roll_dice
+
 /datum/hud/human/proc/draw_status_effects(datum/custom_hud/ui_datum)
 	slowed_icon = new /atom/movable/screen()
 	slowed_icon.icon = ui_datum.ui_style_icon

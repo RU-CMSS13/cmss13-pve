@@ -2,15 +2,15 @@
 	caste_type = PATHOGEN_CREATURE_SPRINTER
 	caste_desc = "A fast, four-legged terror, but weak in sustained combat."
 	tier = 1
-	melee_damage_lower = XENO_DAMAGE_TIER_3
-	melee_damage_upper = XENO_DAMAGE_TIER_2
+	melee_damage_lower = XENO_DAMAGE_TIER_2
+	melee_damage_upper = XENO_DAMAGE_TIER_3
 	melee_vehicle_damage = 0
 	plasma_gain = XENO_PLASMA_GAIN_TIER_1
 	plasma_max = XENO_PLASMA_TIER_2
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_1
 	armor_deflection = XENO_NO_ARMOR
 	max_health = XENO_HEALTH_TIER_3
-	evasion = XENO_EVASION_NONE
+	evasion = XENO_EVASION_HIGH
 	speed = XENO_SPEED_RUNNER
 	attack_delay = -1
 
@@ -79,6 +79,10 @@
 	acid_blood_damage = 0
 	bubble_icon = "pathogen"
 
+	var/linger_range = 5
+	var/linger_deviation = 1
+	var/pull_direction
+
 /mob/living/carbon/xenomorph/sprinter/Initialize(mapload, mob/living/carbon/xenomorph/old_xeno, hivenumber)
 	. = ..()
 	make_pathogen_speaker()
@@ -93,6 +97,76 @@
 	pull_multiplier *= 0.85
 	if(is_zoomed)
 		zoom_out()
+
+/mob/living/carbon/xenomorph/sprinter/launch_towards(datum/launch_metadata/LM)
+	if(!current_target)
+		return ..()
+
+	pull_direction = turn(get_dir(src, current_target), 180)
+
+	if(!(pull_direction in GLOB.cardinals))
+		if(abs(x - current_target.x) < abs(y - current_target.y))
+			pull_direction &= (NORTH|SOUTH)
+		else
+			pull_direction &= (EAST|WEST)
+	return ..()
+
+/mob/living/carbon/xenomorph/sprinter/start_pulling(atom/movable/AM, lunge, no_msg)
+	. = ..()
+
+	add_temp_negative_pass_flags(PASS_FLAGS_CRAWLER)
+
+/mob/living/carbon/xenomorph/sprinter/stop_pulling(bumped_movement = FALSE)
+	. = ..()
+
+	remove_temp_negative_pass_flags(PASS_FLAGS_CRAWLER)
+
+/mob/living/carbon/xenomorph/sprinter/init_movement_handler()
+	var/datum/xeno_ai_movement/linger/linger_movement = new(src)
+	linger_movement.linger_range = linger_range
+	linger_movement.linger_deviation = linger_deviation
+	return linger_movement
+
+/mob/living/carbon/xenomorph/sprinter/ai_move_target(delta_time)
+	if(throwing)
+		return
+
+	if(pulling)
+		if(!current_target || get_dist(src, current_target) > 10)
+			INVOKE_ASYNC(src, PROC_REF(stop_pulling))
+			return ..()
+		if(can_move_and_apply_move_delay())
+			if(!Move(get_step(loc, pull_direction), pull_direction))
+				pull_direction = turn(pull_direction, pick(45, -45))
+		current_path = null
+		return
+
+	..()
+
+	if(get_dist(current_target, src) > 1)
+		return
+
+	if(!istype(current_target, /mob))
+		return
+
+	var/mob/current_target_mob = current_target
+
+	if(!current_target_mob.is_mob_incapacitated())
+		return
+
+	if(isxeno(current_target.pulledby))
+		return
+
+	if(!DT_PROB(RUNNER_GRAB, delta_time))
+		return
+
+	INVOKE_ASYNC(src, PROC_REF(start_pulling), current_target)
+	swap_hand()
+
+/mob/living/carbon/xenomorph/sprinter/process_ai(delta_time)
+	if(get_active_hand())
+		swap_hand()
+	return ..()
 
 /datum/behavior_delegate/pathogen_base/sprinter
 	name = "Base Sprinter Behavior Delegate"

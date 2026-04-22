@@ -227,7 +227,6 @@
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 
 /obj/item/weapon/gun/smg/m39/corporate/crewman
-	current_mag = /obj/item/ammo_magazine/smg/m39/ap
 	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible, /obj/item/attachable/lasersight)
 
 /obj/item/weapon/gun/smg/m39/elite/whiteout//attachies + heap mag for whiteout.

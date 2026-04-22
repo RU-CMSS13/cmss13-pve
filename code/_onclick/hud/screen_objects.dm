@@ -264,6 +264,11 @@
 	icon_state = "action_down"
 	proc_ref = TYPE_VERB_REF(/mob/living, shift_layer_down)
 
+/atom/movable/screen/action/roll_dice
+	name = "Roll Dice"
+	icon_state = "roll_dice"
+	proc_ref = TYPE_VERB_REF(/mob/living/carbon/human, roll_dice_ic)
+
 /atom/movable/screen/action/clicked(mob/user)
 	. = ..()
 	if(.)

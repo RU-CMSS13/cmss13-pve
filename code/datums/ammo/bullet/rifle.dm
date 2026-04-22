@@ -257,7 +257,7 @@
 
 /datum/ammo/bullet/rifle/heavy/holo_target //Royal marines smartgun bullet, less damage, holo-target effect & range-limited knock/pushback
 	name = "holo-targeting 10x28 bullet"
-	damage = 50
+	damage = 25
 	/// inflicts this many holo stacks per bullet hit
 	var/holo_stacks = 25
 	/// modifies the default cap limit of 100 by this amount
@@ -273,14 +273,14 @@
 /datum/ammo/bullet/rifle/heavy/holo_target/ap
 	name = "holo-targetting armor-piercing 10x28 bullet"
 	icon_state = "bullet"
-	damage = 30
+	damage = 20
 	penetration = ARMOR_PENETRATION_TIER_8
 
 /datum/ammo/bullet/rifle/heavy/holo_target/impdet
 	name = "holo-targetting impact-detonating 10x28 bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	holo_stacks = 50 //holo's all over targets, or something
-	damage = 30
+	damage = 20
 	penetration = -ARMOR_PENETRATION_TIER_2
 	damage_falloff = DAMAGE_FALLOFF_TIER_5
 
@@ -606,6 +606,84 @@
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary)
 	))
 
+//UPP High velocity 10x27 SPP-48M DMR
+/datum/ammo/bullet/rifle/upp/spec
+	name = "high velocity 10x27 bullet"
+	shrapnel_chance = 0
+	damage_falloff = 0
+	flags_ammo_behavior = AMMO_BALLISTIC
+	accurate_range_min = 4
+	effective_range_max = 24
+	max_range = 32
+
+	damage = 60 // 63 with x1.05 damage mod.
+	scatter = -SCATTER_AMOUNT_TIER_8
+	penetration= ARMOR_PENETRATION_TIER_6
+	shell_speed = AMMO_SPEED_TIER_7
+
+/datum/ammo/bullet/rifle/upp/spec/incendiary
+	name = "high velocity incendiary 10x27 bullet"
+	flags_ammo_behavior = AMMO_BALLISTIC
+
+	damage = 45 // 47.25 with x1.05 damage mod.
+	penetration= ARMOR_PENETRATION_TIER_4
+
+/datum/ammo/bullet/rifle/upp/spec/incendiary/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary, /datum/reagent/napalm/high_damage)
+	))
+
+/datum/ammo/bullet/rifle/upp/spec/explosive
+	name = "high velocity explosive 10x27 bullet"
+	flags_ammo_behavior = AMMO_BALLISTIC
+
+	damage = 45 // 47.25 with x1.05 damage mod.
+	accuracy = HIT_ACCURACY_TIER_2
+	penetration = ARMOR_PENETRATION_TIER_4
+	damage_armor_punch = 5
+
+/datum/ammo/bullet/rifle/upp/spec/explosive/on_hit_mob(mob/M, obj/projectile/P)
+	knockback(M, P, 6) // Can knockback out to 1/4th-range
+	var/slow_duration = 7
+	var/mob/living/L = M
+	if(isxeno(M))
+		var/mob/living/carbon/xenomorph/target = M
+		if(target.mob_size >= MOB_SIZE_BIG)
+			slow_duration = 2 // Crushers & such are still a threat, recovering much quicker
+		M.adjust_effect(slow_duration, SUPERSLOW)
+		L.apply_armoured_damage(damage, ARMOR_BULLET, BRUTE, null, penetration)
+	else
+		M.adjust_effect(slow_duration, SUPERSLOW)
+		burst(get_turf(M),P,damage_type, 2 , 2)
+		burst(get_turf(M),P,damage_type, 1 , 2 , 0)
+
+/datum/ammo/bullet/rifle/upp/spec/explosive/on_near_target(turf/T, obj/projectile/P)
+	burst(T,P,damage_type, 2 , 4)
+	burst(T,P,damage_type, 1 , 2, 0)
+	return 1
+
+/datum/ammo/bullet/rifle/upp/spec/du
+	name = "high velocity depleted uranium 10x27 bullet"
+
+	damage = 45 // 47.25 with x1.05 damage mod. + 10 tox DoT
+	penetration = ARMOR_PENETRATION_TIER_8 //DU's a heavy armour-piercing kind of material
+	accuracy = HIT_ACCURACY_TIER_4
+	scatter = -SCATTER_AMOUNT_TIER_8
+
+/datum/ammo/bullet/rifle/upp/spec/du/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
+	))
+
+/datum/ammo/bullet/rifle/upp/spec/du/on_hit_mob(mob/target, obj/projectile/fired_proj)
+	target.AddComponent(/datum/component/status_effect/toxic_buildup, toxic_buildup = 10, toxic_buildup_dissipation = 0.3, max_buildup = 50)
+	knockback(target, fired_proj, 8) // Can knockback out to 2/3rds-range
+	if(target.mob_size >= MOB_SIZE_BIG)
+		var/mob/living/L = target
+		L.apply_armoured_damage(damage*1.25, ARMOR_BULLET, BRUTE, null, penetration) // As bugs don't take toxin damage, this should give it a little more oomf versus them
+
 //10X31 AK500
 /datum/ammo/bullet/rifle/heavy/upp
 	name = "10x31 bullet"
@@ -718,7 +796,7 @@
 	penetration = ARMOR_PENETRATION_TIER_1
 
 /datum/ammo/bullet/rifle/f90 // Fancy sci-fi caliber replacer for F90 AUG, instead of just 5.56mm
-	name = "5.5x50mm bullet"
+	name = "5.5x50 bullet"
 	damage = 35
 	penetration = ARMOR_PENETRATION_TIER_1 // It's not caseless 10x24mm
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
@@ -730,5 +808,5 @@
 
 /datum/ammo/bullet/rifle/f90/heap
 	name = "high-explosive armor-piercing 5.5x50 bullet"
-	damage = 50
+	damage = 55
 	penetration = ARMOR_PENETRATION_TIER_6

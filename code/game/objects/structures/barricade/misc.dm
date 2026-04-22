@@ -177,6 +177,7 @@
 	desc = "A square metal surface resting on four legs. This one has side panels, making it useful as a desk, but impossible to flip."
 	icon_state = "prisonflip"
 	barricade_type = "prisonflip"
+
 /*----------------------*/
 // HESCO
 /*----------------------*/
