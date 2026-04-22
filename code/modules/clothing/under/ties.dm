@@ -1634,6 +1634,7 @@
 /obj/item/clothing/accessory/upppads
 	name = "\improper 6B90 Arm Plates"
 	desc = "A set of arm plates designed for the 6B90 armor system."
+	icon = "icon = 'icons/obj/items/clothing/upp_pads.dmi'"
 	icon_state = "upp_arms"
 	item_state = "upp_arms"
 	slot = ACCESSORY_SLOT_DECORARMOR
@@ -1661,16 +1662,20 @@
 /obj/item/clothing/accessory/upppads/bracers_sof
 	name = "\improper CCC5-L Arm Plates"
 	desc = "A pair of composite ballistic vambraces to shield the forearms, with straps to ensure it doesn't ride up or down. designed for the CCC5-L armor system."
+	icon = 'icons/obj/items/clothing/ties.dmi'
 	icon_state = "upp_sof_bracers"
 	item_state = "upp_sof_bracers"
 	slot = ACCESSORY_SLOT_DECORBRACER
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/accessory/upppads/kneepads_sof
 	name = "\improper CCC5-L Kneepads"
 	desc = "High impact ruggedized outer shell and polymer internals protect from shrapnel as well as low power ballistics. designed for the CCC5-L armor system."
+	icon = 'icons/obj/items/clothing/ties.dmi'
 	icon_state = "upp_sof_thighguards"
 	item_state = "upp_sof_thighguards"
 	slot = ACCESSORY_SLOT_DECORKNEE
+	flags_atom = NO_SNOW_TYPE
 
 //===========================//TWE CUSTOM ARMOR PLATES\\================================\\
 
