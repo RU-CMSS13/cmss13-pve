@@ -139,7 +139,7 @@
 	icon_state = "army_uniform"
 	worn_state = "army_uniform"
 	icon = 'icons/obj/items/clothing/uniforms/uniforms_by_faction/UA.dmi'
-	flags_atom = NO_NAME_OVERRIDE
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	item_icons = list(
 		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_faction/UA.dmi',
 	)
