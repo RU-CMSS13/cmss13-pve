@@ -380,7 +380,7 @@
 				ACCESS_CIVILIAN_MEDBAY,
 				ACCESS_CIVILIAN_COMMAND,
 			)
-if(ACCESS_LIST_FL_PLATOON)
+        if(9)//Illegal
 			return list(
 				ACCESS_ILLEGAL_PIRATE,
 				ACCESS_ILLEGAL_PIRATE_PREP,
@@ -390,6 +390,7 @@ if(ACCESS_LIST_FL_PLATOON)
 				ACCESS_ILLEGAL_PIRATE_MEDICAL,
 				ACCESS_ILLEGAL_PIRATE_CO,
 			)
+
 /proc/get_region_accesses_name(code)
 	switch(code)
 		if(0)

@@ -1070,6 +1070,11 @@
 	frequency = WY_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/colony, /obj/item/device/encryptionkey/WY)
 
+/obj/item/device/radio/headset/distress/fl
+	name = "freelancer headset"
+	desc = "A standard headset used by colonists and truckers"
+	frequency = MERC_FREQ
+
 /obj/item/device/radio/headset/distress/WY/security
 	name = "WY corporate security headset"
 	desc = "A headset commonly worn by WY corporate security personnel."

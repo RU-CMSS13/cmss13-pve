@@ -78,7 +78,7 @@
 "iE" = (/obj/structure/closet/secure_closet/engineering_electrical,/turf/open/floor/hybrisa/tile/darkbrown_bigtile,/area/space)
 "iN" = (/obj/effect/decal/hybrisa/dirt_2,/turf/closed/wall/abyssal/standard/reinforced,/area/space)
 "iV" = (/obj/effect/decal/large_stain,/turf/open/floor/dark,/area/space)
-"iX" = (/obj/structure/surface/table/woodentable{color = "#8B7B5B"},/obj/item/reagent_container/food/drinks/cans/food/upp/stew{pixel_x = -21; pixel_y = 8},/obj/item/attachable/bayonet/upp,/turf/open/floor/hybrisa/carpet/carpetbeige,/area/space)
+"iX" = (/obj/structure/surface/table/woodentable{color = "#8B7B5B"},/obj/item/reagent_container/food/drinks/cans/food/upp/stew{pixel_x = -21; pixel_y = 8},/obj/item/attachable/bayonet/upp{pixel_x = -3; pixel_y = 2},/turf/open/floor/hybrisa/carpet/carpetbeige,/area/space)
 "jb" = (/obj/structure/machinery/power/terminal,/turf/open/floor/plating/prison,/area/space)
 "ji" = (/obj/structure/bed/chair{icon_state = "chair_alt"; pixel_x = 3; pixel_y = 17},/turf/open/floor/strata/fake_wood,/area/space)
 "jp" = (/obj/structure/surface/table/woodentable/fancy,/obj/structure/machinery/prop/almayer/CICmap/pmc{pixel_y = 3},/obj/structure/machinery/light,/turf/open/floor/prison,/area/space)
@@ -103,7 +103,7 @@
 "lS" = (/obj/structure/coatrack{icon_state = "coat_det"; pixel_x = 13; pixel_y = 18; layer = 5},/obj/structure/coatrack{icon_state = "coatrack1"; pixel_x = 13; pixel_y = 19},/turf/open/floor/strata/fake_wood,/area/space)
 "lX" = (/obj/item/weapon/twohanded/folded_metal_chair{pixel_y = 9; pixel_x = -22},/turf/open/floor/prison/floor_plate,/area/space)
 "lZ" = (/obj/item/trash/upp_mre{pixel_x = -2; pixel_y = 22},/obj/item/trash/cigbutt{pixel_x = 9; pixel_y = 2},/obj/item/trash/cigbutt{pixel_x = 16; pixel_y = -5},/obj/item/trash/cigbutt/bcigbutt,/turf/open/floor/strata/fake_wood,/area/space)
-"ma" = (/obj/structure/dropship_equipment/weapon/heavygun,/turf/open/floor/prison,/area/space)
+"ma" = (/obj/structure/dropship_equipment/weapon/heavygun,/obj/effect/decal/cleanable/dirt{layer = 2.52},/turf/open/floor/prison,/area/space)
 "mb" = (/obj/item/device/whistle{pixel_x = 7; pixel_y = 9},/obj/item/explosive/grenade/incendiary/molotov{pixel_x = -7; pixel_y = 3},/obj/structure/surface/table/almayer{color = "#d4cfcd"},/obj/item/clothing/suit/armor/vest/hybrisa/civilian_vest{pixel_x = 3; pixel_y = -2},/turf/open/floor/prison/floor_plate_alt/west,/area/space)
 "mn" = (/obj/structure/flora/pottedplant{icon_state = "pottedplant_10"; pixel_y = 10},/obj/structure/machinery/cm_vending/sorted/medical/wall_med/souto,/turf/open/floor/prison,/area/space)
 "mp" = (/obj/structure/machinery/landinglight/ds1/delaytwo,/turf/open/floor/almayer/plate,/area/space)
@@ -127,7 +127,7 @@
 "oZ" = (/obj/structure/machinery/landinglight/ds1{dir = 8},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
 "pl" = (/obj/structure/machinery/door/airlock/multi_tile/hybrisa/personal_solid,/turf/open/floor/prison,/area/space)
 "pr" = (/obj/structure/machinery/vending/coffee/simple,/turf/open/floor/prison,/area/space)
-"pD" = (/obj/structure/surface/table,/obj/item/clothing/head/hardhat/dblue{pixel_x = -7; pixel_y = 10},/obj/item/clothing/head/headband/rebel,/turf/open/floor/prison/floor_plate,/area/space)
+"pD" = (/obj/structure/surface/table,/obj/item/clothing/head/hardhat/dblue{pixel_x = -7; pixel_y = 10},/obj/item/clothing/head/headband/rebel,/obj/item/reagent_container/food/drinks/cans/food/upp/speck{pixel_x = -31; pixel_y = 17},/turf/open/floor/prison/floor_plate,/area/space)
 "pR" = (/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/pmc/suits{pixel_y = 6; density = 0},/obj/structure/machinery/light,/turf/open/floor/strata/fake_wood,/area/space)
 "pV" = (/obj/structure/cargo_container/ferret/right,/turf/open/floor/prison,/area/space)
 "qh" = (/obj/structure/machinery/light/small,/turf/open/floor/prison/floor_plate,/area/space)
@@ -186,11 +186,11 @@
 "vt" = (/obj/effect/decal/cleanable/liquid_fuel,/turf/open/floor/plating/prison,/area/space)
 "vu" = (/obj/item/stool,/obj/structure/machinery/light{dir = 4},/turf/open/floor/prison,/area/space)
 "vF" = (/obj/structure/machinery/pipedispenser,/turf/open/floor/prison/floor_plate,/area/space)
-"vM" = (/obj/structure/closet/crate/green,/obj/item/ammo_magazine/rifle/rmc_f90/marksman,/obj/item/ammo_magazine/rifle/rmc_f90/marksman,/obj/item/ammo_magazine/rifle/rmc_f90/marksman,/obj/item/ammo_magazine/rifle/rmc_f90/marksman,/obj/item/ammo_magazine/rifle/rmc_f90/marksman,/obj/item/ammo_magazine/rifle/rmc_f90/marksman,/obj/item/ammo_magazine/rifle/rmc_f90/marksman,/obj/item/ammo_magazine/rifle/rmc_f90/marksman,/obj/item/ammo_magazine/rifle/rmc_f90,/obj/item/ammo_magazine/rifle/rmc_f90,/obj/item/ammo_magazine/rifle/rmc_f90,/obj/item/ammo_magazine/rifle/rmc_f90,/obj/item/ammo_magazine/rifle/rmc_f90,/obj/item/ammo_magazine/rifle/rmc_f90,/obj/item/ammo_magazine/rifle/rmc_f90,/obj/item/ammo_magazine/rifle/rmc_f90,/obj/item/ammo_magazine/rifle/rmc_f90,/turf/open/floor/prison,/area/space)
+"vM" = (/obj/structure/closet/crate/green,/obj/item/ammo_magazine/rifle/rmc_f90/marksman,/obj/item/ammo_magazine/rifle/rmc_f90/marksman,/obj/item/ammo_magazine/rifle/rmc_f90/marksman,/obj/item/ammo_magazine/rifle/rmc_f90/marksman,/obj/item/ammo_magazine/rifle/rmc_f90/marksman,/obj/item/ammo_magazine/rifle/rmc_f90/marksman,/obj/item/ammo_magazine/rifle/rmc_f90/marksman,/obj/item/ammo_magazine/rifle/rmc_f90/marksman,/obj/item/ammo_magazine/rifle/rmc_f90,/obj/item/ammo_magazine/rifle/rmc_f90,/obj/item/ammo_magazine/rifle/rmc_f90,/obj/item/ammo_magazine/rifle/rmc_f90,/obj/item/ammo_magazine/rifle/rmc_f90,/obj/item/ammo_magazine/rifle/rmc_f90,/obj/item/ammo_magazine/rifle/rmc_f90,/obj/item/ammo_magazine/rifle/rmc_f90,/obj/item/ammo_magazine/rifle/rmc_f90,/obj/item/ammo_magazine/rifle/isr,/obj/item/ammo_magazine/rifle/isr,/obj/item/ammo_magazine/rifle/isr,/obj/item/ammo_magazine/rifle/isr,/obj/item/ammo_magazine/rifle/isr,/turf/open/floor/prison,/area/space)
 "vS" = (/obj/structure/machinery/landinglight/ds1/delaythree{dir = 8},/obj/structure/prop/almayer/cannon_cables{name = "Cables"},/obj/effect/decal/cleanable/liquid_fuel,/turf/open/floor/almayer/plate,/area/space)
 "wd" = (/turf/open/floor/hybrisa/tile/tilewhitecheckered,/area/space)
 "wr" = (/obj/structure/bed/chair{buckling_y = 5; dir = 1; pixel_y = 5},/turf/open/floor/strata/fake_wood,/area/space)
-"ws" = (/obj/structure/dropship_equipment/electronics/flare_launcher,/turf/open/floor/prison,/area/space)
+"ws" = (/obj/structure/surface/table/reinforced/black,/turf/open/floor/prison,/area/space)
 "wt" = (/obj/effect/decal/hybrisa/dirt_2,/obj/structure/prop/server_equipment/broken,/turf/open/floor/prison,/area/space)
 "wC" = (/obj/item/trash/cigbutt,/turf/open/floor/prison,/area/space)
 "wV" = (/obj/item/prop/colony/usedbandage{dir = 10; pixel_y = 13},/obj/item/reagent_container/blood/empty{pixel_x = -8; pixel_y = -17},/turf/open/floor/ice,/area/space)
@@ -201,11 +201,12 @@
 "xx" = (/obj/structure/machinery/landinglight/ds1/delayone{dir = 1},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
 "xE" = (/obj/structure/surface/table/almayer{color = "#8B9490"},/obj/structure/machinery/chem_dispenser/soda{pixel_y = 7},/turf/open/floor/strata/fake_wood_red,/area/space)
 "xH" = (/obj/structure/largecrate/supply/supplies/water,/obj/structure/largecrate/random/mini/wooden{pixel_y = 14},/turf/open/floor/prison/floor_plate,/area/space)
+"xI" = (/obj/effect/decal/hybrisa/dirt_2,/obj/item/reagent_container/food/drinks/cans/food/upp/speck{pixel_x = 5; pixel_y = -27},/turf/open/floor/prison/floor_plate,/area/space)
 "xN" = (/obj/structure/sign/poster/pinup{pixel_x = 7; pixel_y = 3},/turf/closed/wall/abyssal/standard/reinforced,/area/space)
 "ya" = (/obj/structure/bed/chair{buckling_y = 5; dir = 1; pixel_y = 0; pixel_x = -16},/obj/effect/decal/cleanable/hybrisa/trash{icon_state = "trash_9"; pixel_x = -8; pixel_y = 12},/turf/open/floor/strata/fake_wood,/area/space)
 "yd" = (/obj/structure/machinery/light/small/blue{dir = 8},/obj/effect/decal/hybrisa/dirt_2,/obj/effect/decal/hybrisa/dirt_2,/turf/open/floor/hybrisa/tile/tilewhite,/area/space)
 "ye" = (/obj/structure/closet/crate/trashcart{opened = 1},/obj/item/hybrisa/misc/trash_bag_full_prop{pixel_x = -3; pixel_y = 6},/obj/item/trash/buritto,/obj/item/trash/cigbutt{pixel_x = -9; pixel_y = -6},/obj/item/trash/hybrisa/cuppa_joes/lid,/turf/open/floor/prison,/area/space)
-"yk" = (/obj/structure/prop/hybrisa/misc/metergreen{pixel_y = 32},/obj/effect/decal/hybrisa/dirt_2,/obj/structure/machinery/disposal,/turf/open/floor/hybrisa/tile/tilewhite,/area/space)
+"yk" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/turf/open/floor/prison,/area/space)
 "yl" = (/obj/structure/largecrate/random/case/double,/turf/open/floor/station/metal/floor/alt3/west,/area/space)
 "ym" = (/obj/structure/machinery/constructable_frame{icon_state = "box_1"},/turf/open/floor/prison/floor_plate,/area/space)
 "yp" = (/obj/structure/closet/crate/green,/obj/item/ammo_box/magazine/m1911,/obj/item/ammo_box/magazine/l42a,/obj/item/ammo_box/magazine/fp9000,/obj/item/ammo_box/magazine/ar10,/obj/item/ammo_box/magazine/M16,/obj/item/ammo_box/magazine/M16,/obj/item/ammo_box/magazine/mp5,/turf/open/floor/prison,/area/space)
@@ -219,7 +220,7 @@
 "Ag" = (/obj/effect/decal/hybrisa/dirt_2,/obj/structure/machinery/vending/coffee,/turf/open/floor/prison,/area/space)
 "Aj" = (/obj/structure/machinery/door/airlock/multi_tile/hybrisa/personal_solid,/obj/structure/machinery/door/poddoor/shutters/almayer{dir = 1; id = "squadarmory"; name = "\improper Gear Lockers"},/turf/open/floor/prison,/area/space)
 "Al" = (/obj/structure/machinery/landinglight/ds1/delayone{dir = 1},/obj/effect/decal/cleanable/liquid_fuel,/turf/open/floor/almayer/plate,/area/space)
-"An" = (/obj/structure/surface/rack{color = "#7E7F7F"},/obj/item/weapon/gun/shotgun/double/upp{pixel_x = -1; pixel_y = 5},/obj/item/weapon/gun/smg/ppsh/with_drum_mag{pixel_x = -3; pixel_y = 0},/obj/item/weapon/gun/smg/mp5{pixel_x = 0; pixel_y = -7},/turf/open/floor/prison,/area/space)
+"An" = (/obj/structure/surface/rack{color = "#7E7F7F"},/obj/item/weapon/gun/shotgun/double/upp{pixel_x = -1; pixel_y = 5},/obj/item/weapon/gun/smg/ppsh/with_drum_mag{pixel_x = -3; pixel_y = 0},/obj/item/weapon/gun/smg/mp5{pixel_x = 0; pixel_y = -7},/obj/item/weapon/gun/rifle/isr,/turf/open/floor/prison,/area/space)
 "Ao" = (/obj/structure/machinery/landinglight/ds1/delayone,/turf/open/floor/almayer/plate,/area/space)
 "Aq" = (/obj/structure/machinery/cm_vending/sorted/medical/blood,/obj/structure/machinery/light{dir = 1},/turf/open/floor/green/northwest,/area/space)
 "Aw" = (/obj/structure/surface/table/almayer{color = "#d4cfcd"},/obj/effect/decal/hybrisa/dirt,/obj/effect/decal/hybrisa/dirt,/obj/item/roller/bedroll,/obj/item/prop{desc = "An issue of The Pioneer's Standard, the newspaper circulating in UA-controlled space."; icon = 'icons/obj/items/paper.dmi'; icon_state = "newspaper"; name = "The Pioneer's Standard"; pixel_x = 8; pixel_y = 14},/obj/structure/machinery/light/small{dir = 4; pixel_y = -12},/turf/open/floor/prison/floor_plate_alt/west,/area/space)
@@ -295,14 +296,14 @@
 "Im" = (/obj/structure/surface/table/woodentable/fancy,/obj/item/storage/fancy/cigar{layer = 3.04; pixel_x = -2; pixel_y = 2},/obj/item/reagent_container/food/drinks/bottle/sake{pixel_x = -11; pixel_y = 16},/obj/item/reagent_container/food/drinks/bottle/sake{pixel_x = -2; pixel_y = 16},/obj/item/reagent_container/food/drinks/bottle/sake{pixel_x = 7; pixel_y = 16},/obj/effect/decal/cleanable/dirt,/turf/open/floor/strata/fake_wood,/area/space)
 "Iy" = (/obj/structure/largecrate/empty/case,/turf/open/floor/prison,/area/space)
 "IK" = (/obj/structure/largecrate/empty/secure,/obj/structure/largecrate/empty/secure{pixel_y = 14; layer = 4; pixel_x = 12},/turf/open/floor/prison/floor_plate,/area/space)
-"IM" = (/obj/structure/closet/crate/freezer/cooler{pixel_x = 9; pixel_y = 10},/turf/open/floor/prison,/area/space)
+"IM" = (/obj/structure/closet/crate/freezer/cooler{pixel_x = 9; pixel_y = 10},/obj/structure/closet/crate/freezer/cooler/oj{pixel_x = -9; pixel_y = -2},/obj/structure/closet/crate/foodcart{pixel_x = 9; pixel_y = 0; layer = 1},/turf/open/floor/prison,/area/space)
 "IT" = (/obj/structure/cargo_container/arious/left{pixel_x = 2; pixel_y = 0},/turf/open/floor/prison,/area/space)
 "IW" = (/obj/item/device/radio/intercom{freerange = 1; pixel_x = 30},/turf/closed/wall/abyssal/standard/reinforced,/area/space)
 "Jl" = (/obj/effect/decal/hybrisa/dirt_2,/obj/structure/closet/crate/upp,/obj/item/ammo_box/magazine/mar30,/obj/item/ammo_box/magazine/mar30/ext,/obj/item/ammo_box/magazine/mar50,/obj/item/ammo_magazine/shotgun/slug/dragonsbreath,/obj/item/ammo_magazine/shotgun/slug/dragonsbreath,/obj/item/ammo_magazine/shotgun/slug/dragonsbreath,/obj/item/ammo_magazine/shotgun/slug/dragonsbreath,/turf/open/floor/prison,/area/space)
 "Js" = (/obj/structure/device/broken_piano,/turf/open/floor/strata/fake_wood,/area/space)
 "Jv" = (/obj/structure/machinery/space_heater,/turf/open/floor/prison/floor_plate,/area/space)
 "JR" = (/obj/structure/sign/poster/blacklight,/obj/structure/machinery/door_control{pixel_y = 11; pixel_x = 9; id = "squadarmory"; name = "gear lockers door-control"},/turf/closed/wall/abyssal/standard/reinforced,/area/space)
-"JZ" = (/obj/structure/dropship_equipment/electronics/chaff_launcher,/turf/open/floor/prison,/area/space)
+"JZ" = (/obj/structure/dropship_equipment/electronics/chaff_launcher,/obj/structure/surface/table/reinforced/black,/obj/structure/dropship_equipment/electronics/flare_launcher{pixel_x = -5; pixel_y = 9},/turf/open/floor/prison,/area/space)
 "Kd" = (/obj/structure/surface/rack{color = "#7E7F7F"},/obj/item/weapon/gun/rifle/m16/grenadier,/obj/item/weapon/gun/rifle/m16/grenadier{pixel_x = 0; pixel_y = -4},/obj/item/storage/box/guncase/heavy/fuel{pixel_x = 2; pixel_y = 41},/obj/item/weapon/gun/rifle/mar40/carbine{pixel_x = 0; pixel_y = 5},/obj/item/weapon/gun/rifle/mar40/carbine{pixel_x = 0; pixel_y = 10},/turf/open/floor/prison,/area/space)
 "Kn" = (/obj/structure/sign/poster/safety{pixel_x = 6; pixel_y = 2},/turf/closed/wall/abyssal/standard/temphull,/area/space)
 "Kq" = (/obj/effect/decal/hybrisa/dirt_2,/obj/structure/machinery/vending/walkman{pixel_x = 4; pixel_y = 3; density = 0},/turf/open/floor/prison,/area/space)
@@ -314,7 +315,7 @@
 "Ld" = (/obj/structure/machinery/door/airlock/strata,/turf/open/floor/hybrisa/tile/tilewhite,/area/space)
 "Lh" = (/obj/structure/machinery/landinglight/ds1,/turf/open/floor/almayer/plate,/area/space)
 "Lm" = (/obj/structure/window/framed/abyssal/standard,/turf/open/floor/prison,/area/space)
-"Ln" = (/obj/effect/decal/hybrisa/dirt_2,/obj/structure/surface/table,/obj/item/explosive/grenade/high_explosive/upp,/turf/open/floor/prison/floor_plate,/area/space)
+"Ln" = (/obj/effect/decal/hybrisa/dirt_2,/obj/structure/surface/table,/obj/item/explosive/grenade/high_explosive/upp{pixel_x = 25; pixel_y = 0},/obj/item/reagent_container/food/drinks/cans/food/upp/speck{pixel_x = 7; pixel_y = 11},/obj/item/reagent_container/food/drinks/cans/food/upp/speck{pixel_x = -3; pixel_y = 11},/obj/item/reagent_container/food/drinks/cans/food/upp/speck{pixel_x = -5; pixel_y = 3},/turf/open/floor/prison/floor_plate,/area/space)
 "Lr" = (/obj/structure/closet/crate/green,/obj/item/ammo_box/magazine/vp78,/obj/item/ammo_box/magazine/m20a,/obj/item/ammo_box/magazine/m20a,/obj/item/ammo_box/magazine/shotgun/buckshot,/obj/item/ammo_magazine/shotgun/incendiary,/obj/item/ammo_box/magazine/shotgun,/turf/open/floor/prison,/area/space)
 "Lv" = (/obj/effect/decal/hybrisa/dirt_2,/obj/effect/decal/hybrisa/dirt_2,/turf/open/floor/hybrisa/tile/tilewhite,/area/space)
 "Lz" = (/obj/structure/surface/rack,/obj/item/tool/wet_sign,/obj/structure/sign/poster/io{pixel_y = 35},/turf/open/floor/hybrisa/tile/tilewhitecheckered,/area/space)
@@ -356,12 +357,13 @@
 "Qf" = (/obj/structure/bed,/obj/item/bedsheet/yellow,/obj/structure/machinery/light,/turf/open/floor/strata/fake_wood,/area/space)
 "Ql" = (/obj/structure/toilet{dir = 4},/obj/structure/machinery/light/small/blue{dir = 8},/turf/open/floor/hybrisa/tile/tilewhite,/area/space)
 "Qm" = (/obj/structure/flora/pottedplant{desc = "It is made of Fiberbush(tm). It contains asbestos."; icon_state = "pottedplant_22"; name = "synthetic potted plant"; pixel_y = 0; pixel_x = -9},/obj/structure/machinery/light,/turf/open/floor/prison,/area/space)
-"Qo" = (/obj/structure/surface/table/woodentable{color = "#8B7B5B"},/obj/item/reagent_container/food/drinks/cans/souto/vanilla{pixel_x = 9; pixel_y = 10},/turf/open/floor/hybrisa/carpet/carpetbeige,/area/space)
+"Qo" = (/obj/structure/surface/table/woodentable{color = "#8B7B5B"},/obj/item/reagent_container/food/drinks/cans/souto/vanilla{pixel_x = 9; pixel_y = 10},/obj/item/reagent_container/food/drinks/cans/food/upp/pasta{pixel_x = -4; pixel_y = 5},/obj/item/reagent_container/food/drinks/cans/food/upp/stew{pixel_x = -21; pixel_y = 0},/turf/open/floor/hybrisa/carpet/carpetbeige,/area/space)
 "Qu" = (/obj/structure/machinery/door/airlock/multi_tile/hybrisa/generic/autoname{dir = 1},/turf/open/floor/strata/fake_wood,/area/space)
 "QF" = (/obj/structure/surface/table/almayer{color = "#8B9490"},/obj/structure/machinery/chem_dispenser/soda/beer{pixel_y = 8},/obj/structure/machinery/light,/turf/open/floor/strata/fake_wood_red,/area/space)
 "QM" = (/obj/structure/machinery/light{dir = 4},/turf/open/floor/prison,/area/space)
 "QN" = (/obj/structure/cargo_container/armat/right,/turf/open/floor/prison,/area/space)
 "QQ" = (/obj/structure/machinery/light,/turf/open/floor/prison,/area/space)
+"QZ" = (/obj/effect/decal/hybrisa/dirt_2,/obj/structure/surface/table/woodentable/fancy,/turf/open/floor/strata/fake_wood,/area/space)
 "Rf" = (/obj/structure/largecrate/empty/case/double,/turf/open/floor/prison,/area/space)
 "Rk" = (/obj/structure/reagent_dispensers/beerkeg/alt_dark,/obj/structure/machinery/light,/turf/open/floor/prison,/area/space)
 "Rm" = (/obj/structure/dropship_equipment/fuel/fuel_enhancer,/turf/open/floor/prison,/area/space)
@@ -390,7 +392,7 @@
 "Uw" = (/obj/structure/machinery/landinglight/ds1{dir = 4},/turf/open/floor/almayer/plate,/area/space)
 "UF" = (/obj/item/paper/crumpled{pixel_x = 13},/turf/open/floor/station/metal/floor/alt3/west,/area/space)
 "UI" = (/obj/structure/surface/table/almayer{color = "#8B9490"},/obj/structure/machinery/hybrisa/coffee_machine,/turf/open/floor/strata/fake_wood_red,/area/space)
-"UN" = (/obj/structure/closet/cryo{name = "Heavy gunner"},/obj/item/weapon/gun/rifle/isr,/obj/item/ammo_magazine/rifle/isr,/obj/item/ammo_magazine/rifle/isr,/obj/item/ammo_magazine/rifle/isr,/obj/item/ammo_magazine/rifle/isr,/obj/item/ammo_magazine/rifle/isr,/obj/item/ammo_magazine/rifle/isr,/obj/item/ammo_magazine/rifle/isr,/obj/item/ammo_magazine/rifle/isr,/turf/open/floor/prison,/area/space)
+"UN" = (/obj/structure/closet/cryo{name = "Heavy gunner"},/obj/item/weapon/gun/minigun,/obj/item/ammo_magazine/minigun,/obj/item/ammo_magazine/minigun,/obj/item/ammo_magazine/minigun,/obj/item/ammo_magazine/minigun,/obj/item/ammo_magazine/minigun,/turf/open/floor/prison,/area/space)
 "UT" = (/turf/open/floor/prison/floor_plate,/area/space)
 "UX" = (/obj/structure/largecrate/random/case/double,/turf/open/floor/prison/floor_plate,/area/space)
 "Ve" = (/obj/item/trash/used_stasis_bag,/turf/open/floor/ice,/area/space)
@@ -479,22 +481,22 @@ HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
 HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
 HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
 HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKBKBKBKBKBKrqBKBKkNBKBKHCBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKXiXiXiXiXiXiXiXiXiXiXiBKBKBKBKBKBKBKBKHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
-HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKdNWIImlSHCiaPQCePtjIHCzjxnprXcHCgkhuoVbRBwWVjiixHCyzXTXTXTXTcIXGXTXTXGXTXTXTXTXTXTXTXTXTXTXTXGXTXTXTXTXTXGBKBKXTXTXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
-HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKfQaYaYfQqiXTXTXTXTszHCszXTszXTfQfQWLaYorfQfQfQaYHCRmhyFKXTXTcIXTXTXTBCAoLhCSmpAoARGKmpFqqqGKxoXTXTXTXTXTXTXTBKXTXTXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
-HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKGIaYOXaYHCXTXTXTszXTXTXTXTszXTQuhAlZfPXmfQaYfQfQHCDRXTXTXTXTcIXTXTXTCmZWZWZWZWZWZWZWZWZWZWZWSJXTXTXTXTXTGxXTBKXTXTXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
-HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKeLPIfQPCHCcTXTszXTXTcDXTXTXTXTHCFEAJSpyaaYWVfQrrHCkAXTXTXTXTcIXTXTXTFMZWZWZWZWZWZWZWZWZWZWZWYnXTXTXTXTXTXTQMBKXTXTXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
-HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKUofQaYaYHCDzVGszXTokHCkJXTjYvuHCHCHCHCHCHCHCHCHCHCHCHCHCHCHCHCkAXTXTSyZWZWZWZWZWZWZWZWZWZWZWmtXTXTXTXTXTGmXTBKXTXTXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
+HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKdNWIImlSHCiaPQCePtjIHCzjxnprXcHCgkhuoVbRBwWVjiixHCyzXTXTXTykcIXGXTXTXGXTXTXTXTXTXTXTXTXTXTXTXGXTXTXTXTXTXGBKBKXTXTXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
+HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKfQaYaYfQqiXTXTXTXTszHCszXTszXTfQfQWLaYorfQfQfQaYHCRmhyFKXTykcIXTXTXTBCAoLhCSmpAoARGKmpFqqqGKxoXTXTXTXTXTXTXTBKXTXTXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
+HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKGIaYOXaYHCXTXTXTszXTXTXTXTszXTQuhAlZfPXmfQaYfQfQHCDRykykykykcIXTXTXTCmZWZWZWZWZWZWZWZWZWZWZWSJXTXTXTXTXTGxXTBKXTXTXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
+HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKeLPIfQPCHCcTXTszXTXTcDXTXTXTXTHCFEAJSpyaaYWVfQrrHCkAXTXTykXTcIXTXTXTFMZWZWZWZWZWZWZWZWZWZWZWYnXTXTXTXTXTXTQMBKXTXTXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
+HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKUofQaYQZHCDzVGszXTokHCkJXTjYvuHCHCHCHCHCHCHCHCHCHCHCHCHCHCHCHCkAXTXTSyZWZWZWZWZWZWZWZWZWZWZWmtXTXTXTXTXTGmXTBKXTXTXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
 HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKpRfQfQQfHCjpRDXTXTRkHCXTXTszLRHCAqGsbjbjbjbkOATYHCoztTXTXTXTcIXTXTXTrzZWZWZWZWZWZWZWZWZWZWZWoFXTXTXTXTXTXTXABKXTXTXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
-HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKHCHCHCHCHCbDHCriShHCHCXTszXTXTXTGLxrVeVzxrxrxrKBHCkYXTmaaAXTcIXTXTXTtCZWZWZWZWZWZWZWZWZWZWZWSJXTXTXTXTXTXTXTBKXTXTXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
-HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKZkeVMdqsfnlRZkfPfQTrHCmnXTXTszRxVUxrwVWauUxrlCZyHCouXTXTXTXTcIXTXTXTgtZWZWZWZWZWZWZWZWZWZWZWeXXTXTXTXTXTXTQMBKXTXTXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
-HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKJsgEaYuHfQfQrCCkDrgsHCYbMtXTQQHCfBuYNdNdNdNdHQumHCzsXTXTXTXTcIXTXTXTUwZWZWZWZWZWZWZWZWZWZWZWCYXTXTXTXTXTXTXTBKXTXTXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
+HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKHCHCHCHCHCbDHCriShHCHCXTszXTXTXTGLxrVeVzxrxrxrKBHCkYykmaaAXTcIXTXTXTtCZWZWZWZWZWZWZWZWZWZWZWSJXTXTXTXTXTXTXTBKXTXTXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
+HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKZkeVMdqsfnlRZkfPfQTrHCmnXTXTszRxVUxrwVWauUxrlCZyHCouXTykykXTcIXTXTXTgtZWZWZWZWZWZWZWZWZWZWZWeXXTXTXTXTXTXTQMBKXTXTXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
+HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKJsgEaYuHfQfQrCCkDrgsHCYbMtXTQQHCfBuYNdNdNdNdHQumHCzsXTXTykykcIXTXTXTUwZWZWZWZWZWZWZWZWZWZWZWCYXTXTXTXTXTXTXTBKXTXTXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
 HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKPbaaaYaYfcseaXCJmvOmHCHCeGszryHCShxNLmLmLmLmLmHCHCHCHCHCHCHCHCkAXTXTrzZWZWZWZWZWZWZWZWZWZWZWoFXTXTXTXTXTHbuqBKXTXTXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
 HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKfQfQfQqIfcfcHfwraYfQHCAgXTszKqHCbCgfszszszszszXTXRnrszoYszBoHCXTXTXTtCZWZWZWZWZWZWZWZWZWZWZWSJXTXTXTXTITldTtBKXTXTXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
 HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKfQNtfQfQgEfcaYZkaYaYfQszXTwCszXTXTXTszszszszXTszszXTXTszXTXTXTXTXTXTGhZWZWZWZWZWZWZWZWZWZWZWYnXTXTXTXTXTcbdeBKXTXTXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
 HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKAEaYaYWPfQMZCJiXQoSuQuXTXTszszXdXTXTXTXTXTXTszXTXTXTXTszszXTcDXTXTXTOGZWZWZWZWZWUuZWZWZWZWZWoZXTXTXTQQswjVQNBKXTXTXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
 HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKaYaYEjEjEjcgNhBaNqVkHCHCplXTHCHCQmXTszszwtckVsyeQQXTXTQQszIMHCXTXTXTDTZWZWZWZWZWZWZWZWZWZWZWCwXTXTQMBKBKBKBKBKBKBKXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
 HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKIeHCRQslRoHCHCHCShHCHCXGszhQXGHCHCHCHCHCHCHCHCHCJRAjnwHCHCHCHCkAXTXTtCZWZWZWZWZWZWZWZWZWZWZWVWXTXTXTcIXTXTkiKQtuBKXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
-HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKCGafCGcdcdHCQllKbcykHCXTXTXTszHCLzZsZjCRHCHCXGXTXTXTszvpszXGHCXTXTXTCOZWZWZWZWZWZWZWZWZWZWZWNeXTXTXTcIXTXTIyKQKQBKXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
+HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKCGafCGcdcdHCQllKbcbcHCXTXTXTszHCLzZsZjCRHCHCXGXTXTXTszvpszXGHCXTXTXTCOZWZWZWZWZWZWZWZWZWZWZWNeXTXTXTcIXTXTIyKQKQBKXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
 HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKCGjECGCGbBHCllllydbcLdXTszszXTvahbhbPpwdHCHCXTuLszszXTszkXXTHCJZXTXTUwZWZWZWZWZWZWZWZWZWZWZWCYXTXTXTcIXTXTXTRfIyBKXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
 HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKcdcdcdcdcdLdbcbcLvbcHCXTXTXTXTHCwdhbhbwdHCHCXTdwXTszXTXTLTszHCwsXTXTezZWZWZWZWZWZWZWZWZWZWZWmXXTXTXTcIXTXTXTgCkiBKXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
 HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKqzFVxEUIQFHCtycnWRcnHCQQXTXTYbHCVuhPwdtGHCHCXTKdXTszszXTAnXTHCXTXTXTCmZWZWZWZWZWZWZWZWZWZWZWVWXTXTXTcIXTQQXTXTXTBKXTHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
@@ -519,7 +521,7 @@ HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKUTUTHCEVBREdBREdEdBREdBRZNHCTzUTBK
 HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKUTUTfAXyEdEdjbhVhVjbEdEdZNfAihTzBKHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
 HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKUTUTHCsJiETeAMyuYSAMEnDlstHCIKNPBKHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
 HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKUTUTHCHCHCHCHCHCHCHCHCHCHCHCUTUTBKHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
-HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKXjYuUTUTUTUTUTTzTzUTTzTzaBUTUTUTBKHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
+HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKXjYuUTUTUTUTUTxITzUTTzTzaBUTUTUTBKHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
 HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKBKqhUTUTkzTzTzLnpDsqagUTTzUTZPBKBKHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
 HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBKHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp
 HpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHpHp

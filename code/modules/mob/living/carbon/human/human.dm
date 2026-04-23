@@ -1725,6 +1725,9 @@
 		if(FACTION_TWE)
 			alert_type = /atom/movable/screen/text/screen_text/picture/starting/twe
 			platoon = "Gamma Troop"
+						alert_type = /atom/movable/screen/text/screen_text/picture/starting/fl
+			platoon = "Freelanser"
+		if(FACTION_MERCENARY)
 	play_screen_text("<u>[SSmapping.configs[SHIP_MAP].map_name]<br></u>" + "[platoon]<br><br>" + human_manifest, alert_type)
 
 /mob/living/carbon/human/point_to_atom(atom/A, turf/T)

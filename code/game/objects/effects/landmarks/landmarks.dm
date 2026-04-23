@@ -679,3 +679,7 @@
 	. = ..()
 	if(prob(60))
 		new /obj/item/ammo_magazine/smg/m39(loc)
+
+/obj/effect/landmark/late_join/marine/fl
+	name = "freelanser late join"
+	squad = SQUAD_MERC

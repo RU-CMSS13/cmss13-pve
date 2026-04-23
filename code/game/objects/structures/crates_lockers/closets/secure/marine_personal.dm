@@ -239,3 +239,27 @@
 
 /obj/structure/closet/secure_closet/marine_personal/rmc/pilot
 	job = JOB_TWE_RMC_PILOT
+
+/obj/structure/closet/secure_closet/marine_personal/fl/spawn_gear()
+	new /obj/item/clothing/shoes/marine/knife(src)
+	new /obj/item/clothing/under/marine/veteran/freelancer(src)
+	new /obj/item/clothing/accessory/patch/freelancer_patch(src)
+	new /obj/item/device/radio/headset/distress/fl(src)
+
+/obj/structure/closet/secure_closet/marine_personal/fl/rifleman
+	job = JOB_SQUAD_MARINE
+
+/obj/structure/closet/secure_closet/marine_personal/fl/smartgunner
+	job = JOB_SQUAD_SMARTGUN
+
+/obj/structure/closet/secure_closet/marine_personal/fl/corpsman
+	job = JOB_SQUAD_MEDIC
+
+/obj/structure/closet/secure_closet/marine_personal/fl/squad_leader
+	job = JOB_SQUAD_TEAM_LEADER
+
+/obj/structure/closet/secure_closet/marine_personal/fl/platoon_leader
+	job = JOB_SQUAD_LEADER
+
+/obj/structure/closet/secure_closet/marine_personal/fl/rto
+	job = JOB_SQUAD_RTO
