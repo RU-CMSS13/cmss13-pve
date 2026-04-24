@@ -212,6 +212,7 @@
 #include "code\_globalvars\misc.dm"
 #include "code\_globalvars\regexes.dm"
 #include "code\_globalvars\tgui.dm"
+#include "code\_globalvars\lists\banned_ckeys.dm"
 #include "code\_globalvars\lists\clans.dm"
 #include "code\_globalvars\lists\client.dm"
 #include "code\_globalvars\lists\keybindings.dm"
