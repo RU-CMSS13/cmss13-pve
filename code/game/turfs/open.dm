@@ -249,6 +249,31 @@
 /turf/open/slippery/roof/dir/northwest
 	dir = NORTHWEST
 
+
+/turf/open/slippery/roof/dir/alt
+	icon_state = "outerhull_dir_alt"
+
+/turf/open/slippery/roof/dir/alt/southwest
+	dir = SOUTHWEST
+
+/turf/open/slippery/roof/dir/alt/north
+	dir = NORTH
+
+/turf/open/slippery/roof/dir/alt/east
+	dir = EAST
+
+/turf/open/slippery/roof/dir/alt/northeast
+	dir = NORTHEAST
+
+/turf/open/slippery/roof/dir/alt/southeast
+	dir = SOUTHEAST
+
+/turf/open/slippery/roof/dir/alt/west
+	dir = WEST
+
+/turf/open/slippery/roof/dir/alt/northwest
+	dir = NORTHWEST
+
 // Prison grass
 /turf/open/organic/grass
 	name = "grass"
