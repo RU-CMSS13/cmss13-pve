@@ -1,6 +1,10 @@
 #include "modules\mob\living\carbon\human\emote.dm"
 #include "game\objects\items\devices\_defibrillator.dm"
 #include "game\objects\items\devices\defibrillator_paddles.dm"
+#include "music_panel\admin_music_models.dm"
+#include "music_panel\admin_music_preset_library.dm"
+#include "music_panel\admin_music_service.dm"
+#include "music_panel\admin_music_panel.dm"
 //хуйня которую я не знаю куда запихать
 #include "stuff\chair_shifting.dm"
 #include "stuff\pixel_shifting.dm"
