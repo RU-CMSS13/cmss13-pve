@@ -132,7 +132,7 @@
 
 /client/proc/open_human_faction_management_panel()
 	set name = "Human Faction Management Panel"
-	set category = "Game Master.HumanAI"
+	set category = "Game Master.HumanAI - Management"
 
 	if(!check_rights(R_DEBUG))
 		return

@@ -1,6 +1,6 @@
 /client/proc/fortify_room()
 	set name = "Fortify Room"
-	set category = "Game Master.HumanAI"
+	set category = "Game Master.HumanAI - Tools"
 
 	if(!check_rights(R_DEBUG))
 		return

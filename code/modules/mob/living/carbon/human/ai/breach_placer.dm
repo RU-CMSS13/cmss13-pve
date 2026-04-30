@@ -65,7 +65,7 @@
 
 /client/proc/place_plastic_explosives()
 	set name = "Place Plastic Explosives"
-	set category = "Game Master.HumanAI"
+	set category = "Game Master.HumanAI - Tools"
 
 	if(!check_rights(R_DEBUG))
 		return

@@ -68,7 +68,7 @@ GLOBAL_LIST_EMPTY(human_ai_squad_presets)
 
 /client/proc/open_human_squad_spawner_panel()
 	set name = "Human AI Squad Spawner Panel"
-	set category = "Game Master.HumanAI"
+	set category = "Game Master.HumanAI - Spawn"
 
 	if(!check_rights(R_DEBUG))
 		return

@@ -81,7 +81,7 @@
 
 /client/proc/open_human_defense_creator_panel()
 	set name = "Human Defense Creator Panel"
-	set category = "Game Master.HumanAI"
+	set category = "Game Master.HumanAI - Tools"
 
 	if(!check_rights(R_DEBUG))
 		return

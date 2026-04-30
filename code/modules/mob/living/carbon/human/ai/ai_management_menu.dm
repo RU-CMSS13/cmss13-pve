@@ -141,7 +141,7 @@
 
 /client/proc/open_human_ai_management_panel()
 	set name = "Human AI Management Panel"
-	set category = "Game Master.HumanAI"
+	set category = "Game Master.HumanAI - Management"
 
 	if(!check_rights(R_DEBUG))
 		return
@@ -155,7 +155,7 @@
 
 /client/proc/create_human_ai()
 	set name = "Create Human AI - Expanded"
-	set category = "Game Master.HumanAI"
+	set category = "Game Master.HumanAI - Spawn, Advanced"
 
 	if(!check_rights(R_DEBUG))
 		return
