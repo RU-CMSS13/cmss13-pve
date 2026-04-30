@@ -38,7 +38,7 @@
 
 /client/proc/roll_dices()
 	set name = "God's Dice"
-	set category = "Game Master"
+	set category = "Game Master.Extras"
 
 	if(!check_rights(R_ADMIN))
 		return
