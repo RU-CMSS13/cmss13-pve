@@ -522,7 +522,7 @@
 			continue
 
 		marine_card.assignment = "[new_name] [marine.job]"
-		marine_card.name = "[marine_card.registered_name]'s [marine_card.card_name] ([marine_card.assignment])"
+		marine_card.name = "[marine_card.registered_name]'s [marine_card.id_type] ([marine_card.assignment])"
 
 /datum/squad/proc/setup_supply_drop_list()
 	SIGNAL_HANDLER

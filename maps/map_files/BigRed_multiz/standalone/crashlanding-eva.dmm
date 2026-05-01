@@ -402,8 +402,8 @@
 /area/bigredv2/outside/general_offices)
 "by" = (
 /obj/item/frame/rack,
-/obj/item/storage/box/m94,
-/obj/item/storage/box/m94,
+/obj/item/storage/box/flare,
+/obj/item/storage/box/flare,
 /turf/open/floor/plating,
 /area/bigredv2/outside/general_offices)
 "bz" = (

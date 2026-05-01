@@ -993,25 +993,6 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 	icon_state = "tree_stump"
 	density = FALSE
 
-/obj/structure/flora/jungle/thickbush/large_jungle_bush/attack_alien(mob/living/carbon/xenomorph/current_xenomorph)
-	if(unslashable)
-		return XENO_NO_DELAY_ACTION
-	current_xenomorph.animation_attack_on(src)
-	playsound(src, 'sound/effects/vegetation_hit.ogg', 25, 1)
-	current_xenomorph.visible_message(SPAN_DANGER("[current_xenomorph] slashes at [src]!"),
-	SPAN_DANGER("We slash at [src]!"), null, 5, CHAT_TYPE_XENO_COMBAT)
-	update_health(rand(current_xenomorph.melee_damage_lower, current_xenomorph.melee_damage_upper))
-	return XENO_ATTACK_ACTION
-
-/obj/structure/flora/jungle/thickbush/large_jungle_bush/handle_tail_stab(mob/living/carbon/xenomorph/xeno, blunt_stab)
-	if(unslashable)
-		return TAILSTAB_COOLDOWN_NONE
-	playsound(src, 'sound/effects/vegetation_hit.ogg', 25, 1)
-	xeno.visible_message(SPAN_DANGER("[xeno] slashes at [src] with its tail!"),
-	SPAN_DANGER("We slash at [src] with our tail!"), null, 5, CHAT_TYPE_XENO_COMBAT)
-	update_health(xeno.melee_damage_upper)
-	return TAILSTAB_COOLDOWN_NORMAL
-
 /*
 
 	Canyon Bushes

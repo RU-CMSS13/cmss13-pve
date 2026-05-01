@@ -1531,8 +1531,8 @@
 /obj/structure/surface/rack{
 	color = "#98a3ab"
 	},
-/obj/item/clothing/suit/storage/webbing/brown,
-/obj/item/clothing/suit/storage/webbing/brown,
+/obj/item/clothing/suit/storage/webbing,
+/obj/item/clothing/suit/storage/webbing,
 /obj/item/clothing/mask/gas/upp_pfb,
 /obj/item/clothing/mask/gas/upp_pfb,
 /obj/item/clothing/mask/gas/upp_pfb,

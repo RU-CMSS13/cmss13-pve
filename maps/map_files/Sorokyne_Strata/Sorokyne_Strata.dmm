@@ -1282,7 +1282,7 @@
 /area/strata/interior/research)
 "adU" = (
 /obj/structure/closet/secure_closet/security/soro,
-/obj/item/clothing/suit/storage/marine/faction/UPP/army,
+/obj/item/clothing/suit/storage/marine/faction/upp/army,
 /turf/open/floor/strata/red1,
 /area/strata/interior/research)
 "adV" = (
@@ -2169,7 +2169,7 @@
 /area/strata/interior/mining_outpost/hive)
 "agD" = (
 /obj/effect/decal/cleanable/blood,
-/obj/item/ammo_magazine/revolver/cmb{
+/obj/item/ammo_magazine/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
@@ -2205,7 +2205,7 @@
 /area/strata/exterior/far_north_outpost)
 "agI" = (
 /obj/structure/bed/nest,
-/obj/item/weapon/gun/revolver/cmb{
+/obj/item/weapon/gun/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
@@ -2477,7 +2477,7 @@
 /area/strata/interior/mining_outpost/flight_control)
 "aht" = (
 /obj/structure/bed/nest,
-/obj/item/ammo_magazine/revolver/cmb{
+/obj/item/ammo_magazine/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
@@ -2881,7 +2881,7 @@
 /obj/effect/decal/cleanable/blood{
 	icon_state = "xgib2"
 	},
-/obj/item/ammo_magazine/revolver/cmb{
+/obj/item/ammo_magazine/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
@@ -2889,7 +2889,7 @@
 /area/strata/interior/mining_outpost/hive)
 "aiC" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
-/obj/item/ammo_magazine/revolver/cmb{
+/obj/item/ammo_magazine/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
@@ -3168,7 +3168,7 @@
 /obj/structure/surface/rack{
 	color = "#98a3ab"
 	},
-/obj/item/clothing/head/helmet/marine/veteran/UPP/firefighter{
+/obj/item/clothing/head/helmet/marine/veteran/upp/firefighter{
 	pixel_x = -2;
 	pixel_y = 10
 	},
@@ -3485,7 +3485,7 @@
 /obj/structure/machinery/door/poddoor/almayer/closed{
 	name = "Dropship Hold Lockdown"
 	},
-/turf/open/floor/almayer/test_floor6,
+/turf/open/floor/almayer/test_floor5,
 /area/strata/interior/research)
 "akk" = (
 /turf/closed/shuttle/ert{
@@ -4235,8 +4235,8 @@
 /obj/structure/surface/rack{
 	color = "#98a3ab"
 	},
-/obj/item/clothing/suit/storage/webbing/brown,
-/obj/item/clothing/suit/storage/webbing/brown,
+/obj/item/clothing/suit/storage/webbing,
+/obj/item/clothing/suit/storage/webbing,
 /obj/item/clothing/mask/gas/upp_pfb,
 /turf/open/floor/strata/multi_tiles/west,
 /area/strata/interior/research)
@@ -5056,7 +5056,7 @@
 	color = "#98a3ab"
 	},
 /obj/structure/barricade/handrail/strata,
-/obj/item/clothing/accessory/patch/upp/alt,
+/obj/item/clothing/accessory/patch/upp/airborne,
 /turf/open/floor/strata/red1,
 /area/strata/interior/outpost/security)
 "aoD" = (
@@ -5395,14 +5395,14 @@
 /obj/structure/surface/rack{
 	color = "#98a3ab"
 	},
-/obj/item/storage/box/m94,
-/obj/item/storage/box/m94,
+/obj/item/storage/box/flare,
+/obj/item/storage/box/flare,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/strata/floor3,
 /area/strata/interior/outpost/engi)
 "apz" = (
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/exterior/far_north_outpost)
 "apA" = (
@@ -5773,10 +5773,10 @@
 /area/strata/interior/mining_outpost/canteen)
 "aqB" = (
 /obj/structure/closet/secure_closet/security/soro,
-/obj/item/clothing/suit/storage/marine/faction/UPP/army,
-/obj/item/clothing/suit/storage/marine/faction/UPP/army,
-/obj/item/clothing/suit/storage/marine/faction/UPP/army,
-/obj/item/clothing/suit/storage/marine/faction/UPP/army,
+/obj/item/clothing/suit/storage/marine/faction/upp/army,
+/obj/item/clothing/suit/storage/marine/faction/upp/army,
+/obj/item/clothing/suit/storage/marine/faction/upp/army,
+/obj/item/clothing/suit/storage/marine/faction/upp/army,
 /obj/item/clothing/mask/gas/upp_pfb,
 /obj/item/clothing/mask/gas/upp_pfb,
 /obj/item/clothing/mask/gas/upp_pfb,
@@ -7645,8 +7645,8 @@
 	color = "#98a3ab"
 	},
 /obj/item/clothing/shoes/marine/upp/black/knife,
-/obj/item/clothing/suit/storage/webbing/brown,
-/obj/item/clothing/suit/storage/webbing/brown,
+/obj/item/clothing/suit/storage/webbing,
+/obj/item/clothing/suit/storage/webbing,
 /obj/effect/decal/strata_decals/grime/grime3{
 	dir = 8
 	},
@@ -7704,7 +7704,7 @@
 /turf/open/floor/prison/darkyellowfull2,
 /area/strata/interior/outpost/engi)
 "avR" = (
-/obj/item/prop/helmetgarb/netting/jungle,
+/obj/item/prop/helmetgarb/netting,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/exterior/landing_zones/near_lz2)
 "avS" = (
@@ -7807,7 +7807,7 @@
 	pixel_x = -5;
 	pixel_y = 9
 	},
-/obj/item/clothing/head/uppcap/peaked/police{
+/obj/item/clothing/head/cmcap/upp/peaked/police{
 	pixel_x = 2;
 	pixel_y = -5
 	},
@@ -8828,8 +8828,8 @@
 "aza" = (
 /obj/item/poster,
 /obj/structure/closet/secure_closet/security/soro,
-/obj/item/clothing/suit/storage/CMB/pap,
-/obj/item/clothing/head/uppcap/peaked/police{
+/obj/item/clothing/suit/marine/faction/upp/jacket/pap,
+/obj/item/clothing/head/cmcap/upp/peaked/police{
 	pixel_x = 2;
 	pixel_y = -5
 	},
@@ -11157,7 +11157,7 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/strata/exterior/north_outpost)
 "aGd" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/exterior/parts_storage_cave)
 "aGe" = (
@@ -11476,7 +11476,7 @@
 /turf/open/gm/dirt/brown/variant_1,
 /area/strata/exterior/parts_storage_cave)
 "aGY" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/gm/dirt/brown,
 /area/strata/exterior/parts_storage_cave)
 "aGZ" = (
@@ -12289,14 +12289,14 @@
 /area/strata/interior/outpost/canteen/bar)
 "aJC" = (
 /obj/effect/decal/cleanable/blood,
-/obj/item/clothing/accessory/patch/upp/alt,
+/obj/item/clothing/accessory/patch/upp/airborne,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/strata/exterior/parts_storage_cave)
 "aJD" = (
 /obj/effect/decal/strata_decals/mud_corner{
 	dir = 5
 	},
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /obj/item/reagent_container/food/drinks/bottle/vodka{
 	pixel_x = 9
 	},
@@ -12595,7 +12595,7 @@
 /turf/open/asphalt/cement/cement12,
 /area/strata/exterior/south_outpost)
 "aKv" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/gm/dirt/brown/variant_5/south,
 /area/strata/exterior/parts_storage_cave)
 "aKw" = (
@@ -12699,7 +12699,7 @@
 /obj/structure/barricade/wooden{
 	dir = 8
 	},
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /obj/item/lightstick/planted,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/strata/exterior/parts_storage_cave)
@@ -12739,7 +12739,7 @@
 	pixel_x = -10;
 	pixel_y = 2
 	},
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/gm/dirt/brown,
 /area/strata/exterior/parts_storage_cave)
 "aKN" = (
@@ -12897,8 +12897,8 @@
 	color = "#98a3ab"
 	},
 /obj/item/clothing/shoes/marine/upp/black/knife,
-/obj/item/clothing/suit/storage/webbing/brown,
-/obj/item/clothing/suit/storage/webbing/brown,
+/obj/item/clothing/suit/storage/webbing,
+/obj/item/clothing/suit/storage/webbing,
 /obj/effect/decal/strata_decals/grime/grime3{
 	dir = 8
 	},
@@ -13222,8 +13222,8 @@
 /area/strata/interior/outpost/admin)
 "aMg" = (
 /obj/effect/decal/cleanable/blood,
-/obj/item/ammo_casing,
-/obj/item/clothing/suit/storage/marine/faction/UPP/army/alt,
+/obj/effect/decal/ammo_casing,
+/obj/item/clothing/suit/storage/marine/faction/upp/army/alt,
 /turf/open/gm/dirt/brown,
 /area/strata/exterior/parts_storage_cave)
 "aMh" = (
@@ -13455,7 +13455,7 @@
 /turf/open/gm/dirt/brown,
 /area/strata/exterior/parts_storage_cave)
 "aMT" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/strata/exterior/parts_storage_cave)
 "aMU" = (
@@ -13470,7 +13470,7 @@
 	pixel_x = 5;
 	pixel_y = 11
 	},
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/gm/dirt/brown/variant_5/east,
 /area/strata/exterior/parts_storage_cave)
 "aMW" = (
@@ -13669,10 +13669,10 @@
 /area/strata/exterior/marsh/spring_marshes)
 "aNC" = (
 /obj/structure/closet/crate,
-/obj/item/prop/helmetgarb/raincover/jungle,
-/obj/item/prop/helmetgarb/raincover/jungle,
-/obj/item/prop/helmetgarb/raincover/jungle,
-/obj/item/prop/helmetgarb/raincover/jungle,
+/obj/item/prop/helmetgarb/raincover,
+/obj/item/prop/helmetgarb/raincover,
+/obj/item/prop/helmetgarb/raincover,
+/obj/item/prop/helmetgarb/raincover,
 /obj/item/clothing/head/helmet/skullcap/jungle,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/strata/interior/outpost/maint)
@@ -13740,8 +13740,8 @@
 	color = "#98a3ab"
 	},
 /obj/item/clothing/shoes/marine/upp/black/knife,
-/obj/item/clothing/suit/storage/webbing/brown,
-/obj/item/clothing/suit/storage/webbing/brown,
+/obj/item/clothing/suit/storage/webbing,
+/obj/item/clothing/suit/storage/webbing,
 /obj/effect/decal/strata_decals/grime/grime3{
 	dir = 8
 	},
@@ -13754,8 +13754,8 @@
 	color = "#98a3ab"
 	},
 /obj/item/clothing/shoes/marine/upp/black/knife,
-/obj/item/clothing/suit/storage/webbing/brown,
-/obj/item/clothing/suit/storage/webbing/brown,
+/obj/item/clothing/suit/storage/webbing,
+/obj/item/clothing/suit/storage/webbing,
 /obj/effect/decal/strata_decals/grime/grime3,
 /obj/item/clothing/mask/gas/upp_pfb,
 /turf/open/asphalt/cement,
@@ -13875,7 +13875,7 @@
 /obj/effect/decal/cleanable/blood/drip{
 	pixel_y = 12
 	},
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/gm/dirt/brown/variant_5/east,
 /area/strata/exterior/parts_storage_cave)
 "aOd" = (
@@ -14156,7 +14156,7 @@
 /obj/effect/decal/strata_decals/mud_corner{
 	dir = 4
 	},
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/gm/dirt/brown/variant_5/east,
 /area/strata/exterior/parts_storage_cave)
 "aOR" = (
@@ -14431,7 +14431,7 @@
 /turf/open/gm/dirt/brown,
 /area/strata/exterior/parts_storage_cave)
 "aPF" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/gm/dirt/brown/variant_5/east,
 /area/strata/exterior/parts_storage_cave)
 "aPG" = (
@@ -14810,8 +14810,8 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/strata/interior/mining_outpost/south_dormitories)
 "aQH" = (
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/gm/dirt/brown/variant_5/south,
 /area/strata/exterior/parts_storage_cave)
 "aQI" = (
@@ -15355,7 +15355,7 @@
 	},
 /obj/effect/decal/cleanable/blood/gibs/core,
 /obj/effect/landmark/objective_landmark/close,
-/obj/item/clothing/head/helmet/marine/veteran/UPP/firefighter,
+/obj/item/clothing/head/helmet/marine/veteran/upp/firefighter,
 /obj/item/clothing/suit/storage/marine/light/vest/fire_light/upp,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/strata/interior/outpost/canteen/bar)
@@ -15419,7 +15419,7 @@
 /area/strata/interior/outpost/canteen)
 "aSw" = (
 /obj/structure/closet/firecloset/full,
-/obj/item/clothing/head/helmet/marine/veteran/UPP/firefighter,
+/obj/item/clothing/head/helmet/marine/veteran/upp/firefighter,
 /obj/item/clothing/suit/storage/marine/light/vest/fire_light/upp,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/strata/interior/outpost/maint)
@@ -16246,7 +16246,7 @@
 /obj/structure/closet/firecloset/full,
 /obj/structure/machinery/light/small,
 /obj/effect/landmark/objective_landmark/medium,
-/obj/item/clothing/head/helmet/marine/veteran/UPP/firefighter,
+/obj/item/clothing/head/helmet/marine/veteran/upp/firefighter,
 /obj/item/clothing/suit/storage/marine/light/vest/fire_light/upp,
 /turf/open/asphalt/cement,
 /area/strata/interior/outpost/foyer)
@@ -17036,10 +17036,6 @@
 	},
 /turf/open/floor/strata/white_cyan2/west,
 /area/strata/interior/outpost/canteen/bar)
-"aXb" = (
-/obj/effect/decal/cleanable/blood,
-/turf/open/floor/almayer/test_floor6,
-/area/strata/interior/outpost/engi/drome/shuttle_MK3)
 "aXc" = (
 /obj/effect/decal/cleanable/blood,
 /obj/structure/pipes/standard/manifold/hidden/cyan{
@@ -17111,7 +17107,7 @@
 /turf/open/gm/dirt/brown,
 /area/strata/exterior/landing_zones/near_lz2)
 "aXm" = (
-/turf/open/floor/almayer/test_floor6,
+/turf/open/floor/almayer/test_floor5,
 /area/strata/interior/outpost/engi/drome/shuttle_MK3)
 "aXn" = (
 /obj/structure/sink{
@@ -17204,7 +17200,7 @@
 /obj/item/bedsheet/colorable{
 	color = "#798675"
 	},
-/obj/item/prop/helmetgarb/netting/jungle,
+/obj/item/prop/helmetgarb/netting,
 /turf/open/floor/strata,
 /area/strata/interior/mining_outpost/south_dormitories)
 "aXG" = (
@@ -17363,7 +17359,7 @@
 /area/strata/exterior/lz_caves)
 "aYf" = (
 /obj/structure/machinery/door/airlock/dropship_hatch,
-/turf/open/floor/almayer/test_floor6,
+/turf/open/floor/almayer/test_floor5,
 /area/strata/interior/outpost/engi/drome/shuttle_MK3)
 "aYg" = (
 /obj/structure/cargo_container/upp_small/container_20/right,
@@ -17659,7 +17655,7 @@
 /obj/structure/machinery/big_computers/computerblack/computer5{
 	icon_state = "blacksensor_comp1_off"
 	},
-/turf/open/floor/almayer/test_floor6,
+/turf/open/floor/almayer/test_floor5,
 /area/strata/interior/outpost/engi/drome/shuttle_MK3)
 "aYW" = (
 /obj/item/stack/rods,
@@ -17684,7 +17680,7 @@
 /obj/structure/machinery/big_computers/computerblack/computer4{
 	icon_state = "blacksensor_comp2_off"
 	},
-/turf/open/floor/almayer/test_floor6,
+/turf/open/floor/almayer/test_floor5,
 /area/strata/interior/outpost/engi/drome/shuttle_MK3)
 "aZb" = (
 /obj/effect/decal/cleanable/blood/gibs/down,
@@ -18966,7 +18962,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /obj/effect/decal/hybrisa/dirt,
 /obj/effect/decal/cleanable/blood{
 	pixel_x = 5;
@@ -20042,8 +20038,8 @@
 	color = "#98a3ab"
 	},
 /obj/item/clothing/shoes/marine/upp/black/knife,
-/obj/item/clothing/suit/storage/webbing/brown,
-/obj/item/clothing/suit/storage/webbing/brown,
+/obj/item/clothing/suit/storage/webbing,
+/obj/item/clothing/suit/storage/webbing,
 /obj/effect/decal/strata_decals/grime/grime3{
 	dir = 8
 	},
@@ -20363,8 +20359,8 @@
 	color = "#98a3ab"
 	},
 /obj/item/clothing/shoes/marine/upp/black/knife,
-/obj/item/clothing/suit/storage/webbing/brown,
-/obj/item/clothing/suit/storage/webbing/brown,
+/obj/item/clothing/suit/storage/webbing,
+/obj/item/clothing/suit/storage/webbing,
 /obj/effect/decal/strata_decals/grime/grime3{
 	dir = 8
 	},
@@ -22897,7 +22893,7 @@
 /area/strata/exterior/carplake_center)
 "bpX" = (
 /obj/structure/closet/bombcloset,
-/obj/item/clothing/suit/storage/marine/faction/UPP/army/simple,
+/obj/item/clothing/suit/storage/marine/faction/upp/army/simple,
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/strata/interior/outpost/engi/drome)
 "bpY" = (
@@ -23170,8 +23166,8 @@
 	color = "#98a3ab"
 	},
 /obj/item/clothing/shoes/marine/upp/black/knife,
-/obj/item/clothing/suit/storage/webbing/brown,
-/obj/item/clothing/suit/storage/webbing/brown,
+/obj/item/clothing/suit/storage/webbing,
+/obj/item/clothing/suit/storage/webbing,
 /obj/effect/decal/strata_decals/grime/grime3{
 	dir = 8
 	},
@@ -23422,7 +23418,7 @@
 /turf/open/gm/dirt/brown,
 /area/strata/exterior/marsh/center)
 "brM" = (
-/obj/item/reagent_container/food/snacks/donkpocket,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 /turf/open/gm/dirt/brown,
 /area/strata/exterior/marsh/center)
 "brN" = (
@@ -24501,7 +24497,7 @@
 /area/strata/exterior/flight_control_exterior)
 "bvq" = (
 /obj/structure/closet/firecloset/full,
-/obj/item/clothing/head/helmet/marine/veteran/UPP/firefighter,
+/obj/item/clothing/head/helmet/marine/veteran/upp/firefighter,
 /obj/item/clothing/suit/storage/marine/light/vest/fire_light/upp,
 /turf/open/floor/strata,
 /area/strata/interior/parts_storage)
@@ -24616,7 +24612,7 @@
 /obj/structure/bed{
 	icon_state = "abed"
 	},
-/obj/item/prop/helmetgarb/netting/jungle,
+/obj/item/prop/helmetgarb/netting,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/exterior/parts_storage_cave)
 "bvP" = (
@@ -25083,7 +25079,7 @@
 "bxl" = (
 /obj/effect/decal/cleanable/cobweb2,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/prop/helmetgarb/netting/jungle,
+/obj/item/prop/helmetgarb/netting,
 /turf/open/floor/wood/wood_broken5,
 /area/strata/interior/wooden_ruins)
 "bxm" = (
@@ -26032,7 +26028,7 @@
 /area/strata/interior/outpost/canteen/bar)
 "bAp" = (
 /obj/structure/closet/firecloset/full,
-/obj/item/clothing/head/helmet/marine/veteran/UPP/firefighter,
+/obj/item/clothing/head/helmet/marine/veteran/upp/firefighter,
 /obj/item/clothing/suit/storage/marine/light/vest/fire_light/upp,
 /turf/open/floor/strata/yellow3/north,
 /area/strata/interior/outpost/engi/drome)
@@ -26213,7 +26209,7 @@
 "bAO" = (
 /obj/structure/surface/table/almayer,
 /obj/item/reagent_container/food/drinks/cans/bodaplus,
-/obj/item/prop/helmetgarb/netting/jungle{
+/obj/item/prop/helmetgarb/netting{
 	pixel_x = 9;
 	pixel_y = 8
 	},
@@ -27821,8 +27817,8 @@
 	color = "#98a3ab"
 	},
 /obj/item/clothing/shoes/marine/upp/black/knife,
-/obj/item/clothing/suit/storage/webbing/brown,
-/obj/item/clothing/suit/storage/webbing/brown,
+/obj/item/clothing/suit/storage/webbing,
+/obj/item/clothing/suit/storage/webbing,
 /obj/item/clothing/mask/gas/upp_pfb,
 /turf/open/floor/strata/multi_tiles/west,
 /area/strata/exterior/outpost_decks)
@@ -28804,7 +28800,7 @@
 /turf/open/floor/strata/red1,
 /area/strata/interior/outpost/security)
 "bIi" = (
-/obj/item/clothing/under/marine/veteran/UPP/pap,
+/obj/item/clothing/under/marine/veteran/upp/pap,
 /turf/open/floor/strata/white_cyan2/west,
 /area/strata/interior/outpost/security)
 "bIj" = (
@@ -28854,7 +28850,7 @@
 /area/strata/interior/mining_outpost/maintenance)
 "bIo" = (
 /obj/structure/closet/firecloset/full,
-/obj/item/clothing/head/helmet/marine/veteran/UPP/firefighter,
+/obj/item/clothing/head/helmet/marine/veteran/upp/firefighter,
 /obj/item/clothing/suit/storage/marine/light/vest/fire_light/upp,
 /obj/structure/prop/hybrisa/misc/buildinggreebliessmall/smallvent3{
 	pixel_y = 28;
@@ -29150,7 +29146,7 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/strata/exterior/north_outpost)
 "bJi" = (
-/obj/item/clothing/suit/storage/CMB/pap,
+/obj/item/clothing/suit/marine/faction/upp/jacket/pap,
 /turf/open/floor/strata/fake_wood,
 /area/strata/interior/outpost/security)
 "bJj" = (
@@ -30409,14 +30405,14 @@
 /turf/open/floor/almayer/test_floor5,
 /area/strata/interior/research)
 "bMQ" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/upp2{
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/upp{
 	dir = 2;
 	id = "starboard_door";
 	name = "\improper Dropship crew hatch";
 	unacidable = 0;
 	unslashable = 0
 	},
-/turf/open/floor/almayer/test_floor6,
+/turf/open/floor/almayer/test_floor5,
 /area/strata/interior/research)
 "bMR" = (
 /turf/open/floor/strata/multi_tiles/southeast,
@@ -30611,7 +30607,7 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/strata/exterior/deep_jungle/old_tunnels)
 "bNv" = (
-/obj/item/clothing/accessory/patch/upp/alt,
+/obj/item/clothing/accessory/patch/upp/airborne,
 /turf/open/floor/almayer/plate,
 /area/strata/interior/research)
 "bNw" = (
@@ -30680,14 +30676,14 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/strata/exterior/deep_jungle/old_tunnels)
 "bNG" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/upp2{
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/upp{
 	dir = 1;
 	id = "starboard_door";
 	name = "\improper Dropship crew hatch";
 	unacidable = 0;
 	unslashable = 0
 	},
-/turf/open/floor/almayer/test_floor6,
+/turf/open/floor/almayer/test_floor5,
 /area/strata/interior/research)
 "bNH" = (
 /obj/structure/pipes/standard/simple/hidden/cyan,
@@ -30830,9 +30826,6 @@
 /obj/structure/flora/bush/ausbushes/var3/sparsegrass,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/strata/exterior/deep_jungle/old_tunnels)
-"bOd" = (
-/turf/open/floor/almayer/test_floor6,
-/area/strata/interior/research)
 "bOe" = (
 /obj/item/trash/upp_mre{
 	pixel_x = -7;
@@ -31076,7 +31069,7 @@
 	pixel_x = -11;
 	pixel_y = 21
 	},
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /obj/effect/decal/hybrisa/road/lines4,
 /obj/effect/decal/hybrisa/road/road_edge{
 	icon_state = "road_edge_decal2"
@@ -31265,7 +31258,7 @@
 /turf/open/asphalt/brown,
 /area/strata/interior/secure_checkpoint)
 "bPx" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/asphalt/brown,
 /area/strata/interior/secure_checkpoint)
 "bPy" = (
@@ -31469,7 +31462,7 @@
 /turf/open/floor/strata/yellow3,
 /area/strata/interior/secure_checkpoint)
 "bQe" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /obj/effect/decal/hybrisa/road/lines1,
 /obj/effect/decal/hybrisa/road/road_edge,
 /obj/effect/decal/cleanable/blood{
@@ -31801,7 +31794,7 @@
 /turf/open/asphalt/brown,
 /area/strata/interior/secure_checkpoint)
 "bQU" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /obj/effect/decal/hybrisa/road/lines3,
 /obj/effect/decal/hybrisa/road/road_edge{
 	icon_state = "road_edge_decal3"
@@ -31834,7 +31827,7 @@
 /turf/open/asphalt/brown,
 /area/strata/interior/secure_checkpoint)
 "bQX" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /obj/effect/decal/cleanable/blood{
 	pixel_x = 6;
 	pixel_y = 4
@@ -32152,7 +32145,7 @@
 /turf/open/asphalt/brown,
 /area/strata/interior/secure_checkpoint)
 "bRM" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/asphalt/brown,
 /area/strata/interior/secure_checkpoint)
@@ -32408,7 +32401,7 @@
 /turf/open/asphalt/brown,
 /area/strata/interior/secure_checkpoint)
 "bSq" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /obj/effect/decal/hybrisa/road/lines1,
 /obj/effect/decal/hybrisa/road/road_edge,
 /obj/effect/decal/hybrisa/dirt,
@@ -32425,7 +32418,7 @@
 	pixel_x = 1;
 	pixel_y = 13
 	},
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/asphalt/brown,
 /area/strata/interior/secure_checkpoint)
@@ -32439,7 +32432,7 @@
 /turf/open/asphalt/brown,
 /area/strata/interior/secure_checkpoint)
 "bSu" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /obj/effect/decal/hybrisa/road/lines2,
 /obj/effect/decal/hybrisa/road/road_edge{
 	icon_state = "road_edge_decal4"
@@ -33000,7 +32993,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/strata/interior/secure_checkpoint)
@@ -33397,7 +33390,7 @@
 /obj/effect/landmark/wo_supplies/storage/mines,
 /obj/effect/landmark/objective_landmark/far,
 /obj/structure/machinery/light,
-/obj/item/clothing/suit/storage/marine/faction/UPP/army,
+/obj/item/clothing/suit/storage/marine/faction/upp/army,
 /obj/item/clothing/mask/gas/upp_pfb,
 /turf/open/floor/strata/red1,
 /area/strata/interior/secure_checkpoint)
@@ -33445,7 +33438,7 @@
 	pixel_y = 1
 	},
 /obj/effect/landmark/corpsespawner/upp,
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /obj/effect/decal/hybrisa/dirt,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/strata/multi_tiles/southeast,
@@ -33481,7 +33474,7 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/strata/interior/secure_checkpoint)
 "bVc" = (
@@ -33705,7 +33698,7 @@
 /turf/open/floor/plating,
 /area/strata/interior/secure_checkpoint)
 "bVE" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /obj/effect/decal/hybrisa/road/lines1,
 /obj/effect/decal/hybrisa/road/road_edge,
 /obj/effect/decal/cleanable/blood{
@@ -35217,16 +35210,16 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/exterior/far_north_outpost)
 "bZL" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/gm/dirt/brown/variant_2,
 /area/strata/exterior/far_north_outpost)
 "bZM" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /obj/item/trash/upp_mre,
 /turf/open/gm/dirt/brown,
 /area/strata/exterior/far_north_outpost)
 "bZO" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/exterior/far_north_outpost)
 "bZP" = (
@@ -35367,7 +35360,7 @@
 /area/strata/interior/outpost/security)
 "cag" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/exterior/far_north_outpost)
 "cah" = (
@@ -35377,13 +35370,13 @@
 /turf/open/floor/strata/red1,
 /area/strata/interior/outpost/security)
 "cai" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /obj/item/reagent_container/food/drinks/bottle/vodka,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/exterior/far_north_outpost)
 "caj" = (
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /obj/item/weapon/twohanded/folded_metal_chair,
 /turf/open/gm/dirt/brown/variant_5,
 /area/strata/exterior/far_north_outpost)
@@ -35394,7 +35387,7 @@
 /turf/open/floor/strata/red1,
 /area/strata/interior/outpost/security)
 "cal" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /obj/item/clothing/mask/gas/upp_pfb,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/exterior/far_north_outpost)
@@ -35430,8 +35423,8 @@
 /turf/open/gm/dirt/brown/variant_2,
 /area/strata/interior/bball_cave)
 "caq" = (
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /obj/item/weapon/gun/pistol/t73,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/exterior/far_north_outpost)
@@ -35553,7 +35546,7 @@
 /turf/open/floor/interior/plastic,
 /area/strata/interior/wooden_hospital)
 "caG" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /obj/structure/prop/colorable_rock/colorable{
 	color = "#9d7766";
 	dir = 8;
@@ -35623,7 +35616,7 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/strata/interior/outpost/canteen)
 "caN" = (
-/obj/item/clothing/accessory/patch/upp/alt,
+/obj/item/clothing/accessory/patch/upp/airborne,
 /obj/item/ammo_magazine/rifle/type71,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/strata/interior/bball_cave)
@@ -35671,7 +35664,7 @@
 /turf/open/gm/dirt/brown/variant_5,
 /area/strata/exterior/far_north_outpost)
 "caT" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /obj/structure/barricade/sandbags{
 	dir = 1;
 	color = "#a98c7c";
@@ -36750,7 +36743,7 @@
 /area/strata/interior/checkpoints/north)
 "ciW" = (
 /obj/structure/closet/firecloset/full,
-/obj/item/clothing/head/helmet/marine/veteran/UPP/firefighter,
+/obj/item/clothing/head/helmet/marine/veteran/upp/firefighter,
 /obj/item/clothing/suit/storage/marine/light/vest/fire_light/upp,
 /turf/open/floor/strata/floor3/east,
 /area/strata/interior/outpost/engi)
@@ -37041,7 +37034,7 @@
 /obj/item/clothing/shoes/jackboots,
 /obj/item/clothing/shoes/jackboots,
 /obj/item/clothing/shoes/jackboots,
-/obj/item/clothing/suit/storage/marine/faction/UPP/army,
+/obj/item/clothing/suit/storage/marine/faction/upp/army,
 /obj/item/clothing/mask/gas/upp_pfb,
 /obj/item/clothing/mask/gas/upp_pfb,
 /obj/item/clothing/mask/gas/upp_pfb,
@@ -37346,7 +37339,7 @@
 /turf/open/floor/strata/floor3,
 /area/strata/interior/landing_zones/near_lz1)
 "coY" = (
-/obj/item/ammo_magazine/revolver/cmb{
+/obj/item/ammo_magazine/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
@@ -37354,7 +37347,7 @@
 /area/strata/interior/mining_outpost/hive)
 "coZ" = (
 /obj/effect/decal/cleanable/blood,
-/obj/item/ammo_magazine/revolver/cmb{
+/obj/item/ammo_magazine/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
@@ -37840,7 +37833,7 @@
 /area/strata/exterior/parts_storage_cave)
 "cvC" = (
 /obj/structure/closet/firecloset/full,
-/obj/item/clothing/head/helmet/marine/veteran/UPP/firefighter,
+/obj/item/clothing/head/helmet/marine/veteran/upp/firefighter,
 /obj/item/clothing/suit/storage/marine/light/vest/fire_light/upp,
 /turf/open/floor/strata/orange_cover,
 /area/strata/interior/outpost/engi/drome)
@@ -38383,7 +38376,7 @@
 	name = "Supply Dropship Hold Lockdown";
 	needs_power = 0
 	},
-/turf/open/floor/almayer/test_floor6,
+/turf/open/floor/almayer/test_floor5,
 /area/strata/interior/outpost/engi/drome/shuttle_MK3)
 "cYx" = (
 /obj/structure/barricade/handrail/strata{
@@ -38428,12 +38421,12 @@
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/strata/interior/outpost/canteen)
 "dbv" = (
-/obj/item/weapon/gun/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
 /obj/structure/surface/rack{
 	color = "#98a3ab"
 	},
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /obj/structure/machinery/light,
 /turf/open/floor/strata/floor3/east,
@@ -38790,7 +38783,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/strata/interior/outpost/med)
 "dEa" = (
-/obj/item/clothing/suit/storage/marine/faction/UPP/army/simple,
+/obj/item/clothing/suit/storage/marine/faction/upp/army/simple,
 /turf/open/floor/strata/white_cyan2/west,
 /area/strata/interior/bball)
 "dEy" = (
@@ -39084,7 +39077,7 @@
 /obj/structure/surface/rack{
 	color = "#98a3ab"
 	},
-/obj/item/storage/belt/gun/type47/SOF_belt/t73,
+/obj/item/storage/belt/gun/type47/sof,
 /turf/open/floor/strata/red1,
 /area/strata/interior/outpost/security)
 "dWH" = (
@@ -39407,7 +39400,7 @@
 /area/strata/exterior/landing_zones/lz2)
 "exj" = (
 /obj/structure/platform_decoration/stone/soro,
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/gm/dirt/brown/variant_5,
 /area/strata/exterior/parts_storage_cave)
 "exx" = (
@@ -39532,7 +39525,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/item/clothing/accessory/patch/upp/alt,
+/obj/item/clothing/accessory/patch/upp/airborne,
 /turf/open/floor/interior/plastic,
 /area/strata/interior/outpost/canteen)
 "eBo" = (
@@ -41504,7 +41497,7 @@
 /area/strata/interior/outpost/engi/drome)
 "gZp" = (
 /obj/item/tank/emergency_oxygen/engi,
-/turf/open/floor/almayer/test_floor6,
+/turf/open/floor/almayer/test_floor5,
 /area/strata/interior/outpost/engi/drome/shuttle_MK3)
 "gZG" = (
 /obj/structure/platform/metal/strata/north,
@@ -43076,7 +43069,7 @@
 "iZw" = (
 /obj/structure/closet/firecloset/full,
 /obj/effect/landmark/objective_landmark/close,
-/obj/item/clothing/head/helmet/marine/veteran/UPP/firefighter,
+/obj/item/clothing/head/helmet/marine/veteran/upp/firefighter,
 /obj/item/clothing/suit/storage/marine/light/vest/fire_light/upp,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/strata/interior/outpost/engi/drome)
@@ -43775,12 +43768,12 @@
 /turf/closed/wall/strata_outpost,
 /area/strata/interior/underground_dorms/med2)
 "jXD" = (
-/obj/item/weapon/gun/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
 /obj/structure/surface/rack{
 	color = "#98a3ab"
 	},
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/strata/floor3/east,
 /area/strata/interior/parts_storage)
@@ -45294,7 +45287,7 @@
 /turf/open/floor/strata/cyan3/west,
 /area/strata/interior/outpost/med)
 "mam" = (
-/obj/item/ammo_magazine/revolver/cmb{
+/obj/item/ammo_magazine/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
@@ -45532,8 +45525,8 @@
 	color = "#98a3ab"
 	},
 /obj/item/clothing/shoes/marine/upp/black/knife,
-/obj/item/clothing/suit/storage/webbing/brown,
-/obj/item/clothing/suit/storage/webbing/brown,
+/obj/item/clothing/suit/storage/webbing,
+/obj/item/clothing/suit/storage/webbing,
 /obj/effect/decal/strata_decals/grime/grime3{
 	dir = 8
 	},
@@ -46299,11 +46292,11 @@
 /turf/open/floor/strata/floor2,
 /area/strata/exterior/deep_jungle/planet_core_research_station_exterior)
 "ntw" = (
-/obj/item/ammo_magazine/revolver/cmb{
+/obj/item/ammo_magazine/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
-/obj/item/weapon/gun/revolver/cmb{
+/obj/item/weapon/gun/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
@@ -46811,7 +46804,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/blood,
-/turf/open/floor/almayer/test_floor6,
+/turf/open/floor/almayer/test_floor5,
 /area/strata/interior/outpost/engi/drome/shuttle_MK3)
 "odd" = (
 /obj/structure/disposalpipe/segment{
@@ -47333,8 +47326,8 @@
 	color = "#98a3ab"
 	},
 /obj/item/clothing/shoes/marine/upp/black/knife,
-/obj/item/clothing/suit/storage/webbing/brown,
-/obj/item/clothing/suit/storage/webbing/brown,
+/obj/item/clothing/suit/storage/webbing,
+/obj/item/clothing/suit/storage/webbing,
 /obj/effect/decal/strata_decals/grime/grime3{
 	dir = 8
 	},
@@ -48386,7 +48379,7 @@
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/strata/interior/bball_cave)
 "qdI" = (
-/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/ammo_magazine/revolver/spearhead,
 /turf/open/gm/dirt/brown,
 /area/strata/exterior/parts_storage_cave)
 "qer" = (
@@ -49493,8 +49486,8 @@
 	color = "#98a3ab"
 	},
 /obj/item/clothing/shoes/marine/upp/black/knife,
-/obj/item/clothing/suit/storage/webbing/brown,
-/obj/item/clothing/suit/storage/webbing/brown,
+/obj/item/clothing/suit/storage/webbing,
+/obj/item/clothing/suit/storage/webbing,
 /obj/effect/decal/strata_decals/grime/grime3{
 	dir = 8
 	},
@@ -50035,7 +50028,7 @@
 /area/strata/exterior/south_outpost)
 "sha" = (
 /obj/effect/decal/cleanable/blood,
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/gm/dirt/brown,
 /area/strata/exterior/parts_storage_cave)
 "shp" = (
@@ -51115,7 +51108,7 @@
 /area/strata/interior/outpost/canteen)
 "tCM" = (
 /obj/structure/bed/roller,
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/gm/dirt/brown/variant_5,
 /area/strata/exterior/parts_storage_cave)
 "tCR" = (
@@ -52181,7 +52174,7 @@
 /obj/item/weapon/gun/pistol/t73,
 /obj/item/attachable/bayonet/upp,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
-/obj/item/clothing/suit/storage/marine/faction/UPP/army,
+/obj/item/clothing/suit/storage/marine/faction/upp/army,
 /turf/open/floor/strata/red1,
 /area/strata/interior/checkpoints/west)
 "uPR" = (
@@ -52644,7 +52637,7 @@
 /turf/open/floor/strata/purp2,
 /area/strata/exterior/deep_jungle/planet_core_research_station_exterior)
 "vsL" = (
-/obj/item/reagent_container/food/snacks/donkpocket,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/strata/interior/parts_storage)
 "vsR" = (
@@ -53246,7 +53239,7 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/strata/interior/outpost/admin)
 "wgu" = (
-/obj/item/weapon/gun/revolver/cmb/custom,
+/obj/item/weapon/gun/revolver/spearhead/black,
 /turf/open/gm/dirt/brown/variant_5/south,
 /area/strata/exterior/parts_storage_cave)
 "wgB" = (
@@ -57560,7 +57553,7 @@ aZU
 aYV
 aXm
 aYb
-aXb
+mKX
 oeA
 hIb
 cXU
@@ -94587,7 +94580,7 @@ bQE
 bRl
 bBO
 ago
-bOd
+bMP
 bMQ
 aim
 ajb
@@ -96862,7 +96855,7 @@ aeW
 bRl
 aeZ
 agv
-bOd
+bMP
 bNG
 bPo
 bQi

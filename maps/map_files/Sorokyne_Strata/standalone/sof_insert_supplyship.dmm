@@ -595,7 +595,7 @@
 	pixel_x = 3;
 	pixel_y = 6
 	},
-/obj/item/clothing/suit/storage/marine/faction/UPP/SOF_armor,
+/obj/item/clothing/suit/marine/faction/upp/sof,
 /turf/open/floor/hybrisa/metal/red_warning_floor,
 /area/strata/exterior/marsh/crash)
 "Ax" = (
@@ -874,7 +874,7 @@
 	dir = 8;
 	pixel_y = -31
 	},
-/obj/item/storage/belt/gun/type47/SOF_belt,
+/obj/item/storage/belt/gun/type47/sof,
 /obj/item/clothing/accessory/storage/webbing/black,
 /obj/item/clothing/accessory/storage/webbing/black,
 /obj/item/clothing/accessory/storage/webbing/black,
@@ -882,8 +882,8 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "test_square_red"
 	},
-/obj/item/clothing/suit/storage/marine/faction/UPP/SOF_armor,
-/obj/item/clothing/suit/storage/marine/faction/UPP/SOF_armor,
+/obj/item/clothing/suit/marine/faction/upp/sof,
+/obj/item/clothing/suit/marine/faction/upp/sof,
 /turf/open/floor/almayer/no_build/plating,
 /area/strata/interior/supply_shuttle_sof)
 "Kj" = (
@@ -963,7 +963,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood,
-/obj/item/clothing/head/helmet/marine/veteran/UPP/heavy/SOF_helmet{
+/obj/item/clothing/head/helmet/marine/veteran/upp/sof{
 	pixel_x = -11;
 	pixel_y = -1
 	},
