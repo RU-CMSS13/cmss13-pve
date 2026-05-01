@@ -1995,7 +1995,6 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "aep" = (
-/obj/effect/landmark/start/pilot/dropship_pilot/ai,
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
 /turf/open/floor/plating/plating_catwalk,

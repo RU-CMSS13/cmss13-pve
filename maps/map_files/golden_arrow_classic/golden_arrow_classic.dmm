@@ -1,4 +1,22 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/structure/closet/emcloset,
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/synthcloset)
+"ab" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/storage/firstaid/softpack{
+	pixel_y = 11;
+	pixel_x = 5
+	},
+/obj/item/storage/firstaid/softpack/burn{
+	pixel_y = 9;
+	pixel_x = -9;
+	layer = 3.01
+	},
+/obj/item/storage/firstaid/softpack/brute,
+/turf/open/floor/almayer/sterile_green,
+/area/golden_arrow/medical)
 "ad" = (
 /obj/structure/machinery/light,
 /obj/structure/target{
@@ -39,10 +57,10 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "am" = (
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
 	pixel_x = -8
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
 	pixel_x = 8
 	},
 /turf/open/floor/almayer/plate,
@@ -235,11 +253,11 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "br" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = 8
-	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/marine_personal/corpsman{
 	pixel_x = -8
+	},
+/obj/structure/closet/secure_closet/marine_personal/corpsman{
+	pixel_x = 8
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
@@ -281,13 +299,9 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/platoon_commander_rooms)
 "bL" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	job = "Platoon Corpsman";
-	has_cryo_gear = 0
+/obj/structure/machinery/cm_vending/gear/medic_chemical{
+	density = 0
 	},
-/obj/item/clothing/shoes/marine/knife,
-/obj/item/device/radio/headset/almayer/marine,
-/obj/item/clothing/under/marine/medic,
 /turf/open/floor/almayer/sterile_green,
 /area/golden_arrow/medical)
 "bO" = (
@@ -425,7 +439,8 @@
 	},
 /obj/structure/closet/secure_closet/smartgunner{
 	req_access_txt = "14;40";
-	req_one_access = list()
+	req_one_access = list();
+	name = "squad two smartgunner locker"
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/squad_two)
@@ -457,6 +472,14 @@
 "cH" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/computer/med_data/laptop,
+/obj/item/device/flashlight/pen{
+	pixel_y = 9;
+	pixel_x = 17
+	},
+/obj/item/clothing/accessory/stethoscope{
+	pixel_x = 21;
+	pixel_y = 3
+	},
 /turf/open/floor/almayer/sterile_green,
 /area/golden_arrow/medical)
 "cJ" = (
@@ -613,6 +636,15 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
+/obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated{
+	pixel_y = 13;
+	pixel_x = -5
+	},
+/obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated{
+	pixel_x = 5;
+	pixel_y = 10
+	},
+/obj/item/storage/belt/medical/only_scanner,
 /turf/open/floor/almayer/sterile_green,
 /area/golden_arrow/medical)
 "dG" = (
@@ -719,6 +751,12 @@
 "eJ" = (
 /obj/structure/machinery/power/apc/almayer/south,
 /obj/structure/surface/table/reinforced/prison,
+/obj/item/storage/surgical_case/regular{
+	pixel_y = 13
+	},
+/obj/item/roller{
+	pixel_y = 6
+	},
 /turf/open/floor/almayer/sterile_green,
 /area/golden_arrow/medical)
 "eL" = (
@@ -1893,13 +1931,11 @@
 	pixel_x = 16;
 	pixel_y = -15
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = -8;
-	job = "Smartgunner"
+/obj/structure/closet/secure_closet/marine_personal/squad_leader{
+	pixel_x = 8
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = 8;
-	job = "Smartgunner"
+/obj/structure/closet/secure_closet/marine_personal/squad_leader{
+	pixel_x = -8
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
@@ -2077,7 +2113,10 @@
 	dir = 1
 	},
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/storage/box/pillbottles,
+/obj/item/storage/box/pillbottles{
+	pixel_x = 5;
+	pixel_y = 3
+	},
 /turf/open/floor/almayer/sterile_green,
 /area/golden_arrow/medical)
 "oA" = (
@@ -2509,13 +2548,11 @@
 /turf/open/floor/almayer/uscm/directional,
 /area/golden_arrow/briefing)
 "rX" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = -8;
-	job = "Squad Sergeant"
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = -8
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = 8;
-	job = "Squad Sergeant"
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = 8
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
@@ -4743,12 +4780,12 @@
 /obj/structure/sign/banners/united_americas_flag{
 	pixel_y = 30
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/marine_personal/platoon_leader{
 	pixel_x = -8
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/marine_personal/platoon_commander{
 	pixel_x = 8;
-	job = "Platoon Sergeant"
+	pixel_y = 0
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
@@ -5172,12 +5209,8 @@
 /area/golden_arrow/cryo_cells)
 "Kl" = (
 /obj/structure/closet/coffin/woodencrate,
-/obj/item/ammo_magazine/rifle/m49a/pve,
-/obj/item/ammo_magazine/rifle/m49a/pve,
-/obj/item/ammo_magazine/rifle/m49a/pve,
-/obj/item/ammo_magazine/rifle/m49a/pve,
-/obj/item/ammo_magazine/rifle/m49a/pve,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/storage/box/guncase/heavy/m49a_pve,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoon_sergeant)
 "Kp" = (
@@ -5325,12 +5358,11 @@
 	pixel_x = 16;
 	pixel_y = 16
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = 8
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = -8
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = -8;
-	job = "Smartgunner"
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = 8
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
@@ -5370,9 +5402,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "Ls" = (
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/alpha{
-	density = 0
-	},
+/obj/structure/machinery/cm_vending/clothing/leaderplatoon,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoon_sergeant)
 "Lx" = (
@@ -5489,7 +5519,26 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "Mj" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/closet/crate/trashcart{
+	pixel_y = 2;
+	pixel_x = 0
+	},
+/obj/item/prop/colony/usedbandage,
+/obj/item/prop/colony/usedbandage{
+	dir = 4
+	},
+/obj/item/prop/colony/usedbandage{
+	dir = 6;
+	pixel_y = 6
+	},
+/obj/item/prop/colony/usedbandage{
+	dir = 10;
+	pixel_y = 13
+	},
+/obj/item/storage/pill_bottle,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/almayer/sterile_green,
 /area/golden_arrow/medical)
 "Ml" = (
@@ -6449,10 +6498,10 @@
 	pixel_y = 29;
 	serial_number = 16
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
 	pixel_x = 8
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
 	pixel_x = -8
 	},
 /turf/open/floor/almayer/plate,
@@ -6897,12 +6946,13 @@
 /area/golden_arrow/squad_one)
 "UK" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/rifle/m49a/pve{
-	pixel_y = 8
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
 	dir = 4
+	},
+/obj/item/attachable/scope/pve{
+	pixel_x = 0;
+	pixel_y = 3
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoon_sergeant)
@@ -7028,7 +7078,8 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/secure_closet/smartgunner{
 	req_access_txt = "14;39";
-	req_one_access = list()
+	req_one_access = list();
+	name = "squad one smartgunner locker"
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/squad_one)
@@ -15480,7 +15531,7 @@ ZJ
 ZJ
 ZJ
 ZJ
-ZJ
+aa
 qA
 Ng
 fh
@@ -19719,7 +19770,7 @@ ZR
 QE
 cZ
 dE
-Mj
+ab
 Nf
 hG
 jb
