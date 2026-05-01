@@ -78,7 +78,6 @@
 /area/strata/interior/wooden_hospital)
 "aal" = (
 /obj/structure/bed/nest,
-/obj/effect/landmark/corpsespawner/upp,
 /obj/effect/decal/strata_decals/mud_corner{
 	dir = 10
 	},
@@ -132,12 +131,6 @@
 	icon_state = "xgibdown1"
 	},
 /turf/open/gm/dirt/brown/variant_2,
-/area/strata/interior/bball_cave)
-"aax" = (
-/obj/structure/bed/nest,
-/obj/effect/decal/cleanable/blood/gibs/core,
-/obj/effect/landmark/corpsespawner/upp,
-/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/strata/interior/bball_cave)
 "aay" = (
 /obj/structure/machinery/power/apc/no_power/south,
@@ -376,7 +369,6 @@
 /obj/structure/closet/secure_closet/chemical{
 	req_access = null
 	},
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor/interior/plastic,
 /area/strata/interior/wooden_hospital)
 "abi" = (
@@ -437,7 +429,6 @@
 /area/strata/interior/bball_cave)
 "abs" = (
 /obj/structure/filingcabinet,
-/obj/effect/landmark/objective_landmark/medium,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/strata/interior/bball_cave)
 "abt" = (
@@ -457,7 +448,6 @@
 	color = "#98a3ab"
 	},
 /obj/item/tank/emergency_oxygen/engi,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/strata/interior/bball)
 "abv" = (
@@ -496,7 +486,6 @@
 /area/strata/exterior/far_north_outpost)
 "abB" = (
 /obj/structure/bed/nest,
-/obj/effect/landmark/corpsespawner/upp,
 /turf/open/floor/wood/wood_broken,
 /area/strata/interior/wooden_ruins)
 "abC" = (
@@ -628,15 +617,6 @@
 	},
 /turf/open/floor/strata/fake_wood,
 /area/strata/exterior/far_north_outpost)
-"abR" = (
-/obj/effect/landmark/spycam_start,
-/turf/open/floor/plating/asteroidwarning/north,
-/area/strata/exterior/landing_zones/lz2)
-"abS" = (
-/obj/structure/pipes/standard/simple/hidden/cyan,
-/obj/effect/landmark/spycam_start,
-/turf/open/floor/strata/floor3,
-/area/strata/interior/landing_zones/near_lz1)
 "abT" = (
 /obj/structure/surface/rack{
 	color = "#98a3ab"
@@ -975,7 +955,6 @@
 	color = "#969696";
 	dir = 1
 	},
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/floor2,
 /area/strata/interior/research)
 "acU" = (
@@ -988,7 +967,6 @@
 "acW" = (
 /obj/structure/bed/nest,
 /obj/effect/decal/cleanable/blood/gibs/core,
-/obj/effect/landmark/corpsespawner/upp,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/interior/bball_cave)
 "acX" = (
@@ -1165,7 +1143,6 @@
 /area/strata/interior/wooden_ruins)
 "adx" = (
 /obj/structure/filingcabinet,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/floor2,
 /area/strata/interior/research)
 "adz" = (
@@ -1180,7 +1157,6 @@
 /area/strata/interior/research)
 "adB" = (
 /obj/structure/closet/basketball,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor/strata/red1,
 /area/strata/interior/bball)
 "adC" = (
@@ -1290,7 +1266,6 @@
 /obj/structure/window/reinforced/tinted{
 	color = "#969696"
 	},
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/floor2,
 /area/strata/interior/research)
 "adW" = (
@@ -1357,11 +1332,6 @@
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/floor/wood,
 /area/strata/interior/wooden_ruins)
-"aeg" = (
-/obj/effect/decal/cleanable/blood/gibs/core,
-/obj/effect/landmark/objective_landmark/close,
-/turf/open/floor/strata,
-/area/strata/interior/underground_dorms/admin1)
 "aeh" = (
 /obj/structure/surface/table/reinforced/prison{
 	color = "#98a3ab"
@@ -1449,11 +1419,6 @@
 /obj/effect/decal/cleanable/blood/gibs/core,
 /turf/open/floor/strata/multi_tiles,
 /area/strata/interior/mining_outpost/hive)
-"aet" = (
-/obj/structure/closet/secure_closet/personal,
-/obj/effect/landmark/objective_landmark/medium,
-/turf/open/floor/strata/red1,
-/area/strata/interior/bball)
 "aeu" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal8";
@@ -1478,10 +1443,6 @@
 /obj/item/toy/beach_ball/holoball,
 /turf/open/floor/strata/fake_wood,
 /area/strata/interior/bball)
-"aev" = (
-/obj/effect/landmark/corpsespawner/upp,
-/turf/open/auto_turf/strata_grass/layer0_mud,
-/area/strata/interior/bball_cave)
 "aew" = (
 /obj/structure/platform/stone/soro/west,
 /obj/structure/blocker/invisible_wall,
@@ -1646,7 +1607,6 @@
 /obj/structure/surface/table/reinforced/prison{
 	color = "#98a3ab"
 	},
-/obj/effect/landmark/objective_landmark/science,
 /obj/structure/machinery/power/apc/no_power/north,
 /turf/open/floor/interior/plastic,
 /area/strata/interior/wooden_hospital)
@@ -2463,11 +2423,6 @@
 /obj/item/ammo_box/magazine/misc/mre/upp,
 /turf/open/floor/strata/blue1,
 /area/strata/interior/research)
-"ahq" = (
-/obj/structure/closet,
-/obj/effect/landmark/objective_landmark/medium,
-/turf/open/floor/strata/floor3,
-/area/strata/interior/mining_outpost/flight_control)
 "ahr" = (
 /obj/structure/closet/fireaxecabinet,
 /turf/closed/wall/strata_outpost,
@@ -2619,14 +2574,6 @@
 	},
 /turf/open/floor/plating,
 /area/strata/interior/research)
-"ahO" = (
-/obj/structure/filingcabinet/filingcabinet,
-/obj/effect/landmark/objective_landmark/close,
-/obj/structure/machinery/light{
-	dir = 1
-	},
-/turf/open/floor/strata/red1,
-/area/strata/interior/mining_outpost/flight_control)
 "ahP" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/strata/red1,
@@ -3051,7 +2998,6 @@
 	pixel_x = -6;
 	pixel_y = 3
 	},
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/blue1,
 /area/strata/interior/research)
 "aje" = (
@@ -3116,7 +3062,6 @@
 	color = "#98a3ab"
 	},
 /obj/structure/pipes/standard/simple/hidden/cyan,
-/obj/effect/landmark/objective_landmark/close,
 /obj/item/reagent_container/food/drinks/cans/food/upp/meat{
 	pixel_x = -6;
 	pixel_y = 13
@@ -3485,6 +3430,9 @@
 /obj/structure/machinery/door/poddoor/almayer/closed{
 	name = "Dropship Hold Lockdown"
 	},
+/obj/structure/machinery/door/airlock/hatch/cockpit/upp{
+	name = "\improper Dropship Hatch"
+	},
 /turf/open/floor/almayer/test_floor5,
 /area/strata/interior/research)
 "akk" = (
@@ -3526,7 +3474,6 @@
 /area/strata/interior/mining_outpost/flight_control)
 "akp" = (
 /obj/structure/filingcabinet/chestdrawer,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/red1,
 /area/strata/interior/mining_outpost/flight_control)
 "akq" = (
@@ -3684,7 +3631,6 @@
 /area/strata/interior/research)
 "akM" = (
 /obj/structure/filingcabinet,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/floor3/east,
 /area/strata/interior/research)
 "akN" = (
@@ -4152,7 +4098,6 @@
 /obj/effect/decal/cleanable/blood{
 	layer = 3
 	},
-/obj/effect/landmark/objective_landmark/close,
 /obj/structure/prop/hybrisa/misc/urinal{
 	pixel_y = 32
 	},
@@ -4624,7 +4569,6 @@
 /obj/structure/machinery/light/small{
 	dir = 1
 	},
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/red1,
 /area/strata/interior/checkpoints/north_armor)
 "ant" = (
@@ -4693,7 +4637,6 @@
 /turf/open/gm/dirt/brown,
 /area/strata/exterior/deep_jungle/tearlake)
 "anB" = (
-/obj/effect/landmark/objective_landmark/close,
 /obj/structure/closet/secure_closet/security/soro,
 /obj/structure/machinery/light/small{
 	dir = 4
@@ -5361,9 +5304,6 @@
 	color = "#98a3ab"
 	},
 /obj/item/reagent_container/food/drinks/bottle/sake,
-/obj/structure/machinery/computer/objective{
-	dir = 8
-	},
 /turf/open/floor/strata/red1,
 /area/strata/interior/checkpoints/north_armor)
 "apv" = (
@@ -5569,7 +5509,6 @@
 	pixel_x = -1;
 	pixel_y = 11
 	},
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor/hybrisa/tile/cuppajoesfloor,
 /area/strata/interior/mining_outpost/canteen)
 "apV" = (
@@ -5959,7 +5898,6 @@
 /area/strata/interior/research)
 "ara" = (
 /obj/structure/closet/secure_closet/personal,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/floor2,
 /area/strata/interior/research)
 "arb" = (
@@ -6077,11 +6015,9 @@
 /obj/structure/machinery/light/small{
 	dir = 8
 	},
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/red1,
 /area/strata/interior/outpost/security)
 "arx" = (
-/obj/effect/landmark/objective_landmark/far,
 /obj/structure/pipes/vents/pump{
 	dir = 8
 	},
@@ -6146,7 +6082,6 @@
 /turf/open/floor/strata/red1,
 /area/strata/interior/outpost/security)
 "arF" = (
-/obj/effect/landmark/objective_landmark/medium,
 /obj/structure/window/reinforced{
 	dir = 4;
 	health = 80
@@ -6915,7 +6850,6 @@
 	dir = 8
 	},
 /obj/structure/filingcabinet,
-/obj/effect/landmark/objective_landmark/medium,
 /turf/open/floor/strata/floor3,
 /area/strata/interior/outpost/engi)
 "atG" = (
@@ -7766,7 +7700,6 @@
 /area/strata/interior/outpost/security)
 "avZ" = (
 /obj/structure/filingcabinet,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/floor3,
 /area/strata/interior/outpost/security)
 "awa" = (
@@ -8532,7 +8465,6 @@
 /obj/structure/surface/rack{
 	color = "#98a3ab"
 	},
-/obj/effect/landmark/objective_landmark/medium,
 /turf/open/floor/strata/red1,
 /area/strata/interior/research)
 "ayf" = (
@@ -9219,7 +9151,6 @@
 /area/strata/exterior/marsh/water_marshes)
 "aAh" = (
 /obj/structure/filingcabinet,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/prison/darkyellowfull2,
 /area/strata/interior/outpost/engi)
 "aAi" = (
@@ -10310,7 +10241,6 @@
 "aDD" = (
 /obj/structure/closet,
 /obj/item/storage/pill_bottle/kelotane/skillless,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/multi_tiles,
 /area/strata/interior/mining_outpost)
 "aDE" = (
@@ -11461,7 +11391,6 @@
 /obj/structure/toilet{
 	dir = 8
 	},
-/obj/effect/landmark/objective_landmark/medium,
 /turf/open/floor/strata/white_cyan2/west,
 /area/strata/interior/parts_storage)
 "aGW" = (
@@ -11514,7 +11443,6 @@
 	icon_state = "xgib2"
 	},
 /obj/item/tool/kitchen/utensil/pknife,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/white_cyan1,
 /area/strata/interior/mining_outpost)
 "aHe" = (
@@ -12175,7 +12103,6 @@
 /obj/structure/machinery/light/small{
 	dir = 1
 	},
-/obj/effect/landmark/objective_landmark/close,
 /obj/item/prop/almayer/flight_recorder/colony{
 	pixel_x = -6;
 	pixel_y = 10
@@ -12245,7 +12172,6 @@
 /obj/structure/machinery/light/small{
 	dir = 4
 	},
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/white_cyan2/west,
 /area/strata/interior/outpost/admin)
 "aJx" = (
@@ -12968,7 +12894,6 @@
 	pixel_y = 2
 	},
 /obj/structure/surface/table/almayer,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/asphalt/cement,
 /area/strata/exterior/mining_outpost_exterior)
 "aLw" = (
@@ -13822,7 +13747,6 @@
 /area/strata/interior/outpost/engi)
 "aNW" = (
 /obj/structure/closet/emcloset,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/floor3/east,
 /area/strata/interior/outpost/engi)
 "aNX" = (
@@ -14130,7 +14054,6 @@
 /area/strata/exterior/north_outpost)
 "aOL" = (
 /obj/structure/closet/crate/science,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/strata/interior/outpost/maint)
 "aOM" = (
@@ -14313,7 +14236,6 @@
 /obj/item/explosive/grenade/phosphorus,
 /obj/item/folder/red,
 /obj/item/ammo_box/magazine/shotgun/buckshot,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/red1,
 /area/strata/interior/mining_outpost/south_dormitories)
 "aPp" = (
@@ -15354,7 +15276,6 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/blood/gibs/core,
-/obj/effect/landmark/objective_landmark/close,
 /obj/item/clothing/head/helmet/marine/veteran/upp/firefighter,
 /obj/item/clothing/suit/storage/marine/light/vest/fire_light/upp,
 /turf/open/floor/strata/multi_tiles/southwest,
@@ -16245,7 +16166,6 @@
 "aUK" = (
 /obj/structure/closet/firecloset/full,
 /obj/structure/machinery/light/small,
-/obj/effect/landmark/objective_landmark/medium,
 /obj/item/clothing/head/helmet/marine/veteran/upp/firefighter,
 /obj/item/clothing/suit/storage/marine/light/vest/fire_light/upp,
 /turf/open/asphalt/cement,
@@ -16261,7 +16181,6 @@
 /area/strata/exterior/marsh/crash)
 "aUM" = (
 /obj/structure/closet/secure_closet/personal,
-/obj/effect/landmark/objective_landmark/close,
 /obj/structure/machinery/power/apc/no_power/west,
 /turf/open/floor/strata/multi_tiles/west,
 /area/strata/interior/outpost/foyer)
@@ -16330,12 +16249,6 @@
 	},
 /turf/open/gm/dirt/brown,
 /area/strata/exterior/marsh/center)
-"aUY" = (
-/obj/structure/filingcabinet,
-/obj/structure/barricade/handrail/strata,
-/obj/effect/landmark/objective_landmark/medium,
-/turf/open/floor/strata/blue1,
-/area/strata/interior/outpost/admin)
 "aUZ" = (
 /obj/structure/surface/table/reinforced/prison{
 	color = "#98a3ab"
@@ -16478,7 +16391,6 @@
 /obj/structure/barricade/handrail/strata{
 	dir = 8
 	},
-/obj/effect/landmark/objective_landmark/medium,
 /turf/open/floor/strata/blue1,
 /area/strata/interior/outpost/admin)
 "aVo" = (
@@ -16884,7 +16796,6 @@
 /area/strata/exterior/south_outpost)
 "aWB" = (
 /obj/structure/closet/secure_closet/personal,
-/obj/effect/landmark/objective_landmark/medium,
 /turf/open/floor/strata/cyan1/east,
 /area/strata/interior/underground_dorms/med2)
 "aWC" = (
@@ -17024,7 +16935,6 @@
 /obj/structure/bed/chair{
 	dir = 4
 	},
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor/interior/plastic,
 /area/strata/interior/wooden_hospital)
 "aXa" = (
@@ -17344,11 +17254,6 @@
 "aYb" = (
 /turf/open/floor/almayer/plate,
 /area/strata/interior/outpost/engi/drome/shuttle_MK3)
-"aYc" = (
-/obj/effect/landmark/objective_landmark/close,
-/obj/effect/decal/cleanable/blood,
-/turf/open/floor/almayer/plate,
-/area/strata/interior/outpost/engi/drome/shuttle_MK3)
 "aYd" = (
 /obj/structure/prop/colorable_rock/colorable{
 	color = "#9d7766";
@@ -17358,7 +17263,7 @@
 /turf/open/gm/dirt/brown/variant_2,
 /area/strata/exterior/lz_caves)
 "aYf" = (
-/obj/structure/machinery/door/airlock/dropship_hatch,
+/obj/structure/machinery/door/airlock/dropship_hatch/upp,
 /turf/open/floor/almayer/test_floor5,
 /area/strata/interior/outpost/engi/drome/shuttle_MK3)
 "aYg" = (
@@ -17798,7 +17703,6 @@
 	},
 /obj/item/book/manual/engineering_construction,
 /obj/item/book/manual/engineering_hacking,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/orange_cover,
 /area/strata/interior/outpost/maint)
 "aZx" = (
@@ -18560,7 +18464,6 @@
 /area/strata/interior/underground_dorms/admin4)
 "bbM" = (
 /obj/structure/closet/wardrobe/pjs,
-/obj/effect/landmark/objective_landmark/close,
 /obj/structure/machinery/light/small{
 	dir = 1
 	},
@@ -19835,9 +19738,6 @@
 /turf/open/floor/strata/floor3,
 /area/strata/interior/outpost/engi/drome)
 "bgk" = (
-/obj/structure/machinery/landinglight/ds2/delaythree{
-	dir = 4
-	},
 /obj/structure/machinery/floodlight/landing,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/strata/exterior/marsh/crash)
@@ -21576,7 +21476,6 @@
 /obj/structure/machinery/light/small{
 	dir = 1
 	},
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor/interior/plastic,
 /area/strata/interior/wooden_hospital)
 "blE" = (
@@ -21741,10 +21640,6 @@
 	},
 /turf/open/floor/strata/cyan1/east,
 /area/strata/interior/outpost/med)
-"bmi" = (
-/obj/structure/machinery/door/airlock/dropship_hatch,
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/strata/interior/outpost/engi/drome/shuttle)
 "bmj" = (
 /obj/structure/machinery/weather_siren{
 	dir = 4;
@@ -21852,7 +21747,6 @@
 "bmG" = (
 /obj/structure/closet/bodybag,
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/objective_landmark/close,
 /obj/effect/landmark/corpsespawner/colonist/random,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/exterior/south_outpost)
@@ -22071,7 +21965,6 @@
 /area/strata/exterior/lz_caves)
 "bnq" = (
 /obj/structure/largecrate/random,
-/obj/effect/landmark/objective_landmark/medium,
 /turf/open/asphalt/cement,
 /area/strata/interior/outpost/engi)
 "bnt" = (
@@ -22084,7 +21977,6 @@
 /area/strata/exterior/lz_caves)
 "bnw" = (
 /obj/structure/closet/secure_closet/engineering_electrical,
-/obj/effect/landmark/objective_landmark/far,
 /turf/open/floor/strata/orange_cover,
 /area/strata/exterior/lz_caves)
 "bny" = (
@@ -22253,7 +22145,6 @@
 "bob" = (
 /obj/structure/closet/secure_closet/medical2,
 /obj/item/clothing/gloves/latex,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor/interior/plastic,
 /area/strata/interior/wooden_hospital)
 "boc" = (
@@ -22423,7 +22314,6 @@
 /obj/structure/disposalpipe/segment{
 	color = "#858680"
 	},
-/obj/effect/landmark/objective_landmark/close,
 /obj/item/phone{
 	pixel_x = 8;
 	pixel_y = 6
@@ -22549,7 +22439,6 @@
 /obj/structure/surface/rack{
 	color = "#98a3ab"
 	},
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/floor3/east,
 /area/strata/interior/outpost/med)
 "boR" = (
@@ -23300,7 +23189,6 @@
 /area/strata/exterior/south_outpost)
 "brr" = (
 /obj/structure/closet,
-/obj/effect/landmark/objective_landmark/far,
 /turf/open/floor/strata/white_cyan2/west,
 /area/strata/interior/administration)
 "brs" = (
@@ -23329,7 +23217,6 @@
 /area/strata/interior/administration)
 "brw" = (
 /obj/structure/filingcabinet,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/blue1,
 /area/strata/interior/administration)
 "brx" = (
@@ -23923,7 +23810,6 @@
 /area/strata/exterior/parts_storage_cave)
 "btx" = (
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/objective_landmark/medium,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/exterior/parts_storage_cave)
 "bty" = (
@@ -24463,7 +24349,6 @@
 /area/strata/exterior/lz_caves)
 "bvj" = (
 /obj/structure/filingcabinet,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor/strata/cyan1/east,
 /area/strata/interior/outpost/med)
 "bvk" = (
@@ -25638,7 +25523,6 @@
 /obj/structure/closet/secure_closet/medical3{
 	req_access = null
 	},
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor/strata/cyan1/east,
 /area/strata/interior/outpost/med)
 "bzh" = (
@@ -26771,7 +26655,6 @@
 /obj/structure/machinery/light/small{
 	dir = 1
 	},
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/floor2,
 /area/strata/interior/outpost/med)
 "bCn" = (
@@ -27203,7 +27086,6 @@
 "bDt" = (
 /obj/structure/filingcabinet,
 /obj/structure/machinery/light/small,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/orange_cover,
 /area/strata/interior/outpost/engi/drome)
 "bDu" = (
@@ -27360,7 +27242,6 @@
 /obj/structure/machinery/light/small{
 	dir = 8
 	},
-/obj/effect/landmark/objective_landmark/far,
 /turf/open/floor/strata/red1,
 /area/strata/interior/bball)
 "bDV" = (
@@ -27943,7 +27824,6 @@
 	dir = 4;
 	pixel_x = -24
 	},
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/blue1,
 /area/strata/interior/administration)
 "bFC" = (
@@ -28227,7 +28107,6 @@
 /obj/structure/surface/rack{
 	color = "#98a3ab"
 	},
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor/strata/floor2,
 /area/strata/interior/outpost/med)
 "bGz" = (
@@ -28878,7 +28757,6 @@
 /area/strata/interior/outpost/engi/drome)
 "bIs" = (
 /obj/structure/closet/emcloset,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/prison/floor_plate,
 /area/strata/interior/mining_outpost/maintenance)
 "bIt" = (
@@ -29290,13 +29168,11 @@
 /area/strata/interior/outpost/security)
 "bJE" = (
 /obj/structure/filingcabinet,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata,
 /area/strata/interior/administration)
 "bJF" = (
 /obj/structure/filingcabinet,
 /obj/item/pamphlet/skill/medical,
-/obj/effect/landmark/objective_landmark/medium,
 /turf/open/floor/strata,
 /area/strata/interior/administration)
 "bJG" = (
@@ -29712,7 +29588,6 @@
 /area/strata/interior/outpost/med)
 "bKM" = (
 /obj/structure/filingcabinet,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor/strata/floor2,
 /area/strata/interior/outpost/med)
 "bKN" = (
@@ -29756,7 +29631,6 @@
 /obj/structure/machinery/light/small{
 	dir = 4
 	},
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor/strata/floor2,
 /area/strata/interior/outpost/med)
 "bKT" = (
@@ -30405,13 +30279,7 @@
 /turf/open/floor/almayer/test_floor5,
 /area/strata/interior/research)
 "bMQ" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/upp{
-	dir = 2;
-	id = "starboard_door";
-	name = "\improper Dropship crew hatch";
-	unacidable = 0;
-	unslashable = 0
-	},
+/obj/structure/machinery/door/airlock/dropship_hatch/upp,
 /turf/open/floor/almayer/test_floor5,
 /area/strata/interior/research)
 "bMR" = (
@@ -30439,7 +30307,6 @@
 	dir = 8;
 	pixel_x = -24
 	},
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/floor3/east,
 /area/strata/interior/administration)
 "bMW" = (
@@ -30675,16 +30542,6 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/strata/exterior/deep_jungle/old_tunnels)
-"bNG" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/upp{
-	dir = 1;
-	id = "starboard_door";
-	name = "\improper Dropship crew hatch";
-	unacidable = 0;
-	unslashable = 0
-	},
-/turf/open/floor/almayer/test_floor5,
-/area/strata/interior/research)
 "bNH" = (
 /obj/structure/pipes/standard/simple/hidden/cyan,
 /turf/open/floor/strata/cyan2/east,
@@ -30954,7 +30811,6 @@
 	dir = 8
 	},
 /obj/item/storage/pill_bottle/antitox/skillless,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/multi_tiles/west,
 /area/strata/interior/outpost/med)
 "bOA" = (
@@ -31010,7 +30866,6 @@
 	pixel_x = 23
 	},
 /obj/structure/filingcabinet,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/floor2,
 /area/strata/interior/outpost/med)
 "bOI" = (
@@ -31035,7 +30890,6 @@
 /area/strata/interior/wooden_ruins)
 "bON" = (
 /obj/structure/filingcabinet,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/blue1,
 /area/strata/interior/research)
 "bOO" = (
@@ -33388,7 +33242,6 @@
 /obj/structure/closet/wardrobe/grey,
 /obj/effect/landmark/wo_supplies/storage/mines,
 /obj/effect/landmark/wo_supplies/storage/mines,
-/obj/effect/landmark/objective_landmark/far,
 /obj/structure/machinery/light,
 /obj/item/clothing/suit/storage/marine/faction/upp/army,
 /obj/item/clothing/mask/gas/upp_pfb,
@@ -33437,7 +33290,6 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
-/obj/effect/landmark/corpsespawner/upp,
 /obj/effect/decal/ammo_casing,
 /obj/effect/decal/hybrisa/dirt,
 /obj/effect/decal/cleanable/blood,
@@ -33844,10 +33696,6 @@
 	},
 /turf/closed/wall/strata_outpost/reinforced,
 /area/strata/interior/outpost/security)
-"bVW" = (
-/obj/effect/landmark/objective_landmark/close,
-/turf/open/floor/wood/wood_broken3,
-/area/strata/interior/wooden_ruins)
 "bVX" = (
 /obj/item/storage/box/mre/upp,
 /turf/open/floor/strata/red1,
@@ -33983,7 +33831,6 @@
 /area/strata/exterior/far_north_outpost)
 "bWp" = (
 /obj/structure/bed/nest,
-/obj/effect/landmark/corpsespawner/upp,
 /turf/open/floor/wood,
 /area/strata/interior/wooden_ruins)
 "bWq" = (
@@ -34890,7 +34737,6 @@
 /obj/structure/surface/table/reinforced/prison{
 	color = "#98a3ab"
 	},
-/obj/structure/machinery/computer/objective,
 /turf/open/floor/strata/floor3,
 /area/strata/interior/outpost/security)
 "bYS" = (
@@ -36224,7 +36070,6 @@
 /obj/structure/machinery/light/small{
 	dir = 8
 	},
-/obj/effect/landmark/objective_landmark/science,
 /obj/item/storage/box/gloves,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/strata/interior/outpost/med)
@@ -36390,7 +36235,6 @@
 /area/strata/interior/outpost/med)
 "ceZ" = (
 /obj/structure/filingcabinet,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/strata/interior/outpost/engi/drome)
 "cfg" = (
@@ -36543,7 +36387,6 @@
 /obj/effect/landmark/wo_supplies/storage/belts/medical,
 /obj/item/card/id/dogtag/upp,
 /obj/item/clothing/suit/armor/riot,
-/obj/effect/landmark/objective_landmark/far,
 /obj/item/weapon/gun/rifle/ak4047,
 /obj/item/clothing/mask/gas/upp_pfb,
 /turf/open/floor/strata/white_cyan2/west,
@@ -37060,7 +36903,6 @@
 /area/strata/interior/outpost/canteen)
 "clU" = (
 /obj/structure/filingcabinet,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata,
 /area/strata/interior/mining_outpost/south_dormitories)
 "clW" = (
@@ -37218,11 +37060,6 @@
 /area/strata/interior/outpost/engi/drome/shuttle)
 "cnZ" = (
 /obj/structure/machinery/power/apc/no_power/north,
-/turf/open/floor/strata/red1,
-/area/strata/interior/mining_outpost/flight_control)
-"coa" = (
-/obj/structure/filingcabinet/filingcabinet,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/red1,
 /area/strata/interior/mining_outpost/flight_control)
 "cof" = (
@@ -37383,11 +37220,6 @@
 	pixel_x = -4;
 	pixel_y = 7
 	},
-/turf/open/floor/strata/red1,
-/area/strata/interior/mining_outpost/flight_control)
-"cpE" = (
-/obj/structure/filingcabinet/chestdrawer,
-/obj/effect/landmark/objective_landmark/far,
 /turf/open/floor/strata/red1,
 /area/strata/interior/mining_outpost/flight_control)
 "cpU" = (
@@ -37635,7 +37467,6 @@
 /area/strata/exterior/shed_five_caves)
 "csT" = (
 /obj/structure/filingcabinet,
-/obj/effect/landmark/objective_landmark/medium,
 /obj/structure/prop/hybrisa/misc/machinery/screens/wood_clock{
 	pixel_x = 1;
 	pixel_y = 41
@@ -38060,10 +37891,6 @@
 /obj/effect/landmark/structure_spawner/xvx_hive/xeno_core,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/exterior/deep_jungle/east)
-"cDt" = (
-/obj/effect/landmark/objective_landmark/science,
-/turf/open/floor/strata/purp2,
-/area/strata/interior/planet_core_research_station)
 "cDL" = (
 /obj/structure/cargo_container/upp_small/container_20/left,
 /turf/open/gm/dirt/brown,
@@ -38103,11 +37930,6 @@
 /obj/structure/pipes/standard/simple/hidden/cyan,
 /turf/open/floor/strata/orange_edge/east,
 /area/strata/interior/mining_outpost)
-"cGL" = (
-/obj/structure/closet/bodybag,
-/obj/effect/landmark/objective_landmark/medium,
-/turf/open/floor/strata/cyan3/east,
-/area/strata/interior/outpost/med)
 "cGV" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/strata/floor3,
@@ -38275,9 +38097,6 @@
 "cTN" = (
 /obj/structure/surface/table/reinforced/prison{
 	color = "#98a3ab"
-	},
-/obj/structure/machinery/computer/objective{
-	dir = 8
 	},
 /turf/open/floor/strata/red1,
 /area/strata/interior/planet_core_research_station)
@@ -38453,14 +38272,6 @@
 /obj/structure/platform/metal/strata/east,
 /turf/open/floor/strata/orange_cover,
 /area/strata/interior/outpost/admin)
-"dcX" = (
-/obj/structure/surface/rack{
-	color = "#98a3ab"
-	},
-/obj/item/stack/folding_barricade,
-/obj/effect/landmark/objective_landmark/close,
-/turf/open/floor/strata/red1,
-/area/strata/interior/checkpoints/north_armor)
 "dcZ" = (
 /obj/structure/pipes/standard/simple/hidden/cyan,
 /turf/open/floor/strata/orange_cover,
@@ -38475,9 +38286,7 @@
 /turf/open/floor/strata/fake_wood,
 /area/strata/interior/outpost/security)
 "ddU" = (
-/obj/structure/machinery/door/airlock/dropship_hatch{
-	dir = 8
-	},
+/obj/structure/machinery/door/airlock/dropship_hatch/upp,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/strata/interior/outpost/engi/drome/shuttle)
 "den" = (
@@ -38793,7 +38602,6 @@
 /obj/structure/machinery/light/small{
 	dir = 1
 	},
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/strata/interior/outpost/engi/drome)
 "dEC" = (
@@ -39403,10 +39211,6 @@
 /obj/effect/decal/ammo_casing,
 /turf/open/gm/dirt/brown/variant_5,
 /area/strata/exterior/parts_storage_cave)
-"exx" = (
-/obj/effect/landmark/objective_landmark/medium,
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/strata/exterior/outpost_decks)
 "exO" = (
 /turf/open/floor/strata/multi_tiles,
 /area/strata/interior/mining_outpost/hive)
@@ -39430,7 +39234,6 @@
 	pixel_x = -4;
 	pixel_y = 6
 	},
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor/strata/purp2,
 /area/strata/interior/planet_core_research_station)
 "eyK" = (
@@ -39739,7 +39542,6 @@
 /obj/structure/machinery/light/small{
 	dir = 1
 	},
-/obj/effect/landmark/objective_landmark/close,
 /obj/item/clock{
 	pixel_x = -14;
 	pixel_y = 16
@@ -39986,10 +39788,6 @@
 /obj/structure/platform_decoration/stone/soro/east,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/exterior/south_outpost)
-"fbG" = (
-/obj/effect/landmark/objective_landmark/science,
-/turf/open/floor/strata/floor2,
-/area/strata/interior/outpost/med)
 "fce" = (
 /obj/structure/flora/grass/tallgrass/jungle_alt,
 /obj/effect/landmark/monkey_spawn,
@@ -40201,7 +39999,6 @@
 /area/strata/exterior/marsh/center)
 "ftO" = (
 /obj/structure/filingcabinet/filingcabinet,
-/obj/effect/landmark/objective_landmark/far,
 /obj/structure/machinery/light{
 	dir = 1
 	},
@@ -40408,7 +40205,6 @@
 /area/strata/interior/outpost/canteen)
 "fEW" = (
 /obj/effect/decal/cleanable/blood/oil,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/floor3/east,
 /area/strata/interior/generator_substation)
 "fFy" = (
@@ -40521,7 +40317,6 @@
 /obj/item/explosive/grenade/custom/cleaner,
 /obj/item/explosive/grenade/custom/cleaner,
 /obj/item/storage/pill_bottle/bicaridine/skillless,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/strata/interior/outpost/med)
 "fMp" = (
@@ -40810,7 +40605,6 @@
 /area/strata/exterior/marsh/spring_marshes)
 "ggr" = (
 /obj/structure/filingcabinet,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/floor3/east,
 /area/strata/interior/underground_dorms/sec1)
 "ggH" = (
@@ -41029,10 +40823,6 @@
 	},
 /turf/open/gm/river/soro,
 /area/strata/exterior/marsh/relay_marshes)
-"gpr" = (
-/obj/effect/landmark/objective_landmark/medium,
-/turf/open/asphalt/cement,
-/area/strata/interior/checkpoints/south)
 "gpO" = (
 /obj/structure/bed/chair/office/light{
 	dir = 1
@@ -41421,11 +41211,6 @@
 /obj/structure/barricade/handrail/strata,
 /turf/open/floor/strata/multi_tiles/west,
 /area/strata/interior/outpost/engi/drome)
-"gTZ" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/obj/effect/landmark/objective_landmark/close,
-/turf/open/floor/greengrid,
-/area/strata/interior/outpost/engi)
 "gUj" = (
 /obj/item/storage/toolbox/electrical,
 /obj/structure/surface/rack{
@@ -41623,7 +41408,6 @@
 /obj/structure/mirror{
 	pixel_x = -29
 	},
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor/strata/white_cyan2/west,
 /area/strata/interior/underground_dorms/admin3)
 "hfP" = (
@@ -41710,12 +41494,6 @@
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/gm/dirt/brown,
 /area/strata/interior/bball)
-"hmA" = (
-/obj/structure/closet/secure_closet/personal,
-/obj/item/storage/secure/briefcase,
-/obj/effect/landmark/objective_landmark/close,
-/turf/open/floor/strata/red1,
-/area/strata/interior/underground_dorms/sec2)
 "hmX" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_wall,
 /turf/open/auto_turf/strata_grass/layer0_mud,
@@ -41936,13 +41714,6 @@
 /obj/effect/landmark/structure_spawner/xvx_hive/xeno_core,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/exterior/deep_jungle/tearlake)
-"hHO" = (
-/obj/structure/barricade/handrail/strata{
-	dir = 1
-	},
-/obj/effect/landmark/objective_landmark/close,
-/turf/open/floor/strata/floor3,
-/area/strata/interior/outpost/engi)
 "hHZ" = (
 /obj/structure/largecrate/random/case/double,
 /obj/structure/machinery/light{
@@ -42241,7 +42012,6 @@
 /area/strata/interior/outpost/canteen)
 "ibC" = (
 /obj/structure/filingcabinet,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/floor3,
 /area/strata/interior/mining_outpost/south_dormitories)
 "ibE" = (
@@ -42463,12 +42233,6 @@
 /obj/structure/flora/grass/tallgrass/jungle_alt,
 /turf/open/gm/dirt/brown,
 /area/strata/exterior/marsh/river)
-"ioz" = (
-/obj/structure/bed/nest,
-/obj/effect/decal/cleanable/blood/gibs/core,
-/obj/effect/landmark/corpsespawner/upp,
-/turf/open/floor/strata/multi_tiles,
-/area/strata/interior/mining_outpost/hive)
 "ioM" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
@@ -42696,7 +42460,6 @@
 /turf/open/floor/almayer/plate,
 /area/strata/interior/outpost/engi/drome/shuttle)
 "iBZ" = (
-/obj/effect/landmark/objective_landmark/far,
 /obj/item/trash/upp_mre,
 /obj/effect/landmark/survivor_spawner,
 /turf/open/floor/interior/plastic,
@@ -42901,17 +42664,9 @@
 	},
 /turf/open/floor/strata/orange_cover,
 /area/strata/exterior/tcomms_vehicle_yard)
-"iQt" = (
-/obj/structure/surface/table/reinforced/prison{
-	color = "#98a3ab"
-	},
-/obj/effect/landmark/objective_landmark/science,
-/turf/open/floor/strata/blue1,
-/area/strata/interior/outpost/admin)
 "iQB" = (
 /obj/structure/closet/secure_closet/engineering_personal,
 /obj/structure/platform/metal/strata/east,
-/obj/effect/landmark/objective_landmark/science,
 /obj/item/stack/sheet/plasteel/small_stack,
 /turf/open/floor/strata/floor3,
 /area/strata/interior/outpost/engi)
@@ -42975,14 +42730,6 @@
 /obj/docking_port/stationary/marine_dropship/lz2,
 /turf/open/floor/plating,
 /area/strata/exterior/landing_zones/lz2)
-"iUN" = (
-/obj/structure/filingcabinet,
-/obj/structure/barricade/handrail/strata{
-	dir = 8
-	},
-/obj/effect/landmark/objective_landmark/far,
-/turf/open/floor/strata/blue1,
-/area/strata/interior/outpost/admin)
 "iVy" = (
 /obj/structure/pipes/standard/simple/hidden/cyan{
 	dir = 5
@@ -43060,7 +42807,6 @@
 "iZa" = (
 /obj/structure/closet/secure_closet/personal,
 /obj/item/storage/fancy/vials,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor/strata/cyan1/east,
 /area/strata/interior/underground_dorms/med2)
 "iZr" = (
@@ -43068,7 +42814,6 @@
 /area/strata/exterior/outpost_platform)
 "iZw" = (
 /obj/structure/closet/firecloset/full,
-/obj/effect/landmark/objective_landmark/close,
 /obj/item/clothing/head/helmet/marine/veteran/upp/firefighter,
 /obj/item/clothing/suit/storage/marine/light/vest/fire_light/upp,
 /turf/open/floor/strata/multi_tiles/southwest,
@@ -43136,13 +42881,6 @@
 "jeF" = (
 /turf/open/floor/strata/red1,
 /area/strata/interior/planet_core_research_station)
-"jeZ" = (
-/obj/structure/surface/rack{
-	color = "#98a3ab"
-	},
-/obj/effect/landmark/objective_landmark/medium,
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/strata/interior/research)
 "jfh" = (
 /obj/item/fuel_cell,
 /obj/structure/barricade/handrail/strata{
@@ -43239,7 +42977,6 @@
 	},
 /obj/item/storage/pill_bottle/imidazoline,
 /obj/item/storage/pill_bottle/imidazoline,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/strata/interior/outpost/med)
 "jkp" = (
@@ -43964,7 +43701,6 @@
 /obj/item/reagent_container/food/drinks/cans/waterbottle/upp,
 /obj/item/reagent_container/food/drinks/cans/waterbottle/upp,
 /obj/item/reagent_container/food/drinks/cans/waterbottle/upp,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor/strata/blue1,
 /area/strata/interior/bball)
 "kmt" = (
@@ -44138,7 +43874,6 @@
 /obj/effect/decal/cleanable/blood{
 	icon_state = "xgib6"
 	},
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/blue1,
 /area/strata/interior/underground_dorms/admin2)
 "kFZ" = (
@@ -44641,7 +44376,6 @@
 /area/strata/interior/underground_dorms/admin3)
 "lkl" = (
 /obj/structure/filingcabinet,
-/obj/effect/landmark/objective_landmark/far,
 /turf/open/floor/strata/purp1,
 /area/strata/interior/planet_core_research_station)
 "lkB" = (
@@ -44693,10 +44427,6 @@
 	},
 /turf/open/gm/dirt/brown/variant_2,
 /area/strata/exterior/south_outpost)
-"loN" = (
-/obj/effect/landmark/objective_landmark/close,
-/turf/open/floor/wood,
-/area/strata/interior/wooden_ruins)
 "loP" = (
 /obj/structure/filingcabinet,
 /turf/open/floor/strata/cyan1/east,
@@ -45114,7 +44844,6 @@
 /turf/open/floor/strata/orange_cover,
 /area/strata/exterior/marsh/spring_marshes)
 "lPk" = (
-/obj/effect/landmark/objective_landmark/medium,
 /obj/structure/closet/secure_closet/security/soro,
 /turf/open/floor/strata/red1,
 /area/strata/interior/checkpoints/north)
@@ -45359,11 +45088,6 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/strata/exterior/flight_control_exterior)
-"mdK" = (
-/obj/effect/landmark/objective_landmark/close,
-/obj/item/storage/belt/security/brown,
-/turf/open/floor/strata/floor2,
-/area/strata/interior/research)
 "mes" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/comdoor/colony{
 	dir = 1;
@@ -45551,7 +45275,6 @@
 /area/strata/interior/outpost/med)
 "msC" = (
 /obj/structure/filingcabinet,
-/obj/effect/landmark/objective_landmark/medium,
 /turf/open/floor/strata/floor3/east,
 /area/strata/interior/parts_storage)
 "msG" = (
@@ -45817,20 +45540,6 @@
 /obj/structure/pipes/standard/simple/hidden/cyan,
 /turf/open/floor/strata/fake_wood,
 /area/strata/interior/outpost/admin)
-"mOj" = (
-/obj/structure/surface/rack{
-	color = "#98a3ab"
-	},
-/obj/item/ammo_magazine/rifle/type71,
-/obj/structure/machinery/light/small{
-	dir = 4
-	},
-/obj/effect/landmark/objective_landmark/close,
-/obj/item/ammo_magazine/rifle/type71,
-/obj/item/ammo_magazine/rifle/type71,
-/obj/item/ammo_magazine/rifle/type71,
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/strata/interior/research)
 "mPj" = (
 /turf/closed/shuttle/ert{
 	icon_state = "upp_leftengine"
@@ -45947,7 +45656,6 @@
 /area/strata/exterior/outpost_platform)
 "mWM" = (
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/objective_landmark/medium,
 /turf/open/floor/strata/white_cyan2/west,
 /area/strata/interior/underground_dorms/admin2)
 "mWT" = (
@@ -46192,13 +45900,6 @@
 /obj/structure/machinery/vending/coffee,
 /turf/open/floor/strata/fake_wood,
 /area/strata/interior/outpost/foyer)
-"npy" = (
-/obj/structure/closet/secure_closet/medical3{
-	req_access = null
-	},
-/obj/effect/landmark/objective_landmark/science,
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/strata/interior/outpost/admin)
 "npS" = (
 /turf/open/floor/strata/orange_cover,
 /area/strata/exterior/marsh/water_marshes)
@@ -46444,7 +46145,6 @@
 /obj/structure/machinery/light/small{
 	dir = 8
 	},
-/obj/effect/landmark/objective_landmark/medium,
 /turf/open/floor/strata/floor3/east,
 /area/strata/interior/outpost/med)
 "nFd" = (
@@ -46800,10 +46500,8 @@
 /turf/open/floor/strata/floor2,
 /area/strata/exterior/deep_jungle/planet_core_research_station_exterior)
 "ocH" = (
-/obj/structure/machinery/door/airlock/dropship_hatch{
-	dir = 8
-	},
 /obj/effect/decal/cleanable/blood,
+/obj/structure/machinery/door/airlock/dropship_hatch/upp,
 /turf/open/floor/almayer/test_floor5,
 /area/strata/interior/outpost/engi/drome/shuttle_MK3)
 "odd" = (
@@ -46894,15 +46592,6 @@
 	},
 /turf/open/gm/dirt/brown,
 /area/strata/exterior/marsh/spring_marshes)
-"ogL" = (
-/obj/structure/surface/rack{
-	color = "#98a3ab"
-	},
-/obj/item/storage/firstaid/regular,
-/obj/item/storage/firstaid/regular,
-/obj/effect/landmark/objective_landmark/science,
-/turf/open/floor/strata/purp2,
-/area/strata/interior/planet_core_research_station)
 "ohf" = (
 /obj/structure/platform_decoration/stone/soro/north,
 /turf/open/auto_turf/strata_grass/layer0_mud,
@@ -47216,11 +46905,6 @@
 	},
 /turf/open/floor/prison/darkyellowfull2,
 /area/strata/exterior/outpost_decks)
-"oIi" = (
-/obj/structure/filingcabinet,
-/obj/effect/landmark/objective_landmark/close,
-/turf/open/floor/strata/floor3/east,
-/area/strata/interior/parts_storage)
 "oIj" = (
 /obj/structure/platform/metal/strata/north,
 /turf/open/floor/strata,
@@ -47231,7 +46915,6 @@
 /area/strata/interior/outpost/canteen)
 "oIv" = (
 /obj/structure/closet/secure_closet/engineering_personal,
-/obj/effect/landmark/objective_landmark/medium,
 /obj/item/clothing/mask/gas/upp_pfb,
 /turf/open/floor/strata/orange_cover,
 /area/strata/interior/outpost/engi/drome)
@@ -47506,7 +47189,6 @@
 	},
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/blood/gibs/core,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor/strata/cyan1/east,
 /area/strata/interior/mining_outpost)
 "oYM" = (
@@ -48578,11 +48260,6 @@
 /obj/structure/pipes/standard/simple/hidden/cyan,
 /turf/open/floor/strata/red1,
 /area/strata/interior/outpost/security)
-"qsI" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/obj/effect/landmark/objective_landmark/far,
-/turf/open/floor/greengrid,
-/area/strata/exterior/deep_jungle/planet_core_research_station_exterior)
 "qsY" = (
 /obj/structure/platform/stone/soro,
 /obj/effect/blocker/sorokyne_hot_water,
@@ -48987,7 +48664,6 @@
 /obj/effect/decal/cleanable/blood/gibs/down,
 /obj/effect/decal/cleanable/blood/gibs/body,
 /obj/effect/decal/cleanable/blood/gibs/core,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata,
 /area/strata/interior/outpost/med)
 "qQR" = (
@@ -48995,14 +48671,6 @@
 /obj/structure/platform/metal/strata/east,
 /turf/open/floor/strata/fake_wood,
 /area/strata/interior/outpost/engi)
-"qRj" = (
-/obj/structure/filingcabinet,
-/obj/structure/barricade/handrail/strata{
-	dir = 8
-	},
-/obj/effect/landmark/objective_landmark/close,
-/turf/open/floor/strata/blue1,
-/area/strata/interior/outpost/admin)
 "qSc" = (
 /obj/item/lightstick/planted,
 /obj/structure/platform/metal/strata/west,
@@ -49152,7 +48820,6 @@
 /obj/structure/surface/rack{
 	color = "#98a3ab"
 	},
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/strata/interior/research)
 "qWT" = (
@@ -49204,11 +48871,6 @@
 /obj/structure/closet/wardrobe/engineering_yellow,
 /turf/open/floor/prison/darkyellowfull2,
 /area/strata/interior/outpost/canteen)
-"rba" = (
-/obj/structure/closet,
-/obj/effect/landmark/objective_landmark/far,
-/turf/open/floor/strata/floor3,
-/area/strata/interior/mining_outpost/flight_control)
 "rbO" = (
 /obj/structure/flora/grass/tallgrass/jungle_alt/corner{
 	dir = 10
@@ -49224,11 +48886,6 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/strata/interior/outpost/foyer)
-"rcX" = (
-/obj/structure/bed/chair,
-/obj/effect/landmark/objective_landmark/close,
-/turf/open/floor/strata/white_cyan1/east,
-/area/strata/interior/outpost/canteen)
 "rdm" = (
 /obj/structure/largecrate/random,
 /turf/open/floor/strata,
@@ -49722,11 +49379,6 @@
 /obj/structure/pipes/standard/simple/hidden/cyan,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/exterior/flight_control_exterior)
-"rMP" = (
-/obj/structure/closet/coffin,
-/obj/effect/landmark/objective_landmark/science,
-/turf/open/floor/strata/floor2,
-/area/strata/interior/outpost/med)
 "rMX" = (
 /obj/structure/platform/metal/strata/north,
 /turf/open/auto_turf/strata_grass/layer0_mud,
@@ -49773,13 +49425,6 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/exterior/deep_jungle/east)
-"rRx" = (
-/obj/structure/pipes/standard/simple/hidden/cyan{
-	dir = 4
-	},
-/obj/effect/landmark/objective_landmark/science,
-/turf/open/floor/strata/multi_tiles,
-/area/strata/interior/mining_outpost/hive)
 "rRC" = (
 /obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/strata/floor3,
@@ -50698,7 +50343,6 @@
 "taa" = (
 /obj/structure/filingcabinet,
 /obj/structure/barricade/handrail/strata,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/blue1,
 /area/strata/interior/outpost/admin)
 "tab" = (
@@ -50783,11 +50427,6 @@
 	},
 /turf/open/gm/dirt/brown,
 /area/strata/exterior/south_outpost)
-"tfB" = (
-/obj/structure/closet/secure_closet/engineering_electrical,
-/obj/effect/landmark/objective_landmark/medium,
-/turf/open/floor/strata/orange_cover,
-/area/strata/exterior/lz_caves)
 "tgr" = (
 /obj/structure/stairs/perspective{
 	color = "#6e6e6e";
@@ -50872,7 +50511,6 @@
 	pixel_x = -7;
 	pixel_y = 12
 	},
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor/prison/darkyellowfull2,
 /area/strata/interior/outpost/canteen)
 "tlo" = (
@@ -51344,7 +50982,6 @@
 /obj/structure/toilet{
 	dir = 1
 	},
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/white_cyan2/west,
 /area/strata/interior/underground_dorms/sec1)
 "tPx" = (
@@ -51590,7 +51227,6 @@
 /obj/structure/closet/secure_closet/personal,
 /obj/item/lightstick,
 /obj/item/lightstick,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/red1,
 /area/strata/interior/underground_dorms/sec1)
 "ufg" = (
@@ -51731,11 +51367,6 @@
 /obj/structure/machinery/door/airlock/almayer/engineering/colony,
 /turf/open/floor/strata/multi_tiles/west,
 /area/strata/interior/vanyard)
-"unO" = (
-/obj/structure/closet/secure_closet/personal,
-/obj/effect/landmark/objective_landmark/close,
-/turf/open/floor/strata/cyan1/east,
-/area/strata/interior/underground_dorms/med1)
 "unP" = (
 /obj/effect/blocker/sorokyne_hot_water,
 /obj/effect/blocker/sorokyne_hot_water,
@@ -51775,7 +51406,6 @@
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/strata/interior/outpost/engi)
 "urF" = (
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/white_cyan2/west,
 /area/strata/interior/underground_dorms/med2)
 "urM" = (
@@ -52017,11 +51647,6 @@
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/strata/cyan1/east,
 /area/strata/interior/outpost/med)
-"uGb" = (
-/obj/structure/closet/secure_closet/personal,
-/obj/effect/landmark/objective_landmark/close,
-/turf/open/floor/strata/floor3,
-/area/strata/interior/outpost/canteen)
 "uGp" = (
 /obj/structure/stairs/perspective{
 	color = "#6e6e6e";
@@ -52262,11 +51887,6 @@
 	},
 /turf/open/floor/strata,
 /area/strata/interior/outpost/engi)
-"uWO" = (
-/obj/structure/closet/basketball,
-/obj/effect/landmark/objective_landmark/science,
-/turf/open/floor/strata/blue1,
-/area/strata/interior/bball)
 "uWP" = (
 /obj/structure/pipes/standard/simple/hidden/cyan,
 /turf/open/floor/strata/orange_cover,
@@ -52292,13 +51912,6 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/strata/interior/outpost/engi/drome)
-"vaq" = (
-/obj/structure/surface/table/reinforced/prison{
-	color = "#98a3ab"
-	},
-/obj/effect/landmark/objective_landmark/medium,
-/turf/open/floor/strata/red1,
-/area/strata/interior/research)
 "vaZ" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
 /obj/structure/flora/jungle/thickbush/large_jungle_bush{
@@ -52713,7 +52326,6 @@
 /area/strata/interior/outpost/med)
 "vvB" = (
 /obj/structure/filingcabinet,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/strata/interior/outpost/med)
 "vvR" = (
@@ -52898,6 +52510,9 @@
 /obj/structure/machinery/door/poddoor/almayer/closed{
 	name = "Dropship Hold Lockdown"
 	},
+/obj/structure/machinery/door/airlock/hatch/cockpit/upp{
+	name = "\improper Dropship Hatch"
+	},
 /turf/open/floor/plating/warnplate,
 /area/strata/interior/outpost/engi/drome/shuttle)
 "vGW" = (
@@ -52975,7 +52590,6 @@
 /area/strata/exterior/outpost_decks)
 "vMr" = (
 /obj/structure/filingcabinet/filingcabinet,
-/obj/effect/landmark/objective_landmark/medium,
 /turf/open/floor/strata/red1,
 /area/strata/interior/mining_outpost/flight_control)
 "vMY" = (
@@ -52987,7 +52601,6 @@
 /obj/structure/surface/table/reinforced/prison{
 	color = "#98a3ab"
 	},
-/obj/effect/landmark/objective_landmark/science,
 /obj/item/reagent_container/food/drinks/cans/waterbottle/upp{
 	pixel_x = -5;
 	pixel_y = 7
@@ -53040,10 +52653,6 @@
 "vPQ" = (
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/exterior/deep_jungle/platform)
-"vPY" = (
-/obj/effect/landmark/corpsespawner/upp,
-/turf/open/floor/strata,
-/area/strata/interior/underground_dorms/admin1)
 "vQs" = (
 /turf/closed/shuttle/ert{
 	icon_state = "upp_rightengine"
@@ -53255,11 +52864,6 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/exterior/deep_jungle/east)
-"whO" = (
-/obj/structure/filingcabinet,
-/obj/effect/landmark/objective_landmark/medium,
-/turf/open/floor/strata,
-/area/strata/interior/mining_outpost/south_dormitories)
 "wij" = (
 /obj/structure/flora/bush/ausbushes/grassybush,
 /turf/open/auto_turf/strata_grass/layer1,
@@ -53464,7 +53068,6 @@
 	},
 /obj/structure/barricade/handrail/strata,
 /obj/structure/filingcabinet,
-/obj/effect/landmark/objective_landmark/far,
 /turf/open/floor/strata/blue1,
 /area/strata/interior/outpost/admin)
 "wuI" = (
@@ -53562,11 +53165,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/strata/interior/underground_dorms/botany)
-"wBj" = (
-/obj/structure/closet/secure_closet/personal,
-/obj/effect/landmark/objective_landmark/close,
-/turf/open/floor/strata/blue1,
-/area/strata/interior/underground_dorms/admin1)
 "wBI" = (
 /obj/structure/bed{
 	icon_state = "abed"
@@ -53789,7 +53387,6 @@
 /obj/structure/surface/rack{
 	color = "#98a3ab"
 	},
-/obj/effect/landmark/objective_landmark/medium,
 /turf/open/floor/strata/floor3/east,
 /area/strata/interior/research)
 "wUD" = (
@@ -54423,10 +54020,6 @@
 	},
 /turf/open/asphalt/cement,
 /area/strata/exterior/mining_outpost_exterior)
-"xJb" = (
-/obj/effect/landmark/objective_landmark/science,
-/turf/open/floor/strata/floor3/east,
-/area/strata/interior/vanyard)
 "xJD" = (
 /obj/structure/closet/bodybag,
 /obj/effect/decal/cleanable/blood/gibs/core,
@@ -54441,12 +54034,6 @@
 /obj/structure/pipes/standard/simple/hidden/cyan,
 /turf/open/floor/strata/floor3/east,
 /area/strata/interior/parts_storage)
-"xKs" = (
-/obj/structure/closet/bodybag,
-/obj/effect/decal/cleanable/blood/gibs/core,
-/obj/effect/landmark/objective_landmark/medium,
-/turf/open/floor/strata,
-/area/strata/interior/outpost/med)
 "xKt" = (
 /obj/structure/platform/stone/soro/west,
 /turf/open/auto_turf/strata_grass/layer1,
@@ -54914,7 +54501,6 @@
 /area/strata/interior/underground_dorms/admin2)
 "ygz" = (
 /obj/structure/closet,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/floor3,
 /area/strata/interior/mining_outpost/flight_control)
 "yhJ" = (
@@ -56081,7 +55667,7 @@ bGP
 bGP
 bGP
 ahs
-ahq
+ygz
 coO
 aix
 cjb
@@ -57481,7 +57067,7 @@ bGP
 bGP
 bGP
 ahs
-ahq
+ygz
 coO
 aix
 cjb
@@ -57656,12 +57242,12 @@ bGP
 bGP
 bGP
 ahs
-rba
+ygz
 ahP
 aiA
 cof
 cjb
-cpE
+akp
 coS
 doZ
 cqE
@@ -57727,7 +57313,7 @@ bhO
 aZU
 aZa
 gZp
-aYc
+aYa
 aXm
 mKX
 aaE
@@ -58007,8 +57593,8 @@ bGP
 bGP
 bGP
 ahs
-ahO
-coa
+ftO
+vMr
 coO
 coO
 coV
@@ -58213,7 +57799,7 @@ aol
 aol
 aol
 aol
-abS
+aol
 aol
 cso
 aol
@@ -59580,7 +59166,7 @@ bGP
 ddp
 cnO
 cEu
-rRx
+afE
 cnO
 oSC
 kRb
@@ -61149,7 +60735,7 @@ acc
 acc
 ddp
 exO
-ioz
+aiE
 aiE
 cnO
 sWt
@@ -62425,7 +62011,7 @@ acc
 acc
 acc
 acc
-tfB
+bnw
 bxX
 aYX
 bwx
@@ -62943,7 +62529,7 @@ aQA
 iaB
 ckX
 cnA
-whO
+clU
 aXJ
 cjw
 acc
@@ -64231,7 +63817,7 @@ pAZ
 bvE
 bvE
 aen
-abR
+eFa
 bJI
 vsp
 hue
@@ -66510,7 +66096,7 @@ hYc
 acc
 cwT
 qDI
-gpr
+ubN
 swQ
 cwT
 aac
@@ -67004,7 +66590,7 @@ bFv
 jvl
 ajl
 opg
-xJb
+ibE
 dOO
 fbq
 aNP
@@ -67115,7 +66701,7 @@ aac
 acc
 acc
 qSH
-dcX
+bRw
 bUV
 bRw
 run
@@ -68250,8 +67836,8 @@ jVU
 aGT
 aGV
 vxd
-oIi
-oIi
+msC
+msC
 yhJ
 odd
 hTU
@@ -70136,7 +69722,7 @@ bYJ
 bRZ
 fBC
 cva
-exx
+cva
 cuP
 frf
 iNf
@@ -73404,7 +72990,7 @@ cdA
 bDU
 bPB
 bOS
-aet
+kIK
 dWm
 acc
 acc
@@ -73469,7 +73055,7 @@ vlm
 oOB
 qOt
 uRy
-xKs
+xJD
 bdS
 hmf
 led
@@ -73579,7 +73165,7 @@ cdA
 kIK
 bPC
 bOT
-aet
+kIK
 dWm
 acc
 acc
@@ -73613,7 +73199,7 @@ aLQ
 dgB
 aMX
 bDk
-hHO
+bDc
 aQQ
 aSc
 aTA
@@ -73627,7 +73213,7 @@ bsy
 blh
 boY
 bsA
-fbG
+nsB
 byY
 bBY
 ryK
@@ -75125,11 +74711,11 @@ cbe
 wJL
 cae
 aam
-aax
+adn
 aam
 bWE
 pIa
-aax
+adn
 cZZ
 bYo
 bZU
@@ -75167,7 +74753,7 @@ bIA
 bHu
 bIA
 xvy
-gTZ
+bVM
 bVM
 bVM
 ast
@@ -75536,10 +75122,10 @@ cik
 aVn
 aKD
 aLT
-iUN
+aVn
 aKD
 aPK
-qRj
+aVn
 aKD
 aTG
 wuE
@@ -75838,7 +75424,7 @@ aan
 aam
 bYs
 adC
-aev
+aam
 aar
 cdo
 aar
@@ -76242,7 +75828,7 @@ aPL
 aRf
 aYO
 aTI
-aUY
+taa
 bbV
 aYO
 xjX
@@ -76250,7 +75836,7 @@ bds
 bfS
 biV
 blU
-npy
+bpF
 vmI
 bvj
 bzg
@@ -76279,7 +75865,7 @@ vtp
 aYM
 vtp
 ykU
-cGL
+ykU
 vYD
 vtp
 sip
@@ -76767,7 +76353,7 @@ aPO
 aRf
 bll
 bsK
-aUY
+taa
 bbV
 bll
 oSV
@@ -77154,7 +76740,7 @@ vyl
 ggJ
 vlm
 mCx
-rMP
+aWU
 vlm
 gbU
 cxl
@@ -77458,7 +77044,7 @@ cdX
 ceI
 igf
 fwq
-iQt
+bLa
 oSV
 aMb
 bfV
@@ -77518,7 +77104,7 @@ aac
 acc
 acc
 iwH
-wBj
+mrz
 wXb
 hsV
 atI
@@ -77773,7 +77359,7 @@ acc
 acc
 acc
 cdA
-uWO
+adG
 bOn
 bOn
 bOn
@@ -78396,7 +77982,7 @@ iwH
 iwH
 dcc
 aYQ
-aeg
+fZe
 aHx
 ikG
 iwH
@@ -78570,7 +78156,7 @@ wZZ
 cIM
 aYQ
 aYQ
-vPY
+hsV
 pEm
 hsV
 piD
@@ -78726,7 +78312,7 @@ aWV
 vOs
 aac
 iEU
-unO
+bpY
 qWc
 brd
 iEU
@@ -80034,7 +79620,7 @@ aHz
 bYC
 aHz
 aao
-aax
+adn
 bWX
 aHz
 pIa
@@ -80462,7 +80048,7 @@ baY
 cgR
 cgQ
 coD
-bmi
+ddU
 coD
 coD
 mUU
@@ -80781,7 +80367,7 @@ chd
 kmz
 cdj
 qfy
-rcX
+pja
 chd
 chd
 uOJ
@@ -81117,7 +80703,7 @@ aai
 cdm
 cdm
 cdm
-uGb
+cWv
 gNV
 cjn
 uQi
@@ -86073,7 +85659,7 @@ cFp
 cxK
 aWI
 cxW
-hmA
+ugH
 baz
 ekh
 uzb
@@ -87568,7 +87154,7 @@ acc
 acc
 bnd
 abC
-bVW
+bSM
 abC
 acy
 abC
@@ -87745,7 +87331,7 @@ bnd
 bWq
 rwF
 bDn
-loN
+bDn
 acR
 bTq
 bDn
@@ -90804,7 +90390,7 @@ daq
 vsy
 gih
 khT
-ogL
+kfm
 kfm
 scb
 uLl
@@ -91516,7 +91102,7 @@ lZd
 aLj
 aJU
 gdZ
-cDt
+aJU
 lZd
 aLj
 aJS
@@ -92308,7 +91894,7 @@ bOc
 bon
 adz
 aij
-vaq
+aeB
 ajD
 akf
 abX
@@ -92908,7 +92494,7 @@ vsy
 vsy
 vsy
 vsy
-qsI
+gih
 aJR
 aQb
 tIv
@@ -94042,7 +93628,7 @@ acc
 acc
 aac
 uux
-mOj
+abF
 abV
 abF
 bUI
@@ -94580,7 +94166,7 @@ bQE
 bRl
 bBO
 ago
-bMP
+bMQ
 bMQ
 aim
 ajb
@@ -96855,8 +96441,8 @@ aeW
 bRl
 aeZ
 agv
-bMP
-bNG
+bMQ
+bMQ
 bPo
 bQi
 bQj
@@ -96873,7 +96459,7 @@ acp
 bHL
 bAr
 uux
-jeZ
+qWQ
 bXQ
 uux
 aac
@@ -97045,7 +96631,7 @@ bAr
 uux
 bIS
 arb
-mdK
+arb
 arb
 uux
 uux

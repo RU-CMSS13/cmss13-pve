@@ -28,7 +28,7 @@
 		if(2)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/utility/brown/upp(new_human), WEAR_BODY)
 
-	add_survivor_weapon_civilian(new_human)
+	add_survivor_weapon_pistol(new_human)
 	..()
 
 /datum/equipment_preset/survivor/engineer/soro_reactor_tech
@@ -49,7 +49,7 @@
 	var/choice = rand(1,25)
 	switch(choice)
 		if(1 to 12)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/civi/plant_worker, WEAR_HEAD)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/upp/civi/plant_worker, WEAR_HEAD)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/labcoat/short(new_human), WEAR_JACKET)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
@@ -74,7 +74,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp/airborne(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/color/white/alt(new_human), WEAR_BODY)
 
-	add_survivor_weapon_civilian(new_human)
+	add_survivor_weapon_pistol(new_human)
 	..()
 
 
@@ -118,13 +118,12 @@
 	name = "Survivor - UPP - Ministry of Defense - Army Reservist"
 	assignment = "Armiyskiy Rezervist"
 	paygrades = list(PAY_SHORT_UE1 = JOB_PLAYTIME_TIER_0)
-	job_title = JOB_SURVIVOR
+	rank = JOB_SURVIVOR
 	skills = /datum/skills/military/survivor/upp_private
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
 	faction = FACTION_UPP
 	faction_group = FACTION_LIST_SURVIVOR_UPP
 	minimap_icon = "upp_pvt"
-	minimap_background = "background_upp"
 	role_comm_title = "202/ARMY"
 	idtype = /obj/item/card/id/dogtag/upp
 	flags = EQUIPMENT_PRESET_START_OF_ROUND
@@ -138,55 +137,55 @@
 	var/choice = rand(1,4)
 	switch(choice)
 		if(1)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/UPP/army(new_human), WEAR_HEAD)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/upp/army(new_human), WEAR_HEAD)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/balaclava(new_human), WEAR_FACE)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/army/alt(new_human), WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/upp/army/alt(new_human), WEAR_BODY)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/faction/upp/army(new_human), WEAR_JACKET)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/black/knife(new_human), WEAR_FEET)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran(new_human), WEAR_HANDS)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/brown/half_full, WEAR_WAIST)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/black/five_slot(new_human), WEAR_BACK)
-			new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP/recon(new_human), WEAR_L_EAR)
+			new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/upp/territorial(new_human), WEAR_L_EAR)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/survival/full/black(new_human), WEAR_L_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/black, WEAR_R_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/ak4047(new_human), WEAR_J_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/upp_pfb(new_human), WEAR_IN_BACK)
 		if(2)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/UPP/army(new_human), WEAR_HEAD)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/upp/army(new_human), WEAR_HEAD)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/balaclava(new_human), WEAR_FACE)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/army/alt(new_human), WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/upp/army/alt(new_human), WEAR_BODY)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/webbing(new_human), WEAR_JACKET)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/black/knife(new_human), WEAR_FEET)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran(new_human), WEAR_HANDS)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/brown/half_full, WEAR_WAIST)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/black/five_slot(new_human), WEAR_BACK)
-			new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP/recon(new_human), WEAR_L_EAR)
+			new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/upp/territorial(new_human), WEAR_L_EAR)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/survival/full/black(new_human), WEAR_L_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/black, WEAR_R_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/ak4047(new_human), WEAR_J_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/upp_pfb(new_human), WEAR_IN_BACK)
 		if(3)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/UPP/army(new_human), WEAR_HEAD)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/army/alt(new_human), WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/upp/army(new_human), WEAR_HEAD)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/upp/army/alt(new_human), WEAR_BODY)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/faction/upp/army(new_human), WEAR_JACKET)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/black/knife(new_human), WEAR_FEET)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran(new_human), WEAR_HANDS)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/brown/half_full, WEAR_WAIST)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/black/five_slot(new_human), WEAR_BACK)
-			new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP/recon(new_human), WEAR_L_EAR)
+			new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/upp/territorial(new_human), WEAR_L_EAR)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/survival/full/black(new_human), WEAR_L_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/black, WEAR_R_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/ak4047(new_human), WEAR_J_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/upp_pfb(new_human), WEAR_FACE)
 		if(4)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/army_beret(new_human), WEAR_HEAD)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/army/alt(new_human), WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/upp/beret/army(new_human), WEAR_HEAD)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/upp/army/alt(new_human), WEAR_BODY)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/faction/upp/army/alt(new_human), WEAR_JACKET)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/black/knife(new_human), WEAR_FEET)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran(new_human), WEAR_HANDS)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/brown/half_full, WEAR_WAIST)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/black/five_slot(new_human), WEAR_BACK)
-			new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP/recon(new_human), WEAR_L_EAR)
+			new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/upp/territorial(new_human), WEAR_L_EAR)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/survival/full/black(new_human), WEAR_L_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/black, WEAR_R_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/ak4047(new_human), WEAR_J_STORE)
@@ -220,15 +219,15 @@
 	var/random_tie= rand(1,6)
 	switch(random_tie)
 		if(1)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/tie/black(new_human), WEAR_ACCESSORY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/black(new_human), WEAR_ACCESSORY)
 		if(2)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/tie(new_human), WEAR_ACCESSORY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory(new_human), WEAR_ACCESSORY)
 		if(3)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/tie/green(new_human), WEAR_ACCESSORY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/green(new_human), WEAR_ACCESSORY)
 		if(4)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/tie/purple(new_human), WEAR_ACCESSORY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/purple(new_human), WEAR_ACCESSORY)
 		if(6)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/tie/red(new_human), WEAR_ACCESSORY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/red(new_human), WEAR_ACCESSORY)
 
 	var/random_professional_shoe = rand(1,2)
 	switch(random_professional_shoe)
@@ -256,9 +255,9 @@
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/black(new_human), WEAR_BODY)
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/upp_pfb(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/civi/plant_worker, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/upp/civi/plant_worker, WEAR_HEAD)
 
-	add_survivor_weapon_civilian(new_human)
+	add_survivor_weapon_pistol(new_human)
 	..()
 
 /datum/equipment_preset/survivor/scientist/soro
@@ -278,7 +277,7 @@
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/labcoat/brown(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/cec_patch, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/upp(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/upp_pfb(new_human), WEAR_IN_BACK)
 
 	var/random_scientist_satchel= rand(1,3)
@@ -373,9 +372,9 @@
 		if(1)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/color/blue(new_human), WEAR_BODY)
 		if(2)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/color/brown(new_human), WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/brown(new_human), WEAR_BODY)
 		if(3)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/color/lightbrown(new_human), WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/lightbrown(new_human), WEAR_BODY)
 		if(4)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/color/grey(new_human), WEAR_BODY)
 		if(5)
@@ -387,23 +386,23 @@
 		if(8)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/orange(new_human), WEAR_BODY)
 		if(9)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/civi1(new_human), WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/upp/civi(new_human), WEAR_BODY)
 		if(10)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/civi2(new_human), WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/upp/civi(new_human), WEAR_BODY)
 		if(11)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/civi3(new_human), WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/upp/civi(new_human), WEAR_BODY)
 		if(12)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/civi4(new_human), WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/upp/civi(new_human), WEAR_BODY)
 		if(13)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/utility(new_human), WEAR_BODY)
 		if(14)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/utility/blue(new_human), WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/synthetic/utility/blue(new_human), WEAR_BODY)
 		if(15)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/utility/brown(new_human), WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/utility/brown/upp(new_human), WEAR_BODY)
 		if(16)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/utility/gray(new_human), WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/utility/gray/upp(new_human), WEAR_BODY)
 		if(17)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/utility/red(new_human), WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/synthetic/utility/red(new_human), WEAR_BODY)
 		if(18)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/utility/yellow(new_human), WEAR_BODY)
 
@@ -426,9 +425,9 @@
 		if(8)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/black/knife(new_human), WEAR_FEET)
 		if(9)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/knife(new_human), WEAR_FEET)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp(new_human), WEAR_FEET)
 
-	add_survivor_weapon_civilian(new_human)
+	add_survivor_weapon_pistol(new_human)
 	..()
 
 /datum/equipment_preset/survivor/upp_fire_fighter
@@ -457,7 +456,7 @@
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/upp_pfb(new_human), WEAR_FACE)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/utility/brown/upp(new_human), WEAR_BODY)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/light/vest/fire_light/upp(new_human), WEAR_JACKET)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/upp(new_human), WEAR_HANDS)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp(new_human), WEAR_FEET)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack, WEAR_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/attachable/attached_gun/extinguisher(new_human.back), WEAR_IN_BACK)
@@ -468,14 +467,14 @@
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/upp/firefighter(new_human), WEAR_HEAD)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/upp_pfb(new_human), WEAR_FACE)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/light/vest/fire_light/upp(new_human), WEAR_JACKET)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/upp(new_human), WEAR_HANDS)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp(new_human), WEAR_FEET)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack, WEAR_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/attachable/attached_gun/extinguisher(new_human.back), WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/tool/extinguisher/mini(new_human.back), WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/utility/brown/upp(new_human), WEAR_BODY)
 
-	add_survivor_weapon_civilian(new_human)
+	add_survivor_weapon_pistol(new_human)
 	..()
 
 /datum/equipment_preset/survivor/upp_miner
@@ -493,15 +492,15 @@
 /datum/equipment_preset/survivor/upp_miner/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/hardhat/white/alt, WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/civi5(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/upp/civi(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/eng(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/webbing(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/full(new_human), WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/upp(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp/airborne, WEAR_ACCESSORY)
 
-	add_survivor_weapon_civilian(new_human)
+	add_survivor_weapon_pistol(new_human)
 	..()
 
 /datum/equipment_preset/survivor/hyperdyne
@@ -511,7 +510,7 @@
 	flags = EQUIPMENT_PRESET_START_OF_ROUND
 	paygrades = list(PAY_SHORT_WYC2 = JOB_PLAYTIME_TIER_0, PAY_SHORT_WYC3 = JOB_PLAYTIME_TIER_2, PAY_SHORT_WYC4 = JOB_PLAYTIME_TIER_3, PAY_SHORT_WYC5 = JOB_PLAYTIME_TIER_4)
 	faction_group = FACTION_HYPERDYNE
-	job_title = JOB_HC_EXECUTIVE
+	rank = JOB_HC_EXECUTIVE
 	faction = FACTION_HYPERDYNE
 	faction_group = list(FACTION_HYPERDYNE, FACTION_LIST_SURVIVOR_UPP)
 	idtype = /obj/item/card/id/silver/cl/hyperdyne
@@ -554,9 +553,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/hyperdyne(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/lockable/liaison, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/upp(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/brown(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/tie/black(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/black(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/hyperdyne_patch, WEAR_ACCESSORY)
 
 	var/random_trenchcoat = rand(1,2)
@@ -566,7 +565,7 @@
 		if(2)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/CMB/trenchcoat/grey(new_human), WEAR_JACKET)
 
-	add_survivor_weapon_civilian(new_human)
+	add_survivor_weapon_pistol(new_human)
 	add_random_cl_survivor_loot(new_human)
 	add_ice_colony_survivor_equipment(new_human)
 	..()
