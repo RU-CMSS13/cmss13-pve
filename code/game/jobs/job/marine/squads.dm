@@ -821,7 +821,7 @@
 
 	if(paygrade)
 		C.paygrade = paygrade
-	C.name = "[C.registered_name]'s [C.card_name] ([C.assignment])"
+	C.name = "[C.registered_name]'s [C.id_type] ([C.assignment])"
 
 	var/obj/item/device/radio/headset/almayer/marine/headset = locate() in list(M.wear_l_ear, M.wear_r_ear)
 	if(headset && radio_freq)
@@ -843,7 +843,7 @@
 
 	C.access -= src.access
 	C.assignment = M.assigned_equipment_preset.assignment
-	C.name = "[C.registered_name]'s [C.card_name] ([C.assignment])"
+	C.name = "[C.registered_name]'s [C.id_type] ([C.assignment])"
 
 	forget_marine_in_squad(M)
 
