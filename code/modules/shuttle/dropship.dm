@@ -579,3 +579,30 @@
 	desc = "The nose of a TWE produced DAA.4 Nimrod dropship. Contains the AESA radar system and the chin-mounted powered gunpod."
 	icon_state = "101a"
 	opacity = FALSE
+
+// UPP-SOF Ship Cosmetic
+
+/obj/structure/shuttle/part/upp_sof
+	name = "\improper UPP-DS-3 'Voron'"
+	icon = 'icons/turf/upp_sof_dropship.dmi'
+	icon_state = "0,0"
+	opacity = TRUE
+
+/obj/structure/shuttle/part/upp_sof/ex_act(severity, direction)
+	return FALSE
+
+/obj/structure/shuttle/part/upp_sof/transparent
+	opacity = FALSE
+
+
+/obj/structure/shuttle/part/upp_sof_alt
+	name = "\improper UPP-DS-3 'Volk'"
+	icon = 'icons/turf/upp_sof_alt_dropship.dmi'
+	icon_state = "0,0"
+	opacity = TRUE
+
+/obj/structure/shuttle/part/upp_sof_alt/ex_act(severity, direction)
+	return FALSE
+
+/obj/structure/shuttle/part/upp_sof_alt/transparent
+	opacity = FALSE

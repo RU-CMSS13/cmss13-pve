@@ -271,6 +271,12 @@
 	item_state = "silver_badge"
 	paygrade = PAY_SHORT_CMBD
 
+/obj/item/card/id/PaP
+	name = "PaP identification holo-badge"
+	desc = "A standard-issue holo-badge for personnel within the UPP's People's Armed Police. It displays the officer's rank and affiliation."
+	icon_state = "data"
+	paygrade = PAY_SHORT_PAP_MLTS
+
 /obj/item/card/id/nspa_silver
 	name = "\improper NSPA silver badge"
 	desc = "The silver badge which represents that the wearer is a NSPA Constable. It is a sign of justice, authority, and protection. Protecting those who can't. This badge represents a commitment to a sworn oath always kept."
