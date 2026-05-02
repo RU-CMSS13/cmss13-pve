@@ -2013,19 +2013,6 @@
 /obj/item/storage/internal/accessory/black_vest/m3generic/plus // RU-CM PVE edit
 	storage_slots = 6
 
-//Pre-load for MARSOC props
-/obj/item/clothing/accessory/storage/webbing/m3/recon/medic/marsoc
-	icon_state = "armywebbing"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/recon/marsoc
-
-/obj/item/storage/internal/accessory/black_vest/m3generic/recon/marsoc/fill_preset_inventory()
-	new /obj/item/storage/surgical_case/regular(src)
-	new /obj/item/tool/surgery/surgical_line(src)
-	new /obj/item/tool/surgery/synthgraft(src)
-	new /obj/item/storage/syringe_case/regular(src)
-	new /obj/item/reagent_container/blood/OMinus(src)
-	new /obj/item/reagent_container/blood/OMinus(src)
-
 /obj/item/clothing/accessory/storage/webbing/m56
 	name = "\improper Clip-on Pouch"
 	desc = "A clip on synth-leather pouch designed to house a small collection of items for M56 weapon operators."

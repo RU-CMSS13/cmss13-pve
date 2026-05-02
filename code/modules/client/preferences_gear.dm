@@ -173,6 +173,11 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Face wrap, cyan green"
 	path = /obj/item/clothing/mask/rebreather/scarf/tacticalmask/echo
 
+/datum/gear/mask/face_wrap_usa
+	display_name = "Face wrap, USA"
+	path = /obj/item/clothing/mask/rebreather/scarf/tacticalmask/usa
+	allowed_origins = USCM_ORIGINS
+
 /datum/gear/mask/gas
 	display_name = "Gas mask"
 	path = /obj/item/clothing/mask/gas //Civ market gas-mask, no longer USCM locked
