@@ -185,24 +185,6 @@
 	html_link = "images/d/da/White_Antre_Research_Facility.png"
 	color = "cyan"
 
-/obj/item/map/lv_671
-	name = "\improper LV-671 Map"
-	desc = "An orbital scan printout of the LV-671 colony."
-	html_link = ""
-	color = "cyan"
-
-/obj/item/map/oil_depot
-	name = "\improper Oil Depot Map"
-	desc = "A satellite printout of the oil depots on planet."
-	html_link = ""
-	color = "#e88a10"
-
-/obj/item/map/almayer/infested
-	name = "\improper USS Almayer map"
-	desc = "A labeled blueprint of the USS Almayer"
-	html_link = "images/5/54/USS_Almayer.png"
-	color = "cyan"
-
 /obj/item/map/cape_river
 	name = "\improper Cape River map"
 	desc = "A labeled blueprint of the Con-Am mining outpost Cape River"
@@ -258,11 +240,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_TYRARGO_RIFT = new /obj/item/map/tyrargo_rift(),
 		MAP_WHITE_ANTRE_RESEARCH_FACILITY = new /obj/item/map/white_antre_map(),
 		MAP_CONAM_81_ABYSSAL = new /obj/item/map/new_varadero(),
-		MAP_TYRARGO_RIFT = new /obj/item/map/tyrargo_rift(),
 		MAP_CAPE_RIVER = new /obj/item/map/cape_river(),
-		MAP_LV_671 = new /obj/item/map/lv_671(),
-		MAP_OIL_DEPOT = new /obj/item/map/oil_depot(),
-		MAP_DERELICT_ALMAYER_INFESTED = new /obj/item/map/almayer/infested()
 	)
 
 //used by marine equipment machines to spawn the correct map.
