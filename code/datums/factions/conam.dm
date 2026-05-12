@@ -3,15 +3,14 @@
 	faction_tag = FACTION_CONAM
 
 /datum/faction/conam/modify_hud_holder(image/holder, mob/living/carbon/human/H)
-	var/icon/override_icon_file
 	var/hud_icon_state
-	var/obj/item/card/id/id_card = H.get_idcard()
-	var/role
+	var/obj/item/card/id/ID = H.get_idcard()
+	var/_role
 	if(H.mind)
-		role = H.job
-	else if(id_card)
-		role = id_card.rank
-	switch(role)
+		_role = H.job
+	else if(ID)
+		_role = ID.rank
+	switch(_role)
 		if(JOB_CA_TRAINEE)
 			hud_icon_state = "trainee"
 		if(JOB_CA_JUNIOR_EXECUTIVE)
