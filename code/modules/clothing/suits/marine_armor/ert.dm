@@ -106,6 +106,10 @@
 
 /obj/item/clothing/suit/storage/marine/veteran/pmc/light/synth/corporate
 	name = "\improper M1 pattern corporate synthetic armor"
+	icon = 'icons/obj/items/clothing/suits/suits_by_faction/WY.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/WY.dmi'
+	)
 	desc = "A basic synthetic personnel vest with a Weyland-Yutani badge on the right breast. This is a rare sight, as low-level security units often aren't afforded the luxury of an accompanying synthetic. It has all of the armor inserts removed."
 	icon_state = "armor"
 	item_state = "armor"

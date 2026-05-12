@@ -1021,10 +1021,6 @@
 		/obj/item/prop/helmetgarb/helmet_nvg/marsoc = "icon_state",
 	)
 
-/obj/item/clothing/head/beret/royal_marine/team_leader
-	icon_state = "rmc_beret_tl"
-	item_state = "rmc_beret_tl"
-
 /obj/item/clothing/head/cavalry
 	name = "\improper US cavalry hat"
 	desc = "Also known as Cavalry Stetson, this hat is a symbol of tradition and remembrence of heroism that is ongoing from as far as 19th century. Even though cavalry divison had cashed in its horses for choppers, choppers for dropships, and gone tear-assing around space, looking for the shit."

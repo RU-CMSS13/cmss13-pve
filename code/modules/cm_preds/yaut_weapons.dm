@@ -1002,6 +1002,7 @@
 /obj/item/weapon/gun/energy/yautja/plasmarifle
 	name = "plasma rifle"
 	desc = "A long-barreled heavy plasma weapon. Intended for combat, not hunting. Has an integrated battery that allows for a functionally unlimited amount of shots to be discharged. Equipped with an internal gyroscopic stabilizer allowing its operator to fire the weapon one-handed if desired"
+	icon = 'icons/obj/items/hunter/pred_64x32.dmi'
 	icon_state = "plasmarifle"
 	item_state = "plasmarifle"
 	unacidable = TRUE
