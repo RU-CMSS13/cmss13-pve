@@ -1,9 +1,4 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"aaa" = (
-/turf/open/auto_turf/lv_sand/layer0{
-	dir = 2
-	},
-/area/lazarus/ground/jungle/south_central_jungle)
 "aab" = (
 /obj/structure/flora/grass/tallgrass/jungle_alt_2/corner,
 /turf/open/auto_turf/lv_grass/layer1,
@@ -8826,9 +8821,7 @@
 /turf/open/floor/interior/wood/alt,
 /area/lazarus/ground/cove)
 "dSE" = (
-/obj/structure/flora/grass/tallgrass/jungle_alt_2/corner{
-	dir = 3
-	},
+/obj/structure/flora/grass/tallgrass/jungle_alt_2/corner,
 /turf/open/auto_turf/lv_grass/layer0,
 /area/lazarus/landing_zones/lz1)
 "dSG" = (
@@ -12854,9 +12847,7 @@
 /turf/open/floor/ancient_temple/damaged/damage_7,
 /area/lazarus/ground/ancient_temple/south)
 "fCI" = (
-/obj/structure/flora/grass/tallgrass/jungle_alt_2/corner{
-	dir = 3
-	},
+/obj/structure/flora/grass/tallgrass/jungle_alt_2/corner,
 /turf/open/auto_turf/lv_grass/layer1,
 /area/lazarus/ground/jungle/south_west_jungle)
 "fCS" = (
@@ -19937,12 +19928,6 @@
 	},
 /turf/open/floor/strata/fake_wood,
 /area/lazarus/corporate_dome)
-"iKr" = (
-/obj/structure/flora/grass/tallgrass/jungle_alt_2/corner{
-	dir = 3
-	},
-/turf/open/auto_turf/lv_grass/layer1,
-/area/lazarus/ground/jungle/north_east_jungle)
 "iKv" = (
 /obj/structure/flora/bush/ausbushes/grassybush,
 /turf/open/auto_turf/lv_grass/layer1,
@@ -23882,9 +23867,7 @@
 /turf/open/auto_turf/lv_grass_weedable/layer0_mud_alt,
 /area/lazarus/ground/caves/south_west_caves)
 "kwq" = (
-/obj/structure/flora/grass/tallgrass/jungle_alt_2/corner{
-	dir = 3
-	},
+/obj/structure/flora/grass/tallgrass/jungle_alt_2/corner,
 /turf/open/auto_turf/lv_grass/layer0,
 /area/lazarus/ground/jungle/central_jungle)
 "kwr" = (
@@ -27376,9 +27359,7 @@
 /turf/open/auto_turf/lv_grass_weedable/layer0_mud_alt,
 /area/lazarus/ground/caves/west_caves)
 "lUG" = (
-/obj/structure/flora/grass/tallgrass/jungle_alt_2/corner{
-	dir = 3
-	},
+/obj/structure/flora/grass/tallgrass/jungle_alt_2/corner,
 /turf/open/auto_turf/lv_grass/layer1,
 /area/lazarus/ground/jungle/north_west_jungle)
 "lUL" = (
@@ -28604,12 +28585,6 @@
 	name = "Solar Nexus Pillar"
 	},
 /area/lazarus/main_hall)
-"mwd" = (
-/obj/structure/flora/grass/tallgrass/jungle_alt_2/corner{
-	dir = 3
-	},
-/turf/open/auto_turf/lv_grass/layer0,
-/area/lazarus/ground/jungle/west_jungle)
 "mwl" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_wall,
 /turf/open/floor/ancient_temple/damaged/damage_2,
@@ -30745,11 +30720,6 @@
 /obj/structure/flora/grass/tallgrass/jungle_alt_2/corner{
 	dir = 8
 	},
-/turf/open/auto_turf/lv_grass/layer1,
-/area/lazarus/ground/jungle/east_central_jungle)
-"nmk" = (
-/obj/structure/platform/metal/strata/alt/north,
-/obj/structure/platform/metal/strata/alt/north,
 /turf/open/auto_turf/lv_grass/layer1,
 /area/lazarus/ground/jungle/east_central_jungle)
 "nmo" = (
@@ -36324,9 +36294,7 @@
 /turf/open/floor/ancient_temple/ruined/east,
 /area/lazarus/ground/ancient_temple/south/surface)
 "pDb" = (
-/obj/structure/flora/grass/tallgrass/jungle_alt_2/corner{
-	dir = 3
-	},
+/obj/structure/flora/grass/tallgrass/jungle_alt_2/corner,
 /turf/open/auto_turf/lv_grass/layer1,
 /area/lazarus/ground/jungle/north_west_jungle/dense)
 "pDc" = (
@@ -39515,9 +39483,7 @@
 /turf/open/auto_turf/lv_sand_alt/layer0,
 /area/lazarus/ground/caves/south_west_caves)
 "qXq" = (
-/obj/structure/flora/grass/tallgrass/jungle_alt_2/corner{
-	dir = 3
-	},
+/obj/structure/flora/grass/tallgrass/jungle_alt_2/corner,
 /turf/open/auto_turf/lv_grass/layer1,
 /area/lazarus/ground/jungle/south_central_jungle)
 "qXt" = (
@@ -49365,12 +49331,6 @@
 	},
 /turf/open/floor/ancient_temple/damaged/damage_7,
 /area/lazarus/ground/ancient_temple/east)
-"vcK" = (
-/obj/structure/flora/grass/tallgrass/jungle_alt_2/corner{
-	dir = 3
-	},
-/turf/open/auto_turf/lv_grass/layer1,
-/area/lazarus/ground/jungle/north_jungle)
 "vdi" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/ancient_temple/base,
@@ -52110,9 +52070,7 @@
 /turf/open/auto_turf/lv_grass/layer1,
 /area/lazarus/ground/jungle/north_west_jungle/dense)
 "wrU" = (
-/obj/structure/flora/grass/tallgrass/jungle_alt_2/corner{
-	dir = 3
-	},
+/obj/structure/flora/grass/tallgrass/jungle_alt_2/corner,
 /turf/open/auto_turf/lv_grass/layer0,
 /area/lazarus/ground/jungle/south_west_jungle)
 "wrZ" = (
@@ -57511,7 +57469,7 @@ nhv
 wiW
 tyA
 tyA
-mwd
+pwa
 kYd
 naZ
 tyA
@@ -75381,7 +75339,7 @@ ukZ
 hJi
 fkT
 fkT
-vcK
+aab
 aHu
 tdd
 vOE
@@ -81054,7 +81012,7 @@ mGg
 wvE
 jJa
 jJa
-nmk
+leq
 qrf
 kmM
 rrz
@@ -81062,7 +81020,7 @@ vQJ
 rrz
 oRO
 cVo
-aaa
+mgm
 oQF
 tZA
 qKN
@@ -88600,7 +88558,7 @@ mrK
 iyW
 bih
 kof
-iKr
+dVy
 rLn
 cRx
 aqc

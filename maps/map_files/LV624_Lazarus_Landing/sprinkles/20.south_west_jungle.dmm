@@ -46,12 +46,6 @@
 /obj/structure/flora/bush/ausbushes/genericbush,
 /turf/open/auto_turf/lv_grass/layer1,
 /area/lazarus/ground/jungle/west_jungle)
-"hE" = (
-/obj/structure/flora/grass/tallgrass/jungle_alt_2/corner{
-	dir = 3
-	},
-/turf/open/auto_turf/lv_grass/layer0,
-/area/lazarus/ground/jungle/west_jungle)
 "if" = (
 /obj/structure/flora/bush/ausbushes/grassybush,
 /turf/open/auto_turf/lv_grass/layer0,
@@ -532,14 +526,14 @@ Lv
 Sm
 Fw
 Fw
-hE
+Qo
 kl
 ZA
 Fw
 GO
 Fw
 Fw
-cJ
+MZ
 "}
 (5,1,1) = {"
 Fw
