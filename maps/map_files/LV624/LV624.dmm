@@ -3443,7 +3443,10 @@
 /turf/open/gm/grass/grass2,
 /area/lv624/lazarus/yggdrasil)
 "aMQ" = (
-/obj/structure/flora/tree/jungle/bigtreeTL,
+/obj/structure/roof/flora/tree/jungle/bigtreeTL{
+	pixel_x = -15;
+	pixel_y = 1
+	},
 /obj/structure/flora/jungle/vines/heavy,
 /turf/open/gm/grass/grassbeach/west,
 /area/lv624/lazarus/yggdrasil)
@@ -3452,7 +3455,9 @@
 /turf/open/gm/grass/grassbeach/south,
 /area/lv624/lazarus/yggdrasil)
 "aMT" = (
-/obj/structure/flora/tree/jungle/bigtreeTR,
+/obj/structure/roof/flora/tree/jungle/bigtreeTR{
+	pixel_x = -15
+	},
 /turf/open/gm/grass/grass2,
 /area/lv624/lazarus/yggdrasil)
 "aMU" = (
