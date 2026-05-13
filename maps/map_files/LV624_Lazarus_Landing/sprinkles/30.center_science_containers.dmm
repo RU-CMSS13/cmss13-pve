@@ -244,11 +244,6 @@
 /obj/effect/decal/cleanable/blood,
 /turf/open/auto_turf/lv_sand/layer0,
 /area/template_noop)
-"Y" = (
-/turf/open/gm/brown_dirt/random_rocks_alt{
-	dir = 6
-	},
-/area/template_noop)
 "Z" = (
 /obj/structure/machinery/door/airlock/hybrisa/medical/autoname{
 	name = "\improper Research Dome";
@@ -339,7 +334,7 @@ M
 x
 H
 o
-Y
+d
 K
 o
 M

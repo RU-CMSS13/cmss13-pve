@@ -4976,8 +4976,7 @@
 "kQ" = (
 /obj/structure/closet/secure_closet{
 	name = "Platoon Sergeant locker";
-	req_access_txt = "240"pixel_x=-8;
-	can_block_movement = 0;
+	req_access_txt = "240"can_block_movement = 0;
 	pixel_x = -8
 	},
 /obj/item/tool/crowbar/tactical,
