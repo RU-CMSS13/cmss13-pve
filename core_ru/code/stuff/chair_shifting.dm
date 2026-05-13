@@ -7,7 +7,7 @@
 	var/mob_old_y = 0
 
 /obj/structure/bed/chair/Initialize()
-	..()
+	. = ..()
 
 	addtimer(CALLBACK(src, PROC_REF(setup_buckle_offsets)), 1 SECONDS)
 
