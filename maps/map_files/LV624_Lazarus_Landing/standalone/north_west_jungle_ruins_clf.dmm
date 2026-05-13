@@ -2089,9 +2089,7 @@
 /turf/open/floor/interior/wood/alt,
 /area/lazarus/ground/jungle/north_west_jungle/dense/roof)
 "vP" = (
-/obj/structure/flora/grass/tallgrass/jungle_alt_2/corner{
-	dir = 3
-	},
+/obj/structure/flora/grass/tallgrass/jungle_alt_2/corner,
 /turf/open/auto_turf/lv_grass/layer1,
 /area/lazarus/ground/jungle/north_west_jungle/dense)
 "vX" = (
