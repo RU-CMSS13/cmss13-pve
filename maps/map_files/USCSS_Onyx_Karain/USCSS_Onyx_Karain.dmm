@@ -8844,7 +8844,8 @@
 /area/firefly/cafeteria)
 "axv" = (
 /obj/structure/closet/secure_closet/marine_personal/pmc/platoon_leader,
-/obj/item/clothing/head/cmcap/pmc/obj/item/clothing/under/marine/veteran/pmc/leader,
+/obj/item/clothing/head/cmcap/pmc,
+/obj/item/clothing/under/marine/veteran/pmc/leader,
 /obj/item/clothing/shoes/veteran/pmc/knife,
 /obj/item/device/radio/headset/distress/pmc/platoon,
 /turf/open/floor/corsat/cargo,
