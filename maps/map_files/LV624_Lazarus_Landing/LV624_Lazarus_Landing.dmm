@@ -4,6 +4,10 @@
 	dir = 2
 	},
 /area/lazarus/ground/jungle/south_central_jungle)
+"aab" = (
+/obj/structure/flora/grass/tallgrass/jungle_alt_2/corner,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/jungle/north_jungle)
 "aah" = (
 /obj/structure/flora/jungle/planttop1,
 /turf/open/auto_turf/lv_grass/layer0,
@@ -4351,9 +4355,7 @@
 "bTS" = (
 /obj/effect/decal/hybrisa/dirt,
 /obj/effect/decal/hybrisa/dirt,
-/turf/open/floor/interior/sun_emblem{
-	dir = 10
-	},
+/turf/open/floor/interior/sun_emblem/southwest,
 /area/lazarus/main_hall)
 "bTZ" = (
 /obj/structure/platform_decoration/metal/strata/alt{
@@ -5095,9 +5097,7 @@
 /obj/effect/decal/hybrisa/dirt,
 /obj/effect/decal/cleanable/blood/gibs,
 /obj/effect/decal/cleanable/blood,
-/turf/open/floor/interior/sun_emblem{
-	dir = 5
-	},
+/turf/open/floor/interior/sun_emblem/northeast,
 /area/lazarus/main_hall)
 "ckX" = (
 /obj/effect/hunter/ancient_temple/tile_edge_corner/tile_edge_corner_4,
@@ -11592,9 +11592,7 @@
 /obj/structure/platform/stone/ancient_temple/alt/west,
 /obj/structure/blocker/forcefield/all,
 /obj/structure/blocker/forcefield/vehicles,
-/turf/open/void{
-	name = "darkness"
-	},
+/turf/open/void,
 /area/strata/interior/out_of_bounds)
 "fbk" = (
 /obj/structure/prop/hunter/ancient_temple/giant_statue/base,
@@ -12605,9 +12603,7 @@
 "fwq" = (
 /obj/effect/decal/hybrisa/dirt,
 /obj/effect/decal/cleanable/blood,
-/turf/open/floor/interior/sun_emblem{
-	dir = 8
-	},
+/turf/open/floor/interior/sun_emblem/west,
 /area/lazarus/main_hall)
 "fww" = (
 /obj/effect/hunter/ancient_temple/rubble/rubble_6{
@@ -19137,9 +19133,7 @@
 	pixel_y = 1
 	},
 /obj/effect/decal/cleanable/blood/gibs,
-/turf/open/floor/interior/sun_emblem{
-	dir = 6
-	},
+/turf/open/floor/interior/sun_emblem/southeast,
 /area/lazarus/main_hall)
 "ipN" = (
 /obj/effect/decal/hybrisa/dirt,
@@ -19147,9 +19141,7 @@
 	pixel_x = 5;
 	pixel_y = 16
 	},
-/turf/open/floor/interior/sun_emblem{
-	dir = 9
-	},
+/turf/open/floor/interior/sun_emblem/northwest,
 /area/lazarus/main_hall)
 "ipZ" = (
 /obj/structure/platform/stone/ancient_temple/west,
@@ -24932,9 +24924,7 @@
 /obj/structure/platform/stone/ancient_temple/alt/east,
 /obj/structure/blocker/forcefield/all,
 /obj/structure/blocker/forcefield/vehicles,
-/turf/open/void{
-	name = "darkness"
-	},
+/turf/open/void,
 /area/strata/interior/out_of_bounds)
 "kVf" = (
 /obj/structure/flora/grass/tallgrass/jungle_alt_2/corner{
@@ -25448,9 +25438,7 @@
 /area/lazarus/engineering)
 "lgv" = (
 /obj/effect/decal/hybrisa/dirt,
-/turf/open/floor/interior/sun_emblem{
-	desc = "The emblem of the sun etched in gold, a radiant seal that crowns the dome's foundation. At its center lies a block engraved with Weyland-Yutani's insignia and the purpose of this place."
-	},
+/turf/open/floor/interior/sun_emblem,
 /area/lazarus/main_hall)
 "lgx" = (
 /obj/effect/decal/hybrisa/dirt,
@@ -30954,9 +30942,7 @@
 /obj/structure/platform/stone/ancient_temple/alt/east,
 /obj/structure/blocker/forcefield/all,
 /obj/structure/blocker/forcefield/vehicles,
-/turf/open/floor/ancient_temple/fake_wall_dark{
-	name = "sandstone temple wall"
-	},
+/turf/open/floor/ancient_temple/fake_wall_dark,
 /area/strata/interior/out_of_bounds)
 "nqr" = (
 /obj/effect/decal/lv_decals/cave_mud_corner{
@@ -43400,9 +43386,7 @@
 	icon_state = "rope_flipped"
 	},
 /obj/structure/blocker/forcefield/vehicles,
-/turf/open/floor/ancient_temple/fake_wall_dark{
-	name = "sandstone temple wall"
-	},
+/turf/open/floor/ancient_temple/fake_wall_dark,
 /area/strata/interior/out_of_bounds)
 "sHt" = (
 /obj/structure/platform/stone/ancient_temple/west,
@@ -50592,9 +50576,7 @@
 /obj/effect/decal/cleanable/blood/drip{
 	pixel_y = 17
 	},
-/turf/open/floor/interior/sun_emblem{
-	dir = 1
-	},
+/turf/open/floor/interior/sun_emblem/north,
 /area/lazarus/main_hall)
 "vIR" = (
 /obj/structure/platform/metal/strata/alt/west,
@@ -51027,10 +51009,7 @@
 /obj/effect/decal/hybrisa/dirt,
 /obj/effect/landmark/corpsespawner/colonist/random,
 /obj/effect/decal/cleanable/blood,
-/turf/open/floor/interior/sun_emblem{
-	dir = 4;
-	desc = "The emblem of the sun etched in gold, a radiant seal that crowns the dome's foundation. At its center lies a block engraved with Weyland-Yutani's insignia and the purpose of this place."
-	},
+/turf/open/floor/interior/sun_emblem/east,
 /area/lazarus/main_hall)
 "vSH" = (
 /obj/structure/barricade/handrail/wire{
@@ -75626,7 +75605,7 @@ ukZ
 hJi
 hJi
 fkT
-vcK
+aab
 aHu
 tdd
 vOE

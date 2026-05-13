@@ -748,10 +748,40 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/facepaint/skull
 	cost = 3
 
+/datum/gear/paint/facepaint_clown
+	display_name = "Facepaint, clown"
+	path = /obj/item/facepaint/clown
+	cost = 5
+
+/datum/gear/paint/facepaint_clown_alt
+	display_name = "Facepaint, clown (alternate)"
+	path = /obj/item/facepaint/clown/alt
+	cost = 5
+
 /datum/gear/paint/facepaint_body
 	display_name = "Fullbody paint"
 	path = /obj/item/facepaint/sniper
 	cost = 4 //To match with the skull paint amount of point, gave this amount of point for the same reason of the skull facepaint (too cool for everyone to be able to constantly use)
+
+/datum/gear/paint/facepaint_body_snow
+	display_name = "Fullbody paint, snow"
+	path = /obj/item/facepaint/sniper/snow
+	cost = 4
+
+/datum/gear/paint/facepaint_body_desert
+	display_name = "Fullbody paint, desert"
+	path = /obj/item/facepaint/sniper/desert
+	cost = 4
+
+/datum/gear/paint/facepaint_body_jungle
+	display_name = "Fullbody paint, jungle"
+	path = /obj/item/facepaint/sniper/jungle
+	cost = 4
+
+/datum/gear/paint/facepaint_body_urban
+	display_name = "Fullbody paint, urban"
+	path = /obj/item/facepaint/sniper/urban
+	cost = 4
 
 /*
 //================================================
