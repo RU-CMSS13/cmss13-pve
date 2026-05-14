@@ -19,17 +19,6 @@
 /obj/structure/window_frame/solaris,
 /turf/open/floor/plating,
 /area/bigredv2/outside/space_port)
-"af" = (
-/obj/item/stack/rods,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroidwarning,
-/area/bigredv2/outside/nw)
-"ag" = (
-/obj/item/stack/sheet/metal,
-/obj/item/stack/rods,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroidwarning,
-/area/bigredv2/outside/nw)
 "ah" = (
 /obj/structure/window_frame/solaris,
 /obj/item/shard,
@@ -158,12 +147,6 @@
 	},
 /turf/open/floor/asteroidwarning/east,
 /area/bigredv2/outside/space_port)
-"aH" = (
-/obj/item/stack/rods,
-/obj/item/stack/rods,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroidwarning,
-/area/bigredv2/outside/nw)
 "aI" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -308,8 +291,25 @@
 "bn" = (
 /turf/open/floor/asteroidwarning,
 /area/bigredv2/outside/nw)
+"bo" = (
+/obj/item/stack/rods,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/asteroidwarning,
+/area/bigredv2/outside/nw)
+"bp" = (
+/obj/item/stack/sheet/metal,
+/obj/item/stack/rods,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/asteroidwarning,
+/area/bigredv2/outside/nw)
 "bq" = (
 /obj/structure/lz_sign/solaris_sign,
+/turf/open/floor/asteroidwarning,
+/area/bigredv2/outside/nw)
+"br" = (
+/obj/item/stack/rods,
+/obj/item/stack/rods,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/asteroidwarning,
 /area/bigredv2/outside/nw)
 "bs" = (
@@ -733,7 +733,7 @@ aA
 aR
 aZ
 ac
-af
+bo
 bi
 bA
 bE
@@ -775,7 +775,7 @@ aA
 aA
 bb
 ai
-ag
+bp
 bi
 bB
 bE
@@ -817,7 +817,7 @@ aA
 aS
 bd
 ac
-aH
+br
 bi
 bB
 bE
