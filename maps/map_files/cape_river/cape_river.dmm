@@ -60677,6 +60677,9 @@
 	dir = 8
 	},
 /obj/effect/decal/sand_overlay/sand1/corner1,
+/obj/effect/landmark/nightmare{
+	insert_tag = "clfbridgecrash"
+	},
 /turf/open/floor/kutjevo/tan/multi_tiles/east,
 /area/caperiver/outdoors/scrublands/central)
 "xYf" = (
