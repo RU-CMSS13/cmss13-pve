@@ -32,7 +32,7 @@
 	log_admin("[src] rolled a dice: [(action_text && length(action_text)) ? action_text : "no action"] → [result]")
 
 	// Show in admin chat with jump option
-	message_admins(SPAN_BOLDWARNING("[src] rolled a dice: [(action_text && length(action_text)) ? action_text : "no action"] → [result] [ADMIN_JMP(src)]"))
+	message_admins(SPAN_BOLDWARNING("[src] rolled a dice: [(action_text && length(action_text)) ? action_text : "no action"] → [result] [ADMIN_JMP_USER(src)]"))
 
 	return result
 
