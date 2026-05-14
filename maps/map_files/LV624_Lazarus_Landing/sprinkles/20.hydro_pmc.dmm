@@ -598,7 +598,6 @@
 /area/template_noop)
 "CF" = (
 /obj/structure/closet/crate/hydroponics/prespawned,
-/obj/effect/landmark/objective_landmark/close,
 /obj/effect/decal/hybrisa/dirt,
 /obj/item/shard,
 /turf/open/floor/prison/platingdmg1,
@@ -766,8 +765,6 @@
 /turf/open/floor/plating/prison,
 /area/template_noop)
 "IU" = (
-/obj/item/ammo_magazine/rifle/nsg23/extended,
-/obj/effect/landmark/objective_landmark/medium,
 /obj/item/stack/sheet/wood,
 /obj/effect/decal/hybrisa/dirt,
 /obj/effect/decal/hybrisa/dirt,
@@ -1065,7 +1062,6 @@
 /area/template_noop)
 "Tm" = (
 /obj/structure/closet/crate/hydroponics/prespawned,
-/obj/effect/landmark/objective_landmark/close,
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/floor/prison/platingdmg1,
 /area/template_noop)
@@ -1138,10 +1134,10 @@
 	current_rounds = 17
 	},
 /obj/effect/spawner/gibspawner/human,
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /obj/item/clothing/head/helmet/marine/veteran/pmc/leader,
-/obj/effect/decal/ammo_casing,
-/obj/effect/decal/ammo_casing,
-/obj/effect/decal/ammo_casing,
 /turf/open/floor/plating/prison,
 /area/template_noop)
 "Wi" = (
