@@ -174,6 +174,12 @@
 	html_link = ""
 	color = "cyan"
 
+/obj/item/map/navalis
+	name = "\improper Navalis Platform 13 map"
+	desc = "A blueprint of Navalis Platform 13"
+	html_link = "images/6/67/Navalis_platform_13_ic.png"
+	color = "cyan"
+
 /obj/item/map/tyrargo_rift
 	name = "\improper Tyrargo Rift map"
 	desc = "A labeled blueprint of the UA city Tyrargo Rift"
@@ -237,6 +243,8 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_TAIPEI = new /obj/item/map/taipei(),
 		MAP_REDEMPTION_VALLEY = new /obj/item/map/lazarus_landing_map(),
 		MAP_BINHAI_SUPPLY_STATION = new /obj/item/map/FOP_map(),
+		MAP_NAVALIS = new /obj/item/map/navalis,
+		MAP_NAVALIS_SINGLE = new /obj/item/map/navalis,
 		MAP_TYRARGO_RIFT = new /obj/item/map/tyrargo_rift(),
 		MAP_WHITE_ANTRE_RESEARCH_FACILITY = new /obj/item/map/white_antre_map(),
 		MAP_CONAM_81_ABYSSAL = new /obj/item/map/new_varadero(),
