@@ -3265,7 +3265,6 @@
 /obj/effect/decal/lv_decals/red_mud_corner{
 	dir = 4
 	},
-/obj/effect/vehicle_spawner/clf_van/fixed,
 /turf/open/floor/interior/wood/alt,
 /area/lazarus/ground/jungle/north_west_jungle/dense)
 "KP" = (

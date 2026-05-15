@@ -2789,7 +2789,6 @@
 #include "code\modules\vehicles\van\ambulance.dm"
 #include "code\modules\vehicles\van\armored_van.dm"
 #include "code\modules\vehicles\van\box_van.dm"
-#include "code\modules\vehicles\van\clf_van.dm"
 #include "code\modules\vehicles\van\cop_car.dm"
 #include "code\modules\vehicles\van\interior.dm"
 #include "code\modules\vehicles\van\pizza_van.dm"
