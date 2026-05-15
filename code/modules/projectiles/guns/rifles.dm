@@ -113,7 +113,6 @@
 	random_spawn_rail = list(
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
 	)
 	random_spawn_under = list(
 		/obj/item/attachable/angledgrip,
