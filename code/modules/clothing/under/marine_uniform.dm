@@ -1296,11 +1296,15 @@
 	name = "\improper OP-4M suit"
 	desc = "UPP standard issue OZK suits are purpose built to defend the wearer against biological and radioactive contaminants, from nerve gas to nuclear fallout."
 	desc_lore = null
+	icon = 'icons/obj/items/clothing/uniforms/uniforms_by_faction/UPP.dmi'
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_faction/UPP.dmi',
+	)
+	icon_state = "upp_cbrn"
+	worn_state = "upp_cbrn"
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	armor_bio = CLOTHING_ARMOR_HIGH
 	armor_rad = CLOTHING_ARMOR_HIGHPLUS
-	icon_state = "upp_cbrn"
-	worn_state = "upp_cbrn"
 
 /obj/item/clothing/under/marine/cbrn //CBRN MOPP suit
 	name = "\improper M3 MOPP suit"
