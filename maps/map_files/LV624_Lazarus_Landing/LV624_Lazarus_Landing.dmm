@@ -1,8 +1,4 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"aab" = (
-/obj/structure/flora/grass/tallgrass/jungle_alt_2/corner,
-/turf/open/auto_turf/lv_grass/layer1,
-/area/lazarus/ground/jungle/north_jungle)
 "aah" = (
 /obj/structure/flora/jungle/planttop1,
 /turf/open/auto_turf/lv_grass/layer0,
@@ -49331,6 +49327,10 @@
 	},
 /turf/open/floor/ancient_temple/damaged/damage_7,
 /area/lazarus/ground/ancient_temple/east)
+"vcK" = (
+/obj/structure/flora/grass/tallgrass/jungle_alt_2/corner,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/jungle/north_jungle)
 "vdi" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/ancient_temple/base,
@@ -75339,7 +75339,7 @@ ukZ
 hJi
 fkT
 fkT
-aab
+vcK
 aHu
 tdd
 vOE
@@ -75563,7 +75563,7 @@ ukZ
 hJi
 hJi
 fkT
-aab
+vcK
 aHu
 tdd
 vOE

@@ -601,10 +601,6 @@
 	},
 /turf/open/floor/holofloor/cult/south,
 /area/yautja)
-"cv" = (
-/obj/structure/surface/table/reinforced,
-/turf/open/floor/holofloor/cult/south,
-/area/yautja)
 "cw" = (
 /obj/structure/bed/chair/wood/wings{
 	dir = 8;
@@ -896,6 +892,10 @@
 /obj/structure/surface/table/reinforced,
 /obj/item/oldresearch/Blood,
 /obj/item/oldresearch/Blood,
+/turf/open/floor/holofloor/cult/south,
+/area/yautja)
+"dq" = (
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/holofloor/cult/south,
 /area/yautja)
 "ds" = (
@@ -1522,7 +1522,7 @@ Zv
 cS
 Zv
 cq
-cv
+dq
 cA
 Zv
 ZI
@@ -1574,9 +1574,9 @@ Zv
 ZI
 Zv
 cq
-cv
-cv
-cv
+dq
+dq
+dq
 cA
 Zv
 ZI
@@ -1586,7 +1586,7 @@ Zv
 ZI
 Zv
 cq
-cv
+dq
 cA
 Zv
 ZI
@@ -1638,19 +1638,19 @@ Zv
 cn
 Zv
 cq
-cv
+dq
 Zv
-cv
+dq
 cA
 Zv
 ZI
 cE
 Zv
 Zv
-cv
+dq
 Zv
 cq
-cv
+dq
 cA
 Zv
 ZI
@@ -1702,19 +1702,19 @@ Zv
 ZI
 Zv
 cq
-cv
-cv
-cv
+dq
+dq
+dq
 cA
 Zv
 ZI
 cE
 Zv
 Zv
-cv
+dq
 Zv
 cq
-cv
+dq
 cA
 Zv
 ZI
@@ -1775,10 +1775,10 @@ ZI
 cE
 Zv
 Zv
-cv
+dq
 Zv
 cq
-cv
+dq
 cA
 Zv
 ZI
@@ -1839,10 +1839,10 @@ ZI
 cE
 Zv
 Zv
-cv
+dq
 Zv
 cq
-cv
+dq
 cA
 Zv
 ZI
@@ -1903,7 +1903,7 @@ ZI
 cE
 Zv
 Zv
-cv
+dq
 Zv
 Zv
 Zv
@@ -2742,7 +2742,7 @@ dd
 Zv
 Zv
 ZI
-cv
+dq
 cu
 Zv
 Zv
