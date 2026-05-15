@@ -14,11 +14,15 @@
 	var/picked_up_item = /obj/item/weapon/twohanded/folded_metal_chair
 	var/stacked_size = 0
 
+/* // RU-PVE STARTS
+
 /obj/structure/bed/chair/Initialize()
 	. = ..()
 	handle_rotation()
 	if(!can_rotate)
 		verbs.Remove(/obj/structure/bed/chair/verb/rotate)
+
+*/ // RU-PVE ENDS
 
 /obj/structure/bed/chair/initialize_pass_flags(datum/pass_flags_container/PF)
 	if(PF)
