@@ -547,8 +547,8 @@
 		return
 
 	for(var/mob/living/M in view(src))
-		if(!HAS_TRAIT_FROM(M, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ADMIN))
-			ADD_TRAIT(M, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ADMIN)
+		M.Stun(100000000)
+		to_chat(M, SPAN_WARNING("You feel an overwhelming urge not to move!"))
 
 	message_admins(WRAP_STAFF_LOG(usr, "frozed humans in view in [get_area(usr)] ([usr.x],[usr.y],[usr.z])"), usr.x, usr.y, usr.z)
 
@@ -562,10 +562,52 @@
 		return
 
 	for(var/mob/living/M in view(src))
-		if(HAS_TRAIT_FROM(M, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ADMIN))
-			REMOVE_TRAIT(M, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ADMIN)
+		M.SetStun(0)
+		to_chat(M, SPAN_WARNING("I think I can move again."))
 
 	message_admins(WRAP_STAFF_LOG(usr, "unfrozed humans in view in [get_area(usr)] ([usr.x],[usr.y],[usr.z])"), usr.x, usr.y, usr.z)
+
+/client/proc/toggle_frozen_faction()
+	set name = "Freeze Faction"
+	set category = "Game Master.Extras"
+	set hidden = TRUE
+
+	if(!admin_holder || !(admin_holder.rights & R_MOD))
+		to_chat(src, "Only administrators may use this command.")
+		return
+
+	var/selectable_factions = list(FACTION_MARINE, FACTION_UPP, FACTION_PMC, FACTION_TWE)
+	var/faction_to_freeze = tgui_input_list(src, "choose poor souls", "Faction Type", selectable_factions)
+
+	for(var/mob/living/M as anything in GLOB.alive_human_list)
+		if(faction_to_freeze == M.faction)
+			M.Stun(100000000)
+			to_chat(M, SPAN_WARNING("You feel an overwhelming urge not to move!"))
+		else
+			return
+
+	message_admins(WRAP_STAFF_LOG(usr, "frozed [faction_to_freeze]"))
+
+/client/proc/toggle_unfrozen_faction()
+	set name = "Unfreeze Faction"
+	set category = "Game Master.Extras"
+	set hidden = TRUE
+
+	if(!admin_holder || !(admin_holder.rights & R_MOD))
+		to_chat(src, "Only administrators may use this command.")
+		return
+
+	var/selectable_factions = list(FACTION_MARINE, FACTION_UPP, FACTION_PMC, FACTION_TWE)
+	var/faction_to_freeze = tgui_input_list(src, "choose poor souls", "Faction Type", selectable_factions)
+
+	for(var/mob/living/M as anything in GLOB.alive_human_list)
+		if(faction_to_freeze == M.faction)
+			M.SetStun(0)
+			to_chat(M, SPAN_WARNING("I think I can move again."))
+		else
+			return
+
+	message_admins(WRAP_STAFF_LOG(usr, "unfrozed [faction_to_freeze]"))
 
 // ----------------------------
 // PANELS
