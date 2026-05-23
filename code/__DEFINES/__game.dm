@@ -415,8 +415,6 @@
 #define WALL_AICORE "aiwall"
 #define WALL_UPP_GREEN "uppwall_interior"
 #define WALL_UPP_GREY "uppwall_interior"
-#define WALL_UPP_SHIP "uppwall_interior"
-#define WALL_UPP_BASE "uppwall"
 #define WALL_LV_BASE "lvwall"
 #define WALL_ANCIENT_BASE "ancient_stone"
 
