@@ -71,6 +71,7 @@
 	initial_stored = 0
 
 /obj/structure/gun_rack/type71/carbine_commando
+	icon_state = "type73"
 	allowed_type = /obj/item/weapon/gun/rifle/type71/carbine/commando
 	populate_type = /obj/item/weapon/gun/rifle/type71/carbine/commando
 

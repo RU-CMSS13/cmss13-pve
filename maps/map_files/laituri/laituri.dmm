@@ -1804,7 +1804,7 @@
 /turf/open/floor/corsat/squares,
 /area/golden_arrow/engineering)
 "lP" = (
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/upp,
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/upp/forecon,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "lR" = (
@@ -6748,14 +6748,6 @@
 	pixel_x = -8
 	},
 /obj/item/tool/crowbar/tactical,
-/obj/item/weapon/gun/pistol/np92/suppressed,
-/obj/item/ammo_magazine/pistol/np92/tranq,
-/obj/item/ammo_magazine/pistol/np92/tranq,
-/obj/item/ammo_magazine/pistol/np92/tranq,
-/obj/item/ammo_magazine/pistol/np92/tranq,
-/obj/item/ammo_magazine/pistol/np92/tranq,
-/obj/item/ammo_magazine/pistol/np92/tranq,
-/obj/item/ammo_magazine/pistol/np92/tranq,
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/prep_hallway)
 "wk" = (
