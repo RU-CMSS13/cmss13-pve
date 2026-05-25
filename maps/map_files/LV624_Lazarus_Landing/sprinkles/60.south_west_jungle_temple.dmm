@@ -33,7 +33,6 @@
 /obj/structure/flora/jungle/vines/dead/light_1,
 /obj/structure/platform/stone/ancient_temple/alt/west,
 /obj/structure/platform/stone/ancient_temple/alt,
-/obj/effect/landmark/objective_landmark/far,
 /turf/open/floor/ancient_temple/damaged/damage_1,
 /area/lazarus/ground/jungle/south_west_jungle)
 "fi" = (

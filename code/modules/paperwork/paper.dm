@@ -928,12 +928,12 @@
 	icon_state = "paper_stack_words"
 	name = "Colonial Space Grunts"
 	desc = "A tabletop game based around the USCM, easy to get into, simple to play, and most inportantly fun for the whole squad."
-
+/*
 /obj/item/paper/colonial_grunts/Initialize(mapload, ...)
 	. = ..()
 	info = "<div> <img style='align:middle' src='[SSassets.transport.get_asset_url("colonialspacegruntsEZ.png")]'>"
 	update_icon()
-
+*/
 /obj/item/paper/navalis/rescue
 	name = "Rescue Imminent: Tell Others"
 	info = "I just got off the radio before the main relay tower was ripped apart, its the Marines! They heard our distress call and are on the way! They'll be landing within the day, I need to warn the others, hope is in sight! Its almost over."

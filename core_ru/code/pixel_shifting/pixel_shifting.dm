@@ -81,6 +81,7 @@
 	REMOVE_TRAIT(src, TRAIT_UNDENSE, "pixel-shift")
 
 ///overrides
+/*
 /client/Move(n, direct)
 	if(mob.shifting)
 		mob.pixel_shift(direct)
@@ -92,7 +93,7 @@
 /mob/living/on_lying_down(new_lying_angle)
 	unpixel_shift()
 	. = ..()
-
+*/
 /mob/Move(atom/n, direct)
 	unpixel_shift()
 	. = ..()

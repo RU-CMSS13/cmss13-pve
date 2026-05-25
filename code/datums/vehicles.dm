@@ -70,6 +70,10 @@
 	name = "Van"
 	interior_id = "van"
 
+/datum/map_template/interior/clf_van
+	name = "CLF Technical"
+	interior_id = "clf_van"
+
 /datum/map_template/interior/uppvan
 	name = "UPP Van"
 	interior_id = "uppvan"
