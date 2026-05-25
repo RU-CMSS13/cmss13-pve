@@ -391,8 +391,11 @@
 		/obj/item/attachable/flashlight,
 	)
 
+/obj/item/weapon/gun/pistol/np92/suppressed/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 27, "muzzle_y" = 20,"rail_x" = 13, "rail_y" = 22, "under_x" = 21, "under_y" = 18, "stock_x" = 21, "stock_y" = 18, "side_rail_x" = 15, "side_rail_y" = 15)
+
 /obj/item/weapon/gun/pistol/np92/suppressed/tranq
-	current_mag = /obj/item/ammo_magazine/pistol/np92/tranq
+	current_mag = /obj/item/ammo_magazine/pistol/np92/suppressed/tranq
 
 /obj/item/weapon/gun/pistol/np92/unloaded
 	current_mag = null

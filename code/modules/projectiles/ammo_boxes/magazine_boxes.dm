@@ -1209,6 +1209,24 @@
 
 	empty = TRUE
 
+/obj/item/ammo_box/magazine/np92/ap
+	name = "magazine box (NP92 AP x 16)"
+	overlay_ammo_type = "_type71_ap"
+	overlay_content = "_type71_ap"
+	magazine_type = /obj/item/ammo_magazine/pistol/np92/ap
+
+/obj/item/ammo_box/magazine/np92/ap/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/np92/tranq
+	name = "magazine box (NP92 Tranq x 16)"
+	overlay_ammo_type = "_type71_rubber"
+	overlay_content = "_type71_ap"
+	magazine_type = /obj/item/ammo_magazine/pistol/np92/suppressed/tranq
+
+/obj/item/ammo_box/magazine/np92/tranq/empty
+	empty = TRUE
+
 //-----------------------AR10 Rifle Mag Box-----------------------
 
 /obj/item/ammo_box/magazine/ar10
@@ -1335,20 +1353,22 @@
 	name = "speed loaders box (ZhNK-72 x 12)"
 	icon_state = "base_zhnk72"
 	flags_equip_slot = SLOT_BACK
-	overlay_ammo_type = ""
+	overlay_ammo_type = "_type71_reg"
 	overlay_gun_type = "_zhnk72"
 	overlay_content = "_zhnk72"
 	num_of_magazines = 12
 	magazine_type = /obj/item/ammo_magazine/revolver/upp
 
-/obj/item/ammo_box/magazine/zhnk/update_icon()
-	if(overlays)
-		overlays.Cut()
-	overlays += image(icon, icon_state = "[icon_state]_lid") //adding lid
-	overlays += image(text_markings_icon, icon_state = "text[overlay_gun_type]") //adding text
-
 /obj/item/ammo_box/magazine/zhnk/empty
 	empty = TRUE
+
+/obj/item/ammo_box/magazine/zhnk/shrapnel
+	name = "speed loaders box (ZhNK-72 shrap-shot x 12)"
+	overlay_ammo_type = "_type73_impact"
+	overlay_content = "_zhnk72_shrap"
+	magazine_type = /obj/item/ammo_magazine/revolver/upp/shrapnel
+
+/obj/item/ammo_box/magazine/zhnk/shrapnel/empty
 
 //-----------------------Type-19 SMG Mag Box-----------------------
 

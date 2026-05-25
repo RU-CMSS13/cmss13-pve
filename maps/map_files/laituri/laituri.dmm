@@ -6760,7 +6760,7 @@
 /obj/item/ammo_box/magazine/type73{
 	pixel_y = 3
 	},
-/obj/item/ammo_box/magazine/np92{
+/obj/item/ammo_box/magazine/np92/ap{
 	pixel_y = 11
 	},
 /obj/structure/machinery/light/small/red{

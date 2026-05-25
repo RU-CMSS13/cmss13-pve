@@ -63018,8 +63018,8 @@
 /obj/item/ammo_magazine/pistol/np92/suppressed,
 /obj/item/ammo_magazine/pistol/np92/suppressed,
 /obj/item/ammo_magazine/pistol/np92/suppressed,
-/obj/item/ammo_magazine/pistol/np92/tranq,
-/obj/item/ammo_magazine/pistol/np92/tranq,
+/obj/item/ammo_magazine/pistol/np92/suppressed/tranq,
+/obj/item/ammo_magazine/pistol/np92/suppressed/tranq,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata{
 	icon_state = "floor3"
