@@ -129,6 +129,10 @@
 	},
 /turf/open/auto_turf/tyrargo_grass/layer0,
 /area/canyon32B/exterior/south)
+"aq" = (
+/obj/structure/blocker/invisible_wall/fog/bibika,
+/turf/open/asphalt,
+/area/canyon32B/exterior/south)
 "ar" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = -19;
@@ -214,6 +218,14 @@
 	pixel_x = -19;
 	pixel_y = -23
 	},
+/turf/open/auto_turf/tyrargo_grass/layer0,
+/area/canyon32B/exterior/south)
+"aA" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -19;
+	pixel_y = -23
+	},
+/obj/structure/blocker/invisible_wall/fog/bibika,
 /turf/open/auto_turf/tyrargo_grass/layer0,
 /area/canyon32B/exterior/south)
 "aB" = (
@@ -391,6 +403,12 @@
 "bb" = (
 /turf/open/floor/almayer/plate,
 /area/canyon32B/interior/bar)
+"bc" = (
+/obj/effect/vehicle_spawner/van/fixed{
+	dir = 1
+	},
+/turf/open/asphalt,
+/area/canyon32B/exterior/south)
 "bd" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 1
@@ -733,6 +751,14 @@
 	},
 /turf/open/auto_turf/tyrargo_grass/layer1,
 /area/canyon32B/exterior/south)
+"bR" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -19;
+	pixel_y = -23
+	},
+/obj/structure/blocker/invisible_wall/fog/bibika,
+/turf/open/auto_turf/tyrargo_grass/layer1,
+/area/canyon32B/exterior/south)
 "bS" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -899,6 +925,32 @@
 /area/canyon32B/interior/bunker/medbay)
 "ct" = (
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
+/turf/open/auto_turf/tyrargo_grass/layer0,
+/area/canyon32B/exterior/south)
+"cu" = (
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 8;
+	name = "Post";
+	pixel_x = 16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 4;
+	name = "Post";
+	pixel_x = -16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/sign/safety/north{
+	pixel_x = 7;
+	pixel_y = 22
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -19;
+	pixel_y = -23
+	},
+/obj/structure/blocker/invisible_wall/fog/bibika,
 /turf/open/auto_turf/tyrargo_grass/layer0,
 /area/canyon32B/exterior/south)
 "cv" = (
@@ -115255,12 +115307,12 @@ al
 al
 bz
 bz
-al
-al
-al
-al
-al
-al
+aq
+aq
+aq
+aq
+aq
+aq
 al
 al
 al
@@ -115757,12 +115809,12 @@ al
 al
 bz
 bz
+aq
 al
 al
+bc
 al
-al
-al
-al
+aq
 al
 al
 al
@@ -116259,12 +116311,12 @@ al
 al
 bz
 bz
+aq
 al
 al
 al
 al
-al
-al
+aq
 al
 al
 al
@@ -116761,12 +116813,12 @@ ar
 ar
 bB
 bB
-az
-ar
-ar
-aL
-aL
-aL
+cu
+bR
+bR
+aA
+aA
+aA
 ar
 az
 ar

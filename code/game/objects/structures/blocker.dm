@@ -223,3 +223,10 @@ GLOBAL_VAR_INIT(vehicle_blockers, TRUE)
 /obj/structure/blocker/invisible_wall/fog/konec_karti
 	name = "dense fog"
 	desc = "И зачем мне туда идти?"
+
+/obj/structure/blocker/invisible_wall/fog/bibika
+	name = "dense fog"
+	desc = "Рано..."
+	mouse_opacity = MOUSE_OPACITY_ICON
+	icon = 'icons/effects/weather.dmi'
+	icon_state = "hybrisa_rain"

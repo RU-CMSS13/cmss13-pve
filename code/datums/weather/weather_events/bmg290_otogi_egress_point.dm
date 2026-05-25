@@ -13,7 +13,7 @@
 	display_name = "Monsoon Warning"
 	length = 6 MINUTES
 
-	turf_overlay_icon_state = "strata_storm"
+	turf_overlay_icon_state = "hybrisa_rain"
 	turf_overlay_alpha = 115
 
 	effect_message = null
