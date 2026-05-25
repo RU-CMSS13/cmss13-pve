@@ -78,13 +78,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
-"al" = (
-/obj/structure/machinery/door/poddoor/almayer/open{
-	id = "hangerairlock-interior2";
-	name = "Hanger Airlock"
-	},
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/hangar)
 "am" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	pixel_x = -6;
@@ -5806,7 +5799,7 @@
 	},
 /obj/structure/machinery/door_control{
 	name = "Airlock Hanger Access";
-	id = "hangerairlock-interior2";
+	id = "hangerairlock-interior";
 	pixel_y = 31;
 	pixel_x = 1
 	},
@@ -9329,10 +9322,9 @@
 /area/golden_arrow/hangar)
 "Ct" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
-	id = "hangerairlock-interior2";
+	id = "hangerairlock-interior";
 	name = "Hanger Airlock"
 	},
-/turf/open/floor/corsat/marked,
 /area/golden_arrow/prep_hallway)
 "Cy" = (
 /obj/effect/decal/cleanable/blood/oil,
@@ -25191,7 +25183,7 @@ uU
 Gm
 ac
 ac
-al
+ac
 sZ
 sZ
 sZ
@@ -25343,7 +25335,7 @@ uU
 ac
 ac
 ac
-al
+ac
 sZ
 sZ
 sZ
@@ -25495,7 +25487,7 @@ uU
 ac
 ac
 ac
-al
+ac
 sZ
 sZ
 sZ
