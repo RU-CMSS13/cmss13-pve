@@ -1,4 +1,8 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/structure/machinery/status_display,
+/turf/closed/wall/almayer,
+/area/golden_arrow/briefing)
 "aD" = (
 /obj/structure/platform{
 	dir = 4;
@@ -577,6 +581,9 @@
 	dir = 2
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	id = "briefingdoor"
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/briefing)
 "Ka" = (
@@ -957,7 +964,7 @@ bs
 Uk
 "}
 (8,1,1) = {"
-Nt
+Uk
 Nt
 Nt
 Nt
@@ -975,7 +982,7 @@ Uk
 Uk
 Uk
 Uk
-Nt
+Uk
 Nt
 fB
 LT
@@ -989,7 +996,7 @@ Uk
 Uk
 Uk
 Uk
-Nt
+Uk
 Nt
 RC
 bq
@@ -1046,7 +1053,7 @@ Uk
 Uk
 Uk
 Nt
-Nt
+aa
 By
 IX
 bp

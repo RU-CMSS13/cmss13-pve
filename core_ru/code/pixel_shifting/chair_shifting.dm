@@ -7,7 +7,11 @@
 	var/mob_old_y = 0
 
 /obj/structure/bed/chair/Initialize()
-	..()
+	. = ..()
+
+	handle_rotation()
+	if(!can_rotate)
+		verbs.Remove(/obj/structure/bed/chair/verb/rotate)
 
 	addtimer(CALLBACK(src, PROC_REF(setup_buckle_offsets)), 1 SECONDS)
 

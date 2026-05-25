@@ -19987,7 +19987,9 @@
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_heavy/Mai_research)
 "kuS" = (
-/obj/structure/flora/tree/jungle/bigtreeTR,
+/obj/structure/roof/flora/tree/jungle/bigtreeTR{
+	pixel_x = -15
+	},
 /obj/effect/projector{
 	name = "bosenmori_treedown";
 	vector_x = -224
@@ -28590,7 +28592,10 @@
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/mountain/abandoned)
 "oZL" = (
-/obj/structure/flora/tree/jungle/bigtreeTR,
+/obj/structure/roof/flora/tree/jungle/bigtreeTR{
+	pixel_x = -15;
+	pixel_y = 0
+	},
 /turf/open/auto_turf/strata_grass,
 /area/bosenmori/mountain/abandoned)
 "oZN" = (
@@ -34884,7 +34889,7 @@
 /area/bosenmori/interior_heavy/Mai_cargo)
 "sed" = (
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
-/obj/structure/flora/tree/jungle/bigtreeTL{
+/obj/structure/roof/flora/tree/jungle/bigtreeTL{
 	pixel_x = -111;
 	pixel_y = 33
 	},
@@ -36399,7 +36404,10 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/bosenmori/interior_glass/corporate)
 "sWn" = (
-/obj/structure/flora/tree/jungle/bigtreeTL,
+/obj/structure/roof/flora/tree/jungle/bigtreeTL{
+	pixel_x = -15;
+	pixel_y = 1
+	},
 /obj/structure/flora/bush/ausbushes/grassybush,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/bosenmori/mountain/abandoned)

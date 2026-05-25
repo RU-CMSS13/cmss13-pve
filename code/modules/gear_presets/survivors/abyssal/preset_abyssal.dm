@@ -21,8 +21,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas(new_human), WEAR_FACE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/twohanded/spear(new_human), WEAR_R_HAND)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/yellow(new_human), WEAR_HANDS)
-	add_survivor_rare_item(new_human)
-	add_survivor_weapon_civilian(new_human)
+	add_survivor_weapon_pistol(new_human)
 	..()
 
 // Engineer
@@ -49,7 +48,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/magboots(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/conam_patch(new_human), WEAR_ACCESSORY)
-	add_survivor_weapon_civilian(new_human)
+	add_survivor_weapon_pistol(new_human)
 	..()
 
 // Marshal/Security
@@ -62,7 +61,7 @@
 	assignment = "Security"
 	skills = /datum/skills/civilian/survivor/marshal
 	flags = EQUIPMENT_PRESET_START_OF_ROUND
-	job_title = JOB_CMB
+	rank = JOB_CMB
 	role_comm_title = "SEC"
 	access = list(
 		ACCESS_CIVILIAN_PUBLIC,
@@ -104,10 +103,9 @@
 	minimap_background = "background_cmb"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND
 	idtype = /obj/item/card/id/deputy
-	job_title = JOB_CMB
+	rank = JOB_CMB
 	faction = FACTION_MARSHAL
 	faction_group = list(FACTION_MARSHAL, FACTION_MARINE, FACTION_SURVIVOR)
-	origin_override = ORIGIN_CMB
 	role_comm_title = "CMB DEP"
 	access = list(
 		ACCESS_CIVILIAN_PUBLIC,
@@ -122,7 +120,7 @@
 	survivor_variant = SECURITY_SURVIVOR
 
 /datum/equipment_preset/survivor/abyssal/colonial_marshal/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/CM_uniform(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/cmb(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CMB/limited(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/holobadge/cord(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/sec(new_human), WEAR_BACK)
@@ -160,7 +158,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/paper/research_notes/unique/tier_three(new_human), WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medical/full(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/conam_patch(new_human), WEAR_ACCESSORY)
-	add_survivor_weapon_civilian(new_human)
+	add_survivor_weapon_pistol(new_human)
 	add_random_survivor_research_gear(new_human)
 	..()
 
@@ -188,7 +186,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/conam_patch(new_human), WEAR_ACCESSORY)
 
 	add_random_survivor_medical_gear(new_human)
-	add_survivor_weapon_civilian(new_human)
+	add_survivor_weapon_pistol(new_human)
 	..()
 
 // Corporate
@@ -200,7 +198,7 @@
 	flags = EQUIPMENT_PRESET_START_OF_ROUND
 	paygrades = list(PAY_SHORT_WYC2 = JOB_PLAYTIME_TIER_0, PAY_SHORT_WYC3 = JOB_PLAYTIME_TIER_2, PAY_SHORT_WYC4 = JOB_PLAYTIME_TIER_3, PAY_SHORT_WYC5 = JOB_PLAYTIME_TIER_4)
 	faction_group = FACTION_CONAM
-	job_title = JOB_HC_EXECUTIVE
+	rank = JOB_CA_CORPORATE_LIAISON
 	faction = FACTION_CONAM
 	faction_group = list(FACTION_CONAM, FACTION_SURVIVOR)
 	idtype = /obj/item/card/id/silver/cl
@@ -240,12 +238,12 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/brown(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/lockable/liaison(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/paper/abyssal/liaison(new_human.back), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/leather/fancy(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/black_leather(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/tie/gold(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/leather(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/botanic_leather/generic(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/gold(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/conam_patch(new_human), WEAR_ACCESSORY)
 
-	add_survivor_weapon_civilian(new_human)
+	add_survivor_weapon_pistol(new_human)
 	add_random_cl_survivor_loot(new_human)
 	..()
 
@@ -283,5 +281,5 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/m1911/socom(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/sec/alt(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/conam_patch(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/black_leather(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/botanic_leather/generic(new_human), WEAR_HANDS)
 	..()

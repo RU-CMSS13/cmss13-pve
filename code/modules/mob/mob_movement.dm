@@ -108,6 +108,16 @@
 	if(!direct)
 		return FALSE
 
+	//RU-PVE ADDITION STARTS
+
+	if(mob.shifting)
+		mob.pixel_shift(direct)
+		return FALSE
+
+	mob.unpixel_shift()
+
+	//RU-PVE ADDITION ENDS
+
 	if(mob.control_object)
 		next_movement = world.time + MINIMAL_MOVEMENT_INTERVAL
 		return Move_object(direct)

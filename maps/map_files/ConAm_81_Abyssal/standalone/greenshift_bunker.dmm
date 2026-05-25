@@ -118,7 +118,6 @@
 	},
 /obj/structure/closet/firecloset,
 /obj/effect/decal/hybrisa/dirt_2,
-/obj/effect/landmark/objective_landmark/science,
 /obj/structure/sign/poster/safety{
 	pixel_y = 31;
 	pixel_x = 15
@@ -179,7 +178,6 @@
 /obj/structure/closet/emcloset,
 /obj/effect/decal/hybrisa/dirt_2,
 /obj/structure/machinery/power/apc/power/north,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor/elevatorshaft,
 /area/abyssal/interior/bunker)
 "ou" = (

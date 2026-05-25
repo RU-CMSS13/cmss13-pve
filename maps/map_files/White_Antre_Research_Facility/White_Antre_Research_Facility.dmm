@@ -772,9 +772,7 @@
 	dir = 4;
 	layer = 4.12
 	},
-/obj/structure/machinery/power/apc/power/north{
-	start_charge = 60
-	},
+/obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/antre/metal/blackfull,
 /area/white_antre/indoors/main_level/east_containment)
 "acl" = (
@@ -13799,9 +13797,7 @@
 	icon_state = "N";
 	pixel_y = 2
 	},
-/obj/structure/machinery/power/apc/power/north{
-	start_charge = 20
-	},
+/obj/structure/machinery/power/apc/power/north,
 /obj/structure/machinery/light/small{
 	light_color = "#ff3b3b";
 	color = "#ff3b3b";
@@ -14770,9 +14766,7 @@
 	pixel_x = -21
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/power/apc/power/north{
-	start_charge = 20
-	},
+/obj/structure/machinery/power/apc/power/north,
 /obj/effect/antre/border{
 	dir = 8
 	},
@@ -15928,9 +15922,7 @@
 /turf/closed/wall/hybrisa/research/reinforced/hull,
 /area/white_antre/oob)
 "aKe" = (
-/obj/structure/machinery/power/apc/power/north{
-	start_charge = 20
-	},
+/obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/corsat/officesquares,
 /area/white_antre/indoors/upper_level/xenobio)
 "aKf" = (
@@ -16549,9 +16541,7 @@
 /turf/open/floor/prison/darkred2/northeast,
 /area/white_antre/indoors/exterior/checkpoint)
 "aMo" = (
-/obj/structure/machinery/power/apc/power/north{
-	start_charge = 60
-	},
+/obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/strata/orange_edge/north,
 /area/white_antre/indoors/main_level/weapons)
 "aMp" = (
@@ -17085,9 +17075,7 @@
 /turf/open/auto_turf/shale/layer1/weedable,
 /area/white_antre/outdoors/south_field)
 "aOg" = (
-/obj/structure/machinery/power/apc/power/north{
-	start_charge = 20
-	},
+/obj/structure/machinery/power/apc/power/north,
 /obj/structure/machinery/vending/cola,
 /obj/structure/machinery/light/double{
 	dir = 4;
@@ -17739,9 +17727,7 @@
 /obj/effect/antre/border{
 	dir = 8
 	},
-/obj/structure/machinery/power/apc/power/north{
-	start_charge = 20
-	},
+/obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/hybrisa/metal,
 /area/white_antre/indoors/upper_level/central_corridor)
 "aQC" = (
@@ -18641,15 +18627,11 @@
 /turf/open/floor/almayer_hull,
 /area/white_antre/indoors/main_level/south_containment)
 "aTm" = (
-/obj/structure/machinery/power/apc/power/north{
-	start_charge = 60
-	},
+/obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/prison/floor_plate/southwest,
 /area/white_antre/indoors/main_level/south_containment)
 "aTn" = (
-/obj/structure/machinery/power/apc/power/north{
-	start_charge = 60
-	},
+/obj/structure/machinery/power/apc/power/north,
 /obj/effect/antre/border{
 	dir = 4
 	},
@@ -22800,9 +22782,7 @@
 /area/white_antre/indoors/exterior/ext_relay_north)
 "bdC" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/power/apc/power/north{
-	start_charge = 60
-	},
+/obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/prison/darkbrown3/north,
 /area/white_antre/indoors/exterior/ext_relay_north)
 "bdD" = (
@@ -23093,9 +23073,7 @@
 	pixel_y = -1;
 	pixel_x = -6
 	},
-/obj/structure/machinery/power/apc/power/north{
-	start_charge = 60
-	},
+/obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/prison/darkbrownfull2,
 /area/white_antre/landing_zone/roof)
 "bev" = (
@@ -24620,9 +24598,7 @@
 /turf/open/floor/prison/blue/northeast,
 /area/white_antre/indoors/upper_level/central_command)
 "biW" = (
-/obj/structure/machinery/power/apc/power/north{
-	start_charge = 20
-	},
+/obj/structure/machinery/power/apc/power/north,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/trash/plate{
 	pixel_x = 9;
@@ -24729,9 +24705,7 @@
 /turf/open/floor/prison/greencorner/east,
 /area/white_antre/indoors/upper_level/east_corridor)
 "bjs" = (
-/obj/structure/machinery/power/apc/power/north{
-	start_charge = 20
-	},
+/obj/structure/machinery/power/apc/power/north,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/sterile_green,
 /area/white_antre/indoors/upper_level/simian_storage)
@@ -28876,9 +28850,7 @@
 /turf/open/floor/strata/white_cyan1/east,
 /area/white_antre/indoors/upper_level/medical)
 "buz" = (
-/obj/structure/machinery/power/apc/power/north{
-	start_charge = 35
-	},
+/obj/structure/machinery/power/apc/power/north,
 /obj/structure/reagent_dispensers/fueltank,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
@@ -54049,9 +54021,7 @@
 	dir = 8;
 	pixel_y = -5
 	},
-/obj/structure/machinery/power/apc/power/north{
-	start_charge = 60
-	},
+/obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/almayer/silver2/northwest,
 /area/white_antre/indoors/main_level/west_corridor)
 "lWy" = (
@@ -56824,9 +56794,7 @@
 	color = "#5d524b";
 	alpha = 155
 	},
-/obj/structure/machinery/power/apc/power/north{
-	start_charge = 20
-	},
+/obj/structure/machinery/power/apc/power/north,
 /obj/effect/antre/border{
 	dir = 8
 	},
@@ -56932,9 +56900,7 @@
 	color = "#5d524b";
 	alpha = 155
 	},
-/obj/structure/machinery/power/apc/power/north{
-	start_charge = 60
-	},
+/obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/prison/darkbrown3/north,
 /area/white_antre/indoors/exterior/ext_relay_south)
 "wrD" = (
