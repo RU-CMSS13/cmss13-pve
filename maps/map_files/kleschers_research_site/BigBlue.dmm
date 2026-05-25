@@ -1967,7 +1967,7 @@
 	},
 /obj/item/weapon/gun/rifle/nsg23/no_lock,
 /obj/item/ammo_magazine/rifle/nsg23,
-/obj/item/clothing/suit/marine/veteran/pmc/light/lead,
+/obj/item/clothing/suit/marine/veteran/pmc/leader,
 /turf/open/floor/vault2/north,
 /area/kleschers/int_reg/admin)
 "aUW" = (

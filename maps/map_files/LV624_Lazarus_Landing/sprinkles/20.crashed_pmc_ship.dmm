@@ -746,7 +746,6 @@
 /area/lazarus/ground/barrens/north_barrens)
 "jJ" = (
 /obj/item/frame/rack,
-/obj/effect/landmark/objective_landmark/far,
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/floor/almayer/plate,
 /area/lazarus/crashed_shuttle)
@@ -935,7 +934,6 @@
 /turf/open/auto_turf/lv_grass/layer1,
 /area/lazarus/ground/barrens/central_barrens)
 "nE" = (
-/obj/effect/landmark/corpsespawner/pmc,
 /obj/effect/decal/cleanable/blood{
 	pixel_y = 20
 	},
@@ -1794,7 +1792,6 @@
 /obj/effect/decal/ammo_casing,
 /obj/effect/decal/ammo_casing,
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
-/obj/effect/landmark/objective_landmark/far,
 /obj/item/shard,
 /turf/open/floor/platingdmg3,
 /area/lazarus/crashed_shuttle)
@@ -2511,7 +2508,6 @@
 /turf/open/gm/brown_dirt/random_rocks,
 /area/lazarus/ground/barrens/north_barrens)
 "JU" = (
-/obj/effect/landmark/objective_landmark/far,
 /obj/effect/decal/hybrisa/dirt,
 /obj/effect/decal/hybrisa/dirt,
 /obj/effect/decal/hybrisa/dirt,
@@ -2689,9 +2685,7 @@
 /area/lazarus/ground/barrens/north_barrens)
 "Of" = (
 /obj/effect/landmark/big_fog_marker,
-/turf/open/gm/brown_dirt/random_rocks_alt{
-	dir = 6
-	},
+/turf/open/gm/brown_dirt/random_rocks_alt,
 /area/lazarus/ground/barrens/central_barrens)
 "Og" = (
 /obj/effect/decal/large_stain{

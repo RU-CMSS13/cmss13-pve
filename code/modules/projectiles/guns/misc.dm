@@ -298,20 +298,6 @@
 
 /obj/item/weapon/gun/pkp/iff/handle_starting_attachment()
 	..()
-	var/obj/item/attachable/attachie = new /obj/item/attachable/pkpbarrel(src)
-	attachie.flags_attach_features &= ~ATTACH_REMOVABLE
-	attachie.Attach(src)
-	update_attachable(attachie.slot)
-
-	var/obj/item/attachable/pkpstock = new /obj/item/attachable/stock/pkpstock(src)
-	pkpstock.flags_attach_features &= ~ATTACH_REMOVABLE
-	pkpstock.Attach(src)
-	update_attachable(pkpstock.slot)
-
-	var/obj/item/attachable/bipod = new /obj/item/attachable/bipod/integral/pkp(src)
-	bipod.flags_attach_features &= ~ATTACH_REMOVABLE
-	bipod.Attach(src)
-	update_attachable(bipod.slot)
 
 //invisible mag harness
 	var/obj/item/attachable/magnetic_harness/Integrated = new(src)

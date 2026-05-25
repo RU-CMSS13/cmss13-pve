@@ -661,8 +661,10 @@
 
 /obj/structure/platform/metal/strata/alt/north
 	dir = NORTH
+
 /obj/structure/platform/metal/strata/alt/east
 	dir = EAST
+
 /obj/structure/platform/metal/strata/alt/west
 	dir = WEST
 
