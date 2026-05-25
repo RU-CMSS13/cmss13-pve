@@ -3591,6 +3591,27 @@
 	desc = "Here sits a golden emblem of the sun, meant to praise the sky in it's benevolence."
 	icon_state = "sun_emblem"
 
+/turf/open/floor/interior/sun_emblem/north
+	dir = NORTH
+
+/turf/open/floor/interior/sun_emblem/east
+	dir = EAST
+
+/turf/open/floor/interior/sun_emblem/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/interior/sun_emblem/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/interior/sun_emblem/west
+	dir = WEST
+
+/turf/open/floor/interior/sun_emblem/northwest
+	dir = NORTHWEST
+
+/turf/open/floor/interior/sun_emblem/southwest
+	dir = SOUTHWEST
+
 /turf/open/floor/interior/sun_emblem/center
 	name = "Sun Emblem"
 	desc = "Here sits a golden emblem of the sun, meant to praise the sky in it's benevolence."

@@ -78,6 +78,10 @@
 	name = "Van"
 	interior_id = "van"
 
+/datum/map_template/interior/clf_van
+	name = "CLF Technical"
+	interior_id = "clf_van"
+
 /datum/map_template/interior/humvee
 	name = "JTMV-HWC"
 	interior_id = "humvee"

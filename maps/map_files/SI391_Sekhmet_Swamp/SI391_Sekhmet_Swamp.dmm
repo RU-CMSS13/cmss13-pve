@@ -4857,9 +4857,9 @@
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/sekhmet/int_heavy/low_level_rsr)
 "ddA" = (
-/obj/structure/flora/tree/jungle/bigtreeTL{
+/obj/structure/roof/flora/tree/jungle/bigtreeTL{
 	pixel_x = -144;
-	pixel_y = 34
+	pixel_y = 33
 	},
 /turf/closed/wall/strata_ice/jungle{
 	color = "#ffcc33"
@@ -16871,7 +16871,7 @@
 	pixel_x = -49;
 	pixel_y = -64
 	},
-/obj/structure/flora/tree/jungle/bigtreeTR{
+/obj/structure/roof/flora/tree/jungle/bigtreeTR{
 	pixel_x = -16;
 	pixel_y = 64
 	},

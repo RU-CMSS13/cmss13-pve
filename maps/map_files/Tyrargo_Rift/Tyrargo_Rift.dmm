@@ -52446,7 +52446,7 @@
 	pixel_x = 4
 	},
 /obj/item/ammo_box/magazine/m41ae2/heap{
-	current_rounds = 0
+	num_of_magazines = 0
 	},
 /obj/effect/decal/grass_overlay/grass1/dark{
 	dir = 4
@@ -60976,7 +60976,7 @@
 /area/tyrargo/outdoors/outskirts/central)
 "cXv" = (
 /obj/item/ammo_box/magazine/m41ae2/heap{
-	current_rounds = 0
+	num_of_magazines = 0
 	},
 /turf/open/auto_turf/tyrargo_grass/layer0,
 /area/tyrargo/outdoors/outskirts_road/east)
@@ -63429,13 +63429,12 @@
 /area/tyrargo/outdoors/outskirts/fsb_north)
 "ddz" = (
 /obj/item/ammo_box/magazine/m41ae2/heap{
-	current_rounds = 0;
 	pixel_x = -5;
-	pixel_y = 9
+	pixel_y = 9;
+	num_of_magazines = 0
 	},
 /obj/item/ammo_box/magazine/m41ae2/holo{
-	pixel_y = -1;
-	current_rounds = 84
+	pixel_y = -1
 	},
 /turf/open/auto_turf/tyrargo_grass/layer0,
 /area/tyrargo/outdoors/outskirts/fsb_north)
@@ -105346,7 +105345,7 @@
 	light_color = "#A7DBB6"
 	},
 /obj/item/ammo_box/magazine/m41ae2/heap{
-	current_rounds = 0
+	num_of_magazines = 0
 	},
 /turf/open/floor/hybrisa/carpet/carpetpatternblue,
 /area/tyrargo/indoors/apartment/north_upper)

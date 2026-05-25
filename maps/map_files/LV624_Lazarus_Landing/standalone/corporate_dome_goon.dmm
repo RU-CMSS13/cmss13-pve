@@ -68,8 +68,6 @@
 	pixel_y = 22;
 	can_block_movement = 0
 	},
-/obj/effect/landmark/objective_landmark/close,
-/obj/effect/landmark/objective_landmark/close,
 /obj/effect/decal/hybrisa/trash{
 	icon_state = "trash_2";
 	pixel_y = -5;
@@ -360,8 +358,6 @@
 	},
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
-/obj/effect/landmark/objective_landmark/medium,
-/obj/effect/landmark/objective_landmark/far,
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/lazarus/corporate_dome)
@@ -460,7 +456,6 @@
 /turf/open/floor/prison/darkred2/northwest,
 /area/lazarus/corporate_dome)
 "lb" = (
-/obj/effect/landmark/survivor_spawner/lv624_corporate_dome_goon_lead,
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/floor/hybrisa/carpet/rug_colorable/blue,
 /area/lazarus/corporate_dome)
@@ -713,7 +708,6 @@
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
 	},
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/prison/darkred2/west,
 /area/lazarus/corporate_dome)
 "qS" = (
@@ -854,7 +848,6 @@
 /obj/structure/surface/table/reinforced/prison{
 	color = "#98a3ab"
 	},
-/obj/effect/landmark/objective_landmark/close,
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/floor/strata/floor3,
 /area/lazarus/corporate_dome)
@@ -884,9 +877,6 @@
 /area/lazarus/corporate_dome)
 "vv" = (
 /obj/effect/decal/cleanable/blood/drip,
-/obj/item/storage/briefcase/flap/black{
-	pixel_y = 4
-	},
 /turf/open/floor/strata/fake_wood,
 /area/lazarus/corporate_dome)
 "vJ" = (
@@ -924,7 +914,6 @@
 "wC" = (
 /obj/item/trash/cigbutt,
 /obj/structure/closet/bodybag,
-/obj/effect/landmark/corpsespawner/security/marshal,
 /obj/effect/decal/cleanable/blood/drip{
 	pixel_x = 5;
 	pixel_y = 16
@@ -963,7 +952,6 @@
 	},
 /obj/item/trash/cigbutt,
 /obj/item/trash/cigbutt,
-/obj/effect/landmark/objective_landmark/close,
 /obj/item/frame/rack,
 /obj/structure/prop/invuln/pipe_water{
 	pixel_x = 1;
@@ -1020,7 +1008,6 @@
 	pixel_x = -1;
 	pixel_y = 23
 	},
-/obj/effect/landmark/corpsespawner/security/marshal,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/prison/darkred2/east,
 /area/lazarus/corporate_dome)
@@ -1186,7 +1173,6 @@
 	dir = 1
 	},
 /obj/effect/decal/hybrisa/dirt,
-/obj/effect/landmark/survivor_spawner/lv624_corporate_dome_goon_engi,
 /turf/open/floor/prison/platingdmg2,
 /area/lazarus/corporate_dome)
 "Cm" = (
@@ -1285,7 +1271,6 @@
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
 	},
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lazarus/corporate_dome)
 "EE" = (
@@ -1553,7 +1538,6 @@
 /obj/item/clothing/head/helmet/marine/veteran/pmc,
 /obj/item/m_gift,
 /obj/item/coin/diamond,
-/obj/effect/landmark/objective_landmark/close,
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/floor/strata/fake_wood,
 /area/lazarus/corporate_dome)
@@ -1812,7 +1796,6 @@
 /obj/effect/decal/ammo_casing,
 /obj/effect/decal/ammo_casing,
 /obj/effect/decal/hybrisa/dirt,
-/obj/effect/landmark/corpsespawner/wysec,
 /obj/structure/bed/roller,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/hybrisa/carpet/rug_colorable/blue/northwest,
@@ -2014,9 +1997,7 @@
 	pixel_x = 15;
 	pixel_y = -9
 	},
-/obj/effect/landmark/objective_landmark/close,
 /obj/effect/decal/hybrisa/dirt,
-/obj/effect/landmark/survivor_spawner/lv624_corporate_dome_goon_medic,
 /turf/open/floor/hybrisa/carpet/rug_colorable/blue,
 /area/lazarus/corporate_dome)
 "VW" = (

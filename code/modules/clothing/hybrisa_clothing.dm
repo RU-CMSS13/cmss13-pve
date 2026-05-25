@@ -206,6 +206,10 @@
 /obj/item/clothing/under/hybrisa/wy_exec_suit_uniform
 	name = "\improper expensive suit"
 	desc = "A luxurious designer suit, beyond the reach of the average person. It's an exclusive choice for high-level executives and the affluent elite."
+	icon = 'icons/obj/items/clothing/uniforms/uniforms_by_faction/WY.dmi'
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_faction/WY.dmi',
+	)
 	icon_state = "wy_exec_suit"
 	worn_state = "wy_exec_suit"
 	armor_melee = CLOTHING_ARMOR_LOW
