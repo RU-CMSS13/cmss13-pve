@@ -263,6 +263,9 @@ also doesn't really matter. You can only reload them with handfuls.
 /obj/item/ammo_magazine/internal/shotgun/type23/slug
 	default_ammo = /datum/ammo/bullet/shotgun/heavy/slug
 
+/obj/item/ammo_magazine/internal/shotgun/type23/flechette
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/flechette
+
 /obj/item/ammo_magazine/internal/shotgun/type23/riot
 	default_ammo = /datum/ammo/bullet/shotgun/heavy/beanbag
 

@@ -108,7 +108,6 @@
 /obj/item/ammo_box/magazine/nade_box/upp,
 /obj/item/ammo_box/magazine/nade_box/upp,
 /obj/item/ammo_box/magazine/nade_box/upp,
-/obj/item/ammo_box/magazine/nade_box/upp,
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
 	color = "#C02526";
@@ -1038,12 +1037,26 @@
 /turf/open/floor/corsat,
 /area/pudong/base/maintenance)
 "ca" = (
-/obj/item/storage/box/guncase/heavy/motiondetectors/upp,
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
 /obj/item/storage/box/guncase/heavy/motiondetectors/upp{
-	pixel_y = 8;
+	pixel_y = 3
+	},
+/obj/item/storage/box/guncase/heavy/motiondetectors/upp{
+	pixel_y = 10;
 	layer = 3.2
 	},
-/turf/open/floor/strata/floor3,
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 1;
+	light_power = 0.4;
+	pixel_y = 3;
+	light_range = 4;
+	invisibility = 100
+	},
+/turf/open/floor/strata/multi_tiles/west,
 /area/pudong/base/armory)
 "cb" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -2407,6 +2420,8 @@
 /obj/structure/closet/crate/secure/upp,
 /obj/item/ammo_box/magazine/nade_box/upp/ugl,
 /obj/item/ammo_box/magazine/nade_box/upp/ugl,
+/obj/item/ammo_box/magazine/nade_box/upp/ugl/incen,
+/obj/item/ammo_box/magazine/nade_box/upp/ugl/canister,
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
 	pixel_x = 2;
@@ -2749,19 +2764,22 @@
 /area/pudong/base/briefing)
 "jk" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/heavy/sentryupp{
-	pixel_y = 2
+/obj/item/ammo_box/magazine/zhnk{
+	pixel_x = 9;
+	pixel_y = -6
 	},
-/obj/item/storage/box/guncase/heavy/sentryupp{
-	pixel_y = 10;
-	layer = 3.03
+/obj/item/ammo_box/magazine/zhnk{
+	pixel_x = -8;
+	pixel_y = -6
+	},
+/obj/item/ammo_box/rounds/smartgun/upp{
+	pixel_y = 10
 	},
 /turf/open/floor/strata/floor3,
 /area/pudong/base/armory)
 "jl" = (
-/obj/structure/gun_rack/type71/unloaded{
-	pixel_y = 16;
-	density = 0
+/obj/structure/gun_rack/ag80/unloaded{
+	pixel_y = 16
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -3907,15 +3925,14 @@
 "qg" = (
 /obj/structure/surface/rack{
 	pixel_y = 18;
-	density = 0
+	density = 0;
+	color = "#8B9490"
 	},
 /obj/item/ammo_magazine/shotgun/slug/dragonsbreath{
-	pixel_y = 22;
-	pixel_x = -1
+	pixel_y = 32
 	},
 /obj/item/ammo_magazine/shotgun/slug/dragonsbreath{
-	pixel_y = 15;
-	pixel_x = 3
+	pixel_y = 18
 	},
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
@@ -4448,9 +4465,11 @@
 /obj/item/ammo_box/magazine/nade_box/upp,
 /obj/item/ammo_box/magazine/nade_box/upp,
 /obj/item/ammo_box/magazine/nade_box/upp,
-/obj/item/ammo_box/magazine/nade_box/upp,
 /obj/item/ammo_box/magazine/nade_box/upp/ugl,
 /obj/item/ammo_box/magazine/nade_box/upp/ugl,
+/obj/item/ammo_box/magazine/nade_box/upp/ugl/incen,
+/obj/item/ammo_box/magazine/nade_box/upp/ugl/canister,
+/obj/item/ammo_box/magazine/nade_box/upp/ugl/canister,
 /turf/open/floor/corsat/plate,
 /area/pudong/base/armory)
 "sU" = (
@@ -4815,23 +4834,24 @@
 "uH" = (
 /obj/structure/surface/rack{
 	pixel_y = 18;
-	density = 0
+	density = 0;
+	color = "#8B9490"
 	},
-/obj/item/ammo_magazine/shotgun/slug/dragonsbreath{
-	pixel_y = 22;
-	pixel_x = -1
+/obj/item/ammo_box/magazine/shotgun/upp/buckshot{
+	pixel_x = 8;
+	pixel_y = 32
 	},
-/obj/item/ammo_magazine/shotgun/slug/dragonsbreath{
-	pixel_y = 15;
-	pixel_x = 3
+/obj/item/ammo_box/magazine/shotgun/upp{
+	pixel_x = -8;
+	pixel_y = 32
 	},
-/obj/item/ammo_magazine/shotgun/buckshot/heavy{
-	pixel_x = 1;
-	pixel_y = 20
+/obj/item/ammo_box/magazine/shotgun/upp/dragonsbreath{
+	pixel_x = 8;
+	pixel_y = 17
 	},
-/obj/item/ammo_magazine/shotgun/slug/heavy{
-	pixel_y = 15;
-	pixel_x = -3
+/obj/item/ammo_box/magazine/shotgun/upp/flechette{
+	pixel_x = -8;
+	pixel_y = 17
 	},
 /turf/open/floor/corsat/plate,
 /area/pudong/base/armory)
@@ -4936,19 +4956,28 @@
 "vi" = (
 /obj/structure/surface/rack{
 	pixel_y = 18;
-	density = 0
-	},
-/obj/item/ammo_magazine/shotgun/buckshot/heavy{
-	pixel_x = 1;
-	pixel_y = 20
-	},
-/obj/item/ammo_magazine/shotgun/slug/heavy{
-	pixel_y = 15;
-	pixel_x = -3
+	density = 0;
+	color = "#8B9490"
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
 	pixel_y = 1
+	},
+/obj/item/ammo_magazine/shotgun/buckshot/heavy{
+	pixel_x = 8;
+	pixel_y = 32
+	},
+/obj/item/ammo_magazine/shotgun/buckshot/heavy{
+	pixel_x = -8;
+	pixel_y = 32
+	},
+/obj/item/ammo_magazine/shotgun/slug/heavy{
+	pixel_y = 18;
+	pixel_x = 8
+	},
+/obj/item/ammo_magazine/shotgun/slug/heavy{
+	pixel_y = 18;
+	pixel_x = -8
 	},
 /turf/open/floor/strata/floor3,
 /area/pudong/base/armory)
@@ -5286,6 +5315,16 @@
 /turf/open/floor/corsat,
 /area/pudong/base/maintenance)
 "wZ" = (
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
+/obj/item/storage/box/guncase/heavy/sentryupp{
+	pixel_y = 12;
+	layer = 3.03
+	},
+/obj/item/storage/box/guncase/heavy/sentryupp{
+	pixel_y = 5
+	},
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
 	color = "#C02526";
@@ -5348,6 +5387,16 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/pudong/base/hangar)
+"xz" = (
+/obj/structure/gun_rack/ag80/unloaded{
+	pixel_y = 16
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	pixel_y = -2
+	},
+/turf/open/floor/strata/floor3,
+/area/pudong/base/armory)
 "xB" = (
 /obj/structure/window/framed/upp/green,
 /turf/open/floor/corsat/marked,
@@ -5750,7 +5799,7 @@
 /obj/item/ammo_box/magazine/type71/large{
 	pixel_y = -1
 	},
-/obj/item/ammo_box/magazine/type71/large{
+/obj/item/ammo_box/magazine/type71/large/ag80{
 	pixel_y = 6
 	},
 /obj/structure/machinery/light/small{
@@ -9113,7 +9162,7 @@
 	pixel_x = 5;
 	pixel_y = 12
 	},
-/obj/item/device/binoculars/range/designator{
+/obj/item/device/binoculars/range/designator/upp{
 	pixel_y = 17
 	},
 /obj/item/deployable_beacon/red{
@@ -9125,7 +9174,8 @@
 	},
 /obj/structure/surface/rack{
 	pixel_y = 18;
-	density = 0
+	density = 0;
+	color = "#8B9490"
 	},
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -9380,7 +9430,7 @@
 /area/pudong/base/hangar)
 "QD" = (
 /obj/item/roller,
-/obj/item/storage/belt/medical/only_scanner,
+/obj/item/storage/belt/medical/upp/only_scanner,
 /obj/item/storage/firstaid/softpack/upp{
 	pixel_x = 3;
 	pixel_y = 2
@@ -9707,16 +9757,16 @@
 /area/pudong/base/bunker)
 "RX" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/type73{
-	pixel_y = -2;
-	pixel_x = -8
-	},
 /obj/item/ammo_box/magazine/np92{
 	pixel_y = 11;
 	pixel_x = 9
 	},
 /obj/item/ammo_box/magazine/np92{
 	pixel_y = 11;
+	pixel_x = -8
+	},
+/obj/item/ammo_box/magazine/type73{
+	pixel_y = -2;
 	pixel_x = -8
 	},
 /obj/item/ammo_box/magazine/type73{
@@ -10240,12 +10290,13 @@
 /area/pudong/exterior/cliff)
 "Ut" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/type71/large{
-	pixel_y = -1
-	},
-/obj/item/ammo_box/magazine/type71/large{
-	pixel_y = 6
-	},
+/obj/structure/closet/crate/secure/upp/alt,
+/obj/item/ammo_box/magazine/ag80,
+/obj/item/ammo_box/magazine/ag80,
+/obj/item/ammo_box/magazine/ag80,
+/obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/type71,
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
 	color = "#C02526";
@@ -10722,6 +10773,19 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
+/obj/item/ammo_box/magazine/type64{
+	pixel_y = 8
+	},
+/obj/item/ammo_box/magazine/type64,
+/obj/item/storage/belt/gun/bizon{
+	pixel_y = 8
+	},
+/obj/item/storage/box/guncase/heavy/smg/type64{
+	pixel_y = 5
+	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/pudong/base/armory)
 "WC" = (
@@ -10741,7 +10805,9 @@
 /turf/open/auto_turf/snow/layer1,
 /area/pudong/exterior/cliff)
 "WH" = (
-/obj/structure/surface/rack,
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
 	pixel_x = 2;
@@ -11312,23 +11378,13 @@
 	pixel_x = -1;
 	pixel_y = -1
 	},
-/obj/item/ammo_box/magazine/type71{
-	pixel_y = 7;
-	pixel_x = -8
-	},
-/obj/item/ammo_box/magazine/type71{
-	pixel_y = -8;
-	pixel_x = -8
-	},
-/obj/item/ammo_box/magazine/type71{
-	pixel_y = 7;
-	pixel_x = 8
-	},
-/obj/item/ammo_box/magazine/type71{
-	pixel_y = -8;
-	pixel_x = 8
-	},
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/type71/large{
+	pixel_y = -1
+	},
+/obj/item/ammo_box/magazine/type71/large/ag80{
+	pixel_y = 6
+	},
 /turf/open/floor/strata/floor3,
 /area/pudong/base/armory)
 "YM" = (
@@ -21322,7 +21378,7 @@ HO
 nL
 ct
 ES
-ca
+ES
 oX
 Ez
 UF
@@ -21937,7 +21993,7 @@ ES
 ES
 SZ
 su
-wZ
+ca
 Tf
 vm
 oZ
@@ -22846,7 +22902,7 @@ OR
 pS
 sS
 Xk
-IG
+xz
 FY
 iG
 qt

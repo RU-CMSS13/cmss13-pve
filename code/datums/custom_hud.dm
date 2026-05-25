@@ -43,6 +43,9 @@
 	var/ui_layer_up = "EAST-2:8,2:4"
 	var/ui_layer_down = "EAST-2:8,2:4"
 
+	//dice
+	var/ui_roll_dice = "EAST-2:8,2:4"
+
 	//Frame related placements
 	var/UI_FRAME_LOC = "EAST-3:0,14:15"
 

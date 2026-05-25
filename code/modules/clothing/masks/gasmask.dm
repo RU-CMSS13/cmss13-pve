@@ -87,6 +87,22 @@
 		WEAR_FACE = 'icons/mob/humans/onmob/head_1.dmi'
 	)
 
+/obj/item/clothing/mask/gas/pve_mopp/upp
+	name = "\improper OP-4M ShMB/4 gasmask"
+	desc = "The UPP ShMB/4 gasmask mask includes a full covering cowl that securely attaches to the OP-4M suit. It is capable of protecting of a variety of radiological and biological threats."
+	icon = 'icons/obj/items/clothing/masks.dmi'
+	icon_state = "upp_cbrn_hood"
+	item_state = "upp_cbrn_hood"
+	item_icons = list(
+		WEAR_FACE = 'icons/mob/humans/onmob/mask.dmi'
+	)
+
+/obj/item/clothing/mask/gas/pve_mopp/upp/alt
+	name = "\improper OP-4M PMK/5 gasmask"
+	desc = "The UPP PMK/5 gasmask mask includes a full covering cowl that securely attaches to the OP-4M suit, and additional ventilation system strapped on the back of the hood. It is capable of protecting of a variety of radiological and biological threats."
+	icon_state = "upp_cbrn_hood_alt"
+	item_state = "upp_cbrn_hood_alt"
+
 /obj/item/clothing/mask/gas/pmc
 	name = "\improper tactical filtration mask"
 	desc = "A sophisticated filtration mask being tested for the military market but presently limited to Weyland-Yutani tactical teams."
@@ -225,3 +241,35 @@
 	icon_state = "rmc_mask"
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	flags_inventory = COVERMOUTH|COVEREYES|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+
+//= UPP =\\
+
+/obj/item/clothing/mask/gas/upp_pfb
+	name = "\improper ShMB/4 gasmask"
+	desc = "The standard issue gasmask utilized by the UPP Armed Collective and many UPP civilian organizations."
+	icon_state = "pfb"
+	item_state = "pfb"
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	flags_inv_hide = HIDEEARS|HIDEFACE|HIDEALLHAIR
+
+//= CLF =\\
+
+/obj/item/clothing/mask/gas/riot
+	name = "riot mask"
+	desc = "A mask of colonial riot control department, with red laser shield lenses for eye protection due a somewhat often use of RXF-M5 EVA by colonial rioters. Riot gear is also often seen in hands of CLF terrorists, due to large surplus of it being captured in colonial rebellions."
+	icon_state = "carbon_mask"
+	item_state = "balaclava"
+	vision_impair = VISION_IMPAIR_NONE
+	eye_protection = EYE_PROTECTION_FLAVOR
+	flags_inv_hide = HIDEEARS|HIDEFACE
+
+//= Security =\\
+
+/obj/item/clothing/mask/gas/sec_mask
+	name = "\improper Sec Mask"
+	desc = "Standard issue mask issued to Con-Am security forces. Typically locks in with the standard issue helmet Voice modulator appears to be disabled."
+	icon_state = "sec_mask"
+	item_state = "sec_mask"
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	flags_inv_hide = HIDEFACE

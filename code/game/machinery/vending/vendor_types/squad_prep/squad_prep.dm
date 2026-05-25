@@ -127,7 +127,6 @@
 		list("ARMOR", -1, null, null),
 		list("M10 Pattern Marine Helmet", floor(scale * 15), /obj/item/clothing/head/helmet/marine, VENDOR_ITEM_REGULAR),
 		list("Standard M3 Pattern Armor Set", round(scale * 15), /obj/item/storage/box/guncase/m3armor, VENDOR_ITEM_REGULAR),
-		list("ASAPP armor plate", round(scale * 5), /obj/item/clothing/accessory/health/ceramic_plate/marine, VENDOR_ITEM_REGULAR),
 		list("M3 Pattern Chestpiece", round(scale * 10), /obj/item/clothing/suit/marine, VENDOR_ITEM_REGULAR),
 		list("M3 Pattern Ridged Chestpiece", round(scale * 10), /obj/item/clothing/suit/marine/lines, VENDOR_ITEM_REGULAR),
 		list("M3 Pattern Smooth Chestpiece", round(scale * 10), /obj/item/clothing/suit/marine/smooth, VENDOR_ITEM_REGULAR),
@@ -249,13 +248,13 @@
 		list("6b82 Combat Helmet (Brown)", round(scale * 15), /obj/item/clothing/head/helmet/upp/alt, VENDOR_ITEM_REGULAR),
 		list("6B72-03 Pattern Vest", round(scale * 10), /obj/item/clothing/suit/marine/faction/upp/light, VENDOR_ITEM_REGULAR),
 		list("6B90 Pattern Cuirass", round(scale * 15), /obj/item/clothing/suit/marine/faction/upp, VENDOR_ITEM_REGULAR),
-		list("TNAP armor plate", round(scale * 5), /obj/item/clothing/accessory/health/ceramic_plate/upp, VENDOR_ITEM_REGULAR),
 		list("6B90 Crotch Guard", round(scale * 15), /obj/item/clothing/accessory/upppads/crotch, VENDOR_ITEM_REGULAR),
 		list("6B90 Leg Guards", round(scale * 15), /obj/item/clothing/accessory/upppads/legs, VENDOR_ITEM_REGULAR),
 		list("6B90 Arm Plates", round(scale * 15), /obj/item/clothing/accessory/upppads, VENDOR_ITEM_REGULAR),
 
 		list("BACKPACK", -1, null, null, null),
 		list("UPP Satchel", round(scale * 15), /obj/item/storage/backpack/lightpack/upp, VENDOR_ITEM_REGULAR),
+		list("UPP Backpack", round(scale * 15), /obj/item/storage/backpack/marine/upp, VENDOR_ITEM_REGULAR),
 
 		list("RESTRICTED BACKPACKS", -1, null, null),
 		list("Radio Telephone Backpack", round(max(1,(scale * 0.5))), /obj/item/storage/backpack/marine/satchel/rto/upp_net, VENDOR_ITEM_REGULAR),
@@ -325,7 +324,6 @@
 		list("Tactical Helmet", round(scale * 15), /obj/item/clothing/head/helmet/marine/veteran/pmc, VENDOR_ITEM_REGULAR),
 		list("Tactical Armor", round(scale * 15), /obj/item/clothing/suit/marine/veteran/pmc, VENDOR_ITEM_REGULAR),
 		list("Tactical Light Armor", round(scale * 10), /obj/item/clothing/suit/marine/veteran/pmc/light, VENDOR_ITEM_REGULAR),
-		list("HASP armor plate", round(scale * 5), /obj/item/clothing/accessory/health/ceramic_plate/twe/wy, VENDOR_ITEM_REGULAR),
 		list("M4 Pattern Pads", round(scale * 10), /obj/item/clothing/accessory/pmcpads, VENDOR_ITEM_REGULAR),
 		list("M4 Pattern Light Pads", round(scale * 10), /obj/item/clothing/accessory/pmcpads/light, VENDOR_ITEM_REGULAR),
 		list("M4 Pattern Vambraces", round(scale * 10), /obj/item/clothing/accessory/pmcpads/bracers, VENDOR_ITEM_REGULAR),
@@ -504,7 +502,6 @@
 
 		list("ARMOR", -1, null, null),
 		list("M3-R Pattern Recon Armor", round(scale * 10), /obj/item/clothing/suit/marine/rto/forecon, VENDOR_ITEM_REGULAR),
-		list("ASAPP armor plate", round(scale * 4), /obj/item/clothing/accessory/health/ceramic_plate/marine, VENDOR_ITEM_REGULAR),
 		list("M3 Pattern Vambraces", round(scale * 10), /obj/item/clothing/accessory/pads/bracers/standard, VENDOR_ITEM_REGULAR),
 		list("M3 Pattern Greaves", round(scale * 10), /obj/item/clothing/accessory/pads/greaves/standard, VENDOR_ITEM_REGULAR),
 		list("M3 Pattern Kneepads", round(scale * 10), /obj/item/clothing/accessory/pads/kneepads/standard, VENDOR_ITEM_REGULAR),
@@ -611,7 +608,6 @@
 		list("Mk16 Tactical Helmet", round(scale * 10), /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc, VENDOR_ITEM_REGULAR),
 		list("Mk10 Tactical Open Helmet", round(scale * 10), /obj/item/clothing/head/helmet/marine/veteran/pmc/rmc, VENDOR_ITEM_REGULAR),
 		list("Kestrel Armoured Cuirass", round(scale * 10), /obj/item/clothing/suit/marine/veteran/royal_marine, VENDOR_ITEM_REGULAR),
-		list("HASP armor plate", round(scale * 5), /obj/item/clothing/accessory/health/ceramic_plate/twe, VENDOR_ITEM_REGULAR),
 		list("Kestrel Shoulder Pads", round(scale * 10), /obj/item/clothing/accessory/twepads, VENDOR_ITEM_REGULAR),
 		list("Kestrel Leg Guards", round(scale * 10), /obj/item/clothing/accessory/twepads/legs, VENDOR_ITEM_REGULAR),
 
@@ -810,6 +806,7 @@
 		list("Rail Flashlight", round(scale * 5), /obj/item/attachable/flashlight, VENDOR_ITEM_REGULAR),
 		list("Two-point Sling", round(scale * 5), /obj/item/attachable/sling, VENDOR_ITEM_REGULAR),
 		list("M13 Fighting Knife", round(scale * 25), /obj/item/weapon/knife/marine, VENDOR_ITEM_REGULAR),
+		list("M5 Bayonet", round(scale * 5), /obj/item/attachable/bayonet, VENDOR_ITEM_REGULAR),
 		)
 
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/upp
@@ -937,6 +934,7 @@
 		list("Rail Flashlight", round(scale * 5), /obj/item/attachable/flashlight, VENDOR_ITEM_REGULAR),
 		list("Two-point Sling", round(scale * 5), /obj/item/attachable/sling, VENDOR_ITEM_REGULAR),
 		list("M13 Fighting Knife", round(scale * 5), /obj/item/weapon/knife/marine, VENDOR_ITEM_REGULAR),
+		list("M5 Bayonet", round(scale * 5), /obj/item/attachable/bayonet, VENDOR_ITEM_REGULAR),
 		)
 
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/pmc
@@ -1042,7 +1040,6 @@
 		list("FLARE AND LIGHT", -1, null, null),
 		list("Combat Flashlight", round(scale * 10), /obj/item/device/flashlight/combat, VENDOR_ITEM_REGULAR),
 		list("L96 Marking Flare Pack", round(scale * 10), /obj/item/storage/box/flare/rmc, VENDOR_ITEM_REGULAR),
-		list("M89-S Signal Flare Pack", round(scale * 1), /obj/item/storage/box/flare/signal, VENDOR_ITEM_REGULAR),
 
 		list("SIDEARMS", -1, null, null),
 		list("VP70 Combat Pistol", round(scale * 2), /obj/item/weapon/gun/pistol/vp70/unloaded, VENDOR_ITEM_REGULAR),

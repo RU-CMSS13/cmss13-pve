@@ -8,7 +8,7 @@
 
 /datum/human_ai_equipment_preset/twe_rebel/soldier
 	name = "TWE Rebel, Soldier (Rifle)"
-	desc = "Armed with either a Bizon SMG, MAR variant rifle and very rarely an F90 rifle."
+	desc = "Armed with either a Bizon SMG, MAR variant rifle and very rarely an F90 rifle and AK4047."
 	path = /datum/equipment_preset/clf/soldier
 
 /datum/human_ai_equipment_preset/twe_rebel/machinegunner
@@ -43,7 +43,7 @@
 
 /datum/human_ai_equipment_preset/twe_rebel/leader
 	name = "TWE Rebel Leader"
-	desc = "Armed with either a MAR variant or a F90."
+	desc = "Armed with either a MAR variant, F90 or AK4047."
 	path = /datum/equipment_preset/clf/leader
 
 /datum/human_ai_equipment_preset/twe_rebel/cell_commander

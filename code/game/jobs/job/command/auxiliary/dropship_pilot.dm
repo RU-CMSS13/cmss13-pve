@@ -18,26 +18,3 @@ AddTimelock(/datum/job/command/pilot/dropship_pilot, list(
 	name = JOB_DROPSHIP_PILOT
 	icon_state = "po_spawn"
 	job = /datum/job/command/pilot/dropship_pilot
-
-/datum/job/command/pilot/dropship_pilot/ai
-	total_positions = 1
-	spawn_positions = 1
-	gear_preset = /datum/equipment_preset/uscm_ship/dp/ai
-
-/datum/job/command/pilot/dropship_pilot/ai/set_spawn_positions(count)
-	return spawn_positions
-
-/datum/job/command/pilot/dropship_pilot/ai/get_total_positions(latejoin = 0)
-	return latejoin ? total_positions : spawn_positions
-
-/obj/effect/landmark/start/pilot/dropship_pilot/ai
-	name = JOB_DROPSHIP_PILOT
-	job = /datum/job/command/pilot/dropship_pilot/ai
-
-/datum/job/command/pilot/dropship_pilot/ai/rmc
-	title = JOB_TWE_RMC_PILOT
-	gear_preset = /datum/equipment_preset/uscm/rmc/pilot
-
-/obj/effect/landmark/start/pilot/dropship_pilot/ai/rmc
-	name = JOB_TWE_RMC_PILOT
-	job = /datum/job/command/pilot/dropship_pilot/ai/rmc

@@ -224,6 +224,7 @@ GLOBAL_LIST_INIT_TYPED(hive_datum, /datum/hive_status, list(
 	XENO_HIVE_RENEGADE = new /datum/hive_status/corrupted/renegade(),
 	XENO_HIVE_TUTORIAL = new /datum/hive_status/tutorial(),
 	XENO_HIVE_PATHOGEN = new /datum/hive_status/pathogen(),
+	XENO_HIVE_ZETA = new /datum/hive_status/zeta(),
 ))
 
 GLOBAL_LIST_INIT(xeno_evolve_times, setup_xeno_evolve_times())

@@ -2,18 +2,18 @@
 	caste_type = PATHOGEN_CREATURE_POPPER
 	tier = 1
 
-	melee_damage_lower = 25
-	melee_damage_upper = 30
+	melee_damage_lower = 15
+	melee_damage_upper = XENO_DAMAGE_TIER_1
 	melee_vehicle_damage = 0
 	max_health = XENO_HEALTH_LESSER_DRONE
 	plasma_gain = XENO_PLASMA_GAIN_TIER_2
 	plasma_max = XENO_PLASMA_TIER_10
-	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_1
+	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_2
 	armor_deflection = XENO_NO_ARMOR
-	evasion = XENO_EVASION_LOW
+	evasion = XENO_EVASION_MEDIUM
 	speed = XENO_SPEED_TIER_8
 
-	attack_delay = 2 // VERY high slash damage, but attacks relatively slowly
+	attack_delay = 0
 
 	available_strains = list()
 	behavior_delegate_type = /datum/behavior_delegate/pathogen_base
@@ -36,6 +36,7 @@
 	base_pixel_x = 0
 	base_pixel_y = -20
 	organ_value = 10000
+	crit_health = -50
 	base_actions = list(
 		/datum/action/xeno_action/onclick/xeno_resting,
 		/datum/action/xeno_action/watch_xeno,
@@ -68,8 +69,8 @@
 	hivenumber = XENO_HIVE_PATHOGEN
 	speaking_noise = "neo_talk"
 
-	mob_size = MOB_SIZE_XENO_SMALL
-	acid_blood_damage = 0
+	mob_size = MOB_SIZE_XENO_VERY_SMALL
+	acid_blood_damage = 25
 	bubble_icon = "pathogen"
 	aura_strength = 2
 
@@ -79,8 +80,8 @@
 
 /mob/living/carbon/xenomorph/popper/death(cause, gibbed)
 	. = ..()
-	new /obj/effect/pathogen/spore_cloud(loc)
-
+	if(prob(5)) // This is because poppers will be used as drone equivalent, having 100% is death sentence for players without MOPP
+		new /obj/effect/pathogen/spore_cloud(loc)
 
 /mob/living/carbon/xenomorph/popper/start_pulling(atom/movable/AM)
 	return

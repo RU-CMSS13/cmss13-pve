@@ -112,7 +112,7 @@
 	chemclass = CHEM_CLASS_BASIC
 	chemfiresupp = TRUE
 	intensitymod = -3
-	properties = list(PROPERTY_HEMOGENIC = 0.1, PROPERTY_ANTITOXIC = 0.1)
+	properties = list(PROPERTY_HEMOGENIC = 1, PROPERTY_ANTITOXIC = 0.2)
 	flags = REAGENT_SCANNABLE
 
 /datum/reagent/water/reaction_turf(turf/T, volume)

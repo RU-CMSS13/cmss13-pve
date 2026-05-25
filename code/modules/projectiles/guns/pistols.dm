@@ -697,13 +697,13 @@
 	force = 15
 
 	accepted_ammo = list(
-	/obj/item/ammo_magazine/pistol/vp78,
-	/obj/item/ammo_magazine/pistol/vp78/rmc,
-	/obj/item/ammo_magazine/pistol/vp78/toxin,
-	/obj/item/ammo_magazine/pistol/vp78/penetrating,
-	/obj/item/ammo_magazine/pistol/vp78/incendiary,
-	/obj/item/ammo_magazine/pistol/vp78/heap,
-	/obj/item/ammo_magazine/pistol/vp78/rubber,
+		/obj/item/ammo_magazine/pistol/vp78,
+		/obj/item/ammo_magazine/pistol/vp78/rmc,
+		/obj/item/ammo_magazine/pistol/vp78/toxin,
+		/obj/item/ammo_magazine/pistol/vp78/penetrating,
+		/obj/item/ammo_magazine/pistol/vp78/incendiary,
+		/obj/item/ammo_magazine/pistol/vp78/heap,
+		/obj/item/ammo_magazine/pistol/vp78/rubber,
 	)
 
 	attachable_allowed = list(

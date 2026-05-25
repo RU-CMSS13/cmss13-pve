@@ -3786,6 +3786,20 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
+"hI" = (
+/obj/structure/surface/rack{
+	color = "#8B9490";
+	pixel_y = 16;
+	can_block_movement = 0
+	},
+/obj/item/reagent_container/glass/rag/polishing_rag{
+	pixel_y = 12;
+	name = "towel";
+	desc = "A hygiene towel made of soft fabric. The fibers are significantly worn out, and even have a smell hint of leftover sweat.";
+	color = "#1affff"
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/golden_arrow/cryo_cells)
 "hK" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/paper_bin{
@@ -4649,9 +4663,15 @@
 /obj/structure/surface/rack{
 	color = "#8B9490"
 	},
-/obj/item/storage/belt/gun/bizon,
-/obj/item/storage/box/guncase/heavy/smg/type64,
-/obj/item/ammo_box/magazine/type64,
+/obj/item/storage/belt/gun/bizon{
+	pixel_y = 8
+	},
+/obj/item/storage/box/guncase/heavy/smg/type64{
+	pixel_y = 5
+	},
+/obj/item/ammo_box/magazine/type64{
+	pixel_y = 8
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "ka" = (
@@ -4659,9 +4679,14 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
-/obj/item/storage/box/guncase/heavy/motiondetectors/upp,
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
 /obj/item/storage/box/guncase/heavy/motiondetectors/upp{
-	pixel_y = 8;
+	pixel_y = 3
+	},
+/obj/item/storage/box/guncase/heavy/motiondetectors/upp{
+	pixel_y = 10;
 	layer = 3.2
 	},
 /turf/open/floor/strata/multi_tiles,
@@ -4680,10 +4705,10 @@
 	color = "#8B9490"
 	},
 /obj/item/storage/box/guncase/heavy/sentryupp{
-	pixel_y = 2
+	pixel_y = 5
 	},
 /obj/item/storage/box/guncase/heavy/sentryupp{
-	pixel_y = 10;
+	pixel_y = 12;
 	layer = 3.03
 	},
 /turf/open/floor/strata/multi_tiles,
@@ -4954,26 +4979,15 @@
 "kQ" = (
 /obj/structure/closet/secure_closet{
 	name = "Platoon Sergeant locker";
-	req_access_txt = "240"
-	pixel_x = -8;
-	can_block_movement = 0
+	req_access_txt = "240"pixel_x=-8;
+	can_block_movement = 0;
+	pixel_x = -8
 	},
 /obj/item/tool/crowbar/tactical,
 /obj/item/storage/box/zipcuffs/small,
 /obj/item/device/binoculars/range/designator/upp,
 /obj/item/deployable_beacon/red,
 /obj/item/device/whistle,
-/obj/item/weapon/gun/rifle/ak4047/unloaded/platoon,
-/obj/item/ammo_magazine/rifle/ak4047,
-/obj/item/ammo_magazine/rifle/ak4047,
-/obj/item/ammo_magazine/rifle/ak4047,
-/obj/item/ammo_magazine/rifle/ak4047,
-/obj/item/ammo_magazine/rifle/ak4047,
-/obj/item/ammo_magazine/rifle/ak4047,
-/obj/item/ammo_magazine/rifle/ak4047,
-/obj/item/ammo_magazine/rifle/ak4047,
-/obj/item/ammo_magazine/rifle/ak4047,
-/obj/item/ammo_magazine/rifle/ak4047,
 /obj/item/storage/pouch/magazine/large,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
@@ -5106,6 +5120,8 @@
 "lf" = (
 /obj/item/ammo_box/magazine/type71,
 /obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/ag80,
 /obj/item/ammo_box/magazine/ag80,
 /obj/item/ammo_box/magazine/ag80,
 /obj/structure/closet/crate/secure/upp/alt,
@@ -5193,6 +5209,32 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/prep_hallway)
+"lq" = (
+/obj/structure/surface/rack{
+	color = "#8B9490";
+	pixel_y = -10;
+	can_block_movement = 0
+	},
+/obj/item/reagent_container/glass/rag/polishing_rag{
+	name = "towel";
+	desc = "A hygiene towel made of soft fabric. The fibers are significantly worn out, and even have a smell hint of leftover sweat.";
+	color = "#1affff";
+	pixel_x = -6;
+	pixel_y = -4
+	},
+/obj/item/reagent_container/glass/rag/polishing_rag{
+	pixel_y = -10;
+	name = "towel";
+	desc = "A hygiene towel made of soft fabric. The fibers are significantly worn out, and even have a smell hint of leftover sweat.";
+	color = "#1affff";
+	pixel_x = 4
+	},
+/obj/item/stack/medical/ointment{
+	pixel_x = 5;
+	pixel_y = 4
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/golden_arrow/cryo_cells)
 "lr" = (
 /obj/structure/machinery/cm_vending/sorted/medical/no_access/upp{
 	pixel_y = 17;
@@ -5337,7 +5379,10 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/closet/crate/secure/upp,
 /obj/item/ammo_box/magazine/nade_box/upp,
-/obj/item/ammo_box/magazine/nade_box/upp/ugl,
+/obj/item/ammo_box/magazine/nade_box/upp,
+/obj/item/ammo_box/magazine/nade_box/upp,
+/obj/item/ammo_box/magazine/nade_box/upp,
+/obj/item/ammo_box/magazine/nade_box/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "lH" = (
@@ -5379,11 +5424,17 @@
 	color = "#8B9490"
 	},
 /obj/item/ammo_box/magazine/np92{
-	pixel_y = 11;
-	pixel_x = 3
+	pixel_y = 13;
+	pixel_x = 2
 	},
-/obj/item/ammo_box/magazine/type73,
-/obj/item/ammo_box/magazine/zhnk,
+/obj/item/ammo_box/magazine/type73{
+	pixel_x = 3;
+	pixel_y = 6
+	},
+/obj/item/ammo_box/magazine/zhnk{
+	pixel_y = -1;
+	pixel_x = 2
+	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "lL" = (
@@ -5403,6 +5454,10 @@
 /area/golden_arrow/medical)
 "lN" = (
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/closet/crate/secure/upp,
+/obj/item/ammo_box/magazine/nade_box/upp/ugl,
+/obj/item/ammo_box/magazine/nade_box/upp/ugl/canister,
+/obj/item/ammo_box/magazine/nade_box/upp/ugl/incen,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "lP" = (
@@ -5492,16 +5547,24 @@
 "mc" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/ammo_box/magazine/shotgun/upp/buckshot{
-	pixel_y = 0;
-	pixel_x = 0
-	},
-/obj/item/ammo_box/magazine/shotgun/upp{
-	pixel_y = 15;
-	pixel_x = 0
+	pixel_y = -6;
+	pixel_x = -5
 	},
 /obj/item/ammo_box/magazine/shotgun/upp/dragonsbreath{
-	pixel_y = -15;
-	pixel_x = 0
+	pixel_y = -13;
+	pixel_x = 3
+	},
+/obj/item/ammo_box/magazine/shotgun/upp{
+	pixel_y = -20;
+	pixel_x = -4
+	},
+/obj/item/storage/box/guncase/heavy/shotgun/type23{
+	pixel_y = 15
+	},
+/obj/item/storage/box/guncase/heavy/shotgun/type23{
+	pixel_y = 22;
+	pixel_x = 1;
+	layer = 3.03
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
@@ -5571,18 +5634,6 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/medical)
-"mj" = (
-/obj/item/storage/box/guncase/heavy/shotgun/type23{
-	pixel_y = 6
-	},
-/obj/item/storage/box/guncase/heavy/shotgun/type23{
-	pixel_y = 13;
-	pixel_x = 1;
-	layer = 3.03
-	},
-/obj/structure/surface/table/reinforced/almayer_B,
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/prep_hallway)
 "ml" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -5635,7 +5686,7 @@
 	light_range = 5;
 	dir = 8
 	},
-/obj/structure/gun_rack/ag80/unloaded/platoon,
+/obj/structure/gun_rack/ag80/unloaded,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "mt" = (
@@ -5721,7 +5772,7 @@
 	pixel_x = 2
 	},
 /obj/item/ammo_box/magazine/np92{
-	pixel_y = 6;
+	pixel_y = 9;
 	pixel_x = 2
 	},
 /obj/item/ammo_box/magazine/type73{
@@ -7695,7 +7746,25 @@
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
 	},
-/obj/structure/largecrate/random/mini/ammo,
+/obj/structure/largecrate/random/mini/ammo{
+	pixel_y = 8
+	},
+/obj/item/tool/screwdriver/tactical{
+	pixel_x = 3;
+	pixel_y = 16
+	},
+/obj/item/prop/helmetgarb/gunoil{
+	pixel_x = 8;
+	pixel_y = 2
+	},
+/obj/item/reagent_container/food/drinks/water{
+	pixel_x = -9;
+	pixel_y = -2
+	},
+/obj/item/stack/rods{
+	pixel_x = 18;
+	pixel_y = 14
+	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/prep_hallway)
 "rj" = (
@@ -8415,7 +8484,9 @@
 /obj/structure/surface/rack{
 	color = "#8B9490"
 	},
-/obj/item/storage/box/guncase/heavy/sniper/svd_iff,
+/obj/item/storage/box/guncase/heavy/sniper/svd_iff{
+	pixel_y = 5
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "vh" = (
@@ -9155,6 +9226,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/engineering)
+"AN" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/golden_arrow/prep_hallway)
 "AW" = (
 /obj/structure/largecrate/random,
 /turf/open/floor/plating/plating_catwalk/strata,
@@ -11092,6 +11167,21 @@
 /obj/structure/largecrate/black_market,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/hangar)
+"VS" = (
+/obj/structure/surface/rack{
+	color = "#8B9490";
+	pixel_y = -10;
+	can_block_movement = 0
+	},
+/obj/item/reagent_container/glass/rag/polishing_rag{
+	pixel_y = -8;
+	name = "towel";
+	desc = "A hygiene towel made of soft fabric. The fibers are significantly worn out, and even have a smell hint of leftover sweat.";
+	color = "#1affff";
+	pixel_x = 4
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/golden_arrow/cryo_cells)
 "VT" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/southwest,
@@ -11165,6 +11255,21 @@
 /obj/structure/cargo_container/canc/tan/left,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
+"WK" = (
+/obj/structure/surface/rack{
+	color = "#8B9490";
+	pixel_y = 16;
+	can_block_movement = 0
+	},
+/obj/item/reagent_container/glass/rag/polishing_rag{
+	pixel_y = 20;
+	name = "towel";
+	desc = "A hygiene towel made of soft fabric. The fibers are significantly worn out, and even have a smell hint of leftover sweat.";
+	color = "#1affff";
+	pixel_x = 2
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/golden_arrow/cryo_cells)
 "WL" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -14910,7 +15015,7 @@ DL
 DL
 mI
 Km
-kg
+AN
 ON
 ON
 kg
@@ -15216,7 +15321,7 @@ jU
 jU
 mr
 mo
-mj
+mo
 mc
 lN
 lG
@@ -16474,11 +16579,11 @@ dT
 dH
 dl
 bF
-cq
+hI
 cq
 cB
-cq
-cq
+bP
+VS
 bF
 ci
 cg
@@ -17082,11 +17187,11 @@ dr
 dM
 dr
 bF
+WK
 cq
 cq
 cq
-cq
-cq
+lq
 bF
 cj
 ch

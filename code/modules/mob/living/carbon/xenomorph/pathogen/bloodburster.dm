@@ -2,8 +2,8 @@
 	caste_type = PATHOGEN_CREATURE_BURSTER
 	caste_desc = "A tiny sharp-clawed terror that just tore its way out of a living host."
 	tier = 0
-	melee_damage_lower = XENO_DAMAGE_TIER_2
-	melee_damage_upper = XENO_DAMAGE_TIER_3
+	melee_damage_lower = XENO_DAMAGE_TIER_1
+	melee_damage_upper = XENO_DAMAGE_TIER_2
 	melee_vehicle_damage = 0
 	plasma_gain = XENO_PLASMA_GAIN_TIER_1
 	plasma_max = XENO_NO_PLASMA

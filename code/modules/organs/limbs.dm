@@ -167,15 +167,15 @@
 	. = ..()
 	if(!(status & (LIMB_ROBOT|LIMB_SYNTHSKIN))) //meatbags do not care about EMP
 		return
-	var/probability = 30
-	var/damage = 15
+	var/probability = 5
+	var/damage = 20
 	if(severity == 2)
 		probability = 1
 		damage = 3
 	if(prob(probability))
 		droplimb(0, 0, "EMP")
 	else
-		take_damage(damage, 0, 1, 1, used_weapon = "EMP")
+		take_damage(0, damage, 1, 0, used_weapon = "EMP")
 
 
 /obj/limb/proc/take_damage_organ_damage(brute, sharp)
@@ -307,6 +307,7 @@
 
 	var/previous_brute = brute_dam
 	var/previous_burn = burn_dam
+	var/previous_bonebreak = (status & LIMB_BROKEN)
 
 	var/is_ff = FALSE
 	if(istype(attack_source) && attack_source.faction == owner.faction)
@@ -402,7 +403,7 @@
 
 	if(!iszombie(owner))
 		if(previous_brute > 0 && !is_ff && body_part != BODY_FLAG_CHEST && body_part != BODY_FLAG_GROIN && !no_limb_loss && !no_perma_damage && !no_bone_break)
-			if(CONFIG_GET(flag/limbs_can_break) && brute_dam >= max_damage * CONFIG_GET(number/organ_health_multiplier) && (status & LIMB_BROKEN))
+			if(CONFIG_GET(flag/limbs_can_break) && brute_dam >= max_damage * CONFIG_GET(number/organ_health_multiplier) && (previous_bonebreak || (status & (LIMB_ROBOT|LIMB_SYNTHSKIN)))) //delimbable only if broken before this hit or we're a robot limb (synths do not fracture)
 				var/cut_prob = brute/max_damage * 5
 				if(prob(cut_prob))
 					limb_delimb(damage_source)

@@ -91,6 +91,12 @@
 	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_bio = CLOTHING_ARMOR_GIGAHIGHPLUS
 
+/obj/item/clothing/shoes/marine/pve_mopp/upp
+	name = "\improper BcH-2M boots"
+	desc = "UPP standard issue OZK boots excel at keeping viscera or other biological contaminants away from your feet."
+	icon_state = "cbrn_alt"
+	item_state = "cbrn_alt"
+
 /obj/item/clothing/shoes/marine/corporate
 	name = "rugged boots"
 	desc = "These synth-leather boots seem high quality when first worn, but quickly detoriate, especially in the environments the corporate security members these are issued to operate in. Still, better than nothing."
