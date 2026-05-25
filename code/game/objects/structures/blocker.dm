@@ -208,3 +208,18 @@ GLOBAL_VAR_INIT(vehicle_blockers, TRUE)
 	icon_state = "purple_line"
 
 	visible = TRUE
+
+/obj/structure/blocker/invisible_wall/fog
+	name = "dense fog"
+	desc = "It looks way too dangerous to traverse. Best wait until it has cleared up."
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "smoke"
+	opacity = TRUE
+
+/obj/structure/blocker/invisible_wall/fog/New()
+	..()
+	icon_state = initial(icon_state)
+
+/obj/structure/blocker/invisible_wall/fog/konec_karti
+	name = "dense fog"
+	desc = "И зачем мне туда идти?"
