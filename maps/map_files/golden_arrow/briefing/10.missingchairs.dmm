@@ -1,4 +1,8 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/structure/machinery/status_display,
+/turf/closed/wall/almayer,
+/area/golden_arrow/briefing)
 "cs" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer,
@@ -877,7 +881,7 @@ NS
 mG
 "}
 (8,1,1) = {"
-Ma
+mG
 Ma
 Ma
 Ma
@@ -895,7 +899,7 @@ mG
 mG
 mG
 mG
-Ma
+mG
 Ma
 Ef
 Kk
@@ -909,7 +913,7 @@ mG
 mG
 mG
 mG
-Ma
+mG
 Ma
 pI
 mm
@@ -966,7 +970,7 @@ mG
 mG
 mG
 Ma
-Ma
+aa
 gz
 ZG
 cs

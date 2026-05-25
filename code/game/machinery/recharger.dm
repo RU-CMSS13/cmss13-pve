@@ -34,12 +34,7 @@
 			return
 		if(istype(G, /obj/item/device/defibrillator))
 			var/obj/item/device/defibrillator/D = G
-/*
 			if(D.ready)
-*/
-			//RUCM START
-			if(D.paddles_type && D.paddles_type.loc == D.loc)
-			//RUCM END
 				to_chat(user, SPAN_WARNING("It won't fit, put the paddles back into \the [D] first!"))
 				return
 		if(istype(G, /obj/item/tool/portadialysis))
@@ -217,10 +212,6 @@
 				update_use_power(USE_POWER_IDLE)
 			return
 		*/
-
-/obj/structure/machinery/recharger/power_change()
-	..()
-	update_icon()
 
 /obj/structure/machinery/recharger/emp_act(severity)
 	. = ..()

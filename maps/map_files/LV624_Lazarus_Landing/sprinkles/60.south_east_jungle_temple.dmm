@@ -211,7 +211,6 @@
 /turf/closed/wall/strata_ice/jungle,
 /area/strata/interior/out_of_bounds)
 "IY" = (
-/obj/effect/landmark/objective_landmark/close,
 /obj/structure/platform/stone/ancient_temple/alt/north,
 /turf/open/floor/ancient_temple/damaged/damage_2,
 /area/lazarus/ground/jungle/south_east_jungle)
@@ -353,7 +352,6 @@
 /area/lazarus/ground/jungle/south_east_jungle)
 "We" = (
 /obj/effect/hunter/ancient_temple/tile_edge/tile_edge_11,
-/obj/effect/landmark/objective_landmark/medium,
 /obj/structure/flora/jungle/vines/dead/light_1,
 /turf/open/floor/ancient_temple/damaged/damage_7,
 /area/lazarus/ground/jungle/south_east_jungle)

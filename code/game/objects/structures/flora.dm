@@ -419,6 +419,7 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 	fire_flag = FLORA_BURN_SPREAD_ALL
 
 /obj/structure/flora/grass/tallgrass/crop/corner
+
 /obj/structure/flora/grass/tallgrass/jungle_alt_2
 	color = "#9ac68c"
 	icon_state = "tallgrass"

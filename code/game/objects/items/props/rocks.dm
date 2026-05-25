@@ -57,8 +57,17 @@
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	layer = TURF_LAYER
 
+/obj/structure/prop/colorable_rock/colorable/brown
+	color = "#8d6d6d"
+
 /obj/structure/prop/colorable_rock/colorable/alt
 	icon_state = "ground_colorable_alt"
 
+/obj/structure/prop/colorable_rock/colorable/alt/brown
+	color = "#8d6d6d"
+
 /obj/structure/prop/colorable_rock/colorable/alt1
 	icon_state = "ground_colorable_1"
+
+/obj/structure/prop/colorable_rock/colorable/alt1/brown
+	color = "#8d6d6d"
