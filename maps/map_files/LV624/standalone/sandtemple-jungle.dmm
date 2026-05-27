@@ -1,4 +1,12 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/effect/landmark/lizard_spawn,
+/turf/open/gm/dirt,
+/area/lv624/ground/jungle/south_west_jungle)
+"ab" = (
+/obj/effect/landmark/lizard_spawn,
+/turf/open/gm/dirtgrassborder/grassdirt_corner/north_east,
+/area/lv624/ground/jungle/south_west_jungle)
 "aq" = (
 /obj/structure/flora/jungle/vines/heavy,
 /turf/open/gm/grass/grass2,
@@ -18,6 +26,12 @@
 "eV" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 5
+	},
+/turf/open/gm/grass/grass1,
+/area/lv624/ground/jungle/south_west_jungle)
+"fv" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 4
 	},
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/south_west_jungle)
@@ -77,10 +91,6 @@
 "pB" = (
 /turf/open/gm/grass/grass2,
 /area/lv624/ground/jungle/south_west_jungle)
-"pO" = (
-/obj/effect/landmark/lizard_spawn,
-/turf/open/gm/dirtgrassborder/grassdirt_corner/north_east,
-/area/lv624/ground/jungle/south_west_jungle)
 "qZ" = (
 /obj/structure/flora/bush/ausbushes/var3/leafybush,
 /turf/open/gm/grass/grass1,
@@ -128,12 +138,6 @@
 "zh" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 6
-	},
-/turf/open/gm/grass/grass1,
-/area/lv624/ground/jungle/south_west_jungle)
-"zM" = (
-/obj/structure/flora/grass/tallgrass/jungle/corner{
-	dir = 4
 	},
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/south_west_jungle)
@@ -253,10 +257,6 @@
 	},
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/south_west_jungle)
-"XD" = (
-/obj/effect/landmark/lizard_spawn,
-/turf/open/gm/dirt,
-/area/lv624/ground/jungle/south_west_jungle)
 "XG" = (
 /obj/effect/landmark/yautja_teleport,
 /turf/open/gm/dirt,
@@ -343,7 +343,7 @@ oD
 LW
 dy
 Ok
-XD
+aa
 NU
 Ge
 AQ
@@ -371,7 +371,7 @@ zh
 uj
 uj
 uj
-zM
+fv
 eV
 Lz
 jV
@@ -390,7 +390,7 @@ uj
 uj
 uj
 eV
-pO
+ab
 Kn
 IP
 oD

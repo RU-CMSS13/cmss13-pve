@@ -52,8 +52,14 @@
 "au" = (
 /turf/open/gm/dirtgrassborder/south,
 /area/lv624/ground/jungle/west_jungle)
+"av" = (
+/turf/open/gm/dirtgrassborder/grassdirt_corner2/south_west,
+/area/lv624/ground/jungle/west_jungle)
 "aw" = (
 /turf/open/gm/coast/beachcorner/south_west,
+/area/lv624/ground/jungle/west_jungle)
+"az" = (
+/turf/open/gm/dirt,
 /area/lv624/ground/jungle/west_jungle)
 "aC" = (
 /obj/structure/flora/jungle/vines/light_2,
@@ -62,9 +68,6 @@
 "aD" = (
 /obj/structure/flora/jungle/vines/light_1,
 /turf/open/gm/dirtgrassborder/grassdirt_corner/south_west,
-/area/lv624/ground/jungle/west_jungle)
-"aE" = (
-/turf/open/gm/dirtgrassborder/grassdirt_corner2/south_west,
 /area/lv624/ground/jungle/west_jungle)
 "aU" = (
 /turf/closed/wall/strata_ice/jungle,
@@ -106,9 +109,6 @@
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
 /turf/open/gm/river,
 /area/lv624/ground/river/west_river)
-"bV" = (
-/turf/open/gm/dirt,
-/area/lv624/ground/jungle/west_jungle)
 "gX" = (
 /turf/closed/wall/rock/brown,
 /area/lv624/ground/river/west_river)
@@ -202,7 +202,7 @@ ES
 ES
 ES
 qG
-aE
+av
 aD
 "}
 (4,1,1) = {"
@@ -217,8 +217,8 @@ ad
 ad
 aq
 ES
-bV
-aE
+az
+av
 "}
 (5,1,1) = {"
 JC
@@ -231,9 +231,9 @@ bm
 bc
 bc
 bt
-bV
-bV
-bV
+az
+az
+az
 "}
 (6,1,1) = {"
 bi
@@ -246,9 +246,9 @@ aj
 bc
 bc
 bt
-bV
+az
 Za
-bV
+az
 "}
 (7,1,1) = {"
 bi
@@ -261,9 +261,9 @@ bc
 Ok
 FJ
 bt
-bV
+az
 Za
-bV
+az
 "}
 (8,1,1) = {"
 bi
@@ -276,9 +276,9 @@ bc
 bc
 am
 bt
-bV
-bV
-bV
+az
+az
+az
 "}
 (9,1,1) = {"
 bx
@@ -291,9 +291,9 @@ bc
 bc
 bc
 bt
-bV
-bV
-bV
+az
+az
+az
 "}
 (10,1,1) = {"
 bf
@@ -306,9 +306,9 @@ al
 bc
 aX
 ar
-bV
-bV
-bV
+az
+az
+az
 "}
 (11,1,1) = {"
 bi
@@ -320,10 +320,10 @@ bN
 bc
 bc
 bt
-bV
-bV
-bV
-bV
+az
+az
+az
+az
 "}
 (12,1,1) = {"
 bi
@@ -337,8 +337,8 @@ bc
 ao
 zW
 aw
-bV
-bV
+az
+az
 "}
 (13,1,1) = {"
 bx
@@ -352,8 +352,8 @@ bc
 bc
 ve
 Ms
-bV
-bV
+az
+az
 "}
 (14,1,1) = {"
 bi

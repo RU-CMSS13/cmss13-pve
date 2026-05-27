@@ -5,14 +5,14 @@
 	},
 /area/shuttle/ert)
 "b" = (
-/obj/structure/barricade/handrail/strata{
-	dir = 4
-	},
 /obj/effect/decal/warning_stripes{
-	icon_state = "NW-out";
-	pixel_y = 2
+	icon_state = "S"
 	},
-/turf/open/floor/strata/multi_tiles/west,
+/obj/structure/barricade/handrail/strata{
+	dir = 4;
+	can_buckle = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ert)
 "c" = (
 /obj/structure/barricade/handrail/strata{
@@ -24,6 +24,13 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ert)
+"d" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 8;
+	can_buckle = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/ert)
 "e" = (
 /obj/docking_port/mobile/emergency_response/ert3,
 /turf/closed/shuttle/ert{
@@ -32,22 +39,12 @@
 	},
 /area/shuttle/ert)
 "f" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/structure/barricade/handrail/strata{
-	dir = 4;
-	can_buckle = 1
-	},
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/strata/multi_tiles/west,
 /area/shuttle/ert)
 "g" = (
 /turf/closed/shuttle/ert{
 	icon_state = "upp5"
 	},
-/area/shuttle/ert)
-"i" = (
-/turf/open/floor/strata/multi_tiles/west,
 /area/shuttle/ert)
 "j" = (
 /turf/closed/shuttle/ert{
@@ -72,7 +69,7 @@
 	icon_state = "upp23"
 	},
 /area/shuttle/ert)
-"o" = (
+"n" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	layer = 3.3
@@ -80,6 +77,13 @@
 /obj/structure/bed/chair/vehicle{
 	pixel_x = 9;
 	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/ert)
+"o" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 4;
+	can_buckle = 1
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ert)
@@ -110,9 +114,10 @@
 /area/shuttle/ert)
 "t" = (
 /obj/effect/decal/warning_stripes{
-	icon_state = "S"
+	icon_state = "N";
+	pixel_y = 1
 	},
-/turf/open/floor/strata/multi_tiles/west,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ert)
 "u" = (
 /turf/closed/shuttle/ert{
@@ -162,11 +167,14 @@
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ert)
 "D" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
+/obj/structure/barricade/handrail/strata{
+	dir = 4
 	},
-/turf/open/floor/strata/floor3/east,
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 2
+	},
+/turf/open/floor/strata/multi_tiles/west,
 /area/shuttle/ert)
 "E" = (
 /turf/closed/shuttle/ert{
@@ -211,26 +219,15 @@
 /turf/template_noop,
 /area/template_noop)
 "L" = (
-/obj/structure/barricade/handrail/strata{
-	dir = 8;
-	can_buckle = 1
+/obj/structure/bed/chair/dropship/pilot{
+	dir = 1;
+	layer = 6
 	},
-/turf/open/floor/plating/plating_catwalk/strata,
-/area/shuttle/ert)
-"M" = (
-/obj/structure/barricade/handrail/strata{
-	dir = 4;
-	can_buckle = 1
-	},
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/strata/multi_tiles/southwest,
 /area/shuttle/ert)
 "O" = (
-/obj/structure/barricade/handrail/strata{
-	dir = 8
-	},
 /obj/effect/decal/warning_stripes{
-	icon_state = "NE-out";
-	pixel_y = 1
+	icon_state = "S"
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/shuttle/ert)
@@ -245,6 +242,23 @@
 	icon_state = "upp16"
 	},
 /area/shuttle/ert)
+"R" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 1
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/ert)
+"S" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/ert)
 "T" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -255,25 +269,11 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ert)
-"U" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/turf/open/floor/plating/plating_catwalk/strata,
-/area/shuttle/ert)
 "V" = (
 /turf/closed/shuttle/ert{
 	icon_state = "rightengine_2";
 	opacity = 0
 	},
-/area/shuttle/ert)
-"W" = (
-/obj/structure/bed/chair/dropship/pilot{
-	dir = 1;
-	layer = 6
-	},
-/turf/open/floor/strata/multi_tiles/southwest,
 /area/shuttle/ert)
 "X" = (
 /obj/structure/blocker/invisible_wall,
@@ -316,7 +316,7 @@ e
 K
 v
 C
-U
+t
 B
 Z
 Z
@@ -331,45 +331,45 @@ A
 z
 q
 s
-O
-i
-i
-i
-i
-i
-L
-L
+R
+f
+f
+f
+f
+f
+d
+d
 T
 Y
 "}
 (4,1,1) = {"
 I
 X
-W
-D
+L
+S
 w
 k
 w
 w
 k
-i
-i
-t
+f
+f
+O
 w
 "}
 (5,1,1) = {"
 E
 m
 c
-b
-i
-i
-i
-i
-i
-M
-M
+D
 f
+f
+f
+f
+f
+o
+o
+b
 w
 "}
 (6,1,1) = {"
@@ -378,10 +378,10 @@ v
 J
 H
 B
-o
-o
-o
-o
+n
+n
+n
+n
 y
 g
 g

@@ -1,4 +1,12 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/effect/landmark/lizard_spawn,
+/turf/open/gm/dirt,
+/area/lv624/ground/jungle/south_east_jungle)
+"ab" = (
+/obj/effect/landmark/lizard_spawn,
+/turf/open/floor/sandstone/runed,
+/area/lv624/ground/jungle/south_east_jungle)
 "al" = (
 /obj/structure/flora/jungle/vines/light_2,
 /obj/structure/flora/jungle/vines/heavy,
@@ -74,10 +82,6 @@
 /obj/structure/flora/jungle/vines/light_2,
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/south_east_jungle)
-"vt" = (
-/obj/effect/landmark/lizard_spawn,
-/turf/open/gm/dirt,
-/area/lv624/ground/jungle/south_east_jungle)
 "wQ" = (
 /obj/structure/flora/jungle/vines/heavy{
 	pixel_x = -28
@@ -111,10 +115,6 @@
 /area/lv624/ground/jungle/south_east_jungle)
 "EZ" = (
 /obj/structure/flora/jungle/vines/light_3,
-/turf/open/floor/sandstone/runed,
-/area/lv624/ground/jungle/south_east_jungle)
-"Kj" = (
-/obj/effect/landmark/lizard_spawn,
 /turf/open/floor/sandstone/runed,
 /area/lv624/ground/jungle/south_east_jungle)
 "LV" = (
@@ -325,7 +325,7 @@ Wt
 gU
 Xz
 Xy
-vt
+aa
 Xl
 Xl
 Ze
@@ -355,7 +355,7 @@ Tl
 aK
 Wl
 yg
-Kj
+ab
 Xl
 br
 EZ

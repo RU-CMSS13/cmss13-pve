@@ -9,23 +9,6 @@
 "c" = (
 /turf/open/floor/whiteyellow/east,
 /area/lv624/lazarus/main_hall)
-"d" = (
-/obj/item/handset{
-	desc = "A model of an ancient Earth communication device.";
-	force = 8
-	},
-/obj/structure/surface/rack{
-	layer = 2.5
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/turf/open/floor/wood,
-/area/lv624/lazarus/main_hall)
 "e" = (
 /obj/structure/barricade/wooden{
 	dir = 8
@@ -124,17 +107,6 @@
 /obj/structure/machinery/power/apc/no_power/west,
 /turf/open/floor/cult,
 /area/lv624/lazarus/armory)
-"w" = (
-/obj/structure/surface/rack,
-/obj/item/storage/box/mousetraps{
-	pixel_x = -5
-	},
-/obj/item/paper/lv_624/cheese{
-	pixel_x = 8;
-	pixel_y = -4
-	},
-/turf/open/floor/cult,
-/area/lv624/lazarus/armory)
 "y" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -176,6 +148,34 @@
 	},
 /turf/open/floor/cult,
 /area/lv624/lazarus/armory)
+"L" = (
+/obj/structure/surface/rack,
+/obj/item/storage/box/mousetraps{
+	pixel_x = -5
+	},
+/obj/item/paper/lv_624/cheese{
+	pixel_x = 8;
+	pixel_y = -4
+	},
+/turf/open/floor/cult,
+/area/lv624/lazarus/armory)
+"O" = (
+/obj/item/handset{
+	desc = "A model of an ancient Earth communication device.";
+	force = 8
+	},
+/obj/structure/surface/rack{
+	layer = 2.5
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/turf/open/floor/wood,
+/area/lv624/lazarus/main_hall)
 "Q" = (
 /obj/structure/surface/rack,
 /obj/effect/landmark/crap_item,
@@ -246,7 +246,7 @@ i
 l
 q
 Q
-w
+L
 p
 i
 "}
@@ -263,7 +263,7 @@ B
 i
 "}
 (7,1,1) = {"
-d
+O
 g
 a
 j
