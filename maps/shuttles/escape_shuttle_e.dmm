@@ -9,8 +9,11 @@
 	icon_state = "wall2"
 	},
 /area/shuttle/escape_pod)
-"f" = (
-/turf/open/shuttle/escapepod/floor0/west,
+"e" = (
+/obj/docking_port/mobile/crashable/escape_shuttle/e,
+/turf/closed/shuttle/escapepod{
+	icon_state = "wall9"
+	},
 /area/shuttle/escape_pod)
 "i" = (
 /obj/structure/machinery/door/airlock/evacuation{
@@ -46,6 +49,10 @@
 	icon_state = "wall13"
 	},
 /area/shuttle/escape_pod)
+"z" = (
+/obj/structure/machinery/cryopod/evacuation,
+/turf/open/shuttle/escapepod/floor4,
+/area/shuttle/escape_pod)
 "E" = (
 /turf/closed/shuttle/escapepod{
 	icon_state = "wall10"
@@ -56,28 +63,21 @@
 	icon_state = "wall11"
 	},
 /area/shuttle/escape_pod)
-"M" = (
+"L" = (
 /obj/structure/machinery/cryopod/evacuation,
+/obj/structure/sign/safety/cryo{
+	pixel_x = -18
+	},
 /turf/open/shuttle/escapepod/floor4,
 /area/shuttle/escape_pod)
-"O" = (
-/obj/docking_port/mobile/crashable/escape_shuttle/e,
-/turf/closed/shuttle/escapepod{
-	icon_state = "wall9"
-	},
+"N" = (
+/turf/open/shuttle/escapepod/floor0/west,
 /area/shuttle/escape_pod)
 "Q" = (
 /obj/structure/machinery/computer/shuttle/escape_pod_panel{
 	pixel_y = 30
 	},
 /turf/open/shuttle/escapepod/floor0,
-/area/shuttle/escape_pod)
-"T" = (
-/obj/structure/machinery/cryopod/evacuation,
-/obj/structure/sign/safety/cryo{
-	pixel_x = -18
-	},
-/turf/open/shuttle/escapepod/floor4,
 /area/shuttle/escape_pod)
 "W" = (
 /turf/closed/shuttle/escapepod{
@@ -90,20 +90,20 @@ w
 t
 I
 E
-O
+e
 "}
 (2,1,1) = {"
 k
-M
-T
-M
+z
+L
+z
 s
 "}
 (3,1,1) = {"
 d
 Q
 o
-f
+N
 s
 "}
 (4,1,1) = {"

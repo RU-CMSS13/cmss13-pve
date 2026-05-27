@@ -67,6 +67,16 @@
 /obj/effect/landmark/start/crew_chief,
 /turf/open/floor/almayer/plating,
 /area/event)
+"s" = (
+/obj/structure/stairs{
+	dir = 1
+	},
+/obj/effect/step_trigger/teleporter_vector{
+	name = "runtime_down";
+	vector_z = -1
+	},
+/turf/open/floor/almayer/plating,
+/area/event)
 "u" = (
 /obj/effect/landmark/start/requisition,
 /turf/open/floor/almayer/plating,
@@ -168,16 +178,6 @@
 /area/event)
 "Q" = (
 /obj/effect/landmark/start/nurse,
-/turf/open/floor/almayer/plating,
-/area/event)
-"R" = (
-/obj/structure/stairs{
-	dir = 1
-	},
-/obj/effect/step_trigger/teleporter_vector{
-	name = "runtime_down";
-	vector_z = -1
-	},
 /turf/open/floor/almayer/plating,
 /area/event)
 "S" = (
@@ -626,9 +626,9 @@ a
 a
 a
 F
-R
-R
-R
+s
+s
+s
 m
 m
 F
@@ -644,9 +644,9 @@ a
 a
 a
 F
-R
-R
-R
+s
+s
+s
 m
 m
 F
