@@ -59,6 +59,10 @@ map sorokyne_strata
 	minplayers 130
 endmap
 
+map sorokyne_strata_legacy
+	minplayers 130
+endmap
+
 map lv522_chances_claim
 endmap
 
