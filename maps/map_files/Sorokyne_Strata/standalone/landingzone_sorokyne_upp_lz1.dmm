@@ -1774,7 +1774,7 @@
 /obj/structure/machinery/computer/shuttle/dropship/flight/remote_control{
 	name = "Remote dropship navigation computer";
 	req_one_access = null;
-	faction = "UPP"
+	dir = 4
 	},
 /turf/open/floor/strata/blue1,
 /area/strata/interior/research)
