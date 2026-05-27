@@ -48070,15 +48070,6 @@
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/corsat/squareswood/north,
 /area/desert_dam/interior/caves/temple)
-"qLT" = (
-/obj/structure/showcase{
-	desc = "An ancient, dusty tomb with strange alien writing. It's best not to touch it.";
-	icon_state = "yaut";
-	icon = 'icons/obj/structures/morgue.dmi';
-	name = "alien sarcophagus"
-	},
-/turf/open/floor/corsat/squareswood/north,
-/area/desert_dam/interior/caves/temple)
 "qNk" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -106716,7 +106707,7 @@ dTs
 dTs
 dTs
 gGC
-qLT
+aBV
 dTs
 aBL
 aBL
