@@ -3,9 +3,7 @@
 /turf/open/floor/plating,
 /area/strata/exterior/landing_zones/lz2)
 "u" = (
-/obj/docking_port/stationary/marine_dropship/lz2{
-	faction = "Yautja"
-	},
+/obj/docking_port/stationary/marine_dropship/lz2,
 /turf/open/floor/plating,
 /area/strata/exterior/landing_zones/lz2)
 
