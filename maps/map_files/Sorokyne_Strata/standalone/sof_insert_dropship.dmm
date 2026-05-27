@@ -37,26 +37,6 @@
 	icon_state = "3,14"
 	},
 /area/strata/interior/shuttle_sof)
-"dh" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "door_warning2";
-	dir = 4;
-	pixel_x = 1
-	},
-/obj/effect/landmark/survivor_spawner/SOF_survivor/soldier,
-/turf/open/floor/strata/floor3/east,
-/area/strata/interior/outpost/engi/drome)
-"ex" = (
-/obj/structure/bed/chair/vehicle{
-	dir = 4;
-	pixel_x = -5;
-	pixel_y = 1;
-	buckle_offset_x = -5;
-	buckle_offset_y = 1
-	},
-/obj/effect/landmark/survivor_spawner/SOF_survivor/medic,
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/strata/interior/shuttle_sof)
 "eE" = (
 /obj/structure/barricade/handrail/strata,
 /turf/open/floor/plating,
@@ -68,25 +48,10 @@
 "fn" = (
 /turf/open/floor/strata/floor3/east,
 /area/strata/interior/outpost/engi/drome)
-"fq" = (
-/obj/structure/bed/chair/vehicle{
-	dir = 8;
-	buckle_offset_x = 6;
-	buckle_offset_y = 1;
-	pixel_x = 6;
-	pixel_y = 1
-	},
-/obj/effect/landmark/survivor_spawner/SOF_survivor/sapper,
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/strata/interior/shuttle_sof)
 "fv" = (
 /obj/structure/machinery/camera/autoname{
 	dir = 4
 	},
-/turf/open/floor/plating,
-/area/strata/interior/outpost/engi/drome)
-"fF" = (
-/obj/effect/landmark/survivor_spawner/SOF_survivor/soldier,
 /turf/open/floor/plating,
 /area/strata/interior/outpost/engi/drome)
 "gf" = (
@@ -171,7 +136,6 @@
 	buckling_x = 1;
 	buckling_y = 3
 	},
-/obj/effect/landmark/survivor_spawner/SOF_survivor/squad_leader,
 /obj/structure/machinery/big_computers/computerblack/computer3{
 	pixel_y = 19;
 	layer = 2;
@@ -210,7 +174,6 @@
 	pixel_y = 22;
 	pixel_x = 8
 	},
-/obj/effect/landmark/survivor_spawner/SOF_survivor/specialist,
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/strata/interior/shuttle_sof)
 "oY" = (
@@ -386,17 +349,6 @@
 /obj/structure/barricade/handrail/strata,
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/strata/interior/outpost/engi/drome)
-"Ai" = (
-/obj/structure/bed/chair/vehicle{
-	dir = 4;
-	pixel_x = -5;
-	pixel_y = 1;
-	buckle_offset_x = -5;
-	buckle_offset_y = 1
-	},
-/obj/effect/landmark/survivor_spawner/SOF_survivor/soldier,
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/strata/interior/shuttle_sof)
 "Ao" = (
 /obj/structure/shuttle/part/upp_sof/transparent{
 	icon_state = "2,0"
@@ -454,17 +406,6 @@
 	icon_state = "3,15"
 	},
 /turf/open/floor/plating,
-/area/strata/interior/shuttle_sof)
-"Dz" = (
-/obj/structure/bed/chair/vehicle{
-	dir = 8;
-	buckle_offset_x = 6;
-	buckle_offset_y = 1;
-	pixel_x = 6;
-	pixel_y = 1
-	},
-/obj/effect/landmark/survivor_spawner/SOF_survivor/soldier,
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/strata/interior/shuttle_sof)
 "DO" = (
 /obj/structure/shuttle/part/upp_sof/transparent{
@@ -719,11 +660,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/strata/interior/outpost/engi/drome)
-"UL" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/obj/effect/landmark/survivor_spawner/SOF_survivor/soldier,
-/turf/open/floor/greengrid,
-/area/strata/interior/outpost/engi/drome)
 "UM" = (
 /obj/structure/machinery/camera/autoname{
 	dir = 8
@@ -818,7 +754,7 @@ Ze
 Ft
 qU
 oY
-dh
+oY
 qU
 qU
 qU
@@ -852,7 +788,7 @@ Wm
 pn
 vx
 vx
-fF
+vx
 zr
 zk
 Pg
@@ -890,9 +826,9 @@ cC
 wQ
 md
 Cn
-ex
 Fi
-Ai
+Fi
+Fi
 sz
 mQ
 tD
@@ -927,8 +863,8 @@ IS
 md
 oN
 PE
-fq
-Dz
+PE
+PE
 yt
 gh
 wd
@@ -960,7 +896,7 @@ Wm
 vx
 vx
 vx
-fF
+vx
 mm
 VE
 NJ
@@ -1018,7 +954,7 @@ eT
 eT
 Bf
 eT
-UL
+eT
 eT
 eT
 Bf

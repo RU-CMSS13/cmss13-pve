@@ -1026,7 +1026,6 @@
 	pixel_y = 22;
 	pixel_x = 8
 	},
-/obj/effect/landmark/objective_landmark/close,
 /obj/effect/decal/cleanable/blood{
 	pixel_x = 1;
 	pixel_y = -12

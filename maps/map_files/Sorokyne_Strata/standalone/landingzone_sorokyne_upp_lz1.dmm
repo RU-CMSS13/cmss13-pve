@@ -337,9 +337,9 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/strata/interior/research)
-"aY" = (
-/obj/docking_port/stationary/marine_dropship/upp{
-	name = "Research Base Landing Zone"
+"aX" = (
+/obj/docking_port/stationary/marine_dropship/lz1{
+	name = "UPP Landing Zone"
 	},
 /turf/open/floor/plating,
 /area/strata/interior/research)
@@ -921,20 +921,6 @@
 	},
 /turf/open/floor/strata/blue1,
 /area/strata/interior/research)
-"hS" = (
-/obj/structure/surface/rack{
-	color = "#98a3ab"
-	},
-/obj/item/ammo_magazine/rifle/type71,
-/obj/structure/machinery/light/small{
-	dir = 4
-	},
-/obj/effect/landmark/objective_landmark/close,
-/obj/item/ammo_magazine/rifle/type71,
-/obj/item/ammo_magazine/rifle/type71,
-/obj/item/ammo_magazine/rifle/type71,
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/strata/interior/research)
 "hT" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "pottedplant_22"
@@ -1163,13 +1149,6 @@
 "oL" = (
 /turf/open/floor/strata/red1,
 /area/strata/interior/research)
-"oS" = (
-/obj/structure/surface/rack{
-	color = "#98a3ab"
-	},
-/obj/effect/landmark/objective_landmark/medium,
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/strata/interior/research)
 "oV" = (
 /obj/structure/barricade/metal/wired,
 /turf/open/floor/strata/multi_tiles/southeast,
@@ -1253,7 +1232,6 @@
 /obj/structure/surface/rack{
 	color = "#98a3ab"
 	},
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/strata/interior/research)
 "tD" = (
@@ -1276,10 +1254,6 @@
 	pixel_y = -2
 	},
 /turf/open/floor/strata/blue1,
-/area/strata/interior/research)
-"ud" = (
-/obj/effect/landmark/objective_landmark/close,
-/turf/open/floor/strata/white_cyan2/west,
 /area/strata/interior/research)
 "uq" = (
 /obj/structure/flora/bush/ausbushes/grassybush{
@@ -1304,7 +1278,6 @@
 /obj/structure/surface/rack{
 	color = "#98a3ab"
 	},
-/obj/effect/landmark/objective_landmark/medium,
 /turf/open/floor/strata/floor3/east,
 /area/strata/interior/research)
 "wB" = (
@@ -1426,13 +1399,6 @@
 /obj/structure/machinery/door/airlock/almayer/maint/colony,
 /turf/open/floor/strata/multi_tiles/west,
 /area/strata/interior/research)
-"zu" = (
-/obj/structure/surface/table/reinforced/prison{
-	color = "#98a3ab"
-	},
-/obj/effect/landmark/objective_landmark/medium,
-/turf/open/floor/strata/red1,
-/area/strata/interior/research)
 "zB" = (
 /obj/structure/surface/table/reinforced/prison{
 	color = "#98a3ab"
@@ -1509,7 +1475,6 @@
 /area/strata/interior/research)
 "Ai" = (
 /obj/structure/filingcabinet,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/strata/blue1,
 /area/strata/interior/research)
 "At" = (
@@ -2245,7 +2210,7 @@ oL
 oL
 tD
 lm
-ud
+Vi
 ET
 mF
 FR
@@ -2344,7 +2309,7 @@ iN
 bE
 fe
 fF
-zu
+cf
 Lw
 yP
 bi
@@ -2847,7 +2812,7 @@ FR
 (15,1,1) = {"
 dF
 lm
-hS
+Vx
 cU
 Vx
 mF
@@ -3225,8 +3190,8 @@ jI
 jI
 jI
 jI
+aX
 jI
-aY
 jI
 jI
 jI
@@ -3711,7 +3676,7 @@ oJ
 Dz
 ch
 lm
-oS
+tB
 Jy
 mF
 dF
