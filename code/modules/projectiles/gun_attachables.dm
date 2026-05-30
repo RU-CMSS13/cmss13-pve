@@ -1062,8 +1062,8 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/sling/New()
 	..()
 	accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_1
-	recoil_unwielded_mod = -RECOIL_AMOUNT_TIER_2
-	scatter_unwielded_mod = -SCATTER_AMOUNT_TIER_2
+	recoil_unwielded_mod = -RECOIL_AMOUNT_TIER_5
+	scatter_unwielded_mod = -SCATTER_AMOUNT_TIER_10
 
 /obj/item/attachable/sling/can_be_attached_to_gun(mob/user, obj/item/weapon/gun/G)
 	if(SEND_SIGNAL(G, COMSIG_DROP_RETRIEVAL_CHECK) & COMPONENT_DROP_RETRIEVAL_PRESENT)

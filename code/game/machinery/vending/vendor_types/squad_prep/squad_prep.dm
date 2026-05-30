@@ -392,7 +392,7 @@
 		list("Headband, Brown", round(scale * 5), /obj/item/clothing/head/headband/brown, VENDOR_ITEM_REGULAR),
 		list("Headband, Gray", round(scale * 5), /obj/item/clothing/head/headband/brown, VENDOR_ITEM_REGULAR),
 		list("Headband, Red", round(scale * 5), /obj/item/clothing/head/headband/red, VENDOR_ITEM_REGULAR),
-		list("Headband, Green", round(scale * 5), /obj/item/clothing/head/headband, VENDOR_ITEM_REGULAR),
+		list("Headband, Green", round(scale * 5), /obj/item/clothing/head/headband/echo, VENDOR_ITEM_REGULAR),
 		list("Headband, Tan", round(scale * 5), /obj/item/clothing/head/headband/tan, VENDOR_ITEM_REGULAR),
 
 

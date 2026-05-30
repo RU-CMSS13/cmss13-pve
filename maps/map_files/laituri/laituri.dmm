@@ -6994,12 +6994,16 @@
 /obj/item/ammo_box/magazine/zhnk{
 	pixel_y = -3
 	},
+	/obj/item/ammo_box/magazine/zhnk/shrapnel{
+	pixel_y = -6
+	},
 /obj/item/ammo_box/magazine/type73{
 	pixel_y = 3
 	},
 /obj/item/ammo_box/magazine/np92/ap{
 	pixel_y = 11
 	},
+/obj/item/ammo_box/magazine/np92,
 /obj/structure/machinery/light/small/red{
 	dir = 4;
 	light_range = 5
@@ -9169,12 +9173,14 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/ammo_box/magazine/caws/slug{
 	pixel_x = -8
+	pixel_y = -6
 	},
 /obj/item/ammo_box/magazine/caws/flechette{
 	pixel_x = 9
+	pixel_y = -6
 	},
 /obj/item/ammo_box/magazine/caws/incendiary{
-	pixel_y = 8
+	pixel_y = 2
 	},
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/prep_hallway)
@@ -9888,24 +9894,21 @@
 "CI" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/closet/crate/secure/upp/alt,
-/obj/item/storage/box/packet/high_explosive/upp/impact,
-/obj/item/storage/box/packet/high_explosive/upp/impact,
-/obj/item/storage/box/packet/high_explosive/upp/impact,
-/obj/item/storage/box/packet/high_explosive/upp/impact,
-/obj/item/storage/box/packet/high_explosive/upp/impact,
-/obj/item/storage/box/packet/high_explosive/upp,
-/obj/item/storage/box/packet/high_explosive/upp,
 /obj/item/storage/box/packet/high_explosive/upp,
 /obj/item/storage/box/packet/high_explosive/upp,
 /obj/item/storage/box/packet/high_explosive/upp,
 /obj/item/storage/box/packet/high_explosive/upp/smoke,
 /obj/item/storage/box/packet/high_explosive/upp/smoke,
 /obj/item/storage/box/packet/high_explosive/upp/smoke,
+/obj/item/storage/box/packet/high_explosive/upp/impact,
+/obj/item/storage/box/packet/high_explosive/upp/impact,
+/obj/item/storage/box/packet/high_explosive/upp/impact,
 /obj/item/storage/box/packet/high_explosive/upp/incend,
 /obj/item/storage/box/packet/high_explosive/upp/incend,
 /obj/item/storage/box/packet/high_explosive/upp/incend,
-/obj/item/ammo_box/magazine/nade_box/upp/ugl/canister,
-/obj/item/ammo_box/magazine/nade_box/upp/ugl/canister,
+/obj/item/storage/box/packet/high_explosive/upp/canister,
+/obj/item/storage/box/packet/high_explosive/upp/canister,
+/obj/item/storage/box/packet/high_explosive/upp/canister,
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/prep_hallway)
 "Dj" = (
@@ -9988,9 +9991,6 @@
 "Fa" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/guncase/heavy/caws{
-	pixel_y = 22
-	},
-/obj/item/storage/box/guncase/heavy/caws{
 	pixel_y = 11
 	},
 /obj/item/storage/box/guncase/heavy/caws,
@@ -10048,9 +10048,6 @@
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/prep_hallway)
 "Go" = (
-/obj/item/storage/box/guncase/heavy/uppfuel/gellied{
-	pixel_y = 11
-	},
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/guncase/heavy/uppfuel/gellied{
 	pixel_y = 18
@@ -10373,15 +10370,6 @@
 /obj/item/attachable/suppressor,
 /obj/item/attachable/suppressor,
 /obj/item/attachable/suppressor,
-/obj/item/attachable/suppressor,
-/obj/item/attachable/suppressor,
-/obj/item/attachable/flashlight/grip/upp,
-/obj/item/attachable/flashlight/grip/upp,
-/obj/item/attachable/flashlight/grip/upp,
-/obj/item/attachable/flashlight/grip/upp,
-/obj/item/attachable/flashlight/grip/upp,
-/obj/item/attachable/lasersight/upp,
-/obj/item/attachable/lasersight/upp,
 /obj/item/attachable/lasersight/upp,
 /obj/item/attachable/lasersight/upp,
 /obj/item/attachable/lasersight/upp,
@@ -10392,8 +10380,6 @@
 /obj/item/attachable/verticalgrip/upp,
 /obj/item/attachable/verticalgrip/upp,
 /obj/item/attachable/verticalgrip/upp,
-/obj/item/attachable/verticalgrip/upp,
-/obj/item/attachable/angledgrip/upp,
 /obj/item/attachable/angledgrip/upp,
 /obj/item/attachable/angledgrip/upp,
 /obj/item/attachable/angledgrip/upp,
