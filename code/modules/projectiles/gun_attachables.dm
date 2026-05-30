@@ -2886,12 +2886,24 @@ Defined in conflicts.dm of the #defines folder.
 	size_mod = 0
 
 /obj/item/attachable/cawsbarrel
-	name = "Type 97 Suppressor"
+	name = "Type 97 Barrel"
 	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
 	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
 	icon_state = "caws_barrel"
 	attach_icon = "caws_barrel"
 	slot = "muzzle"
+	wield_delay_mod = WIELD_DELAY_NONE
+	flags_attach_features = NO_FLAGS
+	melee_mod = 0
+	size_mod = 0
+
+/obj/item/attachable/mg82barrel
+	name = "MG82 Barrel"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
+	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
+	icon_state = "mg82_barrel"
+	attach_icon = "mg82_barrel"
+	slot = "special"
 	wield_delay_mod = WIELD_DELAY_NONE
 	flags_attach_features = NO_FLAGS
 	melee_mod = 0
@@ -2925,6 +2937,21 @@ Defined in conflicts.dm of the #defines folder.
 	size_mod = 0
 
 /obj/item/attachable/stock/spp/New()
+	..()
+
+/obj/item/attachable/stock/mg82
+	name = "MG82 Stock"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
+	icon = 'icons/obj/items/weapons/guns/attachments/stock.dmi'
+	icon_state = "mg82_stock"
+	attach_icon = "mg82_stock"
+	slot = "stock"
+	wield_delay_mod = WIELD_DELAY_NONE
+	flags_attach_features = NO_FLAGS
+	melee_mod = 25
+	size_mod = 0
+
+/obj/item/attachable/stock/mg82/New()
 	..()
 
 /obj/item/attachable/stock/m60
@@ -4538,6 +4565,20 @@ Defined in conflicts.dm of the #defines folder.
 	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
 	scatter_mod = SCATTER_AMOUNT_TIER_9
 	fa_scatter_peak_mod = 15 //fifteen more shots until you hit max scatter
+
+/obj/item/attachable/bipod/integral/mg82
+	name = "MG82 bipod"
+	desc = "An integral bipod for the MG82 Machine Gun."
+	icon_state = "bipod"
+	attach_icon = "uppmg_bipod_a"
+
+/obj/item/attachable/bipod/integral/mg82/New()
+	..()
+
+	delay_mod = 0
+	wield_delay_mod = WIELD_DELAY_FAST
+	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
+	scatter_mod = SCATTER_AMOUNT_TIER_9
 
 /obj/item/attachable/bipod/m60
 	name = "bipod"

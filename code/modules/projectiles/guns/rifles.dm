@@ -2046,6 +2046,64 @@
 	scope.Attach(src)
 	update_attachable(scope.slot)
 
+//-------------------------------------------------------
+// UPP LMG
+
+/obj/item/weapon/gun/rifle/mg82
+	name = "\improper MG82 pulse LMG"
+	desc = "Pulse action 9.7x16mm caseless light machinegun of the UPPAC Naval Infantry, nicknamed 'Bianchi'. With addition of AG80 pulse rifle to the armed collective arsenal as the lighter, high-capacity carbine to the standard issue Type 71 rifle, the need for the AG80's caliber-shared machinegun has appeared as well. The design also refers to the AG-80 pulse rifle as basis. Firerate is significantly higher in comparison to the QYJ-72, but this makes the gun very hard to control during automatic fire without using bipods. Magazines for the LMG were also optimised for carriage in standard magazine pouches, with the cost of magazine size itself being downed to the 150 rounds."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
+	icon_state = "mg82"
+	item_state = "mg82"
+	mouse_pointer = 'icons/effects/mouse_pointer/lmg_mouse.dmi'
+	fire_sound = "gun_mg82"
+	reload_sound = 'sound/weapons/handling/hpr_reload.ogg'
+	unload_sound = 'sound/weapons/handling/hpr_unload.ogg'
+	current_mag = /obj/item/ammo_magazine/rifle/mg82
+	attachable_allowed = list(
+		/obj/item/attachable/magnetic_harness, // Rail
+		/obj/item/attachable/sling,
+		/obj/item/attachable/scope,
+		/obj/item/attachable/scope/pve,
+		/obj/item/attachable/scope/upp,
+		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/scope/mini/upp,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reddot/upp,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/reflex/upp,
+		/obj/item/attachable/suppressor, // Muzzle
+		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/heavy_barrel,
+		/obj/item/attachable/lasersight, // Side Rail
+		/obj/item/attachable/lasersight/upp,
+		/obj/item/attachable/flashlight,
+		)
+
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	gun_category = GUN_CATEGORY_HEAVY
+	starting_attachment_types = list(/obj/item/attachable/mg82barrel, /obj/item/attachable/stock/mg82, /obj/item/attachable/bipod/integral/mg82)
+	start_automatic = TRUE
+
+/obj/item/weapon/gun/rifle/mg82/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 36, "muzzle_y" = 20,"rail_x" = 12, "rail_y" = 22, "under_x" = 35, "under_y" = 16, "stock_x" = 13, "stock_y" = 16, "side_rail_x" = 23, "side_rail_y" = 18, "special_x" = 34, "special_y" = 18, "sling_x" = 12, "sling_y" = 22)
+
+/obj/item/weapon/gun/rifle/mg82/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_12)
+	set_burst_amount(BURST_AMOUNT_TIER_3)
+	set_burst_delay(FIRE_DELAY_TIER_LMG)
+	fa_max_scatter = SCATTER_AMOUNT_TIER_1
+	accuracy_mult = BASE_ACCURACY_MULT
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_2
+	scatter = SCATTER_AMOUNT_TIER_10
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
+	scatter_unwielded = SCATTER_AMOUNT_TIER_1
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil_unwielded = RECOIL_AMOUNT_TIER_3
+	aim_slowdown = SLOWDOWN_ADS_LMG
+	wield_delay = WIELD_DELAY_SLOW
+
 	//-------------------------------------------------------
 
 //M49A Battle Rifle, standard USCM DMR
