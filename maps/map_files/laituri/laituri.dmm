@@ -279,14 +279,6 @@
 /obj/structure/foamed_metal/iron,
 /turf/closed/wall/upp_wall/grey/hull,
 /area/golden_arrow/hangar)
-"be" = (
-/obj/structure/surface/rack{
-	color = "#8B9490"
-	},
-/obj/structure/largecrate/supply/ammo/sentry/upp,
-/obj/structure/largecrate/supply/ammo/sentry/upp,
-/turf/open/floor/corsat/plate,
-/area/golden_arrow/prep_hallway)
 "bn" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -296,14 +288,6 @@
 	},
 /turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/engineering)
-"br" = (
-/obj/structure/machinery/door/poddoor/almayer/closed{
-	name = "\improper Special Operations Armory";
-	id = "spec_armory4";
-	dir = 4
-	},
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/prep_hallway)
 "bx" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice2";
@@ -327,17 +311,6 @@
 "bF" = (
 /turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/cryo_cells)
-"cb" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	pixel_x = -1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	pixel_x = -1
-	},
-/turf/open/floor/strata/multi_tiles/west,
-/area/golden_arrow/prep_hallway)
 "cc" = (
 /obj/structure/machinery/telecomms/relay/preset/tower,
 /turf/open/floor/almayer,
@@ -349,14 +322,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/cryo_cells)
-"cB" = (
-/obj/structure/machinery/door/poddoor/almayer/closed{
-	name = "\improper Special Operations Armory";
-	id = "spec_armory5";
-	dir = 4
-	},
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/prep_hallway)
 "cD" = (
 /obj/structure/machinery/shower{
 	dir = 8
@@ -559,34 +524,6 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/engineering)
-"ek" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "SW-out";
-	pixel_x = -1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "NE-out";
-	pixel_y = 1;
-	pixel_x = 1
-	},
-/obj/structure/machinery/light/small/red{
-	light_range = 5;
-	dir = 8
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 8;
-	icon_state = "lattice4";
-	pixel_x = -19;
-	pixel_y = 10
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 8;
-	icon_state = "lattice12";
-	pixel_x = 13;
-	pixel_y = 10
-	},
-/turf/open/floor/strata/multi_tiles/southeast,
-/area/golden_arrow/prep_hallway)
 "et" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -612,12 +549,6 @@
 "ev" = (
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/engineering)
-"eF" = (
-/obj/structure/machinery/door_control/brbutton{
-	id = "spec_armory3"
-	},
-/turf/open/floor/corsat/plate,
-/area/golden_arrow/prep_hallway)
 "eG" = (
 /obj/structure/closet{
 	name = "emergency closet";
@@ -731,16 +662,6 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
-"fF" = (
-/obj/structure/surface/rack{
-	color = "#8B9490"
-	},
-/obj/item/bodybag/tarp,
-/obj/item/bodybag/tarp,
-/obj/item/bodybag/tarp,
-/obj/item/bodybag/tarp,
-/turf/open/floor/strata/multi_tiles/west,
-/area/golden_arrow/prep_hallway)
 "fG" = (
 /obj/structure/machinery/cryopod/big{
 	pixel_x = -9;
@@ -812,17 +733,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/cryo_cells)
-"gb" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/heavy/spp{
-	pixel_y = 22
-	},
-/obj/item/storage/box/guncase/heavy/spp{
-	pixel_y = 11
-	},
-/obj/item/storage/box/guncase/heavy/spp,
-/turf/open/floor/corsat/plate,
-/area/space)
 "gc" = (
 /obj/structure/machinery/computer/cryopod{
 	pixel_x = -6;
@@ -854,29 +764,6 @@
 /obj/effect/landmark/start/marine/medic/upp/forecon,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
-"gz" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/closet/crate/secure/upp/alt,
-/obj/item/storage/box/packet/high_explosive/upp/impact,
-/obj/item/storage/box/packet/high_explosive/upp/impact,
-/obj/item/storage/box/packet/high_explosive/upp/impact,
-/obj/item/storage/box/packet/high_explosive/upp/impact,
-/obj/item/storage/box/packet/high_explosive/upp/impact,
-/obj/item/storage/box/packet/high_explosive/upp,
-/obj/item/storage/box/packet/high_explosive/upp,
-/obj/item/storage/box/packet/high_explosive/upp,
-/obj/item/storage/box/packet/high_explosive/upp,
-/obj/item/storage/box/packet/high_explosive/upp,
-/obj/item/storage/box/packet/high_explosive/upp/smoke,
-/obj/item/storage/box/packet/high_explosive/upp/smoke,
-/obj/item/storage/box/packet/high_explosive/upp/smoke,
-/obj/item/storage/box/packet/high_explosive/upp/incend,
-/obj/item/storage/box/packet/high_explosive/upp/incend,
-/obj/item/storage/box/packet/high_explosive/upp/incend,
-/obj/item/ammo_box/magazine/nade_box/upp/ugl/canister,
-/obj/item/ammo_box/magazine/nade_box/upp/ugl/canister,
-/turf/open/floor/corsat/plate,
-/area/space)
 "gF" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -1005,28 +892,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/engineering)
-"hH" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/trash/candle{
-	pixel_x = 12
-	},
-/obj/item/trash/candle{
-	pixel_x = 7;
-	pixel_y = 16
-	},
-/obj/item/tool/candle{
-	pixel_x = 8
-	},
-/obj/item/prop/flower_vase{
-	pixel_y = 11;
-	pixel_x = -8
-	},
-/obj/item/clothing/head/hairflower{
-	pixel_y = 4;
-	pixel_x = -3
-	},
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/prep_hallway)
 "hI" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 4
@@ -1467,9 +1332,6 @@
 	},
 /turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/engineering)
-"jr" = (
-/turf/open/floor/corsat/plate,
-/area/golden_arrow/prep_hallway)
 "jt" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/nosmoking_1{
@@ -1611,32 +1473,6 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
-"ka" = (
-/obj/structure/surface/rack{
-	color = "#8B9490"
-	},
-/obj/item/prop/helmetgarb/frogmen_veil,
-/obj/item/prop/helmetgarb/frogmen_veil,
-/obj/item/prop/helmetgarb/frogmen_veil,
-/obj/item/prop/helmetgarb/frogmen_veil,
-/obj/item/prop/helmetgarb/frogmen_veil,
-/obj/item/prop/helmetgarb/frogmen_veil,
-/obj/item/prop/helmetgarb/frogmen_veil,
-/obj/item/prop/helmetgarb/frogmen_veil,
-/obj/item/prop/helmetgarb/frogmen_veil,
-/obj/item/prop/helmetgarb/frogmen_veil,
-/obj/item/prop/helmetgarb/frogmen_veil,
-/obj/item/prop/helmetgarb/frogmen_veil,
-/obj/item/prop/helmetgarb/frogmen_veil,
-/obj/item/prop/helmetgarb/frogmen_veil,
-/obj/item/prop/helmetgarb/frogmen_veil,
-/obj/item/prop/helmetgarb/frogmen_veil,
-/obj/item/prop/helmetgarb/frogmen_veil,
-/obj/item/prop/helmetgarb/frogmen_veil,
-/obj/item/prop/helmetgarb/frogmen_veil,
-/obj/item/prop/helmetgarb/frogmen_veil,
-/turf/open/floor/strata/multi_tiles/west,
-/area/golden_arrow/prep_hallway)
 "kb" = (
 /obj/structure/sign/safety/storage{
 	pixel_y = 25
@@ -1869,10 +1705,6 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
-"lb" = (
-/obj/structure/gun_rack/type71/carbine_commando/unloaded,
-/turf/open/floor/corsat/plate,
-/area/golden_arrow/prep_hallway)
 "le" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -2096,7 +1928,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/structure/janitorialcart{
+/obj/structure/janitorialcart/brown{
 	pixel_y = 9
 	},
 /obj/item/tool/mop{
@@ -2599,23 +2431,6 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/cryo_cells)
-"oh" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/structure/machinery/light/small/red{
-	light_range = 5;
-	pixel_y = 22;
-	invisibility = 100
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 8;
-	icon_state = "lattice12";
-	pixel_x = 13;
-	pixel_y = -3
-	},
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/prep_hallway)
 "oj" = (
 /obj/item/storage/toolbox/mechanical/green{
 	pixel_y = 10
@@ -2716,40 +2531,6 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
-"oH" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/light/small/red{
-	light_range = 5;
-	dir = 8
-	},
-/obj/item/weapon/gun/pkp/iff/para{
-	pixel_y = -12
-	},
-/obj/item/ammo_box/rounds/pkp{
-	pixel_y = 8;
-	pixel_x = -9
-	},
-/obj/item/ammo_box/rounds/pkp/heap{
-	pixel_x = -9
-	},
-/obj/item/ammo_magazine/pkp/heap{
-	pixel_y = 8;
-	pixel_x = 6
-	},
-/obj/item/ammo_magazine/pkp/heap{
-	pixel_y = 10;
-	pixel_x = 6
-	},
-/obj/item/ammo_magazine/pkp/heap{
-	pixel_y = 6;
-	pixel_x = 6
-	},
-/obj/item/ammo_magazine/pkp/heap{
-	pixel_x = 6;
-	pixel_y = 2
-	},
-/turf/open/floor/corsat/plate,
-/area/space)
 "oL" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -3783,16 +3564,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/cryo_cells)
-"qG" = (
-/obj/structure/machinery/light/small/red{
-	light_range = 5;
-	dir = 1;
-	pixel_y = 20;
-	invisibility = 100
-	},
-/obj/structure/machinery/power/apc/almayer/hardened/south,
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/prep_hallway)
 "qH" = (
 /obj/structure/surface/rack{
 	color = "#8B9490"
@@ -6922,11 +6693,11 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "we" = (
+/obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/closet/crate/secure/upp,
 /obj/item/ammo_box/magazine/nade_box/upp,
 /obj/item/ammo_box/magazine/nade_box/upp,
 /obj/item/ammo_box/magazine/nade_box/upp,
-/obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/ammo_box/magazine/nade_box/upp/ugl,
 /obj/item/ammo_box/magazine/nade_box/upp/ugl,
 /obj/item/ammo_box/magazine/nade_box/upp/ugl/canister,
@@ -6991,22 +6762,31 @@
 /obj/structure/surface/rack{
 	color = "#8B9490"
 	},
-/obj/item/ammo_box/magazine/zhnk{
-	pixel_y = -3
-	},
-	/obj/item/ammo_box/magazine/zhnk/shrapnel{
-	pixel_y = -6
+/obj/item/ammo_box/magazine/zhnk/shrapnel{
+	pixel_y = -8;
+	pixel_x = 8
 	},
 /obj/item/ammo_box/magazine/type73{
-	pixel_y = 3
+	pixel_y = 11;
+	pixel_x = 8
 	},
 /obj/item/ammo_box/magazine/np92/ap{
-	pixel_y = 11
+	pixel_y = 11;
+	pixel_x = -9
 	},
-/obj/item/ammo_box/magazine/np92,
+/obj/item/ammo_box/magazine/np92{
+	pixel_x = -9;
+	pixel_y = -8
+	},
+/obj/item/ammo_box/magazine/zhnk{
+	pixel_x = 8
+	},
 /obj/structure/machinery/light/small/red{
 	dir = 4;
 	light_range = 5
+	},
+/obj/item/ammo_box/magazine/np92{
+	pixel_x = -9
 	},
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/prep_hallway)
@@ -9169,21 +8949,6 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/golden_arrow/medical)
-"AC" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/caws/slug{
-	pixel_x = -8
-	pixel_y = -6
-	},
-/obj/item/ammo_box/magazine/caws/flechette{
-	pixel_x = 9
-	pixel_y = -6
-	},
-/obj/item/ammo_box/magazine/caws/incendiary{
-	pixel_y = 2
-	},
-/turf/open/floor/corsat/plate,
-/area/golden_arrow/prep_hallway)
 "AD" = (
 /obj/structure/machinery/sleep_console{
 	dir = 8;
@@ -9837,99 +9602,6 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/hangar)
-"Ca" = (
-/obj/item/clothing/head/helmet/upp/frogmen,
-/obj/item/clothing/head/helmet/upp/frogmen,
-/obj/item/clothing/head/helmet/upp/frogmen,
-/obj/item/clothing/head/helmet/upp/frogmen,
-/obj/item/clothing/head/helmet/upp/frogmen,
-/obj/item/clothing/head/helmet/upp/frogmen,
-/obj/item/clothing/head/helmet/upp/frogmen,
-/obj/item/clothing/head/helmet/upp/frogmen,
-/obj/item/clothing/head/helmet/upp/frogmen,
-/obj/item/clothing/head/helmet/upp/frogmen,
-/obj/item/clothing/head/helmet/upp/frogmen,
-/obj/item/clothing/head/helmet/upp/frogmen,
-/obj/item/clothing/head/helmet/upp/frogmen,
-/obj/item/clothing/head/helmet/upp/frogmen,
-/obj/item/clothing/head/helmet/upp/frogmen,
-/obj/item/clothing/head/helmet/upp/frogmen,
-/obj/item/clothing/head/helmet/upp/frogmen,
-/obj/item/clothing/head/helmet/upp/frogmen,
-/obj/item/clothing/head/helmet/upp/frogmen,
-/obj/item/clothing/head/helmet/upp/frogmen,
-/obj/structure/surface/rack{
-	color = "#8B9490"
-	},
-/turf/open/floor/strata/multi_tiles/west,
-/area/golden_arrow/prep_hallway)
-"Cm" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "SE-out";
-	pixel_x = 2
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "NW-out";
-	pixel_y = 1
-	},
-/obj/structure/machinery/light/small/red{
-	dir = 4;
-	light_range = 5
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 8;
-	icon_state = "lattice8";
-	pixel_x = 13;
-	pixel_y = 10
-	},
-/turf/open/floor/strata/multi_tiles/southeast,
-/area/golden_arrow/prep_hallway)
-"Cn" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	pixel_x = -1
-	},
-/turf/open/floor/strata/multi_tiles/west,
-/area/golden_arrow/prep_hallway)
-"CI" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/closet/crate/secure/upp/alt,
-/obj/item/storage/box/packet/high_explosive/upp,
-/obj/item/storage/box/packet/high_explosive/upp,
-/obj/item/storage/box/packet/high_explosive/upp,
-/obj/item/storage/box/packet/high_explosive/upp/smoke,
-/obj/item/storage/box/packet/high_explosive/upp/smoke,
-/obj/item/storage/box/packet/high_explosive/upp/smoke,
-/obj/item/storage/box/packet/high_explosive/upp/impact,
-/obj/item/storage/box/packet/high_explosive/upp/impact,
-/obj/item/storage/box/packet/high_explosive/upp/impact,
-/obj/item/storage/box/packet/high_explosive/upp/incend,
-/obj/item/storage/box/packet/high_explosive/upp/incend,
-/obj/item/storage/box/packet/high_explosive/upp/incend,
-/obj/item/storage/box/packet/high_explosive/upp/canister,
-/obj/item/storage/box/packet/high_explosive/upp/canister,
-/obj/item/storage/box/packet/high_explosive/upp/canister,
-/turf/open/floor/corsat/plate,
-/area/golden_arrow/prep_hallway)
-"Dj" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/heavy/spp{
-	pixel_y = 22
-	},
-/obj/item/storage/box/guncase/heavy/spp{
-	pixel_y = 11
-	},
-/obj/item/storage/box/guncase/heavy/spp,
-/turf/open/floor/corsat/plate,
-/area/golden_arrow/prep_hallway)
-"Dl" = (
-/obj/structure/gun_rack/type71/carbine_commando/unloaded,
-/obj/structure/machinery/light/small/red{
-	dir = 4;
-	light_range = 5
-	},
-/turf/open/floor/corsat/plate,
-/area/space)
 "DA" = (
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/forecon_upp,
 /turf/open/floor/strata/floor3/east,
@@ -9949,128 +9621,6 @@
 "DL" = (
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
-"DS" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ashtray/plastic{
-	pixel_y = 8;
-	pixel_x = -7
-	},
-/obj/item/tool/candle{
-	pixel_y = 5
-	},
-/obj/item/tool/candle{
-	pixel_y = 13;
-	pixel_x = -6;
-	layer = 3.03
-	},
-/obj/item/tool/candle{
-	pixel_x = 9;
-	pixel_y = 8
-	},
-/obj/item/ashtray/plastic{
-	pixel_y = 5;
-	pixel_x = 6
-	},
-/obj/item/tool/candle{
-	pixel_x = 6;
-	pixel_y = 10
-	},
-/obj/item/trash/candle{
-	pixel_x = -12;
-	pixel_y = 8
-	},
-/obj/item/trash/candle{
-	pixel_x = 6
-	},
-/obj/item/tool/candle{
-	pixel_y = -3;
-	pixel_x = -8
-	},
-/turf/open/floor/strata/multi_tiles/west,
-/area/golden_arrow/prep_hallway)
-"Fa" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/heavy/caws{
-	pixel_y = 11
-	},
-/obj/item/storage/box/guncase/heavy/caws,
-/turf/open/floor/corsat/plate,
-/area/space)
-"Fh" = (
-/obj/structure/foamed_metal/iron,
-/obj/structure/machinery/power/apc/almayer/hardened/east,
-/turf/open/space/basic,
-/area/golden_arrow/prep_hallway)
-"Fs" = (
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 1;
-	name = "ship-grade camera";
-	network = list("Laituri");
-	c_tag = "Sanitar Office"
-	},
-/obj/structure/machinery/light/small/red{
-	light_range = 5;
-	dir = 8
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "NW-out";
-	layer = 2.5;
-	pixel_x = -1;
-	pixel_y = 2
-	},
-/turf/open/floor/strata/multi_tiles/southeast,
-/area/golden_arrow/prep_hallway)
-"FK" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/heavy/sentryupp,
-/obj/item/storage/box/guncase/heavy/sentryupp{
-	pixel_y = 8
-	},
-/obj/structure/machinery/light/small/red{
-	light_range = 5;
-	dir = 1;
-	pixel_y = 20
-	},
-/turf/open/floor/corsat/plate,
-/area/golden_arrow/prep_hallway)
-"FU" = (
-/obj/structure/machinery/door/poddoor/almayer/closed{
-	name = "\improper Special Operations Armory";
-	id = "spec_armory6";
-	dir = 0
-	},
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/prep_hallway)
-"FY" = (
-/obj/structure/machinery/door_control/brbutton{
-	id = "spec_armory2"
-	},
-/turf/open/floor/corsat/plate,
-/area/golden_arrow/prep_hallway)
-"Go" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/heavy/uppfuel/gellied{
-	pixel_y = 18
-	},
-/obj/item/storage/box/guncase/heavy/uppfuel/gellied,
-/obj/item/storage/box/guncase/heavy/uppfuel/gellied{
-	pixel_y = 7
-	},
-/turf/open/floor/corsat/plate,
-/area/space)
-"GA" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/heavy/smg/type64/heap{
-	pixel_x = null;
-	pixel_y = 11
-	},
-/obj/item/storage/box/guncase/heavy/smg/type64/heap,
-/obj/structure/machinery/light/small/red{
-	light_range = 5;
-	dir = 8
-	},
-/turf/open/floor/corsat/plate,
-/area/golden_arrow/prep_hallway)
 "GI" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -10086,88 +9636,21 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/canteen)
-"HU" = (
-/obj/structure/machinery/door/poddoor/almayer/closed{
-	name = "\improper Special Operations Armory";
-	id = "spec_armory3";
-	dir = 0
-	},
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/prep_hallway)
-"Iu" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/type71/large/heap,
-/obj/item/ammo_box/magazine/type71/large/heap{
-	pixel_y = 6
-	},
-/turf/open/floor/corsat/plate,
-/area/golden_arrow/prep_hallway)
 "Jf" = (
 /obj/structure/machinery/power/apc/almayer/hardened/north,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
-"JR" = (
-/obj/structure/machinery/door/poddoor/almayer/closed{
-	name = "\improper Special Operations Armory";
-	id = "spec_armory";
+"JU" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	name = "\improper Weapons Locker";
+	id = "armory";
 	dir = 4
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 2.5
+	},
 /turf/open/floor/strata/floor3/east,
-/area/golden_arrow/prep_hallway)
-"JW" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo"
-	},
-/obj/structure/barricade/handrail/strata{
-	dir = 8
-	},
-/obj/structure/ladder{
-	height = 5;
-	id = "prep2"
-	},
-/obj/structure/machinery/light/small/red{
-	light_range = 5
-	},
-/turf/open/floor/corsat/plate,
-/area/golden_arrow/prep_hallway)
-"Kr" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/heavy/caws{
-	pixel_y = 22
-	},
-/obj/item/storage/box/guncase/heavy/caws{
-	pixel_y = 11
-	},
-/obj/item/storage/box/guncase/heavy/caws,
-/turf/open/floor/corsat/plate,
-/area/golden_arrow/prep_hallway)
-"KJ" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/heavy/smg/type64/heap{
-	pixel_x = null;
-	pixel_y = 11
-	},
-/obj/item/storage/box/guncase/heavy/smg/type64/heap,
-/turf/open/floor/corsat/plate,
-/area/space)
-"KO" = (
-/obj/structure/machinery/door_control/brbutton{
-	id = "spec_armory4"
-	},
-/turf/open/floor/corsat/plate,
-/area/golden_arrow/prep_hallway)
-"Li" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 8;
-	icon_state = "lattice12";
-	pixel_x = 13;
-	pixel_y = 10
-	},
-/turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/prep_hallway)
 "Lk" = (
 /obj/structure/machinery/power/reactor{
@@ -10176,261 +9659,9 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
-"Ln" = (
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 8;
-	icon_state = "lattice4";
-	pixel_x = -19;
-	pixel_y = 10
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 8;
-	icon_state = "lattice12";
-	pixel_x = 13;
-	pixel_y = 10
-	},
-/obj/structure/machinery/light/small/red{
-	light_range = 5;
-	dir = 8
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "SW-out";
-	pixel_x = -1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "NE-out";
-	pixel_y = 1;
-	pixel_x = 1
-	},
-/turf/open/floor/strata/multi_tiles/southeast,
-/area/golden_arrow/prep_hallway)
-"Lt" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "NW-out";
-	layer = 2.5;
-	pixel_x = -1;
-	pixel_y = 2
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "SE-out"
-	},
-/obj/structure/machinery/light/small/red{
-	light_range = 5;
-	dir = 8
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 8;
-	icon_state = "lattice4";
-	pixel_x = -19;
-	pixel_y = -3
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 8;
-	icon_state = "lattice12";
-	pixel_x = 13;
-	pixel_y = -3
-	},
-/turf/open/floor/strata/multi_tiles/southeast,
-/area/golden_arrow/prep_hallway)
-"LT" = (
-/obj/structure/machinery/door/poddoor/almayer/closed{
-	name = "\improper Special Operations Armory";
-	id = "spec_armory2";
-	dir = 4
-	},
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/prep_hallway)
-"LZ" = (
-/obj/structure/gun_rack/type71/carbine_commando/unloaded,
-/obj/structure/machinery/light/small/red{
-	dir = 4;
-	light_range = 5
-	},
-/turf/open/floor/corsat/plate,
-/area/golden_arrow/prep_hallway)
-"Mn" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/heavy/sniper/svd_iff/heap{
-	pixel_y = 22
-	},
-/obj/item/storage/box/guncase/heavy/sniper/svd_iff/heap{
-	pixel_y = 11
-	},
-/obj/item/storage/box/guncase/heavy/sniper/svd_iff/heap,
-/turf/open/floor/corsat/plate,
-/area/golden_arrow/prep_hallway)
-"MZ" = (
-/obj/item/storage/box/guncase/heavy/uppfuel/gellied{
-	pixel_y = 11
-	},
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/heavy/uppfuel/gellied{
-	pixel_y = 18
-	},
-/obj/item/storage/box/guncase/heavy/uppfuel/gellied,
-/obj/item/storage/box/guncase/heavy/uppfuel/gellied{
-	pixel_y = 7
-	},
-/obj/structure/machinery/light/small/red{
-	dir = 4;
-	light_range = 5
-	},
-/turf/open/floor/corsat/plate,
-/area/golden_arrow/prep_hallway)
-"Ne" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/light/small/red{
-	dir = 4;
-	light_range = 5
-	},
-/obj/item/ammo_box/magazine/caws/slug{
-	pixel_x = -8
-	},
-/obj/item/ammo_box/magazine/caws/flechette{
-	pixel_x = 9
-	},
-/obj/item/ammo_box/magazine/caws/incendiary{
-	pixel_y = 8
-	},
-/turf/open/floor/corsat/plate,
-/area/space)
-"NA" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo"
-	},
-/obj/structure/barricade/handrail/strata{
-	dir = 4
-	},
-/obj/structure/ladder{
-	height = 5;
-	id = "prep1"
-	},
-/obj/structure/machinery/light/small/red{
-	light_range = 5
-	},
-/turf/open/floor/corsat/plate,
-/area/golden_arrow/prep_hallway)
-"NY" = (
-/obj/structure/machinery/door_control/brbutton{
-	id = "spec_armory"
-	},
-/turf/open/floor/corsat/plate,
-/area/golden_arrow/prep_hallway)
-"Ol" = (
-/obj/structure/gun_rack/uppflamer/unloaded{
-	pixel_x = 8
-	},
-/obj/structure/gun_rack/uppflamer/unloaded{
-	pixel_x = -8
-	},
-/turf/open/floor/corsat/plate,
-/area/space)
 "Om" = (
 /turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/platoon_sergeant)
-"Os" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/spp/hv/toxic{
-	pixel_x = -9;
-	pixel_y = 8
-	},
-/obj/item/ammo_box/magazine/spp/hv/incendiary{
-	pixel_x = 8;
-	pixel_y = 8
-	},
-/obj/item/ammo_box/magazine/spp/hv/explosive{
-	pixel_x = -9;
-	pixel_y = 15
-	},
-/obj/item/ammo_box/magazine/spp/hv{
-	pixel_y = 15;
-	pixel_x = 8
-	},
-/obj/item/ammo_box/magazine/type64/heap{
-	pixel_x = -9;
-	pixel_y = -8
-	},
-/obj/item/ammo_box/magazine/type64/heap{
-	pixel_x = 8;
-	pixel_y = -8
-	},
-/turf/open/floor/corsat/plate,
-/area/golden_arrow/prep_hallway)
-"OP" = (
-/obj/structure/pipes/vents/pump{
-	dir = 4
-	},
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/closet/crate/secure/upp,
-/obj/item/attachable/suppressor,
-/obj/item/attachable/suppressor,
-/obj/item/attachable/suppressor,
-/obj/item/attachable/suppressor,
-/obj/item/attachable/suppressor,
-/obj/item/attachable/suppressor,
-/obj/item/attachable/suppressor,
-/obj/item/attachable/suppressor,
-/obj/item/attachable/lasersight/upp,
-/obj/item/attachable/lasersight/upp,
-/obj/item/attachable/lasersight/upp,
-/obj/item/attachable/lasersight/upp,
-/obj/item/attachable/lasersight/upp,
-/obj/item/attachable/lasersight/upp,
-/obj/item/attachable/verticalgrip/upp,
-/obj/item/attachable/verticalgrip/upp,
-/obj/item/attachable/verticalgrip/upp,
-/obj/item/attachable/verticalgrip/upp,
-/obj/item/attachable/angledgrip/upp,
-/obj/item/attachable/angledgrip/upp,
-/obj/item/attachable/angledgrip/upp,
-/obj/item/attachable/angledgrip/upp,
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/prep_hallway)
-"PF" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/heavy/motiondetectors/upp,
-/obj/item/storage/box/guncase/heavy/motiondetectors/upp{
-	pixel_y = 8;
-	layer = 3.2
-	},
-/turf/open/floor/corsat/plate,
-/area/golden_arrow/prep_hallway)
-"PG" = (
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 8;
-	icon_state = "lattice12";
-	pixel_x = 13;
-	pixel_y = 10
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/prep_hallway)
-"PJ" = (
-/obj/structure/sign/safety/ammunition{
-	pixel_x = 14;
-	pixel_y = -39
-	},
-/obj/structure/sign/safety/landingzone{
-	pixel_y = -39
-	},
-/obj/structure/sign/safety/south{
-	pixel_y = -25
-	},
-/obj/structure/sign/safety/medical{
-	pixel_x = 14;
-	pixel_y = -25
-	},
-/turf/open/floor/corsat/marked,
-/area/golden_arrow/prep_hallway)
-"PL" = (
-/obj/structure/machinery/door_control/brbutton{
-	id = "spec_armory5"
-	},
-/turf/open/floor/corsat/plate,
-/area/golden_arrow/prep_hallway)
 "QC" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -10443,331 +9674,12 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
-"Rk" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/defenses/handheld/sentry/flamer/upp,
-/obj/item/defenses/handheld/sentry/flamer/upp,
-/turf/open/floor/corsat/plate,
-/area/golden_arrow/prep_hallway)
-"Ro" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/light/small/red{
-	light_range = 5;
-	dir = 8
-	},
-/obj/item/ammo_box/magazine/spp/hv/toxic{
-	pixel_x = -9;
-	pixel_y = 8
-	},
-/obj/item/ammo_box/magazine/spp/hv/incendiary{
-	pixel_x = 8;
-	pixel_y = 8
-	},
-/obj/item/ammo_box/magazine/spp/hv/explosive{
-	pixel_x = -9;
-	pixel_y = 15
-	},
-/obj/item/ammo_box/magazine/spp/hv{
-	pixel_y = 15;
-	pixel_x = 8
-	},
-/obj/item/ammo_box/magazine/type64/heap{
-	pixel_x = -9;
-	pixel_y = -8
-	},
-/obj/item/ammo_box/magazine/type64/heap{
-	pixel_x = 8;
-	pixel_y = -8
-	},
-/turf/open/floor/corsat/plate,
-/area/space)
-"RQ" = (
-/obj/structure/pipes/vents/pump{
-	dir = 4
-	},
-/obj/structure/machinery/light/small/red{
-	light_range = 5;
-	dir = 1;
-	pixel_y = 20;
-	invisibility = 100
-	},
-/obj/structure/surface/table/reinforced/almayer_B,
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/prep_hallway)
-"RR" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/heavy/motiondetectors/upp,
-/obj/item/storage/box/guncase/heavy/motiondetectors/upp{
-	pixel_y = 8;
-	layer = 3.2
-	},
-/turf/open/floor/corsat/plate,
-/area/space)
-"Sb" = (
-/obj/structure/gun_rack/type71/carbine_commando/unloaded,
-/turf/open/floor/corsat/plate,
-/area/space)
-"SF" = (
-/obj/structure/pipes/vents/pump{
-	dir = 4
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 8;
-	icon_state = "lattice12";
-	pixel_x = 13;
-	pixel_y = 10
-	},
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/prep_hallway)
 "SP" = (
 /obj/docking_port/stationary/marine_dropship/golden_arrow_hangar{
 	roundstart_template = /datum/map_template/shuttle/korobka
 	},
 /turf/open/floor/corsat,
 /area/golden_arrow/hangar)
-"Tz" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/weapon/gun/pkp/iff/para{
-	pixel_y = -12
-	},
-/obj/item/ammo_box/rounds/pkp{
-	pixel_y = 8;
-	pixel_x = -9
-	},
-/obj/item/ammo_box/rounds/pkp/heap{
-	pixel_x = -9
-	},
-/obj/item/ammo_magazine/pkp/heap{
-	pixel_y = 8;
-	pixel_x = 6
-	},
-/obj/item/ammo_magazine/pkp/heap{
-	pixel_y = 10;
-	pixel_x = 6
-	},
-/obj/item/ammo_magazine/pkp/heap{
-	pixel_y = 6;
-	pixel_x = 6
-	},
-/obj/item/ammo_magazine/pkp/heap{
-	pixel_x = 6;
-	pixel_y = 2
-	},
-/turf/open/floor/corsat/plate,
-/area/golden_arrow/prep_hallway)
-"TZ" = (
-/obj/structure/surface/rack{
-	color = "#8B9490"
-	},
-/obj/item/storage/backpack/marine/satchel/scout_cloak/upp,
-/obj/item/storage/backpack/marine/satchel/scout_cloak/upp,
-/obj/item/storage/backpack/marine/satchel/scout_cloak/upp,
-/obj/item/storage/backpack/marine/satchel/scout_cloak/upp,
-/obj/item/storage/backpack/marine/satchel/scout_cloak/upp,
-/obj/item/storage/backpack/marine/satchel/scout_cloak/upp,
-/obj/item/storage/backpack/marine/satchel/scout_cloak/upp,
-/obj/item/storage/backpack/marine/satchel/scout_cloak/upp,
-/obj/item/storage/backpack/marine/satchel/scout_cloak/upp,
-/obj/item/storage/backpack/marine/satchel/scout_cloak/upp,
-/obj/item/storage/backpack/marine/satchel/scout_cloak/upp,
-/obj/item/storage/backpack/marine/satchel/scout_cloak/upp,
-/obj/item/storage/backpack/marine/satchel/scout_cloak/upp,
-/obj/item/storage/backpack/marine/satchel/scout_cloak/upp,
-/obj/item/storage/backpack/marine/satchel/scout_cloak/upp,
-/obj/item/storage/backpack/marine/satchel/scout_cloak/upp,
-/obj/item/storage/backpack/marine/satchel/scout_cloak/upp,
-/obj/item/storage/backpack/marine/satchel/scout_cloak/upp,
-/obj/item/storage/backpack/marine/satchel/scout_cloak/upp,
-/obj/item/storage/backpack/marine/satchel/scout_cloak/upp,
-/turf/open/floor/strata/multi_tiles/west,
-/area/golden_arrow/prep_hallway)
-"Um" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/closet/crate/secure/upp,
-/obj/item/stack/sandbags_empty/full,
-/obj/item/stack/sandbags_empty/full,
-/obj/item/stack/sandbags_empty/full,
-/obj/item/stack/sandbags_empty/full,
-/obj/item/stack/sheet/plasteel/large_stack,
-/obj/item/stack/sheet/metal/large_stack,
-/obj/item/stack/sheet/metal/large_stack,
-/obj/structure/machinery/light/small/red{
-	light_range = 5;
-	dir = 8
-	},
-/turf/open/floor/corsat/plate,
-/area/golden_arrow/prep_hallway)
-"Us" = (
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 8;
-	icon_state = "lattice8";
-	pixel_x = 13;
-	pixel_y = 10
-	},
-/obj/structure/machinery/light/small/red{
-	dir = 4;
-	light_range = 5
-	},
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	name = "ship-grade camera";
-	network = list("Laituri");
-	c_tag = "Port Hallway, Barracks"
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "SE-out";
-	pixel_x = 2
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "NW-out";
-	pixel_y = 1
-	},
-/turf/open/floor/strata/multi_tiles/southeast,
-/area/golden_arrow/prep_hallway)
-"Vd" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 2
-	},
-/turf/open/floor/strata/multi_tiles/west,
-/area/golden_arrow/prep_hallway)
-"Vx" = (
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 8;
-	icon_state = "lattice12";
-	pixel_x = 13;
-	pixel_y = 10
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/turf/open/floor/strata/multi_tiles/southeast,
-/area/golden_arrow/prep_hallway)
-"VL" = (
-/obj/structure/machinery/light/small/red{
-	dir = 4;
-	light_range = 5
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "NE-out";
-	pixel_x = 2
-	},
-/turf/open/floor/strata/multi_tiles/southeast,
-/area/golden_arrow/prep_hallway)
-"VN" = (
-/obj/structure/gun_rack/uppflamer/unloaded{
-	pixel_x = 8
-	},
-/obj/structure/gun_rack/uppflamer/unloaded{
-	pixel_x = -8
-	},
-/turf/open/floor/corsat/plate,
-/area/golden_arrow/prep_hallway)
-"Wr" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/prop/almayer/ship_memorial/golden_arrow{
-	layer = 2.9;
-	pixel_y = 33;
-	pixel_x = 16;
-	color = "#9e9490";
-	desc = "A memorial plaque dedicated to those of the Laituri and other heroes of Armed Collective who have fallen in combat. It's an unfortunately long list of names."
-	},
-/obj/item/storage/fancy/candle_box{
-	pixel_y = 16;
-	pixel_x = -4
-	},
-/obj/item/reagent_container/food/drinks/bottle/vodka/stolichnaya{
-	pixel_x = 8;
-	pixel_y = 14
-	},
-/obj/item/storage/box/matches{
-	pixel_y = 6;
-	pixel_x = -6
-	},
-/turf/open/floor/strata/multi_tiles/west,
-/area/golden_arrow/prep_hallway)
-"WO" = (
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 8;
-	icon_state = "lattice12";
-	pixel_x = 13;
-	pixel_y = -3
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "SE-out"
-	},
-/turf/open/floor/strata/multi_tiles/southeast,
-/area/golden_arrow/prep_hallway)
-"Xc" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 2
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 2
-	},
-/turf/open/floor/strata/multi_tiles/west,
-/area/golden_arrow/prep_hallway)
-"XG" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/defenses/handheld/sentry/upp/light,
-/obj/item/defenses/handheld/sentry/upp/light,
-/obj/item/defenses/handheld/sentry/upp/light,
-/obj/item/defenses/handheld/sentry/upp/light,
-/turf/open/floor/corsat/plate,
-/area/golden_arrow/prep_hallway)
-"XX" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "NE-out";
-	pixel_x = 2
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "SW-out"
-	},
-/obj/structure/machinery/light/small/red{
-	dir = 4;
-	light_range = 5
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 8;
-	icon_state = "lattice8";
-	pixel_x = 13;
-	pixel_y = -3
-	},
-/turf/open/floor/strata/multi_tiles/southeast,
-/area/golden_arrow/prep_hallway)
-"Yq" = (
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 8;
-	icon_state = "lattice12";
-	pixel_x = 13;
-	pixel_y = -3
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/turf/open/floor/strata/multi_tiles/southeast,
-/area/golden_arrow/prep_hallway)
-"Yw" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/closet/crate/secure/upp,
-/obj/item/stack/sandbags_empty/full,
-/obj/item/stack/sandbags_empty/full,
-/obj/item/stack/sandbags_empty/full,
-/obj/item/stack/sandbags_empty/full,
-/obj/item/stack/sheet/plasteel/large_stack,
-/obj/item/stack/sheet/metal/large_stack,
-/obj/item/stack/sheet/metal/large_stack,
-/turf/open/floor/corsat/plate,
-/area/space)
 "YU" = (
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
@@ -10777,46 +9689,9 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
-"Zf" = (
-/obj/structure/machinery/door_control/brbutton{
-	id = "spec_armory6"
-	},
-/turf/open/floor/corsat/plate,
-/area/golden_arrow/prep_hallway)
-"Zw" = (
-/obj/structure/sign/safety/ammunition{
-	pixel_x = -18;
-	pixel_y = 2
-	},
-/obj/structure/machinery/door/poddoor/almayer/closed{
-	name = "\improper Special Operations Armory";
-	id = "spec_armory3";
-	dir = 0
-	},
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/prep_hallway)
-"Zx" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/type71/large/heap,
-/obj/item/ammo_box/magazine/type71/large/heap{
-	pixel_y = 6
-	},
-/turf/open/floor/corsat/plate,
-/area/space)
 "ZS" = (
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
-"ZY" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/heavy/sniper/svd_iff/heap{
-	pixel_y = 22
-	},
-/obj/item/storage/box/guncase/heavy/sniper/svd_iff/heap{
-	pixel_y = 11
-	},
-/obj/item/storage/box/guncase/heavy/sniper/svd_iff/heap,
-/turf/open/floor/corsat/plate,
-/area/space)
 
 (1,1,1) = {"
 mV
@@ -17550,10 +16425,10 @@ vk
 vk
 jU
 jU
-vJ
-vJ
-vJ
-vJ
+JU
+JU
+JU
+JU
 jU
 jU
 jU
@@ -19073,11 +17948,11 @@ wu
 mV
 mV
 mV
-jS
-jS
-jS
-jS
-jS
+mV
+mV
+mV
+mV
+mV
 mV
 mV
 mV
@@ -19225,11 +18100,11 @@ wu
 mV
 mV
 mV
-jS
-KO
-jr
-NY
-jS
+mV
+mV
+mV
+mV
+mV
 mV
 mV
 mV
@@ -19377,11 +18252,11 @@ wu
 mV
 mV
 mV
-jS
-Zf
-eF
-jr
-jS
+mV
+mV
+mV
+mV
+mV
 mV
 mV
 mV
@@ -19529,11 +18404,11 @@ wu
 mV
 mV
 mV
-jS
-PL
-jr
-FY
-jS
+mV
+mV
+mV
+mV
+mV
 mV
 mV
 mV
@@ -19677,21 +18552,21 @@ wu
 wu
 wu
 wu
-jS
-jS
-jS
-jS
-jS
-jS
-jS
-jS
-jS
-jS
-jS
-jS
-jS
-jS
-jS
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
 mV
 mV
 mV
@@ -19827,23 +18702,23 @@ mH
 mV
 mV
 mV
-jS
-vk
-vk
-vk
-vk
-vk
-vk
-vk
-vk
-vk
-vk
-vk
-vk
-vk
-vk
-vk
-jS
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
 mV
 mV
 mV
@@ -19979,24 +18854,24 @@ mH
 mV
 mV
 mV
-jS
-jS
-jS
-jS
-jS
-jS
-jS
-jS
-Fh
-jS
-jS
-jS
-jS
-jS
-jS
-vk
-jS
-jS
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
 mV
 mV
 mV
@@ -20131,25 +19006,25 @@ mH
 mV
 mV
 mV
-jS
-jS
-jS
-Dj
-Os
-GA
-Mn
-jS
-vk
-jS
-CI
-Um
-Tz
-PF
-jS
-vk
-vk
-jS
-jS
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
 mV
 mV
 mV
@@ -20283,25 +19158,25 @@ mH
 mV
 mV
 mV
-jS
-jS
-jS
-br
-br
-br
-br
-jS
-jS
-jS
-JR
-JR
-JR
-JR
-jS
-jS
-vk
-vk
-jS
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
 mV
 mV
 mV
@@ -20432,28 +19307,28 @@ xN
 mI
 xx
 mH
-jS
-jS
-jS
-jS
-jS
-Ln
-Cn
-cb
-cb
-Cn
-Lt
-jS
-ek
-Cn
-Cn
-Cn
-Cn
-Fs
-jS
-jS
-vk
-jS
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
 mV
 mV
 mV
@@ -20584,28 +19459,28 @@ xR
 mI
 xx
 mH
-jS
-Rk
-jr
-jr
-FU
-Vx
-fF
-kL
-kL
-Ca
-WO
-Zw
-Li
-kL
-jS
-Wr
-kL
-mp
-NA
-jS
-vk
-jS
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
 mV
 mV
 mV
@@ -20736,28 +19611,28 @@ xP
 mI
 xx
 mH
-jS
-FK
-jr
-be
-FU
-PG
-RQ
-DA
-lP
-OP
-oh
-HU
-SF
-qG
-jS
-hH
-uF
-vA
-PJ
-jS
-vk
-jS
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
 mV
 mV
 mV
@@ -20888,28 +19763,28 @@ mI
 mI
 xx
 mH
-jS
-XG
-jr
-jr
-FU
-Vx
-TZ
-kL
-kL
-ka
-Yq
-HU
-Li
-kL
-jS
-DS
-kL
-mp
-JW
-jS
-vk
-jS
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
 mV
 mV
 mV
@@ -21040,28 +19915,28 @@ mI
 xx
 xx
 mH
-jS
-jS
-jS
-jS
-jS
-Us
-Vd
-Xc
-Xc
-Vd
-XX
-jS
-Cm
-Vd
-Vd
-Vd
-Vd
-VL
-jS
-jS
-vk
-jS
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
 mV
 mV
 mV
@@ -21195,25 +20070,25 @@ mH
 mV
 mV
 mV
-jS
-jS
-jS
-cB
-cB
-cB
-cB
-jS
-jS
-jS
-LT
-LT
-LT
-LT
-jS
-jS
-vk
-vk
-jS
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
 mV
 mV
 mV
@@ -21347,25 +20222,25 @@ mV
 mV
 mV
 mV
-jS
-jS
-jS
-VN
-MZ
-AC
-Kr
-jS
-vk
-jS
-Iu
-lb
-LZ
-Iu
-jS
-vk
-vk
-jS
-jS
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
 mV
 mV
 mV
@@ -21499,24 +20374,24 @@ mV
 mV
 mV
 mV
-jS
-jS
-jS
-jS
-jS
-jS
-jS
-jS
-vk
-jS
-jS
-jS
-jS
-jS
-jS
-vk
-jS
-jS
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
 mV
 mV
 mV
@@ -21651,23 +20526,23 @@ mV
 mV
 mV
 mV
-jS
-vk
-vk
-vk
-vk
-vk
-vk
-vk
-vk
-vk
-vk
-vk
-vk
-vk
-vk
-vk
-jS
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
 mV
 mV
 mV
@@ -21803,23 +20678,23 @@ mV
 mV
 mV
 mV
-jS
-jS
-jS
-jS
-jS
-jS
-jS
-jS
-jS
-jS
-jS
-jS
-jS
-jS
-jS
-jS
-jS
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
 mV
 mV
 mV
@@ -22262,17 +21137,17 @@ mV
 mV
 mV
 mV
-gz
-Yw
-oH
-RR
 mV
 mV
 mV
-gb
-Ro
-KJ
-ZY
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
 mV
 mV
 mV
@@ -23022,17 +21897,17 @@ mV
 mV
 mV
 mV
-Zx
-Dl
-Sb
-Zx
 mV
 mV
 mV
-Ol
-Go
-Ne
-Fa
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
 mV
 mV
 mV
