@@ -4549,7 +4549,6 @@ Defined in conflicts.dm of the #defines folder.
 	wield_delay_mod = WIELD_DELAY_FAST
 	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
 	scatter_mod = SCATTER_AMOUNT_TIER_9
-	fa_scatter_peak_mod = 15 //fifteen more shots until you hit max scatter
 
 /obj/item/attachable/bipod/integral/pkp
 	name = "QYJ-72 bipod"
@@ -4564,7 +4563,6 @@ Defined in conflicts.dm of the #defines folder.
 	wield_delay_mod = WIELD_DELAY_FAST
 	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
 	scatter_mod = SCATTER_AMOUNT_TIER_9
-	fa_scatter_peak_mod = 15 //fifteen more shots until you hit max scatter
 
 /obj/item/attachable/bipod/integral/mg82
 	name = "MG82 bipod"
