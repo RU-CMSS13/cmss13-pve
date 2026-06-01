@@ -4998,10 +4998,7 @@
 /obj/structure/surface/rack{
 	color = "#8B9490"
 	},
-/obj/item/storage/backpack/marine/ammo_rack{
-	desc = "This ammo rack has been handcrafted by one of the ship's sappers. Union's ingenuity at it's finest.";
-	name = "\improper makeshift ammo rack"
-	},
+/obj/item/storage/backpack/marine/ammo_rack/upp,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "kT" = (

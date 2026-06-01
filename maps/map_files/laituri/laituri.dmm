@@ -6714,6 +6714,7 @@
 	pixel_y = 10;
 	pixel_x = 3
 	},
+/obj/item/storage/backpack/marine/ammo_rack/upp/recon,
 /obj/structure/machinery/light/small/red{
 	light_range = 5;
 	dir = 8
