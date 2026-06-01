@@ -6741,7 +6741,7 @@
 "wj" = (
 /obj/structure/closet/secure_closet{
 	name = "squad sergeant locker";
-	req_access_txt = "240"pixel_x=-8;
+	req_access_txt = "240";
 	can_block_movement = 0;
 	pixel_x = -8
 	},
