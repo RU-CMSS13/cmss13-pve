@@ -2104,7 +2104,11 @@
 	aim_slowdown = SLOWDOWN_ADS_LMG
 	wield_delay = WIELD_DELAY_SLOW
 
-	//-------------------------------------------------------
+/obj/item/weapon/gun/rifle/mg82/unloaded
+	current_mag = null
+	flags_gun_features = /obj/item/weapon/gun/rifle/spp::flags_gun_features | GUN_TRIGGER_SAFETY
+
+//-------------------------------------------------------
 
 //M49A Battle Rifle, standard USCM DMR
 

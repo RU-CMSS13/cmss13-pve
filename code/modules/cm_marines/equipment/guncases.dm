@@ -1312,3 +1312,32 @@
 		return
 	if(locate(/obj/item/weapon/gun/rifle/spp) in src.contents)
 		overlays += image(src.icon, "+spp")
+
+/obj/item/storage/box/guncase/heavy/mg82
+	name = "\improper MG82 LMG case"
+	desc = "A case for storing a MG82 light machinegun."
+	icon_state = "uppmg82case"
+	storage_slots = 9
+	can_hold = list(/obj/item/weapon/gun/rifle/mg82, /obj/item/ammo_magazine/rifle/mg82)
+	max_w_class = SIZE_HUGE
+
+/obj/item/storage/box/guncase/heavy/mg82/fill_preset_inventory() // same amount of ammo as 4 HPR boxes
+	new /obj/item/weapon/gun/rifle/mg82/unloaded(src)
+	new /obj/item/ammo_magazine/rifle/mg82(src)
+	new /obj/item/ammo_magazine/rifle/mg82(src)
+	new /obj/item/ammo_magazine/rifle/mg82(src)
+	new /obj/item/ammo_magazine/rifle/mg82(src)
+	new /obj/item/ammo_magazine/rifle/mg82(src)
+	new /obj/item/ammo_magazine/rifle/mg82(src)
+	new /obj/item/ammo_magazine/rifle/mg82(src)
+	new /obj/item/ammo_magazine/rifle/mg82(src)
+
+/obj/item/storage/box/guncase/heavy/mg82/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays += image(src.icon, "uppbigcase_lid_open")
+	else
+		overlays += image(src.icon, "uppmg82case_lid")
+		return
+	if(locate(/obj/item/weapon/gun/rifle/mg82) in src.contents)
+		overlays += image(src.icon, "+mg82")

@@ -4641,6 +4641,12 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
+/obj/item/storage/box/guncase/heavy/mg82{
+	pixel_y = 5
+	},
 /obj/structure/machinery/light/double{
 	light_color = "#e7c0a4";
 	light_power = 0.8;
