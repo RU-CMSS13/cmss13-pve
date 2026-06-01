@@ -6,6 +6,10 @@
 	name = "backpack"
 	desc = "You wear this on your back and put items into it."
 	icon = 'icons/obj/items/clothing/backpacks.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/backpacks/backpacks_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/backpacks/backpacks_righthand.dmi',
+	)
 	icon_state = "backpack"
 	w_class = SIZE_LARGE
 	flags_equip_slot = SLOT_BACK //ERROOOOO
@@ -1204,9 +1208,19 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	max_storage_space = 15
 
 /obj/item/storage/backpack/lightpack/black
+	name = "\improper lightweight combat pack"
+	desc = "A small, lightweight pack for expeditions and short-range operations."
 	icon_state = "ERT_satchel_black"
 
 /obj/item/storage/backpack/lightpack/black/five_slot
+	max_storage_space = 15
+
+/obj/item/storage/backpack/lightpack/black/medic
+	name = "\improper lightweight medic combat pack"
+	desc = "A small, lightweight medic pack for expeditions and short-range operations."
+	icon_state = "ERT_satchel_medic_black"
+
+/obj/item/storage/backpack/lightpack/black/medic/five_slot
 	max_storage_space = 15
 
 /obj/item/storage/backpack/marine/engineerpack/ert

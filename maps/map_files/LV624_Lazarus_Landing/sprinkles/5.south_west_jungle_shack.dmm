@@ -18,12 +18,6 @@
 	},
 /turf/open/floor/interior/wood/alt,
 /area/lazarus/ground/jungle/west_jungle)
-"cm" = (
-/obj/structure/flora/grass/tallgrass/jungle_alt_2/corner{
-	dir = 3
-	},
-/turf/open/auto_turf/lv_grass/layer0,
-/area/lazarus/ground/jungle/west_jungle)
 "co" = (
 /obj/effect/landmark/wo_supplies/storage/machete{
 	pixel_y = -3
@@ -223,7 +217,6 @@
 "lU" = (
 /obj/structure/closet/cabinet,
 /obj/item/bodybag/tarp,
-/obj/effect/landmark/objective_landmark/far,
 /obj/item/clothing/suit/storage/jacket/marine/vest,
 /turf/open/floor/interior/wood_sat/damage_6,
 /area/lazarus/shack_alt)
@@ -256,7 +249,6 @@
 /area/lazarus/ground/jungle/west_jungle)
 "nM" = (
 /obj/structure/surface/table/woodentable/poor,
-/obj/effect/landmark/objective_landmark/close,
 /obj/item/tool/candle{
 	pixel_x = -8;
 	pixel_y = 9
@@ -419,8 +411,6 @@
 /obj/item/device/flashlight/lantern{
 	pixel_x = 7
 	},
-/obj/effect/landmark/objective_landmark/close,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/interior/wood_sat/damage_5,
 /area/lazarus/shack_alt)
 "tp" = (
@@ -565,7 +555,6 @@
 /obj/structure/noticeboard{
 	pixel_y = 31
 	},
-/obj/effect/landmark/objective_landmark/medium,
 /turf/open/floor/interior/wood_sat/alt,
 /area/lazarus/shack_alt)
 "Ai" = (
@@ -804,11 +793,6 @@
 /obj/effect/landmark/survivor_spawner,
 /turf/open/floor/interior/wood_sat,
 /area/lazarus/shack_alt)
-"Ka" = (
-/turf/open/gm/brown_dirt/random_rocks_alt{
-	dir = 6
-	},
-/area/lazarus/ground/jungle/west_jungle)
 "Kg" = (
 /obj/structure/bed/chair/wood/normal,
 /turf/open/gm/brown_dirt/random_rocks,
@@ -1228,14 +1212,14 @@ Bf
 hy
 Um
 PY
-cm
+ia
 lX
 Lv
 PY
 MN
 PY
 PY
-Ka
+DI
 "}
 (5,1,1) = {"
 PY
@@ -1395,7 +1379,7 @@ PY
 DI
 PY
 Vz
-Ka
+DI
 "}
 (10,1,1) = {"
 nS

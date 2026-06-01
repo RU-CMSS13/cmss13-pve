@@ -114,6 +114,15 @@
 	icon_state = "engineer_worker_alt_uniform"
 	worn_state = "engineer_worker_alt_uniform"
 
+// UPP firefighter
+
+/obj/item/clothing/suit/storage/marine/light/vest/fire_light/upp
+	name = "T-20 fire response coat"
+	desc = "A rugged, no-frills fire-resistant overcoat issued to UPP industrial and emergency crews. Based on the PyroTex LT design but using cheaper, domestically produced materials, it offers basic protection against heat and debris at the cost of weight and comfort."
+	icon_state = "upp_firefighter_alt"
+	item_state = "upp_firefighter_alt"
+	uniform_restricted = FALSE
+
 //  Kelland Mining
 
 /obj/item/clothing/under/hybrisa/kelland_mining
@@ -206,6 +215,10 @@
 /obj/item/clothing/under/hybrisa/wy_exec_suit_uniform
 	name = "\improper expensive suit"
 	desc = "A luxurious designer suit, beyond the reach of the average person. It's an exclusive choice for high-level executives and the affluent elite."
+	icon = 'icons/obj/items/clothing/uniforms/uniforms_by_faction/WY.dmi'
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_faction/WY.dmi',
+	)
 	icon_state = "wy_exec_suit"
 	worn_state = "wy_exec_suit"
 	armor_melee = CLOTHING_ARMOR_LOW

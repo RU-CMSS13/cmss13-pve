@@ -87642,7 +87642,7 @@
 /obj/item/clothing/under/marine,
 /obj/item/clothing/under/marine/veteran/royal_marine,
 /obj/item/clothing/under/marine/veteran/pmc,
-/obj/item/clothing/under/marine/veteran/UPP,
+/obj/item/clothing/under/marine/veteran/upp,
 /obj/item/clothing/under/marine/veteran/marsoc,
 /obj/item/clothing/under/marine,
 /turf/open/floor/interior/wood,
@@ -96153,7 +96153,7 @@
 	pixel_x = -4
 	},
 /obj/structure/machinery/light/small,
-/obj/item/clothing/head/beret/royal_marine{
+/obj/item/clothing/head/cmcap/royal_marine{
 	pixel_x = 8
 	},
 /turf/open/floor/wood,

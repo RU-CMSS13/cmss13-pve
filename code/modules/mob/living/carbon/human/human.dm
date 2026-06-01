@@ -404,7 +404,7 @@
 						if(stat == DEAD)
 							to_chat(usr, SPAN_NOTICE("You take [src]'s information tag, leaving the ID tag"))
 							DT.dogtag_taken = TRUE
-							DT.icon_state = "dogtag_taken"
+							DT.icon_state = DT.tags_taken_icon
 							var/obj/item/dogtag/D = new(loc)
 							D.fallen_names = list(DT.registered_name)
 							D.fallen_assgns = list(DT.assignment)
