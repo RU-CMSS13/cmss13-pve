@@ -5449,8 +5449,7 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/closet/crate/secure/upp,
 /obj/item/ammo_box/magazine/nade_box/upp/ugl,
-/obj/item/ammo_box/magazine/nade_box/upp/ugl/canister,
-/obj/item/ammo_box/magazine/nade_box/upp/ugl/incen,
+/obj/item/ammo_box/magazine/nade_box/upp/ugl,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "lP" = (
@@ -9313,12 +9312,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/hangar)
-"Ct" = (
-/obj/structure/machinery/door/poddoor/almayer/open{
-	id = "hangerairlock-interior";
-	name = "Hanger Airlock"
-	},
-/area/golden_arrow/prep_hallway)
 "Cy" = (
 /obj/effect/decal/cleanable/blood/oil,
 /obj/effect/decal/cleanable/dirt,
@@ -16963,7 +16956,7 @@ ne
 mZ
 mW
 mQ
-Ct
+mJ
 mA
 kL
 uF
