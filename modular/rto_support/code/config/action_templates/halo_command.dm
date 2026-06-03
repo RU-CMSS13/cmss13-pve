@@ -5,12 +5,13 @@
 	support_pool_cost = 1
 	personal_lockout = 8 SECONDS
 	category = "command"
-	icon_state = "radio"
+	icon_state = "flare"
 
 /datum/rto_support_action_template/halo_signal_drop
 	parent_type = /datum/rto_support_action_template/halo/command
 	action_id = "halo_signal_drop"
 	name = "Сигнальный комплект"
+	icon_state = "flare"
 	description = "Сбрасывает сигнальное снаряжение для обозначения зоны посадки и координации боя."
 	fire_support_path = /datum/fire_support/supply_drop/halo/signal
 

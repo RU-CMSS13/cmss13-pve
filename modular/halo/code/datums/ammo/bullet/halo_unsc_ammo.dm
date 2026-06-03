@@ -96,6 +96,34 @@
 	firing_freq_offset = SOUND_FREQ_LOW
 	shell_casing = /obj/effect/decal/ammo_casing/redshell
 
+/datum/ammo/bullet/shotgun/slug/unsc
+	name = "MAG 15P-SL"
+	handful_state = "8g_slug"
+	handful_type = /obj/item/ammo_magazine/handful/shotgun/slug_unsc
+	accurate_range = 9
+	max_range = 12
+	damage = 130
+	penetration = ARMOR_PENETRATION_TIER_7
+	shell_casing = /obj/effect/decal/ammo_casing/greenshell
+
+/datum/ammo/bullet/shotgun/slug/unsc/on_hit_mob(mob/M, obj/projectile/P)
+	if(issangheili(M))
+		return
+	knockback(M, P, 5)
+
+/datum/ammo/bullet/shotgun/slug/unsc/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
+	if(iscarbonsizexeno(living_mob))
+		var/mob/living/carbon/xenomorph/target = living_mob
+		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
+		target.Stun(2.5)
+		target.Slow(4)
+	else
+		if(!isyautja(living_mob))
+			living_mob.Stun(3)
+			living_mob.Slow(5)
+			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
+		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
+
 /datum/ammo/bullet/shotgun/spread/unsc
 	name = "additional buckshot, USCM special type"
 	accurate_range = 8

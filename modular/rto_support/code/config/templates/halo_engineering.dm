@@ -7,9 +7,7 @@
 	targeting_summary = "Сектор не нужен: отметьте открытую точку посадки через RTO-бинокль."
 	restriction_summary = "Доступен только RTO сил UNSC. Инженерные сбросы требуют открытого неба и дольше готовятся к следующему вызову."
 	action_template_types = list(
-		/datum/rto_support_action_template/halo_toolbox_drop,
 		/datum/rto_support_action_template/halo_fortification_drop,
 		/datum/rto_support_action_template/halo_breaching_drop,
-		/datum/rto_support_action_template/halo_vehicle_service_drop,
+		/datum/rto_support_action_template/halo_field_service_drop,
 	)
-	support_action_icon_state = "build"

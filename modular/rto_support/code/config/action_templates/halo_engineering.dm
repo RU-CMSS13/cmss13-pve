@@ -5,7 +5,7 @@
 	support_pool_cost = 1
 	personal_lockout = 8 SECONDS
 	category = "engineering"
-	icon_state = "build"
+	icon_state = "fortification"
 
 /datum/rto_support_action_template/halo_fortification_drop
 	parent_type = /datum/rto_support_action_template/halo/engineering
@@ -14,6 +14,7 @@
 	description = "Сбрасывает мешки с песком, пласталь, металл, складные баррикады и оборонительные мины."
 	support_pool_cost = 2
 	fire_support_path = /datum/fire_support/supply_drop/halo/fortification
+	icon_state = "fortification"
 
 /datum/rto_support_action_template/halo_toolbox_drop
 	parent_type = /datum/rto_support_action_template/halo/engineering
@@ -21,6 +22,7 @@
 	name = "Ящик с инструментами"
 	description = "Сбрасывает инженерные инструменты и снаряжение для полевого ремонта."
 	fire_support_path = /datum/fire_support/supply_drop/halo/toolbox
+	icon_state = "tools"
 
 /datum/rto_support_action_template/halo_breaching_drop
 	parent_type = /datum/rto_support_action_template/halo/engineering
@@ -28,6 +30,7 @@
 	name = "Ящик с взрывчаткой"
 	description = "Сбрасывает подрывные заряды, взрывпакеты и инструмент для форсированного входа."
 	fire_support_path = /datum/fire_support/supply_drop/halo/breaching
+	icon_state = "demo"
 
 /datum/rto_support_action_template/halo_vehicle_service_drop
 	parent_type = /datum/rto_support_action_template/halo/engineering
@@ -36,3 +39,11 @@
 	description = "Сбрасывает полевой ремонтный набор и запасную батарею для ремонта техники."
 	support_pool_cost = 2
 	fire_support_path = /datum/fire_support/supply_drop/halo/vehicle_service
+
+/datum/rto_support_action_template/halo_field_service_drop
+	parent_type = /datum/rto_support_action_template/halo/engineering
+	action_id = "halo_field_service_drop"
+	name = "Ящик полевого ремонта"
+	description = "Сбрасывает полевой ремонтный набор."
+	fire_support_path = /datum/fire_support/supply_drop/halo/field_service
+	icon_state = "tools"

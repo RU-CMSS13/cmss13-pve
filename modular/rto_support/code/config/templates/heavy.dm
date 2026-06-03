@@ -23,4 +23,3 @@
 		/datum/rto_support_action_template/heavy_napalm,
 	)
 	visibility_altitude_requirement = RTO_SUPPORT_ALTITUDE_HIGH
-	support_action_icon_state = "missile"

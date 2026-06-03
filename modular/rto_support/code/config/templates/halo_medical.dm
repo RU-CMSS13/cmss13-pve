@@ -18,4 +18,3 @@
 		/datum/rto_support_action_template/halo_corpsman_kit_drop,
 		/datum/rto_support_action_template/halo_biofoam_reserve_drop,
 	)
-	support_action_icon_state = "medic"

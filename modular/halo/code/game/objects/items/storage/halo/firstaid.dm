@@ -128,3 +128,19 @@
 	new /obj/item/reagent_container/hypospray/autoinjector/primeable/burnguard(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/primeable/burnguard(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/primeable/burnguard(src)
+
+/obj/item/storage/syringe_case/unsc/biofoamcase
+	name = "Biofoam case"
+	desc = "Футляр на три упаковки биопены и один антидот."
+	icon_state = "biofoamcase"
+	storage_slots = 4
+	can_hold = list(
+		/obj/item/reagent_container/hypospray/autoinjector/primeable/biofoam,
+	)
+	cant_hold = list()
+
+/obj/item/storage/syringe_case/unsc/biofoamcase/fill_preset_inventory()
+	new /obj/item/reagent_container/hypospray/autoinjector/primeable/biofoam(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/primeable/biofoam(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/primeable/biofoam(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/primeable/biofoam/antidote(src)

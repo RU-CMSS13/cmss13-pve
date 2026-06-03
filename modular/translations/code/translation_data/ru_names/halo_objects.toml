@@ -38,6 +38,16 @@ prepositional = "медицинском флаконе бикаридина"
 gender = "male"
 tags = [ "halo",]
 
+["biofoam case"]
+nominative = "футляр канистр биопены"
+genitive = "футляра канистр биопены"
+dative = "футляру канистр биопены"
+accusative = "футляр канистр биопены"
+instrumental = "футляром канистр биопены"
+prepositional = "футляре канистр биопены"
+gender = "male"
+tags = [ "halo",]
+
 ["biofoam canister"]
 nominative = "канистра биопены"
 genitive = "канистры биопены"
@@ -2655,6 +2665,16 @@ prepositional = "коробке дробовых патронов ККОН 8-г�
 gender = "female"
 tags = [ "halo",]
 
+["unsc 8-gauge shotgun slug box"]
+nominative = "коробка пулевых патронов ККОН 8-го калибра"
+genitive = "коробки пулевых патронов ККОН 8-го калибра"
+dative = "коробке пулевых патронов ККОН 8-го калибра"
+accusative = "коробку пулевых патронов ККОН 8-го калибра"
+instrumental = "коробкой пулевых патронов ККОН 8-го калибра"
+prepositional = "коробке пулевых патронов ККОН 8-го калибра"
+gender = "female"
+tags = [ "halo",]
+
 ["unsc buttpack"]
 nominative = "задний подсумок ККОН"
 genitive = "заднего подсумка ККОН"
@@ -2825,6 +2845,16 @@ prepositional = "ящике с магазинами ККОН (M6G x 22)"
 gender = "male"
 tags = [ "halo",]
 
+["unsc magazine box (m6d x 22)"]
+nominative = "ящик с магазинами ККОН (M6D x 22)"
+genitive = "ящика с магазинами ККОН (M6D x 22)"
+dative = "ящику с магазинами ККОН (M6D x 22)"
+accusative = "ящик с магазинами ККОН (M6D x 22)"
+instrumental = "ящиком с магазинами ККОН (M6D x 22)"
+prepositional = "ящике с магазинами ККОН (M6D x 22)"
+gender = "male"
+tags = [ "halo",]
+
 ["unsc magazine box (ma5b x 48)"]
 nominative = "ящик с магазинами ККОН (MA5B x 48)"
 genitive = "ящика с магазинами ККОН (MA5B x 48)"
@@ -2862,6 +2892,26 @@ dative = "ящику с магазинами ККОН (MA5C x 48, Shredder)"
 accusative = "ящик с магазинами ККОН (MA5C x 48, Shredder)"
 instrumental = "ящиком с магазинами ККОН (MA5C x 48, Shredder)"
 prepositional = "ящике с магазинами ККОН (MA5C x 48, Shredder)"
+gender = "male"
+tags = [ "halo",]
+
+["shotgun 8g shell box (buckshot x 96)"]
+nominative = "ящик с дробью 8-го калибра ККОН (Дробь x 96)"
+genitive = "ящика с дробью 8-го калибра ККОН (Дробь x 96)"
+dative = "ящику с дробью 8-го калибра ККОН (Дробь x 96)"
+accusative = "ящик с дробью 8-го калибра ККОН (Дробь x 96)"
+instrumental = "ящиком с дробью 8-го калибра ККОН (Дробь x 96)"
+prepositional = "ящике с дробью 8-го калибра ККОН (Дробь x 96)"
+gender = "male"
+tags = [ "halo",]
+
+["shotgun 8g shell box (slug x 96)"]
+nominative = "ящик с пулями 8-го калибра ККОН (Пуля x 96)"
+genitive = "ящика с пулями 8-го калибра ККОН (Пуля x 96)"
+dative = "ящику с пулями 8-го калибра ККОН (Пуля x 96)"
+accusative = "ящик с пулями 8-го калибра ККОН (Пуля x 96)"
+instrumental = "ящиком с пулями 8-го калибра ККОН (Пуля x 96)"
+prepositional = "ящике с пулями 8-го калибра ККОН (Пуля x 96)"
 gender = "male"
 tags = [ "halo",]
 
