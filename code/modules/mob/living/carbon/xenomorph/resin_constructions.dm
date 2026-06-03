@@ -4,6 +4,10 @@ GLOBAL_VAR_INIT(resin_lz_allowed, FALSE)
 	var/name
 	var/desc
 	var/construction_name // The name used in messages (to replace old resin2text proc)
+	/// SS220 EDIT: icon file used by choose-resin UI/button overlays.
+	var/construction_icon = 'icons/mob/hud/actions_xeno.dmi'
+	/// SS220 EDIT: optional icon state for constructions whose display name is not an action icon state.
+	var/construction_icon_state
 	var/cost
 	var/build_time = 2 SECONDS
 	var/pass_hivenumber = TRUE
@@ -18,6 +22,12 @@ GLOBAL_VAR_INIT(resin_lz_allowed, FALSE)
 
 	var/thick_hiveweed = FALSE // if this is set, the thick variants will only work on hiveweeds
 	var/can_build_on_doors = TRUE // if it can be built on a tile with an open door or not
+
+/datum/resin_construction/proc/get_construction_icon()
+	return construction_icon || 'icons/mob/hud/actions_xeno.dmi'
+
+/datum/resin_construction/proc/get_construction_icon_state()
+	return construction_icon_state || construction_name
 
 /datum/resin_construction/proc/can_build_here(turf/T, mob/living/carbon/xenomorph/X)
 	if(!istype(T) || T.is_weedable() < FULLY_WEEDABLE)

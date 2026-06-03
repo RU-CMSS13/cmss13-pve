@@ -1141,6 +1141,8 @@ SUBSYSTEM_DEF(minimaps)
 			return MINIMAP_FLAG_XENO_MUTATED
 		if(XENO_HIVE_FORSAKEN)
 			return MINIMAP_FLAG_XENO_FORSAKEN
+		if(XENO_HIVE_PATHOGEN) // SS220 EDIT: modular xeno_races hive uses the base xeno minimap flag
+			return MINIMAP_FLAG_XENO
 		if(XENO_HIVE_YAUTJA)
 			return MINIMAP_FLAG_YAUTJA
 		if(XENO_HIVE_RENEGADE)

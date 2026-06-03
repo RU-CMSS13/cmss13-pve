@@ -687,7 +687,8 @@
 			return
 
 		to_chat(X, SPAN_XENONOTICE("You plant a node at [T]."))
-		new /obj/effect/alien/weeds/node(T, null, X)
+		var/node_type = X.get_weed_node_type() // SS220 EDIT: modular hives may plant alternate weed nodes
+		new node_type(T, null, X)
 		playsound(T, "alien_resin_build", 35)
 		apply_cooldown_override(node_plant_cooldown)
 		return
@@ -711,7 +712,8 @@
 	if (!check_and_use_plasma_owner())
 		return
 
-	new /obj/effect/alien/weeds(T, node, FALSE)
+	var/weed_type = X.get_weed_type() // SS220 EDIT: modular hives may plant alternate weeds
+	new weed_type(T, node, FALSE)
 	playsound(T, "alien_resin_build", 35)
 
 	recently_built_turfs += T
@@ -855,4 +857,3 @@
 	set desc = "This opens a tactical map, where you can see where every xenomorph is."
 	set category = "Alien"
 	hive.tacmap.tgui_interact(src)
-

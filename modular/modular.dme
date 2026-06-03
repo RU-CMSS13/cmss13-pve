@@ -19,6 +19,7 @@
 #include "player_survival/_player_survival.dme"
 #include "supply_packs/_supply_packs.dme"
 #include "arachnid/_arachnid.dme"
+#include "xeno_races/_xeno_races.dme"
 #include "trees/_trees.dme"
 #include "rto_support/_rto_support.dme"
 #include "cyrillic_fixes/_cyrillic_fixes.dme"

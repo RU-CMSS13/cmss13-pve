@@ -60,15 +60,15 @@
 		if(ishuman(affected_mob))
 			var/mob/living/carbon/human/affected_human = affected_mob
 			if(world.time > affected_human.timeofdeath + affected_human.revive_grace_period) //Can't be defibbed.
-				var/mob/living/carbon/xenomorph/larva/larva_embryo = locate() in affected_mob
-				if(larva_embryo)
-					larva_embryo.chest_burst(affected_mob)
+				var/mob/living/carbon/xenomorph/embryo = locate() in affected_mob // SS220 EDIT: modular embryos may mature into non-larva xenomorphs
+				if(embryo)
+					embryo.chest_burst(affected_mob)
 				qdel(src)
 				return FALSE
 		else
-			var/mob/living/carbon/xenomorph/larva/larva_embryo = locate() in affected_mob
-			if(larva_embryo)
-				larva_embryo.chest_burst(affected_mob)
+			var/mob/living/carbon/xenomorph/embryo = locate() in affected_mob // SS220 EDIT: modular embryos may mature into non-larva xenomorphs
+			if(embryo)
+				embryo.chest_burst(affected_mob)
 			STOP_PROCESSING(SSobj, src)
 			return FALSE
 
@@ -93,7 +93,7 @@
 			counter += 1.5 * hive.larva_gestation_multiplier * delta_time //Currently twice as much, can be changed
 		else
 			if(stage < 5)
-				counter += 1 * hive.larva_gestation_multiplier * delta_time
+				counter += get_embryo_growth_delta(hive, delta_time) // SS220 EDIT: modular embryos may tune growth without replacing the whole proc
 
 		if(stage < 5 && counter >= per_stage_hugged_time)
 			counter = 0
@@ -104,6 +104,8 @@
 
 	switch(stage)
 		if(2)
+			if(handle_modular_stage_effect(stage)) // SS220 EDIT: modular embryos may own custom stage symptoms
+				return
 			if(prob(4))
 				if(!HAS_TRAIT(src, TRAIT_KNOCKEDOUT))
 					affected_mob.pain.apply_pain(PAIN_CHESTBURST_WEAK)
@@ -116,6 +118,8 @@
 				var/message = SPAN_WARNING("[pick("Your chest hurts a little bit", "Your stomach hurts")].")
 				to_chat(affected_mob, message)
 		if(3)
+			if(handle_modular_stage_effect(stage)) // SS220 EDIT: modular embryos may own custom stage symptoms
+				return
 			if(prob(2))
 				var/message = SPAN_WARNING("[pick("Your throat feels sore", "Mucous runs down the back of your throat")].")
 				to_chat(affected_mob, message)
@@ -134,6 +138,8 @@
 					affected_mob.make_jittery(105)
 					affected_mob.take_limb_damage(1)
 		if(4)
+			if(handle_modular_stage_effect(stage)) // SS220 EDIT: modular embryos may own custom stage symptoms
+				return
 			if(prob(2))
 				affected_mob.pain.apply_pain(PAIN_CHESTBURST_WEAK)
 				var/message = pick("Your chest hurts badly", "It becomes difficult to breathe", "Your heart starts beating rapidly, and each beat is painful")
@@ -154,9 +160,25 @@
 		if(7) // Stage 6 is while we are trying to find a candidate in become_larva
 			larva_autoburst_countdown--
 			if(!larva_autoburst_countdown)
-				var/mob/living/carbon/xenomorph/larva/larva_embryo = locate() in affected_mob
-				if(larva_embryo)
-					larva_embryo.chest_burst(affected_mob)
+				var/mob/living/carbon/xenomorph/embryo = locate() in affected_mob // SS220 EDIT: modular embryos may mature into non-larva xenomorphs
+				if(embryo)
+					embryo.chest_burst(affected_mob)
+
+/// SS220 EDIT: modular autodoc removal hook.
+/obj/item/alien_embryo/proc/can_autodoc_remove()
+	return TRUE
+
+/// SS220 EDIT: modular embryo growth hook.
+/obj/item/alien_embryo/proc/get_embryo_growth_delta(datum/hive_status/hive, delta_time)
+	return 1 * hive.larva_gestation_multiplier * delta_time
+
+/// SS220 EDIT: modular embryo symptom hook. Return TRUE to replace vanilla stage effects.
+/obj/item/alien_embryo/proc/handle_modular_stage_effect(stage)
+	return FALSE
+
+/// SS220 EDIT: modular embryo spawn hook. Return a xenomorph typepath to replace vanilla larva.
+/obj/item/alien_embryo/proc/get_custom_xeno_type()
+	return null
 
 ///We look for a candidate. If found, we spawn the candidate as a larva
 ///Order of priority is bursted individual (if xeno is enabled), then player hugger, then random candidate, and then it's up for grabs and spawns braindead
@@ -238,15 +260,18 @@
 							message_alien_candidates(candidates, dequeued = 0)
 							break
 
-	// Spawn the larva
-	var/mob/living/carbon/xenomorph/larva/new_xeno
+	// Spawn the larva or a modular embryo override.
+	var/mob/living/carbon/xenomorph/new_xeno
+	var/custom_xeno_type = get_custom_xeno_type() // SS220 EDIT: modular embryos may mature into custom xenomorphs
 
 	if(isyautja(affected_mob) || (flags_embryo & FLAG_EMBRYO_PREDATOR))
 		new_xeno = new /mob/living/carbon/xenomorph/larva/predalien(affected_mob)
 		yautja_announcement(SPAN_YAUTJABOLDBIG("WARNING!\n\nAn abomination has been detected at [get_area_name(new_xeno)]. It is a stain upon our purity and is unfit for life. Exterminate it immediately.\n\nHeavy Armory unlocked."))
 		SEND_GLOBAL_SIGNAL(COMSIG_GLOB_YAUTJA_ARMORY_OPENED)
+	else if(custom_xeno_type)
+		new_xeno = new custom_xeno_type(affected_mob)
 	else
-		new_xeno = new(affected_mob)
+		new_xeno = new /mob/living/carbon/xenomorph/larva(affected_mob)
 
 	if(hive)
 		hive.add_xeno(new_xeno)
@@ -282,7 +307,11 @@
 
 	stage = 7 // Begin the autoburst countdown
 
-/mob/living/carbon/xenomorph/larva/proc/cause_unbearable_pain(mob/living/carbon/victim)
+/// SS220 EDIT: modular embryo xenomorphs can provide their own pain loop.
+/mob/living/carbon/xenomorph/proc/cause_unbearable_pain(mob/living/carbon/victim)
+	return
+
+/mob/living/carbon/xenomorph/larva/cause_unbearable_pain(mob/living/carbon/victim)
 	if(loc != victim)
 		return
 	victim.emote("scream")
@@ -292,7 +321,11 @@
 	to_chat(victim, message)
 	addtimer(CALLBACK(src, PROC_REF(cause_unbearable_pain), victim), rand(1, 3) SECONDS, TIMER_UNIQUE|TIMER_NO_HASH_WAIT)
 
-/mob/living/carbon/xenomorph/larva/proc/chest_burst(mob/living/carbon/victim)
+/// SS220 EDIT: modular embryo xenomorphs can provide their own burst sequence.
+/mob/living/carbon/xenomorph/proc/chest_burst(mob/living/carbon/victim)
+	return
+
+/mob/living/carbon/xenomorph/larva/chest_burst(mob/living/carbon/victim)
 	set waitfor = 0
 	if(victim.chestburst || loc != victim)
 		return

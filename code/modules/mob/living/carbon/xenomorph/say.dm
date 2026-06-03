@@ -73,9 +73,13 @@
 	..(message, speaking, verb, null, null, message_range, null)
 
 /mob/living/carbon/xenomorph/say_understands(mob/other, datum/language/speaking = null)
-	if(isxeno(other))
+	if(isxeno(other) && can_understand_xeno_speech(speaking)) // SS220 EDIT: modular xeno languages may opt out of shared xeno understanding
 		return TRUE
 	return ..()
+
+/// SS220 EDIT: modular xeno language understanding hook.
+/mob/living/carbon/xenomorph/proc/can_understand_xeno_speech(datum/language/speaking)
+	return TRUE
 
 
 //General proc for hivemind. Lame, but effective.
@@ -114,33 +118,44 @@
 				hear_hivemind = Hu.hivenumber
 
 		if(!QDELETED(S) && (isxeno(S) || S.stat == DEAD || hear_hivemind) && !istype(S,/mob/new_player))
-			var/mob/living/carbon/xenomorph/X = src
+			var/mob/living/carbon/xenomorph/xeno = src
 			if(istype(S,/mob/dead/observer))
 				if(S.client.prefs && S.client.prefs.toggles_chat & CHAT_GHOSTHIVEMIND)
 					track = "(<a href='byond://?src=\ref[S];track=\ref[src]'>F</a>)"
+					var/broadcast_tier = "normal"
 					if(isqueen(src))
 						var/mob/hologram/queen/queen_eye = client?.eye
 						if(istype(queen_eye))
 							track += " (<a href='byond://?src=\ref[S];track=\ref[queen_eye]'>E</a>)"
-						ghostrend = SPAN_XENOQUEEN("Hivemind, [src.name][track] hisses, <span class='normal'>'[message]'</span>")
-					else if(hive.leading_cult_sl == src)
-						ghostrend = SPAN_XENOQUEEN("Hivemind, [src.name][track] hisses, <span class='normal'>'[message]'</span>")
-					else if(istype(X) && IS_XENO_LEADER(X))
-						ghostrend = SPAN_XENOLEADER("Hivemind, Leader [src.name][track] hisses, <span class='normal'>'[message]'</span>")
-					else
-						ghostrend = SPAN_XENO("Hivemind, [src.name][track] hisses, <span class='normal'>'[message]'</span>")
+					if((xeno && xeno.is_hive_ruler()) || hive.leading_cult_sl == src)
+						broadcast_tier = "royal"
+					else if(istype(xeno) && IS_XENO_LEADER(xeno))
+						broadcast_tier = "leader"
+
+					ghostrend = get_hivemind_render(hive.hivenumber, broadcast_tier, message, "[src.name][track]")
 					S.show_message(ghostrend, SHOW_MESSAGE_AUDIBLE)
 
 			else if(hive.hivenumber == xeno_hivenumber(S) || hive.hivenumber == hear_hivemind)
 				if(isxeno(src) && isxeno(S))
 					overwatch_insert = " (<a href='byond://?src=\ref[S];[overwatch_target]=\ref[src];[overwatch_src]=\ref[S]'>watch</a>)"
 
-				if(isqueen(src) || hive.leading_cult_sl == src)
-					rendered = SPAN_XENOQUEEN("Hivemind, [src.name][overwatch_insert] hisses, <span class='normal'>'[message]'</span>")
-				else if(istype(X) && IS_XENO_LEADER(X))
-					rendered = SPAN_XENOLEADER("Hivemind, Leader [src.name][overwatch_insert] hisses, <span class='normal'>'[message]'</span>")
-				else
-					rendered = SPAN_XENO("Hivemind, [src.name][overwatch_insert] hisses, <span class='normal'>'[message]'</span>")
+				var/broadcast_tier = "normal"
+				if((xeno && xeno.is_hive_ruler()) || hive.leading_cult_sl == src)
+					broadcast_tier = "royal"
+				else if(istype(xeno) && IS_XENO_LEADER(xeno))
+					broadcast_tier = "leader"
+
+				rendered = get_hivemind_render(hive.hivenumber, broadcast_tier, message, "[src.name][overwatch_insert]")
 
 				S.show_message(rendered, SHOW_MESSAGE_AUDIBLE)
 
+/mob/living/carbon/proc/get_hivemind_render(hivenumber, tier, message, tracker)
+	var/normal_message = "Hivemind, [tracker] hisses, <span class='normal'>'[message]'</span>" // SS220 EDIT: shared render hook for modular hivemind flavors
+	var/leader_message = "Hivemind, Leader [tracker] hisses, <span class='normal'>'[message]'</span>"
+
+	switch(tier)
+		if("royal")
+			return SPAN_XENOQUEEN(normal_message)
+		if("leader")
+			return SPAN_XENOLEADER(leader_message)
+	return SPAN_XENO(normal_message)

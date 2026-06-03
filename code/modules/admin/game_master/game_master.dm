@@ -189,7 +189,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 	var/list/data = list()
 
-	data["spawnable_xenos"] = GAME_MASTER_AI_XENOS
+	data["spawnable_xenos"] = GAME_MASTER_AI_XENOS + GLOB.xeno_race_ai_spawnables // SS220 EDIT: append modular xeno race spawn entries
 
 	data["spawnable_hives"] = ALL_XENO_HIVES
 

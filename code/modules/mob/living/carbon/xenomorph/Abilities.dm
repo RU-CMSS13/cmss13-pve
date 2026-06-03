@@ -383,6 +383,11 @@
 
 /mob/living/carbon/xenomorph/proc/add_abilities()
 	if(!base_actions)
-		return
+		return give_modular_abilities() // SS220 EDIT: allow modular castes with no base action list to inject actions
 	for(var/action_path in base_actions)
 		give_action(src, action_path)
+	give_modular_abilities() // SS220 EDIT: allow modular castes to append actions without editing base action lists
+
+/// SS220 EDIT: no-op modular ability injection hook.
+/mob/living/carbon/xenomorph/proc/give_modular_abilities()
+	return FALSE

@@ -59,10 +59,10 @@ list( \
 		var/list/entry = list()
 
 		if(structure in GLOB.resin_constructions_list)
-			var/datum/resin_construction/construct = structure
+			var/datum/resin_construction/construct = GLOB.resin_constructions_list[structure] // SS220 EDIT: use instance icon hooks for modular constructions
 			entry["name"] = construct.name
-			entry["image"] = replacetext(construct.construction_name, " ", "-")
-			entry["id"] = "[construct]"
+			entry["image"] = replacetext(construct.get_construction_icon_state(), " ", "-") // SS220 EDIT: allow modular resin constructions to keep custom text and icon state separate
+			entry["id"] = "[structure]"
 		else if(structure in typesof(/turf))
 			var/turf/turf = structure
 			entry["name"] = turf.name
@@ -124,7 +124,7 @@ list( \
 	var/list/modifiers = params2list(params)
 
 	if(LAZYACCESS(modifiers, MIDDLE_CLICK)) //remove
-		if(!(object.type in removal_allowlist))
+		if(!is_type_in_list(object, removal_allowlist)) // SS220 EDIT: allow modular resin panel subtypes to be removed by their base allowlist entry
 			return
 
 		if(isturf(object))

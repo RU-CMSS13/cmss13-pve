@@ -21,6 +21,9 @@
 	if(!CheckAdminHref(href, href_list))
 		return
 
+	if(hascall(src, "modular_handle_xeno_races_admin_topic")) // SS220 EDIT: delegate xeno-races admin hrefs to modular layer
+		if(call(src, "modular_handle_xeno_races_admin_topic")(href_list))
+			return
 
 	if(href_list["ahelp"])
 		if(!check_rights(R_ADMIN|R_MOD, TRUE))

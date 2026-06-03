@@ -26,6 +26,7 @@
 	xeno_cooldown = 10
 	ability_primacy = XENO_PRIMARY_ACTION_1
 
+	var/weed_type = /obj/effect/alien/weeds // SS220 EDIT: modular weed actions may convert child weeds into alternate weed types
 	var/plant_on_semiweedable = FALSE
 	var/node_type = /obj/effect/alien/weeds/node
 
@@ -514,6 +515,7 @@
 	charge_time = 1 SECONDS
 	xeno_cooldown = 10 SECONDS
 	ability_primacy = XENO_TAIL_STAB
+	var/stab_range = 2 // SS220 EDIT: modular tail stab variants may tune range without replacing the base ability
 	/// Used for defender's tail 'stab'.
 	var/blunt_stab = FALSE
 
@@ -558,7 +560,7 @@
 		hide_from(xeno)
 		return
 
-	if(!xeno.hive.living_xeno_queen.ovipositor)
+	if(!xeno.hive.allow_no_queen_actions && !xeno.hive.living_xeno_queen.ovipositor) // SS220 EDIT: support modular hives without queen-gated tacmap actions
 		hide_from(xeno)
 
 	handle_new_queen(new_queen = xeno.hive.living_xeno_queen)
@@ -571,16 +573,24 @@
 /datum/action/xeno_action/onclick/tacmap/proc/handle_new_queen(datum/hive_status/hive, mob/living/carbon/xenomorph/queen/new_queen)
 	SIGNAL_HANDLER
 
+	var/datum/hive_status/checked_hive = hive
+	var/mob/living/carbon/xenomorph/xeno = owner
+	if(!checked_hive && xeno)
+		checked_hive = GLOB.hive_datum[xeno.hivenumber]
+
 	if(tracked_queen)
 		UnregisterSignal(tracked_queen, list(COMSIG_QUEEN_MOUNT_OVIPOSITOR, COMSIG_QUEEN_DISMOUNT_OVIPOSITOR))
 
 	tracked_queen = new_queen
 
-	if(!tracked_queen?.ovipositor)
+	if(!checked_hive?.allow_no_queen_actions && !tracked_queen?.ovipositor) // SS220 EDIT: support modular hives without queen-gated tacmap actions
 		hide_from(owner)
+	else
+		unhide_from(owner)
 
-	RegisterSignal(tracked_queen, COMSIG_QUEEN_MOUNT_OVIPOSITOR, PROC_REF(handle_mount_ovipositor))
-	RegisterSignal(tracked_queen, COMSIG_QUEEN_DISMOUNT_OVIPOSITOR, PROC_REF(handle_dismount_ovipositor))
+	if(tracked_queen)
+		RegisterSignal(tracked_queen, COMSIG_QUEEN_MOUNT_OVIPOSITOR, PROC_REF(handle_mount_ovipositor))
+		RegisterSignal(tracked_queen, COMSIG_QUEEN_DISMOUNT_OVIPOSITOR, PROC_REF(handle_dismount_ovipositor))
 
 /// deals with the queen mounting the ovipositor, unhiding the action from the user
 /datum/action/xeno_action/onclick/tacmap/proc/handle_mount_ovipositor()
@@ -591,6 +601,10 @@
 /// deals with the queen dismounting the ovipositor, hiding the action from the user
 /datum/action/xeno_action/onclick/tacmap/proc/handle_dismount_ovipositor()
 	SIGNAL_HANDLER
+
+	var/mob/living/carbon/xenomorph/xeno = owner
+	if(xeno?.hive?.allow_no_queen_actions) // SS220 EDIT: support modular hives without queen-gated tacmap actions
+		return
 
 	hide_from(owner)
 

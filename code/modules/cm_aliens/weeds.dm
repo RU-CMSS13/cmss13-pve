@@ -27,6 +27,8 @@
 
 	var/datum/hive_status/linked_hive = null
 	var/hivenumber = XENO_HIVE_NORMAL
+	/// SS220 EDIT: optional modular visual family; variants with a family do not autotile into base weeds.
+	var/weed_family = null
 	var/turf/weeded_turf
 
 	// Which node is responsible for keeping this weed patch alive?
@@ -309,6 +311,13 @@
 			if(W)
 				W.update_icon()
 
+/obj/effect/alien/weeds/proc/can_visually_connect_to(obj/effect/alien/weeds/other_weeds)
+	if(!other_weeds)
+		return FALSE
+	if(isnull(weed_family) && isnull(other_weeds.weed_family))
+		return TRUE
+	return weed_family == other_weeds.weed_family // SS220 EDIT: modular weed variants may isolate autotiling by family
+
 /obj/effect/alien/weeds/update_icon()
 	overlays.Cut()
 
@@ -321,8 +330,10 @@
 		if(istype(check, /turf/closed/wall/resin))
 			my_dir |= check_dir
 
-		else if (locate(/obj/effect/alien/weeds) in check)
-			my_dir |= check_dir
+		else
+			var/obj/effect/alien/weeds/adjacent_weeds = locate() in check
+			if(can_visually_connect_to(adjacent_weeds)) // SS220 EDIT: modular weed variants may isolate autotiling by family
+				my_dir |= check_dir
 
 	// big brain the icon dir by letting -15 represent the base icon,
 	// 0-15 be for omnidirectional and -1 to -14 be the rest
@@ -509,15 +520,18 @@
 	var/obj/effect/alien/weeds/replacement_child = new weed_type(T, src)
 	add_child(replacement_child)
 
+/obj/effect/alien/weeds/node/proc/get_node_overlay_image()
+	return staticnode // SS220 EDIT: allow modular weed nodes to provide faction-specific node overlays
+
 /obj/effect/alien/weeds/node/update_icon()
 	..()
 	if(overlay_node)
-		overlays += staticnode
+		overlays += get_node_overlay_image() // SS220 EDIT: allow modular weed nodes to provide faction-specific node overlays
 
 /obj/effect/alien/weeds/node/proc/trap_destroyed()
 	SIGNAL_HANDLER
 	overlay_node = FALSE
-	overlays += staticnode
+	overlays += get_node_overlay_image() // SS220 EDIT: allow modular weed nodes to provide faction-specific node overlays
 
 /obj/effect/alien/weeds/node/Initialize(mapload, hive, mob/living/carbon/xenomorph/xeno)
 	if (hive)

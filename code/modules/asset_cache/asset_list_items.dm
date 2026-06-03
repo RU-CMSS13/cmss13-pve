@@ -148,10 +148,10 @@
 
 /datum/asset/spritesheet/choose_resin/register()
 	for (var/k in GLOB.resin_constructions_list)
-		var/datum/resin_construction/RC = k
+		var/datum/resin_construction/RC = GLOB.resin_constructions_list[k] // SS220 EDIT: use instance icon hooks for modular constructions
 
-		var/icon_file = 'icons/mob/hud/actions_xeno.dmi'
-		var/icon_state = initial(RC.construction_name)
+		var/icon_file = RC.get_construction_icon()
+		var/icon_state = RC.get_construction_icon_state()
 		var/icon_name = replacetext(icon_state, " ", "-")
 
 		if (sprites[icon_name])
