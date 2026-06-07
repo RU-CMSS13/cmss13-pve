@@ -39,6 +39,9 @@
 	sprite_sheets = list(SPECIES_MONKEY = 'icons/mob/humans/species/monkeys/onmob/uniform_monkey_0.dmi')
 	equip_sounds = list('sound/handling/clothing_on.ogg')
 	unequip_sounds = list('sound/handling/clothing_off.ogg')
+	item_icons = list(
+		WEAR_BODY = 'icons/obj/items/clothing/uniforms.dmi',
+	)
 
 /obj/item/clothing/under/Initialize()
 	. = ..()
