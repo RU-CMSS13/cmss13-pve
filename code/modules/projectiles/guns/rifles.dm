@@ -391,6 +391,7 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
 	icon_state = "l23"
 	item_state = "l23"
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 	starting_attachment_types = list(/obj/item/attachable/stock/nsg23/l23)
 
 	random_spawn_chance = 100 //L23 always spawns with attachments
@@ -1829,7 +1830,7 @@
 	update_attachable(sppsight.slot)
 
 /obj/item/weapon/gun/rifle/spp/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 17,"rail_x" = 10, "rail_y" = 23, "under_x" = 20, "under_y" = 12, "stock_x" = 12, "stock_y" = 14, "side_rail_x" = 19, "side_rail_y" = 17)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 17,"rail_x" = 10, "rail_y" = 23, "under_x" = 20, "under_y" = 12, "stock_x" = 12, "stock_y" = 14, "side_rail_x" = 19, "side_rail_y" = 17, "sling_x" = 16, "sling_y" = 19)
 
 
 /obj/item/weapon/gun/rifle/spp/set_gun_config_values()
