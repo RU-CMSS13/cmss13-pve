@@ -523,6 +523,7 @@
 	item_icons = list(
 		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/UPP.dmi',
 	)
+	icon_state = "UPP"
 
 /obj/item/clothing/suit/storage/marine/faction/upp/army
 
