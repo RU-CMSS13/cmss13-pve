@@ -748,10 +748,40 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/facepaint/skull
 	cost = 3
 
+/datum/gear/paint/facepaint_clown
+	display_name = "Facepaint, clown"
+	path = /obj/item/facepaint/clown
+	cost = 5
+
+/datum/gear/paint/facepaint_clown_alt
+	display_name = "Facepaint, clown (alternate)"
+	path = /obj/item/facepaint/clown/alt
+	cost = 5
+
 /datum/gear/paint/facepaint_body
 	display_name = "Fullbody paint"
 	path = /obj/item/facepaint/sniper
 	cost = 4 //To match with the skull paint amount of point, gave this amount of point for the same reason of the skull facepaint (too cool for everyone to be able to constantly use)
+
+/datum/gear/paint/facepaint_body_snow
+	display_name = "Fullbody paint, snow"
+	path = /obj/item/facepaint/sniper/snow
+	cost = 4
+
+/datum/gear/paint/facepaint_body_desert
+	display_name = "Fullbody paint, desert"
+	path = /obj/item/facepaint/sniper/desert
+	cost = 4
+
+/datum/gear/paint/facepaint_body_jungle
+	display_name = "Fullbody paint, jungle"
+	path = /obj/item/facepaint/sniper/jungle
+	cost = 4
+
+/datum/gear/paint/facepaint_body_urban
+	display_name = "Fullbody paint, urban"
+	path = /obj/item/facepaint/sniper/urban
+	cost = 4
 
 /*
 //================================================
@@ -1688,101 +1718,77 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/patch
 	category = "Patches"
+	cost = 1
 
+//USCM patches
 /datum/gear/patch/msfpatch
 	display_name = "MSF shoulder patch"
 	path = /obj/item/clothing/accessory/patch/msf_patch
-	cost = 0
-	slot = WEAR_IN_ACCESSORY
 
 /datum/gear/patch/patch_uscm
 	display_name = "USCM shoulder patch"
 	path = /obj/item/clothing/accessory/patch
-	cost = 0
-	slot = WEAR_IN_ACCESSORY
 	allowed_origins = USCM_ORIGINS
 
 /datum/gear/patch/patch_uscm/devils
 	display_name = "Solar Devils shoulder patch"
 	path = /obj/item/clothing/accessory/patch/devils
-	slot = WEAR_IN_ACCESSORY
 
 /datum/gear/patch/patch_uscm/ua
 	display_name = "United Americas flag shoulder patch"
 	path = /obj/item/clothing/accessory/patch/ua
-	cost = 0
-	slot = WEAR_IN_ACCESSORY
 	allowed_origins = USCM_ORIGINS
 
 /datum/gear/patch/patch_uscm/usa
 	display_name = "United States flag shoulder patch" //no limited allowed_origins, a non-USCM could have the patch to show their original country
 	path = /obj/item/clothing/accessory/patch/usa
-	cost = 0
-	slot = WEAR_IN_ACCESSORY
 
+//UPP patches
 /datum/gear/patch/patch_upp
 	display_name = "UPPAC shoulder patch"
 	path = /obj/item/clothing/accessory/patch/upp
-	cost = 0
-	slot = WEAR_IN_ACCESSORY
 	allowed_origins = UPP_ORIGINS
 
 /datum/gear/patch/patch_upp/sof
 	display_name = "Naval Infantry shoulder patch"
 	path = /obj/item/clothing/accessory/patch/upp/naval
-	slot = WEAR_IN_ACCESSORY
 
+//TWE patches
 /datum/gear/patch/patch_rmc
 	display_name = "Royal Marines Commando shoulder patch"
 	path = /obj/item/clothing/accessory/patch/royal_marines
-	cost = 0
-	slot = WEAR_IN_ACCESSORY
 	allowed_origins = TWE_ORIGINS
 
 /datum/gear/patch/patch_rmc/twe
 	display_name = "Three World Empire shoulder patch"
 	path = /obj/item/clothing/accessory/patch/twe
-	cost = 0
-	slot = WEAR_IN_ACCESSORY
+
 //W-Y patches
 /datum/gear/patch/wy
 	display_name = "Weyland-Yutani patch"
 	path = /obj/item/clothing/accessory/patch/wy
-	cost = 0
-	slot = WEAR_IN_ACCESSORY
 
 /datum/gear/patch/wysquare
 	display_name = "Weyland-Yutani Square patch"
 	path = /obj/item/clothing/accessory/patch/wysquare
-	cost = 0
-	slot = WEAR_IN_ACCESSORY
 
 /datum/gear/patch/wy_faction
 	display_name = "Weyland-Yutani Faction patch"
 	path = /obj/item/clothing/accessory/patch/wy_faction
-	cost = 0
-	slot = WEAR_IN_ACCESSORY
 
 /datum/gear/patch/wy_white
 	display_name = "Weyland-Yutani White patch"
 	path = /obj/item/clothing/accessory/patch/wy_white
-	cost = 0
-	slot = WEAR_IN_ACCESSORY
 
 /datum/gear/patch/wyfury
 	display_name = "Weyland-Yutani Fury '161' patch"
 	path = /obj/item/clothing/accessory/patch/wyfury
-	cost = 0
-	slot = WEAR_IN_ACCESSORY
+
 //Merc patchs
 /datum/gear/patch/freelancer_patch
 	display_name = "Freelancer's Guild patch"
 	path = /obj/item/clothing/accessory/patch/freelancer_patch
-	cost = 0
-	slot = WEAR_IN_ACCESSORY
 
 /datum/gear/patch/merc_patch
 	display_name = "Old Freelancer's Guild patch"
 	path = /obj/item/clothing/accessory/patch/merc_patch
-	cost = 0
-	slot = WEAR_IN_ACCESSORY

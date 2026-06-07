@@ -142,7 +142,7 @@
 /turf/open/auto_turf/sand/layer2,
 /area/caperiver/outdoors/scrublands/central)
 "bO" = (
-/obj/structure/machinery/power/power_generator/port_gen,
+/obj/structure/machinery/power/port_gen/pacman,
 /turf/open/desert/rock,
 /area/caperiver/outdoors/scrublands/central)
 "co" = (
@@ -822,7 +822,7 @@
 /turf/open/desert/rock/deep,
 /area/caperiver/outdoors/scrublands/central)
 "nh" = (
-/obj/structure/machinery/defenses/sentry/premade/lowammo/random/dumb{
+/obj/structure/machinery/defenses/sentry/premade/dumb{
 	dir = 8
 	},
 /turf/open/auto_turf/sand/layer2,
@@ -1062,7 +1062,6 @@
 /turf/open/desert/dirt,
 /area/caperiver/outdoors/scrublands/central)
 "rb" = (
-/obj/effect/landmark/objective_landmark/far,
 /obj/effect/spawner/random/technology_scanner,
 /obj/effect/spawner/random/toolbox{
 	pixel_y = 12
@@ -1294,7 +1293,7 @@
 /area/template_noop)
 "vm" = (
 /obj/structure/flora/grass/desert/lightgrass_2,
-/obj/structure/machinery/defenses/sentry/premade/lowammo/random/dumb,
+/obj/structure/machinery/defenses/sentry/premade/dumb,
 /turf/open/desert/dirt,
 /area/caperiver/outdoors/scrublands/central)
 "vs" = (
@@ -1686,7 +1685,7 @@
 /obj/effect/decal/hybrisa/tiretrack{
 	dir = 1
 	},
-/obj/structure/machinery/defenses/sentry/premade/lowammo/random/dumb,
+/obj/structure/machinery/defenses/sentry/premade/dumb,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/auto_turf/sand/layer2,
 /area/caperiver/outdoors/scrublands/central)
@@ -1728,7 +1727,6 @@
 "BH" = (
 /obj/item/stack/sheet/metal/med_large_stack,
 /obj/effect/spawner/random/tool,
-/obj/effect/landmark/objective_landmark/medium,
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
 	},
@@ -1943,10 +1941,6 @@
 /obj/structure/surface/table/almayer{
 	color = "#EBD9B7"
 	},
-/obj/item/storage/box/clf{
-	pixel_x = 8;
-	pixel_y = 1
-	},
 /turf/open/desert/rock,
 /area/caperiver/outdoors/scrublands/central)
 "Gh" = (
@@ -1986,7 +1980,7 @@
 /turf/open/desert/rock,
 /area/caperiver/outdoors/scrublands/central)
 "GO" = (
-/obj/structure/machinery/defenses/sentry/premade/lowammo/random/dumb{
+/obj/structure/machinery/defenses/sentry/premade/dumb{
 	dir = 1
 	},
 /turf/open/floor/prison/ramptop/north,
@@ -3017,7 +3011,7 @@
 /turf/open/desert/rock,
 /area/caperiver/outdoors/scrublands/central)
 "Zy" = (
-/obj/structure/machinery/defenses/sentry/premade/lowammo/random/dumb{
+/obj/structure/machinery/defenses/sentry/premade/dumb{
 	dir = 4
 	},
 /turf/open/desert/dirt/desert_transition_edge1/northwest,

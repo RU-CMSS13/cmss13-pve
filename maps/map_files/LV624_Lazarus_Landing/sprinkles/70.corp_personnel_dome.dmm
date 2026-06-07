@@ -78,9 +78,7 @@
 /area/lazarus/ground/jungle/west_central_jungle)
 "bL" = (
 /obj/item/trash/cigbutt,
-/turf/open/gm/brown_dirt/random_rocks_alt{
-	dir = 6
-	},
+/turf/open/gm/brown_dirt/random_rocks_alt,
 /area/lazarus/ground/colony/west_tcomms_road)
 "bR" = (
 /obj/structure/flora/jungle/vines/blue/light_1,
@@ -265,9 +263,7 @@
 /area/lazarus/secure_storage)
 "ey" = (
 /obj/structure/flora/bush/ausbushes/var3/sparsegrass,
-/turf/open/gm/brown_dirt/random_rocks_alt{
-	dir = 6
-	},
+/turf/open/gm/brown_dirt/random_rocks_alt,
 /area/lazarus/ground/jungle/west_central_jungle)
 "eJ" = (
 /obj/item/weapon/gun/rifle/m41aMK1,
@@ -330,9 +326,7 @@
 	pixel_x = 4;
 	pixel_y = -24
 	},
-/turf/open/gm/brown_dirt/random_rocks_alt{
-	dir = 6
-	},
+/turf/open/gm/brown_dirt/random_rocks_alt,
 /area/lazarus/landing_zones/lz2)
 "fW" = (
 /obj/effect/decal/hybrisa/dirt,
@@ -385,9 +379,7 @@
 /area/lazarus/ground/colony/west_tcomms_road)
 "gE" = (
 /obj/item/trash/cigbutt,
-/turf/open/gm/brown_dirt/random_rocks_alt{
-	dir = 6
-	},
+/turf/open/gm/brown_dirt/random_rocks_alt,
 /area/lazarus/landing_zones/lz2)
 "gO" = (
 /obj/structure/pipes/standard/simple/hidden/cyan{
@@ -659,9 +651,7 @@
 /area/lazarus/secure_storage)
 "nW" = (
 /obj/structure/cargo_container/hybrisa/containersextended/whitewyright,
-/turf/open/gm/brown_dirt/random_rocks_alt{
-	dir = 6
-	},
+/turf/open/gm/brown_dirt/random_rocks_alt,
 /area/lazarus/ground/colony/west_tcomms_road)
 "od" = (
 /obj/effect/decal/hybrisa/dirt,
@@ -1059,9 +1049,7 @@
 /turf/open/auto_turf/lv_grass/layer1,
 /area/lazarus/ground/jungle/south_west_jungle)
 "ur" = (
-/turf/open/gm/brown_dirt/random_rocks_alt{
-	dir = 6
-	},
+/turf/open/gm/brown_dirt/random_rocks_alt,
 /area/lazarus/ground/colony/west_tcomms_road)
 "uu" = (
 /turf/open/auto_turf/lv_sand/layer0,
@@ -1393,9 +1381,7 @@
 /area/lazarus/ground/colony/west_tcomms_road)
 "Bc" = (
 /obj/effect/decal/ammo_casing,
-/turf/open/gm/brown_dirt/random_rocks_alt{
-	dir = 6
-	},
+/turf/open/gm/brown_dirt/random_rocks_alt,
 /area/lazarus/ground/colony/west_tcomms_road)
 "Bf" = (
 /obj/structure/machinery/door/poddoor/hybrisa/secure_red_door/open{
@@ -1436,9 +1422,6 @@
 	color = "#aaaab5"
 	},
 /obj/item/weapon/gun/shotgun/pump,
-/obj/effect/landmark/objective_landmark/close,
-/obj/effect/landmark/objective_landmark/far,
-/obj/effect/landmark/objective_landmark/medium,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/prison/floor_plate,
 /area/lazarus/secure_storage)
@@ -1707,7 +1690,6 @@
 /obj/structure/surface/table{
 	color = "#8B7B5B"
 	},
-/obj/effect/landmark/objective_landmark/medium,
 /obj/effect/decal/hybrisa/dirt,
 /obj/item/ammo_box/magazine/misc/mre/emergency{
 	pixel_x = -7;
@@ -1913,7 +1895,6 @@
 /obj/structure/surface/table{
 	color = "#8B7B5B"
 	},
-/obj/effect/landmark/objective_landmark/medium,
 /obj/item/prop{
 	desc = "An issue of The Pioneer's Standard, the newspaper circulating in UA-controlled space.";
 	icon = 'icons/obj/items/paper.dmi';
@@ -2036,7 +2017,7 @@
 	pixel_y = -16
 	},
 /obj/effect/decal/hybrisa/dirt,
-/obj/item/storage/belt/gun/m4a3/wy/mod88_near_empty{
+/obj/item/storage/belt/gun/m4a3/wy/vp70{
 	pixel_x = -8;
 	pixel_y = 12
 	},
@@ -2163,7 +2144,6 @@
 /area/lazarus/ground/jungle/south_west_jungle)
 "Qe" = (
 /obj/structure/closet/crate/trashcart/alt,
-/obj/effect/landmark/objective_landmark/close,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /obj/structure/pipes/standard/simple/hidden/cyan{
 	dir = 5
@@ -2293,9 +2273,7 @@
 /turf/open/floor/prison/cell_stripe/north,
 /area/lazarus/secure_storage)
 "St" = (
-/obj/structure/flora/grass/tallgrass/jungle_alt_2/corner{
-	dir = 3
-	},
+/obj/structure/flora/grass/tallgrass/jungle_alt_2/corner,
 /turf/open/auto_turf/lv_grass/layer0,
 /area/lazarus/ground/jungle/south_west_jungle)
 "Sv" = (
@@ -2498,9 +2476,7 @@
 /area/lazarus/secure_storage)
 "WU" = (
 /obj/structure/largecrate/random/barrel/blue,
-/turf/open/gm/brown_dirt/random_rocks_alt{
-	dir = 6
-	},
+/turf/open/gm/brown_dirt/random_rocks_alt,
 /area/lazarus/ground/colony/west_tcomms_road)
 "WW" = (
 /obj/structure/disposalpipe/segment,
@@ -2518,9 +2494,7 @@
 /turf/template_noop,
 /area/template_noop)
 "Xe" = (
-/turf/open/gm/brown_dirt/random_rocks_alt{
-	dir = 6
-	},
+/turf/open/gm/brown_dirt/random_rocks_alt,
 /area/lazarus/ground/jungle/south_central_jungle)
 "Xi" = (
 /obj/structure/disposalpipe/segment{
@@ -2534,7 +2508,6 @@
 /obj/structure/machinery/camera/autoname{
 	dir = 1
 	},
-/obj/effect/landmark/objective_landmark/medium,
 /obj/item/reagent_container/food/drinks/coffeecup/wy{
 	pixel_x = -7;
 	pixel_y = 10
@@ -2589,8 +2562,6 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "test_square_red"
 	},
-/obj/effect/landmark/objective_landmark/medium,
-/obj/effect/landmark/objective_landmark/close,
 /obj/item/storage/belt/marine/wy,
 /turf/open/floor/prison/floor_plate,
 /area/lazarus/secure_storage)
@@ -2608,9 +2579,7 @@
 	},
 /obj/structure/machinery/light/small/blue,
 /obj/item/trash/cigbutt,
-/turf/open/gm/brown_dirt/random_rocks_alt{
-	dir = 6
-	},
+/turf/open/gm/brown_dirt/random_rocks_alt,
 /area/lazarus/secure_storage)
 "Yp" = (
 /obj/structure/platform/metal/strata/alt/north,
@@ -2641,9 +2610,7 @@
 /area/strata/interior/out_of_bounds)
 "YR" = (
 /obj/item/tool/warning_cone,
-/turf/open/gm/brown_dirt/random_rocks_alt{
-	dir = 6
-	},
+/turf/open/gm/brown_dirt/random_rocks_alt,
 /area/lazarus/landing_zones/lz2)
 "Zb" = (
 /obj/structure/flora/bush/ausbushes/var3/sunnybush,

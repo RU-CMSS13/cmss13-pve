@@ -6,7 +6,6 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lazarus/armory)
 "e" = (
-/obj/effect/landmark/objective_landmark/medium,
 /obj/item/reagent_container/food/snacks/cheesewedge/verymature{
 	pixel_y = 9;
 	pixel_x = 5

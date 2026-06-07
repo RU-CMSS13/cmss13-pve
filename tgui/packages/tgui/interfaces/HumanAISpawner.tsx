@@ -17,6 +17,7 @@ type AIEquipmentPreset = {
   name: string;
   path: string;
   description: string;
+  faction: string;
 };
 
 type BackendContext = {

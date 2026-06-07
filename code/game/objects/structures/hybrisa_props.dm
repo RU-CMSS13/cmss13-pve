@@ -2932,4 +2932,4 @@
 	name = "framed picture"
 	desc = "A silver framed picture of someone wearing a corporate issue deepsea powered hardsuit, the base of the frame has some words inscribed, 'site director'."
 	icon = 'icons/obj/structures/props/wall_decorations/decals.dmi'
-	icon_state = "pictureframe_oil"
+	icon_state = "pictureframe"

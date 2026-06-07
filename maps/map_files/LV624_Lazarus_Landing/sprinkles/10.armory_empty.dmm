@@ -107,7 +107,6 @@
 /turf/open/floor/strata/multi_tiles,
 /area/lazarus/armory)
 "A" = (
-/obj/effect/landmark/objective_landmark/medium,
 /turf/open/floor/prison/platingdmg1,
 /area/lazarus/armory)
 "B" = (
@@ -178,7 +177,6 @@
 	pixel_y = -11
 	},
 /obj/item/shard,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/prison/floor_plate,
 /area/lazarus/main_hall)
 "P" = (

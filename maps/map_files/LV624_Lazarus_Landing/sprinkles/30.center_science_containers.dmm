@@ -59,9 +59,7 @@
 	pixel_y = 9;
 	pixel_x = -7
 	},
-/turf/open/gm/brown_dirt/random_rocks_alt{
-	dir = 6
-	},
+/turf/open/gm/brown_dirt/random_rocks_alt,
 /area/template_noop)
 "n" = (
 /obj/effect/landmark/corpsespawner/scientist,
@@ -107,12 +105,7 @@
 /area/template_noop)
 "w" = (
 /obj/structure/closet/crate/science,
-/obj/effect/landmark/objective_landmark/science,
 /obj/item/paper/research_notes/grant/high,
-/obj/item/pamphlet/skill/science,
-/obj/effect/landmark/objective_landmark/science,
-/obj/effect/landmark/objective_landmark/science,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/gm/brown_dirt/random_rocks,
 /area/template_noop)
 "x" = (
@@ -249,9 +242,7 @@
 /turf/open/auto_turf/lv_sand/layer0,
 /area/template_noop)
 "Y" = (
-/turf/open/gm/brown_dirt/random_rocks_alt{
-	dir = 6
-	},
+/turf/open/gm/brown_dirt/random_rocks_alt,
 /area/template_noop)
 "Z" = (
 /obj/structure/machinery/door/airlock/hybrisa/medical/autoname{

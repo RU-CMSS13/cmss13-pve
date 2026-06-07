@@ -2,7 +2,7 @@
 	name = FACTION_UPP
 	languages = list(LANGUAGE_RUSSIAN)
 	faction = FACTION_UPP
-	idtype = /obj/item/card/id/dogtag
+	idtype = /obj/item/card/id/dogtag/upp
 	origin_override = ORIGIN_UPP
 
 /datum/equipment_preset/upp/load_name(mob/living/carbon/human/new_human, randomise)
@@ -1262,7 +1262,7 @@
 
 /datum/equipment_preset/upp/officer/naval
 	name = "UPP Lieutenant (Naval Infantry)"
-	idtype = /obj/item/card/id/dogtag
+	idtype = /obj/item/card/id/dogtag/upp
 
 /datum/equipment_preset/upp/officer/naval/load_gear(mob/living/carbon/human/new_human)
 
@@ -1332,7 +1332,7 @@
 	rank = JOB_UPP_COMBAT_SYNTH
 	paygrades = list(PAY_SHORT_SYN = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_SECURITY, ACCESS_UPP_ARMORY, ACCESS_UPP_FLIGHT, ACCESS_UPP_SQUAD_ONE, ACCESS_UPP_SQUAD_TWO, ACCESS_UPP_LEADERSHIP, ACCESS_UPP_SENIOR_LEAD, ACCESS_UPP_MEDPREP, ACCESS_UPP_TLPREP)
-	idtype = /obj/item/card/id/dogtag
+	idtype = /obj/item/card/id/dogtag/upp
 
 /datum/equipment_preset/upp/synth/commando/load_name(mob/living/carbon/human/new_human, randomise)
 	new_human.gender = pick(60;MALE,40;FEMALE)

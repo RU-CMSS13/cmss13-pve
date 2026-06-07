@@ -53288,7 +53288,7 @@
 /turf/open/floor/plating/plating_catwalk/aicore/white,
 /area/lv759/indoors/colonial_marshals/prisoners_recreation_area)
 "hnu" = (
-/obj/item/storage/backpack/commando{
+/obj/item/storage/backpack/pmc/backpack/commando/apesuit{
 	layer = 5
 	},
 /obj/structure/closet/crate/secure/weyland{
@@ -109353,7 +109353,7 @@
 	pixel_x = -4
 	},
 /obj/structure/machinery/light/small,
-/obj/item/clothing/head/beret/royal_marine{
+/obj/item/clothing/head/cmcap/royal_marine{
 	pixel_x = 8
 	},
 /turf/open/floor/wood,
