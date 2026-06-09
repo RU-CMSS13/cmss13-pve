@@ -57,8 +57,6 @@ GLOBAL_LIST_INIT(admin_verbs_default, list(
 	/client/proc/rejuvenate_all_xenos_in_view,
 	/client/proc/toggle_frozen_in_view,
 	/client/proc/toggle_unfrozen_in_view,
-	/client/proc/toggle_frozen_faction,
-	/client/proc/toggle_unfrozen_faction,
 	/datum/admins/proc/togglesleep,
 	/datum/admins/proc/sleepall,
 	/datum/admins/proc/wakeall,
