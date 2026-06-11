@@ -64,6 +64,9 @@
 /turf/open/floor/strata/blue4/north
 	dir = NORTH
 
+/turf/open/floor/strata/blue4/east
+	dir = EAST
+
 /turf/open/floor/strata/red3
 	icon_state = "red3"
 
@@ -93,6 +96,9 @@
 
 /turf/open/floor/strata/blue3/east
 	dir = EAST
+
+/turf/open/floor/strata/blue3/southwest
+	dir = SOUTHWEST
 
 ////strata - cyan////
 

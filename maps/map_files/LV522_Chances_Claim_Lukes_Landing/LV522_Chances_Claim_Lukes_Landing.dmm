@@ -2295,10 +2295,6 @@
 	},
 /turf/open/floor/prison/floor_marked,
 /area/lv522/indoors/a_block/security)
-"afj" = (
-/obj/structure/window/framed/strata/hull,
-/turf/closed/wall/strata_outpost/reinforced/hull,
-/area/lv522/indoors/a_block/medical)
 "afk" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/strata_outpost/reinforced/hull,
@@ -28704,20 +28700,6 @@
 "dFz" = (
 /turf/open/floor/corsat/marked,
 /area/lv522/atmos/sewer)
-"dFG" = (
-/obj/effect/step_trigger/teleporter_vector/damage{
-	vector_x = 192
-	},
-/obj/structure/prop/invuln/darkness,
-/obj/structure/prop/invuln/prop_fog/smoke,
-/obj/structure/platform/kutjevo/smooth{
-	dir = 1
-	},
-/obj/structure/platform/kutjevo/smooth{
-	dir = 1
-	},
-/turf/open/void,
-/area/lv522/atmos/east_reactor)
 "dFO" = (
 /obj/structure/pipes/standard/manifold/fourway/hidden/green,
 /turf/open/floor/prison/cell_stripe/north,
@@ -190354,7 +190336,7 @@ nTl
 nTl
 iNl
 wth
-dFG
+xJQ
 toR
 toR
 ych
@@ -534129,7 +534111,7 @@ qaT
 qaT
 lHN
 alC
-afj
+alu
 afc
 aeQ
 alu

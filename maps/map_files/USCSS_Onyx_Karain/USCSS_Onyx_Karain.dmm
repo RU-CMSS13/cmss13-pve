@@ -8096,7 +8096,7 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
 "avr" = (
-/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc/apesuit,
+/obj/item/clothing/suit/marine/veteran/pmc/smartgun/commando,
 /turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
 "avs" = (
@@ -8844,7 +8844,7 @@
 /area/firefly/cafeteria)
 "axv" = (
 /obj/structure/closet/secure_closet/marine_personal/pmc/platoon_leader,
-/obj/item/clothing/head/cmcap/pmc
+/obj/item/clothing/head/cmcap/pmc,
 /obj/item/clothing/under/marine/veteran/pmc/leader,
 /obj/item/clothing/shoes/veteran/pmc/knife,
 /obj/item/device/radio/headset/distress/pmc/platoon,

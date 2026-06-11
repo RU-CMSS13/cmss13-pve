@@ -669,6 +669,11 @@
 	name = "\improper UL2c cap"
 	icon_state = "upp_cap_civi"
 
+/obj/item/clothing/head/cmcap/upp/civi/plant_worker
+	name = "white worker cap"
+	desc = "A simple white fabric cap, commonly worn by various UPP workers to keep hair contained and maintain cleanliness. Lightweight and practical, but not very durable."
+	icon_state = "plant_work_cap"
+
 /obj/item/clothing/head/cmcap/upp/boonie
 	name = "\improper UL5 hat"
 	desc = "Standard issue soft brimmed hat for Territorial Guard units stationed in areas with extreme heat."
@@ -758,6 +763,13 @@
 	desc = "A finely crafted beret worn by members of the UPP Space Operations Forces. It signifies service in the void, from deep-space missions to planetary operations, and is a mark of discipline and camaraderie among its wearers."
 	icon_state = "sof_beret"
 	item_state = "sof_beret"
+
+/obj/item/clothing/head/helmet/marine/veteran/upp/firefighter
+	name = "T-20 firefighter helmet"
+	desc = "A reinforced, heat-resistant helmet issued to UPP emergency responders. Its durable composite shell provides protection against falling debris and extreme heat, while the attached fire-resistant shroud shields the wearer’s neck and shoulders. A red star is emblazoned on the front, marking its service within the Union."
+	icon_state = "firefighter"
+	flags_heat_protection = BODY_FLAG_HEAD
+	max_heat_protection_temperature = FIRE_HELMET_MAX_HEAT_PROT
 
 //==========================//PROTECTIVE\\===============================\\
 //=======================================================================\\
@@ -1020,10 +1032,6 @@
 		/obj/item/prop/helmetgarb/helmet_nvg/cosmetic = "icon_state",
 		/obj/item/prop/helmetgarb/helmet_nvg/marsoc = "icon_state",
 	)
-
-/obj/item/clothing/head/beret/royal_marine/team_leader
-	icon_state = "rmc_beret_tl"
-	item_state = "rmc_beret_tl"
 
 /obj/item/clothing/head/cavalry
 	name = "\improper US cavalry hat"
