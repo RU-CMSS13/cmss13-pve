@@ -281,36 +281,6 @@
 	walltype = WALL_SULACO
 
 
-
-/turf/closed/wall/upp_ship/reinforced
-	name = "reinforced hull"
-	damage_cap = HEALTH_WALL_REINFORCED
-	icon_state = "uppwall_reinforced"
-
-/turf/closed/wall/upp_ship/reinforced/outer
-	name = "ultra reinforced hull"
-	desc = "An extremely reinforced metal wall used to isolate potentially dangerous areas."
-	icon_state = "uppwall_hull"
-
-/turf/closed/wall/upp_ship/grey
-	damage = 0
-	damage_cap = HEALTH_WALL //Wall will break down to girders if damage reaches this point
-	opacity = TRUE
-	density = TRUE
-	walltype = WALL_UPP_SHIP
-	icon = 'icons/turf/walls/upp_walls_grey.dmi'
-	icon_state = "uppwall_interior"
-
-/turf/closed/wall/upp_ship/grey/reinforced
-	name = "reinforced hull"
-	damage_cap = HEALTH_WALL_REINFORCED
-	icon_state = "uppwall_reinforced"
-
-/turf/closed/wall/upp_ship/grey/reinforced/outer
-	name = "ultra reinforced hull"
-	desc = "An extremely reinforced metal wall used to isolate potentially dangerous areas."
-	icon_state = "uppwall_hull"
-
 // LV colony walls
 
 /turf/closed/wall/lv_outpost

@@ -2,10 +2,6 @@
 "a" = (
 /turf/closed/wall/lv_outpost/reinforced,
 /area/lazarus/armory)
-"d" = (
-/obj/effect/landmark/objective_landmark/medium,
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/lazarus/armory)
 "j" = (
 /turf/open/floor/strata/multi_tiles,
 /area/lazarus/armory)
@@ -71,11 +67,11 @@
 	},
 /obj/item/ammo_magazine/smg/m39/extended,
 /obj/item/ammo_magazine/smg/m39/extended,
-/obj/item/weapon/gun/smg/m39/corporate/no_lock,
 /obj/structure/sign/poster/wylogo{
 	pixel_y = 32;
 	pixel_x = 1
 	},
+/obj/item/weapon/gun/smg/m39/corporate/no_lock,
 /turf/open/floor/strata/multi_tiles,
 /area/lazarus/armory)
 "O" = (
@@ -165,7 +161,7 @@ a
 (4,1,1) = {"
 a
 O
-d
+C
 C
 a
 "}

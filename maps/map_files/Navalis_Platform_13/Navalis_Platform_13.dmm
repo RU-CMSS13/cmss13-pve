@@ -41383,7 +41383,7 @@
 "nKn" = (
 /obj/item/prop{
 	desc = "A human incinerator. Works well on barbecue nights. This one is broken.";
-	icon = 'icons/obj/structures/morgue.dmi';
+	icon = 'icons/obj/structures/props/stationobjs.dmi';
 	icon_state = "crema2";
 	name = "broken crematorium";
 	pixel_y = 1;

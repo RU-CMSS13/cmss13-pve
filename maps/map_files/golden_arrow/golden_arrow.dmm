@@ -1884,6 +1884,12 @@
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/hangar)
+"aeb" = (
+/obj/effect/landmark/nightmare{
+	insert_tag = "briefing"
+	},
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/prep_hallway)
 "aec" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -1995,7 +2001,6 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "aep" = (
-/obj/effect/landmark/start/pilot/dropship_pilot/ai,
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
 /turf/open/floor/plating/plating_catwalk,
@@ -30429,7 +30434,7 @@ aXH
 abz
 ayo
 awL
-auh
+aeb
 auh
 auh
 auh

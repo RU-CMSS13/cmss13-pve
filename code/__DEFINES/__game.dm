@@ -29,6 +29,7 @@
 #define MAP_WHISKEY_OUTPOST "Whiskey Outpost" // Unused
 #define MAP_DESERT_DAM "Trijent Dam"  // Highpop only
 #define MAP_SOROKYNE_STRATA "Sorokyne Strata"
+#define MAP_SOROKYNE_STRATA_LEGACY "Sorokyne Strata Legacy"
 #define MAP_CORSAT "CORSAT" // Highpop only
 #define MAP_KUTJEVO "Kutjevo Refinery"
 #define MAP_ICE_COLONY_V1 "Ice Colony Classic"
@@ -49,7 +50,6 @@
 #define MAP_DERELICT_ALMAYER "Derelict Almayer"
 #define MAP_LV522_LUKES_LANDING "LV-522 Lukes Landing"
 #define MAP_LV522_CHANCES_CLAIM_LUKES_LANDING "LV-522 Chances Claim & Lukes Landing"
-#define MAP_TAIPEI_STATION "Taipei Station"
 #define MAP_LV295_BLACKSITE "LV295 Blacksite"
 #define MAP_SI391_SEKHMET "SI-391 Sekhmet Swamp"
 #define MAP_BMG290_OTOGI_EGRESS_POINT "BMG-290 Otogi Egress Point" //mapjam
@@ -62,9 +62,6 @@
 #define MAP_BOSENMORI_BASHO "Bosenmori Basho"
 #define MAP_REDEMPTION_VALLEY "Redemption Valley" //valley with a military outpost and agricultural hamlet
 #define MAP_BINHAI_SUPPLY_STATION "Binhai Supply Station" //UPP asteroid base
-#define MAP_LV_671 "LV-671 Ark Borealis"
-#define MAP_OIL_DEPOT "Oil Depot"
-#define MAP_DERELICT_ALMAYER_INFESTED "Infested Almayer"
 
 #define MAP_NAVALIS "Navalis Platform 13"//multiz version
 #define MAP_NAVALIS_SINGLE "Navalis Platform 13 (singlez)" //singlez version
@@ -419,8 +416,6 @@
 #define WALL_AICORE "aiwall"
 #define WALL_UPP_GREEN "uppwall_interior"
 #define WALL_UPP_GREY "uppwall_interior"
-#define WALL_UPP_SHIP "uppwall_interior"
-#define WALL_UPP_BASE "uppwall"
 #define WALL_LV_BASE "lvwall"
 #define WALL_ANCIENT_BASE "ancient_stone"
 

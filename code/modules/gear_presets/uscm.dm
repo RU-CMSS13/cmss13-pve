@@ -410,10 +410,6 @@
 	name = parent_type::name + " (E6 Rank)"
 	paygrades = list(PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_0)
 
-/datum/equipment_preset/uscm/leader/master_sergeant
-	name = parent_type::name + " (E8 Rank)"
-	paygrades = list(PAY_SHORT_ME8 = JOB_PLAYTIME_TIER_0)
-
 /datum/equipment_preset/uscm/leader/upp
 	name = "UPP Platoon Sergeant"
 	assignment = JOB_SQUAD_LEADER_UPP

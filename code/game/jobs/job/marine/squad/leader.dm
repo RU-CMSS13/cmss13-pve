@@ -13,17 +13,15 @@
 	supervisors = "the acting commanding officer"
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
 	gear_preset = /datum/equipment_preset/uscm/leader
-	gear_preset_secondary = /datum/equipment_preset/uscm/leader/master_sergeant
-	gear_preset_tertiary =  /datum/equipment_preset/uscm/leader/staff_sergeant
+	gear_preset_secondary = /datum/equipment_preset/uscm/leader/staff_sergeant
 	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>You are responsible for the men and women of your entire section.</a> Make sure they are on task, working together, and communicating. You are also in charge of communicating with command and letting them know about the situation first hand. Keep out of harm's way.<br><b>You remember that you've stored your personal gear and uniform are located in the dorm or locker rooms.</b>"
 
-	job_options = list(SSGT_VARIANT = "SSGT", GYSGT_VARIANT = "GYSGT", MSSGT_VARIANT = "MSSGT")
+	job_options = list(SSGT_VARIANT = "SSGT", GYSGT_VARIANT = "GYSGT")
 
 /datum/job/marine/leader/handle_job_options(option)
-	gear_preset = initial(gear_preset)
-	if(option == SSGT_VARIANT)
-		gear_preset = gear_preset_tertiary
-	if(option == MSSGT_VARIANT)
+	if(option != SSGT_VARIANT)
+		gear_preset = initial(gear_preset)
+	else
 		gear_preset = gear_preset_secondary
 
 /datum/job/marine/leader/whiskey
@@ -134,5 +132,3 @@ OverrideTimelock(/datum/job/marine/leader, list(
 #undef SGTMJR_VARIANT
 #undef SSGT_VARIANT
 #undef SRSGT_VARIANT
-#undef CAPTAIN_VARIANT
-#undef MAJOR_VARIANT
