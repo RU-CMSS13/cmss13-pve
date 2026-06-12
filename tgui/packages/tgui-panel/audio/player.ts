@@ -12,6 +12,7 @@ type AudioOptions = {
   pitch?: number;
   start?: number;
   end?: number;
+  loop?: boolean;
 };
 
 export class AudioPlayer {
@@ -41,12 +42,75 @@ export class AudioPlayer {
     this.options = options;
 
     const audio = (this.element = new Audio(url));
-    audio.volume = this.volume;
+    audio.volume = this.volume ?? 1;
     audio.playbackRate = this.options.pitch || 1;
 
     logger.log('playing', url, options);
 
+    const startTime = Math.max(0, this.options.start || 0);
+    const endTime =
+      typeof this.options.end === 'number' && this.options.end > startTime
+        ? this.options.end
+        : null;
+
+    const restartPlayback = () => {
+      if (this.element !== audio) {
+        return;
+      }
+
+      try {
+        audio.currentTime = startTime;
+      } catch (error) {
+        logger.log('failed to seek during loop', error);
+      }
+
+      audio.play().catch((error) => logger.log('playback error', error));
+    };
+
+    const startPlayback = () => {
+      if (this.element !== audio) {
+        return;
+      }
+
+      audio.play().catch((error) => logger.log('playback error', error));
+      this.onPlaySubscribers.forEach((subscriber) => subscriber());
+    };
+
+    const seekToStart = () => {
+      if (this.element !== audio || startTime <= 0) {
+        return;
+      }
+
+      try {
+        const duration = Number.isFinite(audio.duration)
+          ? audio.duration
+          : null;
+        audio.currentTime =
+          duration !== null
+            ? Math.min(startTime, Math.max(duration - 0.1, 0))
+            : startTime;
+      } catch (error) {
+        logger.log('failed to seek on metadata', error);
+      }
+    };
+
+    audio.addEventListener('loadedmetadata', () => {
+      if (this.element !== audio) {
+        return;
+      }
+      seekToStart();
+    });
+
     audio.addEventListener('ended', () => {
+      if (this.element !== audio) {
+        return;
+      }
+
+      if (this.options.loop) {
+        restartPlayback();
+        return;
+      }
+
       logger.log('ended');
       this.stop();
     });
@@ -55,21 +119,40 @@ export class AudioPlayer {
       logger.log('playback error', error);
     });
 
-    if (this.options.end) {
+    if (endTime !== null) {
       audio.addEventListener('timeupdate', () => {
-        if (
-          this.options.end &&
-          this.options.end > 0 &&
-          audio.currentTime >= this.options.end
-        ) {
+        if (this.element !== audio || audio.currentTime < endTime) {
+          return;
+        }
+
+        if (this.options.loop) {
+          restartPlayback();
+        } else {
           this.stop();
         }
       });
     }
 
-    audio.play().catch((error) => logger.log('playback error', error));
+    if (startTime > 0 && audio.readyState < HTMLMediaElement.HAVE_METADATA) {
+      const startAfterMetadata = () => {
+        audio.removeEventListener('loadedmetadata', startAfterMetadata);
+        if (this.element !== audio) {
+          return;
+        }
+        seekToStart();
+        startPlayback();
+      };
 
-    this.onPlaySubscribers.forEach((subscriber) => subscriber());
+      audio.addEventListener('loadedmetadata', startAfterMetadata);
+      audio.load();
+      return;
+    }
+
+    if (startTime > 0) {
+      seekToStart();
+    }
+
+    startPlayback();
   }
 
   stop() {

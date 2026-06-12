@@ -75,6 +75,7 @@
 #define TRAIT_SOURCE_UNIT_TESTS "unit_tests"
 
 // Unit tests
+#include "admin_music.dm" // SS220 EDIT: cover the modular Admin Music Panel preset parsing, validation, and merge/save helpers
 #include "autowiki.dm"
 #include "check_runtimes.dm"
 #include "create_and_destroy.dm"

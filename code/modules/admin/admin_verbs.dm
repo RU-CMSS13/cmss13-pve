@@ -127,6 +127,7 @@ GLOBAL_LIST_INIT(admin_verbs_ban, list(
 GLOBAL_LIST_INIT(admin_verbs_sounds, list(
 	/client/proc/play_admin_sound,
 	/client/proc/stop_admin_sound,
+	/client/proc/open_admin_music_panel, // SS220 EDIT: add the modular Admin Music Panel entrypoint under R_SOUNDS
 	/client/proc/cmd_admin_vox_panel
 ))
 

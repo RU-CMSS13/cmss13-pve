@@ -1,3 +1,4 @@
 #include "_admin.dm"
 
+#include "code/admin_music/_admin_music.dm"
 #include "code/stickyban_overrides.dm"
