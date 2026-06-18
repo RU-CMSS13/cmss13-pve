@@ -862,6 +862,11 @@
 	dir = NORTHEAST
 // SS220 EDIT - END
 
+// SS220 EDIT - START: Jungle Delta maplint compat
+/turf/open/gm/coast/southwest
+	dir = SOUTHWEST
+// SS220 EDIT - END
+
 /turf/open/gm/coast/south_east
 	dir = 9
 

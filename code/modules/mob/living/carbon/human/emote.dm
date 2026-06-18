@@ -379,11 +379,19 @@
 		if(user.gender == MALE)
 			if(user.faction == FACTION_UPP)
 				return get_sfx("male_upp_warcry")
+			// SS220 EDIT - START: TWE warcry sounds
+			if(user.faction == FACTION_TWE)
+				return get_sfx("male_twe_warcry")
+			// SS220 EDIT - END
 			else
 				return get_sfx("male_warcry")
 		else
 			if(user.faction == FACTION_UPP)
 				return get_sfx("female_upp_warcry")
+			// SS220 EDIT - START: TWE warcry sounds
+			if(user.faction == FACTION_TWE)
+				return get_sfx("female_twe_warcry")
+			// SS220 EDIT - END
 			else
 				return get_sfx("female_warcry")
 	if(issangheili(user)) // SS220 EDIT: HALO warcry route

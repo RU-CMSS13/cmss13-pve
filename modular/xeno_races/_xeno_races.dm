@@ -99,3 +99,39 @@
 		pathogen_hive.hive_structure_types[PATHOGEN_STRUCTURE_CORE] = /datum/construction_template/xenomorph/pathogen_core
 
 	return
+
+/proc/xeno_races_get_embryo_registry()
+	return list(
+		"standard" = list(
+			"label" = "Standard",
+			"embryo_type" = /obj/item/alien_embryo,
+			"xeno_type" = /mob/living/carbon/xenomorph/larva,
+		),
+		"bodyburster" = list(
+			"label" = "Bodyburster",
+			"embryo_type" = /obj/item/alien_embryo/bodyburster,
+			"xeno_type" = /mob/living/carbon/xenomorph/bodyburster,
+		),
+	)
+
+/proc/xeno_races_get_embryo_type(token)
+	var/list/registry = xeno_races_get_embryo_registry()
+	var/list/entry = registry[token]
+	if(entry)
+		return entry["embryo_type"]
+	return registry["standard"]["embryo_type"]
+
+/proc/xeno_races_get_embryo_xeno_type(token)
+	var/list/registry = xeno_races_get_embryo_registry()
+	var/list/entry = registry[token]
+	if(entry)
+		return entry["xeno_type"]
+	return registry["standard"]["xeno_type"]
+
+/proc/xeno_races_get_embryo_options()
+	var/list/registry = xeno_races_get_embryo_registry()
+	var/list/options = list()
+	for(var/token in registry)
+		var/list/entry = registry[token]
+		options += list(list(displayText = entry["label"], value = token))
+	return options

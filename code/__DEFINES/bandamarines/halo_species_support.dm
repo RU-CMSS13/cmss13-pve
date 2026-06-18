@@ -1,4 +1,10 @@
 // Shared HALO species, skill, and signal contracts consumed by code/** glue and modular/halo/**.
+// SS220 EDIT: HALO hero species defines
+#define SPECIES_SANGHEILI_HEROIC "Sangheili Heroic"
+#define SPECIES_SANGHEILI_LEGENDARY "Sangheili Legendary"
+#define SPECIES_SANGHEILI_MYTHIC "Sangheili Mythic"
+#define SPECIES_UNGGOY_HEROIC "Unggoy Heroic"
+// SS220 EDIT END
 #define SPECIES_RUUHTIAN "Ruuhtian"
 #define LANGUAGE_RUUHTIAN "Ruuhtian"
 #define BLOOD_COLOR_JACKAL "#942270"

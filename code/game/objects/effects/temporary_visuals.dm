@@ -183,7 +183,7 @@
 	. = ..()
 	particles = new /particles/shuttle_dust_hover
 	animate(src, alpha = 255, time = 1 SECONDS)
-	addtimer(CALLBACK(src, PROC_REF(fade_away)), 4 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(fade_away)), duration - 1 SECONDS) // SS220 EDIT: use duration-based fade for HALO hover variants
 
 /obj/effect/temp_visual/dropship_hover/proc/fade_away()
 	animate(src, alpha = 0, time = 1 SECONDS)

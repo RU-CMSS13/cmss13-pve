@@ -2,9 +2,6 @@
 
 #define XENO_HIVE_PATHOGEN "xeno_hive_pathogen"
 
-#define XENO_CASTE_BODYBURSTER "Bodyburster"
-#define XENO_CASTE_LANKY "Lanky"
-
 #define PATHOGEN_CREATURE_BURSTER "Bloodburster"
 #define PATHOGEN_CREATURE_SPRINTER "Sprinter"
 #define PATHOGEN_CREATURE_POPPER "Popper"
@@ -22,21 +19,13 @@
 #define POPPER_COCOON_GROWN 1
 #define POPPER_COCOON_HATCHED 2
 
-#define FLAG_EMBRYO_HYBRID 2
-#define FLAG_EMBRYO_PATHOGEN 4
-
 #define LANGUAGE_PATHOGEN "Pathogen"
 #define LANGUAGE_PATHOGEN_MIND "Pathogen Mind"
 
 #define TRAIT_PATHOGEN_OVERMIND "t_pathogen_overmind"
 #define OVERMIND_TRAIT "pathogen_overmind"
 
-#define BODY_BURSTING (1<<8)
 #define BLOOD_BURSTING BODY_BURSTING
-
-#define XENO_SPEED_LANKY 0.1
-#define XENO_SPEED_RAPTOR -0.9
-#define XENO_ARMOR_TIER_9 60
 
 #define XENO_PLASMA_TIER_7 700 * XENO_UNIVERSAL_PLASMAMULT
 #define XENO_PLASMA_TIER_9 900 * XENO_UNIVERSAL_PLASMAMULT

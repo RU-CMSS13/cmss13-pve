@@ -52,6 +52,11 @@ OverrideTimelock(/datum/job/marine/leader, list(
 	icon_state = "leader_spawn_delta"
 	squad = SQUAD_MARINE_4
 
+// SS220 EDIT - START: PR #1283 Movie-ish Sections — movie squad leader landmarks
+/obj/effect/landmark/start/marine/leader/movie
+	squad = SQUAD_MARINE_MOVIE
+// SS220 EDIT - END
+
 /datum/job/marine/leader/ai
 	total_positions = 1
 	spawn_positions = 1
@@ -85,6 +90,11 @@ OverrideTimelock(/datum/job/marine/leader, list(
 	name = JOB_SQUAD_LEADER_UPP
 	squad = SQUAD_UPP
 	job = /datum/job/marine/leader/ai/upp
+
+// SS220 EDIT - START: PR #1283 Movie-ish Sections — UPP movie squad leader landmark
+/obj/effect/landmark/start/marine/leader/upp/movie
+	squad = SQUAD_UPP_MOVIE
+// SS220 EDIT - END
 
 /datum/job/marine/leader/ai/upp/forecon
 	title = JOB_SQUAD_LEADER_FORECON_UPP

@@ -13,6 +13,7 @@
 #define issangheili(A) (ishuman(A) && istype(A?:species, /datum/species/sangheili)) // SS220 EDIT: HALO species helper
 #define isunggoy(A) (ishuman(A) && istype(A?:species, /datum/species/unggoy)) // SS220 EDIT: HALO species helper
 #define isruuhtian(A) (ishuman(A) && istype(A?:species, /datum/species/ruuhtian)) // SS220 EDIT: HALO species helper
+#define iscovenant(A)   (isunggoy(A) || issangheili(A) || isruuhtian(A)) // SS220 EDIT: PR #153 HALO covenant typecheck including ruuhtian
 #define isspartan(A) (ishuman(A) && istype(A?:species, /datum/species/spartan)) // SS220 EDIT: HALO species helper
 #define isresearcher(A) (ishuman(A) && A.job == "Researcher")
 #define isSEA(A) (ishuman(A) && A.job == "Senior Enlisted Advisor")

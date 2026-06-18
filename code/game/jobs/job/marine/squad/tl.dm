@@ -47,6 +47,11 @@
 	icon_state = "tl_spawn_delta"
 	squad = SQUAD_MARINE_4
 
+// SS220 EDIT - START: PR #1283 Movie-ish Sections — movie squad TL landmarks
+/obj/effect/landmark/start/marine/tl/movie
+	squad = SQUAD_MARINE_MOVIE
+// SS220 EDIT - END
+
 /datum/job/marine/tl/ai
 	total_positions = 8 // SS220 EDIT
 	spawn_positions = 8 // SS220 EDIT
@@ -79,6 +84,11 @@
 	name = JOB_SQUAD_TEAM_LEADER_UPP
 	squad = SQUAD_UPP
 	job = /datum/job/marine/tl/ai/upp
+
+// SS220 EDIT - START: PR #1283 Movie-ish Sections — UPP movie squad TL landmark
+/obj/effect/landmark/start/marine/tl/upp/movie
+	squad = SQUAD_UPP_MOVIE
+// SS220 EDIT - END
 
 /datum/job/marine/tl/ai/upp/forecon
 	title = JOB_SQUAD_TEAM_LEADER_FORECON_UPP

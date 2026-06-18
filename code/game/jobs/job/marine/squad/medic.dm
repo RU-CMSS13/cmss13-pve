@@ -75,6 +75,11 @@
 	icon_state = "medic_spawn_delta"
 	squad = SQUAD_MARINE_4
 
+// SS220 EDIT - START: PR #1283 Movie-ish Sections — movie squad medic landmarks
+/obj/effect/landmark/start/marine/medic/movie
+	squad = SQUAD_MARINE_MOVIE
+// SS220 EDIT - END
+
 /datum/job/marine/medic/ai
 	total_positions = 1
 	spawn_positions = 1
@@ -123,6 +128,11 @@
 	name = JOB_SQUAD_MEDIC_UPP
 	squad = SQUAD_UPP
 	job = /datum/job/marine/medic/ai/upp
+
+// SS220 EDIT - START: PR #1283 Movie-ish Sections — UPP movie squad medic landmark
+/obj/effect/landmark/start/marine/medic/upp/movie
+	squad = SQUAD_UPP_MOVIE
+// SS220 EDIT - END
 
 /datum/job/marine/medic/ai/upp/forecon
 	title = JOB_SQUAD_MEDIC_FORECON_UPP

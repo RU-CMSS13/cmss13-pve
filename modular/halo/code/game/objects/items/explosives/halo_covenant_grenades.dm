@@ -16,7 +16,7 @@
 	harmful = TRUE
 	icon_state = "plasma"
 	item_state = "plasma"
-	arm_sound = 'sound/weapons/halo/firebomb_throw.ogg'
+	arm_sound = 'modular/halo/sound/weapons/firebomb_throw.ogg'
 	explosion_power = 125
 	explosion_falloff = 20
 	shrapnel_count = 32
@@ -106,10 +106,10 @@
 				return
 
 /datum/looping_sound/plasma_hiss
-	start_sound = list('sound/weapons/halo/firebomb_throw.ogg' = 1)
+	start_sound = list('modular/halo/sound/weapons/firebomb_throw.ogg' = 1)
 	mid_sounds = list(
-		'sound/weapons/halo/firebomb_loop2.ogg' = 1,
-		'sound/weapons/halo/firebomb_loop1.ogg' = 1,
+		'modular/halo/sound/weapons/firebomb_loop2.ogg' = 1,
+		'modular/halo/sound/weapons/firebomb_loop1.ogg' = 1,
 	)
 	mid_length = 1 SECONDS
 

@@ -39,7 +39,7 @@
 /turf/closed/wall/rock_column
 	name = "rock wall"
 	desc = "A set of near-hexagonal rocks."
-	icon = 'icons/turf/walls/new_varadero/nv_rock_wall.dmi'
+	icon = 'modular/halo/icons/turf/walls/new_varadero/nv_rock_wall.dmi'
 	icon_state = "nv_rock"
 	walltype = WALL_BASALT_COLUMN
 	hull = TRUE
@@ -47,7 +47,7 @@
 /turf/closed/wall/rock_column/solid
 	name = "rock wall"
 	desc = "A set of near-hexagonal rocks."
-	icon = 'icons/turf/walls/new_varadero/nv_rock_wall_alt.dmi'
+	icon = 'modular/halo/icons/turf/walls/new_varadero/nv_rock_wall_alt.dmi'
 	icon_state = "nv_rock_alt"
 	walltype = WALL_BASALT_COLUMN_SOLID
 	hull = TRUE
@@ -55,7 +55,7 @@
 /turf/closed/wall/new_varadero
 	name = "foundation wall"
 	desc = "A concrete wall with metal reinforcements."
-	icon = 'icons/turf/walls/new_varadero/new_varadero_wall.dmi'
+	icon = 'modular/halo/icons/turf/walls/new_varadero/new_varadero_wall.dmi'
 	icon_state = "new_varadero"
 	walltype = WALL_FOUNDATION
 
@@ -77,7 +77,7 @@
 	desc = "What's inside here? That's concrete, baby!"
 	icon_state = "concrete"
 	walltype = WALL_CONCRETE
-	icon = 'icons/turf/walls/new_varadero/new_varadero_wall.dmi'
+	icon = 'modular/halo/icons/turf/walls/new_varadero/new_varadero_wall.dmi'
 
 /turf/closed/wall/new_varadero/concrete/reinforced
 	name = "hard concrete wall"

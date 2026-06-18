@@ -1,6 +1,6 @@
 /turf/open/auto_turf/varadero_brown_grass
 	name = "matted grass"
-	icon = 'icons/turf/floors/new_varadero/auto_grass_nv_brown.dmi'
+	icon = 'modular/halo/icons/turf/floors/new_varadero/auto_grass_nv_brown.dmi'
 	icon_state = "grass_0"
 	icon_prefix = "grass"
 	layer_name = list("ground", "lush thick grass", "soaked ground")
@@ -32,7 +32,7 @@
 
 /turf/open/auto_turf/varadero_red_grass
 	name = "matted grass"
-	icon = 'icons/turf/floors/new_varadero/auto_grass_nv_red.dmi'
+	icon = 'modular/halo/icons/turf/floors/new_varadero/auto_grass_nv_red.dmi'
 	icon_state = "grass_0"
 	icon_prefix = "grass"
 	layer_name = list("ground", "thick grass", "soaked ground")
@@ -52,7 +52,7 @@
 
 /turf/open/auto_turf/varadero_white_sand
 	name = "compact sand"
-	icon = 'icons/turf/floors/new_varadero/auto_sand_rock_nv.dmi'
+	icon = 'modular/halo/icons/turf/floors/new_varadero/auto_sand_rock_nv.dmi'
 	icon_state = "white_sand_0"
 	icon_prefix = "white_sand_0"
 	layer_name = list("ground", "compact sand")
@@ -69,7 +69,7 @@
 
 /turf/open/auto_turf/ground_rock_column
 	name = "rocky ground"
-	icon = 'icons/turf/floors/new_varadero/auto_sand_rock_nv.dmi'
+	icon = 'modular/halo/icons/turf/floors/new_varadero/auto_sand_rock_nv.dmi'
 	icon_state = "rock_0"
 	icon_prefix = "rock_0"
 	layer_name = list("ground", "rocky ground")
@@ -86,7 +86,7 @@
 
 /turf/open/auto_turf/varadero_white_sand_alt
 	name = "sand"
-	icon = 'icons/turf/floors/new_varadero/white_auto_sand.dmi'
+	icon = 'modular/halo/icons/turf/floors/new_varadero/white_auto_sand.dmi'
 	icon_state = "sand_0"
 	icon_prefix = "sand_0"
 	layer_name = list("ground", "loose sand", "loose sand")
@@ -109,7 +109,7 @@
 
 /turf/open/auto_turf/varadero_water_transit
 	name = "deep water transition"
-	icon = 'icons/turf/floors/new_varadero/seadeep_auto_turf_stuff.dmi'
+	icon = 'modular/halo/icons/turf/floors/new_varadero/seadeep_auto_turf_stuff.dmi'
 	icon_state = "seadeep_0"
 	icon_prefix = "seadeep_0"
 	layer_name = list("sea water", "deep water transition")

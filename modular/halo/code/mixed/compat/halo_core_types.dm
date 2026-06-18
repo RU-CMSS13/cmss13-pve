@@ -2,6 +2,16 @@
 	attack_verb = list("pummel", "slamm", "punch")
 	damage = 20
 
+// PR #162: Elite Hero unarmed attacks
+/datum/unarmed_attack/punch/sangheili/heroic
+	damage = 30
+
+/datum/unarmed_attack/punch/sangheili/heroic/legendary
+	damage = 35
+
+/datum/unarmed_attack/punch/sangheili/heroic/legendary/mythic
+	damage = 40
+
 /datum/unarmed_attack/punch/unggoy
 	attack_verb = list("pummel", "slamm", "punch")
 	damage = 40

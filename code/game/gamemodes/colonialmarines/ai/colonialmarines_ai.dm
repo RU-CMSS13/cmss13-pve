@@ -129,7 +129,25 @@ GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/j
 		/datum/job/marine/engineer/ai/rmc = JOB_TWE_RMC_ENGI,\
 		/datum/job/marine/engineer/ai/rmcmortar = JOB_TWE_RMC_BREACHER,\
 		/datum/job/marine/specialist/ai/rmc = JOB_TWE_RMC_MARKSMAN,\
-		/datum/job/marine/standard/ai/rmc = JOB_TWE_RMC_RIFLEMAN)))
+		/datum/job/marine/standard/ai/rmc = JOB_TWE_RMC_RIFLEMAN),\
+// SS220 EDIT - START: PR #1283 Movie-ish Sections — movie squad AI job mappings
+		/datum/squad/marine/movie = list(/datum/job/command/bridge/ai = JOB_SO,\
+		/datum/job/marine/leader/ai = JOB_SQUAD_LEADER,\
+		/datum/job/marine/medic/ai = JOB_SQUAD_MEDIC,\
+		/datum/job/marine/tl/ai = JOB_SQUAD_TEAM_LEADER,\
+		/datum/job/marine/smartgunner/ai = JOB_SQUAD_SMARTGUN,\
+		/datum/job/marine/standard/ai = JOB_SQUAD_MARINE,\
+		/datum/job/civilian/liaison = JOB_CORPORATE_LIAISON,\
+		/datum/job/civilian/advisor = JOB_ADVISOR),\
+		/datum/squad/marine/upp/movie = list(/datum/job/command/bridge/ai/mss = JOB_UPP_AGENT,\
+		/datum/job/marine/leader/ai/upp = JOB_SQUAD_LEADER,\
+		/datum/job/marine/medic/ai/upp = JOB_SQUAD_MEDIC,\
+		/datum/job/marine/tl/ai/upp = JOB_SQUAD_TEAM_LEADER,\
+		/datum/job/marine/smartgunner/ai/upp = JOB_SQUAD_SMARTGUN,\
+		/datum/job/marine/standard/ai/upp = JOB_SQUAD_MARINE,\
+		/datum/job/civilian/advisor_upp = JOB_UPP_ADVISOR),\
+// SS220 EDIT - END
+		))
 
 GLOBAL_LIST_INIT(platoon_to_role_list, list(/datum/squad/marine/alpha = ROLES_AI,\
 												/datum/squad/marine/upp = ROLES_AI_UPP,\
@@ -137,7 +155,12 @@ GLOBAL_LIST_INIT(platoon_to_role_list, list(/datum/squad/marine/alpha = ROLES_AI
 												/datum/squad/marine/forecon = ROLES_AI_FORECON,\
 												/datum/squad/marine/pmc/small = ROLES_PMCPLT_SMALL,\
 												/datum/squad/marine/upp/forecon = ROLES_AI_UPP_FORECON,\
-												/datum/squad/marine/rmc = ROLES_RMCTROOP))
+												/datum/squad/marine/rmc = ROLES_RMCTROOP,\
+// SS220 EDIT - START: PR #1283 Movie-ish Sections — movie squad AI role lists
+												/datum/squad/marine/movie = ROLES_AI_MARINE_MOVIE,\
+												/datum/squad/marine/upp/movie = ROLES_AI_UPP_MOVIE,\
+// SS220 EDIT - END
+												))
 
 
 // SS220 EDIT - START

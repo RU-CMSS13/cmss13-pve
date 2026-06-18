@@ -71,3 +71,26 @@
 		target = L
 
 	return ..()
+
+
+// SS220 EDIT - START
+/obj/item/hardpoint/support/smoke_launcher/twe_tank
+	name = "\improper дымовой гранатомёт L-39T"
+	desc = "Модуль поддержки для FV150, созданный на основе используемых UA для своих машин."
+	icon = 'icons/obj/vehicles/hardpoints/twe_tank.dmi'
+
+	icon_state = "slauncher_0"
+	disp_icon = "tank"
+
+	firing_arc = 150
+	ammo = new /obj/item/ammo_magazine/hardpoint/turret_smoke/twe
+	max_clips = 5
+
+	scatter = 3
+	gun_firemode = GUN_FIREMODE_BURSTFIRE
+	gun_firemode_list = list(
+		GUN_FIREMODE_BURSTFIRE,
+	)
+	burst_amount = 2
+	burst_delay = 1.0 SECONDS
+// SS220 EDIT - END

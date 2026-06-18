@@ -441,33 +441,35 @@
 			// SS220 EDIT - START: HALO sfx keys
 			// HALO guns UNSC
 			if("gun_ma5c")
-				sound = pick('sound/weapons/halo/gun_ma5c_1.ogg','sound/weapons/halo/gun_ma5c_2.ogg','sound/weapons/halo/gun_ma5c_3.ogg')
+				sound = pick('modular/halo/sound/weapons/gun_ma5c_1.ogg','modular/halo/sound/weapons/gun_ma5c_2.ogg','modular/halo/sound/weapons/gun_ma5c_3.ogg')
 			if("gun_ma5b")
-				sound = pick('sound/weapons/halo/ma5b/gun_ma5b_full_1.ogg', 'sound/weapons/halo/ma5b/gun_ma5b_full_2.ogg')
+				sound = pick('modular/halo/sound/weapons/ma5b/gun_ma5b_full_1.ogg', 'modular/halo/sound/weapons/ma5b/gun_ma5b_full_2.ogg')
 			if("gun_m6c")
-				sound = pick('sound/weapons/halo/gun_m6c_1.ogg','sound/weapons/halo/gun_m6c_2.ogg','sound/weapons/halo/gun_m6c_3.ogg', 'sound/weapons/halo/gun_m6c_4.ogg')
+				sound = pick('modular/halo/sound/weapons/gun_m6c_1.ogg','modular/halo/sound/weapons/gun_m6c_2.ogg','modular/halo/sound/weapons/gun_m6c_3.ogg', 'modular/halo/sound/weapons/gun_m6c_4.ogg')
 			if("gun_m6g")
-				sound = pick('sound/weapons/halo/gun_m6g_1.ogg','sound/weapons/halo/gun_m6g_2.ogg','sound/weapons/halo/gun_m6g_3.ogg','sound/weapons/halo/gun_m6g_4.ogg')
+				sound = pick('modular/halo/sound/weapons/gun_m6g_1.ogg','modular/halo/sound/weapons/gun_m6g_2.ogg','modular/halo/sound/weapons/gun_m6g_3.ogg','modular/halo/sound/weapons/gun_m6g_4.ogg')
 			if("gun_m6d")
-				sound = pick('sound/weapons/halo/m6d/gun_m6d_1.ogg', 'sound/weapons/halo/m6d/gun_m6d_2.ogg', 'sound/weapons/halo/m6d/gun_m6d_3.ogg', 'sound/weapons/halo/m6d/gun_m6d_4.ogg', 'sound/weapons/halo/m6d/gun_m6d_5.ogg')
+				sound = pick('modular/halo/sound/weapons/m6d/gun_m6d_1.ogg', 'modular/halo/sound/weapons/m6d/gun_m6d_2.ogg', 'modular/halo/sound/weapons/m6d/gun_m6d_3.ogg', 'modular/halo/sound/weapons/m6d/gun_m6d_4.ogg', 'modular/halo/sound/weapons/m6d/gun_m6d_5.ogg')
 			if("gun_srs99")
-				sound = pick('sound/weapons/halo/gun_srs99_1.ogg','sound/weapons/halo/gun_srs99_2.ogg','sound/weapons/halo/gun_srs99_3.ogg','sound/weapons/halo/gun_srs99_4.ogg')
+				sound = pick('modular/halo/sound/weapons/gun_srs99_1.ogg','modular/halo/sound/weapons/gun_srs99_2.ogg','modular/halo/sound/weapons/gun_srs99_3.ogg','modular/halo/sound/weapons/gun_srs99_4.ogg')
 			if("gun_br55")
-				sound = pick('sound/weapons/halo/gun_br55_1.ogg','sound/weapons/halo/gun_br55_2.ogg','sound/weapons/halo/gun_br55_3.ogg','sound/weapons/halo/gun_br55_4.ogg')
+				sound = pick('modular/halo/sound/weapons/gun_br55_1.ogg','modular/halo/sound/weapons/gun_br55_2.ogg','modular/halo/sound/weapons/gun_br55_3.ogg','modular/halo/sound/weapons/gun_br55_4.ogg')
 			if("gun_m90")
-				sound = pick('sound/weapons/halo/gun_m90_1.ogg','sound/weapons/halo/gun_m90_2.ogg','sound/weapons/halo/gun_m90_3.ogg')
+				sound = pick('modular/halo/sound/weapons/gun_m90_1.ogg','modular/halo/sound/weapons/gun_m90_2.ogg','modular/halo/sound/weapons/gun_m90_3.ogg')
 			if("gun_spnkr")
-				sound = pick('sound/weapons/halo/gun_spnkr_1.ogg','sound/weapons/halo/gun_spnkr_2.ogg','sound/weapons/halo/gun_spnkr_3.ogg')
+				sound = pick('modular/halo/sound/weapons/gun_spnkr_1.ogg','modular/halo/sound/weapons/gun_spnkr_2.ogg','modular/halo/sound/weapons/gun_spnkr_3.ogg')
 			if("gun_m7")
-				sound = pick('sound/weapons/halo/gun_m7_1.ogg','sound/weapons/halo/gun_m7_2.ogg')
+				sound = pick('modular/halo/sound/weapons/gun_m7_1.ogg','modular/halo/sound/weapons/gun_m7_2.ogg')
 			if("gun_socom")
-				sound = pick('sound/weapons/halo/gun_socom_1.ogg', 'sound/weapons/halo/gun_socom_2.ogg', 'sound/weapons/halo/gun_socom_3.ogg', 'sound/weapons/halo/gun_socom_4.ogg')
+				sound = pick('modular/halo/sound/weapons/gun_socom_1.ogg', 'modular/halo/sound/weapons/gun_socom_2.ogg', 'modular/halo/sound/weapons/gun_socom_3.ogg', 'modular/halo/sound/weapons/gun_socom_4.ogg')
 			if("gun_socom_smg")
-				sound = pick('sound/weapons/halo/gun_silenced_smg_1.ogg', 'sound/weapons/halo/gun_silenced_smg_2.ogg')
+				sound = pick('modular/halo/sound/weapons/gun_silenced_smg_1.ogg', 'modular/halo/sound/weapons/gun_silenced_smg_2.ogg')
+			if("gun_missile_pod") // SS220 EDIT: HALO pelican missile pod
+				sound = pick('modular/halo/sound/weapons/pelican_gun/missile_launch_1.ogg', 'modular/halo/sound/weapons/pelican_gun/missile_launch_2.ogg', 'modular/halo/sound/weapons/pelican_gun/missile_launch_3.ogg', 'modular/halo/sound/weapons/pelican_gun/missile_launch_4.ogg')
 
 			//halo dryfire
 			if("ma5b_dryfire")
-				sound = pick('sound/weapons/halo/ma5b/ma5b_dryfire_1.ogg', 'sound/weapons/halo/ma5b/ma5b_dryfire_2.ogg', 'sound/weapons/halo/ma5b/ma5b_dryfire_3.ogg')
+				sound = pick('modular/halo/sound/weapons/ma5b/ma5b_dryfire_1.ogg', 'modular/halo/sound/weapons/ma5b/ma5b_dryfire_2.ogg', 'modular/halo/sound/weapons/ma5b/ma5b_dryfire_3.ogg')
 
 			// HALO misc
 			if("shield_hit")
@@ -479,7 +481,7 @@
 			if("shield_pop")
 				sound = pick('sound/effects/shields/shield_pop_1.ogg', 'sound/effects/shields/shield_pop_2.ogg', 'sound/effects/shields/shield_pop_3.ogg')
 			if("energy_sword")
-				sound = pick('sound/weapons/halo/energy_sword/energy_sword_1.ogg', 'sound/weapons/halo/energy_sword/energy_sword_2.ogg', 'sound/weapons/halo/energy_sword/energy_sword_3.ogg')
+				sound = pick('modular/halo/sound/weapons/energy_sword/energy_sword_1.ogg', 'modular/halo/sound/weapons/energy_sword/energy_sword_2.ogg', 'modular/halo/sound/weapons/energy_sword/energy_sword_3.ogg')
 			if("droppod_enter")
 				sound = pick('sound/effects/odst_pod/pod_enter_1.ogg', 'sound/effects/odst_pod/pod_enter_2.ogg', 'sound/effects/odst_pod/pod_enter_3.ogg')
 			if("droppod_land")
@@ -501,21 +503,27 @@
 
 			// HALO guns COV
 			if("gun_lightplasma")
-				sound = pick('sound/weapons/halo/gun_lightplasma_1.ogg','sound/weapons/halo/gun_lightplasma_2.ogg','sound/weapons/halo/gun_lightplasma_3.ogg','sound/weapons/halo/gun_lightplasma_4.ogg','sound/weapons/halo/gun_lightplasma_5.ogg')
+				sound = pick('modular/halo/sound/weapons/gun_lightplasma_1.ogg','modular/halo/sound/weapons/gun_lightplasma_2.ogg','modular/halo/sound/weapons/gun_lightplasma_3.ogg','modular/halo/sound/weapons/gun_lightplasma_4.ogg','modular/halo/sound/weapons/gun_lightplasma_5.ogg')
 			if("gun_plasma")
-				sound = pick('sound/weapons/halo/gun_plasma_1.ogg','sound/weapons/halo/gun_plasma_2.ogg','sound/weapons/halo/gun_plasma_3.ogg')
+				sound = pick('modular/halo/sound/weapons/gun_plasma_1.ogg','modular/halo/sound/weapons/gun_plasma_2.ogg','modular/halo/sound/weapons/gun_plasma_3.ogg')
 			if("gun_heavyplasma")
-				sound = pick('sound/weapons/halo/gun_heavyplasma_1.ogg','sound/weapons/halo/gun_heavyplasma_2.ogg','sound/weapons/halo/gun_heavyplasma_3.ogg')
+				sound = pick('modular/halo/sound/weapons/gun_heavyplasma_1.ogg','modular/halo/sound/weapons/gun_heavyplasma_2.ogg','modular/halo/sound/weapons/gun_heavyplasma_3.ogg')
 			if("gun_needler")
-				sound = pick('sound/weapons/halo/gun_needler_1.ogg','sound/weapons/halo/gun_needler_2.ogg','sound/weapons/halo/gun_needler_3.ogg')
+				sound = pick('modular/halo/sound/weapons/gun_needler_1.ogg','modular/halo/sound/weapons/gun_needler_2.ogg','modular/halo/sound/weapons/gun_needler_3.ogg')
 			if("gun_carbine")
-				sound = pick('sound/weapons/halo/gun_carbine_1.ogg','sound/weapons/halo/gun_carbine_2.ogg','sound/weapons/halo/gun_carbine_3.ogg')
+				sound = pick('modular/halo/sound/weapons/gun_carbine_1.ogg','modular/halo/sound/weapons/gun_carbine_2.ogg','modular/halo/sound/weapons/gun_carbine_3.ogg')
 			if("plasma_impact")
 				sound = pick('sound/bullets/plasma/impact_plasma_1.ogg', 'sound/bullets/plasma/impact_plasma_2.ogg', 'sound/bullets/plasma/impact_plasma_3.ogg')
 			if("plasma_miss")
 				sound = pick('sound/bullets/plasma/plasma_miss_1.ogg', 'sound/bullets/plasma/plasma_miss_2.ogg', 'sound/bullets/plasma/plasma_miss_3.ogg', 'sound/bullets/plasma/plasma_miss_4.ogg', 'sound/bullets/plasma/plasma_miss_5.ogg', 'sound/bullets/plasma/plasma_miss_6.ogg')
 			if("gun_plasma_overcharge")
-				sound = pick('sound/weapons/halo/plasma_pistol_overcharge/overcharge_fire_1.ogg', 'sound/weapons/halo/plasma_pistol_overcharge/overcharge_fire_2.ogg', 'sound/weapons/halo/plasma_pistol_overcharge/overcharge_fire_3.ogg')
+				sound = pick('modular/halo/sound/weapons/plasma_pistol_overcharge/overcharge_fire_1.ogg', 'modular/halo/sound/weapons/plasma_pistol_overcharge/overcharge_fire_2.ogg', 'modular/halo/sound/weapons/plasma_pistol_overcharge/overcharge_fire_3.ogg')
+
+			// halo explosions // SS220 EDIT: HALO phantom gun explosion sounds
+			if("explosion_phantomgun")
+				sound = pick('modular/halo/sound/weapons/phantom_gun/gun_phantom_turret_boom_1.ogg', 'modular/halo/sound/weapons/phantom_gun/gun_phantom_turret_boom_2.ogg', 'modular/halo/sound/weapons/phantom_gun/gun_phantom_turret_boom_3.ogg', 'modular/halo/sound/weapons/phantom_gun/gun_phantom_turret_boom_4.ogg', 'modular/halo/sound/weapons/phantom_gun/gun_phantom_turret_boom_5.ogg', 'modular/halo/sound/weapons/phantom_gun/gun_phantom_turret_boom_6.ogg')
+			if("explosion_phantomgun_lod")
+				sound = pick('modular/halo/sound/weapons/phantom_gun/gun_phantom_turret_boom_lod_1.ogg', 'modular/halo/sound/weapons/phantom_gun/gun_phantom_turret_boom_lod_2.ogg', 'modular/halo/sound/weapons/phantom_gun/gun_phantom_turret_boom_lod_3.ogg', 'modular/halo/sound/weapons/phantom_gun/gun_phantom_turret_boom_lod_4.ogg', 'modular/halo/sound/weapons/phantom_gun/gun_phantom_turret_boom_lod_5.ogg', 'modular/halo/sound/weapons/phantom_gun/gun_phantom_turret_boom_lod_6.ogg')
 			// SS220 EDIT - END
 
 			// Xeno
@@ -555,6 +563,8 @@
 				sound = pick('sound/voice/larva_talk1.ogg','sound/voice/larva_talk2.ogg','sound/voice/larva_talk3.ogg','sound/voice/larva_talk4.ogg')
 			if("hiss_talk")
 				sound = pick('sound/voice/hiss2.ogg','sound/voice/hiss3.ogg','sound/voice/hiss4.ogg')
+			if("click_talk") // SS220 EDIT: PR1271 - Itsy Bitsy Buggers spider click talk sound
+				sound = pick('sound/voice/pred_click1.ogg','sound/voice/pred_click2.ogg','sound/voice/pred_click3.ogg','sound/voice/pred_click4.ogg','sound/voice/pred_click5.ogg')
 			if("alien_growl")
 				sound = pick('sound/voice/alien_growl1.ogg','sound/voice/alien_growl2.ogg','sound/voice/alien_growl3.ogg')
 			if("alien_hiss")
@@ -582,6 +592,10 @@
 				sound = pick('sound/voice/warcry/male_go.ogg', 'sound/voice/warcry/male_attack.ogg', 'sound/voice/warcry/male_charge.ogg', 'sound/voice/warcry/male_charge2.ogg', 'sound/voice/warcry/warcry_male_1.ogg', 'sound/voice/warcry/warcry_male_2.ogg', 'sound/voice/warcry/warcry_male_3.ogg', 'sound/voice/warcry/warcry_male_4.ogg', 'sound/voice/warcry/warcry_male_5.ogg', 'sound/voice/warcry/warcry_male_6.ogg', 'sound/voice/warcry/warcry_male_7.ogg', 'sound/voice/warcry/warcry_male_8.ogg', 'sound/voice/warcry/warcry_male_9.ogg', 'sound/voice/warcry/warcry_male_10.ogg', 'sound/voice/warcry/warcry_male_11.ogg', 'sound/voice/warcry/warcry_male_12.ogg', 'sound/voice/warcry/warcry_male_13.ogg', 'sound/voice/warcry/warcry_male_14.ogg', 'sound/voice/warcry/warcry_male_15.ogg', 'sound/voice/warcry/warcry_male_16.ogg', 'sound/voice/warcry/warcry_male_17.ogg', 'sound/voice/warcry/warcry_male_18.ogg', 'sound/voice/warcry/warcry_male_19.ogg', 'sound/voice/warcry/warcry_male_20.ogg', 'sound/voice/warcry/warcry_male_21.ogg', 'sound/voice/warcry/warcry_male_22.ogg', 'sound/voice/warcry/warcry_male_23.ogg', 'sound/voice/warcry/warcry_male_24.ogg', 'sound/voice/warcry/warcry_male_25.ogg', 'sound/voice/warcry/warcry_male_26.ogg', 'sound/voice/warcry/warcry_male_27.ogg', 'sound/voice/warcry/warcry_male_28.ogg', 'sound/voice/warcry/warcry_male_29.ogg', 'sound/voice/warcry/warcry_male_30.ogg', 'sound/voice/warcry/warcry_male_31.ogg', 'sound/voice/warcry/warcry_male_32.ogg', 'sound/voice/warcry/warcry_male_33.ogg', 'sound/voice/warcry/warcry_male_34.ogg', 'sound/voice/warcry/warcry_male_35.ogg', 5;'sound/voice/warcry/warcry_male_rare_1.ogg', 5;'sound/voice/warcry/warcry_male_rare_2.ogg', 5;'sound/voice/warcry/warcry_male_rare_3.ogg', 5;'sound/voice/warcry/warcry_male_rare_4.ogg', 5;'sound/voice/warcry/warcry_male_rare_5.ogg')
 			if("male_upp_warcry")
 				sound = pick('sound/voice/upp_warcry/warcry_male_1.ogg', 'sound/voice/upp_warcry/warcry_male_2.ogg')
+			// SS220 EDIT - START: TWE warcry sounds
+			if("male_twe_warcry")
+				sound = pick('modular/halo/sound/voice/twe_warcry/warcry_male_1.ogg', 'modular/halo/sound/voice/twe_warcry/warcry_male_2.ogg','modular/halo/sound/voice/twe_warcry/warcry_male_3.ogg', 'modular/halo/sound/voice/twe_warcry/warcry_male_4.ogg', 'modular/halo/sound/voice/twe_warcry/warcry_male_5.ogg', 'modular/halo/sound/voice/twe_warcry/warcry_male_6.ogg', 'modular/halo/sound/voice/twe_warcry/warcry_male_7.ogg', 'modular/halo/sound/voice/twe_warcry/warcry_male_9.ogg', 'modular/halo/sound/voice/twe_warcry/warcry_male_10.ogg', 'modular/halo/sound/voice/twe_warcry/warcry_male_11.ogg', 'modular/halo/sound/voice/twe_warcry/warcry_male_12.ogg', 'modular/halo/sound/voice/twe_warcry/warcry_male_13.ogg', 'modular/halo/sound/voice/twe_warcry/warcry_male_14.ogg', 'modular/halo/sound/voice/twe_warcry/warcry_male_15.ogg')
+			// SS220 EDIT - END
 			if("female_scream")
 				sound = pick('sound/voice/human_female_scream_1.ogg','sound/voice/human_female_scream_2.ogg','sound/voice/human_female_scream_3.ogg','sound/voice/human_female_scream_4.ogg',5;'sound/voice/human_female_scream_5.ogg')
 			if("female_pain")
@@ -592,6 +606,10 @@
 				sound = pick('sound/voice/warcry/female_charge.ogg', 'sound/voice/warcry/female_yell1.ogg', 'sound/voice/warcry/warcry_female_1.ogg', 'sound/voice/warcry/warcry_female_2.ogg', 'sound/voice/warcry/warcry_female_3.ogg', 'sound/voice/warcry/warcry_female_4.ogg', 'sound/voice/warcry/warcry_female_5.ogg', 'sound/voice/warcry/warcry_female_6.ogg', 'sound/voice/warcry/warcry_female_7.ogg', 'sound/voice/warcry/warcry_female_8.ogg', 'sound/voice/warcry/warcry_female_9.ogg', 'sound/voice/warcry/warcry_female_10.ogg', 'sound/voice/warcry/warcry_female_11.ogg', 'sound/voice/warcry/warcry_female_12.ogg', 'sound/voice/warcry/warcry_female_13.ogg', 'sound/voice/warcry/warcry_female_14.ogg', 'sound/voice/warcry/warcry_female_15.ogg', 'sound/voice/warcry/warcry_female_16.ogg', 'sound/voice/warcry/warcry_female_17.ogg', 'sound/voice/warcry/warcry_female_18.ogg', 'sound/voice/warcry/warcry_female_19.ogg', 'sound/voice/warcry/warcry_female_20.ogg')
 			if("female_upp_warcry")
 				sound = pick('sound/voice/upp_warcry/warcry_female_1.ogg', 'sound/voice/upp_warcry/warcry_female_2.ogg')
+			// SS220 EDIT - START: TWE warcry sounds
+			if("female_twe_warcry")
+				sound = pick('modular/halo/sound/voice/twe_warcry/warcry_female_1.ogg', 'modular/halo/sound/voice/twe_warcry/warcry_female_2.ogg', 'modular/halo/sound/voice/twe_warcry/warcry_female_3.ogg', 'modular/halo/sound/voice/twe_warcry/warcry_female_4.ogg', 'modular/halo/sound/voice/twe_warcry/warcry_female_5.ogg')
+			// SS220 EDIT - END
 			if("rtb_handset")
 				sound = pick('sound/machines/telephone/rtb_handset_1.ogg', 'sound/machines/telephone/rtb_handset_2.ogg', 'sound/machines/telephone/rtb_handset_3.ogg', 'sound/machines/telephone/rtb_handset_4.ogg', 'sound/machines/telephone/rtb_handset_5.ogg')
 			if("talk_phone")

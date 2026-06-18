@@ -11,4 +11,9 @@
 	if(floor(blood_volume) <= BLOOD_VOLUME_BAD) //How much blood do we have
 		return PULSE_THREADY //not enough :(
 
+	// SS220 EDIT — Hybrid NOBIOSCAN pulse (Auriga's Folly PR#1265)
+	if(species && species.mob_flags & NOBIOSCAN)
+		return pick(PULSE_THREADY, PULSE_SLOW, PULSE_FAST, PULSE_2FAST) //Scanner freaking the hell out
+	// SS220 EDIT END
+
 	return PULSE_NORM

@@ -1,6 +1,7 @@
 /obj/item/device/radio/headset/almayer/marine/solardevils/unsc
 	name = "UNSC headset"
 	desc = "Специальная гарнитура, используемая Космическим Командованием Объединённых Наций во всех родах войск."
+	minimap_type = MINIMAP_FLAG_UNSC
 	frequency = UNSC_FREQ
 	has_hud = TRUE
 	hud_type = list(MOB_HUD_FACTION_UNSC)
@@ -10,7 +11,17 @@
 		"Group Leader" = TRACKER_FTL,
 		"Landing Zone" = TRACKER_LZ
 	)
-	locate_setting = TRACKER_FTL
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/unsc/equipped(mob/living/carbon/human/user, slot)
+	. = ..()
+
+	if((user == user.assigned_squad?.fireteam_leaders["SQ1"] || user == user.assigned_squad?.fireteam_leaders["SQ2"]) && ("Squad Leader" in tracking_options))
+		locate_setting = tracking_options["Squad Leader"]
+		return
+
+	if(((user in user.assigned_squad?.fireteams["SQ1"]) || (user in user.assigned_squad?.fireteams["SQ2"])) && ("Fireteam Leader" in tracking_options))
+		locate_setting = tracking_options["Fireteam Leader"]
+		return
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/unsc/odst
 	name = "гарнитура ODST"

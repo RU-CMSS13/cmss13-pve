@@ -9,6 +9,7 @@ Canonical baseline: [`__docs/HALO_PORT_STATE.md`](./__docs/HALO_PORT_STATE.md). 
 ## Next Sync Tasks
 - Recheck the compatibility hotspots listed in [`__docs/HALO_PORT_STATE.md`](./__docs/HALO_PORT_STATE.md) before changing upstream-facing HALO glue.
 - Keep documenting intentional source deviations from `cmss13-pve-halo`.
+- Treat #156 as the preset/vendor/med file set named in [`__docs/HALO_PORT_STATE.md`](./__docs/HALO_PORT_STATE.md), and treat #159 as item/code-only evidence from `halo_unsc_boxes.dm` and related files; do not revive a deferred-map note without concrete map files.
 - Perform runtime smoke on live host/session.
 
 ## Open Caveats

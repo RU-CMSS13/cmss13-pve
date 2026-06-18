@@ -328,8 +328,10 @@
 	shell_speed = AMMO_SPEED_TIER_4
 
 //RIDGEWAY TANK CANNON
+// SS220 EDIT - START: PR #1266 D66-44 — translated name to Russian
 /datum/ammo/rocket/ltb/ridgeway
 	name = "115-мм снаряд"
+// SS220 EDIT - END
 	icon_state = "ridgeway"
 	flags_ammo_behavior = AMMO_EXPLOSIVE|AMMO_ROCKET
 
@@ -354,7 +356,7 @@
 		var/obj/vehicle/multitile/mob = object
 		mob.next_move = world.time + vehicle_slowdown_time
 		playsound(mob, 'sound/effects/meteorimpact.ogg', 35)
-		mob.at_munition_interior_explosion_effect(cause_data = create_cause_data("Противотанковая ракета"))
+		mob.at_munition_interior_explosion_effect(cause_data = create_cause_data("Противотанковая ракета")) // SS220 EDIT: translated to Russian
 		mob.interior_crash_effect()
 		var/turf/turf = get_turf(mob.loc)
 		mob.ex_act(150, projectile.dir, projectile.weapon_cause_data, 100)

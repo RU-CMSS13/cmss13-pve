@@ -877,6 +877,24 @@
 /obj/item/ammo_box/magazine/mk1/large/rubber/empty
 	empty = TRUE
 
+// SS220 EDIT - START: M20A magazine boxes for Dog War
+/obj/item/ammo_box/magazine/mk1/large/m20
+	name = "magazine box (M20A x 32)"
+	magazine_type = /obj/item/ammo_magazine/rifle/m20a
+
+/obj/item/ammo_box/magazine/mk1/large/m20/heap
+	name = "magazine box (HEAP M20A x 32)"
+	overlay_ammo_type = "_heaplarge"
+	overlay_content = "_heaplarge"
+	magazine_type = /obj/item/ammo_magazine/rifle/m20a/heap
+
+/obj/item/ammo_box/magazine/mk1/large/m20/ap
+	name = "magazine box (AP M20A x 32)"
+	overlay_ammo_type = "_aplarge"
+	overlay_content = "_aplarge"
+	magazine_type = /obj/item/ammo_magazine/rifle/m20a/ap
+// SS220 EDIT - END
+
 //-----------------------NSG 23 Rifle Mag Boxes-----------------------
 
 /obj/item/ammo_box/magazine/nsg23

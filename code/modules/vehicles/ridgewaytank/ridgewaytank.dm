@@ -1,8 +1,10 @@
 // Ridgeway Tank
+// SS220 EDIT - START: PR #1266 D66-44 — translated name/desc/desc_lore to Russian
 /obj/vehicle/multitile/tank/ridgeway
 	name = "тяжёлый танк M40 Ridgeway"
 	desc = "Огромная бронированная махина с большой пушкой. Вы знаете, что делать. Вход сзади."
 	desc_lore = "Тяжёлый танк M40 Ridgeway - основная бронированная машина, состоящая на вооружении вооружённых сил Соединённых Штатов. Передовой образец техники, представленный в конце 2170-х, Ridgeway воплощает современную боевую машину: обширная автоматизация, продвинутые защитные системы, независимая плазменная система жёсткого перехвата и передовые средства маскировки делают его практически невидимым для большинства базовых наземных сенсоров. Хотя он и должен был заменить устаревший M22 Jackson, среди подразделений Колониальной морской пехоты машина пока получила ограниченное распространение."
+// SS220 EDIT - END
 
 	icon = 'icons/obj/vehicles/ridgeway.dmi'
 	icon_state = "tank_base"
@@ -78,13 +80,13 @@
 	if(!camera)
 		camera = new /obj/structure/machinery/camera/vehicle(src)
 	if(change_tag)
-		camera.c_tag = "#[rand(1,100)] M40 \"[nickname]\" тяжёлый танк" //this fluff allows it to be at the start of cams list M40 Ridgeway Heavy Tank
+		camera.c_tag = "#[rand(1,100)] M40 \"[nickname]\" тяжёлый танк" //this fluff allows it to be at the start of cams list M40 Ridgeway Heavy Tank // SS220 EDIT: translated to Russian
 		if(camera_int)
-			camera_int.c_tag = camera.c_tag + " интерьер" //this fluff allows it to be at the start of cams list
+			camera_int.c_tag = camera.c_tag + " интерьер" //this fluff allows it to be at the start of cams list // SS220 EDIT: translated to Russian
 	else
-		camera.c_tag = "#[rand(1,100)] M40 тяжёлый танк"
+		camera.c_tag = "#[rand(1,100)] M40 тяжёлый танк" // SS220 EDIT: translated to Russian
 		if(camera_int)
-			camera_int.c_tag = camera.c_tag + " интерьер" //this fluff allows it to be at the start of cams list
+			camera_int.c_tag = camera.c_tag + " интерьер" //this fluff allows it to be at the start of cams list // SS220 EDIT: translated to Russian
 
 /obj/vehicle/multitile/tank/ridgeway/load_hardpoints()
 	add_hardpoint(new /obj/item/hardpoint/holder/tank_turret/ridgeway)
@@ -93,7 +95,7 @@
 
 /obj/effect/vehicle_spawner/ridgeway
 
-	name = "спавнер танка"
+	name = "спавнер танка" // SS220 EDIT: translated to Russian
 	icon = 'icons/obj/vehicles/ridgeway.dmi'
 	icon_state = "tank_base"
 	pixel_x = -48

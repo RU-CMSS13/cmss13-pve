@@ -212,7 +212,7 @@
 
 /obj/item/weapon/gun/smg/mp5
 	name = "\improper MP5 submachinegun"
-	desc = "Knockoff of an antique UPP submachine gun, made somewhere in the former German state. Chambered for 9x19mm cased ammunition."
+	desc = "Knockoff of an antique UPP submachine gun, made somewhere in the former German state. Chambered for 9x19mm cased ammunition." // SS220 EDIT: CM-PVE PR #169 — desc update
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "mp5"
 	item_state = "mp5"
@@ -273,7 +273,7 @@
 
 /obj/item/weapon/gun/smg/mp27
 	name = "\improper MP27 submachinegun"
-	desc = "Once a respectable weapon, now after the design files were leaked in '67 the cheaply made copies are everywhere. Lightweight and fast firing, but the poor construction of almost every copy severely hampers accuracy."
+	desc = "Once a respectable weapon, now after the design files were leaked in '67 the cheaply made copies are everywhere. Lightweight and fast firing, but the poor construction of almost every copy severely hampers accuracy." // SS220 EDIT: CM-PVE PR #169 — desc update
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "mp7"
 	item_state = "mp7"
@@ -615,7 +615,7 @@
 
 /obj/item/weapon/gun/smg/uzi
 	name = "\improper UZI"
-	desc = "Antique firearm, now almost two centuries old. 9mm, fully automatic. Pull the trigger and hold on tight."
+	desc = "Antique firearm, now almost two centuries old. 9mm, fully automatic. Pull the trigger and hold on tight." // SS220 EDIT: CM-PVE PR #169 — desc update
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "uzi"
 	item_state = "uzi"

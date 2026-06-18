@@ -1161,7 +1161,7 @@
 /turf/open/floor/almayer_hull,
 /area/new_irvine/sector_five/bridge)
 "aTi" = (
-/obj/structure/fence,
+/obj/structure/fence/halo,
 /turf/open/floor/corsat/marked,
 /area/new_irvine/sector_four)
 "aTn" = (
@@ -1864,7 +1864,7 @@
 /turf/open/floor/plating/asteroidfloor,
 /area/new_irvine/sector_one)
 "bqc" = (
-/obj/structure/fence{
+/obj/structure/fence/halo{
 	layer = 2.9
 	},
 /turf/open/floor/plating/asteroidfloor,
@@ -1914,7 +1914,7 @@
 "btL" = (
 /obj/structure/platform,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/fence{
+/obj/structure/fence/halo{
 	layer = 2.9
 	},
 /turf/open/asphalt/cement,
@@ -2130,7 +2130,7 @@
 /turf/open/floor/strata,
 /area/new_irvine/sector_one/indoor/apartments)
 "bEh" = (
-/obj/structure/fence,
+/obj/structure/fence/halo,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement,
 /area/new_irvine/sector_one/indoor/apartments)
@@ -3379,7 +3379,7 @@
 /turf/open/floor/strata,
 /area/new_irvine/sector_three/indoor/arch_angel)
 "cwf" = (
-/obj/structure/fence{
+/obj/structure/fence/halo{
 	layer = 2.9
 	},
 /obj/structure/platform,
@@ -3472,7 +3472,7 @@
 /turf/open/floor/prison/kitchen,
 /area/new_irvine/sector_two/indoor/apartment)
 "czF" = (
-/obj/structure/fence,
+/obj/structure/fence/halo,
 /turf/open/floor/corsat/marked,
 /area/new_irvine/sector_four/indoor/port)
 "cAo" = (
@@ -4939,7 +4939,7 @@
 /turf/open/floor/plating/kutjevo,
 /area/new_irvine/sector_five/indoor/bridge_interier)
 "dEU" = (
-/obj/structure/fence,
+/obj/structure/fence/halo,
 /turf/open/asphalt/tile,
 /area/new_irvine)
 "dFi" = (
@@ -4983,7 +4983,7 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/obj/structure/fence{
+/obj/structure/fence/halo{
 	layer = 2.9
 	},
 /turf/open/asphalt/cement,
@@ -6329,7 +6329,7 @@
 /area/new_irvine/sector_one)
 "eCL" = (
 /obj/structure/platform,
-/obj/structure/fence{
+/obj/structure/fence/halo{
 	layer = 2.9
 	},
 /turf/open/asphalt/cement,
@@ -6747,7 +6747,7 @@
 /turf/open/floor/prison/kitchen,
 /area/new_irvine/sector_two/indoor/apartment)
 "eRC" = (
-/obj/structure/fence,
+/obj/structure/fence/halo,
 /turf/open/asphalt/tile,
 /area/new_irvine/beach)
 "eRX" = (
@@ -7229,7 +7229,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/obj/structure/fence{
+/obj/structure/fence/halo{
 	layer = 2.9
 	},
 /turf/open/asphalt/cement,
@@ -10347,7 +10347,7 @@
 /area/new_irvine/sector_four/indoor/port)
 "hDx" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/fence{
+/obj/structure/fence/halo{
 	layer = 2.9
 	},
 /turf/open/asphalt/cement/cement3,
@@ -11046,7 +11046,7 @@
 /turf/open/asphalt/cement,
 /area/new_irvine/sector_four)
 "igD" = (
-/obj/structure/fence{
+/obj/structure/fence/halo{
 	layer = 2.9
 	},
 /turf/open/asphalt/tile,
@@ -11432,7 +11432,7 @@
 /turf/open/floor/corsat/plate,
 /area/new_irvine/sector_one/indoor)
 "iuS" = (
-/obj/structure/fence{
+/obj/structure/fence/halo{
 	layer = 2.9
 	},
 /turf/open/asphalt/cement/cement1/north,
@@ -14787,7 +14787,7 @@
 /turf/open/floor/plating/asteroidfloor,
 /area/new_irvine/sector_two)
 "kNZ" = (
-/obj/structure/fence,
+/obj/structure/fence/halo,
 /turf/open/asphalt/cement,
 /area/new_irvine/sector_two)
 "kOt" = (
@@ -15725,7 +15725,7 @@
 /turf/open/floor/plating/asteroidfloor,
 /area/new_irvine/sector_four/indoor/port)
 "lyf" = (
-/obj/structure/fence{
+/obj/structure/fence/halo{
 	layer = 2.9
 	},
 /obj/structure/platform{
@@ -16420,7 +16420,7 @@
 /turf/open/floor/almayer_hull,
 /area/new_irvine/sector_two)
 "lYh" = (
-/obj/structure/fence{
+/obj/structure/fence/halo{
 	layer = 2.9
 	},
 /turf/open/asphalt/cement,
@@ -17469,7 +17469,7 @@
 /turf/open/floor/strata/white_cyan2,
 /area/new_irvine/sector_two/indoor/shops)
 "mMV" = (
-/obj/structure/fence{
+/obj/structure/fence/halo{
 	layer = 2.9
 	},
 /obj/structure/platform{
@@ -18931,7 +18931,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/fence{
+/obj/structure/fence/halo{
 	layer = 2.9
 	},
 /turf/open/asphalt/cement,
@@ -19588,7 +19588,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/fence{
+/obj/structure/fence/halo{
 	layer = 2.9
 	},
 /turf/open/asphalt/cement,
@@ -19748,7 +19748,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/obj/structure/fence{
+/obj/structure/fence/halo{
 	layer = 2.9
 	},
 /turf/open/asphalt/cement/cement3,
@@ -20428,7 +20428,7 @@
 /area/new_irvine/sector_one/indoor/corpauth)
 "oME" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/fence{
+/obj/structure/fence/halo{
 	layer = 2.9
 	},
 /turf/open/asphalt/cement,
@@ -20533,7 +20533,7 @@
 /turf/open/floor/strata,
 /area/new_irvine/sector_one/indoor/apartments)
 "oOW" = (
-/obj/structure/fence,
+/obj/structure/fence/halo,
 /obj/structure/platform{
 	dir = 1
 	},
@@ -21813,7 +21813,7 @@
 /turf/open/floor/plating/asteroidfloor,
 /area/new_irvine/sector_three)
 "pRt" = (
-/obj/structure/fence,
+/obj/structure/fence/halo,
 /obj/structure/platform{
 	dir = 8
 	},
@@ -23143,7 +23143,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/fence{
+/obj/structure/fence/halo{
 	layer = 2.9
 	},
 /turf/open/asphalt/cement/cement3,
@@ -23295,7 +23295,7 @@
 /turf/open/asphalt/cement/cement1,
 /area/new_irvine/sector_one)
 "qQY" = (
-/obj/structure/fence,
+/obj/structure/fence/halo,
 /turf/open/asphalt/cement,
 /area/new_irvine/sector_one/indoor/apartments)
 "qRe" = (
@@ -25181,7 +25181,7 @@
 /turf/open/floor/corsat/marked,
 /area/new_irvine/sector_two/indoor/nwapartment)
 "skw" = (
-/obj/structure/fence{
+/obj/structure/fence/halo{
 	layer = 2.9
 	},
 /turf/open/asphalt/cement,
@@ -25757,7 +25757,7 @@
 /area/new_irvine/beach)
 "sMx" = (
 /obj/structure/platform,
-/obj/structure/fence{
+/obj/structure/fence/halo{
 	layer = 2.9
 	},
 /turf/open/asphalt/cement/cement4,
@@ -25939,7 +25939,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/obj/structure/fence{
+/obj/structure/fence/halo{
 	layer = 2.9
 	},
 /turf/open/asphalt/cement,
@@ -26566,7 +26566,7 @@
 /turf/open/floor/strata,
 /area/new_irvine/sector_one/indoor/nipd)
 "tsj" = (
-/obj/structure/fence,
+/obj/structure/fence/halo,
 /obj/structure/platform{
 	dir = 1
 	},
@@ -28504,7 +28504,7 @@
 /turf/open/floor/carpet,
 /area/new_irvine/sector_two/indoor/shops)
 "uML" = (
-/obj/structure/fence{
+/obj/structure/fence/halo{
 	layer = 2.9
 	},
 /obj/structure/platform{
@@ -32069,7 +32069,7 @@
 /turf/open/floor/carpet,
 /area/new_irvine/sector_two/indoor/shops)
 "xHr" = (
-/obj/structure/fence{
+/obj/structure/fence/halo{
 	layer = 2.9
 	},
 /obj/effect/decal/cleanable/dirt,

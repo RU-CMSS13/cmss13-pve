@@ -102,6 +102,18 @@
 		X.away_timer = XENO_LEAVE_TIMER
 		X.set_hive_and_update(hivenumber)
 
+// SS220 EDIT - START: PR #160 Holy Redoubts — covenant admin level areas
+// Halo inserts
+/area/adminlevel/covenant
+	name = "Nanolaminate Structure"
+	icon_state = "cov"
+	requires_power = FALSE
+	ceiling = CEILING_METAL
+
+/area/adminlevel/covenant/no_baselight
+	base_lighting_alpha = 0
+// SS220 EDIT - END
+
 // ERT Station
 /area/adminlevel/ert_station
 	name = "ERT Station"

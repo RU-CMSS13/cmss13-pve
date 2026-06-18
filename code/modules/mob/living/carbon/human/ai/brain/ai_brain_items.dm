@@ -412,9 +412,15 @@
 		set_primary_weapon(picked_up)
 
 	to_pickup -= picked_up
-	if(picked_up == active_grenade_found) // SS220 EDIT: once someone holds the grenade, stop floor-threat gating
-		active_grenade_found = null
+	if(picked_up == active_grenade_found) // SS220 EDIT: once someone holds the grenade, stop floor-threat gating — unless throw-back is active
+		if(!has_ongoing_action(/datum/ai_action/throw_back_nade))
+			addtimer(CALLBACK(src, PROC_REF(clear_active_grenade_if_stale), picked_up), 1 SECONDS) // SS220 EDIT: delay reset so throw-back action has time to spawn on next scheduler tick
 	invalidate_nearby_item_search()
+
+/// SS220 EDIT: delayed reset of active_grenade_found — gives throw-back action one scheduler tick to spawn before clearing
+/datum/human_ai_brain/proc/clear_active_grenade_if_stale(obj/item/explosive/grenade/grenade)
+	if(active_grenade_found == grenade && !has_ongoing_action(/datum/ai_action/throw_back_nade))
+		active_grenade_found = null
 
 /datum/human_ai_brain/proc/on_item_drop(datum/source, obj/item/dropped)
 	SIGNAL_HANDLER
@@ -489,7 +495,9 @@
 
 /datum/human_ai_brain/proc/item_search(list/things_around)
 	// SS220 EDIT - START: grenade threat must come only from the current local scan, not from stale refs.
-	active_grenade_found = null
+	// Preserve active_grenade_found across ticks if it is already the currently held, still-active timed grenade.
+	if(!active_grenade_found || QDELETED(active_grenade_found) || !active_grenade_found.active || (active_grenade_found.fuse_type != TIMED_FUSE) || (active_grenade_found.loc != tied_human))
+		active_grenade_found = null
 	var/can_handle_live_grenade = can_throw_back_grenades && !((tied_human.l_hand?.flags_item & NODROP) && (tied_human.r_hand?.flags_item & NODROP))
 	// SS220 EDIT - END
 	search_loop:

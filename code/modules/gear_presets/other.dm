@@ -736,6 +736,8 @@
 
 	for(var/hud_to_add in huds_to_add)
 		var/datum/mob_hud/hud = GLOB.huds[hud_to_add]
+		if(!hud)
+			continue
 		hud.add_hud_to(new_human, new_human)
 
 	var/list/actions_to_add = subtypesof(/datum/action/human_action/activable/cult)

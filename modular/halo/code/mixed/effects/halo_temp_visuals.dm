@@ -281,3 +281,85 @@
 	particles = new /particles/shield_spark
 	addtimer(VARSET_CALLBACK(particles, count, 0), 1)
 	add_filter("glow", 2, drop_shadow_filter(0, 0, 3, 1, "#77b6ff"))
+
+// ================
+// Dropship hover visuals
+// ================
+
+/obj/effect/temp_visual/dropship_hover/phantom
+	icon = 'modular/halo/icons/halo/effects/phantom_flyby.dmi'
+	icon_state = "phantom_shadow"
+	duration = 1 MINUTES
+	pixel_x = -560
+	pixel_y = -560
+	var/datum/looping_sound/phantom_loop/hover
+	randomdir = FALSE
+	light_range = 15
+	light_color = "#b188b6"
+	halo_perf_is_halo_temp_visual = TRUE
+
+/obj/effect/temp_visual/dropship_hover/phantom/Initialize()
+	. = ..()
+	halo_perf_track_initialize()
+	particles = null
+	hover = new(src)
+	hover.start()
+	animate(src, time = 1 SECONDS, loop = -1, LINEAR_EASING, pixel_y = src.pixel_y +2)
+	animate(time = 1 SECONDS, easing = LINEAR_EASING, pixel_y = src.pixel_y - 2)
+	set_light_on(TRUE)
+
+/obj/effect/temp_visual/dropship_hover/phantom/fade_away()
+	. = ..()
+	hover.stop()
+
+/obj/effect/temp_visual/dropship_hover/spirit
+	icon = 'modular/halo/icons/halo/effects/spirit_flyby.dmi'
+	icon_state = "spirit_shadow"
+	duration = 1 MINUTES
+	pixel_x = -384
+	pixel_y = -384
+	var/datum/looping_sound/phantom_loop/hover
+	randomdir = FALSE
+	light_range = 9
+	light_color = "#b188b6"
+	halo_perf_is_halo_temp_visual = TRUE
+
+/obj/effect/temp_visual/dropship_hover/spirit/Initialize()
+	. = ..()
+	halo_perf_track_initialize()
+	particles = null
+	hover = new(src)
+	hover.start()
+	animate(src, time = 2 SECONDS, loop = -1, LINEAR_EASING, pixel_y = src.pixel_y +4)
+	animate(time = 2 SECONDS, easing = LINEAR_EASING, pixel_y = src.pixel_y - 4)
+	set_light_on(TRUE)
+
+/obj/effect/temp_visual/dropship_hover/spirit/fade_away()
+	. = ..()
+	hover.stop()
+
+/obj/effect/temp_visual/dropship_hover/pelican
+	icon = 'modular/halo/icons/halo/effects/pelican_flyby.dmi'
+	icon_state = "pelican_shadow"
+	duration = 1 MINUTES
+	pixel_x = -368
+	pixel_y = -368
+	var/datum/looping_sound/pelican_loop/hover
+	randomdir = FALSE
+	light_range = 9
+	light_color = "#d7935b"
+	halo_perf_is_halo_temp_visual = TRUE
+
+/obj/effect/temp_visual/dropship_hover/pelican/Initialize()
+	. = ..()
+	halo_perf_track_initialize()
+	particles = null
+	hover = new(src)
+	hover.start()
+	animate(src, time = 1 SECONDS, loop = -1, LINEAR_EASING, pixel_y = src.pixel_y +2)
+	animate(time = 1 SECONDS, easing = LINEAR_EASING, pixel_y = src.pixel_y - 2)
+	set_light_on(TRUE)
+
+/obj/effect/temp_visual/dropship_hover/pelican/fade_away()
+	. = ..()
+	hover.stop()

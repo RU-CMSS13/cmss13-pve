@@ -136,7 +136,9 @@
 		var/mob/living/M = G.grabbed_thing
 		if(!istype(M))
 			return //wut
-		M.apply_damage(50,BRUTE)
+		// SS220 EDIT — gut damage 50→100 (Auriga's Folly PR#1265)
+		M.apply_damage(100,BRUTE)
+		// SS220 EDIT END
 		if(M.stat == 2)
 			M.gib(create_cause_data("gutting", usr))
 

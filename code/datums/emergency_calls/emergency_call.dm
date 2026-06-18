@@ -20,6 +20,12 @@
 	var/input = "TITAN unit online. Good morning, marines."
 	shipwide_ai_announcement(input, name)
 
+// SS220 EDIT - START - HALO upstream PR #164 Titan→Voyager rename
+/datum/game_mode/proc/voyager_online()
+	var/name = "Voyager Report"
+	var/input = "Voyager unit online. Good morning, marines."
+	shipwide_ai_announcement(input, name)
+// SS220 EDIT - END
 /datum/game_mode/proc/request_ert(user, ares = FALSE)
 	if(!user)
 		return FALSE

@@ -957,10 +957,24 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 			M = /mob/living/carbon/xenomorph/predalien
 		if(XENO_CASTE_HELLHOUND)
 			M = /mob/living/carbon/xenomorph/hellhound
+		if(XENO_CASTE_SPIDER_GUARD) // SS220 EDIT: PR1271 - Itsy Bitsy Buggers
+			M = /mob/living/carbon/xenomorph/spider_guard
+		if(XENO_CASTE_SPIDER_NURSE) // SS220 EDIT: PR1271 - Itsy Bitsy Buggers
+			M = /mob/living/carbon/xenomorph/spider_nurse
+		if(XENO_CASTE_SPIDER_HUNTER) // SS220 EDIT: PR1271 - Itsy Bitsy Buggers
+			M = /mob/living/carbon/xenomorph/spider_hunter
+		if(XENO_CASTE_GIANT_LIZARD) // SS220 EDIT: PR1271 - Itsy Bitsy Buggers
+			M = /mob/living/carbon/xenomorph/giant_lizard
 		if(XENO_CASTE_SOLDIER)
 			M = /mob/living/carbon/xenomorph/soldier
 		if(XENO_CASTE_KING)
 			M = /mob/living/carbon/xenomorph/king
+		if(XENO_CASTE_BODYBURSTER) // SS220 EDIT: PR1273 - Gibson & Kloos Bodyburster caste
+			M = /mob/living/carbon/xenomorph/bodyburster
+		if(XENO_CASTE_LANKY) // SS220 EDIT: PR1273 - Gibson & Kloos Lanky caste
+			M = /mob/living/carbon/xenomorph/lanky
+//		if(XENO_CASTE_LANKYBRUTE) // SS220 EDIT: PR1273 - Gibson & Kloos Lanky Brute (commented out in upstream)
+//			M = /mob/living/carbon/xenomorph/lankybrute
 		if(RUNNER_ACIDER)
 			M = /mob/living/carbon/xenomorph/runner/acider
 		if(XENO_CASTE_WARRIOR_DRONE)

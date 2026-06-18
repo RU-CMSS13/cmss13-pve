@@ -43,22 +43,22 @@
 		/obj/item/ammo_box/magazine/unsc/dmr = 1,
 		/obj/item/ammo_box/magazine/unsc/ma5c = 1,
 		/obj/item/ammo_box/magazine/unsc/ma5b = 1,
-		/obj/item/ammo_box/magazine/unsc/shotgun/buckshot = 1,
-		/obj/item/ammo_box/magazine/unsc/shotgun/slug = 1,
+		/obj/item/ammo_box/magazine/shotgun/unsc/buckshot = 1,
+		/obj/item/ammo_box/magazine/shotgun/unsc/beanbag = 1,
 	)
 
 /obj/structure/largecrate/supply/ammo/halo/shotgun
 	name = "UNSC shotgun ammunition case"
 	desc = "A compact UNSC shotgun case intended for one breacher."
 	supplies = list(
-		/obj/item/ammo_box/magazine/unsc/shotgun/buckshot = 1,
-		/obj/item/ammo_box/magazine/unsc/shotgun/slug = 1,
+		/obj/item/ammo_box/magazine/shotgun/unsc/buckshot = 1,
+		/obj/item/ammo_box/magazine/shotgun/unsc/beanbag = 1,
 	)
 
 /obj/structure/largecrate/supply/ammo/halo/sniper
 	name = "UNSC sniper ammunition case"
-	desc = "A UNSC ammunition case containing SRS99 magazines."
-	supplies = list(/obj/item/ammo_magazine/rifle/halo/sniper = 5)
+	desc = "A UNSC ammunition case containing SRS99 ammunition."
+	supplies = list(/obj/item/ammo_box/magazine/lever_action/unsc/sniper = 1)
 
 /obj/structure/largecrate/supply/ammo/halo/spnkr
 	name = "UNSC SPNKr ammunition case"

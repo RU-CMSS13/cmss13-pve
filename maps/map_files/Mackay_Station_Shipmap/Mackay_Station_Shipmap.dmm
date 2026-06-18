@@ -367,6 +367,14 @@
 /obj/structure/closet/crate/unsc,
 /turf/open/floor/almayer/research,
 /area/mackay_station/golf/greenarmory)
+"aaX" = (
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/food/drinks/plasticcup{
+	pixel_x = -9;
+	pixel_y = 10
+	},
+/turf/open/floor/almayer/red/north,
+/area/mackay_station/romeo/redcommons2)
 "aaZ" = (
 /obj/structure/cargo_container/unsc/vertical/south_3/endcap_2,
 /turf/open/shuttle/escapepod,
@@ -720,13 +728,17 @@
 	pixel_y = -2
 	},
 /obj/item/tool/screwdriver{
-	pixel_x = 1;
+	pixel_x = 10;
 	icon_state = "screwdriver4";
-	pixel_y = -8
+	pixel_y = -5
 	},
 /obj/item/storage/toolbox/traxus/alt{
 	pixel_x = 5;
 	pixel_y = 13
+	},
+/obj/item/tool/hand_labeler{
+	pixel_y = -1;
+	pixel_x = 1
 	},
 /turf/open/floor/almayer/pod_landing_floor,
 /area/mackay_station/golf/greenarmory)
@@ -2481,7 +2493,7 @@
 /turf/open/floor/almayer/mono,
 /area/mackay_station/golf/greenquarters1)
 "buK" = (
-/turf/open/shuttle/escapepod/floor0/north/south,
+/turf/open/shuttle/escapepod/floor0,
 /area/mackay_station/bravo/blueengi)
 "bvm" = (
 /turf/open/shuttle/escapepod/north,
@@ -2695,13 +2707,9 @@
 	pixel_x = 0;
 	pixel_y = 17
 	},
-/obj/item/ammo_magazine/shotgun/buckshot/unsc{
-	pixel_x = -7;
-	pixel_y = 20
-	},
-/obj/item/ammo_magazine/shotgun/buckshot/unsc{
-	pixel_x = 6;
-	pixel_y = 19
+/obj/item/ammo_box/magazine/shotgun/unsc/buckshot{
+	pixel_x = 0;
+	pixel_y = 21
 	},
 /obj/item/ammo_box/magazine/unsc/br55{
 	pixel_y = 4
@@ -2994,7 +3002,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/mackay_station/golf/greenrec)
 "bMT" = (
-/turf/open/shuttle/escapepod/floor0/east,
+/turf/open/shuttle/escapepod/floor2,
 /area/mackay_station/romeo/redtram2)
 "bMX" = (
 /obj/structure/barricade/handrail{
@@ -6636,6 +6644,7 @@
 	pixel_x = 0;
 	pixel_y = 12
 	},
+/obj/item/ammo_box/magazine/unsc/ma5c,
 /turf/open/floor/almayer/pod_landing_floor,
 /area/mackay_station/golf/greenarmory)
 "eyh" = (
@@ -6860,7 +6869,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/mackay_station/golf/greenrec)
 "eHH" = (
-/turf/open/shuttle/escapepod/floor0/east,
+/turf/open/shuttle/escapepod/floor2,
 /area/mackay_station/bravo/bluetram)
 "eIr" = (
 /turf/open/floor/almayer/bluecorner/north,
@@ -8035,7 +8044,7 @@
 /turf/open/floor/almayer/research,
 /area/mackay_station/romeo/redtram2)
 "fwI" = (
-/turf/open/shuttle/escapepod/floor0/north/west,
+/turf/open/shuttle/escapepod/floor0/west,
 /area/mackay_station/bravo/blueengi)
 "fxj" = (
 /obj/effect/decal/cleanable/dirt{
@@ -8326,7 +8335,7 @@
 /obj/structure/machinery/light/double/blue{
 	dir = 8
 	},
-/turf/open/shuttle/escapepod/floor0/east,
+/turf/open/shuttle/escapepod/floor2,
 /area/mackay_station/romeo/redhangars)
 "fLh" = (
 /obj/structure/machinery/light/double/blue{
@@ -8360,7 +8369,7 @@
 /obj/structure/machinery/light/double/blue{
 	dir = 8
 	},
-/turf/open/shuttle/escapepod/floor0/east,
+/turf/open/shuttle/escapepod/floor2,
 /area/mackay_station/romeo/redtram1)
 "fMq" = (
 /obj/structure/machinery/disposal,
@@ -9931,7 +9940,7 @@
 /turf/open/floor/almayer/edge/smooth/west,
 /area/mackay_station/golf/greenmedical)
 "gUb" = (
-/turf/open/shuttle/escapepod/floor0/east,
+/turf/open/shuttle/escapepod/floor2,
 /area/mackay_station/romeo/redtram1)
 "gUS" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -10245,7 +10254,7 @@
 /turf/open/floor/almayer/pod_landing_floor,
 /area/mackay_station/bravo/blueengi)
 "hdz" = (
-/turf/open/shuttle/escapepod/floor0/east,
+/turf/open/shuttle/escapepod/floor2,
 /area/mackay_station/golf/greentram)
 "hdK" = (
 /obj/structure/platform_decoration,
@@ -11719,7 +11728,7 @@
 /obj/structure/machinery/light/double/blue{
 	dir = 8
 	},
-/turf/open/shuttle/escapepod/floor0/east,
+/turf/open/shuttle/escapepod/floor2,
 /area/mackay_station/golf/greenrec)
 "ihz" = (
 /obj/structure/prop/almayer/computers/sensor_computer3,
@@ -12858,7 +12867,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/mackay_station/golf/greenrec)
 "iUv" = (
-/turf/open/shuttle/escapepod/floor0/east,
+/turf/open/shuttle/escapepod/floor2,
 /area/mackay_station/golf/greenmedical)
 "iUz" = (
 /obj/effect/decal/cleanable/dirt{
@@ -12990,7 +12999,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/turf/open/shuttle/escapepod/floor0/north/east,
+/turf/open/shuttle/escapepod/floor2,
 /area/mackay_station/bravo/blueengi)
 "jcj" = (
 /obj/structure/flora/pottedplant,
@@ -14192,6 +14201,14 @@
 	pixel_x = 0;
 	pixel_y = 7
 	},
+/obj/item/ammo_box/magazine/misc/unsc/medical_packets{
+	pixel_x = 6;
+	pixel_y = -4
+	},
+/obj/item/ammo_box/magazine/misc/unsc/medical_packets{
+	pixel_x = -2;
+	pixel_y = 13
+	},
 /turf/open/floor/almayer/pod_landing_floor,
 /area/mackay_station/golf/greenarmory)
 "jPw" = (
@@ -14295,7 +14312,7 @@
 /turf/open/floor/almayer/research,
 /area/mackay_station/romeo/redcommons2)
 "jTO" = (
-/turf/open/shuttle/escapepod/floor0/east,
+/turf/open/shuttle/escapepod/floor2,
 /area/mackay_station/firecontrol)
 "jUL" = (
 /turf/open/floor/almayer/sterile_green_side/east,
@@ -14345,6 +14362,7 @@
 	name = "General Listening Channel";
 	pixel_y = -29
 	},
+/obj/item/reagent_container/food/drinks/h_chocolate,
 /turf/open/floor/almayer/red,
 /area/mackay_station/romeo/redcommons2)
 "jYl" = (
@@ -15884,7 +15902,7 @@
 /obj/structure/machinery/light/double/blue{
 	dir = 1
 	},
-/turf/open/shuttle/escapepod/floor0/east,
+/turf/open/shuttle/escapepod/floor2,
 /area/mackay_station/golf/greentram)
 "lcE" = (
 /obj/effect/decal/warning_stripes{
@@ -17921,14 +17939,18 @@
 "mwa" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/ammo_box/magazine/unsc/ma5c{
-	pixel_x = 4;
-	pixel_y = 12
+	pixel_x = 2;
+	pixel_y = 17
 	},
-/obj/item/ammo_box/magazine/unsc/ma5c{
-	pixel_y = 23
-	},
-/obj/item/ammo_box/magazine/unsc/ma5c,
 /obj/structure/machinery/light/double/blue,
+/obj/item/ammo_box/magazine/misc/unsc/grenade/smoke{
+	pixel_x = 9;
+	pixel_y = 0
+	},
+/obj/item/ammo_box/magazine/misc/unsc/grenade/smoke{
+	pixel_x = -8;
+	pixel_y = 0
+	},
 /turf/open/floor/almayer/pod_landing_floor,
 /area/mackay_station/golf/greenarmory)
 "mwr" = (
@@ -18466,7 +18488,7 @@
 /turf/open/floor/almayer/pod_landing_floor,
 /area/mackay_station/romeo/redtram2)
 "mKZ" = (
-/turf/open/shuttle/escapepod/floor0/east,
+/turf/open/shuttle/escapepod/floor2,
 /area/mackay_station/romeo/redhangars)
 "mLY" = (
 /obj/structure/surface/rack,
@@ -19671,7 +19693,7 @@
 /area/mackay_station/romeo/redhangars)
 "nEQ" = (
 /obj/effect/decal/cleanable/blood/oil,
-/turf/open/shuttle/escapepod/floor0/north/east,
+/turf/open/shuttle/escapepod/floor2,
 /area/mackay_station/bravo/blueengi)
 "nEW" = (
 /obj/structure/platform/strata/metal{
@@ -19745,7 +19767,7 @@
 /obj/structure/machinery/light/double/blue{
 	dir = 1
 	},
-/turf/open/shuttle/escapepod/floor0/east,
+/turf/open/shuttle/escapepod/floor2,
 /area/mackay_station/romeo/redtram1)
 "nIC" = (
 /obj/structure/machinery/camera/autoname{
@@ -20067,18 +20089,22 @@
 /turf/open/floor/strata/white_cyan2/west,
 /area/mackay_station/golf/greenquarters2)
 "nVz" = (
-/obj/item/facepaint/green{
-	pixel_y = 6;
-	pixel_x = 2
-	},
-/obj/item/facepaint/black{
-	pixel_x = -7;
-	pixel_y = 1
-	},
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/facepaint/brown{
-	pixel_x = 1;
-	pixel_y = -4
+/obj/item/ammo_box/magazine/misc/unsc/m6_ammo_packet{
+	pixel_x = 6;
+	pixel_y = -7
+	},
+/obj/item/ammo_box/magazine/misc/unsc/m7_ammo_packet{
+	pixel_x = 8;
+	pixel_y = 11
+	},
+/obj/item/ammo_box/magazine/misc/unsc/ma5_ammo_packet{
+	pixel_x = -9;
+	pixel_y = 10
+	},
+/obj/item/ammo_box/magazine/misc/unsc/br55_ammo_packet{
+	pixel_x = -8;
+	pixel_y = -7
 	},
 /turf/open/floor/almayer/pod_landing_floor,
 /area/mackay_station/golf/greenarmory)
@@ -26003,7 +26029,7 @@
 /obj/structure/machinery/light/double/blue{
 	dir = 8
 	},
-/turf/open/shuttle/escapepod/floor0/east,
+/turf/open/shuttle/escapepod/floor2,
 /area/mackay_station/romeo/redtram2)
 "rTV" = (
 /obj/effect/decal/cleanable/dirt{
@@ -28233,7 +28259,7 @@
 /obj/structure/machinery/light/double/blue{
 	dir = 8
 	},
-/turf/open/shuttle/escapepod/floor0/east,
+/turf/open/shuttle/escapepod/floor2,
 /area/mackay_station/bravo/bluetram)
 "tBZ" = (
 /obj/effect/decal/warning_stripes{
@@ -28288,7 +28314,7 @@
 	name = "Motor Pool Door Controls";
 	pixel_y = -24
 	},
-/turf/open/shuttle/escapepod/floor0/east,
+/turf/open/shuttle/escapepod/floor2,
 /area/mackay_station/romeo/redhangars)
 "tEM" = (
 /obj/effect/decal/warning_stripes{
@@ -30405,9 +30431,17 @@
 /area/mackay_station/golf/greenrec)
 "uYX" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/tool/hand_labeler{
-	pixel_y = 2;
-	pixel_x = -3
+/obj/item/facepaint/black{
+	pixel_x = -7;
+	pixel_y = 1
+	},
+/obj/item/facepaint/green{
+	pixel_y = 6;
+	pixel_x = 2
+	},
+/obj/item/facepaint/brown{
+	pixel_x = 1;
+	pixel_y = -4
 	},
 /turf/open/floor/almayer/pod_landing_floor,
 /area/mackay_station/golf/greenarmory)
@@ -34336,7 +34370,7 @@
 /obj/structure/machinery/light/double/blue{
 	dir = 1
 	},
-/turf/open/shuttle/escapepod/floor0/east,
+/turf/open/shuttle/escapepod/floor2,
 /area/mackay_station/romeo/redtram2)
 "xOM" = (
 /turf/open/floor/almayer/sterile_green_corner,
@@ -139610,7 +139644,7 @@ kIa
 kIa
 kIa
 vTv
-haG
+aaX
 nTd
 xVd
 laz

@@ -304,9 +304,11 @@
 	return data
 
 // Rideway turret
+// SS220 EDIT - START: PR #1266 D66-44 — translated name/desc to Russian
 /obj/item/hardpoint/holder/tank_turret/ridgeway
 	name = "\improper башня M40 Ridgeway"
 	desc = "Башня тяжёлого танка M40 Ridgeway. Значительный шаг вперёд по сравнению со старыми машинами: Ridgeway способен нести заметно более совершенное вооружение, защитные системы, оптику и датчики, не жертвуя бронёй и не набирая чрезмерный вес."
+// SS220 EDIT - END
 
 	icon = 'icons/obj/vehicles/ridgeway.dmi'
 	icon_state = "tank_turret_0"
@@ -371,3 +373,59 @@
 		// secondaries
 	)
 	icon = 'icons/obj/vehicles/apc_wolfpack.dmi'
+
+
+// SS220 EDIT - START
+//TWE TURRET
+/obj/item/hardpoint/holder/tank_turret/twe_tank_turret
+	name = "\improper башня TBA3 «Vandeleur»"
+	desc = "Башня TBA3 «Vandeleur», разработанная Weyland Yutani в рамках пакета модернизации «B» для лёгкого кавалерийского танка FV150 «Hobelar». Vandeleur является прямым развитием оригинальной башни FV150-A с улучшениями внутренних систем и модульности. Она может быстро и легко устанавливать широкий спектр оружейных систем и оснащена встроенной системой запуска осветительных ракет."
+
+	icon = 'icons/obj/vehicles/twe_tank.dmi'
+	icon_state = "tank_turret_0"
+	disp_icon = "tank"
+	disp_icon_state = "tank_turret"
+	activation_sounds = list('sound/weapons/vehicles/smokelauncher_fire.ogg')
+	pixel_x = -48
+	pixel_y = -48
+
+	ammo = new /obj/item/ammo_magazine/hardpoint/flare_launcher
+	max_clips = 2
+	use_muzzle_flash = FALSE
+	allowed_seat = VEHICLE_GUNNER
+
+	// big beefy chonk of metal
+	health = 1500
+	damage_multiplier = 0.05
+
+	accepted_hardpoints = list(
+		// primaries
+		/obj/item/hardpoint/primary/autocannon/twe_tank,
+	)
+
+	hdpt_layer = HDPT_LAYER_TURRET
+	px_offsets = list(
+		"1" = list(0, 3),
+		"2" = list(0, 0),
+		"4" = list(0, 0),
+		"8" = list(0, 0)
+	)
+
+/obj/item/hardpoint/holder/tank_turret/twe_tank_turret/get_tgui_info()
+	var/list/data = list()
+
+	data += list(list( // turret flare data
+		"name" = "TBA3-B ракетница башни",
+		"health" = health <= 0 ? null : floor(get_integrity_percent()),
+		"uses_ammo" = TRUE,
+		"current_rounds" = ammo.current_rounds / 2,
+		"max_rounds"= ammo.max_rounds / 2,
+		"mags" = LAZYLEN(backup_clips),
+		"max_mags" = max_clips,
+	))
+
+	for(var/obj/item/hardpoint/H in hardpoints)
+		data += list(H.get_tgui_info())
+
+	return data
+// SS220 EDIT - END

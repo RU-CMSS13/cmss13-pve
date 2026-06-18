@@ -70,3 +70,14 @@
 	name = "\improper UNSC science officer uniform"
 	icon_state = "crewjumpsuit_rnd"
 	worn_state = "crewjumpsuit_rnd"
+
+/obj/item/clothing/under/marine/classic
+	name = "\improper UNSC fatigues"
+	desc = "Униформа морской пехоты старого образца с вставками из венларовой брони в критических зонах для защиты от клинков и баллистических угроз."
+	icon = 'modular/halo/icons/halo/obj/items/clothing/undersuit.dmi'
+	icon_state = "classic_marine"
+	worn_state = "classic_marine"
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	item_icons = list(
+		WEAR_BODY = 'modular/halo/icons/halo/mob/humans/onmob/clothing/uniforms.dmi')

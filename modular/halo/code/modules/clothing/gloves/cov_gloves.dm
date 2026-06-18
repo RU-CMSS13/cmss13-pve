@@ -9,7 +9,7 @@
 		WEAR_HANDS = 'modular/halo/icons/halo/mob/humans/onmob/clothing/sangheili/gloves.dmi'
 	)
 
-	allowed_species_list = list(SPECIES_SANGHEILI)
+	allowed_species_list = list(SPECIES_SANGHEILI,SPECIES_SANGHEILI_HEROIC,SPECIES_SANGHEILI_LEGENDARY,SPECIES_SANGHEILI_MYTHIC)
 
 	armor_melee = CLOTHING_ARMOR_HIGH
 	armor_bullet = CLOTHING_ARMOR_HIGH

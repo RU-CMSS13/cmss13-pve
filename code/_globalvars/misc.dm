@@ -146,4 +146,6 @@ GLOBAL_VAR_INIT(gm_set_zombie_random_helmet, FALSE)
 /// Zombies chance to get "helmets"
 GLOBAL_VAR_INIT(gm_set_zombie_helmet_chance, 25)
 /// Zombie individually set disable auto clean, stops callback qdels for droppedlimbs and perma corpses
+
+GLOBAL_VAR_INIT(toggle_slot_preferences, TRUE) // SS220 EDIT: добавлен для Dog War slot preferences toggle
 GLOBAL_VAR_INIT(gm_set_zombie_disable_auto_clean, FALSE)

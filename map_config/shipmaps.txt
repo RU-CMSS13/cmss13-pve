@@ -36,6 +36,9 @@ endmap
 map rover_tethered
 endmap
 
+map rover_tethered
+endmap
+
 map golden_arrow_classic
 endmap
 
@@ -46,6 +49,12 @@ map uscss_onyx_karain
 endmap
 
 map hms_brynhild
+endmap
+
+map uscm_bunker
+endmap
+
+map upp_bunker
 endmap
 
 map uscm_blue_ridge
@@ -67,3 +76,15 @@ map mackay_station_shipmap
 endmap
 
 # SS220 EDIT - END
+
+// SS220 EDIT - START: PR #1283 Movie-ish Sections — movie ship map rotation
+map golden_arrow_movie
+endmap
+
+map chapaev_movie
+endmap
+// SS220 EDIT - END
+
+// SS220 EDIT: Dog War shipmap
+map golden_arrow_dog_war
+endmap

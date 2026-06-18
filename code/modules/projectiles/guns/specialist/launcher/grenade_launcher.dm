@@ -202,7 +202,7 @@
 	msg_admin_attack("[key_name_admin(user)] fired a grenade ([fired.name]) from \a ([name]).")
 	log_game("[key_name_admin(user)] used a grenade ([name]).")
 
-// canister rounds explode before leaving the barrel of the launcher.
+// SS220 EDIT: CM-PVE PR #182 — canister rounds explode before leaving the barrel of the launcher.
 	if(istype(fired, /obj/item/explosive/grenade/high_explosive/airburst/canister))
 		var/obj/item/explosive/grenade/high_explosive/airburst/canister/canister_round = fired
 		canister_round.canister_fire(user, target)

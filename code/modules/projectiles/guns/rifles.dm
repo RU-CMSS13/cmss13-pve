@@ -469,7 +469,7 @@
 
 /obj/item/weapon/gun/rifle/m41aMK1
 	name = "\improper M41A pulse rifle"
-	desc = "Pulse action 10x24mm caseless assault rifle of the USCMC, personal friend of any Marine. Features an integrated 30mm grenade launcher and ammo tube that can hold four grenades on backup."
+	desc = "Pulse action 10x24mm caseless assault rifle of the USCMC, personal friend of any Marine." // SS220 EDIT: CM-PVE PR #169 — desc update (removed grenade launcher mention for base MK1)
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m41amk1" //Placeholder.
 	item_state = "m41amk1" //Placeholder.
@@ -706,6 +706,8 @@
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/stock/m20a,
 		/obj/item/attachable/attached_gun/shotgun,
+		/obj/item/attachable/flashlight/m20a, // SS220 EDIT: M20A flashlight for Dog War
+		/obj/item/attachable/attached_gun/grenade/m20a, // SS220 EDIT: M20A grenade launcher for Dog War
 	)
 
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
@@ -715,11 +717,11 @@
 	map_specific_decoration = FALSE
 
 /obj/item/weapon/gun/rifle/m20a/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 18, "under_y" = 15, "stock_x" = 22, "stock_y" = 15, "side_rail_x" = 23, "side_rail_y" = 16)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 18, "under_y" = 15, "stock_x" = 22, "stock_y" = 15, "side_rail_x" = 23, "side_rail_y" = 16, "special_x" = 16, "special_y" = 16) // SS220 EDIT: Add special slot offset for M20A grenade launcher
 
 /obj/item/weapon/gun/rifle/m20a/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_9)
+	set_fire_delay(FIRE_DELAY_TIER_10) // SS220 EDIT: Changed from TIER_9 for Dog War balance
 	set_burst_amount(BURST_AMOUNT_TIER_3)
 	set_burst_delay(FIRE_DELAY_TIER_10)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_5
@@ -727,8 +729,8 @@
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_4
 	damage_falloff_mult = 0
-	scatter = SCATTER_AMOUNT_TIER_8
-	burst_scatter_mult = SCATTER_AMOUNT_TIER_8
+	scatter = SCATTER_AMOUNT_TIER_9 // SS220 EDIT: Changed from TIER_8 for Dog War balance
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_9 // SS220 EDIT: Changed from TIER_8 for Dog War balance
 
 /obj/item/weapon/gun/rifle/m20a/unloaded
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
@@ -775,6 +777,25 @@
 
 /obj/item/weapon/gun/rifle/m20a/merc/unloaded
 	current_mag = null
+
+// SS220 EDIT - START: M20A old variant for Dog War
+/obj/item/weapon/gun/rifle/m20a/old
+	desc = "USCMC assault rifle chambered in 10x24 caseless, complete with an integrated 20mm grenade launcher and an integrated flashlight."
+	starting_attachment_types = list(/obj/item/attachable/stock/m20a)
+	start_automatic = TRUE
+
+/obj/item/weapon/gun/rifle/m20a/old/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/attached_gun/grenade/m20a/S = new(src)
+	S.flags_attach_features &= ~ATTACH_REMOVABLE
+	S.hidden = TRUE
+	S.Attach(src)
+	var/obj/item/attachable/flashlight/m20a/flashlight = new(src)
+	flashlight.flags_attach_features &= ~ATTACH_REMOVABLE
+	flashlight.Attach(src)
+	update_attachable(flashlight.slot)
+// SS220 EDIT - END
+
 //----------------------------------------------
 //Experimental ARMAT side-grade to the M41A, not standard issue, only used by MARSOC
 
@@ -1074,7 +1095,7 @@
 
 /obj/item/weapon/gun/rifle/m16
 	name = "\improper M16 rifle"
-	desc = "The manufacturer claims that these are Classic 16 assault rifles. It's another one of the clonetypes you see on the Frontier since the AR-15 patent expired over a century ago. Chambered in 5.56x45mm, popular on the Frontier for home defense and hunting. The old cased rounds can also be used till they disintegrate, if you can be bothered to police the brass."
+	desc = "The manufacturer claims that these are Classic 16 assault rifles. It's another one of the clonetypes you see on the Frontier since the AR-15 patent expired over a century ago. Chambered in 5.56x45mm, popular on the Frontier for home defense and hunting. The old cased rounds can also be used till they disintegrate, if you can be bothered to police the brass." // SS220 EDIT: CM-PVE PR #169 — desc update
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "m16"
 	item_state = "m16"
@@ -1162,7 +1183,7 @@
 
 /obj/item/weapon/gun/rifle/m16/grenadier
 	name = "\improper M16 grenadier rifle"
-	desc = "The little worn and faded sticker on the lower receiver claims that this is a Mustang Special, Little Friend Edition. Point is, it's an M16 repro with an irremovable M203 underslung. 40mm, careful where you point it."
+	desc = "The little worn and faded sticker on the lower receiver claims that this is a Mustang Special, Little Friend Edition. Point is, it's an M16 repro with an irremovable M203 underslung. 40mm, careful where you point it." // SS220 EDIT: CM-PVE PR #169 — desc update
 	icon_state = "m16g"
 	item_state = "m16"
 	fire_sound = 'sound/weapons/gun_m16.ogg'
@@ -1210,8 +1231,8 @@
 //awesome vietnam era special forces carbine version of the M16
 
 /obj/item/weapon/gun/rifle/xm177
-	name = "\improper XM177 carbine"
-	desc = "5.56x45mm carbine. Either this is a really cheap replica of the old XM177, someone's crappy DIY modification, or somehow an actual genuine antique which probably is worth at least a couple grand to a museum. Who knows?"
+	name = "\improper XM177 carbine" // SS220 EDIT: CM-PVE PR #169 — name/desc update
+	desc = "5.56x45mm carbine. Either this is a really cheap replica of the old XM177, someone's crappy DIY modification, or somehow an actual genuine antique which probably is worth at least a couple grand to a museum. Who knows?" // SS220 EDIT: CM-PVE PR #169
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "xm177"
 	item_state = "m16"
@@ -2016,6 +2037,15 @@
 
 /obj/item/weapon/gun/rifle/l42a/training
 	current_mag = /obj/item/ammo_magazine/rifle/l42a/rubber
+
+// SS220 EDIT: XM24A old marksman rifle for Dog War
+/obj/item/weapon/gun/rifle/l42a/old
+	name = "\improper XM24A pulse rifle"
+	desc = "XM24A was developed by Lindenthal-Ehrenfeld Militärindustrie under the designation of L42. It is currently undergoing field-testing in the USCMC as a marskman rifle replacement."
+	current_mag = /obj/item/ammo_magazine/rifle/l42a/heap
+	fire_sound = 'sound/weapons/gun_carbine.ogg'
+	starting_attachment_types = list(/obj/item/attachable/stock/carbine, /obj/item/attachable/scope/mini)
+	map_specific_decoration = FALSE
 
 //-------------------------------------------------------
 //-------------------------------------------------------

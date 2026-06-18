@@ -199,7 +199,7 @@
 
 /obj/item/clothing/suit/marine/veteran/pmc/light
 	name = "\improper WY light tactical armor"
-	icon_state = "pmc_sniper"
+	icon_state = "pmc_vest"
 	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bullet = CLOTHING_ARMOR_MEDIUM
 	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
@@ -207,7 +207,7 @@
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
 	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
-	item_state_slots = list(WEAR_JACKET = "pmc_sniper")
+	item_state_slots = list(WEAR_JACKET = "pmc_vest")
 
 /obj/item/clothing/suit/marine/smartgunner/veteran/pmc
 	name = "\improper WY support gunner armor"
@@ -427,7 +427,8 @@
 	name = "\improper 6B90 pattern UPP armor"
 	desc = "Union frontline issue body armor. Part of protective complex Kuija-M, 6B90 is capable of rifle threats with new ultralight alloy plates over the vitals, while ballistic mesh inserts provide torso protection from shrapnel or ricochets. A small transmitter on the lower back supports low resolution video/audio and biotelemetry feeds for the TOC. While designed to be one size fits all, the support system proves difficult to comfortably adjust."
 	icon_state = "upp_armor"
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE|FPRINT|CONDUCT
+	// SS220 EDIT: CM-PVE #1255 UPP camouflage — NO_SNOW_TYPE removed for gamemode skin support
+	flags_atom = NO_NAME_OVERRIDE|FPRINT|CONDUCT
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
 	slowdown = SLOWDOWN_ARMOR_MEDIUM
 	flags_inventory = BLOCKSHARPOBJ
@@ -454,7 +455,8 @@
 	desc = "Deep modification of the standard body armor, intended for Union machinegunners. Contains compact fire control computers and an encrypted data processing unit in the lower back, as well as an armored cable to connect to the machine gun. Covers all requirements to operate the weapon, but a common complaint is the bulkiness."
 	icon_state = "upp_armor_support"
 	slowdown = SLOWDOWN_ARMOR_LOWHEAVY
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	// SS220 EDIT: CM-PVE #1255 UPP camouflage — NO_SNOW_TYPE removed for gamemode skin support
+	flags_atom = NO_NAME_OVERRIDE
 	flags_inventory = BLOCKSHARPOBJ|SMARTGUN_HARNESS
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
 	armor_melee = CLOTHING_ARMOR_HIGH
@@ -553,6 +555,7 @@
 	name = "\improper Type 12 CANC armor"
 	desc = "Vintage CANC armor system. Provides basic ballistic/shrapnel protection."
 	icon_state = "canc"
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
 	slowdown = SLOWDOWN_ARMOR_LIGHT
 	armor_melee = CLOTHING_ARMOR_MEDIUM
@@ -626,6 +629,7 @@
 	name = "\improper PaP uniform jacket"
 	desc = "A People's Armed Police service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality, and a Personal Light Unit rig."
 	icon_state = "upp_coat_pap"
+	flags_atom = NO_SNOW_TYPE
 
 
 //===========================//FREELANCER\\================================\\

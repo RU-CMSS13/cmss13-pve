@@ -464,7 +464,7 @@
 			if("Wraith Plasma")
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				selected_mode = GLOB.fire_support_types[FIRESUPPORT_TYPE_WRAITH_PLASMA]
-				selected_mode.initiate_fire_support(target_turf)
+				selected_mode.initiate_fire_support(target_turf, user, TRUE)
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
@@ -472,7 +472,7 @@
 			if("Banshee Fuel Rod")
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				selected_mode = GLOB.fire_support_types[FIRESUPPORT_TYPE_BANSHEE_FUEL_ROD]
-				selected_mode.initiate_fire_support(target_turf)
+				selected_mode.initiate_fire_support(target_turf, user, TRUE)
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
@@ -480,7 +480,7 @@
 			if("Banshee Strafe")
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				selected_mode = GLOB.fire_support_types[FIRESUPPORT_TYPE_BANSHEE_STRAFE]
-				selected_mode.initiate_fire_support(target_turf)
+				selected_mode.initiate_fire_support(target_turf, user, TRUE)
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
@@ -488,14 +488,14 @@
 			if("Glassing Beam")
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				selected_mode = GLOB.fire_support_types[FIRESUPPORT_TYPE_GLASSING_BEAM]
-				selected_mode.initiate_fire_support(target_turf)
+				selected_mode.initiate_fire_support(target_turf, user, TRUE)
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
 			if("Glassing Fast")
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				selected_mode = GLOB.fire_support_types[FIRESUPPORT_TYPE_GLASSING_BEAM_FAST]
-				selected_mode.initiate_fire_support(target_turf)
+				selected_mode.initiate_fire_support(target_turf, user, TRUE)
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
@@ -503,7 +503,7 @@
 			if("Glassing Weak Fast")
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				selected_mode = GLOB.fire_support_types[FIRESUPPORT_TYPE_GLASSING_BEAM_WEAK]
-				selected_mode.initiate_fire_support(target_turf)
+				selected_mode.initiate_fire_support(target_turf, user, TRUE)
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
@@ -511,7 +511,7 @@
 			if("Glassing Weak Instant")
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				selected_mode = GLOB.fire_support_types[FIRESUPPORT_TYPE_GLASSING_BEAM_WEAK_INSTANT]
-				selected_mode.initiate_fire_support(target_turf)
+				selected_mode.initiate_fire_support(target_turf, user, TRUE)
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
@@ -520,7 +520,7 @@
 			if("Wombat GAU")
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				selected_mode = GLOB.fire_support_types[FIRESUPPORT_TYPE_WOMBAT_GAU]
-				selected_mode.initiate_fire_support(target_turf)
+				selected_mode.initiate_fire_support(target_turf, user, TRUE)
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
@@ -528,7 +528,7 @@
 			if("Wombat Missile")
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				selected_mode = GLOB.fire_support_types[FIRESUPPORT_TYPE_WOMBAT_MISSILE]
-				selected_mode.initiate_fire_support(target_turf)
+				selected_mode.initiate_fire_support(target_turf, user, TRUE)
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
@@ -536,9 +536,15 @@
 			if("Wombat Inc. Missile")
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				selected_mode = GLOB.fire_support_types[FIRESUPPORT_TYPE_WOMBAT_INCENDIARY]
-				selected_mode.initiate_fire_support(target_turf)
+				selected_mode.initiate_fire_support(target_turf, user, TRUE)
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
+				return TRUE
+
+			if("Wombat Flyby")
+				selected_mode = GLOB.fire_support_types[FIRESUPPORT_TYPE_WOMBAT_FLYBY]
+				selected_mode.initiate_fire_support(target_turf, user, TRUE)
+
 				return TRUE
 
 
@@ -546,7 +552,7 @@
 			if("C712 Coilgun")
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				selected_mode = GLOB.fire_support_types[FIRESUPPORT_TYPE_C712_COILGUN]
-				selected_mode.initiate_fire_support(target_turf)
+				selected_mode.initiate_fire_support(target_turf, user, TRUE)
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
@@ -554,7 +560,7 @@
 			if("C712 Missile")
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				selected_mode = GLOB.fire_support_types[FIRESUPPORT_TYPE_C712_MISSILE]
-				selected_mode.initiate_fire_support(target_turf)
+				selected_mode.initiate_fire_support(target_turf, user, TRUE)
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
@@ -562,9 +568,15 @@
 			if("C712 Cluster")
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				selected_mode = GLOB.fire_support_types[FIRESUPPORT_TYPE_C712_CLUSTER]
-				selected_mode.initiate_fire_support(target_turf)
+				selected_mode.initiate_fire_support(target_turf, user, TRUE)
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
+				return TRUE
+
+			if("C712 Flyby")
+				selected_mode = GLOB.fire_support_types[FIRESUPPORT_TYPE_C712_FLYBY]
+				selected_mode.initiate_fire_support(target_turf, user, TRUE)
+
 				return TRUE
 
 			//C709
@@ -572,7 +584,7 @@
 			if("C709 Cluster Bomb")
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				selected_mode = GLOB.fire_support_types[FIRESUPPORT_TYPE_C709_CLUSTER]
-				selected_mode.initiate_fire_support(target_turf)
+				selected_mode.initiate_fire_support(target_turf, user, TRUE)
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
@@ -580,7 +592,7 @@
 			if("C709 Heavy Missile")
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				selected_mode = GLOB.fire_support_types[FIRESUPPORT_TYPE_C709_MISSILE]
-				selected_mode.initiate_fire_support(target_turf)
+				selected_mode.initiate_fire_support(target_turf, user, TRUE)
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
@@ -588,16 +600,16 @@
 			if("C709 Inc. Bomb")
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				selected_mode = GLOB.fire_support_types[FIRESUPPORT_TYPE_C709_INCENDIARY]
-				selected_mode.initiate_fire_support(target_turf)
+				selected_mode.initiate_fire_support(target_turf, user, TRUE)
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
-			if("MAC")
 
 			// Naval Ordnance
+			if("MAC")
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				selected_mode = GLOB.fire_support_types[FIRESUPPORT_TYPE_MAC]
-				selected_mode.initiate_fire_support(target_turf)
+				selected_mode.initiate_fire_support(target_turf, user, TRUE)
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
@@ -605,7 +617,7 @@
 			if("MAC - Atmospheric")
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				selected_mode = GLOB.fire_support_types[FIRESUPPORT_TYPE_MAC_ATMOS]
-				selected_mode.initiate_fire_support(target_turf)
+				selected_mode.initiate_fire_support(target_turf, user, TRUE)
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
@@ -613,7 +625,7 @@
 			if("Coilguns")
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				selected_mode = GLOB.fire_support_types[FIRESUPPORT_TYPE_COILGUNS]
-				selected_mode.initiate_fire_support(target_turf)
+				selected_mode.initiate_fire_support(target_turf, user, TRUE)
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
@@ -621,7 +633,7 @@
 			if("Banshee Flyby")
 				var/obj/effect/overlay/temp/blinking_laser/invis/target_lase = new(target_turf)
 				flyby_effect = /obj/effect/temp_visual/flyby/banshee_flyby
-				flyby_sound = 'sound/weapons/halo/fire_support/banshee_flyby.ogg'
+				flyby_sound = 'modular/halo/sound/weapons/fire_support/banshee_flyby.ogg'
 				handle_flyby_initiate(target_turf)
 				QDEL_IN(target_lase, 1 SECONDS)
 				return TRUE
@@ -629,7 +641,7 @@
 			if("Seraph Flyby")
 				var/obj/effect/overlay/temp/blinking_laser/invis/target_lase = new(target_turf)
 				flyby_effect = /obj/effect/temp_visual/flyby/seraph_flyby
-				flyby_sound = 'sound/weapons/halo/fire_support/seraph_flyby.ogg'
+				flyby_sound = 'modular/halo/sound/weapons/fire_support/seraph_flyby.ogg'
 				handle_flyby_initiate(target_turf)
 				QDEL_IN(target_lase, 1 SECONDS)
 				return TRUE
@@ -637,7 +649,7 @@
 			if("Wombat Flyby")
 				var/obj/effect/overlay/temp/blinking_laser/invis/target_lase = new(target_turf)
 				flyby_effect = /obj/effect/temp_visual/flyby/wombat_flyby
-				flyby_sound = 'sound/weapons/halo/fire_support/wombat_flyover.ogg'
+				flyby_sound = 'modular/halo/sound/weapons/fire_support/wombat_flyover.ogg'
 				handle_flyby_initiate(target_turf)
 				QDEL_IN(target_lase, 1 SECONDS)
 				return TRUE
@@ -645,7 +657,7 @@
 			if("C712 Flyby")
 				var/obj/effect/overlay/temp/blinking_laser/invis/target_lase = new(target_turf)
 				flyby_effect = /obj/effect/temp_visual/flyby/c712_longsword_flyby
-				flyby_sound = 'sound/weapons/halo/fire_support/c712_flyover.ogg'
+				flyby_sound = 'modular/halo/sound/weapons/fire_support/c712_flyover.ogg'
 				handle_flyby_initiate(target_turf)
 				QDEL_IN(target_lase, 1 SECONDS)
 				return TRUE
@@ -653,7 +665,7 @@
 			if("C709 Flyby")
 				var/obj/effect/overlay/temp/blinking_laser/invis/target_lase = new(target_turf)
 				flyby_effect = /obj/effect/temp_visual/flyby/c709_longsword_flyby
-				flyby_sound = 'sound/weapons/halo/fire_support/c709_flyover.ogg'
+				flyby_sound = 'modular/halo/sound/weapons/fire_support/c709_flyover.ogg'
 				handle_flyby_initiate(target_turf)
 				QDEL_IN(target_lase, 1 SECONDS)
 				return TRUE
@@ -796,14 +808,41 @@
 	var/shadow_cooldown
 	var/has_shadow
 
+/datum/fire_support/custom/New()
+	name = "[name] ([cost])"
+
+///Enables the firesupport option
+/datum/fire_support/custom/enable_firesupport()
+	fire_support_flags |= FIRESUPPORT_AVAILABLE
+
+///Disables the firesupport entirely
+/datum/fire_support/custom/disable()
+	fire_support_flags &= ~FIRESUPPORT_AVAILABLE
+
 ///Initiates fire support proc chain
-/datum/fire_support/custom/initiate_fire_support(turf/target_turf)
-	addtimer(CALLBACK(src, PROC_REF(start_fire_support), target_turf), delay_to_impact)
+/datum/fire_support/custom/initiate_fire_support(turf/target_turf, mob/user, ignore_availability = FALSE)
+	if(!ignore_availability && !(fire_support_flags & FIRESUPPORT_AVAILABLE))
+		to_chat(user, SPAN_NOTICE("FIRE SUPPORT UNAVAILABLE"))
+		return
+	addtimer(CALLBACK(src, PROC_REF(start_fire_support), target_turf, user), delay_to_impact)
 
 	if(initiate_visual)
 		new initiate_visual(target_turf)
 	if(initiate_sound)
 		playsound(target_turf, initiate_sound, 100, sound_range = sound_ranges)
+	if(initiate_chat_message)
+		to_chat(user, SPAN_NOTICE(initiate_chat_message))
+	if(!(MODE_HAS_TOGGLEABLE_FLAG(MODE_DISABLE_FS_PORTRAIT)))
+		if(portrait_type && initiate_title && initiate_screen_message)
+			var/list/alert_receivers = list()
+			var/picked_screen_message = pick(initiate_screen_message)
+			for(var/mob/living/carbon/human/human as anything in GLOB.alive_human_list)
+				if(human.faction == user.faction)
+					alert_receivers += human
+			alert_receivers += GLOB.observer_list
+			for(var/mob/mob_receiver in alert_receivers)
+				playsound_client(mob_receiver.client, 'sound/effects/radiostatic.ogg', 35, channel = CHANNEL_ANNOUNCEMENTS)
+				mob_receiver.play_screen_text("<span class='langchat' style=font-size:24pt;text-align:left valign='top'><u>[uppertext(name)]</u></span><br>" + picked_screen_message, new /atom/movable/screen/text/screen_text/potrait/faster(null, null, initiate_title, 'icons/ui_icons/screen_alert_images.dmi', portrait_type))
 
 	addtimer(CALLBACK(src, PROC_REF(early_warning), target_turf), delay_to_impact/4)
 	addtimer(CALLBACK(src, PROC_REF(late_warning), target_turf), delay_to_impact/2)
@@ -833,8 +872,9 @@
 		)
 
 ///Actually begins the fire support attack
-/datum/fire_support/custom/start_fire_support(turf/target_turf)
-	select_target(target_turf)
+/datum/fire_support/custom/start_fire_support(turf/target_turf, mob/user)
+	select_target(target_turf, user)
+	cooldown_timer = addtimer(VARSET_CALLBACK(src, cooldown_timer, null), cooldown_duration, TIMER_STOPPABLE)
 	if(has_shadow)
 		if(!shadow_cooldown)
 			shadow_cooldown = addtimer(VARSET_CALLBACK(src, shadow_cooldown, null), 4 SECONDS, TIMER_STOPPABLE)
@@ -846,15 +886,15 @@
 		playsound(target_turf, start_sound, 100, sound_range = sound_ranges)
 
 ///Selects the final target turf(s) and calls impact procs
-/datum/fire_support/custom/select_target(turf/target_turf)
+/datum/fire_support/custom/select_target(turf/target_turf, mob/user)
 	var/list/turf_list = RANGE_TURFS(scatter_range, target_turf)
 	for(var/i = 1 to impact_quantity)
 		var/turf/impact_turf = pick(turf_list)
-		addtimer(CALLBACK(src, PROC_REF(do_impact), impact_turf), impact_delay * i)
+		addtimer(CALLBACK(src, PROC_REF(do_impact), impact_turf, user), impact_delay * i)
 		addtimer(CALLBACK(src, PROC_REF(do_impact_effect), impact_turf), visual_impact_delay * i)
 
 ///The actual impact of the fire support
-/datum/fire_support/custom/do_impact(turf/target_turf)
+/datum/fire_support/custom/do_impact(turf/target_turf, mob/user)
 	return
 
 /datum/fire_support/custom/do_impact_effect(turf/target_turf)
@@ -867,7 +907,7 @@
 /datum/fire_support/custom/wraith_plasma
 	name = "wraith plasma"
 	scatter_range = 0
-	initiate_sound = 'sound/weapons/halo/fire_support/wraith_plasma_whistle.ogg'
+	initiate_sound = 'modular/halo/sound/weapons/fire_support/wraith_plasma_whistle.ogg'
 	delay_to_impact = 1.5 SECONDS
 	impact_delay = 0.9 SECONDS
 	start_sound = null
@@ -890,7 +930,7 @@
 	name = "banshee fuel rod"
 	scatter_range = 0
 	start_visual = /obj/effect/temp_visual/flyby/banshee_flyby
-	start_sound = 'sound/weapons/halo/fire_support/banshee_flyby.ogg'
+	start_sound = 'modular/halo/sound/weapons/fire_support/banshee_flyby.ogg'
 	warning_chat_message = "BANSHEE"
 	delay_to_impact = 2 SECONDS
 	has_shadow = TRUE
@@ -914,8 +954,8 @@
 	impact_delay = 0.05 SECONDS
 	start_visual = /obj/effect/temp_visual/flyby/banshee_flyby
 	has_shadow = TRUE
-	initiate_sound = 'sound/weapons/halo/fire_support/banshee_strafe.ogg'
-	start_sound = 'sound/weapons/halo/fire_support/banshee_flyby.ogg'
+	initiate_sound = 'modular/halo/sound/weapons/fire_support/banshee_strafe.ogg'
+	start_sound = 'modular/halo/sound/weapons/fire_support/banshee_flyby.ogg'
 	warning_chat_message = "BANSHEE"
 
 /datum/fire_support/custom/banshee_strafe/do_impact(turf/target_turf)
@@ -942,8 +982,8 @@
 	name = "glassing beam"
 
 	scatter_range = 0
-	initiate_sound = 'sound/weapons/halo/fire_support/cruiser_overhead.ogg'
-	start_sound = 'sound/weapons/halo/fire_support/glassing_beam.ogg'
+	initiate_sound = 'modular/halo/sound/weapons/fire_support/cruiser_overhead.ogg'
+	start_sound = 'modular/halo/sound/weapons/fire_support/glassing_beam.ogg'
 	delay_to_impact = 30 SECONDS
 	impact_delay = 1.7 SECONDS
 	warning_chat_message = "COVENANT SHIP"
@@ -960,11 +1000,11 @@
 	var/fire_type = "white"
 
 /datum/fire_support/custom/glassing_beam/fast
-	initiate_sound = 'sound/weapons/halo/fire_support/cruiser_overhead_fast.ogg'
+	initiate_sound = 'modular/halo/sound/weapons/fire_support/cruiser_overhead_fast.ogg'
 	delay_to_impact = 4 SECONDS
 
 /datum/fire_support/custom/glassing_beam/weak
-	initiate_sound = 'sound/weapons/halo/fire_support/cruiser_overhead_fast.ogg'
+	initiate_sound = 'modular/halo/sound/weapons/fire_support/cruiser_overhead_fast.ogg'
 	delay_to_impact = 4 SECONDS
 	clear_power = 300
 	clear_falloff = 100
@@ -1010,7 +1050,13 @@
 
 // wombat
 
-/datum/fire_support/custom/wombat_gau
+/datum/fire_support/custom/wombat
+	initiate_title = "Dropbear-1"
+	portrait_type = "robot_green"
+	cooldown_duration = 1 MINUTES
+	fire_support_firer = FIRESUPPORT_CAS_WOMBAT
+
+/datum/fire_support/custom/wombat/gau
 	name = "F-99 Wombat GAU strafe"
 	scatter_range = 3
 	impact_quantity = 4
@@ -1018,11 +1064,26 @@
 	impact_delay = 0.05 SECONDS
 	start_visual = /obj/effect/temp_visual/flyby/wombat_flyby
 	has_shadow = TRUE
-	initiate_sound = 'sound/weapons/halo/fire_support/wombat_flyover.ogg'
+	initiate_sound = 'modular/halo/sound/weapons/fire_support/wombat_flyover.ogg'
 	start_sound = 'sound/weapons/fire_support/casplane_flyby.ogg'
 	warning_chat_message = "WOMBAT"
 
-/datum/fire_support/custom/wombat_gau/do_impact(turf/target_turf)
+/datum/fire_support/custom/wombat/gau/call_in
+	name = "Wombat - GAU"
+	delay_to_impact = 3 SECONDS
+
+	cost = 2
+	faction = FACTION_UNSC
+	fire_support_type = FIRESUPPORT_TYPE_WOMBAT_GAU
+	icon_state = "Wombat_Gau"
+	initiate_chat_message = "TARGET ACQUIRED. GUN RUN INBOUND."
+	initiate_screen_message = list(
+		"TARGET ACQUIRED. GUN RUN INBOUND.",
+		"LASE SIGHTED. MUNITIONS EN-ROUTE.",
+		"MUNITION DELIVERY IMMINENT, TAKE COVER.",
+	)
+
+/datum/fire_support/custom/wombat/gau/do_impact(turf/target_turf)
 	var/revdir = REVERSE_DIR(NORTH)
 	var/turf/strafe_turf = target_turf // SS220 EDIT: keep the working turf separate while building the strafe path
 	for(var/i=0 to 2)
@@ -1041,7 +1102,7 @@
 
 	strafe_turfs(strafelist)
 
-/datum/fire_support/custom/wombat_gau/proc/strafe_turfs(list/strafelist)
+/datum/fire_support/custom/wombat/gau/proc/strafe_turfs(list/strafelist)
 	var/turf/strafed
 	playsound(strafelist[1], 'sound/effects/gauimpact.ogg', 10, 1, 20, falloff = 3)
 	var/strafe_count = min(3, length(strafelist)) // SS220 EDIT: tolerate shorter batches if callers ever change
@@ -1068,7 +1129,7 @@
 	if(length(strafelist))
 		addtimer(CALLBACK(src, PROC_REF(strafe_turfs), strafelist), 0.2 SECONDS)
 
-/datum/fire_support/custom/wombat_missile
+/datum/fire_support/custom/wombat/missile
 	name = "F-99 Wombat ASGM-4 missile run"
 	scatter_range = 5
 	impact_quantity = 6
@@ -1076,14 +1137,29 @@
 	impact_delay = 0.3 SECONDS
 	start_visual = /obj/effect/temp_visual/flyby/wombat_flyby
 	has_shadow = TRUE
-	initiate_sound = 'sound/weapons/halo/fire_support/wombat_flyover.ogg'
-	start_sound = 'sound/weapons/halo/fire_support/wombat_missile.ogg'
+	initiate_sound = 'modular/halo/sound/weapons/fire_support/wombat_flyover.ogg'
+	start_sound = 'modular/halo/sound/weapons/fire_support/wombat_missile.ogg'
 	warning_chat_message = "WOMBAT"
 
-/datum/fire_support/custom/wombat_missile/do_impact(turf/target_turf)
+/datum/fire_support/custom/wombat/missile/call_in
+	name = "Wombat - Missile"
+	delay_to_impact = 3 SECONDS
+
+	cost = 4
+	fire_support_type = FIRESUPPORT_TYPE_WOMBAT_MISSILE
+	faction = FACTION_UNSC
+	icon_state = "Wombat_Missile"
+	initiate_chat_message = "TARGET ACQUIRED. MISSILE INBOUND."
+	initiate_screen_message = list(
+		"TARGET ACQUIRED. MISSILE INBOUND.",
+		"LASE SIGHTED. MUNITIONS EN-ROUTE.",
+		"MUNITION DELIVERY IMMINENT, TAKE COVER.",
+	)
+
+/datum/fire_support/custom/wombat/missile/do_impact(turf/target_turf)
 	cell_explosion(target_turf, 180, 40, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data("F-99 Wombat ASGM-4 missile run"))
 
-/datum/fire_support/custom/wombat_incendiary_missile
+/datum/fire_support/custom/wombat/incendiary_missile
 	name = "F-99 Wombat ASGIM-5 missile run"
 	scatter_range = 5
 	impact_quantity = 10
@@ -1091,17 +1167,115 @@
 	impact_delay = 0.2 SECONDS
 	start_visual = /obj/effect/temp_visual/flyby/wombat_flyby
 	has_shadow = TRUE
-	initiate_sound = 'sound/weapons/halo/fire_support/wombat_flyover.ogg'
-	start_sound = 'sound/weapons/halo/fire_support/wombat_missile.ogg'
+	initiate_sound = 'modular/halo/sound/weapons/fire_support/wombat_flyover.ogg'
+	start_sound = 'modular/halo/sound/weapons/fire_support/wombat_missile.ogg'
 	warning_chat_message = "WOMBAT"
 
-/datum/fire_support/custom/wombat_incendiary_missile/do_impact(turf/target_turf)
+/datum/fire_support/custom/wombat/incendiary_missile/call_in
+	name = "Wombat - Inc. Missile"
+	delay_to_impact = 3 SECONDS
+
+	cost = 3
+	fire_support_type = FIRESUPPORT_TYPE_WOMBAT_INCENDIARY
+	faction = FACTION_UNSC
+	icon_state = "Wombat_Incin"
+	initiate_chat_message = "TARGET ACQUIRED. INCENDIARY INBOUND."
+	initiate_screen_message = list(
+		"TARGET ACQUIRED. INCENDIARY INBOUND.",
+		"LASE SIGHTED. MUNITIONS EN-ROUTE.",
+		"MUNITION DELIVERY IMMINENT, TAKE COVER.",
+	)
+
+/datum/fire_support/custom/wombat/incendiary_missile/do_impact(turf/target_turf)
 	cell_explosion(target_turf, 100, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data("F-99 Wombat ASGIM-5 missile run"))
 	fire_spread(target_turf, create_cause_data("Incendiary rockets"), 3, 25, 20, "#EE6515")
 
+/datum/fire_support/custom/wombat/flyby
+	name = "F-99 Wombat Flyby"
+	delay_to_impact = 0.4 SECONDS
+	start_visual = /obj/effect/temp_visual/flyby/wombat_flyby
+	has_shadow = FALSE
+	warning_chat_message = "WOMBAT"
+
+/datum/fire_support/custom/wombat/supply_drop
+	name = "Supply - Mixed Ammo"
+	cost = 2
+	fire_support_type = FIRESUPPORT_TYPE_WOMBAT_SUPPLY_DROP
+	faction = FACTION_UNSC
+	icon_state = "Supply_Marine"
+	initiate_chat_message = "TARGET ACQUIRED, TUBE DEPLOYING."
+	initiate_screen_message = list(
+		"SUPPLIES; ENROUTE.",
+		"RESUPPLY INBOUND.",
+		"WATCH YOUR HEADS, SUPPLY DROP COMING IN.",
+	)
+	scatter_range = 5
+	impact_quantity = 6
+	delay_to_impact = 3 SECONDS
+	impact_delay = 0.3 SECONDS
+	start_visual = /obj/effect/temp_visual/flyby/wombat_flyby
+	has_shadow = TRUE
+	initiate_sound = 'modular/halo/sound/weapons/fire_support/wombat_flyover.ogg'
+	start_sound = 'sound/items/fulton.ogg'
+	///Thing the dropship delivers
+	var/enroute_tube = /obj/structure/closet/ordnance_canister/dropping/ammo_mix/basic
+
+/datum/fire_support/custom/wombat/supply_drop/select_target(turf/target_turf, mob/user)
+	start_sound = 'sound/items/fulton.ogg'
+	var/obj/delivered_tube
+	delivered_tube = new enroute_tube(target_turf)
+	delivered_tube.pixel_z = 100
+	delivered_tube.overlays += image('icons/obj/structures/droppod_32x64.dmi', delivered_tube, "chute_cables_static")
+	var/image/I = image('icons/obj/structures/droppod_64x64.dmi', delivered_tube, "chute_animated")
+	I.pixel_x -= 16
+	I.pixel_y += 16
+	delivered_tube.overlays += I
+	delivered_tube.density = FALSE
+	animate(delivered_tube, pixel_z = 0, time = 1.5 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(delivered_tube_land), target_turf, delivered_tube), 1.5 SECONDS)
+
+/datum/fire_support/custom/wombat/supply_drop/proc/delivered_tube_land(turf/target_turf, obj/delivered_tube)
+	delivered_tube.overlays.Cut()
+
+/datum/fire_support/custom/wombat/supply_drop/spec
+	name = "Supply - Spec Ammo"
+	icon_state = "Supply_Spec"
+	fire_support_type = FIRESUPPORT_TYPE_WOMBAT_SUPPLY_DROP_SPEC
+	cost = 5
+	enroute_tube = /obj/structure/closet/ordnance_canister/dropping/ammo_mix/spec
+
+/datum/fire_support/custom/wombat/supply_drop/odst
+	name = "Supply - ODST Ammo"
+	icon_state = "Supply_ODST"
+	fire_support_type = FIRESUPPORT_TYPE_WOMBAT_SUPPLY_DROP_ODST
+	cost = 4
+	enroute_tube = /obj/structure/closet/ordnance_canister/dropping/ammo_mix/odst
+
+/datum/fire_support/custom/wombat/supply_drop/grenades
+	name = "Supply - Grenades"
+	icon_state = "Supply_Grenade"
+	fire_support_type = FIRESUPPORT_TYPE_WOMBAT_SUPPLY_DROP_GRENADES
+	cost = 4
+	enroute_tube = /obj/structure/closet/ordnance_canister/dropping/misc/grenades
+
+/datum/fire_support/custom/wombat/supply_drop/medical_resupply
+	name = "Supply - Medical"
+	icon_state = "Supply_Med"
+	fire_support_type = FIRESUPPORT_TYPE_WOMBAT_SUPPLY_DROP_MEDICAL
+	enroute_tube = /obj/structure/closet/ordnance_canister/dropping/misc/corpsman_resupply
+
+/datum/fire_support/custom/wombat/flyby/do_impact(turf/target_turf)
+	return
+
 // c712
 
-/datum/fire_support/custom/c712_coilgun
+/datum/fire_support/custom/c712
+	initiate_title = "Right to Party-1"
+	portrait_type = "pilot_green"
+	cooldown_duration = 2 MINUTES
+	fire_support_firer = FIRESUPPORT_CAS_C712
+
+/datum/fire_support/custom/c712/coilgun
 	name = "C712 Longsword Coilgun"
 	scatter_range = 5
 	impact_quantity = 16
@@ -1109,14 +1283,28 @@
 	impact_delay = 0.1 SECONDS
 	start_visual = /obj/effect/temp_visual/flyby/c712_longsword_flyby
 	has_shadow = TRUE
-	initiate_sound = 'sound/weapons/halo/fire_support/c712_flyover.ogg'
-	start_sound = 'sound/weapons/halo/fire_support/c712_coilgun.ogg'
+	initiate_sound = 'modular/halo/sound/weapons/fire_support/c712_flyover.ogg'
+	start_sound = 'modular/halo/sound/weapons/fire_support/c712_coilgun.ogg'
 	warning_chat_message = "C712 LONGSWORD"
 
-/datum/fire_support/custom/c712_coilgun/do_impact(turf/target_turf)
+/datum/fire_support/custom/c712/coilgun/call_in
+	delay_to_impact = 5 SECONDS
+
+	fire_support_type = FIRESUPPORT_TYPE_C712_COILGUN
+	cost = 3
+	faction = FACTION_UNSC
+	icon_state = "712_Coilgun"
+	initiate_chat_message = "TARGET ACQUIRED, MUNITIONS INBOUND."
+	initiate_screen_message = list(
+		"Copy on target, firing now.",
+		"Letting her rip.",
+		"All right, keep your heads down!",
+		)
+
+/datum/fire_support/custom/c712/coilgun/do_impact(turf/target_turf)
 	cell_explosion(target_turf, 80, 40, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data("C712 Longsword Coilgun"))
 
-/datum/fire_support/custom/c712_cluster
+/datum/fire_support/custom/c712/cluster
 	name = "C712 Cluster Bomb"
 	scatter_range = 10
 	impact_quantity = 20
@@ -1124,18 +1312,33 @@
 	impact_delay = 0.1 SECONDS
 	start_visual = /obj/effect/temp_visual/flyby/c712_longsword_flyby
 	has_shadow = TRUE
-	initiate_sound = 'sound/weapons/halo/fire_support/c712_flyover.ogg'
+	initiate_sound = 'modular/halo/sound/weapons/fire_support/c712_flyover.ogg'
 	start_sound = null
 	warning_chat_message = "C712 LONGSWORD"
 
-/datum/fire_support/custom/c712_cluster/do_impact(turf/target_turf)
+
+/datum/fire_support/custom/c712/cluster/call_in
+	delay_to_impact = 5 SECONDS
+
+	fire_support_type = FIRESUPPORT_TYPE_C712_CLUSTER
+	cost = 4
+	faction = FACTION_UNSC
+	icon_state = "712_Cluster"
+	initiate_chat_message = "TARGET ACQUIRED, MUNITIONS INBOUND."
+	initiate_screen_message = list(
+		"Eyes on, bomb away.",
+		"Roger, ground-shaker dropping now.",
+		"Watch out for the shrapnel!",
+		)
+
+/datum/fire_support/custom/c712/cluster/do_impact(turf/target_turf)
 	cell_explosion(target_turf, 90, 90, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data("C712 Cluster Bomb"))
 	addtimer(CALLBACK(src, PROC_REF(shrapnelboom), target_turf), 0.2 SECONDS)
 
-/datum/fire_support/custom/c712_cluster/proc/shrapnelboom(turf/target_turf)
+/datum/fire_support/custom/c712/cluster/proc/shrapnelboom(turf/target_turf)
 	create_shrapnel(target_turf, rand(8, 12), , , /datum/ammo/bullet/shrapnel/heavy, create_cause_data("C712 Cluster Bomb"))
 
-/datum/fire_support/custom/c712_missile
+/datum/fire_support/custom/c712/missile
 	name = "C712 Missile Strike"
 	scatter_range = 3
 	impact_quantity = 2
@@ -1143,16 +1346,47 @@
 	impact_delay = 1 SECONDS
 	start_visual = /obj/effect/temp_visual/flyby/c712_longsword_flyby
 	has_shadow = TRUE
-	initiate_sound = 'sound/weapons/halo/fire_support/c712_flyover.ogg'
-	start_sound = 'sound/weapons/halo/fire_support/c712_missile.ogg'
+	initiate_sound = 'modular/halo/sound/weapons/fire_support/c712_flyover.ogg'
+	start_sound = 'modular/halo/sound/weapons/fire_support/c712_missile.ogg'
 	warning_chat_message = "C712 LONGSWORD"
 
-/datum/fire_support/custom/c712_missile/do_impact(turf/target_turf)
+/datum/fire_support/custom/c712/missile/call_in
+	delay_to_impact = 5 SECONDS
+
+	fire_support_type = FIRESUPPORT_TYPE_C712_MISSILE
+	cost = 4
+	faction = FACTION_UNSC
+	icon_state = "712_Missile"
+	initiate_chat_message = "TARGET ACQUIRED, MUNITIONS INBOUND."
+	initiate_screen_message = list(
+		"TGP on lase, one out.",
+		"Hope that target's worth it, sending one.",
+		"One big boom, on the way.",
+		"Missile inbound, keep your heads down.",
+		)
+
+/datum/fire_support/custom/c712/missile/do_impact(turf/target_turf)
 	cell_explosion(target_turf, 400, 75, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data("C712 Missile Strike"))
+
+/datum/fire_support/custom/c712/flyby
+	name = "C712 Longsword Flyby"
+	start_visual = /obj/effect/temp_visual/flyby/c712_longsword_flyby
+	has_shadow = FALSE // this is so you can have several in formation if you want!
+	delay_to_impact = 0.4 SECONDS
+	warning_chat_message = "C712 LONGSWORD"
+
+/datum/fire_support/custom/c712/flyby/do_impact(turf/target_turf)
+	return
 
 // c709
 
-/datum/fire_support/custom/c709_missile
+/datum/fire_support/custom/c709
+	initiate_title = "Genuine Risk-1"
+	portrait_type = "pilot_2_green"
+	cooldown_duration = 3 MINUTES
+	fire_support_firer = FIRESUPPORT_CAS_C709
+
+/datum/fire_support/custom/c709/missile
 	name = "C709 Missile Strike"
 	scatter_range = 0
 	impact_quantity = 1
@@ -1160,16 +1394,29 @@
 	impact_delay = 1 SECONDS
 	start_visual = /obj/effect/temp_visual/flyby/c709_longsword_flyby
 	has_shadow = TRUE
-	initiate_sound = 'sound/weapons/halo/fire_support/c709_flyover.ogg'
-	start_sound = 'sound/weapons/halo/fire_support/c712_missile.ogg'
+	initiate_sound = 'modular/halo/sound/weapons/fire_support/c709_flyover.ogg'
+	start_sound = 'modular/halo/sound/weapons/fire_support/c712_missile.ogg'
 	warning_chat_message = "C709 LONGSWORD"
 	warning_range = 35
 
-/datum/fire_support/custom/c709_missile/do_impact(turf/target_turf)
+	faction = FACTION_UNSC
+	fire_support_type = FIRESUPPORT_TYPE_C709_MISSILE
+	cost = 5
+
+	icon_state = "709_Missile"
+	initiate_chat_message = "TARGET ACQUIRED, HEAVY MUNITIONS INBOUND."
+	initiate_screen_message = list(
+		"TGP on lase, one out.",
+		"Hope that target's worth it, sending one.",
+		"One big boom, on the way.",
+		"Missile inbound, keep your heads down.",
+		)
+
+/datum/fire_support/custom/c709/missile/do_impact(turf/target_turf)
 	var/obj/structure/ob_ammo/warhead/explosive/ammo = new()
 	ammo.warhead_impact(target_turf)
 
-/datum/fire_support/custom/c709_cluster
+/datum/fire_support/custom/c709/cluster
 	name = "C709 Cluster Bomb"
 	scatter_range = 0
 	impact_quantity = 1
@@ -1177,16 +1424,29 @@
 	impact_delay = 1 SECONDS
 	start_visual = /obj/effect/temp_visual/flyby/c709_longsword_flyby
 	has_shadow = TRUE
-	initiate_sound = 'sound/weapons/halo/fire_support/c709_flyover.ogg'
-	start_sound = 'sound/weapons/halo/fire_support/c712_missile.ogg'
+	initiate_sound = 'modular/halo/sound/weapons/fire_support/c709_flyover.ogg'
+	start_sound = 'modular/halo/sound/weapons/fire_support/c712_missile.ogg'
 	warning_chat_message = "C709 LONGSWORD"
 	warning_range = 35
 
-/datum/fire_support/custom/c709_cluster/do_impact(turf/target_turf)
+	faction = FACTION_UNSC
+	fire_support_type = FIRESUPPORT_TYPE_C709_CLUSTER
+	cost = 5
+
+	icon_state = "709_Cluster"
+	initiate_chat_message = "TARGET ACQUIRED, HEAVY MUNITIONS INBOUND."
+	initiate_screen_message = list(
+		"Eyes on, bombs away.",
+		"Roger, ground-shaker dropping now.",
+		"Watch out for the shrapnel!",
+		"Copy target, suggest you get clear of the blast.",
+		)
+
+/datum/fire_support/custom/c709/cluster/do_impact(turf/target_turf)
 	var/obj/structure/ob_ammo/warhead/cluster/ammo = new()
 	ammo.warhead_impact(target_turf)
 
-/datum/fire_support/custom/c709_incendiary
+/datum/fire_support/custom/c709/incendiary
 	name = "C709 Inc. Bomb"
 	scatter_range = 0
 	impact_quantity = 1
@@ -1194,27 +1454,58 @@
 	impact_delay = 1 SECONDS
 	start_visual = /obj/effect/temp_visual/flyby/c709_longsword_flyby
 	has_shadow = TRUE
-	initiate_sound = 'sound/weapons/halo/fire_support/c709_flyover.ogg'
-	start_sound = 'sound/weapons/halo/fire_support/c712_missile.ogg'
+	initiate_sound = 'modular/halo/sound/weapons/fire_support/c709_flyover.ogg'
+	start_sound = 'modular/halo/sound/weapons/fire_support/c712_missile.ogg'
 	warning_chat_message = "C709 LONGSWORD"
 	warning_range = 35
 
-/datum/fire_support/custom/c709_incendiary/do_impact(turf/target_turf)
+	faction = FACTION_UNSC
+	fire_support_type = FIRESUPPORT_TYPE_C709_INCENDIARY
+	cost = 5
+
+	icon_state = "709_Incin"
+	initiate_chat_message = "TARGET ACQUIRED, HEAVY MUNITIONS INBOUND."
+	initiate_screen_message = list(
+		"TGP on lase, one firecracker out.",
+		"Hope that target's worth it, sending a hot one.",
+		"One spicy boom, on the way.",
+		"Missile inbound, keep your heads down.",
+		)
+
+/datum/fire_support/custom/c709/incendiary/do_impact(turf/target_turf)
 	var/obj/structure/ob_ammo/warhead/incendiary/ammo = new()
 	ammo.warhead_impact(target_turf)
 
-/datum/fire_support/custom/mac_gun
+/datum/fire_support/custom/c709/flyby
+	name = "C709 Longsword Flyby"
+	start_visual = /obj/effect/temp_visual/flyby/c709_longsword_flyby
+	has_shadow = FALSE // this is so you can have several in formation if you want!
+	delay_to_impact = 0.4 SECONDS
+	warning_chat_message = "C709 LONGSWORD"
+
+/datum/fire_support/custom/c709/flyby/do_impact(turf/target_turf)
+	return
+
+// naval fire support
+
+/datum/fire_support/custom/ob
+	initiate_title = "Bridge"
+	portrait_type = "woman_fleet_green"
+	cooldown_duration = 4 MINUTES
+	fire_support_firer = FIRESUPPORT_ORBITAL_UNSC
+
+/datum/fire_support/custom/ob/mac_gun
 	name = "MAC"
 	scatter_range = 0
 	impact_quantity = 1
 	delay_to_impact = 0 SECONDS
 	impact_delay = 0 SECONDS
 	impact_sound = null
-	start_sound = 'sound/weapons/halo/fire_support/frigate_mac.ogg'
+	start_sound = 'modular/halo/sound/weapons/fire_support/frigate_mac.ogg'
 	warning_chat_message = "MAC"
 	warning_range = 35
 
-/datum/fire_support/custom/mac_gun/do_impact(turf/target_turf)
+/datum/fire_support/custom/ob/mac_gun/do_impact(turf/target_turf)
 
 	var/clear_power = 1600
 	var/clear_falloff = 3
@@ -1248,26 +1539,160 @@
 			qdel(src)
 			return
 
-/datum/fire_support/custom/mac_gun/in_atmosphere
+/datum/fire_support/custom/ob/mac_gun/in_atmosphere
 	name = "MAC - Atmospheric"
 	delay_to_impact = 4 SECONDS
-	initiate_sound = 'sound/weapons/halo/fire_support/frigate_mac_in_atmos.ogg'
+	initiate_sound = 'modular/halo/sound/weapons/fire_support/frigate_mac_in_atmos.ogg'
 	start_sound = null
 
-/datum/fire_support/custom/coilgun_fire
+/datum/fire_support/custom/ob/mac_gun/in_atmosphere/call_in
+	delay_to_impact = 20 SECONDS
+
+	name = "MAC"
+	faction = FACTION_UNSC
+	fire_support_type = FIRESUPPORT_TYPE_MAC_ATMOS
+	cost = 20
+
+	icon_state = "Naval_MAC"
+	initiate_chat_message = "TARGET ACQUIRED, ORBITAL MUNITION INBOUND. CLEAR THE AREA."
+	initiate_screen_message = list(
+		"MAC on target.",
+		"MAC firing.",
+		"MAC away.",
+		"Acquiring firing solution, suggest you take cover.",
+		"Orbital munition inbound, clear the site!",
+		)
+
+/datum/fire_support/custom/ob/coilgun_fire
 	name = "Coilguns"
 	scatter_range = 10
 	impact_quantity = 25
 	delay_to_impact = 8 SECONDS
 	impact_delay = 0.5 SECONDS
 	impact_sound = null
-	initiate_sound = 'sound/weapons/halo/fire_support/frigate_gunfire.ogg'
+	initiate_sound = 'modular/halo/sound/weapons/fire_support/frigate_gunfire.ogg'
 	warning_chat_message = "COILGUNS"
 	warning_range = 35
 
-/datum/fire_support/custom/coilgun_fire/do_impact(turf/target_turf)
+	faction = FACTION_UNSC
+	fire_support_type = FIRESUPPORT_TYPE_COILGUNS
+	cost = 10
+
+	icon_state = "Naval_Coilgun"
+	initiate_chat_message = "TARGET ACQUIRED, ORBITAL MUNITION INBOUND. CLEAR THE AREA."
+	initiate_screen_message = list(
+		"Positive on target, guns spooling now.",
+		"Find some cover, it's about to get loud down there!",
+		"Copy, engaging target lase.",
+		)
+
+/datum/fire_support/custom/ob/coilgun_fire/do_impact(turf/target_turf)
 	cell_explosion(target_turf, 80, 20, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data("Coilgun Battery"))
 
+// ============================ SERAPH ORDNANCE ============================ \\
+
+/datum/fire_support/custom/banshee_fuel_rod/seraph
+	name = "seraph fuel rod"
+	scatter_range = 2
+	start_visual = /obj/effect/temp_visual/flyby/seraph_flyby
+	start_sound = 'modular/halo/sound/weapons/fire_support/seraph_flyby.ogg'
+	warning_chat_message = "SERAPH"
+	delay_to_impact = 2 SECONDS
+	has_shadow = TRUE
+	impact_quantity = 2
+	radius = 2
+
+/datum/fire_support/custom/banshee_strafe/seraph
+	name = "seraph strafe"
+	impact_quantity = 45
+	impact_delay = 0.02 SECONDS
+	initiate_sound = 'modular/halo/sound/weapons/fire_support/seraph_strafe.ogg'
+	start_sound = 'modular/halo/sound/weapons/fire_support/seraph_flyby.ogg'
+	start_visual = /obj/effect/temp_visual/flyby/seraph_flyby
+	warning_chat_message = "SERAPH"
+	scatter_range = 4
+
+/datum/fire_support/custom/banshee_flyby
+	name = "banshee flyby"
+	delay_to_impact = 0.4 SECONDS
+	start_visual = /obj/effect/temp_visual/flyby/banshee_flyby
+	has_shadow = FALSE
+	initiate_sound = null
+	start_sound = 'modular/halo/sound/weapons/fire_support/banshee_flyby.ogg'
+	warning_chat_message = "BANSHEE"
+
+/datum/fire_support/custom/banshee_flyby/do_impact(turf/target_turf)
+	return
+
+/datum/fire_support/custom/seraph_flyby
+	name = "seraph flyby"
+	delay_to_impact = 0.4 SECONDS
+	start_visual = /obj/effect/temp_visual/flyby/seraph_flyby
+	has_shadow = FALSE
+	initiate_sound = null
+	start_sound = 'modular/halo/sound/weapons/fire_support/seraph_flyby.ogg'
+	warning_chat_message = "SERAPH"
+
+/datum/fire_support/custom/seraph_flyby/do_impact(turf/target_turf)
+	return
+
+// ============================ DROPSHIP HOVERING ============================ \\
+
+/datum/fire_support/custom/pelican_hover
+	name = "pelican hover"
+	delay_to_impact = 0.4 SECONDS
+	start_visual = /obj/effect/temp_visual/dropship_hover/pelican
+	has_shadow = FALSE
+	initiate_sound = null
+	start_sound = null
+	warning_chat_message = "PELICAN"
+
+/datum/fire_support/custom/pelican_hover/do_impact(turf/target_turf)
+	return
+
+/datum/fire_support/custom/pelican_hover/armed
+	name = "pelican hover (rocket pods)"
+	start_visual = /obj/effect/temp_visual/dropship_hover/pelican
+	warning_chat_message = "ARMED PELICAN"
+
+/datum/fire_support/custom/pelican_hover/light
+	name = "pelican hover (light)"
+	start_visual = /obj/effect/temp_visual/dropship_hover/pelican
+	warning_chat_message = "PELICAN"
+
+/datum/fire_support/custom/phantom_hover
+	name = "phantom hover"
+	delay_to_impact = 0.4 SECONDS
+	start_visual = /obj/effect/temp_visual/dropship_hover/phantom
+	has_shadow = FALSE
+	initiate_sound = null
+	start_sound = null
+	warning_chat_message = "PHANTOM"
+
+/datum/fire_support/custom/phantom_hover/do_impact(turf/target_turf)
+	return
+
+/datum/fire_support/custom/phantom_hover/armed
+	name = "phantom hover (armed)"
+	start_visual = /obj/effect/temp_visual/dropship_hover/phantom
+	warning_chat_message = "ARMED PHANTOM"
+
+/datum/fire_support/custom/spirit_hover
+	name = "spirit hover"
+	delay_to_impact = 0.4 SECONDS
+	start_visual = /obj/effect/temp_visual/dropship_hover/spirit
+	has_shadow = FALSE
+	initiate_sound = null
+	start_sound = null
+	warning_chat_message = "SPIRIT"
+
+/datum/fire_support/custom/spirit_hover/do_impact(turf/target_turf)
+	return
+
+/datum/fire_support/custom/spirit_hover/armed
+	name = "spirit hover (armed)"
+	start_visual = /obj/effect/temp_visual/dropship_hover/spirit
+	warning_chat_message = "ARMED SPIRIT"
 
 #undef ORDNANCE_OPTIONS
 #undef COVENANT_ORDNANCE

@@ -149,15 +149,6 @@
 	overlay_icon_type = "hiam"
 	overlay_grenade_type = "hiam"
 
-/obj/item/ammo_box/magazine/nade_box/canister
-	name = "\improper M108 canister grenade box"
-	desc = "A secure box holding 25 M108 canister grenades. Flammable, don't store near the flamer fuel."
-	magazine_type = /obj/item/explosive/grenade/high_explosive/airburst/canister
-	allowed_magazines = list(/obj/item/explosive/grenade/high_explosive/airburst/canister)
-	overlay_model_type = "model_m108"
-	overlay_icon_type = "buck"
-	overlay_grenade_type = "buck"
-
 /obj/item/ammo_box/magazine/nade_box/foam
 	name = "\improper M42 MFHS grenade box"
 	desc = "A secure box holding 25 M42 Metal-Foam Hull-Sealant grenades. Flammable, don't store near the flamer fuel."
@@ -238,6 +229,16 @@
 	overlay_model_type = "model_40mm"
 	overlay_icon_type = "hedp"
 	overlay_grenade_type = "40mm_hedp"
+
+// SS220 EDIT: Old M74 grenade box for Dog War
+/obj/item/ammo_box/magazine/nade_box/fourtymil/old
+	name = "\improper M74 grenade box"
+	desc = "A secure box holding 25 M74 grenades. Explosive, don't store near the flamer fuel."
+	magazine_type = /obj/item/explosive/grenade/high_explosive/old
+	allowed_magazines = list(/obj/item/explosive/grenade/high_explosive/old)
+	overlay_model_type = "model_m74"
+	overlay_icon_type = "agmf"
+	overlay_grenade_type = "40mm_agmf"
 
 /obj/item/ammo_box/magazine/nade_box/fourtymil/frag
 	name = "\improper 40mm HEFA grenade box"

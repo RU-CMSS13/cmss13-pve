@@ -75,6 +75,7 @@
 	new /obj/item/clothing/suit/storage/jacket/marine/dress/officer/bomber(src)
 	new /obj/item/clothing/shoes/marine/knife(src)
 	new /obj/item/device/radio/headset/almayer/marine/solardevils/pltco/odst(src)
+	new /obj/item/clothing/head/helmet/marine/unsc/odst/motion(src)
 
 /obj/structure/closet/secure_closet/marine_personal/odst/rto
 	job = JOB_SQUAD_RTO_ODST

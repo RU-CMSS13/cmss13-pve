@@ -127,7 +127,7 @@
 	if(SSmapping.configs[GROUND_MAP].environment_traits[ZTRAIT_BASIC_RT])
 		flags_round_type |= MODE_BASIC_RT
 
-	addtimer(CALLBACK(src, PROC_REF(titan_online)), 5 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(voyager_online)), 5 SECONDS) // SS220 EDIT: HALO upstream PR #164 Titan→Voyager rename
 	addtimer(CALLBACK(src, PROC_REF(map_announcement)), 40 SECONDS)
 	//addtimer(CALLBACK(src, PROC_REF(start_lz_hazards)), LZ_HAZARD_START)
 
@@ -389,6 +389,11 @@
 	addtimer(CALLBACK(src, PROC_REF(intro_sequence)), DROPSHIP_DROP_MSG_DELAY)
 	add_current_round_status_to_end_results("First Drop")
 
+// SS220 EDIT - START - HALO upstream PR #155 ODST Drop Pod Intro Blurb
+/datum/game_mode/colonialmarines/pod_first_drop(/obj/structure/halo_droppod)
+	addtimer(CALLBACK(src, PROC_REF(intro_sequence)), DROPSHIP_DROP_MSG_DELAY)
+	add_current_round_status_to_end_results("First Drop")
+// SS220 EDIT - END
 /datum/game_mode/colonialmarines/proc/intro_sequence()
 	for(var/mob/living/carbon/human/human as anything in GLOB.alive_human_list)
 		if(human.z != ZTRAIT_GROUND)

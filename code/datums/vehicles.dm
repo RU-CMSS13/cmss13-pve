@@ -62,9 +62,11 @@
 	name = "UPP Command Tank"
 	interior_id = "upptank_command"
 
+// SS220 EDIT - START: PR #1266 D66-44 — Ridgeway tank interior template
 /datum/map_template/interior/ridgeway
 	name = "Ridgeway Tank"
 	interior_id = "ridgeway"
+// SS220 EDIT - END
 
 /datum/map_template/interior/aev
 	name = "AEV"
@@ -129,3 +131,17 @@
 /datum/map_template/interior/uppapc
 	name = "ZSL-68"
 	interior_id = "uppapc"
+
+// SS220 EDIT - START
+/datum/map_template/interior/twe_tank
+	name = "FV150 Cavalry Tank"
+	interior_id = "twe_tank"
+
+/datum/map_template/interior/twe_apc
+	name = "Type 200/FCV Light APC"
+	interior_id = "twe_apc"
+
+/datum/map_template/interior/twe_apc/command
+	name = "Type 200/FCV-C Command Light APC"
+	interior_id = "twe_command_apc"
+// SS220 EDIT - END

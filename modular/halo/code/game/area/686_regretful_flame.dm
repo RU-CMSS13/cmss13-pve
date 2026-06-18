@@ -1,6 +1,6 @@
 /area/regretful_flame
 	name = "Swamp Marsh"
-	icon_state = "lv-626"
+	icon_state = "green"
 	can_build_special = TRUE
 	powernet_name = "ground"
 	minimap_color = MINIMAP_AREA_COLONY

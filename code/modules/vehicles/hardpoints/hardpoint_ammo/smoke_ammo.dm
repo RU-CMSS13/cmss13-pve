@@ -28,3 +28,7 @@
 /obj/item/ammo_magazine/hardpoint/turret_smoke/incen/aev
 	desc = "A magazine of modified M60 incendiary smoke grenades used by the AEVs discharger array."
 	max_rounds = 12
+
+// SS220 EDIT
+/obj/item/ammo_magazine/hardpoint/turret_smoke/twe
+	max_rounds = 6

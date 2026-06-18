@@ -6,6 +6,9 @@
 #define STATUS_HUD "2" // alive, dead, diseased, etc.
 #define ID_HUD "3" // the job asigned to your ID
 #define WANTED_HUD "4" // wanted, released, parroled, security status
+// SS220 EDIT - START - HALO VISR HUD
+#define VISR_HUD "5" // for HALO Friend-Foe stuff
+// SS220 EDIT - END
 #define FACTION_HUD "8" // Any faction related HUD on humans
 #define STATUS_HUD_OOC "10" // STATUS_HUD without virus db check for someone being ill.
 #define STATUS_HUD_XENO_INFECTION "11" // STATUS_HUD without virus db check for someone being ill.
@@ -53,6 +56,8 @@
 #define MOB_HUD_HUNTER_CLAN 22
 #define MOB_HUD_EXECUTE 23
 #define MOB_HUD_FACTION_UNSC 24 // SS220 EDIT: HALO UNSC faction HUD slot
+#define MOB_HUD_FACTION_COVENANT 25 // SS220 EDIT: HALO Covenant faction HUD slot
+#define MOB_HUD_VISR 26 // SS220 EDIT: HALO VISR HUD
 
 //for SL/FTL/LZ targeting on locator huds
 #define TRACKER_SL "track_sl"

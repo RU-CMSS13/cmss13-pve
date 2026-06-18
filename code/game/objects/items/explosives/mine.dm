@@ -393,6 +393,7 @@
 /obj/item/explosive/mine/m760ap
 	name = "M760 antipersonnel landmine"
 	desc = "A standard issue American antipersonnel landmine. Minimum metal and blast-resistant, with integrated anti-tamper features. Due to counter-demining design, it contains little primary fragmentation liner."
+	icon = 'icons/obj/structures/souto_land.dmi'
 	icon_state = "m760"
 	angle = 360
 	var/disarmed = FALSE
@@ -535,6 +536,7 @@
 /obj/item/explosive/mine/m5a3betty
 	name = "M5A2 bounding mine"
 	desc = "An intelligent blast-resistant bounding landmine with enhanced fragmentation."
+	icon = 'icons/obj/structures/souto_land.dmi'
 	icon_state = "m5"
 	angle = 360
 	var/disarmed = FALSE
@@ -675,6 +677,7 @@
 /obj/item/explosive/mine/fzd91
 	name = "FZD-91 Landmine"
 	desc = "Regular issue area denial landmine for Union of Progressive Peoples' forces in the field. Powerful, with a strong fragmentation liner. Produced by Gruppo Meccanico Militare Vasella."
+	icon = 'icons/obj/structures/souto_land.dmi'
 	icon_state = "fzd91"
 	angle = 360
 	var/disarmed = FALSE
@@ -812,6 +815,7 @@
 /obj/item/explosive/mine/tn13
 	name = "TN-13"
 	desc = "A simple vintage landmine. It has no intelligent or electronic components, and is easily disarmed. Formerly produced by the Oberon Mechanical Concern's military ordinance division. While not in use anymore, vast stockpiles still exist."
+	icon = 'icons/obj/structures/souto_land.dmi'
 	icon_state = "tn13"
 	angle = 360
 	var/disarmed = FALSE
@@ -922,22 +926,80 @@
 	map_deployed = TRUE
 
 /obj/item/explosive/mine/sharp
-	name = "\improper XM9 SHARP explosive dart"
-	desc = "An experimental XM9 SHARP proximity mine designed by Armat Systems for use in the SHARP rifle. A series of passive IR sensors give it coverage in a 360 perimeter once embedded into the ground."
-	icon_state = "sonicharpoon_g"
+	name = "\improper P9 SHARP explosive dart"
+	desc = "An experimental P9 SHARP proximity triggered explosive dart designed by Armat Systems for use by the United States Colonial Marines. This one has full 360 detection range."
+	icon_state = "sharp_explosive_mine"
 	angle = 360
+	light_color = "#D75555"
+	light_range = 2
+	light_power = 1
+	var/lit = TRUE
 	var/disarmed = FALSE
-	explosive_power = 200
-	explosive_falloff = 100
-	var/mine_mode = SHARP_DANGER_MODE
+	var/explosion_strength = 200
+	var/explosion_falloff = 100
+	var/mine_mode = ""
+	var/rearm_desc
 
-/obj/item/explosive/mine/sharp/check_for_obstacles(mob/living/user)
-	return FALSE
+/obj/item/explosive/mine/sharp/Initialize()
+	. = ..()
+	set_light_on(lit)
+
+/obj/item/explosive/mine/sharp/proc/update_brightness()
+	if(lit)
+		set_light_range(light_range)
+		set_light_color(light_color)
+		set_light_on(TRUE)
+	else
+		set_light_on(FALSE)
 
 /obj/item/explosive/mine/sharp/proc/set_mine_mode(mode)
 	mine_mode = mode
 
+/obj/item/explosive/mine/sharp/check_for_obstacles(mob/living/user)
+	return FALSE
+
 /obj/item/explosive/mine/sharp/attackby(obj/item/W, mob/user)
+	if(user.action_busy)
+		return
+	if(!disarmed)
+		if(HAS_TRAIT(W, TRAIT_TOOL_MULTITOOL))
+			user.visible_message(SPAN_NOTICE("[user] starts adjusting [src]."), \
+			SPAN_NOTICE("You start adjusting the detonation mode of [src]."))
+			if(!do_after(user, 30, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY))
+				user.visible_message(SPAN_WARNING("[user] stops adjusting [src]."), \
+				SPAN_WARNING("You stop adjusting the detonation mode of [src]."))
+				return
+			if(!active)//someone beat us to it
+				return
+			var/mine_mode_notice = ""
+			switch(mine_mode)
+				if(SHARP_DANGER_MODE)
+					mine_mode = SHARP_DIRECTED_MODE
+					mine_mode_notice += "The placed dart will concentrate the detonation on the target."
+				if(SHARP_SAFE_MODE)
+					mine_mode = SHARP_DANGER_MODE
+					mine_mode_notice += "The placed dart will concentrate the detonation on the target."
+				if(SHARP_DIRECTED_MODE)
+					mine_mode = SHARP_DANGER_MODE
+					mine_mode_notice += "The placed dart will detonate regularly."
+			user.visible_message(SPAN_NOTICE("[user] finishes adjusting [src]."), \
+			SPAN_NOTICE("You finish adjusting the detonation mode of [src]. It's now set to [mine_mode], [mine_mode_notice]."))
+	else
+		if(HAS_TRAIT(W, TRAIT_TOOL_MULTITOOL))
+			if(!skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_MAX) && user.skills.get_skill_level(SKILL_ENGINEER) != SKILL_ENGINEER_TRAINED)
+				to_chat(user, SPAN_WARNING("You don't seem to know how to rearm \the [src]..."))
+				return
+			user.visible_message(SPAN_NOTICE("[user] starts rearming [src]."), \
+			SPAN_NOTICE("You start rearming [src]."))
+			if(!do_after(user, 30, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY))
+				user.visible_message(SPAN_WARNING("[user] stops rearming [src]."), \
+				SPAN_WARNING("You stop rearming [src]."))
+				return
+			if(active)//someone beat us to it
+				return
+			user.visible_message(SPAN_NOTICE("[user] finishes rearming [src]."), \
+			SPAN_NOTICE("You finish rearming [src]."))
+			rearm(user)
 	return
 
 /obj/item/explosive/mine/sharp/set_tripwire()
@@ -955,13 +1017,13 @@
 		cause_data = create_cause_data(initial(name), user)
 	switch(mine_mode)
 		if(SHARP_DIRECTED_MODE)
-			explosive_falloff = (explosive_power * 0.75)
+			explosion_falloff = (explosion_strength * 0.75)
 		if(SHARP_SAFE_MODE)
-			for(var/mob/living/carbon/human in range((explosive_power / explosive_falloff), src))
+			for(var/mob/living/carbon/human in range((explosion_strength / explosion_falloff), src))
 				if(human.get_target_lock(iff_signal))
 					disarm()
 					return
-	cell_explosion(loc, explosive_power, explosive_falloff, EXPLOSION_FALLOFF_SHAPE_LINEAR, CARDINAL_ALL_DIRS, cause_data)
+	cell_explosion(loc, explosion_strength, explosion_falloff, EXPLOSION_FALLOFF_SHAPE_LINEAR, CARDINAL_ALL_DIRS, cause_data)
 	playsound(loc, 'sound/weapons/gun_sharp_explode.ogg', 45)
 	qdel(src)
 
@@ -969,10 +1031,22 @@
 	anchored = FALSE
 	active = FALSE
 	triggered = FALSE
-	icon_state = base_icon_state + "_disarmed"
+	icon_state = "sharp_mine_disarmed"
+	rearm_desc = desc
+	desc = "A disarmed P9 SHARP rifle dart. With the right training, it can potentially be rearmed with a security access tuner."
 	QDEL_NULL(tripwire)
 	disarmed = TRUE
-	add_to_garbage(src)
+	lit = FALSE
+	update_brightness()
+	playsound(src, 'sound/weapons/smartgun_fail.ogg', 25)
+
+/obj/item/explosive/mine/sharp/proc/rearm(mob/user)
+	disarmed = FALSE
+	lit = TRUE
+	desc = rearm_desc
+	addtimer(CALLBACK(src, PROC_REF(disarm)), 10 MINUTES, TIMER_DELETE_ME)
+	update_brightness()
+	deploy_mine(user)
 
 /obj/item/explosive/mine/sharp/attack_self(mob/living/user)
 	if(disarmed)
@@ -987,7 +1061,7 @@
 
 	cause_data = create_cause_data(initial(name), user)
 	anchored = TRUE
-	if(user)
+	if(user && user.get_held_item() == src)
 		user.drop_inv_item_on_ground(src)
 	setDir(user ? user.dir : dir) //The direction it is planted in is the direction the user faces at that time
 	activate_sensors()
@@ -1004,7 +1078,8 @@
 /obj/item/explosive/mine/sharp/incendiary
 	name = "\improper P9 SHARP incendiary dart"
 	desc = "An experimental P9 SHARP proximity triggered explosive dart designed by Armat Systems for use by the United States Colonial Marines. This one has full 360 detection range."
-	icon_state = "sharp_incendiary_dart"
+	icon_state = "sharp_incendiary_mine"
+	light_color = "#FFB400"
 
 /obj/item/explosive/mine/sharp/incendiary/prime(mob/user)
 	set waitfor = FALSE
@@ -1021,9 +1096,6 @@
 		if(SHARP_DIRECTED_MODE)
 			incendiary_reagent = new /datum/reagent/napalm/blue
 			flame_radius = 1
-			new /obj/flamer_fire(get_turf(src), cause_data, incendiary_reagent, flame_radius)
-			qdel(src)
-			return
 		if(SHARP_SAFE_MODE)
 			for(var/mob/living/carbon/human in range(smoke_radius, src))
 				if(human.get_target_lock(iff_signal))

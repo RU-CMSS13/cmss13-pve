@@ -1,6 +1,6 @@
 /obj/structure/window/framed/new_varadero/foundation
 	name = "window"
-	icon = 'icons/turf/walls/new_varadero/new_varadero_windows.dmi'
+	icon = 'modular/halo/icons/turf/walls/new_varadero/new_varadero_windows.dmi'
 	icon_state = "new_varadero_window"
 	basestate = "new_varadero_window"
 	window_frame = /obj/structure/window_frame/new_varadero/foundation
@@ -27,7 +27,7 @@
 
 /obj/structure/window/framed/new_varadero/concrete
 	name = "picture window"
-	icon = 'icons/turf/walls/new_varadero/concrete_windows.dmi'
+	icon = 'modular/halo/icons/turf/walls/new_varadero/concrete_windows.dmi'
 	desc = "A fully sized window pane meant to have full view of the outside world. This window seems to be made thick enough to take a few hits."
 	not_deconstructable = TRUE
 	health = 100
@@ -38,7 +38,7 @@
 
 /obj/structure/window/framed/new_varadero/concrete/hull
 	name = "dense picture window"
-	icon = 'icons/turf/walls/new_varadero/concrete_windows.dmi'
+	icon = 'modular/halo/icons/turf/walls/new_varadero/concrete_windows.dmi'
 	desc = "A fully sized window pane meant to have full view of the outside world. The window looks thick enough to stop anything!"
 	icon_state = "concrete_window_h"
 	not_damageable = TRUE
@@ -89,20 +89,20 @@
 	window_frame = /obj/structure/window_frame/shipwall/yellow/hull/south
 
 /obj/structure/window_frame/new_varadero/foundation
-	icon = 'icons/turf/walls/new_varadero/new_varadero_windows.dmi'
+	icon = 'modular/halo/icons/turf/walls/new_varadero/new_varadero_windows.dmi'
 	icon_state = "new_varadero_window0_frame"
 	basestate = "new_varadero_window"
 	window_type = /obj/structure/window/framed/new_varadero/foundation
 
 /obj/structure/window_frame/new_varadero/foundation/reinforced
-	icon = 'icons/turf/walls/new_varadero/new_varadero_windows.dmi'
+	icon = 'modular/halo/icons/turf/walls/new_varadero/new_varadero_windows.dmi'
 	icon_state = "new_varadero_r_window0_frame"
 	basestate = "new_varadero_r_window"
 	reinforced = TRUE
 	window_type = /obj/structure/window/framed/new_varadero/foundation/reinforced
 
 /obj/structure/window_frame/new_varadero/foundation/reinforced/hull
-	icon = 'icons/turf/walls/new_varadero/new_varadero_windows.dmi'
+	icon = 'modular/halo/icons/turf/walls/new_varadero/new_varadero_windows.dmi'
 	icon_state = "new_varadero_r_window0_frame"
 	basestate = "new_varadero_r_window"
 	unslashable = TRUE
@@ -110,7 +110,7 @@
 	window_type = /obj/structure/window/framed/new_varadero/foundation/reinforced/hull
 
 /obj/structure/window_frame/new_varadero/concrete_frame
-	icon = 'icons/turf/walls/new_varadero/concrete_windows.dmi'
+	icon = 'modular/halo/icons/turf/walls/new_varadero/concrete_windows.dmi'
 	icon_state = "concrete_window0_frame"
 	basestate = "concrete_window"
 	reinforced = TRUE

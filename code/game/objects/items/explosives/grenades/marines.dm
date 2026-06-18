@@ -166,11 +166,12 @@
 	arm_sound = 'sound/weapons/pinpull.ogg'
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 
+// SS220 EDIT - START: CM-PVE PR #182 — Canister Grenade
 /*
-+//================================================
-+				Canister Grenade
-+//================================================
-+*/
+//================================================
+				Canister Grenade
+//================================================
+*/
 
 /obj/item/explosive/grenade/high_explosive/airburst/canister
 	name = "\improper M108 canister grenade"
@@ -184,9 +185,9 @@
 	explosion_power = 0
 	explosion_falloff = 25
 	det_time = 0 //this should mean that it will explode instantly when fired and thus generate the shotshell effect.
-	shrapnel_count = 18
-	shrapnel_type = /datum/ammo/bullet/shrapnel/canister
-	dispersion_angle = 15 //hopefully this means the cone spread is pretty small
+	shrapnel_count = 20
+	shrapnel_type = /datum/ammo/bullet/shotgun/buckshot/canister
+	dispersion_angle = 20 //hopefully this means the cone spread is pretty small
 
 /obj/item/explosive/grenade/high_explosive/airburst/canister/proc/canister_fire(mob/living/user, target)
 	var/direction = Get_Compass_Dir(user, target)
@@ -198,6 +199,7 @@
 // canister has no impact explosion.
 /obj/item/explosive/grenade/high_explosive/airburst/canister/launch_impact(atom/hit_atom)
 	return
+// SS220 EDIT - END
 
 /*
 //================================================
@@ -570,8 +572,12 @@
 	if(!istype(T))
 		return
 	var/datum/reagent/R = new /datum/reagent/napalm/ut()
-	if(burn_level >= BURN_LEVEL_TIER_7)
+// SS220 EDIT - START - Thermite Grenade handling
+	if(burn_level >= BURN_LEVEL_TIER_9)
+		R = new /datum/reagent/thermite
+	else if(burn_level >= BURN_LEVEL_TIER_7)
 		R = new /datum/reagent/napalm/blue()
+// SS220 EDIT - END
 	else if(burn_level <= BURN_LEVEL_TIER_2)
 		R = new /datum/reagent/napalm/green()
 
@@ -1507,3 +1513,17 @@
 	item_state = "grenade_training"
 	caliber = "20mm"
 	explosion_power = 160
+
+// SS220 EDIT - START: Old M74 grenade for Dog War
+/obj/item/explosive/grenade/high_explosive/old
+	name = "\improper M74 20mm Grenade"
+	desc = "This grenade must be launched with a grenade launcher, and detonates once it reaches its destination."
+	icon_state = "grenade_m74_airburst_f"
+	item_state = "grenade_m74_airburst_f_active"
+	caliber = "20mm"
+	explosion_power = 30
+	shrapnel_count = 16
+	hand_throwable = FALSE
+	dual_purpose = FALSE
+	fuse_type = 1
+// SS220 EDIT - END

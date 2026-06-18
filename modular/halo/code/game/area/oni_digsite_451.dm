@@ -77,6 +77,7 @@
 
 /area/oni_digsite/sub_level_2/cavern
 	name = "\improper Sub Level 2 Cavern"
+	icon = 'icons/turf/areas.dmi'
 	icon_state = "green"
 	//ambience = list('sound/ambience/ambimine.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen12.ogg','sound/ambience/ambisin4.ogg')
 	ambience_exterior = AMBIENCE_CAVE

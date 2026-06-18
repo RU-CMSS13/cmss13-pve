@@ -207,3 +207,7 @@
 	icon_opened = "secureopen-so"
 	icon_broken = "securebroken-so"
 	icon_off = "secureoff-so"
+
+/obj/structure/closet/secure_closet/marine_personal/platoon_commander/spawn_gear()
+	. = ..()
+	new /obj/item/clothing/head/helmet/marine/motion(src)

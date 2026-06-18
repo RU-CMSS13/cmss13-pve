@@ -368,6 +368,12 @@
 	item_state = "corporate_brown"
 	has_buttons = FALSE
 
+// SS220 EDIT - START: PR #1283 Movie-ish Sections — brown leather jacket
+/obj/item/clothing/suit/storage/jacket/marine/corporate/brown/leather
+	name = "brown leather jacket"
+	desc = "A brown leather jacket, for the individual who has some experience in living and working amidst the heavens."
+// SS220 EDIT - END
+
 /obj/item/clothing/suit/storage/jacket/marine/corporate/blue
 	name = "blue suit jacket"
 	desc = "A blue suit jacket."

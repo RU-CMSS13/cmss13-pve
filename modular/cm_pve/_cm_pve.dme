@@ -1,0 +1,19 @@
+#include "_cm_pve.dm"
+
+// CM-PVE non-glue content migrated from code/ to modular/cm_pve/
+// Original SS220 EDIT markers preserved as legacy debt.
+// HALO-specific content lives in modular/halo/ — see modular/halo/_halo.dme
+
+// Clothing
+#include "code/modules/clothing/under/vai.dm"
+
+// Food
+#include "code/game/objects/items/reagent_containers/food/mre_food/dog_war.dm"
+
+// Vehicles — TWE Tank
+#include "code/modules/vehicles/twe_tank/interior.dm"
+#include "code/modules/vehicles/twe_tank/twe_apc.dm"
+#include "code/modules/vehicles/twe_tank/twe_tank.dm"
+
+// Vehicles — Heavy Autocannon
+#include "code/modules/vehicles/hardpoints/hardpoint_ammo/heavy_autocannon.dm"

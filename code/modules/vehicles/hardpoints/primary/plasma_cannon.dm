@@ -1,7 +1,9 @@
 // Plasma cannon for ridgeway tank
+// SS220 EDIT - START: PR #1266 D66-44 — translated name/desc to Russian
 /obj/item/hardpoint/primary/cannon/plasmacannon
 	name = "\improper Boyars PARS 177 орудие точечной обороны"
 	desc = "Boyars PARS 177 Point-Defence-Weapon - это фазированное плазменное энергетическое оружие мощностью 20 кВт, предназначенное для защиты M40 Ridgeway от авиации, ракет и, неофициально, видимой вражеской пехоты. Желанное улучшение по сравнению со старыми лазерными системами M22 Jackson и M34 Longstreet: комплекс способен жёстко перехватывать воздушные цели и мгновенно испарять пехоту."
+// SS220 EDIT - END
 
 	icon = 'icons/obj/vehicles/hardpoints/tank.dmi'
 	icon_state = "plasma_cannon"

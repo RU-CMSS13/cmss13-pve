@@ -23,6 +23,11 @@
 	if(option == HALO_PFC_VARIANT)
 		gear_preset = gear_preset_secondary
 
+/datum/job/marine/standard/ai/halo/odst/handle_job_options(option)
+	gear_preset = initial(gear_preset)
+	if(option == HALO_PFC_VARIANT)
+		gear_preset = gear_preset_secondary
+
 /datum/job/marine/medic/ai/halo/unsc/handle_job_options(option)
 	gear_preset = initial(gear_preset)
 	if(option == HALO_PVT_VARIANT)

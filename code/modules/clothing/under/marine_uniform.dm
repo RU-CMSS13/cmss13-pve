@@ -546,6 +546,8 @@
 	has_sensor = UNIFORM_HAS_SENSORS
 	sensor_faction = FACTION_UPP
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
+	// SS220 EDIT: CM-PVE #1255 UPP camouflage — NO_NAME_OVERRIDE for gamemode skin
+	flags_atom = NO_NAME_OVERRIDE
 	item_icons = list( // SS220 EDIT: split GroundSide military uniforms out of uniform_0.dmi
 		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_faction/groundside_military.dmi',
 	)
@@ -556,6 +558,8 @@
 	icon_state = "upp_boiler"
 	worn_state = "upp_boiler"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+	// SS220 EDIT: CM-PVE #1255 UPP camouflage — NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/under/marine/veteran/UPP/pap
 	name = "\improper PaP service uniform"
@@ -565,6 +569,8 @@
 	has_sensor = UNIFORM_HAS_SENSORS
 	sensor_faction = FACTION_LIST_UPP_COLONY
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+	// SS220 EDIT: CM-PVE #1255 UPP camouflage — NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/under/marine/veteran/UPP/service
 	name = "\improper UPP service uniform"
@@ -572,6 +578,8 @@
 	icon_state = "upp_uniform_service"
 	worn_state = "upp_uniform_service"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+	// SS220 EDIT: CM-PVE #1255 UPP camouflage — NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/under/marine/veteran/UPP/naval
 	name = "\improper UPP naval infantry uniform"
@@ -580,6 +588,8 @@
 	icon_state = "upp_uniform_naval"
 	worn_state = "upp_uniform_naval"
 	flags_jumpsuit = UNIFORM_SLEEVE_CUT
+	// SS220 EDIT: CM-PVE #1255 UPP camouflage — NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	valid_accessory_slots = list(ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_HOLSTER)
 
 
@@ -1442,6 +1452,15 @@
 	item_icons = list( // SS220 EDIT: split GroundSide military uniforms out of uniform_0.dmi
 		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_faction/groundside_military.dmi',
 	)
+
+// SS220 EDIT: Old USCM khakis for Dog War
+/obj/item/clothing/under/marine/standard/old
+	name = "\improper USCM khakis"
+	icon_state = "d_uscmboiler"
+	item_state = "d_uscmboiler"
+	worn_state = "d_uscmboiler"
+	desc = "Single-tone marine khakis."
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/under/marine/veteran/fil
 	name = "\improper french combat uniform"

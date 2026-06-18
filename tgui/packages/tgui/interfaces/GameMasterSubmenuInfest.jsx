@@ -18,6 +18,9 @@ export const GameMasterSubmenuInfest = (props, context) => {
 
 export const GameMasterSubmenuInfestInfestingPanel = (props, context) => {
   const { data, act } = useBackend();
+  const selectedEmbryo = data.selectable_embryos?.find(
+    (embryo) => embryo.value === data.selected_embryo_type,
+  );
 
   return (
     <Section title="Infesting">
@@ -36,6 +39,20 @@ export const GameMasterSubmenuInfestInfestingPanel = (props, context) => {
             </Stack.Item>
           </Stack>
         </Stack.Item>
+        {/* SS220 EDIT - START: GM hybrid embryo selector */}
+        <Stack.Item mt={1}>Embryo Type</Stack.Item>
+        <Stack.Item>
+          <Dropdown
+            options={data.selectable_embryos}
+            selected={data.selected_embryo_type}
+            displayText={selectedEmbryo?.displayText}
+            width="15rem"
+            onSelected={(new_embryo_type) => {
+              act('set_selected_embryo_type', { new_embryo_type });
+            }}
+          />
+        </Stack.Item>
+        {/* SS220 EDIT - END */}
         <Stack.Item mt={1}>Embryo Stage</Stack.Item>
         <Stack.Item>
           <Slider

@@ -37,9 +37,6 @@
 	. = ..()
 	det_time = max(0, rand(det_time - 5, det_time + 5))
 
-/obj/item/explosive/grenade/proc/log_grenade_debug(message, mob/user = null)
-	log_game("GRENADE DEBUG: [src] [message] user=[key_name(user)] loc=[AREACOORD(src)] active=[active] throwing=[throwing] rebounding=[rebounding] launch_target=[AREACOORD(launch_metadata?.target)] launch_dist=[launch_metadata?.dist]/[launch_metadata?.range]")
-
 /obj/item/explosive/grenade/proc/get_remaining_timed_fuse_ticks()
 	if(!active || (fuse_type != TIMED_FUSE) || (timed_fuse_deadline <= 0))
 		return null
@@ -120,17 +117,14 @@
 		if((fuse_type == TIMED_FUSE) && det_time)
 			timed_fuse_deadline = world.time + det_time // SS220 EDIT: track the armed timed-fuse deadline so throw-back can randomize across the real remaining window
 		det_time ? addtimer(CALLBACK(src, PROC_REF(prime)), det_time) : prime()
-	log_grenade_debug("activated") // SS220 EDIT: temporary diagnostics for grenade timer arming
 	w_class = SIZE_MASSIVE // We cheat a little, primed nades become massive so they cant be stored anywhere
 	update_icon()
 
 /obj/item/explosive/grenade/prime(force = FALSE)
 	timed_fuse_deadline = 0
-	log_grenade_debug("prime() entered") // SS220 EDIT: temporary diagnostics for grenades that appear to never detonate
 	..()
 	if(!QDELETED(src))
 		w_class = initial(w_class)
-		log_grenade_debug("prime() returned without deleting the grenade") // SS220 EDIT: temporary diagnostics for non-qdel grenade prime paths
 
 /obj/item/explosive/grenade/update_icon()
 	if(active && dangerous)
@@ -167,15 +161,12 @@
 /obj/item/explosive/grenade/attack_hand()
 	walk(src, null, null)
 	if(active && isturf(loc) && (throwing || rebounding || launch_metadata)) // SS220 EDIT: recover grenades left in a stale thrown state on the floor
-		log_grenade_debug("attack_hand found stale launch state before pickup", usr)
 		if(launch_metadata)
 			remove_temp_pass_flags(launch_metadata.pass_flags)
 		throwing = FALSE
 		rebounding = FALSE
 		QDEL_NULL(launch_metadata)
-	log_grenade_debug("attack_hand forwarding to base item pickup", usr) // SS220 EDIT: temporary diagnostics for unpickable active grenades
 	..()
-	log_grenade_debug("attack_hand returned from base item pickup", usr) // SS220 EDIT: temporary diagnostics for post-pickup grenade state
 	return
 
 /obj/item/explosive/grenade/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)

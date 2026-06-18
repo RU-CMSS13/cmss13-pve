@@ -33,10 +33,6 @@ GLOBAL_LIST_EMPTY(active_droppod_landing_turfs)
 	var/turf/planned_landing_turf
 	var/list/turf/launch_targets = list()
 
-// failure vars
-	var/failure_chance = 10
-	var/failure_type
-
 // other vars
 	var/image/occupant_image
 	var/image/door_image
@@ -52,6 +48,7 @@ GLOBAL_LIST_EMPTY(active_droppod_landing_turfs)
 	COOLDOWN_DECLARE(door_cooldown)
 	var/datum/turf_reservation/reservation
 	var/launch_sequence_active = FALSE
+	var/finish_drop_retries = 0
 
 	var/image/pod_overlay
 	var/image/rocket_image
@@ -71,11 +68,11 @@ GLOBAL_LIST_EMPTY(active_droppod_landing_turfs)
 	icon_state = "pod_door"
 	layer = 5.8
 	anchored = 1
-	drop_sound = 'sound/effects/odst_pod/door_clang_1.ogg'
+	drop_sound = 'modular/halo/sound/effects/odst_pod/door_clang_1.ogg'
 
 /obj/item/drop_pod_door/launch_impact(hit_atom)
 	. = ..()
-	playsound(src, 'sound/effects/odst_pod/door_clang_1.ogg')
+	playsound(src, 'modular/halo/sound/effects/odst_pod/door_clang_1.ogg')
 
 /obj/structure/drop_pod_chute
 	name = "\improper M8823 HEV pod chute"
@@ -98,6 +95,11 @@ GLOBAL_LIST_EMPTY(active_droppod_landing_turfs)
 
 /obj/structure/halo_droppod/Destroy()
 	release_landing_target()
+	QDEL_NULL(reservation)
+	if(occupant)
+		var/mob/living/evicted = occupant
+		occupant = null
+		evicted.forceMove(get_turf(src))
 	return ..()
 
 /obj/structure/halo_droppod/proc/handle_overlays(mob/living/user)
@@ -193,6 +195,7 @@ GLOBAL_LIST_EMPTY(active_droppod_landing_turfs)
 	launch_sequence_active = FALSE
 	locked = FALSE
 	release_landing_target()
+	finish_drop_retries = 0
 	if(reset_can_launch)
 		can_launch = TRUE
 	if(pod_state == POD_INFLIGHT)
@@ -215,7 +218,7 @@ GLOBAL_LIST_EMPTY(active_droppod_landing_turfs)
 	if(closed)
 		if(user)
 			visible_message(SPAN_NOTICE("[user] pulls a lever and opens the [src]s door."), SPAN_NOTICE("You pull a lever and open the [src]s door."))
-		playsound(src, 'sound/effects/odst_pod/pod_door_open.ogg')
+		playsound(src, 'modular/halo/sound/effects/odst_pod/pod_door_open.ogg')
 		door_obj.icon_state = "pod_door_open"
 		var/open_time = 1 SECONDS
 		animate(door_obj, pixel_y = 24, time = open_time, easing = SINE_EASING)
@@ -228,7 +231,7 @@ GLOBAL_LIST_EMPTY(active_droppod_landing_turfs)
 	if(!closed)
 		if(user)
 			visible_message(SPAN_NOTICE("[user] pulls a lever and closes the [src]s door."), SPAN_NOTICE("You pull a lever and close the [src]s door."))
-		playsound(src, 'sound/effects/odst_pod/pod_door_close.ogg')
+		playsound(src, 'modular/halo/sound/effects/odst_pod/pod_door_close.ogg')
 		var/close_time = 1 SECONDS
 		animate(door_obj, pixel_y = 0, time = close_time, easing = SINE_EASING)
 		sleep(close_time+1)
@@ -368,6 +371,8 @@ GLOBAL_LIST_EMPTY(active_droppod_landing_turfs)
 /obj/structure/halo_droppod/proc/find_new_target(mob/user, list/candidate_targets = null, turf/ignore_reserved_turf = null)
 	var/list/turf/targets_to_check = candidate_targets ? candidate_targets : get_launch_target_list()
 	if(!length(targets_to_check))
+		if(user)
+			to_chat(user, SPAN_WARNING("No landing zones available."))
 		return null
 	for(var/turf/base_target in targets_to_check)
 		if(!base_target)
@@ -387,7 +392,7 @@ GLOBAL_LIST_EMPTY(active_droppod_landing_turfs)
 				continue
 			return attemptdrop
 	if(user)
-		to_chat(user, SPAN_WARNING("RECALCULATION FAILED!"))
+		to_chat(user, SPAN_WARNING("All landing zones are blocked or occupied."))
 	return null
 
 /obj/structure/halo_droppod/proc/start_launch_pod(mob/user)
@@ -440,7 +445,7 @@ GLOBAL_LIST_EMPTY(active_droppod_landing_turfs)
 	if(!launch_sequence_active || pod_state != POD_INFLIGHT)
 		return
 	if(occupant?.client)
-		playsound_client(occupant.client, 'sound/effects/odst_pod/drop_timer.ogg', src, 25)
+		playsound_client(occupant.client, 'modular/halo/sound/effects/odst_pod/drop_timer.ogg', src, 25)
 	addtimer(CALLBACK(src, PROC_REF(launch_pod), user), 3.5 SECONDS)
 
 
@@ -454,6 +459,11 @@ GLOBAL_LIST_EMPTY(active_droppod_landing_turfs)
 
 	playsound(src, 'sound/effects/escape_pod_launch.ogg', 70)
 	sleep(1 SECONDS)
+	if(SSticker?.mode)
+		if(!(MODE_HAS_TOGGLEABLE_FLAG(MODE_DISABLE_INTRO_BLURB)))
+			if(!(SSticker.mode.flags_round_type & MODE_DS_LANDED)) //Launching on first drop.
+				SSticker.mode.pod_first_drop(src)
+				SSticker.mode.flags_round_type |= MODE_DS_LANDED
 	reservation = SSmapping.request_turf_block_reservation(5, 5, 1, reservation_type = /datum/turf_reservation/transit/drop_pod)
 	if(!reservation)
 		to_chat(user, SPAN_WARNING("Error. No droppod transit corridor available."))
@@ -493,7 +503,7 @@ GLOBAL_LIST_EMPTY(active_droppod_landing_turfs)
 	rocket_image.pixel_y = -32
 	overlays += rocket_image
 	animate(src, pixel_z = 500, time = 4 SECONDS, easing = LINEAR_EASING)
-	playsound(src, 'sound/effects/odst_pod/pod_jet.ogg')
+	playsound(src, 'modular/halo/sound/effects/odst_pod/pod_jet.ogg')
 	sleep(4 SECONDS)
 	qdel(chute_obj)
 	handle_overlays(user)
@@ -508,10 +518,19 @@ GLOBAL_LIST_EMPTY(active_droppod_landing_turfs)
 		if(targetturf)
 			set_planned_landing_target(targetturf)
 	if(!targetturf)
+		finish_drop_retries++
+		if(finish_drop_retries >= 30)
+			if(user)
+				to_chat(user, SPAN_DANGER("CRITICAL! NO LZ FOUND AFTER 30 ATTEMPTS! ABORTING DROP!"))
+			if(reservedturf)
+				forceMove(reservedturf)
+			reset_launch_state(TRUE)
+			return
 		if(user)
-			to_chat(user, SPAN_WARNING("WARNING! NO SAFE LZ AVAILABLE! HOLDING IN TRANSIT!"))
+			to_chat(user, SPAN_WARNING("WARNING! NO SAFE LZ AVAILABLE! HOLDING IN TRANSIT! (Attempt [finish_drop_retries]/30)"))
 		addtimer(CALLBACK(src, PROC_REF(finish_drop), user, reservedturf), 1 SECONDS)
 		return
+	finish_drop_retries = 0
 	forceMove(targetturf)
 	release_landing_target()
 	QDEL_NULL(reservation)
@@ -530,7 +549,7 @@ GLOBAL_LIST_EMPTY(active_droppod_landing_turfs)
 /obj/structure/halo_droppod/proc/complete_drop(mob/user)
 	launch_sequence_active = FALSE
 	locked = FALSE
-	playsound(src, 'sound/effects/odst_pod/door_kaboom.ogg')
+	playsound(src, 'modular/halo/sound/effects/odst_pod/door_kaboom.ogg')
 	addtimer(CALLBACK(src, PROC_REF(door_explode), user), 3 SECONDS)
 	addtimer(CALLBACK(src, PROC_REF(exit_pod), user), 4 SECONDS)
 
@@ -550,4 +569,4 @@ GLOBAL_LIST_EMPTY(active_droppod_landing_turfs)
 	new_door_obj.icon_state = "pod_door_floor"
 	sleep(0.8 SECONDS)
 
-	playsound(new_door_obj, 'sound/effects/odst_pod/door_clang_1.ogg')
+	playsound(new_door_obj, 'modular/halo/sound/effects/odst_pod/door_clang_1.ogg')

@@ -3,7 +3,7 @@
 
 /obj/item/ammo_magazine/revolver
 	name = "\improper M44 speed loader (.44)"
-	desc = "A revolver speed loader for the M44 revolver."
+	desc = "A revolver speed loader for the M44 revolver." // SS220 EDIT: CM-PVE PR #169 — desc update
 	default_ammo = /datum/ammo/bullet/revolver
 	flags_equip_slot = NO_FLAGS
 	caliber = ".44"
@@ -70,10 +70,10 @@
 	icon_state = "zhnk72loader_shrapnel"
 
 /obj/item/ammo_magazine/revolver/small
-	name = "\improper .38 overpressure speedloader (.38 +P)"
-	desc = "A speedloader of 6 handloaded overpressure .38 bullets. Substantial impact, but suffers from accuracy issues compared to factory ammunition. Liable to damage firearms not built to handle the chamber pressure."
+	name = "\improper .38 overpressure speedloader (.38 +P)" // SS220 EDIT: CM-PVE PR #169 — name/desc/caliber update
+	desc = "A speedloader of 6 handloaded overpressure .38 bullets. Substantial impact, but suffers from accuracy issues compared to factory ammunition. Liable to damage firearms not built to handle the chamber pressure." // SS220 EDIT: CM-PVE PR #169
 	default_ammo = /datum/ammo/bullet/revolver/small
-	caliber = ".38 +P"
+	caliber = ".38 +P" // SS220 EDIT: CM-PVE PR #169
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "38"
 	max_rounds = 6
@@ -81,7 +81,7 @@
 
 /obj/item/ammo_magazine/revolver/spearhead
 	name = "\improper Spearhead speed loader (.357)"
-	desc = "A speedloader of 6 FMJ .357 bullets, uncommonly issued to Colonial Marshals due to overpenetration risks."
+	desc = "A speedloader of 6 FMJ .357 bullets, uncommonly issued to Colonial Marshals due to overpenetration risks." // SS220 EDIT: CM-PVE PR #169 — desc update
 	default_ammo = /datum/ammo/bullet/revolver/small
 	caliber = ".357"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
@@ -91,7 +91,7 @@
 
 /obj/item/ammo_magazine/revolver/spearhead/hollowpoint
 	name = "\improper Spearhead speed loader (.357)"
-	desc = "A speedloader of 6 hollowpoint .357 bullets, commonly issued to Colonial Marshals to both prevent overpenetration and improve performance against unarmored criminals or wildlife."
+	desc = "A speedloader of 6 hollowpoint .357 bullets, commonly issued to Colonial Marshals to both prevent overpenetration and improve performance against unarmored criminals or wildlife." // SS220 EDIT: CM-PVE PR #169 — desc update
 	default_ammo = /datum/ammo/bullet/revolver/small/hollowpoint
 	icon_state = "cmb_hp"
 
@@ -193,7 +193,7 @@
 
 /obj/item/ammo_magazine/internal/revolver/small
 	default_ammo = /datum/ammo/bullet/revolver/small
-	caliber = ".357 Hotload"
+	caliber = ".357 Hotload" // SS220 EDIT: CM-PVE PR #169 — caliber update (.38→.357 Hotload)
 	gun_type = /obj/item/weapon/gun/revolver/small
 
 //-------------------------------------------------------

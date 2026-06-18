@@ -2,7 +2,7 @@
 //BASE
 /area/gamma_sector
 	name = "Gamma Sector"
-	icon_state = "lv626"
+	icon_state = "green"
 	can_build_special = TRUE
 	powernet_name = "ground"
 	minimap_color = MINIMAP_AREA_COLONY
@@ -76,7 +76,7 @@
 	icon_state = "iso2"
 /area/gamma_sector/unsc_base/command_office
 	name = "Operations Office"
-	icon_state = "tactical"
+	icon_state = "head_quarters"
 /area/gamma_sector/unsc_base/communication_office
 	name = "Traxus Affairs"
 	icon_state = "law"
@@ -300,13 +300,13 @@
 	icon_state = "caves_sw"
 /area/gamma_sector/closed_hard/highway_caves
 	name = "Eastern Cavern"
-	icon_state = "caves_e"
+	icon_state = "caves_east"
 /area/gamma_sector/closed_hard/facility_caves
 	name = "Northern Access Cavern"
 	icon_state = "caves_lambda"
 /area/gamma_sector/closed_hard/engineering_caves
 	name = "Western Shore Cavern"
-	icon_state = "caves_n"
+	icon_state = "caves_north"
 /area/gamma_sector/closed_hard/cliff_caves
 	name = "Central Cavern"
 	icon_state = "caves_virology"

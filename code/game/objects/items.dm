@@ -136,6 +136,8 @@
 
 	///Vision impairing effect if worn on head/mask/glasses.
 	var/vision_impair = VISION_IMPAIR_NONE
+	/// SS220 EDIT: CM-PVE #1287 Gas Mask Vision — allow scope use with vision-impairing head/mask gear
+	var/ignore_zoom_tint = FALSE
 
 	///Used for stepping onto flame and seeing how much dmg you take and if you're ignited.
 	var/fire_intensity_resistance
@@ -848,8 +850,16 @@ cases. Override_icon_state should be a list.*/
 		to_chat(user, SPAN_WARNING("You are too blind to see anything."))
 	else if(user.stat || !ishuman(user))
 		to_chat(user, SPAN_WARNING("You are unable to focus through \the [zoom_device]."))
+	// SS220 EDIT - START: CM-PVE #1287 Gas Mask Vision — allow scopes with ignore_zoom_tint gear
 	else if(!zoom && user.client && user.update_tint())
-		to_chat(user, SPAN_WARNING("Your welding equipment gets in the way of you looking through \the [zoom_device]."))
+		var/mob/living/carbon/human/H = user
+		var/tint_allowed = (H.wear_mask && H.wear_mask.ignore_zoom_tint) || (H.head && H.head.ignore_zoom_tint)
+		if(!tint_allowed)
+			to_chat(user, SPAN_WARNING("Your worn equipment gets in the way of you looking through \the [zoom_device]."))
+			return
+		do_zoom(user, tileoffset, viewsize, keep_zoom)
+		return
+	// SS220 EDIT - END
 	else if(!zoom && user.get_active_hand() != src && !istype(src, /obj/item/clothing/mask))
 		to_chat(user, SPAN_WARNING("You need to hold \the [zoom_device] to look through it."))
 	else if(!zoom)

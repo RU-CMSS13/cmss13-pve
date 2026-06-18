@@ -1521,7 +1521,7 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/obj/structure/prop/vehicles/tank/twe{
+/obj/structure/prop/vehicle/twe_tank{
 	layer = 5.1;
 	pixel_y = -6
 	},

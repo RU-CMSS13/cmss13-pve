@@ -17,6 +17,9 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	/// If TRUE, may enter the grenade throw-back action from nearby live grenades.
 	var/can_throw_back_grenades = TRUE // SS220 EDIT: modular HALO presets can opt weak HumanAI out of grenade throw-back
 
+	/// Range in tiles for friendly proximity check when throwing grenades. Default 3. Override in HALO presets.
+	var/friendly_throw_check_range = 3 // SS220 EDIT: configurable friendly check range for grenade throws
+
 	/// Distance for view checks
 	var/view_distance = 6
 
@@ -210,10 +213,28 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 		if(is_type_in_list(ongoing_action, allowed_actions))
 			allowed_actions -= ongoing_action.type
 
+	// SS220 EDIT START: prevent new hand-using actions from interrupting an in-progress grenade throw
+	var/grenade_throw_in_progress = FALSE
+	for(var/datum/ai_action/ongoing_action as anything in ongoing_actions)
+		if(istype(ongoing_action, /datum/ai_action/throw_grenade))
+			var/datum/ai_action/throw_grenade/tg = ongoing_action
+			if(tg.mid_throw)
+				grenade_throw_in_progress = TRUE
+				break
+		if(istype(ongoing_action, /datum/ai_action/throw_back_nade))
+			var/datum/ai_action/throw_back_nade/tbn = ongoing_action
+			if(tbn.mid_throw)
+				grenade_throw_in_progress = TRUE
+				break
+	// SS220 EDIT END
+
 	// Create assoc list of selected AI actions and their weight
 	var/list/possible_actions = list()
 	for(var/action_type in shuffle(allowed_actions))
 		var/datum/ai_action/glob_ref = GLOB.AI_actions[action_type]
+		// SS220 EDIT: skip hand-using actions while a grenade throw is in async flight
+		if(grenade_throw_in_progress && (glob_ref.action_flags & ACTION_USING_HANDS))
+			continue
 		var/weight = glob_ref.get_weight(src)
 		if(weight) // No weight means we shouldn't consider this action at all
 			possible_actions[action_type] = weight
@@ -240,6 +261,9 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 #endif
 
 	for(var/datum/ai_action/action as anything in ongoing_actions)
+		// SS220 EDIT: suppress hand-using actions while a grenade throw is in async flight
+		if(grenade_throw_in_progress && (action.action_flags & ACTION_USING_HANDS))
+			continue
 		var/retval = action.trigger_action()
 		switch(retval)
 			if(ONGOING_ACTION_UNFINISHED_BLOCK)

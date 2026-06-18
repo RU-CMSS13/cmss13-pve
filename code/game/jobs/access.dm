@@ -300,6 +300,17 @@
 				ACCESS_UPP_MACHINEGUN
 			)
 
+// SS220 EDIT - START: PR #1283 Movie-ish Sections — UPP Liaison access list
+		if(ACCESS_LIST_UPP_LIAISON)
+			return list(
+				ACCESS_UPP_GENERAL,
+				ACCESS_UPP_MEDICAL,
+				ACCESS_UPP_ENGINEERING,
+				ACCESS_UPP_FLIGHT,
+				ACCESS_UPP_RESEARCH,
+			) + get_access(ACCESS_LIST_COLONIAL_ALL)
+// SS220 EDIT - END
+
 		if(ACCESS_LIST_TWE_ALL)
 			return list(
 				ACCESS_WY_GENERAL,

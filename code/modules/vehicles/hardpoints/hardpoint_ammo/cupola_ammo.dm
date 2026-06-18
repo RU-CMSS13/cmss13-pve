@@ -47,3 +47,19 @@
 		icon_state = "m56d_drum"
 	else
 		icon_state = "m56d_drum_empty"
+
+// SS220 EDIT - START
+/obj/item/ammo_magazine/hardpoint/m56_cupola/twe_tank
+	name = "магазин курсового пулемёта L98"
+	desc = "Увеличенная коробка на 500, 10x28-мм безгильзовых патронов для курсового пулемёта L98."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/twe_ammo.dmi'
+	icon_state = "mounted_cupola_1"
+	max_rounds = 500
+	gun_type = /obj/item/hardpoint/secondary/m56cupola/twe_tank
+
+/obj/item/ammo_magazine/hardpoint/m56_cupola/twe_tank/update_icon()
+	if(current_rounds > 0)
+		icon_state = "mounted_cupola_1"
+	else
+		icon_state = "mounted_cupola_0"
+// SS220 EDIT - END

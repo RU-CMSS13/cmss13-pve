@@ -105,6 +105,15 @@
 	},
 /turf/open/shuttle/escapepod/north,
 /area/unsc_stalwart_frigate/supply)
+"aaf" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 8;
+	id = "squadarmory_alpha";
+	name = "\improper Снаряжение командира отделения"
+	},
+/obj/item/ammo_box/magazine/unsc/dmr,
+/turf/open/floor/almayer/pod_landing_floor,
+/area/unsc_stalwart_frigate/armory)
 "aag" = (
 /obj/structure/platform{
 	dir = 1
@@ -1165,7 +1174,7 @@
 /turf/open/floor/almayer,
 /area/unsc_stalwart_frigate/armory)
 "acd" = (
-/obj/structure/fence,
+/obj/structure/fence/halo,
 /obj/structure/platform,
 /turf/open/shuttle/escapepod/floor4,
 /area/unsc_stalwart_frigate/cryo_hall)
@@ -8407,9 +8416,6 @@
 /area/unsc_stalwart_frigate/bridge/one)
 "apv" = (
 /obj/structure/closet/secure_closet/halo/job_locker/rto,
-/obj/item/storage/backpack/marine/satchel/rto/unsc,
-/obj/item/device/binoculars/range/designator/sergeant,
-/obj/item/ammo_box/magazine/misc/unsc/flare/signal,
 /turf/open/floor/almayer/plating_striped/east,
 /area/unsc_stalwart_frigate/armory)
 "apw" = (
@@ -8540,9 +8546,6 @@
 /area/unsc_stalwart_frigate/bridge/two)
 "apL" = (
 /obj/structure/closet/secure_closet/halo/job_locker/rto,
-/obj/item/storage/backpack/marine/satchel/rto/unsc,
-/obj/item/device/binoculars/range/designator/sergeant,
-/obj/item/ammo_box/magazine/misc/unsc/flare/signal,
 /turf/open/floor/almayer/plating_striped/west,
 /area/unsc_stalwart_frigate/armory)
 "apM" = (
@@ -8694,10 +8697,6 @@
 /area/unsc_stalwart_frigate/upper_hallway/east)
 "aqb" = (
 /obj/structure/closet/secure_closet/halo/job_locker/squad_leader,
-/obj/item/device/binoculars/range/designator/sergeant,
-/obj/item/attachable/attached_gun/grenade/ma5,
-/obj/item/ammo_box/magazine/unsc/dmr,
-/obj/item/weapon/gun/rifle/halo/dmr/unloaded,
 /turf/open/floor/almayer/plating_striped/east,
 /area/unsc_stalwart_frigate/armory)
 "aqd" = (
@@ -8724,10 +8723,6 @@
 /area/unsc_stalwart_frigate/bridge)
 "aqh" = (
 /obj/structure/closet/secure_closet/halo/job_locker/squad_leader,
-/obj/item/device/binoculars/range/designator/sergeant,
-/obj/item/attachable/attached_gun/grenade/ma5,
-/obj/item/ammo_box/magazine/unsc/dmr,
-/obj/item/weapon/gun/rifle/halo/dmr/unloaded,
 /turf/open/floor/almayer/plating_striped/west,
 /area/unsc_stalwart_frigate/armory)
 "aqi" = (
@@ -13290,8 +13285,6 @@
 /area/unsc_stalwart_frigate/upper_hallway)
 "aBe" = (
 /obj/structure/closet/secure_closet/halo/job_locker/fireteam_leader/ft2,
-/obj/item/device/binoculars/range/monocular,
-/obj/item/weapon/gun/rifle/halo/dmr/unloaded,
 /obj/structure/sign/safety/two{
 	pixel_x = -16
 	},
@@ -13796,7 +13789,7 @@
 /turf/open/floor/almayer/plate,
 /area/unsc_stalwart_frigate/hangar)
 "boo" = (
-/obj/structure/fence{
+/obj/structure/fence/halo{
 	pixel_x = 0;
 	pixel_y = 18;
 	layer = 5
@@ -19532,7 +19525,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/obj/structure/fence,
+/obj/structure/fence/halo,
 /turf/open/shuttle/escapepod,
 /area/unsc_stalwart_frigate/upper_hallway/north)
 "iqT" = (
@@ -21079,7 +21072,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/obj/structure/fence,
+/obj/structure/fence/halo,
 /turf/open/shuttle/escapepod,
 /area/unsc_stalwart_frigate/cryo_hall)
 "ksg" = (
@@ -22468,8 +22461,6 @@
 /area/unsc_stalwart_frigate/motor_pool/heavy)
 "mdn" = (
 /obj/structure/closet/secure_closet/halo/job_locker/fireteam_leader/ft2,
-/obj/item/device/binoculars/range/monocular,
-/obj/item/weapon/gun/rifle/halo/dmr/unloaded,
 /obj/structure/sign/safety/two{
 	pixel_x = 32
 	},
@@ -24718,8 +24709,6 @@
 /area/unsc_stalwart_frigate/hangar)
 "pkq" = (
 /obj/structure/closet/secure_closet/halo/job_locker/fireteam_leader/ft1,
-/obj/item/device/binoculars/range/monocular,
-/obj/item/weapon/gun/rifle/halo/dmr/unloaded,
 /obj/structure/sign/safety/one{
 	pixel_x = -16
 	},
@@ -25071,8 +25060,6 @@
 /area/unsc_stalwart_frigate/motor_pool/heavy)
 "pIL" = (
 /obj/structure/closet/secure_closet/halo/job_locker/fireteam_leader/ft1,
-/obj/item/device/binoculars/range/monocular,
-/obj/item/weapon/gun/rifle/halo/dmr/unloaded,
 /obj/structure/sign/safety/one{
 	pixel_x = 32
 	},
@@ -26517,7 +26504,7 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/obj/structure/fence,
+/obj/structure/fence/halo,
 /turf/open/shuttle/escapepod,
 /area/unsc_stalwart_frigate/cryo_hall)
 "rEL" = (
@@ -27389,7 +27376,7 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/obj/structure/fence,
+/obj/structure/fence/halo,
 /turf/open/shuttle/escapepod,
 /area/unsc_stalwart_frigate/upper_hallway/north)
 "sIe" = (
@@ -31599,7 +31586,7 @@
 /turf/open/floor/almayer/plate,
 /area/unsc_stalwart_frigate/supply)
 "xpS" = (
-/obj/structure/fence,
+/obj/structure/fence/halo,
 /turf/open/shuttle/escapepod/floor4,
 /area/unsc_stalwart_frigate/cryo_hall)
 "xrk" = (
@@ -56707,7 +56694,7 @@ abh
 abg
 awD
 cIn
-onU
+aaf
 onU
 cIn
 apD
@@ -60186,7 +60173,7 @@ rRM
 ykE
 kJi
 ase
-tUd
+ckt
 ckt
 ckt
 ckt

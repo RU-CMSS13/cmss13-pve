@@ -59,7 +59,7 @@
 	icon_state = "unggoy_minor"
 	item_state = "unggoy_minor"
 	item_icons = list(WEAR_HANDS = 'modular/halo/icons/halo/mob/humans/onmob/clothing/unggoy/gloves.dmi')
-	allowed_species_list = list(SPECIES_UNGGOY)
+	allowed_species_list = list(SPECIES_UNGGOY,SPECIES_UNGGOY_HEROIC)
 	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
 	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
@@ -223,7 +223,7 @@
 	icon_state = "unggoy_minor_assault"
 	item_state = "unggoy_minor_assault"
 	item_icons = list(WEAR_HEAD = 'modular/halo/icons/halo/mob/humans/onmob/clothing/unggoy/hat.dmi')
-	allowed_species_list = list(SPECIES_UNGGOY)
+	allowed_species_list = list(SPECIES_UNGGOY,SPECIES_UNGGOY_HEROIC)
 	flags_marine_helmet = NO_FLAGS
 	flags_inventory = NO_FLAGS
 	flags_inv_hide = NO_FLAGS
@@ -333,7 +333,7 @@
 	item_state = "unggoy_minor"
 	drop_sound = "armorequip"
 	item_icons = list(WEAR_FEET = 'modular/halo/icons/halo/mob/humans/onmob/clothing/unggoy/shoes.dmi')
-	allowed_species_list = list(SPECIES_UNGGOY)
+	allowed_species_list = list(SPECIES_UNGGOY,SPECIES_UNGGOY_HEROIC)
 	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
 	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
@@ -493,7 +493,7 @@
 	icon = 'modular/halo/icons/halo/obj/items/clothing/covenant/accessories.dmi'
 	icon_state = "unggoy_minor_shoulder"
 	item_state = "unggoy_minor_shoulder"
-	allowed_species_list = list(SPECIES_UNGGOY)
+	allowed_species_list = list(SPECIES_UNGGOY,SPECIES_UNGGOY_HEROIC)
 	slot = ACCESSORY_SLOT_UNGGOY_SHOULDER
 	flags_atom = NO_SNOW_TYPE
 	accessory_icons = list(WEAR_BODY = 'modular/halo/icons/halo/mob/humans/onmob/clothing/unggoy/accessories.dmi', WEAR_JACKET = 'modular/halo/icons/halo/mob/humans/onmob/clothing/unggoy/accessories.dmi')
@@ -532,7 +532,7 @@
 	icon = 'modular/halo/icons/halo/obj/items/clothing/covenant/accessories.dmi'
 	icon_state = "unggoy_minor_bicep"
 	item_state = "unggoy_minor_bicep"
-	allowed_species_list = list(SPECIES_UNGGOY)
+	allowed_species_list = list(SPECIES_UNGGOY,SPECIES_UNGGOY_HEROIC)
 	slot = ACCESSORY_SLOT_UNGGOY_BICEP
 	flags_atom = NO_SNOW_TYPE
 	accessory_icons = list(WEAR_BODY = 'modular/halo/icons/halo/mob/humans/onmob/clothing/unggoy/accessories.dmi', WEAR_JACKET = 'modular/halo/icons/halo/mob/humans/onmob/clothing/unggoy/accessories.dmi')

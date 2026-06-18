@@ -30,6 +30,20 @@
 	var/plant_on_semiweedable = FALSE
 	var/node_type = /obj/effect/alien/weeds/node
 
+// SS220 EDIT - START: PR1271 - Itsy Bitsy Buggers plant_webs ability for spider castes
+/datum/action/xeno_action/onclick/plant_webs
+	name = "Plant Webs (10)"
+	ability_name = "Plant Webs"
+	plasma_cost = 10
+	macro_path = /datum/action/xeno_action/verb/verb_plant_webs
+	action_type = XENO_ACTION_CLICK
+	xeno_cooldown = 2
+	ability_primacy = XENO_PRIMARY_ACTION_1
+
+	var/plant_on_semiweedable = FALSE
+	var/node_type = /obj/effect/spider/stickyweb
+// SS220 EDIT - END: PR1271
+
 // Resting
 /datum/action/xeno_action/onclick/xeno_resting
 	name = "Rest"

@@ -31,6 +31,11 @@
 #define SQUAD_LRRP_2 "Ocelot Grapplers"
 #define SQUAD_SISSI "Fox Stalkers"
 
+// SS220 EDIT - START: PR #1283 Movie-ish Sections — movie squad defines
+#define SQUAD_MARINE_MOVIE "Sun Riders"
+#define SQUAD_UPP_MOVIE "Red Dawn"
+// SS220 EDIT - END
+
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"
 #define JOB_SQUAD_LEADER "Squad Leader" // SS220 EDIT
@@ -68,6 +73,9 @@
 GLOBAL_LIST_INIT(job_squad_roles, JOB_SQUAD_ROLES_LIST)
 
 #define JOB_COLONIST "Colonist"
+// SS220 EDIT - START: PR #1283 Movie-ish Sections — Civilian Advisor job
+#define JOB_ADVISOR "Civilian Advisor"
+// SS220 EDIT - END
 #define JOB_PASSENGER "Passenger"
 #define JOB_SURVIVOR "Survivor"
 #define JOB_SYNTH_SURVIVOR "Synth Survivor"
@@ -416,11 +424,18 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_UPP_LT_GENERAL "Lieutenant General"
 #define JOB_UPP_GENERAL "General"
 
+// SS220 EDIT - START: PR #1283 Movie-ish Sections — UPP advisor and agent jobs
+#define JOB_UPP_ADVISOR "Civilian Specialist"
+#define JOB_UPP_AGENT "MSS Agent"
+// SS220 EDIT - END
+
 #define JOB_UPP_COMBAT_SYNTH "Combat Synthetic"
 #define JOB_UPP_SUPPORT_SYNTH "Support Synthetic"
 #define JOB_UPP_JOE "Dzho Automaton"
 
-#define UPP_JOB_LIST list(JOB_UPP, JOB_UPP_ENGI, JOB_UPP_MEDIC, JOB_UPP_SPECIALIST, JOB_UPP_LEADER, JOB_UPP_POLICE, JOB_UPP_LT_OFFICER, JOB_UPP_LT_DOKTOR, JOB_UPP_SRLT_OFFICER, JOB_UPP_KPT_OFFICER, JOB_UPP_KOL_OFFICER, JOB_UPP_COMBAT_SYNTH, JOB_UPP_JOE)
+// SS220 EDIT - START: PR #1283 Movie-ish Sections — add JOB_UPP_AGENT to UPP_JOB_LIST
+#define UPP_JOB_LIST list(JOB_UPP, JOB_UPP_ENGI, JOB_UPP_MEDIC, JOB_UPP_SPECIALIST, JOB_UPP_LEADER, JOB_UPP_POLICE, JOB_UPP_LT_OFFICER, JOB_UPP_LT_DOKTOR, JOB_UPP_SRLT_OFFICER, JOB_UPP_KPT_OFFICER, JOB_UPP_KOL_OFFICER, JOB_UPP_COMBAT_SYNTH, JOB_UPP_JOE, JOB_UPP_AGENT)
+// SS220 EDIT - END
 #define UPP_JOB_GRUNT_LIST list(JOB_UPP, JOB_UPP_ENGI, JOB_UPP_MEDIC, JOB_UPP_SPECIALIST, JOB_UPP_LEADER, JOB_UPP_POLICE, JOB_UPP_CREWMAN)
 
 #define JOB_UPP_COMMANDO "Junior Kommando"

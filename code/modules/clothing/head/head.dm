@@ -927,3 +927,33 @@
 /obj/item/clothing/head/beret/royal_marine_pvp/team_leader
 	icon_state = "rmc_beret_tl"
 	item_state = "rmc_beret_tl"
+
+// SS220 EDIT - START: HALO CE-like classic uniforms
+/obj/item/clothing/head/cmcap/classic
+	name = "\improper grey utility cap"
+	desc = "A grey utility cap"
+	icon_state = "cap_grey"
+	icon = 'modular/halo/icons/halo/obj/items/clothing/hats/hats_by_faction/hat_unsc.dmi'
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	item_icons = list(
+		WEAR_HEAD = 'modular/halo/icons/halo/mob/humans/onmob/clothing/hats/hats_by_faction/hat_unsc.dmi'
+	)
+
+/obj/item/clothing/head/cmcap/boonie/classic
+	name = "\improper grey boonie hat"
+	icon_state = "booniehat_grey"
+	icon = 'modular/halo/icons/halo/obj/items/clothing/hats/hats_by_faction/hat_unsc.dmi'
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	item_icons = list(
+		WEAR_HEAD = 'modular/halo/icons/halo/mob/humans/onmob/clothing/hats/hats_by_faction/hat_unsc.dmi'
+	)
+
+/obj/item/clothing/head/durag/classic
+	icon_state = "durag_grey"
+	desc = "An improvised head wrap made out of a grey neckerchief. Great for keeping the sweat out of your eyes and protecting your hair."
+	icon = 'modular/halo/icons/halo/obj/items/clothing/hats/hats_by_faction/hat_unsc.dmi'
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	item_icons = list(
+		WEAR_HEAD = 'modular/halo/icons/halo/mob/humans/onmob/clothing/hats/hats_by_faction/hat_unsc.dmi'
+	)
+// SS220 EDIT - END

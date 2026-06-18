@@ -7,7 +7,7 @@
 	icon_state = "vulcan"
 	disp_icon = "warthog"
 	disp_icon_state = "vulcan"
-	activation_sounds = 'modular/halo/sound/vehicles/halo/warthog_fire_1.ogg'
+	activation_sounds = 'modular/halo/sound/vehicles/warthog_fire_1.ogg'
 
 	health = 100
 	firing_arc = 0

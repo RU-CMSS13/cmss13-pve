@@ -56,8 +56,8 @@
 	var/image/heat_overlay
 
 	// Sounds
-	var/overheat_sound = 'sound/weapons/halo/plasma_overheat.ogg'
-	var/manual_vent_sound = 'sound/weapons/halo/plasma_overheat.ogg'
+	var/overheat_sound = 'modular/halo/sound/weapons/plasma_overheat.ogg'
+	var/manual_vent_sound = 'modular/halo/sound/weapons/plasma_overheat.ogg'
 	var/close_vent_sound = 'sound/weapons/handling/safety_toggle.ogg'
 
 /obj/item/weapon/gun/energy/plasma/Initialize()
@@ -271,7 +271,7 @@
 		toggle_ammo()
 		overcharged = TRUE
 		toggle_overcharge_overlay()
-		playsound(src, 'sound/weapons/halo/plasma_pistol_overcharge/overcharge.ogg', vary = TRUE)
+		playsound(src, 'modular/halo/sound/weapons/plasma_pistol_overcharge/overcharge.ogg', vary = TRUE)
 		COOLDOWN_START(src, overcharge_cooldown, 1.5 SECONDS)
 
 /obj/item/weapon/gun/energy/plasma/plasma_pistol/proc/toggle_overcharge_overlay()
@@ -329,7 +329,7 @@
 	ammo = /datum/ammo/energy/halo_plasma/plasma_rifle
 	has_heat_overlay = TRUE
 	has_overheat_icon_state = TRUE
-	fire_sound = 'sound/weapons/halo/gun_plasmarifle_1.ogg'
+	fire_sound = 'modular/halo/sound/weapons/gun_plasmarifle_1.ogg'
 	start_automatic = TRUE
 	muzzleflash_iconstate = "muzzle_flash_blue"
 	muzzle_flash_color = COLOR_PLASMA_BLUE
@@ -373,9 +373,9 @@
 	base_gun_icon = "p90"
 	item_state = "needler"
 	fire_sound = "gun_needler"
-	reload_sound = 'sound/weapons/halo/gun_needler_reload.ogg'
-	cocked_sound = 'sound/weapons/halo/gun_needler_cocked.ogg'
-	unload_sound = 'sound/weapons/halo/gun_needler_reload.ogg'
+	reload_sound = 'modular/halo/sound/weapons/gun_needler_reload.ogg'
+	cocked_sound = 'modular/halo/sound/weapons/gun_needler_cocked.ogg'
+	unload_sound = 'modular/halo/sound/weapons/gun_needler_reload.ogg'
 	flags_gun_features = GUN_CAN_POINTBLANK
 	muzzleflash_icon = 'modular/halo/icons/halo/obj/items/weapons/halo_projectiles.dmi'
 	muzzleflash_iconstate = "muzzle_flash_pink"
@@ -466,10 +466,10 @@
 	base_gun_icon = "type71"
 	item_state = "carbine"
 	fire_sound = "gun_carbine"
-	reload_sound = 'sound/weapons/halo/gun_carbine_reload.ogg'
-	cocked_sound = 'sound/weapons/halo/gun_carbine_cocked.ogg'
-	unload_sound = 'sound/weapons/halo/gun_carbine_unload.ogg'
-	empty_sound = 'sound/weapons/halo/gun_carbine_dryfire.ogg'
+	reload_sound = 'modular/halo/sound/weapons/gun_carbine_reload.ogg'
+	cocked_sound = 'modular/halo/sound/weapons/gun_carbine_cocked.ogg'
+	unload_sound = 'modular/halo/sound/weapons/gun_carbine_unload.ogg'
+	empty_sound = 'modular/halo/sound/weapons/gun_carbine_dryfire.ogg'
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AUTO_EJECTOR|GUN_AMMO_COUNTER
 	current_mag = /obj/item/ammo_magazine/carbine
 	map_specific_decoration = FALSE
@@ -514,7 +514,7 @@
 	integrated.flags_attach_features &= ~ATTACH_REMOVABLE
 	integrated.Attach(src)
 	update_attachable(integrated.slot)
-	var/obj/item/attachable/scope/variable_zoom/scope = new(src)
+	var/obj/item/attachable/scope/variable_zoom/covenant/scope = new(src)
 	scope.flags_attach_features &= ~ATTACH_REMOVABLE
 	scope.Attach(src)
 	scope.hidden = TRUE

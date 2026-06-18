@@ -285,12 +285,12 @@
 
 /obj/item/clothing/accessory/medal/bronze/conduct
 	name = MARINE_CONDUCT_MEDAL
-	desc = "A bronze medal awarded for distinguished conduct. Whilst a great honor, this is the most basic award given by the USCM"
+	desc = "A bronze medal awarded for distinguished conduct during combat actions. A more common medal, still highly regarded.  Suspended by a red ribbon, with a blue stripe along the center bordered on the left and right by a thin white stripe." // SS220 EDIT: UNSC medal desc (PR #157)
 	icon_state = "bronze_b"
 
 /obj/item/clothing/accessory/medal/bronze/heart
 	name = MARINE_BRONZE_HEART_MEDAL
-	desc = "A bronze heart-shaped medal awarded for sacrifice. It is often awarded posthumously or for severe injury in the line of duty."
+	desc = "A bronze heart-shaped medal awarded for a service injury. It is often awarded posthumously or for injury in the line of duty. Suspended by a purple ribbon with white stripes on the left and right of the award." // SS220 EDIT: UNSC medal desc (PR #157)
 	icon_state = "bronze_heart"
 
 /obj/item/clothing/accessory/medal/bronze/science
@@ -304,7 +304,7 @@
 
 /obj/item/clothing/accessory/medal/silver/valor
 	name = MARINE_VALOR_MEDAL
-	desc = "A silver medal awarded for acts of exceptional valor."
+	desc = "A silver medal awarded for acts of exceptional valor in the line of duty. Among the highest awards that can be obtained through combat actions, often rare to see living recipients of this award nowadays. Suspended by a red white and blue ribbon, with blue on the exterior inset with two thin white stripes, red in the middle with two larger white stripes on the left and right. " // SS220 EDIT: UNSC medal desc (PR #157)
 
 /obj/item/clothing/accessory/medal/silver/security
 	name = "robust security award"
@@ -321,7 +321,7 @@
 
 /obj/item/clothing/accessory/medal/gold/heroism
 	name = MARINE_HEROISM_MEDAL
-	desc = "An extremely rare golden medal awarded only by the USCM. To receive such a medal is the highest honor and as such, very few exist."
+	desc = "An extremely rare golden medal awarded by the UNSC to the Navy and Marine Corps. Such a medal is a lifetime achievement for the servicemember that earns it, coming with multiple benefits to retirement and normally accompanied by a promotion. Suspended by a blue ribbon with thin white stripes on the left and right.." // SS220 EDIT: UNSC medal desc (PR #157)
 
 /obj/item/clothing/accessory/medal/platinum
 	name = "platinum medal"
@@ -1554,6 +1554,13 @@
 	item_state = "upp_arms"
 	slot = ACCESSORY_SLOT_DECORARMOR
 
+/obj/item/clothing/accessory/upppads/Initialize(mapload)
+	. = ..()
+	// SS220 EDIT: CM-PVE #1255 UPP camouflage — conditional gamemode skin
+	if(!(flags_atom & NO_SNOW_TYPE))
+		select_gamemode_skin(type)
+	update_icon()
+
 /obj/item/clothing/accessory/upppads/legs
 	name = "\improper 6B90 Leg Guards"
 	desc = "A set of leg greaves designed for the 6B90 armor system."
@@ -2232,3 +2239,22 @@
 	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to Weyland Yutani PMC armor. This webbing is fitted with loops for storing M40-hull grenades."
 	icon_state = "wy_webbing_m40"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade
+
+// SS220 EDIT - START: Old MACE webbing for Dog War
+/obj/item/clothing/accessory/storage/webbing/m3/old
+	name = "\improper MACE Webbing"
+	icon_state = "macenormal"
+	desc = "Outdated Modular Assault Carrying Equipment, designed to be worn over M59 series of flak vests."
+
+/obj/item/clothing/accessory/storage/webbing/m3/small/old
+	name = "\improper MACE Small Pouch Webbing"
+	icon_state = "macesmall"
+	desc = "An outdated Modular Assault Carrying Equipment, configured to carry a whole array of small items."
+
+/obj/item/clothing/accessory/storage/webbing/m3/drop
+	name = "\improper MACE Drop Pouch Webbing"
+	desc = "An unusual piece of kit, this Modular Assault Carrying Equipment webbing is configured to carry a single sizeable pouch."
+	icon_state = "macedrop"
+	hold = /obj/item/storage/internal/accessory/drop_pouch
+	slot = ACCESSORY_SLOT_M3UTILITY
+// SS220 EDIT - END

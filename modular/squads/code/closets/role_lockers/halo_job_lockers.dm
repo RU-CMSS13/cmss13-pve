@@ -1,14 +1,50 @@
 /obj/structure/closet/secure_closet/halo/job_locker
 	name = "occupation locker"
 
+/obj/structure/closet/secure_closet/halo/job_locker/proc/spawn_gear()
+	return
+
+/obj/structure/closet/secure_closet/halo/job_locker/proc/get_faction_helmet_motion()
+	var/platoon_type = GLOB.RoleAuthority?.get_active_ship_platoon_type()
+	switch(platoon_type)
+		if(/datum/squad/marine/halo/unsc/alpha)
+			return /obj/item/clothing/head/helmet/marine/unsc/motion
+		if(/datum/squad/marine/halo/odst/alpha)
+			return /obj/item/clothing/head/helmet/marine/unsc/odst/motion
+		else
+			return /obj/item/clothing/head/helmet/marine/motion
+
 /obj/structure/closet/secure_closet/halo/job_locker/squad_leader
 	name = "Squad Leader locker"
 	desc = "Contains the equipment for a squad leader."
 	req_access = list(ACCESS_MARINE_LEADER)
 
+/obj/structure/closet/secure_closet/halo/job_locker/squad_leader/spawn_gear()
+	. = ..()
+	new /obj/item/ammo_box/magazine/m49a(src)
+	new /obj/item/weapon/gun/rifle/m49a(src)
+	new /obj/item/weapon/gun/launcher/grenade/m92(src)
+	new /obj/item/device/binoculars/range/designator(src)
+	var/helmet_type = get_faction_helmet_motion()
+	new helmet_type(src)
+
 /obj/structure/closet/secure_closet/halo/job_locker/rto
 	name = "Radio Telephone Operator locker"
 	req_access = list(ACCESS_MARINE_SMARTPREP)
+
+/obj/structure/closet/secure_closet/halo/job_locker/rto/spawn_gear()
+	. = ..()
+	var/platoon_type = GLOB.RoleAuthority?.get_active_ship_platoon_type()
+	switch(platoon_type)
+		if(/datum/squad/marine/halo/unsc/alpha, /datum/squad/marine/halo/odst/alpha)
+			new /obj/item/storage/backpack/marine/satchel/rto/unsc(src)
+		else
+			new /obj/item/storage/backpack/marine/satchel/rto(src)
+	new /obj/item/device/binoculars/range/designator(src)
+	new /obj/item/storage/box/flare/signal(src)
+	new /obj/item/storage/box/flare/signal(src)
+	var/helmet_type = get_faction_helmet_motion()
+	new helmet_type(src)
 
 /obj/structure/closet/secure_closet/halo/job_locker/weapons_spec
 	name = "Weapons Specialist locker"
@@ -150,6 +186,14 @@
 	name = "Group Leader locker"
 	req_access = list(ACCESS_MARINE_TL_PREP)
 
+/obj/structure/closet/secure_closet/halo/job_locker/fireteam_leader/spawn_gear()
+	. = ..()
+	new /obj/item/ammo_box/magazine/m49a(src)
+	new /obj/item/weapon/gun/rifle/m49a(src)
+	new /obj/item/device/binoculars/range/designator/monocular(src)
+	var/helmet_type = get_faction_helmet_motion()
+	new helmet_type(src)
+
 /obj/structure/closet/secure_closet/halo/job_locker/fireteam_leader/ft1
 	name = "group one Group Leader locker"
 	req_access = list(ACCESS_MARINE_TL_PREP, ACCESS_SQUAD_ONE)
@@ -157,3 +201,13 @@
 /obj/structure/closet/secure_closet/halo/job_locker/fireteam_leader/ft2
 	name = "group two Group Leader locker"
 	req_access = list(ACCESS_MARINE_TL_PREP, ACCESS_SQUAD_TWO)
+
+/obj/structure/closet/secure_closet/halo/job_locker/smartgunner
+	name = "Smartgunner locker"
+	desc = "A locker for Smartgunners."
+	req_access = list(ACCESS_MARINE_SMARTPREP)
+
+/obj/structure/closet/secure_closet/halo/job_locker/smartgunner/spawn_gear()
+	. = ..()
+	var/helmet_type = get_faction_helmet_motion()
+	new helmet_type(src)

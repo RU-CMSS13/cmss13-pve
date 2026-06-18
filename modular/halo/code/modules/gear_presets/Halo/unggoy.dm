@@ -6,6 +6,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	paygrades = list(PAY_SHORT_COV_CIV = JOB_PLAYTIME_TIER_0)
 	faction = FACTION_UNGGOY
+	faction_group = FACTION_LIST_COVENANT
 	skills = /datum/skills/covenant/unggoy
 	languages = list(LANGUAGE_SANGHEILI, LANGUAGE_UNGGOY)
 	var/halo_unggoy_role = "minor"
@@ -121,6 +122,14 @@
 	equip_unggoy_basics(new_human, /obj/item/clothing/suit/marine/unggoy/minor, /obj/item/storage/belt/marine/covenant/unggoy/minor)
 	add_plasma_pistol_package(new_human)
 
+/datum/equipment_preset/covenant/unggoy/minor/plasma_pistol/grenade
+	name = parent_type::name + " (!GRENADES!)"
+
+/datum/equipment_preset/covenant/unggoy/minor/plasma_pistol/grenade/load_gear(mob/living/carbon/human/new_human)
+	equip_unggoy_basics(new_human, /obj/item/clothing/suit/marine/unggoy/minor, /obj/item/storage/belt/marine/covenant/unggoy/minor)
+	add_plasma_pistol_package(new_human)
+	add_plasma_grenade_low(new_human)
+
 /datum/equipment_preset/covenant/unggoy/minor/needler
 	name = parent_type::name + " (Needler)"
 
@@ -162,6 +171,14 @@
 /datum/equipment_preset/covenant/unggoy/major/plasma_pistol/load_gear(mob/living/carbon/human/new_human)
 	equip_unggoy_basics(new_human, /obj/item/clothing/suit/marine/unggoy/major, /obj/item/storage/belt/marine/covenant/unggoy/major)
 	add_plasma_pistol_package(new_human)
+
+/datum/equipment_preset/covenant/unggoy/major/plasma_pistol/grenade
+	name = parent_type::name + " (!GRENADES!)"
+
+/datum/equipment_preset/covenant/unggoy/major/plasma_pistol/grenade/load_gear(mob/living/carbon/human/new_human)
+	equip_unggoy_basics(new_human, /obj/item/clothing/suit/marine/unggoy/major, /obj/item/storage/belt/marine/covenant/unggoy/major)
+	add_plasma_pistol_package(new_human)
+	add_plasma_grenade_low(new_human)
 
 /datum/equipment_preset/covenant/unggoy/major/needler
 	name = parent_type::name + " (Needler)"
@@ -217,6 +234,14 @@
 	equip_unggoy_basics(new_human, /obj/item/clothing/suit/marine/unggoy/heavy, /obj/item/storage/belt/marine/covenant/unggoy/heavy)
 	add_plasma_rifle_package(new_human)
 
+/datum/equipment_preset/covenant/unggoy/heavy/plasma_rifle/grenade
+	name = parent_type::name + " (!GRENADES!)"
+
+/datum/equipment_preset/covenant/unggoy/heavy/plasma_rifle/grenade/load_gear(mob/living/carbon/human/new_human)
+	equip_unggoy_basics(new_human, /obj/item/clothing/suit/marine/unggoy/heavy, /obj/item/storage/belt/marine/covenant/unggoy/heavy)
+	add_plasma_rifle_package(new_human)
+	add_plasma_grenade_medium(new_human)
+
 // Ultra
 /datum/equipment_preset/covenant/unggoy/ultra
 	name = parent_type::name + " ультра"
@@ -231,6 +256,11 @@
 	languages = list(LANGUAGE_SANGHEILI, LANGUAGE_UNGGOY)
 	halo_unggoy_role = "ultra"
 	halo_unggoy_ignore_panic = TRUE
+
+// PR #162: Unggoy Heroic subtype assignment
+/datum/equipment_preset/covenant/unggoy/ultra/load_race(mob/living/carbon/human/new_human, client/mob_client)
+	. = ..()
+	new_human.set_species(SPECIES_UNGGOY_HEROIC)
 
 /datum/equipment_preset/covenant/unggoy/ultra/load_gear(mob/living/carbon/human/new_human)
 	add_grunt_ultra(new_human)
@@ -273,6 +303,11 @@
 	halo_unggoy_role = "specops"
 	halo_unggoy_ignore_panic = TRUE
 
+// PR #162: Unggoy Heroic subtype assignment
+/datum/equipment_preset/covenant/unggoy/specops/load_race(mob/living/carbon/human/new_human, client/mob_client)
+	. = ..()
+	new_human.set_species(SPECIES_UNGGOY_HEROIC)
+
 /datum/equipment_preset/covenant/unggoy/specops/load_gear(mob/living/carbon/human/new_human)
 	add_grunt_specops(new_human)
 	add_plasma_rifle_package(new_human)
@@ -297,6 +332,14 @@
 /datum/equipment_preset/covenant/unggoy/specops/plasma_rifle/load_gear(mob/living/carbon/human/new_human)
 	equip_unggoy_basics(new_human, /obj/item/clothing/suit/marine/unggoy/cloaking/specops, /obj/item/storage/belt/marine/covenant/unggoy/specops)
 	add_plasma_rifle_package(new_human)
+
+/datum/equipment_preset/covenant/unggoy/specops/plasma_rifle/grenade
+	name = parent_type::name + " (!GRENADES!)"
+
+/datum/equipment_preset/covenant/unggoy/specops/plasma_rifle/grenade/load_gear(mob/living/carbon/human/new_human)
+	equip_unggoy_basics(new_human, /obj/item/clothing/suit/marine/unggoy/cloaking/specops, /obj/item/storage/belt/marine/covenant/unggoy/specops)
+	add_plasma_rifle_package(new_human)
+	add_plasma_grenade_high(new_human)
 
 /datum/equipment_preset/covenant/unggoy/specops/cloaking
 	name = parent_type::name + " (Plasma Rifle) !!CLOAKED!!"
@@ -350,6 +393,10 @@
 	faction = FACTION_SPECOPS_UNGGOY
 	halo_unggoy_role = "specops_ultra"
 	halo_unggoy_ignore_panic = TRUE
+
+/datum/equipment_preset/covenant/unggoy/specops_ultra/load_race(mob/living/carbon/human/new_human, client/mob_client)
+	. = ..()
+	new_human.set_species(SPECIES_UNGGOY_HEROIC)
 
 /datum/equipment_preset/covenant/unggoy/specops_ultra/load_gear(mob/living/carbon/human/new_human)
 	add_grunt_specops_ultra(new_human)

@@ -82,6 +82,16 @@
 	penetration = ARMOR_PENETRATION_TIER_1
 	scatter = SCATTER_AMOUNT_TIER_8
 	accuracy = HIT_ACCURACY_TIER_4
+	shell_casing = null
+
+/datum/ammo/bullet/smg/halo/m7
+	name = "5×23mm M443 FMJ"
+	penetration = 0
+	damage = 34
+	penetration = ARMOR_PENETRATION_TIER_1
+	scatter = SCATTER_AMOUNT_TIER_8
+	accuracy = HIT_ACCURACY_TIER_4
+	shell_casing = null
 
 // shotgun ammo
 
@@ -188,11 +198,22 @@
 	accurate_range = 14
 	max_range = 24
 
+/datum/ammo/rocket/pelican_missile_pod
+	name = "M19 missile"
+	icon = 'modular/halo/icons/halo/obj/items/weapons/halo_projectiles.dmi'
+	icon_state = "spnkr_missile"
+	damage = 300
+	shell_speed = AMMO_SPEED_TIER_1
+	accuracy = HIT_ACCURACY_TIER_4
+	accurate_range = 14
+	max_range = 24
+
 
 // sniper ammo
 
 /datum/ammo/bullet/rifle/srs99
 	name = "APFSDS bullet"
+	handful_state = "vulture_bullet"
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
 	damage = 700
 	penetration = ARMOR_PENETRATION_TIER_8
@@ -216,6 +237,16 @@
 // pistol ammo
 
 /datum/ammo/bullet/pistol/magnum
+	name = "SAP-HE bullet"
+	headshot_state = HEADSHOT_OVERLAY_HEAVY
+	accuracy = HIT_ACCURACY_TIER_4
+	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
+	damage = 40
+	penetration= ARMOR_PENETRATION_TIER_2
+	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
+	shell_casing = /obj/effect/decal/ammo_casing/bullet/halo
+
+/datum/ammo/bullet/pistol/halo/m6
 	name = "SAP-HE bullet"
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
 	accuracy = HIT_ACCURACY_TIER_4

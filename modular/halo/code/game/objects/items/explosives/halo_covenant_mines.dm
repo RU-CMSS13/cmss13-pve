@@ -187,7 +187,7 @@
 		cause_data = create_cause_data(initial(name), user)
 	create_shrapnel(loc, 32, dir, 360, /datum/ammo/needler, cause_data)
 	cell_explosion(loc, explosive_power, explosive_falloff, EXPLOSION_FALLOFF_SHAPE_LINEAR, CARDINAL_ALL_DIRS, cause_data)
-	playsound(loc, 'sound/effects/halo/supercombine.ogg', 45)
+	playsound(loc, 'modular/halo/sound/effects/supercombine.ogg', 45)
 	qdel(src)
 
 /obj/item/explosive/mine/covenant/needle_mine/active

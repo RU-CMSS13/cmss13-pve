@@ -1,5 +1,6 @@
 
 /// For PvE CM we start without the ability for people to join as xenos. This can be toggled by game masters.
+// SS220 EDIT - START: fix compile error — add tab indentation inside proc body
 /client/proc/toggle_join_xeno()
 	set name = "Toggle Player Xeno Joins"
 	set category = "Game Master.Flags"
@@ -13,3 +14,4 @@
 
 	SSticker.mode.toggleable_flags ^= MODE_NO_JOIN_AS_XENO
 	message_admins("[src] has [MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_JOIN_AS_XENO) ? "disallowed players from joining" : "allowed players to join"] as xenos.")
+// SS220 EDIT - END

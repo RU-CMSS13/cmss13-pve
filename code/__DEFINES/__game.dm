@@ -6,7 +6,7 @@
 #define GLOBAL_PROC "magic BS"
 
 //Game defining directives.
-#define MAIN_AI_SYSTEM "TITAN 1200" //Previously ARES v3.2
+#define MAIN_AI_SYSTEM "Voyager" //Previously "TITAN 1200" // ARES v3.2 // SS220 EDIT: HALO upstream PR #164 Titan→Voyager rename
 
 // Maploader bounds indices
 #define MAP_MINX 1
@@ -55,8 +55,15 @@
 #define MAP_BOSENMORI_BASHO "Bosenmori Basho"
 #define MAP_REDEMPTION_VALLEY "Redemption Valley" //valley with a military outpost and agricultural hamlet
 #define MAP_BINHAI_SUPPLY_STATION "Binhai Supply Station" //UPP asteroid base
-#define MAP_LV818_FEATURELESS_JUNGLE "LV818 Featureless Jungle"
 // SS220 EDIT - START
+#define MAP_FEATURELESS_SPACE "Featureless Space"
+#define MAP_LV522_FEATURELESS_BARRENS "LV-522 Featureless Barrens"
+#define MAP_LV818_FEATURELESS_DESERT "LV-818 Featureless Desert"
+#define MAP_LV818_FEATURELESS_JUNGLE "LV818 Featureless Jungle"
+#define MAP_LV295_FEATURELESS_ARCTIC "LV-295 Featureless Arctic"
+#define MAP_JUNGLE_DELTA "Jungle Delta"
+#define MAP_PROSPECTOR_CANYON "Prospector Canyon"
+#define MAP_ARCTIC_VALLEY "Arctic Valley"
 #define MAP_LV_671 "LV-671 Ark Borealis"
 #define MAP_OIL_DEPOT "Oil Depot 276"
 #define MAP_DERELICT_ALMAYER_INFESTED "Infested Almayer"

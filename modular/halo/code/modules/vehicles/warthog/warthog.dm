@@ -41,8 +41,8 @@
 		"cooldown" = 1
 	)
 
-	movement_sound = 'modular/halo/sound/vehicles/halo/warthog_med.ogg'
-	honk_sound = 'modular/halo/sound/vehicles/halo/hog_horn.ogg'
+	movement_sound = 'modular/halo/sound/vehicles/warthog_med.ogg'
+	honk_sound = 'modular/halo/sound/vehicles/hog_horn.ogg'
 
 	light_range = 3
 	vehicle_light_range = 6
@@ -436,10 +436,10 @@
 	if(istype(wheel, /obj/item/steering_wheel))
 		if(wheel.flags_item & WIELDED)
 			move_delay = VEHICLE_SPEED_FAST
-			movement_sound = 'modular/halo/sound/vehicles/halo/warthog_hi.ogg'
+			movement_sound = 'modular/halo/sound/vehicles/warthog_hi.ogg'
 		else
 			move_delay = VEHICLE_SPEED_FASTNORMAL
-			movement_sound = 'modular/halo/sound/vehicles/halo/warthog_med.ogg'
+			movement_sound = 'modular/halo/sound/vehicles/warthog_med.ogg'
 		for(var/obj/item/hardpoint/locomotion/warthog_wheels/wheels in hardpoints)
 			if(wheels && wheels.health == 0)
 				move_delay = VEHICLE_SPEED_STATIC
@@ -449,10 +449,10 @@
 	if(istype(wheel, /obj/item/steering_wheel))
 		if(wheel.flags_item & WIELDED)
 			move_delay = VEHICLE_SPEED_FAST
-			movement_sound = 'modular/halo/sound/vehicles/halo/warthog_hi.ogg'
+			movement_sound = 'modular/halo/sound/vehicles/warthog_hi.ogg'
 		else
 			move_delay = VEHICLE_SPEED_FASTNORMAL
-			movement_sound = 'modular/halo/sound/vehicles/halo/warthog_med.ogg'
+			movement_sound = 'modular/halo/sound/vehicles/warthog_med.ogg'
 			if(prob(5) && user.get_active_hand())
 				direction = pick(turn(direction, 90), turn(direction, -90))
 				user.visible_message(

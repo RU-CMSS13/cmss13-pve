@@ -632,5 +632,6 @@
 /datum/ammo/anti_air/on_hit_turf(turf/turf, obj/projectile/projectile)
 	return
 
-/datum/ammo/anti_air/do_at_max_range(obj/projectile/projectile)
-	return
+// SS220 EDIT: CM-PVE #1288 Anti Air GM Choice — do_at_max_range commented out (handled by GM callback)
+// /datum/ammo/anti_air/do_at_max_range(obj/projectile/projectile)
+// 	return

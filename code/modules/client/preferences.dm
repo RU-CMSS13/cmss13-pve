@@ -2205,6 +2205,8 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 /datum/preferences/proc/find_assigned_slot(job_title, is_late_join = FALSE)
 	if(toggle_prefs & (is_late_join ? TOGGLE_LATE_JOIN_CURRENT_SLOT : TOGGLE_START_JOIN_CURRENT_SLOT))
 		return
+	if(!GLOB.toggle_slot_preferences) // SS220 EDIT: Dog War slot preferences toggle check
+		return
 	var/slot_for_job = get_job_slot_assignment(job_title) // SS220 EDIT: slot lookup resolves through canonical ship-side role bucket with legacy fallback
 	switch(slot_for_job)
 		if(JOB_SLOT_RANDOMISED_SLOT)

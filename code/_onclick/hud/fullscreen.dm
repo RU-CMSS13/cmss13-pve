@@ -124,6 +124,12 @@
 /atom/movable/screen/fullscreen/brute/nvg
 	color = COLOR_BLACK
 
+// SS220 EDIT - START - HALO VISR fullscreen overlay
+/atom/movable/screen/fullscreen/brute/nvg/visr
+	color = "#e3b153"
+	alpha = 0
+// SS220 EDIT - END
+
 /atom/movable/screen/fullscreen/oxy
 	icon_state = "oxydamageoverlay"
 	layer = FULLSCREEN_DAMAGE_LAYER

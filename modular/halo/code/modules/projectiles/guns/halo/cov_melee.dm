@@ -70,11 +70,11 @@
 	/// Whether or not the energy sword is nonfunctional
 	var/nonfunctional = FALSE
 	// sounds
-	drop_sound = 'sound/items/halo/drop_lightweapon.ogg'
+	drop_sound = 'modular/halo/sound/items/drop_lightweapon.ogg'
 	hitsound = "swing_hit"
-	var/on_sound = 'sound/weapons/halo/energy_sword/energy_sword_on.ogg'
-	var/off_sound = 'sound/weapons/halo/energy_sword/energy_sword_off.ogg'
-	var/break_sound = 'sound/weapons/halo/energy_sword/energy_sword_disabled.ogg'
+	var/on_sound = 'modular/halo/sound/weapons/energy_sword/energy_sword_on.ogg'
+	var/off_sound = 'modular/halo/sound/weapons/energy_sword/energy_sword_off.ogg'
+	var/break_sound = 'modular/halo/sound/weapons/energy_sword/energy_sword_disabled.ogg'
 	// light stuff
 	light_color = "#7b92df"
 	light_power = 0.3

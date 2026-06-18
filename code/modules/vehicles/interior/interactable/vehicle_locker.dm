@@ -134,9 +134,11 @@
 	icon = 'icons/obj/vehicles/interiors/tank.dmi'
 	icon_state = "locker"
 
+// SS220 EDIT - START: PR #1266 D66-44 — Ridgeway tank locker
 /obj/structure/vehicle_locker/tank/ridgeway
 	icon = 'icons/obj/vehicles/interiors/general.dmi'
 	icon_state = "rlocker"
+// SS220 EDIT - END
 
 /obj/structure/vehicle_locker/tank/upp
 	icon = 'icons/obj/vehicles/interiors/upptank.dmi'
@@ -174,6 +176,11 @@
 	name = "storage ammunition"
 	icon = 'icons/obj/vehicles/interiors/uppvan.dmi'
 	icon_state = "small_storage"
+
+// SS220 EDIT
+/obj/structure/vehicle_locker/tank/twe
+	icon = 'icons/obj/vehicles/interiors/twe_tank.dmi'
+	icon_state = "locker"
 
 /obj/structure/vehicle_locker/med/on_pocket_open(first_open)
 	if(first_open)

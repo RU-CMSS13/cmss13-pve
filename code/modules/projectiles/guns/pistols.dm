@@ -49,7 +49,7 @@
 
 /obj/item/weapon/gun/pistol/m4a3
 	name = "\improper M4A3 service pistol"
-	desc = "The recently replaced semi-automatic 9mm service pistol of the USCM. It remains popular among marines due to its light trigger and familiarity."
+	desc = "An M4A3 Service Pistol, once the standard issue sidearm of the Colonial Marines but has recently been replaced with the Weyland Yutani 88 Mod 4 combat pistol. Fires 9mm pistol rounds." // SS220 EDIT: CM-PVE PR #169 — desc update
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m4a3"
 	item_state = "m4a3"

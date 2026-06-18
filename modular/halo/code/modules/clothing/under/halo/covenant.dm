@@ -19,7 +19,7 @@
 	worn_state = "sangheili_undersuit"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
 	drop_sound = "armorequip"
-	allowed_species_list = list(SPECIES_SANGHEILI)
+	allowed_species_list = list(SPECIES_SANGHEILI,SPECIES_SANGHEILI_HEROIC,SPECIES_SANGHEILI_LEGENDARY,SPECIES_SANGHEILI_MYTHIC)
 	item_state_slots = list()
 
 	item_icons = list(
@@ -44,7 +44,7 @@
 	worn_state = "unggoy_harness"
 	flags_jumpsuit = null
 	drop_sound = "armorequip"
-	allowed_species_list = list(SPECIES_UNGGOY)
+	allowed_species_list = list(SPECIES_UNGGOY,SPECIES_UNGGOY_HEROIC)
 	item_state_slots = list()
 
 	item_icons = list(

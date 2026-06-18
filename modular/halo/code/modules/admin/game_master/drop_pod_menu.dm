@@ -36,9 +36,12 @@ GLOBAL_DATUM_INIT(droppod_panel, /datum/drop_pod_menu, new)
 		next_launch_target_index = 1
 		return
 	for(var/target_ref in selected_launch_targets.Copy())
-		if(istype(locate(target_ref), /obj/effect/landmark/droppod))
+		var/obj/effect/landmark/droppod/target = locate(target_ref)
+		if(!istype(target))
+			selected_launch_targets -= target_ref
 			continue
-		selected_launch_targets -= target_ref
+		if(!get_turf(target))
+			selected_launch_targets -= target_ref
 	if(!length(selected_launch_targets) || next_launch_target_index > length(selected_launch_targets))
 		next_launch_target_index = 1
 
@@ -173,7 +176,6 @@ GLOBAL_DATUM_INIT(droppod_panel, /datum/drop_pod_menu, new)
 			if(!launched_pods)
 				to_chat(ui.user, SPAN_WARNING("No ready occupied droppods were found."))
 			return TRUE
-
 /datum/drop_pod_menu/ui_close(mob/user)
 	var/client/user_client = user.client
 	if(user_client?.click_intercept == src)

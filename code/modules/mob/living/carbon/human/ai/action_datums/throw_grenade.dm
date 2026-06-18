@@ -40,6 +40,7 @@
 /datum/ai_action/throw_grenade/Added()
 	throwing = locate() in brain.equipment_map[HUMAN_AI_GRENADES]
 	throw_range_override = isnum(throwing?.throw_range) ? throwing.throw_range : null
+	log_game("AI GRENADE: throw action created — grenade=[throwing] ([throwing?.type]), available=[english_list(brain?.equipment_map[HUMAN_AI_GRENADES])], throw_range=[throw_range_override], mob=[key_name(brain?.tied_human)]")
 	cancel_conflicting_actions()
 
 /datum/ai_action/throw_grenade/Destroy(force, ...)
@@ -147,7 +148,7 @@
 	if(!brain || !target_turf)
 		return FALSE
 
-	for(var/mob/possible_friendly in range(3, target_turf))
+	for(var/mob/possible_friendly in range(brain.friendly_throw_check_range, target_turf)) // SS220 EDIT: use configurable range from brain
 		if(!brain.can_target(possible_friendly))
 			return TRUE
 
@@ -180,10 +181,12 @@
 	throw_finished = TRUE
 
 /datum/ai_action/throw_grenade/proc/async_prime_and_throw(mob/living/carbon/human/tied_human, obj/item/explosive/grenade/grenade, turf/target_turf)
+	log_game("AI GRENADE: async throw started — grenade=[grenade] ([grenade?.type]), target=[target_turf], mob=[key_name(tied_human)]")
 	if(QDELETED(src))
 		return
 
 	if(!brain || !brain.has_valid_tied_human() || (brain.tied_human != tied_human))
+		log_game("AI GRENADE: async throw aborted — brain invalid or tied_human mismatch, mob=[key_name(tied_human)]")
 		finish_async_throw()
 		return
 
@@ -191,15 +194,26 @@
 	sleep(pre_throw_hold_delay) // SS220 EDIT: NPCs should visibly commit to the throw and hold the grenade for at least one second before priming/throwing
 
 	if(!brain || !brain.has_valid_tied_human() || (brain.tied_human != tied_human))
+		log_game("AI GRENADE: async throw aborted after pre-hold — brain invalid or mismatch, mob=[key_name(tied_human)]")
 		finish_async_throw()
 		return
 
 	if(!try_hold_grenade(tied_human, grenade) || !can_throw_to_target(tied_human, grenade, target_turf))
+		log_game("AI GRENADE: async throw aborted — hold or target check failed, grenade=[grenade], mob=[key_name(tied_human)]")
+		finish_async_throw()
+		return
+
+	// SS220 EDIT START: resolve throw target BEFORE priming to avoid holding a live grenade
+	var/turf/final_target_turf = resolve_throw_target(tied_human, grenade, target_turf)
+	if(!final_target_turf)
+		log_game("AI GRENADE: async throw aborted — no valid throw target, target=[target_turf], mob=[key_name(tied_human)]")
 		finish_async_throw()
 		return
 
 	grenade.attack_self(tied_human)
+	log_game("AI GRENADE: grenade primed — grenade=[grenade], target=[final_target_turf], mob=[key_name(tied_human)]")
 	if(QDELETED(grenade) || !grenade.active)
+		log_game("AI GRENADE: async throw aborted after prime — QDELETED=[QDELETED(grenade)], active=[grenade?.active], mob=[key_name(tied_human)]")
 		finish_async_throw()
 		return
 
@@ -207,23 +221,42 @@
 	brain.say_grenade_thrown_line() // SS220 EDIT: keep the voiceline inside the fixed one-second post-prime throw window
 	sleep(HUMAN_AI_GRENADE_POST_PRIME_THROW_DELAY) // SS220 EDIT: generic AI should release its own primed grenade after one second, not after burning most of the fuse in hand
 	if(QDELETED(grenade) || (grenade.loc != tied_human))
+		log_game("AI GRENADE: async throw aborted after post-prime hold — grenade lost, QDELETED=[QDELETED(grenade)], loc=[grenade?.loc], mob=[key_name(tied_human)]")
 		finish_async_throw()
 		return
 
 	if(!try_hold_grenade(tied_human, grenade))
+		log_game("AI GRENADE: async throw aborted — final hold failed, grenade=[grenade], mob=[key_name(tied_human)]")
 		finish_async_throw()
 		return
 
-	var/turf/final_target_turf = resolve_throw_target(tied_human, grenade, target_turf)
-	if(!final_target_turf)
+	// SS220 EDIT START: emergency fallback if target became invalid after prime
+	var/turf/emergency_target = resolve_throw_target(tied_human, grenade, target_turf)
+	if(!emergency_target)
+		emergency_target = get_fallback_throw_directions(tied_human, target_turf)
+		if(length(emergency_target))
+			for(var/direction in emergency_target)
+				var/turf/candidate = get_ranged_target_turf(tied_human, direction, get_effective_throw_range(grenade))
+				if(candidate && can_throw_to_target(tied_human, grenade, candidate))
+					emergency_target = candidate
+					break
+			if(!isturf(emergency_target))
+				emergency_target = null
+	if(!emergency_target)
+		log_game("AI GRENADE: EMERGENCY — no valid target, dropping live grenade on floor, grenade=[grenade], mob=[key_name(tied_human)], loc=[AREACOORD(tied_human)]")
+		msg_admin_attack("[key_name(tied_human)] (AI) dropped a live [grenade] on the floor — no valid throw target at [AREACOORD(tied_human)].")
+		tied_human.drop_inv_item_on_ground(grenade)
 		finish_async_throw()
 		return
+	final_target_turf = emergency_target
+	// SS220 EDIT END
 
 	if(!tied_human.throw_mode)
 		tied_human.toggle_throw_mode(THROW_MODE_NORMAL)
 
 	tied_human.face_atom(final_target_turf)
 	tied_human.throw_item(final_target_turf) // SS220 EDIT: still release the primed grenade if the original target turf became invalid during the one-second wind-up
+	log_game("AI GRENADE: throw_item() called — grenade=[grenade], target=[final_target_turf], mob=[key_name(tied_human)]")
 	finish_async_throw()
 
 /datum/ai_action/throw_grenade/trigger_action()
@@ -239,6 +272,7 @@
 
 	var/turf/target_turf = brain.target_turf
 	if(QDELETED(throwing) || !target_turf)
+		log_game("AI GRENADE: throw action aborted — grenade missing or no target, QDELETED=[QDELETED(throwing)], target=[target_turf], mob=[key_name(brain?.tied_human)]")
 		return ONGOING_ACTION_COMPLETED
 
 	var/mob/living/carbon/human/tied_human = brain.tied_human
@@ -249,14 +283,17 @@
 
 	cancel_conflicting_actions() // SS220 EDIT: cancel any already-running move/fire/reload actions before the grenade is primed
 	if(!try_hold_grenade(tied_human, throwing))
+		log_game("AI GRENADE: throw action aborted — could not hold grenade, grenade=[throwing], mob=[key_name(tied_human)]")
 		return ONGOING_ACTION_COMPLETED
 
 	if(isnum(throwing.throw_range))
 		throw_range_override = throwing.throw_range
 
 	if(!can_throw_to_target(tied_human, throwing, target_turf))
+		log_game("AI GRENADE: throw action aborted — target unreachable, distance=[get_dist(tied_human, target_turf)], throw_range=[throw_range_override], mob=[key_name(tied_human)]")
 		return ONGOING_ACTION_COMPLETED
 
+	log_game("AI GRENADE: throw action proceeding to async prime — grenade=[throwing], target=[target_turf], mob=[key_name(tied_human)]")
 	mid_throw = TRUE
 	INVOKE_ASYNC(src, PROC_REF(async_prime_and_throw), tied_human, throwing, target_turf)
 	return ONGOING_ACTION_UNFINISHED_BLOCK

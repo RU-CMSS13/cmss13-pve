@@ -23,8 +23,15 @@
 #define isspitter(A) (istype(A, /mob/living/carbon/xenomorph/spitter))
 #define iswarrior(A) (istype(A, /mob/living/carbon/xenomorph/warrior))
 #define isburrower(A) (istype(A, /mob/living/carbon/xenomorph/burrower))
+#define islanky(A) (istype(A, /mob/living/carbon/xenomorph/lanky)) // SS220 EDIT: PR1273 - Gibson & Kloos Lanky caste
+// #define islankybrute(A) (istype(A, /mob/living/carbon/xenomorph/lankybrute)) // SS220 EDIT: PR1273 - Gibson & Kloos Lanky Brute (commented out in upstream)
+#define isspiderguard(A) (istype(A, /mob/living/carbon/xenomorph/spider_guard)) // SS220 EDIT: PR1271 - Itsy Bitsy Buggers
+#define isspidernurse(A) (istype(A, /mob/living/carbon/xenomorph/spider_nurse)) // SS220 EDIT: PR1271 - Itsy Bitsy Buggers
+#define isspiderhunter(A) (istype(A, /mob/living/carbon/xenomorph/spider_hunter)) // SS220 EDIT: PR1271 - Itsy Bitsy Buggers
+#define islizard(A) (istype(A, /mob/living/carbon/xenomorph/giant_lizard)) // SS220 EDIT: PR1271 - Itsy Bitsy Buggers
 
 #define isxeno_builder(A) (isdrone(A) || ishivelord(A) || iscarrier(A) || isburrower(A) || isqueen(A))
+#define isspider(A) (isspiderguard(A) || isspidernurse(A) || isspiderhunter(A)) // SS220 EDIT: PR1271 - Itsy Bitsy Buggers
 
 /// Returns true/false based on if the xenomorph can harm the passed carbon mob.
 /mob/living/carbon/xenomorph/proc/can_not_harm(mob/living/carbon/attempt_harm_mob)

@@ -2,6 +2,8 @@
 #define MAIN_SHIP_NAME SSmapping.get_main_ship_name()
 #define MAIN_SHIP_DEFAULT_NAME "USS Golden Arrow"
 
+// SS220 EDIT - START: PR #1283 Movie-ish Sections — add movie ship map names
+// SS220 EDIT - END
 #define MAIN_SHIP_PLATOON text2path(SSmapping.get_main_ship_platoon())
 #define MAIN_SHIP_DEFAULT_PLATOON "/datum/squad/marine/alpha"
 #define USCM_AUXILIARY_PLATOON new /datum/squad/marine/bravo

@@ -620,6 +620,27 @@
 
 ////////// MARINES BOXES //////////////////////////
 
+// SS220 EDIT - START: CM-PVE PR #182 M108 canister grenade box
+/obj/item/storage/box/nade_box
+	w_class = SIZE_LARGE
+	storage_slots = 25
+	max_storage_space = 25
+	var/grenade_type
+
+/obj/item/storage/box/nade_box/fill_preset_inventory()
+	if(!grenade_type)
+		return
+	for(var/i in 1 to storage_slots)
+		new grenade_type(src)
+
+/obj/item/storage/box/nade_box/canister
+	name = "\improper M108 canister grenade box"
+	desc = "Reinforced box of 25 30mm M108 canister grenades."
+	icon_state = "airburst_nade_placeholder"
+	can_hold = list(/obj/item/explosive/grenade/high_explosive/airburst/canister)
+	grenade_type = /obj/item/explosive/grenade/high_explosive/airburst/canister
+	has_gamemode_skin = FALSE
+// SS220 EDIT - END
 
 /obj/item/storage/box/explosive_mines
 	name = "\improper M20A2 mine box"

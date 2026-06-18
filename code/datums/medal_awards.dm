@@ -1,7 +1,9 @@
-#define MARINE_CONDUCT_MEDAL "distinguished conduct medal"
-#define MARINE_BRONZE_HEART_MEDAL "bronze heart medal"
-#define MARINE_VALOR_MEDAL "medal of valor"
-#define MARINE_HEROISM_MEDAL "medal of exceptional heroism"
+// SS220 EDIT - START: UNSC medal names (PR #157 UNSC Medals Enabled)
+#define MARINE_CONDUCT_MEDAL "Bronze Star"
+#define MARINE_BRONZE_HEART_MEDAL "Purple Heart"
+#define MARINE_VALOR_MEDAL "Silver Star"
+#define MARINE_HEROISM_MEDAL "Navy Cross"
+// SS220 EDIT - END
 
 #define ALL_MARINE_MEDALS list(MARINE_CONDUCT_MEDAL, MARINE_BRONZE_HEART_MEDAL, MARINE_VALOR_MEDAL, MARINE_HEROISM_MEDAL)
 
@@ -38,7 +40,8 @@ GLOBAL_LIST_EMPTY(medal_recommendations)
 	giver_mob = list()
 	giver_ckey = list()
 
-GLOBAL_LIST_INIT(human_medals, list(MARINE_CONDUCT_MEDAL, MARINE_BRONZE_HEART_MEDAL))
+// SS220 EDIT: expanded to all 4 medals (PR #157 UNSC Medals Enabled)
+GLOBAL_LIST_INIT(human_medals, list(MARINE_CONDUCT_MEDAL, MARINE_BRONZE_HEART_MEDAL, MARINE_VALOR_MEDAL, MARINE_HEROISM_MEDAL))
 
 /proc/give_medal_award(medal_location, as_admin = FALSE)
 	if(as_admin && !check_rights(R_ADMIN))
@@ -271,15 +274,15 @@ GLOBAL_LIST_INIT(human_medals, list(MARINE_CONDUCT_MEDAL, MARINE_BRONZE_HEART_ME
 		return
 
 	if(!card.registered_ref)
-		user.visible_message("ERROR: ID card not registered in USCM registry. Potential medal fraud detected.")
+		user.visible_message("ERROR: ID card not registered in UNSC registry. Potential medal fraud detected.") // SS220 EDIT: USCM→UNSC (PR #157)
 		return
 
 	if(!card.check_biometrics(user))
-		user.visible_message("ERROR: ID card not registered for [user.real_name] in USCM registry. Potential medal fraud detected.")
+		user.visible_message("ERROR: ID card not registered for [user.real_name] in UNSC registry. Potential medal fraud detected.") // SS220 EDIT: USCM→UNSC (PR #157)
 		return
 
 	if(!(FACTION_MARINE in user.faction_group))
-		to_chat(user, SPAN_WARNING("Medals only available for USCM personnel."))
+		to_chat(user, SPAN_WARNING("Medals only available for UNSC personnel.")) // SS220 EDIT: USCM→UNSC (PR #157)
 		return
 
 	if(length(GLOB.medal_awards))
@@ -604,13 +607,13 @@ GLOBAL_DATUM_INIT(ic_medals_panel, /datum/ic_medal_panel, new)
 		return
 
 	if(!card.registered_ref)
-		user.visible_message("ERROR: ID card not registered in USCM registry. Potential medal fraud detected.")
+		user.visible_message("ERROR: ID card not registered in UNSC registry. Potential medal fraud detected.") // SS220 EDIT: USCM→UNSC (PR #157)
 		return
 
 	var/real_owner_ref = card.registered_ref
 
 	if(real_owner_ref != WEAKREF(user))
-		user.visible_message("ERROR: ID card not registered for [user.real_name] in USCM registry. Potential medal fraud detected.")
+		user.visible_message("ERROR: ID card not registered for [user.real_name] in UNSC registry. Potential medal fraud detected.") // SS220 EDIT: USCM→UNSC (PR #157)
 		return
 
 	var/datum/weakref/user_ref = WEAKREF(user)

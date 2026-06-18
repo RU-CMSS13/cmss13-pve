@@ -238,7 +238,11 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_TAIPEI = new /obj/item/map/taipei(),
 		MAP_REDEMPTION_VALLEY = new /obj/item/map/lazarus_landing_map(),
 		MAP_BINHAI_SUPPLY_STATION = new /obj/item/map/FOP_map(),
+		MAP_FEATURELESS_SPACE = new /obj/item/map/lv522_map(),
+		MAP_LV522_FEATURELESS_BARRENS = new /obj/item/map/lv522_map(),
+		MAP_LV818_FEATURELESS_DESERT = new /obj/item/map/lv522_map(),
 		MAP_LV818_FEATURELESS_JUNGLE = new /obj/item/map/lv522_map(),
+		MAP_LV295_FEATURELESS_ARCTIC = new /obj/item/map/lv522_map(),
 		// SS220 EDIT - START
 		MAP_LV_671 = new /obj/item/map/lv_671(),
 		MAP_OIL_DEPOT = new /obj/item/map/oil_depot(),

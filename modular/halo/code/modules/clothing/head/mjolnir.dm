@@ -20,6 +20,7 @@
 
 /obj/item/clothing/head/helmet/marine/unsc/mjolnir/Initialize()
 	. = ..()
+	AddComponent(/datum/component/halo_motion_sensor_manager)
 	update_icon()
 
 /obj/item/clothing/head/helmet/marine/unsc/mjolnir/update_icon()

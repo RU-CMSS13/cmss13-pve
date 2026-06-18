@@ -53,3 +53,29 @@
 	)
 
 	scatter = 2
+
+
+// SS220 EDIT - START
+/obj/item/hardpoint/secondary/m56cupola/twe_tank
+	name = "\improper 10x28-мм курсовой пулемёт L98"
+	desc = "Имперская реализация курсового пулемёта в бронированной турели. Компактный, с интегрированным жидкостным охлаждением и бронёй, защищающей от стрелкового оружия. Однако угол горизонтального наведения ограничен передней дугой, а вертикальный — не более 23 градусов. Установленное орудие — тяжелоствольный вариант штатного 10x28-мм пулемёта с импульсным механизмом. Производится по лицензии Armat компанией Weyland Yutani."
+	icon = 'icons/obj/vehicles/hardpoints/twe_tank.dmi'
+	disp_icon_state = "mounted_cupola"
+	icon_state = "mounted_cupola"
+
+	allowed_seat = VEHICLE_DRIVER
+
+	firing_arc = 105
+
+	ammo = new /obj/item/ammo_magazine/hardpoint/m56_cupola/twe_tank
+	max_clips = 5
+
+	muzzle_flash_pos = list(
+		"1" = list(8, -1),
+		"2" = list(-8, -21),
+		"4" = list(13, -10),
+		"8" = list(-11, 1)
+	)
+
+	scatter = 2
+// SS220 EDIT - END

@@ -709,10 +709,16 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 				if(length(total_visors) > iterator)
 					var/obj/item/device/helmet_visor/next_visor = total_visors[iterator + 1]
 
-					if(!isnull(GLOB.huds[next_visor.hud_type]?.hudusers[user]))
-						iterator++
-						skipped_hud = TRUE
-						continue
+					if(length(next_visor.hud_type))
+						var/hud_already_active = FALSE
+						for(var/hud_key in next_visor.hud_type)
+							if(!isnull(GLOB.huds[hud_key]?.hudusers[user]))
+								hud_already_active = TRUE
+								break
+						if(hud_already_active)
+							iterator++
+							skipped_hud = TRUE
+							continue
 
 					if(!next_visor.can_toggle(user))
 						iterator++
@@ -730,8 +736,14 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 			iterator++
 
 	for(var/obj/item/device/helmet_visor/new_visor in total_visors)
-		if(!isnull(GLOB.huds[new_visor.hud_type]?.hudusers[user]))
-			continue
+		if(length(new_visor.hud_type))
+			var/hud_already_active = FALSE
+			for(var/hud_key in new_visor.hud_type)
+				if(!isnull(GLOB.huds[hud_key]?.hudusers[user]))
+					hud_already_active = TRUE
+					break
+			if(hud_already_active)
+				continue
 
 		if(!new_visor.can_toggle(user))
 			continue
@@ -768,7 +780,14 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 /// Sets the action overlay to default hud sight up
 /datum/action/item_action/cycle_helmet_huds/proc/set_default_overlay()
-	action_icon_state = "hud_sight_up"
+	// SS220 EDIT - START - HALO VISR support
+	var/obj/item/clothing/head/helmet/marine/holder_helmet = holder_item
+	for(var/obj/item/device/helmet_visor/night_vision/halo/visr in holder_helmet)
+		if(!visr)
+			action_icon_state = "hud_sight_up"
+		else
+			action_icon_state = "visr_off"
+	// SS220 EDIT - END
 	button.overlays.Cut()
 	button.overlays += image('icons/obj/items/clothing/helmet_visors.dmi', button, action_icon_state)
 
@@ -883,6 +902,16 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	force = 20
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|BLOCKGASEFFECT|ALLOWCPR
+
+// SS220 EDIT: Old M118 APPS helmet for Dog War
+/obj/item/clothing/head/helmet/marine/old
+	name = "\improper M118 APPS pattern helmet"
+	desc = "Advanced Personnel Protective System armored helmet designed by NAMCo. While durable and easy to produce, this helmet featured a simple night-vision capable shooting optic, basic radio microphone and rudimentary tactical camera."
+	icon_state = "old_helmet"
+	flags_atom = NO_SNOW_TYPE
+	specialty = "M4 pattern marine"
+	built_in_visors = list()
+	start_down_visor_type = null
 
 /obj/item/clothing/head/helmet/marine/grenadier
 	name = "\improper M12 grenadier helmet"
@@ -1093,6 +1122,9 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	name = "\improper Mk16 tactical helmet"
 	desc = "Standard issue high molecular density polymer enclosed combat helmet of the RMC, though this one has been painted white for service with Weyland Yutani's elite tactical teams. Resistant to glancing hits from small arms and shrapnel, incorporates tactical camera, IFF signal transponder, and heads up display lens. Also features white/black hot IR viewing modes from the camera system."
 	icon_state = "pmc_helmet_enclosed"
+	// SS220 EDIT: CM-PVE #1287 Gas Mask Vision — vision impair + scope allowance for enclosed helmets
+	vision_impair = VISION_IMPAIR_WEAK
+	ignore_zoom_tint = TRUE
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
 	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR
 	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
@@ -1227,6 +1259,9 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	name = "\improper W-Y Mk17 Commando helmet"
 	desc = "A standard enclosed helmet utilized by Weyland-Yutani Commandos."
 	icon_state = "commando_helmet"
+	// SS220 EDIT: CM-PVE #1287 Gas Mask Vision — vision impair + scope allowance for enclosed helmets
+	vision_impair = VISION_IMPAIR_MED
+	ignore_zoom_tint = TRUE
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
 	armor_melee = CLOTHING_ARMOR_HIGH
 	armor_bullet = CLOTHING_ARMOR_ULTRAHIGHPLUS
@@ -1450,6 +1485,9 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	name = "\improper 6B79 helmet"
 	desc = "EVA-capable enclosed helmet of the UPP's Naval Infantry. Despite offering a higher armor rating, this helmet's cumbersome design kept it from retaining a larger role in the equipment of the Naval Infantry, and instead is largely reserved for heavy weapons operators and other specialist roles."
 	icon_state = "upp_helmet_heavy"
+	// SS220 EDIT: CM-PVE #1287 Gas Mask Vision — vision impair + scope allowance for enclosed helmets
+	vision_impair = VISION_IMPAIR_WEAK
+	ignore_zoom_tint = TRUE
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_energy = CLOTHING_ARMOR_MEDIUM
@@ -1508,6 +1546,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	attack_verb = list("whacked", "hit", "smacked", "beaten", "battered")
 	var/obj/structure/machinery/camera/camera
 	var/helmet_overlays[]
+	// SS220 EDIT: CM-PVE #1255 UPP camouflage — allow select_gamemode_skin
+	flags_atom = null
 	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = NONE
 	clothing_traits = list(TRAIT_EAR_PROTECTION)
@@ -1541,6 +1581,10 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 /obj/item/clothing/head/helmet/upp/Initialize(mapload, new_protection[] = list(MAP_ICE_COLONY = ICE_PLANET_MIN_COLD_PROT))
 	. = ..()
+	// SS220 EDIT: CM-PVE #1255 UPP camouflage — conditional gamemode skin
+	if(!(flags_atom & NO_SNOW_TYPE))
+		select_gamemode_skin(type)
+	update_icon()
 
 	helmet_overlays = list()
 
@@ -1803,10 +1847,16 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 				if(length(total_visors) > iterator)
 					var/obj/item/device/helmet_visor/next_visor = total_visors[iterator + 1]
 
-					if(!isnull(GLOB.huds[next_visor.hud_type]?.hudusers[user]))
-						iterator++
-						skipped_hud = TRUE
-						continue
+					if(length(next_visor.hud_type))
+						var/hud_already_active = FALSE
+						for(var/hud_key in next_visor.hud_type)
+							if(!isnull(GLOB.huds[hud_key]?.hudusers[user]))
+								hud_already_active = TRUE
+								break
+						if(hud_already_active)
+							iterator++
+							skipped_hud = TRUE
+							continue
 
 					if(!next_visor.can_toggle(user))
 						iterator++
@@ -1824,8 +1874,14 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 			iterator++
 
 	for(var/obj/item/device/helmet_visor/new_visor in total_visors)
-		if(!isnull(GLOB.huds[new_visor.hud_type]?.hudusers[user]))
-			continue
+		if(length(new_visor.hud_type))
+			var/hud_already_active = FALSE
+			for(var/hud_key in new_visor.hud_type)
+				if(!isnull(GLOB.huds[hud_key]?.hudusers[user]))
+					hud_already_active = TRUE
+					break
+			if(hud_already_active)
+				continue
 
 		if(!new_visor.can_toggle(user))
 			continue
@@ -1850,6 +1906,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
 	)
 	siemens_coefficient = 2
+	flags_atom = NO_SNOW_TYPE
 	flags_armor_protection = BODY_FLAG_HEAD
 	armor_melee = CLOTHING_ARMOR_VERYLOW
 	armor_bullet = CLOTHING_ARMOR_NONE
@@ -1863,68 +1920,87 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	flags_inventory = null
 
+/obj/item/clothing/head/uppcap/Initialize(mapload, new_protection[] = list(MAP_ICE_COLONY = ICE_PLANET_MIN_COLD_PROT))
+	. = ..()
+	// SS220 EDIT: CM-PVE #1255 UPP camouflage — conditional gamemode skin
+	if(!(flags_atom & NO_SNOW_TYPE))
+		select_gamemode_skin(type)
+	update_icon()
+
 /obj/item/clothing/head/uppcap/civi
 	name = "\improper UL2c cap"
 	icon_state = "upp_cap_civi"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/uppcap/boonie
 	name = "\improper UL5 hat"
 	desc = "Standard issue soft brimmed hat for Territorial Guard units stationed in areas with extreme heat."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "upp_boonie"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/uppcap/boonie/canc
 	name = "\improper boonie hat"
 	desc = "A boonie hat in CANC uniform colors."
 	icon_state = "canc_boonie"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/uppcap/beret/naval
 	name = "\improper UL4 Naval Infantry beret"
 	desc = "A black beret worn by the UPP's Naval Infantry. Wear it with pride."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "upp_beret_naval"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/uppcap/beret/guerilla
 	name = "\improper red beret"
 	desc = "A red beret popular with communist revolutionaries."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "upp_beret_revolution"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/uppcap/beret
 	name = "\improper UL3 beret"
 	desc = "Standard issue beret of the UPP's military."
 	icon_state = "upp_beret"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/uppcap/beret/para
 	name = "\improper UL6 Recon Infantry beret"
 	desc = "A red beret worn by the UPP-SOF \"Rozbòjnik\" Group. Wear it with pride."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "upp_beret_revolution"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/uppcap/peaked
 	name = "\improper UL3 peaked cap"
 	desc = "Standard issue peaked service cap of the UPP's military."
 	icon_state = "upp_peaked"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/uppcap/peaked/police
 	name = "\improper UL3 PaP peaked cap"
 	desc = "Standard issue peaked cap of the People's Armed Police."
 	icon_state = "upp_peaked_police"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/uppcap/peaked/mss
 	name = "\improper UL3 MSS peaked cap"
 	desc = "Standard issue peaked cap of the Ministry of Space Security."
 	icon_state = "upp_peaked_mss"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/uppcap/peaked/canc
 	name = "\improper CANC peaked cap"
 	desc = "Standard issue peaked cap of the Chinese-Asian Nation Cooperative."
 	icon_state = "canc_peaked"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/uppcap/ushanka
 	name = "\improper UL2 ushanka"
 	desc = "Standard issue cold weather hat of the UPP's military."
 	icon_state = "upp_ushanka"
+	flags_atom = NO_SNOW_TYPE
 	item_state = "upp_ushanka"
 	var/tied = FALSE
 	var/original_state = "upp_ushanka"

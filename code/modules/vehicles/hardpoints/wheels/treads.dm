@@ -47,9 +47,11 @@
 	owner.move_momentum_build_factor = initial(owner.move_momentum_build_factor)
 	owner.move_turn_momentum_loss_factor = initial(owner.move_turn_momentum_loss_factor)
 
+// SS220 EDIT - START: PR #1266 D66-44 — translated name/desc to Russian
 /obj/item/hardpoint/locomotion/treads/ridgeway
 	name = "\improper гусеницы M40 Ridgeway"
 	desc = "Гусеницы тяжёлого танка M40 Ridgeway. Пожалуй, наименее революционная из новинок Ridgeway, но именно они помогают решать многие проблемы, с которыми прежние танки армии США в колониях справиться не могли. Адаптивность к местности и продуманная простота обслуживания сделали эти гусеницы любимым узлом морских танкистов."
+// SS220 EDIT - END
 
 	icon_state = "treads_ridgeway"
 	disp_icon = "tank"

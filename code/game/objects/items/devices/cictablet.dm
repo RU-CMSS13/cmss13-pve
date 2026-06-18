@@ -201,3 +201,17 @@
 	announcement_faction = FACTION_TWE
 	req_access = list(ACCESS_TWE_LEADERSHIP)
 	minimap_type = MINIMAP_FLAG_TWE
+
+// SS220 EDIT - START: HALO Minimap Fix - UNSC Field Officer Tablet
+/obj/item/device/cotablet/unsc
+
+	desc = "A special device used by field UNSC Officers."
+
+	tablet_name = "UNSC Field Officer's Tablet"
+
+	announcement_title = UNSC_COMMAND_ANNOUNCE
+	announcement_faction = FACTION_LIST_UNSC
+	req_access = null
+
+	minimap_type = MINIMAP_FLAG_UNSC
+// SS220 EDIT - END

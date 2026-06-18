@@ -1,6 +1,6 @@
 /area/valorous_chant
 	name = "Rocky Mountaintop"
-	icon_state = "lv-626"
+	icon_state = "green"
 	can_build_special = TRUE
 	powernet_name = "Rocky Mountains"
 	minimap_color = MINIMAP_AREA_COLONY

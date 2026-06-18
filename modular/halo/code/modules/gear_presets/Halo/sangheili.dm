@@ -14,6 +14,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	paygrades = list(PAY_SHORT_COV_CIV = JOB_PLAYTIME_TIER_0)
 	faction = FACTION_SANGHEILI
+	faction_group = FACTION_LIST_COVENANT
 	skills = /datum/skills/covenant/sangheili
 	var/halo_sangheili_sword_only = FALSE
 	var/halo_sangheili_sword_charge_range = 5
@@ -162,6 +163,11 @@
 	skills = /datum/skills/covenant/sangheili
 	languages = list(LANGUAGE_SANGHEILI)
 
+// PR #162: Elite Hero subtype assignment
+/datum/equipment_preset/covenant/sangheili/major/load_race(mob/living/carbon/human/new_human, client/mob_client)
+	. = ..()
+	new_human.set_species(SPECIES_SANGHEILI_HEROIC)
+
 /datum/equipment_preset/covenant/sangheili/major/load_gear(mob/living/carbon/human/new_human)
 	equip_sangheili_basics(new_human, /obj/item/clothing/head/helmet/marine/sangheili/major, /obj/item/clothing/suit/marine/shielded/sangheili/major, /obj/item/clothing/gloves/marine/sangheili/major, /obj/item/clothing/shoes/sangheili/major, /obj/item/storage/belt/marine/covenant/sangheili/major)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/energy/plasma/plasma_rifle(new_human), WEAR_J_STORE)
@@ -183,6 +189,10 @@
 	skills = /datum/skills/covenant/sangheili
 	languages = list(LANGUAGE_SANGHEILI)
 
+/datum/equipment_preset/covenant/sangheili/ultra/load_race(mob/living/carbon/human/new_human, client/mob_client)
+	. = ..()
+	new_human.set_species(SPECIES_SANGHEILI_LEGENDARY)
+
 /datum/equipment_preset/covenant/sangheili/ultra/load_gear(mob/living/carbon/human/new_human)
 	equip_sangheili_basics(new_human, /obj/item/clothing/head/helmet/marine/sangheili/ultra, /obj/item/clothing/suit/marine/shielded/sangheili/ultra, /obj/item/clothing/gloves/marine/sangheili/ultra, /obj/item/clothing/shoes/sangheili/ultra, /obj/item/storage/belt/marine/covenant/sangheili/ultra)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/energy/plasma/plasma_rifle(new_human), WEAR_J_STORE)
@@ -203,6 +213,10 @@
 	role_comm_title = "Зилот"
 	skills = /datum/skills/covenant/sangheili
 	languages = list(LANGUAGE_SANGHEILI)
+
+/datum/equipment_preset/covenant/sangheili/zealot/load_race(mob/living/carbon/human/new_human, client/mob_client)
+	. = ..()
+	new_human.set_species(SPECIES_SANGHEILI_MYTHIC)
 
 /datum/equipment_preset/covenant/sangheili/zealot/load_gear(mob/living/carbon/human/new_human)
 	equip_sangheili_basics(new_human, /obj/item/clothing/head/helmet/marine/sangheili/zealot, /obj/item/clothing/suit/marine/shielded/sangheili/cloaking/zealot, /obj/item/clothing/gloves/marine/sangheili/zealot, /obj/item/clothing/shoes/sangheili/zealot, /obj/item/storage/belt/marine/covenant/sangheili/zealot)

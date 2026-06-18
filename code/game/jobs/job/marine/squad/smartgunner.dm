@@ -71,6 +71,11 @@
 	icon_state = "smartgunner_spawn_delta"
 	squad = SQUAD_MARINE_4
 
+// SS220 EDIT - START: PR #1283 Movie-ish Sections — movie squad smartgunner landmarks
+/obj/effect/landmark/start/marine/smartgunner/movie
+	squad = SQUAD_MARINE_MOVIE
+// SS220 EDIT - END
+
 /datum/job/marine/smartgunner/ai
 	total_positions = 2
 	spawn_positions = 2
@@ -121,6 +126,11 @@
 	name = JOB_SQUAD_SMARTGUN_UPP
 	job = JOB_SQUAD_SMARTGUN_UPP
 	squad = SQUAD_UPP
+
+// SS220 EDIT - START: PR #1283 Movie-ish Sections — UPP movie squad smartgunner landmark
+/obj/effect/landmark/start/marine/smartgunner/upp/movie
+	squad = SQUAD_UPP_MOVIE
+// SS220 EDIT - END
 
 /datum/job/marine/smartgunner/ai/upp/forecon
 	title = JOB_SQUAD_SMARTGUN_FORECON_UPP

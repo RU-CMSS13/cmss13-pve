@@ -3,21 +3,22 @@
 /obj/item/weapon/gun/halo_launcher // im a lazy bastard and dont want to deal with killing all of the dumb procs sorry :)
 	icon = 'modular/halo/icons/halo/obj/items/weapons/guns_by_faction/unsc/unsc_weapons.dmi'
 	icon_state = null
+	indestructible = TRUE
 
 // ====================== SPNKR LAUNCHER ====================== \\
 
 // ===== SPNKR SOUND ====== \\
 
 /datum/looping_sound/spnkr_locking
-	start_sound = list('sound/weapons/halo/spnkr_locking/spnkr_aa_startlocking.ogg' = 1)
+	start_sound = list('modular/halo/sound/weapons/spnkr_locking/spnkr_aa_startlocking.ogg' = 1)
 	start_length = 0.2 SECONDS
-	mid_sounds = list('sound/weapons/halo/spnkr_locking/spnkr_aa_locking.ogg' = 1)
+	mid_sounds = list('modular/halo/sound/weapons/spnkr_locking/spnkr_aa_locking.ogg' = 1)
 	mid_length = 0.35 SECONDS
 	volume = 40
 	extra_range = 14
 
 /datum/looping_sound/spnkr_lockon
-	mid_sounds = list('sound/weapons/halo/spnkr_locking/spnkr_aa_lockon.ogg' = 1)
+	mid_sounds = list('modular/halo/sound/weapons/spnkr_locking/spnkr_aa_lockon.ogg' = 1)
 	mid_length = 0.35 SECONDS
 	volume = 40
 	extra_range = 14
@@ -41,8 +42,8 @@
 	aim_slowdown = SLOWDOWN_ADS_RIFLE
 	flags_gun_features = GUN_WIELDED_FIRING_ONLY
 	fire_sound = "gun_spnkr"
-	reload_sound = 'sound/weapons/halo/gun_spnkr_reload.ogg'
-	unload_sound = 'sound/weapons/halo/gun_spnkr_unload.ogg'
+	reload_sound = 'modular/halo/sound/weapons/gun_spnkr_reload.ogg'
+	unload_sound = 'modular/halo/sound/weapons/gun_spnkr_unload.ogg'
 	item_icons = list(
 		WEAR_BACK = 'modular/halo/icons/halo/mob/humans/onmob/clothing/back/guns_by_type/heavy_weapons_32.dmi',
 		WEAR_L_HAND = 'modular/halo/icons/halo/mob/humans/onmob/items_lefthand_halo.dmi',
@@ -93,7 +94,7 @@
 	cancel_sounds = FALSE// In case the user moves while while locking on
 	if(current_area.ceiling >= CEILING_PROTECTION_TIER_1)
 		to_chat(user, SPAN_DANGER("There's a ceiling above you...bad idea."))
-		playsound(user, 'sound/weapons/halo/spnkr_locking/spnkr_aa_fail.ogg')
+		playsound(user, 'modular/halo/sound/weapons/spnkr_locking/spnkr_aa_fail.ogg')
 		return
 	if(!in_chamber)
 		to_chat(user, SPAN_DANGER("You don't have any missiles left to fire!"))
@@ -116,7 +117,7 @@
 	addtimer(CALLBACK(src, PROC_REF(play_lockon)), 3 SECONDS)
 	if(!do_after(user, 5 SECONDS, show_busy_icon = BUSY_ICON_HOSTILE))
 		stop_loops()
-		playsound(user, 'sound/weapons/halo/spnkr_locking/spnkr_aa_fail.ogg')
+		playsound(user, 'modular/halo/sound/weapons/spnkr_locking/spnkr_aa_fail.ogg')
 		to_chat(user, SPAN_WARNING("You interrupt the lockon sequence."))
 		cancel_sounds = TRUE
 		return
@@ -140,11 +141,13 @@
 			if(hit_type == "damage")
 				to_chat(current_mob, SPAN_HIGHDANGER("You see the [missile_name] arc into the target and explode, damaging the aircraft!"))
 				if(current_mob.client)
-					playsound_client(current_mob.client, 'sound/weapons/halo/spnkr_locking/spnkr_aa_damage.ogg', src, 25)
+					playsound_client(current_mob.client, 'modular/halo/sound/weapons/spnkr_locking/spnkr_aa_damage.ogg', src, 25)
 			if(hit_type == "crash")
 				to_chat(current_mob, SPAN_HIGHDANGER("You see the [missile_name] arc directly into the aircraft, hitting it with a powerful explosion and sending it crashing down!"))
 				if(current_mob.client)
-					playsound_client(current_mob.client, 'sound/weapons/halo/spnkr_locking/spnkr_aa_crash.ogg', src, 25)
+					playsound_client(current_mob.client, 'modular/halo/sound/weapons/spnkr_locking/spnkr_aa_crash.ogg', src, 25)
+			if(hit_type == "miss")
+				to_chat(current_mob, SPAN_HIGHDANGER("You see the [missile_name] miss its target!"))
 
 //
 

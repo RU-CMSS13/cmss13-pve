@@ -1216,6 +1216,37 @@
 		GLOB.orbital_cannon_cancellation["[cancel_token]"] = null
 		message_admins("[src.owner] has cancelled the orbital strike.")
 
+	// SS220 EDIT - START: CM-PVE #1288 Anti Air GM Choice — admin callback for USCM AA launcher
+	else if(href_list["adminacceptantiair"])
+		if(!check_rights(R_MOD)) return
+		var/obj/item/weapon/gun/launcher/rocket/anti_air/uscm/rocket = locate(href_list["rocket_anti_air"])
+		var/turf/sound_turf = locate(href_list["turf"])
+		var/missile_name = locate(href_list["missile_name"])
+		if(!rocket)
+			return
+		var/template_choice = tgui_input_list(usr, "Do you want to allow the missile to hit its target?", "AA Missile", list("Yes - Crash", "Yes - Damage", "Random - 20% Crash / 40% Dmg / 40% Miss", "No - Miss"))
+		if(!template_choice)
+			return
+		var/choice
+		if(template_choice == "Yes - Crash")
+			choice = "crash"
+		if(template_choice == "Yes - Damage")
+			choice = "damage"
+		if(template_choice == "No - Miss")
+			choice = "miss"
+		if(template_choice == "Random - 20% Crash / 40% Dmg / 40% Miss")
+			// weighted at 20% crash, 40% damage, 40% miss
+			var/list/random_choice = list()
+			for(var/i = 1 to 2)
+				random_choice += "crash"
+			for(var/i = 1 to 4)
+				random_choice += "damage"
+			for(var/i = 1 to 4)
+				random_choice += "miss"
+			choice = pick(random_choice)
+		rocket.hit_announce(sound_turf, choice, missile_name)
+	// SS220 EDIT - END
+
 	// SS220 EDIT - START: HALO SPNKr admin callback bridges modular launcher UI to upstream topic handling
 	else if(href_list["adminacceptspnkr"])
 		if(!check_rights(R_MOD)) return
@@ -1224,7 +1255,7 @@
 		var/missile_name = url_decode(href_list["missile_name"] || "") // SS220 EDIT: decode modular HALO missile label from href payload
 		if(!rocket)
 			return
-		var/template_choice = tgui_input_list(usr, "Do you want to allow the missile to hit its target?", "AA Missile", list("Yes - Crash", "Yes - Damage", "No - Miss"))
+		var/template_choice = tgui_input_list(usr, "Do you want to allow the missile to hit its target?", "AA Missile", list("Yes - Crash", "Yes - Damage", "Random - 60% Crash / 30% Dmg / 10% Miss", "No - Miss"))
 		if(!template_choice)
 			return
 		var/choice
@@ -1232,6 +1263,18 @@
 			choice = "crash"
 		if(template_choice == "Yes - Damage")
 			choice = "damage"
+		if(template_choice == "No - Miss")
+			choice = "miss"
+		if(template_choice == "Random - 60% Crash / 30% Dmg / 10% Miss")
+			// weighted at 60% crash, 30% damage, 10% miss
+			var/list/random_choice = list()
+			for(var/i = 1 to 6)
+				random_choice += "crash"
+			for(var/i = 1 to 3)
+				random_choice += "damage"
+			for(var/i = 1 to 1)
+				random_choice += "miss"
+			choice = pick(random_choice)
 		rocket.hit_announce(sound_turf, choice, missile_name)
 	// SS220 EDIT - END
 

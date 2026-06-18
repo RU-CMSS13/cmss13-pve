@@ -107,3 +107,17 @@
 	unggoy.set_languages(list(LANGUAGE_SANGHEILI, LANGUAGE_UNGGOY))
 	unggoy.halo_apply_species_tts_seed()
 	return ..()
+
+// PR #162: Unggoy Heroic subtype (for ultras and specops)
+/datum/species/unggoy/heroic
+	name = SPECIES_UNGGOY_HEROIC
+	name_plural = "Unggoy Heroic"
+
+	total_health = 150
+	burn_mod = 0.9
+	brute_mod = 0.9
+	slowdown = 0.1
+
+	dodge_pool = 12
+	dodge_pool_max = 12
+	dp_regen_base_reactivation_time = 30

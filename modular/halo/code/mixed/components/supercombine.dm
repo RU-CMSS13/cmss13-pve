@@ -39,7 +39,7 @@
 	var/cause_data = create_cause_data("supercombine explosion", shooter_name)
 	cell_explosion(turf, 50, 40, EXPLOSION_FALLOFF_SHAPE_LINEAR, direction, cause_data)
 	flick_overlay(parent_carbon, image('modular/halo/icons/halo/effects/supercombine.dmi', null, "supercombine"), 3)
-	playsound(parent_carbon, 'sound/effects/halo/supercombine.ogg')
+	playsound(parent_carbon, 'modular/halo/sound/effects/supercombine.ogg')
 	src.needles = 0
 	for(var/obj/item/shard/shrapnel/needler/needle in parent_carbon.embedded_items)
 		var/obj/limb/organ = needle.embedded_organ

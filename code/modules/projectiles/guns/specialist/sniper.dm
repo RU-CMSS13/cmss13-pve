@@ -474,7 +474,7 @@
 /obj/item/weapon/gun/rifle/sniper/elite
 	name = "\improper M42C scoped rifle"
 	desc = "A high-end, compact, marksman rifle from Weyland-Armat chambered in 10x28mm Caseless. Near exclusively seen in use by corporate PMCs, this weapon is the bougie reflection of its cousin, the M42A. The desired aim of this weapon's development was to bridge the gap between sniper rifle and marksman rifle, via an increased fire rate combined with the utilization of a smaller frame."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/wy.dmi'
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/WY/marksman_rifles.dmi'
 	icon_state = "m42c"
 	item_state = "m42c" //NEEDS A TWOHANDED STATE
 

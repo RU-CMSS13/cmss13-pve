@@ -38,7 +38,7 @@
 /obj/item/ammo_magazine/sentry/wy
 	name = "H20 ammo drum (10x42mm Caseless)"
 	desc = "An ammo drum of 200 10x42mm caseless rounds for the WY 202-GMA1 Smart Sentry. Just feed it into the sentry gun's ammo port when its ammo is depleted."
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/wy.dmi'
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/WY/turrets.dmi'
 	icon_state = "wy22e5"
 	caliber = "10x42mm"
 	max_rounds = 200
@@ -46,7 +46,7 @@
 /obj/item/ammo_magazine/sentry/wy/mini
 	name = "H16 ammo drum (10x12mm Caseless)"
 	desc = "An ammo drum of 1000 10x12mm caseless rounds for the WY 14-GRA2 Mini Sentry. Just feed it into the sentry gun's ammo port when its ammo is depleted."
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/wy.dmi'
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/WY/turrets.dmi'
 	icon_state = "wy22e5"
 	caliber = "10x12mm"
 	max_rounds = 1000
@@ -80,7 +80,7 @@
 /obj/item/ammo_magazine/sentry_flamer/wy
 	name = "wy sentry incinerator tank"
 	desc = "A fuel tank of Ultra Thick Sticky Napthal Fuel, used in the WY 406-FE2."
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/wy.dmi'
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/WY/turrets.dmi'
 	icon_state = "wy22e5"
 	caliber = "Sticky Napalm"
 	max_rounds = 200
