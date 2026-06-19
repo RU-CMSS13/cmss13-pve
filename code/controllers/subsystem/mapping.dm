@@ -63,6 +63,7 @@ SUBSYSTEM_DEF(mapping)
 	loadWorld()
 	repopulate_sorted_areas()
 	preloadTemplates()
+	load_cm_pve_bunker_access_templates() // SS220 EDIT: CM-PVE PR #1284 bunker shipmaps need their access overlays after template preload.
 	// Add the first transit level
 	var/datum/space_level/base_transit = add_reservation_zlevel()
 	initialize_reserved_level(base_transit.z_value)

@@ -8,6 +8,10 @@
 
 /obj/item/explosive/grenade/high_explosive/covenant/plasma
 	name = "Type-1 plasma grenade"
+	item_icons = list(
+		WEAR_L_HAND = 'modular/halo/icons/halo/mob/humans/onmob/items_lefthand_halo.dmi',
+		WEAR_R_HAND = 'modular/halo/icons/halo/mob/humans/onmob/items_righthand_halo.dmi',
+	)
 	desc = "Штатная липкая плазменная граната Ковенанта. Известна также как «огненная бомба», «святой свет» и «сигнальная». Прилипает к живым целям и технике, после чего сжигает их перегретой плазмой."
 	desc_lore = "Паттерн «Анскум» массово выдаётся войскам Ковенанта как стандартная ручная взрывчатка. «Умная материя» в сердечнике помогает гранате закрепляться на цели до детонации."
 	det_time = 40
@@ -15,28 +19,35 @@
 	underslug_launchable = FALSE
 	harmful = TRUE
 	icon_state = "plasma"
-	item_state = "plasma"
-	arm_sound = 'modular/halo/sound/weapons/firebomb_throw.ogg'
+	item_state = "plasma_grenade"
+	arm_sound = 'modular/halo/sound/weapons/plasma_grenade_arm.ogg'
 	explosion_power = 125
 	explosion_falloff = 20
 	shrapnel_count = 32
 	shrapnel_type = /datum/ammo/bullet/shrapnel/metal
 	throw_range = 6
 	dual_purpose = FALSE
-	light_power = 0.4
-	light_range = 1.1
+	light_color = "#3decff"
+	light_power = 1
+	light_range = 2
 	var/datum/looping_sound/plasma_hiss/hiss_loop
 	var/list/atoms_it_can_stick_to = list(/obj/vehicle/multitile, /mob/living/carbon/human, /mob/living)
 	var/attached = FALSE
 	var/attached_icon = "stuck_plasma"
 	var/time_triggered
+	/// Prevents multiple windup sounds from playing if the grenade gets unstuck.
+	var/windup_sound_queued = FALSE
+	/// Holder for the plasma flame particle effect.
+	var/obj/effect/abstract/particle_holder/plasma_effect
 
 /obj/item/explosive/grenade/high_explosive/covenant/plasma/New()
 	hiss_loop = new(src)
+	plasma_effect = new(src, /particles/plasma_grenade_flame)
 	..()
 
 /obj/item/explosive/grenade/high_explosive/covenant/plasma/Destroy()
 	QDEL_NULL(hiss_loop)
+	QDEL_NULL(plasma_effect)
 	return ..()
 
 /obj/item/explosive/grenade/high_explosive/plasma
@@ -50,6 +61,15 @@
 		time_triggered = world.time
 		hiss_loop.start()
 		set_light_on(TRUE)
+		if(plasma_effect?.particles)
+			plasma_effect.particles.spawning = 5
+			plasma_effect.add_filter("pixel_outline", 0.1, outline_filter(1, "#3decff", OUTLINE_SHARP))
+		addtimer(CALLBACK(src, PROC_REF(play_windup_sound)), det_time - 1.15 SECONDS)
+		windup_sound_queued = TRUE
+		item_state = "plasma_grenade_on"
+		if(user)
+			user.update_inv_l_hand()
+			user.update_inv_r_hand()
 
 /obj/item/explosive/grenade/high_explosive/covenant/plasma/attack(mob/living/target, mob/living/user)
 	if(target == user)
@@ -64,15 +84,14 @@
 				to_chat(user, SPAN_HIGHDANGER("Ты крепче сжимаешь [src] в ладонях. Она прожигает кожу!"))
 				var/mob/living/carbon/thrower = user
 				thrower.toggle_throw_mode(THROW_MODE_NORMAL)
-				activate()
+				activate(user)
 				INVOKE_ASYNC(thrower, TYPE_PROC_REF(/mob, throw_item), thrower)
 
 /obj/item/explosive/grenade/high_explosive/covenant/plasma/prime(mob/living/user)
 	set waitfor = 0
 	if(!attached)
 		cell_explosion(src.loc, explosion_power, explosion_falloff, falloff_mode, null, cause_data)
-		new /obj/effect/overlay/temp/sebb(get_turf(src))
-		new /obj/effect/overlay/temp/emp_sparks(get_turf(src))
+		new /obj/effect/temp_visual/plasma_explosion/cyan(get_turf(src))
 		for(var/mob/living/target_living in range(3, get_turf(src)))
 			var/obj/projectile/projectile = new /obj/projectile(src)
 			projectile.generate_bullet(GLOB.ammo_list[/datum/ammo/bullet/shrapnel/metal], 0, NO_FLAGS)
@@ -82,8 +101,8 @@
 			qdel(projectile)
 		if(shrapnel_count)
 			create_shrapnel(loc, shrapnel_count, , , shrapnel_type, cause_data)
-		apply_explosion_overlay()
 		empulse(src, 1, 2)
+		playsound(loc, 'modular/halo/sound/weapons/plasma_grenade_explosion.ogg', 100)
 		qdel(src)
 
 /obj/item/explosive/grenade/high_explosive/covenant/plasma/launch_impact(atom/hit_atom)
@@ -105,6 +124,11 @@
 				big_vehicle.AddComponent(/datum/component/status_effect/plasma_stuck, src)
 				return
 
+/obj/item/explosive/grenade/high_explosive/covenant/plasma/proc/play_windup_sound()
+	if(!windup_sound_queued)
+		return
+	playsound(loc, 'modular/halo/sound/weapons/plasma_grenade_windup.ogg', 100)
+
 /datum/looping_sound/plasma_hiss
 	start_sound = list('modular/halo/sound/weapons/firebomb_throw.ogg' = 1)
 	mid_sounds = list(
@@ -112,6 +136,7 @@
 		'modular/halo/sound/weapons/firebomb_loop1.ogg' = 1,
 	)
 	mid_length = 1 SECONDS
+	volume = 50
 
 /datum/component/status_effect/plasma_stuck
 	dupe_mode = COMPONENT_DUPE_ALLOWED
@@ -123,6 +148,7 @@
 	var/x_offset
 	var/mutable_appearance/attached_icon_em
 	var/image/attached_icon
+	var/det_time_after_unstuck = 4 SECONDS
 
 /datum/component/status_effect/plasma_stuck/Initialize(origin_nade, zone)
 	. = ..()
@@ -153,36 +179,61 @@
 	src.origin_nade.attached = TRUE
 	src.origin_nade.forceMove(parent_atom)
 	src.origin_nade.set_light_on(TRUE)
+	src.origin_nade.windup_sound_queued = FALSE
 	animation_flash_color(parent_atom, COLOR_BLUE)
 	time_running = world.time - src.origin_nade.time_triggered
 	if(time_running >= 2.5 SECONDS)
 		time_running -= 5
 	if(istype(parent_atom, /mob/living))
-		RegisterSignal(parent_atom, list(COMSIG_LIVING_REJUVENATED), PROC_REF(unstuck))
+		RegisterSignal(parent_atom, list(COMSIG_LIVING_REJUVENATED), PROC_REF(force_unstuck))
+		RegisterSignal(parent_atom, COMSIG_MOB_RESISTED, PROC_REF(unstuck))
 	START_PROCESSING(SSfastobj, src)
 
 /datum/component/status_effect/plasma_stuck/UnregisterFromParent()
 	STOP_PROCESSING(SSfastobj, src)
-	UnregisterSignal(parent, list(COMSIG_LIVING_REJUVENATED))
+	UnregisterSignal(parent, list(COMSIG_LIVING_REJUVENATED, COMSIG_MOB_RESISTED))
 
 	var/atom/movable/parent_atom = parent
 	if(parent_atom)
 		parent_atom.overlays -= attached_icon
 		parent_atom.overlays -= attached_icon_em
 
-/datum/component/status_effect/plasma_stuck/proc/unstuck(delete_nade = TRUE)
+/datum/component/status_effect/plasma_stuck/proc/force_unstuck()
 	var/atom/movable/parent_atom = parent
-	if(delete_nade)
+	if(src.origin_nade)
 		qdel(src.origin_nade)
-	else
+	if(parent_atom)
+		parent_atom.overlays -= attached_icon
+		parent_atom.overlays -= attached_icon_em
+	qdel(src)
+
+/datum/component/status_effect/plasma_stuck/proc/unstuck()
+	var/atom/movable/parent_atom = parent
+	if(!parent_atom || !src.origin_nade)
+		return
+
+	if(prob(50))
+		if(isliving(parent_atom))
+			var/mob/living/target = parent_atom
+			target.spin(5, 1)
+			target.KnockDown(1)
 		to_chat(parent, SPAN_HIGHDANGER("Ты отрываешь от себя пылающий шар света!"))
 		src.origin_nade.forceMove(parent_atom.loc)
 		src.origin_nade.attached = FALSE
-		addtimer(CALLBACK(src.origin_nade, TYPE_PROC_REF(/obj/item/explosive/grenade/high_explosive/covenant/plasma, prime)), src.origin_nade.det_time - time_running)
+		addtimer(CALLBACK(src.origin_nade, TYPE_PROC_REF(/obj/item/explosive/grenade/high_explosive/covenant/plasma, prime)), det_time_after_unstuck)
+		addtimer(CALLBACK(src.origin_nade, TYPE_PROC_REF(/obj/item/explosive/grenade/high_explosive/covenant/plasma, play_windup_sound)), det_time_after_unstuck - 1.15 SECONDS)
+		src.origin_nade.windup_sound_queued = TRUE
 		INVOKE_ASYNC(src.origin_nade, TYPE_PROC_REF(/atom/movable, throw_atom), get_random_turf_in_range_unblocked(parent_atom, 3, 1), src.origin_nade.throw_range, SPEED_SLOW, parent_atom, HIGH_LAUNCH)
-	parent_atom.overlays -= attached_icon
-	parent_atom.overlays -= attached_icon_em
-	qdel(src)
+		parent_atom.overlays -= attached_icon
+		parent_atom.overlays -= attached_icon_em
+		qdel(src)
+		return
+
+	if(isliving(parent_atom))
+		var/mob/living/target = parent_atom
+		target.spin(5, 1)
+		target.KnockDown(1)
+	to_chat(parent, SPAN_HIGHDANGER("Не выходит сбросить пылающий шар света!"))
 
 /datum/component/status_effect/plasma_stuck/proc/update_vehicle_icon()
 	var/atom/movable/parent_atom = parent
@@ -242,6 +293,7 @@
 
 /datum/component/status_effect/plasma_stuck/proc/light_tune(intensity)
 	origin_nade.set_light_range(intensity)
+	origin_nade.set_light_power(intensity)
 
 /datum/component/status_effect/plasma_stuck/process(delta_time)
 	time_running += delta_time
@@ -268,14 +320,16 @@
 		to_chat(parent, SPAN_HIGHDANGER("Кости начинают плавиться!"))
 		stuck_limb?.fracture(100)
 		stage = 2
-	if(time_running >= 2.5 SECONDS && stage == 2)
-		to_chat(parent, SPAN_HIGHDANGER("Плоть разрывает перегретая плазма!"))
+	if(time_running >= 2.4 SECONDS && stage == 2)
+		playsound(parent_atom.loc, 'modular/halo/sound/weapons/plasma_grenade_windup.ogg', 100)
+		stage = 2.5
+	if(time_running >= 2.5 SECONDS && stage == 2.5)
 		var/obj/limb/stuck_limb = stuck_human.get_limb(zone)
 		stuck_limb?.droplimb()
 		origin_nade.attached = FALSE
 		origin_nade.prime()
-		stuck_human.gib()
 		stage = 3
+		force_unstuck()
 
 /datum/component/status_effect/plasma_stuck/proc/process_living(delta_time)
 	var/atom/parent_atom = parent
@@ -292,12 +346,15 @@
 		stuck_mob.KnockDown(1)
 		to_chat(parent, SPAN_HIGHDANGER("Кости начинают плавиться!"))
 		stage = 2
-	if(time_running >= 2.5 SECONDS && stage == 2)
+	if(time_running >= 2.4 SECONDS && stage == 2)
+		playsound(parent_atom.loc, 'modular/halo/sound/weapons/plasma_grenade_windup.ogg', 100)
+		stage = 2.5
+	if(time_running >= 2.5 SECONDS && stage == 2.5)
 		to_chat(parent, SPAN_HIGHDANGER("Плоть разрывает перегретая плазма!"))
 		origin_nade.attached = FALSE
 		origin_nade.prime()
-		stuck_mob.gib()
 		stage = 3
+		force_unstuck()
 
 /datum/component/status_effect/plasma_stuck/proc/process_vehicle(delta_time)
 	var/atom/parent_atom = parent
@@ -320,7 +377,10 @@
 		new /obj/flamer_fire(target, create_cause_data("Плазменная граната"), reagent, 1)
 		multitile_vehicle.interior_crash_effect()
 		stage = 2
-	if(time_running >= 2.5 SECONDS && stage == 2)
+	if(time_running >= 2.4 SECONDS && stage == 2)
+		playsound(parent_atom.loc, 'modular/halo/sound/weapons/plasma_grenade_windup.ogg', 100)
+		stage = 2.5
+	if(time_running >= 2.5 SECONDS && stage == 2.5)
 		animation_flash_color(parent_atom, COLOR_BLUE)
 		var/turf/centre = multitile_vehicle.interior.get_middle_turf()
 		var/turf/target = get_random_turf_in_range(centre, 2, 0)
@@ -331,4 +391,4 @@
 		multitile_vehicle.ex_act(300)
 		origin_nade.attached = FALSE
 		origin_nade.prime()
-		qdel(src)
+		force_unstuck()

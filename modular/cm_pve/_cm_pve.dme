@@ -10,6 +10,9 @@
 // Food
 #include "code/game/objects/items/reagent_containers/food/mre_food/dog_war.dm"
 
+// Mapping
+#include "code/modules/mapping/bunker_access.dm"
+
 // Vehicles — TWE Tank
 #include "code/modules/vehicles/twe_tank/interior.dm"
 #include "code/modules/vehicles/twe_tank/twe_apc.dm"
