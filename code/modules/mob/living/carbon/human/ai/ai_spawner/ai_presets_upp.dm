@@ -16,6 +16,16 @@
 	desc = "The standard UPP soldier. These guys are equipped well enough to fight most forces. EVA equipped"
 	path = /datum/equipment_preset/upp/rifleman/eva
 
+/datum/human_ai_equipment_preset/upp/rto
+	name = "UPP Squad RTO"
+	desc = "The standard UPP soldier, but with a radio backpack. These guys are equipped well enough to fight most forces."
+	path = /datum/equipment_preset/upp/rto
+
+/datum/human_ai_equipment_preset/upp/rto/ag80
+	name = "UPP Squad RTO - AG80"
+	desc = "The standard UPP soldier, but with a radio backpack. These guys are equipped well enough to fight most forces."
+	path = /datum/equipment_preset/upp/rto/ag80
+
 /datum/human_ai_equipment_preset/upp/machinegunner
 	name = "UPP Squad Machinegunner"
 	desc = "The UPP’s answer to the USCM’s smartgunner. About as strong, can gun down unaware marines easily. This one shoots standard 10x27mm."

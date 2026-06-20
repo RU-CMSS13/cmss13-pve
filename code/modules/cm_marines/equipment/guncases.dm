@@ -1312,3 +1312,72 @@
 		return
 	if(locate(/obj/item/weapon/gun/rifle/spp) in src.contents)
 		overlays += image(src.icon, "+spp")
+
+/obj/item/storage/box/guncase/heavy/mg82
+	name = "\improper MG82 LMG case"
+	desc = "A case for storing a MG82 light machinegun."
+	icon_state = "uppmg82case"
+	storage_slots = 9
+	can_hold = list(/obj/item/weapon/gun/rifle/mg82, /obj/item/ammo_magazine/rifle/mg82)
+	max_w_class = SIZE_HUGE
+
+/obj/item/storage/box/guncase/heavy/mg82/fill_preset_inventory() // same amount of ammo as 4 HPR boxes
+	new /obj/item/weapon/gun/rifle/mg82/unloaded(src)
+	new /obj/item/ammo_magazine/rifle/mg82(src)
+	new /obj/item/ammo_magazine/rifle/mg82(src)
+	new /obj/item/ammo_magazine/rifle/mg82(src)
+	new /obj/item/ammo_magazine/rifle/mg82(src)
+	new /obj/item/ammo_magazine/rifle/mg82(src)
+	new /obj/item/ammo_magazine/rifle/mg82(src)
+	new /obj/item/ammo_magazine/rifle/mg82(src)
+	new /obj/item/ammo_magazine/rifle/mg82(src)
+
+/obj/item/storage/box/guncase/heavy/mg82/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays += image(src.icon, "uppbigcase_lid_open")
+	else
+		overlays += image(src.icon, "uppmg82case_lid")
+		return
+	if(locate(/obj/item/weapon/gun/rifle/mg82) in src.contents)
+		overlays += image(src.icon, "+mg82")
+
+/obj/item/storage/box/guncase/heavy/m92_upp_forecon
+	name = "\improper OG-74 grenade launcher case"
+	desc = "A case for storing an OG-74 grenade launcher."
+	icon_state = "uppgm94case"
+	storage_slots = 3
+	can_hold = list(/obj/item/weapon/gun/launcher/grenade/m92/upp/forecon, /obj/item/storage/pouch/explosive, /obj/item/storage/large_holster/m39/upp_m92_forecon, /obj/item/storage/box/packet/high_explosive/upp)
+	max_w_class = SIZE_HUGE
+
+/obj/item/storage/box/guncase/heavy/m92_upp_forecon/fill_preset_inventory()
+	new /obj/item/weapon/gun/launcher/grenade/m92/upp/forecon/stored(src)
+	new /obj/item/storage/large_holster/m39/upp_m92_forecon(src)
+	new /obj/item/storage/pouch/explosive(src)
+
+/obj/item/storage/box/guncase/heavy/m92_upp_forecon/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays += image(icon, "uppbigcase_lid_open")
+	else
+		overlays += image(icon, "uppgm94case_lid")
+		return
+	if(locate(/obj/item/weapon/gun/launcher/grenade/m92/upp/forecon) in contents)
+		overlays += image(icon, "+gm94")
+	var/obj/item/storage/pouch/explosive/nade_pouch = locate(/obj/item/storage/pouch/explosive) in contents
+	if(nade_pouch)
+		if(!nade_pouch.contents.len)
+			overlays += image(icon, "+nade_pouch")
+		else
+			overlays += image(icon, "+nade_pouch_full")
+
+/obj/item/storage/box/guncase/heavy/m92_upp_forecon/preloaded
+	storage_slots = 6
+
+/obj/item/storage/box/guncase/heavy/m92_upp_forecon/preloaded/fill_preset_inventory()
+	new /obj/item/weapon/gun/launcher/grenade/m92/upp/forecon/stored(src)
+	new /obj/item/storage/large_holster/m39/upp_m92_forecon(src)
+	new /obj/item/storage/pouch/explosive/upp/impact(src)
+	new /obj/item/storage/box/packet/high_explosive/upp/impact(src)
+	new /obj/item/storage/box/packet/high_explosive/upp/ap(src)
+	new /obj/item/storage/box/packet/high_explosive/upp/incend(src)

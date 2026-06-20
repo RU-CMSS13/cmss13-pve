@@ -249,6 +249,8 @@
 						/obj/item/clothing/glasses/mgoggles/orange/prescription = HAT_GARB_RELAY_ICON_STATE,
 						/obj/item/clothing/glasses/mgoggles/green = HAT_GARB_RELAY_ICON_STATE,
 						/obj/item/clothing/glasses/mgoggles/green/prescription = HAT_GARB_RELAY_ICON_STATE,
+						/obj/item/clothing/glasses/mgoggles/upp = HAT_GARB_RELAY_ICON_STATE,
+						/obj/item/clothing/glasses/mgoggles/upp/prescription = HAT_GARB_RELAY_ICON_STATE,
 						/obj/item/prop/helmetgarb/helmet_nvg = HAT_GARB_RELAY_ICON_STATE,
 						/obj/item/prop/helmetgarb/helmet_nvg/cosmetic = HAT_GARB_RELAY_ICON_STATE,
 						/obj/item/prop/helmetgarb/helmet_nvg/marsoc = HAT_GARB_RELAY_ICON_STATE,
@@ -269,6 +271,9 @@
 						/obj/item/prop/helmetgarb/lucky_feather/purple = "lucky_feather_purple",
 						/obj/item/prop/helmetgarb/lucky_feather/yellow = "lucky_feather_yellow",
 						/obj/item/tool/pen/fountain = "fountainpen",
+						/obj/item/prop/helmetgarb/helmet_nvg/upp = HAT_GARB_RELAY_ICON_STATE,
+						/obj/item/prop/helmetgarb/helmet_nvg/upp/frogmen = HAT_GARB_RELAY_ICON_STATE,
+
 						)
 	var/storage_slots = 1
 	var/storage_slots_reserved_for_garb = 1
@@ -763,6 +768,10 @@
 	desc = "A finely crafted beret worn by members of the UPP Space Operations Forces. It signifies service in the void, from deep-space missions to planetary operations, and is a mark of discipline and camaraderie among its wearers."
 	icon_state = "sof_beret"
 	item_state = "sof_beret"
+
+/obj/item/clothing/head/cmcap/upp/beret/sof/recon
+	name = "\improper UL6 Recon Infantry beret"
+	desc = "A red beret worn by the UPP-SOF \"Rozbójnik\" Group. Wear it with pride."
 
 /obj/item/clothing/head/helmet/marine/veteran/upp/firefighter
 	name = "T-20 firefighter helmet"
