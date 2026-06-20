@@ -365,6 +365,11 @@
 	S.Attach(src)
 	update_attachable(S.slot)
 
+	var/obj/item/attachable/bipod = new /obj/item/attachable/bipod/integral/pkp(src)
+	bipod.flags_attach_features &= ~ATTACH_REMOVABLE
+	bipod.Attach(src)
+	update_attachable(bipod.slot)
+
 /obj/item/weapon/gun/pkp/iff/para/set_gun_config_values()
 	..()
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_2
