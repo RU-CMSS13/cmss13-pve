@@ -2176,6 +2176,34 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_bio = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
 
+/obj/item/clothing/head/helmet/marine/cbrn_hood/upp
+	name = "\improper HRPS-200M PMK/5 gasmask"
+	desc = "The UPP PMK/5 gas mask includes a fully enclosing hood, which is securely attached to the HRPS-200M suit, and an additional ventilation system mounted on the back of the hood. It is able to protect against radiological and biological threats, as well as from open fire."
+	icon = 'icons/obj/items/clothing/masks.dmi'
+	icon_state = "upp_cbrn_hood_alt"
+	item_state = "upp_cbrn_hood_alt"
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/mask.dmi'
+	)
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	max_heat_protection_temperature = ARMOR_MAX_HEAT_PROT
+	flags_cold_protection = BODY_FLAG_HEAD
+	flags_heat_protection = BODY_FLAG_HEAD
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_HIGH
+	armor_rad = CLOTHING_ARMOR_HIGHPLUS
+	armor_internaldamage = CLOTHING_ARMOR_HIGH
+	force = 0 //"The M3 MOPP mask would be a normal weapon if you were to hit someone with it."
+	throwforce = 0
+	flags_inventory = BLOCKSHARPOBJ|BLOCKGASEFFECT|SPOREPROOF
+	flags_marine_helmet = NO_FLAGS
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_inv_hide = HIDEEARS|HIDEALLHAIR
+	built_in_visors = list()
+
 //=ROYAL MARINES=\\
 
 /obj/item/clothing/head/helmet/marine/veteran/royal_marine

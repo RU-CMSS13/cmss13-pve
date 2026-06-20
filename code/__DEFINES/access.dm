@@ -129,6 +129,7 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 #define ACCESS_UPP_MEDPREP 242
 #define ACCESS_UPP_MACHINEGUN 243
 #define ACCESS_UPP_TLPREP 244
+#define ACCESS_UPP_FLAMER 245
 //=================================================
 
 //Colonial Liberation Front access levels (260-289)

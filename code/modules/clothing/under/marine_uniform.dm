@@ -1496,6 +1496,21 @@
 	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
 	hood_type = /obj/item/clothing/head/helmet/marine/cbrn_hood/advanced
 
+/obj/item/clothing/under/marine/cbrn/upp
+	name = "\improper HRPS-200M suit"
+	desc = "Heat-Reflecting Protective Suit 200M. It was developed and adopted by the CBRN in 2176 due to events on the planet New Siberia. Due to the difficulties in production, this model stands out only to flamethrower operators."
+	desc_lore = null
+	icon = 'icons/obj/items/clothing/uniforms/uniforms_by_faction/UPP.dmi'
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_faction/UPP.dmi',
+	)
+	icon_state = "upp_cbrn"
+	worn_state = "upp_cbrn"
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	armor_bio = CLOTHING_ARMOR_HIGH
+	armor_rad = CLOTHING_ARMOR_HIGHPLUS
+	hood_type = /obj/item/clothing/head/helmet/marine/cbrn_hood/upp
+
 //=USASF & ARMY=\\
 
 /obj/item/clothing/under/navy/officer

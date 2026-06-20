@@ -43,6 +43,7 @@
 #define JOB_SQUAD_MEDIC_UPP "Platoon Sanitar"
 #define JOB_SQUAD_TEAM_LEADER_UPP "Squad Sergeant"
 #define JOB_SQUAD_SMARTGUN_UPP "Machinegunner"
+#define JOB_SQUAD_FLAMER_UPP "Fire Trooper"
 #define JOB_SO_UPP "UPP Platoon Commander"
 
 #define JOB_SQUAD_TEAM_LEADER_FORECON "Assistant Recon Squad Leader"
