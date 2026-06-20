@@ -241,6 +241,8 @@
 	icon_state = "np92mag"
 	max_rounds = 12
 	gun_type = /obj/item/weapon/gun/pistol/np92
+	ammo_band_icon = "+np92mag_band"
+	ammo_band_icon_empty = "+np92mag_band_e"
 
 /obj/item/ammo_magazine/pistol/np92/suppressed
 	name = "\improper NPZ92 magazine (9x18mm Makarov)"
@@ -249,14 +251,28 @@
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "npz92mag"
 	max_rounds = 12
+	ammo_band_icon = ""
+	ammo_band_icon_empty = ""
 
-/obj/item/ammo_magazine/pistol/np92/tranq
+/obj/item/ammo_magazine/pistol/np92/suppressed/tranq
 	name = "\improper NPZ92 tranq magazine (9x18mm Makarov)"
 	default_ammo = /datum/ammo/bullet/pistol/tranq
-	caliber = "9x18mm Makarov"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "npz92tranqmag"
-	max_rounds = 12
+
+/obj/item/ammo_magazine/pistol/np92/ap
+	name = "\improper NP92 AP magazine (9x18mm Makarov)"
+	default_ammo = /datum/ammo/bullet/pistol/upp/ap
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/pistol/np92/penetrating
+	name = "\improper NP92 wall-penetrating magazine (9x18mm Makarov)"
+	default_ammo = /datum/ammo/bullet/pistol/upp/ap/penetrating
+	ammo_band_color = AMMO_BAND_COLOR_PENETRATING
+
+/obj/item/ammo_magazine/pistol/np92/toxin
+	name = "\improper NP92 toxin magazine (9x18mm Makarov)"
+	default_ammo = /datum/ammo/bullet/pistol/upp/ap/toxin
+	ammo_band_color = AMMO_BAND_COLOR_TOXIN
 
 //-------------------------------------------------------
 //Type 73 pistol. //A TT
