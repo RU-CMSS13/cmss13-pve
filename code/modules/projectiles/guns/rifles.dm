@@ -1711,15 +1711,15 @@
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_10)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
-	set_burst_delay(FIRE_DELAY_TIER_10)
+	set_burst_delay(FIRE_DELAY_TIER_11)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3
-	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_8
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_6
 	scatter = SCATTER_AMOUNT_TIER_7
-	burst_scatter_mult = SCATTER_AMOUNT_TIER_7
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_9
 	scatter_unwielded = SCATTER_AMOUNT_TIER_5
-	damage_mult = BASE_BULLET_DAMAGE_MULT - BULLET_DAMAGE_MULT_TIER_4
+	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_4
-	damage_falloff_mult = 1
+	damage_falloff_mult = 1.5
 
 /obj/item/weapon/gun/rifle/type71/carbine/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 17,"rail_x" = 15, "rail_y" = 22, "under_x" = 25, "under_y" = 13, "stock_x" = 15, "stock_y" = 13, "side_rail_x" = 21, "side_rail_y" = 18, "sling_x" = 13, "sling_y" = 21)
@@ -1727,8 +1727,15 @@
 /obj/item/weapon/gun/rifle/type71/carbine/unloaded
 	current_mag = null
 
+/obj/item/weapon/gun/rifle/type71/carbine/recon
+	starting_attachment_types = list(/obj/item/attachable/verticalgrip/upp, /obj/item/attachable/lasersight/upp)
+
+/obj/item/weapon/gun/rifle/type71/carbine/recon/unloaded
+	current_mag = null
+	flags_gun_features = /obj/item/weapon/gun/rifle/type71/carbine/recon::flags_gun_features | GUN_TRIGGER_SAFETY
+
 /obj/item/weapon/gun/rifle/type71/carbine/assault
-	starting_attachment_types = list(/obj/item/attachable/stock/type71, /obj/item/attachable/bayonet/upp, /obj/item/attachable/verticalgrip/upp)
+	starting_attachment_types = list( /obj/item/attachable/bayonet/upp, /obj/item/attachable/verticalgrip/upp)
 
 //-------------------------------------------------------
 //UPP TYPE 73 RIFLE
@@ -1986,7 +1993,7 @@
 
 /obj/item/weapon/gun/rifle/lw317/dmr/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_4)
+	set_fire_delay(FIRE_DELAY_TIER_5)
 	set_burst_amount(BURST_AMOUNT_TIER_1)
 	accuracy_mult = BASE_ACCURACY_MULT * 3
 	scatter = SCATTER_AMOUNT_TIER_8

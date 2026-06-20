@@ -354,6 +354,17 @@
 	actions_types = list(/datum/action/item_action/toggle_iff_pkp)
 	requires_harness = FALSE
 
+/obj/item/weapon/gun/pkp/iff/para/handle_starting_attachment()
+	var/obj/item/attachable/B = new /obj/item/attachable/pkpbarrel/para(src)
+	B.flags_attach_features &= ~ATTACH_REMOVABLE
+	B.Attach(src)
+	update_attachable(B.slot)
+
+	var/obj/item/attachable/S = new /obj/item/attachable/stock/pkpstock/para(src)
+	S.flags_attach_features &= ~ATTACH_REMOVABLE
+	S.Attach(src)
+	update_attachable(S.slot)
+
 /obj/item/weapon/gun/pkp/iff/para/set_gun_config_values()
 	..()
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_2

@@ -6699,8 +6699,10 @@
 /obj/item/ammo_box/magazine/nade_box/upp,
 /obj/item/ammo_box/magazine/nade_box/upp,
 /obj/item/ammo_box/magazine/nade_box/upp/ugl,
-/obj/item/ammo_box/magazine/nade_box/upp/ugl,
-/obj/item/ammo_box/magazine/nade_box/upp/ugl/canister,
+/obj/item/storage/box/packet/high_explosive/upp/impact,
+/obj/item/storage/box/packet/high_explosive/upp/incend,
+/obj/item/storage/box/packet/high_explosive/upp/smoke,
+/obj/item/storage/box/packet/high_explosive/upp/canister,
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/prep_hallway)
 "wf" = (
@@ -6722,7 +6724,7 @@
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/prep_hallway)
 "wg" = (
-/obj/structure/gun_rack/type71/carbine_commando/unloaded,
+/obj/structure/gun_rack/type71/carbine/recon,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "wh" = (
