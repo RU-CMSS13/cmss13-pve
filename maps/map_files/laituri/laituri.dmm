@@ -530,7 +530,7 @@
 	layer = 2.5
 	},
 /obj/structure/largecrate/random/case/double{
-	stuff = list(/obj/item/clothing/under/marine/veteran/UPP,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp)
+	stuff = list(/obj/item/clothing/under/marine/veteran/upp,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp)
 	},
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/engineering)
@@ -4877,7 +4877,7 @@
 	pixel_y = 1
 	},
 /obj/structure/largecrate/random/barrel/red{
-	stuff = list(/obj/item/clothing/under/marine/veteran/UPP,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp)
+	stuff = list(/obj/item/clothing/under/marine/veteran/upp,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp)
 	},
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/dorms)
@@ -9030,7 +9030,7 @@
 	icon_state = "cargo"
 	},
 /obj/structure/largecrate/random/barrel/red{
-	stuff = list(/obj/item/clothing/under/marine/veteran/UPP,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp);
+	stuff = list(/obj/item/clothing/under/marine/veteran/upp,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp);
 	pixel_x = 9
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -9149,7 +9149,7 @@
 	icon_state = "cargo"
 	},
 /obj/structure/largecrate/random/barrel/red{
-	stuff = list(/obj/item/clothing/under/marine/veteran/UPP,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp);
+	stuff = list(/obj/item/clothing/under/marine/veteran/upp,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp);
 	pixel_y = -4;
 	pixel_x = 6
 	},
@@ -9367,7 +9367,7 @@
 	icon_state = "cargo"
 	},
 /obj/structure/largecrate/random/barrel/red{
-	stuff = list(/obj/item/clothing/under/marine/veteran/UPP,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp);
+	stuff = list(/obj/item/clothing/under/marine/veteran/upp,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp);
 	pixel_x = 5
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -9473,7 +9473,7 @@
 	icon_state = "cargo"
 	},
 /obj/structure/largecrate/random/barrel/red{
-	stuff = list(/obj/item/clothing/under/marine/veteran/UPP,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp);
+	stuff = list(/obj/item/clothing/under/marine/veteran/upp,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp);
 	pixel_y = 1;
 	pixel_x = -2
 	},
@@ -9495,7 +9495,7 @@
 	icon_state = "cargo"
 	},
 /obj/structure/largecrate/random/barrel/red{
-	stuff = list(/obj/item/clothing/under/marine/veteran/UPP,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp);
+	stuff = list(/obj/item/clothing/under/marine/veteran/upp,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp);
 	pixel_y = 4
 	},
 /turf/open/floor/corsat/plate,
@@ -9505,7 +9505,7 @@
 	icon_state = "cargo"
 	},
 /obj/structure/largecrate/random/barrel/red{
-	stuff = list(/obj/item/clothing/under/marine/veteran/UPP,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp);
+	stuff = list(/obj/item/clothing/under/marine/veteran/upp,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp);
 	pixel_x = -8
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -9516,7 +9516,7 @@
 	icon_state = "cargo"
 	},
 /obj/structure/largecrate/random/barrel/red{
-	stuff = list(/obj/item/clothing/under/marine/veteran/UPP,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp);
+	stuff = list(/obj/item/clothing/under/marine/veteran/upp,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp);
 	pixel_x = 6;
 	pixel_y = -4
 	},
@@ -9551,7 +9551,7 @@
 	icon_state = "cargo"
 	},
 /obj/structure/largecrate/random/barrel/red{
-	stuff = list(/obj/item/clothing/under/marine/veteran/UPP,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp);
+	stuff = list(/obj/item/clothing/under/marine/veteran/upp,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp);
 	pixel_x = -4;
 	pixel_y = -1
 	},
