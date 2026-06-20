@@ -1381,6 +1381,3 @@
 	new /obj/item/storage/box/packet/high_explosive/upp/impact(src)
 	new /obj/item/storage/box/packet/high_explosive/upp/ap(src)
 	new /obj/item/storage/box/packet/high_explosive/upp/incend(src)
-
-/obj/item/storage/box/guncase/heavy/m92_upp_forecon/aa22
-	name = "\improper aa22"
