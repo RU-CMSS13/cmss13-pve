@@ -100,7 +100,7 @@
 
 /client/proc/quick_order_ai_approach()
 	set name = "Quick Order: Approach"
-	set category = "Game Master.HumanAI - Tools"
+	set category = "Game Master.HumanAI"
 
 	if(!check_rights(R_DEBUG))
 		return
@@ -132,7 +132,7 @@
 
 /client/proc/quick_order_ai_hold_position()
 	set name = "Quick Order: Hold Position"
-	set category = "Game Master.HumanAI - Tools"
+	set category = "Game Master.HumanAI"
 
 	if(!check_rights(R_DEBUG))
 		return

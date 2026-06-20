@@ -69,7 +69,7 @@
 
 /datum/admins/proc/create_human_ai_machinegunner()
 	set name = "Create Human AI machinegunner"
-	set category = "Game Master.HumanAI - Spawn, Advanced"
+	set category = "Game Master.HumanAI"
 
 	var/static/list/machinegunner_equipment_presets = list(
 		/datum/equipment_preset/rebel/soldier::name = /datum/equipment_preset/rebel/soldier,

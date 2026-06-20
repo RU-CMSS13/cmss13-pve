@@ -69,7 +69,7 @@
 
 /datum/admins/proc/create_human_ai_sniper()
 	set name = "Create Human AI Sniper"
-	set category = "Game Master.HumanAI - Spawn, Advanced"
+	set category = "Game Master.HumanAI"
 
 	var/static/list/sniper_equipment_presets = list(
 		/datum/equipment_preset/clf/soldier/bolt::name = /datum/equipment_preset/clf/soldier/bolt,

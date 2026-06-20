@@ -361,7 +361,7 @@
 
 /client/proc/open_human_ai_spawner_panel()
 	set name = "Create Human AI"
-	set category = "Game Master.HumanAI - Spawn"
+	set category = "Game Master.HumanAI"
 
 	if(!check_rights(R_DEBUG))
 		return
