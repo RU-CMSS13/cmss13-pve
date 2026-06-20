@@ -210,6 +210,15 @@
 /obj/item/storage/large_holster/m39/full/elite/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/smg/m39/elite())
 
+/obj/item/storage/large_holster/m39/upp_m92_forecon
+	name = "\improper Type 44 GL holster rig"
+	desc = "A refitted Type 41 SMG holster, able to carry OG-74 grenade launcher. Uncommonly issued to the special forces of Armed Collective."
+	icon_state = "upp_smg_holster"
+	flags_equip_slot = SLOT_WAIST|SLOT_SUIT_STORE
+	max_w_class = 5
+	can_hold = list(
+		/obj/item/weapon/gun/launcher/grenade/m92/upp/forecon,
+	)
 
 /obj/item/storage/large_holster/fuelpack
 	name = "\improper Broiler-T flexible refueling system"

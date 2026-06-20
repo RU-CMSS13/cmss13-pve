@@ -1374,6 +1374,19 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	item_state = "marinepack_medic_upp"
 	bag_open_time = 2 SECONDS
 
+/obj/item/storage/backpack/marine/ammo_rack/upp
+	name = "\improper UCCR5 ammo rack"
+	desc = "A UPP military standard issue Union Combat Carry-Frame MK5 with buckles designed to hold multiple ammo cans and grenade boxes. Helps you lug around extra ammunition or supplies."
+	has_gamemode_skin = FALSE
+	storage_slots = 3
+	icon_state = "upp_frame_0"
+	base_icon_state = "upp_frame"
+
+/obj/item/storage/backpack/marine/ammo_rack/upp/recon
+	name = "\improper UCCR5-R ammo rack"
+	desc = "A UPP military standard issue Union Combat Carry-Frame MK5 with buckles designed to hold multiple ammo cans and grenade boxes. Helps you lug around extra ammunition or supplies. Additional straps and buckles have improved stability of the package, making it easier to carry even fully loaded."
+	move_delay_mult = 0
+
 /obj/item/storage/backpack/marine/satchel/scout_cloak/upp
 	name = "\improper V86 Thermal Cloak"
 	desc = "A thermo-optic camouflage cloak commonly used by UPP commando units."

@@ -96,13 +96,14 @@
 	bonus_projectiles_type = /datum/ammo/bullet/revolver/upp/shrapnel_bits
 
 	max_range = 6
-	damage = 40 // + TIER_4 * 3
+	effective_range_max = 0
+	damage = 50 // + TIER_4 * 3
 	damage_falloff = DAMAGE_FALLOFF_TIER_7
 	penetration = -ARMOR_PENETRATION_TIER_1
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_3
 	shrapnel_chance = 100
 	shrapnel_type = /obj/item/shard/shrapnel/upp
-	//roughly 90 or so damage with the additional shrapnel, around 130 in total with primary round
+	//roughly 120 or so damage with the additional shrapnel, around 180 in total with primary round
 
 /datum/ammo/bullet/revolver/upp/shrapnel/on_hit_mob(mob/M, obj/projectile/P)
 	pushback(M, P, 1)
@@ -112,7 +113,8 @@
 	icon_state = "shrapnelshot_bit"
 
 	max_range = 6
-	damage = 30
+	effective_range_max = 0
+	damage = 40
 	penetration = -ARMOR_PENETRATION_TIER_2
 	scatter = SCATTER_AMOUNT_TIER_1
 	bonus_projectiles_amount = 0

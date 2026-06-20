@@ -880,3 +880,7 @@
 /datum/sprite_accessory/hair/fluffylong //ignore
 	name = "Fluffy (Long)"
 	icon_state = "hair_fluffy_long"
+
+/datum/sprite_accessory/hair/pulato
+	name = "Pulato"
+	icon_state = "hair_pulato"
