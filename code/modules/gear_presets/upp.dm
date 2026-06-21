@@ -1187,6 +1187,47 @@
 
 //*****************************************************************************************************/
 
+/datum/equipment_preset/upp/military_police/rodina
+	name = "UPP Rodina's Security"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = JOB_UPP_POLICE
+	role_comm_title = "MP"
+	rank = JOB_UPP_POLICE
+	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0, PAY_SHORT_UE5 = JOB_PLAYTIME_TIER_1)
+	skills = /datum/skills/upp/military_police
+	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_SECURITY, ACCESS_UPP_ARMORY, ACCESS_UPP_FLIGHT, ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS, ACCESS_CIVILIAN_MEDBAY, ACCESS_CIVILIAN_RESEARCH)
+
+/datum/equipment_preset/upp/military_police/rodina/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "Naval Infantry Telnyashka"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/military/upp, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/upp, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/upp/territorial, WEAR_L_EAR)
+	var/upphead = prob(50) ? /obj/item/clothing/head/cmcap/upp/beret/army : /obj/item/clothing/head/helmet/upp
+	new_human.equip_to_slot_or_del(new upphead, WEAR_HEAD)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/upp, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/mpsec, WEAR_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/light/armor, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppmags/type71, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71/carbine, WEAR_J_STORE)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/upp/full, WEAR_WAIST)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/t73, WEAR_IN_R_STORE)
+
+//*****************************************************************************************************/
+
 /datum/equipment_preset/upp/officer
 	name = "UPP Lieutenant"
 	flags = EQUIPMENT_PRESET_EXTRA

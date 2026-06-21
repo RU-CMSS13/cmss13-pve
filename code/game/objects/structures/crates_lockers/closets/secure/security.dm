@@ -137,6 +137,17 @@
 	new /obj/item/clothing/under/marine/veteran/upp/pap(src)
 	new /obj/item/storage/belt/gun/type47/sof(src)
 
+/obj/structure/closet/secure_closet/security/soro/rodina
+
+/obj/structure/closet/secure_closet/security/soro/rodina/Initialize()
+	. = ..()
+	new /obj/item/clothing/under/marine/veteran/upp/service(src)
+	new /obj/item/clothing/suit/storage/jacket/marine/upp(src)
+	new /obj/item/storage/belt/gun/type47/t73(src)
+	new /obj/item/storage/belt/security/MP/upp/full(src)
+	new /obj/item/clothing/head/cmcap/upp/beret/army(src)
+	new /obj/item/clothing/accessory/armband/mpsec(src)
+
 
 
 /obj/structure/closet/secure_closet/security/cargo/Initialize()
