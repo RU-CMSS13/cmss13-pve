@@ -322,6 +322,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	/obj/item/prop/helmetgarb/rmc_platemask = "rmc_platemask",
 	/obj/item/prop/helmetgarb/rmc_goggles = "rmc_goggles",
 	/obj/item/prop/helmetgarb/frogmen_veil = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/prop/helmetgarb/helmet_nvg/upp = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/prop/helmetgarb/helmet_nvg/upp/frogmen = HELMET_GARB_RELAY_ICON_STATE,
 
 	// MISC
 	/obj/item/tool/pen = "helmet_pen_black",

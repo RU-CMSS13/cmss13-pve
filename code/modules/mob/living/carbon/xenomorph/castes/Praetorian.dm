@@ -60,10 +60,11 @@
 		/datum/action/xeno_action/watch_xeno,
 		/datum/action/xeno_action/activable/tail_stab,
 		/datum/action/xeno_action/activable/corrosive_acid,
-		/datum/action/xeno_action/activable/xeno_spit,
+		/datum/action/xeno_action/activable/xeno_spit/ai,
 		/datum/action/xeno_action/activable/pounce/base_prae_dash,
-		/datum/action/xeno_action/activable/prae_acid_ball,
+		/datum/action/xeno_action/activable/prae_acid_ball/ai,
 		/datum/action/xeno_action/activable/spray_acid/base_prae_spray_acid,
+		/datum/action/xeno_action/onclick/crusher_stomp,
 		/datum/action/xeno_action/onclick/tacmap,
 	)
 
@@ -74,6 +75,8 @@
 	mycelium_food_icon = 'icons/mob/pathogen/pathogen_weeds_64x64.dmi'
 	weed_food_states = list("Praetorian_1","Praetorian_2","Praetorian_3")
 	weed_food_states_flipped = list("Praetorian_1","Praetorian_2","Praetorian_3")
+	ai_range = 24
+	forced_retarget_time = (3 SECONDS)
 
 /datum/behavior_delegate/praetorian_base
 	name = "Base Praetorian Behavior Delegate"
@@ -104,3 +107,25 @@
 	bound_xeno.add_xeno_shield(reward_shield, XENO_SHIELD_SOURCE_BASE_PRAE, add_shield_on = TRUE, max_shield = 45)
 	to_chat(bound_xeno, SPAN_NOTICE("Your exoskeleton shimmers for a fraction of a second as the acid coats your target."))
 	return
+
+/mob/living/carbon/xenomorph/praetorian/Initialize(mapload, mob/living/carbon/xenomorph/oldXeno, h_number, ai_hard_off = FALSE)
+	. = ..()
+	AddComponent(/datum/component/footstep, 2, 50, 15, 1, "alien_footstep_medium")
+
+	playsound(src, 'sound/voice/alien_death_unused.ogg', 100, TRUE, 30, falloff = 5)
+	if(!get_turf(src)) //autowiki compat, spawns in nullspace
+		return
+	for(var/mob/current_mob as anything in get_mobs_in_z_level_range(get_turf(src), 30) - src)
+		var/relative_dir = get_dir(current_mob, src)
+		var/final_dir = dir2text(relative_dir)
+		to_chat(current_mob, SPAN_HIGHDANGER("You hear a terrible roar coming from [final_dir ? "the [final_dir]" : "nearby"] as the ground shakes!"))
+
+/datum/action/xeno_action/activable/prae_acid_ball/ai
+	default_ai_action = TRUE
+	ai_prob_chance = 40
+	activation_delay = 0 SECONDS
+	prime_delay = 0 SECONDS
+	xeno_cooldown = 20 SECONDS
+
+/datum/action/xeno_action/activable/prae_acid_ball/ai/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
+	return DT_PROB(ai_prob_chance, delta_time) && (get_dist(parent, parent.current_target) <= 6) && !check_for_obstacles_projectile(parent, parent.current_target, GLOB.ammo_list[/datum/ammo/xeno/acid/prae_nade]) && use_ability_async(parent.current_target)

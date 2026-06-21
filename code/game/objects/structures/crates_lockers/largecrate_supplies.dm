@@ -205,6 +205,11 @@
 	desc = "An ammunition case containing six UA 571-C sentry ammunition drums."
 	supplies = list(/obj/item/ammo_magazine/sentry = 6)
 
+/obj/structure/largecrate/supply/ammo/sentry/upp
+	name = "\improper UPPAC 32-H ammunition drum case (x6)"
+	desc = "An ammunition case containing six UPPAC 32-H sentry ammunition drums."
+	supplies = list(/obj/item/ammo_magazine/sentry/upp = 6)
+
 /obj/structure/largecrate/supply/ammo/m56d
 	name = "\improper M56D ammunition drum case (x6)"
 	desc = "An ammunition case containing six M56D ammunition drums."
