@@ -92,6 +92,47 @@
 	stamina_damage = 25
 	shrapnel_chance = 0
 
+//Used by NP92 Makarov
+
+/datum/ammo/bullet/pistol/upp/ap
+	name = "armor-piercing 9x18 bullet"
+
+	damage = 25
+	accuracy = HIT_ACCURACY_TIER_2
+	penetration= ARMOR_PENETRATION_TIER_3
+
+/datum/ammo/bullet/pistol/upp/ap/penetrating
+	name = "wall-penetrating 9x18 bullet"
+	shrapnel_chance = 0
+
+	damage = 30
+	penetration = ARMOR_PENETRATION_TIER_10
+
+/datum/ammo/bullet/pistol/upp/ap/penetrating/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
+	))
+
+/datum/ammo/bullet/pistol/upp/ap/toxin
+	name = "toxic 9x18 bullet"
+	var/acid_per_hit = 10
+	var/organic_damage_mult = 3
+
+/datum/ammo/bullet/pistol/upp/ap/toxin/on_hit_mob(mob/M, obj/projectile/P)
+	. = ..()
+	M.AddComponent(/datum/component/status_effect/toxic_buildup, acid_per_hit)
+
+/datum/ammo/bullet/pistol/upp/ap/toxin/on_hit_turf(turf/T, obj/projectile/P)
+	. = ..()
+	if(T.turf_flags & TURF_ORGANIC)
+		P.damage *= organic_damage_mult
+
+/datum/ammo/bullet/pistol/upp/ap/toxin/on_hit_obj(obj/O, obj/projectile/P)
+	. = ..()
+	if(O.flags_obj & OBJ_ORGANIC)
+		P.damage *= organic_damage_mult
+
 // Reskinned rubber bullet used for the ES-4 CL pistol.
 /datum/ammo/bullet/pistol/electrostatic
 	name = "electrostatic pistol bullet"

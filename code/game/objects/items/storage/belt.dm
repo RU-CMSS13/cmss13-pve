@@ -1392,6 +1392,13 @@
 	storage_slots = 20
 	max_storage_space = 60
 
+/obj/item/storage/belt/grenade/upp
+	name="\improper Type 39 pattern grenade rig"
+	desc = "The Type 39 grenade rig is the standard-issue load-bearing equipment of the UPP military. It consists of a modular belt with various clips for secure fastening on the armor, and two big pouches for general grenade storage. Requisition department department recommends to avoid accidental falls and drops on full pouches."
+	icon_state = "upp_grenadebelt"
+	item_state = "upp_grenadebelt"
+	has_gamemode_skin = FALSE
+
 /obj/item/storage/belt/grenade/large
 	name="\improper M276 pattern M40 Grenade rig Mk. II"
 	desc="The M276 Mk. II is is an upgraded version of the M276 grenade rig, with more storage capacity."
@@ -1433,6 +1440,13 @@
 	desc="The WY-TM-386 Mk. II is is an upgraded version of the m40 grenade rig, with more storage capacity."
 	storage_slots = 25
 	max_storage_space = 75
+
+/obj/item/storage/belt/grenade/large/upp
+	name="\improper Type 40 pattern grenade rig"
+	desc = "The Type 40 grenade rig is the modified variant of Type 39 rig. Besides 2 main pouches for general grenade storage, front-sided belt clips were changed to hold additional grenades, increasing the overall carriage."
+	icon_state = "upp_grenadebelt"
+	item_state = "upp_grenadebelt"
+	has_gamemode_skin = FALSE
 
 ////////////////////////////// GUN BELTS /////////////////////////////////////
 
@@ -2230,7 +2244,7 @@
 		/obj/item/ammo_magazine/pistol/t73_impact,
 		/obj/item/weapon/gun/pistol/np92,
 		/obj/item/ammo_magazine/pistol/np92,
-		/obj/item/ammo_magazine/pistol/np92/tranq,
+		/obj/item/ammo_magazine/pistol/np92/suppressed/tranq,
 		/obj/item/weapon/gun/revolver/upp,
 		/obj/item/ammo_magazine/revolver/upp,
 		/obj/item/ammo_magazine/revolver/upp/shrapnel,
