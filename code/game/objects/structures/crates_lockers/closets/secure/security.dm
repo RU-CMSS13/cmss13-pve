@@ -137,9 +137,17 @@
 	new /obj/item/clothing/under/marine/veteran/upp/pap(src)
 	new /obj/item/storage/belt/gun/type47/sof(src)
 
-/obj/structure/closet/secure_closet/security/soro/rodina
+/obj/structure/closet/secure_closet/security/rodina
+	name = "Military Police's Locker"
+	req_one_access = list(ACCESS_CIVILIAN_COMMAND, ACCESS_CIVILIAN_BRIG)
+	icon_state = "secure_alt_locked_warrant"
+	icon_closed = "secure_alt_unlocked_warrant"
+	icon_locked = "secure_alt_locked_warrant"
+	icon_opened = "secure_alt_open_warrant"
+	icon_broken = "secure_alt_locked_warrant"
+	icon_off = "secure_alt_closed_warrant"
 
-/obj/structure/closet/secure_closet/security/soro/rodina/Initialize()
+/obj/structure/closet/secure_closet/security/rodina/Initialize()
 	. = ..()
 	new /obj/item/clothing/under/marine/veteran/upp/service(src)
 	new /obj/item/clothing/suit/storage/jacket/marine/upp(src)

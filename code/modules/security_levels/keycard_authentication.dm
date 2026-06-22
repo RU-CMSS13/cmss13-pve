@@ -172,11 +172,11 @@ GLOBAL_VAR_INIT(maint_all_access, TRUE)
 	confirm_delay = 30
 
 /obj/structure/machinery/keycard_auth/lockdown/corsat
-	name = "CORSAT automated biohazard override"
+	name = "RSS Rodina automated biohazard override"
 	card_type = /obj/item/card/data/corsat
-	announce_title = "CORSAT Security Authority automated announcement"
-	window_desc = "This device is used to override the CORSAT automated lockdown. It requires both of the authentication disks, which can be found in the offices of various heads of departments around the station."
-	desc = "This device is used override the CORSAT automatic biohazard lockdown."
+	announce_title = "RSS Rodina Security Authority automated announcement"
+	window_desc = "This device is used to override the RSS Rodina automated lockdown. It requires both of the authentication disks, which can be found in the offices of various heads of departments around the station."
+	desc = "This device is used override the RSS Rodina automatic biohazard lockdown."
 
 /obj/structure/machinery/keycard_auth/lockdown/prison
 	card_type = /obj/item/card/data/prison
