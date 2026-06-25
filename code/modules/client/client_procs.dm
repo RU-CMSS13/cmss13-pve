@@ -285,6 +285,9 @@ GLOBAL_LIST_INIT(whitelisted_client_procs, list(
 	GLOB.clients += src
 	GLOB.directory[ckey] = src
 
+	if(ckey in GLOB.blocked_ckeys)
+		qdel(src)
+
 	if(byond_version >= 516) // Enable 516 compat browser storage mechanisms
 		winset(src, "", "browser-options=byondstorage")
 
