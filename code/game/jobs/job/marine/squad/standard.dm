@@ -100,7 +100,6 @@
 	gear_preset_quaternary = /datum/equipment_preset/uscm/rto/pfc
 	job_options = list(PFC_VARIANT = "PFC", LCPL_VARIANT = "LCPL", CPL_VARIANT = "CPL")
 
-
 /datum/job/marine/standard/ai/rto/handle_job_options(option)
 	gear_preset = initial(gear_preset)
 	if(option == PVT_VARIANT)
