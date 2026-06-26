@@ -13,7 +13,7 @@
 	item_state = "generic_mag"
 	w_class = SIZE_MEDIUM
 	default_ammo = /datum/ammo/bullet/rifle
-	max_rounds = 50
+	max_rounds = 60
 	gun_type = /obj/item/weapon/gun/rifle/m41a
 	ammo_band_icon = "+m41a_band"
 	ammo_band_icon_empty = "+m41a_band_e"
@@ -22,7 +22,7 @@
 	name = "\improper M41A LE extended magazine (10x24mm)"
 	desc = "A 10mm assault Light Explosive extended rifle magazine."
 	icon_state = "m41a_extended"
-	max_rounds = 60
+	max_rounds = 85
 	bonus_overlay = "m41a_ex"
 
 /obj/item/ammo_magazine/rifle/incendiary
