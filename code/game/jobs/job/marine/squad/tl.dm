@@ -3,8 +3,6 @@
 #define SGT_VARIANT "Sergeant"
 #define CPL_VARIANT "Corporal"
 #define JSGT_VARIANT "Junior Sergeant"
-#define MSSGT_VARIANT "Master Sergeant"
-#define GYSGT_VARIANT "Gunnery Sergeant"
 
 /datum/job/marine/tl
 	title = JOB_SQUAD_TEAM_LEADER
@@ -69,12 +67,12 @@
 	spawn_positions = 1
 	title = JOB_SQUAD_TEAM_LEADER_FORECON
 	gear_preset = /datum/equipment_preset/uscm/tl/forecon
-	gear_preset_secondary = /datum/equipment_preset/uscm/tl/forecon/high
-	job_options = list(GYSGT_VARIANT = "GYSGT", MSSGT_VARIANT = "MSSGT")
+	gear_preset_secondary = /datum/equipment_preset/uscm/tl/forecon/sergeant
+	job_options = list(SGT_VARIANT = "SGT", SSGT_VARIANT = "SSGT")
 
 /datum/job/marine/tl/ai/forecon/handle_job_options(option)
 	gear_preset = initial(gear_preset)
-	if(option == MSSGT_VARIANT)
+	if(option == SGT_VARIANT)
 		gear_preset = gear_preset_secondary
 
 /obj/effect/landmark/start/marine/tl/upp
