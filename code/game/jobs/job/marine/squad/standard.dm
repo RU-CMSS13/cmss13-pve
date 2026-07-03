@@ -102,7 +102,6 @@
 	gear_preset_tertiary = /datum/equipment_preset/uscm/rto/sergeant
 	job_options = list(PFC_VARIANT = "PFC", LCPL_VARIANT = "LCPL", CPL_VARIANT = "CPL", SGT_VARIANT = "SGT")
 
-
 /datum/job/marine/standard/ai/rto/handle_job_options(option)
 	gear_preset = initial(gear_preset)
 	if(option == PFC_VARIANT)
@@ -201,6 +200,7 @@
 	squad = SQUAD_RMC
 	job = /datum/job/marine/standard/ai/rmc
 
+#undef SGT_VARIANT
 #undef JSGT_VARIANT
 #undef CPL_VARIANT
 #undef LCPL_VARIANT
