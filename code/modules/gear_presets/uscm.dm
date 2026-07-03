@@ -272,6 +272,10 @@
 	name = parent_type::name + " (E2 Rank)"
 	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
 
+/datum/equipment_preset/uscm/rto/sergeant
+	name = parent_type::name + " (E5 Rank)"
+	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/rto/upp
@@ -436,13 +440,13 @@
 /datum/equipment_preset/uscm/tl/forecon
 	name = "FORECON Assistant Squad Leader"
 	assignment = JOB_SQUAD_TEAM_LEADER_FORECON
-	paygrades = list(PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_ME7 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "ARSL"
 	skills = /datum/skills/tl/recon
 
-/datum/equipment_preset/uscm/tl/forecon/sergeant
-	name = parent_type::name + " (E5 Rank)"
-	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
+/datum/equipment_preset/uscm/tl/forecon/high
+	name = parent_type::name + " (Higher Rank)"
+	paygrades = list(PAY_SHORT_ME8 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/tl/upp/forecon
 	name = "UPP Assistant Recon Squad Sergeant"
@@ -523,12 +527,12 @@
 /datum/equipment_preset/uscm/leader/forecon
 	name = "FORECON Squad Leader"
 	assignment = JOB_SQUAD_LEADER_FORECON
-	paygrades = list(PAY_SHORT_ME8 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_MO1 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RSL"
 
-/datum/equipment_preset/uscm/leader/forecon/gunnery_sergeant
-	name = parent_type::name + " (E7 Rank)"
-	paygrades = list(PAY_SHORT_ME7 = JOB_PLAYTIME_TIER_0)
+/datum/equipment_preset/uscm/leader/forecon/lower
+	name = parent_type::name + " (ME9E Rank)"
+	paygrades = list(PAY_SHORT_ME9E = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/leader/upp/forecon
 	name = "UPP Recon Squad Sergeant"
