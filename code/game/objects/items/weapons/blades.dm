@@ -14,6 +14,7 @@
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	attack_speed = 9
+	inherent_traits = list(TRAIT_TOOL_CAN_OPENER_CRUDE)
 
 /obj/item/weapon/sword/claymore
 	name = "claymore"
@@ -221,6 +222,7 @@
 			return
 
 /obj/item/weapon/swiss_army_knife/proc/switch_tool(new_state)
+	REMOVE_TRAITS_IN(src,src)
 	switch(new_state)
 		if("Closed")
 			desc = initial(desc)
@@ -232,7 +234,6 @@
 			icon_state = initial(icon_state)
 			attack_speed = initial(attack_speed)
 			flags_atom = initial(flags_atom)
-			REMOVE_TRAITS_IN(src,src)
 		if("Knife")
 			desc = "A sharp knife for cutting things."
 			icon_state = "swiss_knife"
@@ -245,6 +246,7 @@
 			attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 			attack_speed = 9
 			flags_item = CAN_DIG_SHRAPNEL
+			ADD_TRAIT(src,TRAIT_TOOL_CAN_OPENER_CRUDE,src)
 		if("Screwdriver")
 			desc = "A trusty screwdriver for all your fastening needs."
 			icon_state = "swiss_screwdriver"
@@ -284,6 +286,7 @@
 			attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 			attack_speed = 9
 			flags_item = CAN_DIG_SHRAPNEL
+			ADD_TRAIT(src,TRAIT_TOOL_CAN_OPENER_EFFECTIVE,src)
 		if("Corkscrew")
 			desc = "A simple corkscrew."
 			icon_state = "swiss_corkscrew"
@@ -294,7 +297,6 @@
 			flags_item = CAN_DIG_SHRAPNEL
 	mode = new_state
 	update_icon()
-
 
 /obj/item/weapon/swiss_army_knife/knife
 	icon_state = "swiss_knife"
@@ -308,6 +310,7 @@
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	attack_speed = 9
 	flags_item = CAN_DIG_SHRAPNEL
+
 /obj/item/weapon/swiss_army_knife/screwdriver
 	icon_state = "swiss_screwdriver"
 	desc = "A trusty screwdriver for all your fastening needs."
@@ -334,6 +337,7 @@
 					SPAN_DANGER("You stab [H] in the eyes with [src]!"))
 				E.take_damage(rand(8,20))
 	return ..()
+
 /obj/item/weapon/swiss_army_knife/wirecutters
 	icon_state = "swiss_cutters"
 	desc = "Cutters for cutting through wires and various materials."
@@ -409,6 +413,7 @@
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	attack_speed = 9
 	flags_item = CAN_DIG_SHRAPNEL
+
 /obj/item/weapon/swiss_army_knife/corkscrew
 	icon = 'icons/obj/items/weapons/weapons.dmi'
 	icon_state = "swiss_corkscrew"
@@ -698,6 +703,7 @@
 	hitsound = 'sound/weapons/slash.ogg'
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	attack_speed = 7
+	inherent_traits = list(TRAIT_TOOL_CAN_OPENER_CRUDE)
 
 /obj/item/weapon/knife/marine/kabar
 	name = "\improper KA-BAR utility knife"
