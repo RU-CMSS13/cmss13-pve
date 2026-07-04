@@ -4311,15 +4311,14 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/structure/closet/cryo{
-	pixel_x = 0;
-	pixel_y = 0;
-	name = "Sergeant's RHBZ equipment closet"
-	},
 /obj/item/clothing/shoes/marine/pve_mopp/upp,
 /obj/item/clothing/under/marine/pve_mopp/upp,
 /obj/item/clothing/mask/gas/pve_mopp/upp/alt,
 /obj/item/clothing/gloves/marine/pve_mopp/upp,
+/obj/structure/closet{
+	name = "Sergeant's RHBZ equipment closet";
+	can_block_movement = 0
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_sergeant)
 "jd" = (
@@ -4867,32 +4866,32 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/closet/cryo{
-	pixel_x = -7;
-	pixel_y = 0;
-	name = "RHBZ equipment closet"
+/obj/item/clothing/gloves/marine/pve_mopp/upp,
+/obj/item/clothing/gloves/marine/pve_mopp/upp,
+/obj/item/clothing/gloves/marine/pve_mopp/upp,
+/obj/item/clothing/gloves/marine/pve_mopp/upp,
+/obj/item/clothing/under/marine/pve_mopp/upp,
+/obj/item/clothing/under/marine/pve_mopp/upp,
+/obj/item/clothing/under/marine/pve_mopp/upp,
+/obj/item/clothing/under/marine/pve_mopp/upp,
+/obj/item/clothing/shoes/marine/pve_mopp/upp,
+/obj/item/clothing/shoes/marine/pve_mopp/upp,
+/obj/item/clothing/shoes/marine/pve_mopp/upp,
+/obj/item/clothing/shoes/marine/pve_mopp/upp,
+/obj/item/clothing/mask/gas/pve_mopp/upp,
+/obj/item/clothing/mask/gas/pve_mopp/upp,
+/obj/item/clothing/mask/gas/pve_mopp/upp,
+/obj/item/clothing/mask/gas/pve_mopp/upp,
+/obj/structure/closet{
+	name = "RHBZ equipment closet";
+	can_block_movement = 0;
+	pixel_x = -7
 	},
-/obj/structure/closet/cryo{
-	pixel_x = 7;
-	pixel_y = 0;
-	name = "RHBZ equipment closet"
+/obj/structure/closet{
+	name = "RHBZ equipment closet";
+	can_block_movement = 0;
+	pixel_x = 7
 	},
-/obj/item/clothing/gloves/marine/pve_mopp/upp,
-/obj/item/clothing/gloves/marine/pve_mopp/upp,
-/obj/item/clothing/gloves/marine/pve_mopp/upp,
-/obj/item/clothing/gloves/marine/pve_mopp/upp,
-/obj/item/clothing/under/marine/pve_mopp/upp,
-/obj/item/clothing/under/marine/pve_mopp/upp,
-/obj/item/clothing/under/marine/pve_mopp/upp,
-/obj/item/clothing/under/marine/pve_mopp/upp,
-/obj/item/clothing/shoes/marine/pve_mopp/upp,
-/obj/item/clothing/shoes/marine/pve_mopp/upp,
-/obj/item/clothing/shoes/marine/pve_mopp/upp,
-/obj/item/clothing/shoes/marine/pve_mopp/upp,
-/obj/item/clothing/mask/gas/pve_mopp/upp,
-/obj/item/clothing/mask/gas/pve_mopp/upp,
-/obj/item/clothing/mask/gas/pve_mopp/upp,
-/obj/item/clothing/mask/gas/pve_mopp/upp,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "kx" = (
@@ -8630,15 +8629,14 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/structure/closet/cryo{
-	pixel_x = 0;
-	pixel_y = 0;
-	name = "Sergeant's RHBZ equipment closet"
-	},
 /obj/item/clothing/under/marine/pve_mopp/upp,
 /obj/item/clothing/gloves/marine/pve_mopp/upp,
 /obj/item/clothing/shoes/marine/pve_mopp/upp,
 /obj/item/clothing/mask/gas/pve_mopp/upp/alt,
+/obj/structure/closet{
+	name = "Sergeant's RHBZ equipment closet";
+	can_block_movement = 0
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_sergeant)
 "ws" = (
@@ -9576,32 +9574,32 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/engineering)
 "Fp" = (
-/obj/structure/closet/cryo{
-	pixel_x = -7;
-	pixel_y = 0;
-	name = "RHBZ equipment closet"
+/obj/item/clothing/gloves/marine/pve_mopp/upp,
+/obj/item/clothing/gloves/marine/pve_mopp/upp,
+/obj/item/clothing/gloves/marine/pve_mopp/upp,
+/obj/item/clothing/gloves/marine/pve_mopp/upp,
+/obj/item/clothing/under/marine/pve_mopp/upp,
+/obj/item/clothing/under/marine/pve_mopp/upp,
+/obj/item/clothing/under/marine/pve_mopp/upp,
+/obj/item/clothing/under/marine/pve_mopp/upp,
+/obj/item/clothing/shoes/marine/pve_mopp/upp,
+/obj/item/clothing/shoes/marine/pve_mopp/upp,
+/obj/item/clothing/shoes/marine/pve_mopp/upp,
+/obj/item/clothing/shoes/marine/pve_mopp/upp,
+/obj/item/clothing/mask/gas/pve_mopp/upp,
+/obj/item/clothing/mask/gas/pve_mopp/upp,
+/obj/item/clothing/mask/gas/pve_mopp/upp,
+/obj/item/clothing/mask/gas/pve_mopp/upp,
+/obj/structure/closet{
+	name = "RHBZ equipment closet";
+	can_block_movement = 0;
+	pixel_x = -7
 	},
-/obj/structure/closet/cryo{
-	pixel_x = 7;
-	pixel_y = 0;
-	name = "RHBZ equipment closet"
+/obj/structure/closet{
+	name = "RHBZ equipment closet";
+	can_block_movement = 0;
+	pixel_x = 7
 	},
-/obj/item/clothing/gloves/marine/pve_mopp/upp,
-/obj/item/clothing/gloves/marine/pve_mopp/upp,
-/obj/item/clothing/gloves/marine/pve_mopp/upp,
-/obj/item/clothing/gloves/marine/pve_mopp/upp,
-/obj/item/clothing/under/marine/pve_mopp/upp,
-/obj/item/clothing/under/marine/pve_mopp/upp,
-/obj/item/clothing/under/marine/pve_mopp/upp,
-/obj/item/clothing/under/marine/pve_mopp/upp,
-/obj/item/clothing/shoes/marine/pve_mopp/upp,
-/obj/item/clothing/shoes/marine/pve_mopp/upp,
-/obj/item/clothing/shoes/marine/pve_mopp/upp,
-/obj/item/clothing/shoes/marine/pve_mopp/upp,
-/obj/item/clothing/mask/gas/pve_mopp/upp,
-/obj/item/clothing/mask/gas/pve_mopp/upp,
-/obj/item/clothing/mask/gas/pve_mopp/upp,
-/obj/item/clothing/mask/gas/pve_mopp/upp,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/prep_hallway)
 "Ft" = (
@@ -9704,15 +9702,15 @@
 	dir = 4;
 	pixel_y = -5
 	},
-/obj/structure/closet/cryo{
-	pixel_x = 8;
-	pixel_y = 0;
-	name = "Medic's RHBZ equipment closet"
-	},
 /obj/item/clothing/mask/gas/pve_mopp/upp/alt,
 /obj/item/clothing/shoes/marine/pve_mopp/upp,
 /obj/item/clothing/under/marine/pve_mopp/upp,
 /obj/item/clothing/gloves/marine/pve_mopp/upp,
+/obj/structure/closet{
+	name = "Medic's RHBZ equipment closet";
+	can_block_movement = 0;
+	pixel_x = 7
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/medical)
 "GF" = (
@@ -11474,32 +11472,32 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
 "XS" = (
-/obj/structure/closet/cryo{
-	pixel_x = -7;
-	pixel_y = 0;
-	name = "RHBZ equipment closet"
+/obj/item/clothing/gloves/marine/pve_mopp/upp,
+/obj/item/clothing/gloves/marine/pve_mopp/upp,
+/obj/item/clothing/gloves/marine/pve_mopp/upp,
+/obj/item/clothing/gloves/marine/pve_mopp/upp,
+/obj/item/clothing/under/marine/pve_mopp/upp,
+/obj/item/clothing/under/marine/pve_mopp/upp,
+/obj/item/clothing/under/marine/pve_mopp/upp,
+/obj/item/clothing/under/marine/pve_mopp/upp,
+/obj/item/clothing/shoes/marine/pve_mopp/upp,
+/obj/item/clothing/shoes/marine/pve_mopp/upp,
+/obj/item/clothing/shoes/marine/pve_mopp/upp,
+/obj/item/clothing/shoes/marine/pve_mopp/upp,
+/obj/item/clothing/mask/gas/pve_mopp/upp,
+/obj/item/clothing/mask/gas/pve_mopp/upp,
+/obj/item/clothing/mask/gas/pve_mopp/upp,
+/obj/item/clothing/mask/gas/pve_mopp/upp,
+/obj/structure/closet{
+	name = "RHBZ equipment closet";
+	can_block_movement = 0;
+	pixel_x = -7
 	},
-/obj/structure/closet/cryo{
-	pixel_x = 7;
-	pixel_y = 0;
-	name = "RHBZ equipment closet"
+/obj/structure/closet{
+	name = "RHBZ equipment closet";
+	can_block_movement = 0;
+	pixel_x = 7
 	},
-/obj/item/clothing/gloves/marine/pve_mopp/upp,
-/obj/item/clothing/gloves/marine/pve_mopp/upp,
-/obj/item/clothing/gloves/marine/pve_mopp/upp,
-/obj/item/clothing/gloves/marine/pve_mopp/upp,
-/obj/item/clothing/under/marine/pve_mopp/upp,
-/obj/item/clothing/under/marine/pve_mopp/upp,
-/obj/item/clothing/under/marine/pve_mopp/upp,
-/obj/item/clothing/under/marine/pve_mopp/upp,
-/obj/item/clothing/shoes/marine/pve_mopp/upp,
-/obj/item/clothing/shoes/marine/pve_mopp/upp,
-/obj/item/clothing/shoes/marine/pve_mopp/upp,
-/obj/item/clothing/shoes/marine/pve_mopp/upp,
-/obj/item/clothing/mask/gas/pve_mopp/upp,
-/obj/item/clothing/mask/gas/pve_mopp/upp,
-/obj/item/clothing/mask/gas/pve_mopp/upp,
-/obj/item/clothing/mask/gas/pve_mopp/upp,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "XW" = (
