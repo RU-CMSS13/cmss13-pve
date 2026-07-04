@@ -1,5 +1,6 @@
 #define STANDARD_MARINE_TO_TOTAL_SPAWN_RATIO 0.4
 
+#define SGT_VARIANT "Sergeant"
 #define JSGT_VARIANT "Junior Sergeant"
 #define CPL_VARIANT "Corporal"
 #define LCPL_VARIANT "Lance Corporal"
@@ -98,14 +99,17 @@
 	gear_preset = /datum/equipment_preset/uscm/rto
 	gear_preset_secondary = /datum/equipment_preset/uscm/rto/lance_corporal
 	gear_preset_quaternary = /datum/equipment_preset/uscm/rto/pfc
-	job_options = list(PFC_VARIANT = "PFC", LCPL_VARIANT = "LCPL", CPL_VARIANT = "CPL")
+	gear_preset_tertiary = /datum/equipment_preset/uscm/rto/sergeant
+	job_options = list(PFC_VARIANT = "PFC", LCPL_VARIANT = "LCPL", CPL_VARIANT = "CPL", SGT_VARIANT = "SGT")
 
 /datum/job/marine/standard/ai/rto/handle_job_options(option)
 	gear_preset = initial(gear_preset)
-	if(option == PVT_VARIANT)
-		gear_preset = gear_preset_tertiary
+	if(option == PFC_VARIANT)
+		gear_preset = gear_preset_quaternary
 	if(option == LCPL_VARIANT)
 		gear_preset = gear_preset_secondary
+	if(option == SGT_VARIANT)
+		gear_preset = gear_preset_tertiary
 
 /obj/effect/landmark/start/marine/upp
 	name = JOB_SQUAD_MARINE_UPP
@@ -212,6 +216,7 @@
 	squad = SQUAD_UPP
 	job = JOB_SQUAD_FLAMER_UPP
 
+#undef SGT_VARIANT
 #undef JSGT_VARIANT
 #undef CPL_VARIANT
 #undef LCPL_VARIANT
