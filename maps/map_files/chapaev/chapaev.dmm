@@ -3641,6 +3641,16 @@
 	network = list("Chapaev");
 	c_tag = "Sergeants Room"
 	},
+/obj/structure/filingcabinet{
+	pixel_x = -8;
+	pixel_y = 0;
+	can_block_movement = 0
+	},
+/obj/structure/filingcabinet{
+	pixel_x = 7;
+	pixel_y = 0;
+	can_block_movement = 0
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_sergeant)
 "hr" = (
@@ -4297,6 +4307,21 @@
 "iY" = (
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/platoon_commander_rooms)
+"ja" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/closet/cryo{
+	pixel_x = 0;
+	pixel_y = 0;
+	name = "Sergeant's RHBZ equipment closet"
+	},
+/obj/item/clothing/shoes/marine/pve_mopp/upp,
+/obj/item/clothing/under/marine/pve_mopp/upp,
+/obj/item/clothing/mask/gas/pve_mopp/upp/alt,
+/obj/item/clothing/gloves/marine/pve_mopp/upp,
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/platoon_sergeant)
 "jd" = (
 /obj/structure/machinery/light/small,
 /turf/open/floor/strata/floor3,
@@ -4784,7 +4809,8 @@
 /obj/structure/machinery/disposal{
 	density = 0;
 	layer = 3.2;
-	pixel_y = 16
+	pixel_y = 14;
+	pixel_x = 0
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 4
@@ -4841,7 +4867,32 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/upp,
+/obj/structure/closet/cryo{
+	pixel_x = -7;
+	pixel_y = 0;
+	name = "RHBZ equipment closet"
+	},
+/obj/structure/closet/cryo{
+	pixel_x = 7;
+	pixel_y = 0;
+	name = "RHBZ equipment closet"
+	},
+/obj/item/clothing/gloves/marine/pve_mopp/upp,
+/obj/item/clothing/gloves/marine/pve_mopp/upp,
+/obj/item/clothing/gloves/marine/pve_mopp/upp,
+/obj/item/clothing/gloves/marine/pve_mopp/upp,
+/obj/item/clothing/under/marine/pve_mopp/upp,
+/obj/item/clothing/under/marine/pve_mopp/upp,
+/obj/item/clothing/under/marine/pve_mopp/upp,
+/obj/item/clothing/under/marine/pve_mopp/upp,
+/obj/item/clothing/shoes/marine/pve_mopp/upp,
+/obj/item/clothing/shoes/marine/pve_mopp/upp,
+/obj/item/clothing/shoes/marine/pve_mopp/upp,
+/obj/item/clothing/shoes/marine/pve_mopp/upp,
+/obj/item/clothing/mask/gas/pve_mopp/upp,
+/obj/item/clothing/mask/gas/pve_mopp/upp,
+/obj/item/clothing/mask/gas/pve_mopp/upp,
+/obj/item/clothing/mask/gas/pve_mopp/upp,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "kx" = (
@@ -4989,6 +5040,10 @@
 	pixel_x = -8;
 	can_block_movement = 0
 	},
+/obj/item/clothing/under/marine/pve_mopp/upp,
+/obj/item/clothing/shoes/marine/pve_mopp/upp,
+/obj/item/clothing/mask/gas/pve_mopp/upp/alt,
+/obj/item/clothing/gloves/marine/pve_mopp/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "kR" = (
@@ -5695,56 +5750,28 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/medical)
 "mv" = (
-/obj/structure/surface/rack{
-	color = "#8B9490"
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/item/ammo_box/magazine/type71/large/ag80{
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/upp,
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/prep_hallway)
+"mw" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
 	pixel_x = 0;
-	pixel_y = -5
+	pixel_y = 0
 	},
 /obj/item/ammo_box/magazine/type71/large{
 	pixel_x = 0;
 	pixel_y = 4
 	},
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/prep_hallway)
-"mw" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/closet/crate/freezer/cooler{
-	pixel_y = 9;
-	pixel_x = 7;
-	can_block_movement = 0;
-	anchored = 1
+/obj/item/ammo_box/magazine/type71/large/ag80{
+	pixel_x = 0;
+	pixel_y = -5
 	},
-/obj/item/reagent_container/food/drinks/bottle/beer/craft/tazhushka{
-	pixel_y = 11;
-	pixel_x = 10
-	},
-/obj/item/reagent_container/food/drinks/bottle/beer/craft/tazhushka{
-	pixel_y = 12;
-	pixel_x = 6
-	},
-/obj/item/reagent_container/food/drinks/bottle/beer/craft/tazhushka{
-	pixel_y = 7;
-	pixel_x = 6
-	},
-/obj/item/reagent_container/food/drinks/bottle/beer/craft/tazhushka{
-	pixel_y = 10;
-	pixel_x = 9
-	},
-/obj/item/snowball{
-	pixel_y = 9;
-	pixel_x = 5
-	},
-/obj/structure/prop/ice_colony/hula_girl{
-	pixel_x = -5;
-	pixel_y = 15
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
+/obj/structure/surface/rack{
+	color = "#8B9490"
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/prep_hallway)
@@ -5762,23 +5789,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/zhnk{
-	pixel_y = 18;
-	pixel_x = 2
-	},
-/obj/item/ammo_box/magazine/np92{
-	pixel_y = 9;
-	pixel_x = 2
-	},
-/obj/item/ammo_box/magazine/type73{
-	pixel_y = 0;
-	pixel_x = 2
-	},
-/obj/item/stack/sheet/cardboard/medium_stack{
-	pixel_x = -15;
-	pixel_y = -8
-	},
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "my" = (
@@ -5791,6 +5802,7 @@
 	light_range = 5;
 	dir = 1
 	},
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "mz" = (
@@ -8618,16 +8630,15 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/structure/filingcabinet{
-	pixel_x = 8;
-	pixel_y = 16;
-	can_block_movement = 0
+/obj/structure/closet/cryo{
+	pixel_x = 0;
+	pixel_y = 0;
+	name = "Sergeant's RHBZ equipment closet"
 	},
-/obj/structure/filingcabinet{
-	pixel_x = -8;
-	pixel_y = 16;
-	can_block_movement = 0
-	},
+/obj/item/clothing/under/marine/pve_mopp/upp,
+/obj/item/clothing/gloves/marine/pve_mopp/upp,
+/obj/item/clothing/shoes/marine/pve_mopp/upp,
+/obj/item/clothing/mask/gas/pve_mopp/upp/alt,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_sergeant)
 "ws" = (
@@ -9564,6 +9575,35 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/engineering)
+"Fp" = (
+/obj/structure/closet/cryo{
+	pixel_x = -7;
+	pixel_y = 0;
+	name = "RHBZ equipment closet"
+	},
+/obj/structure/closet/cryo{
+	pixel_x = 7;
+	pixel_y = 0;
+	name = "RHBZ equipment closet"
+	},
+/obj/item/clothing/gloves/marine/pve_mopp/upp,
+/obj/item/clothing/gloves/marine/pve_mopp/upp,
+/obj/item/clothing/gloves/marine/pve_mopp/upp,
+/obj/item/clothing/gloves/marine/pve_mopp/upp,
+/obj/item/clothing/under/marine/pve_mopp/upp,
+/obj/item/clothing/under/marine/pve_mopp/upp,
+/obj/item/clothing/under/marine/pve_mopp/upp,
+/obj/item/clothing/under/marine/pve_mopp/upp,
+/obj/item/clothing/shoes/marine/pve_mopp/upp,
+/obj/item/clothing/shoes/marine/pve_mopp/upp,
+/obj/item/clothing/shoes/marine/pve_mopp/upp,
+/obj/item/clothing/shoes/marine/pve_mopp/upp,
+/obj/item/clothing/mask/gas/pve_mopp/upp,
+/obj/item/clothing/mask/gas/pve_mopp/upp,
+/obj/item/clothing/mask/gas/pve_mopp/upp,
+/obj/item/clothing/mask/gas/pve_mopp/upp,
+/turf/open/floor/strata/floor2,
+/area/golden_arrow/prep_hallway)
 "Ft" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small{
@@ -9664,6 +9704,15 @@
 	dir = 4;
 	pixel_y = -5
 	},
+/obj/structure/closet/cryo{
+	pixel_x = 8;
+	pixel_y = 0;
+	name = "Medic's RHBZ equipment closet"
+	},
+/obj/item/clothing/mask/gas/pve_mopp/upp/alt,
+/obj/item/clothing/shoes/marine/pve_mopp/upp,
+/obj/item/clothing/under/marine/pve_mopp/upp,
+/obj/item/clothing/gloves/marine/pve_mopp/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/medical)
 "GF" = (
@@ -9968,6 +10017,36 @@
 /obj/structure/machinery/light/double,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
+"Jy" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/reagent_container/food/drinks/bottle/beer/craft/tazhushka{
+	pixel_y = 6;
+	pixel_x = 0
+	},
+/obj/item/reagent_container/food/drinks/bottle/beer/craft/tazhushka{
+	pixel_y = 9;
+	pixel_x = -3
+	},
+/obj/item/reagent_container/food/drinks/bottle/beer/craft/tazhushka{
+	pixel_y = 5;
+	pixel_x = -6
+	},
+/obj/structure/closet/crate/freezer/cooler{
+	pixel_y = 5;
+	pixel_x = -4;
+	can_block_movement = 0;
+	anchored = 1
+	},
+/obj/item/snowball{
+	pixel_y = 2;
+	pixel_x = -4
+	},
+/obj/structure/prop/ice_colony/hula_girl{
+	pixel_x = 10;
+	pixel_y = 14
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/golden_arrow/prep_hallway)
 "JD" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo";
@@ -11309,6 +11388,22 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
+"Xl" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/zhnk{
+	pixel_y = 11;
+	pixel_x = -4
+	},
+/obj/item/ammo_box/magazine/np92{
+	pixel_y = 4;
+	pixel_x = -4
+	},
+/obj/item/ammo_box/magazine/type73{
+	pixel_x = -4;
+	pixel_y = -3
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/golden_arrow/prep_hallway)
 "Xo" = (
 /obj/structure/cargo_container/upp/tan/mid,
 /turf/open/floor/strata/floor3,
@@ -11378,6 +11473,35 @@
 /obj/structure/machinery/light/small,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
+"XS" = (
+/obj/structure/closet/cryo{
+	pixel_x = -7;
+	pixel_y = 0;
+	name = "RHBZ equipment closet"
+	},
+/obj/structure/closet/cryo{
+	pixel_x = 7;
+	pixel_y = 0;
+	name = "RHBZ equipment closet"
+	},
+/obj/item/clothing/gloves/marine/pve_mopp/upp,
+/obj/item/clothing/gloves/marine/pve_mopp/upp,
+/obj/item/clothing/gloves/marine/pve_mopp/upp,
+/obj/item/clothing/gloves/marine/pve_mopp/upp,
+/obj/item/clothing/under/marine/pve_mopp/upp,
+/obj/item/clothing/under/marine/pve_mopp/upp,
+/obj/item/clothing/under/marine/pve_mopp/upp,
+/obj/item/clothing/under/marine/pve_mopp/upp,
+/obj/item/clothing/shoes/marine/pve_mopp/upp,
+/obj/item/clothing/shoes/marine/pve_mopp/upp,
+/obj/item/clothing/shoes/marine/pve_mopp/upp,
+/obj/item/clothing/shoes/marine/pve_mopp/upp,
+/obj/item/clothing/mask/gas/pve_mopp/upp,
+/obj/item/clothing/mask/gas/pve_mopp/upp,
+/obj/item/clothing/mask/gas/pve_mopp/upp,
+/obj/item/clothing/mask/gas/pve_mopp/upp,
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/prep_hallway)
 "XW" = (
 /obj/item/tool/warning_cone{
 	pixel_x = 4;
@@ -15174,7 +15298,7 @@ Nz
 KD
 gZ
 Om
-IT
+ja
 gt
 hY
 gt
@@ -15920,9 +16044,9 @@ lP
 lI
 lx
 uF
-le
-kR
-kI
+XS
+Fp
+Fp
 kw
 km
 ka
@@ -16524,8 +16648,8 @@ ko
 mp
 uF
 mf
-kg
-kg
+Jy
+Xl
 jU
 lp
 lg
