@@ -231,6 +231,8 @@
 /obj/vehicle/multitile/tank/solo
 	interior_map = /datum/map_template/interior/tank_solo
 
+	one_man_army = TRUE
+
 /obj/vehicle/multitile/tank/solo/add_seated_verbs(mob/living/user, seat)
 	if(!user.client)
 		return

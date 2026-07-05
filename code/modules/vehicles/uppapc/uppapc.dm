@@ -182,6 +182,8 @@
 /obj/vehicle/multitile/apc/uppapc/solo
 	interior_map = /datum/map_template/interior/uppapc_solo
 
+	one_man_army = TRUE
+
 /obj/vehicle/multitile/apc/uppapc/solo/add_seated_verbs(mob/living/M, seat)
 	if(!M.client)
 		return
