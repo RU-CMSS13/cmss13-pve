@@ -273,6 +273,7 @@
 
 #define TRAIT_TOOL_CAN_OPENER_EFFECTIVE "t_tool_can_opener_effective"
 #define TRAIT_TOOL_CAN_OPENER_CRUDE "t_tool_can_opener_crude"
+#define TRAIT_TOOL_UTENSIL "t_tool_utensil"
 
 /// Can lockout blackmarket from ASRS console circuits.
 #define TRAIT_TOOL_TRADEBAND "t_tool_tradeband"
@@ -402,6 +403,7 @@ GLOBAL_LIST_INIT(traits_by_type, list(
 		"TRAIT_ITEM_RENAME_SPECIAL" = TRAIT_ITEM_RENAME_SPECIAL,
 		"TRAIT_TOOL_CAN_OPENER_EFFECTIVE" = TRAIT_TOOL_CAN_OPENER_EFFECTIVE,
 		"TRAIT_TOOL_CAN_OPENER_CRUDE" = TRAIT_TOOL_CAN_OPENER_CRUDE,
+		"TRAIT_TOOL_UTENSIL" = TRAIT_TOOL_UTENSIL,
 	),
 	/obj/item/clothing = list(
 		"TRAIT_CLOTHING_HOOD" = TRAIT_CLOTHING_HOOD
