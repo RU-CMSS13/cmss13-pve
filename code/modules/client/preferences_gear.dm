@@ -591,9 +591,21 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "jungle combat boots"
 	path = /obj/item/clothing/shoes/marine/civilian/jungle
 
+/datum/gear/clothing/urban_boots
+	display_name = "urban combat boots"
+	path = /obj/item/clothing/shoes/marine/civilian/urban
+
+/datum/gear/clothing/snow_boots
+	display_name = "snow combat boots"
+	path = /obj/item/clothing/shoes/marine/civilian/snow
+
 /datum/gear/clothing/brown_boots
 	display_name = "brown combat boots"
 	path = /obj/item/clothing/shoes/marine/civilian/brown
+
+/datum/gear/clothing/grey_boots
+	display_name = "grey combat boots"
+	path = /obj/item/clothing/shoes/marine/civilian/grey
 
 /datum/gear/clothing/brown_gloves
 	display_name = "brown combat gloves"
