@@ -334,7 +334,7 @@
 	var/obj/item/cell/super/power_cell
 
 	/// About 40 minutes active use charge (hypothetically)
-	var/power_use = 5
+	var/power_use = 10
 
 	/// The alpha of darkness we set to for the mob while the visor is on, not completely fullbright but see-able
 	var/lighting_alpha = 140
@@ -343,7 +343,7 @@
 	var/atom/movable/nvg_light/on_light
 
 	/// Whether or not the sight uses on_light and produces light
-	var/visor_glows = FALSE
+	var/visor_glows = TRUE
 
 /obj/item/device/helmet_visor/night_vision/Initialize(mapload, ...)
 	. = ..()
@@ -369,6 +369,7 @@
 		on_light = new(attached_helmet)
 		on_light.set_light_on(TRUE)
 	START_PROCESSING(SSobj, src)
+	RegisterSignal(user, COMSIG_MOB_CHANGE_VIEW, PROC_REF(change_view))
 
 /obj/item/device/helmet_visor/night_vision/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
 	user.remove_client_color_matrix("nvg_visor", 1 SECONDS)
