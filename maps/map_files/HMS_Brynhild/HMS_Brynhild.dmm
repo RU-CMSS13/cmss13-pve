@@ -2537,7 +2537,7 @@
 /turf/open/floor/almayer/aicore,
 /area/hms_brynhild/ai_interface)
 "fa" = (
-/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/rmc,
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
@@ -2740,7 +2740,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/cryo_cells)
 "fv" = (
-/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm{
+/obj/structure/machinery/suit_storage_unit/pressure_suit/rmc{
 	pixel_x = 5
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -2768,7 +2768,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/prep_hallway)
 "fy" = (
-/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/rmc,
 /turf/open/floor/prison,
 /area/hms_brynhild/EVA_prep)
 "fz" = (
@@ -2804,7 +2804,7 @@
 /turf/open/floor/prison,
 /area/hms_brynhild/hangar)
 "fC" = (
-/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm{
+/obj/structure/machinery/suit_storage_unit/pressure_suit/rmc{
 	pixel_x = 5
 	},
 /obj/structure/machinery/light/double/blue{
@@ -7124,7 +7124,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/lower_hangar)
 "or" = (
-/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm{
+/obj/structure/machinery/suit_storage_unit/pressure_suit/rmc{
 	pixel_x = 5
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -12558,7 +12558,7 @@
 /turf/closed/wall/almayer/aicore/white/hull,
 /area/hms_brynhild/supply)
 "AL" = (
-/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/rmc,
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
@@ -15326,7 +15326,7 @@
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/Docking)
 "Ic" = (
-/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm{
+/obj/structure/machinery/suit_storage_unit/pressure_suit/rmc{
 	pixel_x = 5
 	},
 /turf/open/floor/prison,
@@ -15568,7 +15568,7 @@
 /turf/open/floor/prison,
 /area/hms_brynhild/hangar)
 "IJ" = (
-/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/rmc,
 /turf/open/floor/prison,
 /area/hms_brynhild/hangar)
 "IL" = (
@@ -15698,7 +15698,7 @@
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/Docking)
 "Ji" = (
-/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm{
+/obj/structure/machinery/suit_storage_unit/pressure_suit/rmc{
 	pixel_x = 5
 	},
 /turf/open/floor/prison,
