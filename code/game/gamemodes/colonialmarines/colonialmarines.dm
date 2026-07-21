@@ -149,8 +149,8 @@
 	if(SSmapping.configs[GROUND_MAP].environment_traits[ZTRAIT_BASIC_RT])
 		flags_round_type |= MODE_BASIC_RT
 
-	addtimer(CALLBACK(src, PROC_REF(titan_online)), 40 SECONDS)
-	addtimer(CALLBACK(src, PROC_REF(map_announcement)), 90 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(titan_online)), 60 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(map_announcement)), 120 SECONDS)
 	//addtimer(CALLBACK(src, PROC_REF(start_lz_hazards)), LZ_HAZARD_START)
 
 	return ..()
