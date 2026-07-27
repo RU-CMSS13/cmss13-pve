@@ -72,7 +72,7 @@
 
 /obj/item/clothing/shoes/marine/upp
 	name = "\improper UPP combat boots"
-	desc = "A pair of standard issue black UPP Naval Infantry combat boots."
+	desc = "A pair of standard issue black UPP Armed Collective combat boots."
 	spawn_item_type = /obj/item/attachable/bayonet/upp
 
 /obj/item/clothing/shoes/marine/upp/black

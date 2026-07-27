@@ -763,6 +763,12 @@
 	icon_state = "upp_beret_naval"
 	item_state = "upp_beret_naval"
 
+/obj/item/clothing/head/cmcap/upp/beret/vdv
+	name = "\improper UL7 Airborne Forces beret"
+	desc = "A blue beret worn by the UPP's paratroopers. Exactly the same berets were worn by paratroopers hundreds of years ago, who proudly and honorably fulfilled their duty to their country. Wear it with pride."
+	icon_state = "upp_beret_vdv"
+	item_state = "upp_beret_vdv"
+
 /obj/item/clothing/head/cmcap/upp/beret/sof
 	name = "\improper UL5 Space Operations Force beret"
 	desc = "A finely crafted beret worn by members of the UPP Space Operations Forces. It signifies service in the void, from deep-space missions to planetary operations, and is a mark of discipline and camaraderie among its wearers."

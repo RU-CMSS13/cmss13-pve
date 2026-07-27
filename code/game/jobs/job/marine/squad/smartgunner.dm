@@ -98,6 +98,23 @@
 	if(option == CPL_VARIANT)
 		gear_preset = gear_preset_secondary
 
+/datum/job/marine/smartgunner/ai/upp/airborne
+	title = JOB_SQUAD_SMARTGUN_UPP_AIRBORNE
+	gear_preset = /datum/equipment_preset/uscm/sg/upp/airborne
+	gear_preset_secondary = /datum/equipment_preset/uscm/sg/upp/airborne/junior_sergeant
+	gear_preset_tertiary = /datum/equipment_preset/uscm/sg/upp/airborne/senior_private
+	gear_preset_quaternary = /datum/equipment_preset/uscm/sg/upp/airborne/private
+	job_options = list(PVT_VARIANT = "PVT", SR_PVT_VARIANT = "SrPVT", CPL_VARIANT = "CPL", JSGT_VARIANT = "JrSGT")
+
+/datum/job/marine/smartgunner/ai/upp/airborne/handle_job_options(option)
+	gear_preset = initial(gear_preset)
+	if(option == PVT_VARIANT)
+		gear_preset = gear_preset_quaternary
+	if(option == SR_PVT_VARIANT)
+		gear_preset = gear_preset_tertiary
+	if(option == JSGT_VARIANT)
+		gear_preset = gear_preset_secondary
+
 /datum/job/marine/smartgunner/ai/forecon
 	title = JOB_SQUAD_SMARTGUN_FORECON
 	total_positions = 1
@@ -121,6 +138,11 @@
 	name = JOB_SQUAD_SMARTGUN_UPP
 	job = JOB_SQUAD_SMARTGUN_UPP
 	squad = SQUAD_UPP
+
+/obj/effect/landmark/start/marine/smartgunner/upp/airborne
+	name = JOB_SQUAD_SMARTGUN_UPP_AIRBORNE
+	squad = SQUAD_UPP_AIRBORNE
+	job = /datum/job/marine/smartgunner/ai/upp/airborne
 
 /datum/job/marine/smartgunner/ai/upp/forecon
 	title = JOB_SQUAD_SMARTGUN_FORECON_UPP

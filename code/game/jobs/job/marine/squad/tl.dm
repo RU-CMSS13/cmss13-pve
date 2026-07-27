@@ -64,6 +64,17 @@
 	if(option == JSGT_VARIANT)
 		gear_preset = gear_preset_secondary
 
+/datum/job/marine/tl/ai/upp/airborne
+	title = JOB_SQUAD_TEAM_LEADER_UPP_AIRBORNE
+	gear_preset = /datum/equipment_preset/uscm/tl/upp/airborne
+	gear_preset_secondary = /datum/equipment_preset/uscm/tl/upp/airborne/junior_sergeant
+	job_options = list(JSGT_VARIANT = "JrSGT", SGT_VARIANT = "SGT")
+
+/datum/job/marine/tl/ai/upp/airborne/handle_job_options(option)
+	gear_preset = initial(gear_preset)
+	if(option == JSGT_VARIANT)
+		gear_preset = gear_preset_secondary
+
 /datum/job/marine/tl/ai/forecon
 	total_positions = 1
 	spawn_positions = 1
@@ -81,6 +92,11 @@
 	name = JOB_SQUAD_TEAM_LEADER_UPP
 	squad = SQUAD_UPP
 	job = /datum/job/marine/tl/ai/upp
+
+/obj/effect/landmark/start/marine/tl/upp/airborne
+	name = JOB_SQUAD_TEAM_LEADER_UPP_AIRBORNE
+	squad = SQUAD_UPP_AIRBORNE
+	job = /datum/job/marine/tl/ai/upp/airborne
 
 /datum/job/marine/tl/ai/upp/forecon
 	title = JOB_SQUAD_TEAM_LEADER_FORECON_UPP
