@@ -286,7 +286,7 @@
 	direct_draw = FALSE
 
 /obj/item/weapon/gun/launcher/grenade/m92/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 14, "rail_y" = 22, "under_x" = 19, "under_y" = 14, "stock_x" = 19, "stock_y" = 14,  "sling_x" = 12, "sling_y" = 22)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 14, "rail_y" = 22, "under_x" = 19, "under_y" = 14, "stock_x" = 19, "stock_y" = 14)
 
 /obj/item/weapon/gun/launcher/grenade/m92/set_gun_config_values()
 	..()
@@ -323,7 +323,7 @@
 	set_fire_delay(FIRE_DELAY_TIER_1)
 
 /obj/item/weapon/gun/launcher/grenade/m92/upp/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 14, "rail_y" = 22, "under_x" = 24, "under_y" = 14, "stock_x" = 19, "stock_y" = 14,  "sling_x" = 12, "sling_y" = 22)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 14, "rail_y" = 22, "under_x" = 24, "under_y" = 14, "stock_x" = 19, "stock_y" = 14)
 
 /obj/item/weapon/gun/launcher/grenade/m92/upp/stored
 	preload = null
