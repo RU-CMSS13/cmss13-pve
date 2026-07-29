@@ -52,7 +52,7 @@
 	soundscape_playlist = SCAPE_PL_ENG
 
 
-/area/turing/command
+/area/turing/base/command
 	name = "\improper Command Center"
 	icon_state = "bridge"
 	minimap_color = MINIMAP_AREA_COMMAND
@@ -65,7 +65,7 @@
 	name = "Garage Workshop"
 	icon_state = "storage"
 
-/area/turing/command/checkpoint
+/area/turing/base/command/checkpoint
 	name = "\improper Checkpoint Building"
 	icon_state = "security"
 
