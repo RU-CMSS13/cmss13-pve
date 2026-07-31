@@ -3,9 +3,8 @@
 
 /datum/human_ai_squad_preset/iasf/rifleteam
 	name = "TWE, IASF Patrol Team"
-	desc = "TWE IASF patrol group armed with F903 rifles."
+	desc = "TWE IASF patrol group armed with F903 or L23 rifles."
 	ai_to_spawn = list(
-		/datum/equipment_preset/iasf/leader/lesser = 1,
 		/datum/equipment_preset/iasf/standard = 2,
 	)
 
@@ -19,35 +18,33 @@
 
 /datum/human_ai_squad_preset/iasf/gunteam_marksman
 	name = "TWE, IASF Fire Support Team, Marksman"
-	desc = "TWE IASF fireteam armed with a F903 and an F903A1 marksman rifles."
+	desc = "TWE IASF fireteam armed with a F903 and L23 rifles and an F903A1 marksman rifles."
 	ai_to_spawn = list(
 		/datum/equipment_preset/iasf/sniper/light = 1,
 		/datum/equipment_preset/iasf/standard = 1,
 	)
 
-/datum/human_ai_squad_preset/iasf/squad
-	name = "TWE, IASF Infantry Squad, MG"
-	desc = "TWE IASF squad armed with F903 rifles and an L58A3 smartgun."
+/datum/human_ai_squad_preset/iasf/squad_rifle
+	name = "TWE, IASF Infantry Squad, Riflemen"
+	desc = "TWE IASF squad armed with F903 and L23 rifles."
 	ai_to_spawn = list(
 		/datum/equipment_preset/iasf/leader = 1,
-		/datum/equipment_preset/iasf/leader/lesser = 1,
 		/datum/equipment_preset/iasf/standard = 2,
-		/datum/equipment_preset/iasf/machinegun = 1,
+		/datum/equipment_preset/iasf/leader/lesser = 1,
 	)
 
 /datum/human_ai_squad_preset/iasf/squad_marksman
 	name = "TWE, IASF Infantry Squad, Marksman"
-	desc = "TWE IASF squad armed with F903 rifles and an F903A1 marksman rifle."
+	desc = "TWE IASF squad armed with F903 and L23 rifles and an F903A1 marksman rifle."
 	ai_to_spawn = list(
 		/datum/equipment_preset/iasf/leader = 1,
-		/datum/equipment_preset/iasf/leader/lesser = 1,
 		/datum/equipment_preset/iasf/standard = 2,
 		/datum/equipment_preset/iasf/sniper/light = 1,
 	)
 
 /datum/human_ai_squad_preset/iasf/support
 	name = "TWE, IASF Technician Support Team"
-	desc = "TWE IASF specialist team armed with P90 SMG and F903 rifle, carrying ample medical & engineering supplies."
+	desc = "TWE IASF specialist team armed with P90 PDW, carrying ample medical & engineering supplies."
 	ai_to_spawn = list(
 		/datum/equipment_preset/iasf/medic = 1,
 		/datum/equipment_preset/iasf/engineer = 1,
