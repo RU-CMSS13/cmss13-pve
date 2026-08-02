@@ -42,12 +42,11 @@
 	var/beam_delay = 20
 
 /obj/item/hardpoint/primary/cannon/plasmacannon/handle_fire(atom/target, mob/living/user, /obj/vehicle/multitile/owner, params)
-
-    var/datum/beam/plasma_beam
-    if(!ammo.current_rounds)
-        click_empty(owner)
-        return
-    plasma_beam = target.beam(owner, "light_beam", 'icons/effects/beam.dmi', time = 0.7 SECONDS, maxdistance = 30, beam_type = plasma_beam_type, always_turn = TRUE)
-    animate(plasma_beam.visuals, alpha = 255, time = 0.7 SECONDS, color = COLOR_PURPLE, luminosity = 3 , easing = SINE_EASING|EASE_OUT)
-    . = ..()
+	var/datum/beam/plasma_beam
+	if(!ammo.current_rounds)
+		click_empty(owner)
+		return
+	plasma_beam = target.beam(owner, "light_beam", 'icons/effects/beam.dmi', time = 0.7 SECONDS, maxdistance = 30, beam_type = plasma_beam_type, always_turn = TRUE)
+	animate(plasma_beam.visuals, alpha = 255, time = 0.7 SECONDS, color = COLOR_PURPLE, luminosity = 3 , easing = SINE_EASING|EASE_OUT)
+	. = ..()
 
