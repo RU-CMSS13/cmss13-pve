@@ -46,6 +46,10 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	/// The looping ringing sound when the phone is called
 	var/datum/looping_sound/phone_ringing/ringing_loop
 
+	var/datum/looping_sound/telephone/busy/busy_loop
+	var/datum/looping_sound/telephone/hangup/hangup_loop
+	var/datum/looping_sound/telephone/ring/outring_loop
+
 	/// Whether the phone is able to be called or not
 	var/enabled = TRUE
 
@@ -74,6 +78,9 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	networks_receive = null
 	networks_transmit = null
 	QDEL_NULL(ringing_loop)
+	QDEL_NULL(busy_loop)
+	QDEL_NULL(hangup_loop)
+	QDEL_NULL(outring_loop)
 
 	GLOB.phones -= src
 	SStgui.close_uis(src)
@@ -112,6 +119,9 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	RegisterSignal(src.holder, COMSIG_MOVABLE_FORCEMOVED, PROC_REF(holder_forcemoved))
 
 	ringing_loop = new(src.holder)
+	busy_loop = new(src.holder)
+	hangup_loop = new(src.holder)
+	outring_loop = new(src.holder)
 
 	return TRUE
 
@@ -160,6 +170,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 
 	user.put_in_active_hand(phone_handset)
 	SEND_SIGNAL(holder, COMSIG_ATOM_PHONE_PICKED_UP)
+	outring_loop.stop()
 	ringing_loop.stop()
 
 /// Handles what we want to do when a phone we are calling picks up
@@ -174,11 +185,14 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 		deltimer(timeout_timer_id)
 		timeout_timer_id = null
 
+	outring_loop.stop()
+
 	if(!ismob(phone_handset.loc))
 		return
 
 	var/mob/phone_user = phone_handset.loc
 	to_chat(phone_user, SPAN_PURPLE("[icon2html(calling_phone.holder, phone_user)] [calling_phone.phone_id] has picked up."))
+	playsound(phone_handset.loc, 'sound/machines/telephone/remote_pickup.ogg', 20)
 
 /// Handles setting a specific phone ID and enabling the phone when the holder is picked up
 /datum/component/phone/proc/holder_picked_up(obj/item/picked_up_holder, mob/user)
@@ -313,6 +327,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	to_chat(user, SPAN_PURPLE("[icon2html(holder, user)] Dialing [calling_phone_id].."))
 	timeout_timer_id = addtimer(CALLBACK(src, PROC_REF(reset_call), TRUE), timeout_duration, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_STOPPABLE)
 	playsound(get_turf(user), "rtb_handset")
+	outring_loop.start()
 
 	user.put_in_active_hand(phone_handset)
 	SEND_SIGNAL(holder, COMSIG_ATOM_PHONE_PICKED_UP)
@@ -349,10 +364,14 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	var/mob/handset_user = phone_handset.loc
 	if(recursed)
 		to_chat(handset_user, SPAN_PURPLE("[icon2html(holder, handset_user)] [calling_phone.phone_id] has hung up on you."))
+		hangup_loop.start()
 	else if(timeout)
 		to_chat(handset_user, SPAN_PURPLE("[icon2html(holder, handset_user)] Your call to [calling_phone.phone_id] has reached voicemail, you immediately disconnect the line."))
+		busy_loop.start()
+		outring_loop.stop()
 	else
 		to_chat(handset_user, SPAN_PURPLE("[icon2html(holder, handset_user)] You have hung up on [calling_phone.phone_id]."))
+		outring_loop.stop()
 
 /// Recalls our handset back to holder and calls reset_call()
 /datum/component/phone/proc/recall_handset()
@@ -360,9 +379,12 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 		var/mob/M = phone_handset.loc
 		M.drop_held_item(phone_handset)
 		playsound(get_turf(M), "rtb_handset", 100, FALSE, 7)
+		hangup_loop.stop()
 
 	phone_handset.moveToNullspace()
 	reset_call()
+	busy_loop.stop()
+	outring_loop.stop()
 
 	SEND_SIGNAL(holder, COMSIG_ATOM_PHONE_HUNG_UP)
 
@@ -376,7 +398,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 
 	if(direct_talking)
 		handle_hear(message, message_language, speaker, direct_talking)
-
+		playsound(phone_handset, "talk_phone", 5)
 		log_say("TELEPHONE: [key_name(speaker)] on Phone '[phone_id]' to '[calling_phone.phone_id]' said '[message]'")
 
 		var/comm_paygrade = speaker.get_paygrade()

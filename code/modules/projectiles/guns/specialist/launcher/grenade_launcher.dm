@@ -325,18 +325,60 @@
 /obj/item/weapon/gun/launcher/grenade/m92/upp/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 14, "rail_y" = 22, "under_x" = 24, "under_y" = 14, "stock_x" = 19, "stock_y" = 14)
 
-/obj/item/weapon/gun/launcher/grenade/m92/upp/handle_starting_attachment()
-	..()
-	var/obj/item/attachable/sling/scope = new(src)
-	scope.hidden = FALSE
-	scope.Attach(src)
-	update_attachable(scope.slot)
-	var/obj/item/attachable/verticalgrip/upp/grip = new(src)
-	grip.hidden = FALSE
-	grip.Attach(src)
-	update_attachable(grip.slot)
-
 /obj/item/weapon/gun/launcher/grenade/m92/upp/stored
+	preload = null
+	flags_gun_features = /obj/item/weapon/gun/launcher/grenade/m92/upp::flags_gun_features | GUN_TRIGGER_SAFETY
+	starting_attachment_types = list(/obj/item/attachable/verticalgrip/upp)
+
+//UPP PUMP-ACTION GL / FORECON EXCLUSIVE
+
+/obj/item/weapon/gun/launcher/grenade/m92/upp/forecon
+	name = "\improper OG-74 Grenade Launcher"
+	desc = "A lightweight, pump-action, magazine-fed grenade launcher, with the barrel below the magazine. First introduced as police enforcement weapon, it found it's way into hands of Armed Collective. Mostly seen used by the recon and NBC troops."
+	icon_state = "gm94"
+	item_state = "gm94"
+	internal_slots = 4
+	is_lobbing = TRUE
+	actions_types = list() // cuz pump action
+	flags_equip_slot = SLOT_SUIT_STORE|SLOT_BACK
+	aim_slowdown = SLOWDOWN_ADS_RIFLE
+	wield_delay = WIELD_DELAY_NORMAL
+	var/cocked = TRUE
+
+/obj/item/weapon/gun/launcher/grenade/m92/upp/forecon/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_1 * 1.5)
+
+/obj/item/weapon/gun/launcher/grenade/m92/upp/forecon/able_to_fire(mob/living/user)
+	. = ..()
+
+	if(!.)
+		return FALSE
+
+	if(!cocked)
+		to_chat(user, SPAN_WARNING("\The [src] must be cocked! <b>(use unique-action)</b>"))
+		return FALSE
+
+	return TRUE
+
+/obj/item/weapon/gun/launcher/grenade/m92/upp/forecon/fire_grenade(atom/target, mob/user)
+	. = ..()
+
+	cocked = FALSE
+
+/obj/item/weapon/gun/launcher/grenade/m92/upp/forecon/unique_action(mob/user)
+	. = ..()
+
+	if(cocked)
+		to_chat(user, SPAN_WARNING("[src] is already cocked."))
+		return
+
+	cocked = TRUE
+	to_chat(user, SPAN_NOTICE("You close \the [src]'s breech, cocking it!"))
+	playsound(src, "shotgunpump", 25, 1)
+
+
+/obj/item/weapon/gun/launcher/grenade/m92/upp/forecon/stored
 	preload = null
 	flags_gun_features = /obj/item/weapon/gun/launcher/grenade/m92/upp::flags_gun_features | GUN_TRIGGER_SAFETY
 

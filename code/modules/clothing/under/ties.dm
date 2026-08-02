@@ -439,6 +439,11 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the 173rd Airborne Reconnaissance Platoon."
 	icon_state = "vdvpatch"
 
+/obj/item/clothing/accessory/patch/upp/recon
+	name = "UPP 'Rozbójnik' Group patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the 'Rozbójnik' Group who specialise in reconnaissance operations."
+	icon_state = "uppreconpatch"
+
 /obj/item/clothing/accessory/patch/upp/naval
 	name = "UPP Naval Infantry patch"
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the UPP Naval Infantry."
@@ -572,6 +577,7 @@
 	desc = "A fire-resistant shoulder patch, depicting the logo of Marine Space Force III, Herculis, deployed throughout the Anglo-Japanese arm from the outer veil to the ICSC Network, this patch is often worn by any general assigned to the MSF Herculis, US Space Command and UA Allied Command Generals often have their own patches."
 	icon_state = "msfpatch"
 
+// Hyperdyne patch
 /obj/item/clothing/accessory/patch/hyperdyne_patch
 	name = "Hyperdyne Corporation patch"
 	desc = "A sleek corporate patch bearing the logo of the Hyperdyne Corporation—one of the most powerful conglomerates. Known for synthetic production, AI research, and deep-space logistics. Wearing this patch implies loyalty to profit over people."
@@ -2109,6 +2115,13 @@
 		/obj/item/ammo_magazine/plasma,
 		/obj/item/ammo_magazine/flamer_tank, // RU-CM PVE edit
 	)
+
+/obj/item/clothing/accessory/storage/webbing/m3/m40/upp
+	name = "\improper Type 82 Pattern Grenade Webbing"
+	desc = "A set of UPP webbing with small pouches that can carry up to 10 grenades, hand or impact."
+	icon_state = "upp_webbing_grenade"
+	flags_atom = NO_SNOW_TYPE
+	slot = ACCESSORY_SLOT_M3UTILITY
 
 //Partial Pre-load For Props
 //===

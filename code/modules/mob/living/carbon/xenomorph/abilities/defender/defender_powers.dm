@@ -112,9 +112,11 @@
 		to_chat(src, SPAN_XENOWARNING("We cannot use tail swipe while fortified."))
 		return
 
+/* why cant lol
 	if(xeno.crest_defense)
 		to_chat(src, SPAN_XENOWARNING("We cannot use tail swipe with our crest lowered."))
 		return
+*/
 
 	xeno.visible_message(SPAN_XENOWARNING("[xeno] sweeps its tail in a wide circle!"), \
 	SPAN_XENOWARNING("We sweep our tail in a wide circle!"))

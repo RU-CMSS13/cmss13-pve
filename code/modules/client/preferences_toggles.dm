@@ -279,6 +279,7 @@
 		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/toggle_clickdrag_override'>Toggle Combat Click-Drag Override</a><br>",
 		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/toggle_pb_override'>Toggle Combat Point-Blank Override</a><br>",
 		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/toggle_dualwield'>Toggle Alternate-Fire Dual Wielding</a><br>",
+		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/toggle_auto_holotag'>Toggle Auto Holotags</a><br>",
 		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/toggle_middle_mouse_swap_hands'>Toggle Middle Mouse Swapping Hands</a><br>",
 		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/toggle_vend_item_to_hand'>Toggle Vendors Vending to Hands</a><br>",
 		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/switch_item_animations'>Toggle Item Animations</a><br>",
@@ -398,6 +399,24 @@
 			to_chat(src, SPAN_BOLDNOTICE("Dual-wielding now has no effect on how you fire."))
 
 	prefs.save_preferences()
+
+// Toggles whether or not using a body scanner/handheld scanner applies a triage tag to patients automatically
+
+/client/proc/toggle_auto_holotag()
+	switch (prefs.auto_holotag) {
+		if(NEVER_TAG_PATIENTS)
+			prefs.auto_holotag = ALWAYS_TAG_PATIENTS
+			to_chat(src, SPAN_BOLDNOTICE("Body scanners and handheld scanners will now automatically apply holocards."))
+		if(ALWAYS_TAG_PATIENTS)
+			prefs.auto_holotag = BODYSCAN_TAG_PATIENTS
+			to_chat(src, SPAN_BOLDNOTICE("Only body scanners will automatically apply triage holocards."))
+		if(BODYSCAN_TAG_PATIENTS)
+			prefs.auto_holotag = NEVER_TAG_PATIENTS
+			to_chat(src, SPAN_BOLDNOTICE("Triage holocards will never be automatically applied by health scanning devices."))
+		else
+			// Redundancy case, if defines ever get changed
+			prefs.auto_holotag = ALWAYS_TAG_PATIENTS
+	}
 
 /client/proc/toggle_middle_mouse_swap_hands() //Toggle whether middle click swaps your hands
 	prefs.toggle_prefs ^= TOGGLE_MIDDLE_MOUSE_SWAP_HANDS
@@ -664,7 +683,25 @@
 	set category = "Preferences.Ghost"
 	set desc = "Use to change which HUDs you want to have by default when you become an observer."
 
-	var/hud_choice = tgui_input_list(usr, "Choose a HUD to toggle", "Toggle HUD prefs", list("Medical HUD", "Security HUD", "Squad HUD", "Xeno Status HUD", "Faction US Army HUD", "Faction USASF HUD", "Faction CMB HUD", "Faction UPP HUD", "Faction Wey-Yu HUD", "Faction TWE HUD", "Faction IASF HUD", "Faction CLF HUD"))
+	var/list/hud_options = list(
+		"Medical HUD" = MOB_HUD_MEDICAL_OBSERVER,
+		"Security HUD" = MOB_HUD_SECURITY_ADVANCED,
+		"Squad HUD" = MOB_HUD_FACTION_OBSERVER,
+		"Xeno Status HUD" = MOB_HUD_XENO_STATUS,
+		"Faction UPP HUD" = MOB_HUD_FACTION_UPP,
+		"Faction Wey-Yu HUD" = MOB_HUD_FACTION_WY,
+		"Faction TWE HUD" = MOB_HUD_FACTION_TWE,
+		"Faction CLF HUD" = MOB_HUD_FACTION_CLF,
+		"Faction Hyperdyne HUD" = MOB_HUD_FACTION_HC,
+		"Faction CMB HUD"= MOB_HUD_FACTION_MARSHAL,
+		//PVE
+		"Faction US Army HUD" = MOB_HUD_FACTION_ARMY,
+		"Faction USASF HUD" = MOB_HUD_FACTION_NAVY,
+		"Faction IASF HUD" = MOB_HUD_FACTION_IASF,
+	)
+
+	var/hud_choice = tgui_input_list(usr, "Choose a HUD to toggle", "Toggle HUD prefs", hud_options)
+
 	if(!hud_choice)
 		return
 	prefs.observer_huds[hud_choice] = !prefs.observer_huds[hud_choice]
@@ -675,40 +712,13 @@
 	if(!isobserver(usr))
 		return
 	var/mob/dead/observer/observer_user = usr
-	var/datum/mob_hud/H
-	switch(hud_choice)
-		if("Medical HUD")
-			H = GLOB.huds[MOB_HUD_MEDICAL_OBSERVER]
-		if("Security HUD")
-			H = GLOB.huds[MOB_HUD_SECURITY_ADVANCED]
-		if("Squad HUD")
-			H = GLOB.huds[MOB_HUD_FACTION_OBSERVER]
-		if("Xeno Status HUD")
-			H = GLOB.huds[MOB_HUD_XENO_STATUS]
-		if("Faction US Army HUD")
-			H = GLOB.huds[MOB_HUD_FACTION_ARMY]
-		if("Faction USASF HUD")
-			H = GLOB.huds[MOB_HUD_FACTION_NAVY]
-		if("Faction CMB HUD")
-			H = GLOB.huds[MOB_HUD_FACTION_MARSHAL]
-		if("Faction UPP HUD")
-			H = GLOB.huds[MOB_HUD_FACTION_UPP]
-		if("Faction Wey-Yu HUD")
-			H = GLOB.huds[MOB_HUD_FACTION_WY]
-		if("Faction TWE HUD")
-			H = GLOB.huds[MOB_HUD_FACTION_TWE]
-		if("Faction IASF HUD")
-			H = GLOB.huds[MOB_HUD_FACTION_IASF]
-		if("Faction CLF HUD")
-			H = GLOB.huds[MOB_HUD_FACTION_CLF]
-		if("Faction UACG HUD")
-			H = GLOB.huds[MOB_HUD_FACTION_UACG]
+	var/datum/mob_hud/hud = GLOB.huds[hud_options[hud_choice]]
 
 	observer_user.HUD_toggled[hud_choice] = prefs.observer_huds[hud_choice]
 	if(observer_user.HUD_toggled[hud_choice])
-		H.add_hud_to(observer_user, observer_user)
+		hud.add_hud_to(observer_user, observer_user)
 	else
-		H.remove_hud_from(observer_user, observer_user)
+		hud.remove_hud_from(observer_user, observer_user)
 
 /client/proc/toggle_ghost_health_scan()
 	set name = "Toggle Health Scan"

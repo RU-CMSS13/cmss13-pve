@@ -75,6 +75,13 @@
 	desc = "A pair of standard issue black UPP Naval Infantry combat boots."
 	spawn_item_type = /obj/item/attachable/bayonet/upp
 
+/obj/item/clothing/shoes/marine/upp/black
+	icon_state = "marine"
+	item_state = "marine"
+
+/obj/item/clothing/shoes/marine/upp/black/knife
+	spawn_item_type = /obj/item/attachable/bayonet/upp
+
 /obj/item/clothing/shoes/marine/upp/guard
 	desc = "A pair of standard issue brown UPP Territorial Guard combat boots."
 	icon_state = "marine_brown"

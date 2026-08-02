@@ -114,6 +114,23 @@
 	icon_state = "engineer_worker_alt_uniform"
 	worn_state = "engineer_worker_alt_uniform"
 
+// UPP firefighter
+
+/obj/item/clothing/suit/storage/marine/light/vest/fire_light/upp
+	name = "T-20 fire response coat"
+	desc = "A rugged, no-frills fire-resistant overcoat issued to UPP industrial and emergency crews. Based on the PyroTex LT design but using cheaper, domestically produced materials, it offers basic protection against heat and debris at the cost of weight and comfort."
+	icon = 'icons/obj/items/clothing/suits/suits_by_faction/UPP.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/UPP.dmi',
+	)
+	icon_state = "upp_firefighter"
+	item_state = "upp_firefighter"
+	uniform_restricted = FALSE
+
+/obj/item/clothing/suit/storage/marine/light/vest/fire_light/upp/alt
+	icon_state = "upp_firefighter_alt"
+	item_state = "upp_firefighter_alt"
+
 //  Kelland Mining
 
 /obj/item/clothing/under/hybrisa/kelland_mining

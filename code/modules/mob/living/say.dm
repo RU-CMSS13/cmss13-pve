@@ -5,6 +5,8 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 
 	":+" = RADIO_CHANNEL_SPECIAL, ".+" = RADIO_CHANNEL_SPECIAL, "#+" = RADIO_CHANNEL_SPECIAL, //activate radio-specific special functions
 
+	":x" = RADIO_CHANNEL_HYPERDYNE, ".x" = RADIO_CHANNEL_HYPERDYNE, "#x" = RADIO_CHANNEL_HYPERDYNE,
+
 	":a" = SQUAD_MARINE_1, ".a" = SQUAD_MARINE_1, "#a" = RADIO_CHANNEL_CLF_MED,
 	":b" = SQUAD_MARINE_2, ".b" = SQUAD_MARINE_2, "#b" = RADIO_CHANNEL_CLF_ENGI,
 	":c" = SQUAD_MARINE_3, ".c" = SQUAD_MARINE_3, "#c" = RADIO_CHANNEL_CIA,
@@ -34,7 +36,8 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	":1" = RADIO_CHANNEL_USASF, ".1" = RADIO_CHANNEL_USASF, "#1" = RADIO_CHANNEL_USASF,
 	":2" = RADIO_CHANNEL_REBEL_UA, ".2" = RADIO_CHANNEL_REBEL_UA, "#2" = RADIO_CHANNEL_REBEL_UA,
 	":3" = RADIO_CHANNEL_REBEL_TWE, ".3" = RADIO_CHANNEL_REBEL_TWE, "#3" = RADIO_CHANNEL_REBEL_TWE,
-	//4-9 available, CLF not in use, channels available for overwrite.
+	":4" = RADIO_CHANNEL_UPP_RCN, ".4" = RADIO_CHANNEL_UPP_RCN, "#4" = RADIO_CHANNEL_UPP_RCN,
+	//5-9 available, CLF not in use, channels available for overwrite.
 ))
 
 /proc/channel_to_prefix(channel)
