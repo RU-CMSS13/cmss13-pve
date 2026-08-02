@@ -39,7 +39,7 @@
 		/obj/item/hardpoint/locomotion/treads,
 		/obj/item/hardpoint/locomotion/treads/robust,
 		/obj/item/hardpoint/secondary/m56cupola/twe_tank,
-		/obj/item/hardpoint/support/smoke_launcher/twe_tank
+		/obj/item/hardpoint/support/smoke_launcher/twe_tank,
 	)
 
 
@@ -234,7 +234,7 @@
 
 	interior_map = /datum/map_template/interior/twe_apc/command
 
-	passengers_slots = 3
+	passengers_slots = 4
 	revivable_dead_slots = 1
 	xenos_slots = 1
 

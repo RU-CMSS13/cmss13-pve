@@ -157,6 +157,8 @@
 	name = "ZSL-68"
 	interior_id = "uppapc"
 
+// TWE Tank
+
 /datum/map_template/interior/twe_tank
 	name = "FV150 Cavalry Tank"
 	interior_id = "twe_tank"
