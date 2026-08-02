@@ -339,7 +339,7 @@
 
 	accepted_hardpoints = list(
 		// primaries
-        /obj/item/hardpoint/primary/cannon/plasmacannon,
+		/obj/item/hardpoint/primary/cannon/plasmacannon,
 		/obj/item/hardpoint/primary/cannon/ridgeway,
 
 		// secondaries
