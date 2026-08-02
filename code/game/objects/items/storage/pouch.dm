@@ -1010,6 +1010,9 @@
 	new /obj/item/reagent_container/hypospray/autoinjector/tramadol(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/emergency(src)
 
+/obj/item/storage/pouch/autoinjector/wy
+	icon_state = "wy_medicpack"
+
 /obj/item/storage/pouch/autoinjector/full/wy
 	icon_state = "wy_medicpack"
 
