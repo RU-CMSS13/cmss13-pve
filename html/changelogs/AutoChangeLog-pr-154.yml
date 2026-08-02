@@ -1,0 +1,6 @@
+author: "Vany3045"
+delete-after: True
+changes:
+  - balance: "B18-akin armor sets now have lower bullet armor stats."
+  - balance: "UPP Armored Infantry firearms skill lowered from 2 to standard 1."
+  - balance: "UPP Armored Infantry Type-71S and Type-97 now has magnetic harness, to prevent excessive looting by players."
