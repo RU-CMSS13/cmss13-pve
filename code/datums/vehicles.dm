@@ -30,6 +30,10 @@
 	name = "Movie APC"
 	interior_id = "apc_movie"
 
+/datum/map_template/interior/apc_wolfpack
+	name = "Wolfpack APC"
+	interior_id = "apc_wolfpack"
+
 /datum/map_template/interior/apc_aa
 	name = "Anti-Air APC"
 	interior_id = "apc_aa"
@@ -70,6 +74,10 @@
 	name = "UPP Tank (Solo)"
 	interior_id = "upptank_solo"
 
+/datum/map_template/interior/ridgeway
+	name = "Ridgeway Tank"
+	interior_id = "ridgeway"
+
 /datum/map_template/interior/aev
 	name = "AEV"
 	interior_id = "aev"
@@ -81,6 +89,18 @@
 /datum/map_template/interior/clf_van
 	name = "CLF Technical"
 	interior_id = "clf_van"
+
+/datum/map_template/interior/humvee
+	name = "JTMV-HWC"
+	interior_id = "humvee"
+
+/datum/map_template/interior/humvee/humvee_medical
+	name = "JTMV-Ambulance"
+	interior_id = "humvee_medical"
+
+/datum/map_template/interior/humvee/humvee_transport
+	name = "JTMV-Utility"
+	interior_id = "humvee_transport"
 
 /datum/map_template/interior/uppvan
 	name = "UPP Van"
@@ -153,10 +173,16 @@
 	name = "JTMV-HWC"
 	interior_id = "humvee"
 
-/datum/map_template/interior/humvee/humvee_medical
-	name = "JTMV-Ambulance"
-	interior_id = "humvee_medical"
+// TWE Tank
 
-/datum/map_template/interior/humvee/humvee_transport
-	name = "JTMV-Utility"
-	interior_id = "humvee_transport"
+/datum/map_template/interior/twe_tank
+	name = "FV150 Cavalry Tank"
+	interior_id = "twe_tank"
+
+/datum/map_template/interior/twe_apc
+	name = "Type 200/FCV Light APC"
+	interior_id = "twe_apc"
+
+/datum/map_template/interior/twe_apc/command
+	name = "Type 200/FCV-C Command Light APC"
+	interior_id = "twe_command_apc"
