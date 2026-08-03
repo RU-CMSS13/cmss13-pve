@@ -895,6 +895,10 @@
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/smg/m39 (src)
 
+/obj/item/storage/belt/marine/standard/m39/freelancer/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/smg/m39/pve(src)
+
 /obj/item/storage/belt/marine/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/ammo_magazine/shotgun))
 		var/obj/item/ammo_magazine/shotgun/M = W
@@ -1079,6 +1083,10 @@
 	for(var/i in 1 to storage_slots)
 		new /obj/item/ammo_magazine/sniper/svd/pve(src)
 
+/obj/item/storage/belt/marine/upp/spp/fill_preset_inventory() // SPP
+	for(var/i in 1 to storage_slots)
+		new /obj/item/ammo_magazine/rifle/spp(src)
+
 /obj/item/storage/belt/marine/upp/black
 	icon_state = "upp_black_belt"
 	item_state = "upp_black_belt"
@@ -1195,6 +1203,10 @@
 	icon_state = "wy_shotgunbelt"
 	item_state = "wy_shotgunbelt"
 	flags_atom = FPRINT
+
+/obj/item/storage/belt/shotgun/wy/freelancer/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/handful/shotgun/flechette(src)
 
 /obj/item/storage/belt/shotgun/upp
 	name = "\improper Type 42 pattern shotgun shell loading rig"

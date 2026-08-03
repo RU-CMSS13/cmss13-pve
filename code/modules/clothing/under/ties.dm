@@ -1251,6 +1251,15 @@
 	icon_state = "holster_hip"
 	item_state = "holster_hip"
 
+/obj/item/clothing/accessory/storage/holster/waist/freelancer
+	hold = /obj/item/storage/internal/accessory/holster/freelancer
+
+/obj/item/storage/internal/accessory/holster/freelancer/fill_preset_inventory()
+	new /obj/item/weapon/gun/pistol/highpower/automag/tactical(src)
+	new /obj/item/ammo_magazine/pistol/highpower/automag(src)
+	new /obj/item/ammo_magazine/pistol/highpower/automag(src)
+	new /obj/item/ammo_magazine/pistol/highpower/automag(src)
+
 //Knife sheath, for the really big kinds of knives you get in the loadout
 //Butchered holster code
 
@@ -1887,6 +1896,16 @@
 	new /obj/item/tool/crowbar/tactical(src)
 	new /obj/item/tool/shovel/etool/folded(src)
 	new /obj/item/device/binoculars/range/designator(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/small/freelancer
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/freelancer
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/freelancer/fill_preset_inventory()
+	new /obj/item/storage/box/mre/fsr(src)
+	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/clothing/mask/gas/pmc(src)
+	new /obj/item/device/motiondetector/m717/hacked/freelancer(src)
 
 //===
 
