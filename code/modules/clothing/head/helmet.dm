@@ -2387,13 +2387,10 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/FREELANCER.dmi'
 	)
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
-	armor_melee = CLOTHING_ARMOR_VERYHIGH
-	armor_bullet = CLOTHING_ARMOR_VERYHIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
 	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
-	armor_bio = CLOTHING_ARMOR_HIGHPLUS
-	armor_rad = CLOTHING_ARMOR_MEDIUM
-	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
+	armor_internaldamage = CLOTHING_ARMOR_HIGH
 	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
 	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
 	flags_marine_helmet = HELMET_DAMAGE_OVERLAY
@@ -2408,13 +2405,9 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	item_icons = list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/FREELANCER.dmi'
 	)
-	armor_melee = CLOTHING_ARMOR_ULTRAHIGH
-	armor_bullet = CLOTHING_ARMOR_ULTRAHIGHPLUS
-	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bomb = CLOTHING_ARMOR_HIGHPLUS
-	armor_bio = CLOTHING_ARMOR_HIGHPLUS
-	armor_rad = CLOTHING_ARMOR_MEDIUM
-	armor_internaldamage = CLOTHING_ARMOR_VERYHIGHPLUS
+	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bomb = CLOTHING_ARMOR_HIGH
 
 /obj/item/clothing/head/helmet/marine/veteran/freelancer/elite/beret
 	name = "\improper Z14 beret"
@@ -2424,12 +2417,13 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	item_icons = list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/FREELANCER.dmi'
 	)
-	armor_melee = CLOTHING_ARMOR_HIGHPLUS
-	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
-	armor_energy = CLOTHING_ARMOR_LOW
-	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bio = CLOTHING_ARMOR_VERYHIGH
-	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_internaldamage = CLOTHING_ARMOR_VERYHIGH
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
+	armor_laser = CLOTHING_ARMOR_LOW
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_LOW
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+	armor_rad = CLOTHING_ARMOR_MEDIUMLOW
+	armor_internaldamage = CLOTHING_ARMOR_LOW
 	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK
 	built_in_visors = list(new /obj/item/device/helmet_visor/medical)

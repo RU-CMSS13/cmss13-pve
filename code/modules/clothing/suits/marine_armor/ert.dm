@@ -1575,13 +1575,12 @@
 	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
 	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
 	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN
-	armor_melee = CLOTHING_ARMOR_VERYHIGHPLUS
-	armor_bullet = CLOTHING_ARMOR_VERYHIGHPLUS
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_energy = CLOTHING_ARMOR_MEDIUM
-	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bio = CLOTHING_ARMOR_VERYHIGH
-	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_internaldamage = CLOTHING_ARMOR_VERYHIGH
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 	slowdown = SLOWDOWN_ARMOR_MEDIUM
 	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/freelancer/elite)
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
@@ -1610,13 +1609,12 @@
 	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
 	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
 	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN
-	armor_melee = CLOTHING_ARMOR_VERYHIGH
-	armor_bullet = CLOTHING_ARMOR_VERYHIGH
-	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_energy = CLOTHING_ARMOR_MEDIUM
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
-	armor_bio = CLOTHING_ARMOR_HIGHPLUS
 	armor_rad = CLOTHING_ARMOR_MEDIUM
-	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	slowdown = SLOWDOWN_ARMOR_LIGHT
 
 /obj/item/clothing/suit/marine/veteran/freelancer/elite/heavy
@@ -1626,13 +1624,14 @@
 	flags_armor_protection = BODY_FLAG_ALL_BUT_HEAD
 	flags_cold_protection = BODY_FLAG_ALL_BUT_HEAD
 	flags_heat_protection = BODY_FLAG_ALL_BUT_HEAD
-	armor_melee = CLOTHING_ARMOR_ULTRAHIGHPLUS
-	armor_bullet = CLOTHING_ARMOR_GIGAHIGH
-	armor_energy = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bomb = CLOTHING_ARMOR_VERYHIGH
-	armor_bio = CLOTHING_ARMOR_VERYHIGH
-	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_internaldamage = CLOTHING_ARMOR_ULTRAHIGH
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_HIGH
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_MEDIUMLOW
+	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS // it is heavier
 	slowdown = SLOWDOWN_ARMOR_HEAVY
 
 /obj/item/clothing/suit/marine/veteran/freelancer/elite/heavy/smartgunner
