@@ -24,6 +24,7 @@
 #define SQUAD_IASF "IASF"
 #define SQUAD_LRRP "Snake Eaters"
 #define SQUAD_LRRP_2 "Ocelot Grapplers"
+#define SQUAD_SISSI "Fox Stalkers"
 
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"
@@ -39,6 +40,7 @@
 #define JOB_SQUAD_ROLES_LIST list(JOB_SQUAD_MARINE, JOB_SQUAD_LEADER, JOB_SQUAD_ENGI, JOB_SQUAD_MEDIC, JOB_SQUAD_SPECIALIST, JOB_SQUAD_SMARTGUN, JOB_SQUAD_TEAM_LEADER)
 
 #define JOB_SQUAD_MARINE_UPP "Infantryman"
+#define JOB_SQUAD_UPP_RTO "Radio Transmissions Operator"
 #define JOB_SQUAD_LEADER_UPP "Platoon Sergeant"
 #define JOB_SQUAD_MEDIC_UPP "Platoon Sanitar"
 #define JOB_SQUAD_TEAM_LEADER_UPP "Squad Sergeant"
@@ -352,6 +354,25 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_CA_DEPUTY_DIRECTOR "HC Deputy Director"
 #define JOB_CA_DIRECTOR "HC Director"
 
+//-------- Hyperdyne --------//
+
+#define JOB_HC_SEC "HC Security Guard"
+#define JOB_HC_SEC_SYNTH "HC Security Guard Synthetic"
+#define JOB_HC_TRAINEE "Corporate Trainee"
+#define JOB_HC_JUNIOR_EXECUTIVE "Corporate Junior Executive"
+#define JOB_HC_CORPORATE_LIAISON "Corporate Liaison"
+#define JOB_HC_EXECUTIVE "Corporate Executive"
+#define JOB_HC_SENIOR_EXECUTIVE "Corporate Senior Executive"
+#define JOB_HC_EXECUTIVE_SPECIALIST "Corporate Executive Specialist"
+#define JOB_HC_LEGAL_SPECIALIST "Corporate Legal Specialist"
+#define JOB_HC_EXECUTIVE_SUPERVISOR "Corporate Executive Supervisor"
+#define JOB_HC_LEGAL_SUPERVISOR "Corporate Legal Supervisor"
+#define JOB_HC_ASSISTANT_MANAGER "Corporate Assistant Manager"
+#define JOB_HC_DIVISION_MANAGER "Corporate Division Manager"
+#define JOB_HC_CHIEF_EXECUTIVE "Corporate Chief Executive"
+#define JOB_HC_DEPUTY_DIRECTOR "HC Deputy Director"
+#define JOB_HC_DIRECTOR "HC Director"
+
 //---- Contractors ----//
 #define JOB_CONTRACTOR "VAIPO Mercenary"
 #define JOB_CONTRACTOR_ST "VAIPO Mercenary"
@@ -433,6 +454,15 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_UPP_LT_GENERAL "Lieutenant General"
 #define JOB_UPP_GENERAL "General"
 
+//-------- UPP Small --------//
+
+#define JOB_SQUAD_TEAM_LEADER_FORECON_UPP "Assistant Recon Squad Sergeant"
+#define JOB_SQUAD_LEADER_FORECON_UPP  "Recon Squad Sergeant"
+#define JOB_SQUAD_MEDIC_FORECON_UPP "Recon Sanitar"
+#define JOB_SQUAD_RTO_FORECON_UPP "Recon Radio Transmissions Operator"
+#define JOB_SQUAD_MARINE_FORECON_UPP "Recon Infantryman"
+#define JOB_SQUAD_SMARTGUN_FORECON_UPP "Recon Machinegunner"
+
 #define JOB_UPP_COMBAT_SYNTH "Combat Synthetic"
 #define JOB_UPP_SUPPORT_SYNTH "Support Synthetic"
 #define JOB_UPP_JOE "Dzho Automaton"
@@ -451,6 +481,19 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_UPP_CREWMAN "Tank Crewman"
 
 #define JOB_UPP_COMMISSAR "Political Commissar"
+
+//-------- People's Armed Police --------//
+
+#define JOB_PAP_MILITSIONER "UPP Militsioner"
+#define JOB_PAP_STARSHIY_MILITSIONER "UPP Starshiy Militsioner"
+#define JOB_PAP_STARSHINA "UPP Starshina"
+#define JOB_PAP_LEYTENANT "UPP Leytenant Militsii"
+#define JOB_PAP_KAPITAN "UPP Kapitan Militsii"
+#define JOB_PAP_MAYOR "UPP Mayor Militsii"
+#define JOB_PAP_POLITKOMISSAR "UPP Politkomissar"
+#define JOB_PAP_POLKOVNIK "UPP Polkovnik Militsii"
+
+#define PAP_GRUNT_LIST list(JOB_PAP_MILITSIONER, JOB_PAP_STARSHIY_MILITSIONER, JOB_PAP_STARSHINA)
 
 //-------- CLF --------//
 #define JOB_CLF "CLF Guerilla"

@@ -65,6 +65,8 @@
 	var/faction = FACTION_NEUTRAL
 	var/list/faction_group
 
+	var/id_type = "ID Card"
+
 	/// The name registered_name on the card
 	var/registered_name = "Unknown"
 	var/datum/weakref/registered_ref = null
@@ -91,8 +93,6 @@
 	var/pinned_on_uniform = TRUE
 
 	var/modification_log = list()
-
-	var/card_name = "ID Card"
 
 /obj/item/card/id/Initialize(mapload, ...)
 	. = ..()
@@ -134,7 +134,7 @@
 
 /obj/item/card/id/proc/set_assignment(new_assignment)
 	assignment = new_assignment
-	name = "[registered_name]'s [card_name] ([assignment])"
+	name = "[registered_name]'s [id_type] ([assignment])"
 
 /obj/item/card/id/GetAccess()
 	return access
@@ -220,11 +220,13 @@
 	name = "battered-up visa card"
 	desc = "A corporate holo-badge. It's a unique Corporate orange and white."
 	icon_state = "visa"
+	id_type = "Document"
 
 /obj/item/card/id/silver/cl
 	name = "corporate holo-badge"
 	desc = "A corporate holo-badge. It's a unique Corporate orange and white."
 	icon_state = "cl"
+	id_type = "Badge"
 
 /obj/item/card/id/silver/cl/hyperdyne
 	name = "corporate holo-badge"
@@ -263,6 +265,7 @@
 	icon_state = "cmbmar"
 	item_state = "gold_badge"
 	paygrade = PAY_SHORT_CMBM
+	id_type = "Badge"
 
 /obj/item/card/id/deputy
 	name = "\improper CMB deputy silver badge"
@@ -270,6 +273,13 @@
 	icon_state = "cmbdep"
 	item_state = "silver_badge"
 	paygrade = PAY_SHORT_CMBD
+	id_type = "Badge"
+
+/obj/item/card/id/PaP
+	name = "PaP identification holo-badge"
+	desc = "A standard-issue holo-badge for personnel within the UPP's People's Armed Police. It displays the officer's rank and affiliation."
+	icon_state = "data"
+	paygrade = PAY_SHORT_PAP_MLTS
 
 /obj/item/card/id/nspa_silver
 	name = "\improper NSPA silver badge"
@@ -321,7 +331,7 @@
 	if(!QDELETED(user)) // Runtime prevention on laggy starts or where users log out because of lag at round start.
 		registered_name = ishuman(user) ? user.real_name : "Unknown"
 	assignment = "Agent"
-	name = "[registered_name]'s [card_name] ([assignment])"
+	name = "[registered_name]'s [id_type] ([assignment])"
 
 /obj/item/card/id/adaptive/afterattack(obj/item/O as obj, mob/user as mob, proximity)
 	if(!proximity)
@@ -397,18 +407,26 @@
 
 
 /obj/item/card/id/dogtag
-	name = "dog tag"
-	desc = "A dog tag."
+	name = "dog tags"
+	desc = "A marine dog tags."
 	icon_state = "dogtag"
 	item_state = "dogtag"
+	id_type = "Dogtags"
 	pinned_on_uniform = FALSE
+	var/tags_taken_icon = "dogtag_taken"
+	var/infotag_type = /obj/item/dogtag
 	var/dogtag_taken = FALSE
-	card_name = "dog tags"
 
 /obj/item/card/id/dogtag/get_examine_text(mob/user)
 	. = ..()
 	if(ishuman(user))
 		. += SPAN_NOTICE("It reads \"[registered_name] - [assignment][blood_type ? " - [blood_type]":""]\"")
+
+/obj/item/card/id/dogtag/upp
+	name = "UPP dog tag"
+	desc = "A soldier dog tag."
+	icon_state = "dogtag_upp"
+	tags_taken_icon = "dogtag_upp_taken"
 
 /obj/item/dogtag
 	name = "information dog tag"

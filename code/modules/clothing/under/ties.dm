@@ -439,6 +439,11 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the 173rd Airborne Reconnaissance Platoon."
 	icon_state = "vdvpatch"
 
+/obj/item/clothing/accessory/patch/upp/recon
+	name = "UPP 'Rozbójnik' Group patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the 'Rozbójnik' Group who specialise in reconnaissance operations."
+	icon_state = "uppreconpatch"
+
 /obj/item/clothing/accessory/patch/upp/naval
 	name = "UPP Naval Infantry patch"
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the UPP Naval Infantry."
@@ -478,6 +483,7 @@
 	name = "Brazilian Colonial Military Police patch"
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the Brazilian Military Police."
 	icon_state = "brazilpolicepatch"
+
 //W-Y patches
 /obj/item/clothing/accessory/patch/wy
 	name = "Weyland-Yutani patch"
@@ -503,23 +509,7 @@
 	name = "Weyland-Yutani Fury '161' patch"
 	desc = "A fire-resistant shoulder patch. Was worn by workers and then later prisoners on the Fiorina 'Fury' 161 facility, a rare relic, after the facility went dark in 2179."
 	icon_state = "fury161patch"
-//Merc patchs
-/obj/item/clothing/accessory/patch/freelancer_patch
-	name = "Freelancer's Guild patch"
-	desc = "A fire-resistant circular patch featuring a white skull on a vertically split black and blue background. Worn by a skilled mercenary of the Freelancers, a well-equipped group for hire across the outer colonies, known for their professionalism and neutrality. This patch is a personal memento from the wearer’s time with the group, representing a life spent navigating the dangerous world of mercenary contracts."
-	icon_state = "mercpatch"
-	item_state_slots = list(WEAR_AS_GARB = "mercpatch")
 
-/obj/item/clothing/accessory/patch/merc_patch
-	name = "Old Freelancer's Guild patch"
-	desc = "A faded old, worn fire-resistant circular patch featuring a white skull on a vertically split black and red background. Worn by a well-equipped mercenary group for hire across the outer colonies, known for their professionalism and neutrality. The current owner’s connection to the patch is unclear—whether it was once earned as part of service, kept as a memento, or simply found, disconnected from its original wearer."
-	icon_state = "mercpatch_red"
-	item_state_slots = list(WEAR_AS_GARB = "mercpatch_red")
-//msf patch
-/obj/item/clothing/accessory/patch/msf_patch
-	name = "Marine Space Force Herculis patch"
-	desc = "A fire-resistant shoulder patch, depicting the logo of Marine Space Force III, Herculis, deployed throughout the Anglo-Japanese arm from the outer veil to the ICSC Network, this patch is often worn by any general assigned to the MSF Herculis, US Space Command and UA Allied Command Generals often have their own patches."
-	icon_state = "msfpatch"
 //Flag patches
 /obj/item/clothing/accessory/patch/ua
 	name = "UA flag patch"
@@ -587,6 +577,7 @@
 	desc = "A fire-resistant shoulder patch, depicting the logo of Marine Space Force III, Herculis, deployed throughout the Anglo-Japanese arm from the outer veil to the ICSC Network, this patch is often worn by any general assigned to the MSF Herculis, US Space Command and UA Allied Command Generals often have their own patches."
 	icon_state = "msfpatch"
 
+// Hyperdyne patch
 /obj/item/clothing/accessory/patch/hyperdyne_patch
 	name = "Hyperdyne Corporation patch"
 	desc = "A sleek corporate patch bearing the logo of the Hyperdyne Corporation—one of the most powerful conglomerates. Known for synthetic production, AI research, and deep-space logistics. Wearing this patch implies loyalty to profit over people."
@@ -2021,19 +2012,6 @@
 /obj/item/storage/internal/accessory/black_vest/m3generic/plus // RU-CM PVE edit
 	storage_slots = 6
 
-//Pre-load for MARSOC props
-/obj/item/clothing/accessory/storage/webbing/m3/recon/medic/marsoc
-	icon_state = "armywebbing"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/recon/marsoc
-
-/obj/item/storage/internal/accessory/black_vest/m3generic/recon/marsoc/fill_preset_inventory()
-	new /obj/item/storage/surgical_case/regular(src)
-	new /obj/item/tool/surgery/surgical_line(src)
-	new /obj/item/tool/surgery/synthgraft(src)
-	new /obj/item/storage/syringe_case/regular(src)
-	new /obj/item/reagent_container/blood/OMinus(src)
-	new /obj/item/reagent_container/blood/OMinus(src)
-
 /obj/item/clothing/accessory/storage/webbing/m56
 	name = "\improper Clip-on Pouch"
 	desc = "A clip on synth-leather pouch designed to house a small collection of items for M56 weapon operators."
@@ -2145,6 +2123,13 @@
 		/obj/item/ammo_magazine/plasma,
 		/obj/item/ammo_magazine/flamer_tank, // RU-CM PVE edit
 	)
+
+/obj/item/clothing/accessory/storage/webbing/m3/m40/upp
+	name = "\improper Type 82 Pattern Grenade Webbing"
+	desc = "A set of UPP webbing with small pouches that can carry up to 10 grenades, hand or impact."
+	icon_state = "upp_webbing_grenade"
+	flags_atom = NO_SNOW_TYPE
+	slot = ACCESSORY_SLOT_M3UTILITY
 
 //Partial Pre-load For Props
 //===

@@ -146,7 +146,7 @@
 			if(target_id_card)
 				if(target_id_card.registered_name != origin_name || target_id_card.assignment != origin_assignment)
 					GLOB.data_core.manifest_modify(target_id_card.registered_name, target_id_card.registered_ref, target_id_card.assignment, target_id_card.rank)
-					target_id_card.name = text("[target_id_card.registered_name]'s [target_id_card.card_name] ([target_id_card.assignment])")
+					target_id_card.name = text("[target_id_card.registered_name]'s [target_id_card.id_type] ([target_id_card.assignment])")
 					if(target_id_card.registered_name != origin_name)
 						log_idmod(target_id_card, "<font color='orange'> [user.real_name] changed the registered name of the ID to '[target_id_card.registered_name]'. </font>", key_name_admin(user))
 					if(target_id_card.assignment != origin_assignment)
@@ -475,7 +475,7 @@
 			usr.put_in_hands(target_id_card)
 		if(operable()) // Powered. Make comp proceed ejection
 			GLOB.data_core.manifest_modify(target_id_card.registered_name, target_id_card.registered_ref, target_id_card.assignment, target_id_card.rank)
-			target_id_card.name = text("[target_id_card.registered_name]'s [target_id_card.card_name] ([target_id_card.assignment])")
+			target_id_card.name = text("[target_id_card.registered_name]'s [target_id_card.id_type] ([target_id_card.assignment])")
 			visible_message("[SPAN_BOLD("[src]")] states, \"CARD EJECT: Data imprinted. Updating database... Success.\"")
 		else
 			to_chat(usr, "You remove \the [target_id_card] from \the [src].")
@@ -1141,6 +1141,13 @@ GLOBAL_LIST_EMPTY_TYPED(crewmonitor, /datum/crewmonitor)
 				JOB_UPP_ENGI = 63,
 				JOB_UPP = 64,
 				JOB_UPP_CONSCRIPT = 65,
+				// 70-79: Recon
+				JOB_SQUAD_TEAM_LEADER_FORECON_UPP = 60,
+				JOB_SQUAD_LEADER_FORECON_UPP = 61,
+				JOB_SQUAD_MEDIC_FORECON_UPP = 62,
+				JOB_SQUAD_RTO_FORECON_UPP = 63,
+				JOB_SQUAD_MARINE_FORECON_UPP = 64,
+				JOB_SQUAD_SMARTGUN_FORECON_UPP = 65,
 
 				// ANYTHING ELSE = UNKNOWN_JOB_ID, Unknowns/custom jobs will appear after civilians, and before stowaways
 				JOB_STOWAWAY = 999,

@@ -101,6 +101,12 @@ FORENSIC SCANNER
 			last_health_display = new(M)
 		else
 			last_health_display.target_mob = M
+
+		// Handle automatic holotags
+		if (user?.client.prefs.auto_holotag >= ALWAYS_TAG_PATIENTS && istype(M, /mob/living/carbon/human))
+			var/mob/living/carbon/human/human = M
+			human.auto_assign_holotag(user, HOLOCARD_ACCURACY_HANDHELD)
+
 		SStgui.close_user_uis(user, src)
 		last_scan = last_health_display.ui_data(user, DETAIL_LEVEL_HEALTHANALYSER)
 		last_health_display.look_at(user, DETAIL_LEVEL_HEALTHANALYSER, bypass_checks = FALSE, ignore_delay = FALSE, alien = alien, associated_equipment = src)
@@ -409,6 +415,12 @@ FORENSIC SCANNER
 				SStgui.close_user_uis(connected_from, src)
 				last_scan = last_health_display.ui_data(connected_from, DETAIL_LEVEL_HEALTHANALYSER)
 				last_health_display.look_at(connected_from, DETAIL_LEVEL_HEALTHANALYSER, bypass_checks = TRUE, ignore_delay = FALSE, alien = alien, associated_equipment = src)
+
+		// Handle automatic holotags
+		if(connected_from?.client?.prefs?.auto_holotag >= ALWAYS_TAG_PATIENTS && istype(connected_to, /mob/living/carbon/human))
+			var/mob/living/carbon/human/human = connected_to
+			human.auto_assign_holotag(connected_from, HOLOCARD_ACCURACY_HANDHELD)
+
 		src.add_fingerprint()
 		if(last_scan && record_scan_on_connect)
 			record_scan_on_connect = FALSE

@@ -46,8 +46,8 @@
 		/datum/action/xeno_action/watch_xeno,
 		/datum/action/xeno_action/activable/tail_stab,
 		/datum/action/xeno_action/activable/corrosive_acid/weak,
-		/datum/action/xeno_action/activable/slowing_spit, //first macro
-		/datum/action/xeno_action/activable/scattered_spit, //second macro
+		/datum/action/xeno_action/activable/slowing_spit/ai, //first macro
+		/datum/action/xeno_action/activable/scattered_spit/ai, //second macro
 		/datum/action/xeno_action/onclick/paralyzing_slash, //third macro
 		/datum/action/xeno_action/onclick/tacmap,
 	)
@@ -62,6 +62,9 @@
 	mycelium_food_icon = 'icons/mob/pathogen/pathogen_weeds_48x48.dmi'
 	weed_food_states = list("Drone_1","Drone_2","Drone_3")
 	weed_food_states_flipped = list("Drone_1","Drone_2","Drone_3")
+
+	var/linger_range = 5
+	var/linger_deviation = 1
 
 /datum/behavior_delegate/sentinel_base
 	name = "Base Sentinel Behavior Delegate"
@@ -107,3 +110,25 @@
 	human_target.KnockDown(2)
 	human_target.Stun(2)
 	to_chat(human_target, SPAN_XENOHIGHDANGER("You fall over, paralyzed by the toxin!"))
+
+/datum/action/xeno_action/activable/slowing_spit/ai
+	default_ai_action = TRUE
+	ai_prob_chance = 80
+	xeno_cooldown = 8 SECONDS
+
+/datum/action/xeno_action/activable/scattered_spit/ai
+	default_ai_action = TRUE
+	ai_prob_chance = 40
+	xeno_cooldown = 10 SECONDS
+
+/datum/action/xeno_action/activable/slowing_spit/ai/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
+	return DT_PROB(ai_prob_chance, delta_time) && (get_dist(parent, parent.current_target) <= 7) && !check_for_obstacles_projectile(parent, parent.current_target, GLOB.ammo_list[/datum/ammo/xeno/toxin]) && use_ability_async(parent.current_target)
+
+/datum/action/xeno_action/activable/scattered_spit/ai/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
+	return DT_PROB(ai_prob_chance, delta_time) && (get_dist(parent, parent.current_target) <= 3) && !check_for_obstacles_projectile(parent, parent.current_target, GLOB.ammo_list[/datum/ammo/xeno/toxin/shotgun]) && use_ability_async(parent.current_target)
+
+/mob/living/carbon/xenomorph/sentinel/init_movement_handler()
+	var/datum/xeno_ai_movement/linger/linger_movement = new(src)
+	linger_movement.linger_range = linger_range
+	linger_movement.linger_deviation = linger_deviation
+	return linger_movement

@@ -27735,7 +27735,9 @@
 /turf/open/floor/almayer/tcomms,
 /area/bmg290/relay/synthetic)
 "ncQ" = (
-/obj/structure/flora/tree/jungle/bigtreeTR,
+/obj/structure/roof/flora/tree/jungle/bigtreeTR{
+	pixel_x = -15
+	},
 /turf/open/auto_turf/strata_grass,
 /area/bmg290/wilderness/farmland)
 "ncZ" = (
@@ -49514,7 +49516,10 @@
 /turf/open/floor/prison/sterile_white,
 /area/bmg290/keppitz/research)
 "xxT" = (
-/obj/structure/flora/tree/jungle/bigtreeTL,
+/obj/structure/roof/flora/tree/jungle/bigtreeTL{
+	pixel_x = -15;
+	pixel_y = 1
+	},
 /obj/structure/flora/grass/tallgrass/desert{
 	color = "#bfff00"
 	},

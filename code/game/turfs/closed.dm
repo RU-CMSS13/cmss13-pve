@@ -64,14 +64,6 @@
 	user.forceMove(above_current)
 	return
 
-/turf/closed/attack_alien(mob/user)
-	attack_hand(user)
-
-/turf/closed/attack_hand(mob/user)
-	if(user.a_intent == INTENT_HARM)
-		return
-	climb_up(user)
-
 /turf/closed/Enter(atom/movable/mover, atom/forget)
 	. = ..()
 	if(!mover.move_intentionally || !istype(mover,/mob/living))
@@ -407,6 +399,22 @@
 /turf/closed/shuttle/twe_dropship/transparent
 	opacity = FALSE
 
+/turf/closed/shuttle/upp_sof
+	name = "\improper UPP-DS-3 'Voron'"
+	icon = 'icons/turf/upp_sof_dropship.dmi'
+	icon_state = "0,0"
+
+/turf/closed/shuttle/upp_sof/transparent
+	opacity = FALSE
+
+/turf/closed/shuttle/upp_sof_alt
+	name = "\improper UPP-DS-3 'Volk'"
+	icon = 'icons/turf/upp_sof_alt_dropship.dmi'
+	icon_state = "0,0"
+
+/turf/closed/shuttle/upp_sof_alt/transparent
+	opacity = FALSE
+
 /turf/closed/shuttle/gibraltar
 	name = "\improper Gibraltar"
 	icon = 'icons/turf/dropship_rmc.dmi'
@@ -557,4 +565,16 @@
 	icon_state = "1"
 
 /turf/closed/shuttle/dropship4/WY/StarGlider/transparent
+	opacity = FALSE
+
+/turf/closed/shuttle/dropship_clf
+	icon = 'icons/turf/dropship_clf.dmi'
+	icon_state = "1"
+
+/turf/closed/shuttle/dropship_clf/Fire
+	name = "\improper UD-9M 'Dogbite'"
+	desc = "The UD-9M 'Dogbite' is a repurposed utility dropship, originally designed for short-haul cargo operations across colonial systems. Stolen and heavily modified by the Colonial Liberation Front, it's now a rugged smuggler and strike craft, capable of dropping a full fireteam through tight patrol nets. Its hull is scarred with gunfire, rust, and graffiti — a patchwork of rebellion held together by grit and stolen parts."
+	icon_state = "1"
+
+/turf/closed/shuttle/dropship_clf/Fire/transparent
 	opacity = FALSE

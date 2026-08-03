@@ -13,7 +13,7 @@
 	item_state = "generic_mag"
 	w_class = SIZE_MEDIUM
 	default_ammo = /datum/ammo/bullet/rifle
-	max_rounds = 50
+	max_rounds = 60
 	gun_type = /obj/item/weapon/gun/rifle/m41a
 	ammo_band_icon = "+m41a_band"
 	ammo_band_icon_empty = "+m41a_band_e"
@@ -22,7 +22,7 @@
 	name = "\improper M41A LE extended magazine (10x24mm)"
 	desc = "A 10mm assault Light Explosive extended rifle magazine."
 	icon_state = "m41a_extended"
-	max_rounds = 60
+	max_rounds = 85
 	bonus_overlay = "m41a_ex"
 
 /obj/item/ammo_magazine/rifle/incendiary
@@ -467,6 +467,36 @@
 	default_ammo = /datum/ammo/bullet/rifle/lw317/ap
 	ammo_band_color = AMMO_BAND_COLOR_AP
 	bonus_overlay = "lw317apoverlay"
+
+//-------------------------------------------------------
+//UPP MG82 LMG
+
+/obj/item/ammo_magazine/rifle/mg82
+	name = "\improper MG82 drum magazine (9.7x16mm)"
+	desc = "A 9.7x16mm high-capacity magazine for the MG82 machinegun."
+	caliber = "9.7x16mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "mg82"
+	ammo_band_icon = "+mg82_band"
+	ammo_band_icon_empty = "+mg82_band_e"
+	default_ammo = /datum/ammo/bullet/rifle/ag80
+	max_rounds = 150
+	gun_type = /obj/item/weapon/gun/rifle/mg82
+	flags_magazine = AMMUNITION_REFILLABLE|AMMUNITION_SLAP_TRANSFER
+	reload_delay = 5
+
+/obj/item/ammo_magazine/rifle/mg82/ap
+	name = "\improper MG82 AP drum magazine (9.7x16mm)"
+	desc = "A 9.7x16mm high-capacity magazine for the MG82 machinegun. This one is loaded with steelcore armor piercing rounds."
+	default_ammo = /datum/ammo/bullet/rifle/ag80/ap
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/rifle/mg82/heap
+	name = "\improper MG82 HEAP drum magazine (9.7x16mm)"
+	desc = "A 9.7x16mm high-capacity magazine for the MG82 machinegun. This one is loaded with high-explosive armor piercing rounds."
+	default_ammo = /datum/ammo/bullet/rifle/ag80/heap
+	ammo_band_color = AMMO_BAND_COLOR_HEAP
+
 //-------------------------------------------------------
 //L42A Battle Rifle
 
@@ -554,6 +584,43 @@
 	desc = "An ABR-40 magazine loaded with holo-targeting ammunition, primarily utilized to highlight hunting targets for easier target capture. Theoretically cross-compatible with an L42A battle rifle."
 	default_ammo = /datum/ammo/bullet/rifle/holo_target/hunting
 	ammo_band_color = AMMO_BAND_COLOR_HOLOTARGETING
+
+//-------------------------------------------------------
+//R81M1 mags
+
+/obj/item/ammo_magazine/rifle/r81m1
+	name = "\improper R81M1 magazine (9x32mm)"
+	desc = "A 9x32mm high-velocity battle rifle magazine."
+	caliber = "9x32mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon_state = "fal"
+	bonus_overlay = "fal_overlay"
+	default_ammo = /datum/ammo/bullet/rifle/r81m1
+	max_rounds = 20
+	gun_type = /obj/item/weapon/gun/rifle/r81m1a
+	w_class = SIZE_MEDIUM
+	ammo_band_icon = "+fal_band"
+	ammo_band_icon_empty = "+fal_band_e"
+
+/obj/item/ammo_magazine/rifle/r81m1/ap
+	name = "\improper R81M1 AP magazine (9x32mm)"
+	desc = "A 9x32mm high-velocity battle rifle armor piercing magazine."
+	default_ammo = /datum/ammo/bullet/rifle/r81m1/ap
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/rifle/r81m1/hp
+	name = "\improper R81M1 HP magazine (9x32mm)"
+	desc = "A 9x32mm high-velocity battle rifle hollow point magazine."
+	default_ammo = /datum/ammo/bullet/rifle/r81m1/hp
+	ammo_band_color = AMMO_BAND_COLOR_HOLLOWPOINT
+
+/obj/item/ammo_magazine/rifle/r81m1/drum
+	name = "\improper R81M1D drum magazine (9x32mm)"
+	desc = "A 9x32mm high-velocity drum magazine."
+	icon_state = "fal_drum"
+	bonus_overlay = "fal_drum_overlay"
+	max_rounds = 80
+	gun_type = /obj/item/weapon/gun/rifle/r81m1a/m1d
 
 //M20A
 

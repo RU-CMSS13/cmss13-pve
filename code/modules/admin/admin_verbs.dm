@@ -108,7 +108,7 @@ GLOBAL_LIST_INIT(admin_verbs_admin, list(
 	/client/proc/toggle_hear_radio, /*toggles whether we hear the radio*/
 	/client/proc/event_panel,
 	/client/proc/free_slot, /*frees slot for chosen job*/
-	/client/proc/modify_job_slot,
+	/client/proc/modify_slot,
 	/client/proc/cmd_admin_rejuvenate,
 	/client/proc/cmd_admin_remove_clamp,
 	/client/proc/cmd_admin_repair_multitile,
@@ -382,6 +382,8 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		add_verb(src, /client/proc/toggle_rappel_menu)
 		add_verb(src, /client/proc/toggle_fire_support_menu)
 		add_verb(src, /client/proc/gm_lighting)
+		add_verb(src, /client/proc/disallow_to_join) // RU-PVE
+		add_verb(src, /client/proc/allow_to_join) // RU-PVE
 	if(CLIENT_HAS_RIGHTS(src, R_SERVER))
 		add_verb(src, GLOB.admin_verbs_server)
 	if(CLIENT_HAS_RIGHTS(src, R_DEBUG))
@@ -427,6 +429,8 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		/client/proc/toggle_portrait,
 		/client/proc/toggle_intro,
 		/client/proc/gm_lighting,
+		/client/proc/disallow_to_join, // RU-PVE
+		/client/proc/allow_to_join, // RU-PVE
 		GLOB.admin_verbs_admin,
 		GLOB.admin_verbs_ban,
 		GLOB.admin_verbs_minor_event,

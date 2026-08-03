@@ -1056,28 +1056,13 @@ Defined in conflicts.dm of the #defines folder.
 	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi'
 	icon_state = "pve-sling"
 	attach_icon = "pve-sling_a"
-	slot = "sling"
-	var/retrieval_slot = WEAR_J_STORE
+	slot = "rail"
 
 /obj/item/attachable/sling/New()
 	..()
 	accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_1
 	recoil_unwielded_mod = -RECOIL_AMOUNT_TIER_2
 	scatter_unwielded_mod = -SCATTER_AMOUNT_TIER_2
-
-/obj/item/attachable/sling/can_be_attached_to_gun(mob/user, obj/item/weapon/gun/G)
-	if(SEND_SIGNAL(G, COMSIG_DROP_RETRIEVAL_CHECK) & COMPONENT_DROP_RETRIEVAL_PRESENT)
-		to_chat(user, SPAN_WARNING("[G] already has a retrieval system installed!"))
-		return FALSE
-	return ..()
-
-/obj/item/attachable/sling/Attach(obj/item/weapon/gun/G)
-	. = ..()
-	G.AddElement(/datum/element/drop_retrieval/gun, retrieval_slot)
-
-/obj/item/attachable/sling/Detach(mob/user, obj/item/weapon/gun/detaching_gub, drop_attachment = TRUE)
-	. = ..()
-	detaching_gub.RemoveElement(/datum/element/drop_retrieval/gun, retrieval_slot)
 
 /obj/item/attachable/scope
 	name = "S8 4x telescopic scope"
@@ -1260,6 +1245,12 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "A civilian-grade scope that can be switched between short and long range magnification, intended for use in extraterrestrial scouting. Looks ridiculous on a pistol."
 	aim_speed_mod = 0
 
+/obj/item/attachable/scope/variable_zoom/fal
+	name = "ODS R94 telescopic variable scope"
+	attach_icon = "sniperscope_fal"
+	desc = "A Orion Defence Systems telescopic scope used mainly for the R81M1D. Can switch between 2x and 4x magnification."
+	aim_speed_mod = 0
+
 /obj/item/attachable/scope/variable_zoom/canc
 	name = "LMR-72 4x smartscope"
 	desc = "Outdated CANC scope."
@@ -1373,6 +1364,11 @@ Defined in conflicts.dm of the #defines folder.
 	dynamic_aim_slowdown = SLOWDOWN_ADS_QUICK
 	zoom_offset = 8
 	zoom_viewsize = 9
+
+/obj/item/attachable/scope/mini/r81
+	name = "ODS R92 2x advanced telescopic mini-scope"
+	desc = "An Orion Defence Systems R81M1D 2x advanced telescopic mini-scope, used mainly for the R81M1A and it's variants."
+	attach_icon = "miniscope_fal"
 
 /obj/item/attachable/scope/mini/xm88
 	name = "XS-9 targeting relay"
@@ -2217,6 +2213,22 @@ Defined in conflicts.dm of the #defines folder.
 
 	matter = list("wood" = 2000)
 
+/obj/item/attachable/stock/p79s
+	name = "\improper P79S stock"
+	desc = "A stock made for the P79S semi-automatic shotgun."
+	icon_state = "p79s_stock"
+	hud_offset_mod = 6
+
+/obj/item/attachable/stock/p79s/New()
+	..()
+	accuracy_mod = HIT_ACCURACY_MULT_TIER_1
+	recoil_mod = -RECOIL_AMOUNT_TIER_5
+	scatter_mod = -SCATTER_AMOUNT_TIER_10
+	movement_onehanded_acc_penalty_mod = -MOVEMENT_ACCURACY_PENALTY_MULT_TIER_5
+	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_1
+	recoil_unwielded_mod = -RECOIL_AMOUNT_TIER_5
+	scatter_unwielded_mod = -SCATTER_AMOUNT_TIER_10
+
 /obj/item/attachable/stock/slavic
 	name = "wooden stock"
 	desc = "A non-standard heavy wooden stock for Slavic firearms."
@@ -2639,6 +2651,29 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/stock/ar10/New()//no stats, its cosmetic
 	..()
 
+/obj/item/attachable/stock/r81_saw
+	name = "\improper R81M1D stock"
+	desc = "You kinda need this to even use the gun properly."
+	attach_icon = "fal_saw_stock"
+	wield_delay_mod = WIELD_DELAY_MIN
+	flags_attach_features = NO_FLAGS
+	hud_offset_mod = 3
+
+/obj/item/attachable/stock/r81_saw/New()//no stats, its cosmetic
+	..()
+
+/obj/item/attachable/stock/r81_sniper
+	name = "\improper R81M1B stock"
+	desc = "You kinda need this to even use the gun properly."
+	icon_state = "fal_sniper_stock"
+	attach_icon = "fal_sniper_stock"
+	wield_delay_mod = WIELD_DELAY_MIN
+	flags_attach_features = NO_FLAGS
+	hud_offset_mod = 3
+
+/obj/item/attachable/stock/r81_sniper/New()
+	..()
+
 /obj/item/attachable/stock/m79
 	name = "\improper M79 hardened polykevlon stock"
 	desc = "Helps to mitigate the recoil of launching a 40mm grenade. Fits only to the M79."
@@ -2849,6 +2884,18 @@ Defined in conflicts.dm of the #defines folder.
 	melee_mod = 0
 	size_mod = 0
 
+/obj/item/attachable/pkpbarrel/para
+	name = "QYJ-72 Para Barrel"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
+	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
+	icon_state = "uppmg_para_barrel"
+	attach_icon = "uppmg_para_barrel"
+	slot = "muzzle"
+	wield_delay_mod = WIELD_DELAY_NONE
+	flags_attach_features = NO_FLAGS
+	melee_mod = 0
+	size_mod = 0
+
 /obj/item/attachable/stock/pkpstock
 	name = "QYJ-72 Stock"
 	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
@@ -2859,6 +2906,18 @@ Defined in conflicts.dm of the #defines folder.
 	wield_delay_mod = WIELD_DELAY_NONE
 	flags_attach_features = NO_FLAGS
 	melee_mod = 40 //the thought of a upp spec beating people to death with a pk makes me laugh
+	size_mod = 0
+
+/obj/item/attachable/stock/pkpstock/para
+	name = "QYJ-72 Para Stock"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
+	icon = 'icons/obj/items/weapons/guns/attachments/stock.dmi'
+	icon_state = "uppmg_para_stock"
+	attach_icon = "uppmg_para_stock"
+	slot = "stock"
+	wield_delay_mod = WIELD_DELAY_NONE
+	flags_attach_features = NO_FLAGS
+	melee_mod = 20 //the thought of a upp spec beating people to death with a pk makes me laugh
 	size_mod = 0
 
 /obj/item/attachable/type88_barrel
@@ -2886,7 +2945,7 @@ Defined in conflicts.dm of the #defines folder.
 	size_mod = 0
 
 /obj/item/attachable/cawsbarrel
-	name = "Type 97 Suppressor"
+	name = "Type 97 Barrel"
 	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
 	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
 	icon_state = "caws_barrel"
@@ -2895,6 +2954,54 @@ Defined in conflicts.dm of the #defines folder.
 	wield_delay_mod = WIELD_DELAY_NONE
 	flags_attach_features = NO_FLAGS
 	melee_mod = 0
+	size_mod = 0
+
+/obj/item/attachable/mg82barrel
+	name = "MG82 Barrel"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
+	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
+	icon_state = "mg82_barrel"
+	attach_icon = "mg82_barrel"
+	slot = "special"
+	wield_delay_mod = WIELD_DELAY_NONE
+	flags_attach_features = NO_FLAGS
+	melee_mod = 0
+
+/obj/item/attachable/r81m1a_barrel
+	name = "R81M1A barrel"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
+	icon_state = "fal_barrel"
+	attach_icon = "fal_barrel"
+	slot = "special"
+	wield_delay_mod = WIELD_DELAY_NONE
+	flags_attach_features = NO_FLAGS
+	melee_mod = 0 //Integrated attachment for visuals, stats handled on main gun.
+	size_mod = 0
+
+/obj/item/attachable/r81m1a_barrel/short
+	name = "R81M1C barrel"
+	icon_state = "fal_short_barrel"
+	attach_icon = "fal_short_barrel"
+
+/obj/item/attachable/r81m1a_barrel/saw
+	name = "R81M1D barrel"
+	icon_state = "fal_saw_barrel"
+	attach_icon = "fal_saw_barrel"
+
+/obj/item/attachable/r81m1a_barrel/sniper
+	name = "R81M1D barrel"
+	icon_state = "fal_sniper_barrel"
+	attach_icon = "fal_sniper_barrel"
+
+/obj/item/attachable/p79s_barrel
+	name = "P79S barrel"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
+	icon_state = "p79s_barrel"
+	attach_icon = "p79s_barrel"
+	slot = "special"
+	wield_delay_mod = WIELD_DELAY_NONE
+	flags_attach_features = NO_FLAGS
+	melee_mod = 0 //Integrated attachment for visuals, stats handled on main gun.
 	size_mod = 0
 
 /obj/item/attachable/stock/type71
@@ -2925,6 +3032,21 @@ Defined in conflicts.dm of the #defines folder.
 	size_mod = 0
 
 /obj/item/attachable/stock/spp/New()
+	..()
+
+/obj/item/attachable/stock/mg82
+	name = "MG82 Stock"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
+	icon = 'icons/obj/items/weapons/guns/attachments/stock.dmi'
+	icon_state = "mg82_stock"
+	attach_icon = "mg82_stock"
+	slot = "stock"
+	wield_delay_mod = WIELD_DELAY_NONE
+	flags_attach_features = NO_FLAGS
+	melee_mod = 25
+	size_mod = 0
+
+/obj/item/attachable/stock/mg82/New()
 	..()
 
 /obj/item/attachable/stock/m60
@@ -4522,7 +4644,6 @@ Defined in conflicts.dm of the #defines folder.
 	wield_delay_mod = WIELD_DELAY_FAST
 	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
 	scatter_mod = SCATTER_AMOUNT_TIER_9
-	fa_scatter_peak_mod = 15 //fifteen more shots until you hit max scatter
 
 /obj/item/attachable/bipod/integral/pkp
 	name = "QYJ-72 bipod"
@@ -4537,7 +4658,20 @@ Defined in conflicts.dm of the #defines folder.
 	wield_delay_mod = WIELD_DELAY_FAST
 	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
 	scatter_mod = SCATTER_AMOUNT_TIER_9
-	fa_scatter_peak_mod = 15 //fifteen more shots until you hit max scatter
+
+/obj/item/attachable/bipod/integral/mg82
+	name = "MG82 bipod"
+	desc = "An integral bipod for the MG82 Machine Gun."
+	icon_state = "bipod"
+	attach_icon = "uppmg_bipod_a"
+
+/obj/item/attachable/bipod/integral/mg82/New()
+	..()
+
+	delay_mod = 0
+	wield_delay_mod = WIELD_DELAY_FAST
+	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
+	scatter_mod = SCATTER_AMOUNT_TIER_9
 
 /obj/item/attachable/bipod/m60
 	name = "bipod"
@@ -4546,6 +4680,26 @@ Defined in conflicts.dm of the #defines folder.
 	attach_icon = "bipod_m60_a"
 
 	flags_attach_features = ATTACH_ACTIVATION
+
+/obj/item/attachable/bipod/r81
+	name = "R81M1D bipod"
+	desc = "An integral bipod for the R81M1D Pulse Squad Automatic Weapon."
+	attach_icon = "bipod_fal_saw_a"
+	slot = "under"
+	size_mod = 0
+	melee_mod = 0
+	flags_attach_features = ATTACH_ACTIVATION
+	attachment_action_type = /datum/action/item_action/toggle
+
+/obj/item/attachable/bipod/r81/New()
+	..()
+
+	delay_mod = 0
+	wield_delay_mod = WIELD_DELAY_FAST
+	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
+	scatter_mod = SCATTER_AMOUNT_TIER_9
+	recoil_mod = -RECOIL_AMOUNT_TIER_2
+	fa_scatter_peak_mod = 15
 
 /obj/item/attachable/bipod/vulture
 	name = "heavy bipod"

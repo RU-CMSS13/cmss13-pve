@@ -272,8 +272,14 @@
 /obj/structure/prop/colorable_rock/boulder/wide_boulder/wide_boulder1
 	icon_state = "boulderwide"
 
+/obj/structure/prop/colorable_rock/boulder/wide_boulder/wide_boulder1/brown
+	color = "#8d6d6d"
+
 /obj/structure/prop/colorable_rock/boulder/wide_boulder/wide_boulder2
 	icon_state = "boulderwide2"
+
+/obj/structure/prop/colorable_rock/boulder/wide_boulder/wide_boulder2/brown
+	color = "#8d6d6d"
 
 /obj/structure/prop/colorable_rock/boulder/small
 	name = "boulder"
@@ -285,11 +291,20 @@
 /obj/structure/prop/colorable_rock/boulder/small/boulder1
 	icon_state = "bouldersmall1"
 
+/obj/structure/prop/colorable_rock/boulder/small/boulder1/brown
+	color = "#8d6d6d"
+
 /obj/structure/prop/colorable_rock/boulder/small/boulder2
 	icon_state = "bouldersmall2"
 
+/obj/structure/prop/colorable_rock/boulder/small/boulder2/brown
+	color = "#8d6d6d"
+
 /obj/structure/prop/colorable_rock/boulder/small/boulder3
 	icon_state = "bouldersmall3"
+
+/obj/structure/prop/colorable_rock/boulder/small/boulder3/brown
+	color = "#8d6d6d"
 
 //Use these to replace non-functional machinery 'props' around maps from bay12
 
@@ -986,13 +1001,6 @@
 	name = "colony crawler"
 	desc = "It is a tread bound crawler used in harsh conditions. Supplied by Orbital Blue International; 'Your friends, in the Aerospace business.' A subsidiary of Weyland Yutani."
 	icon_state = "crawler"
-	density = TRUE
-
-/obj/structure/prop/vehicles/tank/twe
-	name = "\improper FV150 Shobo MKII"
-	desc = "The FV150 Shobo MKII is a Combat Reconnaissance Vehicle Tracked, abbreviated to CVR(T) in official documentation. It was co-developed in 2175 by Weyland-Yutani and Gallar Co., a Titan based heavy vehicle manufacturer. Taking into account lessons learned from the MkI's performance in the Australian Wars, major structual changes were made, and the MKII went into production in 2178. It is armed with a twin 30mm cannon and a L58A3 10x28mm coaxial, complimented by its ammunition stores of 170 rounds of 30mm and 1600 rounds of 10x28mm. The maximum speed of the Shobo is 60 mph, but on a standard deployment after the ammo stores are fully loaded and the terrain is taken into account, it consistently sits at 55mph."
-	icon = 'icons/obj/vehicles/twe_tank.dmi'
-	icon_state = "twe_tank"
 	density = TRUE
 
 //overhead prop sets
@@ -1713,6 +1721,13 @@
 	icon_state = "missile_platform"
 
 //overhead prop sets
+
+/obj/structure/prop/vehicles/tank/twe
+	name = "\improper FV150 Shobo MKII"
+	desc = "The FV150 Shobo MKII is a Combat Reconnaissance Vehicle Tracked, abbreviated to CVR(T) in official documentation. It was co-developed in 2175 by Weyland-Yutani and Gallar Co., a Titan based heavy vehicle manufacturer. Taking into account lessons learned from the MkI's performance in the Australian Wars, major structual changes were made, and the MKII went into production in 2178. It is armed with a twin 30mm cannon and a L58A3 10x28mm coaxial, complimented by its ammunition stores of 170 rounds of 30mm and 1600 rounds of 10x28mm. The maximum speed of the Shobo is 60 mph, but on a standard deployment after the ammo stores are fully loaded and the terrain is taken into account, it consistently sits at 55mph."
+	icon = 'icons/obj/vehicles/twe_tank.dmi'
+	icon_state = "tank_base"
+	density = TRUE
 
 /obj/structure/prop/invuln/overhead
 	layer = ABOVE_FLY_LAYER

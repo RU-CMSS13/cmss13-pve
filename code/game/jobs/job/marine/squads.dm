@@ -206,6 +206,18 @@
 	usable = TRUE
 	squad_type = "Squad"
 
+/datum/squad/marine/upp/forecon
+	name = SQUAD_SISSI
+	equipment_color = "#07770d"
+	chat_color = "#07770d"
+	minimap_color = "#07770d"
+	access = list(ACCESS_UPP_GENERAL)
+	radio_freq = UPP_FORECON_FREQ
+	minimap_color = MINIMAP_SQUAD_UPP
+	use_stripe_overlay = FALSE
+	usable = TRUE
+	faction = FACTION_UPP
+
 /datum/squad/marine/bravo
 	name = SQUAD_MARINE_2
 	equipment_color = "#ffc32d"
@@ -522,7 +534,7 @@
 			continue
 
 		marine_card.assignment = "[new_name] [marine.job]"
-		marine_card.name = "[marine_card.registered_name]'s [marine_card.card_name] ([marine_card.assignment])"
+		marine_card.name = "[marine_card.registered_name]'s [marine_card.id_type] ([marine_card.assignment])"
 
 /datum/squad/proc/setup_supply_drop_list()
 	SIGNAL_HANDLER
@@ -821,7 +833,7 @@
 
 	if(paygrade)
 		C.paygrade = paygrade
-	C.name = "[C.registered_name]'s [C.card_name] ([C.assignment])"
+	C.name = "[C.registered_name]'s [C.id_type] ([C.assignment])"
 
 	var/obj/item/device/radio/headset/almayer/marine/headset = locate() in list(M.wear_l_ear, M.wear_r_ear)
 	if(headset && radio_freq)
@@ -843,7 +855,7 @@
 
 	C.access -= src.access
 	C.assignment = M.assigned_equipment_preset.assignment
-	C.name = "[C.registered_name]'s [C.card_name] ([C.assignment])"
+	C.name = "[C.registered_name]'s [C.id_type] ([C.assignment])"
 
 	forget_marine_in_squad(M)
 

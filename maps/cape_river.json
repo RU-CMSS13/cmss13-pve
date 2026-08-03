@@ -13,9 +13,6 @@
     "CO_survivor_types": [
         "/datum/equipment_preset/survivor/caperiver/captain"
     ],
-    "CO_insert_survivor_types": [
-        "/datum/equipment_preset/survivor/clf/coordinator"
-    ],
     "map_item_type": "/obj/item/map/cape_river",
     "announce_text": "An automated distress signal has been received from Cape River, a Con-Amalagated corporate operated mining colony. The ###SHIPNAME### has been dictated to conduct an investigation in force.",
     "monkey_types": [
