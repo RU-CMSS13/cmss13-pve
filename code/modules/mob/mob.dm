@@ -403,6 +403,19 @@
 			pointed_at.add_filter(outline_name, 2, list("type" = "outline", "color" = outline_color, "size" = outline_size))
 			addtimer(CALLBACK(pointed_at, PROC_REF(disable_point_outline), outline_name), 4.5 SECONDS)
 
+		if(ishuman(mob) && ishumansynth_strict(pointed_at) && pointed_at != mob) //Don't yell out the name of predators ever, that would be weird. Our ourselves
+			var/mob/living/carbon/human/yelled_at_human = pointed_at
+			if(yelled_at_human.faction == mob.faction && yelled_at_human.name != "Unknown") // Don't yell out the name of CLF... Or someone you don't know
+				var/split_name = splittext(yelled_at_human.name, " ")
+				var/last_name = split_name[length(split_name)]
+				var/final_spoken_name
+				if(mob.a_intent == INTENT_GRAB)
+					final_spoken_name = "[last_name]!"
+				if(mob.a_intent == INTENT_HARM)
+					final_spoken_name = "[uppertext(last_name)]!!"
+				if(final_spoken_name)
+					say(final_spoken_name)
+
 	visible_message("<b>[src]</b> points to [pointed_at]", null, null, 5)
 	return TRUE
 
