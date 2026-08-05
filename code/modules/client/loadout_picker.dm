@@ -6,8 +6,9 @@
 	var/static/list/origin_groups = list( //yeah that's stupid but I don't want to see the entire list
 		"USCM" = USCM_ORIGINS,
 		"UPP" = UPP_ORIGINS,
+		"WY" = WY_ORIGINS,
 		"TWE" = TWE_ORIGINS,
-		"USCM, UPP & TWE" = FACTION_ORIGINS,
+		"Any faction" = FACTION_ORIGINS,
 		"Non-USCM" = NON_USCM_ORIGINS,
 		"Non-UPP" = NON_UPP_ORIGINS,
 		"Non-TWE" = NON_TWE_ORIGINS,

@@ -39,11 +39,11 @@
 	icon_state = "orange"
 	item_state = "orangegloves"
 
-/obj/item/clothing/gloves/red
+/obj/item/clothing/gloves/alpha
 	name = "red gloves"
 	desc = "A pair of gloves, they don't look special in any way."
 	icon_state = "red"
-	item_state = "redgloves"
+	item_state = "red"
 
 /obj/item/clothing/gloves/rainbow
 	name = "rainbow gloves"
@@ -51,17 +51,23 @@
 	icon_state = "rainbow"
 	item_state = "rainbowgloves"
 
-/obj/item/clothing/gloves/blue
+/obj/item/clothing/gloves/delta
 	name = "blue gloves"
 	desc = "A pair of gloves, they don't look special in any way."
 	icon_state = "blue"
-	item_state = "bluegloves"
+	item_state = "blue"
 
-/obj/item/clothing/gloves/purple
+/obj/item/clothing/gloves/charlie
 	name = "purple gloves"
 	desc = "A pair of gloves, they don't look special in any way."
 	icon_state = "purple"
-	item_state = "purplegloves"
+	item_state = "purple"
+
+/obj/item/clothing/gloves/bravo
+	name = "yellow gloves"
+	desc = "A pair of gloves, they don't look special in any way."
+	icon_state = "yellow"
+	item_state = "yellow"
 
 /obj/item/clothing/gloves/green
 	name = "green gloves"
