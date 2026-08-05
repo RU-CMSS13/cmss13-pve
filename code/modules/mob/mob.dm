@@ -421,6 +421,7 @@
 
 /mob/proc/disable_point_outline(outline_name)
 	remove_filter(outline_name)
+
 ///Is this mob important enough to point with big arrows?
 /mob/proc/check_improved_pointing()
 	if(HAS_TRAIT(src, TRAIT_LEADERSHIP))
