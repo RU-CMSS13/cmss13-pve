@@ -132,13 +132,6 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	cost = 4
 	allowed_roles = list(JOB_SQUAD_MEDIC, JOB_SQUAD_LEADER, JOB_SO)
 
-/datum/gear/eyewear/med_visor_old
-	display_name = "SensorMate HUD"
-	path = /obj/item/clothing/glasses/hud/sensor
-	cost = 6
-	allowed_roles = list(JOB_SQUAD_MEDIC, JOB_SQUAD_LEADER, JOB_SO)
-	allowed_origins = USCM_ORIGINS
-
 /*
 //================================================
 				Masks & Scarves
