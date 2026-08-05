@@ -45,7 +45,7 @@
 
 #define AGE_MIN 19 //youngest a character can be
 #define AGE_MAX 90 //oldest a character can be //no. you are not allowed to be 160.
-#define MAX_GEAR_COST 15 //Used in chargen for loadout limit.
+#define MAX_GEAR_COST 12 //Used in chargen for loadout limit.
 
 ///dual_wield_pref from /datum/preferences
 ///Fire both weapons when dual wielding
