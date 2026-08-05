@@ -1884,23 +1884,23 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	display_name = "Pack Of Lucky Strikes"
 	path = /obj/item/storage/fancy/cigarettes/lucky_strikes
 
-/datum/gear/smoking/pack_ladyfingers
+/datum/gear/smoking/uscm/pack_ladyfingers
 	display_name = "Pack Of Lady Fingers"
 	path = /obj/item/storage/fancy/cigarettes/lady_finger
 
-/datum/gear/smoking/pack_arcturian
+/datum/gear/smoking/uscm/pack_arcturian
 	display_name = "Pack Of Arcturian Aces"
 	path = /obj/item/storage/fancy/cigarettes/arcturian_ace
 
-/datum/gear/smoking/pack_koorlander
+/datum/gear/smoking/uscm/pack_koorlander
 	display_name = "Pack Of Koorlander Golds"
 	path = /obj/item/storage/fancy/cigarettes/kpack
 
-/datum/gear/smoking/spirit
+/datum/gear/smoking/uscm/spirit
 	display_name = "Pack Of American Spirit, Turquoise"
 	path = /obj/item/storage/fancy/cigarettes/spirit
 
-/datum/gear/smoking/spirit_yellow
+/datum/gear/smoking/uscm/spirit_yellow
 	display_name = "Pack Of American Spirit, Yellow"
 	path = /obj/item/storage/fancy/cigarettes/spirit/yellow
 
