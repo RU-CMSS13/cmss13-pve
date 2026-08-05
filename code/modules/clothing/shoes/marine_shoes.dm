@@ -56,11 +56,32 @@
 /obj/item/clothing/shoes/marine/brown/knife
 	spawn_item_type = /obj/item/weapon/knife/marine
 
+/obj/item/clothing/shoes/marine/grey
+	icon_state = "marine_grey"
+	desc = "Standard issue combat boots for combat scenarios or combat situations. All combat, all the time. These are grey."
+
+/obj/item/clothing/shoes/marine/grey/knife
+	spawn_item_type = /obj/item/weapon/knife/marine
+
 /obj/item/clothing/shoes/marine/jungle
 	icon_state = "marine_jungle"
 	desc = "A pair of standard issue United States Colonial Marine jungle boots. Don't go walkin' slow, the devil's on the loose."
 
 /obj/item/clothing/shoes/marine/jungle/knife
+	spawn_item_type = /obj/item/weapon/knife/marine
+
+/obj/item/clothing/shoes/marine/urban
+	icon_state = "marine_grey_alt"
+	desc = "Don't go walkin' slow, the devil's on the loose."
+
+/obj/item/clothing/shoes/marine/urban/knife
+	spawn_item_type = /obj/item/weapon/knife/marine
+
+/obj/item/clothing/shoes/marine/snow
+	icon_state = "marine_snow"
+	desc = "Don't go walkin' slow, the devil's on the loose."
+
+/obj/item/clothing/shoes/marine/snow/knife
 	spawn_item_type = /obj/item/weapon/knife/marine
 
 /obj/item/clothing/shoes/marine/army
@@ -193,8 +214,20 @@
 	icon_state = "marine_brown"
 	desc = "A pair of brown boots not so dissimilar from military combat boots, a likely culprit for their inspiration. They'll get the job done, whether that's hiking, or kicking in teeth."
 
+/obj/item/clothing/shoes/marine/civilian/grey
+	icon_state = "marine_grey"
+	desc = "A pair of grey boots not so dissimilar from military combat boots, a likely culprit for their inspiration. They'll get the job done, whether that's hiking, or kicking in teeth."
+
 /obj/item/clothing/shoes/marine/civilian/jungle
 	icon_state = "marine_jungle"
+	desc = "A pair of jungle boots not so dissimilar from military combat boots, a likely culprit for their inspiration. They'll get the job done, whether that's hiking, or kicking in teeth."
+
+/obj/item/clothing/shoes/marine/civilian/urban
+	icon_state = "marine_grey_alt"
+	desc = "A pair of urban boots not so dissimilar from military combat boots, a likely culprit for their inspiration. They'll get the job done, whether that's hiking, or kicking in teeth."
+
+/obj/item/clothing/shoes/marine/civilian/snow
+	icon_state = "marine_snow"
 	desc = "A pair of jungle boots not so dissimilar from military combat boots, a likely culprit for their inspiration. They'll get the job done, whether that's hiking, or kicking in teeth."
 
 /obj/item/clothing/shoes/marine/joe
@@ -230,6 +263,14 @@
 	desc = "A pair of sneakers designed to elicit a morale boosting response within anyone that witnesses them."
 	icon_state = "stompers"
 	flags_inventory = NOSLIPPING
+	allowed_items_typecache = list(
+		/obj/item/attachable/bayonet,
+		/obj/item/weapon/throwing_knife,
+		/obj/item/weapon/gun/pistol/clfpistol,
+		/obj/item/tool/screwdriver,
+		/obj/item/tool/surgery/scalpel,
+		/obj/item/weapon/straight_razor,
+	)
 
 /obj/item/clothing/shoes/veteran/pmc
 	name = "polished shoes"

@@ -132,6 +132,7 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	cost = 4
 	allowed_roles = list(JOB_SQUAD_MEDIC, JOB_SQUAD_LEADER, JOB_SO)
 
+
 /*
 //================================================
 				Masks & Scarves
@@ -680,9 +681,21 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	display_name = "jungle combat boots"
 	path = /obj/item/clothing/shoes/marine/civilian/jungle
 
+/datum/gear/clothing/boots/grey_boots
+	display_name = "grey combat boots"
+	path = /obj/item/clothing/shoes/marine/civilian/grey
+
 /datum/gear/clothing/boots/brown_boots
 	display_name = "brown combat boots"
 	path = /obj/item/clothing/shoes/marine/civilian/brown
+
+/datum/gear/clothing/boots/urban_boots
+	display_name = "urban combat boots"
+	path = /obj/item/clothing/shoes/marine/civilian/urban
+
+/datum/gear/clothing/boots/snow_boots
+	display_name = "snow combat boots"
+	path = /obj/item/clothing/shoes/marine/civilian/snow
 
 // gloves
 /datum/gear/clothing/gloves
