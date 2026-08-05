@@ -23,17 +23,17 @@ type LoadoutItem = {
 };
 
 export const LoadoutPicker = () => {
-  const { data } = useBackend<LoadoutPickerData>();
+  const { data, act } = useBackend<LoadoutPickerData>();
 
   const { categories, points, max_points, loadout } = data;
 
   const [selected, setSelected] = useState(categories[0]);
 
   return (
-    <Window height={485} width={610} theme="crtblue">
+    <Window height={620} width={780} theme="crtblue">
       <Window.Content className="LoadoutPicker">
         <Stack fill>
-          <Stack.Item>
+          <Stack.Item width="260px" shrink={0}>
             <Stack vertical fill>
               <Stack.Item>
                 <Section scrollable height="220px">
@@ -44,6 +44,10 @@ export const LoadoutPicker = () => {
                           fluid
                           selected={selected === category}
                           onClick={() => setSelected(category)}
+                          style={{
+                            whiteSpace: 'normal',
+                            wordBreak: 'break-word',
+                          }}
                         >
                           {category.name}
                         </Button>
@@ -52,11 +56,21 @@ export const LoadoutPicker = () => {
                   </Stack>
                 </Section>
               </Stack.Item>
-              <Stack.Item grow>
+              <Stack.Item grow minHeight="0">
                 <Section
                   title={`Loadout (${points}/${max_points} points)`}
-                  height="100%"
+                  fill
                   scrollable
+                  buttons={
+                    loadout.length > 0 && (
+                      <Button
+                        icon="trash"
+                        color="bad"
+                        tooltip="Clear loadout"
+                        onClick={() => act('clear')}
+                      />
+                    )
+                  }
                 >
                   <ItemList items={loadout} loadout />
                 </Section>
@@ -120,6 +134,10 @@ const ItemRow = (props: {
         width="100%"
         color={loadout ? 'bad' : undefined}
         disabled={!loadout && atLimit}
+        style={{
+          whiteSpace: 'normal',
+          wordBreak: 'break-word',
+        }}
         tooltip={
           <Box maxWidth="200px">
             {desc && <Box>{desc}</Box>}

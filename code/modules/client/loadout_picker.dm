@@ -90,6 +90,9 @@
 			if(!istype(gear))
 				return
 
+			if(gear.display_name in prefs.gear) // only one cuz bug with interface
+				return
+
 			var/total_cost = 0
 			for(var/gear_name in prefs.gear)
 				total_cost += GLOB.gear_datums_by_name[gear_name].cost
@@ -106,6 +109,9 @@
 				return
 
 			prefs.gear -= gear.display_name
+
+		if("clear")
+			prefs.gear = list()
 
 	prefs.ShowChoices(ui.user)
 	return TRUE
