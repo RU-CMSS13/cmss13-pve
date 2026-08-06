@@ -546,6 +546,14 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 /datum/gear/headwear/pmc
 	allowed_origins = WY_ORIGINS
 
+/datum/gear/headwear/pmc/cap
+	display_name = "Weyland-Yutani cap"
+	path = /obj/item/clothing/head/cmcap/weyyu
+
+/datum/gear/headwear/pmc/cap_alt
+	display_name = "Weyland-Yutani cap, Black"
+	path = /obj/item/clothing/head/cmcap/wy_cap
+
 /datum/gear/headwear/pmc/beret
 	display_name = "PMC beret"
 	path = /obj/item/clothing/head/cmcap/pmc
@@ -1919,6 +1927,7 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 /datum/gear/smoking/wy/pack_emeraldgreen
 	display_name = "Pack Of Emerald Greens"
 	path = /obj/item/storage/fancy/cigarettes/emeraldgreen
+	allowed_origins = NON_UPP_ORIGINS
 
 /datum/gear/smoking/wy/pack_wygold
 	display_name = "Pack Of Weyland Yutani Golds"
