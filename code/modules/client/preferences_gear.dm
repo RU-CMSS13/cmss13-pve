@@ -141,6 +141,7 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 /datum/gear/mask
 	category = "Masks and scarves"
 	slot = WEAR_FACE
+	cost = 2
 
 // balaclavas
 
@@ -298,7 +299,7 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 
 /datum/gear/headwear
 	category = "Headwear"
-	cost = 3
+	cost = 2
 	slot = WEAR_HEAD
 
 /datum/gear/headwear/uscm/santa_hat
@@ -339,28 +340,12 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	display_name = "Beret, white"
 	path = /obj/item/clothing/head/beret/cm/white
 
+/datum/gear/headwear/fisherman_boonie
+	display_name = "Fisherman's boonie hat"
+	path = /obj/item/clothing/head/cmcap/boonie/fisherman // 🐟
+
 /datum/gear/headwear/uscm
 	allowed_origins = USCM_ORIGINS
-
-/datum/gear/headwear/uscm/bandana_green
-	display_name = "USCM bandana, green"
-	path = /obj/item/clothing/head/cmbandana
-
-/datum/gear/headwear/uscm/bandana_tan
-	display_name = "USCM bandana, tan"
-	path = /obj/item/clothing/head/cmbandana/tan
-
-/datum/gear/headwear/uscm/beanie_grey
-	display_name = "USCM beanie, grey"
-	path = /obj/item/clothing/head/beanie/gray
-
-/datum/gear/headwear/uscm/beanie_green
-	display_name = "USCM beanie, green"
-	path = /obj/item/clothing/head/beanie/green
-
-/datum/gear/headwear/uscm/beanie_tan
-	display_name = "USCM beanie, tan"
-	path = /obj/item/clothing/head/beanie/tan
 
 /datum/gear/headwear/uscm/boonie_jungle
 	display_name = "USCM boonie hat, jungle"
@@ -374,33 +359,43 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	display_name = "USCM boonie hat, snow"
 	path = /obj/item/clothing/head/cmcap/boonie/snow
 
+/datum/gear/headwear/uscm/beanie
+
+/datum/gear/headwear/uscm/beanie/grey
+	display_name = "USCM beanie, grey"
+	path = /obj/item/clothing/head/beanie/gray
+
+/datum/gear/headwear/uscm/beanie/green
+	display_name = "USCM beanie, green"
+	path = /obj/item/clothing/head/beanie/green
+
+/datum/gear/headwear/uscm/beanie/tan
+	display_name = "USCM beanie, tan"
+	path = /obj/item/clothing/head/beanie/tan
+
 /datum/gear/headwear/uscm/cap
 	display_name = "USCM cap, jungle"
 	path = /obj/item/clothing/head/cmcap
-	cost = 2
 
-/datum/gear/headwear/uscm/cap_desert
+/datum/gear/headwear/uscm/cap/desert
 	display_name = "USCM cap, desert"
 	path = /obj/item/clothing/head/cmcap/desert
-	cost = 2
 
-/datum/gear/headwear/uscm/cap_snow
+/datum/gear/headwear/uscm/cap/snow
 	display_name = "USCM cap, snow"
 	path = /obj/item/clothing/head/cmcap/snow
-	cost = 2
 
-/datum/gear/headwear/uscm/cap_operations
+/datum/gear/headwear/uscm/cap/operations
 	display_name = "USCM Operations Cap, Green"
 	path = /obj/item/clothing/head/cmcap/bridge
 
-/datum/gear/headwear/uscm/cap_operations2
+/datum/gear/headwear/uscm/cap/cap_operations_alt
 	display_name = "USCM Operations Cap, Tan"
 	path = /obj/item/clothing/head/cmcap/bridge/tan
 
 /datum/gear/headwear/uscm/cap/sulaco
 	display_name = "USS Golden Arrow cap"
 	path = /obj/item/clothing/head/sulacocap
-	cost = 1
 
 /datum/gear/headwear/uscm/cap/flap_jungle
 	display_name = "USCM expedition flapcap, jungle"
@@ -414,81 +409,90 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	display_name = "USCM expedition flapcap, snow"
 	path = /obj/item/clothing/head/cmcap/flap/snow
 
-/datum/gear/headwear/uscm/headband_brown
+/datum/gear/headwear/uscm/headband
+	cost = 1
+
+/datum/gear/headwear/uscm/headband/brown
 	display_name = "USCM headband, brown"
 	path = /obj/item/clothing/head/headband/brown
 
-/datum/gear/headwear/uscm/headband_green
+/datum/gear/headwear/uscm/headband/green
 	display_name = "USCM headband, green"
 	path = /obj/item/clothing/head/headband
 
-/datum/gear/headwear/uscm/headband_grey
+/datum/gear/headwear/uscm/headband/grey
 	display_name = "USCM headband, grey"
 	path = /obj/item/clothing/head/headband/gray
 
-/datum/gear/headwear/uscm/headband_red
+/datum/gear/headwear/uscm/headband/red
 	display_name = "USCM headband, red"
 	path = /obj/item/clothing/head/headband/red
 
-/datum/gear/headwear/uscm/headband_tan
+/datum/gear/headwear/uscm/headband/tan
 	display_name = "USCM headband, tan"
 	path = /obj/item/clothing/head/headband/tan
 
-/datum/gear/headwear/uscm/headband_intel
+/datum/gear/headwear/uscm/headband/intel
 	display_name = "USCM headband, black"
 	path = /obj/item/clothing/head/headband/intel
 
-/datum/gear/headwear/uscm/headband_bravo
+/datum/gear/headwear/uscm/headband/bravo
 	display_name = "USCM headband, orange"
 	path = /obj/item/clothing/head/headband/bravo
 
-/datum/gear/headwear/uscm/headband_charlie
+/datum/gear/headwear/uscm/headband/charlie
 	display_name = "USCM headband, purple"
 	path = /obj/item/clothing/head/headband/charlie
 
-/datum/gear/headwear/uscm/headband_delta
+/datum/gear/headwear/uscm/headband/delta
 	display_name = "USCM headband, blue"
 	path = /obj/item/clothing/head/headband/delta
 
-/datum/gear/headwear/uscm/headband_echo
+/datum/gear/headwear/uscm/headband/echo
 	display_name = "USCM headband, cyan green"
 	path = /obj/item/clothing/head/headband/echo
+
+/datum/gear/headwear/uscm/beret
+
+/datum/gear/headwear/uscm/beret/white
+	display_name = "Beret, white"
+	path = /obj/item/clothing/head/beret/cm/white
+
+/datum/gear/headwear/uscm/beret/alpha
+	display_name = "Beret, red flash"
+	path = /obj/item/clothing/head/beret/cm/alpha
+
+/datum/gear/headwear/uscm/beret/bravo
+	display_name = "Beret, yellow flash"
+	path = /obj/item/clothing/head/beret/cm/bravo
+
+/datum/gear/headwear/uscm/beret/charlie
+	display_name = "Beret, purple flash"
+	path = /obj/item/clothing/head/beret/cm/charlie
+
+/datum/gear/headwear/uscm/beret/delta
+	display_name = "Beret, blue flash"
+	path = /obj/item/clothing/head/beret/cm/delta
+
+/datum/gear/headwear/uscm/beret/echo
+	display_name = "Beret, green flash"
+	path = /obj/item/clothing/head/beret/cm/echo
+
+/datum/gear/headwear/uscm/beret/foxtrot
+	display_name = "Beret, brown flash"
+	path = /obj/item/clothing/head/beret/cm/foxtrot
+
+/datum/gear/headwear/uscm/beret/intel
+	display_name = "Beret, black flash"
+	path = /obj/item/clothing/head/beret/cm/intel
 
 /datum/gear/headwear/uscm/headset
 	display_name = "USCM headset"
 	path = /obj/item/clothing/head/headset
 
-/datum/gear/headwear/uscm/beret_white
-	display_name = "Beret, white"
-	path = /obj/item/clothing/head/beret/cm/white
-
-/datum/gear/headwear/uscm/beret_alpha
-	display_name = "Beret, red flash"
-	path = /obj/item/clothing/head/beret/cm/alpha
-
-/datum/gear/headwear/uscm/beret_bravo
-	display_name = "Beret, yellow flash"
-	path = /obj/item/clothing/head/beret/cm/bravo
-
-/datum/gear/headwear/uscm/beret_charlie
-	display_name = "Beret, purple flash"
-	path = /obj/item/clothing/head/beret/cm/charlie
-
-/datum/gear/headwear/uscm/beret_delta
-	display_name = "Beret, blue flash"
-	path = /obj/item/clothing/head/beret/cm/delta
-
-/datum/gear/headwear/uscm/beret_echo
-	display_name = "Beret, green flash"
-	path = /obj/item/clothing/head/beret/cm/echo
-
-/datum/gear/headwear/uscm/beret_foxtrot
-	display_name = "Beret, brown flash"
-	path = /obj/item/clothing/head/beret/cm/foxtrot
-
-/datum/gear/headwear/uscm/beret_intel
-	display_name = "Beret, black flash"
-	path = /obj/item/clothing/head/beret/cm/intel
+/datum/gear/headwear/uscm/headset
+	display_name = "Ushanka"
+	path = /obj/item/clothing/head/ushanka
 
 /datum/gear/headwear/upp
 	allowed_origins = UPP_ORIGINS
@@ -508,6 +512,11 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 /datum/gear/headwear/upp/boonie_canc
 	display_name = "CANC boonie hat"
 	path = /obj/item/clothing/head/cmcap/upp/boonie/canc
+	allowed_origins = list(ORIGIN_CANC, ORIGIN_UPP_EXCANC)
+
+/datum/gear/headwear/upp/boonie_canc
+	display_name = "CANC flapcap"
+	path = /obj/item/clothing/head/cmcap/flap/canc
 	allowed_origins = list(ORIGIN_CANC, ORIGIN_UPP_EXCANC)
 
 /datum/gear/headwear/upp/ushanka
@@ -2056,6 +2065,27 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	cost = 2
 
 /datum/gear/misc/eye_drops
-
 	display_name = "Eye drops"
 	path = /obj/item/prop/helmetgarb/eye_drops
+
+/datum/gear/misc/coin
+	cost = 1
+
+/datum/gear/misc/coin/iron
+	display_name = "Iron Coin"
+	path = /obj/item/coin/iron
+
+/datum/gear/misc/coin/silver
+	display_name = "Silver Coin"
+	path = /obj/item/coin/silver
+	cost = 2
+
+/datum/gear/misc/coin/gold
+	display_name = "Gold Coin"
+	path = /obj/item/coin/gold
+	cost = 3
+
+/datum/gear/misc/coin/diamond
+	display_name = "Diamond Coin"
+	path = /obj/item/coin/diamond
+	cost = 4
