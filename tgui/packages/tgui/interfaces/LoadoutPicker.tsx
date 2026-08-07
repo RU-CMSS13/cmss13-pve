@@ -62,14 +62,12 @@ export const LoadoutPicker = () => {
                   fill
                   scrollable
                   buttons={
-                    loadout.length > 0 && (
-                      <Button
-                        icon="trash"
-                        color="bad"
-                        tooltip="Clear loadout"
-                        onClick={() => act('clear')}
-                      />
-                    )
+                    <Button
+                      icon="trash"
+                      color="bad"
+                      tooltip="Clear loadout"
+                      onClick={() => act('clear')}
+                    />
                   }
                 >
                   <ItemList items={loadout} loadout />
