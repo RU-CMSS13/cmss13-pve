@@ -99,9 +99,6 @@
 /obj/structure/closet/secure_closet/marine_personal/upp/platoon_leader
 	job = JOB_SQUAD_LEADER
 
-/obj/structure/closet/secure_closet/marine_personal/upp/flamer
-	job = JOB_SQUAD_FLAMER_UPP
-
 /obj/structure/closet/secure_closet/marine_personal/upp/platoon_commander
 	job = JOB_SO
 

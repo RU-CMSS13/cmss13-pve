@@ -471,7 +471,7 @@
 
 // Used to authenticate to CORSAT machines. Doesn't do anything except have its type variable
 /obj/item/card/data/corsat
-	name = "RSS Rodina administration code"
+	name = "CORSAT administration code"
 	desc = "A disk of data containing one of the CORSAT administration authentication codes necessary to lift the biohazard lockdown."
 	icon_state = "data"
 	item_state = "red-id"

@@ -679,6 +679,18 @@
 	sensor_faction = FACTION_CANC
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
 
+/obj/item/clothing/under/marine/veteran/canc/blackops
+	name = "\improper Brotherhood fatigues"
+	desc = "It's a set of standard-issue Brotherhood combat fatigues featuring venlar armor inserts at critical areas to protect from blades and low caliber ballistics. The rubberized outer layer provides additional protection from chemical hazards."
+	icon_state = "canc_uniform_blackops"
+	worn_state = "canc_uniform_blackops"
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	has_sensor = UNIFORM_HAS_SENSORS
+	sensor_faction = FACTION_CANC
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
+	armor_melee = CLOTHING_ARMOR_LOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
+
 // UPP Army / Territorial Guard
 
 /obj/item/clothing/under/marine/veteran/upp/army

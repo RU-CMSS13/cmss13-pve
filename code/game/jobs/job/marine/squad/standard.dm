@@ -200,22 +200,6 @@
 	squad = SQUAD_RMC
 	job = /datum/job/marine/standard/ai/rmc
 
-/datum/job/marine/standart/ai/upp/flamer
-	title = JOB_SQUAD_FLAMER_UPP
-	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
-	total_positions = 2
-	spawn_positions = 2
-	gear_preset = /datum/equipment_preset/uscm/flamer/upp
-	gear_preset_secondary = /datum/equipment_preset/uscm/flamer/upp/corporal
-	job_options = list(CPL_VARIANT = "CPL", JSGT_VARIANT = "JrSGT")
-	supervisors = "the platoon sergeant and your squad sergeant"
-	entry_message_body = "You are a vanguard fighter, trained to use a flamethrower. Your task is to ensure the safety of your comrades around the perimeter with your flamethrower. <BR>You remember that your equipment is stored in the armory."
-
-/obj/effect/landmark/start/marine/upp/flamer
-	name = JOB_SQUAD_FLAMER_UPP
-	squad = SQUAD_UPP
-	job = JOB_SQUAD_FLAMER_UPP
-
 #undef SGT_VARIANT
 #undef JSGT_VARIANT
 #undef CPL_VARIANT

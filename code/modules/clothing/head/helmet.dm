@@ -1071,6 +1071,20 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "canc"
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
 
+/obj/item/clothing/head/helmet/marine/veteran/canc/blackops
+	name = "\improper Type 107-C helmet"
+	desc = "Experimental Helmet Type 107-C. Developed by the CANC scientific divison in collaboration with engineers from Hyperdyne. Constructed from the same titanium nanocrystalline alloy used in UPP armor plates, and reinforced with additional para-aramid plating. In addition to its integrated air filtration system, the helmet is equipped with advanced hearing protection, communication systems, and mounting ports for additional visors. On top of that, the helmet also features a high-resolution camera, allowing targets to be observed even in IR mode."
+	icon_state = "canc_blackops"
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR|SPOREPROOF
+	eye_protection = EYE_PROTECTION_FLASH
+	clothing_traits = list(TRAIT_EAR_PROTECTION)
+	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
+
 /obj/item/clothing/head/helmet/marine/veteran/pmc
 	name = "\improper Mk10 combat helmet"
 	desc = "Standard issue high molecular density polymer combat helmet used by Weyland Yutani's elite tactical teams. Designed by Weyland-Yutani, initially as a hard hat, the project was eventually retrofitted into a cheap, reliable combat helmet system that incorporates a tactical camera, IFF signal transponder, and heads up display lens. Also features white/black hot IR viewing modes from the camera system."

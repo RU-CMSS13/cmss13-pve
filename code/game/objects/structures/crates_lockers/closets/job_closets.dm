@@ -198,20 +198,3 @@
 	new /obj/item/ammo_magazine/smartgun/holo_targeting(src)
 	new /obj/item/ammo_magazine/smartgun/holo_targeting(src)
 	new /obj/item/clothing/glasses/night/m56_goggles/rmc(src)
-
-/obj/structure/closet/secure_closet/upp_flamer
-	name = "Fire Trooper locker"
-	desc = "A secure storage unit for a fire trooper"
-	req_access = list(ACCESS_UPP_FLAMER)
-
-/obj/structure/closet/secure_closet/upp_flamer/Initialize()
-	. = ..()
-	new /obj/item/storage/backpack/marine/engineerpack/flamethrower/upp/large(src)
-	new /obj/item/clothing/gloves/marine/pve_mopp/upp(src)
-	new /obj/item/clothing/under/marine/cbrn/upp(src)
-	new /obj/item/clothing/shoes/marine/pve_mopp/upp(src)
-	new /obj/item/weapon/gun/flamer/upp/unloaded(src)
-	new /obj/item/ammo_magazine/flamer_tank/upp/gellied(src)
-	new /obj/item/ammo_magazine/flamer_tank/upp/gellied(src)
-	new /obj/item/ammo_magazine/flamer_tank/upp/extended(src)
-	new /obj/item/storage/pouch/flamertank(src)

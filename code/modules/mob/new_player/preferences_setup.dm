@@ -288,8 +288,6 @@
 			return /datum/equipment_preset/upp/machinegunner
 		if(JOB_SQUAD_TEAM_LEADER_UPP)
 			return /datum/equipment_preset/upp/squadlead
-		if(JOB_SQUAD_FLAMER_UPP)
-			return /datum/equipment_preset/uscm/flamer/upp
 		if(JOB_SO_UPP)
 			return /datum/equipment_preset/uscm_ship/so/upp/equipped
 //FORECON Squad

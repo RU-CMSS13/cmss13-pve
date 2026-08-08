@@ -69,7 +69,6 @@
 			if(JOB_SQUAD_SMARTGUN) hud_icon_state = "gun"
 			if(JOB_SQUAD_TEAM_LEADER) hud_icon_state = "tl"
 			if(JOB_SQUAD_LEADER) hud_icon_state = "leader_a"
-			if(JOB_SQUAD_FLAMER_UPP) hud_icon_state = "spec"
 			if(JOB_SQUAD_RTO) hud_icon_state = "rto"
 		if(squad.fireteam_leaders["SQ1"] == H || squad.fireteam_leaders["SQ2"] == H)
 			H.langchat_styles = "langchat_smaller_bolded"

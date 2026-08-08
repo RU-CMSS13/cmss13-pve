@@ -250,29 +250,6 @@
 	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0)
 
 //*****************************************************************************************************/
-
-/datum/equipment_preset/uscm/flamer/upp
-	name = "UPP Fire Trooper"
-	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
-	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_FLAMER)
-	assignment = JOB_SQUAD_FLAMER_UPP
-	rank = JOB_SQUAD_FLAMER_UPP
-	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "FT"
-	skills = /datum/skills/upp/flamer
-	languages = list(LANGUAGE_RUSSIAN)
-	faction_group = list(FACTION_UPP)
-	faction = FACTION_UPP
-	minimap_icon = "rto"
-
-/datum/equipment_preset/uscm/flamer/upp/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Naval Infantry Telnyashka"
-
-/datum/equipment_preset/uscm/flamer/upp/corporal
-	name = parent_type::name + " (E3 Rank)"
-	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
-
-//*****************************************************************************************************/
 /datum/equipment_preset/uscm/rto
 	name = "USCM Radio Telephone Operator"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
