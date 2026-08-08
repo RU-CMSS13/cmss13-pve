@@ -34,10 +34,20 @@
 	return list(
 		"name" = gear.display_name,
 		"cost" = gear.cost,
-		"desc" = initial(gear.path::desc),
+		"desc" = get_gear_desc(gear),
 		"origin" = get_origin_text(gear),
 		"roles" = length(gear.allowed_roles) ? english_list(gear.allowed_roles, and_text = ", ") : null,
 	)
+
+/datum/loadout_picker/proc/get_gear_desc(datum/gear/gear)
+	var/static/list/desc_cache
+
+	if(!LAZYISIN(desc_cache, gear.path))
+		var/atom/dummy = new gear.path()
+		LAZYSET(desc_cache, gear.path, dummy.desc)
+		qdel(dummy)
+
+	return LAZYACCESS(desc_cache, gear.path)
 
 /datum/loadout_picker/ui_static_data(mob/user)
 	. = ..()
