@@ -2262,7 +2262,7 @@
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/heavy/nostrip, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppsmall/upp_breacher, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/caws, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/caws/assault, WEAR_J_STORE)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/specialist/upp, WEAR_HANDS)

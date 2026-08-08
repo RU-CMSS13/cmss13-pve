@@ -62,7 +62,7 @@ def main(repo : pygit2.Repository):
     try:
         repo.remotes.create("upstream", "https://github.com/RU-CMSS13/cmss13-pve.git")
     except ValueError:
-        pass
+        repo.remotes.set_url("upstream", "https://github.com/RU-CMSS13/cmss13-pve.git")
     else:
         print("Adding upstream remote...")
 

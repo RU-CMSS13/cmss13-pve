@@ -1741,7 +1741,7 @@
 	flags_gun_features = /obj/item/weapon/gun/rifle/type71/carbine/recon::flags_gun_features | GUN_TRIGGER_SAFETY
 
 /obj/item/weapon/gun/rifle/type71/carbine/assault
-	starting_attachment_types = list( /obj/item/attachable/bayonet/upp, /obj/item/attachable/verticalgrip/upp)
+	starting_attachment_types = list(/obj/item/attachable/bayonet/upp, /obj/item/attachable/magnetic_harness)
 
 //-------------------------------------------------------
 //UPP TYPE 73 RIFLE

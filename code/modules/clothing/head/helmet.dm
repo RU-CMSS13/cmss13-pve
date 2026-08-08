@@ -1927,7 +1927,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "upp_helmet_heavy"
 	armor_melee = CLOTHING_ARMOR_HIGH
 	armor_bullet = CLOTHING_ARMOR_VERYHIGH
-	armor_bomb = CLOTHING_ARMOR_ULTRAHIGH
+	armor_bomb = CLOTHING_ARMOR_ULTRAHIGHPLUS
 	armor_bio = CLOTHING_ARMOR_HIGH
 	armor_rad = CLOTHING_ARMOR_HIGHPLUS
 	armor_internaldamage = CLOTHING_ARMOR_VERYHIGH
