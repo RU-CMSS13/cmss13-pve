@@ -14666,7 +14666,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/cm_vending/clothing/leaderplatoon,
+/obj/structure/machinery/cm_vending/clothing/leader/uscm,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
 "aVP" = (

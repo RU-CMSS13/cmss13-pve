@@ -1036,6 +1036,14 @@
 		/obj/item/weapon/gun/smartgun/rmc,
 	)
 
+/obj/item/clothing/suit/marine/veteran/royal_marine/leader
+	name = "\improper Kestrel command cuirass"
+	desc = "Standard RMC issue Kestrel Personal Armor designed by Weyland-Yutani subsidary. Advanced composite ballistic protection, biomonitoring system, LCS brackets. This variant carries a command relay for monitoring squad vitals."
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+
 /atom/movable/marine_light
 	light_system = DIRECTIONAL_LIGHT
 

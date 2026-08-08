@@ -206,6 +206,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_leader, list(
 /obj/effect/essentials_set/leader
 	spawned_gear_list = list(
 		/obj/item/explosive/plastic,
+		/obj/item/device/whistle,
 		/obj/item/device/binoculars/range/designator,
 		/obj/item/storage/box/flare/signal,
 		/obj/item/tool/extinguisher/mini,
@@ -228,10 +229,14 @@ GLOBAL_LIST_INIT(cm_vending_clothing_uscm_platoon, list(
 		list("M4A4", 0, /obj/item/storage/box/loadout/m4a4_vendor, MARINE_CAN_BUY_KIT, VENDOR_ITEM_RECOMMENDED),
 
 		list("BELT (CHOOSE 1)", 0, null, null, null),
-		list("M276 Lifesaver Bag", 0, /obj/item/storage/belt/medical/lifesaver, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
-		list("M276 Medical Storage Rig", 0, /obj/item/storage/belt/medical, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
-		list("M276 Toolbelt Rig (Full)", 0, /obj/item/storage/belt/utility/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
-		list("M276 Pattern Combat Toolbelt Rig", 0, /obj/item/storage/belt/gun/utility, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 Lifesaver Bag", 0, /obj/item/storage/belt/medical/lifesaver, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("M276 Medical Storage Rig", 0, /obj/item/storage/belt/medical, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("M276 Pattern Ammo Load Rig", 0, /obj/item/storage/belt/marine/standard, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 Pattern M40 Grenade Rig", 0, /obj/item/storage/belt/grenade, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 Pattern General Pistol Holster Rig", 0, /obj/item/storage/belt/gun/m4a3/standard, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 Pattern General Revolver Holster Rig", 0, /obj/item/storage/belt/gun/m44, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 Pattern M82F Holster Rig", 0, /obj/item/storage/belt/gun/flaregun, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 G8-A General Utility Pouch", 0, /obj/item/storage/backpack/general_belt/standard, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 
 		list("WEBBINGS (CHOOSE 1)", 0, null, null, null),
 		list("M3 Pattern Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
@@ -264,10 +269,14 @@ GLOBAL_LIST_INIT(cm_vending_clothing_uscm_forecon_platoon, list(
 		list("M4A4", 0, /obj/item/storage/box/loadout/m4a4_vendor, MARINE_CAN_BUY_KIT, VENDOR_ITEM_RECOMMENDED),
 
 		list("BELT (CHOOSE 1)", 0, null, null, null),
-		list("M276 Lifesaver Bag", 0, /obj/item/storage/belt/medical/lifesaver, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
-		list("M276 Medical Storage Rig", 0, /obj/item/storage/belt/medical, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
-		list("M276 Toolbelt Rig (Full)", 0, /obj/item/storage/belt/utility/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
-		list("M276 Pattern Combat Toolbelt Rig", 0, /obj/item/storage/belt/gun/utility, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 Lifesaver Bag", 0, /obj/item/storage/belt/medical/lifesaver, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("M276 Medical Storage Rig", 0, /obj/item/storage/belt/medical, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("M276 Pattern Ammo Load Rig", 0, /obj/item/storage/belt/marine/standard, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 Pattern M40 Grenade Rig", 0, /obj/item/storage/belt/grenade, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 Pattern General Pistol Holster Rig", 0, /obj/item/storage/belt/gun/m4a3/standard, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 Pattern General Revolver Holster Rig", 0, /obj/item/storage/belt/gun/m44, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 Pattern M82F Holster Rig", 0, /obj/item/storage/belt/gun/flaregun, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 G8-A General Utility Pouch", 0, /obj/item/storage/backpack/general_belt/standard, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 
 		list("WEBBINGS (CHOOSE 1)", 0, null, null, null),
 		list("M3-R Pattern Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/recon, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
@@ -298,9 +307,13 @@ GLOBAL_LIST_INIT(cm_vending_clothing_upp_platoon, list(
 		list("UPP Flag", 0, /obj/item/flag/plantable/upp, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
 
 		list("BELT (CHOOSE 1)", 0, null, null, null),
-		list("M276 Lifesaver Bag", 0, /obj/item/storage/belt/medical/lifesaver, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
-		list("M276 Medical Storage Rig", 0, /obj/item/storage/belt/medical, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
-		list("M276 Toolbelt Rig (Full)", 0, /obj/item/storage/belt/utility/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("Type 41 Lifesaver Bag (Full)", 0, /obj/item/storage/belt/medical/lifesaver/upp/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("Type 41 Medical Storage Rig (Full)", 0, /obj/item/storage/belt/medical/upp/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("Type 41 Pattern Ammo Load Rig", 0, /obj/item/storage/belt/marine/upp, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("Type 39 Pattern Grenade Rig", 0, /obj/item/storage/belt/grenade/upp, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("Type 47 Pattern General Pistol Holster Rig", 0, /obj/item/storage/belt/gun/type47, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 Pattern M82F Holster Rig", 0, /obj/item/storage/belt/gun/flaregun, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("Type 48 General Utility Pouch", 0, /obj/item/storage/backpack/general_belt/upp, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 
 		list("WEBBINGS (CHOOSE 1)", 0, null, null, null),
 		list("Type 90 Pattern Magazine Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/uppmags, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
@@ -310,4 +323,102 @@ GLOBAL_LIST_INIT(cm_vending_clothing_upp_platoon, list(
 		list("Drop Pouch", 0, /obj/item/clothing/accessory/storage/droppouch/upp, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
 		list("Leg Pouch", 0, /obj/item/clothing/accessory/storage/smallpouch/upp, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
 		list("Shoulder Holster", 0, /obj/item/clothing/accessory/storage/holster, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+	))
+
+/obj/structure/machinery/cm_vending/clothing/leader/upp_forecon
+	name = "\improper UnTech Recon Squad Leader Equipment Rack"
+	icon_state = "upp_gear"
+	vendor_role = list(JOB_SQUAD_LEADER)
+	req_access = list(ACCESS_UPP_LEADERSHIP)
+	vendor_theme = VENDOR_THEME_UPP
+
+/obj/structure/machinery/cm_vending/clothing/leader/upp_forecon/get_listed_products(mob/user)
+	return GLOB.cm_vending_clothing_upp_forecon_platoon
+
+GLOBAL_LIST_INIT(cm_vending_clothing_upp_forecon_platoon, list(
+		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
+		list("6B85-K Pattern Armor", 0, /obj/item/clothing/suit/marine/faction/upp/recon/leader, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("Leader Kit", 0, /obj/effect/essentials_set/leader, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+
+		list("BELT (CHOOSE 1)", 0, null, null, null),
+		list("Type 41 Lifesaver Bag (Full)", 0, /obj/item/storage/belt/medical/lifesaver/upp/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("Type 41 Medical Storage Rig (Full)", 0, /obj/item/storage/belt/medical/upp/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("Type 41 Pattern Ammo Load Rig", 0, /obj/item/storage/belt/marine/upp, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("Type 39 Pattern Grenade Rig", 0, /obj/item/storage/belt/grenade/upp, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("Type 47 Pattern General Pistol Holster Rig", 0, /obj/item/storage/belt/gun/type47, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 Pattern M82F Holster Rig", 0, /obj/item/storage/belt/gun/flaregun, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("Type 48 General Utility Pouch", 0, /obj/item/storage/backpack/general_belt/upp, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+
+		list("WEBBINGS (CHOOSE 1)", 0, null, null, null),
+		list("Type 90 Pattern Magazine Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/uppmags, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Type 82 Pattern Grenade Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/m40/upp, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Type 78 Pattern Small Pouch Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/uppsmall, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Type 77 Pattern Pouch Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/uppgeneral, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Drop Pouch", 0, /obj/item/clothing/accessory/storage/droppouch/upp, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Leg Pouch", 0, /obj/item/clothing/accessory/storage/smallpouch/upp, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Shoulder Holster", 0, /obj/item/clothing/accessory/storage/holster, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+	))
+
+/obj/structure/machinery/cm_vending/clothing/leader/pmc
+	name = "\improper WeyTech Squad Leader Equipment Rack"
+	icon_state = "pmc_gear"
+	vendor_role = list(JOB_SQUAD_LEADER)
+	req_access = list(ACCESS_WY_SENIOR_LEAD)
+	vendor_theme = VENDOR_THEME_COMPANY
+
+/obj/structure/machinery/cm_vending/clothing/leader/pmc/get_listed_products(mob/user)
+	return GLOB.cm_vending_clothing_pmc_platoon
+
+GLOBAL_LIST_INIT(cm_vending_clothing_pmc_platoon, list(
+		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
+		list("M4 Pattern Armor", 0, list(/obj/item/clothing/head/helmet/marine/veteran/pmc/leader, /obj/item/clothing/suit/marine/veteran/pmc/leader), MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("Leader Kit", 0, /obj/effect/essentials_set/leader, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+
+		list("BELT (CHOOSE 1)", 0, null, null, null),
+		list("M276 Lifesaver Bag (Full)", 0, /obj/item/storage/belt/medical/lifesaver/wy/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("WY-TM402 Pattern Ammo Load Rig", 0, /obj/item/storage/belt/marine/wy, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 Pattern M40 Grenade Rig", 0, /obj/item/storage/belt/grenade, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("WY-TM406 pattern Shotgun Shell Rig", 0, /obj/item/storage/belt/shotgun/wy, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("WY-TM892 Pattern General Pistol Holster Rig", 0, /obj/item/storage/belt/gun/m4a3/wy, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 Pattern M82F Holster Rig", 0, /obj/item/storage/belt/gun/flaregun, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("WY-TM612 General Utility Pouch", 0, /obj/item/storage/backpack/general_belt/wy, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+
+		list("WEBBINGS (CHOOSE 1)", 0, null, null, null),
+		list("67 Pattern Small Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/uppsmall/pmc, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("68 Pattern Big Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/pmc, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("82 Pattern Magazine Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/mag/pmc, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("41 Pattern Shotgun Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/recon/shotgun/pmc, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("76 Pattern Grenade Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/m40/pmc, VENDOR_ITEM_REGULAR),
+		list("Small Pouch", 0, /obj/item/clothing/accessory/storage/smallpouch/wy, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Drop Pouch", 0, /obj/item/clothing/accessory/storage/droppouch/wy, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Waist Holster", 0, /obj/item/clothing/accessory/storage/holster/waist, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+	))
+
+/obj/structure/machinery/cm_vending/clothing/leader/rmc
+	name = "\improper WeyTech Squad Leader Equipment Rack"
+	icon_state = "rmc_gear"
+	vendor_role = list(JOB_TWE_RMC_TROOPLEADER)
+	req_access = list(ACCESS_TWE_TLPREP)
+	vendor_theme = VENDOR_THEME_COMPANY
+
+/obj/structure/machinery/cm_vending/clothing/leader/rmc/get_listed_products(mob/user)
+	return GLOB.cm_vending_clothing_rmc_platoon
+
+GLOBAL_LIST_INIT(cm_vending_clothing_rmc_platoon, list(
+		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
+		list("Kestrel Pattern Armor", 0, list(/obj/item/clothing/head/beret/royal_marine_pvp/team_leader, /obj/item/clothing/suit/marine/veteran/royal_marine/leader), MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("Leader Kit", 0, /obj/effect/essentials_set/leader, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+
+		list("BELT (CHOOSE 1)", 0, null, null, null),
+		list("L75 Medical Storage Rig (Full)", 0, /obj/item/storage/belt/medical/rmc/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("L70 Pattern Ammo Load Rig", 0, /obj/item/storage/belt/marine/rmc, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("L26 Pattern General Utility Belt", 0, /obj/item/storage/backpack/general_belt/rmc, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("L165 Gunbelt", 0, /obj/item/storage/belt/gun/l905, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+
+		list("WEBBINGS (CHOOSE 1)", 0, null, null, null),
+		list("82 Pattern Magazine Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/uppmags/rmc, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("67 Pattern Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/uppsmall/rmc, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Drop Pouch", 0, /obj/item/clothing/accessory/storage/droppouch/rmc, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Small Pouch", 0, /obj/item/clothing/accessory/storage/smallpouch/rmc, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Waist Holster", 0, /obj/item/clothing/accessory/storage/holster/waist, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
 	))
