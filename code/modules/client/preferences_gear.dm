@@ -873,7 +873,7 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	display_name = "Solar Devils shoulder patch"
 	path = /obj/item/clothing/accessory/patch/devils
 
-/datum/gear/patch/uscm/patch_uscm/devils
+/datum/gear/patch/uscm/patch_uscm/falcons
 	display_name = "USCM Falling Falcons patch"
 	path = /obj/item/clothing/accessory/patch/falcon
 
