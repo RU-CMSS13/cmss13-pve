@@ -1,0 +1,4 @@
+author: "chaos-creations"
+delete-after: True
+changes:
+  - rscadd: "ported tgui loadout menu from pvp"

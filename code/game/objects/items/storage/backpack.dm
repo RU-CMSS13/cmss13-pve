@@ -1282,6 +1282,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	icon_state = "pmc_welderpack"
 	flags_atom = FPRINT
 	worn_accessible = TRUE
+	max_storage_space = 20
 	max_fuel = 180
 
 /obj/item/storage/backpack/combat_droid

@@ -417,6 +417,7 @@
 			// Redundancy case, if defines ever get changed
 			prefs.auto_holotag = ALWAYS_TAG_PATIENTS
 	}
+	prefs.save_preferences()
 
 /client/proc/toggle_middle_mouse_swap_hands() //Toggle whether middle click swaps your hands
 	prefs.toggle_prefs ^= TOGGLE_MIDDLE_MOUSE_SWAP_HANDS
