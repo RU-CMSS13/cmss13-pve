@@ -291,6 +291,30 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	cost = 3
 	allowed_origins = UPP_ORIGINS
 
+/datum/gear/mask/keffiyeh
+	display_name = "Keffiyeh"
+	path = /obj/item/clothing/mask/rebreather/scarf/keffiyeh
+
+/datum/gear/mask/keffiyeh/white
+	display_name = "Keffiyeh, white"
+	path = /obj/item/clothing/mask/rebreather/scarf/keffiyeh/white
+
+/datum/gear/mask/keffiyeh/red
+	display_name = "Keffiyeh, red"
+	path = /obj/item/clothing/mask/rebreather/scarf/keffiyeh/red
+
+/datum/gear/mask/keffiyeh/green
+	display_name = "Keffiyeh, green"
+	path = /obj/item/clothing/mask/rebreather/scarf/keffiyeh/green
+
+/datum/gear/mask/keffiyeh/black
+	display_name = "Keffiyeh, black"
+	path = /obj/item/clothing/mask/rebreather/scarf/keffiyeh/black
+
+/datum/gear/mask/keffiyeh/blue
+	display_name = "Keffiyeh, blue"
+	path = /obj/item/clothing/mask/rebreather/scarf/keffiyeh/blue
+
 /*
 //================================================
 				Headwear
@@ -514,7 +538,7 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	path = /obj/item/clothing/head/cmcap/upp/boonie/canc
 	allowed_origins = list(ORIGIN_CANC, ORIGIN_UPP_EXCANC)
 
-/datum/gear/headwear/upp/boonie_canc
+/datum/gear/headwear/upp/flapcap_canc
 	display_name = "CANC flapcap"
 	path = /obj/item/clothing/head/cmcap/flap/canc
 	allowed_origins = list(ORIGIN_CANC, ORIGIN_UPP_EXCANC)
@@ -2036,6 +2060,19 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 /datum/gear/misc/family_photo
 	display_name = "Family photo"
 	path = /obj/item/prop/helmetgarb/family_photo
+
+/datum/gear/misc/bible
+	display_name = "Bible"
+	path = /obj/item/prop/magazine/book/bible
+	cost = 1
+
+/datum/gear/misc/bible/quran
+	display_name = "Quran"
+	path = /obj/item/prop/magazine/book/bible/quran
+
+/datum/gear/misc/bible/torah
+	display_name = "Torah"
+	path = /obj/item/prop/magazine/book/bible/torah
 
 /datum/gear/misc/compass
 	display_name = "Compass"
