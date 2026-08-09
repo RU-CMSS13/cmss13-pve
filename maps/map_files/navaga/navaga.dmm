@@ -2450,6 +2450,10 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/machinery/light/small{
+	light_range = 6;
+	light_color = "#e7c0a4"
+	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/dorms)
 "nR" = (
@@ -2641,6 +2645,11 @@
 	can_be_stacked = 1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door_control{
+	pixel_x = 25;
+	pixel_y = -5;
+	id = "reactor"
+	},
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/engineering)
 "oL" = (
@@ -3874,7 +3883,7 @@
 /obj/structure/bed,
 /obj/item/bedsheet/brown{
 	layer = 3.4;
-	color = "#8B9490";
+	color = s;
 	anchored = 1
 	},
 /turf/open/floor/strata/multi_tiles,
@@ -5170,13 +5179,15 @@
 /obj/structure/machinery/door_control{
 	name = "Equipment Room Shutter Control";
 	id = "prep";
-	pixel_x = 8
+	pixel_x = 8;
+	req_one_access_txt = "240,241"
 	},
 /obj/structure/machinery/door_control{
 	name = "Weapon Storage Shutter Control";
 	id = "armory";
 	pixel_x = 8;
-	pixel_y = 8
+	pixel_y = 8;
+	req_one_access_txt = "240,241"
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/canteen)
@@ -5352,6 +5363,7 @@
 /area/golden_arrow/hangar)
 "Bv" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/photocopier,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/platoon_sergeant)
 "BD" = (
@@ -5752,11 +5764,6 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "DK" = (
-/obj/structure/machinery/light/small{
-	dir = 8;
-	light_color = "#e7c0a4";
-	light_range = 6
-	},
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/bible{
 	pixel_x = -1;
@@ -5769,6 +5776,12 @@
 /obj/item/tool/candle{
 	pixel_x = 5;
 	pixel_y = 9
+	},
+/obj/structure/machinery/light/double{
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5;
+	dir = 8
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/dorms)
@@ -5888,6 +5901,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/hangar)
+"EL" = (
+/obj/structure/filingcabinet{
+	pixel_x = -7;
+	color = "#8B7B5B";
+	can_block_movement = 0;
+	pixel_y = 23
+	},
+/turf/open/floor/strata/floor2,
+/area/golden_arrow/platoon_commander_rooms)
 "EU" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo";
@@ -6304,6 +6326,11 @@
 	name = "Hangar";
 	dir = 1;
 	req_one_access_txt = "230"
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 2;
+	id = "briefing";
+	name = "Briefing Room Shutter"
 	},
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/hangar)
@@ -6998,6 +7025,7 @@
 /obj/item/tool/crew_monitor{
 	faction = "UPP"
 	},
+/obj/item/device/cotablet/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
 "JR" = (
@@ -7269,6 +7297,24 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/dorms)
+"Ln" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 4;
+	pixel_x = 2
+	},
+/obj/structure/machinery/door_control{
+	pixel_x = 25;
+	pixel_y = -5;
+	id = "reactor"
+	},
+/obj/structure/machinery/door_control{
+	pixel_x = 8;
+	pixel_y = 27;
+	id = "reactor2"
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/engineering)
 "Lq" = (
 /obj/item/facepaint/green{
 	pixel_x = 40;
@@ -7872,6 +7918,11 @@
 /area/golden_arrow/engineering)
 "Oq" = (
 /obj/structure/machinery/power/apc/almayer/north,
+/obj/structure/machinery/light/small{
+	dir = 4;
+	light_color = "#e7c0a4";
+	light_range = 6
+	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/platoon_commander_rooms)
 "Ot" = (
@@ -8218,6 +8269,13 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
+"QE" = (
+/obj/structure/machinery/door/poddoor/hybrisa/ultra_reinforced_door{
+	dir = 4;
+	id = "reactor2"
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/engineering)
 "QF" = (
 /obj/structure/machinery/door/airlock/multi_tile/upp_green{
 	dir = 1;
@@ -8274,6 +8332,18 @@
 "QV" = (
 /turf/closed/wall/upp_wall/grey/hull,
 /area/golden_arrow/briefing)
+"QW" = (
+/obj/structure/bed/chair/comfy{
+	dir = 4
+	},
+/obj/structure/machinery/light/double{
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5;
+	dir = 8
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/dorms)
 "QX" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo";
@@ -8924,10 +8994,6 @@
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
 	},
-/obj/structure/machinery/light/small{
-	light_range = 6;
-	light_color = "#e7c0a4"
-	},
 /obj/item/storage/box/matches{
 	pixel_x = -4;
 	pixel_y = 2
@@ -9278,16 +9344,20 @@
 /obj/item/ammo_box/magazine/nade_box/upp,
 /obj/item/ammo_box/magazine/nade_box/upp,
 /obj/item/ammo_box/magazine/nade_box/upp/smoke,
+/obj/item/ammo_box/magazine/nade_box/upp/smoke,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoonarmory)
 "Wg" = (
 /turf/open/floor/prison/whitegreen,
 /area/golden_arrow/medical)
 "Wh" = (
-/obj/structure/sign/poster/upp{
+/obj/item/prop{
+	desc = "A large piece of cheap printed paper. It depicts a Union soldier proudly clutching the UPP flag, his gaze fixed resolutely on the horizon. This poster fills you with pride for your Motherland, for the UPP.";
+	icon = 'icons/obj/structures/props/posters.dmi';
+	icon_state = "poster88";
 	pixel_x = -27;
 	pixel_y = 5;
-	desc = "A large piece of cheap printed paper. It depicts a Union soldier proudly clutching the UPP flag, his gaze fixed resolutely on the horizon. This poster fills you with pride for your Motherland, for the UPP."
+	name = "Pride of Union"
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
@@ -9458,7 +9528,8 @@
 /obj/structure/machinery/door_control{
 	name = "Briefing Room Shutter Control";
 	id = "briefing";
-	pixel_x = 6
+	pixel_x = 6;
+	req_one_access_txt = "240,241"
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/canteen)
@@ -9541,6 +9612,20 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_sergeant)
+"Xd" = (
+/obj/structure/machinery/photocopier{
+	pixel_x = -4;
+	pixel_y = 0;
+	desc = "REM-710 model photocopier. Developed and mass-produced at the request of the Ministry of Space Security and UPP Armed Collective. While these machines are not particularly widespread, engineers from Russia and Serbia succeeded in making them highly reliable while reducing toner consumption during copying.";
+	name = "REM-710 'Slavich' photocopier";
+	color = "#8B9490"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_y = 1
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/platoon_commander_rooms)
 "Xg" = (
 /obj/structure/surface/rack{
 	color = "#8B9490"
@@ -9691,10 +9776,15 @@
 	pixel_y = 11
 	},
 /obj/structure/machinery/computer/cameras/almayer/vehicle{
-	network = list("Chapaev","Vehicle");
+	network = list("Navaga","Vehicle");
 	pixel_x = -2;
 	dir = 4;
 	pixel_y = -3
+	},
+/obj/structure/machinery/light/small{
+	dir = 8;
+	light_color = "#e7c0a4";
+	light_range = 6
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
@@ -12649,7 +12739,7 @@ DK
 Nb
 dR
 vE
-vE
+QW
 rr
 vh
 MQ
@@ -13108,9 +13198,9 @@ SJ
 dq
 rr
 HI
-Mk
-Mk
-Mk
+bI
+bI
+bI
 Mk
 Mk
 Mk
@@ -13261,7 +13351,7 @@ Lj
 bI
 bI
 bI
-bI
+Xd
 bI
 bI
 bI
@@ -13867,7 +13957,7 @@ Nb
 Rq
 yp
 bI
-Mc
+EL
 bp
 nh
 bI
@@ -16150,10 +16240,10 @@ Tl
 do
 do
 be
-BK
-BK
-BK
-cy
+Og
+Og
+Og
+qR
 tv
 Vv
 du
@@ -16302,10 +16392,10 @@ fz
 Up
 Up
 nV
-BK
+Og
 cH
 cH
-cy
+qR
 PI
 mV
 HQ
@@ -16454,10 +16544,10 @@ Ah
 do
 do
 Qv
-BK
-BK
-BK
-cy
+Og
+Og
+Og
+qR
 Iq
 Vv
 VT
@@ -17223,7 +17313,7 @@ BK
 BK
 bT
 cy
-SV
+Ln
 SV
 cy
 bT
@@ -17375,8 +17465,8 @@ cH
 cy
 cy
 cy
-VQ
-VQ
+QE
+QE
 cy
 cy
 cy
