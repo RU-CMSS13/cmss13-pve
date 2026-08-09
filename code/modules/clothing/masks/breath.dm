@@ -336,3 +336,67 @@
 	w_class = SIZE_SMALL
 	gas_transfer_coefficient = 0.10
 	permeability_coefficient = 0.50
+
+/obj/item/clothing/mask/rebreather/scarf/keffiyeh
+	name = "keffiyeh"
+	desc = "A traditional headscarf worn for protection from the elements and to conceal the face. Typically made of cotton, it can provide shade from the sun, guard against dust, and serve as camouflage in arid environments. Often worn by soldiers and civilians alike in desert and hostile regions, the keffiyeh has become a symbol of cultural identity and resilience."
+	icon_state = "keffiyeh"
+	item_state = "keffiyeh"
+	original_state = "keffiyeh"
+	flags_inventory = COVERMOUTH|ALLOWREBREATH|ALLOWCPR
+	flags_inv_hide = HIDEFACE|HIDEALLHAIR|HIDEEARS
+	flags_cold_protection = BODY_FLAG_HEAD
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	pulled = FALSE
+	actions_types = list(/datum/action/item_action/toggle)
+
+/obj/item/clothing/mask/rebreather/scarf/keffiyeh/ui_action_click()
+	pull_keffiyeh_down()
+
+/obj/item/clothing/mask/rebreather/scarf/keffiyeh/verb/pull_keffiyeh_down()
+	set name = "Pull Up/Down"
+	set category = "Object"
+	set src in usr
+	if(usr.stat == DEAD)
+		return
+
+	pulled = !pulled
+	if(pulled)
+		to_chat(usr, SPAN_NOTICE("You pull \the [src] down."))
+		icon_state += "_down"
+		flags_inv_hide = HIDEFACE|HIDELOWHAIR
+	else
+		to_chat(usr, SPAN_NOTICE("You pull \the [src] up."))
+		icon_state = original_state
+		flags_inv_hide = HIDEFACE|HIDEALLHAIR|HIDEEARS
+	if(ishuman(loc))
+		var/mob/living/carbon/human/H = loc
+		if(H.wear_mask == src)
+			H.update_hair()
+
+	update_clothing_icon(src)
+
+/obj/item/clothing/mask/rebreather/scarf/keffiyeh/white
+	icon_state = "keffiyeh_white"
+	item_state = "keffiyeh_white"
+	original_state = "keffiyeh_white"
+
+/obj/item/clothing/mask/rebreather/scarf/keffiyeh/red
+	icon_state = "keffiyeh_red"
+	item_state = "keffiyeh_red"
+	original_state = "keffiyeh_red"
+
+/obj/item/clothing/mask/rebreather/scarf/keffiyeh/green
+	icon_state = "keffiyeh_green"
+	item_state = "keffiyeh_green"
+	original_state = "keffiyeh_green"
+
+/obj/item/clothing/mask/rebreather/scarf/keffiyeh/black
+	icon_state = "keffiyeh_black"
+	item_state = "keffiyeh_black"
+	original_state = "keffiyeh_black"
+
+/obj/item/clothing/mask/rebreather/scarf/keffiyeh/blue
+	icon_state = "keffiyeh_blue"
+	item_state = "keffiyeh_blue"
+	original_state = "keffiyeh_blue"
