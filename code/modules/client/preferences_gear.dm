@@ -538,7 +538,7 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	path = /obj/item/clothing/head/cmcap/upp/boonie/canc
 	allowed_origins = list(ORIGIN_CANC, ORIGIN_UPP_EXCANC)
 
-/datum/gear/headwear/upp/boonie_canc
+/datum/gear/headwear/upp/flapcap_canc
 	display_name = "CANC flapcap"
 	path = /obj/item/clothing/head/cmcap/flap/canc
 	allowed_origins = list(ORIGIN_CANC, ORIGIN_UPP_EXCANC)
