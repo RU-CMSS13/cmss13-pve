@@ -1,6 +1,0 @@
-author: "StalkerVolkProvodnik"
-delete-after: True
-changes:
-  - rscadd: "keffiyeh в лодауте за 2 очка"
-  - rscadd: "библия, коран и тора как пропы. Также внесены в лодаут по 1 очку за штуку."
-  - imageadd: "перенесены спрайты keffiyeh с ПВП"
