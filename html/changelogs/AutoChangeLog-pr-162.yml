@@ -1,0 +1,4 @@
+author: "StalkerVolkProvodnik"
+delete-after: True
+changes:
+  - bugfix: "быстрый фикс в виду добавления спрайтов"
