@@ -73,7 +73,6 @@ const ALTERNATE_ACTIONS: Record<string, AlternateAction> = {
     icon: 'mask-face',
     text: 'Toggle internals',
   },
-
 };
 
 type Slot = {
