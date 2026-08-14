@@ -374,6 +374,9 @@ GLOBAL_LIST_INIT(cm_vending_clothing_pmc_platoon, list(
 		list("M4 Pattern Armor", 0, list(/obj/item/clothing/head/helmet/marine/veteran/pmc/leader, /obj/item/clothing/suit/marine/veteran/pmc/leader), MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 		list("Leader Kit", 0, /obj/effect/essentials_set/leader, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 
+		list("SIDEARM (CHOOSE 1)", 0, null, null, null),
+		list("ES-7 Case", 0, /obj/item/storage/box/guncase/heavy/es7, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
+
 		list("BELT (CHOOSE 1)", 0, null, null, null),
 		list("M276 Lifesaver Bag (Full)", 0, /obj/item/storage/belt/medical/lifesaver/wy/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
 		list("WY-TM402 Pattern Ammo Load Rig", 0, /obj/item/storage/belt/marine/wy, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
