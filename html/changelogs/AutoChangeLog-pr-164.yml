@@ -1,4 +1,0 @@
-author: "chaos-creations"
-delete-after: True
-changes:
-  - rscadd: "the preview dummy now correctly wears gear chosen in the gear select menu"
