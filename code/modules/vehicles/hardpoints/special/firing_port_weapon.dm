@@ -9,7 +9,7 @@
 	disp_icon_state = ""
 	activation_sounds = list('sound/weapons/gun_smartgun1.ogg', 'sound/weapons/gun_smartgun2.ogg', 'sound/weapons/gun_smartgun3.ogg', 'sound/weapons/gun_smartgun4.ogg')
 
-	health = 100
+	health = 800
 	firing_arc = 120
 	//FPWs reload automatically
 	var/reloading = FALSE
@@ -21,7 +21,7 @@
 	allowed_seat = VEHICLE_SUPPORT_GUNNER_ONE
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/firing_port_weapon
-	max_clips = 1
+	max_clips = 2
 
 	underlayer_north_muzzleflash = TRUE
 
@@ -30,7 +30,7 @@
 	gun_firemode_list = list(
 		GUN_FIREMODE_AUTOMATIC,
 	)
-	fire_delay = 0.3 SECONDS
+	fire_delay = FIRE_DELAY_TIER_SG
 
 /obj/item/hardpoint/special/firing_port_weapon/set_bullet_traits()
 	..()
