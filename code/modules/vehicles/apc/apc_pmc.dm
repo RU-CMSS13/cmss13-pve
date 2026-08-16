@@ -4,33 +4,8 @@
 
 	icon = 'icons/obj/vehicles/apc_pmc.dmi'
 	icon_state = "hull_wy"
-	pixel_x = -48
-	pixel_y = -48
-
-	bound_width = 96
-	bound_height = 96
-
-	bound_x = -32
-	bound_y = -32
 
 	interior_map = /datum/map_template/interior/apc_pmc
-
-	passengers_slots = 20
-	xenos_slots = 8
-
-	entrances = list(
-		"left" = list(2, 0),
-		"right" = list(-2, 0),
-		"rear left" = list(1, 2),
-		"rear center" = list(0, 2),
-		"rear right" = list(-1, 2)
-	)
-
-	entrance_speed = 0.5 SECONDS
-
-	required_skill = SKILL_VEHICLE_LARGE
-
-	movement_sound = 'sound/vehicles/tank_driving.ogg'
 
 	hardpoints_allowed = list(
 		/obj/item/hardpoint/primary/dualcannon/pmc,
@@ -38,22 +13,6 @@
 		/obj/item/hardpoint/support/flare_launcher,
 		/obj/item/hardpoint/locomotion/apc_wheels/pmc,
 	)
-
-	seats = list(
-		VEHICLE_DRIVER = null,
-		VEHICLE_GUNNER = null,
-		VEHICLE_SUPPORT_GUNNER_ONE = null,
-		VEHICLE_SUPPORT_GUNNER_TWO = null,
-	)
-
-	active_hp = list(
-		VEHICLE_DRIVER = null,
-		VEHICLE_GUNNER = null,
-		VEHICLE_SUPPORT_GUNNER_ONE = null,
-		VEHICLE_SUPPORT_GUNNER_TWO = null,
-	)
-
-	vehicle_flags = VEHICLE_CLASS_LIGHT
 
 	mob_size_required_to_hit = MOB_SIZE_XENO
 
@@ -71,10 +30,48 @@
 	move_momentum_build_factor = 1.5
 	move_turn_momentum_loss_factor = 0.8
 
+	var/sensor_radius = 45 //45 tiles radius
+
+	/// weakrefs of xenos temporarily added to the marine minimap
+	var/list/minimap_added = list()
+
+/obj/vehicle/multitile/apc/pmc/Initialize()
+	. = ..()
+	START_PROCESSING(SSslowobj, src)
+	GLOB.command_apc_list += src
+
+/obj/vehicle/multitile/apc/pmc/Destroy()
+	GLOB.command_apc_list -= src
+	STOP_PROCESSING(SSslowobj, src)
+	return ..()
+
+/obj/vehicle/multitile/apc/pmc/process()
+	var/turf/apc_turf = get_turf(src)
+	if(health == 0 || !visible_in_tacmap || !is_ground_level(apc_turf.z))
+		return
+
+	for(var/mob/living/carbon/xenomorph/current_xeno as anything in GLOB.living_xeno_list)
+		var/turf/xeno_turf = get_turf(current_xeno)
+		if(!is_ground_level(xeno_turf.z))
+			continue
+
+		if(get_dist(src, current_xeno) <= sensor_radius)
+			if(WEAKREF(current_xeno) in minimap_added)
+				continue
+
+			SSminimaps.remove_marker(current_xeno)
+			current_xeno.add_minimap_marker(MINIMAP_FLAG_USCM|get_minimap_flag_for_faction(current_xeno.hivenumber))
+			minimap_added += WEAKREF(current_xeno)
+		else
+			if(WEAKREF(current_xeno) in minimap_added)
+				SSminimaps.remove_marker(current_xeno)
+				current_xeno.add_minimap_marker()
+				minimap_added -= WEAKREF(current_xeno)
+
 /obj/vehicle/multitile/apc/pmc/load_role_reserved_slots()
 	var/datum/role_reserved_slots/RRS = new
 	RRS.category_name = "Crewmen"
-	RRS.roles = JOB_PMC_CREWMAN
+	RRS.roles = list(JOB_PMC_CREWMAN)
 	RRS.total = 1
 	role_reserved_slots += RRS
 
@@ -86,7 +83,7 @@
 
 	RRS = new
 	RRS.category_name = "Synthetic Unit"
-	RRS.roles = JOB_PMC_SYNTH
+	RRS.roles = list(JOB_PMC_SYNTH)
 	RRS.total = 1
 	role_reserved_slots += RRS
 
