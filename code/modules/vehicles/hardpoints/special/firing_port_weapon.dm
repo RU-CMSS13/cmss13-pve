@@ -21,7 +21,7 @@
 	allowed_seat = VEHICLE_SUPPORT_GUNNER_ONE
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/firing_port_weapon
-	max_clips = 2
+	max_clips = 1
 
 	underlayer_north_muzzleflash = TRUE
 
