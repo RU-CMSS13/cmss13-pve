@@ -124,6 +124,9 @@
 		icon_state = "[initial(icon_state)]"
 		playsound(src.loc, "toolbox", 25, TRUE, 3)
 
+/obj/structure/vehicle_locker/pmc
+	icon = 'icons/obj/vehicles/interiors/general_wy.dmi'
+
 /obj/structure/vehicle_locker/tank
 	name = "storage compartment"
 	desc = "Small storage unit allowing vehicle crewmen to store their personal possessions or weaponry ammunition. Only vehicle crewmen can access these."
