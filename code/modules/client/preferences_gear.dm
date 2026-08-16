@@ -360,10 +360,6 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	display_name = "Beret, tan"
 	path = /obj/item/clothing/head/beret/cm/tan
 
-/datum/gear/headwear/beret_white
-	display_name = "Beret, white"
-	path = /obj/item/clothing/head/beret/cm/white
-
 /datum/gear/headwear/fisherman_boonie
 	display_name = "Fisherman's boonie hat"
 	path = /obj/item/clothing/head/cmcap/boonie/fisherman // 🐟
@@ -1980,19 +1976,15 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	path = /obj/item/storage/fancy/cigarettes/balaji
 
 /datum/gear/smoking/lighters
+	display_name = "Lighter, cheap"
+	path = /obj/item/tool/lighter/random
 	allowed_origins = FACTION_ORIGINS
 	cost = 1
 
-/datum/gear/smoking/lighters/lighter
-	display_name = "Lighter, cheap"
-	path = /obj/item/tool/lighter/random
-
 /datum/gear/smoking/lighters/lighter/zippos
-	cost = 2
-
-/datum/gear/smoking/lighters/lighter/zippos/zippo
 	display_name = "Lighter, zippo"
 	path = /obj/item/tool/lighter/zippo
+	cost = 2
 
 /datum/gear/smoking/lighters/lighter/zippos/black
 	display_name = "Black lighter, zippo"
