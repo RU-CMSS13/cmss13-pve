@@ -2869,10 +2869,7 @@
 /turf/open/auto_turf/sand/layer1,
 /area/bandakar/exterior/cavern)
 "zy" = (
-/obj/item/storage/backpack/marine/ammo_rack{
-	desc = "This ammo rack has been handcrafted by one of the ship's sappers. Union's ingenuity at it's finest.";
-	name = "\improper makeshift ammo rack"
-	},
+/obj/item/storage/backpack/marine/ammo_rack/upp,
 /obj/item/ammo_box/magazine/nade_box/upp/smoke{
 	pixel_y = 6
 	},
