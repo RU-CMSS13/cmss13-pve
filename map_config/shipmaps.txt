@@ -47,3 +47,24 @@ endmap
 
 map mi264_pudong_bunker
 endmap
+
+map mi410_bandakar_pass
+endmap
+
+map lv_818_firebase_zulu
+endmap
+
+map golden_arrow_tethered
+endmap
+
+map lv_818_firebase_juliet
+endmap
+
+map lv_818_firebase_juliet_forecon
+endmap
+
+map lv522_firebase_charlie_charlie
+endmap
+
+map lv295_firebase_sierra_bravo
+endmap
