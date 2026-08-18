@@ -2454,7 +2454,7 @@
 /obj/item/tool/crew_monitor{
 	faction = "UPP"
 	},
-/obj/item/clothing/suit/marine/faction/UPP/jacket,
+/obj/item/clothing/suit/marine/faction/upp/jacket,
 /obj/item/clothing/suit/marine/lamp,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
@@ -3375,7 +3375,7 @@
 	color = "#8B7B5B";
 	pixel_y = 3
 	},
-/obj/item/clothing/under/marine/veteran/UPP/naval{
+/obj/item/clothing/under/marine/veteran/upp/naval{
 	pixel_y = -1;
 	pixel_x = -5
 	},
