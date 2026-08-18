@@ -130,7 +130,7 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	display_name = "Prescription HealthMate HUD"
 	path = /obj/item/clothing/glasses/hud/health/prescription
 	cost = 4
-	allowed_roles = list(JOB_SQUAD_MEDIC, JOB_SQUAD_LEADER, JOB_SO)
+	allowed_roles = JOB_PLATOON_ROLES_MEDHUD
 
 /*
 //================================================
