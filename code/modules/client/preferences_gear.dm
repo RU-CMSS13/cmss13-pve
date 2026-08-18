@@ -1976,25 +1976,29 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	path = /obj/item/storage/fancy/cigarettes/balaji
 
 /datum/gear/smoking/lighters
-	display_name = "Lighter, cheap"
-	path = /obj/item/tool/lighter/random
 	allowed_origins = FACTION_ORIGINS
 	cost = 1
 
-/datum/gear/smoking/lighters/lighter/zippos
-	display_name = "Lighter, zippo"
-	path = /obj/item/tool/lighter/zippo
+/datum/gear/smoking/lighters/cheap
+	display_name = "Lighter, cheap"
+	path = /obj/item/tool/lighter/random
+
+/datum/gear/smoking/lighters/zippos
 	cost = 2
 
-/datum/gear/smoking/lighters/lighter/zippos/black
+/datum/gear/smoking/lighters/zippos/zippo
+	display_name = "Lighter, zippo"
+	path = /obj/item/tool/lighter/zippo
+
+/datum/gear/smoking/lighters/zippos/black
 	display_name = "Black lighter, zippo"
 	path = /obj/item/tool/lighter/zippo/black
 
-/datum/gear/smoking/lighters/lighter/zippos/blue
+/datum/gear/smoking/lighters/zippos/blue
 	display_name = "Blue lighter, zippo"
 	path = /obj/item/tool/lighter/zippo/blue
 
-/datum/gear/smoking/lighters/lighter/zippos/goldzippo
+/datum/gear/smoking/lighters/zippos/goldzippo
 	display_name = "Lighter, golden zippo"
 	path = /obj/item/tool/lighter/zippo/gold
 	cost = 3
