@@ -382,6 +382,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		add_verb(src, /client/proc/toggle_rappel_menu)
 		add_verb(src, /client/proc/toggle_fire_support_menu)
 		add_verb(src, /client/proc/gm_lighting)
+		add_verb(src, /client/proc/gm_shipmap_lighting)
 		add_verb(src, /client/proc/disallow_to_join) // RU-PVE
 		add_verb(src, /client/proc/allow_to_join) // RU-PVE
 	if(CLIENT_HAS_RIGHTS(src, R_SERVER))
@@ -429,6 +430,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		/client/proc/toggle_portrait,
 		/client/proc/toggle_intro,
 		/client/proc/gm_lighting,
+		/client/proc/gm_shipmap_lighting,
 		/client/proc/disallow_to_join, // RU-PVE
 		/client/proc/allow_to_join, // RU-PVE
 		GLOB.admin_verbs_admin,
