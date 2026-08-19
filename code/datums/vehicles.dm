@@ -26,6 +26,10 @@
 	name = "APC - No FPW"
 	interior_id = "apc_no_fpw"
 
+/datum/map_template/interior/apc_pmc
+	name = "W-Y APC"
+	interior_id = "apc_pmc"
+
 /datum/map_template/interior/apc_movie
 	name = "Movie APC"
 	interior_id = "apc_movie"

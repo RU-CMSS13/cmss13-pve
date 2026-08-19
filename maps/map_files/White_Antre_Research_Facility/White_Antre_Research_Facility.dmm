@@ -7757,14 +7757,6 @@
 	},
 /turf/open/floor/prison/bluefull,
 /area/white_antre/indoors/main_level/dorms)
-"aqZ" = (
-/obj/structure/surface/table/almayer,
-/obj/item/clothing/head/cmcap/wy_cap{
-	pixel_x = -8;
-	pixel_y = 2
-	},
-/turf/open/floor/prison/blue_plate/north,
-/area/white_antre/indoors/main_level/dorms)
 "ara" = (
 /obj/structure/surface/table/almayer,
 /obj/item/ashtray/bronze{
@@ -27634,10 +27626,6 @@
 /turf/open/floor/prison,
 /area/white_antre/indoors/upper_level/east_corridor)
 "bru" = (
-/obj/item/clothing/head/cmcap/wy_cap{
-	pixel_x = -8;
-	pixel_y = 2
-	},
 /obj/effect/decal/cleanable/blood{
 	pixel_x = 1;
 	pixel_y = 5
@@ -116376,7 +116364,7 @@ arr
 aku
 apw
 mFB
-aqZ
+fFV
 aqU
 atI
 atu

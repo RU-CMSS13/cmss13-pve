@@ -130,7 +130,7 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	display_name = "Prescription HealthMate HUD"
 	path = /obj/item/clothing/glasses/hud/health/prescription
 	cost = 4
-	allowed_roles = list(JOB_SQUAD_MEDIC, JOB_SQUAD_LEADER, JOB_SO)
+	allowed_roles = JOB_PLATOON_ROLES_MEDHUD
 
 /*
 //================================================
@@ -360,10 +360,6 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	display_name = "Beret, tan"
 	path = /obj/item/clothing/head/beret/cm/tan
 
-/datum/gear/headwear/beret_white
-	display_name = "Beret, white"
-	path = /obj/item/clothing/head/beret/cm/white
-
 /datum/gear/headwear/fisherman_boonie
 	display_name = "Fisherman's boonie hat"
 	path = /obj/item/clothing/head/cmcap/boonie/fisherman // 🐟
@@ -514,7 +510,7 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	display_name = "USCM headset"
 	path = /obj/item/clothing/head/headset
 
-/datum/gear/headwear/uscm/headset
+/datum/gear/headwear/uscm/ushanka
 	display_name = "Ushanka"
 	path = /obj/item/clothing/head/ushanka
 
@@ -937,26 +933,26 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	display_name = "Three World Empire shoulder patch"
 	path = /obj/item/clothing/accessory/patch/twe
 
-/datum/gear/patch/twe
+/datum/gear/patch/wy
 	allowed_origins = WY_ORIGINS
 
-/datum/gear/patch/twe/wy
+/datum/gear/patch/wy/patch
 	display_name = "Weyland-Yutani patch"
 	path = /obj/item/clothing/accessory/patch/wy
 
-/datum/gear/patch/twe/wysquare
+/datum/gear/patch/wy/wysquare
 	display_name = "Weyland-Yutani Square patch"
 	path = /obj/item/clothing/accessory/patch/wysquare
 
-/datum/gear/patch/twe/wy_faction
+/datum/gear/patch/wy/wy_faction
 	display_name = "Weyland-Yutani Faction patch"
 	path = /obj/item/clothing/accessory/patch/wy_faction
 
-/datum/gear/patch/twe/wy_white
+/datum/gear/patch/wy/wy_white
 	display_name = "Weyland-Yutani White patch"
 	path = /obj/item/clothing/accessory/patch/wy_white
 
-/datum/gear/patch/twe/wyfury
+/datum/gear/patch/wy/wyfury
 	display_name = "Weyland-Yutani Fury '161' patch"
 	path = /obj/item/clothing/accessory/patch/wyfury
 
@@ -1983,26 +1979,26 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	allowed_origins = FACTION_ORIGINS
 	cost = 1
 
-/datum/gear/smoking/lighters/lighter
+/datum/gear/smoking/lighters/cheap
 	display_name = "Lighter, cheap"
 	path = /obj/item/tool/lighter/random
 
-/datum/gear/smoking/lighters/lighter/zippos
+/datum/gear/smoking/lighters/zippos
 	cost = 2
 
-/datum/gear/smoking/lighters/lighter/zippos/zippo
+/datum/gear/smoking/lighters/zippos/zippo
 	display_name = "Lighter, zippo"
 	path = /obj/item/tool/lighter/zippo
 
-/datum/gear/smoking/lighters/lighter/zippos/black
+/datum/gear/smoking/lighters/zippos/black
 	display_name = "Black lighter, zippo"
 	path = /obj/item/tool/lighter/zippo/black
 
-/datum/gear/smoking/lighters/lighter/zippos/blue
+/datum/gear/smoking/lighters/zippos/blue
 	display_name = "Blue lighter, zippo"
 	path = /obj/item/tool/lighter/zippo/blue
 
-/datum/gear/smoking/lighters/lighter/zippos/goldzippo
+/datum/gear/smoking/lighters/zippos/goldzippo
 	display_name = "Lighter, golden zippo"
 	path = /obj/item/tool/lighter/zippo/gold
 	cost = 3
