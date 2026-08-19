@@ -510,7 +510,7 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	display_name = "USCM headset"
 	path = /obj/item/clothing/head/headset
 
-/datum/gear/headwear/uscm/headset
+/datum/gear/headwear/uscm/ushanka
 	display_name = "Ushanka"
 	path = /obj/item/clothing/head/ushanka
 
@@ -933,26 +933,26 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	display_name = "Three World Empire shoulder patch"
 	path = /obj/item/clothing/accessory/patch/twe
 
-/datum/gear/patch/twe
+/datum/gear/patch/wy
 	allowed_origins = WY_ORIGINS
 
-/datum/gear/patch/twe/wy
+/datum/gear/patch/wy/patch
 	display_name = "Weyland-Yutani patch"
 	path = /obj/item/clothing/accessory/patch/wy
 
-/datum/gear/patch/twe/wysquare
+/datum/gear/patch/wy/wysquare
 	display_name = "Weyland-Yutani Square patch"
 	path = /obj/item/clothing/accessory/patch/wysquare
 
-/datum/gear/patch/twe/wy_faction
+/datum/gear/patch/wy/wy_faction
 	display_name = "Weyland-Yutani Faction patch"
 	path = /obj/item/clothing/accessory/patch/wy_faction
 
-/datum/gear/patch/twe/wy_white
+/datum/gear/patch/wy/wy_white
 	display_name = "Weyland-Yutani White patch"
 	path = /obj/item/clothing/accessory/patch/wy_white
 
-/datum/gear/patch/twe/wyfury
+/datum/gear/patch/wy/wyfury
 	display_name = "Weyland-Yutani Fury '161' patch"
 	path = /obj/item/clothing/accessory/patch/wyfury
 
