@@ -1,9 +1,0 @@
-author: "chaos-creations"
-delete-after: True
-changes:
-  - rscadd: "БТР для ПМС с ПвП"
-  - balance: "повышенная скорострельность и ёмкость для боковых пулемётов БТРов."
-  - bugfix: "убраны райнтаймы связанные с preference_gear.dm"
-  - bugfix: "фикс рантаймов связанных с худами на шлемах"
-  - rscdel: "уничтожение ебаных кепок с антре"
-  - bugfix: "Fixed legacy chat bold for commando radio"
