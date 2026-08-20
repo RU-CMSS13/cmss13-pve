@@ -1097,3 +1097,11 @@
 	desc = "A distinguished service cap worn by officers of the Imperial Armed Space Force. Featuring a crimson band, gold IASF emblem, and a black patent peak, it reflects the discipline and authority of the Empire’s airborne command."
 	icon_state = "iasf_co_cap"
 	item_state = "iasf_co_cap"
+/obj/item/clothing/head/seegsoncap
+
+    name = "Seegson Cap"
+    desc = "A Seegson worker's cap looks old and worn. Issued to workers at stations and some colonies, it looks stylish, but doesn't protect the head while working. The tag on the back reads: Seegson in pursuit of affordable quality. Some workers say the company's androids Working Joe themselves used to wear this cap, but the company abandoned it due to both the idea and the extra expense."
+    icon_state = "seegson_cap"
+    icon = 'icons/obj/items/clothing/hats/hats.dmi'
+    item_icons = list(
+        WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats.dmi'
