@@ -163,6 +163,7 @@
 	new /obj/item/weapon/gun/smartgun/silenced(src)
 	new /obj/item/smartgun_battery(src)
 	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/ammo_magazine/smartgun(src)
 
 /obj/structure/closet/cryo/Initialize()
 	. = ..()
