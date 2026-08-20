@@ -364,6 +364,10 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	display_name = "Beret, white"
 	path = /obj/item/clothing/head/beret/cm/white
 
+/datum/gear/headwear/uscm/seegson_cap
+	display_name = "Seegson cap"
+	path = /obj/item/clothing/head/seegson_cap
+
 /datum/gear/headwear/fisherman_boonie
 	display_name = "Fisherman's boonie hat"
 	path = /obj/item/clothing/head/cmcap/boonie/fisherman // 🐟
@@ -595,6 +599,7 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	display_name = "PMC field officer beret"
 	path = /obj/item/clothing/head/cmcap/pmc/fieldleader
 	allowed_roles = list(JOB_PMCPLAT_LEADER, JOB_PMCPLAT_OW)
+
 
 /*
 //================================================
