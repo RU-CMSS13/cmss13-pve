@@ -507,6 +507,7 @@
     icon = 'icons/obj/items/clothing/hats.dmi'
     item_icons = list(
         WEAR_HEAD = 'icons/mob/humans/onmob/head_0.dmi'
+)
 
 //============================//BERETS\\=================================\\
 //=======================================================================\\
