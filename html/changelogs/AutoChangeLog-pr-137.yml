@@ -1,0 +1,5 @@
+author: "StalkerVolkProvodnik"
+delete-after: True
+changes:
+  - admin: "функция выбора успеха от ракеты."
+  - soundadd: "звуки с Halo PVE для ПЗРК"
