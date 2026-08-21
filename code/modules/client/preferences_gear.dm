@@ -366,7 +366,7 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 
 /datum/gear/headwear/seegson_cap
 	display_name = "Seegson cap"
-	path = /obj/item/clothing/hats/seegson_cap
+	path = /obj/item/clothing/head/seegsoncap
 
 /datum/gear/headwear/fisherman_boonie
 	display_name = "Fisherman's boonie hat"
