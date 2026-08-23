@@ -19370,6 +19370,10 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/item/clothing/head/cmcap/seegsoncap{
+	pixel_x = -1;
+	pixel_y = 16
+	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
 "nhH" = (
