@@ -684,6 +684,37 @@
 	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/heap
 	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/magnetic_harness, /obj/item/attachable/lasersight, /obj/item/attachable/attached_gun/grenade/mk1)
 
+/obj/item/weapon/gun/rifle/m41aMK1/marksman
+	name = "\improper M41A3 marksman pulse rifle"
+	desc = "Pulse action 10x24mm caseless assault rifle of the USCMC, configurated into marksman rifle. Features an integrated 30mm grenade launcher and ammo tube that can hold four grenades on backup. Semi-automatic fire is highly adviced."
+	fire_sound = "gun_rmcdmr"
+	start_automatic = FALSE
+
+/obj/item/weapon/gun/rifle/m41aMK1/marksman/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_9)
+	set_burst_amount(BURST_AMOUNT_TIER_3)
+	set_burst_delay(FIRE_DELAY_TIER_9)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_5
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_8
+	scatter = SCATTER_AMOUNT_TIER_10
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_6
+	scatter_unwielded = SCATTER_AMOUNT_TIER_2
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2
+	damage_falloff_mult = 0
+	recoil_unwielded = RECOIL_AMOUNT_TIER_2
+
+/obj/item/weapon/gun/rifle/m41aMK1/marksman/masterkey
+	desc = "Pulse action 10x24mm caseless assault rifle of the USCMC, configurated into marksman rifle. This one has a U7 underbarrel shotgun strapped to it. Semi-automatic fire is highly adviced."
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible)
+
+/obj/item/weapon/gun/rifle/m41aMK1/marksman/masterkey/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/attachie = new /obj/item/attachable/attached_gun/shotgun(src)
+	attachie.flags_attach_features &= ~ATTACH_REMOVABLE
+	attachie.Attach(src)
+	update_attachable(attachie.slot)
+
 //AG80 pulse rifle (UPP MK1 equivalent)
 //=================================================
 //=================================================
