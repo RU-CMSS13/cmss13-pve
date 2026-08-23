@@ -98,7 +98,7 @@
 	damage_falloff_mult = 0
 
 /obj/item/weapon/gun/rifle/m41a/elite
-	name = "\improper M41A2 pulse rifle MK2"
+	name = "\improper M41A/2 pulse rifle MK2"
 	desc = "A Weyland-Yutani creation, a modified version M41A MK2 pulse rifle re-engineered for better weight, handling, and an high degree of accuracy."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/wy.dmi'
 	icon_state = "m41a2mk2"
@@ -611,7 +611,7 @@
 	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1/preloaded, /obj/item/attachable/suppressor, /obj/item/attachable/magnetic_harness, /obj/item/attachable/stock/rifle/collapsible)
 
 /obj/item/weapon/gun/rifle/m41aMK1/elite
-	name = "\improper M41A2 pulse rifle"
+	name = "\improper M41A/2 pulse rifle"
 	desc = "A modified version M41A pulse rifle re-engineered for better weight and handling, and an high degree of accuracy brought about by a precise two-round burst system."
 	icon_state = "m41a2"
 	item_state = "m41a2"
@@ -628,7 +628,6 @@
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_10
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
 	scatter = SCATTER_AMOUNT_TIER_10
-	damage_mult = BASE_BULLET_DAMAGE_MULT
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
 	scatter_unwielded = SCATTER_AMOUNT_TIER_4
 

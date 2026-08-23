@@ -664,7 +664,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 
 /obj/item/storage/backpack/marine/satchel/rto/twe_net/small
 	name = "\improper Wireless Set No.207 Small Radio Telephone Pack"
-	max_storage_space = 14
+	max_storage_space = 13
 
 /obj/item/storage/backpack/marine/satchel/rto/pmc_net
 	name = "\improper Wireless Set No.208 Radio Telephone Pack"
@@ -674,7 +674,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	networks_receive = list(FACTION_PMC)
 	networks_transmit = list(FACTION_PMC)
 	actions_types = list(/datum/action/item_action/rto_pack/use_phone/pmc)
-	max_storage_space = 24
+	max_storage_space = 21
 	worn_accessible = FALSE
 	bag_open_time = 2 SECONDS
 
@@ -694,7 +694,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 
 /obj/item/storage/backpack/marine/satchel/rto/pmc_net/small
 	name = "\improper Wireless Set No.208 Small Radio Telephone Pack"
-	max_storage_space = 18
+	max_storage_space = 16
 
 
 /obj/item/storage/backpack/marine/smock
@@ -1259,7 +1259,6 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	name = "\improper PMC combat backpack"
 	desc = "Ergonomic, protected, high capacity backpack, designed for Weyland-Yutani PMCs."
 	icon_state = "pmc_backpack"
-	max_storage_space = 24
 	worn_accessible = FALSE
 
 /obj/item/storage/backpack/pmc/backpack/commando
