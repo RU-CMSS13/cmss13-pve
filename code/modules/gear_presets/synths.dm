@@ -286,7 +286,7 @@
 		WEAR_IN_BACK = /obj/item/storage/bag/trash,
 		WEAR_JACKET = /obj/item/clothing/suit/storage/hazardvest,
 		WEAR_IN_JACKET = /obj/item/reagent_container/spray/cleaner,
-		WEAR_HANDS = /obj/item/clothing/gloves/purple,
+		WEAR_HANDS = /obj/item/clothing/gloves/charlie,
 		WEAR_R_HAND = /obj/item/tool/mop,
 		WEAR_R_STORE = /obj/item/storage/pouch/tools/full,
 		WEAR_FEET = /obj/item/clothing/shoes/galoshes

@@ -204,6 +204,13 @@
 	preview_dummy.update_body()
 	preview_dummy.update_hair()
 
+	for(var/gear_item in gear)
+		var/datum/gear/gear = GLOB.gear_datums_by_name[gear_item]
+		var/obj/item/item = new gear.path()
+
+		if(!preview_dummy.equip_to_appropriate_slot(item))
+			qdel(item)
+
 	arm_equipment(preview_dummy, J, FALSE, FALSE, owner, show_job_gear)
 
 	// If the dummy was equipped with marine armor.
