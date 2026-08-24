@@ -1,0 +1,9 @@
+author: "Vany3045"
+delete-after: True
+changes:
+  - rscadd: "Dyalisis Machine was moved from medvendor to chemical vendor for corpsmen for a small price."
+  - rscadd: "Dyalisis Machine can now be put in small medical belt, just like the big health analyzer."
+  - balance: "upgraded trauma and burn kits were removed from belt for PMC corpsman."
+  - balance: "PMC corpsman medkit and autoinjector pouch in vendor now spawn empty, just like the other platoons."
+  - rscdel: "Removes Defibrillator from medvendor. Irrelevant to the PVE build."
+  - bugfix: "Fixes PMC hAI corpsman not having a medscanner in it's loadout."
