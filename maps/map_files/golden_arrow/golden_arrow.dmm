@@ -10484,13 +10484,9 @@
 "aGm" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/guncase/heavy/m49a_pve{
-	pixel_y = 16;
-	pixel_x = 0
+	pixel_y = 10
 	},
-/obj/item/storage/box/guncase/heavy/hpr{
-	pixel_x = 0;
-	pixel_y = 5
-	},
+/obj/item/storage/box/guncase/heavy/hpr,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "aGo" = (
@@ -13724,10 +13720,6 @@
 	pixel_y = 2;
 	pixel_x = -3
 	},
-/obj/item/storage/box/guncase/heavy/smg{
-	pixel_x = -3;
-	pixel_y = 6
-	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "aSt" = (
@@ -16411,17 +16403,12 @@
 /area/golden_arrow/engineering)
 "dzT" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/vp70{
-	pixel_y = 12
-	},
-/obj/item/ammo_box/magazine/m4a3{
-	pixel_y = 22;
-	pixel_x = 1;
-	layer = 3.2
-	},
 /obj/item/ammo_box/magazine/nade_box/flare{
 	pixel_x = 1
 	},
+/obj/item/ammo_box/magazine/m4a3/ap,
+/obj/item/ammo_box/magazine/vp70,
+/obj/item/ammo_box/magazine/m44,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "dAO" = (
@@ -16900,6 +16887,8 @@
 	pixel_y = 10
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/effect/landmark/personal_weapon,
+/obj/effect/landmark/personal_weapon,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoonarmory)
 "fbw" = (
@@ -17378,27 +17367,18 @@
 /area/golden_arrow/supplydrop)
 "gSr" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/belt/gun/m39{
-	pixel_x = 0;
-	pixel_y = 7
-	},
-/obj/item/ammo_box/magazine/vp70{
-	pixel_y = -2
-	},
-/obj/item/ammo_box/magazine/m4a3{
-	pixel_y = 11;
-	pixel_x = -7;
-	layer = 2.98
-	},
 /obj/item/ammo_box/magazine/mk1{
 	pixel_y = 12;
 	pixel_x = 16;
 	layer = 2.98
 	},
-/obj/item/ammo_box/magazine/m39{
-	pixel_x = 3;
-	pixel_y = 5
-	},
+/obj/item/ammo_box/magazine/m39,
+/obj/item/ammo_box/magazine/m4a3/ap,
+/obj/item/ammo_box/magazine/vp70,
+/obj/item/storage/belt/gun/m39,
+/obj/item/storage/box/guncase/heavy/smg,
+/obj/item/ammo_magazine/hpr_box,
+/obj/item/ammo_magazine/hpr_box,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "gUY" = (
