@@ -1929,13 +1929,6 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "eU" = (
-/obj/item/ammo_box/rounds/smartgun{
-	pixel_x = -6;
-	pixel_y = -8
-	},
-/turf/open/floor/almayer/edge/smooth/corner/north,
-/area/golden_arrow/hangar)
-"eV" = (
 /obj/structure/pipes/vents/scrubber{
 	dir = 4
 	},
@@ -1946,7 +1939,7 @@
 /obj/structure/roof/cargocrane_tracks/vertical,
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/hangar)
-"eX" = (
+"eV" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	layer = 3.3
@@ -1954,13 +1947,18 @@
 /obj/structure/roof/cargocrane_tracks/tjoint3,
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/hangar)
-"eY" = (
+"eX" = (
 /obj/docking_port/stationary/marine_dropship/airlock/inner/golden_arrow_one{
 	name = "Rover Hangar Airlock 1 Inner";
 	dropship_airlock_id = "rover-airlock-one";
 	id = "rover-airlock-1-inner"
 	},
 /turf/open/floor/hangar_airlock/inner/frame5,
+/area/golden_arrow/hangar)
+"eY" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer/mono,
 /area/golden_arrow/hangar)
 "eZ" = (
 /obj/structure/prop/invuln/overhead_pipe{
@@ -1975,24 +1973,19 @@
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/cryo_cells)
 "fa" = (
-/obj/effect/decal/cleanable/blood/oil,
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/almayer/mono,
-/area/golden_arrow/hangar)
-"fb" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/hangar)
-"fc" = (
+"fb" = (
 /obj/item/stack/cable_coil{
 	pixel_x = 7
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
-"fd" = (
+"fc" = (
 /obj/item/tool/wirecutters{
 	pixel_x = -8;
 	pixel_y = 18
@@ -2000,9 +1993,15 @@
 /obj/structure/machinery/floodlight/landing/floor,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
-"fe" = (
+"fd" = (
 /obj/structure/machinery/door/poddoor/railing,
 /turf/open/floor/almayer/edge/smooth/west,
+/area/golden_arrow/hangar)
+"fe" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/door/poddoor/railing,
+/obj/structure/machinery/door/poddoor/railing,
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "ff" = (
 /obj/structure/window/reinforced{
@@ -2022,12 +2021,6 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
 "fh" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/door/poddoor/railing,
-/obj/structure/machinery/door/poddoor/railing,
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/hangar)
-"fi" = (
 /obj/structure/machinery/gear{
 	id = "supply_elevator_gear"
 	},
@@ -2035,6 +2028,10 @@
 	icon_state = "NW-out";
 	pixel_y = 1
 	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"fi" = (
+/obj/item/tool/warning_cone,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "fj" = (
@@ -2049,13 +2046,6 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "fk" = (
-/obj/item/tool/warning_cone,
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/hangar)
-"fl" = (
-/turf/closed/wall/almayer,
-/area/golden_arrow/dorms)
-"fm" = (
 /obj/structure/machinery/prop{
 	desc = "Yeah, it got fucked up during FORECON operation in iron forests of LV-711. Literally - the trees there were too tough even for tanks: threads, transmission and even turret rotation motors are now chilling somewhere in repair bay.";
 	icon = 'icons/obj/vehicles/tank.dmi';
@@ -2067,6 +2057,15 @@
 	},
 /obj/structure/blocker/invisible_wall,
 /turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
+"fl" = (
+/turf/closed/wall/almayer,
+/area/golden_arrow/dorms)
+"fm" = (
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "fn" = (
 /obj/effect/decal/cleanable/dirt,
@@ -2083,10 +2082,13 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "fp" = (
-/obj/structure/machinery/door/poddoor/railing{
-	dir = 8
+/obj/effect/decal/cleanable/blood/oil,
+/obj/structure/roof/cargocrane_tracks/vertical/endcap1,
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3
 	},
-/turf/open/floor/almayer/plate,
+/turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/hangar)
 "fq" = (
 /obj/structure/platform,
@@ -2107,8 +2109,6 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "fs" = (
-/obj/effect/decal/cleanable/blood/oil,
-/obj/structure/roof/cargocrane_tracks/vertical/endcap1,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	layer = 3.3
@@ -2116,13 +2116,6 @@
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/hangar)
 "ft" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	layer = 3.3
-	},
-/turf/open/floor/almayer/edge/smooth/west,
-/area/golden_arrow/hangar)
-"fu" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
 	},
@@ -2131,6 +2124,13 @@
 	layer = 3.3
 	},
 /turf/open/floor/almayer/edge/smooth/west,
+/area/golden_arrow/hangar)
+"fu" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 10
+	},
+/turf/open/floor/almayer/mono,
 /area/golden_arrow/hangar)
 "fv" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -2154,17 +2154,6 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
 "fx" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 10
-	},
-/turf/open/floor/almayer/mono,
-/area/golden_arrow/hangar)
-"fy" = (
-/obj/structure/window/framed/almayer,
-/turf/open/floor/almayer,
-/area/golden_arrow/squad_one)
-"fz" = (
 /obj/structure/cargo_container/wy/left,
 /obj/structure/blocker/invisible_wall,
 /obj/structure/machinery/light/double/blue{
@@ -2177,11 +2166,11 @@
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/hangar)
-"fA" = (
-/obj/structure/pipes/standard/manifold/hidden/supply,
+"fy" = (
+/obj/structure/window/framed/almayer,
 /turf/open/floor/almayer,
-/area/golden_arrow/dorms)
-"fB" = (
+/area/golden_arrow/squad_one)
+"fz" = (
 /obj/structure/cargo_container/wy/mid,
 /obj/structure/blocker/invisible_wall,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -2190,7 +2179,11 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
-"fC" = (
+"fA" = (
+/obj/structure/pipes/standard/manifold/hidden/supply,
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"fB" = (
 /obj/structure/machinery/gear{
 	id = "supply_elevator_gear"
 	},
@@ -2199,23 +2192,30 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
-"fD" = (
+"fC" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
 /turf/open/floor/almayer/plate/hangar_1,
 /area/golden_arrow/hangar)
-"fE" = (
+"fD" = (
 /obj/vehicle/powerloader,
 /turf/open/floor/almayer/mono,
+/area/golden_arrow/hangar)
+"fE" = (
+/obj/structure/cargo_container/wy/left,
+/turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/hangar)
 "fF" = (
 /obj/structure/largecrate/random/barrel/red,
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "fG" = (
-/obj/structure/cargo_container/wy/left,
-/turf/open/floor/almayer/edge/smooth/west,
+/obj/structure/cargo_container/wy/mid,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 6
+	},
+/turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "fH" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -2236,13 +2236,6 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
 "fI" = (
-/obj/structure/cargo_container/wy/mid,
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 6
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/hangar)
-"fJ" = (
 /obj/structure/cargo_container/wy/right,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -2253,6 +2246,16 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
+"fJ" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/edge/smooth,
+/area/golden_arrow/hangar)
 "fK" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -2261,9 +2264,11 @@
 	icon_state = "S";
 	pixel_y = -1
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/hangar)
 "fL" = (
+/obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
@@ -2271,11 +2276,9 @@
 	icon_state = "S";
 	pixel_y = -1
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/edge/smooth,
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "fM" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
@@ -2294,16 +2297,6 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
 "fO" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	pixel_y = -1
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/hangar)
-"fP" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -2314,11 +2307,22 @@
 	},
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/hangar)
-"fQ" = (
+"fP" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 1
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/edge/smooth,
+/area/golden_arrow/hangar)
+"fQ" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
 	pixel_y = -1
@@ -2334,17 +2338,6 @@
 /area/golden_arrow/squad_one)
 "fS" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	pixel_y = -1
-	},
-/turf/open/floor/almayer/edge/smooth,
-/area/golden_arrow/hangar)
-"fU" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
 	},
 /obj/effect/decal/warning_stripes{
@@ -2352,6 +2345,10 @@
 	pixel_y = -1
 	},
 /turf/open/floor/almayer/edge/smooth/corner,
+/area/golden_arrow/hangar)
+"fU" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/mono,
 /area/golden_arrow/hangar)
 "fV" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -2375,10 +2372,6 @@
 /turf/open/floor/almayer/edge/smooth/northeast,
 /area/golden_arrow/platoon_commander_rooms)
 "fX" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/mono,
-/area/golden_arrow/hangar)
-"fY" = (
 /obj/structure/machinery/light/small/blue{
 	dir = 1;
 	light_color = "#dae2ff";
@@ -2387,7 +2380,7 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/hangar)
-"fZ" = (
+"fY" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/smooth/northeast,
 /area/golden_arrow/hangar)
@@ -3753,6 +3746,13 @@
 "sK" = (
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/prep_hallway)
+"sL" = (
+/obj/item/ammo_box/rounds/smartgun{
+	pixel_x = -6;
+	pixel_y = -8
+	},
+/turf/open/floor/almayer/edge/smooth/corner/north,
+/area/golden_arrow/hangar)
 "sO" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
@@ -8504,13 +8504,13 @@ Sn
 Sn
 TX
 Zv
-fG
+fE
 hS
-fz
+fx
 He
 He
-fm
-fe
+fk
+fd
 aW
 dT
 Nc
@@ -8606,13 +8606,13 @@ Sn
 Sn
 TX
 FF
-fI
+fG
 qv
-fB
+fz
 Eo
 Eo
 Eo
-fh
+fe
 sr
 sr
 Bh
@@ -8708,7 +8708,7 @@ Sn
 Sn
 TX
 FF
-fJ
+fI
 sk
 zD
 He
@@ -8810,13 +8810,13 @@ Sn
 Sn
 TX
 FF
-fK
+fJ
 eq
-fC
-fp
-fp
-fp
-fi
+fB
+fm
+fm
+fm
+fh
 JI
 PI
 PI
@@ -8912,9 +8912,9 @@ Sn
 Sn
 TX
 FF
-fL
+fK
 PI
-fD
+fC
 PI
 eC
 eI
@@ -9014,7 +9014,7 @@ Sn
 Sn
 TX
 Zd
-fM
+fL
 PI
 PI
 LI
@@ -9116,7 +9116,7 @@ TX
 TX
 TX
 yz
-fM
+fL
 Bo
 zO
 Ld
@@ -9218,7 +9218,7 @@ Py
 TX
 Sw
 FF
-fO
+fM
 Bo
 zO
 Ld
@@ -9320,7 +9320,7 @@ Ga
 TX
 aE
 FF
-fK
+fJ
 PI
 zO
 Ld
@@ -9422,7 +9422,7 @@ Py
 WM
 Sw
 FF
-fP
+fO
 PI
 zO
 Ld
@@ -9524,7 +9524,7 @@ Py
 WM
 Sw
 FF
-fQ
+fP
 JI
 zO
 Ld
@@ -9537,7 +9537,7 @@ eS
 eS
 eS
 eS
-eY
+eX
 eS
 eS
 eS
@@ -9626,7 +9626,7 @@ Py
 WM
 UN
 yz
-fK
+fJ
 PI
 zO
 Ld
@@ -9728,7 +9728,7 @@ Ga
 TX
 zC
 FF
-fK
+fJ
 PI
 zO
 Ld
@@ -9830,7 +9830,7 @@ Py
 TX
 mV
 yz
-fS
+fQ
 Bo
 zO
 Ld
@@ -9932,7 +9932,7 @@ TX
 TX
 TX
 FF
-fO
+fM
 Bo
 zO
 Ld
@@ -10033,8 +10033,8 @@ Sn
 Sn
 Sn
 TX
-fY
-fO
+fX
+fM
 PI
 Bo
 LI
@@ -10136,7 +10136,7 @@ Sn
 Sn
 TX
 Ek
-fK
+fJ
 PI
 ez
 PI
@@ -10238,15 +10238,15 @@ Sn
 Sn
 TX
 FF
-fK
+fJ
 eq
 PI
 PI
 PI
 PI
-fk
-fd
+fi
 fc
+fb
 oY
 KX
 PI
@@ -10340,12 +10340,12 @@ Sn
 Sn
 TX
 FF
-fU
+fS
 fV
 fV
-fu
 ft
 fs
+fp
 xY
 di
 xY
@@ -10354,8 +10354,8 @@ xD
 xY
 xY
 xD
-eX
 eV
+eU
 bs
 xY
 xY
@@ -10442,17 +10442,17 @@ Sn
 Sn
 TX
 FF
-fX
-fE
+fU
+fD
 Sw
-fx
+fu
 Aa
 Yl
 Rq
 Yl
 ZX
-fb
 fa
+eY
 Aa
 Aa
 Yl
@@ -10543,7 +10543,7 @@ Sn
 Sn
 Sn
 TX
-fZ
+fY
 Ho
 Ho
 sO
@@ -10764,7 +10764,7 @@ oM
 Un
 hP
 Un
-eU
+sL
 TX
 bc
 bi

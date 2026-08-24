@@ -120,6 +120,8 @@
 	density = TRUE
 	opacity = TRUE
 
+// dropship airlock
+
 /obj/structure/machinery/door/poddoor/almayer/airlock
 	density = TRUE
 	opacity = TRUE
