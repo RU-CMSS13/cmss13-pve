@@ -2113,6 +2113,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 	if(toggle_prefs & (is_late_join ? TOGGLE_LATE_JOIN_CURRENT_SLOT : TOGGLE_START_JOIN_CURRENT_SLOT))
 		return
 	var/slot_for_job = pref_job_slots[job_title]
+	log_debug("find_assigned_slot: owner=[owner] job=[job_title] slot_for_job=[slot_for_job] default_slot=[default_slot] is_late_join=[is_late_join]")
 	switch(slot_for_job)
 		if(JOB_SLOT_RANDOMISED_SLOT)
 			be_random_body = TRUE
