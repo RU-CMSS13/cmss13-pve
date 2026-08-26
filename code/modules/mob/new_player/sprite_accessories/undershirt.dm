@@ -101,6 +101,10 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 	name = "undershirt"
 	icon_state = "undershirt"
 
+/datum/sprite_accessory/undershirt/civilian
+	name = "Seegson Worker Undershirt"
+	icon_state = "seegson_undershirt"
+
 /datum/sprite_accessory/undershirt/telnyashka
 	name = "Naval Infantry Telnyashka"
 	icon_state = "telnyashka_black"
