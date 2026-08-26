@@ -79,9 +79,9 @@
 // ==UPP== //
 
 /obj/structure/closet/secure_closet/marine_personal/upp/spawn_gear()
-	new /obj/item/clothing/head/cmcap/upp/beret/naval(src)
+	new /obj/item/clothing/head/cmcap/upp/beret/army(src)
 	new /obj/item/clothing/under/marine/veteran/upp(src)
-	new /obj/item/clothing/shoes/marine/upp(src)
+	new /obj/item/clothing/shoes/marine/upp/guard(src)
 	new /obj/item/device/radio/headset/almayer/marine/solardevils/upp(src)
 
 /obj/structure/closet/secure_closet/marine_personal/upp/rifleman
@@ -103,12 +103,12 @@
 	job = JOB_SO
 
 /obj/structure/closet/secure_closet/marine_personal/upp/platoon_commander/spawn_gear()
-	new /obj/item/clothing/head/cmcap/upp/beret/naval(src)
-	new /obj/item/clothing/under/marine/veteran/upp/naval(src)
-	new /obj/item/clothing/shoes/marine/upp(src)
+	new /obj/item/clothing/head/cmcap/upp/beret/army(src)
+	new /obj/item/clothing/head/cmcap/upp/peaked(src)
+	new /obj/item/clothing/under/marine/veteran/upp/army/alt(src)
+	new /obj/item/clothing/shoes/marine/upp/guard(src)
 	new /obj/item/device/radio/headset/almayer/marine/solardevils/upp(src)
-	new /obj/item/clothing/suit/storage/jacket/marine/upp/naval(src)
-	new /obj/item/clothing/suit/storage/jacket/marine/upp(src)
+	new /obj/item/clothing/suit/storage/jacket/marine/upp/coldweather(src)
 
 // ==USCM FORECON== //
 

@@ -602,6 +602,13 @@
 	worn_state = "upp_boiler"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
+/obj/item/clothing/under/marine/veteran/upp/snow
+	name = "\improper UPP winter fatigues"
+	desc = "A winter variation of the UPP Armed Collective uniform. The only difference from the standard uniform is that it is worn with an uncomfortable but incredibly warm camouflage jacket over it."
+	icon_state = "upp_uniform_winter"
+	worn_state = "upp_uniform_winter"
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+
 /obj/item/clothing/under/marine/veteran/upp/pap
 	name = "\improper PaP service uniform"
 	desc = "A pair of blue-grey slacks coupled with a blue shirt, featuring venlar armor inserts at critical areas to protect from blades and low caliber ballistics."
