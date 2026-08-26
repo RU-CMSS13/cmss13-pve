@@ -6,4 +6,6 @@
     "webmap_url": "LV522",
     "traits": [{"Marine Main Ship": true}],
     "platoon": "/datum/squad/marine/upp"
+
+    "weather_holder": "/datum/weather_ss_map_holder/shivas_snowball",
 }

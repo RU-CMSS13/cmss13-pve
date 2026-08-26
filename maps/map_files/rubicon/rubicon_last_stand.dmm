@@ -10573,6 +10573,11 @@
 /obj/item/storage/belt/shotgun/upp,
 /obj/item/ammo_box/magazine/shotgun/upp/buckshot,
 /obj/item/ammo_box/magazine/shotgun/upp/beanbag,
+/obj/item/ammo_box/magazine/type71/large,
+/obj/item/ammo_box/magazine/ak4047,
+/obj/item/ammo_box/magazine/ak4047,
+/obj/item/ammo_box/magazine/ak4047,
+/obj/item/ammo_box/magazine/ak4047,
 /turf/open/floor/almayer_hull,
 /area/rubicon/inside_underground)
 "uH" = (
@@ -10629,7 +10634,7 @@
 "uM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/gun_rack/type71/unloaded{
-	initial_stored = 2
+	initial_stored = 4
 	},
 /turf/open/floor/plating/wood,
 /area/rubicon/inside_underground)

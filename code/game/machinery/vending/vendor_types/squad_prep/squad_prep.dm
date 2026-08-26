@@ -244,7 +244,7 @@
 		list("Heat absorbent coif (black)", round(scale * 5), /obj/item/clothing/mask/rebreather/scarf, VENDOR_ITEM_REGULAR),
 		list("Scarf (green)", round(scale * 5), /obj/item/clothing/mask/tornscarf/green, VENDOR_ITEM_REGULAR),
 		list("Scarf (white)", round(scale * 5), /obj/item/clothing/mask/tornscarf/snow, VENDOR_ITEM_REGULAR),
-		list("Scarf (black)", round(scale * 5), /obj/item/clothing/mask/rebreather/scarf/tacticalmask/black, VENDOR_ITEM_REGULAR),
+		list("Scarf (black)", round(scale * 5), /obj/item/clothing/mask/tornscarf/black, VENDOR_ITEM_REGULAR),
 
 		list("WEBBINGS", -1, null, null),
 		list("Type 90 Pattern Magazine Webbing", round(scale * 10), /obj/item/clothing/accessory/storage/webbing/m3/uppmags, VENDOR_ITEM_REGULAR),
