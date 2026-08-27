@@ -111,8 +111,19 @@ PLANT_CUT_MACHETE = 3 = Needs at least a machete to be cut down
 	name = "pine tree"
 	icon = 'icons/obj/structures/props/pinetrees.dmi'
 	icon_state = "pine_1"
+	icon_tag = "pine"
+	variations = 3
 
-/obj/structure/flora/tree/pine/xmas
+/obj/structure/flora/tree/pine/pine_1
+	icon_state = "pine_1"
+
+/obj/structure/flora/tree/pine/pine_2
+	icon_state = "pine_2"
+
+/obj/structure/flora/tree/pine/pine_3
+	icon_state = "pine_3"
+
+/obj/structure/flora/tree/xmas
 	name = "xmas tree"
 	icon = 'icons/obj/structures/props/pinetrees.dmi'
 	icon_state = "pine_c"
@@ -453,6 +464,39 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 	overlay_type = "tallgrass_overlay_corner"
 	center = FALSE
 
+//TYRARGO - TEMPERATE/TAIGA MAPS//
+
+/obj/structure/flora/grass/temperate
+	icon = 'icons/obj/structures/props/natural/vegetation/temperate_flora.dmi'
+	icon_state = "1"
+
+/obj/structure/flora/wood
+	name = "stick"
+	icon = 'icons/obj/structures/props/natural/vegetation/tyrargo_wood_flora.dmi'
+	icon_state = "stick1"
+	density = FALSE
+	fire_flag = FLORA_BURN_NO_SPREAD
+
+/obj/structure/flora/wood/stick1
+	icon_state = "stick1"
+
+/obj/structure/flora/wood/stick2
+	icon_state = "stick2"
+
+/obj/structure/flora/wood/stick3
+	icon_state = "stick3"
+
+/obj/structure/flora/wood/stick4
+	icon_state = "stick4"
+
+/obj/structure/flora/wood/trunk1
+	name = "tree trunk"
+	icon_state = "trunk1"
+
+/obj/structure/flora/wood/trunk2
+	name = "tree trunk"
+	icon_state = "trunk2"
+
 //BUSHES
 
 /*
@@ -563,6 +607,11 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 /obj/structure/flora/bush/ausbushes/var3/brflowers
 	icon_state = "brflowers_1"
 	icon_tag = "brflowers"
+	layer = BELOW_MOB_LAYER
+
+/obj/structure/flora/bush/ausbushes/var3/ppflowers
+	icon_state = "ppflowers_1"
+	icon_tag = "ppflowers"
 	layer = BELOW_MOB_LAYER
 
 /obj/structure/flora/bush/ausbushes/var3/sparsegrass
@@ -1011,5 +1060,4 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 
 /obj/structure/flora/bush/canyon/grass_yellow/alt2
 	icon_state = "yellow_grass_3"
-
 

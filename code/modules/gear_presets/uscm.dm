@@ -530,7 +530,7 @@
 	name = parent_type::name + " (E6 Rank)"
 	paygrades = list(PAY_SHORT_UE6 = JOB_PLAYTIME_TIER_0)
 
-/datum/equipment_preset/uscm/leader/forecon/captain
+/datum/equipment_preset/uscm/leader/forecon
 	name = "FORECON Squad Leader"
 	assignment = JOB_SQUAD_LEADER_FORECON
 	paygrades = list(PAY_SHORT_MO1 = JOB_PLAYTIME_TIER_0)
