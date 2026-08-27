@@ -3,6 +3,10 @@
 /obj/structure/machinery/light/dropship/green{
 	dir = 4
 	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
 /turf/closed/shuttle/gibraltar{
 	icon_state = "0,7"
 	},
@@ -11,127 +15,16 @@
 /obj/structure/machinery/light/dropship/red{
 	dir = 8
 	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
 /turf/closed/shuttle/gibraltar{
 	icon_state = "8,7"
 	},
 /area/shuttle/gibraltar)
-"ac" = (
-/obj/structure/shuttle/part/gibraltar/leftenginefore{
-	layer = 2.01
-	},
-/turf/template_noop,
-/area/shuttle/gibraltar)
-"ad" = (
-/obj/structure/shuttle/part/gibraltar/rightenginefore{
-	layer = 2.01
-	},
-/turf/template_noop,
-/area/shuttle/gibraltar)
-"ae" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W"
-	},
-/turf/open/shuttle/dropship/light_grey_bottom_left,
-/area/shuttle/gibraltar)
-"af" = (
-/obj/structure/barricade/handrail/strata{
-	dir = 8;
-	pixel_y = -32;
-	can_buckle = 1;
-	health = 160;
-	maxhealth = 160;
-	starting_maxhealth = 160;
-	name = "gunner handrail";
-	desc = "A railing, for your hands. Woooow. Seems you can buckle on this.";
-	color = "#E10600";
-	can_block_movement = 0
-	},
-/turf/open/shuttle/dropship/light_grey_top_right,
-/area/shuttle/gibraltar)
-"ag" = (
-/obj/structure/barricade/handrail/strata{
-	dir = 4;
-	pixel_y = -32;
-	can_buckle = 1;
-	health = 160;
-	maxhealth = 160;
-	starting_maxhealth = 160;
-	name = "gunner handrail";
-	desc = "A railing, for your hands. Woooow. Seems you can buckle on this.";
-	color = "#E10600";
-	can_block_movement = 0
-	},
-/turf/open/shuttle/dropship/light_grey_top_left,
-/area/shuttle/gibraltar)
-"ah" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1;
-	pixel_y = 0
-	},
-/turf/open/shuttle/dropship/light_grey_bottom_right,
-/area/shuttle/gibraltar)
-"ai" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W"
-	},
-/turf/open/shuttle/dropship/light_grey_top_left,
-/area/shuttle/gibraltar)
-"aj" = (
-/turf/open/shuttle/dropship/light_grey_left_to_right,
-/area/shuttle/gibraltar)
-"ak" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1;
-	pixel_y = 0
-	},
-/turf/open/shuttle/dropship/light_grey_top_right,
-/area/shuttle/gibraltar)
-"al" = (
-/obj/structure/barricade/handrail{
-	dir = 8;
-	pixel_x = -4
-	},
-/obj/structure/bed/chair/vehicle{
-	dir = 4;
-	pixel_x = -3;
-	pixel_y = 15
-	},
-/obj/structure/bed/chair/vehicle{
-	dir = 4;
-	pixel_x = -3;
-	pixel_y = 1
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/gibraltar)
-"am" = (
-/obj/structure/vehicle_locker/movie{
-	pixel_y = 20;
-	layer = 2.9
-	},
-/obj/structure/barricade/handrail{
-	dir = 8;
-	pixel_x = -4
-	},
-/obj/structure/bed/chair/vehicle{
-	dir = 4;
-	pixel_x = -3;
-	pixel_y = 15;
-	layer = 2.99
-	},
-/obj/structure/bed/chair/vehicle{
-	dir = 4;
-	pixel_x = -3;
-	pixel_y = -1;
-	layer = 2.99
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/gibraltar)
 "ax" = (
-/obj/effect/attach_point/electronics/gibraltar{
-	attach_id = 5
-	},
+/obj/effect/attach_point/electronics/gibraltar,
 /obj/structure/shuttle/part/gibraltar/transparent{
 	icon_state = "85"
 	},
@@ -149,18 +42,13 @@
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/gibraltar)
 "aR" = (
-/obj/structure/platform_decoration/metal/almayer/east,
-/obj/structure/platform_decoration/metal/almayer/west,
-/obj/effect/decal/hybrisa/road/road_stop{
-	dir = 2;
-	icon_state = "stop_decal5";
-	pixel_y = 6
+/obj/structure/platform_decoration{
+	dir = 8
 	},
-/obj/effect/decal/hybrisa/road/road_stop{
-	icon_state = "stop_decal2";
-	pixel_y = -23
+/obj/structure/platform_decoration{
+	dir = 4
 	},
-/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/gibraltar)
 "bI" = (
 /obj/structure/machinery/camera/autoname/golden_arrow/gibraltar{
@@ -177,6 +65,18 @@
 	color = "#E10600";
 	pixel_x = -1;
 	pixel_y = -2
+	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow/gibraltar{
+	dir = 8;
+	pixel_x = 22
+	},
+/obj/structure/bed/chair/vehicle{
+	dir = 8;
+	pixel_x = 5
 	},
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/gibraltar)
@@ -210,22 +110,15 @@
 	},
 /obj/structure/extinguisher_cabinet/lifeboat{
 	pixel_y = 27;
-	pixel_x = -4;
-	layer = 2.98
+	pixel_x = -4
 	},
 /obj/structure/bed/chair/vehicle{
-	dir = 4;
-	pixel_x = -3;
-	pixel_y = 15;
-	layer = 2.99
+	pixel_x = -8
 	},
 /obj/structure/bed/chair/vehicle{
-	dir = 4;
-	pixel_x = -3;
-	pixel_y = -1;
-	layer = 2.99
+	pixel_x = 8
 	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/gibraltar)
 "hh" = (
 /turf/closed/shuttle/gibraltar{
@@ -294,37 +187,33 @@
 	pixel_y = 16;
 	pixel_x = -7
 	},
-/obj/structure/machinery/computer/overwatch/almayer{
-	dir = 4;
-	pixel_x = 14;
-	pixel_y = -1;
-	faction = "TWE";
-	req_one_access_txt = "295;301;306;310"
+/obj/structure/phone_base{
+	dir = 8;
+	pixel_x = 19;
+	pixel_y = 12;
+	layer = 3.1;
+	phone_category = "Dropship";
+	name = "Gibraltar telephone receiver";
+	phone_id = "Gibraltar"
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/gibraltar)
 "mZ" = (
-/obj/structure/machinery/light/small/blue{
+/obj/structure/machinery/light/double{
 	dir = 8
 	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/gibraltar)
 "nk" = (
 /obj/structure/bed/chair/vehicle{
-	dir = 8;
-	pixel_x = 3;
-	pixel_y = 15
+	dir = 1;
+	pixel_x = -8
 	},
 /obj/structure/bed/chair/vehicle{
-	dir = 8;
-	pixel_x = 3;
-	pixel_y = 1
+	dir = 1;
+	pixel_x = 8
 	},
-/obj/structure/barricade/handrail{
-	dir = 4;
-	pixel_x = 4
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/gibraltar)
 "nO" = (
 /turf/closed/shuttle/gibraltar{
@@ -345,36 +234,24 @@
 	},
 /area/shuttle/gibraltar)
 "pS" = (
-/obj/structure/platform/metal/almayer/north,
-/obj/effect/decal/hybrisa/road/road_stop{
-	dir = 2;
-	icon_state = "stop_decal5";
-	pixel_y = 6
+/obj/structure/platform{
+	dir = 1
 	},
-/obj/effect/decal/hybrisa/road/lines2{
-	pixel_y = -23
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/gibraltar)
 "qe" = (
-/obj/structure/bed/chair/vehicle{
-	dir = 4;
-	pixel_x = -3;
-	pixel_y = 15
+/obj/structure/machinery/light/double{
+	dir = 8
 	},
 /obj/structure/bed/chair/vehicle{
-	dir = 4;
-	pixel_x = -3;
-	pixel_y = 1
+	dir = 1;
+	pixel_x = -8
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "SW-out"
+/obj/structure/bed/chair/vehicle{
+	dir = 1;
+	pixel_x = 8
 	},
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	pixel_y = 16
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/gibraltar)
 "rp" = (
 /obj/structure/shuttle/part/gibraltar/rightenginerear,
@@ -384,10 +261,15 @@
 /turf/template_noop,
 /area/space)
 "tl" = (
-/obj/structure/blocker/forcefield/multitile_vehicles,
 /obj/structure/stairs/perspective,
-/obj/structure/platform/metal/almayer/east,
-/obj/structure/platform/metal/almayer/west,
+/obj/structure/platform{
+	dir = 4;
+	layer = 2.7
+	},
+/obj/structure/platform{
+	dir = 8
+	},
+/obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/gibraltar)
 "tq" = (
@@ -396,22 +278,12 @@
 	layer = 2.9
 	},
 /obj/structure/bed/chair/vehicle{
-	dir = 8;
-	pixel_x = 3;
-	pixel_y = 15;
-	layer = 2.99
+	pixel_x = -8
 	},
 /obj/structure/bed/chair/vehicle{
-	dir = 8;
-	pixel_x = 3;
-	pixel_y = -1;
-	layer = 2.99
+	pixel_x = 8
 	},
-/obj/structure/barricade/handrail{
-	dir = 4;
-	pixel_x = 4
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/gibraltar)
 "vi" = (
 /obj/structure/shuttle/part/gibraltar/leftaftdivot,
@@ -422,16 +294,9 @@
 /turf/template_noop,
 /area/shuttle/gibraltar)
 "vL" = (
-/obj/effect/attach_point/crew_weapon/gibraltar/floor{
-	attach_id = 7;
-	pixel_x = 2;
-	pixel_y = -2
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo";
-	color = "#E10600";
-	pixel_x = 2;
-	pixel_y = -2
+/obj/structure/bed/chair/vehicle{
+	dir = 4;
+	pixel_x = -5
 	},
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/gibraltar)
@@ -441,10 +306,10 @@
 	},
 /area/shuttle/gibraltar)
 "wF" = (
-/obj/structure/machinery/light/small/blue{
+/obj/structure/machinery/light/double{
 	dir = 4
 	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/gibraltar)
 "xC" = (
 /obj/structure/shuttle/part/gibraltar/lefttailboom,
@@ -517,16 +382,10 @@
 	pixel_x = -8
 	},
 /obj/structure/bed/chair/vehicle{
-	dir = 8;
-	pixel_x = 3;
-	pixel_y = 15;
-	layer = 2.99
+	pixel_x = -8
 	},
 /obj/structure/bed/chair/vehicle{
-	dir = 8;
-	pixel_x = 3;
-	pixel_y = -1;
-	layer = 2.99
+	pixel_x = 8
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/gibraltar)
@@ -549,8 +408,9 @@
 /turf/template_noop,
 /area/shuttle/gibraltar)
 "Jx" = (
+/obj/effect/attach_point/crew_weapon/gibraltar,
 /obj/docking_port/mobile/marine_dropship/gibraltar,
-/turf/open/shuttle/dropship/light_grey_middle,
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/gibraltar)
 "JV" = (
 /obj/structure/shuttle/part/gibraltar/righttailfin,
@@ -601,21 +461,12 @@
 	},
 /obj/structure/bed/chair/vehicle/dropship_cockpit/copilot{
 	dir = 1;
-	pixel_x = -6;
+	pixel_x = -8;
 	layer = 5
 	},
 /obj/structure/machinery/computer/dropship_weapons/gibraltar/small{
 	pixel_y = 8;
-	pixel_x = -7
-	},
-/obj/structure/phone_base{
-	dir = 8;
-	pixel_x = 19;
-	pixel_y = 2;
-	layer = 3.1;
-	phone_category = "Dropship";
-	name = "Gibraltar telephone receiver";
-	phone_id = "Gibraltar"
+	pixel_x = -8
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/gibraltar)
@@ -676,9 +527,7 @@
 /turf/template_noop,
 /area/shuttle/gibraltar)
 "Zh" = (
-/obj/effect/attach_point/electronics/gibraltar{
-	attach_id = 6
-	},
+/obj/effect/attach_point/electronics/gibraltar,
 /obj/structure/shuttle/part/gibraltar/transparent{
 	icon_state = "90"
 	},
@@ -690,24 +539,17 @@
 	},
 /area/shuttle/gibraltar)
 "ZG" = (
-/obj/structure/bed/chair/vehicle{
-	dir = 8;
-	pixel_x = 3;
-	pixel_y = 15
-	},
-/obj/structure/bed/chair/vehicle{
-	dir = 8;
-	pixel_x = 3;
-	pixel_y = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "SE-out";
-	pixel_x = 1;
-	pixel_y = 0
-	},
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double{
 	dir = 4;
-	pixel_y = 16
+	pixel_y = -5
+	},
+/obj/structure/bed/chair/vehicle{
+	dir = 1;
+	pixel_x = -8
+	},
+/obj/structure/bed/chair/vehicle{
+	dir = 1;
+	pixel_x = 8
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/gibraltar)
@@ -741,7 +583,7 @@ nO
 GA
 bY
 vi
-ac
+RQ
 aa
 Bg
 Ju
@@ -756,8 +598,8 @@ ax
 AI
 fy
 qe
-ai
-ae
+dF
+dF
 hh
 nO
 oo
@@ -774,12 +616,12 @@ Ut
 GQ
 tq
 nk
-aj
-af
+oY
+oY
 vL
 pS
 mZ
-dF
+oY
 jE
 sq
 sq
@@ -796,8 +638,8 @@ Jx
 oY
 tl
 aR
-oY
-oY
+dF
+dF
 kh
 sq
 sq
@@ -808,14 +650,14 @@ in
 OY
 ET
 RD
-am
-al
-aj
-ag
+tq
+nk
+oY
+oY
 bI
 pS
 wF
-dF
+oY
 kh
 sq
 sq
@@ -828,8 +670,8 @@ Zh
 ZE
 GC
 ZG
-ak
-ah
+dF
+dF
 jy
 Ic
 Lu
@@ -849,7 +691,7 @@ Ic
 aB
 Np
 GY
-ad
+Sm
 ab
 iv
 rp

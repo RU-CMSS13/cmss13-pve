@@ -3,7 +3,7 @@
 /turf/open/asphalt/tile,
 /area/desert_dam/exterior/valley/valley_medical)
 "ab" = (
-/obj/effect/blocker/water/toxic/Group_2,
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/gm/river/desert/shallow_edge/northeast,
 /area/desert_dam/exterior/river/riverside_east)
 "ac" = (
@@ -11,14 +11,22 @@
 /obj/structure/platform{
 	dir = 8
 	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/effect/blocker/toxic_water/Group_2,
+/obj/structure/platform{
+	dir = 8
+	},
 /turf/open/gm/river/desert/shallow_edge/north,
 /area/desert_dam/exterior/river/riverside_east)
 "ad" = (
-/obj/effect/blocker/water/toxic/Group_2,
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/gm/river/desert/shallow_corner/west,
 /area/desert_dam/exterior/river/riverside_east)
 "af" = (
-/obj/effect/blocker/water/toxic/Group_2,
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/desert/desert_shore/desert_shore1/north,
 /area/desert_dam/exterior/river/riverside_east)
 "ag" = (
@@ -35,6 +43,14 @@
 	dir = 1
 	},
 /obj/effect/blocker/water/toxic/Group_2,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/desert/dirt/dirt2,
 /area/desert_dam/exterior/river/riverside_east)
 "aj" = (
@@ -60,7 +76,7 @@
 /turf/open/desert/dirt/dirt2,
 /area/desert_dam/exterior/river/riverside_east)
 "ap" = (
-/obj/effect/blocker/water/toxic/Group_2,
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/gm/river/desert/deep/covered,
 /area/desert_dam/exterior/river/riverside_east)
 "aq" = (
@@ -80,7 +96,7 @@
 /turf/open/asphalt/cement_sunbleached/cement_sunbleached14,
 /area/desert_dam/exterior/valley/valley_medical)
 "at" = (
-/obj/effect/blocker/water/toxic/Group_2,
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/gm/river/desert/shallow_corner,
 /area/desert_dam/exterior/river/riverside_east)
 "au" = (
@@ -91,10 +107,18 @@
 	dir = 1
 	},
 /obj/effect/blocker/water/toxic/Group_2,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/desert/desert_shore/shore_corner2/west,
 /area/desert_dam/exterior/river/riverside_east)
 "ax" = (
-/obj/effect/blocker/water/toxic/Group_2,
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/desert/desert_shore/shore_corner2/west,
 /area/desert_dam/exterior/river/riverside_east)
 "ay" = (
@@ -108,6 +132,17 @@
 /obj/structure/platform{
 	dir = 8
 	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/effect/blocker/toxic_water/Group_2,
+/obj/structure/platform{
+	dir = 8
+	},
 /turf/open/gm/river/desert/shallow,
 /area/desert_dam/exterior/river/riverside_east)
 "aA" = (
@@ -117,6 +152,13 @@
 /obj/structure/platform,
 /obj/effect/blocker/water/toxic/Group_2,
 /obj/effect/blocker/water/toxic/Group_2,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/platform,
+/obj/effect/blocker/toxic_water/Group_2,
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/gm/river/desert/shallow_edge,
 /area/desert_dam/exterior/river/riverside_east)
 "aE" = (
@@ -124,6 +166,14 @@
 	dir = 1
 	},
 /obj/effect/blocker/water/toxic/Group_2,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/desert/desert_shore/shore_edge1/east,
 /area/desert_dam/exterior/river/riverside_east)
 "aF" = (
@@ -131,6 +181,14 @@
 	dir = 4
 	},
 /obj/effect/blocker/water/toxic/Group_2,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/platform_decoration{
+	dir = 4
+	},
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/gm/river/desert/shallow_edge/west,
 /area/desert_dam/exterior/river/riverside_east)
 "aG" = (
@@ -140,6 +198,12 @@
 "aH" = (
 /obj/structure/platform,
 /obj/effect/blocker/water/toxic/Group_2,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/platform,
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/gm/river/desert/shallow_edge,
 /area/desert_dam/exterior/river/riverside_east)
 "aI" = (
@@ -150,6 +214,17 @@
 	dir = 8
 	},
 /obj/effect/blocker/water/toxic/Group_2,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/structure/platform{
+	dir = 8
+	},
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/desert/desert_shore/shore_corner2/north,
 /area/desert_dam/exterior/river/riverside_east)
 "aJ" = (
@@ -158,6 +233,12 @@
 "aK" = (
 /obj/structure/platform_decoration,
 /obj/effect/blocker/water/toxic/Group_2,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/platform_decoration,
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/gm/river/desert/shallow_edge,
 /area/desert_dam/exterior/river/riverside_east)
 "aM" = (
@@ -165,6 +246,14 @@
 	dir = 1
 	},
 /obj/effect/blocker/water/toxic/Group_2,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/desert/desert_shore/shore_corner2/north,
 /area/desert_dam/exterior/river/riverside_east)
 "aN" = (
@@ -172,6 +261,14 @@
 	dir = 4
 	},
 /obj/effect/blocker/water/toxic/Group_2,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/platform_decoration{
+	dir = 4
+	},
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/gm/river/desert/shallow_edge/northwest,
 /area/desert_dam/exterior/river/riverside_east)
 "aO" = (
@@ -185,6 +282,17 @@
 /obj/structure/platform{
 	dir = 4
 	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/effect/blocker/toxic_water/Group_2,
+/obj/structure/platform{
+	dir = 4
+	},
 /turf/open/gm/river/desert/deep,
 /area/desert_dam/exterior/river/riverside_east)
 "aQ" = (
@@ -192,14 +300,22 @@
 	dir = 4
 	},
 /obj/effect/blocker/water/toxic/Group_2,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/platform{
+	dir = 4
+	},
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/gm/river/desert/deep,
 /area/desert_dam/exterior/river/riverside_east)
 "aR" = (
-/obj/effect/blocker/water/toxic/Group_2,
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/gm/river/desert/shallow_edge/north,
 /area/desert_dam/exterior/river/riverside_east)
 "aS" = (
-/obj/effect/blocker/water/toxic/Group_2,
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/gm/river/desert/shallow_corner/north,
 /area/desert_dam/exterior/river/riverside_east)
 "aT" = (
@@ -208,10 +324,19 @@
 /obj/structure/platform{
 	dir = 8
 	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/effect/blocker/toxic_water/Group_2,
+/obj/structure/platform,
+/obj/structure/platform{
+	dir = 8
+	},
 /turf/open/gm/river/desert/shallow_edge,
 /area/desert_dam/exterior/river/riverside_east)
 "aU" = (
-/obj/effect/blocker/water/toxic/Group_2,
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/gm/river/desert/shallow_edge/covered,
 /area/desert_dam/exterior/river/riverside_east)
 "aV" = (
@@ -219,6 +344,14 @@
 	dir = 8
 	},
 /obj/effect/blocker/water/toxic/Group_2,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/platform_decoration{
+	dir = 8
+	},
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/gm/river/desert/deep,
 /area/desert_dam/exterior/river/riverside_east)
 "aW" = (
@@ -234,7 +367,7 @@
 /turf/open/asphalt/cement_sunbleached/cement_sunbleached14,
 /area/desert_dam/exterior/valley/valley_bridge)
 "aZ" = (
-/obj/effect/blocker/water/toxic/Group_2,
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/gm/river/desert/shallow_corner/covered,
 /area/desert_dam/exterior/river/riverside_east)
 "ba" = (
@@ -243,14 +376,31 @@
 /obj/structure/platform{
 	dir = 4
 	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/platform,
+/obj/effect/blocker/toxic_water/Group_2,
+/obj/structure/platform{
+	dir = 4
+	},
 /turf/open/gm/river/desert/shallow_edge,
 /area/desert_dam/exterior/river/riverside_east)
 "bc" = (
-/obj/effect/blocker/water/toxic/Group_2,
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/gm/river/desert/deep,
 /area/desert_dam/exterior/river/riverside_east)
 "bd" = (
 /obj/effect/blocker/water/toxic/Group_2,
+/obj/structure/platform{
+	dir = 8
+	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/effect/blocker/toxic_water/Group_2,
 /obj/structure/platform{
 	dir = 8
 	},
@@ -261,6 +411,14 @@
 	dir = 4
 	},
 /obj/effect/blocker/water/toxic/Group_2,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/platform{
+	dir = 4
+	},
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/gm/river/desert/shallow_corner,
 /area/desert_dam/exterior/river/riverside_east)
 "bf" = (
@@ -268,31 +426,39 @@
 /obj/structure/platform{
 	dir = 4
 	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/effect/blocker/toxic_water/Group_2,
+/obj/structure/platform{
+	dir = 4
+	},
 /turf/open/gm/river/desert/deep,
 /area/desert_dam/exterior/river/riverside_east)
 "bg" = (
-/obj/effect/blocker/water/toxic/Group_2,
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/gm/river/desert/shallow_edge/southwest,
 /area/desert_dam/exterior/river/riverside_east)
 "bh" = (
-/obj/effect/blocker/water/toxic/Group_2,
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/desert/desert_shore/shore_corner2,
 /area/desert_dam/exterior/river/riverside_east)
 "bi" = (
-/obj/effect/blocker/water/toxic/Group_2,
-/obj/effect/blocker/water/toxic/Group_2,
+/obj/effect/blocker/toxic_water/Group_2,
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/gm/river/desert/shallow,
 /area/desert_dam/exterior/river/riverside_east)
 "bj" = (
-/obj/effect/blocker/water/toxic/Group_2,
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/gm/river/desert/shallow_edge,
 /area/desert_dam/exterior/river/riverside_east)
 "bk" = (
-/obj/effect/blocker/water/toxic/Group_2,
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/desert/desert_shore/shore_edge1,
 /area/desert_dam/exterior/river/riverside_east)
 "bl" = (
-/obj/effect/blocker/water/toxic/Group_2,
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/desert/desert_shore/desert_shore1,
 /area/desert_dam/exterior/river/riverside_east)
 "bm" = (
@@ -312,6 +478,14 @@
 	dir = 4
 	},
 /obj/effect/blocker/water/toxic/Group_2,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/platform{
+	dir = 4
+	},
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/desert/desert_shore/desert_shore1,
 /area/desert_dam/exterior/river/riverside_east)
 "bp" = (
@@ -359,7 +533,7 @@
 /turf/open/asphalt/cement_sunbleached/cement_sunbleached1,
 /area/desert_dam/exterior/valley/valley_medical)
 "bA" = (
-/obj/effect/blocker/water/toxic/Group_2,
+/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/gm/river/desert/shallow_edge/covered/east,
 /area/desert_dam/exterior/river/riverside_east)
 

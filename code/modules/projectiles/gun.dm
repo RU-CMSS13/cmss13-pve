@@ -1767,8 +1767,7 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 		else
 			skill_accuracy = user.skills.get_skill_level(SKILL_FIREARMS)
 		if(skill_accuracy)
-			gun_accuracy_mult += skill_accuracy * HIT_ACCURACY_MULT_TIER_3 // Accuracy mult increase/decrease per level is equal to attaching/removing a red dot sight
-
+			gun_accuracy_mult += skill_accuracy * HIT_ACCURACY_MULT_TIER_4 // Accuracy mult increase/decrease per level is equal to attaching/removing a red dot sight
 	projectile_to_fire.accuracy = floor(projectile_to_fire.accuracy * gun_accuracy_mult) // Apply gun accuracy multiplier to projectile accuracy
 	projectile_to_fire.scatter += gun_scatter
 
@@ -1801,9 +1800,6 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 			playsound(user, actual_sound, 25, firing_sndfreq)
 
 /obj/item/weapon/gun/proc/simulate_scatter(obj/projectile/projectile_to_fire, atom/target, turf/curloc, turf/targloc, mob/user, bullets_fired = 1)
-	if(curloc.z != targloc.z)
-		return target
-
 	var/fire_angle = Get_Angle(curloc, targloc)
 	var/total_scatter_angle = projectile_to_fire.scatter
 

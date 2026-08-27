@@ -7,8 +7,6 @@
 	layer = TURF_LAYER
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "shards"
-	allow_this_to_overlap = TRUE
-	cleanable_type = CLEANABLE_JUNK
 
 /obj/effect/decal/cleanable/ash
 	name = "ashes"
@@ -17,8 +15,6 @@
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "ash"
 	anchored = TRUE
-	allow_this_to_overlap = TRUE
-	cleanable_type = CLEANABLE_JUNK
 
 /obj/effect/decal/cleanable/ash/attack_hand(mob/user as mob)
 	to_chat(user, SPAN_NOTICE("[src] sifts through your fingers."))
@@ -34,7 +30,6 @@
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "dirt"
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
-	allow_this_to_overlap = TRUE
 
 /obj/effect/decal/cleanable/dirt/greenglow
 	name = "glowing goo"
@@ -66,8 +61,6 @@
 	layer = TURF_LAYER
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "flour"
-	allow_this_to_overlap = TRUE
-	cleanable_type = CLEANABLE_SPLATTER
 
 /obj/effect/decal/cleanable/greenglow
 	name = "glowing goo"
@@ -80,8 +73,6 @@
 	light_color = COLOR_LIGHT_GREEN
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "greenglow"
-	allow_this_to_overlap = TRUE
-	cleanable_type = CLEANABLE_SPLATTER
 
 /obj/effect/decal/cleanable/greenglow/Initialize(mapload, ...)
 	if(mapload)
@@ -97,8 +88,6 @@
 	layer = FLY_LAYER
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "cobweb1"
-	allow_this_to_overlap = TRUE
-	cleanable_type = CLEANABLE_JUNK
 
 /obj/effect/decal/cleanable/molten_item
 	name = "gooey grey mass"
@@ -109,8 +98,6 @@
 	gender = PLURAL
 	icon = 'icons/obj/items/chemistry.dmi'
 	icon_state = "molten"
-	allow_this_to_overlap = TRUE
-	cleanable_type = CLEANABLE_JUNK
 
 /obj/effect/decal/cleanable/cobweb2
 	name = "cobweb"
@@ -120,8 +107,6 @@
 	layer = OBJ_LAYER
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "cobweb2"
-	allow_this_to_overlap = TRUE
-	cleanable_type = CLEANABLE_JUNK
 
 /// Variant used for halloween - need to pass info in constructor as its turned in an overlay
 /obj/effect/decal/cleanable/cobweb2/dynamic
@@ -151,7 +136,6 @@
 	icon_state = "vomit_1"
 	random_icon_states = list("vomit_1", "vomit_2", "vomit_3", "vomit_4")
 	cleanable_type = CLEANABLE_SPLATTER
-	allow_this_to_overlap = TRUE
 
 /obj/effect/decal/cleanable/vomit/ex_act()
 	return
@@ -164,8 +148,6 @@
 	layer = TURF_LAYER
 	icon = 'icons/effects/effects.dmi'
 	random_icon_states = list("tomato_floor1", "tomato_floor2", "tomato_floor3")
-	allow_this_to_overlap = TRUE
-	cleanable_type = CLEANABLE_SPLATTER
 
 /obj/effect/decal/cleanable/egg_smudge
 	name = "smashed egg"
@@ -175,8 +157,6 @@
 	layer = TURF_LAYER
 	icon = 'icons/effects/effects.dmi'
 	random_icon_states = list("smashed_egg1", "smashed_egg2", "smashed_egg3")
-	allow_this_to_overlap = TRUE
-	cleanable_type = CLEANABLE_SPLATTER
 
 /obj/effect/decal/cleanable/pie_smudge //honk
 	name = "smashed pie"
@@ -186,8 +166,6 @@
 	layer = TURF_LAYER
 	icon = 'icons/effects/effects.dmi'
 	random_icon_states = list("smashed_pie")
-	allow_this_to_overlap = TRUE
-	cleanable_type = CLEANABLE_SPLATTER
 
 /obj/effect/decal/cleanable/blackgoo
 	name = "black goo"
@@ -195,8 +173,6 @@
 	gender = PLURAL
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "blackgoo"
-	allow_this_to_overlap = TRUE
-	cleanable_type = CLEANABLE_SPLATTER
 
 /obj/effect/decal/cleanable/blackgoo/Crossed(mob/living/carbon/human/H)
 	if(!istype(H)) return
@@ -214,32 +190,26 @@
 	icon = 'icons/effects/blood.dmi'
 	icon_state = "mucus"
 	random_icon_states = list("mucus")
-	allow_this_to_overlap = TRUE
-	cleanable_type = CLEANABLE_SPLATTER
 
 //Hybrisa Dirt & Grime
-/obj/effect/decal/cleanable/hybrisa
-	allow_this_to_overlap = TRUE
-	cleanable_type = CLEANABLE_JUNK
+/obj/effect/decal/cleanable/Hybrisa
+	gender = PLURAL
+	density = FALSE
+	anchored = TRUE
+	layer = TURF_LAYER
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
 /obj/effect/decal/cleanable/hybrisa/dirt
 	icon = 'icons/effects/hybrisa_decals.dmi'
 	icon_state = "dirt"
-	allow_this_to_overlap = TRUE
-	cleanable_type = CLEANABLE_MISC
 
 /obj/effect/decal/cleanable/hybrisa/dirt_2
 	icon = 'icons/effects/hybrisa_decals.dmi'
 	icon_state = "dirt_2"
-	allow_this_to_overlap = TRUE
-	cleanable_type = CLEANABLE_MISC
 
 /obj/effect/decal/cleanable/hybrisa/bloodtrail
 	icon = 'icons/effects/hybrisa_decals.dmi'
 	icon_state = "bloodtrail"
-	allow_this_to_overlap = TRUE
-	cleanable_type = CLEANABLE_TRACKS
 
 /obj/effect/decal/cleanable/hybrisa/trash
 	icon = 'icons/effects/hybrisa_decals.dmi'

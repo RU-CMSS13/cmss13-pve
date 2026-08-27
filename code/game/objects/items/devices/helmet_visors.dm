@@ -40,7 +40,7 @@
 	return TRUE
 
 /// Called to see if this visor is a special non-HUD visor
-/obj/item/device/helmet_visor/proc/toggle_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user, silent = FALSE)
+/obj/item/device/helmet_visor/proc/toggle_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user, silent = FALSE )
 	if(attached_helmet == user.head && attached_helmet.active_visor == src)
 
 		if(!can_toggle(user))
@@ -64,14 +64,14 @@
 
 /// Called by toggle_visor() to activate the visor's effects
 /obj/item/device/helmet_visor/proc/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
-	for(var/type in hud_type)
-		var/datum/mob_hud/current_mob_hud = GLOB.huds[type]
+	if(isnull(GLOB.huds[hud_type]?.hudusers[user]))
+		var/datum/mob_hud/current_mob_hud = GLOB.huds[hud_type]
 		current_mob_hud.add_hud_to(user, attached_helmet)
 
 /// Called by toggle_visor() to deactivate the visor's effects
 /obj/item/device/helmet_visor/proc/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
-	for(var/type in hud_type)
-		var/datum/mob_hud/current_mob_hud = GLOB.huds[type]
+	if(!isnull(GLOB.huds[hud_type]?.hudusers[user]))
+		var/datum/mob_hud/current_mob_hud = GLOB.huds[hud_type]
 		current_mob_hud.remove_hud_from(user, attached_helmet)
 
 /obj/item/device/helmet_visor/process(delta_time)
