@@ -82,6 +82,13 @@
 /obj/item/clothing/head/beret/cm/black
 	icon_state = "beret_black"
 
+/obj/item/clothing/head/beret/cm/black/army
+	name = "US Army beret"
+	desc = "The proud tradition of the US Army 1st Air Cav using black berets for their troopers is maintained since the 20th century."
+
+/obj/item/clothing/head/beret/marine/commander/black/army
+	name = "army major black beret"
+
 /obj/item/clothing/head/beret/cm/green
 	icon_state = "beret_green"
 
@@ -492,6 +499,15 @@
 	desc = "A dark blue utility cap."
 	icon_state = "corrections"
 	item_state = "corrections"
+
+/obj/item/clothing/head/cmcap/seegsoncap
+	name = "Seegson Cap"
+	desc = "A Seegson worker's cap looks old and worn. Issued to workers at stations and some colonies, it looks stylish, but doesn't protect the head while working. The tag on the back reads: Seegson in pursuit of affordable quality. Some workers say the company's androids Working Joe themselves used to wear this cap, but the company abandoned it due to both the idea and the extra expense."
+	icon_state = "seegson_cap"
+	icon = 'icons/obj/items/clothing/hats.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/head_0.dmi'
+)
 
 //============================//BERETS\\=================================\\
 //=======================================================================\\
