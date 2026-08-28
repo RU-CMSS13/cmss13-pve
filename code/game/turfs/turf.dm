@@ -880,3 +880,6 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 	if(T.name != name)
 		T.name = name
 	return T
+
+/turf/proc/remove_flag(flag)
+	turf_flags &= ~flag
