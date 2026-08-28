@@ -121,6 +121,14 @@
 	name = "Black Beret"
 	icon_state = "beret_black"
 
+/obj/item/clothing/head/beret/cm/canc
+	name = "CANC beret"
+	desc = "Military CANC beret."
+	icon_state = "canc_beret"
+
+/obj/item/clothing/head/beret/cm/canc/leader
+	desc = "Military CANC beret, worn by squad sergeants and junior officers, complete with a subdued insignia."
+	icon_state = "canc_beret_leader"
 
 /obj/item/clothing/head/headband
 	name = "headband"
@@ -719,6 +727,11 @@
 	name = "\improper UL3 MSS peaked cap"
 	desc = "Standard issue peaked cap of the Ministry of Space Security."
 	icon_state = "upp_peaked_mss"
+
+/obj/item/clothing/head/cmcap/upp/peaked/canc
+	name = "\improper CANC officer peaked cap"
+	desc = "Standard issue peaked service cap of the CANC's military."
+	icon_state = "canc_peaked"
 
 /obj/item/clothing/head/cmcap/upp/ushanka
 	name = "\improper UL2 ushanka"

@@ -47,6 +47,3 @@ endmap
 
 map mi264_pudong_bunker
 endmap
-
-map rubicon
-endmap

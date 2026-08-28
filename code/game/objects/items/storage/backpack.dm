@@ -633,6 +633,15 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	name = "\improper R-559 'Bagulnik' Small Radio Telephone Pack"
 	max_storage_space = 10
 
+/obj/item/storage/backpack/marine/satchel/rto/canc
+	name = "\improper Type 559 Radio Telephone Pack"
+	icon_state = "upp_rto_backpack"
+	item_state = "upp_rto_backpack"
+	phone_icon = "upp_rpb_phone"
+	phone_category = PHONE_CANC_SOLDIER
+	networks_receive = list(FACTION_UPP)
+	networks_transmit = list(FACTION_UPP)
+
 /obj/item/storage/backpack/marine/satchel/rto/io
 	phone_category = PHONE_IO
 
@@ -710,6 +719,14 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 		if("urban")
 			name = "\improper M60 Sniper Cloak"
 			desc = "A specially-designed cloak with thermal dampering waterproof coating, designed for urban environments. Doesn't have the optical camouflage electronics that more advanced M68 cloak has."
+
+/obj/item/storage/backpack/marine/canc_smock
+	name = "\improper Type-14 smock"
+	desc = "A specially-designed smock with pockets for all your recon needs."
+	icon_state = "smock"
+	max_storage_space = 15
+	worn_accessible = TRUE
+	xeno_types = null
 
 /obj/item/storage/backpack/marine/marsoc
 	name = "\improper USCM SOF IMP tactical rucksack"
