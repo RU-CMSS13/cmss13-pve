@@ -282,11 +282,13 @@
 /turf/open/floor/coagulation/icon0_0,
 /area/bmg290/wilderness/colony_exterior)
 "agT" = (
-/obj/item/tool/shovel{
-	pixel_x = 8
+/obj/structure/barricade/sandbags/full{
+	dir = 1;
+	pixel_y = 6;
+	is_wired = 1
 	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/bmg290/caverns/cave_west)
+/turf/open/floor/almayer_hull/blackfull,
+/area/bmg290/wilderness/outskirts)
 "ahv" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/item/weapon/sword/katana/replica,
@@ -745,6 +747,19 @@
 "ase" = (
 /turf/open/floor/strata/faux_wood,
 /area/bmg290/keppitz/archives)
+"asm" = (
+/obj/structure/barricade/sandbags/full{
+	dir = 1;
+	pixel_y = 6;
+	is_wired = 1
+	},
+/obj/structure/barricade/sandbags/full{
+	dir = 4;
+	is_wired = 1;
+	pixel_y = -6
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "asv" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8;
@@ -831,10 +846,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz/entry_pub)
-"auu" = (
-/turf/open/asphalt/cement_sunbleached_darkened,
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "auP" = (
 /obj/structure/sign/poster/ad,
 /turf/closed/wall/strata_outpost/reinforced/hull,
@@ -1296,6 +1307,12 @@
 	},
 /turf/open/floor/prison,
 /area/bmg290/keppitz/entry_pub)
+"aGd" = (
+/obj/structure/platform/strata/metal{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "aGh" = (
 /obj/structure/stairs/perspective{
 	color = "#6e6e6e";
@@ -1356,11 +1373,6 @@
 "aHI" = (
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/bmg290/keppitz/research)
-"aHN" = (
-/obj/structure/prop/tyrargo/large_tents/medical,
-/obj/structure/blocker/invisible_wall,
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "aHZ" = (
 /turf/open/floor/prison/green,
 /area/bmg290/relay/hallway)
@@ -2036,8 +2048,9 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz/command)
 "aZL" = (
-/turf/open/asphalt/cement_sunbleached_darkened,
-/area/bmg290/wilderness/farmland)
+/obj/structure/platform_decoration/strata/metal,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "aZP" = (
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 1
@@ -2318,6 +2331,16 @@
 	},
 /turf/open/floor/plating,
 /area/bmg290/colony/engineering)
+"beV" = (
+/obj/structure/machinery/telecomms/relay/preset/ice_colony{
+	density = 0;
+	layer = 6.02;
+	desc = "Фрагмент мощной китайской РЛС Тип-177, способная обнаруживать вражеские летательные аппараты на тысячи километров. Такие антенны подключаются к единому аппарату, который после передаёт общую картину в оперативный центр.";
+	name = "Type-177 RS Antenna"
+	},
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/wilderness/farmland)
 "bfd" = (
 /obj/structure/prop/vehicles/crawler{
 	density = 0;
@@ -2946,6 +2969,12 @@
 	},
 /turf/open/gm/dirt,
 /area/bmg290/wilderness/beach)
+"bsi" = (
+/obj/structure/platform_decoration/strata/metal{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/bmg290/wilderness/outskirts)
 "bsj" = (
 /turf/open/floor/prison/darkyellow2,
 /area/bmg290/colony/complex)
@@ -2970,13 +2999,6 @@
 	},
 /turf/open/asphalt/cement,
 /area/bmg290/wilderness/colony_exterior)
-"bsJ" = (
-/obj/structure/platform/kutjevo/rock{
-	dir = 1;
-	color = "#999999"
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "bth" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1;
@@ -3593,6 +3615,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/bmg290/relay/synthetic)
+"bKA" = (
+/obj/structure/fence/slim/upp,
+/turf/open/asphalt/cement_sunbleached_darkened,
+/area/bmg290/wilderness/outskirts)
 "bKC" = (
 /obj/structure/surface/table/almayer,
 /obj/item/storage/box/pillbottles{
@@ -4865,14 +4891,6 @@
 	},
 /turf/open/floor/grey_dark2,
 /area/bmg290/wilderness/site)
-"cnI" = (
-/obj/structure/platform/kutjevo/rock{
-	dir = 4;
-	color = "#999999";
-	layer = 3.02
-	},
-/turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/bmg290/wilderness/outskirts)
 "cnW" = (
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/bmg290/wilderness_roof/storage_house)
@@ -5457,14 +5475,6 @@
 	},
 /turf/open/floor/prison/darkyellow2/northwest,
 /area/bmg290/relay/synthetic)
-"cCY" = (
-/obj/structure/barricade/sandbags/full{
-	dir = 4;
-	is_wired = 1;
-	pixel_y = -6
-	},
-/turf/open/auto_turf/strata_grass/layer0_mud,
-/area/bmg290/wilderness/outskirts)
 "cDh" = (
 /obj/structure/platform/mineral/sandstone/runed{
 	dir = 4;
@@ -5553,6 +5563,12 @@
 	},
 /turf/open/floor/plating/wood,
 /area/bmg290/colony/admin)
+"cFe" = (
+/obj/structure/fence/slim/upp/door{
+	dir = 4
+	},
+/turf/open/asphalt/cement_sunbleached_darkened,
+/area/bmg290/caverns/filtration)
 "cFk" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8;
@@ -5726,11 +5742,15 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/bmg290/colony/complex)
 "cIM" = (
-/obj/structure/platform/strata/metal,
-/obj/structure/platform/strata/metal{
-	dir = 8
+/obj/structure/platform/kutjevo/rock{
+	color = "#9494b8"
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/obj/structure/platform/kutjevo/rock{
+	dir = 4;
+	color = "#999999";
+	layer = 3.02
+	},
+/turf/open/gm/dirt2,
 /area/bmg290/wilderness/outskirts)
 "cIT" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -6192,6 +6212,19 @@
 	},
 /turf/open/asphalt/cement/cement12,
 /area/bmg290/wilderness/colony_exterior)
+"cWL" = (
+/obj/structure/barricade/sandbags/full{
+	dir = 1;
+	pixel_y = 6;
+	is_wired = 1
+	},
+/obj/structure/barricade/sandbags/full{
+	dir = 8;
+	is_wired = 1;
+	pixel_y = -6
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "cWM" = (
 /turf/open/floor/prison/cell_stripe/west,
 /area/bmg290/caverns/site_caves)
@@ -6486,6 +6519,13 @@
 	},
 /turf/open/gm/river/beach_water,
 /area/bmg290/wilderness/beach)
+"dcQ" = (
+/obj/structure/platform/strata/metal,
+/obj/structure/platform/strata/metal{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "ddh" = (
 /obj/structure/prop/almayer/computers/sensor_computer3,
 /turf/open/floor/prison/sterile_white,
@@ -6773,6 +6813,19 @@
 	},
 /turf/open/gm/river/beach_water,
 /area/bmg290/wilderness/road)
+"dkW" = (
+/obj/structure/barricade/sandbags/full{
+	pixel_x = 0;
+	pixel_y = -6;
+	is_wired = 1
+	},
+/obj/structure/barricade/sandbags/full{
+	dir = 8;
+	is_wired = 1;
+	pixel_y = 4
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "dll" = (
 /turf/open/floor/prison/darkbrown2/north,
 /area/bmg290/colony/logistics_hub)
@@ -7506,19 +7559,6 @@
 	},
 /turf/open/floor/corsat/whitebluefull,
 /area/bmg290/relay/dataserver)
-"dAE" = (
-/obj/structure/barricade/sandbags/full{
-	pixel_x = 0;
-	pixel_y = -6;
-	is_wired = 1
-	},
-/obj/structure/barricade/sandbags/full{
-	dir = 4;
-	is_wired = 1
-	},
-/obj/structure/machinery/m56d_hmg/mg_turret,
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "dBg" = (
 /obj/structure/prop/invuln/joey,
 /turf/open/floor/prison/floor_plate,
@@ -7693,6 +7733,15 @@
 /turf/open/floor/plating,
 /area/bmg290/caverns/filtration)
 "dGD" = (
+/obj/structure/barricade/sandbags/full{
+	dir = 8;
+	is_wired = 1
+	},
+/obj/structure/barricade/sandbags/full{
+	dir = 1;
+	pixel_y = 6;
+	is_wired = 1
+	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/wilderness/outskirts)
 "dGF" = (
@@ -8050,6 +8099,10 @@
 	},
 /turf/open/floor/plating,
 /area/bmg290/oob/button_stuff)
+"dNI" = (
+/turf/open/asphalt/cement_sunbleached_darkened,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "dNP" = (
 /turf/open/floor/prison/darkbrown2/east,
 /area/bmg290/colony/logistics_hub)
@@ -8541,6 +8594,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement,
 /area/bmg290/wilderness/colony_exterior)
+"dXJ" = (
+/obj/structure/stairs/perspective{
+	color = "#6e6e6e";
+	icon_state = "p_stair_full";
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "dXT" = (
 /obj/structure/machinery/light{
 	dir = 1;
@@ -8584,6 +8645,18 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/bmg290/site/undiscovered)
+"dYq" = (
+/obj/structure/barricade/sandbags/full{
+	dir = 8;
+	is_wired = 1
+	},
+/obj/structure/barricade/sandbags/full{
+	pixel_x = 0;
+	pixel_y = -6;
+	is_wired = 1
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/bmg290/wilderness/outskirts)
 "dYD" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/prop/almayer/computer/PC{
@@ -9203,12 +9276,6 @@
 	},
 /turf/open/floor/plating,
 /area/bmg290/colony/engineering)
-"epb" = (
-/obj/structure/platform_decoration/strata/metal{
-	dir = 4
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "eph" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -9255,12 +9322,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/bmg290/relay/synthetic)
-"epF" = (
-/obj/structure/platform/strata/metal{
-	dir = 8
-	},
-/turf/open/auto_turf/strata_grass/layer0_mud,
-/area/bmg290/wilderness/outskirts)
 "epQ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/surface/rack{
@@ -9350,13 +9411,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/bmg290/wilderness/beach)
-"erE" = (
-/obj/structure/stairs/perspective{
-	color = "#6e6e6e";
-	icon_state = "p_stair_full"
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "erT" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/green/southeast,
@@ -9441,6 +9495,15 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/prison/darkred2/northeast,
 /area/bmg290/colony/security)
+"etG" = (
+/obj/structure/platform/strata/metal{
+	dir = 1
+	},
+/obj/structure/platform/strata/metal{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "etI" = (
 /obj/structure/largecrate/supply/medicine/optable,
 /turf/open/floor/prison/floor_marked,
@@ -9881,6 +9944,13 @@
 	},
 /turf/open/asphalt/cement/cement4,
 /area/bmg290/wilderness/colony_exterior)
+"eCO" = (
+/obj/structure/stairs/perspective{
+	color = "#6e6e6e";
+	icon_state = "p_stair_full"
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "eCP" = (
 /obj/structure/machinery/vending/coffee{
 	density = 0;
@@ -10111,12 +10181,6 @@
 /obj/structure/machinery/power/port_gen/pacman,
 /turf/open/auto_turf/strata_grass,
 /area/bmg290/wilderness/archaeology)
-"eHH" = (
-/obj/structure/platform/strata/metal{
-	dir = 4
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "eHO" = (
 /obj/effect/decal/siding,
 /turf/open/floor/almayer/tcomms,
@@ -10267,6 +10331,12 @@
 "eMB" = (
 /turf/open/asphalt/cement/cement4,
 /area/bmg290/relay/exterior_storage)
+"eMC" = (
+/obj/structure/platform/strata/metal{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "eMF" = (
 /obj/structure/sign/poster/safety,
 /turf/closed/wall/strata_outpost,
@@ -11338,16 +11408,6 @@
 /obj/structure/largecrate/random/barrel/true_random,
 /turf/open/asphalt/cement/cement3,
 /area/bmg290/wilderness/colony_exterior)
-"fnR" = (
-/obj/structure/machinery/telecomms/relay/preset/ice_colony{
-	density = 0;
-	layer = 6;
-	desc = "Фрагмент мощной китайской РЛС Тип-177, способная обнаруживать вражеские летательные аппараты на тысячи километров. Такие антенны подключаются к единому аппарату, который после передаёт общую картину в оперативный центр.";
-	name = "Type-177 RS Antenna"
-	},
-/obj/structure/blocker/invisible_wall,
-/turf/open/floor/prison/floor_plate,
-/area/bmg290/wilderness/farmland)
 "fnT" = (
 /obj/structure/barricade/handrail{
 	dir = 8
@@ -11533,6 +11593,12 @@
 "fty" = (
 /turf/closed/wall/rock,
 /area/bmg290/site/discovered)
+"ftF" = (
+/obj/structure/platform_decoration/strata/metal{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "ftH" = (
 /obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 8
@@ -11966,6 +12032,13 @@
 	},
 /turf/open/gm/river/beach_water,
 /area/bmg290/wilderness/beach)
+"fBu" = (
+/obj/structure/barricade/sandbags/full{
+	dir = 8;
+	is_wired = 1
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "fBw" = (
 /obj/structure/machinery/door/window{
 	dir = 8
@@ -12193,8 +12266,11 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/bmg290/colony/complex)
 "fHw" = (
-/turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/bmg290/wilderness/colony_exterior)
+/obj/structure/platform_decoration/strata/metal{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "fHW" = (
 /obj/structure/machinery/iv_drip,
 /turf/open/floor/almayer/sterile_green_side/west,
@@ -13337,18 +13413,6 @@
 	},
 /turf/open/floor/prison,
 /area/bmg290/colony/complex)
-"ggE" = (
-/obj/structure/barricade/sandbags/full{
-	dir = 4;
-	is_wired = 1
-	},
-/obj/structure/barricade/sandbags/full{
-	dir = 1;
-	pixel_y = 6;
-	is_wired = 1
-	},
-/turf/open/floor/almayer_hull/blackfull,
-/area/bmg290/wilderness/outskirts)
 "ggU" = (
 /turf/open/gm/dirtgrassborder/grassdirt_corner/south_west,
 /area/bmg290/wilderness/colony_exterior)
@@ -14004,11 +14068,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay/cargo)
-"gzK" = (
-/obj/structure/prop/almayer/cannon_cable_connector,
-/obj/structure/blocker/invisible_wall,
-/turf/open/floor/almayer_hull/blackfull,
-/area/bmg290/wilderness/outskirts)
 "gzS" = (
 /obj/structure/stairs/perspective{
 	dir = 8;
@@ -14514,6 +14573,18 @@
 	},
 /turf/open/asphalt,
 /area/bmg290/wilderness/road)
+"gMv" = (
+/obj/structure/barricade/sandbags/full{
+	pixel_x = 0;
+	pixel_y = -6;
+	is_wired = 1
+	},
+/obj/structure/barricade/sandbags/full{
+	dir = 8;
+	is_wired = 1
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/bmg290/wilderness/outskirts)
 "gMC" = (
 /obj/structure/platform_decoration/kutjevo{
 	dir = 4
@@ -14984,7 +15055,8 @@
 /area/bmg290/wilderness/colony_exterior)
 "haa" = (
 /obj/structure/blocker/invisible_wall,
-/turf/open/floor/almayer_hull/blackfull,
+/obj/structure/blocker/invisible_wall,
+/turf/open/auto_turf/strata_grass/layer1,
 /area/bmg290/wilderness/outskirts)
 "han" = (
 /obj/effect/decal/siding{
@@ -16075,12 +16147,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt,
 /area/bmg290/wilderness/relay_exterior)
-"hAc" = (
-/obj/structure/platform_decoration/strata/metal{
-	dir = 8
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "hAR" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -16164,11 +16230,6 @@
 "hBR" = (
 /turf/open/floor/prison/floor_marked,
 /area/bmg290/relay/underground_shelter)
-"hCk" = (
-/obj/effect/decal/strata_decals/grime/grime4,
-/obj/effect/decal/hybrisa/bloodtrail,
-/turf/open/floor/interior/tatami,
-/area/bmg290/wilderness_roof/farm_house)
 "hCL" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/structure/disposalpipe/segment,
@@ -16389,19 +16450,6 @@
 /obj/structure/machinery/light/double,
 /turf/open/auto_turf/strata_grass,
 /area/bmg290/wilderness/farmland)
-"hGK" = (
-/obj/structure/barricade/sandbags/full{
-	dir = 1;
-	pixel_y = 6;
-	is_wired = 1
-	},
-/obj/structure/barricade/sandbags/full{
-	dir = 4;
-	is_wired = 1;
-	pixel_y = -6
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "hGM" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkyellow2/east,
@@ -16511,6 +16559,9 @@
 /obj/structure/cargo_container/grant/left,
 /turf/open/asphalt/cement/cement4,
 /area/bmg290/wilderness/colony_exterior)
+"hJT" = (
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/bmg290/caverns/cave_west)
 "hKa" = (
 /obj/effect/decal/floor_symbol/upp/northface/north,
 /turf/open/floor/almayer/redfull2,
@@ -17576,10 +17627,6 @@
 	},
 /turf/open/auto_turf/strata_grass,
 /area/bmg290/wilderness/road)
-"ifC" = (
-/obj/structure/flag/plantable/canc,
-/turf/open/auto_turf/strata_grass/layer0_mud,
-/area/bmg290/wilderness/outskirts)
 "ifR" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/effect/decal/cleanable/dirt,
@@ -17657,18 +17704,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/aicore,
 /area/bmg290/wilderness/colony_exterior)
-"iiq" = (
-/obj/structure/barricade/sandbags/full{
-	dir = 8;
-	is_wired = 1
-	},
-/obj/structure/barricade/sandbags/full{
-	pixel_x = 4;
-	pixel_y = -6;
-	is_wired = 1
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "iit" = (
 /obj/structure/flora/grass/tallgrass/desert/corner{
 	color = "#bfff00";
@@ -18317,6 +18352,13 @@
 	},
 /turf/open/floor/kutjevo/tan/multi_tiles/southeast,
 /area/bmg290/wilderness/colony_exterior)
+"izX" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 4;
+	color = "#999999"
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "iAc" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -18346,6 +18388,10 @@
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/almayer/plating,
 /area/bmg290/relay/exterior_storage)
+"iAV" = (
+/obj/structure/platform/strata/metal,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "iAW" = (
 /obj/effect/overlay/palmtree_r{
 	icon_state = "palm2"
@@ -19253,14 +19299,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/wilderness/colony_exterior)
-"iUk" = (
-/obj/structure/barricade/sandbags/full{
-	dir = 1;
-	pixel_y = 6;
-	is_wired = 1
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "iUm" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 4
@@ -20241,6 +20279,11 @@
 "jtp" = (
 /turf/open/floor/grey_dark2,
 /area/bmg290/wilderness/site)
+"jtD" = (
+/obj/structure/prop/tyrargo/large_tents/small_closed,
+/obj/structure/blocker/invisible_wall,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "jtZ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -20824,19 +20867,6 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/wilderness/colony_exterior)
-"jHL" = (
-/obj/structure/barricade/sandbags/full{
-	dir = 8;
-	is_wired = 1;
-	pixel_y = -6
-	},
-/obj/structure/barricade/sandbags/full{
-	dir = 1;
-	pixel_y = 6;
-	is_wired = 1
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "jIq" = (
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/wilderness_roof/checkpoint)
@@ -21681,6 +21711,10 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/colony/flightdeck)
+"kdA" = (
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/bmg290/caverns/cave_west)
 "kdC" = (
 /obj/structure/flora/grass/tallgrass/desert/corner{
 	color = "#bfff00";
@@ -21688,18 +21722,6 @@
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/bmg290/wilderness/farmland)
-"kdP" = (
-/obj/structure/barricade/sandbags/full{
-	dir = 8;
-	is_wired = 1
-	},
-/obj/structure/barricade/sandbags/full{
-	pixel_x = 0;
-	pixel_y = -6;
-	is_wired = 1
-	},
-/turf/open/floor/almayer_hull/blackfull,
-/area/bmg290/wilderness/outskirts)
 "kdY" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 9
@@ -21794,6 +21816,13 @@
 /obj/structure/machinery/colony_floodlight,
 /turf/open/asphalt/cement_sunbleached_darkened,
 /area/bmg290/wilderness/road)
+"kgJ" = (
+/obj/structure/barricade/sandbags/full{
+	dir = 4;
+	is_wired = 1
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/bmg290/wilderness/outskirts)
 "kgP" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -22698,6 +22727,19 @@
 "kCC" = (
 /turf/open/floor/plating/wood,
 /area/bmg290/colony/logistics_hub)
+"kCW" = (
+/obj/structure/barricade/sandbags/full{
+	dir = 4;
+	is_wired = 1;
+	pixel_y = -6
+	},
+/obj/structure/barricade/sandbags/full{
+	dir = 1;
+	pixel_y = 6;
+	is_wired = 1
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "kDd" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 8;
@@ -22754,10 +22796,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/asteroidwarning,
 /area/bmg290/wilderness/colony_exterior)
-"kEG" = (
-/obj/structure/flora/bush/ausbushes,
-/turf/open/auto_turf/strata_grass/layer0_mud,
-/area/bmg290/wilderness/outskirts)
 "kFc" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -22837,9 +22875,16 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/wilderness_roof/checkpoint)
 "kHX" = (
-/obj/structure/prop/tyrargo/large_tents/small_closed/back,
-/obj/structure/blocker/invisible_wall,
-/turf/open/auto_turf/strata_grass/layer1,
+/obj/structure/barricade/sandbags/full{
+	pixel_x = 0;
+	pixel_y = -6;
+	is_wired = 1
+	},
+/obj/structure/barricade/sandbags/full{
+	dir = 4;
+	is_wired = 1
+	},
+/turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/wilderness/outskirts)
 "kIn" = (
 /obj/effect/decal/cleanable/dirt,
@@ -22873,12 +22918,6 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/bmg290/keppitz/research)
-"kJv" = (
-/obj/structure/platform_decoration/strata/metal{
-	dir = 8
-	},
-/turf/open/auto_turf/strata_grass/layer0_mud,
-/area/bmg290/wilderness/outskirts)
 "kJH" = (
 /obj/structure/machinery/computer/arcade,
 /obj/effect/decal/cleanable/dirt,
@@ -23169,15 +23208,6 @@
 	},
 /turf/open/gm/dirtgrassborder/east,
 /area/bmg290/wilderness/colony_exterior)
-"kRA" = (
-/obj/structure/platform/strata/metal{
-	dir = 1
-	},
-/obj/structure/platform/strata/metal{
-	dir = 4
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "kSd" = (
 /obj/structure/surface/table/almayer,
 /obj/item/folder/white{
@@ -23396,13 +23426,10 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/bmg290/relay/underground_shelter)
-"kWW" = (
+"kXr" = (
 /obj/structure/flora/bush/ausbushes,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/bmg290/wilderness/outskirts)
-"kXr" = (
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/caverns/filtration)
 "kXu" = (
 /obj/effect/decal/siding,
 /turf/open/asphalt/cement/cement12,
@@ -23683,6 +23710,12 @@
 	},
 /turf/open/gm/river/beach_water,
 /area/bmg290/caverns/filtration)
+"lcY" = (
+/obj/structure/platform/strata/metal{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/bmg290/wilderness/outskirts)
 "lcZ" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -24039,6 +24072,13 @@
 /obj/structure/sign/poster/music,
 /turf/open/floor/asteroidfloor,
 /area/bmg290/wilderness/colony_exterior)
+"llR" = (
+/obj/structure/platform/strata/metal,
+/obj/structure/platform/strata/metal{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "llT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small{
@@ -24098,6 +24138,10 @@
 	},
 /turf/open/auto_turf/strata_grass,
 /area/bmg290/wilderness/road)
+"lmW" = (
+/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "lmZ" = (
 /obj/item/storage/toolbox/mechanical,
 /turf/open/gm/grass,
@@ -24409,6 +24453,14 @@
 "luf" = (
 /turf/open/floor/almayer/sterile_green_side/northeast,
 /area/bmg290/colony/hospital)
+"lui" = (
+/obj/structure/barricade/sandbags/full{
+	pixel_x = 0;
+	pixel_y = -6;
+	is_wired = 1
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/bmg290/wilderness/outskirts)
 "lut" = (
 /obj/structure/platform_decoration/kutjevo{
 	dir = 1
@@ -24604,9 +24656,6 @@
 "lxM" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/bmg290/caverns/filtration)
-"lxQ" = (
-/turf/closed/wall/upp_wall/hull,
-/area/bmg290/wilderness/outskirts)
 "lyn" = (
 /obj/structure/desertdam/decals/loose_sand_overlay,
 /obj/structure/prop/dam/torii,
@@ -24656,19 +24705,6 @@
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
 /turf/open/gm/dirtgrassborder/grassdirt_corner2/south_east,
 /area/bmg290/wilderness/colony_exterior)
-"lzn" = (
-/obj/structure/barricade/sandbags/full{
-	pixel_x = 0;
-	pixel_y = -6;
-	is_wired = 1
-	},
-/obj/structure/barricade/sandbags/full{
-	dir = 8;
-	is_wired = 1
-	},
-/obj/structure/machinery/m56d_hmg/mg_turret,
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "lzq" = (
 /obj/structure/barricade/handrail{
 	dir = 8
@@ -24976,12 +25012,6 @@
 /obj/structure/pipes/standard/simple/hidden/cyan,
 /turf/open/floor/prison,
 /area/bmg290/relay/hallway)
-"lIe" = (
-/obj/effect/decal/hybrisa/bloodtrail{
-	dir = 9
-	},
-/turf/open/floor/prison/floor_plate,
-/area/bmg290/wilderness_roof/farm_house)
 "lIj" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/effect/decal/cleanable/dirt{
@@ -25985,6 +26015,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/bmg290/relay/hallway)
+"mgi" = (
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/almayer_hull/blackfull,
+/area/bmg290/wilderness/outskirts)
 "mgJ" = (
 /obj/structure/prop{
 	icon = 'icons/obj/structures/props/almayer_props64.dmi';
@@ -26607,18 +26641,6 @@
 	},
 /turf/open/floor/kutjevo/tan/multi_tiles/southeast,
 /area/bmg290/wilderness/colony_exterior)
-"mud" = (
-/obj/structure/barricade/sandbags/full{
-	pixel_x = 0;
-	pixel_y = -6;
-	is_wired = 1
-	},
-/obj/structure/barricade/sandbags/full{
-	dir = 8;
-	is_wired = 1
-	},
-/turf/open/floor/almayer_hull/blackfull,
-/area/bmg290/wilderness/outskirts)
 "mug" = (
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/prison/greenblue/east,
@@ -26640,11 +26662,7 @@
 /turf/open/floor/plating/plating_catwalk/aicore/white,
 /area/bmg290/keppitz/acquisitions)
 "mvo" = (
-/obj/structure/barricade/sandbags/full{
-	dir = 8;
-	is_wired = 1
-	},
-/turf/open/auto_turf/strata_grass/layer0_mud,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/bmg290/wilderness/outskirts)
 "mwp" = (
 /obj/structure/platform_decoration/kutjevo{
@@ -26885,14 +26903,6 @@
 /obj/structure/prop/invuln/catwalk_support,
 /turf/open/asphalt/cement/cement4,
 /area/bmg290/wilderness/colony_exterior)
-"mCD" = (
-/obj/structure/barricade/sandbags/full{
-	dir = 1;
-	pixel_y = 6;
-	is_wired = 1
-	},
-/turf/open/floor/almayer_hull/blackfull,
-/area/bmg290/wilderness/outskirts)
 "mCR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/manifold/hidden/green{
@@ -26913,6 +26923,18 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz/entry_pub)
+"mDm" = (
+/obj/structure/barricade/sandbags/full{
+	dir = 8;
+	is_wired = 1
+	},
+/obj/structure/barricade/sandbags/full{
+	dir = 1;
+	pixel_y = 6;
+	is_wired = 1
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "mEh" = (
 /turf/open/gm/dirt,
 /area/bmg290/wilderness/archaeology)
@@ -26936,6 +26958,13 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/bmg290/keppitz/research)
+"mFi" = (
+/obj/structure/barricade/sandbags/full{
+	dir = 8;
+	is_wired = 1
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/bmg290/wilderness/outskirts)
 "mFj" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement/cement1,
@@ -27133,14 +27162,12 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/keppitz/command)
-"mJD" = (
-/obj/structure/barricade/sandbags/full{
-	pixel_x = 0;
-	pixel_y = -6;
-	is_wired = 1
+"mJF" = (
+/obj/effect/decal/hybrisa/bloodtrail{
+	dir = 1
 	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
+/turf/open/floor/kutjevo/tan/multi_tiles,
+/area/bmg290/wilderness_roof/farm_house)
 "mJI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/invuln/lattice_prop{
@@ -27224,6 +27251,12 @@
 /obj/structure/machinery/optable,
 /turf/open/floor/corsat/sterileplate,
 /area/bmg290/keppitz/research)
+"mND" = (
+/obj/effect/decal/hybrisa/bloodtrail{
+	dir = 9
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/wilderness_roof/farm_house)
 "mNH" = (
 /obj/structure/platform{
 	layer = 3.1
@@ -27252,6 +27285,18 @@
 /obj/structure/prop/rock/brown,
 /turf/open/asphalt/cement_sunbleached_darkened,
 /area/bmg290/wilderness/road)
+"mPs" = (
+/obj/structure/barricade/sandbags/full{
+	dir = 8;
+	is_wired = 1
+	},
+/obj/structure/barricade/sandbags/full{
+	pixel_x = 4;
+	pixel_y = -6;
+	is_wired = 1
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "mPw" = (
 /obj/structure/machinery/colony_floodlight,
 /obj/effect/decal/cleanable/dirt,
@@ -28335,17 +28380,6 @@
 "nnX" = (
 /turf/open/floor/grey_dark2,
 /area/bmg290/site/discovered)
-"nok" = (
-/obj/structure/platform/kutjevo/rock{
-	color = "#9494b8"
-	},
-/obj/structure/platform/kutjevo/rock{
-	dir = 4;
-	color = "#999999";
-	layer = 3.02
-	},
-/turf/open/gm/dirt2,
-/area/bmg290/wilderness/outskirts)
 "nol" = (
 /turf/open/floor/prison/darkyellow2/north,
 /area/bmg290/wilderness/road)
@@ -28839,6 +28873,9 @@
 	},
 /turf/open/floor/prison/whitegreen/northeast,
 /area/bmg290/colony/diner)
+"nCl" = (
+/turf/closed/wall/upp_wall/hull,
+/area/bmg290/wilderness/outskirts)
 "nCt" = (
 /turf/open/floor/almayer/research/containment/entrance,
 /area/bmg290/keppitz/test)
@@ -29089,10 +29126,6 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/relay/synthetic)
-"nIU" = (
-/obj/structure/platform/strata/metal,
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "nIV" = (
 /obj/structure/bed/chair{
 	can_buckle = 0;
@@ -29313,13 +29346,6 @@
 "nNw" = (
 /turf/closed/wall/cult,
 /area/bmg290/site/undiscovered)
-"nNx" = (
-/obj/structure/barricade/sandbags/full{
-	dir = 8;
-	is_wired = 1
-	},
-/turf/open/floor/almayer_hull/blackfull,
-/area/bmg290/wilderness/outskirts)
 "nND" = (
 /obj/structure/barricade/handrail/kutjevo{
 	dir = 8
@@ -30819,17 +30845,6 @@
 /obj/structure/cargo_container/horizontal/blue/bottom,
 /turf/open/asphalt,
 /area/bmg290/relay/cargo)
-"owU" = (
-/obj/structure/barricade/sandbags/full{
-	dir = 1;
-	pixel_y = 6;
-	is_wired = 1
-	},
-/obj/structure/machinery/m56d_hmg{
-	dir = 1
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "oxn" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/device/camera{
@@ -31165,9 +31180,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz/test)
-"oDE" = (
-/turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/bmg290/wilderness/outskirts)
 "oDJ" = (
 /obj/structure/machinery/door_control/brbutton{
 	pixel_x = -9;
@@ -31681,6 +31693,19 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/keppitz/command)
+"oPC" = (
+/obj/structure/barricade/sandbags/full{
+	dir = 8;
+	is_wired = 1;
+	pixel_y = -6
+	},
+/obj/structure/barricade/sandbags/full{
+	dir = 1;
+	pixel_y = 6;
+	is_wired = 1
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "oPO" = (
 /obj/structure/prop/vehicles/crawler{
 	density = 0;
@@ -31728,19 +31753,6 @@
 /obj/structure/blocker/invisible_wall,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/wilderness/farmland)
-"oQF" = (
-/obj/structure/barricade/sandbags/full{
-	dir = 4;
-	is_wired = 1;
-	pixel_y = -6
-	},
-/obj/structure/barricade/sandbags/full{
-	dir = 1;
-	pixel_y = 6;
-	is_wired = 1
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "oQN" = (
 /obj/structure/prop/server_equipment/yutani_server,
 /turf/open/floor/prison/darkyellow2/northeast,
@@ -31888,15 +31900,6 @@
 /turf/open/floor/plating/plating_catwalk/aicore/white,
 /area/bmg290/colony/hospital)
 "oVB" = (
-/obj/structure/barricade/sandbags/full{
-	dir = 8;
-	is_wired = 1
-	},
-/obj/structure/barricade/sandbags/full{
-	dir = 1;
-	pixel_y = 6;
-	is_wired = 1
-	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/wilderness/outskirts)
 "oVG" = (
@@ -31993,6 +31996,18 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/asteroidwarning/northeast,
 /area/bmg290/wilderness/colony_exterior)
+"oWs" = (
+/obj/structure/barricade/sandbags/full{
+	dir = 4;
+	is_wired = 1
+	},
+/obj/structure/barricade/sandbags/full{
+	dir = 1;
+	pixel_y = 6;
+	is_wired = 1
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/bmg290/wilderness/outskirts)
 "oWt" = (
 /obj/structure/barricade/handrail/kutjevo{
 	dir = 4
@@ -32838,6 +32853,13 @@
 "psP" = (
 /turf/open/floor/strata/faux_wood,
 /area/bmg290/keppitz/command)
+"psQ" = (
+/obj/structure/barricade/sandbags/full{
+	dir = 4;
+	is_wired = 1
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "psU" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 4
@@ -34345,6 +34367,11 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/asphalt/cement/cement9,
 /area/bmg290/wilderness/colony_exterior)
+"qaS" = (
+/obj/structure/prop/tyrargo/large_tents/medical,
+/obj/structure/blocker/invisible_wall,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "qaT" = (
 /turf/open/floor/kutjevo/grey,
 /area/bmg290/site/discovered)
@@ -34442,13 +34469,6 @@
 /obj/structure/largecrate/random/case/double,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/shed)
-"qdd" = (
-/obj/structure/platform/strata/metal,
-/obj/structure/platform/strata/metal{
-	dir = 4
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "qdf" = (
 /turf/open/floor/prison/cell_stripe,
 /area/bmg290/oob/plg)
@@ -34637,19 +34657,6 @@
 /obj/structure/barricade/handrail/kutjevo,
 /turf/open/asphalt,
 /area/bmg290/wilderness/road)
-"qgV" = (
-/obj/structure/barricade/sandbags/full{
-	pixel_x = 0;
-	pixel_y = -6;
-	is_wired = 1
-	},
-/obj/structure/barricade/sandbags/full{
-	dir = 8;
-	is_wired = 1;
-	pixel_y = 4
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "qhl" = (
 /obj/structure/disposalpipe/junction{
 	dir = 4
@@ -34674,19 +34681,6 @@
 /obj/structure/prop/rock,
 /turf/open/gm/grass,
 /area/bmg290/wilderness/colony_exterior)
-"qia" = (
-/obj/structure/anti_air_cannon,
-/obj/structure/barricade/sandbags/full{
-	dir = 8;
-	is_wired = 1
-	},
-/obj/structure/barricade/sandbags/full{
-	pixel_x = 0;
-	pixel_y = -6;
-	is_wired = 1
-	},
-/turf/open/floor/almayer_hull/blackfull,
-/area/bmg290/wilderness/outskirts)
 "qin" = (
 /obj/structure/largecrate/random/barrel/true_random,
 /turf/open/floor/prison/floor_plate,
@@ -35143,6 +35137,19 @@
 	},
 /turf/open/asphalt/cement/cement3,
 /area/bmg290/wilderness/colony_exterior)
+"qrC" = (
+/obj/structure/anti_air_cannon,
+/obj/structure/barricade/sandbags/full{
+	dir = 8;
+	is_wired = 1
+	},
+/obj/structure/barricade/sandbags/full{
+	pixel_x = 0;
+	pixel_y = -6;
+	is_wired = 1
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/bmg290/wilderness/outskirts)
 "qrG" = (
 /obj/structure/barricade/handrail/kutjevo,
 /obj/structure/barricade/handrail/kutjevo{
@@ -35908,6 +35915,19 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement/cement13,
 /area/bmg290/wilderness/colony_exterior)
+"qMP" = (
+/obj/structure/barricade/sandbags/full{
+	pixel_x = 0;
+	pixel_y = -6;
+	is_wired = 1
+	},
+/obj/structure/barricade/sandbags/full{
+	dir = 4;
+	is_wired = 1
+	},
+/obj/structure/machinery/m56d_hmg/mg_turret,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "qNc" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/prison,
@@ -35975,6 +35995,15 @@
 	},
 /turf/open/asphalt,
 /area/bmg290/colony/motorpool)
+"qOZ" = (
+/obj/structure/platform/strata/metal{
+	dir = 1
+	},
+/obj/structure/platform/strata/metal{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "qPh" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
@@ -36356,16 +36385,8 @@
 /turf/open/auto_turf/strata_grass,
 /area/bmg290/wilderness/outskirts)
 "rbN" = (
-/obj/structure/barricade/sandbags/full{
-	pixel_x = 0;
-	pixel_y = -6;
-	is_wired = 1
-	},
-/obj/structure/barricade/sandbags/full{
-	dir = 4;
-	is_wired = 1
-	},
-/turf/open/floor/almayer_hull/blackfull,
+/obj/structure/blocker/invisible_wall,
+/turf/open/auto_turf/strata_grass/layer1,
 /area/bmg290/wilderness/outskirts)
 "rcy" = (
 /obj/structure/surface/table/almayer,
@@ -36517,6 +36538,11 @@
 	},
 /turf/open/floor/strata/faux_wood,
 /area/bmg290/colony/bar)
+"rfW" = (
+/obj/structure/prop/tyrargo/large_tents/supply,
+/obj/structure/blocker/invisible_wall,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "rgd" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 1;
@@ -36994,13 +37020,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement/cement9,
 /area/bmg290/wilderness/colony_exterior)
-"rqp" = (
-/obj/structure/barricade/sandbags/full{
-	dir = 4;
-	is_wired = 1
-	},
-/turf/open/floor/almayer_hull/blackfull,
-/area/bmg290/wilderness/outskirts)
 "rqJ" = (
 /obj/structure/machinery/computer/emails{
 	pixel_y = 4
@@ -37278,6 +37297,13 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/bmg290/wilderness/road)
+"rxa" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 1;
+	color = "#999999"
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "rxd" = (
 /turf/closed/wall/mineral/sandstone/runed{
 	color = "#424a50";
@@ -37468,13 +37494,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz/acquisitions)
-"rzr" = (
-/obj/structure/platform_decoration/kutjevo/rock{
-	dir = 4;
-	color = "#999999"
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "rzu" = (
 /obj/structure/ore_box,
 /turf/open/asphalt/cement_sunbleached_darkened,
@@ -37547,12 +37566,6 @@
 /obj/structure/closet/crate/miningcar/yellow,
 /turf/open/asphalt/cement_sunbleached_darkened,
 /area/bmg290/caverns/cave_west)
-"rBd" = (
-/obj/effect/decal/hybrisa/bloodtrail{
-	dir = 1
-	},
-/turf/open/floor/kutjevo/tan/multi_tiles,
-/area/bmg290/wilderness_roof/farm_house)
 "rBA" = (
 /turf/open/floor/prison/cell_stripe/west,
 /area/bmg290/keppitz/acquisitions)
@@ -38756,10 +38769,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/wilderness/colony_exterior)
-"siv" = (
-/obj/structure/prop/almayer/cannon_cables,
-/turf/open/floor/almayer_hull/blackfull,
-/area/bmg290/wilderness/outskirts)
 "siF" = (
 /turf/open/floor/prison/darkred2/north,
 /area/bmg290/relay/hallway)
@@ -38793,12 +38802,6 @@
 	},
 /turf/open/floor/prison/floor_marked,
 /area/bmg290/relay/underground_shelter)
-"sjg" = (
-/obj/structure/platform/strata/metal{
-	dir = 4
-	},
-/turf/open/auto_turf/strata_grass/layer0_mud,
-/area/bmg290/wilderness/outskirts)
 "sjk" = (
 /obj/structure/platform{
 	density = 0;
@@ -38831,14 +38834,6 @@
 	},
 /turf/open/asphalt,
 /area/bmg290/wilderness/road)
-"sjN" = (
-/obj/structure/stairs/perspective{
-	color = "#6e6e6e";
-	icon_state = "p_stair_full";
-	dir = 1
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "sjO" = (
 /turf/open/floor/prison/cell_stripe/west,
 /area/bmg290/relay/telecommunication)
@@ -39326,14 +39321,6 @@
 	},
 /turf/open/floor/interior/wood/alt,
 /area/bmg290/wilderness/beach)
-"svt" = (
-/obj/structure/barricade/sandbags/full{
-	pixel_x = 0;
-	pixel_y = -6;
-	is_wired = 1
-	},
-/turf/open/floor/almayer_hull/blackfull,
-/area/bmg290/wilderness/outskirts)
 "svy" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/disposalpipe/segment{
@@ -39759,13 +39746,12 @@
 /turf/open/floor/almayer/research/containment/corner_var1/containment_corner_variant_2,
 /area/bmg290/keppitz/test)
 "sFX" = (
-/obj/structure/prop/invuln/minecart_tracks{
-	layer = 2.96;
-	dir = 1
+/obj/structure/barricade/sandbags/full{
+	dir = 8;
+	is_wired = 1
 	},
-/obj/structure/closet/crate/miningcar,
-/turf/open/asphalt/cement_sunbleached_darkened,
-/area/bmg290/caverns/cave_west)
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/bmg290/wilderness/outskirts)
 "sFY" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -40937,9 +40923,8 @@
 /turf/open/floor/prison,
 /area/bmg290/colony/logistics)
 "tlt" = (
-/obj/structure/fence/slim/upp,
-/turf/open/asphalt/cement_sunbleached_darkened,
-/area/bmg290/wilderness/outskirts)
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/bmg290/wilderness/colony_exterior)
 "tlJ" = (
 /obj/structure/stairs/perspective{
 	dir = 1;
@@ -41558,6 +41543,11 @@
 /obj/item/storage/box/mre/wy,
 /turf/open/floor/strata/fake_wood,
 /area/bmg290/wilderness/beach)
+"tCK" = (
+/obj/effect/decal/strata_decals/grime/grime4,
+/obj/effect/decal/hybrisa/bloodtrail,
+/turf/open/floor/interior/tatami,
+/area/bmg290/wilderness_roof/farm_house)
 "tCN" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/emails{
@@ -41865,14 +41855,6 @@
 /obj/structure/surface/table,
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/caverns/filtration)
-"tLE" = (
-/obj/structure/platform/kutjevo/rock{
-	dir = 8;
-	color = "#999999";
-	layer = 3.02
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "tLL" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -41967,12 +41949,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bmg290/caverns/site_caves)
-"tOD" = (
-/obj/structure/platform/strata/metal{
-	dir = 1
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "tPo" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
@@ -42274,15 +42250,17 @@
 /obj/structure/platform/kutjevo,
 /turf/open/asphalt/cement,
 /area/bmg290/wilderness/colony_exterior)
+"tXG" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 4;
+	color = "#999999";
+	layer = 3.02
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/bmg290/wilderness/outskirts)
 "tXM" = (
 /turf/open/floor/prison/darkyellow2/northwest,
 /area/bmg290/colony/engineering)
-"tXX" = (
-/obj/structure/fence/slim/upp/door{
-	dir = 4
-	},
-/turf/open/asphalt/cement_sunbleached_darkened,
-/area/bmg290/caverns/filtration)
 "tYa" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -42341,6 +42319,11 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison,
 /area/bmg290/colony/logistics)
+"tYV" = (
+/obj/structure/prop/tyrargo/large_tents/small_closed/back,
+/obj/structure/blocker/invisible_wall,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "tZe" = (
 /obj/structure/platform/kutjevo,
 /obj/structure/platform/kutjevo/smooth{
@@ -42934,22 +42917,21 @@
 	},
 /turf/open/floor/kutjevo/multi_tiles,
 /area/bmg290/colony/complex)
-"unr" = (
-/obj/structure/barricade/sandbags/full{
-	dir = 8;
-	is_wired = 1
-	},
+"unu" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison,
+/area/bmg290/colony/logistics_hub)
+"uog" = (
 /obj/structure/barricade/sandbags/full{
 	dir = 1;
 	pixel_y = 6;
 	is_wired = 1
 	},
+/obj/structure/machinery/m56d_hmg{
+	dir = 1
+	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/bmg290/wilderness/outskirts)
-"unu" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison,
-/area/bmg290/colony/logistics_hub)
 "uok" = (
 /obj/structure/flora/grass/tallgrass/desert/corner{
 	color = "#bfff00";
@@ -43018,6 +43000,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/logistics_hub)
+"uqh" = (
+/obj/structure/prop/almayer/cannon_cable_connector,
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/almayer_hull/blackfull,
+/area/bmg290/wilderness/outskirts)
 "uqt" = (
 /obj/structure/pipes/standard/simple/hidden/cyan{
 	dir = 4
@@ -43271,15 +43258,6 @@
 	},
 /turf/open/floor/almayer/sterile_green_corner/north,
 /area/bmg290/relay/hallway)
-"uyW" = (
-/obj/structure/platform/strata/metal{
-	dir = 1
-	},
-/obj/structure/platform/strata/metal{
-	dir = 8
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "uzt" = (
 /obj/structure/machinery/light/small{
 	dir = 1
@@ -43946,6 +43924,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt,
 /area/bmg290/wilderness/relay_exterior)
+"uSR" = (
+/obj/structure/flag/plantable/canc,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/bmg290/wilderness/outskirts)
 "uTb" = (
 /obj/structure/surface/table/almayer,
 /obj/item/tool/hatchet{
@@ -44032,6 +44014,16 @@
 /obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/prison/darkyellow2/north,
 /area/bmg290/relay/engineering)
+"uUY" = (
+/obj/structure/machinery/telecomms/relay/preset/ice_colony{
+	density = 0;
+	layer = 6;
+	desc = "Фрагмент мощной китайской РЛС Тип-177, способная обнаруживать вражеские летательные аппараты на тысячи километров. Такие антенны подключаются к единому аппарату, который после передаёт общую картину в оперативный центр.";
+	name = "Type-177 RS Antenna"
+	},
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/wilderness/farmland)
 "uVk" = (
 /obj/structure/platform/stair_cut,
 /obj/structure/stairs/perspective{
@@ -44372,6 +44364,10 @@
 /obj/structure/machinery/light,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz/hangar)
+"veg" = (
+/obj/structure/flora/bush/ausbushes,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/bmg290/wilderness/outskirts)
 "vej" = (
 /obj/structure/machinery/cm_vending/sorted/tech/comp_storage,
 /turf/open/floor/plating,
@@ -44652,12 +44648,6 @@
 /obj/structure/pipes/standard/cap,
 /turf/open/floor/almayer/sterile_green_side,
 /area/bmg290/colony/hospital)
-"viV" = (
-/obj/structure/platform_decoration/strata/metal{
-	dir = 1
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "vja" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/disposalpipe/segment{
@@ -44729,27 +44719,27 @@
 	},
 /turf/open/asphalt/cement,
 /area/bmg290/wilderness/road)
+"vkk" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 8;
+	color = "#999999";
+	layer = 3.02
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "vkm" = (
 /obj/structure/machinery/autolathe,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/wilderness_roof/storage_house)
 "vkF" = (
-/obj/item/tool/pickaxe{
-	pixel_x = 4;
-	pixel_y = -4
-	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/bmg290/caverns/cave_west)
+/obj/structure/prop/almayer/cannon_cables,
+/turf/open/floor/almayer_hull/blackfull,
+/area/bmg290/wilderness/outskirts)
 "vkG" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer_hull,
 /area/bmg290/wilderness/road)
-"vkO" = (
-/obj/structure/prop/tyrargo/large_tents/small_closed,
-/obj/structure/blocker/invisible_wall,
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "vlo" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -44764,6 +44754,12 @@
 /obj/structure/machinery/power/apc/almayer/south,
 /turf/open/floor/prison/floor_marked,
 /area/bmg290/colony/admin)
+"vme" = (
+/obj/structure/platform/strata/metal{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/bmg290/wilderness/outskirts)
 "vmm" = (
 /obj/structure/prop/server_equipment/laptop/closed{
 	pixel_x = 0;
@@ -44790,14 +44786,6 @@
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/open/asphalt/cement/cement3,
 /area/bmg290/relay/cargo)
-"vna" = (
-/obj/structure/barricade/sandbags/full{
-	dir = 8;
-	is_wired = 1;
-	pixel_y = -6
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "vnc" = (
 /obj/structure/platform_decoration/kutjevo{
 	dir = 1
@@ -45139,6 +45127,12 @@
 /obj/structure/cargo_container/horizontal/blue/middle,
 /turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
+"vvA" = (
+/obj/structure/platform/strata/metal{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "vvS" = (
 /obj/structure/flora/pottedplant{
 	desc = "It is made of Fiberbush(tm). It contains asbestos. Studies say that greenery calms the mind due to some sort evolved mechanism in the brain. This plant is not calming.";
@@ -45308,6 +45302,14 @@
 	},
 /turf/open/floor/carpet,
 /area/bmg290/keppitz/research)
+"vzM" = (
+/obj/structure/barricade/sandbags/full{
+	dir = 8;
+	is_wired = 1;
+	pixel_y = -6
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "vAa" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -45619,19 +45621,6 @@
 	},
 /turf/open/floor/strata/faux_wood,
 /area/bmg290/colony/bar)
-"vIr" = (
-/obj/structure/barricade/sandbags/full{
-	dir = 1;
-	pixel_y = 6;
-	is_wired = 1
-	},
-/obj/structure/barricade/sandbags/full{
-	dir = 8;
-	is_wired = 1;
-	pixel_y = -6
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "vIE" = (
 /obj/structure/pipes/vents/pump,
 /obj/effect/decal/cleanable/dirt,
@@ -45650,6 +45639,19 @@
 	},
 /turf/open/void,
 /area/bmg290/site/discovered)
+"vIV" = (
+/obj/structure/barricade/sandbags/full{
+	dir = 1;
+	pixel_y = 6;
+	is_wired = 1
+	},
+/obj/structure/barricade/sandbags/full{
+	dir = 8;
+	is_wired = 1;
+	pixel_y = -6
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/bmg290/wilderness/outskirts)
 "vJm" = (
 /obj/structure/platform/kutjevo{
 	dir = 4
@@ -46265,13 +46267,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement/cement4,
 /area/bmg290/wilderness/colony_exterior)
-"vVX" = (
-/obj/structure/barricade/sandbags/full{
-	dir = 4;
-	is_wired = 1
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "vWT" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/bmg290/colony/hospital)
@@ -46328,13 +46323,6 @@
 /obj/structure/sign/poster/propaganda,
 /turf/open/gm/grass,
 /area/bmg290/wilderness/colony_exterior)
-"vYd" = (
-/obj/structure/barricade/sandbags/full{
-	dir = 8;
-	is_wired = 1
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "vYp" = (
 /obj/structure/machinery/colony_floodlight,
 /obj/effect/decal/cleanable/dirt,
@@ -46703,13 +46691,8 @@
 /turf/open/floor/prison/darkredcorners2/east,
 /area/bmg290/colony/bar)
 "wfW" = (
-/obj/structure/platform/kutjevo/rock{
-	dir = 8;
-	color = "#999999";
-	layer = 3.02
-	},
-/turf/open/auto_turf/strata_grass,
-/area/bmg290/wilderness/farmland)
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/caverns/filtration)
 "wgn" = (
 /obj/structure/flora/grass/tallgrass/desert/corner{
 	color = "#bfff00"
@@ -46894,10 +46877,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/wilderness/colony_exterior)
-"wjP" = (
-/turf/open/auto_turf/strata_grass/layer1,
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "wjU" = (
 /obj/structure/surface/rack,
 /turf/open/floor/prison,
@@ -47058,19 +47037,6 @@
 /obj/structure/closet/toolcloset,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/motorpool)
-"wni" = (
-/obj/structure/barricade/sandbags/full{
-	dir = 1;
-	pixel_y = 6;
-	is_wired = 1
-	},
-/obj/structure/barricade/sandbags/full{
-	dir = 8;
-	is_wired = 1;
-	pixel_y = -6
-	},
-/turf/open/auto_turf/strata_grass/layer0_mud,
-/area/bmg290/wilderness/outskirts)
 "wnp" = (
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/keppitz/interlude)
@@ -47232,17 +47198,19 @@
 /turf/open/asphalt/cement/cement3,
 /area/bmg290/relay/exterior_storage)
 "wqo" = (
-/obj/structure/platform/kutjevo/rock{
-	dir = 8;
-	color = "#999999";
-	layer = 3.02
+/obj/structure/platform_decoration/strata/metal{
+	dir = 4
 	},
-/obj/structure/platform/kutjevo/rock{
-	dir = 1;
-	color = "#999999"
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
+"wqF" = (
+/obj/structure/barricade/sandbags/full{
+	dir = 4;
+	is_wired = 1;
+	pixel_y = -6
 	},
-/turf/open/auto_turf/strata_grass,
-/area/bmg290/wilderness/farmland)
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/bmg290/wilderness/outskirts)
 "wrg" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -47958,12 +47926,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/blue/northwest,
 /area/bmg290/colony/complex)
-"wHD" = (
-/obj/structure/platform/strata/metal{
-	dir = 8
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "wHK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/random/mini/small_case/c{
@@ -48228,11 +48190,6 @@
 "wNM" = (
 /turf/open/floor/prison/darkyellow2/northeast,
 /area/bmg290/wilderness/road)
-"wNT" = (
-/obj/structure/prop/tyrargo/large_tents/supply,
-/obj/structure/blocker/invisible_wall,
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "wNU" = (
 /obj/effect/decal/siding{
 	icon_state = "siding10"
@@ -48456,10 +48413,6 @@
 	},
 /turf/open/gm/river/beach_water,
 /area/bmg290/wilderness/beach)
-"wTw" = (
-/obj/structure/platform_decoration/strata/metal,
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "wTH" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -49075,6 +49028,14 @@
 	},
 /turf/open/floor/grey_dark2,
 /area/bmg290/site/discovered)
+"xjK" = (
+/obj/structure/barricade/sandbags/full{
+	pixel_x = 0;
+	pixel_y = -6;
+	is_wired = 1
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "xjT" = (
 /obj/structure/flora/grass/tallgrass/desert/corner{
 	color = "#bfff00";
@@ -49578,11 +49539,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay/engineering)
-"xvU" = (
-/obj/structure/blocker/invisible_wall,
-/obj/structure/blocker/invisible_wall,
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "xwj" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 16
@@ -49958,6 +49914,14 @@
 /obj/item/smallDelivery,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/hangar)
+"xGk" = (
+/obj/structure/barricade/sandbags/full{
+	dir = 1;
+	pixel_y = 6;
+	is_wired = 1
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "xGo" = (
 /obj/structure/prop/ice_colony/surveying_device/measuring_device{
 	dir = 8;
@@ -50464,10 +50428,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz/command)
-"xSe" = (
-/obj/structure/blocker/invisible_wall,
-/turf/open/auto_turf/strata_grass/layer1,
-/area/bmg290/wilderness/outskirts)
 "xSj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/warning_stripes{
@@ -50494,6 +50454,19 @@
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
 /turf/open/gm/dirtgrassborder/north,
 /area/bmg290/wilderness/colony_exterior)
+"xTR" = (
+/obj/structure/barricade/sandbags/full{
+	pixel_x = 0;
+	pixel_y = -6;
+	is_wired = 1
+	},
+/obj/structure/barricade/sandbags/full{
+	dir = 8;
+	is_wired = 1
+	},
+/obj/structure/machinery/m56d_hmg/mg_turret,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "xUz" = (
 /obj/structure/machinery/door_control/brbutton/alt{
 	id = "plg-4"
@@ -51109,16 +51082,6 @@
 /obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/complex)
-"yii" = (
-/obj/structure/machinery/telecomms/relay/preset/ice_colony{
-	density = 0;
-	layer = 6.02;
-	desc = "Фрагмент мощной китайской РЛС Тип-177, способная обнаруживать вражеские летательные аппараты на тысячи километров. Такие антенны подключаются к единому аппарату, который после передаёт общую картину в оперативный центр.";
-	name = "Type-177 RS Antenna"
-	},
-/obj/structure/blocker/invisible_wall,
-/turf/open/floor/prison/floor_plate,
-/area/bmg290/wilderness/farmland)
 "yin" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
@@ -57760,7 +57723,7 @@ hRu
 hRu
 hRu
 hRu
-hRu
+cbW
 cbW
 qJZ
 qJZ
@@ -58060,17 +58023,17 @@ hRu
 hRu
 hRu
 hRu
-hRu
-hRu
 cbW
 cbW
+cbW
 qJZ
 qJZ
 qJZ
 qJZ
 qJZ
-hRu
-hRu
+qJZ
+cbW
+cbW
 hRu
 hRu
 hRu
@@ -58358,22 +58321,22 @@ hRu
 hRu
 hRu
 hRu
-hRu
-hRu
-hRu
-hRu
-hRu
 cbW
-agT
+cbW
+cbW
+cbW
+cbW
+qJZ
+qJZ
 qJZ
 qJZ
 qJZ
 eQw
 qJZ
 qJZ
-hRu
-hRu
-hRu
+cbW
+cbW
+cbW
 hRu
 hRu
 hRu
@@ -58658,15 +58621,15 @@ hRu
 hRu
 hRu
 hRu
-hRu
-hRu
-hRu
-hRu
-hRu
 cbW
-vkF
 cbW
-tWr
+cbW
+cbW
+cbW
+qJZ
+qJZ
+qJZ
+qJZ
 qJZ
 eQw
 eQw
@@ -58674,10 +58637,10 @@ qJZ
 qJZ
 qJZ
 qJZ
-hRu
-hRu
-hRu
-hRu
+cbW
+cbW
+cbW
+cbW
 hRu
 hRu
 hRu
@@ -58956,16 +58919,16 @@ qJZ
 qJZ
 qJZ
 qJZ
-hRu
-hRu
-hRu
-hRu
-hRu
-hRu
-hRu
 cbW
 cbW
 cbW
+cbW
+qJZ
+qJZ
+qJZ
+qJZ
+qJZ
+qJZ
 qJZ
 qJZ
 qJZ
@@ -58980,9 +58943,9 @@ qJZ
 cbW
 cbW
 cbW
-hRu
-hRu
-hRu
+cbW
+cbW
+cbW
 cbW
 cbW
 qJZ
@@ -59259,8 +59222,8 @@ tCO
 tCO
 qJZ
 qJZ
-hRu
-hRu
+qJZ
+qJZ
 qJZ
 qJZ
 qJZ
@@ -59576,7 +59539,7 @@ qJZ
 qJZ
 qJZ
 cbW
-cbW
+qJZ
 qJZ
 qJZ
 qJZ
@@ -59869,8 +59832,8 @@ qJZ
 qJZ
 qJZ
 qJZ
-qJZ
-qJZ
+cbW
+cbW
 qJZ
 qJZ
 mme
@@ -59880,10 +59843,10 @@ cbW
 cbW
 cbW
 cbW
-cbW
-cbW
-cbW
-cbW
+qJZ
+qJZ
+qJZ
+qJZ
 qJZ
 qJZ
 qJZ
@@ -60164,14 +60127,14 @@ nvr
 nvr
 nvr
 nvr
-sFX
-sFX
+nvr
+nvr
 lAK
 qJZ
-hRu
-hRu
-hRu
-hRu
+qJZ
+qJZ
+cbW
+cbW
 qqf
 qqf
 hRu
@@ -60181,13 +60144,13 @@ qJZ
 cbW
 cbW
 cbW
-hRu
-hRu
-hRu
-hRu
 cbW
 cbW
-cbW
+qJZ
+qJZ
+qJZ
+qJZ
+qJZ
 qJZ
 qJZ
 qJZ
@@ -60470,6 +60433,8 @@ qJZ
 qJZ
 qJZ
 qJZ
+qJZ
+cbW
 cbW
 hRu
 hRu
@@ -60481,15 +60446,13 @@ hRu
 hRu
 hRu
 hRu
-hRu
-hRu
-hRu
-hRu
-hRu
-hRu
-hRu
-hRu
 cbW
+cbW
+cbW
+qJZ
+qJZ
+qJZ
+qJZ
 qJZ
 qJZ
 qJZ
@@ -60773,11 +60736,7 @@ qJZ
 qJZ
 qJZ
 cbW
-hRu
-hRu
-hRu
-hRu
-hRu
+cbW
 hRu
 hRu
 hRu
@@ -60792,12 +60751,16 @@ hRu
 hRu
 hRu
 cbW
+cbW
+qJZ
+qJZ
+qJZ
 qJZ
 qJZ
 qJZ
 qJZ
 mrq
-hRu
+qJZ
 cbW
 cbW
 qJZ
@@ -61090,17 +61053,17 @@ hRu
 hRu
 hRu
 hRu
-hRu
-hRu
-hRu
+cbW
+cbW
 cbW
 qJZ
 qJZ
 qJZ
 qJZ
+qJZ
 mme
-hRu
-hRu
+cbW
+cbW
 cbW
 cbW
 qJZ
@@ -61394,14 +61357,14 @@ hRu
 hRu
 hRu
 hRu
-hRu
+cbW
 cbW
 qJZ
 qJZ
 qJZ
 qJZ
-hRu
-hRu
+cbW
+cbW
 hRu
 hRu
 cbW
@@ -61701,8 +61664,8 @@ cbW
 qJZ
 qJZ
 qJZ
-hRu
-hRu
+qJZ
+cbW
 hRu
 hRu
 hRu
@@ -62003,7 +61966,7 @@ cbW
 qJZ
 qJZ
 qJZ
-hRu
+qJZ
 hRu
 hRu
 hRu
@@ -62304,8 +62267,8 @@ cbW
 cbW
 qJZ
 qJZ
-hRu
-hRu
+qJZ
+qJZ
 hRu
 hRu
 hRu
@@ -62606,8 +62569,8 @@ cbW
 qJZ
 qJZ
 qJZ
-hRu
-hRu
+qJZ
+qJZ
 hRu
 hRu
 hRu
@@ -62908,8 +62871,8 @@ cbW
 qJZ
 qJZ
 qJZ
-hRu
-hRu
+qJZ
+qJZ
 hRu
 hRu
 hRu
@@ -63210,7 +63173,7 @@ qJZ
 qJZ
 qJZ
 qJZ
-hRu
+qJZ
 hRu
 hRu
 hRu
@@ -63511,8 +63474,8 @@ qqf
 qJZ
 eQw
 qJZ
+qJZ
 qqf
-hRu
 hRu
 hRu
 hRu
@@ -63813,8 +63776,8 @@ cbW
 qJZ
 eQw
 qJZ
+qJZ
 qqf
-hRu
 hRu
 hRu
 hRu
@@ -64116,7 +64079,7 @@ qJZ
 qJZ
 qJZ
 qJZ
-hRu
+qJZ
 hRu
 hRu
 hRu
@@ -65625,7 +65588,7 @@ qJZ
 qJZ
 cbW
 cbW
-hRu
+qJZ
 qJZ
 qJZ
 qJZ
@@ -65926,9 +65889,9 @@ qJZ
 qJZ
 cbW
 cbW
-hRu
-hRu
-hRu
+cbW
+cbW
+cbW
 qJZ
 qJZ
 qJZ
@@ -66230,8 +66193,8 @@ cbW
 hRu
 hRu
 hRu
-hRu
-hRu
+cbW
+qJZ
 qJZ
 qJZ
 qJZ
@@ -66533,8 +66496,8 @@ hRu
 hRu
 hRu
 hRu
-hRu
-hRu
+qJZ
+qJZ
 qJZ
 qJZ
 qJZ
@@ -66836,7 +66799,7 @@ hRu
 hRu
 hRu
 hRu
-hRu
+qJZ
 qJZ
 qJZ
 qJZ
@@ -67138,7 +67101,7 @@ hRu
 hRu
 hRu
 hRu
-hRu
+qJZ
 qJZ
 qJZ
 qJZ
@@ -67741,7 +67704,7 @@ cbW
 hRu
 hRu
 hRu
-hRu
+qJZ
 qJZ
 qJZ
 qJZ
@@ -68678,11 +68641,11 @@ fYC
 nbf
 ejR
 oQp
-fnR
+uUY
 ayD
 hgB
 ayD
-yii
+beV
 blp
 ejR
 qdr
@@ -69886,11 +69849,11 @@ jTG
 wRG
 ejR
 oQp
-fnR
+uUY
 ayD
 oQC
 ayD
-yii
+beV
 blp
 ejR
 qdr
@@ -71059,11 +71022,11 @@ hRu
 hRu
 hRu
 qqf
-fGT
-fGT
-fGT
-fGT
-fGT
+hJT
+qJZ
+qJZ
+hJT
+hJT
 qqf
 hRu
 npZ
@@ -71361,10 +71324,10 @@ hRu
 hRu
 hRu
 qqf
-qJZ
-qJZ
-qJZ
-qJZ
+hJT
+hJT
+hJT
+hJT
 qJZ
 qqf
 hRu
@@ -71663,12 +71626,12 @@ hRu
 hRu
 hRu
 eae
+hJT
+hJT
+hJT
+hJT
 qJZ
-qJZ
-qJZ
-qJZ
-qJZ
-eae
+kdA
 hRu
 npZ
 npZ
@@ -71964,13 +71927,13 @@ hRu
 npZ
 npZ
 npZ
-aZL
-aZL
-aZL
-aZL
-aZL
-wqo
-wfW
+qas
+qas
+qas
+qas
+qas
+qas
+qas
 npZ
 npZ
 ejR
@@ -72266,13 +72229,13 @@ hRu
 npZ
 npZ
 npZ
-wfW
-wfW
-wfW
-wfW
-wfW
 ejR
-ejR
+qas
+qas
+qas
+qas
+qas
+qas
 ejR
 ejR
 ejR
@@ -72568,14 +72531,14 @@ hRu
 npZ
 npZ
 ejR
-ejR
-ejR
-ejR
-ejR
-ejR
-ejR
-ejR
-ejR
+qas
+qas
+qas
+qas
+qas
+qas
+qas
+qas
 ejR
 ejR
 ejR
@@ -72869,16 +72832,16 @@ hRu
 hRu
 npZ
 npZ
-ejR
-ejR
-ejR
-ejR
-ejR
-ejR
-ejR
-ejR
-ejR
-ejR
+qas
+qas
+qas
+qas
+qas
+qas
+qas
+qas
+qas
+qas
 ejR
 ejR
 mph
@@ -73171,13 +73134,13 @@ hRu
 hRu
 npZ
 kQs
+qas
 ejR
+qas
+qas
+qas
 ejR
-ejR
-ejR
-ejR
-ejR
-wkZ
+qas
 ejR
 ejR
 ejR
@@ -73475,9 +73438,9 @@ npZ
 npZ
 ejR
 ejR
-ejR
-ejR
-ejR
+qas
+qas
+qas
 wkZ
 wkZ
 wkZ
@@ -73776,8 +73739,8 @@ hRu
 npZ
 npZ
 mph
-ejR
-ejR
+qas
+qas
 ejR
 ejR
 wkZ
@@ -75942,8 +75905,8 @@ gxM
 pSK
 uTS
 rJc
-lIe
-rBd
+mND
+mJF
 wFm
 ayD
 mph
@@ -77148,7 +77111,7 @@ ejR
 ejR
 aBO
 lND
-hCk
+tCK
 xPy
 lri
 aBO
@@ -101950,7 +101913,7 @@ jqe
 jqe
 jqe
 jqe
-bsJ
+rxa
 fWM
 fWM
 qLU
@@ -102250,9 +102213,9 @@ jqe
 pPb
 jqe
 pPb
-tLE
-tLE
-rzr
+vkk
+vkk
+izX
 fWM
 fWM
 qLU
@@ -102519,7 +102482,7 @@ pPb
 pPb
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
@@ -102528,7 +102491,7 @@ fWM
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
@@ -102824,7 +102787,7 @@ fWM
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
@@ -103110,8 +103073,8 @@ pPb
 pPb
 pPb
 fWM
-kWW
-kWW
+kXr
+kXr
 fWM
 fWM
 fWM
@@ -103139,7 +103102,7 @@ fWM
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
@@ -103422,7 +103385,7 @@ fWM
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
@@ -103728,7 +103691,7 @@ fWM
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
@@ -104017,14 +103980,14 @@ pPb
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
@@ -104323,7 +104286,7 @@ fWM
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
@@ -104633,12 +104596,12 @@ fWM
 sUY
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 cdt
 aAu
@@ -105239,11 +105202,11 @@ fWM
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
-kWW
+kXr
 cdt
 aAu
 aAu
@@ -105553,7 +105516,7 @@ nlv
 lmC
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
@@ -105831,7 +105794,7 @@ fWM
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
@@ -106129,7 +106092,7 @@ sUY
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
@@ -106142,7 +106105,7 @@ fWM
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
@@ -106158,7 +106121,7 @@ fWM
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 pPb
 fWM
@@ -106439,7 +106402,7 @@ fWM
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
@@ -106447,7 +106410,7 @@ fWM
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
@@ -106730,12 +106693,12 @@ pPb
 pPb
 pPb
 fWM
-kWW
-kWW
+kXr
+kXr
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
@@ -107053,7 +107016,7 @@ fWM
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
@@ -107069,7 +107032,7 @@ pPb
 pPb
 pPb
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
@@ -107351,18 +107314,18 @@ fWM
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
@@ -107623,7 +107586,7 @@ fWM
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 pPb
@@ -107636,7 +107599,7 @@ pPb
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
@@ -107648,7 +107611,7 @@ neT
 fSd
 pPb
 pPb
-lxQ
+nCl
 jqe
 jqe
 jqe
@@ -107923,7 +107886,7 @@ fWM
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
@@ -107950,16 +107913,16 @@ aAu
 nlv
 bLe
 pPb
-lxQ
-tlt
-tlt
-tlt
-tlt
-tlt
-tlt
-tlt
-tlt
-tlt
+nCl
+bKA
+bKA
+bKA
+bKA
+bKA
+bKA
+bKA
+bKA
+bKA
 jqe
 jqe
 jqe
@@ -108237,7 +108200,7 @@ pPb
 pPb
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
@@ -108261,15 +108224,15 @@ fWM
 fWM
 fWM
 fWM
-tlt
-tlt
-tlt
-tlt
-tlt
+bKA
+bKA
+bKA
+bKA
+bKA
 jqe
 jqe
 bwr
-lxQ
+nCl
 pPb
 pPb
 pPb
@@ -108562,16 +108525,16 @@ fWM
 fWM
 fWM
 aib
-kWW
+kXr
 fWM
 fWM
 fWM
 fWM
 wHP
-tlt
-tlt
-lxQ
-lxQ
+bKA
+bKA
+nCl
+nCl
 pPb
 pPb
 pPb
@@ -108833,7 +108796,7 @@ pPb
 iBE
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
@@ -108849,17 +108812,17 @@ jqe
 jqe
 jqe
 jqe
-lxQ
+nCl
 pPb
 aAu
 kUL
-auu
-auu
-auu
-auu
-auu
-auu
-wjP
+dNI
+dNI
+dNI
+dNI
+dNI
+dNI
+lmW
 aib
 fWM
 fWM
@@ -109140,7 +109103,7 @@ fWM
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
@@ -109148,10 +109111,10 @@ fWM
 pPb
 fWM
 bwr
-tlt
-tlt
-tlt
-lxQ
+bKA
+bKA
+bKA
+nCl
 pPb
 pPb
 pPb
@@ -109168,7 +109131,7 @@ fWM
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
@@ -109439,7 +109402,7 @@ iBE
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
@@ -109450,7 +109413,7 @@ bwr
 jqe
 jqe
 jqe
-tlt
+bKA
 fWM
 fWM
 fWM
@@ -109469,14 +109432,14 @@ fWM
 fWM
 fWM
 fWM
-unr
-mvo
-vYd
-iiq
+mDm
+sFX
+fBu
+mPs
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 pPb
 pPb
@@ -109740,19 +109703,19 @@ aAu
 nNN
 iBE
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
 fWM
 fWM
 jqe
-tlt
-tlt
-tlt
-tlt
-tlt
-tlt
+bKA
+bKA
+bKA
+bKA
+bKA
+bKA
 fWM
 fWM
 fWM
@@ -109770,12 +109733,12 @@ fWM
 aib
 aib
 fWM
-jHL
+oPC
 fWM
 fWM
 fWM
 fWM
-qgV
+dkW
 fWM
 fWM
 fWM
@@ -110049,7 +110012,7 @@ pPb
 pPb
 sUY
 jqe
-tlt
+bKA
 fWM
 fWM
 fWM
@@ -110072,12 +110035,12 @@ fWM
 aib
 fWM
 fWM
-iUk
+xGk
 fWM
 aib
 aib
 fWM
-mJD
+xjK
 fWM
 fWM
 fWM
@@ -110348,38 +110311,38 @@ fWM
 fWM
 pPb
 pPb
-lxQ
+nCl
 fWM
 jqe
-tlt
+bKA
 fWM
 fWM
 aib
 aib
-wTw
-eHH
-eHH
-eHH
-hAc
+aZL
+vvA
+vvA
+vvA
+fHw
 fWM
 fWM
 fWM
 fWM
 fWM
-wTw
-eHH
-eHH
-eHH
-hAc
+aZL
+vvA
+vvA
+vvA
+fHw
 fWM
 fWM
 fWM
-iUk
+xGk
 fWM
 aib
 fWM
 fWM
-mJD
+xjK
 fWM
 fWM
 fWM
@@ -110650,30 +110613,30 @@ pPb
 pPb
 pPb
 pPb
-lxQ
-lxQ
-tlt
-tlt
+nCl
+nCl
+bKA
+bKA
 fWM
 aib
 aib
-wTw
-qdd
-oVB
-nNx
-kdP
-kRA
-hAc
+aZL
+llR
+dGD
+mFi
+dYq
+etG
+fHw
 fWM
 aib
 fWM
-wTw
-qdd
-oVB
-nNx
-kdP
-kRA
-hAc
+aZL
+llR
+dGD
+mFi
+dYq
+etG
+fHw
 fWM
 fWM
 fWM
@@ -110958,25 +110921,25 @@ fWM
 fWM
 fWM
 aib
-wTw
-qdd
+aZL
+llR
+dGD
 oVB
-dGD
-dGD
-dGD
-qia
-kRA
-hAc
-aib
-wTw
-qdd
 oVB
+oVB
+qrC
+etG
+fHw
+aib
+aZL
+llR
 dGD
-dGD
-dGD
-qia
-kRA
-hAc
+oVB
+oVB
+oVB
+qrC
+etG
+fHw
 fWM
 fWM
 fWM
@@ -110989,8 +110952,8 @@ aib
 aib
 fWM
 fWM
-wni
-vna
+vIV
+vzM
 fWM
 pPb
 pPb
@@ -111260,25 +111223,25 @@ pPb
 fWM
 fWM
 fWM
-nIU
+iAV
+dGD
 oVB
-dGD
-haa
-haa
-dGD
-dGD
-mud
-kRA
-aib
-qdd
+mgi
+mgi
 oVB
+oVB
+gMv
+etG
+aib
+llR
 dGD
-haa
-haa
-dGD
-dGD
-mud
-tOD
+oVB
+mgi
+mgi
+oVB
+oVB
+gMv
+eMC
 fWM
 fWM
 fWM
@@ -111290,7 +111253,7 @@ fWM
 fWM
 aib
 fWM
-vIr
+cWL
 aib
 fWM
 fWM
@@ -111562,25 +111525,25 @@ pPb
 pPb
 fWM
 fWM
-nIU
-mCD
-dGD
-haa
-haa
-dGD
-dGD
-dGD
-erE
+iAV
+agT
+oVB
+mgi
+mgi
+oVB
+oVB
+oVB
+eCO
 aib
-sjN
-dGD
-dGD
-haa
-haa
-dGD
-dGD
-svt
-tOD
+dXJ
+oVB
+oVB
+mgi
+mgi
+oVB
+oVB
+lui
+eMC
 fWM
 fWM
 fWM
@@ -111592,7 +111555,7 @@ fWM
 fWM
 aib
 fWM
-owU
+uog
 fWM
 fWM
 fWM
@@ -111864,28 +111827,28 @@ pPb
 pPb
 fWM
 fWM
-nIU
-ggE
-dGD
-haa
-haa
-siv
-gzK
-rbN
-uyW
+iAV
+oWs
+oVB
+mgi
+mgi
+vkF
+uqh
+kHX
+qOZ
 aib
-cIM
-ggE
-dGD
-haa
-haa
-siv
-gzK
-rbN
-tOD
+dcQ
+oWs
+oVB
+mgi
+mgi
+vkF
+uqh
+kHX
+eMC
 fWM
-oDE
-oDE
+mvo
+mvo
 fWM
 fWM
 fWM
@@ -111894,7 +111857,7 @@ fWM
 fWM
 aib
 fWM
-iUk
+xGk
 fWM
 fWM
 fWM
@@ -112166,37 +112129,37 @@ pPb
 pPb
 fWM
 fWM
-viV
-cIM
-ggE
-dGD
-dGD
-dGD
-rbN
-uyW
-epb
+ftF
+dcQ
+oWs
+oVB
+oVB
+oVB
+kHX
+qOZ
+wqo
 aib
-viV
-cIM
-ggE
-dGD
-dGD
-dGD
-rbN
-uyW
-epb
+ftF
+dcQ
+oWs
+oVB
+oVB
+oVB
+kHX
+qOZ
+wqo
 fWM
 fWM
 fWM
 fWM
 fWM
-oDE
+mvo
 fWM
 fWM
 fWM
 aib
 aib
-hGK
+asm
 fWM
 fWM
 fWM
@@ -112469,40 +112432,40 @@ pPb
 fWM
 fWM
 fWM
-viV
-cIM
-ggE
-rqp
-rbN
-uyW
-epb
+ftF
+dcQ
+oWs
+kgJ
+kHX
+qOZ
+wqo
 aib
 aib
 fWM
-viV
-cIM
-ggE
-rqp
-rbN
-uyW
-epb
+ftF
+dcQ
+oWs
+kgJ
+kHX
+qOZ
+wqo
 fWM
 sUY
 fWM
 fWM
 fWM
 fWM
-oDE
-oDE
+mvo
+mvo
 fWM
 fWM
 fWM
 fWM
 fWM
-oQF
-cCY
+kCW
+wqF
 fWM
-vVX
+psQ
 pPb
 pPb
 pPb
@@ -112772,21 +112735,21 @@ pPb
 fWM
 fWM
 fWM
-viV
-wHD
-wHD
-wHD
-epb
+ftF
+aGd
+aGd
+aGd
+wqo
 aib
 aib
 fWM
 fWM
 fWM
-viV
-epF
-epF
-wHD
-epb
+ftF
+lcY
+lcY
+aGd
+wqo
 fWM
 fWM
 fWM
@@ -112796,8 +112759,8 @@ fWM
 fWM
 fWM
 fWM
-oDE
-oDE
+mvo
+mvo
 fWM
 fWM
 fWM
@@ -113090,10 +113053,10 @@ aib
 fWM
 fWM
 fWM
-oDE
-oDE
-oDE
-oDE
+mvo
+mvo
+mvo
+mvo
 fWM
 fWM
 fWM
@@ -113376,30 +113339,30 @@ pPb
 fWM
 fWM
 fWM
-wTw
-eHH
-sjg
-eHH
-hAc
+aZL
+vvA
+vme
+vvA
+fHw
 fWM
 fWM
 fWM
 aib
 fWM
-wTw
-eHH
-eHH
-eHH
-hAc
+aZL
+vvA
+vvA
+vvA
+fHw
 aib
 fWM
 fWM
 fWM
 fWM
 fWM
-oDE
-oDE
-oDE
+mvo
+mvo
+mvo
 fWM
 fWM
 fWM
@@ -113423,7 +113386,7 @@ fWM
 fWM
 fWM
 fWM
-oDE
+mvo
 fWM
 fWM
 fWM
@@ -113677,23 +113640,23 @@ pPb
 pPb
 fWM
 fWM
-wTw
-qdd
-oVB
-nNx
-kdP
-kRA
-hAc
+aZL
+llR
+dGD
+mFi
+dYq
+etG
+fHw
 fWM
 fWM
 fWM
-wTw
-qdd
-oVB
-nNx
-kdP
-kRA
-hAc
+aZL
+llR
+dGD
+mFi
+dYq
+etG
+fHw
 aib
 fWM
 fWM
@@ -113701,12 +113664,12 @@ fWM
 fWM
 fWM
 fWM
-oDE
-oDE
+mvo
+mvo
 fWM
 fWM
 fWM
-oDE
+mvo
 fWM
 fWM
 fWM
@@ -113724,7 +113687,7 @@ pPb
 bYK
 bYK
 bYK
-oDE
+mvo
 fWM
 fWM
 fWM
@@ -113978,25 +113941,25 @@ pPb
 pPb
 fWM
 fWM
-wTw
-qdd
+aZL
+llR
+dGD
 oVB
-dGD
-dGD
-dGD
-qia
-kRA
-hAc
-aib
-wTw
-qdd
 oVB
+oVB
+qrC
+etG
+fHw
+aib
+aZL
+llR
 dGD
-dGD
-dGD
-qia
-kRA
-kJv
+oVB
+oVB
+oVB
+qrC
+etG
+bsi
 aib
 fWM
 fWM
@@ -114008,7 +113971,7 @@ fWM
 fWM
 fWM
 fWM
-oDE
+mvo
 fWM
 fWM
 fWM
@@ -114026,7 +113989,7 @@ pPb
 pPb
 bYK
 bYK
-oDE
+mvo
 bYK
 bYK
 fWM
@@ -114280,25 +114243,25 @@ pPb
 fWM
 fWM
 fWM
-nIU
+iAV
+dGD
 oVB
-dGD
-haa
-haa
-dGD
-dGD
-mud
-kRA
+mgi
+mgi
+oVB
+oVB
+gMv
+etG
 aib
-qdd
+llR
+dGD
 oVB
-dGD
-haa
-haa
-dGD
-dGD
-mud
-tOD
+mgi
+mgi
+oVB
+oVB
+gMv
+eMC
 fWM
 fWM
 fWM
@@ -114308,10 +114271,10 @@ fWM
 fWM
 fWM
 fWM
-oDE
+mvo
 fWM
 fWM
-oDE
+mvo
 fWM
 pPb
 pPb
@@ -114328,7 +114291,7 @@ pPb
 pPb
 ltf
 ltf
-cnI
+tXG
 ltf
 ltf
 bYK
@@ -114582,25 +114545,25 @@ pPb
 fWM
 fWM
 fWM
-nIU
-mCD
-dGD
-haa
-haa
-dGD
-dGD
-dGD
-erE
+iAV
+agT
+oVB
+mgi
+mgi
+oVB
+oVB
+oVB
+eCO
 aib
-sjN
-dGD
-dGD
-haa
-haa
-dGD
-dGD
-svt
-tOD
+dXJ
+oVB
+oVB
+mgi
+mgi
+oVB
+oVB
+lui
+eMC
 fWM
 fWM
 fWM
@@ -114610,7 +114573,7 @@ pPb
 fWM
 fWM
 fWM
-oDE
+mvo
 fWM
 fWM
 fWM
@@ -114630,9 +114593,9 @@ xuL
 xuL
 grv
 grv
-fHw
+tlt
 grv
-fHw
+tlt
 grv
 grv
 xuL
@@ -114876,33 +114839,33 @@ pPb
 fWM
 fWM
 fWM
-lxQ
-lxQ
+nCl
+nCl
 pPb
 pPb
 fWM
 fWM
 aib
 fWM
-nIU
-ggE
-dGD
-haa
-haa
-siv
-gzK
-rbN
-uyW
+iAV
+oWs
+oVB
+mgi
+mgi
+vkF
+uqh
+kHX
+qOZ
 aib
-cIM
-ggE
-dGD
-haa
-haa
-siv
-gzK
-rbN
-tOD
+dcQ
+oWs
+oVB
+mgi
+mgi
+vkF
+uqh
+kHX
+eMC
 jjB
 neT
 neT
@@ -114912,10 +114875,10 @@ pPb
 fWM
 fWM
 fWM
-oDE
-oDE
+mvo
+mvo
 fWM
-oDE
+mvo
 fWM
 pPb
 pPb
@@ -114934,7 +114897,7 @@ grv
 grv
 grv
 grv
-fHw
+tlt
 grv
 grv
 xuL
@@ -115186,25 +115149,25 @@ fWM
 fWM
 aib
 fWM
-viV
-cIM
-ggE
-dGD
-dGD
-dGD
-rbN
-uyW
-epb
+ftF
+dcQ
+oWs
+oVB
+oVB
+oVB
+kHX
+qOZ
+wqo
 fWM
-viV
-cIM
-ggE
-dGD
-dGD
-dGD
-rbN
-uyW
-epb
+ftF
+dcQ
+oWs
+oVB
+oVB
+oVB
+kHX
+qOZ
+wqo
 cdt
 aAu
 aAu
@@ -115215,10 +115178,10 @@ pPb
 fWM
 fWM
 fWM
-oDE
+mvo
 fWM
 fWM
-oDE
+mvo
 fWM
 fWM
 pPb
@@ -115236,7 +115199,7 @@ grv
 grv
 grv
 grv
-fHw
+tlt
 grv
 xuL
 xuL
@@ -115489,23 +115452,23 @@ fWM
 fWM
 aib
 fWM
-viV
-cIM
-ggE
-rqp
-rbN
-uyW
-epb
+ftF
+dcQ
+oWs
+kgJ
+kHX
+qOZ
+wqo
 fWM
 fWM
 fWM
-viV
-cIM
-ggE
-rqp
-rbN
-uyW
-epb
+ftF
+dcQ
+oWs
+kgJ
+kHX
+qOZ
+wqo
 fWM
 kme
 gWQ
@@ -115523,7 +115486,7 @@ fWM
 fWM
 fWM
 fWM
-mJD
+xjK
 fWM
 fWM
 mjY
@@ -115535,10 +115498,10 @@ grv
 grv
 grv
 grv
-fHw
+tlt
 grv
 grv
-fHw
+tlt
 grv
 xuL
 xuL
@@ -115792,21 +115755,21 @@ fWM
 fWM
 fWM
 fWM
-viV
-wHD
-wHD
-wHD
-epb
+ftF
+aGd
+aGd
+aGd
+wqo
 fWM
 fWM
 fWM
 fWM
 fWM
-viV
-wHD
-wHD
-wHD
-epb
+ftF
+aGd
+aGd
+aGd
+wqo
 fWM
 fWM
 sUY
@@ -115824,8 +115787,8 @@ fWM
 fWM
 fWM
 fWM
-vVX
-dAE
+psQ
+qMP
 fWM
 fWM
 fWM
@@ -115834,9 +115797,9 @@ gJE
 pic
 grv
 grv
-fHw
-fHw
-fHw
+tlt
+tlt
+tlt
 grv
 grv
 grv
@@ -116123,24 +116086,24 @@ fWM
 fWM
 fWM
 fWM
-oDE
-oDE
+mvo
+mvo
 fWM
 fWM
 fWM
-oDE
-oDE
-oDE
+mvo
+mvo
+mvo
 qdf
 gJE
 pic
 grv
-fHw
-fHw
+tlt
+tlt
 grv
 grv
 grv
-fHw
+tlt
 grv
 grv
 grv
@@ -116441,8 +116404,8 @@ grv
 grv
 grv
 grv
-fHw
-fHw
+tlt
+tlt
 grv
 grv
 grv
@@ -116689,7 +116652,7 @@ kme
 gWQ
 aAu
 nlv
-nok
+cIM
 wHP
 fWM
 fWM
@@ -116730,9 +116693,9 @@ fWM
 fWM
 fWM
 fWM
-oDE
-oDE
-oDE
+mvo
+mvo
+mvo
 fWM
 fWM
 qdf
@@ -116742,7 +116705,7 @@ grv
 grv
 grv
 grv
-fHw
+tlt
 grv
 grv
 grv
@@ -116990,12 +116953,12 @@ fWM
 fWM
 kme
 bLe
-nok
+cIM
 fWM
 wHP
 wHP
 wHP
-lxQ
+nCl
 pPb
 pPb
 pPb
@@ -117031,8 +116994,8 @@ pPb
 pPb
 fWM
 fWM
-vYd
-lzn
+fBu
+xTR
 fWM
 fWM
 fWM
@@ -117043,7 +117006,7 @@ pic
 grv
 grv
 grv
-fHw
+tlt
 grv
 grv
 grv
@@ -117297,7 +117260,7 @@ fWM
 fWM
 fWM
 fWM
-lxQ
+nCl
 pPb
 pPb
 pPb
@@ -117322,8 +117285,8 @@ fWM
 fWM
 fWM
 fWM
-xSe
-kHX
+rbN
+tYV
 pPb
 pPb
 pPb
@@ -117334,7 +117297,7 @@ pPb
 pPb
 fWM
 fWM
-mJD
+xjK
 fWM
 fWM
 fWM
@@ -117614,9 +117577,9 @@ pPb
 pPb
 fWM
 fWM
-xSe
-xvU
-aHN
+rbN
+haa
+qaS
 fWM
 fWM
 aib
@@ -117624,8 +117587,8 @@ aib
 aib
 fWM
 fWM
-xSe
-xSe
+rbN
+rbN
 pPb
 pPb
 pPb
@@ -117916,9 +117879,9 @@ pPb
 pPb
 pPb
 fWM
-xSe
-xvU
-xSe
+rbN
+haa
+rbN
 fWM
 fWM
 fWM
@@ -117926,8 +117889,8 @@ aib
 aib
 fWM
 fWM
-xSe
-xSe
+rbN
+rbN
 pPb
 pPb
 pPb
@@ -118218,9 +118181,9 @@ pPb
 pPb
 pPb
 pPb
-xSe
-xvU
-xSe
+rbN
+haa
+rbN
 fWM
 aib
 aib
@@ -118228,8 +118191,8 @@ aib
 aib
 aib
 fWM
-xSe
-kHX
+rbN
+tYV
 fWM
 pPb
 pPb
@@ -118504,7 +118467,7 @@ fWM
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 sUY
 pPb
@@ -118520,18 +118483,18 @@ pPb
 pPb
 pPb
 pPb
-xSe
-xvU
-wNT
+rbN
+haa
+rfW
 fWM
 aib
-ifC
+uSR
 aib
 fWM
 aib
 fWM
-xSe
-xSe
+rbN
+rbN
 fWM
 pPb
 pPb
@@ -118822,9 +118785,9 @@ pPb
 pPb
 pPb
 pPb
-xSe
-xvU
-xSe
+rbN
+haa
+rbN
 fWM
 aib
 aib
@@ -118832,8 +118795,8 @@ aib
 fWM
 fWM
 fWM
-xSe
-xSe
+rbN
+rbN
 fWM
 fWM
 pPb
@@ -119124,9 +119087,9 @@ pPb
 pPb
 pPb
 pPb
-xSe
-xvU
-xSe
+rbN
+haa
+rbN
 fWM
 fWM
 fWM
@@ -119134,9 +119097,9 @@ aib
 fWM
 fWM
 fWM
-xSe
-kHX
-kWW
+rbN
+tYV
+kXr
 fWM
 pPb
 pPb
@@ -119410,9 +119373,9 @@ pPb
 pPb
 pPb
 pPb
-kWW
+kXr
 fWM
-kWW
+kXr
 fWM
 fWM
 pPb
@@ -119427,8 +119390,8 @@ pPb
 pPb
 pPb
 pPb
-xSe
-vkO
+rbN
+jtD
 fWM
 fWM
 fWM
@@ -119436,15 +119399,15 @@ fWM
 aib
 fWM
 fWM
-xSe
-xSe
+rbN
+rbN
 fWM
 fWM
 pPb
 pPb
 pPb
 fWM
-kWW
+kXr
 fWM
 fWM
 pPb
@@ -119729,17 +119692,17 @@ pPb
 pPb
 pPb
 pPb
-xSe
-xSe
+rbN
+rbN
 fWM
 aib
 aib
 fWM
-kEG
+veg
 fWM
 fWM
-xSe
-xSe
+rbN
+rbN
 fWM
 fWM
 fWM
@@ -120031,12 +119994,12 @@ pPb
 pPb
 pPb
 pPb
-xSe
-xSe
+rbN
+rbN
 fWM
-kWW
+kXr
 aib
-kEG
+veg
 fWM
 fWM
 fWM
@@ -120279,19 +120242,19 @@ rjR
 rjR
 rjR
 fIr
-kXr
-kXr
-kXr
-kXr
+wfW
+wfW
+wfW
+wfW
 fIr
 rjR
 rjR
 rjR
 fIr
-kXr
-kXr
-kXr
-kXr
+wfW
+wfW
+wfW
+wfW
 fIr
 rjR
 rjR
@@ -120580,21 +120543,21 @@ rjR
 rjR
 rjR
 rjR
-kXr
-kXr
-kXr
-kXr
-kXr
-kXr
-kXr
-kXr
-kXr
-kXr
-kXr
-kXr
-kXr
-kXr
-kXr
+wfW
+wfW
+wfW
+wfW
+wfW
+wfW
+wfW
+wfW
+wfW
+wfW
+wfW
+wfW
+wfW
+wfW
+wfW
 rjR
 rjR
 rjR
@@ -120619,9 +120582,9 @@ rjR
 pPb
 pPb
 fWM
-kWW
+kXr
 fWM
-kWW
+kXr
 fWM
 pPb
 pPb
@@ -120642,7 +120605,7 @@ fWM
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
@@ -120650,10 +120613,10 @@ fWM
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
-kWW
+kXr
 fWM
 pPb
 pPb
@@ -120881,22 +120844,22 @@ rjR
 rjR
 rjR
 rjR
-kXr
-kXr
-kXr
-kXr
-kXr
-kXr
-kXr
-kXr
-kXr
-kXr
-kXr
-kXr
-kXr
-kXr
-kXr
-kXr
+wfW
+wfW
+wfW
+wfW
+wfW
+wfW
+wfW
+wfW
+wfW
+wfW
+wfW
+wfW
+wfW
+wfW
+wfW
+wfW
 rjR
 rjR
 rjR
@@ -120921,8 +120884,8 @@ rjR
 pPb
 pPb
 pPb
-kWW
-kWW
+kXr
+kXr
 fWM
 fWM
 fWM
@@ -120948,7 +120911,7 @@ fWM
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
@@ -121183,12 +121146,12 @@ rjR
 rjR
 rjR
 rjR
-kXr
-kXr
-kXr
-kXr
-kXr
-kXr
+wfW
+wfW
+wfW
+wfW
+wfW
+wfW
 dSD
 dSD
 dSD
@@ -121196,9 +121159,9 @@ dSD
 dSD
 dSD
 dSD
-kXr
-kXr
-kXr
+wfW
+wfW
+wfW
 rjR
 rjR
 rjR
@@ -121485,10 +121448,10 @@ rjR
 rjR
 rjR
 rjR
-kXr
-kXr
-kXr
-kXr
+wfW
+wfW
+wfW
+wfW
 dSD
 dSD
 dSD
@@ -121499,60 +121462,60 @@ dSD
 dSD
 dSD
 dSD
+wfW
+wfW
+wfW
+rjR
+rjR
+rjR
+rjR
+rjR
+rjR
+rjR
+rjR
+rjR
+rjR
+rjR
+rjR
+rjR
+rjR
+rjR
+rjR
+rjR
+rjR
+rjR
+rjR
+pPb
+pPb
+pPb
+fWM
+fWM
+fWM
+fWM
+fWM
+fWM
+pPb
+rjR
+rjR
+rjR
+rjR
+rjR
+rjR
+rjR
+rjR
+rjR
+rjR
+rjR
+pPb
+pPb
+pPb
+pPb
+pPb
+fWM
+fWM
+fWM
+fWM
 kXr
-kXr
-kXr
-rjR
-rjR
-rjR
-rjR
-rjR
-rjR
-rjR
-rjR
-rjR
-rjR
-rjR
-rjR
-rjR
-rjR
-rjR
-rjR
-rjR
-rjR
-rjR
-rjR
-pPb
-pPb
-pPb
-fWM
-fWM
-fWM
-fWM
-fWM
-fWM
-pPb
-rjR
-rjR
-rjR
-rjR
-rjR
-rjR
-rjR
-rjR
-rjR
-rjR
-rjR
-pPb
-pPb
-pPb
-pPb
-pPb
-fWM
-fWM
-fWM
-fWM
-kWW
 fWM
 fWM
 fWM
@@ -121802,10 +121765,10 @@ dSD
 dSD
 dSD
 dSD
-kXr
-kXr
-kXr
-kXr
+wfW
+wfW
+wfW
+wfW
 rjR
 rjR
 uJE
@@ -121830,7 +121793,7 @@ fWM
 fWM
 fWM
 fWM
-kWW
+kXr
 fWM
 fWM
 fWM
@@ -122155,7 +122118,7 @@ fIr
 esY
 esY
 esY
-tXX
+cFe
 esY
 esY
 esY
@@ -122436,7 +122399,7 @@ rnQ
 lYZ
 fWM
 fWM
-kWW
+kXr
 fWM
 fNH
 boe
