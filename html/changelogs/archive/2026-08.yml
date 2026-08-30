@@ -1468,3 +1468,6 @@
       just like the other platoons.
   - rscdel: Removes Defibrillator from medvendor. Irrelevant to the PVE build.
   - bugfix: Fixes PMC hAI corpsman not having a medscanner in it's loadout.
+2026-08-30:
+  Maxssliks:
+  - rscadd: Seegson Undershirt, Flipped version Seegson cap
