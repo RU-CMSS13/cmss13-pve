@@ -818,6 +818,10 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	path = /obj/item/clothing/suit/storage/jacket/marine/service
 	allowed_roles = list(JOB_SQUAD_LEADER, JOB_SO)
 
+/datum/gear/clothing/uscm/tanker_jacket
+	display_name = "USCM tanker jacket"
+	path = /obj/item/clothing/suit/storage/jacket/marine/service/tanker
+
 /datum/gear/clothing/uscm/aso_jacket
 	display_name = "USCM auxiliary support officer jacket"
 	path = /obj/item/clothing/suit/storage/jacket/marine/service/aso
