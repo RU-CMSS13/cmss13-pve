@@ -890,6 +890,17 @@
 	new /obj/item/tool/wirecutters(src)
 	new /obj/item/device/multitool(src)
 
+/obj/item/clothing/accessory/storage/tool_webbing/small/upp
+	hold = /obj/item/storage/internal/accessory/tool_webbing/small/upp
+
+/obj/item/storage/internal/accessory/tool_webbing/small/upp/fill_preset_inventory()
+	new /obj/item/tool/screwdriver/tactical(src)
+	new /obj/item/tool/wrench(src)
+	new /obj/item/tool/weldingtool(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/wirecutters/tactical(src)
+	new /obj/item/device/multitool/upp(src)
+
 /obj/item/clothing/accessory/storage/tool_webbing/equipped
 	hold = /obj/item/storage/internal/accessory/tool_webbing/equipped
 
