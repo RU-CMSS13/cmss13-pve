@@ -789,6 +789,12 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	display_name = "Windbreaker, Blue"
 	path = /obj/item/clothing/suit/storage/windbreaker/windbreaker_blue
 
+// raincoats
+
+/datum/gear/clothing/kellandmining_raincoat
+	display_name = "Kelland Mining raincoat"
+	path = /obj/item/clothing/suit/kellandmining_raincoat
+
 // webbings
 
 /datum/gear/clothing/utility_vest
