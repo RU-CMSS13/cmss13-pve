@@ -92,8 +92,8 @@
 /obj/item/clothing/suit/kellandmining_raincoat
 	name = "Kelland Mining raincoat"
 	desc ="A raincoat made by Weyland-Yutani's mining subsidiary, Kelland Mining. Issued to miners and overseers to protect against the harsh weather conditions of the colonies, the raincoat failed to gain popularity among the workers due to its low cost and lack of utility in harsh weather conditions. The tag on the inside of the jacket reads: Mining for Better Worlds." 
-	icon_state = "Kellandmining_raincoat"
-	item_state = "Kellandmining_raincoat"
+	icon_state = "kellandmining_raincoat"
+	item_state = "kellandmining_raincoat"
 
 /obj/item/clothing/suit/justice
 	name = "justice suit"
