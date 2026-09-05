@@ -1,0 +1,4 @@
+author: "chaos-creations"
+delete-after: True
+changes:
+  - rscadd: "Ability to open other people's worn storage items via strip menu."
