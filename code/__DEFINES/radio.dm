@@ -58,6 +58,7 @@
 #define RADIO_CHANNEL_UPP_KDO "UPP Kdo"
 #define RADIO_CHANNEL_UPP_GRD "UPP Guard"
 #define RADIO_CHANNEL_UPP_RCN "UPP Recon"
+#define RADIO_CHANNEL_UPP_VDV "UPP Airborne"
 //WY Comms
 #define RADIO_CHANNEL_WY "WY"
 #define RADIO_CHANNEL_PMC_GEN "WY PMC"

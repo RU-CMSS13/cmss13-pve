@@ -76,6 +76,17 @@
 	if(option == PVT_VARIANT)
 		gear_preset = gear_preset_secondary
 
+/datum/job/marine/standard/ai/upp/airborne
+	title = JOB_SQUAD_MARINE_UPP_AIRBORNE
+	gear_preset = /datum/equipment_preset/uscm/pfc/upp/airborne
+	gear_preset_secondary = /datum/equipment_preset/uscm/pfc/upp/airborne/private
+	job_options = list(PVT_VARIANT = "PVT", SR_PVT_VARIANT = "SrPVT")
+
+/datum/job/marine/standard/ai/upp/airborne/handle_job_options(option)
+	gear_preset = initial(gear_preset)
+	if(option == PVT_VARIANT)
+		gear_preset = gear_preset_secondary
+
 /datum/job/marine/standard/ai/forecon
 	title = JOB_SQUAD_MARINE_FORECON
 	total_positions = 2
@@ -115,6 +126,11 @@
 	name = JOB_SQUAD_MARINE_UPP
 	squad = SQUAD_UPP
 	job = /datum/job/marine/standard/ai/upp
+
+/obj/effect/landmark/start/marine/upp/airborne
+	name = JOB_SQUAD_MARINE_UPP_AIRBORNE
+	squad = SQUAD_UPP_AIRBORNE
+	job = /datum/job/marine/standard/ai/upp/airborne
 
 /datum/job/marine/standard/ai/upp/rto
 	title = JOB_SQUAD_UPP_RTO

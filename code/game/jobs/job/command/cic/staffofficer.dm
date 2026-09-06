@@ -87,6 +87,16 @@ OverrideTimelock(/datum/job/command/bridge, list(
 	if(option == JR_LT_VARIANT)
 		gear_preset = gear_preset_secondary
 
+/datum/job/command/bridge/ai/upp/airborne
+	title = JOB_SO_UPP_AIRBORNE
+	gear_preset = /datum/equipment_preset/uscm_ship/so/upp/airborne
+	job_options = list(JR_LT_VARIANT = "JrLT")
+
+/obj/effect/landmark/start/bridge/upp/airborne
+	name = JOB_SO_UPP_AIRBORNE
+	icon_state = "so_spawn"
+	job = /datum/job/command/bridge/ai/upp/airborne
+
 /obj/effect/landmark/start/bridge/upp
 	name = JOB_SO_UPP
 	icon_state = "so_spawn"
