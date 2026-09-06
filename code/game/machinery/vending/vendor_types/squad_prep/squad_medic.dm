@@ -304,11 +304,11 @@ GLOBAL_LIST_INIT(cm_vending_clothing_pmc_medic, list(
 		list("Red Cross On Black Paint", 0, /obj/item/clothing/accessory/paint/medic/wy/black, MARINE_CAN_BUY_PAINT, VENDOR_ITEM_RECOMMENDED),
 
 		list("BELT", 0, null, null, null),
-		list("M276 Lifesaver Bag (Full)", 0, /obj/item/storage/belt/medical/lifesaver/wy/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("WY-TM625 pattern medical bag (Full)", 0, /obj/item/storage/belt/medical/lifesaver/wy/full/low_threat, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
 
 		list("POUCHES (CHOOSE 2)", 0, null, null, null),
-		list("Autoinjector Pouch (Full)", 0, /obj/item/storage/pouch/autoinjector/full/wy, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
-		list("Medical Kit Pouch (Full)", 0, /obj/item/storage/pouch/medkit/wy/full_advanced, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Autoinjector Pouch", 0, /obj/item/storage/pouch/autoinjector/wy, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Medical Kit Pouch", 0, /obj/item/storage/pouch/medkit/wy, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("Pressurized Reagent Canister Pouch (Bicaridine)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/bicaridine, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("Pressurized Reagent Canister Pouch (Kelotane)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/kelotane, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("Pressurized Reagent Canister Pouch (Tricordrazine)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/tricordrazine, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
@@ -396,6 +396,9 @@ GLOBAL_LIST_INIT(cm_vending_chemical_medic, list(
 
 		list("INJECTORS", 0, null, null, null),
 		list("Smart Refill Tank", 40, /obj/item/reagent_container/glass/minitank, null, VENDOR_ITEM_REGULAR),
+
+		list("MEDICAL UTILITIES", 0, null, null, null),
+		list("Portable Dialys", 20, /obj/item/tool/portadialysis, null, VENDOR_ITEM_REGULAR),
 	))
 
 /obj/structure/machinery/cm_vending/gear/medic_chemical

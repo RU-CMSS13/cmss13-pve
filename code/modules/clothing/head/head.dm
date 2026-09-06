@@ -453,6 +453,16 @@
 	icon_state = "cc_flagcap"
 	item_state = "cc_flagcap"
 
+/obj/item/clothing/head/cmcap/wy_cap
+	name = "\improper Weyland-Yutani black cap"
+	desc = "A dark cap enscribed with the Weyland-Yutani 'Wings' logo, representing corporate justice."
+	icon = 'icons/obj/items/clothing/hats/hats_by_faction/WY.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/WY.dmi'
+	)
+	icon_state = "newcorpo_cap"
+	item_state = "newcorpo_cap"
+
 /obj/item/clothing/head/cmcap/weyyu
 	name = "\improper Weyland-Yutani cap"
 	desc = "An offwhite cap worn by Weyland-Yutani security personnel."
@@ -489,6 +499,15 @@
 	desc = "A dark blue utility cap."
 	icon_state = "corrections"
 	item_state = "corrections"
+
+/obj/item/clothing/head/cmcap/seegsoncap
+	name = "Seegson Cap"
+	desc = "A Seegson worker's cap looks old and worn. Issued to workers at stations and some colonies, it looks stylish, but doesn't protect the head while working. The tag on the back reads: Seegson in pursuit of affordable quality. Some workers say the company's androids Working Joe themselves used to wear this cap, but the company abandoned it due to both the idea and the extra expense."
+	icon_state = "seegson_cap"
+	icon = 'icons/obj/items/clothing/hats.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/head_0.dmi'
+)
 
 //============================//BERETS\\=================================\\
 //=======================================================================\\

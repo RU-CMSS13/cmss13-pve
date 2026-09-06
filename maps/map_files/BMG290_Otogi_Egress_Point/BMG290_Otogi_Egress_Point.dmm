@@ -22342,7 +22342,7 @@
 	pixel_x = 10;
 	pixel_y = -5
 	},
-/obj/item/clothing/gloves/blue{
+/obj/item/clothing/gloves/delta{
 	pixel_x = 3;
 	pixel_y = -2
 	},

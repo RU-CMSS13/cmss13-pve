@@ -1913,7 +1913,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "upp_helmet_heavy"
 	armor_melee = CLOTHING_ARMOR_HIGH
 	armor_bullet = CLOTHING_ARMOR_VERYHIGH
-	armor_bomb = CLOTHING_ARMOR_ULTRAHIGH
+	armor_bomb = CLOTHING_ARMOR_ULTRAHIGHPLUS
 	armor_bio = CLOTHING_ARMOR_HIGH
 	armor_rad = CLOTHING_ARMOR_HIGHPLUS
 	armor_internaldamage = CLOTHING_ARMOR_VERYHIGH
@@ -1938,6 +1938,14 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 	specialty = "6B84 helmet"
 	max_inserted_visors = 2
+
+/obj/item/clothing/head/helmet/upp/frogmen/leader
+	name = "\improper 6B84-K light helmet"
+	desc = "Command variant of the 6B84, distinguished by an extra tactical relay wired into the standard datalink. Issued to squad leaders so they can keep their team and command net separate without swapping headsets mid-op."
+	icon_state = "upp_helmet_frogmen"
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
+	specialty = "6B84-K helmet"
 
 /obj/item/clothing/head/helmet/marine/veteran/van_bandolier
 	name = "pith helmet"

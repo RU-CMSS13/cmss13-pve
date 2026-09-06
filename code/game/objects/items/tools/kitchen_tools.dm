@@ -150,6 +150,7 @@
 
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	flags_human_ai = MELEE_WEAPON_ITEM | TOOL_ITEM
+	inherent_traits = list(TRAIT_TOOL_CAN_OPENER_CRUDE)
 
 /*
  * Plastic Pizza Cutter
@@ -299,6 +300,7 @@
 	edge = 1
 	force = MELEE_FORCE_TIER_2
 	attack_verb = list("pinched", "nipped", "cut")
+	inherent_traits = list(TRAIT_TOOL_CAN_OPENER_EFFECTIVE)
 
 /obj/item/tool/kitchen/can_opener/compact
 	name = "folding can opener"

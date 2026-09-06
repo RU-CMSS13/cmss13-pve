@@ -286,7 +286,7 @@
 		WEAR_IN_BACK = /obj/item/storage/bag/trash,
 		WEAR_JACKET = /obj/item/clothing/suit/storage/hazardvest,
 		WEAR_IN_JACKET = /obj/item/reagent_container/spray/cleaner,
-		WEAR_HANDS = /obj/item/clothing/gloves/purple,
+		WEAR_HANDS = /obj/item/clothing/gloves/charlie,
 		WEAR_R_HAND = /obj/item/tool/mop,
 		WEAR_R_STORE = /obj/item/storage/pouch/tools/full,
 		WEAR_FEET = /obj/item/clothing/shoes/galoshes
@@ -568,6 +568,8 @@
 /datum/equipment_preset/synth/working_joe/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = null
 	new_human.underwear = null
+	if(prob(30)) // kepochka seegsonside
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/seegsoncap(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/synthetic/joe(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET) //don't remove shrap by yourself, go to android maintenance or have ARES call a human handler!
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
