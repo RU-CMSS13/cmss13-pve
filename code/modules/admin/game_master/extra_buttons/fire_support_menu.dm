@@ -9,6 +9,7 @@
 #define MISC_ORDNANCE list("Laser", "Minirocket", "Incendiary Minirocket",  "Sentry Drop", "25mm Multipurpose Strike", "25mm Armorpiercing Strike")
 #define THROWABLES_ORDNANCE list("HE", "HE - UPP", "HE - RMC", "Frag", "Incendiary", "Molotov", "Incendiary - RMC", "Smoke - White", "Smoke - Green", "Smoke - Red", "Smoke - UPP", "WP", "WP - UPP", "Ball-Breakers", "Nerve Gas", "LSD", "Tear Gas", "Cryogenic Neon", "Metal Foam", "Flare", "Flare - UPP", "Flare - Signal")
 #define FLYBY_ORDNANCE list("Cheyenne Flyby", "Cheyenne Hover", "Krokodil Flyby", "Krokodil Hover")
+#define XENO_ORDNANCE list("Boiler Acid Glob", "Boiler Nerve Glob", "Boiler Fire Glob")
 
 /client/proc/toggle_fire_support_menu()
 	set name = "Fire Support Menu"
@@ -66,6 +67,7 @@
 	data["misc_ordnance_options"] = MISC_ORDNANCE
 	data["throwables_ordnance_options"] = THROWABLES_ORDNANCE
 	data["flyby_ordnance_options"] = FLYBY_ORDNANCE
+	data["xeno_ordnance_options"] = XENO_ORDNANCE
 
 	return data
 
@@ -496,6 +498,30 @@
 
 				return TRUE
 
+			if("Boiler Acid Glob")
+				var/obj/effect/overlay/temp/acid_glob/glob = new(target_turf)
+				var/obj/item/explosive/grenade/nerve_gas/glob/ammo = new (target_turf)
+				ammo.activate()
+
+				QDEL_IN(glob, 5 SECONDS)  //to stop "unused var" warnings
+
+				return TRUE
+
+			if("Boiler Nerve Glob")
+				var/obj/effect/overlay/temp/neuro_glob/glob = new(target_turf)
+				var/obj/item/explosive/grenade/nerve_gas/glob/nerve_glob/ammo = new (target_turf)
+				ammo.activate()
+
+				QDEL_IN(glob, 5 SECONDS)  //to stop "unused var" warnings
+
+				return TRUE
+
+			if("Boiler Fire Glob")
+				var/obj/item/explosive/grenade/nerve_gas/glob/fire_glob/ammo = new (target_turf)
+				ammo.activate()
+
+				return TRUE
+
 			else
 				to_chat(user, SPAN_ANNOUNCEMENT_HEADER_ADMIN("Invalid ordnance selection! If this appears, yell at a coder!"))
 				return TRUE
@@ -536,4 +562,5 @@
 #undef CHEMICAL_ORDNANCE
 #undef THROWABLES_ORDNANCE
 #undef FLYBY_ORDNANCE
+#undef XENO_ORDNANCE
 #undef FIRE_SUPPORT_CLICK_INTERCEPT_ACTION

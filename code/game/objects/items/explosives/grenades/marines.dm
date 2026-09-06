@@ -1506,3 +1506,44 @@
 	item_state = "grenade_training"
 	caliber = "20mm"
 	explosion_power = 160
+
+/*
+//================================================
+			Boiler Glob "Grenades"
+//================================================
+*/
+
+/obj/item/explosive/grenade/nerve_gas/glob
+	name = "\improper Boiler acid glob"
+	desc = "Wow, something big is flying here!"
+	icon_state = "glob_greyscale"//temp icon
+	color = "#86B028"
+
+	caliber = "non-standard"
+	underslug_launchable = FALSE
+	harmful = TRUE
+	antigrief_protection = TRUE
+
+	anchored = TRUE
+	det_time = 50
+	arm_sound = 'sound/effects/blobattack.ogg'
+
+	nerve_gas_type = /datum/effect_system/smoke_spread/xeno_acid
+	nerve_gas_radius = 4
+	spent_case = null
+
+/obj/item/explosive/grenade/nerve_gas/glob/prime()
+	playsound(src.loc, "acid_sizzle", 25, 1, 4)
+	nerve_gas.set_up(nerve_gas_radius, 0, get_turf(src), null, 20)
+	nerve_gas.start()
+	qdel(src)
+
+/obj/item/explosive/grenade/nerve_gas/glob/nerve_glob
+	name = "\improper Boiler nerve glob"
+	color = "#ffbf58"
+	nerve_gas_type = /datum/effect_system/smoke_spread/xeno_weaken
+
+/obj/item/explosive/grenade/nerve_gas/glob/fire_glob
+	name = "\improper Boiler fire glob"
+	color = "#b33e1e"
+	nerve_gas_type = /datum/effect_system/smoke_spread/xeno_extinguish_fire
