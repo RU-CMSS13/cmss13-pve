@@ -1036,6 +1036,33 @@
 		/obj/item/weapon/gun/smartgun/rmc,
 	)
 
+/obj/item/clothing/suit/marine/veteran/royal_marine/iasf
+	name = "\improper Condor armoured airborne vest"
+	desc = "A current standard Imperial Armed Space Force's protective gear, modified on the basis of RMC issue Kestrel Personal Armor designed by Weyland-Yutani subsidary, Lindenthal-Ehrenfeld Militärindustrie. Advanced composite ballistic armor of the latest generation, and brackets for a load carrying system as well as the TNR Shoulder Lamp. Some of the previous plating was removed due to the requirement of airborne deployment compability, alongside the general cost reduction."
+	icon_state = "iasf_standard"
+	item_state = "iasf_standard"
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+
+/obj/item/clothing/suit/marine/veteran/royal_marine/iasf/heavy/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/twepads/shoulders = new()
+	src.attach_accessory(null, shoulders, TRUE)
+	var/obj/item/clothing/accessory/twepads/legs/greaves = new()
+	src.attach_accessory(null, greaves, TRUE)
+
+/obj/item/clothing/suit/marine/veteran/royal_marine/iasf/light
+	name = "Goshawk airborne vest"
+	desc = "A lightweight, high-mobility flak vest designed for the Imperial Armed Space Force’s airborne troops. Developed by Alphatech, the Goshawk offers crucial protection while ensuring paratroopers retain full freedom of movement during high-risk insertions. Advanced composite plating and reinforced webbing make it effective against shrapnel and small-arms fire, striking the perfect balance between defense and agility for those who strike fast and strike hard."
+	icon_state = "iasf_light"
+	item_state = "iasf_light"
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_LOW
+	slowdown = SLOWDOWN_ARMOR_LIGHT
+
 /obj/item/clothing/suit/marine/veteran/royal_marine/leader
 	name = "\improper Kestrel command cuirass"
 	desc = "Standard RMC issue Kestrel Personal Armor designed by Weyland-Yutani subsidary. Advanced composite ballistic protection, biomonitoring system, LCS brackets. This variant carries a command relay for monitoring squad vitals."
@@ -1510,12 +1537,13 @@
 	item_state = "iasf_light"
 	storage_slots = 3
 
-	armor_melee = CLOTHING_ARMOR_MEDIUMLOW // Goon stats
-	armor_bullet = CLOTHING_ARMOR_MEDIUM
-	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	armor_rad = CLOTHING_ARMOR_MEDIUM
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_LOW
+	slowdown = SLOWDOWN_ARMOR_LIGHT
 
 	flags_armor_protection = (BODY_FLAG_CHEST)
 	flags_cold_protection = (BODY_FLAG_CHEST)
