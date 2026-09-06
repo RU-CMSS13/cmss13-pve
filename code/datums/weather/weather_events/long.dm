@@ -46,3 +46,11 @@
 /datum/weather_event/blizzard/infinite
 	name = "Blizzard (Infinite)"
 	length = INFINITY
+
+/datum/weather_event/monsoon/infinite/fog
+	name = "Fog (Infinite)"
+	length = INFINITY
+	display_name = "Fog"
+	turf_overlay_icon_state = "fog"
+	ambience = null
+	turf_overlay_alpha = 200
