@@ -42,8 +42,6 @@
 #define MAP_LV759_HYBRISA_PROSPERA_REPAIRED "LV-759 Hybrisa Prospera Repaired"
 #define MAP_NEW_VARADERO "New Varadero"//ice colony underground but as its own map
 #define MAP_NEW_VARADERO_REPAIRED "New Varadero Repaired"
-#define MAP_TYRARGO_RIFT "Tyrargo Rift"
-#define MAP_WHITE_ANTRE_RESEARCH_FACILITY "White Antre Research Facility"
 #define MAP_CONAM_81_ABYSSAL "Con-Am 81 'Abyssal'"
 #define MAP_CAPE_RIVER "Cape River Mining Colony"
 #define MAP_CHINOOK "Chinook 91 GSO" //admin level
@@ -61,9 +59,6 @@
 #define MAP_BOSENMORI_BASHO "Bosenmori Basho"
 #define MAP_REDEMPTION_VALLEY "Redemption Valley" //valley with a military outpost and agricultural hamlet
 #define MAP_BINHAI_SUPPLY_STATION "Binhai Supply Station" //UPP asteroid base
-
-#define MAP_NAVALIS "Navalis Platform 13"//multiz version
-#define MAP_NAVALIS_SINGLE "Navalis Platform 13 (singlez)" //singlez version
 
 #define GAMEMODE_WHISKEY_OUTPOST "Whiskey Outpost"
 #define GAMEMODE_HIVE_WARS "Hive Wars"
