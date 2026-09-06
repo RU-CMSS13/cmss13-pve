@@ -2374,3 +2374,56 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "sec_helmet"
 	item_state = "sec_helmet"
 	flags_inv_hide = HIDETOPHAIR
+
+//===========================//FREELANCER - ELITE\\================================\\
+//=====================================================================\\
+
+/obj/item/clothing/head/helmet/marine/veteran/freelancer/elite
+	name = "\improper Y12 ceramic helmet"
+	desc = "A rugged helmet and facemask. Extremely protective and uses prototype ceramic plates in its construction. Armor like this is made to-order for elite freelancers."
+	icon_state = "freelancecell_helmet"
+	icon = 'icons/obj/items/clothing/hats/hats_by_faction/FREELANCER.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/FREELANCER.dmi'
+	)
+	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_HIGH
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+	flags_marine_helmet = HELMET_DAMAGE_OVERLAY
+	clothing_traits = list(TRAIT_EAR_PROTECTION)
+	built_in_visors = list(new /obj/item/device/helmet_visor/pmc)
+
+/obj/item/clothing/head/helmet/marine/veteran/freelancer/elite/heavy
+	name = "\improper K16 juggernaut helmet"
+	desc = "An exceptionally heavy helmet and facemask. Made almost entirely out of prototype ceramic plates, which gives it almost impossible strength and resistance. Armor like this is even rarer than normal freelancer gear, and it's only used by their most elite members."
+	icon_state = "freelancecell_helmet_heavy"
+	icon = 'icons/obj/items/clothing/hats/hats_by_faction/FREELANCER.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/FREELANCER.dmi'
+	)
+	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bomb = CLOTHING_ARMOR_HIGH
+
+/obj/item/clothing/head/helmet/marine/veteran/freelancer/elite/beret
+	name = "\improper Z14 beret"
+	desc = "A rugged helmet and armored beret rig. Extremely protective and uses prototype ceramic plates in its construction. Armor like this is favored by elite freelancers."
+	icon_state = "freelancecell_beret"
+	icon = 'icons/obj/items/clothing/hats/hats_by_faction/FREELANCER.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/FREELANCER.dmi'
+	)
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
+	armor_laser = CLOTHING_ARMOR_LOW
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_LOW
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+	armor_rad = CLOTHING_ARMOR_MEDIUMLOW
+	armor_internaldamage = CLOTHING_ARMOR_LOW
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK
+	built_in_visors = list(new /obj/item/device/helmet_visor/medical)

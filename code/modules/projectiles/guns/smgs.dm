@@ -199,6 +199,9 @@
 	random_spawn_chance = 0
 	fire_sound = 'sound/weapons/gun_m39.ogg'
 
+/obj/item/weapon/gun/smg/m39/elite/pve/freelancer
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
+
 /obj/item/weapon/gun/smg/m39/elite/compact
 	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible, /obj/item/attachable/suppressor, /obj/item/attachable/reflex, /obj/item/attachable/lasersight)
 	current_mag = /obj/item/ammo_magazine/smg/m39/ap
