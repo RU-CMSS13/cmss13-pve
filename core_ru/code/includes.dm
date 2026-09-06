@@ -8,3 +8,8 @@
 #include "pixel_shifting\pixel_shifting.dm"
 #include "pixel_shifting\pixel_shifting_items.dm"
 #include "pixel_shifting\layer_shifting.dm"
+// music panel
+#include "music_panel\admin_music_models.dm"
+#include "music_panel\admin_music_preset_library.dm"
+#include "music_panel\admin_music_service.dm"
+#include "music_panel\admin_music_panel.dm"
