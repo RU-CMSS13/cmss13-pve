@@ -4,9 +4,11 @@
 	tag_icon = "usa_colony" // RU PVE ADDITION
 
 /datum/origin/wy/security
+	name = ORIGIN_WY_SEC
 	desc = "You served as corporate security, protecting Weyland-Yutani personnel, facilities, and valuable assets. Following Company protocol was simply part of the job."
 	tag_icon = "usa_colony" // RU PVE ADDITION
 
 /datum/origin/wy/security/pmc
+	name = ORIGIN_WY_PMC
 	desc = "You served as a Weyland-Yutani Private Military Contractor, an elite operative entrusted with protecting Company assets and carrying out high-risk missions where official involvement was best left unspoken."
 	tag_icon = "usa_colony" // RU PVE ADDITION
