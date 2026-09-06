@@ -153,30 +153,30 @@
 	desc = "UPP military doctor, unarmed but still a member of the military"
 	path = /datum/equipment_preset/upp/mildoctor
 
-/datum/human_ai_equipment_preset/upp/sof
-	name = "UPP - SOF Rifleman"
-	desc = "UPP Space Operating Force. These guys are equipped with CCC5-L Compression suits, and armed with AK-4047 and Type-73. Main force."
-	path = /datum/equipment_preset/upp/sof
+/datum/human_ai_equipment_preset/upp/rifleman_eva_comp
+	name = "UPP Squad Rifleman - Compression EVA"
+	desc = "The standard UPP soldier. These guys are equipped well enough to fight most forces. Compression EVA equipped"
+	path = /datum/equipment_preset/upp/rifleman/eva_comp
 
-/datum/human_ai_equipment_preset/upp/sof_sapper
-	name = "UPP - SOF Sapper"
-	desc = "UPP Space Operating Force. These guys are equipped with CCC5-L Compression suits, and armed with AK-4047. Engineering force."
-	path = /datum/equipment_preset/upp/sof/sapper
+/datum/human_ai_equipment_preset/upp/breacher_eva_comp
+	name = "UPP Squad Breacher - Compression EVA"
+	desc = "The standard UPP soldier, given a heavier armor and close quarters weapon. Will sign an autograph on your corpse with buckshots and breaching shrapnel. Compression EVA equipped"
+	path = /datum/equipment_preset/upp/rifleman/eva_comp/breacher
 
-/datum/human_ai_equipment_preset/upp/sof_medic
-	name = "UPP - SOF Medic"
-	desc = "UPP Space Operating Force. These guys are equipped with CCC5-L Compression suits, and armed with AK-4047. Medical support."
-	path = /datum/equipment_preset/upp/sof/medic
+/datum/human_ai_equipment_preset/upp/sapper_eva_comp
+	name = "UPP Squad Sapper - Compression EVA"
+	desc = "The technical and fortifying specialist, standard equipment with some engineering tools and materials. Compression EVA equipped"
+	path = /datum/equipment_preset/upp/sapper/eva_comp
 
-/datum/human_ai_equipment_preset/upp/sof_breacher
-	name = "UPP - SOF Breacher"
-	desc = "UPP Space Operating Force. These guys are equipped with CCC5-L Compression suits, and armed with KS-29/4 on buckshots and slugs, and Type-73. Assault force, and very deadly at close quarters."
-	path = /datum/equipment_preset/upp/sof/breacher
+/datum/human_ai_equipment_preset/upp/sanitar_eva_comp
+	name = "UPP Squad Sanitar - Compression EVA"
+	desc = "The guy who tries to keep the rest of the team alive. Comes equipped with medical supplies, though they don’t always live long enough to do treatment. Compression EVA equipped"
+	path = /datum/equipment_preset/upp/sanitar/eva_comp
 
-/datum/human_ai_equipment_preset/upp/sof_squadlead
-	name = "UPP - SOF Squad Sergeant"
-	desc = "UPP Space Operating Force. These guys are equipped with CCC5-L Compression suits, and armed with AK-4047 and ZhNK-72. Red beret, commanding other units."
-	path = /datum/equipment_preset/upp/sof/squadlead
+/datum/human_ai_equipment_preset/upp/squadlead_eva_comp
+	name = "UPP Squad Sergeant - Compression EVA"
+	desc = "The leader of a UPP squad. Functionally very similar to squad riflemen."
+	path = /datum/equipment_preset/upp/squadlead/eva_comp
 
 //Colonists
 

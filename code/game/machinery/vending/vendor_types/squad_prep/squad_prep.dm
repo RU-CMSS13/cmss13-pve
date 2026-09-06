@@ -456,13 +456,12 @@
 		list("BELTS", -1, null, null),
 		list("WY-TM402 Pattern Ammo Load Rig", round(scale * 15), /obj/item/storage/belt/marine/wy, VENDOR_ITEM_REGULAR),
 		list("M276 Pattern M40 Grenade Rig", round(scale * 10), /obj/item/storage/belt/grenade, VENDOR_ITEM_REGULAR),
-		list("WY-TM406 pattern Shotgun Shell Rig", round(scale * 10), /obj/item/storage/belt/shotgun/wy, VENDOR_ITEM_REGULAR),
 		list("WY-TM892 Pattern General Pistol Holster Rig", round(scale * 15), /obj/item/storage/belt/gun/m4a3/wy, VENDOR_ITEM_REGULAR),
 		list("M276 Pattern M82F Holster Rig", round(scale * 5), /obj/item/storage/belt/gun/flaregun, VENDOR_ITEM_REGULAR),
 		list("WY-TM612 General Utility Pouch", round(scale * 15), /obj/item/storage/backpack/general_belt/wy, VENDOR_ITEM_REGULAR),
 
 		list("POUCHES", -1, null, null, null),
-		list("First-Aid Pouch", floor(scale * 15), /obj/item/storage/pouch/firstaid/wy_pve, VENDOR_ITEM_REGULAR),
+		list("First-Aid Pouch", floor(scale * 15), /obj/item/storage/pouch/firstaid/wy, VENDOR_ITEM_REGULAR),
 		list("Flare Pouch (Full)", floor(scale * 15), /obj/item/storage/pouch/flare/full, VENDOR_ITEM_REGULAR),
 		list("Magazine Pouch", floor(scale * 15), /obj/item/storage/pouch/magazine/wy, VENDOR_ITEM_REGULAR),
 		list("Medium General Pouch", floor(scale * 15), /obj/item/storage/pouch/general/medium/wy, VENDOR_ITEM_REGULAR),
@@ -472,9 +471,8 @@
 		list("RESTRICTED POUCHES", -1, null, null, null),
 		list("Construction Pouch", 1.25, /obj/item/storage/pouch/construction/wy, VENDOR_ITEM_REGULAR),
 		list("Explosive Pouch", 1.25, /obj/item/storage/pouch/explosive, VENDOR_ITEM_REGULAR),
-		list("Large Magazine Pouch", floor(scale * 2), /obj/item/storage/pouch/magazine/large/wy, VENDOR_ITEM_REGULAR),
 		list("Large Pistol Magazine Pouch", floor(scale * 2), /obj/item/storage/pouch/magazine/pistol/large, VENDOR_ITEM_REGULAR),
-		list("Tools Pouch", 1.25, /obj/item/storage/pouch/tools/tactical, VENDOR_ITEM_REGULAR),
+		list("Tools Pouch", 1.25, /obj/item/storage/pouch/tools/black, VENDOR_ITEM_REGULAR),
 		list("Sling Pouch", 1.25, /obj/item/storage/pouch/sling, VENDOR_ITEM_REGULAR),
 		list("Shotgun Shell Pouch", 1.25, /obj/item/storage/pouch/shotgun/wy, VENDOR_ITEM_REGULAR),
 		list("Incinerator Fuel Tank Pouch", 1.25, /obj/item/storage/pouch/flamertank, VENDOR_ITEM_REGULAR),
@@ -631,6 +629,7 @@
 		list("M3-R Pattern Shotgun Shell Webbing", 2, /obj/item/clothing/accessory/storage/webbing/m3/recon/shotgun, VENDOR_ITEM_REGULAR),
 		list("M3-R Pattern M40 Webbing", 2, /obj/item/clothing/accessory/storage/webbing/m3/recon/m40, VENDOR_ITEM_REGULAR),
 		list("Drop Pouch", 3, /obj/item/clothing/accessory/storage/droppouch, VENDOR_ITEM_REGULAR),
+		list("Leg Pouch", 3, /obj/item/clothing/accessory/storage/smallpouch, VENDOR_ITEM_REGULAR),
 		list("Shoulder Holster", round(max(1,(scale * 0.5))), /obj/item/clothing/accessory/storage/holster, VENDOR_ITEM_REGULAR),
 
 		list("ARMOR", -1, null, null),
@@ -903,7 +902,6 @@
 		list("SIDEARMS", -1, null, null),
 		list("VP70 Combat Pistol", round(scale * 2), /obj/item/weapon/gun/pistol/vp70/unloaded, VENDOR_ITEM_REGULAR),
 		list("M4A3 Service Pistol", round(scale * 2), /obj/item/weapon/gun/pistol/m4a3/unloaded, VENDOR_ITEM_REGULAR),
-		list("M44 Combat Revolver", round(scale *1), /obj/item/weapon/gun/revolver/m44, VENDOR_ITEM_REGULAR),
 		list("M82F Flare Gun", round(scale * 1), /obj/item/weapon/gun/flare, VENDOR_ITEM_REGULAR),
 
 		list("MISCELLANEOUS", -1, null, null),
@@ -917,7 +915,6 @@
 		list("Rail Flashlight", round(scale * 5), /obj/item/attachable/flashlight, VENDOR_ITEM_REGULAR),
 		list("Two-point Sling", round(scale * 5), /obj/item/attachable/sling, VENDOR_ITEM_REGULAR),
 		list("M13 Fighting Knife", round(scale * 25), /obj/item/weapon/knife/marine, VENDOR_ITEM_REGULAR),
-		list("M5 Bayonet", round(scale * 5), /obj/item/attachable/bayonet, VENDOR_ITEM_REGULAR),
 		)
 
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/upp
@@ -968,7 +965,6 @@
 		list("SIDEARMS", -1, null, null),
 		list("NP92 Standard Pistol", round(scale * 2), /obj/item/weapon/gun/pistol/np92/unloaded, VENDOR_ITEM_REGULAR),
 		list("Type 73 Service Pistol", round(scale * 2), /obj/item/weapon/gun/pistol/t73/unloaded, VENDOR_ITEM_REGULAR),
-		list("ZHNK-72 Revolver", round(scale * 1), /obj/item/weapon/gun/revolver/upp, VENDOR_ITEM_REGULAR),
 		list("M82F Flare Gun", round(scale * 3), /obj/item/weapon/gun/flare, VENDOR_ITEM_REGULAR),
 
 		list("MISCELLANEOUS", -1, null, null),
@@ -1084,7 +1080,6 @@
 		list("VP70 Magazine (9mm)", round(scale * 20), /obj/item/ammo_magazine/pistol/vp70, VENDOR_ITEM_REGULAR),
 		list("M44 Speedloader (.44)", round(scale * 20), /obj/item/ammo_magazine/revolver, VENDOR_ITEM_REGULAR),
 		list("M4A3 Magazine (9mm)", round(scale * 20), /obj/item/ammo_magazine/pistol, VENDOR_ITEM_REGULAR),
-		list("M44 Combat Revolver", round(scale *1), /obj/item/ammo_magazine/revolver, VENDOR_ITEM_REGULAR),
 		list("VP78 magazine (9mm)", round(scale * 20), /obj/item/ammo_magazine/pistol/vp78, VENDOR_ITEM_REGULAR),
 
 		list("MISCELLANEOUS", -1, null, null),
@@ -1097,7 +1092,6 @@
 		list("Rail Flashlight", round(scale * 5), /obj/item/attachable/flashlight, VENDOR_ITEM_REGULAR),
 		list("Two-point Sling", round(scale * 5), /obj/item/attachable/sling, VENDOR_ITEM_REGULAR),
 		list("M13 Fighting Knife", round(scale * 5), /obj/item/weapon/knife/marine, VENDOR_ITEM_REGULAR),
-		list("M5 Bayonet", round(scale * 5), /obj/item/attachable/bayonet, VENDOR_ITEM_REGULAR),
 		)
 
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/pmc
