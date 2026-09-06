@@ -3129,6 +3129,13 @@
 	pixel_x = -8;
 	pixel_y = 31
 	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/cm_vending/clothing/leader/rmc{
+	pixel_y = 17;
+	density = 0
+	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury)
 "gj" = (
@@ -3194,7 +3201,14 @@
 /obj/structure/closet/secure_closet/rmc_section_leader{
 	pixel_y = 15;
 	pixel_x = -8;
-	can_block_movement = 0
+	density = 0
+	},
+/obj/structure/closet/secure_closet/rmc_section_leader{
+	pixel_y = 15;
+	pixel_x = 9;
+	name = "section 2IC locker";
+	req_access = list(306,298);
+	density = 0
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury)
@@ -3274,6 +3288,22 @@
 	},
 /turf/open/space/basic,
 /area/space)
+"gx" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/closet/secure_closet/rmc_section_leader{
+	pixel_y = -15;
+	pixel_x = -8;
+	name = "section 2IC locker";
+	req_access = list(306,298);
+	can_block_movement = 0
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/prison/bright_clean,
+/area/hms_brynhild/armoury)
 "gy" = (
 /turf/open/floor/almayer/empty/golden_arrow,
 /area/hms_brynhild/cargo_shuttle/upper)
@@ -11179,19 +11209,6 @@
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/prep_hallway)
-"wr" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/closet/secure_closet/rmc_section_leader{
-	pixel_y = -15;
-	pixel_x = -8;
-	name = "section 2IC locker";
-	req_access = list(306,298);
-	can_block_movement = 0
-	},
-/turf/open/floor/prison/bright_clean,
-/area/hms_brynhild/armoury)
 "wt" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -28615,7 +28632,7 @@ WY
 ZF
 sw
 gi
-wr
+gx
 sw
 sw
 sw

@@ -245,6 +245,7 @@
 		/obj/item/reagent_container/glass/minitank,
 		/obj/item/storage/surgical_case,
 		/obj/item/reagent_container/blood,
+		/obj/item/tool/portadialysis,
 	)
 
 /obj/item/storage/belt/medical/only_scanner/fill_preset_inventory()
@@ -1462,7 +1463,7 @@
 	max_w_class = SIZE_MEDIUM
 	storage_flags = STORAGE_FLAGS_POUCH|STORAGE_ALLOW_QUICKDRAW
 	///Array of holster slots and stats to use for them. First layer is "1", "2" etc. Guns are stored in both the slot and the holstered_guns list which keeps track of which was last inserted.
-	var/list/list/obj/item/weapon/gun/holster_slots = list( // RU-PVE EDIT
+	var/list/list/obj/item/weapon/gun/holster_slots = list(
 		"1" = list(
 			"gun" = null,
 			"underlay_sprite" = null,

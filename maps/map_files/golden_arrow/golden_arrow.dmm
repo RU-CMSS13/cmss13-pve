@@ -14666,7 +14666,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/cm_vending/clothing/leaderplatoon,
+/obj/structure/machinery/cm_vending/clothing/leader/uscm,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
 "aVP" = (
@@ -19365,6 +19365,10 @@
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
+	},
+/obj/item/clothing/head/cmcap/seegsoncap{
+	pixel_x = -1;
+	pixel_y = 16
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)

@@ -360,6 +360,10 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	display_name = "Beret, tan"
 	path = /obj/item/clothing/head/beret/cm/tan
 
+/datum/gear/headwear/seegson_cap
+	display_name = "Seegson cap"
+	path = /obj/item/clothing/head/cmcap/seegsoncap
+
 /datum/gear/headwear/fisherman_boonie
 	display_name = "Fisherman's boonie hat"
 	path = /obj/item/clothing/head/cmcap/boonie/fisherman // 🐟
@@ -592,6 +596,7 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	path = /obj/item/clothing/head/cmcap/pmc/fieldleader
 	allowed_roles = list(JOB_PMCPLAT_LEADER, JOB_PMCPLAT_OW)
 
+
 /*
 //================================================
 				Helmet Accessories
@@ -784,6 +789,12 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	display_name = "Windbreaker, Blue"
 	path = /obj/item/clothing/suit/storage/windbreaker/windbreaker_blue
 
+// raincoats
+
+/datum/gear/clothing/kellandmining_raincoat
+	display_name = "Kelland Mining raincoat"
+	path = /obj/item/clothing/suit/kellandmining_raincoat
+
 // webbings
 
 /datum/gear/clothing/utility_vest
@@ -812,6 +823,10 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums_by_name, /datum/gear)
 	display_name = "USCM service jacket"
 	path = /obj/item/clothing/suit/storage/jacket/marine/service
 	allowed_roles = list(JOB_SQUAD_LEADER, JOB_SO)
+
+/datum/gear/clothing/uscm/tanker_jacket
+	display_name = "USCM tanker jacket"
+	path = /obj/item/clothing/suit/storage/jacket/marine/service/tanker
 
 /datum/gear/clothing/uscm/aso_jacket
 	display_name = "USCM auxiliary support officer jacket"
