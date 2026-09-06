@@ -709,7 +709,7 @@
 	return bleed_layer ? NOT_WEEDABLE : FULLY_WEEDABLE
 
 /turf/open/mars/is_weedable()
-	return SEMI_WEEDABLE
+	return FULLY_WEEDABLE
 
 /turf/open/jungle/is_weedable()
 	return NOT_WEEDABLE

@@ -429,6 +429,11 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women loyal to the Three World Empire, An older style symbol of the TWE."
 	icon_state = "twepatch"
 
+/obj/item/clothing/accessory/patch/brotherhood
+	name = "Brotherhood of Thousand Petals patch"
+	desc = "A sleek triangular patch bearing the logo, The sherpened leaf, of the mystic group of combatants, fighting for the rebirth of CANC. They've been seen only in outer sectors, as rumors are saying, as punitive force of different corporations."
+	icon_state = "brotherhoodpatch"
+
 /obj/item/clothing/accessory/patch/upp
 	name = "UPP patch"
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the Union of Progressive Peoples Armed Collective."
@@ -2239,6 +2244,20 @@
 	new /obj/item/ammo_magazine/pistol/vp78/incendiary(src)
 	new /obj/item/ammo_magazine/pistol/vp78/incendiary(src)
 	new /obj/item/smartgun_battery(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/pmc/canc_blackops
+	name = "\improper Type 79 Pattern Small Pouch Webbing"
+	desc = "A set of CANC webbing fully outfitted with pouches and pockets to carry a while array of small items."
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/pmc/canc_blackops
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/pmc/canc_blackops/fill_preset_inventory()
+	storage_slots = 6
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/tramadol/skillless(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine/skillless(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/kelotane/skillless(src)
 
 /obj/item/clothing/accessory/storage/webbing/m3/mag/pmc
 	name = "\improper 82 Pattern Magazine Webbing"

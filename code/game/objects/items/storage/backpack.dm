@@ -633,6 +633,15 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	name = "\improper R-559 'Bagulnik' Small Radio Telephone Pack"
 	max_storage_space = 10
 
+/obj/item/storage/backpack/marine/satchel/rto/canc
+	name = "\improper Type 559 Radio Telephone Pack"
+	icon_state = "upp_rto_backpack"
+	item_state = "upp_rto_backpack"
+	phone_icon = "upp_rpb_phone"
+	phone_category = PHONE_CANC_SOLDIER
+	networks_receive = list(FACTION_UPP)
+	networks_transmit = list(FACTION_UPP)
+
 /obj/item/storage/backpack/marine/satchel/rto/io
 	phone_category = PHONE_IO
 
@@ -710,6 +719,14 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 		if("urban")
 			name = "\improper M60 Sniper Cloak"
 			desc = "A specially-designed cloak with thermal dampering waterproof coating, designed for urban environments. Doesn't have the optical camouflage electronics that more advanced M68 cloak has."
+
+/obj/item/storage/backpack/marine/canc_smock
+	name = "\improper Type-14 smock"
+	desc = "A specially-designed smock with pockets for all your recon needs."
+	icon_state = "smock"
+	max_storage_space = 15
+	worn_accessible = TRUE
+	xeno_types = null
 
 /obj/item/storage/backpack/marine/marsoc
 	name = "\improper USCM SOF IMP tactical rucksack"
@@ -1190,6 +1207,18 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	icon_state = "upp_flamethrower_backpack"
 	item_state = "upp_flamethrower_backpack"
 	max_fuel = 1000
+	has_gamemode_skin = FALSE
+	max_storage_space = 3
+	storage_slots = 1
+	worn_accessible = TRUE
+	can_hold = list(/obj/item/ammo_magazine/flamer_tank/upp, /obj/item/tool/extinguisher)
+
+/obj/item/storage/backpack/marine/engineerpack/flamethrower/upp/large
+	name = "\improper UPP Pyrotechnician BROB-9 fueltank"
+	desc = "UPPAC standard issue 'Bolshoj Rancevyj Ognemetnyj Bak', or 'Large Back-mounted Flamer Tank', old back rig that holds fuel in massive square shaped tank, with highly-pressured canister below it. A small regulator sits on the side of rig, compatible with refillment of all flamethrowers used by UPPAC. Tho due to the size, it cannot hold additional regular tanks, like it's American counterpart."
+	icon_state = "upp_flamethrower_backpack"
+	item_state = "upp_flamethrower_backpack"
+	max_fuel = 2000
 	has_gamemode_skin = FALSE
 	max_storage_space = 3
 	storage_slots = 1

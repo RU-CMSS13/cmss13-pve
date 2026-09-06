@@ -157,6 +157,14 @@
 	max_range = 7
 	max_duration = 50
 
+/obj/item/ammo_magazine/flamer_tank/upp/extended
+	name = "extended incinerator tank"
+	desc = "A extended fuel tank used to store fuel for use in the LPO80 incinerator unit. Handle with care."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "LPO80"
+	item_state = "LPO80"
+	max_rounds = 250
+
 // This is gellie fuel. Green Flames.
 /obj/item/ammo_magazine/flamer_tank/gellied
 	name = "incinerator tank (B-Gel)"
