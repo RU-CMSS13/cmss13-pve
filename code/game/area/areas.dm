@@ -103,8 +103,12 @@
 	GLOB.active_areas += src
 	GLOB.all_areas += src
 	reg_in_areas_in_z()
-	if(is_mainship_level(z))
-		GLOB.ship_areas += src
+// RU-PVE - START - SHIPMAP BRIGHTNESS VERB
+	//if(is_mainship_level(z))
+		//GLOB.ship_areas += src
+	GLOB.ship_areas += src
+	if(is_mainship_level(z) && (ceiling > CEILING_GLASS))
+// RU-PVE - END
 		daytime_affected = FALSE
 	if(ceiling > CEILING_GLASS)
 		daytime_affected = FALSE
