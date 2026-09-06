@@ -61,6 +61,9 @@
 #define MAP_BOSENMORI_BASHO "Bosenmori Basho"
 #define MAP_REDEMPTION_VALLEY "Redemption Valley" //valley with a military outpost and agricultural hamlet
 #define MAP_BINHAI_SUPPLY_STATION "Binhai Supply Station" //UPP asteroid base
+#define MAP_LV_671 "LV-671 Ark Borealis"
+#define MAP_OIL_DEPOT "Oil Depot"
+#define MAP_DERELICT_ALMAYER_INFESTED "Infested Almayer"
 
 #define MAP_NAVALIS "Navalis Platform 13"//multiz version
 #define MAP_NAVALIS_SINGLE "Navalis Platform 13 (singlez)" //singlez version
