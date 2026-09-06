@@ -3369,10 +3369,7 @@
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/hangar)
 "un" = (
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/forecon{
-	req_access = list();
-	req_one_access_txt = "8;12;13;39"
-	},
+/obj/structure/machinery/cm_vending/clothing/leader/uscm_forecon,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/briefing)
 "uo" = (
