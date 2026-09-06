@@ -55,6 +55,7 @@
 #define MAP_TAIPEI "Taipei Way-Station" //mapjam LAGO
 #define MAP_CANYON_32B "Canyon 32B"
 #define MAP_BIG_BLUE "Kleschers Research Site"
+#define TURUNG_BASE "Turing base"  // TWE Grond maps
 #define MAP_CALLIOPE_HIGHWAY "Calliope Highway" //blueshift-orientated
 #define MAP_CALLIOPE_DESERT_BUS "Calliope Desert Bus" //long-town road
 #define MAP_OREAD_GARRISON "OBW - Oread Garrison" //mapjam
