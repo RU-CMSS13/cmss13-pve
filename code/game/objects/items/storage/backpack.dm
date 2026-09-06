@@ -1259,6 +1259,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	name = "\improper PMC combat backpack"
 	desc = "Ergonomic, protected, high capacity backpack, designed for Weyland-Yutani PMCs."
 	icon_state = "pmc_backpack"
+	max_storage_space = 21
 	worn_accessible = FALSE
 
 /obj/item/storage/backpack/pmc/backpack/commando
@@ -1364,7 +1365,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	desc = "A UPP military standard-issue Union Combat BackPack MK4. Very robust and heavy."
 	icon_state = "marinepack_upp"
 	item_state = "marinepack_upp"
-	max_storage_space = 24
+	max_storage_space = 21
 	bag_open_time = 3 SECONDS
 
 /obj/item/storage/backpack/marine/upp/medic
