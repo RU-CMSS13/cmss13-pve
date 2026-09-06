@@ -472,7 +472,7 @@
 		list("Construction Pouch", 1.25, /obj/item/storage/pouch/construction/wy, VENDOR_ITEM_REGULAR),
 		list("Explosive Pouch", 1.25, /obj/item/storage/pouch/explosive, VENDOR_ITEM_REGULAR),
 		list("Large Pistol Magazine Pouch", floor(scale * 2), /obj/item/storage/pouch/magazine/pistol/large, VENDOR_ITEM_REGULAR),
-		list("Tools Pouch", 1.25, /obj/item/storage/pouch/tools/tactical, VENDOR_ITEM_REGULAR),
+		list("Tools Pouch", 1.25, /obj/item/storage/pouch/tools/black, VENDOR_ITEM_REGULAR),
 		list("Sling Pouch", 1.25, /obj/item/storage/pouch/sling, VENDOR_ITEM_REGULAR),
 		list("Shotgun Shell Pouch", 1.25, /obj/item/storage/pouch/shotgun/wy, VENDOR_ITEM_REGULAR),
 		list("Incinerator Fuel Tank Pouch", 1.25, /obj/item/storage/pouch/flamertank, VENDOR_ITEM_REGULAR),

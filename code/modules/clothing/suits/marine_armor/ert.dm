@@ -1259,8 +1259,8 @@
 		/obj/item/weapon/gun/smartgun,
 		/obj/item/weapon/gun/smartgun/dirty,
 	)
-	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PLATE2, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE, ACCESSORY_SLOT_DECORNECK)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PLATE2, ACCESSORY_SLOT_DECORKNEE, ACCESSORY_SLOT_DECORNECK)
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PLATE2, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PLATE2, ACCESSORY_SLOT_DECORKNEE, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT)
 
 /obj/item/clothing/suit/marine/veteran/pmc/smartgun/heavy
 //Just the normal armor with attachies
@@ -1269,8 +1269,12 @@
 	. = ..()
 	var/obj/item/clothing/accessory/pmcpads/shoulders = new()
 	src.attach_accessory(null, shoulders, TRUE)
+	var/obj/item/clothing/accessory/pmcpads/greaves/greaves = new()
+	src.attach_accessory(null, greaves, TRUE)
 	var/obj/item/clothing/accessory/pmcpads/kneepads/kneepads = new()
 	src.attach_accessory(null, kneepads, TRUE)
+	var/obj/item/clothing/accessory/pmcpads/bracers/armguards = new()
+	src.attach_accessory(null, armguards, TRUE)
 
 /obj/item/clothing/suit/marine/veteran/pmc/guard
 	name = "\improper M4 pattern PMC guard armor"

@@ -2258,7 +2258,7 @@
 	hold = /obj/item/storage/internal/accessory/webbing/m3mag/pmc
 
 /obj/item/storage/internal/accessory/webbing/m3mag/pmc
-	storage_slots = 5
+	storage_slots = 4
 
 //Partial Pre-load For Props
 //===
@@ -2266,7 +2266,6 @@
 	hold = /obj/item/storage/internal/accessory/webbing/m3mag/pmc/one
 
 /obj/item/storage/internal/accessory/webbing/m3mag/pmc/one/fill_preset_inventory()
-	new /obj/item/ammo_magazine/smg/m39/ap(src)
 	new /obj/item/ammo_magazine/smg/m39/ap(src)
 	new /obj/item/ammo_magazine/smg/m39/ap(src)
 	new /obj/item/ammo_magazine/smg/m39/ap(src)
@@ -2280,13 +2279,11 @@
 	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
 	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
 	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
-	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
 
 /obj/item/clothing/accessory/storage/webbing/m3/mag/pmc/presetthree
 	hold = /obj/item/storage/internal/accessory/webbing/m3mag/pmc/three
 
 /obj/item/storage/internal/accessory/webbing/m3mag/pmc/three/fill_preset_inventory()
-	new /obj/item/ammo_magazine/sniper/elite/basic(src)
 	new /obj/item/ammo_magazine/sniper/elite/basic(src)
 	new /obj/item/ammo_magazine/sniper/elite/basic(src)
 	new /obj/item/ammo_magazine/sniper/elite/basic(src)
@@ -2300,13 +2297,11 @@
 	new /obj/item/ammo_magazine/rifle/nsg23(src)
 	new /obj/item/ammo_magazine/rifle/nsg23(src)
 	new /obj/item/ammo_magazine/rifle/nsg23(src)
-	new /obj/item/ammo_magazine/rifle/nsg23(src)
 
 /obj/item/clothing/accessory/storage/webbing/m3/mag/pmc/presetfive
 	hold = /obj/item/storage/internal/accessory/webbing/m3mag/pmc/five
 
 /obj/item/storage/internal/accessory/webbing/m3mag/pmc/five/fill_preset_inventory()
-	new /obj/item/ammo_magazine/rifle/extended(src)
 	new /obj/item/ammo_magazine/rifle/extended(src)
 	new /obj/item/ammo_magazine/rifle/extended(src)
 	new /obj/item/ammo_magazine/rifle/extended(src)
@@ -2320,7 +2315,6 @@
 	new /obj/item/ammo_magazine/rifle/ap(src)
 	new /obj/item/ammo_magazine/rifle/ap(src)
 	new /obj/item/ammo_magazine/rifle/ap(src)
-	new /obj/item/ammo_magazine/rifle/ap(src)
 
 /obj/item/clothing/accessory/storage/webbing/m3/mag/pmc/presetseven
 	hold = /obj/item/storage/internal/accessory/webbing/m3mag/pmc/seven
@@ -2330,13 +2324,11 @@
 	new /obj/item/ammo_magazine/rifle/heap(src)
 	new /obj/item/ammo_magazine/rifle/heap(src)
 	new /obj/item/ammo_magazine/rifle/heap(src)
-	new /obj/item/ammo_magazine/rifle/heap(src)
 
 /obj/item/clothing/accessory/storage/webbing/m3/mag/pmc/preseteight
 	hold = /obj/item/storage/internal/accessory/webbing/m3mag/pmc/eight
 
 /obj/item/storage/internal/accessory/webbing/m3mag/pmc/eight/fill_preset_inventory()
-	new /obj/item/ammo_magazine/smg/m39(src)
 	new /obj/item/ammo_magazine/smg/m39(src)
 	new /obj/item/ammo_magazine/smg/m39(src)
 	new /obj/item/ammo_magazine/smg/m39(src)
@@ -2371,7 +2363,3 @@
 	name = "\improper 76 Pattern Grenade Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to Weyland Yutani PMC armor. This webbing is fitted with loops for storing M40-hull grenades."
 	icon_state = "wy_webbing_m40"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade/pmc
-
-/obj/item/storage/internal/accessory/black_vest/m3grenade/pmc
-	storage_slots = 15
