@@ -700,6 +700,7 @@
 		"Xeno Status HUD" = MOB_HUD_XENO_STATUS,
 		"Faction UPP HUD" = MOB_HUD_FACTION_UPP,
 		"Faction Wey-Yu HUD" = MOB_HUD_FACTION_WY,
+		"Faction PMC HUD" = MOB_HUD_FACTION_PMC,
 		"Faction TWE HUD" = MOB_HUD_FACTION_TWE,
 		"Faction CLF HUD" = MOB_HUD_FACTION_CLF,
 		"Faction Hyperdyne HUD" = MOB_HUD_FACTION_HC,
