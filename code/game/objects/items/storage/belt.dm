@@ -245,6 +245,7 @@
 		/obj/item/reagent_container/glass/minitank,
 		/obj/item/storage/surgical_case,
 		/obj/item/reagent_container/blood,
+		/obj/item/tool/portadialysis,
 	)
 
 /obj/item/storage/belt/medical/only_scanner/fill_preset_inventory()
@@ -1462,7 +1463,7 @@
 	max_w_class = SIZE_MEDIUM
 	storage_flags = STORAGE_FLAGS_POUCH|STORAGE_ALLOW_QUICKDRAW
 	///Array of holster slots and stats to use for them. First layer is "1", "2" etc. Guns are stored in both the slot and the holstered_guns list which keeps track of which was last inserted.
-	var/list/list/obj/item/weapon/gun/holster_slots = list( // RU-PVE EDIT
+	var/list/list/obj/item/weapon/gun/holster_slots = list(
 		"1" = list(
 			"gun" = null,
 			"underlay_sprite" = null,
@@ -2835,7 +2836,6 @@
 	item_state = "s_mortarbelt"
 	w_class = SIZE_HUGE
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
-	w_class = SIZE_HUGE
 	max_w_class = SIZE_HUGE
 	has_gamemode_skin = FALSE
 	holster_slots = list(
@@ -2894,10 +2894,10 @@
 
 /obj/item/storage/belt/gun/mortarbelt/rmc/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78/rmc())
+	can_be_inserted(new /obj/item/mortar_shell/he())
+	can_be_inserted(new /obj/item/mortar_shell/he())
+	can_be_inserted(new /obj/item/mortar_shell/smoke())
 	new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
-	new /obj/item/mortar_shell/he(src)
-	new /obj/item/mortar_shell/he(src)
-	new /obj/item/mortar_shell/smoke(src)
 
 /obj/item/storage/belt/gun/mortarbelt/rmc/full/gl/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78/rmc())

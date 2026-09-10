@@ -57,6 +57,7 @@ GLOBAL_LIST_INIT(whitelisted_client_procs, list(
 	/client/proc/set_eye_blur_type,
 	/client/proc/set_flash_type,
 	/client/proc/set_crit_type,
+	/client/proc/toggle_shouting_at_pointed_people,
 ))
 
 /client/proc/reduce_minute_count()

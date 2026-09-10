@@ -1,0 +1,6 @@
+author: "Maxssliks"
+delete-after: True
+changes:
+  - rscadd: "Seegson patch"
+  - rscadd: "Lasalle patch"
+  - rscadd: "Hyperdyne Patch"

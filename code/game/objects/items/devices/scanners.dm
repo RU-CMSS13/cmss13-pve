@@ -480,6 +480,12 @@ FORENSIC SCANNER
 		current_beam = connected_from.beam(get_atom_on_turf(connected_to), "iv_tube", extra_x_offset_at_target = 4)
 
 /obj/item/device/healthanalyzer/soul/attack(mob/living/M, mob/living/user)
+	if(M == user)
+		if(connected_to)
+			disconnect(TRUE)
+			return
+		to_chat(user, SPAN_WARNING("You cannot connect this to yourself! You need someone else to do it for you!"))
+		return
 
 	if(connected_to == M)
 		disconnect()

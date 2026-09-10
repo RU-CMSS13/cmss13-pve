@@ -1650,6 +1650,9 @@ can cause issues with ammo types getting mixed up during the burst.
 	current_mag = null
 	flags_gun_features = /obj/item/weapon/gun/rifle/caws::flags_gun_features | GUN_TRIGGER_SAFETY
 
+/obj/item/weapon/gun/rifle/caws/assault
+	starting_attachment_types = list(/obj/item/attachable/cawsbarrel, /obj/item/attachable/magnetic_harness, /obj/item/attachable/attached_gun/grenade/type71/ag80/preloaded)
+
 #define CAWS_UNJAM_CHANCE 65
 
 /obj/item/weapon/gun/rifle/caws/auto // meant to be used by players, has a jam chance you need to have in mind when fighting
