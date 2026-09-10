@@ -88,6 +88,11 @@ GLOBAL_LIST_INIT(grenade_packets, list(
 	desc = "It contains six RDG-17 smoke grenades."
 	content_type = /obj/item/explosive/grenade/smokebomb/upp
 
+/obj/item/storage/box/packet/high_explosive/upp/canister
+	name = "\improper VShG-80 assault grenade packet"
+	desc = "It contains six VShG-80 airburst grenades."
+	content_type = /obj/item/explosive/grenade/high_explosive/airburst/upp
+
 /obj/item/storage/box/packet/baton
 	name = "\improper M230 LLRB grenade packet"
 	desc = "It contains five M230 LLRB (Less-than-Lethal Rubber Baton) grenade-launched rounds."
@@ -212,7 +217,6 @@ GLOBAL_LIST_INIT(grenade_packets, list(
 /obj/item/storage/box/packet/rmc/mini
 	name = "\improper L103A1 20mm HE grenade packet"
 	desc = "It contains eight L103A1 20mm HE grenades. Handle with care."
-	w_class = SIZE_LARGE //No more bag-storing for these
 	storage_slots = 12
 	icon_state = "rmc_packet"
 	packet_icon = "bfab-p"

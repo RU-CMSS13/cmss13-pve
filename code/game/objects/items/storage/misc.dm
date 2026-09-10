@@ -309,3 +309,23 @@
 	new /obj/item/attachable/bayonet/co2(src)
 	new /obj/item/co2_cartridge(src)
 	new /obj/item/co2_cartridge(src)
+
+/obj/item/storage/box/loadout/vp78m6_vendor
+	name = "VP78M6 storage box"
+	desc = "A slim storage case containing a loaded VP78M6 pistol and additional magazines."
+	can_hold = list(/obj/item/weapon/gun/pistol/vp78m6, /obj/item/ammo_magazine/pistol/vp78)
+
+/obj/item/storage/box/loadout/vp78m6_vendor/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78m6())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/pistol/vp78(src)
+
+/obj/item/storage/box/loadout/m4a4_vendor
+	name = "M4A4 storage box"
+	desc = "A slim storage case containing a loaded M4A4 pistol and additional magazines."
+	can_hold = list(/obj/item/weapon/gun/pistol/m4a3/m4a4, /obj/item/ammo_magazine/pistol)
+
+/obj/item/storage/box/loadout/m4a4_vendor/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/m4a3/m4a4())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/pistol(src)

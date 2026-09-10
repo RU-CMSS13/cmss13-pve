@@ -48,6 +48,7 @@ GLOBAL_LIST_INIT(whitelisted_client_procs, list(
 	/client/proc/toggle_clickdrag_override,
 	/client/proc/toggle_pb_override,
 	/client/proc/toggle_dualwield,
+	/client/proc/toggle_auto_holotag,
 	/client/proc/toggle_middle_mouse_swap_hands,
 	/client/proc/toggle_vend_item_to_hand,
 	/client/proc/switch_item_animations,
@@ -56,6 +57,7 @@ GLOBAL_LIST_INIT(whitelisted_client_procs, list(
 	/client/proc/set_eye_blur_type,
 	/client/proc/set_flash_type,
 	/client/proc/set_crit_type,
+	/client/proc/toggle_shouting_at_pointed_people,
 ))
 
 /client/proc/reduce_minute_count()

@@ -298,7 +298,6 @@
 
 /obj/item/weapon/gun/pkp/iff/handle_starting_attachment()
 	..()
-
 //invisible mag harness
 	var/obj/item/attachable/magnetic_harness/Integrated = new(src)
 	Integrated.hidden = TRUE
@@ -348,6 +347,34 @@
 		action_icon_state = "iff_toggle_off"
 	button.overlays.Cut()
 	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+
+/obj/item/weapon/gun/pkp/iff/para
+	name = "\improper QYJ-72-IM General Purpose Machine Gun"
+	desc = "The QYJ-72-IM is an experimental variant of common UPP GPMG featuring IFF capabilities which were developed by reverse-engineering USCM smartweapons. Aside from that, it has also had some internal parts stripped down to make it easier to deploy with recon units, sacrficing some performance in the process. It's still quite heavy and will overheat quickly, but the platform is able to lay down range unprecedented amounts of lead. \n<b>Alt-click it to open the feed cover and allow for reloading.</b>"
+	actions_types = list(/datum/action/item_action/toggle_iff_pkp)
+	requires_harness = FALSE
+
+/obj/item/weapon/gun/pkp/iff/para/handle_starting_attachment()
+	var/obj/item/attachable/B = new /obj/item/attachable/pkpbarrel/para(src)
+	B.flags_attach_features &= ~ATTACH_REMOVABLE
+	B.Attach(src)
+	update_attachable(B.slot)
+
+	var/obj/item/attachable/S = new /obj/item/attachable/stock/pkpstock/para(src)
+	S.flags_attach_features &= ~ATTACH_REMOVABLE
+	S.Attach(src)
+	update_attachable(S.slot)
+
+	var/obj/item/attachable/bipod = new /obj/item/attachable/bipod/integral/pkp(src)
+	bipod.flags_attach_features &= ~ATTACH_REMOVABLE
+	bipod.Attach(src)
+	update_attachable(bipod.slot)
+
+/obj/item/weapon/gun/pkp/iff/para/set_gun_config_values()
+	..()
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_2
+	fa_max_scatter = SCATTER_AMOUNT_TIER_2
+	// gotta be a price for not needing the harness
 
 /obj/item/weapon/gun/pkp/iff/proc/toggle_lethal_mode(mob/user)
 	to_chat(user, "[icon2html(src, usr)] You [iff_enabled? "<B>disable</b>" : "<B>enable</b>"] \the [src]'s fire restriction. You will [iff_enabled ? "harm anyone in your way" : "target through IFF"].")

@@ -48,9 +48,9 @@
 		/datum/action/xeno_action/watch_xeno,
 		/datum/action/xeno_action/activable/tail_stab/spitter,
 		/datum/action/xeno_action/activable/corrosive_acid,
-		/datum/action/xeno_action/activable/xeno_spit,
+		/datum/action/xeno_action/activable/xeno_spit/ai,
 		/datum/action/xeno_action/onclick/charge_spit,
-		/datum/action/xeno_action/activable/spray_acid/spitter,
+		/datum/action/xeno_action/activable/spray_acid/spitter/ai,
 		/datum/action/xeno_action/onclick/tacmap,
 	)
 	inherent_verbs = list(
@@ -64,3 +64,48 @@
 	mycelium_food_icon = 'icons/mob/pathogen/pathogen_weeds_48x48.dmi'
 	weed_food_states = list("Drone_1","Drone_2","Drone_3")
 	weed_food_states_flipped = list("Drone_1","Drone_2","Drone_3")
+
+	var/linger_range = 5
+	var/linger_deviation = 1
+
+
+/datum/action/xeno_action/activable/xeno_spit/ai
+	default_ai_action = TRUE
+	ai_prob_chance = 80
+	xeno_cooldown = 8 SECONDS
+
+/datum/action/xeno_action/activable/xeno_spit/ai/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
+	return DT_PROB(ai_prob_chance, delta_time) && (get_dist(parent, parent.current_target) <= 7) && !check_for_obstacles_projectile(parent, parent.current_target, GLOB.ammo_list[/datum/ammo/xeno/acid/spatter]) && use_ability_async(parent.current_target)
+
+/datum/action/xeno_action/activable/spray_acid/spitter/ai
+	default_ai_action = TRUE
+	ai_prob_chance = 40
+	xeno_cooldown = 16 SECONDS
+
+/datum/action/xeno_action/activable/spray_acid/spitter/ai/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
+	return DT_PROB(ai_prob_chance, delta_time) && (get_dist(parent, parent.current_target) <= 4) && !check_for_obstacles_projectile(parent, parent.current_target) && use_ability_async(parent.current_target)
+
+/proc/check_for_obstacles_projectile(mob/firer, mob/target, datum/ammo/ammo_datum)
+	var/list/turf/path = get_line(firer, target, include_start_atom = FALSE)
+	if(!length(path) || get_dist(firer, target) > ammo_datum.max_range)
+		return TRUE
+
+	for(var/turf/T in path)
+		if(T == target.loc)
+			continue
+
+		if(T.density)
+			return TRUE
+
+		for(var/obj/O in T)
+			if(O == target) continue
+			if(O.density && !O.throwpass)
+				return TRUE
+
+	return FALSE
+
+/mob/living/carbon/xenomorph/spitter/init_movement_handler()
+	var/datum/xeno_ai_movement/linger/linger_movement = new(src)
+	linger_movement.linger_range = linger_range
+	linger_movement.linger_deviation = linger_deviation
+	return linger_movement

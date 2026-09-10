@@ -6,22 +6,24 @@
 /datum/origin/upp/cradle
 	name = ORIGIN_UPP_CRADLE
 	desc = "From one of the numerous member states of Earth, or from a heavily developed colony in the inner rim, you've been enthralled by Frontier adventure."
-
+	tag_icon = "upp_cradle" // RU PVE ADDITION
 
 /datum/origin/upp/frontier
 	name = ORIGIN_UPP_FRONTIERSMAN
 	desc = "You hail from the distant Far-Frontier of UPP space, growing up in sterile and tight quarters, never having seen the sun."
-
+	tag_icon = "upp_frontier" // RU PVE ADDITION
 
 /datum/origin/upp/volunteer
 	name = ORIGIN_UPP_VOLUNTEER
 	desc = "You escaped capitalist oppression and lies, passed all of the tests and background checks and are earning your citizenship with a member state, welcome aboard Comrade."
-
+	tag_icon = "upp_volunteer" // RU PVE ADDITION
 
 /datum/origin/upp/excanc
 	name = ORIGIN_UPP_EXCANC
 	desc = "You hail from the now extinct Chinese/Asian-Nation Cooperative, a once powerful colonizing entity, which was absorbed into the UPP after the disastrous Dog War."
+	tag_icon = "upp_excanc" // RU PVE ADDITION
 
 /datum/origin/upp/canc
 	name = ORIGIN_CANC
 	desc = "You hail from the now extinct Chinese/Asian-Nation Cooperative, a once powerful colonizing entity, which was absorbed into the UPP after the disastrous Dog War. You fight on."
+	tag_icon = "upp_canc" // RU PVE ADDITION

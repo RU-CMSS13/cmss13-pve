@@ -547,8 +547,8 @@
 		return
 
 	for(var/mob/living/M in view(src))
-		if(!HAS_TRAIT_FROM(M, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ADMIN))
-			ADD_TRAIT(M, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ADMIN)
+		M.Stun(100000000)
+		to_chat(M, SPAN_WARNING("You feel an overwhelming urge not to move!"))
 
 	message_admins(WRAP_STAFF_LOG(usr, "frozed humans in view in [get_area(usr)] ([usr.x],[usr.y],[usr.z])"), usr.x, usr.y, usr.z)
 
@@ -562,8 +562,8 @@
 		return
 
 	for(var/mob/living/M in view(src))
-		if(HAS_TRAIT_FROM(M, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ADMIN))
-			REMOVE_TRAIT(M, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ADMIN)
+		M.SetStun(0)
+		to_chat(M, SPAN_WARNING("I think I can move again."))
 
 	message_admins(WRAP_STAFF_LOG(usr, "unfrozed humans in view in [get_area(usr)] ([usr.x],[usr.y],[usr.z])"), usr.x, usr.y, usr.z)
 

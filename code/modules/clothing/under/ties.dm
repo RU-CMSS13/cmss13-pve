@@ -439,6 +439,11 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the 173rd Airborne Reconnaissance Platoon."
 	icon_state = "vdvpatch"
 
+/obj/item/clothing/accessory/patch/upp/recon
+	name = "UPP 'Rozbójnik' Group patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the 'Rozbójnik' Group who specialise in reconnaissance operations."
+	icon_state = "uppreconpatch"
+
 /obj/item/clothing/accessory/patch/upp/naval
 	name = "UPP Naval Infantry patch"
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the UPP Naval Infantry."
@@ -572,6 +577,7 @@
 	desc = "A fire-resistant shoulder patch, depicting the logo of Marine Space Force III, Herculis, deployed throughout the Anglo-Japanese arm from the outer veil to the ICSC Network, this patch is often worn by any general assigned to the MSF Herculis, US Space Command and UA Allied Command Generals often have their own patches."
 	icon_state = "msfpatch"
 
+// Hyperdyne patch
 /obj/item/clothing/accessory/patch/hyperdyne_patch
 	name = "Hyperdyne Corporation patch"
 	desc = "A sleek corporate patch bearing the logo of the Hyperdyne Corporation—one of the most powerful conglomerates. Known for synthetic production, AI research, and deep-space logistics. Wearing this patch implies loyalty to profit over people."
@@ -627,39 +633,6 @@
 /obj/item/clothing/accessory/poncho/green/army
 	name = "Well-worn Poncho"
 	desc = "The standard poncho has variations for every climate. Custom fitted to be attached to M3 & M4 armor variants, it is comfortable and warms or cools as needed. A trooper couldn't ask for more. Affectionately referred to as a \"woobie\"."
-
-/obj/item/clothing/accessory/poncho/green/raicoat
-	name = "Rain Poncho"
-	desc = "Apparently this one is used more in particularly tropical climates."
-	icon_state = "r_poncho"
-
-/obj/item/clothing/accessory/poncho/green/raicoat/on_attached(obj/item/clothing/S, mob/living/carbon/human/user)
-	. = ..()
-	RegisterSignal(S, COMSIG_ITEM_EQUIPPED, PROC_REF(on_suit_equipped))
-	RegisterSignal(S, COMSIG_ITEM_UNEQUIPPED, PROC_REF(on_suit_unequipped))
-	if(ishuman(S.loc))
-		var/mob/living/carbon/human/H = S.loc
-		if(H.w_uniform == S || H.wear_suit == S)
-			H.remove_overlay(HAIR_LAYER)
-
-/obj/item/clothing/accessory/poncho/green/raicoat/on_removed(mob/living/carbon/human/user, obj/item/clothing/S)
-	. = ..()
-	UnregisterSignal(S, list(COMSIG_ITEM_EQUIPPED, COMSIG_ITEM_UNEQUIPPED))
-	if(ishuman(S.loc))
-		var/mob/living/carbon/human/H = S.loc
-		if(H.w_uniform == S || H.wear_suit == S)
-			H.apply_overlay(HAIR_LAYER)
-			H.update_hair()
-
-/obj/item/clothing/accessory/poncho/green/raicoat/proc/on_suit_equipped(datum/source, mob/living/carbon/human/user, slot)
-	SIGNAL_HANDLER
-	if(slot == WEAR_BODY || slot == WEAR_JACKET)
-		user.remove_overlay(HAIR_LAYER)
-
-/obj/item/clothing/accessory/poncho/green/raicoat/proc/on_suit_unequipped(datum/source, mob/living/carbon/human/user, slot)
-	SIGNAL_HANDLER
-	if(slot == WEAR_BODY || slot == WEAR_JACKET)
-		user.update_hair()
 
 /obj/item/clothing/accessory/clf_cape
 	name = "torn CLF flag"
@@ -2109,6 +2082,13 @@
 		/obj/item/ammo_magazine/plasma,
 		/obj/item/ammo_magazine/flamer_tank, // RU-CM PVE edit
 	)
+
+/obj/item/clothing/accessory/storage/webbing/m3/m40/upp
+	name = "\improper Type 82 Pattern Grenade Webbing"
+	desc = "A set of UPP webbing with small pouches that can carry up to 10 grenades, hand or impact."
+	icon_state = "upp_webbing_grenade"
+	flags_atom = NO_SNOW_TYPE
+	slot = ACCESSORY_SLOT_M3UTILITY
 
 //Partial Pre-load For Props
 //===

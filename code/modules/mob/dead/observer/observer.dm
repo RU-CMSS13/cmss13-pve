@@ -414,6 +414,9 @@
 				if("Faction CLF HUD")
 					H = GLOB.huds[MOB_HUD_FACTION_CLF]
 					H.add_hud_to(src, src)
+				if("Faction Hyperdyne HUD")
+					H = GLOB.huds[MOB_HUD_FACTION_HC]
+					H.add_hud_to(src, src)
 
 	see_invisible = INVISIBILITY_OBSERVER
 
@@ -1081,6 +1084,10 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 	if(jobban_isbanned(src, "Freed Mob"))
 		to_chat(src, SPAN_WARNING("You are banned from being able to join as a freed mob."))
+		return
+
+	if(usr.client.total_enter_lock)
+		to_chat(usr, SPAN_WARNING("You have BLACKLISTED from entering!"))
 		return
 
 	var/list/mobs_by_role = list() // the list the mobs are assigned to first, for sorting purposes

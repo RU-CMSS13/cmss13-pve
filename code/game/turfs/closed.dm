@@ -64,14 +64,6 @@
 	user.forceMove(above_current)
 	return
 
-/turf/closed/attack_alien(mob/user)
-	attack_hand(user)
-
-/turf/closed/attack_hand(mob/user)
-	if(user.a_intent == INTENT_HARM)
-		return
-	climb_up(user)
-
 /turf/closed/Enter(atom/movable/mover, atom/forget)
 	. = ..()
 	if(!mover.move_intentionally || !istype(mover,/mob/living))
@@ -405,6 +397,22 @@
 	icon_state = "0,0"
 
 /turf/closed/shuttle/twe_dropship/transparent
+	opacity = FALSE
+
+/turf/closed/shuttle/upp_sof
+	name = "\improper UPP-DS-3 'Voron'"
+	icon = 'icons/turf/upp_sof_dropship.dmi'
+	icon_state = "0,0"
+
+/turf/closed/shuttle/upp_sof/transparent
+	opacity = FALSE
+
+/turf/closed/shuttle/upp_sof_alt
+	name = "\improper UPP-DS-3 'Volk'"
+	icon = 'icons/turf/upp_sof_alt_dropship.dmi'
+	icon_state = "0,0"
+
+/turf/closed/shuttle/upp_sof_alt/transparent
 	opacity = FALSE
 
 /turf/closed/shuttle/gibraltar

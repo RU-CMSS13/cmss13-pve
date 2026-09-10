@@ -18,7 +18,7 @@
 /datum/game_mode/proc/titan_online()
 	var/name = "TITAN 1200 Report"
 	var/input = "TITAN unit online. Good morning, marines."
-	shipwide_ai_announcement(input, name)
+	shipwide_ai_announcement(input, name, 'sound/theme/hyper_sleep.ogg')
 
 /datum/game_mode/proc/request_ert(user, ares = FALSE)
 	if(!user)
@@ -162,6 +162,11 @@
 	if(!SSticker.mode || !length(SSticker.mode.picked_calls))
 		to_chat(src, SPAN_WARNING("No distress beacons are active. You will be notified if this changes."))
 		return
+	// RU-PVE START
+	if(usr.client.total_enter_lock)
+		to_chat(usr, SPAN_NOTICE("You have BLACKLISTED from entering!"))
+		return
+	// RU-PVE END
 
 	var/list/beacons = list()
 

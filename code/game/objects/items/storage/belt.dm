@@ -245,6 +245,7 @@
 		/obj/item/reagent_container/glass/minitank,
 		/obj/item/storage/surgical_case,
 		/obj/item/reagent_container/blood,
+		/obj/item/tool/portadialysis,
 	)
 
 /obj/item/storage/belt/medical/only_scanner/fill_preset_inventory()
@@ -705,6 +706,44 @@
 	new /obj/item/reagent_container/spray/pepper(src)
 	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
 	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
+
+/obj/item/storage/belt/security/brown
+	name = "\improper 6B80 pattern ammo rig"
+	desc = "The 6B80 is an outdated but reliable ammo rig, formerly standard for the UPP Army. Its modular belt holds various munitions, still used by UPP security forces and reserves for its rugged design."
+	icon_state = "securitybelt_brown"
+	item_state = "security_brown"//Could likely use a better one.
+	w_class = SIZE_LARGE
+	storage_slots = 5
+	max_w_class = SIZE_MEDIUM
+	max_storage_space = 20
+	can_hold = list(
+		/obj/item/attachable/bayonet,
+		/obj/item/device/flashlight/flare,
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/smg,
+		/obj/item/ammo_magazine/pistol,
+		/obj/item/ammo_magazine/revolver,
+		/obj/item/ammo_magazine/sniper,
+		/obj/item/ammo_magazine/handful,
+		/obj/item/explosive/grenade,
+		/obj/item/explosive/mine,
+		/obj/item/reagent_container/food/snacks,
+	)
+	bypass_w_limit = list(
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/smg,
+	)
+
+/obj/item/storage/belt/security/brown/full/fill_preset_inventory()
+	new /obj/item/ammo_magazine/rifle/ak4047(src)
+	new /obj/item/ammo_magazine/rifle/ak4047(src)
+	new /obj/item/ammo_magazine/rifle/ak4047(src)
+	new /obj/item/ammo_magazine/rifle/ak4047(src)
+	new /obj/item/ammo_magazine/rifle/ak4047(src)
+
+/obj/item/storage/belt/security/brown/half_full/fill_preset_inventory()
+	new /obj/item/ammo_magazine/rifle/ak4047(src)
+	new /obj/item/ammo_magazine/rifle/ak4047(src)
 
 /obj/item/storage/belt/security/MP
 	name = "\improper M276 pattern military police rig"
@@ -1354,6 +1393,13 @@
 	storage_slots = 20
 	max_storage_space = 60
 
+/obj/item/storage/belt/grenade/upp
+	name="\improper Type 39 pattern grenade rig"
+	desc = "The Type 39 grenade rig is the standard-issue load-bearing equipment of the UPP military. It consists of a modular belt with various clips for secure fastening on the armor, and two big pouches for general grenade storage. Requisition department department recommends to avoid accidental falls and drops on full pouches."
+	icon_state = "upp_grenadebelt"
+	item_state = "upp_grenadebelt"
+	has_gamemode_skin = FALSE
+
 /obj/item/storage/belt/grenade/large
 	name="\improper M276 pattern M40 Grenade rig Mk. II"
 	desc="The M276 Mk. II is is an upgraded version of the M276 grenade rig, with more storage capacity."
@@ -1396,6 +1442,13 @@
 	storage_slots = 25
 	max_storage_space = 75
 
+/obj/item/storage/belt/grenade/large/upp
+	name="\improper Type 40 pattern grenade rig"
+	desc = "The Type 40 grenade rig is the modified variant of Type 39 rig. Besides 2 main pouches for general grenade storage, front-sided belt clips were changed to hold additional grenades, increasing the overall carriage."
+	icon_state = "upp_grenadebelt"
+	item_state = "upp_grenadebelt"
+	has_gamemode_skin = FALSE
+
 ////////////////////////////// GUN BELTS /////////////////////////////////////
 
 /obj/item/storage/belt/gun
@@ -1410,7 +1463,7 @@
 	max_w_class = SIZE_MEDIUM
 	storage_flags = STORAGE_FLAGS_POUCH|STORAGE_ALLOW_QUICKDRAW
 	///Array of holster slots and stats to use for them. First layer is "1", "2" etc. Guns are stored in both the slot and the holstered_guns list which keeps track of which was last inserted.
-	var/list/list/obj/item/weapon/gun/holster_slots = list( // RU-PVE EDIT
+	var/list/list/obj/item/weapon/gun/holster_slots = list(
 		"1" = list(
 			"gun" = null,
 			"underlay_sprite" = null,
@@ -2192,7 +2245,7 @@
 		/obj/item/ammo_magazine/pistol/t73_impact,
 		/obj/item/weapon/gun/pistol/np92,
 		/obj/item/ammo_magazine/pistol/np92,
-		/obj/item/ammo_magazine/pistol/np92/tranq,
+		/obj/item/ammo_magazine/pistol/np92/suppressed/tranq,
 		/obj/item/weapon/gun/revolver/upp,
 		/obj/item/ammo_magazine/revolver/upp,
 		/obj/item/ammo_magazine/revolver/upp/shrapnel,
@@ -2783,7 +2836,6 @@
 	item_state = "s_mortarbelt"
 	w_class = SIZE_HUGE
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
-	w_class = SIZE_HUGE
 	max_w_class = SIZE_HUGE
 	has_gamemode_skin = FALSE
 	holster_slots = list(
@@ -2842,10 +2894,10 @@
 
 /obj/item/storage/belt/gun/mortarbelt/rmc/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78/rmc())
+	can_be_inserted(new /obj/item/mortar_shell/he())
+	can_be_inserted(new /obj/item/mortar_shell/he())
+	can_be_inserted(new /obj/item/mortar_shell/smoke())
 	new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
-	new /obj/item/mortar_shell/he(src)
-	new /obj/item/mortar_shell/he(src)
-	new /obj/item/mortar_shell/smoke(src)
 
 /obj/item/storage/belt/gun/mortarbelt/rmc/full/gl/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78/rmc())

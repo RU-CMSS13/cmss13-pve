@@ -724,7 +724,7 @@
 	paygrades = list(PAY_SHORT_UE1 = JOB_PLAYTIME_TIER_0, PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_1)
 	skills = /datum/skills/pfc
 	access = list(ACCESS_UPP_GENERAL)
-	idtype = /obj/item/card/id/dogtag
+	idtype = /obj/item/card/id/dogtag/upp
 
 /datum/equipment_preset/corpse/upp/load_gear(mob/living/carbon/human/new_human)
 	//back

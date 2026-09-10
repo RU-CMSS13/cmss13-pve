@@ -296,11 +296,11 @@
 		var/search_pda = 1
 
 		for(var/A in searching)
-			if( search_id && istype(A,/obj/item/card/id) )
+			if(search_id && istype(A, /obj/item/card/id))
 				var/obj/item/card/id/ID = A
 				if(ID.registered_name == oldname)
 					ID.registered_name = newname
-					ID.name = "[newname]'s [ID.card_name] ([ID.assignment])"
+					ID.name = "[newname]'s [ID.id_type] ([ID.assignment])"
 					if(!search_pda) break
 					search_id = 0
 	return 1

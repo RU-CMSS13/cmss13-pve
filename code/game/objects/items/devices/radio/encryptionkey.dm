@@ -310,6 +310,15 @@
 	channels = list(RADIO_CHANNEL_WY_WO = TRUE, RADIO_CHANNEL_WY = TRUE)
 
 //---------------------------------------------------
+//Hyperdyne Keys
+
+/obj/item/device/encryptionkey/hyperdyne
+	name = "\improper Hyperdyne Corporation encryption key"
+	icon_state = "ce_key"
+	channels = list(RADIO_CHANNEL_HYPERDYNE = TRUE)
+	tracking_options = list("Corporate Liaison" = TRACKER_CL)
+
+//---------------------------------------------------
 //UPP Keys
 /obj/item/device/encryptionkey/upp
 	name = "\improper UPP Naval Infantry Radio Encryption Key"
@@ -335,6 +344,11 @@
 /obj/item/device/encryptionkey/upp/command
 	name = "\improper UPP Command Radio Encryption Key"
 	channels = list(RADIO_CHANNEL_UPP_CMD = TRUE, RADIO_CHANNEL_UPP_GEN = TRUE, RADIO_CHANNEL_UPP_ENGI = TRUE, RADIO_CHANNEL_UPP_MED = TRUE, RADIO_CHANNEL_UPP_CCT = TRUE)
+
+/obj/item/device/encryptionkey/upp/forecon
+	name = "\improper UPP Recon Radio Encryption Key"
+	icon_state = "upp_key"
+	channels = list(RADIO_CHANNEL_UPP_RCN = TRUE)
 //---------------------------------------------------
 //CLF Keys
 /obj/item/device/encryptionkey/clf

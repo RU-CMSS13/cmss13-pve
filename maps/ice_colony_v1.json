@@ -5,7 +5,7 @@
     "environment_traits": {
         "COLD": true
     },
-    "weather_holder": "/datum/weather_ss_map_holder/sorokyne",
+    "weather_holder": "/datum/weather_ss_map_holder/sorokyne_legacy",
     "defcon_triggers": [
         3300,
         2100,

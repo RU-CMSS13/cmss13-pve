@@ -101,6 +101,11 @@
 	flags_heat_protection = BODY_FLAG_HEAD
 	max_heat_protection_temperature = FIRE_HELMET_MAX_HEAT_PROT
 
+/obj/item/clothing/head/hardhat/white/alt
+	icon_state = "hardhat0_white_alt"
+	hardhat_color = "white_alt"
+	name = "Jùtóu Combine mining helmet"
+
 /obj/item/clothing/head/hardhat/dblue
 	icon_state = "hardhat0_dblue"
 	hardhat_color = "dblue"

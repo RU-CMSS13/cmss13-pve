@@ -220,6 +220,17 @@
 	new /obj/item/device/radio(src)
 	new /obj/item/attachable/bayonet(src)
 
+/obj/item/storage/pouch/survival/synth/black
+	icon_state = "soctools"
+
+/obj/item/storage/pouch/survival/synth/black/full/fill_preset_inventory()
+	new /obj/item/tool/crowbar/red(src)
+	new /obj/item/tool/weldingtool(src)
+	new /obj/item/stack/cable_coil(src)
+	new /obj/item/stack/sheet/metal/large_stack(src)
+	new /obj/item/device/radio(src)
+	new /obj/item/attachable/bayonet(src)
+
 /obj/item/storage/pouch/firstaid
 	name = "first-aid pouch"
 	desc = "A first aid pouch capable of storing a variety of basic medical supplies. It can hold ointments, bandages, injectors, splints and pill packets."
@@ -998,6 +1009,9 @@
 	new /obj/item/reagent_container/hypospray/autoinjector/tramadol(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/tramadol(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/emergency(src)
+
+/obj/item/storage/pouch/autoinjector/wy
+	icon_state = "wy_medicpack"
 
 /obj/item/storage/pouch/autoinjector/full/wy
 	icon_state = "wy_medicpack"

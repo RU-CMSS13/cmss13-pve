@@ -100,6 +100,7 @@ Radiochat range: 1441 to 1489 (most devices refuse to be tune to other frequency
 #define UPP_CCT_FREQ 1255
 #define UPP_KDO_FREQ 1259
 #define UPP_GRD_FREQ 1256
+#define UPP_FORECON_FREQ 1257
 
 //CLF Channels (1270-1289)
 #define CLF_FREQ 1271
@@ -112,6 +113,9 @@ Radiochat range: 1441 to 1489 (most devices refuse to be tune to other frequency
 //Listening Bugs (1290-1291)
 #define BUG_A_FREQ 1290
 #define BUG_B_FREQ 1291
+
+//Hyperdyne channels (1331-1399)
+#define HDC_FREQ 1331
 
 //General Radio
 #define MIN_FREQ 1460 // ------------------------------------------------------
@@ -191,6 +195,7 @@ GLOBAL_LIST_INIT(radiochannels, list(
 	SQUAD_FORECON = FORECON_FREQ,
 	SQUAD_SOLAR = SOF_FREQ,
 	SQUAD_ARMY = ARMY_FREQ,
+	SQUAD_SISSI = UPP_FORECON_FREQ,
 
 	RADIO_CHANNEL_ALAMO = DS1_FREQ,
 	RADIO_CHANNEL_NORMANDY = DS2_FREQ,
@@ -198,6 +203,7 @@ GLOBAL_LIST_INIT(radiochannels, list(
 
 	RADIO_CHANNEL_COLONY = COLONY_FREQ,
 
+	RADIO_CHANNEL_HYPERDYNE = HDC_FREQ,
 
 	RADIO_CHANNEL_WY = WY_FREQ,
 	RADIO_CHANNEL_PMC_GEN = PMC_FREQ,
@@ -214,6 +220,7 @@ GLOBAL_LIST_INIT(radiochannels, list(
 	RADIO_CHANNEL_UPP_CCT = UPP_CCT_FREQ,
 	RADIO_CHANNEL_UPP_KDO = UPP_KDO_FREQ,
 	RADIO_CHANNEL_UPP_GRD = UPP_GRD_FREQ,
+	RADIO_CHANNEL_UPP_RCN = UPP_FORECON_FREQ,
 
 	RADIO_CHANNEL_CLF_GEN = CLF_FREQ,
 	RADIO_CHANNEL_CLF_CMD = CLF_CMD_FREQ,
@@ -231,7 +238,7 @@ GLOBAL_LIST_INIT(radiochannels, list(
 #define ERT_FREQS list(VAI_FREQ, DUT_FREQ, YAUT_FREQ, CMB_FREQ, RMC_FREQ, MERC_FREQ, IASF_FREQ)
 
 // UPP Frequencies
-#define UPP_FREQS list(UPP_FREQ, UPP_CMD_FREQ, UPP_ENGI_FREQ, UPP_MED_FREQ, UPP_CCT_FREQ, UPP_KDO_FREQ, UPP_GRD_FREQ)
+#define UPP_FREQS list(UPP_FREQ, UPP_CMD_FREQ, UPP_ENGI_FREQ, UPP_MED_FREQ, UPP_CCT_FREQ, UPP_KDO_FREQ, UPP_GRD_FREQ, UPP_FORECON_FREQ)
 
 // CLF Frequencies
 #define CLF_FREQS list(CLF_FREQ, CLF_CMD_FREQ, CLF_ENGI_FREQ, CLF_MED_FREQ)
@@ -319,6 +326,7 @@ SUBSYSTEM_DEF(radio)
 		"[BUG_A_FREQ]" = "airadio",
 		"[BUG_B_FREQ]" = "aiprivradio",
 		"[UPP_FREQ]" = "syndradio",
+		"[UPP_FORECON_FREQ]" = "opforcmd",
 		"[UPP_CMD_FREQ]" = "opforcmd",
 		"[UPP_ENGI_FREQ]" = "opforeng",
 		"[UPP_MED_FREQ]" = "opformed",
@@ -331,6 +339,7 @@ SUBSYSTEM_DEF(radio)
 		"[CLF_MED_FREQ]" = "opformed",
 		"[PFA_FREQ]" = "pfaradio",
 		"[JSC_FREQ]" = "jscradio",
+		"[HDC_FREQ]" = "hdcradio",
 	)
 
 /datum/controller/subsystem/radio/proc/add_object(obj/device as obj, new_frequency as num, filter = null as text|null)

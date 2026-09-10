@@ -2537,7 +2537,7 @@
 /turf/open/floor/almayer/aicore,
 /area/hms_brynhild/ai_interface)
 "fa" = (
-/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/rmc,
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
@@ -2740,7 +2740,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/cryo_cells)
 "fv" = (
-/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm{
+/obj/structure/machinery/suit_storage_unit/pressure_suit/rmc{
 	pixel_x = 5
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -2768,7 +2768,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/prep_hallway)
 "fy" = (
-/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/rmc,
 /turf/open/floor/prison,
 /area/hms_brynhild/EVA_prep)
 "fz" = (
@@ -2804,7 +2804,7 @@
 /turf/open/floor/prison,
 /area/hms_brynhild/hangar)
 "fC" = (
-/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm{
+/obj/structure/machinery/suit_storage_unit/pressure_suit/rmc{
 	pixel_x = 5
 	},
 /obj/structure/machinery/light/double/blue{
@@ -3120,13 +3120,9 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/closet/secure_closet/rmc_troop_sergeant{
-	pixel_y = 15;
-	pixel_x = -8
-	},
-/obj/item/clothing/glasses/hud/health{
-	pixel_x = -8;
-	pixel_y = 31
+/obj/structure/machinery/cm_vending/clothing/leader/rmc{
+	pixel_y = 17;
+	density = 0
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury)
@@ -3192,7 +3188,15 @@
 "gn" = (
 /obj/structure/closet/secure_closet/rmc_section_leader{
 	pixel_y = 15;
-	pixel_x = -8
+	pixel_x = -8;
+	density = 0
+	},
+/obj/structure/closet/secure_closet/rmc_section_leader{
+	pixel_y = 15;
+	pixel_x = 9;
+	name = "section 2IC locker";
+	req_access = list(306,298);
+	density = 0
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury)
@@ -7124,7 +7128,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/lower_hangar)
 "or" = (
-/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm{
+/obj/structure/machinery/suit_storage_unit/pressure_suit/rmc{
 	pixel_x = 5
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -11177,18 +11181,6 @@
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/prep_hallway)
-"wr" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/closet/secure_closet/rmc_section_leader{
-	pixel_y = -15;
-	pixel_x = -8;
-	name = "section 2IC locker";
-	req_access = list(306,298)
-	},
-/turf/open/floor/prison/bright_clean,
-/area/hms_brynhild/armoury)
 "wt" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -12558,7 +12550,7 @@
 /turf/closed/wall/almayer/aicore/white/hull,
 /area/hms_brynhild/supply)
 "AL" = (
-/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/rmc,
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
@@ -15326,7 +15318,7 @@
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/Docking)
 "Ic" = (
-/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm{
+/obj/structure/machinery/suit_storage_unit/pressure_suit/rmc{
 	pixel_x = 5
 	},
 /turf/open/floor/prison,
@@ -15568,7 +15560,7 @@
 /turf/open/floor/prison,
 /area/hms_brynhild/hangar)
 "IJ" = (
-/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/rmc,
 /turf/open/floor/prison,
 /area/hms_brynhild/hangar)
 "IL" = (
@@ -15698,7 +15690,7 @@
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/Docking)
 "Ji" = (
-/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm{
+/obj/structure/machinery/suit_storage_unit/pressure_suit/rmc{
 	pixel_x = 5
 	},
 /turf/open/floor/prison,
@@ -28612,7 +28604,7 @@ WY
 ZF
 sw
 gi
-wr
+AI
 sw
 sw
 sw

@@ -249,6 +249,8 @@
 						/obj/item/clothing/glasses/mgoggles/orange/prescription = HAT_GARB_RELAY_ICON_STATE,
 						/obj/item/clothing/glasses/mgoggles/green = HAT_GARB_RELAY_ICON_STATE,
 						/obj/item/clothing/glasses/mgoggles/green/prescription = HAT_GARB_RELAY_ICON_STATE,
+						/obj/item/clothing/glasses/mgoggles/upp = HAT_GARB_RELAY_ICON_STATE,
+						/obj/item/clothing/glasses/mgoggles/upp/prescription = HAT_GARB_RELAY_ICON_STATE,
 						/obj/item/prop/helmetgarb/helmet_nvg = HAT_GARB_RELAY_ICON_STATE,
 						/obj/item/prop/helmetgarb/helmet_nvg/cosmetic = HAT_GARB_RELAY_ICON_STATE,
 						/obj/item/prop/helmetgarb/helmet_nvg/marsoc = HAT_GARB_RELAY_ICON_STATE,
@@ -269,6 +271,9 @@
 						/obj/item/prop/helmetgarb/lucky_feather/purple = "lucky_feather_purple",
 						/obj/item/prop/helmetgarb/lucky_feather/yellow = "lucky_feather_yellow",
 						/obj/item/tool/pen/fountain = "fountainpen",
+						/obj/item/prop/helmetgarb/helmet_nvg/upp = HAT_GARB_RELAY_ICON_STATE,
+						/obj/item/prop/helmetgarb/helmet_nvg/upp/frogmen = HAT_GARB_RELAY_ICON_STATE,
+
 						)
 	var/storage_slots = 1
 	var/storage_slots_reserved_for_garb = 1
@@ -448,6 +453,16 @@
 	icon_state = "cc_flagcap"
 	item_state = "cc_flagcap"
 
+/obj/item/clothing/head/cmcap/wy_cap
+	name = "\improper Weyland-Yutani black cap"
+	desc = "A dark cap enscribed with the Weyland-Yutani 'Wings' logo, representing corporate justice."
+	icon = 'icons/obj/items/clothing/hats/hats_by_faction/WY.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/WY.dmi'
+	)
+	icon_state = "newcorpo_cap"
+	item_state = "newcorpo_cap"
+
 /obj/item/clothing/head/cmcap/weyyu
 	name = "\improper Weyland-Yutani cap"
 	desc = "An offwhite cap worn by Weyland-Yutani security personnel."
@@ -484,6 +499,15 @@
 	desc = "A dark blue utility cap."
 	icon_state = "corrections"
 	item_state = "corrections"
+
+/obj/item/clothing/head/cmcap/seegsoncap
+	name = "Seegson Cap"
+	desc = "A Seegson worker's cap looks old and worn. Issued to workers at stations and some colonies, it looks stylish, but doesn't protect the head while working. The tag on the back reads: Seegson in pursuit of affordable quality. Some workers say the company's androids Working Joe themselves used to wear this cap, but the company abandoned it due to both the idea and the extra expense."
+	icon_state = "seegson_cap"
+	icon = 'icons/obj/items/clothing/hats.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/head_0.dmi'
+)
 
 //============================//BERETS\\=================================\\
 //=======================================================================\\
@@ -669,6 +693,11 @@
 	name = "\improper UL2c cap"
 	icon_state = "upp_cap_civi"
 
+/obj/item/clothing/head/cmcap/upp/civi/plant_worker
+	name = "white worker cap"
+	desc = "A simple white fabric cap, commonly worn by various UPP workers to keep hair contained and maintain cleanliness. Lightweight and practical, but not very durable."
+	icon_state = "plant_work_cap"
+
 /obj/item/clothing/head/cmcap/upp/boonie
 	name = "\improper UL5 hat"
 	desc = "Standard issue soft brimmed hat for Territorial Guard units stationed in areas with extreme heat."
@@ -758,6 +787,17 @@
 	desc = "A finely crafted beret worn by members of the UPP Space Operations Forces. It signifies service in the void, from deep-space missions to planetary operations, and is a mark of discipline and camaraderie among its wearers."
 	icon_state = "sof_beret"
 	item_state = "sof_beret"
+
+/obj/item/clothing/head/cmcap/upp/beret/sof/recon
+	name = "\improper UL6 Recon Infantry beret"
+	desc = "A red beret worn by the UPP-SOF \"Rozbójnik\" Group. Wear it with pride."
+
+/obj/item/clothing/head/helmet/marine/veteran/upp/firefighter
+	name = "T-20 firefighter helmet"
+	desc = "A reinforced, heat-resistant helmet issued to UPP emergency responders. Its durable composite shell provides protection against falling debris and extreme heat, while the attached fire-resistant shroud shields the wearer’s neck and shoulders. A red star is emblazoned on the front, marking its service within the Union."
+	icon_state = "firefighter"
+	flags_heat_protection = BODY_FLAG_HEAD
+	max_heat_protection_temperature = FIRE_HELMET_MAX_HEAT_PROT
 
 //==========================//PROTECTIVE\\===============================\\
 //=======================================================================\\

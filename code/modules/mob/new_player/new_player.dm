@@ -233,9 +233,16 @@
 
 		if("SelectedJob")
 
+			// RU-PVE START
+			if(usr.client.total_enter_lock)
+				to_chat(usr, SPAN_NOTICE("You have BLACKLISTED from entering!"))
+				return 0
+
 			if(!GLOB.enter_allowed)
-				to_chat(usr, SPAN_WARNING("There is an administrative lock on entering the game! (The dropship likely crashed into the Almayer. This should take at most 20 minutes.)"))
-				return
+				if(!check_rights(, show_msg = FALSE) && !usr.client.enter_lock_bypass)
+					to_chat(usr, SPAN_NOTICE("There is an administrative lock on entering the game!"))
+					return 0
+			// RU-PVE END
 
 			AttemptLateSpawn(href_list["job_selected"])
 			return
@@ -269,9 +276,15 @@
 	if(SSticker.current_state != GAME_STATE_PLAYING)
 		to_chat(usr, SPAN_WARNING("The round is either not ready, or has already finished!"))
 		return
+	// RU-PVE START
+	if(usr.client.total_enter_lock)
+		to_chat(usr, SPAN_WARNING("You have BLACKLISTED from entering!"))
+		return 0
 	if(!GLOB.enter_allowed)
-		to_chat(usr, SPAN_WARNING("There is an administrative lock on entering the game! (The dropship likely crashed into the Almayer. This should take at most 20 minutes.)"))
-		return
+		if(!check_rights(, show_msg = FALSE) && !usr.client.enter_lock_bypass)
+			to_chat(usr, SPAN_WARNING("There is an administrative lock on entering the game!"))
+			return 0
+	// RU-PVE END
 	if(!GLOB.RoleAuthority.assign_role(src, player_rank, 1))
 		to_chat(src, alert("[rank] is not available. Please try another."))
 		return

@@ -416,6 +416,10 @@
 /obj/item/clothing/suit/storage/jacket/marine/upp
 	name = "\improper UPP service uniform jacket"
 	desc = "A UPP service uniform jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality."
+	icon = 'icons/obj/items/clothing/suits/suits_by_faction/UPP.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/UPP.dmi',
+	)
 	icon_state = "upp_coat_service"
 	flags_atom = NO_SNOW_TYPE
 

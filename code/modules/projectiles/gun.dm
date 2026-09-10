@@ -1766,8 +1766,6 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 			skill_accuracy = -1
 		else
 			skill_accuracy = user.skills.get_skill_level(SKILL_FIREARMS)
-		if(HAS_TRAIT(user, TRAIT_HUD_SIGHT))
-			skill_accuracy += 1
 		if(skill_accuracy)
 			gun_accuracy_mult += skill_accuracy * HIT_ACCURACY_MULT_TIER_3 // Accuracy mult increase/decrease per level is equal to attaching/removing a red dot sight
 
@@ -1887,7 +1885,7 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 	if(!istype(gun_user) || !isturf(gun_user.loc))
 		return
 	if(muzzle_flash && !muzzle_flash.applied)
-		var/atom/movable/flash_loc = gun_user.loc
+		var/atom/movable/flash_loc = gun_user
 		var/prev_light = light_range
 		if(!light_on && (light_range <= muzzle_flash_lum))
 			set_light_range(muzzle_flash_lum)

@@ -119,6 +119,12 @@
 	html_link = "images/2/21/Sorokyne_Wiki_Map.jpg" //The fact that this is just a wiki-link makes me sad and amused.
 	color = "cyan"
 
+/obj/item/map/sorokyne_map_legacy
+	name = "\improper Sorokyne Strata map"
+	desc = "A map of the Weyland-Yutani colony Sorokyne Outpost, commonly known as Sorokyne Strata."
+	html_link = "images/2/21/Sorokyne_Wiki_Map.jpg" //The fact that this is just a wiki-link makes me sad and amused.
+	color = "cyan"
+
 /obj/item/map/corsat
 	name = "\improper CORSAT map"
 	desc = "A blueprint of CORSAT station"
@@ -220,6 +226,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_PRISON_STATION_V3 = new /obj/item/map/FOP_map_v3(),
 		MAP_DESERT_DAM = new /obj/item/map/desert_dam(),
 		MAP_SOROKYNE_STRATA = new /obj/item/map/sorokyne_map(),
+		MAP_SOROKYNE_STRATA_LEGACY = new /obj/item/map/sorokyne_map_legacy(),
 		MAP_CORSAT = new /obj/item/map/corsat(),
 		MAP_KUTJEVO = new /obj/item/map/kutjevo_map(),
 		MAP_LV522_CHANCES_CLAIM = new /obj/item/map/lv522_map(),
@@ -230,7 +237,6 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_NEW_VARADERO_REPAIRED = new /obj/item/map/new_varadero(),
 		MAP_DERELICT_ALMAYER = new /obj/item/map/almayer(),
 		MAP_LV522_LUKES_LANDING = new /obj/item/map/lv522_map(),
-		MAP_LV522_CHANCES_CLAIM_LUKES_LANDING = new /obj/item/map/lv522_map(),
 		MAP_LV295_BLACKSITE = new /obj/item/map/lv522_map(),
 		MAP_SI391_SEKHMET = new /obj/item/map/lazarus_landing_map(),
 		MAP_BMG290_OTOGI_EGRESS_POINT = new /obj/item/map/new_varadero(),

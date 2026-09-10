@@ -145,7 +145,7 @@
 	remove_attached_item()
 
 	var/obj/item/MO = S.master_object
-	if(!istype(MO, /obj/item/clothing/head/helmet/marine) && !istype(MO, /obj/item/clothing/head/cmcap)) // Do not bother if it's not a helmet or at least a hat
+	if(!istype(MO, /obj/item/clothing/head/helmet/marine) && !istype(MO, /obj/item/clothing/head/cmcap) && !istype(MO, /obj/item/clothing/head/helmet/upp)) // Do not bother if it's not a helmet or at least a hat
 		return
 
 	attached_item = MO
@@ -389,7 +389,8 @@
 	set name = "Toggle M2 night vision goggles"
 
 	var/obj/item/clothing/head/helmet/marine/H = usr.get_item_by_slot(WEAR_HEAD)
-	if(istype(H))
+	var/obj/item/clothing/head/helmet/upp/U = usr.get_item_by_slot(WEAR_HEAD)
+	if(istype(H) && istype(U))
 		for(var/obj/item/prop/helmetgarb/helmet_nvg/G in H.pockets.contents)
 			G.toggle_nods(usr)
 			break
@@ -458,7 +459,8 @@
 		if(shape != NVG_SHAPE_COSMETIC)
 			shape = NVG_SHAPE_BROKEN
 		var/obj/item/clothing/head/helmet/marine/H = attached_item
-		H.pockets.remove_from_storage(src, get_turf(H))
+		var/obj/item/clothing/head/helmet/upp/U = attached_item
+		H.pockets.remove_from_storage(src, get_turf(H) && get_turf(U))
 
 /obj/item/prop/helmetgarb/helmet_nvg/cosmetic //for "custom loadout", purely cosmetic
 	name = "old M2 night vision goggles"
@@ -483,6 +485,20 @@
 /obj/item/prop/helmetgarb/helmet_nvg/marsoc //for Marine Raiders
 	name = "\improper Tactical M3 night vision goggles"
 	desc = "With an integrated self-recharging battery, nothing can stop you. Put them on your helmet and press the button and it's go-time."
+	shape = NVG_SHAPE_FINE
+	cell_max_charge = -1
+
+/obj/item/prop/helmetgarb/helmet_nvg/upp
+	name = "\improper NZP-44 'Cyclop' night vision goggles"
+	desc = "UPPAC standard NZP-44 Night vision goggles for military operations. Requires a battery in order to work"
+	icon_state = "nvg_upp"
+	active_powered_icon_state = "nvg_upp_down_powered"
+	active_icon_state = "nvg_upp_down"
+	inactive_icon_state = "nvg_upp"
+
+/obj/item/prop/helmetgarb/helmet_nvg/upp/frogmen // for recon frogmen
+	name = "\improper NZP-50 'Huginn' night vision goggles"
+	desc = "With an integrated self-recharging battery, enemies of the Union will not hide from your vision. Put them on your helmet and press the button and it's go-time."
 	shape = NVG_SHAPE_FINE
 	cell_max_charge = -1
 

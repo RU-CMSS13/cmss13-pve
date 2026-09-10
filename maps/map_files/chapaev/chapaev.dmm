@@ -78,13 +78,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
-"al" = (
-/obj/structure/machinery/door/poddoor/almayer/open{
-	id = "hangerairlock-interior2";
-	name = "Hanger Airlock"
-	},
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/hangar)
 "am" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	pixel_x = -6;
@@ -4645,6 +4638,12 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
+/obj/item/storage/box/guncase/heavy/mg82{
+	pixel_y = 5
+	},
 /obj/structure/machinery/light/double{
 	light_color = "#e7c0a4";
 	light_power = 0.8;
@@ -4974,18 +4973,7 @@
 /turf/closed/wall/upp_wall/grey/hull,
 /area/golden_arrow/medical)
 "kQ" = (
-/obj/item/tool/crowbar/tactical,
-/obj/item/storage/box/zipcuffs/small,
-/obj/item/device/binoculars/range/designator/upp,
-/obj/item/deployable_beacon/red,
-/obj/item/device/whistle,
-/obj/item/storage/pouch/magazine/large,
-/obj/structure/closet/secure_closet{
-	name = "Platoon Sergeant locker";
-	req_access_txt = "240";
-	pixel_x = -8;
-	can_block_movement = 0
-	},
+/obj/structure/machinery/cm_vending/clothing/leader/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "kR" = (
@@ -5002,10 +4990,7 @@
 /obj/structure/surface/rack{
 	color = "#8B9490"
 	},
-/obj/item/storage/backpack/marine/ammo_rack{
-	desc = "This ammo rack has been handcrafted by one of the ship's sappers. Union's ingenuity at it's finest.";
-	name = "\improper makeshift ammo rack"
-	},
+/obj/item/storage/backpack/marine/ammo_rack/upp,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "kT" = (
@@ -5453,8 +5438,7 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/closet/crate/secure/upp,
 /obj/item/ammo_box/magazine/nade_box/upp/ugl,
-/obj/item/ammo_box/magazine/nade_box/upp/ugl/canister,
-/obj/item/ammo_box/magazine/nade_box/upp/ugl/incen,
+/obj/item/ammo_box/magazine/nade_box/upp/ugl,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "lP" = (
@@ -5803,7 +5787,7 @@
 	},
 /obj/structure/machinery/door_control{
 	name = "Airlock Hanger Access";
-	id = "hangerairlock-interior2";
+	id = "hangerairlock-interior";
 	pixel_y = 31;
 	pixel_x = 1
 	},
@@ -9317,13 +9301,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/hangar)
-"Ct" = (
-/obj/structure/machinery/door/poddoor/almayer/open{
-	id = "hangerairlock-interior2";
-	name = "Hanger Airlock"
-	},
-/turf/open/floor/corsat/marked,
-/area/golden_arrow/prep_hallway)
 "Cy" = (
 /obj/effect/decal/cleanable/blood/oil,
 /obj/effect/decal/cleanable/dirt,
@@ -16968,7 +16945,7 @@ ne
 mZ
 mW
 mQ
-Ct
+mJ
 mA
 kL
 uF
@@ -25170,7 +25147,7 @@ uU
 Gm
 ac
 ac
-al
+ac
 sZ
 sZ
 sZ
@@ -25322,7 +25299,7 @@ uU
 ac
 ac
 ac
-al
+ac
 sZ
 sZ
 sZ
@@ -25474,7 +25451,7 @@ uU
 ac
 ac
 ac
-al
+ac
 sZ
 sZ
 sZ

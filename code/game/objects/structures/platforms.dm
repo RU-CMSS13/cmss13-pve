@@ -525,6 +525,12 @@
 /obj/structure/platform/stone/stair_cut/shiva_right
 	icon_state = "strata_platform_stair_alt"
 
+/obj/structure/platform/stone/stair_cut/soro_left
+	icon_state = "strata_rock_platform_stair"
+
+/obj/structure/platform/stone/stair_cut/soro_right
+	icon_state = "strata_rock_platform_stair_alt"
+
 /obj/structure/platform/stone/stair_cut/kutjevo_left
 	icon_state = "kutjevo_rock_stair"
 

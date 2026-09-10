@@ -249,3 +249,6 @@
 	icon = 'icons/turf/floors/tyrargo_map_dirt.dmi'
 	icon_state = "forestseashallow"
 	icon_overlay = "forestriverwater"
+
+/turf/open/gm/river/soro
+	icon = 'icons/turf/floors/ground_map_dirt.dmi'
