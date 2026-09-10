@@ -10,3 +10,4 @@
 #include "pixel_shifting\layer_shifting.dm"
 
 #include "modules/criptid_hunting/base_mechanics.dm"
+#include "modules/criptid_hunting/utility.dm"

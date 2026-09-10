@@ -40,7 +40,7 @@
 	var/current_clues_found = 0
 	var/needed_amount = 0
 
-	var/mission_name = "Охота" // also for GM purposes
+	var/mission_name = "The Hunt" // also for GM purposes
 	var/automatic_messaging_delay = 300
 
 /obj/structure/criptic/mission_controller/proc/show_mission_name()
@@ -50,13 +50,13 @@
 	if(!busy_now)
 		busy_now = TRUE
 		addtimer(CALLBACK(src, PROC_REF(unbusy)), 30)
-		show_blurb(GLOB.player_list, 45, "Необходимых доказательств найдено: | [current_clues_found]/[needed_amount] |", null, "EAST-1,NORTH-2", "right", COLOR_GRAY, null, null, 1)
+		show_blurb(GLOB.player_list, 45, "Clues Found: | [current_clues_found]/[needed_amount] |", null, "EAST-1,NORTH-2", "right", COLOR_GRAY, null, null, 1)
 		spawn(15)
-			show_blurb(GLOB.player_list, 35, "Охота длится: | <span class='langchat' style='color:#ff0000'>[duration2text()]</span> |", null, "EAST-1,NORTH-3", "right", COLOR_GRAY, null, null, 1)
+			show_blurb(GLOB.player_list, 35, "Hunt Timer: | <span class='langchat' style='color:#ff0000'>[duration2text()]</span> |", null, "EAST-1,NORTH-3", "right", COLOR_GRAY, null, null, 1)
 
 		if(current_clues_found >= needed_amount)
 			spawn(30)
-				show_blurb(GLOB.player_list, 35, "Завершите ритуал", null, "EAST-1,NORTH-5", "right", COLOR_RED, null, null, 1)
+				show_blurb(GLOB.player_list, 35, "WIPE OUT THE STAIN", null, "EAST-1,NORTH-5", "right", COLOR_RED, null, null, 1)
 		return TRUE
 	else
 		return FALSE
@@ -111,8 +111,6 @@
 	mouse_opacity = FALSE
 
 	light_color = "#ff8411"
-	light_range = 1
-	light_power = 1
 
 /obj/structure/criptic/clue/uv/runes/Initialize(mapload, ...)
 	. = ..()
@@ -121,7 +119,7 @@
 /obj/structure/criptic/clue/uv/runes/reveal_itself()
 	. = ..()
 	add_filter("firerune", 1, list("type" = "outline", "color" = "#ff8411", "size" = 1))
-	set_light_on(1)
+	set_light_range(1)
 
 /obj/structure/criptic/clue/photo
 	icon = 'core_ru/code/modules/criptid_hunting/effects_newer.dmi'
@@ -174,6 +172,7 @@
 	var/icon_state_on = "phone_old_on"
 
 	w_class = SIZE_SMALL
+	flags_equip_slot = SLOT_WAIST | SLOT_SUIT_STORE
 
 /obj/item/criptic/instrument/dropped(mob/user)
 	if(passive_searching && activated)
@@ -281,7 +280,7 @@
 
 		if(ishuman(loc))
 			var/mob/living/carbon/human/H = loc
-			show_blurb(H, 15, "Телефон что-то засёк", null, "WEST+6:22,2:14", "center", COLOR_GRAY, null, null, 1)
+			show_blurb(H, 15, "Phone detected something", null, "WEST+6:22,2:14", "center", COLOR_GRAY, null, null, 1)
 
 		cooldown_active = TRUE
 
@@ -348,6 +347,10 @@
 /obj/item/criptic/instrument/camera/attack_self(mob/user)
 	. = ..()
 
+	if(activated)
+		animation_flash_color(src, COLOR_RED)
+		return FALSE
+
 	if(!activated)
 		check_for_condition()
 		return TRUE
@@ -411,6 +414,7 @@
 /obj/item/criptic/instrument/sound_device/check_for_condition()
 
 	if(ishuman(loc))
+
 		var/mob/living/carbon/human/H = loc
 		last_holder = H
 		var/obj/effect/temp_visual/laptop_scanning/L = new /obj/effect/temp_visual/laptop_scanning(get_turf(H))
@@ -438,6 +442,8 @@
 					if(!(C in hintlist))
 						hintlist += C
 					H.show_hint(C)
+
+		addtimer(CALLBACK(src, PROC_REF(remove_hints)), 10 SECONDS)
 
 /obj/item/criptic/instrument/sound_device/proc/remove_hints()
 	if(last_holder)
