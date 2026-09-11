@@ -550,7 +550,7 @@
 		icon_state = "[icon_state_on]"
 
 		user.anchored = TRUE
-		var/obj/structure/criptic/ritual/R = new /obj/structure/criptic/ritual(loc)
+		var/obj/structure/criptic/ritual/R = new /obj/structure/criptic/ritual(get_turf(loc))
 		R.begin_the_ritual()
 
 		if(do_after(user, 15 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC))
@@ -588,8 +588,71 @@
 				new blocker_type(T, src, additional_dir)
 		return TRUE
 	else
-		if(ishuman(loc))
-			var/mob/living/carbon/human/H = loc
-			animation_flash_color(src, COLOR_RED)
-			show_blurb(H, 15, "We need more info before we can call the trial", null, "WEST+6:22,2:14", "center", COLOR_DARK_RED, null, null, 1)
-			return TRUE
+		var/mob/living/carbon/human/H = loc
+		animation_flash_color(src, COLOR_RED)
+		show_blurb(H, 15, "We need more info before we can call the trial", null, "WEST+6:22,2:14", "center", COLOR_DARK_RED, null, null, 1)
+		return TRUE
+
+////////////////////////////////////////
+
+/datum/equipment_preset/contractor/duty/hunter
+	name = "Paranormal Hunter (Standard)"
+	paygrades = list(PAY_SHORT_VAI_S = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "Merc"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "VAIPO Mercenary"
+	rank = JOB_CONTRACTOR_ST
+	skills = /datum/skills/contractor
+	faction = FACTION_CONTRACTOR
+
+/datum/equipment_preset/contractor/duty/hunter/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
+
+	var/random_gear = rand(0,4)
+	switch(random_gear)
+		if(0)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/tshirt/w_br(new_human), WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/black(new_human), WEAR_FEET)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses(new_human), WEAR_EYES)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/tshirt/gray_blu(new_human), WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/rmc, WEAR_FEET)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/tshirt/r_bla(new_human), WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/suit_jacket/trainee(new_human), WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
+		if(4)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/cyan(new_human), WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/holobadge/cord, WEAR_ACCESSORY)
+
+	var/random_vest = rand(0,1)
+	switch(random_vest)
+		if(0)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/light/vest, WEAR_JACKET)
+			new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range, WEAR_IN_JACKET)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/hybrisa/civilian_vest, WEAR_JACKET)
+
+	var/random_hat = rand(0,3)
+	switch(random_hat)
+		if(0)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine, WEAR_HEAD)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/weyyu/black, WEAR_HEAD)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/boonie, WEAR_HEAD)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cowboy, WEAR_HEAD)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/softpack/regular, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/fancy/cigarettes/wypacket, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/lighter/zippo, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre,WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)

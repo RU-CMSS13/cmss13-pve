@@ -20,7 +20,7 @@
 
 	var/total_uses = 0
 	var/total_uses_allowed = 5
-	var/list/mob/living/carbon/xenomorph/criptids = list(/mob/living/carbon/xenomorph/criptic_wendigo)
+	var/list/mob/living/carbon/xenomorph/criptids = list(/mob/living/carbon/xenomorph/criptic_wendigo, /mob/living/carbon/xenomorph/criptic_wendigo/banshee)
 
 /obj/item/criptic/utility/protective_cross/attack_self(mob/user)
 	. = ..()
@@ -182,6 +182,12 @@
 	icon = 'core_ru/code/modules/criptid_hunting/effects.dmi'
 	icon_state = "shadow"
 	opacity = TRUE
+
+/obj/structure/blocker/chime/dark/initialize_pass_flags(datum/pass_flags_container/PF)
+	..()
+	if (PF)
+		PF.flags_can_pass_front = PASS_MOB_IS_OTHER
+		PF.flags_can_pass_behind = PASS_MOB_IS_OTHER
 
 /obj/structure/blocker/chime
 	name = "shield"

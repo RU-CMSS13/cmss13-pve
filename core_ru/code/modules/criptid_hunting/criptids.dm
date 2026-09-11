@@ -1,5 +1,5 @@
 #define XENO_PLASMA_TIER_11 9999 * XENO_UNIVERSAL_PLASMAMULT
-#define XENO_HEALTH_WENDIGO 1600 * XENO_UNIVERSAL_HPMULT
+#define XENO_HEALTH_WENDIGO 2600 * XENO_UNIVERSAL_HPMULT
 
 /datum/caste_datum/criptic_wendigo
 	caste_type = XENO_CASTE_WENDIGO
@@ -74,6 +74,12 @@
 	icon_xeno = 'core_ru/code/modules/criptid_hunting/wendigo.dmi'
 	icon_xenonid = 'core_ru/code/modules/criptid_hunting/wendigo.dmi'
 	gib_chance = 0
+
+	pixel_x = -16
+	old_x = -16
+
+	pixel_y = -16
+	old_y = -16
 
 /mob/living/carbon/xenomorph/criptic_wendigo/Initialize(mapload, mob/living/carbon/xenomorph/oldXeno, h_number)
 	. = ..(mapload, oldXeno, h_number || XENO_HIVE_YAUTJA)
@@ -156,6 +162,7 @@
 
 	icon_xeno = 'core_ru/code/modules/criptid_hunting/lessers.dmi'
 	icon_xenonid = 'core_ru/code/modules/criptid_hunting/lessers.dmi'
+	gib_chance = 100
 
 /mob/living/carbon/xenomorph/criptic_wendigo/banshee/init_movement_handler()
 	return new /datum/xeno_ai_movement/drone(src)
