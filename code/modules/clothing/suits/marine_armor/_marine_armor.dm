@@ -971,6 +971,28 @@
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 	specialty = "B12 pattern marine"
 
+/obj/item/clothing/suit/marine/leader/forecon
+	flags_atom = NO_SNOW_TYPE
+
+/obj/item/clothing/suit/marine/leader/forecon/mod_a
+	name = "\improper modified B12 pattern marine armor 'A'"
+	desc = "A heavily altered suit of B12 pattern marine armor. The joints have been cut away to enhance mobility while additional pads have been fastened around the shoulders. It is incredibly beat-down."
+	icon_state = "FR_SL_A"
+	specialty = "B12 pattern mod-'A' marine"
+
+/obj/item/clothing/suit/marine/leader/forecon/mod_b
+	name = "\improper modified B12 pattern marine armor 'B'"
+	desc = "A heavily altered suit of B12 pattern marine armor. The joints have been cut away to enhance mobility while additional pads have been fastened around the shoulders. It is incredibly beat-down."
+	icon_state = "FR_SL_B"
+	armor_melee = CLOTHING_ARMOR_MEDIUM
+	specialty = "B12 pattern mod-'B' marine"
+
+/obj/item/clothing/suit/marine/leader/forecon/mod_c
+	name = "\improper modified M3-L pattern marine armor"
+	desc = "A heavily altered suit of lightweight M3-L pattern marine armor. The joints have been cut away to enhance mobility while additional pads have been fastened around the shoulders. It is incredibly beat-down."
+	icon_state = "FR_SL_C"
+	specialty = "M3-L pattern mod marine"
+
 /obj/item/clothing/suit/marine/guard
 	desc = "Standard UACG issue M3 Pattern Personal Armor. Composite ballistic armor, integral biomonitoring system, and brackets for the IMP system as well as the TNR Shoulder Lamp."
 	icon_state = "uacg"

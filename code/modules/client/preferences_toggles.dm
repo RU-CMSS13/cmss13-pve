@@ -287,6 +287,7 @@
 		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/set_eye_blur_type'>Set Eye Blur Type</a><br>",
 		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/set_flash_type'>Set Flash Type</a><br>",
 		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/set_crit_type'>Set Crit Type</a><br>",
+		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/toggle_shouting_at_pointed_people'>Toggle Shouting the last name of people you point at on disarm or grab intent</a><br>",
 	)
 
 	var/dat = ""
@@ -381,6 +382,14 @@
 		to_chat(src,SPAN_BOLDNOTICE( "Using Harm Intent with a gun on an target you sprite click next to you will now ensure you are autofiring instead of Point-Blanking. Disarm Intent will still have Point-Blanking."))
 	else
 		to_chat(src,SPAN_BOLDNOTICE( "You will point blank targets next to you on sprite click."))
+	prefs.save_preferences()
+
+/client/proc/toggle_shouting_at_pointed_people() // Toggles whether you shout the last name of people you point at
+	prefs.toggle_prefs ^= TOGGLE_SHOUTING_AT_POINTED_PEOPLE
+	if(prefs.toggle_prefs & TOGGLE_SHOUTING_AT_POINTED_PEOPLE)
+		to_chat(src, SPAN_BOLDNOTICE("You will now shout the last name of people you point at while on disarm or grab intent."))
+	else
+		to_chat(src, SPAN_BOLDNOTICE("You will no longer shout the last name of people you point at while on disarm or grab intent."))
 	prefs.save_preferences()
 
 ///Toggle whether dual-wielding fires both guns at once or swaps between them.
