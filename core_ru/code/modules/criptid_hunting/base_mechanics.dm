@@ -140,6 +140,19 @@
 	icon = 'core_ru/code/modules/criptid_hunting/effects_newer.dmi'
 	icon_state_found = "void_chill_oh_fuck"
 	mouse_opacity = FALSE
+	var/hinted = FALSE
+	var/mob/living/carbon/human/connected
+	var/remove_hint_after = 0
+
+/obj/structure/criptic/clue/sound_clue/process()
+	if(hinted && remove_hint_after > 0)
+		remove_hint_after -= 1
+
+	if(hinted && remove_hint_after <= 0)
+		if(src in connected.revealed_hints)
+			connected.hide_hint(src)
+		hinted = FALSE
+		STOP_PROCESSING(SSobj,src)
 
 /obj/structure/criptic/clue/sound_clue/reveal_itself()
 	var/list/creepyasssounds = list('sound/effects/ghost.ogg', 'sound/effects/ghost2.ogg', 'sound/effects/Heart Beat.ogg', 'sound/effects/screech.ogg',\
@@ -251,6 +264,18 @@
 	light_range = 1
 	light_power = 1
 
+	var/weeds_nearby = FALSE
+
+/obj/item/criptic/instrument/phone/proc/buzzed()
+	set waitfor = FALSE
+	add_filter("buzzed", 1, list("type" = "outline", "color" = COLOR_RED, "size" = 1))
+	sleep(1 SECONDS)
+	remove_filter("buzzed")
+	sleep(1 SECONDS)
+	add_filter("buzzed", 1, list("type" = "outline", "color" = COLOR_RED, "size" = 1))
+	sleep(1 SECONDS)
+	remove_filter("buzzed")
+
 /obj/item/criptic/instrument/phone/check_for_condition()
 	set waitfor = FALSE
 	new /obj/effect/temp_visual/phone_scanning(get_turf(loc))
@@ -265,24 +290,42 @@
 		clue_cooldown -= 1
 		return TRUE
 
-	for(var/obj/structure/criptic/clue/C in range(5,get_turf(loc)))
-		if(!C.revealed)
-			signatures += C
-
-	if(length(signatures))
-		playsound(loc, 'sound/machines/telephone/phone_busy.ogg', 30, 1)
-		animation_flash_color(src, COLOR_CYAN)
-		add_filter("activated", 1, list("type" = "outline", "color" = COLOR_CYAN, "size" = 1))
-
-		animate(src, 3, easing = SINE_EASING|EASE_OUT, transform = matrix(10, MATRIX_ROTATE), time = 5)
-		sleep(3)
-		animate(src, 3, easing = SINE_EASING|EASE_IN, transform = matrix())
-
+	if(!(locate(/obj/effect/alien/weeds) in range(7,get_turf(loc))) && weeds_nearby)
+		weeds_nearby = FALSE
 		if(ishuman(loc))
 			var/mob/living/carbon/human/H = loc
-			show_blurb(H, 15, "Phone detected something", null, "WEST+6:22,2:14", "center", COLOR_GRAY, null, null, 1)
+			show_blurb(H, 15, "Disruption are gone...for now", null, "WEST+6:22,2:14", "center", COLOR_LIGHT_GREEN, null, null, 1)
+		return TRUE
 
-		cooldown_active = TRUE
+	if((locate(/obj/effect/alien/weeds) in range(7,get_turf(loc))) && !weeds_nearby)
+		weeds_nearby = TRUE
+		if(ishuman(loc))
+			var/mob/living/carbon/human/H = loc
+			show_blurb(H, 15, "Something disrupts the signal...", null, "WEST+6:22,2:14", "center", COLOR_DARK_RED, null, null, 1)
+
+		buzzed()
+		return TRUE
+
+	if(!weeds_nearby)
+
+		for(var/obj/structure/criptic/clue/C in range(5,get_turf(loc)))
+			if(!C.revealed)
+				signatures += C
+
+		if(length(signatures))
+			playsound(loc, 'sound/machines/telephone/phone_busy.ogg', 30, 1)
+			animation_flash_color(src, COLOR_CYAN)
+			add_filter("activated", 1, list("type" = "outline", "color" = COLOR_CYAN, "size" = 1))
+
+			animate(src, 3, easing = SINE_EASING|EASE_OUT, transform = matrix(10, MATRIX_ROTATE), time = 5)
+			sleep(3)
+			animate(src, 3, easing = SINE_EASING|EASE_IN, transform = matrix())
+
+			if(ishuman(loc))
+				var/mob/living/carbon/human/H = loc
+				show_blurb(H, 15, "Phone detected something", null, "WEST+6:22,2:14", "center", COLOR_GRAY, null, null, 1)
+
+			cooldown_active = TRUE
 
 /obj/item/criptic/instrument/uv_lamp
 	name = "UV lamp"
@@ -409,7 +452,6 @@
 	light_power = 1
 
 	var/mob/living/carbon/human/last_holder
-	var/list/atom/hintlist = list()
 
 /obj/item/criptic/instrument/sound_device/check_for_condition()
 
@@ -439,23 +481,115 @@
 				if(C.revealed)
 					continue
 				if(!(C in H.revealed_hints))
-					if(!(C in hintlist))
-						hintlist += C
+					if(istype(C,/obj/structure/criptic/clue/sound_clue))
+						var/obj/structure/criptic/clue/sound_clue/S = C
+						S.hinted = TRUE
+						S.connected = H
+						S.remove_hint_after += 10
+						START_PROCESSING(SSobj,S)
 					H.show_hint(C)
-
-		addtimer(CALLBACK(src, PROC_REF(remove_hints)), 10 SECONDS)
-
-/obj/item/criptic/instrument/sound_device/proc/remove_hints()
-	if(last_holder)
-		for(var/atom/A as anything in hintlist)
-			if(A in last_holder.revealed_hints)
-				last_holder.hide_hint(A)
-		last_holder = null
-	hintlist.Cut()
 
 /obj/item/criptic/instrument/sound_device/revert_instrument_effect()
 	if(last_holder)
 		for(var/atom/A as anything in last_holder.revealed_hints)
 			last_holder.hide_hint(A)
 		last_holder = null
-	hintlist.Cut()
+
+/obj/structure/criptic/ritual
+	name = "ritual circle"
+	desc = "Used for ritual performing"
+
+	icon = 'core_ru/code/modules/criptid_hunting/64x64.dmi'
+
+	icon_state = "baali"
+	pixel_x = -16
+	pixel_y = -16
+
+	alpha = 0
+
+/obj/structure/criptic/ritual/proc/begin_the_ritual()
+	set waitfor = FALSE
+	animate(src, alpha = 255, time = 15 SECONDS, easing = SINE_EASING | EASE_IN)
+	show_blurb(GLOB.player_list, 20, "GOOD HUNTER DOESN'T KNOW LOVE", null, "center", "center", COLOR_RED, null, null, 1)
+
+	set_light_range(1)
+	set_light_power(0.5)
+
+	sleep(5 SECONDS)
+
+	show_blurb(GLOB.player_list, 10, "FINISH THE JOB", null, "center", "center", COLOR_RED, null, null, 1)
+
+	set_light_range(3)
+	set_light_power(1)
+
+	sleep(5 SECONDS)
+
+	show_blurb(GLOB.player_list, 20, "WIPE OUT THE STAIN", null, "center", "center", COLOR_RED, null, null, 1)
+
+	set_light_range(5)
+	set_light_power(2)
+
+/obj/item/criptic/instrument/book
+	name = "book"
+	desc = "Used for ritual performing"
+
+	icon = 'core_ru/code/modules/criptid_hunting/books.dmi'
+
+	icon_state = "arcane"
+	icon_state_on = "bookofnod-1"
+
+	var/blocker_type = /obj/structure/blocker/chime/dark
+	var/arena_radius = 12
+
+/obj/item/criptic/instrument/book/attack_self(mob/user)
+	. = ..()
+
+	var/obj/structure/criptic/mission_controller/M = locate(/obj/structure/criptic/mission_controller) in world
+	var/mob/living/carbon/xenomorph/criptic_wendigo/W = locate(/mob/living/carbon/xenomorph/criptic_wendigo) in world
+	if(M.current_clues_found >= M.needed_amount)
+		icon_state = "[icon_state_on]"
+
+		user.anchored = TRUE
+		var/obj/structure/criptic/ritual/R = new /obj/structure/criptic/ritual(loc)
+		R.begin_the_ritual()
+
+		if(do_after(user, 15 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC))
+			W.forceMove(get_turf(src))
+			user.anchored = FALSE
+
+			var/list/box = RANGE_TURFS(arena_radius, loc)
+			for(var/turf/T as anything in box)
+				if(get_dist(T, src) < arena_radius)
+					continue
+
+				var/angle = Get_Angle(loc, T)
+				var/relative_direction = get_dir_p_cardinals(angle)
+
+				var/additional_dir
+				switch(relative_direction)
+					if (NORTHEAST)
+						additional_dir = NORTH
+						relative_direction = EAST
+					if (SOUTHEAST)
+						additional_dir = SOUTH
+						relative_direction = EAST
+					if (SOUTHWEST)
+						additional_dir = SOUTH
+						relative_direction = WEST
+					if (NORTHWEST)
+						additional_dir = NORTH
+						relative_direction = WEST
+
+				new blocker_type(T, src, relative_direction)
+
+				if(!additional_dir)
+					continue
+
+				new blocker_type(T, src, additional_dir)
+		return TRUE
+	else
+		if(ishuman(loc))
+			var/mob/living/carbon/human/H = loc
+			animation_flash_color(src, COLOR_RED)
+			show_blurb(H, 15, "We need more info before we can call the trial", null, "WEST+6:22,2:14", "center", COLOR_DARK_RED, null, null, 1)
+			return TRUE
