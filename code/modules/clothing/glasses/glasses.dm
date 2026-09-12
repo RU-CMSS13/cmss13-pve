@@ -189,6 +189,10 @@
 	icon_state = "kutjevo_goggles"
 	item_state = "kutjevo_goggles"
 
+/obj/item/clothing/glasses/kutjevo/alt
+	name = "N95Z goggles"
+	desc = "Protective goggles designed to shield the wearer's eyes from dust, debris, and other airborne particles commonly encountered in industrial and mining environments."
+
 /obj/item/clothing/glasses/eyepatch
 	name = "eyepatch"
 	gender = NEUTER

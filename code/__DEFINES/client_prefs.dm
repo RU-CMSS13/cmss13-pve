@@ -37,6 +37,7 @@
 #define TOGGLE_ABILITY_DEACTIVATION_OFF (1<<18) // This toggles whether selecting the same ability again can toggle it off
 #define TOGGLE_AMMO_DISPLAY_TYPE (1<<19)/// limit how often the ammo is displayed when using semi-automatic fire
 #define TOGGLE_COMBAT_POINTBLANK_OVERRIDE (1<<20)/// Override PBing adjacent targets for non shotgun weapons. Instead using autofire
+#define TOGGLE_SHOUTING_AT_POINTED_PEOPLE (1<<21)///Toggles if you shout out the last name of people you point at on disarm/grab intent
 
 #define JOB_SLOT_RANDOMISED_SLOT -1
 #define JOB_SLOT_CURRENT_SLOT 0
@@ -45,7 +46,7 @@
 
 #define AGE_MIN 19 //youngest a character can be
 #define AGE_MAX 90 //oldest a character can be //no. you are not allowed to be 160.
-#define MAX_GEAR_COST 15 //Used in chargen for loadout limit.
+#define MAX_GEAR_COST 12 //Used in chargen for loadout limit.
 
 ///dual_wield_pref from /datum/preferences
 ///Fire both weapons when dual wielding
