@@ -1939,6 +1939,11 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	specialty = "6B84 helmet"
 	max_inserted_visors = 2
 
+/obj/item/clothing/head/helmet/upp/frogmen/vdv
+	name = "\improper 6B84-D light helmet"
+	desc = "A new UPP paratroopers helmet retains all the essential features required by airborne troops: low weight and a compact design. Unlike the reconnaissance version, it is made from more affordable and readily available materials, making it heavier and less comfortable."
+	max_inserted_visors = 1
+
 /obj/item/clothing/head/helmet/upp/frogmen/leader
 	name = "\improper 6B84-K light helmet"
 	desc = "Command variant of the 6B84, distinguished by an extra tactical relay wired into the standard datalink. Issued to squad leaders so they can keep their team and command net separate without swapping headsets mid-op."
