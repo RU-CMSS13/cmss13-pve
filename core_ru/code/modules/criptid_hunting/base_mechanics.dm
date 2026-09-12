@@ -1,6 +1,26 @@
+/atom
+	var/uv_scannable = FALSE
+	var/uv_scanned = FALSE
+
 /image/hint
 /mob/living/carbon/human
 	var/list/revealed_hints = list()
+	var/list/naturally_hinted = list()
+	var/hint_visibility = 1
+
+/mob/living/carbon/human/Life()
+
+	if(ishuman(src) && client)
+		for(var/atom/A as anything in revealed_hints)
+			if((get_dist(src, A) > hint_visibility) && (A in naturally_hinted))
+				hide_hint(A)
+
+		for(var/atom/A in range(hint_visibility,src))
+			if(!(A in revealed_hints) && A.uv_scannable && !A.uv_scanned)
+				show_hint(A)
+				naturally_hinted += A
+
+	. = ..()
 
 /mob/living/carbon/human/proc/show_hint(atom/A)
 	if(!client || (A in revealed_hints))
@@ -228,7 +248,6 @@
 					user.hide_hint(C)
 				C.reveal_itself()
 
-
 /obj/item/criptic/instrument/process()
 	check_for_condition()
 
@@ -327,6 +346,24 @@
 
 			cooldown_active = TRUE
 
+/obj/effect/temp_visual/uv_trail
+	duration = 1 MINUTES
+	icon = 'icons/effects/blood.dmi'
+	icon_state = "csplatter1"
+	layer = 3
+	alpha = 0
+
+/obj/effect/temp_visual/uv_trail/Initialize(mapload)
+	. = ..()
+	icon_state = "csplatter[rand(1,6)]"
+	var/splatter_size = pick(0.3,0.6,1)
+
+	animate(src, transform = matrix(splatter_size, MATRIX_SCALE), time = 1)
+	pixel_x = rand(-10,10)
+	pixel_y = rand(-10,10)
+
+	add_filter("highlight", 1, list("type" = "outline", "color" = "#b417b9", "size" = 1))
+
 /obj/item/criptic/instrument/uv_lamp
 	name = "UV lamp"
 	desc = "Can reveal hidden runes and ectoplasm"
@@ -345,10 +382,39 @@
 
 	var/mob/living/carbon/human/last_holder
 
+/obj/item/criptic/instrument/uv_lamp/afterattack(atom/A, mob/living/carbon/human/user, proximity_flag, click_parameters)
+	if(A.uv_scannable && !A.uv_scanned)
+		if(do_after(user, 50, INTERRUPT_ALL, BUSY_ICON_GENERIC))
+			A.uv_scanned = TRUE
+			create_path(A)
+		return TRUE
+
+	. = ..()
+
+/obj/item/criptic/instrument/uv_lamp/proc/create_path(atom/target) //working alright, but only on open grounds - indoors path goes trough walls - might get_step_towards help?
+	var/list/connected_clues = list()
+	for(var/obj/structure/criptic/clue/C in range(14,get_turf(target)))
+		if(C.revealed)
+			continue
+		connected_clues += C
+
+	var/obj/structure/criptic/clue/trail_to_follow = pick(connected_clues)
+
+	for(var/turf/open/O in get_line(target,trail_to_follow,0))
+		new /obj/effect/temp_visual/uv_trail(O)
+
 /obj/item/criptic/instrument/uv_lamp/check_for_condition()
 	if(ishuman(loc))
 		var/mob/living/carbon/human/H = loc
 		last_holder = H
+
+/// TRAIL
+
+		for(var/obj/effect/temp_visual/uv_trail/trail in range(2,get_turf(H)))
+			if(trail.alpha < 100)
+				animate(trail, alpha = 100, time = 0.5 SECONDS, easing = SINE_EASING | EASE_IN)
+
+/// TRAIL
 
 		for(var/obj/structure/criptic/clue/C in H.revealed_hints)
 			if(get_dist(C,H) > 3)
