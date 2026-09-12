@@ -123,6 +123,7 @@
 	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_UPP_GENERAL)
 	languages = list(LANGUAGE_RUSSIAN)
+	idtype = /obj/item/card/id/dogtag/upp
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 
@@ -196,6 +197,7 @@
 	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "MG"
 	languages = list(LANGUAGE_RUSSIAN)
+	idtype = /obj/item/card/id/dogtag/upp
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 
@@ -284,6 +286,7 @@
 	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_UPP_GENERAL)
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
+	idtype = /obj/item/card/id/dogtag/upp
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 	role_comm_title = "RTO"
@@ -348,6 +351,7 @@
 	assignment = JOB_SQUAD_MEDIC_UPP
 	role_comm_title = "PltStr"
 	languages = list(LANGUAGE_RUSSIAN)
+	idtype = /obj/item/card/id/dogtag/upp
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 
@@ -427,6 +431,7 @@
 	paygrades = list(PAY_SHORT_UE5 = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_TLPREP)
 	languages = list(LANGUAGE_RUSSIAN)
+	idtype = /obj/item/card/id/dogtag/upp
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 
@@ -514,6 +519,7 @@
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_LEADERSHIP, ACCESS_UPP_FLIGHT)
 	paygrades = list(PAY_SHORT_UE7 = JOB_PLAYTIME_TIER_0)
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
+	idtype = /obj/item/card/id/dogtag/upp
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 

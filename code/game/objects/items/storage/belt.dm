@@ -245,6 +245,7 @@
 		/obj/item/reagent_container/glass/minitank,
 		/obj/item/storage/surgical_case,
 		/obj/item/reagent_container/blood,
+		/obj/item/tool/portadialysis,
 	)
 
 /obj/item/storage/belt/medical/only_scanner/fill_preset_inventory()
@@ -2835,7 +2836,6 @@
 	item_state = "s_mortarbelt"
 	w_class = SIZE_HUGE
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
-	w_class = SIZE_HUGE
 	max_w_class = SIZE_HUGE
 	has_gamemode_skin = FALSE
 	holster_slots = list(
@@ -2894,10 +2894,10 @@
 
 /obj/item/storage/belt/gun/mortarbelt/rmc/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78/rmc())
+	can_be_inserted(new /obj/item/mortar_shell/he())
+	can_be_inserted(new /obj/item/mortar_shell/he())
+	can_be_inserted(new /obj/item/mortar_shell/smoke())
 	new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
-	new /obj/item/mortar_shell/he(src)
-	new /obj/item/mortar_shell/he(src)
-	new /obj/item/mortar_shell/smoke(src)
 
 /obj/item/storage/belt/gun/mortarbelt/rmc/full/gl/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78/rmc())

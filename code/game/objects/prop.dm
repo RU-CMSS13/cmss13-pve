@@ -354,6 +354,21 @@
 	icon_state = "poster3"
 	desc = "A copy of Playboy magazine. On the cover is photo of guitarist Sadie Summers, with the headline 'Sadie Summers tells ALL'. The article itself focuses on Sadie's many carnal exploits while on tour as well as her very public brawl at an LA nightclub that occured two years prior to the date of this issue. Flipping through the magazine you see article titles such as 'Jungle Mercenary: Life as an Ex-UPP commando' and 'The whys and hows of choosing synthetic girls'."
 
+/obj/item/prop/magazine/book/bible
+	name = "Bible"
+	desc = "A thick, dark-brown Bible with a worn cover, pale page edges, and a simple embossed cross on the front. It is a bound collection of Christian scriptures, containing the Old and New Testaments. Amen!"
+	icon_state = "bible"
+
+/obj/item/prop/magazine/book/bible/quran
+	name = "Quran"
+	desc = "A small, dark-green book with a worn brown spine and bright golden geometric patterns on its cover. The Quran is the sacred scripture of Islam, containing verses of the Quran in Arabic. Allahu Akbar!"
+	icon_state = "quran"
+
+/obj/item/prop/magazine/book/bible/torah
+	name = "Torah"
+	desc = "A thick, dark-brown scroll bound in a worn wooden case, with faded red edges and a pale parchment band across the bottom. The Torah is a sacred Jewish scroll containing the Five Books of Moses, traditionally handwritten on parchment and kept in a synagogue. Shalom!"
+	icon_state = "torah"
+
 //boots magazine
 /obj/item/prop/magazine/boots
 	name = "generic Boots! magazine"

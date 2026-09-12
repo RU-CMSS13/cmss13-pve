@@ -171,7 +171,7 @@
 	if(istype(W,/obj/item/storage))
 		..() // -> item/attackby()
 
-	if(istype(W,/obj/item/tool/kitchen/utensil))
+	if(istype(W,/obj/item/tool/kitchen/utensil) || HAS_TRAIT(W, TRAIT_TOOL_UTENSIL))
 
 		var/obj/item/tool/kitchen/utensil/U = W
 
