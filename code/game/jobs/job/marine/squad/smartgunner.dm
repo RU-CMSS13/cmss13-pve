@@ -95,7 +95,7 @@
 		gear_preset = gear_preset_quaternary
 	if(option == SR_PVT_VARIANT)
 		gear_preset = gear_preset_tertiary
-	if(option == CPL_VARIANT)
+	if(option == JSGT_VARIANT)
 		gear_preset = gear_preset_secondary
 
 /datum/job/marine/smartgunner/ai/forecon
@@ -128,7 +128,7 @@
 	spawn_positions = 1
 	gear_preset = /datum/equipment_preset/uscm/sg/upp/forecon
 	gear_preset_secondary = /datum/equipment_preset/uscm/sg/upp/forecon/junior_sergeant
-	gear_preset_quaternary = /datum/equipment_preset/uscm/sg/upp/forecon/senior_private
+	gear_preset_tertiary = /datum/equipment_preset/uscm/sg/upp/forecon/senior_private
 	job_options = list(SR_PVT_VARIANT = "SrPVT", JSGT_VARIANT = "JrSGT", SGT_VARIANT = "SGT")
 
 /obj/effect/landmark/start/marine/smartgunner/upp/forecon
