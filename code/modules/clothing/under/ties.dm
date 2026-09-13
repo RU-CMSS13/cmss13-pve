@@ -510,6 +510,27 @@
 	desc = "A fire-resistant shoulder patch. Was worn by workers and then later prisoners on the Fiorina 'Fury' 161 facility, a rare relic, after the facility went dark in 2179."
 	icon_state = "fury161patch"
 
+//Seegson patches
+/obj/item/clothing/accessory/patch/seegson_patch
+	name = "Seegson patch"
+	desc = "The patch issued by a Seegson conglomerate employee is old and worn, but still holds its shape despite being made of cheap materials."
+	desc_lore = "Does anyone still remember a company called Seegson? A second-rate company producing cheap knockoffs, as the colonial newspaper began calling it after 2135."
+	icon_state = "seegsonpatch"
+
+//Lasalle patches
+/obj/item/clothing/accessory/patch/lasalle_patch_alt
+	name = "Lasalle Bionational patch"
+	desc = "The patch issued to Lasalle Bionational employees is fire-resistant and acid-resistant. It smells foul, reeking of the company's lab."
+	desc_lore = "Lasalle is famous for its scientists, who, after leaving Weyland Yutani, went on to start their own company and become involved in agriculture and bioweapons development. But it seems you were just a technical worker or a janitor, since all that remains of your work is a patch."
+	icon_state = "lasallepatch"
+
+//Hyperdyne patches
+/obj/item/clothing/accessory/patch/hyperdyne_patch
+	name = "Hyperdyne Systems patch"
+	desc = "A patch worn by employees of Hyperdyne Systems, once a great developer of synthetics and a creator of some fine weapons and space exploration."
+	desc_lore = "It seems you previously worked for this corporation, whether it was part of Weyland Yutani at the time or whether it had already bought out its assets. The important thing is that you remember your time there, but it's more likely you were just a laborer working in a manufacturing site, now company entirely on the UPP market."
+	icon_state = "hyperdynepatch"
+
 //Flag patches
 /obj/item/clothing/accessory/patch/ua
 	name = "UA flag patch"
@@ -517,7 +538,6 @@
 	icon_state = "uaflagpatch"
 
 /obj/item/clothing/accessory/patch/brazil
-
 	name = "Brazilian flag patch"
 	desc = "A fire-resistant shoulder patch, with the flag of Brazil, a large South American nation of Earth."
 	icon_state = "brazilpatch"
