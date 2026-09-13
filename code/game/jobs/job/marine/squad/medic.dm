@@ -88,8 +88,9 @@
 /datum/job/marine/medic/ai/upp
 	title = JOB_SQUAD_MEDIC_UPP
 	gear_preset = /datum/equipment_preset/uscm/medic/upp
-	gear_preset_secondary = /datum/equipment_preset/uscm/medic/upp/senior_private
-	gear_preset_tertiary = /datum/equipment_preset/uscm/medic/upp/private
+	gear_preset_secondary = /datum/equipment_preset/uscm/medic/upp/junior_sergeant
+	gear_preset_tertiary = /datum/equipment_preset/uscm/medic/upp/senior_private
+	gear_preset_quaternary = /datum/equipment_preset/uscm/medic/upp/private
 	job_options = list(PVT_VARIANT = "PVT", SR_PVT_VARIANT = "SrPVT", JSGT_VARIANT = "JrSGT")
 
 /datum/job/marine/medic/ai/upp/handle_job_options(option)
@@ -98,7 +99,7 @@
 		gear_preset = gear_preset_quaternary
 	if(option == SR_PVT_VARIANT)
 		gear_preset = gear_preset_tertiary
-	if(option == CPL_VARIANT)
+	if(option == JSGT_VARIANT)
 		gear_preset = gear_preset_secondary
 
 /datum/job/marine/medic/ai/forecon
@@ -126,7 +127,7 @@
 /datum/job/marine/medic/ai/upp/forecon
 	title = JOB_SQUAD_MEDIC_FORECON_UPP
 	gear_preset = /datum/equipment_preset/uscm/medic/upp/forecon
-	gear_preset_secondary = /datum/equipment_preset/uscm/medic/upp/forecon/sergeant
+	gear_preset_secondary = /datum/equipment_preset/uscm/medic/upp/forecon/junior_sergeant
 	gear_preset_tertiary = /datum/equipment_preset/uscm/medic/upp/forecon/senior_private
 	job_options = list(SR_PVT_VARIANT = "SrPVT", JSGT_VARIANT = "JrSGT", SGT_VARIANT = "SGT")
 
