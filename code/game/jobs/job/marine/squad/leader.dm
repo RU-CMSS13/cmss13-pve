@@ -62,7 +62,7 @@ OverrideTimelock(/datum/job/marine/leader, list(
 /datum/job/marine/leader/ai/upp
 	title = JOB_SQUAD_LEADER_UPP
 	gear_preset = /datum/equipment_preset/uscm/leader/upp
-	gear_preset_secondary = /datum/equipment_preset/uscm/leader/upp/sergeant_major
+	gear_preset_secondary = /datum/equipment_preset/uscm/leader/upp/senior_sergeant
 	job_options = list(SRSGT_VARIANT = "SrSGT", SGTMJR_VARIANT = "SGTMJR")
 
 /datum/job/marine/leader/ai/upp/handle_job_options(option)
