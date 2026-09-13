@@ -150,16 +150,12 @@
 /datum/equipment_preset/uscm/pfc/upp/forecon
 	name = "UPP Recon Infantryman"
 	assignment = JOB_SQUAD_MARINE_FORECON_UPP
-	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/pfc/recon
 
 /datum/equipment_preset/uscm/pfc/upp/forecon/senior_private
 	name = parent_type::name + " (UE2 Rank)"
 	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0)
-
-/datum/equipment_preset/uscm/pfc/upp/forecon/junior_sergeant
-	name = parent_type::name + " (UE3 Rank)"
-	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
 
 //*****************************************************************************************************/
 
@@ -290,9 +286,9 @@
 
 	minimap_icon = "rto"
 
-/datum/equipment_preset/uscm/rto/upp/junior_sergeant
-	name = parent_type::name + " (UE3 Rank)"
-	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
+/datum/equipment_preset/uscm/rto/upp/senior_private
+	name = parent_type::name + " (UE2 Rank)"
+	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/rto/upp/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "Naval Infantry Telnyashka"
@@ -300,10 +296,6 @@
 /datum/equipment_preset/uscm/rto/upp/forecon
 	name = "UPP Recon Radio Transmissions Operator"
 	assignment = JOB_SQUAD_RTO_FORECON_UPP
-	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
-
-/datum/equipment_preset/uscm/rto/upp/forecon/junior_sergeant
-	name = parent_type::name + " (UE3 Rank)"
 	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/rto/upp/forecon/senior_private
