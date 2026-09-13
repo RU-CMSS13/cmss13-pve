@@ -350,8 +350,11 @@
 	duration = 1 MINUTES
 	icon = 'icons/effects/blood.dmi'
 	icon_state = "csplatter1"
-	layer = 3
+	layer = 2.52
 	alpha = 0
+
+	var/found = FALSE
+	var/time_to_fade = 5
 
 /obj/effect/temp_visual/uv_trail/Initialize(mapload)
 	. = ..()
@@ -363,6 +366,19 @@
 	pixel_y = rand(-10,10)
 
 	add_filter("highlight", 1, list("type" = "outline", "color" = "#b417b9", "size" = 1))
+	START_PROCESSING(SSobj,src)
+
+/obj/effect/temp_visual/uv_trail/process()
+	if(alpha > 0 && !found)
+		found = TRUE
+
+	if(found && time_to_fade > 0)
+		time_to_fade -= 1
+
+	if(found && time_to_fade <= 0)
+		found = FALSE
+		time_to_fade = 5
+		animate(src, alpha = 00, time = 0.5 SECONDS, easing = SINE_EASING | EASE_IN)
 
 /obj/item/criptic/instrument/uv_lamp
 	name = "UV lamp"
@@ -378,9 +394,14 @@
 
 	light_color = COLOR_STRONG_VIOLET
 	light_range = 4
-	light_power = 0.7
+	light_power = 2
 
 	var/mob/living/carbon/human/last_holder
+	var/list/trail_excludes = list()
+
+/obj/item/criptic/instrument/uv_lamp/Initialize(mapload, ...)
+	. = ..()
+	trail_excludes += typesof(/obj/structure/window_frame,/obj/structure/machinery/door)
 
 /obj/item/criptic/instrument/uv_lamp/afterattack(atom/A, mob/living/carbon/human/user, proximity_flag, click_parameters)
 	if(A.uv_scannable && !A.uv_scanned)
@@ -399,9 +420,41 @@
 		connected_clues += C
 
 	var/obj/structure/criptic/clue/trail_to_follow = pick(connected_clues)
+	var/obj/effect/temp_visual/uv_trail/trail = new /obj/effect/temp_visual/uv_trail(get_turf(target))
 
-	for(var/turf/open/O in get_line(target,trail_to_follow,0))
-		new /obj/effect/temp_visual/uv_trail(O)
+	var/stopped = FALSE
+
+	for(var/distance in 0 to 14)
+		var/turf/last_turf = get_turf(trail)
+		var/turf/T = get_step_to(trail,trail_to_follow)
+		new /obj/effect/temp_visual/uv_trail(get_turf(trail))
+
+		for(var/obj/O in T)
+			if(O.density && !(O.type in trail_excludes))
+				stopped = TRUE
+			else
+				trail.forceMove(T)
+
+		if(stopped)
+			var/list/turf/open/turflist = list()
+			for(var/turf/open/O in orange(1,trail))
+				if(O == last_turf)
+					continue
+
+				for(var/atom/A in O)
+					if(A.density && !(A.type in trail_excludes))
+						continue
+					else
+						turflist += O
+
+			if(length(turflist))
+				T = pick(turflist)
+				trail.forceMove(T)
+
+			else
+				trail.forceMove(T)
+		else
+			trail.forceMove(T)
 
 /obj/item/criptic/instrument/uv_lamp/check_for_condition()
 	if(ishuman(loc))
