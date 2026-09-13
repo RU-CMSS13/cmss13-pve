@@ -56,7 +56,6 @@
 		/obj/item/attachable/angledgrip,
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/gyro,
-		/obj/item/attachable/quickfire,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/bipod,
 		/obj/item/attachable/extended_barrel,
@@ -276,7 +275,6 @@
 		/obj/item/attachable/bayonet/wy,
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/quickfire,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/sling,
 		/obj/item/attachable/flashlight,
@@ -524,17 +522,11 @@
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/scope/pve,
-		/obj/item/attachable/quickfire,
 		/obj/item/attachable/bayonet,
-		/obj/item/attachable/bayonet/upp,
-		/obj/item/attachable/bayonet/co2,
 		/obj/item/attachable/bayonet/wy,
 		/obj/item/attachable/attached_gun/grenade/mk1,
-		/obj/item/attachable/attached_gun/flamer,
-		/obj/item/attachable/attached_gun/flamer/advanced,
 		/obj/item/attachable/stock/rifle/collapsible,
 		/obj/item/attachable/attached_gun/shotgun,
-		/obj/item/attachable/lasersight,
 		/obj/item/attachable/sling,
 	)
 
@@ -622,6 +614,7 @@
 	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible,/obj/item/attachable/attached_gun/grenade/mk1)
 
 /obj/item/weapon/gun/rifle/m41aMK1/elite/set_gun_config_values()
+	..()
 	set_fire_delay(FIRE_DELAY_TIER_11)
 	set_burst_amount(BURST_AMOUNT_TIER_2)
 	set_burst_delay(FIRE_DELAY_TIER_LMG)
@@ -644,18 +637,14 @@
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/scope/pve,
-		/obj/item/attachable/quickfire,
 		/obj/item/attachable/bayonet,
-		/obj/item/attachable/bayonet/upp,
-		/obj/item/attachable/bayonet/co2,
 		/obj/item/attachable/bayonet/wy,
 		/obj/item/attachable/attached_gun/grenade/mk1,
-		/obj/item/attachable/attached_gun/flamer,
-		/obj/item/attachable/attached_gun/flamer/advanced,
 		/obj/item/attachable/stock/rifle/collapsible,
 		/obj/item/attachable/sling,
 		/obj/item/attachable/angledgrip,
 		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/lasersight,
 	)
 	random_rail_chance = 50
 	random_spawn_rail = list(
@@ -835,7 +824,6 @@
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/scope/pve,
 		/obj/item/attachable/sling,
-		/obj/item/attachable/quickfire,
 		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/verticalgrip, // Under
@@ -1625,7 +1613,9 @@
 		/obj/item/attachable/bayonet/upp,
 		/obj/item/attachable/extended_barrel,
 		/obj/item/attachable/heavy_barrel,
-		/obj/item/attachable/attached_gun/grenade/type71/ag80, // underbarrel
+		/obj/item/attachable/attached_gun/grenade/type71, // underbarrel
+		/obj/item/attachable/attached_gun/grenade/type71/preloaded,
+		/obj/item/attachable/attached_gun/grenade/type71/ag80,
 		/obj/item/attachable/attached_gun/grenade/type71/ag80/preloaded,
 		/obj/item/attachable/verticalgrip/upp,
 		/obj/item/attachable/angledgrip/upp,
@@ -1638,7 +1628,7 @@
 	start_automatic = TRUE
 
 /obj/item/weapon/gun/rifle/type71/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 17,"rail_x" = 10, "rail_y" = 23, "under_x" = 24, "under_y" = 12, "stock_x" = 11, "stock_y" = 13, "side_rail_x" = 24, "side_rail_y" = 18)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 17,"rail_x" = 10, "rail_y" = 23, "under_x" = 24, "under_y" = 12, "stock_x" = 11, "stock_y" = 13, "side_rail_x" = 22, "side_rail_y" = 15)
 
 /obj/item/weapon/gun/rifle/type71/set_gun_config_values()
 	..()
@@ -1729,7 +1719,7 @@
 	damage_falloff_mult = 1.5
 
 /obj/item/weapon/gun/rifle/type71/carbine/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 17,"rail_x" = 15, "rail_y" = 22, "under_x" = 25, "under_y" = 13, "stock_x" = 15, "stock_y" = 13, "side_rail_x" = 21, "side_rail_y" = 18)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 17,"rail_x" = 15, "rail_y" = 22, "under_x" = 25, "under_y" = 13, "stock_x" = 15, "stock_y" = 13, "side_rail_x" = 22, "side_rail_y" = 16)
 
 /obj/item/weapon/gun/rifle/type71/carbine/unloaded
 	current_mag = null

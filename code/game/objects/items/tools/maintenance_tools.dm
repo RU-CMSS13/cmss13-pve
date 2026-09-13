@@ -468,6 +468,7 @@
 	max_fuel = 60
 	matter = list("metal" = 70, "glass" = 60)
 	icon_state = "welder_c"
+	has_welding_screen = FALSE
 
 
 /obj/item/tool/weldingtool/hugetank
