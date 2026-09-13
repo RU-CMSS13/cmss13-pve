@@ -1535,6 +1535,14 @@
 	new /obj/item/device/multitool(src)
 	new /obj/item/tool/wrench(src)
 
+/obj/item/storage/pouch/tools/black/pmc/fill_preset_inventory()
+	new /obj/item/tool/screwdriver/tactical(src)
+	new /obj/item/tool/wirecutters/tactical(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/weldingtool/largetank(src)
+	new /obj/item/device/multitool(src)
+	new /obj/item/tool/wrench(src)
+
 /obj/item/storage/pouch/tools/tactical
 	name = "tactical tools pouch"
 	desc = "This particular toolkit full of sharp, heavy objects was designed for breaking into things rather than fixing them. Still does the latter pretty well, though."

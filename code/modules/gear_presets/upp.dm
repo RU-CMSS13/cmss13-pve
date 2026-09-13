@@ -827,7 +827,7 @@
 	rank = JOB_SQUAD_MARINE
 	paygrades = list(PAY_SHORT_UE1 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/pfc
-	access = list(ACCESS_UPP_GENERAL, ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG)
+	access = list(ACCESS_UPP_GENERAL)
 
 /datum/equipment_preset/upp/rifleman/load_gear(mob/living/carbon/human/new_human)
 

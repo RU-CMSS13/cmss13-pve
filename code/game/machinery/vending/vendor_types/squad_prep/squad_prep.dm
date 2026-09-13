@@ -757,7 +757,6 @@
 		list("Helmet goggles", round(scale * 15), /obj/item/prop/helmetgarb/rmc_goggles, VENDOR_ITEM_REGULAR),
 
 		list("PATCHES", -1, null, null, null),
-		list("Marine Space Force Herculis patch", round(scale * 10), /obj/item/clothing/accessory/patch/msf_patch, VENDOR_ITEM_REGULAR),
 		list("Royal Marine Commando Shoulder Patch", round(scale * 15), /obj/item/clothing/accessory/patch/royal_marines, VENDOR_ITEM_REGULAR),
 		list("TWE Shoulder Patch", round(scale * 15), /obj/item/clothing/accessory/patch/twe, VENDOR_ITEM_REGULAR),
 		)
@@ -1124,7 +1123,7 @@
 		list("Crowbar", round(scale * 5), /obj/item/tool/crowbar/tactical, VENDOR_ITEM_REGULAR),
 		list("Wrench", round(scale * 5), /obj/item/tool/wrench, VENDOR_ITEM_REGULAR),
 		list("Multitool", round(scale * 1), /obj/item/device/multitool, VENDOR_ITEM_REGULAR),
-		list("Welding Tool", round(scale * 1), /obj/item/tool/weldingtool/largetank, VENDOR_ITEM_REGULAR),
+		list("Welding Tool", round(scale * 1), /obj/item/tool/weldingtool, VENDOR_ITEM_REGULAR),
 
 		list("EXPLOSIVES", -1, null, null),
 		list("Plastic Explosives", round(scale * 2), /obj/item/explosive/plastic, VENDOR_ITEM_REGULAR),
