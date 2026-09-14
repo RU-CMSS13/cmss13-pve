@@ -327,7 +327,7 @@
 
 	if(!weeds_nearby)
 
-		for(var/obj/structure/criptic/clue/C in range(5,get_turf(loc)))
+		for(var/obj/structure/criptic/clue/C in range(7,get_turf(loc)))
 			if(!C.revealed)
 				signatures += C
 
@@ -412,49 +412,79 @@
 
 	. = ..()
 
-/obj/item/criptic/instrument/uv_lamp/proc/create_path(atom/target) //working alright, but only on open grounds - indoors path goes trough walls - might get_step_towards help?
+/obj/item/criptic/instrument/uv_lamp/proc/create_path(atom/target)
 	var/list/connected_clues = list()
-	for(var/obj/structure/criptic/clue/C in range(14,get_turf(target)))
+	for(var/obj/structure/criptic/clue/C in range(14, get_turf(target)))
 		if(C.revealed)
 			continue
 		connected_clues += C
 
+	if(!length(connected_clues))
+		return
+
 	var/obj/structure/criptic/clue/trail_to_follow = pick(connected_clues)
-	var/obj/effect/temp_visual/uv_trail/trail = new /obj/effect/temp_visual/uv_trail(get_turf(target))
+	var/turf/start = get_turf(target)
+	var/turf/end = get_turf(trail_to_follow)
 
-	var/stopped = FALSE
+	if(!start || !end)
+		return
 
-	for(var/distance in 0 to 14)
-		var/turf/last_turf = get_turf(trail)
-		var/turf/T = get_step_to(trail,trail_to_follow)
-		new /obj/effect/temp_visual/uv_trail(get_turf(trail))
+	var/list/turf/queue = list(start)
+	var/list/turf/parents = list()
+	parents[start] = null
+	var/turf/current
+	var/found = FALSE
 
-		for(var/obj/O in T)
-			if(O.density && !(O.type in trail_excludes))
-				stopped = TRUE
-			else
-				trail.forceMove(T)
+	while(length(queue))
+		current = queue[1]
+		queue.Cut(1, 2)
 
-		if(stopped)
-			var/list/turf/open/turflist = list()
-			for(var/turf/open/O in orange(1,trail))
-				if(O == last_turf)
-					continue
+		if(current == end)
+			found = TRUE
+			break
 
-				for(var/atom/A in O)
-					if(A.density && !(A.type in trail_excludes))
-						continue
-					else
-						turflist += O
+		var/list/turf/neighbors = list(
+			get_step(current, NORTH),
+			get_step(current, SOUTH),
+			get_step(current, EAST),
+			get_step(current, WEST)
+		)
 
-			if(length(turflist))
-				T = pick(turflist)
-				trail.forceMove(T)
+		for(var/turf/next in neighbors)
+			if(!next || (next in parents))
+				continue
+			if(!is_turf_passable(next))
+				continue
 
-			else
-				trail.forceMove(T)
-		else
-			trail.forceMove(T)
+			parents[next] = current
+			queue += next
+
+	if(!found)
+		return
+
+	var/list/turf/path = list()
+	current = end
+	while(current)
+		path.Insert(1, current)
+		current = parents[current]
+
+	for(var/turf/T in path)
+		if(prob(80))
+			new /obj/effect/temp_visual/uv_trail(T)
+
+/obj/item/criptic/instrument/uv_lamp/proc/is_turf_passable(turf/T)
+	if(!T)
+		return FALSE
+	if(T.density)
+		return FALSE
+	if(!istype(T, /turf/open))
+		return FALSE
+
+	for(var/obj/O in T)
+		if(O.density && !(O.type in trail_excludes))
+			return FALSE
+
+	return TRUE
 
 /obj/item/criptic/instrument/uv_lamp/check_for_condition()
 	if(ishuman(loc))
