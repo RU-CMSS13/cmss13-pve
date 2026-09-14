@@ -1,3 +1,17 @@
+/obj/effect/temp_visual/utility
+	duration = 5 SECONDS
+	layer = ABOVE_MOB_LAYER
+
+	color = COLOR_GREEN
+
+/obj/effect/temp_visual/utility/Initialize(mapload)
+	. = ..()
+	animate(src, transform = matrix(0.5, MATRIX_SCALE), time = 1)
+
+	animate(src, 3.5 SECONDS, easing = SINE_EASING|EASE_OUT, pixel_y = 48, transform = matrix().Update(scale_x = 2.5, scale_y = 2.5, rotation = 30))
+	spawn(4 SECONDS)
+		animate(src, 1 SECONDS, easing = SINE_EASING|EASE_IN, flags = ANIMATION_PARALLEL, alpha = 0, transform = matrix())
+
 /obj/item/criptic/utility
 	name = "paranormal equipment"
 	desc = "..."
@@ -7,13 +21,18 @@
 
 	w_class = SIZE_TINY
 
+/obj/item/criptic/utility/proc/pop_out() //proc that exist specifically to show that you used an item
+	var/obj/effect/temp_visual/utility/U = new /obj/effect/temp_visual/utility(get_turf(loc))
+	U.icon = icon
+	U.icon_state = "[icon_state]"
+
 /obj/item/criptic/utility/protective_cross
 	name = "protection cross"
 	desc = "Used to scare of some of the entities"
 
 	light_color = LIGHT_COLOR_HOLY_MAGIC
 	light_range = 3
-	light_power = 0.5
+	light_power = 1
 
 	var/usage_cooldown = 1 MINUTES
 	var/used = FALSE
@@ -31,6 +50,7 @@
 	if(!used)
 		used = TRUE
 		addtimer(CALLBACK(src, PROC_REF(reset_cross)), usage_cooldown)
+		playsound(loc,'sound/voice/holy_chorus.ogg', 25, 1)
 		set_light_on(1)
 
 		for(var/mob/living/carbon/xenomorph/X in range(2,loc))
@@ -43,9 +63,7 @@
 				var/datum/action/xeno_action/onclick/lurker_invisibility/lurker_invis_action = get_action(X, /datum/action/xeno_action/onclick/lurker_invisibility)
 				if (lurker_invis_action)
 					lurker_invis_action.invisibility_off()
-
-				var/throwtarget = get_edge_target_turf(X, reverse_direction(X.dir))
-				X.throw_atom(throwtarget, 5, SPEED_AVERAGE, user, TRUE)
+				X.forceMove(get_step(X,reverse_direction(X.dir)))
 
 		sleep(0.5 SECONDS)
 
@@ -63,6 +81,8 @@
 				var/datum/action/xeno_action/onclick/lurker_invisibility/lurker_invis_action = get_action(X, /datum/action/xeno_action/onclick/lurker_invisibility)
 				if (lurker_invis_action)
 					lurker_invis_action.invisibility_off()
+				var/throwtarget = get_edge_target_turf(X, reverse_direction(X.dir))
+				X.throw_atom(throwtarget, 5, SPEED_AVERAGE, user, TRUE)
 
 		sleep(0.5 SECONDS)
 
