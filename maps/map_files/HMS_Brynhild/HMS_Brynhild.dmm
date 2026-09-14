@@ -3120,6 +3120,18 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/structure/closet/secure_closet/rmc_troop_sergeant{
+	pixel_y = 15;
+	pixel_x = -8;
+	can_block_movement = 0
+	},
+/obj/item/clothing/glasses/hud/health{
+	pixel_x = -8;
+	pixel_y = 31
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /obj/structure/machinery/cm_vending/clothing/leader/rmc{
 	pixel_y = 17;
 	density = 0
@@ -3276,6 +3288,15 @@
 	},
 /turf/open/space/basic,
 /area/space)
+"gx" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/prison/bright_clean,
+/area/hms_brynhild/armoury)
 "gy" = (
 /turf/open/floor/almayer/empty/golden_arrow,
 /area/hms_brynhild/cargo_shuttle/upper)
@@ -18469,7 +18490,7 @@
 	pixel_x = 18;
 	pixel_y = 6
 	},
-/obj/item/ammo_box/magazine/l54{
+/obj/item/ammo_box/magazine/vp70/extended{
 	pixel_x = -5;
 	pixel_y = 8
 	},
@@ -28604,7 +28625,7 @@ WY
 ZF
 sw
 gi
-AI
+gx
 sw
 sw
 sw

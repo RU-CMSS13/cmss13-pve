@@ -5410,12 +5410,7 @@
 	pixel_x = 2
 	},
 /obj/item/ammo_box/magazine/type73{
-	pixel_x = 3;
-	pixel_y = 6
-	},
-/obj/item/ammo_box/magazine/zhnk{
-	pixel_y = -1;
-	pixel_x = 2
+	pixel_x = 3
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
@@ -5748,12 +5743,8 @@
 	icon_state = "S"
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/zhnk{
-	pixel_y = 18;
-	pixel_x = 2
-	},
 /obj/item/ammo_box/magazine/np92{
-	pixel_y = 9;
+	pixel_y = 13;
 	pixel_x = 2
 	},
 /obj/item/ammo_box/magazine/type73{

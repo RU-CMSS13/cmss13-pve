@@ -2420,8 +2420,6 @@
 /obj/structure/closet/crate/secure/upp,
 /obj/item/ammo_box/magazine/nade_box/upp/ugl,
 /obj/item/ammo_box/magazine/nade_box/upp/ugl,
-/obj/item/ammo_box/magazine/nade_box/upp/ugl/incen,
-/obj/item/ammo_box/magazine/nade_box/upp/ugl/canister,
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
 	pixel_x = 2;
@@ -2764,14 +2762,6 @@
 /area/pudong/base/briefing)
 "jk" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/zhnk{
-	pixel_x = 9;
-	pixel_y = -6
-	},
-/obj/item/ammo_box/magazine/zhnk{
-	pixel_x = -8;
-	pixel_y = -6
-	},
 /obj/item/ammo_box/rounds/smartgun/upp{
 	pixel_y = 10
 	},
@@ -9155,28 +9145,11 @@
 /turf/open/auto_turf/snow/layer1,
 /area/pudong/exterior/cliff)
 "PA" = (
-/obj/item/tool/crowbar/tactical{
-	pixel_y = 15
-	},
-/obj/item/storage/box/zipcuffs/small{
-	pixel_x = 5;
-	pixel_y = 12
-	},
-/obj/item/device/binoculars/range/designator/upp{
-	pixel_y = 17
-	},
-/obj/item/deployable_beacon/red{
-	pixel_y = 21
-	},
-/obj/item/device/whistle{
-	pixel_y = 22;
-	pixel_x = -8
-	},
-/obj/structure/surface/rack{
-	pixel_y = 18;
-	density = 0;
-	color = "#8B9490"
-	},
+/obj/item/tool/crowbar/tactical,
+/obj/item/storage/box/zipcuffs/small,
+/obj/item/device/binoculars/range/designator/upp,
+/obj/item/deployable_beacon/red,
+/obj/item/device/whistle,
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
 	color = "#C02526";
@@ -9184,6 +9157,10 @@
 	light_power = 0.4;
 	pixel_y = 20;
 	light_range = 4
+	},
+/obj/structure/closet/secure_closet{
+	name = "Platoon Sergeant locker";
+	req_access_txt = "240"
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/pudong/base/armory)
