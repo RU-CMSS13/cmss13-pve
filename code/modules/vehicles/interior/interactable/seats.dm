@@ -350,7 +350,7 @@
 
 	handle_rotation()
 
-/obj/structure/bed/chair/vehicle/update_shimmy_data(obj/structure/bed/chair/neighbor = null)
+/obj/structure/bed/chair/vehicle/update_shimmy_data(obj/structure/bed/chair/neighbor = null, force_update = FALSE)
 	if(shimmy_data == null)
 		return	//this chair doesnt shimmy
 	var/approachness = NORTH|SOUTH|EAST|WEST
@@ -389,6 +389,21 @@
 		else
 			shimmy_data[3] = offset
 			shimmy_data[4] = offset
+
+	if(force_update && buckled_mob)
+		buckled_mob.density = FALSE
+		density = TRUE
+		AddComponent(/datum/component/shimmy_around, \
+			north_offset = shimmy_data[1], \
+			south_offset = shimmy_data[2], \
+			east_offset  = shimmy_data[3], \
+			west_offset  = shimmy_data[4], \
+			extra_delay  = 0.5 SECONDS, \
+			approach_dirs = shimmy_data[5], \
+			internal_dirs = shimmy_data[6], \
+			disallowed_types = list( \
+				/mob/living/carbon/xenomorph,) \
+			)
 
 // /obj/structure/bed/chair/vehicle/proc/setup_buckle_offsets()
 /obj/structure/bed/chair/vehicle/setup_buckle_offsets() //RU-PVE
