@@ -1,15 +1,13 @@
 /obj/effect/temp_visual/utility
-	duration = 5 SECONDS
+	duration = 3 SECONDS
 	layer = ABOVE_MOB_LAYER
-
-	color = COLOR_GREEN
 
 /obj/effect/temp_visual/utility/Initialize(mapload)
 	. = ..()
 	animate(src, transform = matrix(0.5, MATRIX_SCALE), time = 1)
 
-	animate(src, 3.5 SECONDS, easing = SINE_EASING|EASE_OUT, pixel_y = 48, transform = matrix().Update(scale_x = 2.5, scale_y = 2.5, rotation = 30))
-	spawn(4 SECONDS)
+	animate(src, 1.5 SECONDS, easing = SINE_EASING|EASE_OUT, pixel_y = 64, transform = matrix().Update(scale_x = 1.5, scale_y = 1.5, rotation = 30))
+	spawn(2 SECONDS)
 		animate(src, 1 SECONDS, easing = SINE_EASING|EASE_IN, flags = ANIMATION_PARALLEL, alpha = 0, transform = matrix())
 
 /obj/item/criptic/utility
@@ -48,6 +46,8 @@
 		return FALSE
 
 	if(!used)
+		pop_out()
+
 		used = TRUE
 		addtimer(CALLBACK(src, PROC_REF(reset_cross)), usage_cooldown)
 		playsound(loc,'sound/voice/holy_chorus.ogg', 25, 1)
@@ -65,18 +65,20 @@
 					lurker_invis_action.invisibility_off()
 				X.forceMove(get_step(X,reverse_direction(X.dir)))
 
+				X.apply_damage(600,BURN)
+				X.emote("roar")
+
+				X.adjust_fire_stacks(20)
+				X.IgniteMob()
+
 		sleep(0.5 SECONDS)
 
-		set_light_range(5)
+		set_light_range(6)
 		set_light_power(2)
 
 		for(var/mob/living/carbon/xenomorph/X in range(5,loc))
 			if(X.type in criptids)
 				playsound(X.loc,"acid_sizzle", 50, 1)
-
-				animation_flash_color(X, COLOR_RED)
-				X.apply_damage(600,BRUTE)
-				X.emote("roar")
 
 				var/datum/action/xeno_action/onclick/lurker_invisibility/lurker_invis_action = get_action(X, /datum/action/xeno_action/onclick/lurker_invisibility)
 				if (lurker_invis_action)
@@ -122,6 +124,7 @@
 
 /obj/item/criptic/utility/pills/healing/attack_self(mob/living/carbon/human/user)
 	. = ..()
+	pop_out()
 	playsound(loc,'sound/effects/pillbottle.ogg',10,TRUE)
 	user.rejuvenate()
 	animation_flash_color(src, COLOR_GREEN)
@@ -132,6 +135,7 @@
 
 /obj/item/criptic/utility/pills/healing/attack(mob/living/carbon/human/M, mob/user)
 	. = ..()
+	pop_out()
 	playsound(loc,'sound/effects/pillbottle.ogg',10,TRUE)
 	M.rejuvenate()
 	animation_flash_color(src, COLOR_GREEN)
@@ -185,7 +189,7 @@
 
 /obj/item/criptic/utility/fuel/attack_self(mob/user)
 	. = ..()
-
+	pop_out()
 	var/obj/structure/criptic/fuel/F = new /obj/structure/criptic/fuel(get_turf(loc))
 
 	for(var/turf/open/T in orange(1,F))
@@ -268,6 +272,7 @@
 
 /obj/item/criptic/utility/chime/attack_self(mob/user)
 	. = ..()
+	pop_out()
 	user.drop_held_item(src)
 
 	anchored = TRUE

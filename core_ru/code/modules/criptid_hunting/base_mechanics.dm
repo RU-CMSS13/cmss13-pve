@@ -1,3 +1,48 @@
+/image/proc/show_cluetext(message, scroll_down, text_alignment = "left", text_color = "#FFFFFF", speed = 1)
+	set waitfor = 0
+
+	var/style = "font-family: Fixedsys, monospace; -dm-text-outline: 1 black; font-size: 9px; text-align: [text_alignment]; color: [text_color];"
+	var/list/linebreaks = list()
+
+	var/linebreak = findtext(message, "\n")
+	while(linebreak)
+		linebreak++
+		linebreaks += linebreak
+		linebreak = findtext(message, "\n", linebreak)
+
+	var/list/html_tags = list()
+	var/html_tag = findtext(message, regex("<.>"))
+	var/opener = TRUE
+	while(html_tag)
+		html_tag++
+		if(opener)
+			html_tags += list(html_tag, html_tag + 1, html_tag + 2)
+			html_tag = findtext(message, regex("<.>"), html_tag + 2)
+			if(!html_tag)
+				opener = FALSE
+				html_tag = findtext(message, regex("</.>"))
+		else
+			html_tags += list(html_tag, html_tag + 1, html_tag + 2, html_tag + 3)
+			html_tag = findtext(message, regex("</.>"), html_tag + 3)
+
+	switch(text_alignment)
+		if("center")
+			maptext_x = -(maptext_width * 0.5 - 16)
+		if("right")
+			maptext_x = -(maptext_width - 32)
+	if(scroll_down)
+		maptext_y = length(linebreaks) * 14
+
+	for(var/i in 1 to length(message) + 1)
+		if(i in linebreaks)
+			if(scroll_down)
+				maptext_y -= 14 //Move the object to keep lines in the same place.
+			continue
+		if(i in html_tags)
+			continue
+		maptext = "<span style=\"[style]\">[copytext_char(message,1,i)]</span>"
+		sleep(speed)
+
 /// Runs Scale, Turn, and Translate if supplied parameters, then multiplies by others if set.
 /matrix/proc/Update(scale_x, scale_y, rotation, offset_x, offset_y, list/others)
 	var/x_null = isnull(scale_x)
@@ -19,6 +64,9 @@
 	var/uv_scannable = FALSE
 	var/uv_scanned = FALSE
 
+	var/uv_slogan = "..."
+	var/uv_onfind = "..."
+
 /image/hint
 /mob/living/carbon/human
 	var/list/revealed_hints = list()
@@ -34,23 +82,30 @@
 
 		for(var/atom/A in range(hint_visibility,src))
 			if(!(A in revealed_hints) && A.uv_scannable && !A.uv_scanned)
-				show_hint(A)
+				show_hint(A,"trail", 1, A.uv_slogan)
 				naturally_hinted += A
 
 	. = ..()
 
-/mob/living/carbon/human/proc/show_hint(atom/A)
+/mob/living/carbon/human/proc/show_hint(atom/A, icon_to_show = "auspex", show_maptext = 0, maptext_text = "...")
 	if(!client || (A in revealed_hints))
 		return
 
-	var/image/hint/new_hint = new /image/hint('core_ru/code/modules/criptid_hunting/disciplines.dmi', A, "auspex", layer = HUD_LAYER)
+	var/image/hint/new_hint = new /image/hint('core_ru/code/modules/criptid_hunting/disciplines.dmi', A, "[icon_to_show]", layer = HUD_LAYER)
 
 	new_hint.alpha = 0
 	new_hint.pixel_x = pixel_x + 5
 	new_hint.pixel_y = pixel_y + 5
 	new_hint.plane = HUD_PLANE
 
+	new_hint.maptext_width = 480
+	new_hint.maptext_height = 480
+	new_hint.maptext_y = 15
+
 	animate(new_hint, alpha = 255, pixel_x = A.pixel_x+8, pixel_y = A.pixel_y+12, time = 0.3 SECONDS, easing = SINE_EASING|EASE_OUT)
+
+	if(show_maptext)
+		new_hint.show_cluetext(maptext_text, null, "center", COLOR_GRAY, 1)
 
 	client.images += new_hint
 	revealed_hints[A] = new_hint
@@ -424,6 +479,8 @@
 	if(A.uv_scannable && !A.uv_scanned)
 		if(do_after(user, 50, INTERRUPT_ALL, BUSY_ICON_GENERIC))
 			A.uv_scanned = TRUE
+			show_blurb(user, 20, "[A.uv_onfind]", null, "CENTER,CENTER+1", "center", COLOR_GRAY, null, null, 1)
+			user.hide_hint(A)
 			create_path(A)
 		return TRUE
 
@@ -712,8 +769,9 @@
 
 	var/obj/structure/criptic/mission_controller/M = locate(/obj/structure/criptic/mission_controller) in world
 	var/mob/living/carbon/xenomorph/criptic_wendigo/W = locate(/mob/living/carbon/xenomorph/criptic_wendigo) in world
-	if(M.current_clues_found >= M.needed_amount)
+	if(M.current_clues_found >= M.needed_amount && !activated)
 		icon_state = "[icon_state_on]"
+		activated = TRUE
 
 		user.anchored = TRUE
 		var/obj/structure/criptic/ritual/R = new /obj/structure/criptic/ritual(get_turf(loc))
