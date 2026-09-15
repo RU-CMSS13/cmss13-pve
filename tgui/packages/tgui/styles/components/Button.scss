@@ -168,3 +168,15 @@ $bg-map: colors.$bg-map !default;
 .Button__textMargin {
   margin-left: 0.4rem;
 }
+
+.Button.AdminMusicPanel__centeredButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .Button__content {
+    align-self: auto;
+    width: 100%;
+    text-align: center;
+  }
+}
