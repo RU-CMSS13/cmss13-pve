@@ -53,7 +53,7 @@ em {font-style: normal; font-weight: bold;}
 .jtacradio {color: #702963;}
 .intelradio {color: #027D02;}
 .wyradio {color: #FE9B24;}
-.hdcradio {color: #FEE6C24;}
+.hdcradio {color: #FE6C24;}
 .pmcradio {color: #A13852;}
 
 .clfradio {color: #6f679c}
@@ -160,7 +160,7 @@ h1.alert, h2.alert {color: #000000;}
 .ruspatois {color: #258687}
 .japanese {color: #0047A0}
 .polish {color: #FF8DA1}
-.commando {color: #FE9B24; font-style: bold;}
+.commando {color: #FE9B24; font-weight: bold;}
 .say_quote {font-family: Georgia, Verdana, sans-serif;}
 
 .retro_translator {font-weight: bold;}

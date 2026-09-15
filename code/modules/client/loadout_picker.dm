@@ -76,14 +76,23 @@
 		return
 
 	var/points = 0
+	var/list/valid_gear = list()
 
 	.["loadout"] = list()
 
 	for(var/item in prefs.gear)
 		var/datum/gear/gear = GLOB.gear_datums_by_name[item]
+		if(!istype(gear))
+			log_debug("loadout_picker: skipping unknown gear '[item]' for [user]")
+			continue
+
+		valid_gear += item
 		points += gear.cost
 
 		.["loadout"] += list(get_gear_data(gear))
+
+	if(length(valid_gear) != length(prefs.gear))
+		prefs.gear = valid_gear
 
 	.["points"] = points
 
@@ -105,7 +114,10 @@
 
 			var/total_cost = 0
 			for(var/gear_name in prefs.gear)
-				total_cost += GLOB.gear_datums_by_name[gear_name].cost
+				var/datum/gear/existing_gear = GLOB.gear_datums_by_name[gear_name]
+				if(!istype(existing_gear))
+					continue
+				total_cost += existing_gear.cost
 
 			total_cost += gear.cost
 			if(total_cost > MAX_GEAR_COST)
@@ -116,6 +128,7 @@
 		if("remove")
 			var/datum/gear/gear = GLOB.gear_datums_by_name[params["name"]]
 			if(!istype(gear))
+				prefs.gear -= params["name"]
 				return
 
 			prefs.gear -= gear.display_name
