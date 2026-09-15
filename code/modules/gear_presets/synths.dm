@@ -540,6 +540,8 @@
 	/// Used to set species when loading race
 	var/joe_type = SYNTH_WORKING_JOE
 
+	ai_disallow_looting = TRUE
+
 /datum/equipment_preset/synth/working_joe/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_GLOBAL)
