@@ -1,0 +1,9 @@
+{
+    "map_name": "Turing_base",
+    "map_path": "map_files/Turing_base",
+    "map_file": "Turing_base.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+	"nightmare_path": "maps/Nightmare/maps/turing_base/",
+    "platoon": "/datum/squad/marine/rmc"
+}
