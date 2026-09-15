@@ -1559,3 +1559,80 @@
 	armor_bio = CLOTHING_ARMOR_MEDIUM
 	armor_rad = CLOTHING_ARMOR_MEDIUMLOW
 	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS // it is heavier
+
+//===========================//FREELANCER - ELITE\\================================\\
+//=====================================================================\\
+
+/obj/item/clothing/suit/marine/veteran/freelancer/elite
+	name = "\improper Y12 ceramic plated armor"
+	desc = "A rugged hauberk. Extremely protective and uses prototype ceramic plates in its construction. Armor like this is made to-order for elite freelancers."
+	icon_state = "freelancecell_armor_3"
+	icon = 'icons/obj/items/clothing/suits/suits_by_faction/FREELANCER.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/FREELANCER.dmi'
+	)
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	slowdown = SLOWDOWN_ARMOR_MEDIUM
+	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/freelancer/elite)
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY)
+
+/obj/item/clothing/suit/marine/veteran/freelancer/elite/partial1
+	name = "\improper Y12 ceramic plated hauberk"
+	icon_state = "freelancecell_armor_1"
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARM_LEFT|BODY_FLAG_LEGS
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+
+/obj/item/clothing/suit/marine/veteran/freelancer/elite/partial2
+	name = "\improper Y12 ceramic plated hauberk"
+	icon_state = "freelancecell_armor_2"
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARM_RIGHT|BODY_FLAG_LEGS
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+
+/obj/item/clothing/suit/marine/veteran/freelancer/elite/light
+	name = "\improper Z14 ceramic plated light armor"
+	desc = "A rugged hauberk. Extremely protective and uses prototype ceramic plates in its construction. Armor like this is made to-order for elite freelancers."
+	icon_state = "freelancecell_armor_4"
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
+	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
+	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN
+	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	slowdown = SLOWDOWN_ARMOR_LIGHT
+
+/obj/item/clothing/suit/marine/veteran/freelancer/elite/heavy
+	name = "\improper K16 juggernaut armor"
+	desc = "An exceptionally set of armor. Made almost entirely out of prototype ceramic plates, which gives it almost impossible strength and resistance. Armor like this is even rarer than normal freelancer gear, and it's only used by their most elite members."
+	icon_state = "freelancecell_armor_heavy"
+	flags_armor_protection = BODY_FLAG_ALL_BUT_HEAD
+	flags_cold_protection = BODY_FLAG_ALL_BUT_HEAD
+	flags_heat_protection = BODY_FLAG_ALL_BUT_HEAD
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_HIGH
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_MEDIUMLOW
+	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS // it is heavier
+	slowdown = SLOWDOWN_ARMOR_HEAVY
+
+/obj/item/clothing/suit/marine/veteran/freelancer/elite/heavy/smartgunner
+	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN|SMARTGUN_HARNESS
