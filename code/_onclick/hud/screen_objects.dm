@@ -264,11 +264,6 @@
 	icon_state = "action_down"
 	proc_ref = TYPE_VERB_REF(/mob/living, shift_layer_down)
 
-/atom/movable/screen/action/roll_dice
-	name = "Roll Dice"
-	icon_state = "roll_dice"
-	proc_ref = TYPE_VERB_REF(/mob/living/carbon/human, roll_dice_ic)
-
 /atom/movable/screen/action/clicked(mob/user)
 	. = ..()
 	if(.)
@@ -471,7 +466,20 @@
 	else
 		icon_state = "pull0"
 
+/atom/movable/screen/important_action
+	name = "important emote"
+	icon = 'icons/mob/hud/human_midnight.dmi'
+	icon_state = "act_important_action"
+	layer = HUD_LAYER
 
+/atom/movable/screen/important_action/clicked(mob/user)
+	if(ishuman(user))
+		var/mob/living/carbon/human/human = user
+		var/message = reject_bad_text(input(user,"Must be formatted like an emote", "Important Action", ""))
+		if(!message)
+			return FALSE
+		human.do_important_action(message)
+		return 1
 
 /atom/movable/screen/squad_leader_locator
 	name = "beacon tracker"
