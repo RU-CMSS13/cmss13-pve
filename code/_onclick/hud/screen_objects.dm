@@ -479,7 +479,7 @@
 		if(!message)
 			return FALSE
 		human.do_important_action(message)
-		return 1
+		return TRUE
 
 /atom/movable/screen/squad_leader_locator
 	name = "beacon tracker"
