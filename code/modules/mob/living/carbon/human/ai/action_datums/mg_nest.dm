@@ -92,6 +92,8 @@
 		/datum/equipment_preset/rebel/soldier/machinegunner::name = /datum/equipment_preset/rebel/soldier/machinegunner,
 		/datum/equipment_preset/clf/soldier/machinegunner::name = /datum/equipment_preset/clf/soldier/machinegunner,
 		/datum/equipment_preset/mercenary/sentinel/mg::name = /datum/equipment_preset/mercenary/sentinel/mg,
+		/datum/equipment_preset/canc/remnant/old/commando/machinegunner::name = /datum/equipment_preset/canc/remnant/old/commando/machinegunner,
+		/datum/equipment_preset/canc/machinegunner/blackops::name = /datum/equipment_preset/canc/machinegunner/blackops,
 	)
 
 	if(!check_rights(R_DEBUG))

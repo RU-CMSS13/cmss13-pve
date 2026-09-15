@@ -230,11 +230,21 @@
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/upp/populate_product_list(scale)
 	listed_products = list(
 		list("STANDARD EQUIPMENT", -1, null, null, null),
-		list("Military Combat Boots", round(scale * 15), /obj/item/clothing/shoes/marine/upp, VENDOR_ITEM_REGULAR),
-		list("Naval Infantry Uniform", round(scale * 15), /obj/item/clothing/under/marine/veteran/upp, VENDOR_ITEM_REGULAR),
-		list("Combat Gloves", round(scale * 15), /obj/item/clothing/gloves/marine, VENDOR_ITEM_REGULAR),
+		list("Military Combat Boots", round(scale * 15), /obj/item/clothing/shoes/marine/upp/guard, VENDOR_ITEM_REGULAR),
+		list("Garrison Uniform (green)", round(scale * 15), /obj/item/clothing/under/marine/veteran/upp/army, VENDOR_ITEM_REGULAR),
+		list("Garrison Uniform (brown)", round(scale * 15), /obj/item/clothing/under/marine/veteran/upp/army/alt, VENDOR_ITEM_REGULAR),
+		list("Combat Gloves", round(scale * 15), /obj/item/clothing/gloves/marine/brown, VENDOR_ITEM_REGULAR),
 		list("Radio Headset", round(scale * 15), /obj/item/device/radio/headset/almayer/marine/solardevils/upp, VENDOR_ITEM_REGULAR),
 		list("1PN77M \"Periskop\" Camera Unit", floor(scale * 15), /obj/item/device/overwatch_camera/upp, VENDOR_ITEM_REGULAR),
+
+		list("WINTER GARRISON EQUIPMENT", -1, null, null, null),
+		list("Winter Uniform", round(scale * 15), /obj/item/clothing/under/marine/veteran/upp/snow, VENDOR_ITEM_REGULAR),
+		list("UL2 ushanka", round(scale * 15), /obj/item/clothing/head/cmcap/upp/ushanka, VENDOR_ITEM_REGULAR),
+		list("Heat absorbent coif (tan)", round(scale * 5), /obj/item/clothing/mask/rebreather/scarf/tan, VENDOR_ITEM_REGULAR),
+		list("Heat absorbent coif (black)", round(scale * 5), /obj/item/clothing/mask/rebreather/scarf, VENDOR_ITEM_REGULAR),
+		list("Scarf (green)", round(scale * 5), /obj/item/clothing/mask/tornscarf/green, VENDOR_ITEM_REGULAR),
+		list("Scarf (white)", round(scale * 5), /obj/item/clothing/mask/tornscarf/snow, VENDOR_ITEM_REGULAR),
+		list("Scarf (black)", round(scale * 5), /obj/item/clothing/mask/tornscarf/black, VENDOR_ITEM_REGULAR),
 
 		list("WEBBINGS", -1, null, null),
 		list("Type 90 Pattern Magazine Webbing", round(scale * 10), /obj/item/clothing/accessory/storage/webbing/m3/uppmags, VENDOR_ITEM_REGULAR),
@@ -257,9 +267,6 @@
 		list("BACKPACK", -1, null, null, null),
 		list("UPP Satchel", round(scale * 15), /obj/item/storage/backpack/lightpack/upp, VENDOR_ITEM_REGULAR),
 		list("UPP Backpack", round(scale * 15), /obj/item/storage/backpack/marine/upp, VENDOR_ITEM_REGULAR),
-
-		list("RESTRICTED BACKPACKS", -1, null, null),
-		list("Radio Telephone Backpack", round(max(1,(scale * 0.5))), /obj/item/storage/backpack/marine/satchel/rto/upp_net, VENDOR_ITEM_REGULAR),
 
 		list("BELTS", -1, null, null),
 		list("Type 41 Pattern Ammo Load Rig", round(scale * 15), /obj/item/storage/belt/marine/upp, VENDOR_ITEM_REGULAR),
@@ -289,12 +296,6 @@
 		list("MASK", -1, null, null, null),
 		list("ShMB/4 Gas Mask", round(scale * 15), /obj/item/clothing/mask/gas/military/upp, VENDOR_ITEM_REGULAR),
 
-		list("CLOTHING", -1, null, null),
-		list("Balaclava", round(scale * 5), /obj/item/clothing/mask/rebreather/scarf/tan, VENDOR_ITEM_REGULAR),
-		list("Balaclava", round(scale * 5), /obj/item/clothing/mask/rebreather/scarf, VENDOR_ITEM_REGULAR),
-		list("Scarf", round(scale * 5), /obj/item/clothing/mask/rebreather/scarf/tacticalmask/tan, VENDOR_ITEM_REGULAR),
-		list("Scarf", round(scale * 5), /obj/item/clothing/mask/rebreather/scarf/tacticalmask/black, VENDOR_ITEM_REGULAR),
-
 		list("MISCELLANEOUS", -1, null, null, null),
 		list("Ballistic goggles", round(scale * 10), /obj/item/clothing/glasses/mgoggles/upp, VENDOR_ITEM_REGULAR),
 		list("Prescription ballistic goggles", round(scale * 10), /obj/item/clothing/glasses/mgoggles/upp/prescription, VENDOR_ITEM_REGULAR),
@@ -303,7 +304,6 @@
 		list("Canteen", round(scale * 20), /obj/item/reagent_container/food/drinks/flask/canteen, VENDOR_ITEM_REGULAR),
 
 		list("PATCHES", -1, null, null, null),
-		list("UPP Naval Infantry Shoulder Patch", round(scale * 15), /obj/item/clothing/accessory/patch/upp/naval, VENDOR_ITEM_REGULAR),
 		list("UPPAC Shoulder Patch", round(scale * 15), /obj/item/clothing/accessory/patch/upp, VENDOR_ITEM_REGULAR),
 		)
 
