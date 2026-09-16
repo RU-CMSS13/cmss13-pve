@@ -73,7 +73,7 @@
 				var/can_vend = TRUE
 				if(uniform_path in vended_items)
 					can_vend = FALSE
-				var/name = sanitize(initial(O.name))
+				var/name = sanitize(strip_improper(initial(O.name)))
 				var/flags = can_vend ? null : MARINE_CAN_BUY_DRESS
 				display_list += list(
 					list(name, 0, uniform_path, flags, VENDOR_ITEM_REGULAR)
@@ -113,8 +113,8 @@
 	if(!istype(human_user))
 		return
 
-	switch(action)
-		if("vend")
+	switch (action)
+		if ("vend")
 			var/exploiting = TRUE
 			var/idx=params["prod_index"]
 
@@ -126,7 +126,7 @@
 			var/obj/item/card/id/id_card = human_user.get_idcard()
 
 			if(!id_card) //not wearing an ID
-				to_chat(human_user, SPAN_WARNING("Access denied. No ID card detected"))
+				to_chat(human_user, SPAN_WARNING("Access denied. No ID card detected."))
 				return
 
 			if(id_card.registered_name != human_user.real_name)
