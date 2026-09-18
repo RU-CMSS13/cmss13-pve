@@ -86,6 +86,8 @@
 		/datum/equipment_preset/royal_marine/sniper::name = /datum/equipment_preset/royal_marine/sniper/ai,
 		/datum/equipment_preset/colonist/security/guard/marksman::name = /datum/equipment_preset/colonist/security/guard/marksman,
 		/datum/equipment_preset/mercenary/sentinel/marksman::name = /datum/equipment_preset/mercenary/sentinel/marksman,
+		/datum/equipment_preset/canc/remnant/old/commando/sniper::name = /datum/equipment_preset/canc/remnant/old/commando/sniper,
+		/datum/equipment_preset/canc/marksman/blackops::name = /datum/equipment_preset/canc/marksman/blackops,
 	)
 
 	if(!check_rights(R_DEBUG))
