@@ -12,6 +12,8 @@
 	var/scorchable = FALSE //if TRUE set to be an icon_state which is the full sprite version of whatever gets scorched --> for border turfs like grass edges and shorelines
 	var/scorchedness = 0 //how scorched is this turf 0 to 3
 	var/icon_state_before_scorching //this is really dumb, blame the mappers...
+	var/footstep_sound
+	var/barefoot_sound = "barefoot_footstep"
 
 /turf/open/Initialize(mapload, ...)
 	. = ..()
@@ -254,6 +256,7 @@
 	name = "grass"
 	icon = 'icons/turf/floors/floors.dmi'
 	icon_state = "grass1"
+	footstep_sound = "grass_footstep"
 
 /turf/open/organic/grass/astroturf
 	desc = "It'll get in your shoes no matter what you do."
@@ -267,6 +270,7 @@
 	icon_state = "mars_sand_1"
 	is_groundmap_turf = TRUE
 	minimap_color = MINIMAP_MARS_DIRT
+	footstep_sound = "sand_footstep"
 
 
 /turf/open/mars_cave
@@ -274,6 +278,7 @@
 	icon = 'icons/turf/floors/bigred.dmi'
 	icon_state = "mars_cave_1"
 	is_groundmap_turf = TRUE
+	footstep_sound = "dirt_footstep"
 
 /turf/open/mars_cave/Initialize(mapload, ...)
 	. = ..()
@@ -492,6 +497,7 @@
 	icon = 'icons/turf/ground_map.dmi'
 	icon_state = "desert"
 	is_groundmap_turf = TRUE
+	footstep_sound = "sand_footstep"
 
 /turf/open/gm/attackby(obj/item/I, mob/user)
 
@@ -528,6 +534,7 @@
 	icon_state = "desert"
 	baseturfs = /turf/open/gm/dirt
 	minimap_color = MINIMAP_DIRT
+	footstep_sound = "sand_footstep"
 
 /turf/open/gm/dirt/Initialize(mapload, ...)
 	. = ..()
@@ -608,6 +615,7 @@
 	icon_state = "dirt"
 	baseturfs = /turf/open/gm/dirt2
 	minimap_color = MINIMAP_DIRT
+	footstep_sound = "grass_footstep"
 
 /turf/open/gm/dirtgrassborder
 	name = "grass"
@@ -656,21 +664,27 @@
 
 /turf/open/gm/dirtgrassborder/desert
 	icon_state = "desert"
+	footstep_sound = "sand_footstep"
 
 /turf/open/gm/dirtgrassborder/desert0
 	icon_state = "desert0"
+	footstep_sound = "sand_footstep"
 
 /turf/open/gm/dirtgrassborder/desert1
 	icon_state = "desert1"
+	footstep_sound = "sand_footstep"
 
 /turf/open/gm/dirtgrassborder/desert2
 	icon_state = "desert2"
+	footstep_sound = "sand_footstep"
 
 /turf/open/gm/dirtgrassborder/desert3
 	icon_state = "desert3"
+	footstep_sound = "sand_footstep"
 
 /turf/open/gm/dirtgrassborder/desert_dug
 	icon_state = "desert_dug"
+	footstep_sound = "sand_footstep"
 
 /turf/open/gm/dirtgrassborder/Initialize(mapload, ...)
 	. = ..()
@@ -688,6 +702,7 @@
 	name = "grass"
 	icon_state = "grassdirt2_edge"
 	baseturfs = /turf/open/gm/dirtgrassborder2
+	footstep_sound = "grass_footstep"
 
 /turf/open/gm/dirtgrassborder2/north
 	dir = NORTH
@@ -720,6 +735,7 @@
 	baseturfs = /turf/open/gm/river
 	supports_surgery = FALSE
 	minimap_color = MINIMAP_WATER
+	footstep_sound = "water_footstep"
 
 /turf/open/gm/river/pool
 	fishing_allowed = 0
@@ -904,6 +920,7 @@
 	icon_state = "beach"
 	baseturfs = /turf/open/gm/coast
 	supports_surgery = FALSE
+	footstep_sound = "water_footstep"
 
 /turf/open/gm/coast/north
 
@@ -956,6 +973,7 @@
 	minimap_color = MINIMAP_WATER
 	is_groundmap_turf = FALSE // Not real ground
 	fishing_allowed = TRUE
+	footstep_sound = "water_footstep"
 
 
 /turf/open/gm/riverdeep/Initialize(mapload, ...)
@@ -994,6 +1012,7 @@
 	icon_state = "seadeep"
 	can_bloody = FALSE
 	supports_surgery = FALSE
+	footstep_sound = "water_footstep"
 
 //Ice Colony grounds
 
@@ -1003,6 +1022,7 @@
 	icon = 'icons/turf/ice.dmi'
 	icon_state = "ice_floor"
 	baseturfs = /turf/open/ice
+	footstep_sound = "ice_footstep"
 
 
 //Randomize ice floor sprite
@@ -1022,6 +1042,8 @@
 	icon_state = "sunbleached_asphalt"
 	baseturfs = /turf/open/asphalt
 	minimap_color = MINIMAP_ROAD
+	footstep_sound = "rock_footstep"
+	barefoot_sound = "barefoot_footstep"
 
 /turf/open/asphalt/tile
 	icon_state = "tile"
@@ -1137,6 +1159,7 @@
 	icon_state = "grass1"
 	var/icon_spawn_state = "grass1"
 	baseturfs = /turf/open/jungle
+	footstep_sound = "grass_footstep"
 
 /turf/open/jungle/Initialize(mapload, ...)
 	. = ..()
@@ -1250,6 +1273,7 @@
 	icon_spawn_state = "water"
 	can_bloody = FALSE
 	supports_surgery = FALSE
+	footstep_sound = "water_footstep"
 
 
 /turf/open/jungle/water/Initialize(mapload, ...)
@@ -1313,6 +1337,8 @@
 	icon_state = "floor"
 	icon = 'icons/turf/shuttle.dmi'
 	unacidable = TRUE
+	footstep_sound = "metal_Footstep"
+	barefoot_sound = "barefoot_footstep"
 
 /turf/open/shuttle/can_surgery
 	allow_construction = TRUE
@@ -1441,6 +1467,8 @@
 /turf/open/shuttle/escapepod
 	icon = 'icons/turf/escapepods.dmi'
 	icon_state = "floor3"
+	footstep_sound = "catwalk_footstep"
+	barefoot_sound = "barefoot_footstep"
 
 /turf/open/shuttle/escapepod/north
 	dir = NORTH
@@ -1501,6 +1529,7 @@
 
 /turf/open/shuttle/escapepod/floor4
 	icon_state = "floor4"
+	footstep_sound = "metal_footstep"
 
 /turf/open/shuttle/escapepod/floor5
 	icon_state = "floor5"
