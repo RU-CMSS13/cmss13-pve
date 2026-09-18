@@ -14666,7 +14666,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/cm_vending/clothing/leader/uscm,
+/obj/structure/closet/secure_closet/platoon_sergeant,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
 "aVP" = (
@@ -18068,6 +18068,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 8
 	},
+/obj/structure/closet/secure_closet/platoon_sergeant,
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/supply)
 "iLR" = (
