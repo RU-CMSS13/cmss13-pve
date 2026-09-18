@@ -1939,6 +1939,7 @@
 #include "code\modules\gear_presets\contractor.dm"
 #include "code\modules\gear_presets\corpses.dm"
 #include "code\modules\gear_presets\dutch.dm"
+#include "code\modules\gear_presets\elite_mercs.dm"
 #include "code\modules\gear_presets\fun.dm"
 #include "code\modules\gear_presets\iasf.dm"
 #include "code\modules\gear_presets\mercenary.dm"

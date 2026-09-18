@@ -714,6 +714,20 @@
 	has_sensor = UNIFORM_NO_SENSORS
 	suit_restricted = list(/obj/item/clothing/suit/storage/marine/faction/freelancer, /obj/item/clothing/suit/storage/webbing, /obj/item/clothing/suit/storage/utility_vest)
 
+//=========================//Elite Freelancer\\================================\\
+
+/obj/item/clothing/under/marine/veteran/freelancer/elite
+	name = "\improper elite freelancer fatigues"
+	desc = "A set of fatigues for elite freelancers. It smells faintly of vodka."
+	icon = 'icons/obj/items/clothing/uniforms/uniforms_by_faction/FREELANCER.dmi'
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_faction/FREELANCER.dmi'
+	)
+	icon_state = "freelancecell_uniform"
+	worn_state = "freelancecell_uniform"
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+	suit_restricted = list(/obj/item/clothing/suit/marine/veteran/freelancer/elite)
+
 //=========================//Dutch Dozen\\================================\\
 
 /obj/item/clothing/under/marine/veteran/dutch
