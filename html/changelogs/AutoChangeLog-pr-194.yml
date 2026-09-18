@@ -1,6 +1,0 @@
-author: "Drathek"
-delete-after: True
-changes:
-  - code_imp: "Updated some code regarding dress vendor and snowflake vendor to satisfy new checks"
-  - config: "Added a WIKIURL_HOME_PAGE config that can override WIKIURL for the wiki button"
-  - bugfix: "Foldout maps now do not attempt to load maps if the map has no url set"

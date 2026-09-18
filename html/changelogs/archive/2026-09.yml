@@ -20,3 +20,10 @@
   chaos-creations:
   - rscdel: "\u0432\u0435\u043D\u0434\u043E\u0440\u044B \u0434\u043B\u044F \u0421\u041B\
       \u043E\u0432 \u0443\u043D\u0438\u0447\u0442\u043E\u0436\u0435\u043D\u044B."
+2026-09-18:
+  Drathek:
+  - code_imp: Updated some code regarding dress vendor and snowflake vendor to satisfy
+      new checks
+  - config: Added a WIKIURL_HOME_PAGE config that can override WIKIURL for the wiki
+      button
+  - bugfix: Foldout maps now do not attempt to load maps if the map has no url set
