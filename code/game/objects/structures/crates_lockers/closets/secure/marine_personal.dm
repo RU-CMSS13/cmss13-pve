@@ -162,6 +162,42 @@
 /obj/structure/closet/secure_closet/marine_personal/forecon_upp/rto
 	job = JOB_SQUAD_RTO
 
+// ==UPP PARATROOPERS aka VDV== //
+
+/obj/structure/closet/secure_closet/marine_personal/vdv_upp/spawn_gear()
+	new /obj/item/clothing/head/cmcap/upp/beret/vdv(src)
+	new /obj/item/clothing/under/marine/veteran/upp(src)
+	new /obj/item/clothing/shoes/marine/upp(src)
+	new /obj/item/clothing/accessory/patch/upp/vdv(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils/upp/airborne(src)
+
+/obj/structure/closet/secure_closet/marine_personal/vdv_upp/rifleman
+	job = JOB_SQUAD_MARINE
+
+/obj/structure/closet/secure_closet/marine_personal/vdv_upp/smartgunner
+	job = JOB_SQUAD_SMARTGUN
+/obj/structure/closet/secure_closet/marine_personal/vdv_upp/corpsman
+	job = JOB_SQUAD_MEDIC
+
+/obj/structure/closet/secure_closet/marine_personal/vdv_upp/squad_leader
+	job = JOB_SQUAD_TEAM_LEADER
+
+/obj/structure/closet/secure_closet/marine_personal/vdv_upp/platoon_leader
+	job = JOB_SQUAD_LEADER
+
+/obj/structure/closet/secure_closet/marine_personal/vdv_upp/platoon_commander
+	job = JOB_SO
+
+/obj/structure/closet/secure_closet/marine_personal/vdv_upp/platoon_commander/spawn_gear()
+	new /obj/item/clothing/head/cmcap/upp/beret/vdv(src)
+	new /obj/item/clothing/under/marine/veteran/upp(src)
+	new /obj/item/clothing/under/marine/veteran/upp/service(src)
+	new /obj/item/clothing/shoes/marine/upp(src)
+	new /obj/item/clothing/shoes/laceup/brown(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils/upp/airborne(src)
+	new /obj/item/clothing/suit/storage/jacket/marine/upp(src)
+	new /obj/item/clothing/head/cmcap/upp/peaked(src)
+
 // ==WY PMC== //
 
 /obj/structure/closet/secure_closet/marine_personal/pmc/spawn_gear()

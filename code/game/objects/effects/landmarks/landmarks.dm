@@ -443,6 +443,10 @@
 	name = "upp forecon late join"
 	squad = SQUAD_SISSI
 
+/obj/effect/landmark/late_join/upp/airborne
+	name = "upp vdv late join"
+	squad = SQUAD_UPP_AIRBORNE
+
 /obj/effect/landmark/late_join/rmc
 	name = "rmc late join"
 	squad = SQUAD_RMC

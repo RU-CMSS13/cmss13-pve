@@ -33,6 +33,9 @@
 /atom/movable/screen/text/screen_text/picture/fox_stalkers
 	image_to_play = "fox_stalkers"
 
+/atom/movable/screen/text/screen_text/picture/crimson_comet
+	image_to_play = "crimson_comet"
+
 /atom/movable/screen/text/screen_text/picture/azure
 	image_to_play = "azure_15"
 
