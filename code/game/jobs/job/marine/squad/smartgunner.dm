@@ -94,8 +94,6 @@
 		gear_preset = gear_preset_quaternary
 	if(option == SR_PVT_VARIANT)
 		gear_preset = gear_preset_tertiary
-	if(option == JSGT_VARIANT)
-		gear_preset = gear_preset_secondary
 
 /datum/job/marine/smartgunner/ai/forecon
 	title = JOB_SQUAD_SMARTGUN_FORECON
