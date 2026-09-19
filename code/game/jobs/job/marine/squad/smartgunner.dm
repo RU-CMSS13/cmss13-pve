@@ -131,6 +131,13 @@
 	gear_preset_tertiary = /datum/equipment_preset/uscm/sg/upp/forecon/senior_private
 	job_options = list(SR_PVT_VARIANT = "SrPVT", JSGT_VARIANT = "JrSGT")
 
+/datum/job/marine/smartgunner/ai/upp/forecon/handle_job_options(option)
+	gear_preset = initial(gear_preset)
+	if(option == SR_PVT_VARIANT)
+		gear_preset = gear_preset_tertiary
+	if(option == JSGT_VARIANT)
+		gear_preset = gear_preset_secondary
+
 /obj/effect/landmark/start/marine/smartgunner/upp/forecon
 	name = JOB_SQUAD_SMARTGUN_FORECON_UPP
 	job = JOB_SQUAD_SMARTGUN_FORECON_UPP
