@@ -19,3 +19,6 @@
 #include "modules/criptid_hunting/clues/uv.dm"
 
 #include "modules/criptid_hunting/utility.dm"
+#include "modules/criptid_hunting/weapons_tinkering.dm"
+
+#include "modules/criptid_hunting/weapons_override.dm"

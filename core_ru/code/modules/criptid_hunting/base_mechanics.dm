@@ -81,6 +81,7 @@
 	var/current_clues_found = 0
 	var/needed_amount = 0
 
+	var/weakness = "Salt"
 	var/mission_name = "The Hunt" // also for GM purposes
 	var/automatic_messaging_delay = 300
 
