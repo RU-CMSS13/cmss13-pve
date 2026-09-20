@@ -4856,10 +4856,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
 	},
-/obj/structure/largecrate{
-	pixel_x = 1;
-	pixel_y = 13
-	},
+/obj/structure/criptic/gunbench,
 /turf/open/floor/prison,
 /area/redemptionvalley/valleyroof/store)
 "gQk" = (
@@ -6304,6 +6301,10 @@
 /obj/item/roller{
 	pixel_x = -2;
 	pixel_y = 3
+	},
+/obj/item/clothing/accessory/armband/medgreen{
+	pixel_x = -13;
+	pixel_y = 7
 	},
 /turf/open/floor/prison/whitegreen/north,
 /area/redemptionvalley/valleyroof/medical)
@@ -9786,21 +9787,9 @@
 /obj/structure/surface/table/almayer{
 	color = "#EBD9B7"
 	},
-/obj/item/clothing/accessory/armband/medgreen{
-	pixel_x = -13;
-	pixel_y = 7
-	},
-/obj/item/clothing/accessory/armband/medgreen{
-	pixel_x = -16;
-	pixel_y = -3
-	},
-/obj/item/criptic/utility/pills/healing{
-	pixel_y = 9
-	},
-/obj/item/criptic/utility/pills/healing,
-/obj/item/criptic/utility/pills/healing{
-	pixel_x = 16;
-	pixel_y = 6
+/obj/structure/criptic/chemstation{
+	pixel_y = 8;
+	pixel_x = -3
 	},
 /turf/open/floor/prison/whitegreen/north,
 /area/redemptionvalley/valleyroof/medical)
@@ -11213,6 +11202,14 @@
 	pixel_y = 11;
 	pixel_x = -7
 	},
+/obj/item/criptic/utility/pills/healing{
+	pixel_x = -5;
+	pixel_y = 4
+	},
+/obj/item/criptic/utility/pills/healing{
+	pixel_x = -5;
+	pixel_y = -6
+	},
 /turf/open/floor/prison/whitegreen/east,
 /area/redemptionvalley/valleyroof/medical)
 "snG" = (
@@ -11342,6 +11339,22 @@
 /obj/item/criptic/instrument/uv_lamp{
 	pixel_y = 7;
 	pixel_x = 7
+	},
+/obj/item/criptic/instrument/brush{
+	pixel_x = -11;
+	pixel_y = 9
+	},
+/obj/item/criptic/instrument/brush{
+	pixel_x = -11;
+	pixel_y = 9
+	},
+/obj/item/criptic/instrument/brush{
+	pixel_x = -11;
+	pixel_y = 9
+	},
+/obj/item/criptic/instrument/brush{
+	pixel_x = -11;
+	pixel_y = 9
 	},
 /turf/open/asphalt,
 /area/redemptionvalley/valley/proper)
@@ -11475,6 +11488,9 @@
 /obj/item/clothing/suit/storage/windbreaker/windbreaker_fr,
 /obj/item/clothing/suit/storage/windbreaker/windbreaker_fr,
 /obj/structure/machinery/light,
+/obj/item/criptic/utility/pills/healing{
+	pixel_y = 14
+	},
 /turf/open/floor/prison/sterile_white,
 /area/redemptionvalley/valleyroof/medical)
 "sFc" = (
@@ -25195,7 +25211,7 @@ qgO
 qgO
 fNZ
 mwA
-biP
+hlv
 oTU
 cWm
 xEX
