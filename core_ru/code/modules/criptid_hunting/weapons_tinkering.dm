@@ -136,6 +136,10 @@
 	var/used = FALSE
 	var/type_to_display = "None"
 
+	var/research_progress = 0
+	var/research_needed = 5
+	var/list/scanned = list()
+
 /obj/structure/criptic/chemstation/Initialize(mapload, ...)
 	. = ..()
 
@@ -162,14 +166,14 @@
 	if(used)
 		return FALSE
 
-	if(MC.current_clues_found < MC.needed_amount / 2)
-		balloon_alert(user, "You need atleast half of the clues to research that!", COLOR_WHITE)
+	if(research_progress < research_needed)
+		balloon_alert(user, "You need more info to perform this research!", COLOR_WHITE)
 		return FALSE
 
 	for(var/i in 0 to 10)
 		new /obj/effect/temp_visual/working_progress(get_turf(src))
 
-	if(do_after(user, 4 SECONDS, INTERRUPT_ALL, BUSY_ICON_BUILD))
+	if(do_after(user, 4 SECONDS, INTERRUPT_ALL, BUSY_ICON_MEDICAL))
 		used = TRUE
 		balloon_alert(user, "Possibly weak to: [type_to_display]", COLOR_WHITE)
 		switch(type_to_display)
@@ -180,6 +184,20 @@
 			if("UV")
 				add_filter("uv", 1, list("type" = "outline", "color" = "#6f0091", "size" = 1))
 	return TRUE
+
+/obj/structure/criptic/chemstation/attackby(obj/item/W, mob/user)
+	. = ..()
+	if(istype(W,/obj/item/criptic/clue_item) && (W in scanned))
+		animation_flash_color(W, COLOR_RED)
+		balloon_alert(user, "[W] already scanned!", COLOR_WHITE)
+		return FALSE
+
+	if(istype(W,/obj/item/criptic/clue_item) && !(W in scanned) && research_progress < research_needed)
+		if(do_after(user, 2 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC))
+			scanned += W
+			research_progress += 1
+			balloon_alert(user, "[research_progress] out of [research_needed] samples collected!", COLOR_WHITE)
+			return TRUE
 
 /obj/structure/criptic/gunbench
 	name = "workbench"
