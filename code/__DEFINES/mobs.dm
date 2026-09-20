@@ -225,6 +225,7 @@
 #define SPECIAL_BONEBREAK (1<<13) //species do not get their bonebreak chance modified by endurance
 #define NO_SHRAPNEL (1<<14)
 #define HAS_HARDCRIT (1<<15)
+#define HAS_MOUTH (1<<17)
 
 //=================================================
 
