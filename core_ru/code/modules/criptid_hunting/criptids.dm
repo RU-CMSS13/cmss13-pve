@@ -81,6 +81,8 @@
 	pixel_y = -16
 	old_y = -16
 
+	var/fur_dropped = FALSE
+
 /mob/living/carbon/xenomorph/criptic_wendigo/Initialize(mapload, mob/living/carbon/xenomorph/oldXeno, h_number)
 	. = ..(mapload, oldXeno, h_number || XENO_HIVE_YAUTJA)
 
@@ -166,3 +168,20 @@
 
 /mob/living/carbon/xenomorph/criptic_wendigo/banshee/init_movement_handler()
 	return new /datum/xeno_ai_movement/drone(src)
+
+/obj/item/criptic/clue_item/criptid_cloth
+	name = "criptid part"
+	desc = "Some kind of occult old shit."
+	icon = 'core_ru/code/modules/criptid_hunting/ms_scrap.dmi'
+	icon_state = "scrap_leather"
+
+	w_class = SIZE_SMALL
+
+/obj/item/weapon/knife/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
+	. = ..()
+
+	if(istype(target,/mob/living/carbon/xenomorph/criptic_wendigo) && prob(20))
+		var/mob/living/carbon/xenomorph/criptic_wendigo/W = target
+		if(!W.fur_dropped)
+			W.fur_dropped = TRUE
+			new /obj/item/criptic/clue_item/criptid_cloth(get_turf(src))

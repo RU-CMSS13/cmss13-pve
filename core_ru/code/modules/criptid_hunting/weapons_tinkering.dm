@@ -195,7 +195,10 @@
 	if(istype(W,/obj/item/criptic/clue_item) && !(W in scanned) && research_progress < research_needed)
 		if(do_after(user, 2 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC))
 			scanned += W
-			research_progress += 1
+			if(istype(W,/obj/item/criptic/clue_item/criptid_cloth))
+				research_progress = research_needed
+			else
+				research_progress += 1
 			balloon_alert(user, "[research_progress] out of [research_needed] samples collected!", COLOR_WHITE)
 			return TRUE
 
