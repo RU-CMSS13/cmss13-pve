@@ -146,6 +146,7 @@
 	spawn(5)
 		S.device_rep.remove_filter("collected")
 		animate(S.device_rep, time = 3, easing = SINE_EASING|EASE_IN, transform = matrix())
+		S.device_rep.SetTransform(1.5)
 
 	var/obj/item/criptic/clue_item/sound_disc/disc = new /obj/item/criptic/clue_item/sound_disc(get_turf(user))
 

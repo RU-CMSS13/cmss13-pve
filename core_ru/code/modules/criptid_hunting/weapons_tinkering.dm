@@ -175,6 +175,7 @@
 
 	if(do_after(user, 4 SECONDS, INTERRUPT_ALL, BUSY_ICON_BUILD))
 		used = TRUE
+		type_to_display = MC.weakness
 		balloon_alert(user, "Possibly weak to: [type_to_display]", COLOR_WHITE)
 		switch(type_to_display)
 			if("Salt")
