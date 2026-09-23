@@ -64,7 +64,7 @@
 	flags_equip_slot = NO_FLAGS
 	hitsound = 'sound/weapons/wristblades_hit.ogg'
 	attack_speed = 6
-	force = MELEE_FORCE_TIER_12
+	force = MELEE_FORCE_TIER_4
 	pry_capable = IS_PRY_CAPABLE_FORCE
 	attack_verb = list("sliced", "slashed", "jabbed", "torn", "gored")
 
@@ -127,7 +127,7 @@
 	item_state = "scim"
 	attack_speed = 5
 	attack_verb = list("sliced", "slashed", "jabbed", "torn", "gored")
-	force = MELEE_FORCE_TIER_13
+	force = MELEE_FORCE_TIER_5
 	has_speed_bonus = FALSE
 
 /*#########################################
@@ -153,7 +153,7 @@
 	embeddable = FALSE
 	w_class = SIZE_MEDIUM
 	unacidable = TRUE
-	force = MELEE_FORCE_TIER_10
+	force = MELEE_FORCE_TIER_6
 	throwforce = MELEE_FORCE_TIER_5
 	sharp = IS_SHARP_ITEM_SIMPLE
 	edge = TRUE
@@ -175,8 +175,8 @@
 	flags_atom = FPRINT|QUICK_DRAWABLE|CONDUCT
 	flags_item = ITEM_PREDATOR
 	flags_equip_slot = SLOT_BACK
-	force = MELEE_FORCE_TIER_14
-	throwforce = MELEE_FORCE_TIER_10
+	force = MELEE_FORCE_TIER_7
+	throwforce = MELEE_FORCE_TIER_5
 	sharp = IS_SHARP_ITEM_ACCURATE
 	edge = TRUE
 	embeddable = FALSE
@@ -200,7 +200,7 @@
 	flags_atom = FPRINT|QUICK_DRAWABLE|CONDUCT
 	flags_item = ITEM_PREDATOR
 	flags_equip_slot = SLOT_WAIST
-	force = MELEE_FORCE_TIER_14
+	force = MELEE_FORCE_TIER_6
 	throwforce = MELEE_FORCE_TIER_5
 	sharp = IS_SHARP_ITEM_SIMPLE
 	edge = TRUE
@@ -242,8 +242,8 @@
 	throw_speed = SPEED_VERY_FAST
 	throw_range = 4
 	unacidable = TRUE
-	force = MELEE_FORCE_TIER_13
-	throwforce = MELEE_FORCE_TIER_15
+	force = MELEE_FORCE_TIER_6
+	throwforce = MELEE_FORCE_TIER_6
 	sharp = IS_SHARP_ITEM_SIMPLE
 	edge = TRUE
 	hitsound = 'sound/weapons/bladeslice.ogg'
@@ -252,8 +252,8 @@
 	var/on = TRUE
 	var/charged = FALSE
 
-	var/force_wielded = MELEE_FORCE_TIER_13
-	var/force_unwielded = MELEE_FORCE_TIER_5
+	var/force_wielded = MELEE_FORCE_TIER_6
+	var/force_unwielded = MELEE_FORCE_TIER_2
 	var/force_storage = MELEE_FORCE_TIER_1
 	/// Ref to the tether effect when thrown
 	var/datum/effects/tethering/chain
@@ -400,7 +400,7 @@
 		flags_item |= TWOHANDED
 		w_class = SIZE_LARGE
 		force = force_unwielded
-		throwforce = MELEE_FORCE_TIER_14
+		throwforce = MELEE_FORCE_TIER_6
 		attack_verb = list("speared", "stabbed", "impaled")
 
 		if(blood_overlay && blood_color)
@@ -417,7 +417,7 @@
 		flags_item &= ~TWOHANDED
 		w_class = SIZE_TINY
 		force = force_storage
-		throwforce = MELEE_FORCE_TIER_10
+		throwforce = MELEE_FORCE_TIER_6
 		attack_verb = list("thwacked", "smacked")
 		overlays.Cut()
 		on = FALSE
@@ -722,8 +722,8 @@
 	icon_state = "spearhunter"
 	item_state = "spearhunter"
 	flags_item = NOSHIELD|TWOHANDED
-	force = MELEE_FORCE_TIER_5
-	force_wielded = MELEE_FORCE_TIER_12
+	force = MELEE_FORCE_TIER_3
+	force_wielded = MELEE_FORCE_TIER_7
 	sharp = IS_SHARP_ITEM_SIMPLE
 	attack_verb = list("attacked", "stabbed", "jabbed", "torn", "gored")
 
@@ -776,8 +776,8 @@
 	desc = "A huge, powerful blade on a metallic pole. Mysterious writing is carved into the weapon."
 	icon_state = "glaive"
 	item_state = "glaive"
-	force = MELEE_FORCE_TIER_6
-	force_wielded = MELEE_FORCE_TIER_15
+	force = MELEE_FORCE_TIER_3
+	force_wielded = MELEE_FORCE_TIER_9
 	throwforce = MELEE_FORCE_TIER_3
 	embeddable = FALSE //so predators don't lose their glaive when thrown.
 	sharp = IS_SHARP_ITEM_BIG
@@ -909,8 +909,8 @@
 	ammo = /datum/ammo/alloy_spike
 	flags_equip_slot = SLOT_WAIST|SLOT_BACK
 	w_class = SIZE_MEDIUM //Fits in yautja bags.
-	var/spikes = 30
-	var/max_spikes = 30
+	var/spikes = 12
+	var/max_spikes = 12
 	var/last_regen
 	flags_gun_features = GUN_UNUSUAL_DESIGN
 	flags_item = ITEM_PREDATOR|TWOHANDED
@@ -933,7 +933,7 @@
 
 /obj/item/weapon/gun/launcher/spike/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_11)
+	set_fire_delay(FIRE_DELAY_TIER_6)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_5
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT
 	scatter = SCATTER_AMOUNT_TIER_8
@@ -942,8 +942,8 @@
 
 /obj/item/weapon/gun/launcher/spike/set_bullet_traits()
 	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY_ID("turfs", /datum/element/bullet_trait_damage_boost, 35, GLOB.damage_boost_turfs),
-		BULLET_TRAIT_ENTRY_ID("breaching", /datum/element/bullet_trait_damage_boost, 35, GLOB.damage_boost_breaching)
+		BULLET_TRAIT_ENTRY_ID("turfs", /datum/element/bullet_trait_damage_boost, 25, GLOB.damage_boost_turfs),
+		BULLET_TRAIT_ENTRY_ID("breaching", /datum/element/bullet_trait_damage_boost, 25, GLOB.damage_boost_breaching)
 	))
 
 /obj/item/weapon/gun/launcher/spike/get_examine_text(mob/user)

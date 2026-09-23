@@ -68,7 +68,7 @@
 	default_ammo = /datum/ammo/bullet/pistol/heavy
 	caliber = ".45"
 	icon_state = "m1911"
-	max_rounds = 8
+	max_rounds = 7
 	gun_type = /obj/item/weapon/gun/pistol/m1911
 	ammo_band_icon = "+m1911_band"
 	ammo_band_icon_empty = "+m1911_band_e"
