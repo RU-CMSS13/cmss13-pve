@@ -27,7 +27,7 @@
 	body_temperature = 350
 
 	mob_flags = KNOWS_TECHNOLOGY
-	flags = IS_WHITELISTED|NO_BREATHE|NO_CLONE_LOSS|NO_BLOOD|NO_POISON|IS_SYNTHETIC|NO_CHEM_METABOLIZATION|NO_NEURO|HAS_UNDERWEAR
+	flags = IS_WHITELISTED|NO_BREATHE|NO_CLONE_LOSS|NO_BLOOD|NO_POISON|IS_SYNTHETIC|NO_CHEM_METABOLIZATION|NO_NEURO|HAS_UNDERWEAR|HAS_MOUTH
 
 	blood_color = BLOOD_COLOR_SYNTHETIC
 
@@ -62,6 +62,7 @@
 	uses_skin_color = FALSE
 	special_body_types = FALSE
 	mob_inherent_traits = list(TRAIT_SUPER_STRONG, TRAIT_INTENT_EYES, TRAIT_IRON_TEETH)
+	flags = parent_type::flags & ~(HAS_MOUTH)
 
 	hair_color = "#000000"
 	icobase = 'icons/mob/humans/species/r_synthetic.dmi'

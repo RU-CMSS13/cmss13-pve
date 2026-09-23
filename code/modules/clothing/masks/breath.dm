@@ -51,7 +51,7 @@
 	w_class = SIZE_SMALL
 	flags_armor_protection = 0
 	flags_inventory = COVERMOUTH|ALLOWREBREATH
-	flags_inv_hide = HIDELOWHAIR
+	flags_inv_hide = HIDELOWHAIR|HIDEMOUTH
 
 /obj/item/clothing/mask/rebreather/skull
 	name = "skull balaclava"
@@ -59,7 +59,7 @@
 	icon_state = "blue_skull_balaclava"
 	item_state = "blue_skull_balaclava"
 	flags_inventory = COVERMOUTH|ALLOWREBREATH|ALLOWCPR
-	flags_inv_hide = HIDEALLHAIR
+	flags_inv_hide = HIDEALLHAIR|HIDEMOUTH
 	flags_cold_protection = BODY_FLAG_HEAD
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 
@@ -75,7 +75,7 @@
 	icon_state = "coif"
 	item_state = "coif"
 	flags_inventory = COVERMOUTH|ALLOWREBREATH|ALLOWCPR
-	flags_inv_hide = HIDEALLHAIR
+	flags_inv_hide = HIDEALLHAIR|HIDEMOUTH
 	flags_cold_protection = BODY_FLAG_HEAD
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	var/pulled = FALSE
@@ -92,7 +92,7 @@
 	if(usr.stat == DEAD)
 		return
 
-	flags_inv_hide ^= HIDEFACE|HIDELOWHAIR
+	flags_inv_hide ^= HIDEFACE|HIDELOWHAIR|HIDEMOUTH
 	pulled = !pulled
 	if(pulled)
 		to_chat(usr, SPAN_NOTICE("You pull \the [src] down."))
@@ -130,7 +130,7 @@
 	item_state = "scarf_gray"
 	original_state = "scarf_gray"
 	flags_inventory = COVERMOUTH|ALLOWREBREATH|ALLOWCPR
-	flags_inv_hide = HIDEFACE|HIDELOWHAIR
+	flags_inv_hide = HIDEFACE|HIDELOWHAIR|HIDEMOUTH
 	flags_cold_protection = BODY_FLAG_HEAD
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 
@@ -344,7 +344,7 @@
 	item_state = "keffiyeh"
 	original_state = "keffiyeh"
 	flags_inventory = COVERMOUTH|ALLOWREBREATH|ALLOWCPR
-	flags_inv_hide = HIDEFACE|HIDEALLHAIR|HIDEEARS
+	flags_inv_hide = HIDEFACE|HIDEALLHAIR|HIDEEARS|HIDEMOUTH
 	flags_cold_protection = BODY_FLAG_HEAD
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	pulled = FALSE
@@ -368,7 +368,7 @@
 	else
 		to_chat(usr, SPAN_NOTICE("You pull \the [src] up."))
 		icon_state = original_state
-		flags_inv_hide = HIDEFACE|HIDEALLHAIR|HIDEEARS
+		flags_inv_hide = HIDEFACE|HIDEALLHAIR|HIDEEARS|HIDEMOUTH
 	if(ishuman(loc))
 		var/mob/living/carbon/human/H = loc
 		if(H.wear_mask == src)

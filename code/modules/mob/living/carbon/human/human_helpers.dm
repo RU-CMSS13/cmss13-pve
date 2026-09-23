@@ -515,6 +515,14 @@ f
 	if(get_ai_brain())
 		get_ai_brain().appraise_inventory(armor = TRUE)
 
+/mob/living/carbon/human/proc/move_mouth_message(message)
+	var/words_spoken = 1
+	for(var/i in 1 to length(message))
+		var/char = copytext(message, i, i + 1)
+		if(char == " ")
+			words_spoken++
+	move_mouth(words_spoken, langchat_styles == "" ? 1 : 2)
+
 /mob/living/carbon/human/proc/move_mouth(times, yelling = FALSE, timing_override = null)
 	update_mouth(yelling)
 	if(times && !timing_override)
