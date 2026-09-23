@@ -76,12 +76,14 @@
 		animate(src, alpha = 255, time = 1 SECONDS, easing = SINE_EASING | EASE_IN)
 
 /atom/movable/screen/sound_clue/clicked(mob/user)
-	if(!usr.client.connected_sound)
+	var/mob/living/carbon/human/H = user
+	var/obj/item/criptic/instrument/held_item = H.get_held_item()
 
+	if(istype(held_item,/obj/item/criptic/instrument/sound_device) && H.client.connected_sound)
 		add_filter("clue", 1, list("type" = "outline", "size" = 1, "color" = COLOR_CYAN))
 		animate(src, transform = matrix(0.7, MATRIX_SCALE), time = 0.2 SECONDS, easing = SINE_EASING | EASE_IN)
 		animate(transform = matrix(1, MATRIX_SCALE), time = 0.2 SECONDS, easing = SINE_EASING | EASE_OUT)
-		usr.client.connected_sound = src
+		H.client.connected_sound = src
 		return TRUE
 	else
 		usr.client.connected_sound = null

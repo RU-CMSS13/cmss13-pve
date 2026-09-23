@@ -338,3 +338,91 @@
 			return WEST
 		else
 			return NORTH
+
+/obj/item/criptic/utility/cigarette
+	name = "cig"
+	desc = "Keeps you in check"
+
+	icon = 'core_ru/code/modules/criptid_hunting/ms_cigarettes.dmi'
+	icon_state = "cig"
+
+	w_class = SIZE_TINY
+
+/obj/item/criptic/utility/cigarette/attack_self(mob/user)
+	. = ..()
+	pop_out()
+	var/list/atom/possible_points = list()
+
+	for(var/atom/A in view(user))
+		if(A.uv_scannable)
+			possible_points += A
+
+	if(!length(possible_points))
+		for(var/turf/open/T in view(user))
+			possible_points += T
+
+	var/atom/new_clue = pick(possible_points)
+	if(!new_clue.uv_scannable)
+		new_clue.uv_scannable = TRUE
+		new_clue.uv_slogan = "Seems interesting..."
+		new_clue.uv_onfind = "It might lead us to the next evidence..."
+
+		if(ishuman(user))
+			var/mob/living/carbon/human/H = user
+			H.show_hint(new_clue,"trail", 1, new_clue.uv_slogan)
+			H.naturally_hinted += new_clue
+
+	animation_flash_color(src, COLOR_GREEN)
+	sleep(0.5 SECONDS)
+	qdel(src)
+
+/obj/item/criptic/utility/cig_pack
+	name = "cigpack"
+	desc = "For your goodies"
+
+	icon = 'core_ru/code/modules/criptid_hunting/ms_cigarettes.dmi'
+	icon_state = "full"
+
+	w_class = SIZE_SMALL
+	var/list/obj/item/criptic/utility/cigarette/cigarettes = list()
+	var/max_slots = 5
+
+/obj/item/criptic/utility/cig_pack/Initialize(mapload, ...)
+	. = ..()
+
+	for(var/amount in 0 to rand(1,max_slots))
+		cigarettes += new /obj/item/criptic/utility/cigarette(src)
+
+/obj/item/criptic/utility/cig_pack/attackby(obj/item/W, mob/user)
+	. = ..()
+
+	if(istype(W,/obj/item/criptic/utility/cigarette))
+		if(length(cigarettes) < max_slots)
+			cigarettes += W
+			user.drop_held_item(W)
+
+			W.forceMove(src)
+			if(icon_state != "full")
+				icon_state = "full"
+		else
+			animation_flash_color(W, COLOR_RED)
+			balloon_alert(user, "Pack is full!", COLOR_WHITE)
+		return TRUE
+
+/obj/item/criptic/utility/cig_pack/attack_self(mob/user)
+	. = ..()
+	if(length(cigarettes))
+		var/cig_to_remove = pick(cigarettes)
+		cigarettes -= cig_to_remove
+		user.put_in_hands(cig_to_remove)
+
+		animate(src, time = 3, easing = SINE_EASING|EASE_OUT, transform = matrix(10, MATRIX_ROTATE))
+		sleep(3)
+		animate(src, time = 3, easing = SINE_EASING|EASE_IN, transform = matrix())
+
+		if(!length(cigarettes))
+			icon_state = "empty"
+		return TRUE
+
+	animation_flash_color(src, COLOR_RED)
+	balloon_alert(user, "Pack is empty!", COLOR_WHITE)

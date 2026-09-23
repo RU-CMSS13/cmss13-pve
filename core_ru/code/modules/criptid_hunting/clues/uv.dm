@@ -51,6 +51,15 @@
 		time_to_fade = 5
 		animate(src, alpha = 00, time = 0.5 SECONDS, easing = SINE_EASING | EASE_IN)
 
+/obj/item/criptic/battery
+	name = "battery"
+	desc = "..."
+
+	icon = 'core_ru/code/modules/criptid_hunting/ms_scrap.dmi'
+	icon_state = "battery"
+
+	w_class = SIZE_TINY
+
 /obj/item/criptic/instrument/uv_lamp
 	name = "UV lamp"
 	desc = "Can reveal hidden runes and ectoplasm"
@@ -67,20 +76,59 @@
 	light_range = 4
 	light_power = 2
 
+	var/charges = 3
+
 	var/mob/living/carbon/human/last_holder
 	var/list/trail_excludes = list()
+
+	maptext_y = 15
+	maptext_x = -5
+	maptext_width = 128
+	maptext_height = 128
+
+/obj/item/criptic/instrument/uv_lamp/MouseEntered(location, control, params)
+	. = ..()
+	if(loc == usr)
+		maptext = SPAN_LANGCHAT("[charges] CHARGES LEFT")
+
+/obj/item/criptic/instrument/uv_lamp/MouseExited(location, control, params)
+	. = ..()
+
+	if(maptext)
+		maptext = ""
 
 /obj/item/criptic/instrument/uv_lamp/Initialize(mapload, ...)
 	. = ..()
 	trail_excludes += typesof(/obj/structure/window_frame,/obj/structure/machinery/door)
 
+/obj/item/criptic/instrument/uv_lamp/attackby(obj/item/W, mob/user)
+	. = ..()
+
+	if(istype(W,/obj/item/criptic/battery) && charges < 3)
+		if(charges < 3)
+			charges++
+
+			animation_flash_color(W, COLOR_GREEN)
+
+			sleep(0.5 SECONDS)
+			qdel(W)
+			return TRUE
+		else
+			balloon_alert(user, "Flashlight fully charged!", COLOR_WHITE)
+			return TRUE
+
 /obj/item/criptic/instrument/uv_lamp/afterattack(atom/A, mob/living/carbon/human/user, proximity_flag, click_parameters)
-	if(A.uv_scannable && !A.uv_scanned)
-		if(do_after(user, 50, INTERRUPT_ALL, BUSY_ICON_GENERIC))
-			A.uv_scanned = TRUE
-			show_blurb(user, 20, "[A.uv_onfind]", null, "CENTER,CENTER+1", "center", COLOR_GRAY, null, null, 1)
-			user.hide_hint(A)
-			create_path(A)
+
+	if(A.uv_scannable && !A.uv_scanned && charges > 0)
+		if(charges > 0)
+			if(do_after(user, 50, INTERRUPT_ALL, BUSY_ICON_GENERIC))
+				A.uv_scanned = TRUE
+				show_blurb(user, 20, "[A.uv_onfind]", null, "CENTER,CENTER+1", "center", COLOR_GRAY, null, null, 1)
+				user.hide_hint(A)
+				create_path(A)
+		else
+			balloon_alert(user, "You need more power to perform examine that close!", COLOR_WHITE)
+			animation_flash_color(src, COLOR_RED)
 		return TRUE
 
 	. = ..()
@@ -93,7 +141,10 @@
 		connected_clues += C
 
 	if(!length(connected_clues))
+		balloon_alert(loc, "Seems like there is nothing to look for...", COLOR_WHITE)
 		return
+
+	--charges
 
 	var/obj/structure/criptic/clue/trail_to_follow = pick(connected_clues)
 	var/turf/start = get_turf(target)
