@@ -81,15 +81,15 @@
 	var/mob/living/carbon/human/last_holder
 	var/list/trail_excludes = list()
 
-	maptext_y = 15
-	maptext_x = -5
+	maptext_y = 24
+	maptext_x = -15
 	maptext_width = 128
 	maptext_height = 128
 
 /obj/item/criptic/instrument/uv_lamp/MouseEntered(location, control, params)
 	. = ..()
 	if(loc == usr)
-		maptext = SPAN_LANGCHAT("[charges] CHARGES LEFT")
+		maptext = SPAN_LANGCHAT("|[charges]| CHARGES LEFT")
 
 /obj/item/criptic/instrument/uv_lamp/MouseExited(location, control, params)
 	. = ..()

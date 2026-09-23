@@ -347,6 +347,11 @@
 	icon_state = "cig"
 
 	w_class = SIZE_TINY
+	var/list/ignore_them = list()
+
+/obj/item/criptic/utility/cigarette/Initialize(mapload, ...)
+	. = ..()
+	ignore_them += typesof(/obj/structure/flora,/obj/structure/window,/obj/structure/window_frame,/obj/structure/machinery/door,/obj/structure/machinery/light,/obj/structure/machinery/door_control,/obj/structure/sign,/obj/structure/surface,/obj/structure/bed,/obj/structure/platform)
 
 /obj/item/criptic/utility/cigarette/attack_self(mob/user)
 	. = ..()
@@ -356,6 +361,12 @@
 	for(var/atom/A in view(user))
 		if(A.uv_scannable)
 			possible_points += A
+
+	if(!length(possible_points))
+		for(var/obj/O in view(user))
+			if(O.type in ignore_them)
+				continue
+			possible_points += O
 
 	if(!length(possible_points))
 		for(var/turf/open/T in view(user))
@@ -369,12 +380,18 @@
 
 		if(ishuman(user))
 			var/mob/living/carbon/human/H = user
+			H.hint_visibility = 7
 			H.show_hint(new_clue,"trail", 1, new_clue.uv_slogan)
 			H.naturally_hinted += new_clue
+
+			addtimer(CALLBACK(H, TYPE_PROC_REF(/mob/living/carbon/human, reset_cigbuff)), 10 SECONDS)
 
 	animation_flash_color(src, COLOR_GREEN)
 	sleep(0.5 SECONDS)
 	qdel(src)
+
+/mob/living/carbon/human/proc/reset_cigbuff()
+	hint_visibility = 1
 
 /obj/item/criptic/utility/cig_pack
 	name = "cigpack"

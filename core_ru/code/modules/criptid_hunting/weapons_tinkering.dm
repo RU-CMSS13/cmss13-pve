@@ -87,7 +87,7 @@
 	w_class = SIZE_SMALL
 
 /obj/item/criptic/scrap/attack_hand(mob/user)
-	if(istype(loc,/obj/structure/criptic/gunbench))
+	if(locate(/obj/structure/criptic/gunbench) in get_turf(loc))
 		var/obj/structure/criptic/gunbench/G = loc
 		G.resources -= src
 		SetTransform(1)
@@ -106,7 +106,7 @@
 	w_class = SIZE_SMALL
 
 /obj/item/criptic/blueprint/attack_hand(mob/user)
-	if(istype(loc,/obj/structure/criptic/gunbench))
+	if(locate(/obj/structure/criptic/gunbench) in get_turf(loc))
 		var/obj/structure/criptic/gunbench/G = loc
 		G.resources -= src
 		SetTransform(1)
@@ -150,9 +150,9 @@
 	. = ..()
 
 	var/mob/living/L = usr
-	if(loc == L && get_dist(L,src) < 2 && used)
-		maptext_y = pixel_y + 15
-		maptext_x = pixel_x + 5
+	if(get_dist(L,src) < 2 && used)
+		maptext_y = pixel_y + 20
+		maptext_x = pixel_x - 5
 		maptext = SPAN_LANGCHAT("[type_to_display]")
 
 /obj/structure/criptic/chemstation/MouseExited(location, control, params)
@@ -173,7 +173,7 @@
 	for(var/i in 0 to 10)
 		new /obj/effect/temp_visual/working_progress(get_turf(src))
 
-	if(do_after(user, 4 SECONDS, INTERRUPT_ALL, BUSY_ICON_MEDICAL))
+	if(do_after(user, 4 SECONDS, INTERRUPT_ALL, BUSY_ICON_BUILD))
 		used = TRUE
 		balloon_alert(user, "Possibly weak to: [type_to_display]", COLOR_WHITE)
 		switch(type_to_display)
@@ -315,8 +315,10 @@
 	return FALSE
 
 /obj/item/weapon/gun/attack_hand(mob/user)
-	if(istype(loc,/obj/structure/criptic/gunbench))
+	if(locate(/obj/structure/criptic/gunbench) in get_turf(loc))
 		var/obj/structure/criptic/gunbench/G = loc
 		G.target_gun = null
+		pixel_x = initial(pixel_x)
+		pixel_y = initial(pixel_y)
 
 	. = ..()

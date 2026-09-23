@@ -79,7 +79,7 @@
 	var/mob/living/carbon/human/H = user
 	var/obj/item/criptic/instrument/held_item = H.get_held_item()
 
-	if(istype(held_item,/obj/item/criptic/instrument/sound_device) && H.client.connected_sound)
+	if(istype(held_item,/obj/item/criptic/instrument/sound_device) && !H.client.connected_sound)
 		add_filter("clue", 1, list("type" = "outline", "size" = 1, "color" = COLOR_CYAN))
 		animate(src, transform = matrix(0.7, MATRIX_SCALE), time = 0.2 SECONDS, easing = SINE_EASING | EASE_IN)
 		animate(transform = matrix(1, MATRIX_SCALE), time = 0.2 SECONDS, easing = SINE_EASING | EASE_OUT)
@@ -223,20 +223,20 @@
 	user.client.mouse_pointer_icon = 'core_ru/code/modules/criptid_hunting/keycards.dmi'
 	user.overlay_fullscreen("background",/atom/movable/screen/fullscreen/crt/criptic)
 
-	ADD_TRAIT(user, TRAIT_IMMOBILIZED, INTERACTION_TRAIT)
 	user.client.screen += device_rep
 	user.client.screen += exit_search
 	user.client.screen += clues_rep
+	ADD_TRAIT(user, TRAIT_IMMOBILIZED, INTERACTION_TRAIT)
 
 /obj/item/criptic/instrument/sound_device/proc/stop_minigame(mob/user)
 	busy = FALSE
 	user.client.mouse_pointer_icon = initial(user.client.mouse_pointer_icon)
 	user.clear_fullscreen("background")
 
-	REMOVE_TRAIT(user, TRAIT_IMMOBILIZED, INTERACTION_TRAIT)
 	user.client.screen -= device_rep
 	user.client.screen -= exit_search
 	user.client.screen -= clues_rep
+	REMOVE_TRAIT(user, TRAIT_IMMOBILIZED, INTERACTION_TRAIT)
 
 /obj/item/criptic/instrument/sound_device/check_for_condition()
 	for(var/obj/structure/criptic/clue/sound_clue/S in clues_nearby)
