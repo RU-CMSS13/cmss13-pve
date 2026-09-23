@@ -175,7 +175,7 @@
 	icon = 'core_ru/code/modules/criptid_hunting/ms_scrap.dmi'
 	icon_state = "scrap_leather"
 
-	w_class = SIZE_SMALL
+	w_class = SIZE_TINY
 
 /obj/item/weapon/knife/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
 	. = ..()

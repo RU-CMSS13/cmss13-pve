@@ -1,4 +1,8 @@
-
+/atom/movable/screen/fullscreen/crt/criptic
+	icon_state = "crt"
+	layer = FULLSCREEN_LAYER
+	blend_mode = BLEND_OVERLAY
+	alpha = 200
 
 /atom
 	var/uv_scannable = FALSE
@@ -158,6 +162,8 @@
 	user.client.screen -= attached_to.cover
 	user.client.screen -= attached_to.connected_image
 
+	user.clear_fullscreen("background")
+
 	for(var/atom/movable/screen/dirt/D in attached_to.cover)
 		D.alpha = 255
 	attached_to.connected_image.alpha = 255
@@ -197,12 +203,12 @@
 
 /atom/movable/screen/connected_representation/Initialize()
 	. = ..()
-	transform = matrix(2, 2, MATRIX_SCALE)*matrix(rand(-48,48), rand(-48,48), MATRIX_TRANSLATE)
+	transform = matrix(2, 2, MATRIX_SCALE)*matrix(rand(-64,64), rand(-64,64), MATRIX_TRANSLATE)
 
 /atom/movable/screen/connected_representation/clicked(mob/user)
 	var/mob/living/carbon/human/H = user
 
-	animate(src, alpha = 0, transform = matrix(0.5, MATRIX_SCALE)*matrix(0, -64, MATRIX_TRANSLATE), time = 0.5 SECONDS, easing = BOUNCE_EASING | EASE_OUT, flags = ANIMATION_PARALLEL)
+	animate(src, alpha = 0, transform = matrix(0.5, MATRIX_SCALE)*matrix(0, -96, MATRIX_TRANSLATE), time = 0.5 SECONDS, easing = BOUNCE_EASING | EASE_OUT, flags = ANIMATION_PARALLEL)
 	for(var/atom/movable/screen/dirt/D in attached_to.cover)
 		animate(D, alpha = 0, transform = matrix(3, MATRIX_SCALE)*matrix(0, -72, MATRIX_TRANSLATE), time = 0.5 SECONDS, easing = SINE_EASING | EASE_IN, flags = ANIMATION_PARALLEL)
 
@@ -214,6 +220,8 @@
 
 	H.client.screen -= attached_to.cover
 	H.client.screen -= attached_to.exit
+
+	H.clear_fullscreen("background")
 
 	if(attached_to in H.revealed_hints)
 		H.hide_hint(attached_to)
@@ -271,6 +279,9 @@
 /obj/structure/criptic/clue/proc/start_arch_minigame(mob/user)
 	busy = TRUE
 	ADD_TRAIT(user, TRAIT_IMMOBILIZED, INTERACTION_TRAIT)
+
+	user.overlay_fullscreen("background",/atom/movable/screen/fullscreen/crt/criptic)
+
 	user.client.screen += exit
 	user.client.screen += connected_image
 	user.client.screen += cover
@@ -365,6 +376,19 @@
 /obj/item/criptic/instrument/proc/revert_instrument_effect()
 	return TRUE
 
+/obj/effect/temp_visual/laptop_scanning
+	duration = 0.5 SECONDS
+	icon = 'core_ru/code/modules/criptid_hunting/effectss.dmi'
+	icon_state = "push"
+	layer = 3
+	alpha = 50
+
+	color = COLOR_GREEN
+
+/obj/effect/temp_visual/laptop_scanning/Initialize(mapload)
+	. = ..()
+	animate(src, transform = matrix(5, MATRIX_SCALE), time = 3)
+
 /obj/effect/temp_visual/phone_scanning
 	duration = 0.5 SECONDS
 	icon = 'core_ru/code/modules/criptid_hunting/effectss.dmi'
@@ -380,6 +404,8 @@
 
 /obj/item/criptic/instrument/phone
 	passive_searching = TRUE
+	var/warning_cooldown = 10
+	var/warning_cooldown_active = FALSE
 	var/clue_cooldown = 10
 	var/cooldown_active = FALSE
 
@@ -389,6 +415,19 @@
 
 	clue_type_to_reveal = list()
 	var/weeds_nearby = FALSE
+	var/altmode = FALSE
+
+/obj/item/criptic/instrument/phone/clicked(mob/user, list/mods)
+	if(mods[ALT_CLICK])
+		if(!CAN_PICKUP(user, src))
+			return ..()
+		altmode = !altmode
+		if(altmode)
+			light_color = COLOR_GREEN
+		if(!altmode)
+			light_color = COLOR_CYAN
+		return TRUE
+	return ..()
 
 /obj/item/criptic/instrument/phone/proc/buzzed()
 	set waitfor = FALSE
@@ -400,8 +439,70 @@
 	sleep(1 SECONDS)
 	remove_filter("buzzed")
 
-/obj/item/criptic/instrument/phone/check_for_condition()
-	set waitfor = FALSE
+/obj/item/criptic/instrument/phone/proc/narrow_scan()
+	if(warning_cooldown <= 0 && warning_cooldown_active)
+		warning_cooldown = 10
+		warning_cooldown_active = FALSE
+
+	if(ishuman(loc))
+
+		var/mob/living/carbon/human/H = loc
+		var/obj/effect/temp_visual/laptop_scanning/L = new /obj/effect/temp_visual/laptop_scanning(get_turf(H))
+		L.dir = H.dir
+
+		switch(H.dir)
+			if(NORTH)
+				animate(L, pixel_x = 0, pixel_y = 96, time = 0.3 SECONDS, easing = SINE_EASING|EASE_IN, flags = ANIMATION_PARALLEL)
+			if(SOUTH)
+				animate(L, pixel_x = 0, pixel_y = -96, time = 0.3 SECONDS, easing = SINE_EASING|EASE_IN, flags = ANIMATION_PARALLEL)
+			if(EAST)
+				animate(L, pixel_x = 96, pixel_y = 0, time = 0.3 SECONDS, easing = SINE_EASING|EASE_IN, flags = ANIMATION_PARALLEL)
+			if(WEST)
+				animate(L, pixel_x = -96, pixel_y = 0, time = 0.3 SECONDS, easing = SINE_EASING|EASE_IN, flags = ANIMATION_PARALLEL)
+
+		var/turf/T = get_ranged_target_turf(H,H.dir,7)
+		var/list/turf/open_turfs = get_line(get_turf(H),T,0)
+
+		var/obj/effect/alien/weeds/closest_weeds
+		var/nearest_range = 10
+
+		for(var/turf/open/O in open_turfs)
+			for(var/obj/effect/alien/weeds/W in O)
+				var/dist_between = get_dist(W,H)
+				if(dist_between < nearest_range)
+					nearest_range = dist_between
+					closest_weeds = W
+
+		if(closest_weeds)
+			open_turfs.Cut()
+			open_turfs = get_line(get_turf(H),get_turf(closest_weeds),0)
+
+			if(warning_cooldown_active && warning_cooldown > 0)
+				warning_cooldown -= 1
+			else
+				warning_cooldown_active = TRUE
+				show_blurb(H, 15, "Seems like the signal will not go very far in this direction...", null, "WEST+6:22,2:14", "center", COLOR_DARK_RED, null, null, 1)
+
+		var/list/clues = list()
+		for(var/turf/open/O in open_turfs)
+			for(var/obj/structure/criptic/clue/C in O)
+				if(C.revealed)
+					continue
+				clues += C
+
+		if(length(clues))
+			animation_flash_color(src, COLOR_GREEN)
+			add_filter("activated2", 1, list("type" = "outline", "color" = COLOR_GREEN, "size" = 1))
+
+			animate(src, time = 3, easing = SINE_EASING|EASE_OUT, transform = matrix(10, MATRIX_ROTATE))
+			sleep(3)
+			animate(src, time = 3, easing = SINE_EASING|EASE_IN, transform = matrix())
+			remove_filter("activated2")
+
+			for(var/turf/open/O in open_turfs)
+				animation_flash_color(O, COLOR_GREEN)
+
+/obj/item/criptic/instrument/phone/proc/passive_scan()
 	new /obj/effect/temp_visual/phone_scanning(get_turf(loc))
 
 	if(clue_cooldown <= 0 && cooldown_active)
@@ -414,14 +515,14 @@
 		clue_cooldown -= 1
 		return TRUE
 
-	if(!(locate(/obj/effect/alien/weeds) in range(7,get_turf(loc))) && weeds_nearby)
+	if(!(locate(/obj/effect/alien/weeds) in range(10,get_turf(loc))) && weeds_nearby)
 		weeds_nearby = FALSE
 		if(ishuman(loc))
 			var/mob/living/carbon/human/H = loc
 			show_blurb(H, 15, "Disruption are gone...for now", null, "WEST+6:22,2:14", "center", COLOR_LIGHT_GREEN, null, null, 1)
 		return TRUE
 
-	if((locate(/obj/effect/alien/weeds) in range(7,get_turf(loc))) && !weeds_nearby)
+	if((locate(/obj/effect/alien/weeds) in range(10,get_turf(loc))) && !weeds_nearby)
 		weeds_nearby = TRUE
 		if(ishuman(loc))
 			var/mob/living/carbon/human/H = loc
@@ -441,15 +542,22 @@
 			animation_flash_color(src, COLOR_CYAN)
 			add_filter("activated", 1, list("type" = "outline", "color" = COLOR_CYAN, "size" = 1))
 
-			animate(src, 3, easing = SINE_EASING|EASE_OUT, transform = matrix(10, MATRIX_ROTATE), time = 5)
+			animate(src, time = 3, easing = SINE_EASING|EASE_OUT, transform = matrix(10, MATRIX_ROTATE))
 			sleep(3)
-			animate(src, 3, easing = SINE_EASING|EASE_IN, transform = matrix())
+			animate(src, time = 3, easing = SINE_EASING|EASE_IN, transform = matrix())
 
 			if(ishuman(loc))
 				var/mob/living/carbon/human/H = loc
 				show_blurb(H, 15, "Phone detected something", null, "WEST+6:22,2:14", "center", COLOR_GRAY, null, null, 1)
 
 			cooldown_active = TRUE
+
+/obj/item/criptic/instrument/phone/check_for_condition()
+	set waitfor = FALSE
+	if(altmode)
+		narrow_scan()
+	else
+		passive_scan()
 
 /obj/structure/criptic/ritual
 	name = "ritual circle"

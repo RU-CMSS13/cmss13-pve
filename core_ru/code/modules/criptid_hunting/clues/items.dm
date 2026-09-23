@@ -4,7 +4,7 @@
 	icon = 'core_ru/code/modules/criptid_hunting/precious_objects.dmi'
 	icon_state = "teapot_gold"
 
-	w_class = SIZE_SMALL
+	w_class = SIZE_TINY
 
 /obj/structure/criptic/clue/item
 	covered = TRUE
