@@ -442,12 +442,6 @@
 	pixel_y = 9;
 	pixel_x = -13
 	},
-/obj/item/ammo_magazine/handful/lever_action/marksman{
-	pixel_x = 20
-	},
-/obj/item/ammo_magazine/handful/lever_action/marksman{
-	pixel_x = 20
-	},
 /obj/item/storage/belt/gun/m4a3/vp70,
 /obj/item/storage/belt/gun/m4a3/vp70,
 /obj/item/storage/belt/gun/m4a3/vp70,
@@ -1142,6 +1136,19 @@
 	},
 /turf/open/gm/dirt2,
 /area/redemptionvalley/valley/checkpoint)
+"aAv" = (
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/structure/platform/kutjevo/rock{
+	dir = 1;
+	color = "#999999"
+	},
+/obj/structure/platform/kutjevo/rock{
+	dir = 8;
+	color = "#999999";
+	layer = 3.02
+	},
+/turf/open/gm/river/ocean/deep_water,
+/area/redemptionvalley/valley/proper)
 "aAH" = (
 /obj/structure/surface/table/reinforced/prison,
 /turf/open/floor/prison/bright_clean,
@@ -1258,6 +1265,13 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/redemptionvalley/valley/checkpoint)
+"aMB" = (
+/obj/structure/platform/wood/west{
+	dir = 2
+	},
+/obj/item/criptic/scrap,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/redemptionvalley/valley/proper)
 "aMN" = (
 /obj/structure/platform/shiva/catwalk{
 	dir = 1
@@ -1379,6 +1393,22 @@
 	layer = 3.02
 	},
 /turf/open/auto_turf/sand_white/layer0,
+/area/redemptionvalley/valley/proper)
+"aRT" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/poster/pinup{
+	pixel_y = 34;
+	pixel_x = 10
+	},
+/obj/structure/sign/poster/music{
+	pixel_y = 31;
+	pixel_x = -10
+	},
+/obj/structure/sign/poster/nspa{
+	pixel_y = 29
+	},
+/obj/structure/largecrate/supply/generator,
+/turf/open/floor/interior/wood/alt,
 /area/redemptionvalley/valley/proper)
 "aSF" = (
 /obj/structure/machinery/body_scanconsole,
@@ -1791,6 +1821,7 @@
 /area/redemptionvalley/valleyroof/engi)
 "byQ" = (
 /obj/structure/closet/secure_closet/engineering_welding,
+/obj/item/criptic/battery,
 /turf/open/floor/prison/darkyellow2/west,
 /area/redemptionvalley/valleyroof/engi)
 "byX" = (
@@ -1811,6 +1842,12 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/fake_wood,
+/area/redemptionvalley/valley/proper)
+"bAg" = (
+/obj/structure/prop/rock/brown{
+	dir = 5
+	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/redemptionvalley/valley/proper)
 "bAG" = (
 /obj/structure/machinery/door/airlock/almayer/generic,
@@ -1900,6 +1937,21 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valleyroof/housesix)
+"bHb" = (
+/obj/item/stack/sheet/wood/small_stack{
+	pixel_y = 13;
+	pixel_x = 4
+	},
+/obj/item/stack/sheet/wood/small_stack{
+	pixel_y = 16;
+	pixel_x = 4
+	},
+/obj/item/stack/sheet/wood/small_stack{
+	pixel_y = 3;
+	pixel_x = 6
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/redemptionvalley/valley/proper)
 "bHc" = (
 /obj/structure/machinery/light,
 /turf/open/floor/prison/red,
@@ -2389,6 +2441,20 @@
 /obj/structure/platform/kutjevo/rock,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/redemptionvalley/valley/checkpoint)
+"cyI" = (
+/obj/structure/noticeboard{
+	pixel_y = 27
+	},
+/obj/item/reagent_container/food/snacks/fishable/fish/catfish{
+	pixel_y = 24
+	},
+/obj/structure/bed/alien,
+/obj/item/reagent_container/food/drinks/cans/food/upp/speck{
+	pixel_x = -10;
+	pixel_y = -15
+	},
+/turf/open/floor/plating,
+/area/redemptionvalley/valley/proper)
 "cyU" = (
 /obj/structure/machinery/light/small{
 	dir = 4
@@ -2778,6 +2844,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/marked,
 /area/redemptionvalley/valleyroof/storage)
+"cYi" = (
+/obj/structure/platform_decoration/wood/east{
+	dir = 1
+	},
+/obj/structure/flora/bush/ausbushes/grassybush{
+	icon_state = "fullgrass_1"
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/redemptionvalley/valley/proper)
 "cYE" = (
 /obj/structure/bed/chair{
 	dir = 8;
@@ -2848,6 +2923,14 @@
 /obj/structure/flora/tree/tyrargo/tree_3,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
+"dhM" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/surface/rack,
+/obj/item/criptic/blueprint/silver,
+/turf/open/floor/prison,
+/area/redemptionvalley/valleyroof/storage)
 "dhP" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 4;
@@ -3180,6 +3263,12 @@
 "dAF" = (
 /turf/open/floor/prison/bright_clean,
 /area/redemptionvalley/valleyroof/housesix)
+"dBv" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 8
+	},
+/turf/open/floor/interior/wood/alt2,
+/area/redemptionvalley/valley/proper)
 "dBP" = (
 /turf/open/floor/prison/red/north,
 /area/redemptionvalley/valleyroof/security)
@@ -3434,6 +3523,11 @@
 	},
 /turf/open/floor/prison,
 /area/redemptionvalley/valleyroof/hydro)
+"dWE" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair/wood/normal,
+/turf/open/floor/plating/platingdmg1,
+/area/redemptionvalley/valley/proper)
 "dWT" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
@@ -3590,6 +3684,22 @@
 /obj/effect/spawner/random/powercell,
 /turf/open/floor/prison,
 /area/redemptionvalley/valleyroof/engi)
+"eni" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 8
+	},
+/obj/structure/barricade/handrail/strata{
+	can_buckle = 1
+	},
+/obj/structure/surface/rack,
+/obj/effect/spawner/random/toolbox,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/criptic/battery,
+/turf/open/floor/prison,
+/area/redemptionvalley/valleyroof/housefour)
 "enm" = (
 /turf/closed/wall/biodome,
 /area/redemptionvalley/valleyroof/housefour)
@@ -3629,6 +3739,10 @@
 	dir = 4
 	},
 /turf/open/auto_turf/strata_grass/layer0,
+/area/redemptionvalley/valley/proper)
+"epN" = (
+/obj/item/criptic/scrap,
+/turf/open/auto_turf/sand_white/layer0,
 /area/redemptionvalley/valley/proper)
 "eqd" = (
 /obj/structure/bed/chair{
@@ -3773,6 +3887,15 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
+"eFk" = (
+/obj/structure/flora/bush/ausbushes/grassybush{
+	icon_state = "fullgrass_1"
+	},
+/obj/structure/flora/bush/ausbushes/grassybush{
+	icon_state = "leafybush_2"
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/redemptionvalley/valley/proper)
 "eFQ" = (
 /obj/structure/largecrate/random/secure{
 	pixel_x = 6;
@@ -4138,6 +4261,10 @@
 /obj/structure/cargo_container/wy/right,
 /turf/open/auto_turf/sand_white/layer0,
 /area/redemptionvalley/valley/proper)
+"fjo" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/interior/wood/alt,
+/area/redemptionvalley/valley/proper)
 "fkm" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -4232,6 +4359,17 @@
 	},
 /turf/open/floor/prison/kitchen,
 /area/redemptionvalley/valleyroof/cafe)
+"fsS" = (
+/obj/structure/platform/shiva/catwalk{
+	dir = 1
+	},
+/obj/structure/platform/shiva/catwalk{
+	dir = 4;
+	layer = 3.01
+	},
+/obj/item/criptic/scrap,
+/turf/open/floor/plating,
+/area/redemptionvalley/valleyroof/housefour)
 "fto" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
@@ -4323,6 +4461,13 @@
 /obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/strata,
 /area/redemptionvalley/valleyroof/server)
+"fyu" = (
+/obj/structure/flora/tree/tyrargo/tree_3,
+/obj/structure/flora/bush/ausbushes/grassybush{
+	icon_state = "fullgrass_1"
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/redemptionvalley/valley/proper)
 "fzA" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/criptic/utility/protective_cross,
@@ -4576,6 +4721,10 @@
 	},
 /turf/open/floor/plating/warnplate,
 /area/redemptionvalley/valleyroof/housefive)
+"fUV" = (
+/obj/item/criptic/scrap,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/redemptionvalley/valley/proper)
 "fUW" = (
 /obj/structure/platform/strata/metal,
 /obj/structure/platform/strata/metal{
@@ -4732,6 +4881,12 @@
 /obj/structure/flora/tree/tyrargo/tree_3,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
+"gtK" = (
+/obj/structure/platform/wood/west{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/redemptionvalley/valley/proper)
 "gtQ" = (
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "brflowers_1"
@@ -4852,6 +5007,18 @@
 	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/redemptionvalley/valleyroof/housefour)
+"gMk" = (
+/obj/structure/bed/chair{
+	dir = 8;
+	pixel_x = 8
+	},
+/obj/structure/prop/fishing/pole_interactive{
+	dir = 8;
+	pixel_y = 25;
+	pixel_x = 30
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/redemptionvalley/valley/proper)
 "gOO" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -5133,6 +5300,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
 	},
+/obj/item/criptic/scrap,
 /turf/open/floor/prison,
 /area/redemptionvalley/valleyroof/store)
 "hlQ" = (
@@ -5159,6 +5327,15 @@
 	},
 /turf/open/floor/prison,
 /area/redemptionvalley/valleyroof/admin)
+"hok" = (
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/structure/platform/kutjevo/rock{
+	dir = 8;
+	color = "#999999";
+	layer = 3.02
+	},
+/turf/open/gm/river/ocean/deep_water,
+/area/redemptionvalley/valley/proper)
 "hoz" = (
 /obj/structure/surface/table/reinforced/prison{
 	color = "#8B7B5B"
@@ -5178,6 +5355,11 @@
 "hps" = (
 /turf/open/floor/prison/green/east,
 /area/redemptionvalley/valleyroof/laundro)
+"hpD" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/criptic/utility/cigarette,
+/turf/open/floor/prison/kitchen,
+/area/redemptionvalley/valleyroof/cafe)
 "hpH" = (
 /obj/structure/cargo_container/lockmart/left,
 /turf/open/auto_turf/sand_white/layer0,
@@ -5352,6 +5534,9 @@
 /area/redemptionvalley/valleyroof/medical)
 "hDf" = (
 /obj/structure/closet/cabinet,
+/obj/item/criptic/blueprint/silver,
+/obj/item/criptic/blueprint/uv,
+/obj/item/criptic/blueprint,
 /turf/open/floor/interior/wood/alt,
 /area/redemptionvalley/valleyroof/housesix)
 "hDm" = (
@@ -5520,6 +5705,14 @@
 	},
 /turf/open/floor/prison/redfull,
 /area/redemptionvalley/valleyroof/security)
+"hOK" = (
+/obj/structure/prop/rock/brown{
+	dir = 5;
+	pixel_y = -9;
+	pixel_x = 10
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/redemptionvalley/valley/proper)
 "hOL" = (
 /obj/structure/platform_decoration/kutjevo/smooth,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -5601,6 +5794,12 @@
 "iap" = (
 /turf/open/floor/prison/bluecorner/north,
 /area/redemptionvalley/valleyroof/admin)
+"iaB" = (
+/obj/structure/platform_decoration/wood/east{
+	dir = 2
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/redemptionvalley/valley/proper)
 "iaR" = (
 /turf/open/floor/prison/bright_clean,
 /area/redemptionvalley/valleyroof/housefour)
@@ -5667,6 +5866,10 @@
 /obj/structure/machinery/light,
 /turf/open/floor/prison/yellow,
 /area/redemptionvalley/valleyroof/hydro)
+"iiV" = (
+/obj/structure/window_frame/wood/plain,
+/turf/open/floor/plating/platingdmg2,
+/area/redemptionvalley/valley/proper)
 "ijV" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/auto_turf/strata_grass/layer0_mud,
@@ -5711,6 +5914,10 @@
 /obj/structure/flora/tree/tyrargo/tree_3,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/redemptionvalley/valley/proper)
+"ipM" = (
+/obj/item/trash/semki,
+/turf/open/floor/interior/wood/alt,
+/area/redemptionvalley/valley/proper)
 "ipR" = (
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/platform/kutjevo/smooth{
@@ -5724,6 +5931,18 @@
 	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/redemptionvalley/valleyroof/housesix)
+"iqZ" = (
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/structure/platform/kutjevo/rock{
+	dir = 8;
+	color = "#999999";
+	layer = 3.02
+	},
+/obj/structure/platform/kutjevo/rock{
+	color = "#999999"
+	},
+/turf/open/gm/river/ocean/deep_water,
+/area/redemptionvalley/valley/proper)
 "irP" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -5774,6 +5993,7 @@
 /obj/item/ammo_magazine/pistol/skorpion,
 /obj/item/ammo_magazine/pistol/skorpion,
 /obj/item/ammo_magazine/pistol/skorpion,
+/obj/item/weapon/gun/pistol/skorpion,
 /turf/open/asphalt,
 /area/redemptionvalley/valley/proper)
 "itX" = (
@@ -5826,6 +6046,10 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
+"iBm" = (
+/obj/structure/prop/rock/brown,
+/turf/open/auto_turf/sand_white/layer0,
+/area/redemptionvalley/valley/proper)
 "iCd" = (
 /obj/structure/platform/shiva/catwalk{
 	dir = 1
@@ -5867,6 +6091,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
 /area/redemptionvalley/valleyroof/housefive)
+"iHc" = (
+/obj/structure/platform/wood/west,
+/turf/open/auto_turf/sand_white/layer0,
+/area/redemptionvalley/valley/proper)
 "iHU" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt,
@@ -6233,6 +6461,12 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/redemptionvalley/valleyroof/medical)
+"jjy" = (
+/obj/structure/platform/wood/west{
+	dir = 2
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/redemptionvalley/valley/proper)
 "jkl" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1;
@@ -6336,6 +6570,7 @@
 /area/redemptionvalley/valley/proper)
 "jrg" = (
 /obj/structure/machinery/power/apc/power/west,
+/obj/item/criptic/scrap,
 /turf/open/floor/prison/darkyellow2/east,
 /area/redemptionvalley/valleyroof/engi)
 "jtc" = (
@@ -6483,6 +6718,10 @@
 	},
 /turf/open/gm/dirt2,
 /area/redemptionvalley/valley/proper)
+"jGM" = (
+/obj/structure/flora/bush/ausbushes/grassybush,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/redemptionvalley/valley/proper)
 "jHH" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 8
@@ -6490,9 +6729,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/redemptionvalley/caverns/east)
 "jIo" = (
-/obj/structure/prop/fishing/pole_interactive,
-/obj/structure/surface/table/holotable,
-/turf/open/auto_turf/strata_grass/layer0,
+/turf/closed/wall/wood/plain,
 /area/redemptionvalley/valley/proper)
 "jIt" = (
 /obj/structure/barricade/handrail/kutjevo,
@@ -6620,8 +6857,6 @@
 /obj/item/ammo_box/magazine/shotgun/special_buck{
 	pixel_y = 14
 	},
-/obj/item/ammo_magazine/handful/shotgun/buckshot/incendiary,
-/obj/item/ammo_magazine/handful/shotgun/buckshot/incendiary,
 /turf/open/asphalt,
 /area/redemptionvalley/valley/proper)
 "jZp" = (
@@ -7091,6 +7326,12 @@
 /obj/structure/prop/ice_colony/soil_net,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
+"kTm" = (
+/obj/structure/platform/wood/west{
+	dir = 1
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/redemptionvalley/valley/proper)
 "kUd" = (
 /obj/structure/surface/table/reinforced/prison{
 	color = "#ffe6e6"
@@ -7292,6 +7533,10 @@
 /obj/item/prop/magazine/book/warisaracket,
 /turf/open/floor/wood,
 /area/redemptionvalley/valleyroof/medical)
+"loU" = (
+/obj/structure/platform_decoration/wood/east,
+/turf/open/auto_turf/sand_white/layer0,
+/area/redemptionvalley/valley/proper)
 "lqo" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -7347,6 +7592,9 @@
 /obj/structure/curtain/blue,
 /turf/open/floor/kutjevo/grey,
 /area/redemptionvalley/valleyroof/houseone)
+"lyu" = (
+/turf/open/floor/interior/wood/alt,
+/area/redemptionvalley/valley/proper)
 "lzg" = (
 /obj/structure/platform/strata/metal{
 	dir = 1
@@ -7561,6 +7809,10 @@
 /obj/structure/flora/grass/tallgrass/crop,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/redemptionvalley/valley/proper)
+"lWC" = (
+/obj/item/criptic/scrap,
+/turf/open/gm/dirt2,
+/area/redemptionvalley/valley/checkpoint)
 "lXq" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 1
@@ -7673,6 +7925,13 @@
 "mfZ" = (
 /turf/open/floor/prison/red/northeast,
 /area/redemptionvalley/valleyroof/security)
+"mgb" = (
+/obj/structure/flora/bush/ausbushes/grassybush{
+	icon_state = "fullgrass_1"
+	},
+/obj/structure/flora/tree/tyrargo/tree_2,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/redemptionvalley/valley/proper)
 "mgD" = (
 /obj/structure/machinery/door/airlock/almayer/generic,
 /turf/open/floor/strata,
@@ -7716,13 +7975,7 @@
 /turf/open/floor/kutjevo/fake_wood,
 /area/redemptionvalley/valleyroof/houseone)
 "mju" = (
-/obj/structure/bed/chair{
-	buckling_y = 5;
-	dir = 1;
-	pixel_y = 7;
-	pixel_x = 4
-	},
-/turf/open/auto_turf/strata_grass/layer0,
+/turf/open/floor/interior/wood/damage,
 /area/redemptionvalley/valley/proper)
 "mjH" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/engidoor{
@@ -7891,6 +8144,15 @@
 	},
 /turf/open/floor/prison,
 /area/redemptionvalley/valleyroof/engi)
+"mtv" = (
+/obj/structure/platform_decoration/wood/east{
+	dir = 2
+	},
+/obj/structure/platform_decoration/wood/east{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/redemptionvalley/valley/proper)
 "mvI" = (
 /turf/open/gm/dirt2,
 /area/redemptionvalley/caverns/bunker)
@@ -8080,6 +8342,16 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/redemptionvalley/valleyroof/medical)
+"mQT" = (
+/obj/structure/platform/wood/west{
+	dir = 2
+	},
+/obj/item/tool/shovel{
+	pixel_x = 3;
+	pixel_y = 5
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/redemptionvalley/valley/proper)
 "mRp" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterile_white,
@@ -8202,6 +8474,7 @@
 	pixel_y = 15
 	},
 /obj/structure/surface/table/reinforced/prison,
+/obj/item/criptic/utility/cigarette,
 /turf/open/floor/prison/bright_clean,
 /area/redemptionvalley/valleyroof/housethree)
 "nfu" = (
@@ -8632,10 +8905,35 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/redemptionvalley/valleyroof/housefour)
+"nUr" = (
+/obj/structure/prop/hybrisa/misc/machinery/screens/wood_clock{
+	pixel_x = 1;
+	pixel_y = 41
+	},
+/obj/item/storage/backpack/industrial{
+	pixel_y = 16;
+	pixel_x = -5
+	},
+/obj/item/storage/box/mre/us_army{
+	pixel_y = 7;
+	pixel_x = 10
+	},
+/obj/item/storage/box/mre/us_army{
+	pixel_y = 0;
+	pixel_x = 10
+	},
+/turf/open/floor/interior/wood/alt,
+/area/redemptionvalley/valley/proper)
 "nUv" = (
 /obj/structure/flora/tree/tyrargo/tree_4,
 /turf/open/gm/dirt2,
 /area/redemptionvalley/valley/checkpoint)
+"nVf" = (
+/obj/structure/platform/wood/west{
+	dir = 2
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/redemptionvalley/valley/proper)
 "nVl" = (
 /obj/structure/sink{
 	dir = 4;
@@ -8675,6 +8973,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/strata_outpost/reinforced,
 /area/redemptionvalley/valleyroof/company)
+"nZF" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/criptic/scrap,
+/turf/open/floor/plating,
+/area/redemptionvalley/valleyroof/housefour)
 "oaE" = (
 /obj/structure/platform/shiva/catwalk{
 	dir = 4;
@@ -8698,6 +9001,13 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/redemptionvalley/caverns/lake)
+"oem" = (
+/obj/structure/platform/wood/west,
+/obj/structure/flora/bush/ausbushes/grassybush{
+	icon_state = "fullgrass_1"
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/redemptionvalley/valley/proper)
 "ofj" = (
 /obj/structure/platform/strata/metal{
 	dir = 4
@@ -8878,6 +9188,12 @@
 /obj/structure/tunnel,
 /turf/open/auto_turf/sand_white/layer0,
 /area/redemptionvalley/caverns/lake)
+"owe" = (
+/obj/structure/mineral_door/wood{
+	dir = 4
+	},
+/turf/open/floor/interior/wood/damage_2,
+/area/redemptionvalley/valley/proper)
 "owf" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 8
@@ -8889,10 +9205,26 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/redemptionvalley/valleyroof/housefive)
+"oxg" = (
+/obj/structure/flora/tree/tyrargo/tree_2,
+/obj/structure/platform/wood/west{
+	dir = 2
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/redemptionvalley/valley/proper)
 "oAr" = (
 /obj/structure/machinery/iv_drip,
 /turf/open/floor/prison/sterile_white,
 /area/redemptionvalley/valleyroof/medical)
+"oAK" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/item/criptic/battery{
+	pixel_y = 2
+	},
+/turf/open/floor/prison,
+/area/redemptionvalley/valleyroof/store)
 "oAN" = (
 /obj/structure/machinery/optable,
 /obj/item/device/flashlight/pen{
@@ -9111,6 +9443,22 @@
 /obj/structure/platform/stone/tyrargo/north,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/redemptionvalley/valley/proper)
+"oUT" = (
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/reagent_container/food/drinks/cans/food/upp/meat{
+	pixel_y = 16;
+	pixel_x = 8
+	},
+/obj/item/reagent_container/food/drinks/cans/food/upp/meat{
+	pixel_y = 16;
+	pixel_x = -3
+	},
+/obj/item/reagent_container/food/drinks/cans/food/upp/meat{
+	pixel_y = 6;
+	pixel_x = 8
+	},
+/turf/open/floor/interior/wood/alt,
+/area/redemptionvalley/valley/proper)
 "oVx" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
@@ -9313,6 +9661,15 @@
 "pjk" = (
 /turf/open/floor/wood,
 /area/redemptionvalley/valleyroof/admin)
+"pjT" = (
+/obj/structure/flora/bush/ausbushes/grassybush{
+	icon_state = "fullgrass_1"
+	},
+/obj/structure/flora/bush/ausbushes/grassybush{
+	icon_state = "leafybush_2"
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/redemptionvalley/valley/proper)
 "pkC" = (
 /obj/structure/platform/kutjevo/rock{
 	color = "#999999"
@@ -9326,7 +9683,10 @@
 /area/redemptionvalley/valley/proper)
 "pkF" = (
 /obj/structure/surface/table/holotable,
-/obj/structure/machinery/botany/extractor,
+/obj/structure/criptic/chemstation{
+	pixel_y = 8;
+	pixel_x = -1
+	},
 /turf/open/floor/prison,
 /area/redemptionvalley/valleyroof/hydro)
 "pkJ" = (
@@ -9371,6 +9731,9 @@
 	pixel_y = 15
 	},
 /obj/structure/surface/table/reinforced/prison,
+/obj/item/criptic/blueprint{
+	pixel_y = -8
+	},
 /turf/open/floor/prison/bright_clean,
 /area/redemptionvalley/valleyroof/houseone)
 "poQ" = (
@@ -9458,6 +9821,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/biodome,
 /area/redemptionvalley/valleyroof/housefive)
+"puX" = (
+/obj/structure/platform/strata/metal,
+/obj/structure/flora/bush/ausbushes/grassybush,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/redemptionvalley/valley/proper)
 "pws" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/redemptionvalley/valleyroof/housefive)
@@ -9726,6 +10094,10 @@
 	},
 /turf/open/floor/prison/bright_clean,
 /area/redemptionvalley/valleyroof/housethree)
+"pNq" = (
+/obj/item/criptic/scrap,
+/turf/open/floor/prison,
+/area/redemptionvalley/valleyroof/storage)
 "pOB" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -9786,10 +10158,6 @@
 "pUJ" = (
 /obj/structure/surface/table/almayer{
 	color = "#EBD9B7"
-	},
-/obj/structure/criptic/chemstation{
-	pixel_y = 8;
-	pixel_x = -3
 	},
 /turf/open/floor/prison/whitegreen/north,
 /area/redemptionvalley/valleyroof/medical)
@@ -9995,6 +10363,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/marked,
 /area/redemptionvalley/valleyroof/housefour)
+"qoL" = (
+/obj/structure/platform/wood/west{
+	dir = 1
+	},
+/obj/structure/platform/wood/west{
+	dir = 4
+	},
+/obj/structure/prop/static_tank/water,
+/obj/structure/prop/structure_lattice,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/redemptionvalley/valley/proper)
 "qoU" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	name = "Bathroom";
@@ -10329,6 +10708,20 @@
 /obj/structure/cargo_container/ferret/mid,
 /turf/open/floor/prison,
 /area/redemptionvalley/valleyroof/storage)
+"qOu" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/tool/kitchen/knife/butcher{
+	pixel_x = 6
+	},
+/obj/item/tool/kitchen/can_opener,
+/obj/item/trash/snack_bowl{
+	pixel_y = 17;
+	pixel_x = -4
+	},
+/turf/open/floor/plating,
+/area/redemptionvalley/valley/proper)
 "qPk" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -10508,6 +10901,7 @@
 	light_color = "#dae2ff";
 	light_power = 0.5
 	},
+/obj/item/criptic/battery,
 /turf/open/floor/prison,
 /area/redemptionvalley/valleyroof/storage)
 "rbh" = (
@@ -10758,6 +11152,13 @@
 /obj/structure/machinery/light,
 /turf/open/floor/prison/blue,
 /area/redemptionvalley/valleyroof/admin)
+"ryY" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/item/criptic/scrap,
+/turf/open/floor/prison,
+/area/redemptionvalley/valleyroof/security)
 "rzZ" = (
 /obj/structure/platform{
 	density = 0;
@@ -10838,6 +11239,10 @@
 /obj/structure/machinery/cm_vending/sorted/tech/comp_storage,
 /turf/open/floor/prison/darkyellow2/west,
 /area/redemptionvalley/valleyroof/engi)
+"rHn" = (
+/obj/structure/closet/secure_closet/freezer/fridge/full,
+/turf/open/floor/interior/wood/alt,
+/area/redemptionvalley/valley/proper)
 "rJg" = (
 /turf/open/floor/prison/greenbluecorner/east,
 /area/redemptionvalley/valleyroof/cafe)
@@ -11052,6 +11457,18 @@
 	},
 /turf/open/floor/whitegreenfull,
 /area/redemptionvalley/valleyroof/store)
+"rXH" = (
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/structure/platform/kutjevo/rock{
+	color = "#999999"
+	},
+/obj/structure/platform/kutjevo/rock{
+	dir = 8;
+	color = "#999999";
+	layer = 3.02
+	},
+/turf/open/gm/river/ocean/deep_water,
+/area/redemptionvalley/valley/proper)
 "rYb" = (
 /obj/structure/machinery/door_control{
 	pixel_x = -24;
@@ -11105,6 +11522,11 @@
 /obj/item/folder/yellow,
 /turf/open/floor/kutjevo/multi_tiles/southeast,
 /area/redemptionvalley/valleyroof/company)
+"saW" = (
+/obj/item/criptic/scrap,
+/obj/item/tool/carpenters_hammer,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/redemptionvalley/valley/proper)
 "sbH" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner,
 /turf/open/auto_turf/strata_grass/layer0_mud,
@@ -11112,6 +11534,20 @@
 "sck" = (
 /turf/open/gm/dirt2,
 /area/redemptionvalley/valley/checkpoint)
+"seW" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal4"
+	},
+/obj/item/criptic/battery{
+	pixel_x = -11;
+	pixel_y = -3
+	},
+/obj/item/criptic/battery{
+	pixel_x = -11;
+	pixel_y = -12
+	},
+/turf/open/asphalt,
+/area/redemptionvalley/valley/proper)
 "sfc" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -11418,6 +11854,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/gm/dirt2,
 /area/redemptionvalley/valley/checkpoint)
+"szl" = (
+/obj/item/criptic/scrap,
+/turf/open/floor/interior/wood/alt,
+/area/redemptionvalley/valleyroof/housesix)
 "szn" = (
 /obj/structure/mirror{
 	pixel_y = 35;
@@ -11481,6 +11921,10 @@
 /area/redemptionvalley/valleyroof/housefive)
 "sDG" = (
 /obj/structure/surface/table/holotable,
+/obj/structure/machinery/botany/extractor{
+	pixel_y = 12
+	},
+/obj/item/criptic/utility/cigarette,
 /turf/open/floor/prison,
 /area/redemptionvalley/valleyroof/hydro)
 "sEg" = (
@@ -11563,6 +12007,12 @@
 "sID" = (
 /turf/open/floor/prison/sterile_white,
 /area/redemptionvalley/valleyroof/company)
+"sKH" = (
+/obj/structure/flora/bush/ausbushes/grassybush{
+	icon_state = "fullgrass_1"
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/redemptionvalley/valley/proper)
 "sKN" = (
 /turf/open/floor/prison/blue/west,
 /area/redemptionvalley/valleyroof/admin)
@@ -11577,6 +12027,7 @@
 	pixel_y = 15
 	},
 /obj/structure/surface/table/reinforced/prison,
+/obj/item/criptic/utility/cigarette,
 /turf/open/floor/prison/bright_clean,
 /area/redemptionvalley/valleyroof/housefive)
 "sLK" = (
@@ -11739,6 +12190,15 @@
 /obj/item/device/flashlight/lamp/tripod,
 /turf/open/auto_turf/sand_white/layer0,
 /area/redemptionvalley/valley/proper)
+"tas" = (
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/structure/platform/kutjevo/rock{
+	dir = 4;
+	color = "#999999";
+	layer = 3.02
+	},
+/turf/open/gm/river/ocean/deep_water,
+/area/redemptionvalley/valley/proper)
 "tbH" = (
 /obj/structure/machinery/light/small/blue{
 	dir = 8;
@@ -11792,6 +12252,17 @@
 /obj/structure/closet/secure_closet/personal/cabinet,
 /turf/open/floor/kutjevo/multi_tiles/southeast,
 /area/redemptionvalley/valleyroof/housefive)
+"teC" = (
+/obj/structure/flora/bush/ausbushes/grassybush{
+	icon_state = "fullgrass_1"
+	},
+/obj/item/criptic/scrap,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/redemptionvalley/valley/proper)
+"teF" = (
+/obj/structure/surface/table/woodentable/poor,
+/turf/open/floor/plating,
+/area/redemptionvalley/valley/proper)
 "teJ" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /obj/structure/flora/grass/tallgrass/jungle,
@@ -11856,6 +12327,11 @@
 	},
 /turf/open/gm/dirt2,
 /area/redemptionvalley/caverns/bunker)
+"tmA" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/interior/wood/alt,
+/area/redemptionvalley/valley/proper)
 "tmO" = (
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/redemptionvalley/valley/proper)
@@ -11934,6 +12410,15 @@
 "tzE" = (
 /turf/closed/wall/rock/brown,
 /area/redemptionvalley/valley/proper)
+"tBg" = (
+/obj/structure/machinery/light/small/blue{
+	light_color = "#dae2ff";
+	light_power = 0.5;
+	pixel_y = -1
+	},
+/obj/item/criptic/scrap,
+/turf/open/floor/prison,
+/area/redemptionvalley/valleyroof/housefour)
 "tBD" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/storage/box/drinkingglasses{
@@ -12082,6 +12567,7 @@
 	pixel_x = 1;
 	pixel_y = 41
 	},
+/obj/item/criptic/utility/cigarette,
 /turf/open/floor/interior/wood/alt,
 /area/redemptionvalley/valleyroof/housesix)
 "tPU" = (
@@ -12254,6 +12740,32 @@
 	},
 /turf/open/floor/prison,
 /area/redemptionvalley/valleyroof/security)
+"ufB" = (
+/obj/structure/stairs/perspective{
+	color = "#8B7B5B";
+	icon_state = "p_stair_full";
+	dir = 8
+	},
+/obj/structure/platform/wood/west{
+	dir = 1
+	},
+/obj/structure/platform/wood/west{
+	dir = 2
+	},
+/turf/open/floor/interior/wood/alt2,
+/area/redemptionvalley/valley/proper)
+"ufR" = (
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/structure/platform/kutjevo/rock{
+	color = "#999999"
+	},
+/obj/structure/platform/kutjevo/rock{
+	dir = 4;
+	color = "#999999";
+	layer = 3.02
+	},
+/turf/open/gm/river/ocean/deep_water,
+/area/redemptionvalley/valley/proper)
 "ugo" = (
 /obj/structure/platform/shiva/catwalk{
 	dir = 8
@@ -12613,6 +13125,12 @@
 /obj/effect/spawner/random/toolbox,
 /turf/open/floor/prison,
 /area/redemptionvalley/valleyroof/storage)
+"uOc" = (
+/obj/structure/platform_decoration/wood/east{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/redemptionvalley/valley/proper)
 "uOS" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/tyrargo/boards/boards_1{
@@ -12693,6 +13211,10 @@
 	},
 /turf/open/floor/plating,
 /area/redemptionvalley/oob/buttons)
+"uSz" = (
+/obj/structure/platform/wood/west,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/redemptionvalley/valley/proper)
 "uSJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -12851,6 +13373,19 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/redemptionvalley/valley/proper)
+"vkc" = (
+/obj/structure/flora/tree/tyrargo/tree_2,
+/turf/open/auto_turf/sand_white/layer0,
+/area/redemptionvalley/valley/proper)
+"vkz" = (
+/obj/structure/filingcabinet/chestdrawer{
+	pixel_y = 24;
+	pixel_x = -8;
+	density = 0
+	},
+/obj/structure/flora/pottedplant/random,
+/turf/open/floor/interior/wood/alt,
+/area/redemptionvalley/valley/proper)
 "vkP" = (
 /obj/structure/flora/grass/tallgrass/crop/corner{
 	dir = 4
@@ -12880,6 +13415,12 @@
 /obj/structure/closet/secure_closet/engineering_electrical,
 /turf/open/floor/prison/darkyellow2/west,
 /area/redemptionvalley/valleyroof/engi)
+"vlJ" = (
+/obj/structure/platform/wood/west{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/redemptionvalley/valley/proper)
 "vmq" = (
 /obj/structure/toilet{
 	dir = 1
@@ -12945,6 +13486,7 @@
 /area/redemptionvalley/valley/checkpoint)
 "vsn" = (
 /obj/structure/surface/table/holotable,
+/obj/item/criptic/blueprint/uv,
 /obj/item/criptic/utility/pills/healing{
 	pixel_y = 5;
 	pixel_x = -6
@@ -13159,6 +13701,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/redemptionvalley/valleyroof/admin)
+"vLz" = (
+/obj/structure/window/framed/wood/plain,
+/turf/open/floor/interior/wood/alt,
+/area/redemptionvalley/valley/proper)
 "vNe" = (
 /turf/open/gm/river/ocean/deep_water,
 /area/redemptionvalley/valley/proper)
@@ -13182,6 +13728,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
+"vPZ" = (
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/reagent_container/food/drinks/cans/beer{
+	pixel_y = 16;
+	pixel_x = -6
+	},
+/obj/item/criptic/utility/cig_pack,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/redemptionvalley/valley/proper)
 "vQE" = (
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "fullgrass_1"
@@ -14255,6 +14810,20 @@
 	},
 /turf/open/gm/river/ocean/deep_water,
 /area/redemptionvalley/valley/Westbound)
+"xQF" = (
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/structure/platform/kutjevo/rock{
+	color = "#999999"
+	},
+/turf/open/gm/river/ocean/deep_water,
+/area/redemptionvalley/valley/proper)
+"xSg" = (
+/obj/structure/platform/wood/west{
+	dir = 4
+	},
+/obj/item/trash/sosjerky,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/redemptionvalley/valley/proper)
 "xSJ" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 1
@@ -14375,6 +14944,12 @@
 	},
 /obj/structure/flora/tree/tyrargo/tree_2,
 /turf/open/auto_turf/strata_grass/layer0,
+/area/redemptionvalley/valley/proper)
+"yeV" = (
+/obj/structure/platform/wood/west{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer1,
 /area/redemptionvalley/valley/proper)
 "yfV" = (
 /obj/structure/platform/kutjevo/rock{
@@ -25211,7 +25786,7 @@ qgO
 qgO
 fNZ
 mwA
-hlv
+oAK
 oTU
 cWm
 xEX
@@ -26619,7 +27194,7 @@ eZp
 adi
 dMN
 hrG
-abJ
+szl
 eZp
 sVG
 eZp
@@ -31994,7 +32569,7 @@ mgX
 pBp
 pBp
 pBp
-oFj
+ryY
 puf
 eNB
 sih
@@ -33225,7 +33800,7 @@ qgO
 fNZ
 wJR
 eYp
-eYp
+pNq
 aUT
 cRM
 eYp
@@ -34728,7 +35303,7 @@ wJR
 xdc
 xdc
 noe
-hkJ
+dhM
 aaR
 eYp
 wJR
@@ -39921,7 +40496,7 @@ eqo
 jLL
 qBG
 sqj
-sck
+lWC
 hDm
 vcB
 uvh
@@ -42325,7 +42900,7 @@ aaq
 aao
 aan
 pIu
-qgO
+bJw
 pIu
 pIu
 qgO
@@ -43102,7 +43677,7 @@ tuE
 eRt
 bMr
 bMr
-bdp
+hpD
 bdp
 dqV
 bZj
@@ -43335,7 +43910,7 @@ aan
 qgO
 pIu
 qgO
-cWx
+qgO
 qgO
 pIu
 qgO
@@ -43451,7 +44026,7 @@ avX
 kwA
 iMS
 hBx
-oQh
+nZF
 hBx
 uRU
 vrN
@@ -43587,13 +44162,13 @@ aan
 qgO
 yeM
 qgO
-cWx
-qgO
-pIu
-pIu
 qgO
 qgO
 pIu
+pIu
+qgO
+bJw
+pjT
 qgO
 pIu
 pIu
@@ -43700,7 +44275,7 @@ kyw
 oNz
 uRU
 kGP
-jZp
+eni
 deX
 ogk
 rvR
@@ -43839,8 +44414,8 @@ aan
 qgO
 pIu
 qgO
-cWx
-cWx
+lSu
+qgO
 qgO
 pIu
 qgO
@@ -44090,9 +44665,9 @@ vNe
 aan
 qgO
 qgO
+pIu
+abb
 qgO
-cWx
-cWx
 qgO
 qgO
 pIu
@@ -44342,10 +44917,10 @@ vNe
 aan
 qgO
 pIu
+pIu
+pIu
 qgO
-cWx
-cWx
-cWx
+qgO
 qgO
 hfz
 qgO
@@ -44595,9 +45170,9 @@ aap
 qgO
 pIu
 qgO
-cWx
-cWx
-cWx
+pjT
+qgO
+qgO
 qgO
 qgO
 qgO
@@ -44847,10 +45422,10 @@ qgO
 qgO
 fSv
 qgO
-cWx
-cWx
-cWx
-cWx
+pIu
+fyu
+qgO
+pIu
 qgO
 qgO
 qIO
@@ -45099,10 +45674,10 @@ qgO
 rWK
 pIu
 qgO
-cWx
-cWx
-cWx
-cWx
+qgO
+pIu
+qgO
+lSu
 qIO
 bRO
 xIT
@@ -45351,11 +45926,11 @@ qgO
 qgO
 pIu
 qgO
-cWx
-cWx
-cWx
-cWx
-fNZ
+pIu
+qgO
+qgO
+qgO
+kXt
 hcb
 hcb
 hcb
@@ -45603,11 +46178,11 @@ pIu
 qgO
 pIu
 qgO
-cWx
-cWx
-cWx
-cWx
-fNZ
+qgO
+qgO
+qgO
+pIu
+puX
 hcb
 kZN
 cCx
@@ -45855,10 +46430,10 @@ pIu
 pIu
 qgO
 hfz
-cWx
-cWx
-cWx
-cWx
+qgO
+hfz
+qgO
+qgO
 fNZ
 hcb
 pVG
@@ -46107,10 +46682,10 @@ qgO
 pIu
 pIu
 yeM
-cWx
-cWx
-cWx
-cWx
+pIu
+qgO
+qgO
+qgO
 fNZ
 hcb
 acW
@@ -46359,10 +46934,10 @@ hfz
 pIu
 pIu
 qgO
-cWx
-cWx
-cWx
-cWx
+pIu
+qgO
+qgO
+qgO
 fNZ
 hcb
 msX
@@ -46611,10 +47186,10 @@ qgO
 pIu
 yeM
 qgO
-cWx
-cWx
-cWx
-cWx
+qgO
+qgO
+qgO
+lSu
 fNZ
 hcb
 hcb
@@ -46863,10 +47438,10 @@ aam
 qgO
 pIu
 qgO
+kot
+hfz
 qgO
-cWx
-cWx
-cWx
+qgO
 hDu
 bKa
 qTL
@@ -47116,10 +47691,10 @@ erl
 pIu
 qgO
 qgO
-cWx
-cWx
-cWx
 qgO
+pIu
+pIu
+fyu
 qgO
 oAP
 bKa
@@ -47368,11 +47943,11 @@ erl
 pIu
 hfz
 qgO
-cWx
-cWx
-cWx
-cWx
-cWx
+pIu
+qgO
+qgO
+qgO
+qgO
 qgO
 qgO
 qgO
@@ -47618,17 +48193,17 @@ vNe
 aan
 erl
 pIu
-rWK
+abr
 qgO
 qgO
-cWx
-cWx
-cWx
-cWx
-cWx
-cVT
-cVT
-cVT
+qgO
+qgO
+bJw
+pIu
+qgO
+qgO
+hfz
+qgO
 bXW
 bXW
 bXW
@@ -47873,15 +48448,15 @@ qgO
 qgO
 qgO
 qgO
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cVT
-cVT
+pIu
+qgO
+lSu
+rRf
+pIu
+qgO
+qgO
+qgO
+qgO
 bXW
 bXW
 jaH
@@ -48125,20 +48700,20 @@ pIu
 pIu
 qgO
 pIu
+pIu
 qgO
-cWx
-cWx
-cWx
-cWx
-cWx
-cVT
-cVT
-cVT
-cVT
-cVT
-cVT
+qgO
+qgO
+hfz
+qgO
+qgO
+lSu
+qgO
+pIu
+pIu
+qgO
 jaH
-cVT
+qgO
 jaH
 jaH
 bXW
@@ -48373,25 +48948,25 @@ vNe
 vNe
 aan
 qgO
-jIo
-pIu
+qgO
+pjT
 pIu
 yeM
 hfz
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cVT
-cVT
-cWx
-cVT
-acv
-cVT
-acv
+pIu
+qgO
+qgO
+pIu
+qgO
+qgO
+pIu
+pIu
+hfz
+pIu
+bJw
+uZD
+qgO
+uZD
 cVT
 cVT
 cVT
@@ -48625,31 +49200,31 @@ vNe
 vNe
 aao
 aam
-mju
+qgO
 qgO
 pIu
 pIu
 qgO
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
+pIu
+qgO
+lSu
+qgO
+qgO
+qgO
+kot
+qgO
+qgO
+pIu
+qgO
+lSu
+qgO
 cVT
 cVT
-cWx
 cVT
-cVT
-cWx
-cWx
-cWx
-cWx
+hqb
+hqb
+hqb
+hqb
 cWx
 cWx
 cWx
@@ -48882,28 +49457,28 @@ rWK
 pIu
 pIu
 qgO
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
+pIu
+qgO
+qgO
+qgO
+lSu
+qgO
+qgO
+fyu
+qgO
+qgO
+qgO
+qgO
+cVT
+cVT
 cWx
 cWx
 cWx
 cWx
 cWx
 hqb
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
+hqb
+hqb
 cWx
 cWx
 cWx
@@ -49135,28 +49710,28 @@ qgO
 pIu
 qgO
 qgO
+kot
+qgO
+qgO
+qgO
+qgO
+pIu
+qgO
+qgO
+qgO
+qgO
+uZD
+cVT
+cVT
 cWx
 cWx
 cWx
 cWx
 cWx
 cWx
-cWx
-cWx
-cWx
+iPp
 hqb
-acq
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
+iPp
 cWx
 cWx
 cWx
@@ -49386,7 +49961,19 @@ vWK
 pIu
 rWK
 qgO
+hfz
+tmO
+tmO
+tmO
+tmO
 qgO
+qgO
+pjT
+pIu
+qgO
+hfz
+acv
+cVT
 cWx
 cWx
 cWx
@@ -49395,25 +49982,13 @@ cWx
 cWx
 cWx
 cWx
-cWx
-hqb
-acq
-hqb
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
+iPp
+iPp
+iPp
 cWx
 cWx
 hqb
-hqb
+iPp
 hqb
 hqb
 hqb
@@ -49635,11 +50210,22 @@ vNe
 aan
 erl
 erl
-yeM
+mgb
 qgO
 qgO
 qgO
-cWx
+tmO
+tmO
+tmO
+tmO
+qgO
+qgO
+qgO
+qgO
+qgO
+qgO
+cVT
+acp
 cWx
 cWx
 cWx
@@ -49650,22 +50236,11 @@ cWx
 cWx
 cWx
 hqb
-acq
 hqb
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
 hqb
+hqb
+iPp
+iPp
 hqb
 hqb
 uLb
@@ -49885,31 +50460,29 @@ vNe
 vNe
 vNe
 aao
-aam
+hok
+iqZ
+sKH
 erl
+erl
+tmO
+tmO
+aAv
+iqZ
+tmO
+tmO
+acI
+erl
+qgO
+qgO
 pIu
-qgO
-qgO
-qgO
+cVT
+acp
 cWx
 cWx
 cWx
 cWx
 cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-hqb
-acq
-cWx
-cWx
-cWx
-cWx
-cWx
-hqb
-ouT
 cWx
 cWx
 cWx
@@ -49918,6 +50491,8 @@ cWx
 cWx
 hqb
 hqb
+iPp
+iPp
 hqb
 hqb
 uLb
@@ -50137,38 +50712,38 @@ vNe
 vNe
 vNe
 vNe
-aan
+vNe
+aao
+hok
+iqZ
 erl
+aAv
+hok
+aao
+aao
+hok
+rXH
+erl
+jGM
 qgO
 qgO
 qgO
-qgO
+cVT
+acp
 cWx
 cWx
 cWx
 cWx
 cWx
 cWx
-cWx
-cWx
-cWx
-cWx
-hqb
-acq
-cWx
-cWx
-cWx
-cWx
-hqb
-hqb
 cWx
 cWx
 cWx
 cWx
 cWx
 hqb
-hqb
-hqb
+iPp
+iPp
 hqb
 hqb
 uLb
@@ -50389,29 +50964,29 @@ vNe
 vNe
 vNe
 vNe
-aan
+vNe
+vNe
+vNe
+aao
+hok
+aao
+vNe
+vNe
+vNe
+vNe
+xQF
 erl
-hfz
+erl
 qgO
 qgO
+qgO
+cVT
 cWx
 cWx
 cWx
 cWx
 cWx
 cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-hqb
-hqb
-hqb
-cWx
-cWx
-cWx
-hqb
 cWx
 cWx
 cWx
@@ -50641,11 +51216,23 @@ vNe
 vNe
 vNe
 vNe
-aan
-erl
-kot
+vNe
+vNe
+vNe
+vNe
+vNe
+vNe
+vNe
+vNe
+vNe
+aao
+ufR
+tmO
 qgO
+lSu
 qgO
+hfz
+cVT
 cWx
 cWx
 cWx
@@ -50658,19 +51245,7 @@ cWx
 cWx
 cWx
 hqb
-hqb
-cWx
-cWx
-cWx
-cWx
-hqb
-cWx
-cWx
-cWx
-cWx
-cWx
-hqb
-hqb
+iPp
 hqb
 hqb
 hqb
@@ -50893,12 +51468,23 @@ vNe
 vNe
 vNe
 vNe
-aan
+vNe
+vNe
+vNe
+vNe
+vNe
+vNe
+vNe
+vNe
+aao
+ufR
+tmO
 erl
 qgO
-hfz
 qgO
 qgO
+cVT
+cVT
 cWx
 cWx
 cWx
@@ -50911,18 +51497,7 @@ cWx
 cWx
 hqb
 hqb
-cWx
-cWx
-cWx
-cWx
-hqb
-cWx
-cWx
-cWx
-cWx
-hqb
-hqb
-hqb
+iPp
 hqb
 hqb
 uLb
@@ -51145,29 +51720,29 @@ vNe
 vNe
 vNe
 vNe
-aan
+vNe
+vNe
+vNe
+vNe
+vNe
+vNe
+aao
+tas
+ufR
+erl
+tmO
+qgO
 pIu
 qgO
-qgO
-qgO
+kot
+cVT
+cVT
 cWx
 cWx
 cWx
 cWx
 cWx
 cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-hqb
-hqb
-cWx
-cWx
-cWx
-cWx
-hqb
 cWx
 cWx
 cWx
@@ -51397,11 +51972,22 @@ vNe
 vNe
 vNe
 vNe
-aan
-dux
-qZq
-qZq
-qZq
+vNe
+vNe
+vNe
+vNe
+aao
+tas
+ufR
+erl
+erl
+erl
+qgO
+bJw
+qgO
+pIu
+rRf
+cVT
 cWx
 cWx
 cWx
@@ -51409,17 +51995,6 @@ cWx
 cWx
 cWx
 cWx
-cWx
-cWx
-hqb
-hqb
-hqb
-cWx
-cWx
-cWx
-cWx
-hqb
-hqb
 cWx
 cWx
 cWx
@@ -51649,11 +52224,22 @@ aao
 vNe
 vNe
 vNe
-aan
+vNe
+vNe
+vNe
+aao
+ufR
+gMk
+vPZ
+bHb
+erl
+kDK
 pIu
 qgO
+fyu
 pIu
 qgO
+cVT
 cWx
 cWx
 cWx
@@ -51661,17 +52247,6 @@ cWx
 cWx
 cWx
 cWx
-cWx
-cWx
-hqb
-hqb
-cWx
-cWx
-cWx
-cWx
-cWx
-hqb
-hqb
 cWx
 cWx
 cWx
@@ -51901,28 +52476,28 @@ aaq
 vNe
 vNe
 vNe
-aan
-pIu
-rWK
+aao
+tas
+tas
+ufR
+iaB
+yeV
+gtK
+mtv
+gtK
+xSg
+uOc
 pIu
 qgO
 qgO
+cVT
+cVT
 cWx
 cWx
 cWx
 cWx
 cWx
 cWx
-cWx
-cWx
-hqb
-hqb
-cWx
-cWx
-cWx
-cWx
-cWx
-hqb
 cWx
 cWx
 cWx
@@ -52154,10 +52729,20 @@ vNe
 vNe
 vNe
 aan
-yeM
+mgb
+erl
+sKH
+nVf
+jIo
+mju
+ufB
+dBv
+jIo
+qoL
+uOc
+fUV
 qgO
-pIu
-qgO
+vkc
 cWx
 cWx
 cWx
@@ -52165,16 +52750,6 @@ cWx
 cWx
 cWx
 cWx
-cWx
-hqb
-hqb
-hqb
-cWx
-cWx
-cWx
-cWx
-hqb
-hqb
 cWx
 cWx
 cWx
@@ -52406,26 +52981,26 @@ aao
 vNe
 vNe
 aan
+eFk
+erl
 pIu
+jjy
+jIo
+iiV
+owe
+vLz
+jIo
+jIo
+vlJ
 qgO
-pIu
 qgO
+cVT
 cWx
 cWx
 cWx
 cWx
 cWx
 cWx
-cWx
-hqb
-hqb
-iPp
-hqb
-cWx
-hqb
-hqb
-hqb
-hqb
 cWx
 cWx
 cWx
@@ -52661,22 +53236,22 @@ aan
 pIu
 pIu
 pIu
-lSu
+oxg
+jIo
+nUr
+lyu
+lyu
+lyu
+jIo
+vlJ
+qgO
+vkc
+cVT
 cWx
 cWx
 cWx
 cWx
 cWx
-cWx
-cWx
-hqb
-iPp
-iPp
-hqb
-hqb
-hqb
-hqb
-hqb
 cWx
 cWx
 cWx
@@ -52913,21 +53488,21 @@ aan
 pIu
 pIu
 lSu
+mQT
+jIo
+fjo
+lyu
+lyu
+qOu
+jIo
+vlJ
 qgO
+cVT
+cVT
 cWx
 cWx
 cWx
 cWx
-cWx
-cWx
-cWx
-hqb
-iPp
-hqb
-hqb
-hqb
-hqb
-hqb
 cWx
 cWx
 cWx
@@ -53165,17 +53740,17 @@ aan
 mmC
 qgO
 qgO
+aMB
+vLz
+vkz
+fjo
+dWE
+teF
+jIo
+vlJ
+hOK
+cVT
 cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-hqb
-hqb
-hqb
 cWx
 cWx
 cWx
@@ -53415,19 +53990,19 @@ aaq
 vNe
 aan
 mmC
-pIu
+teC
 qgO
+jjy
+jIo
+cyI
+fjo
+tmA
+oUT
+jIo
+vlJ
+cVT
+cVT
 cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-hqb
-hqb
-hqb
 cWx
 cWx
 cWx
@@ -53668,17 +54243,17 @@ vNe
 aan
 mmC
 mmC
-qgO
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-hqb
-hqb
-hqb
+saW
+jjy
+jIo
+aRT
+ipM
+fjo
+rHn
+jIo
+kTm
+cVT
+cVT
 cWx
 cWx
 cWx
@@ -53919,18 +54494,18 @@ aaq
 vNe
 aan
 tmO
-uLb
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-hqb
-hqb
-hqb
-hqb
+tmO
+bJw
+jjy
+jIo
+jIo
+jIo
+jIo
+jIo
+jIo
+kTm
+cVT
+bXW
 cWx
 cWx
 cWx
@@ -54171,18 +54746,18 @@ aaq
 vNe
 aan
 tmO
-uLb
-hqb
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-hqb
-hqb
-hqb
-cWx
+tmO
+qgO
+cYi
+oem
+uSz
+uSz
+uSz
+iHc
+iHc
+loU
+bXW
+bXW
 cWx
 cWx
 cWx
@@ -54422,19 +54997,19 @@ uLb
 aaq
 aao
 aan
-uLb
-uLb
-hqb
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-hqb
-hqb
-cWx
-cWx
+tmO
+tmO
+pIu
+cVT
+kot
+qgO
+hfz
+cVT
+cVT
+cVT
+cVT
+bXW
+bXW
 cWx
 cWx
 cWx
@@ -54674,18 +55249,18 @@ uLb
 adJ
 vNe
 oSJ
-uLb
-uLb
-hqb
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-hqb
-hqb
-hqb
+tmO
+tmO
+cVT
+cVT
+cVT
+vkc
+qgO
+bAg
+cVT
+cVT
+cVT
+bXW
 cWx
 cWx
 cWx
@@ -54895,7 +55470,7 @@ fNZ
 uRU
 irP
 pSZ
-sTj
+fsS
 kwA
 nfu
 hhA
@@ -54926,18 +55501,18 @@ uLb
 adJ
 dfO
 kgb
-uLb
-hqb
-hqb
-cWx
-cWx
-cWx
-cWx
-cWx
-hqb
-hqb
-hqb
-hqb
+tmO
+cVT
+cVT
+cVT
+cVT
+cVT
+cVT
+cVT
+cVT
+cVT
+bXW
+bXW
 cWx
 cWx
 cWx
@@ -55179,17 +55754,17 @@ adJ
 kDj
 uLb
 uLb
-hqb
-hqb
-cWx
-cWx
-cWx
-cWx
-cWx
-hqb
-hqb
-hqb
-cWx
+cVT
+cVT
+bXW
+bXW
+cVT
+cVT
+cVT
+cVT
+cVT
+cVT
+bXW
 cWx
 cWx
 cWx
@@ -55431,17 +56006,17 @@ adJ
 kDj
 uLb
 uLb
-hqb
-cWx
-cWx
-cWx
-cWx
-cWx
-cWx
-hqb
-iPp
-hqb
-hqb
+cVT
+cVT
+cVT
+bXW
+bXW
+cVT
+cVT
+cVT
+iBm
+cVT
+bXW
 cWx
 cWx
 cWx
@@ -55653,7 +56228,7 @@ uRU
 ayD
 uCy
 hka
-uek
+tBg
 uRU
 uRU
 gKS
@@ -55683,17 +56258,17 @@ kDj
 kDj
 uLb
 uLb
-hqb
-hqb
-cWx
-cWx
-cWx
-cWx
-cWx
-hqb
-iPp
-hqb
-hqb
+cVT
+cVT
+cVT
+cVT
+cVT
+cVT
+cVT
+cVT
+cVT
+cVT
+cVT
 cWx
 cWx
 cWx
@@ -55934,18 +56509,18 @@ kDj
 kDj
 kDj
 uLb
-uLb
 hqb
-hqb
-cWx
-cWx
-cWx
-cWx
-cWx
-hqb
-iPp
-hqb
-hqb
+cVT
+cVT
+cVT
+cVT
+cVT
+cVT
+cVT
+cVT
+cVT
+cVT
+cVT
 cWx
 cWx
 cWx
@@ -56186,18 +56761,18 @@ kDj
 kDj
 uLb
 uLb
-uLb
 hqb
-cWx
-hqb
-cWx
-cWx
-cWx
-cWx
-hqb
-hqb
-hqb
-cWx
+oKz
+cVT
+cVT
+bXW
+bXW
+cVT
+cVT
+cVT
+cVT
+cVT
+cVT
 cWx
 cWx
 cWx
@@ -56438,18 +57013,18 @@ kDj
 kDj
 uLb
 uLb
-uLb
 hqb
-hqb
-hqb
-cWx
-cWx
-cWx
-cWx
-hqb
-hqb
-cWx
-cWx
+cVT
+bXW
+bXW
+bXW
+bXW
+cVT
+cVT
+cVT
+cVT
+cVT
+cVT
 cWx
 cWx
 hqb
@@ -56690,12 +57265,12 @@ kDj
 kDj
 uLb
 uLb
-uLb
 hqb
 hqb
-cWx
-cWx
-cWx
+hqb
+bXW
+bXW
+cVT
 cWx
 cWx
 hqb
@@ -56942,11 +57517,11 @@ kDj
 kDj
 uLb
 uLb
-uLb
 hqb
 hqb
-cWx
-cWx
+iPp
+iPp
+bXW
 cWx
 cWx
 cWx
@@ -57194,11 +57769,11 @@ kDj
 kDj
 uLb
 kdc
-uLb
 hqb
 hqb
-cWx
-cWx
+iPp
+iPp
+hqb
 cWx
 cWx
 cWx
@@ -57446,11 +58021,11 @@ kDj
 kDj
 uLb
 uLb
-uLb
 hqb
-cWx
-cWx
-cWx
+hqb
+hqb
+hqb
+hqb
 cWx
 cWx
 cWx
@@ -57700,8 +58275,8 @@ uLb
 uLb
 hqb
 hqb
-cWx
-cWx
+hqb
+hqb
 cWx
 cWx
 cWx
@@ -57949,10 +58524,10 @@ kDj
 kDj
 uLb
 uLb
-uLb
 hqb
 hqb
-cWx
+hqb
+hqb
 cWx
 cWx
 cWx
@@ -58203,8 +58778,8 @@ uLb
 uLb
 hqb
 hqb
-cWx
-cWx
+fgw
+hqb
 cWx
 cWx
 cWx
@@ -58455,7 +59030,7 @@ uLb
 hqb
 hqb
 hqb
-cWx
+hqb
 cWx
 cWx
 cWx
@@ -62742,7 +63317,7 @@ cWx
 cWx
 cWx
 cWx
-hqb
+ouT
 hqb
 cWx
 cWx
@@ -68660,7 +69235,7 @@ mUT
 khE
 mUT
 rWK
-cVT
+epN
 mUT
 lSu
 qgO
@@ -75429,7 +76004,7 @@ ejm
 ejm
 klC
 xTD
-baW
+seW
 wXH
 wXH
 wXH
