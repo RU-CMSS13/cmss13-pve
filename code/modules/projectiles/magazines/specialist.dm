@@ -244,8 +244,8 @@
 /obj/item/ammo_magazine/smartgun/upp
 	name = "automated machinegun drum"
 	caliber = "12.7x40mm"
-	max_rounds = 200
-	desc = "Simple high-caliber 200 round machinegun drum."
+	max_rounds = 250
+	desc = "Simple high-caliber 250 round machinegun drum."
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "rfvs37"
 	default_ammo = /datum/ammo/bullet/rifle/heavy/upp_smartgun

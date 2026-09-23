@@ -37,12 +37,12 @@
 
 /datum/unarmed_attack/punch/strong
 	attack_verb = list("punch","bust","skewer")
-	damage = 40
+	damage = 10
 
 /datum/unarmed_attack/punch/synthetic
 	attack_verb = list("punch","clock","slugg","bludgeon","maul")
 	attack_sound = 'sound/weapons/synthpunch1.ogg'
-	damage = 30
+	damage = 35
 
 /datum/unarmed_attack/claws
 	attack_verb = list("scratch", "claw")
@@ -54,10 +54,10 @@
 
 /datum/unarmed_attack/claws/strong
 	attack_verb = list("slash")
-	damage = 40
+	damage = 10
 	shredding = TRUE
 
 /datum/unarmed_attack/bite/strong
 	attack_verb = list("maul")
-	damage = 40
+	damage = 15
 	shredding = TRUE

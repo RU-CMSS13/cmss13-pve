@@ -16541,9 +16541,8 @@
 /obj/item/ammo_box/magazine/nade_box/flare{
 	pixel_x = 1
 	},
-/obj/item/ammo_box/magazine/m4a3/ap,
+/obj/item/ammo_box/magazine/m4a3,
 /obj/item/ammo_box/magazine/vp70,
-/obj/item/ammo_box/magazine/m44,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "dAO" = (
@@ -17622,11 +17621,8 @@
 	pixel_x = 16;
 	layer = 2.98
 	},
-/obj/item/ammo_box/magazine/m39,
-/obj/item/ammo_box/magazine/m4a3/ap,
+/obj/item/ammo_box/magazine/m4a3,
 /obj/item/ammo_box/magazine/vp70,
-/obj/item/storage/belt/gun/m39,
-/obj/item/storage/box/guncase/heavy/smg,
 /obj/item/ammo_magazine/hpr_box,
 /obj/item/ammo_magazine/hpr_box,
 /turf/open/floor/almayer,

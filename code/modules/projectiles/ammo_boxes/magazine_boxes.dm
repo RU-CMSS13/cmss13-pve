@@ -411,7 +411,7 @@
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/m4a3/hp
-	name = "magazine box (A27 M4A3 x 16)"
+	name = "magazine box (HP M4A3 x 16)"
 	overlay_ammo_type = "_hp"
 	overlay_content = "_hp"
 	magazine_type = /obj/item/ammo_magazine/pistol/hp
