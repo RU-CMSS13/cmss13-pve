@@ -19,6 +19,10 @@
 /client
 	var/atom/movable/screen/sound_clue/connected_sound
 
+	var/next_proximity_sound = 0
+	var/proximity_radius = 100
+	var/proximity_beep = 'sound/items/taperecorder/taperecorder_hiss_mid.ogg'
+
 /client/MouseMove(object, location, control, params)
 	. = ..()
 
@@ -28,6 +32,37 @@
 
 		if(abs(connected_sound.x_off) < 10 && abs(connected_sound.y_off) < 10)
 			connected_sound.connected_clue.reveal_itself(usr)
+
+	var/mob/living/carbon/human/H = usr
+	var/obj/item/criptic/instrument/held_item = H.get_held_item()
+
+	if(istype(held_item,/obj/item/criptic/instrument/sound_device))
+		var/obj/item/criptic/instrument/sound_device/S = held_item
+		if(S.busy)
+			if(world.time < next_proximity_sound)
+				return
+
+			var/list/coords = screen_loc2pixels(params)
+
+			var/closest = INFINITY
+			for(var/atom/movable/screen/sound_clue/SC in screen)
+				if(SC.connected_clue.revealed)
+					continue
+
+				var/dx = coords[1] - SC.x_off
+				var/dy = coords[2] - SC.y_off
+				var/d = sqrt(dx*dx + dy*dy)
+				if(d < closest)
+					closest = d
+
+			if(closest >= proximity_radius)
+				return
+
+			// louder + higher pitched as the cursor gets closer
+			var/t = 1 - closest / proximity_radius          // 0 far .. 1 on top
+			var/beep_vol  = round(20 + 80 * t)
+			playsound_client(src, proximity_beep, beep_vol)
+			next_proximity_sound = world.time + 3           // ~0.3 s debounce
 
 /atom/movable/screen/exit_button_sound
 	name = "EXIT"
