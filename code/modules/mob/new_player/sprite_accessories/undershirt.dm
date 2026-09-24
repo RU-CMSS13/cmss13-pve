@@ -33,6 +33,9 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 	var/camo_conforming = FALSE
 	var/restricted = FALSE
 
+	/// If this undershirt should be displayed while a uniform is worn
+	var/shown_under_uniform = FALSE
+
 /datum/sprite_accessory/undershirt/proc/get_image(mob_gender)
 	var/selected_icon_state = icon_state
 	if(camo_conforming)
@@ -68,6 +71,8 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 	name = "Undershirt (Tan)"
 	icon_state = "t_undershirt"
 	gender = NEUTER
+
+	shown_under_uniform = TRUE
 
 /datum/sprite_accessory/undershirt/undershirt/black
 	name = "Undershirt (Black)"

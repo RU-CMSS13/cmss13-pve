@@ -133,6 +133,8 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 
 	var/be_random_body = 0 //whether we have a random appearance every round
 	var/gender = MALE //gender of character (well duh)
+	var/body_presentation
+
 	var/age = 19 //age of character
 	var/spawnpoint = "Arrivals Shuttle" //where this character will spawn (0-2).
 	var/underwear = "Boxers (Camo Conforming)" //underwear type
@@ -2158,6 +2160,8 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 	character.skin_color = skin_color
 	character.body_type = body_type
 	character.body_size = body_size
+	character.body_presentation = get_body_presentation()
+
 	character.blood_type = blood_type
 
 	character.r_eyes = r_eyes
@@ -2241,6 +2245,8 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 	character.skin_color = skin_color
 	character.body_type = body_type
 	character.body_size = body_size
+	character.body_presentation = get_body_presentation()
+
 	character.blood_type = blood_type
 
 	character.r_eyes = r_eyes
@@ -2446,6 +2452,12 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 /datum/preferences/proc/update_all_pickers(mob/user)
 	var/datum/tgui/picker_ui = SStgui.get_open_ui(user, loadout_picker)
 	picker_ui?.send_update()
+
+	picker_ui = SStgui.get_open_ui(user, body_picker)
+	picker_ui?.send_update()
+
+/datum/preferences/proc/get_body_presentation()
+	return body_presentation || gender
 
 #undef MENU_MARINE
 #undef MENU_XENOMORPH
