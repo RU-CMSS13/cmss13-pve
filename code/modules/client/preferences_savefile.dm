@@ -1,5 +1,5 @@
 #define SAVEFILE_VERSION_MIN 8
-#define SAVEFILE_VERSION_MAX 30
+#define SAVEFILE_VERSION_MAX 31
 
 //handles converting savefiles to new formats
 //MAKE SURE YOU KEEP THIS UP TO DATE!
@@ -208,6 +208,18 @@
 		S["toggle_prefs"] >> pref_toggles
 		pref_toggles |= TOGGLE_SHOUTING_AT_POINTED_PEOPLE // enabled by default for new saves
 		S["toggle_prefs"] << pref_toggles
+
+	if(savefile_version < 31)
+		var/hair_style = ""
+		S["hair_style_name"] >> hair_style
+
+		switch(hair_style)
+			if("Shoulder-length Hair Alt")
+				hair_style = "Long Fringe"
+			if("Long Hair Alt")
+				hair_style = "Longer Fringe"
+
+		S["hair_style_name"] << hair_style
 
 	savefile_version = SAVEFILE_VERSION_MAX
 	return 1
