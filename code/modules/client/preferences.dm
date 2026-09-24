@@ -367,12 +367,12 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 			dat += "<h2><b><u>Physical Information:</u></b>"
 			dat += "<a href='byond://?_src_=prefs;preference=all;task=random'>&reg;</A></h2>"
 			dat += "<b>Age:</b> <a href='byond://?_src_=prefs;preference=age;task=input'><b>[age]</b></a><br>"
-			dat += "<b>Gender:</b> <a href='?_src_=prefs;preference=gender'><b>[gender == MALE ? "Male" : "Female"]</b></a><br><br>"
+			dat += "<b>Gender:</b> <a href='byond://?_src_=prefs;preference=gender'><b>[gender == MALE ? "Male" : "Female"]</b></a><br><br>"
 
 			dat += "<b>Skin Color:</b> [skin_color]<br>"
 			dat += "<b>Body Size:</b> [body_size]<br>"
 			dat += "<b>Body Muscularity:</b> [body_type]<br>"
-			dat += "<b>Edit Body:</b> <a href='?_src_=prefs;preference=body;task=input'><b>Picker</b></a><br><br>"
+			dat += "<b>Edit Body:</b> <a href='byond://?_src_=prefs;preference=body;task=input'><b>Picker</b></a><br><br>"
 
 			dat += "<b>Blood Type:</b> <a href='byond://?_src_=prefs;preference=blood_type;task=input'><b>[blood_type]</b></a><br>"
 			dat += "<b>Traits:</b> <a href='byond://?src=\ref[user];preference=traits'><b>Character Traits</b></a>"
@@ -403,7 +403,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 				dat += "<span class='square' style='background-color: #[num2hex(r_gradient, 2)][num2hex(g_gradient, 2)][num2hex(b_gradient)];'></span>"
 				dat += "<br>"
 
-			dat += "<b>Edit Hair:</b> <a href='?_src_=prefs;preference=hair;task=input'><b>Picker</b></a><br><br>"
+			dat += "<b>Edit Hair:</b> <a href='byond://?_src_=prefs;preference=hair;task=input'><b>Picker</b></a><br><br>"
 
 			dat += "<b>Eye:</b> "
 			dat += "<a href='byond://?_src_=prefs;preference=eyes;task=input'>"
