@@ -1,18 +1,17 @@
 import { hexToHsva, HsvaColor, hsvaToHex } from 'common/color';
 import { BooleanLike } from 'common/react';
-import { createRef, useState } from 'react';
+import { useState } from 'react';
 
 import { useBackend } from '../backend';
 import {
   Box,
   Button,
   ColorBox,
-  DmIcon,
   Dropdown,
+  Input,
   Modal,
   Section,
   Stack,
-  Tooltip,
 } from '../components';
 import { Window } from '../layouts';
 import { ColorSelector } from './ColorPickerModal';
@@ -38,11 +37,9 @@ export const HairPicker = () => {
   const { act, data } = useBackend<HairPickerData>();
 
   const {
-    hair_icon,
     hair_style,
     hair_styles,
     hair_color,
-    facial_hair_icon,
     facial_hair_style,
     facial_hair_styles,
     facial_hair_color,
@@ -56,9 +53,9 @@ export const HairPicker = () => {
     'hair' | 'facial_hair' | 'gradient' | false
   >(false);
 
-  let height = 340;
+  let height = 370;
   if (facial_hair_styles.length > 1) {
-    height = height + 310;
+    height = height + 330;
   }
 
   if (gradient_available) {
@@ -86,7 +83,6 @@ export const HairPicker = () => {
       <Window.Content className="HairPicker">
         <PickerElement
           name="Hair"
-          icon={hair_icon}
           hair={hair_styles}
           active={hair_style}
           color={hair_color}
@@ -96,7 +92,6 @@ export const HairPicker = () => {
         {!!(facial_hair_styles.length > 1) && (
           <PickerElement
             name="Facial Hair"
-            icon={facial_hair_icon}
             hair={facial_hair_styles}
             active={facial_hair_style}
             color={facial_hair_color}
@@ -170,57 +165,51 @@ const ColorPicker = (props: {
 
 const PickerElement = (props: {
   readonly name: string;
-  readonly icon: string;
   readonly active: string;
   readonly hair: { icon: string; name: string }[];
   readonly action: 'hair' | 'facial_hair';
   readonly setColor: (_) => void;
   readonly color: string;
 }) => {
-  const { name, icon, hair, active, action, setColor, color } = props;
+  const { name, hair, active, action, setColor, color } = props;
 
   const { act } = useBackend();
 
-  const scrollRef = createRef<HTMLDivElement>();
+  const [search, setSearch] = useState('');
+
+  const filtered = hair.filter((val) =>
+    val.name.toLowerCase().includes(search.toLowerCase()),
+  );
 
   return (
     <Section
       title={name}
-      height="300px"
-      scrollable
       buttons={
         <Button onClick={() => setColor(action)}>
           <ColorBox color={color} mr={1} />
           Color
         </Button>
       }
-      ref={scrollRef}
-      onMouseOver={() => {
-        scrollRef.current?.focus();
-      }}
     >
-      <Stack wrap="wrap" height="240px" width="400px">
-        {hair.map((hair) => (
-          <Stack.Item
+      <Input
+        fluid
+        mb={1}
+        placeholder="Search..."
+        value={search}
+        onInput={(_, value) => setSearch(value)}
+      />
+      <Box height="240px" overflowY="auto">
+        {filtered.map((hair) => (
+          <Button
             key={hair.name}
-            className={`Picker${active === hair.icon ? ' Active' : ''}`}
+            fluid
+            selected={active === hair.icon}
+            onClick={() => act(action, { name: hair.name })}
           >
-            <Tooltip content={hair.name}>
-              <Box
-                position="relative"
-                onClick={() => act(action, { name: hair.name })}
-              >
-                <DmIcon
-                  icon={icon}
-                  icon_state={`${hair.icon}_s`}
-                  height="64px"
-                  width="64px"
-                />
-              </Box>
-            </Tooltip>
-          </Stack.Item>
+            {hair.name}
+          </Button>
         ))}
-      </Stack>
+      </Box>
     </Section>
   );
 };

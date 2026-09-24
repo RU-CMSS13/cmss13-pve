@@ -1783,6 +1783,10 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 					underwear = sanitize_inlist(underwear, gender == MALE ? GLOB.underwear_m : GLOB.underwear_f, initial(underwear))
 					undershirt = sanitize_inlist(undershirt, gender == MALE ? GLOB.undershirt_m : GLOB.undershirt_f, initial(undershirt))
 
+					var/datum/sprite_accessory/facial_hair/current_facial = GLOB.facial_hair_styles_list[f_style]
+					if(!current_facial || (current_facial.gender != NEUTER && current_facial.gender != gender))
+						f_style = initial(f_style)
+
 					// Refresh hair picker
 					var/datum/tgui/picker_ui = SStgui.get_open_ui(user, hair_picker)
 					if(picker_ui)
