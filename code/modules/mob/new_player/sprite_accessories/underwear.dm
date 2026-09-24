@@ -13,17 +13,20 @@ GLOBAL_LIST_INIT_TYPED(underwear_restricted, /datum/sprite_accessory/underwear, 
 		if(underwear_datum.camo_conforming)
 			underwear_list["[underwear_datum.name] (Camo Conforming)"] = underwear_datum
 			var/datum/sprite_accessory/underwear/classic_datum = new underwear_type
-			classic_datum.generate_non_conforming("c")
+			classic_datum.generate_non_conforming("classic")
 			underwear_list[classic_datum.name] = classic_datum
 			var/datum/sprite_accessory/underwear/jungle_datum = new underwear_type
-			jungle_datum.generate_non_conforming("j")
+			jungle_datum.generate_non_conforming("jungle")
 			underwear_list[jungle_datum.name] = jungle_datum
 			var/datum/sprite_accessory/underwear/desert_datum = new underwear_type
-			desert_datum.generate_non_conforming("d")
+			desert_datum.generate_non_conforming("desert")
 			underwear_list[desert_datum.name] = desert_datum
 			var/datum/sprite_accessory/underwear/snow_datum = new underwear_type
-			snow_datum.generate_non_conforming("s")
+			snow_datum.generate_non_conforming("snow")
 			underwear_list[snow_datum.name] = snow_datum
+			var/datum/sprite_accessory/underwear/urban_datum = new underwear_type
+			urban_datum.generate_non_conforming("urban")
+			underwear_list[urban_datum.name] = urban_datum
 		else
 			underwear_list[underwear_datum.name] = underwear_datum
 	return underwear_list
@@ -45,6 +48,8 @@ GLOBAL_LIST_INIT_TYPED(underwear_restricted, /datum/sprite_accessory/underwear, 
 				selected_icon_state = "d_" + selected_icon_state
 			if("snow")
 				selected_icon_state = "s_" + selected_icon_state
+			if("urban")
+				selected_icon_state = "u_" + selected_icon_state
 	if(gender == PLURAL)
 		selected_icon_state += mob_gender == MALE ? "_m" : "_f"
 	return image(icon, selected_icon_state)
@@ -92,6 +97,38 @@ GLOBAL_LIST_INIT_TYPED(underwear_restricted, /datum/sprite_accessory/underwear, 
 	icon_state = "tanga"
 	gender = NEUTER
 	camo_conforming = TRUE
+
+/datum/sprite_accessory/underwear/boxers/black
+	name = "Boxers (Black)"
+	icon_state = "b_boxers"
+	gender = NEUTER
+	camo_conforming = FALSE
+
+/datum/sprite_accessory/underwear/briefs/black
+	name = "Briefs (Black)"
+	icon_state = "b_briefs"
+	gender = NEUTER
+	camo_conforming = FALSE
+
+/datum/sprite_accessory/underwear/lowriders/black
+	name = "Lowriders (Black)"
+	icon_state = "b_lowriders"
+	gender = NEUTER
+	camo_conforming = FALSE
+
+/datum/sprite_accessory/underwear/satin/black
+	name = "Satin (Black)"
+	icon_state = "b_satin"
+	gender = NEUTER
+	camo_conforming = FALSE
+
+/datum/sprite_accessory/underwear/tanga/black
+	name = "Tanga (Black)"
+	icon_state = "b_tanga"
+	gender = NEUTER
+	camo_conforming = FALSE
+
+// PVE
 
 /datum/sprite_accessory/underwear/boxers/white
 	name = "White Boxers"
