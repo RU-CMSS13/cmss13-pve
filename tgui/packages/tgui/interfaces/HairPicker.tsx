@@ -177,9 +177,9 @@ const PickerElement = (props: {
 
   const [search, setSearch] = useState('');
 
-  const filtered = hair.filter((val) =>
-    val.name.toLowerCase().includes(search.toLowerCase()),
-  );
+  const filtered = hair
+    .filter((val) => val.name.toLowerCase().includes(search.toLowerCase()))
+    .sort((a, b) => (a.name > b.name ? 1 : -1));
 
   return (
     <Section
