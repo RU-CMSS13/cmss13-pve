@@ -11,11 +11,13 @@ type PickerData = {
   body_type: string;
   skin_color: string;
   body_size: string;
+
+  body_presentation: string;
 };
 
 export const BodyPicker = () => {
   return (
-    <Window width={420} height={320} theme={'crtblue'}>
+    <Window width={420} height={380} theme={'crtblue'}>
       <Window.Content className="BodyPicker">
         <Stack fill>
           <Stack.Item grow>
@@ -25,6 +27,9 @@ export const BodyPicker = () => {
               </Stack.Item>
               <Stack.Item>
                 <TypePicker toUse="size" />
+              </Stack.Item>
+              <Stack.Item>
+                <PresentationPicker />
               </Stack.Item>
             </Stack>
           </Stack.Item>
@@ -60,6 +65,39 @@ const TypePicker = (props: { readonly toUse: 'type' | 'size' }) => {
           {type.name}
         </Button>
       ))}
+    </Section>
+  );
+};
+
+const PresentationPicker = () => {
+  const { data, act } = useBackend<PickerData>();
+
+  const { body_presentation } = data;
+
+  return (
+    <Section title="Body Presentation">
+      <Stack>
+        <Stack.Item grow>
+          <Button
+            fluid
+            icon="mars"
+            selected={body_presentation === 'm'}
+            onClick={() => act('body_presentation', { picked: 'm' })}
+          >
+            Male
+          </Button>
+        </Stack.Item>
+        <Stack.Item grow>
+          <Button
+            fluid
+            icon="venus"
+            selected={body_presentation === 'f'}
+            onClick={() => act('body_presentation', { picked: 'f' })}
+          >
+            Female
+          </Button>
+        </Stack.Item>
+      </Stack>
     </Section>
   );
 };

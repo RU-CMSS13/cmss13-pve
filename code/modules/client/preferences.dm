@@ -33,7 +33,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 
 	var/static/datum/flavor_text_editor/flavor_text_editor = new
 
-	var/static/datum/body_picker/picker = new
+	var/static/datum/body_picker/body_picker = new
 	var/static/datum/loadout_picker/loadout_picker = new
 
 	//doohickeys for savefiles
@@ -1631,7 +1631,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 						grad_style = new_h_gradient_style
 
 				if("body")
-					picker.tgui_interact(user)
+					body_picker.tgui_interact(user)
 					return
 
 				if("blood_type")
