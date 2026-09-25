@@ -39,10 +39,6 @@
 	var/ui_gun_attachment = "EAST-3:-10,1:+5"
 	var/ui_gun_unique = "EAST-3:-4,1:+2"
 
-	//layer change
-	var/ui_layer_up = "EAST-2:8,2:4"
-	var/ui_layer_down = "EAST-2:8,2:4"
-
 	//important action
 	var/ui_important_action = "WEST:6,4:11"
 

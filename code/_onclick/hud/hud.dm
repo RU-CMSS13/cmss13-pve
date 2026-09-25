@@ -46,9 +46,6 @@
 	var/atom/movable/screen/toggle_burst
 	var/atom/movable/screen/unique_action
 
-	var/atom/movable/screen/layer_up
-	var/atom/movable/screen/layer_down
-
 	var/atom/movable/screen/important_action_icon
 
 	var/atom/movable/screen/zone_sel/zone_sel
@@ -152,9 +149,6 @@
 	eject_mag = null
 	toggle_burst = null
 	unique_action = null
-
-	layer_up = null
-	layer_down = null
 
 	important_action_icon = null
 
