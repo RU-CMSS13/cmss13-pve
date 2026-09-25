@@ -429,6 +429,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		/client/proc/toggle_portrait,
 		/client/proc/toggle_intro,
 		/client/proc/gm_lighting,
+		/client/proc/gm_base_lighting,
 		/client/proc/disallow_to_join, // RU-PVE
 		/client/proc/allow_to_join, // RU-PVE
 		GLOB.admin_verbs_admin,
