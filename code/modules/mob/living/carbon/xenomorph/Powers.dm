@@ -181,7 +181,7 @@
 		to_chat(src, SPAN_NOTICE("We must have a meaning for the mark before you can make it."))
 		hive.mark_ui.open_mark_menu(src)
 		return FALSE
-	if(!SSmapping.same_z_map(target_turf.z, z))
+	if(target_turf.z != src.z)
 		to_chat(src, SPAN_NOTICE("We have no psychic presence on that world."))
 		return FALSE
 	if(!(istype(target_turf)) || target_turf.density)

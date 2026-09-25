@@ -1061,4 +1061,3 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 /obj/structure/flora/bush/canyon/grass_yellow/alt2
 	icon_state = "yellow_grass_3"
 
-

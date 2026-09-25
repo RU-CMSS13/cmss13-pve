@@ -182,7 +182,6 @@
 		return
 	if(!client)
 		return
-	QDEL_NULL(observed_atom)
 	is_zoomed = 1
 	client.change_view(viewsize)
 	var/viewoffset = 32 * tileoffset
