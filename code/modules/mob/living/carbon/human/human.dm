@@ -21,6 +21,8 @@
 	if(SSticker?.mode?.hardcore)
 		hardcore = TRUE //For WO disposing of corpses
 
+	move_eyelids(EYELID_SWITCH, 0.2, 3, EYELID_LOOP)
+
 /mob/living/carbon/human/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()
 	if (PF)
@@ -976,6 +978,8 @@
 		number += wear_mask.eye_protection
 	if(glasses)
 		number += glasses.eye_protection
+	if(number == 0 && eyelids_status == EYELID_CLOSED_VOLUNTARILY)
+		return EYE_PROTECTION_FLAVOR
 
 	return number
 
