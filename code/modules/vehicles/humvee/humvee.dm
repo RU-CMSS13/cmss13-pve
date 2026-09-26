@@ -165,4 +165,17 @@
 
 /obj/effect/vehicle_spawner/humvee/load_hardpoints(obj/vehicle/multitile/V)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/humvee_wheels)
+	V.add_hardpoint(new /obj/item/hardpoint/holder/humvee_turret)
+	for(var/obj/item/hardpoint/holder/humvee_turret/T in V.hardpoints)
+		T.add_hardpoint(new /obj/item/hardpoint/primary/humvee_cannon)
+		T.add_hardpoint(new /obj/item/hardpoint/support/humvee_flare_launcher)
+		break
+
+/obj/effect/vehicle_spawner/humvee/weaponless/load_misc(obj/vehicle/multitile/V)
+	. = ..()
+	V.name = "\improper M2420 JTMV-TC Troop Carrier"
+	V.desc = "An M2420 JTMV-TC Troop Carrier. A lightly armored vehicle with a top hatch instead of a turret. Entrances on the sides."
+
+/obj/effect/vehicle_spawner/humvee/weaponless/load_hardpoints(obj/vehicle/multitile/V)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/humvee_wheels)
 	V.add_hardpoint(new /obj/item/hardpoint/primary/humvee_hatch)
