@@ -1,5 +1,5 @@
 #define SAVEFILE_VERSION_MIN 8
-#define SAVEFILE_VERSION_MAX 30
+#define SAVEFILE_VERSION_MAX 31
 
 //handles converting savefiles to new formats
 //MAKE SURE YOU KEEP THIS UP TO DATE!
@@ -208,6 +208,18 @@
 		S["toggle_prefs"] >> pref_toggles
 		pref_toggles |= TOGGLE_SHOUTING_AT_POINTED_PEOPLE // enabled by default for new saves
 		S["toggle_prefs"] << pref_toggles
+
+	if(savefile_version < 31)
+		var/hair_style = ""
+		S["hair_style_name"] >> hair_style
+
+		switch(hair_style)
+			if("Shoulder-length Hair Alt")
+				hair_style = "Long Fringe"
+			if("Long Hair Alt")
+				hair_style = "Longer Fringe"
+
+		S["hair_style_name"] << hair_style
 
 	savefile_version = SAVEFILE_VERSION_MAX
 	return 1
@@ -600,6 +612,7 @@
 	S["skin_color"] >> skin_color
 	S["body_type"] >> body_type
 	S["body_size"] >> body_size
+	S["body_presentation"] >> body_presentation
 	S["blood_type"] >> blood_type
 	S["language"] >> language
 	S["spawnpoint"] >> spawnpoint
@@ -689,6 +702,7 @@
 	be_random_name = sanitize_integer(be_random_name, 0, 1, initial(be_random_name))
 	be_random_body = sanitize_integer(be_random_body, 0, 1, initial(be_random_body))
 	gender = sanitize_gender(gender)
+	body_presentation = sanitize_gender(body_presentation)
 	age = sanitize_integer(age, AGE_MIN, AGE_MAX, initial(age))
 	skin_color = sanitize_skin_color(skin_color)
 	body_type = sanitize_body_type(body_type)
@@ -782,6 +796,7 @@
 	S["skin_color"] << skin_color
 	S["body_type"] << body_type
 	S["body_size"] << body_size
+	S["body_presentation"] << body_presentation
 	S["blood_type"] << blood_type
 	S["language"] << language
 	S["hair_red"] << r_hair

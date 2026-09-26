@@ -26,9 +26,10 @@
 	var/g_eyes = 0
 	var/b_eyes = 0
 
-	var/skin_color = "Pale 2" // Skin color
-	var/body_size = "Average" // Body Size
-	var/body_type = "Lean" // Body Buffness
+	var/skin_color = SKIN_COLOR_PALE2 // Skin color
+	var/body_size = BODY_SIZE_AVERAGE // Body Size
+	var/body_type = BODY_TYPE_LEAN // Body Buffness
+	var/body_presentation
 
 	//Skin color
 	var/r_skin = 0
@@ -41,7 +42,7 @@
 	var/b_type = "A+" //Player's bloodtype
 
 	var/underwear = "Boxers (Camo Conforming)" //Which underwear the player wants
-	var/undershirt = "Undershirt (Tan)" //Which undershirt the player wants.
+	var/undershirt = "Undershirt (Tan) (Camo Conforming)" //Which undershirt the player wants.
 	var/backbag = 2 //Which backpack type the player has chosen. Satchel or Backpack.
 
 	var/datum/species/species //Contains icon generation and language information, set during New().

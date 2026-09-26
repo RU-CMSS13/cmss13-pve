@@ -33,6 +33,9 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 
 	var/static/datum/flavor_text_editor/flavor_text_editor = new
 
+	var/static/datum/hair_picker/hair_picker = new
+	var/static/datum/body_picker/body_picker = new
+	var/static/datum/traits_picker/traits_picker = new
 	var/static/datum/loadout_picker/loadout_picker = new
 
 	//doohickeys for savefiles
@@ -132,10 +135,12 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 
 	var/be_random_body = 0 //whether we have a random appearance every round
 	var/gender = MALE //gender of character (well duh)
+	var/body_presentation
+
 	var/age = 19 //age of character
 	var/spawnpoint = "Arrivals Shuttle" //where this character will spawn (0-2).
 	var/underwear = "Boxers (Camo Conforming)" //underwear type
-	var/undershirt = "Undershirt (Tan)" //undershirt type
+	var/undershirt = "Undershirt (Tan) (Camo Conforming)" //undershirt type
 	var/backbag = 2 //backpack type
 	var/preferred_armor = "Random" //preferred armor type (from their primary prep vendor)
 
@@ -162,9 +167,9 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 	var/b_eyes = 0 //Eye color
 	var/species = "Human"    //Species datum to use.
 	var/ethnicity = "Western" //Legacy, kept to update save files
-	var/skin_color = "Pale 2" // Skin color
-	var/body_size = "Average" // Body Size
-	var/body_type = "Lean" // Body Type
+	var/skin_color = SKIN_COLOR_PALE2 // Skin color
+	var/body_size = BODY_SIZE_AVERAGE // Body Size
+	var/body_type = BODY_TYPE_LEAN // Body Type
 	var/blood_type = "O+" //Blood Type
 	var/language = "None" //Secondary language
 	var/list/gear //Custom/fluff item loadout.
@@ -362,12 +367,15 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 			dat += "<h2><b><u>Physical Information:</u></b>"
 			dat += "<a href='byond://?_src_=prefs;preference=all;task=random'>&reg;</A></h2>"
 			dat += "<b>Age:</b> <a href='byond://?_src_=prefs;preference=age;task=input'><b>[age]</b></a><br>"
-			dat += "<b>Gender:</b> <a href='byond://?_src_=prefs;preference=gender'><b>[gender == MALE ? "Male" : "Female"]</b></a><br>"
-			dat += "<b>Skin Color:</b> <a href='byond://?_src_=prefs;preference=skin_color;task=input'><b>[skin_color]</b></a><br>"
-			dat += "<b>Body Size:</b> <a href='byond://?_src_=prefs;preference=body_size;task=input'><b>[body_size]</b></a><br>"
-			dat += "<b>Body Muscularity:</b> <a href='byond://?_src_=prefs;preference=body_type;task=input'><b>[body_type]</b></a><br>"
+			dat += "<b>Gender:</b> <a href='byond://?_src_=prefs;preference=gender'><b>[gender == MALE ? "Male" : "Female"]</b></a><br><br>"
+
+			dat += "<b>Skin Color:</b> [skin_color]<br>"
+			dat += "<b>Body Size:</b> [body_size]<br>"
+			dat += "<b>Body Muscularity:</b> [body_type]<br>"
+			dat += "<b>Edit Body:</b> <a href='byond://?_src_=prefs;preference=body;task=input'><b>Picker</b></a><br><br>"
+
 			dat += "<b>Blood Type:</b> <a href='byond://?_src_=prefs;preference=blood_type;task=input'><b>[blood_type]</b></a><br>"
-			dat += "<b>Traits:</b> <a href='byond://?src=\ref[user];preference=traits;task=open'><b>Character Traits</b></a>"
+			dat += "<b>Traits:</b> <a href='byond://?src=\ref[user];preference=traits'><b>Character Traits</b></a>"
 			dat += "<br>"
 
 			dat += "<h2><b><u>Occupation Choices:</u></b></h2>"
@@ -379,30 +387,23 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 
 			dat += "<div id='column2'>"
 			dat += "<h2><b><u>Hair and Eyes:</u></b></h2>"
-			dat += "<b>Hair:</b> "
-			dat += "<a href='byond://?_src_=prefs;preference=h_style;task=input'><b>[h_style]</b></a>"
+			dat += "<b>Hair:</b> [h_style]"
 			dat += " | "
-			dat += "<a href='byond://?_src_=prefs;preference=hair;task=input'>"
-			dat += "<b>Color</b> <span class='square' style='background-color: #[num2hex(r_hair, 2)][num2hex(g_hair, 2)][num2hex(b_hair)];'></span>"
-			dat += "</a>"
+			dat += "<span class='square' style='background-color: #[num2hex(r_hair, 2)][num2hex(g_hair, 2)][num2hex(b_hair)];'></span>"
+			dat += "<br>"
+
+			dat += "<b>Facial Hair:</b> [f_style]"
+			dat += " | "
+			dat += "<span class='square' style='background-color: #[num2hex(r_facial, 2)][num2hex(g_facial, 2)][num2hex(b_facial)];'></span>"
 			dat += "<br>"
 
 			if(/datum/character_trait/hair_dye in traits)
-				dat += "<b>Hair Gradient:</b> "
-				dat += "<a href='byond://?_src_=prefs;preference=grad_style;task=input'><b>[grad_style]</b></a>"
+				dat += "<b>Hair Gradient:</b> [grad_style]"
 				dat += " | "
-				dat += "<a href='byond://?_src_=prefs;preference=grad;task=input'>"
-				dat += "<b>Color</b> <span class='square' style='background-color: #[num2hex(r_gradient, 2)][num2hex(g_gradient, 2)][num2hex(b_gradient)];'></span>"
-				dat += "</a>"
+				dat += "<span class='square' style='background-color: #[num2hex(r_gradient, 2)][num2hex(g_gradient, 2)][num2hex(b_gradient)];'></span>"
 				dat += "<br>"
 
-			dat += "<b>Facial Hair:</b> "
-			dat += "<a href='byond://?_src_=prefs;preference=f_style;task=input'><b>[f_style]</b></a>"
-			dat += " | "
-			dat += "<a href='byond://?_src_=prefs;preference=facial;task=input'>"
-			dat += "<b>Color</b> <span class='square' style='background-color: #[num2hex(r_facial, 2)][num2hex(g_facial, 2)][num2hex(b_facial)];'></span>"
-			dat += "</a>"
-			dat += "<br>"
+			dat += "<b>Edit Hair:</b> <a href='byond://?_src_=prefs;preference=hair;task=input'><b>Picker</b></a><br><br>"
 
 			dat += "<b>Eye:</b> "
 			dat += "<a href='byond://?_src_=prefs;preference=eyes;task=input'>"
@@ -1153,42 +1154,8 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 				winset(user, null, "input.focus=false")
 
 		if("traits")
-			switch(href_list["task"])
-				if("open")
-					open_character_traits(user)
-					return TRUE
-				if("change_slot")
-					var/trait_group = text2path(href_list["trait_group"])
-					if(!GLOB.character_trait_groups[trait_group])
-						trait_group = null
-					open_character_traits(user, trait_group)
-					return TRUE
-				if("give_trait")
-					var/trait_group = text2path(href_list["trait_group"])
-					if(!GLOB.character_trait_groups[trait_group])
-						trait_group = null
-					var/trait = text2path(href_list["trait"])
-					var/datum/character_trait/character_trait = GLOB.character_traits[trait]
-					character_trait?.try_give_trait(src)
-					open_character_traits(user, trait_group)
-					if(character_trait.refresh_choices)
-						ShowChoices(user)
-					if(character_trait.refresh_mannequin)
-						update_preview_icon()
-					return TRUE
-				if("remove_trait")
-					var/trait_group = text2path(href_list["trait_group"])
-					if(!GLOB.character_trait_groups[trait_group])
-						trait_group = null
-					var/trait = text2path(href_list["trait"])
-					var/datum/character_trait/character_trait = GLOB.character_traits[trait]
-					character_trait?.try_remove_trait(src)
-					open_character_traits(user, trait_group)
-					if(character_trait.refresh_choices)
-						ShowChoices(user)
-					if(character_trait.refresh_mannequin)
-						update_preview_icon()
-					return TRUE
+			traits_picker.tgui_interact(user)
+			return
 
 		if("toggle_job_gear")
 			show_job_gear = !show_job_gear
@@ -1578,107 +1545,18 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 						metadata = strip_html(new_metadata)
 
 				if("hair")
-					if(species == "Human")
-						var/new_hair = input(user, "Choose your character's hair color:", "Character Preference", rgb(r_hair, g_hair, b_hair)) as color|null
-						if(new_hair)
-							r_hair = hex2num(copytext(new_hair, 2, 4))
-							g_hair = hex2num(copytext(new_hair, 4, 6))
-							b_hair = hex2num(copytext(new_hair, 6, 8))
+					hair_picker.tgui_interact(user)
+					return
 
-				if("h_style")
-					var/list/valid_hairstyles = list()
-					for(var/hairstyle in GLOB.hair_styles_list)
-						var/datum/sprite_accessory/sprite_accessory = GLOB.hair_styles_list[hairstyle]
-						if( !(species in sprite_accessory.species_allowed))
-							continue
-						if(!sprite_accessory.selectable)
-							continue
+				if("body")
+					body_picker.tgui_interact(user)
+					return
 
-						valid_hairstyles[hairstyle] = GLOB.hair_styles_list[hairstyle]
-					valid_hairstyles = sortList(valid_hairstyles)
-
-					var/new_h_style = input(user, "Choose your character's hair style:", "Character Preference")  as null|anything in valid_hairstyles
-					if(new_h_style)
-						h_style = new_h_style
-
-				if("grad")
-					if(species == "Human")
-						var/new_hair_grad = input(user, "Choose your character's hair gradient color:", "Character Preference", rgb(r_gradient, g_gradient, b_gradient)) as color|null
-						if(new_hair_grad)
-							r_gradient = hex2num(copytext(new_hair_grad, 2, 4))
-							g_gradient = hex2num(copytext(new_hair_grad, 4, 6))
-							b_gradient = hex2num(copytext(new_hair_grad, 6, 8))
-
-				if("grad_style")
-					var/list/valid_hair_gradients = list()
-					for(var/hair_gradient in GLOB.hair_gradient_list)
-						var/datum/sprite_accessory/sprite_accessory = GLOB.hair_gradient_list[hair_gradient]
-						if(!(species in sprite_accessory.species_allowed))
-							continue
-						if(!sprite_accessory.selectable)
-							continue
-						valid_hair_gradients[hair_gradient] = GLOB.hair_gradient_list[hair_gradient]
-					valid_hair_gradients = sortList(valid_hair_gradients)
-
-					var/new_h_gradient_style = input(user, "Choose your character's hair gradient style:", "Character Preference")  as null|anything in valid_hair_gradients
-					if(new_h_gradient_style)
-						grad_style = new_h_gradient_style
-
-				if ("skin_color")
-					var/new_skin_color = tgui_input_list(user, "Choose your character's skin color:", "Character Preferences", GLOB.skin_color_list)
-
-					if (new_skin_color)
-						skin_color = new_skin_color
-
-				if ("body_size")
-					var/new_body_size = tgui_input_list(user, "Choose your character's body size:", "Character Preferences", GLOB.body_size_list)
-
-					if (new_body_size)
-						body_size = new_body_size
-
-				if ("body_type")
-					var/new_body_type = tgui_input_list(user, "Choose your character's body type:", "Character Preferences", GLOB.body_type_list)
-
-					if (new_body_type)
-						body_type = new_body_type
-
-				if ("body_size")
-					var/new_body_size = tgui_input_list(user, "Choose your character's body size:", "Character Preferences", GLOB.body_size_list)
-
-					if (new_body_size)
-						body_size = new_body_size
 				if("blood_type")
 					var/choice = tgui_input_list(user, "Please choose a blood type.", "Blood type choice", GLOB.blood_type_choices)
 					if(!choice)
 						return
 					blood_type = choice
-
-				if("facial")
-					var/new_facial = input(user, "Choose your character's facial-hair color:", "Character Preference", rgb(r_facial, g_facial, b_facial)) as color|null
-					if(new_facial)
-						r_facial = hex2num(copytext(new_facial, 2, 4))
-						g_facial = hex2num(copytext(new_facial, 4, 6))
-						b_facial = hex2num(copytext(new_facial, 6, 8))
-
-				if("f_style")
-					var/list/valid_facialhairstyles = list()
-					for(var/facialhairstyle in GLOB.facial_hair_styles_list)
-						var/datum/sprite_accessory/sprite_accessory = GLOB.facial_hair_styles_list[facialhairstyle]
-						if(gender == MALE && sprite_accessory.gender == FEMALE)
-							continue
-						if(gender == FEMALE && sprite_accessory.gender == MALE)
-							continue
-						if( !(species in sprite_accessory.species_allowed))
-							continue
-						if(!sprite_accessory.selectable)
-							continue
-
-						valid_facialhairstyles[facialhairstyle] = GLOB.facial_hair_styles_list[facialhairstyle]
-					valid_facialhairstyles = sortList(valid_facialhairstyles)
-
-					var/new_f_style = input(user, "Choose your character's facial-hair style:", "Character Preference")  as null|anything in valid_facialhairstyles
-					if(new_f_style)
-						f_style = new_f_style
 
 				if("personalweapon")
 					var/new_weapon = tgui_input_list(user, "Choose your character's personal weapon:", "Character Preference (USCM Only)", GLOB.personal_weapons_list+"None")
@@ -1707,7 +1585,8 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 					ShowChoices(user)
 
 				if("eyes")
-					var/new_eyes = input(user, "Choose your character's eye color:", "Character Preference", rgb(r_eyes, g_eyes, b_eyes)) as color|null
+					var/new_eyes = tgui_color_picker(user, "Choose your character's eye color:", "Character Preference", rgb(r_eyes, g_eyes, b_eyes))
+
 					if(new_eyes)
 						r_eyes = hex2num(copytext(new_eyes, 2, 4))
 						g_eyes = hex2num(copytext(new_eyes, 4, 6))
@@ -1870,6 +1749,15 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 						gender = MALE
 					underwear = sanitize_inlist(underwear, gender == MALE ? GLOB.underwear_m : GLOB.underwear_f, initial(underwear))
 					undershirt = sanitize_inlist(undershirt, gender == MALE ? GLOB.undershirt_m : GLOB.undershirt_f, initial(undershirt))
+
+					var/datum/sprite_accessory/facial_hair/current_facial = GLOB.facial_hair_styles_list[f_style]
+					if(!current_facial || (current_facial.gender != NEUTER && current_facial.gender != gender))
+						f_style = initial(f_style)
+
+					// Refresh hair picker
+					var/datum/tgui/picker_ui = SStgui.get_open_ui(user, hair_picker)
+					if(picker_ui)
+						picker_ui.send_update()
 
 				if("hear_adminhelps")
 					toggles_sound ^= SOUND_ADMINHELP
@@ -2173,6 +2061,8 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 	character.skin_color = skin_color
 	character.body_type = body_type
 	character.body_size = body_size
+	character.body_presentation = get_body_presentation()
+
 	character.blood_type = blood_type
 
 	character.r_eyes = r_eyes
@@ -2256,6 +2146,8 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 	character.skin_color = skin_color
 	character.body_type = body_type
 	character.body_size = body_size
+	character.body_presentation = get_body_presentation()
+
 	character.blood_type = blood_type
 
 	character.r_eyes = r_eyes
@@ -2395,52 +2287,6 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 	alert("The key sequence is [key_buf].")
 	return key_buf
 
-/datum/preferences/proc/open_character_traits(mob/user, character_trait_group)
-	if(!read_traits)
-		read_traits = TRUE
-		for(var/trait in traits)
-			var/datum/character_trait/character_trait = GLOB.character_traits[trait]
-			trait_points -= character_trait.cost
-	var/dat = "<body onselectstart='return false;'>"
-	dat += "<center>"
-	var/datum/character_trait_group/current_trait_group
-	var/i = 1
-	for(var/trait_group in GLOB.character_trait_groups)
-		var/datum/character_trait_group/CTG = GLOB.character_trait_groups[trait_group]
-		if(!CTG.group_visible)
-			continue
-		var/button_class = ""
-		if(!character_trait_group && i == 1 || character_trait_group == trait_group)
-			button_class = "class='linkOn'"
-			current_trait_group = CTG
-		dat += "<a style='white-space:nowrap;' href='byond://?_src_=prefs;preference=traits;task=change_slot;trait_group=[trait_group]' [button_class]>"
-		dat += CTG.trait_group_name
-		dat += "</a>"
-		i++
-	dat += "</center>"
-	dat += "<table>"
-	for(var/trait in current_trait_group.traits)
-		var/datum/character_trait/character_trait = trait
-		if(!character_trait.applyable)
-			continue
-		var/has_trait = (character_trait.type in traits)
-		var/task = has_trait ? "remove_trait" : "give_trait"
-		var/button_class = has_trait ? "class='linkOn'" : ""
-		dat += "<tr><td width='40%'>"
-		if(has_trait || character_trait.can_give_trait(src))
-			dat += "<a href='byond://?_src_=prefs;preference=traits;task=[task];trait=[character_trait.type];trait_group=[current_trait_group.type]' [button_class]>"
-			dat += "[character_trait.trait_name]"
-			dat += "</a>"
-		else
-			dat += "<i>[character_trait.trait_name]</i>"
-		var/cost_text = character_trait.cost ? " ([character_trait.cost] points)" : ""
-		dat += "</td><td>[character_trait.trait_desc][cost_text]</td></tr>"
-		dat += ""
-	dat += "</table>"
-	dat += "</body>"
-	show_browser(user, dat, "Character Traits", "character_traits")
-	update_preview_icon(TRUE)
-
 /// Converts a client's list of completed tutorials into a string for saving
 /datum/preferences/proc/tutorial_list_to_savestring()
 	if(!length(completed_tutorials))
@@ -2459,8 +2305,34 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 
 /// Refreshes all open TGUI interfaces inside the character prefs menu
 /datum/preferences/proc/update_all_pickers(mob/user)
-	var/datum/tgui/picker_ui = SStgui.get_open_ui(user, loadout_picker)
+	var/datum/tgui/picker_ui = SStgui.get_open_ui(user, hair_picker)
 	picker_ui?.send_update()
+
+	picker_ui = SStgui.get_open_ui(user, body_picker)
+	picker_ui?.send_update()
+
+	picker_ui = SStgui.get_open_ui(user, loadout_picker)
+	picker_ui?.send_update()
+
+	picker_ui = SStgui.get_open_ui(user, traits_picker)
+	picker_ui?.send_update()
+
+/// Closes all the TGUI interfaces inside the character prefs menu
+/datum/preferences/proc/close_all_pickers(mob/user)
+	var/datum/tgui/picker_ui = SStgui.get_open_ui(user, hair_picker)
+	picker_ui?.close()
+
+	picker_ui = SStgui.get_open_ui(user, body_picker)
+	picker_ui?.close()
+
+	picker_ui = SStgui.get_open_ui(user, loadout_picker)
+	picker_ui?.close()
+
+	picker_ui = SStgui.get_open_ui(user, traits_picker)
+	picker_ui?.close()
+
+/datum/preferences/proc/get_body_presentation()
+	return body_presentation || gender
 
 #undef MENU_MARINE
 #undef MENU_XENOMORPH
