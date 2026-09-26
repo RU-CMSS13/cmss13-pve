@@ -4,6 +4,7 @@
 	name_plural = "W-Y Combat Androids"
 	uses_skin_color = FALSE
 	special_body_types = FALSE
+	flags = (parent_type::flags & ~(HAS_SKIN_COLOR | HAS_UNDERWEAR)) | HAS_MOUTH
 	mob_inherent_traits = list(TRAIT_SUPER_STRONG, TRAIT_EMOTE_CD_EXEMPT, TRAIT_UNSTRIPPABLE) //No IRON_TEETH because they have no teeth (literally)
 
 	burn_mod = 0.6 //made for combat

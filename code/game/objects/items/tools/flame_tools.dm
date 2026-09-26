@@ -179,6 +179,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	flags_equip_slot = SLOT_EAR | SLOT_FACE
 	flags_obj = parent_type::flags_obj|OBJ_IS_HELMET_GARB
 	flags_atom = CAN_BE_SYRINGED
+	flags_inv_hide = HIDEMOUTHCLENCHED
 	attack_verb = list("burnt", "singed")
 	blood_overlay_type = ""
 	light_color = LIGHT_COLOR_ORANGE

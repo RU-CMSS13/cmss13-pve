@@ -180,6 +180,8 @@
 
 		..(message, speaking, verb, alt_name, italics, message_range, speech_sound, sound_vol, 0, message_mode) //ohgod we should really be passing a datum here.
 
+		move_mouth_message(message)
+
 		INVOKE_ASYNC(src, TYPE_PROC_REF(/mob/living/carbon/human, say_to_radios), used_radios, message, message_mode, verb, speaking)
 
 /mob/living/carbon/human/proc/say_to_radios(used_radios, message, message_mode, verb, speaking)
