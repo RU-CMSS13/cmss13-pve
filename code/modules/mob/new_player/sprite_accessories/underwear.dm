@@ -13,19 +13,19 @@ GLOBAL_LIST_INIT_TYPED(underwear_restricted, /datum/sprite_accessory/underwear, 
 		if(underwear_datum.camo_conforming)
 			underwear_list["[underwear_datum.name] (Camo Conforming)"] = underwear_datum
 			var/datum/sprite_accessory/underwear/classic_datum = new underwear_type
-			classic_datum.generate_non_conforming("classic")
+			classic_datum.generate_non_conforming("c")
 			underwear_list[classic_datum.name] = classic_datum
 			var/datum/sprite_accessory/underwear/jungle_datum = new underwear_type
-			jungle_datum.generate_non_conforming("jungle")
+			jungle_datum.generate_non_conforming("j")
 			underwear_list[jungle_datum.name] = jungle_datum
 			var/datum/sprite_accessory/underwear/desert_datum = new underwear_type
-			desert_datum.generate_non_conforming("desert")
+			desert_datum.generate_non_conforming("d")
 			underwear_list[desert_datum.name] = desert_datum
 			var/datum/sprite_accessory/underwear/snow_datum = new underwear_type
-			snow_datum.generate_non_conforming("snow")
+			snow_datum.generate_non_conforming("s")
 			underwear_list[snow_datum.name] = snow_datum
 			var/datum/sprite_accessory/underwear/urban_datum = new underwear_type
-			urban_datum.generate_non_conforming("urban")
+			urban_datum.generate_non_conforming("u")
 			underwear_list[urban_datum.name] = urban_datum
 		else
 			underwear_list[underwear_datum.name] = underwear_datum
@@ -66,6 +66,8 @@ GLOBAL_LIST_INIT_TYPED(underwear_restricted, /datum/sprite_accessory/underwear, 
 			name += " (Desert)"
 		if("s")
 			name += " (Snow)"
+		if("u")
+			name += " (Urban)"
 
 // Both
 /datum/sprite_accessory/underwear/boxers

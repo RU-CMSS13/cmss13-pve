@@ -70,10 +70,12 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 			name += " (Desert)"
 		if("s")
 			name += " (Snow)"
+		if("u")
+			name += " (Urban)"
 
 // Plural
 /datum/sprite_accessory/undershirt/undershirt
-	name = "Undershirt (Tan)"
+	name = "Undershirt"
 	icon_state = "t_undershirt"
 	gender = NEUTER
 
@@ -86,7 +88,7 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 	camo_conforming = FALSE
 
 /datum/sprite_accessory/undershirt/undershirt/sleeveless
-	name = "Undershirt (Tan, Sleeveless)"
+	name = "Undershirt (Sleeveless)"
 	icon_state = "t_undershirt_sleeveless"
 	camo_conforming = TRUE
 
@@ -96,7 +98,7 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 	camo_conforming = FALSE
 
 /datum/sprite_accessory/undershirt/undershirt/rolled
-	name = "Undershirt (Tan, Rolled)"
+	name = "Undershirt (Rolled)"
 	icon_state = "t_rolled_undershirt"
 	camo_conforming = TRUE
 
@@ -106,7 +108,7 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 	camo_conforming = FALSE
 
 /datum/sprite_accessory/undershirt/undershirt/rolled_sleeveless
-	name = "Undershirt (Tan, Rolled, Sleeveless)"
+	name = "Undershirt (Rolled, Sleeveless)"
 	icon_state = "t_rolled_undershirt_sleeveless"
 	camo_conforming = TRUE
 
@@ -116,7 +118,7 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 	camo_conforming = FALSE
 
 /datum/sprite_accessory/undershirt/undershirt/long
-	name = "Undershirt (Tan, Long Sleeved)"
+	name = "Undershirt (Long Sleeved)"
 	icon_state = "t_long_undershirt"
 	camo_conforming = TRUE
 
