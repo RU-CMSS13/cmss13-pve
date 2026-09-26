@@ -165,4 +165,4 @@
 
 /obj/effect/vehicle_spawner/humvee/load_hardpoints(obj/vehicle/multitile/V)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/humvee_wheels)
-	V.add_hardpoint(new /obj/item/hardpoint/holder/humvee_turret)
+	V.add_hardpoint(new /obj/item/hardpoint/primary/humvee_hatch)
