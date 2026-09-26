@@ -9,5 +9,8 @@ export type AudioState = {
     artist?: string;
     upload_date?: string;
     album?: string;
+    start?: number;
+    end?: number;
+    loop?: boolean;
   };
 };
