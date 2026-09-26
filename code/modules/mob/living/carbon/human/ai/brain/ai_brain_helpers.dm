@@ -105,6 +105,10 @@
 	if(cur_hand)
 		tied_human.drop_held_item(cur_hand)
 
+	if(istype(primary_weapon.loc, /obj/item/storage))
+		var/obj/item/storage/holster = primary_weapon.loc
+		holster._item_removal(primary_weapon, cur_hand)
+
 	tied_human.u_equip(primary_weapon)
 	tied_human.put_in_active_hand(primary_weapon)
 
@@ -178,12 +182,12 @@
 			else
 				return FALSE
 	if(unholster_melee())
-		tied_human.a_intent_change(INTENT_GRAB)
+		tied_human.a_intent_change(INTENT_HARM)
 		return TRUE
 	if(primary_weapon)
 		unholster_primary()
 		ensure_primary_hand(primary_weapon)
 		wield_primary()
-		tied_human.a_intent_change(INTENT_GRAB)
+		tied_human.a_intent_change(INTENT_HARM)
 		return TRUE
 	// insert any viable weapon slot macros in here
