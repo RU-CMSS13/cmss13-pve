@@ -1,0 +1,8 @@
+{
+    "map_name": "SSV Navaga",
+    "map_path": "map_files/navaga",
+    "map_file": "navaga.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "platoon": "/datum/squad/marine/upp/airborne"
+}

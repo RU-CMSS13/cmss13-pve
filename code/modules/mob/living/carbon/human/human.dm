@@ -1863,6 +1863,8 @@
 			alert_type = /atom/movable/screen/text/screen_text/picture/starting/upp
 			if(assigned_squad && assigned_squad.name == SQUAD_SISSI)
 				platoon = "Fox Stalkers"
+			if(assigned_squad && assigned_squad.name == SQUAD_UPP_AIRBORNE)
+				platoon = "Crimson Comet"
 			else
 				platoon = "Red Dawn"
 		if(FACTION_PMC)
