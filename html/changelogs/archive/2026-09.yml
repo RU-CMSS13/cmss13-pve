@@ -31,3 +31,19 @@
   Mary-Marilyn:
   - qol: Examining a character now shows their body type and a rough estimate of their
       age.
+2026-09-26:
+  Antlers:
+  - rscadd: Pill bottles can now be broken open by knives and other sharp objects,
+      breaking them and spilling their pills out onto the floor
+  - rscadd: Pill bottles can be fixed by using a wirecutter to pinch and bend the
+      lid back into place with the correct medical skill (surgery >=1)
+  - bugfix: Humans without the necessary medical skill can no longer scoop up pills
+      from the ground into pill bottles
+  Drathek:
+  - admin: Added a Change Daytime Base Lighting GM proc
+  - code_imp: Optimized the Change Daytime GM proc
+  chaos-creations:
+  - refactor: "\u043D\u0435\u043C\u043D\u043E\u0433\u043E \u0438\u0437\u043C\u0435\
+      \u043D\u0451\u043D\u043D\u044B\u0439 \u043A\u043E\u0434 \u043E\u0441\u043E\u0431\
+      \u043E\u0433\u043E \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044F."
+  - rscdel: pudong bunker has been removed
