@@ -32,3 +32,21 @@
 	name = "Yī jí Jūn Shì Zhǎng"
 	prefix = "Yī jí."
 	pay_multiplier = 0.6
+
+/datum/paygrade/canc/cb1
+	paygrade = PAY_SHORT_CB1
+	name = "Operative"
+	prefix = "OPR"
+	pay_multiplier = 2.5
+
+/datum/paygrade/canc/cb2
+	paygrade = PAY_SHORT_CB2
+	name = "Operative Combat Medic"
+	prefix = "OPR ComMed"
+	pay_multiplier = 2.7
+
+/datum/paygrade/canc/cb3
+	paygrade = PAY_SHORT_CB3
+	name = "Bāncháng"
+	prefix = "Bāncháng"
+	pay_multiplier = 3
