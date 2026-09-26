@@ -105,11 +105,6 @@
 	pixel_x = -48
 	pixel_y = -48
 
-/obj/effect/vehicle_spawner/arc/weaponless/Initialize()
-	. = ..()
-	spawn_vehicle()
-	qdel(src)
-
 //PRESET: no hardpoints
 /obj/effect/vehicle_spawner/arc/weaponless/spawn_vehicle()
 	var/obj/vehicle/multitile/apc/arc/weaponless/APC = new (loc)
