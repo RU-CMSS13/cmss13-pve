@@ -238,8 +238,6 @@
 /// default skin color
 #define SKIN_COLOR_PALE2 "Pale 2"
 
-//--- end ---//
-
 /// eyelid states & arguments
 #define EYELID_OPEN   "open"
 #define EYELID_CLOSED "closed"
@@ -251,3 +249,5 @@
 #define EYELID_DEFAULT_CLOSED_HOLD (0.1 SECONDS)
 /// Default hold time for one half of a blink when period is omitted mid-sequence.
 #define EYELID_DEFAULT_OPEN_HOLD (30 SECONDS)
+
+//--- end ---//
