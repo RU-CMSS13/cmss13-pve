@@ -251,31 +251,6 @@
 	icon_state = "gun_unique"
 	gun_proc_ref = TYPE_VERB_REF(/obj/item/weapon/gun, use_unique_action)
 
-/atom/movable/screen/action
-	var/proc_ref
-
-/atom/movable/screen/action/shift_layer_up
-	name = "Shift layer up"
-	icon_state = "action_up"
-	proc_ref = TYPE_VERB_REF(/mob/living, shift_layer_up)
-
-/atom/movable/screen/action/shift_layer_down
-	name = "Shift layer down"
-	icon_state = "action_down"
-	proc_ref = TYPE_VERB_REF(/mob/living, shift_layer_down)
-
-/atom/movable/screen/action/roll_dice
-	name = "Roll Dice"
-	icon_state = "roll_dice"
-	proc_ref = TYPE_VERB_REF(/mob/living/carbon/human, roll_dice_ic)
-
-/atom/movable/screen/action/clicked(mob/user)
-	. = ..()
-	if(.)
-		return
-	if(proc_ref)
-		INVOKE_ASYNC(user, proc_ref)
-
 /atom/movable/screen/clicked(mob/user, list/mods)
 	if(!user)
 		return TRUE
@@ -471,7 +446,20 @@
 	else
 		icon_state = "pull0"
 
+/atom/movable/screen/important_action
+	name = "important emote"
+	icon = 'icons/mob/hud/human_midnight.dmi'
+	icon_state = "act_important_action"
+	layer = HUD_LAYER
 
+/atom/movable/screen/important_action/clicked(mob/user)
+	if(ishuman(user))
+		var/mob/living/carbon/human/human = user
+		var/message = reject_bad_text(input(user,"Must be formatted like an emote", "Important Action", ""))
+		if(!message)
+			return FALSE
+		human.do_important_action(message)
+		return TRUE
 
 /atom/movable/screen/squad_leader_locator
 	name = "beacon tracker"
