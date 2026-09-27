@@ -129,3 +129,40 @@
 	.[/obj/item/ammo_magazine/pistol/vp78] =  /obj/item/ammo_magazine/pistol/vp78/toxin
 	.[/obj/item/ammo_magazine/pistol/vp70] =  /obj/item/ammo_magazine/pistol/vp70/toxin
 	.[/obj/item/ammo_magazine/revolver] =  /obj/item/ammo_magazine/revolver/marksman/toxin
+
+/obj/item/ammo_kit/upp
+	name = "UPP ammo kit"
+	desc = "An ammo kit used to convert regular ammo magazines of various weapons into a different variation."
+	icon_state = "upp_base"
+	uses = 6
+
+/obj/item/ammo_kit/upp/ap
+	name = "UPP AP ammo kit"
+	desc = "Converts magazines into armor-piercing ammo."
+	icon_state = "upp_ap"
+
+/obj/item/ammo_kit/upp/ap/get_convert_map()
+	. = ..()
+	.[/obj/item/ammo_magazine/rifle/type71] = /obj/item/ammo_magazine/rifle/type71/ap
+	.[/obj/item/ammo_magazine/rifle/ag80] = /obj/item/ammo_magazine/rifle/ag80/ap
+	.[/obj/item/ammo_magazine/smg/bizon] = /obj/item/ammo_magazine/smg/bizon/ap
+	.[/obj/item/ammo_magazine/pkp] = /obj/item/ammo_magazine/pkp/ap
+
+/obj/item/ammo_kit/upp/incendiary
+	name = "UPP incendiary ammo kit"
+	desc = "Converts magazines into incendiary ammo."
+	icon_state = "upp_incendiary"
+
+/obj/item/ammo_kit/upp/incendiary/get_convert_map()
+	. = ..()
+	.[/obj/item/ammo_magazine/rifle/type71] = /obj/item/ammo_magazine/rifle/type71/incendiary
+
+/obj/item/ammo_kit/upp/rubber
+	name = "UPP rubber ammo kit"
+	desc = "Converts magazines into less-than-lethal rubber ammo."
+	icon_state = "upp_rubber"
+
+/obj/item/ammo_kit/upp/rubber/get_convert_map()
+	. = ..()
+	.[/obj/item/ammo_magazine/rifle/type71] = /obj/item/ammo_magazine/rifle/type71/rubber
+	.[/obj/item/ammo_magazine/rifle/ag80] = /obj/item/ammo_magazine/rifle/ag80/rubber
