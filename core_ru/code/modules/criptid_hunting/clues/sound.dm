@@ -26,7 +26,12 @@
 /client/MouseMove(object, location, control, params)
 	. = ..()
 
-	if(connected_sound && !connected_sound.connected_clue.revealed && !connected_sound.connected_clue.in_search)
+	if(connected_sound)
+		if(connected_sound.connected_clue.revealed)
+			screen -= connected_sound
+			connected_sound.remove_filter("clue")
+			connected_sound = null
+			return FALSE
 		var/list/coords = screen_loc2pixels(params)
 		connected_sound.set_screenpos(coords[1],coords[2])
 
@@ -297,8 +302,8 @@
 			continue
 		if(SC in clues_nearby)
 			continue
+		SC.in_search = TRUE
 		clues_nearby += SC
-		S.in_search = TRUE
 		clues_rep += SC.representation
 
 		SC.representation.alpha = 0
