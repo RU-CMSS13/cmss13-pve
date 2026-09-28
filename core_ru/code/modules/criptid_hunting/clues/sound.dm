@@ -26,7 +26,7 @@
 /client/MouseMove(object, location, control, params)
 	. = ..()
 
-	if(connected_sound)
+	if(connected_sound && !connected_sound.connected_clue.revealed && !connected_sound.connected_clue.in_search)
 		var/list/coords = screen_loc2pixels(params)
 		connected_sound.set_screenpos(coords[1],coords[2])
 
@@ -153,6 +153,7 @@
 	var/mob/living/carbon/human/connected
 
 	var/atom/movable/screen/sound_clue/representation
+	var/in_search = FALSE
 
 /obj/structure/criptic/clue/sound_clue/Initialize(mapload, ...)
 	. = ..()
@@ -187,6 +188,7 @@
 
 	user.put_in_hands(disc)
 
+	in_search = FALSE
 	revealed = TRUE
 	alpha = 0
 	icon_state = "[icon_state_found]"
@@ -269,6 +271,9 @@
 	user.client.mouse_pointer_icon = initial(user.client.mouse_pointer_icon)
 	user.clear_fullscreen("background")
 
+	for(var/obj/structure/criptic/clue/sound_clue/S in clues_nearby)
+		S.in_search = FALSE
+
 	user.client.screen -= device_rep
 	user.client.screen -= exit_search
 	user.client.screen -= clues_rep
@@ -277,6 +282,7 @@
 /obj/item/criptic/instrument/sound_device/check_for_condition()
 	for(var/obj/structure/criptic/clue/sound_clue/S in clues_nearby)
 		if(get_dist(S,loc) > 7)
+			S.in_search = FALSE
 			clues_nearby -= S
 			clues_rep -= S.representation
 
@@ -287,9 +293,12 @@
 	for(var/obj/structure/criptic/clue/sound_clue/SC in range(7,get_turf(loc)))
 		if(SC.revealed)
 			continue
+		if(SC.in_search)
+			continue
 		if(SC in clues_nearby)
 			continue
 		clues_nearby += SC
+		S.in_search = TRUE
 		clues_rep += SC.representation
 
 		SC.representation.alpha = 0

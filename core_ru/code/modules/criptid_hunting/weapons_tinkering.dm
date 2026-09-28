@@ -87,7 +87,7 @@
 	w_class = SIZE_SMALL
 
 /obj/item/criptic/scrap/attack_hand(mob/user)
-	if(locate(/obj/structure/criptic/gunbench) in get_turf(loc))
+	if(locate(/obj/structure/criptic/gunbench) in get_turf(src))
 		var/obj/structure/criptic/gunbench/G = loc
 		G.resources -= src
 		SetTransform(1)
@@ -106,7 +106,7 @@
 	w_class = SIZE_SMALL
 
 /obj/item/criptic/blueprint/attack_hand(mob/user)
-	if(locate(/obj/structure/criptic/gunbench) in get_turf(loc))
+	if(locate(/obj/structure/criptic/gunbench) in get_turf(src))
 		var/obj/structure/criptic/gunbench/G = loc
 		G.resources -= src
 		SetTransform(1)
@@ -227,6 +227,10 @@
 			balloon_alert(user, "[G] ammunition upgraded already!", COLOR_WHITE)
 			animation_flash_color(G, COLOR_RED)
 			return FALSE
+		if(target_gun)
+			balloon_alert(user, "Remove other weapon from the table first!", COLOR_WHITE)
+			animation_flash_color(G, COLOR_RED)
+			return FALSE
 		else
 			target_gun = G
 			user.drop_held_item(G)
@@ -316,7 +320,7 @@
 	return FALSE
 
 /obj/item/weapon/gun/attack_hand(mob/user)
-	if(locate(/obj/structure/criptic/gunbench) in get_turf(loc))
+	if(locate(/obj/structure/criptic/gunbench) in get_turf(src))
 		var/obj/structure/criptic/gunbench/G = loc
 		G.target_gun = null
 		pixel_x = initial(pixel_x)
