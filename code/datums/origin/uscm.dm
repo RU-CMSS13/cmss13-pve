@@ -2,6 +2,7 @@
 	name = ORIGIN_USCM
 	desc = "You were born in the US-of-A, the best god damn country in the entire universe."
 	tag_icon = "usa" // RU PVE ADDITION
+	tag_color = "#5c9e3a" // RU PVE ADDITION
 
 /datum/origin/uscm/luna
 	name = ORIGIN_USCM_LUNA
