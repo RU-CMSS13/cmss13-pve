@@ -520,7 +520,6 @@
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/scope/pve,
 		/obj/item/attachable/bayonet,
 		/obj/item/attachable/bayonet/wy,
@@ -824,7 +823,6 @@
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/scope/pve,
 		/obj/item/attachable/sling,
-		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/verticalgrip, // Under
 		/obj/item/attachable/angledgrip,
@@ -866,7 +864,7 @@
 	scatter = SCATTER_AMOUNT_TIER_8
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_8
 	scatter_unwielded = SCATTER_AMOUNT_TIER_2
-	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_5
+	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
 	fa_max_scatter = SCATTER_AMOUNT_TIER_8
 
@@ -2124,7 +2122,7 @@
 
 /obj/item/weapon/gun/rifle/m49a/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_5)
+	set_fire_delay(FIRE_DELAY_TIER_4)
 	set_burst_amount(0)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_5
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
