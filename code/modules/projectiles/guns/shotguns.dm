@@ -1307,7 +1307,7 @@ can cause issues with ammo types getting mixed up during the burst.
 		return //Don't spam it.
 	if(pumped)
 		if (world.time > (message + pump_delay))
-			to_chat(usr, SPAN_WARNING("<i>[src] already has a shell in the chamber!<i>"))
+			to_chat(usr, SPAN_WARNING(SPAN_ITALIC("[src] already has a shell in the chamber!")))
 			message = world.time
 		return
 	if(in_chamber) //eject the chambered round
@@ -1320,9 +1320,11 @@ can cause issues with ammo types getting mixed up during the burst.
 	playsound(user, pump_sound, 10, 1)
 	eject_casing()
 	recent_pump = world.time
-	if (in_chamber)
+	if(in_chamber)
+		to_chat(user, SPAN_WARNING(SPAN_ITALIC("You pump [src], loading a shell into the chamber!")))
 		pumped = TRUE
-
+	else
+		to_chat(user, SPAN_WARNING(SPAN_ITALIC("You pump [src].")))
 
 /obj/item/weapon/gun/shotgun/pump/reload_into_chamber(mob/user)
 	if(!current_mag)
