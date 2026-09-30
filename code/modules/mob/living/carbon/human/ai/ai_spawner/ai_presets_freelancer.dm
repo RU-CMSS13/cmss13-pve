@@ -30,3 +30,28 @@
 	name = "Synthetic - Security Android - Freelancer"
 	desc = "A security android for the freelancer faction, GMs should remember not to use this as they are illegal"
 	path = /datum/equipment_preset/synth/working_joe/security_android/freelancer
+
+/datum/human_ai_equipment_preset/freelancer/rifleman_elite
+	name = "Freelancer Cell (Standart)"
+	desc = "change later"
+	path = /datum/equipment_preset/other/freelancer/cell/standard
+
+/datum/human_ai_equipment_preset/freelancer/medic_elite
+	name = "Freelancer Cell (Medic)"
+	desc = "change later"
+	path = /datum/equipment_preset/other/freelancer/cell/medic
+
+/datum/human_ai_equipment_preset/freelancer/rto_elite
+	name = "Freelancer Cell (RTO)"
+	desc = "change later"
+	path = /datum/equipment_preset/other/freelancer/cell/rto
+
+/datum/human_ai_equipment_preset/freelancer/juggernaut_elite
+	name = "Freelancer Cell (Juggernaut)"
+	desc = "change later"
+	path = /datum/equipment_preset/other/freelancer/cell/heavy
+
+/datum/human_ai_equipment_preset/freelancer/leader_elite
+	name = "Freelancer Cell (Leader)"
+	desc = "change later"
+	path = /datum/equipment_preset/other/freelancer/cell/leader

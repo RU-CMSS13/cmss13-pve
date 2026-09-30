@@ -961,6 +961,13 @@
 		/obj/item/reagent_container/blood,
 	)
 
+/obj/item/storage/pouch/first_responder/rmc/full/fill_preset_inventory()
+	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/reagent_container/hypospray/tricordrazine(src)
+	new /obj/item/tool/surgery/surgical_line(src)
+	new /obj/item/tool/surgery/synthgraft(src)
+	new /obj/item/reagent_container/blood/OMinus(src)
 
 /obj/item/storage/pouch/vials
 	name = "vial pouch"
@@ -979,6 +986,14 @@
 /obj/item/storage/pouch/vials/full/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/reagent_container/glass/beaker/vial(src)
+
+/obj/item/storage/pouch/vials/freelancer/fill_preset_inventory()
+	new /obj/item/reagent_container/glass/beaker/vial/meralyne(src)
+	new /obj/item/reagent_container/glass/beaker/vial/meralyne(src)
+	new /obj/item/reagent_container/glass/beaker/vial/dermaline(src)
+	new /obj/item/reagent_container/glass/beaker/vial/dermaline(src)
+	new /obj/item/reagent_container/glass/beaker/vial/oxycodone(src)
+	new /obj/item/reagent_container/glass/beaker/vial/imialk(src)
 
 /obj/item/storage/pouch/chem
 	name = "chemist pouch"

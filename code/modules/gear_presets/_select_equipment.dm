@@ -2030,3 +2030,70 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 		if(10)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/type23/flechette, WEAR_J_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/shotgun/upp/heavyflech, WEAR_WAIST)
+
+/datum/equipment_preset/proc/add_elite_freelancer_helmet(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/helmetpath = pick(
+		/obj/item/clothing/head/helmet/marine/veteran/freelancer/elite,
+		/obj/item/clothing/head/helmet/marine/veteran/freelancer/elite/beret,
+		)
+	new_human.equip_to_slot_or_del(new helmetpath, WEAR_HEAD)
+
+/datum/equipment_preset/proc/add_elite_freelancer_armor(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/suitpath = pick(
+		/obj/item/clothing/suit/marine/veteran/freelancer/elite,
+		/obj/item/clothing/suit/marine/veteran/freelancer/elite/partial1,
+		/obj/item/clothing/suit/marine/veteran/freelancer/elite/partial2,
+		)
+	new_human.equip_to_slot_or_del(new suitpath, WEAR_JACKET)
+
+/datum/equipment_preset/proc/add_elite_freelancer_medic_armor(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/medsuitpath = pick(
+		/obj/item/clothing/suit/marine/veteran/freelancer/elite/partial1,
+		/obj/item/clothing/suit/marine/veteran/freelancer/elite/partial2,
+		/obj/item/clothing/suit/marine/veteran/freelancer/elite/light,
+		)
+	new_human.equip_to_slot_or_del(new medsuitpath, WEAR_JACKET)
+
+/datum/equipment_preset/proc/add_elite_freelancer_smoke(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/nade_type = rand(1,4)
+	switch(nade_type)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/smokebomb(new_human), WEAR_IN_R_STORE)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/smokebomb/green(new_human), WEAR_IN_R_STORE)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/smokebomb/red(new_human), WEAR_IN_R_STORE)
+		if(4)
+			new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/smokebomb/upp(new_human), WEAR_IN_R_STORE)
+
+/datum/equipment_preset/proc/add_elite_freelancer_phosphorus(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/nade_type = rand(1,3)
+	switch(nade_type)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/phosphorus(new_human), WEAR_IN_R_STORE)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/phosphorus/upp(new_human), WEAR_IN_R_STORE)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/phosphorus/clf(new_human), WEAR_IN_R_STORE)
+
+/datum/equipment_preset/proc/add_elite_freelancer_high_explosive(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/nade_type = rand(1,3)
+	switch(nade_type)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/super(new_human), WEAR_IN_R_STORE)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/pmc(new_human), WEAR_IN_R_STORE)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/stick(new_human), WEAR_IN_R_STORE)
