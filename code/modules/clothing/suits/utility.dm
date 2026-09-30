@@ -73,7 +73,7 @@
 	armor_rad = CLOTHING_ARMOR_NONE
 	armor_internaldamage = CLOTHING_ARMOR_LOW
 	flags_inventory = COVEREYES|COVERMOUTH
-	flags_inv_hide = HIDEFACE|HIDEMASK|HIDEEARS|HIDEALLHAIR
+	flags_inv_hide = HIDEFACE|HIDEMASK|HIDEEARS|HIDEALLHAIR|HIDEMOUTH
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
 	siemens_coefficient = 0
 
@@ -131,7 +131,7 @@
 	icon_state = "rad"
 	desc = "A hood with radiation protective properties. Label: Made with lead, do not eat insulation"
 	flags_inventory = COVEREYES|COVERMOUTH
-	flags_inv_hide = HIDEFACE|HIDEMASK|HIDEEARS|HIDEALLHAIR
+	flags_inv_hide = HIDEFACE|HIDEMASK|HIDEEARS|HIDEALLHAIR|HIDEMOUTH
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
 	armor_melee = CLOTHING_ARMOR_NONE
 	armor_bullet = CLOTHING_ARMOR_NONE

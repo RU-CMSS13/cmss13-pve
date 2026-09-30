@@ -170,7 +170,7 @@
 	icon_state = "gladiator"
 	item_state = "gladiator"
 	flags_inventory = COVEREYES|BLOCKSHARPOBJ
-	flags_inv_hide = HIDEMASK|HIDEEARS|HIDEEYES|HIDEALLHAIR
+	flags_inv_hide = HIDEMASK|HIDEEARS|HIDEEYES|HIDEALLHAIR|HIDEMOUTH
 	siemens_coefficient = 1
 	armor_melee = CLOTHING_ARMOR_MEDIUM
 	armor_bullet = CLOTHING_ARMOR_LOW
@@ -939,7 +939,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "pyro_helmet"
 	desc = "M10 variant with complete facial coverage and internal breathing apparatus. Environmentally sealed with a full fitting of polymer compounds to resist burning."
 	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|BLOCKGASEFFECT|ALLOWCPR
-	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR|HIDEMOUTH
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROT
 	flags_atom = NO_NAME_OVERRIDE
@@ -1118,7 +1118,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "pmc_helmet_enclosed"
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
 	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR
-	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR|HIDEMOUTH
 	built_in_visors = list(new /obj/item/device/helmet_visor/pmc/alt)
 	start_down_visor_type = /obj/item/device/helmet_visor/pmc/alt
 
@@ -1257,7 +1257,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_HIGH
 	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR
-	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR|HIDEMOUTH
 	clothing_traits = list(TRAIT_EAR_PROTECTION)
 	anti_hug = 6
 
@@ -1294,7 +1294,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_bio = CLOTHING_ARMOR_VERYHIGHPLUS
 	armor_internaldamage = CLOTHING_ARMOR_HIGH
 	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|BLOCKGASEFFECT|FULL_DECAP_PROTECTION
-	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR|HIDEMOUTH
 	flags_marine_helmet = HELMET_DAMAGE_OVERLAY
 	unacidable = TRUE
 	anti_hug = 100
@@ -1354,7 +1354,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	else
 		flags_armor_protection |= BODY_FLAG_FACE|BODY_FLAG_EYES
 		flags_inventory |= COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|BLOCKGASEFFECT
-		flags_inv_hide |= HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+		flags_inv_hide |= HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR|HIDEMOUTH
 		icon_state = initial(icon_state)
 		to_chat(usr, SPAN_NOTICE("You deactivate integrated face armor plate."))
 	deactivated = !deactivated
@@ -1917,7 +1917,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_bio = CLOTHING_ARMOR_HIGH
 	armor_rad = CLOTHING_ARMOR_HIGHPLUS
 	armor_internaldamage = CLOTHING_ARMOR_VERYHIGH
-	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR|HIDEMOUTH
 	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR
 	anti_hug = 6
 	force = 20
@@ -2037,7 +2037,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
 	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
-	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR|HIDEMOUTH
 	flags_marine_helmet = HELMET_DAMAGE_OVERLAY
 
 /obj/item/clothing/head/helmet/marine/veteran/mercenary

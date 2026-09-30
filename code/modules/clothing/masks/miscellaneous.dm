@@ -38,7 +38,7 @@
 	name = "Snorkel"
 	desc = "For the Swimming Savant."
 	icon_state = "snorkel"
-	flags_inv_hide = HIDEFACE
+	flags_inv_hide = HIDEFACE|HIDEMOUTH
 	flags_armor_protection = 0
 
 /obj/item/clothing/mask/pig
@@ -58,7 +58,7 @@
 	icon_state = "balaclava"
 	item_state = "balaclava"
 	flags_inventory = COVERMOUTH|ALLOWREBREATH|ALLOWCPR
-	flags_inv_hide = HIDEFACE|HIDEALLHAIR
+	flags_inv_hide = HIDEFACE|HIDEALLHAIR|HIDEMOUTH
 	flags_cold_protection = BODY_FLAG_HEAD
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	w_class = SIZE_SMALL
@@ -81,7 +81,7 @@
 	desc = "Worn by robust fighters, flying high to defeat their foes!"
 	icon_state = "luchag"
 	item_state = "luchag"
-	flags_inv_hide = HIDEFACE|HIDEALLHAIR
+	flags_inv_hide = HIDEFACE|HIDEALLHAIR|HIDEMOUTH
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE
 	w_class = SIZE_SMALL
 	siemens_coefficient = 3
