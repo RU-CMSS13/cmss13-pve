@@ -730,6 +730,13 @@
 	if(!late_join)
 		add_verb(new_human.client, /client/proc/commander_rename_platoon)
 
+/datum/equipment_preset/uscm_ship/so/upp/airborne
+	name = "UPP Paratroop Platoon Commander (PltCo)"
+	paygrades = list(PAY_SHORT_UO1 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm_ship/so/upp/airborne/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "Airborne Telnyashka"
+
 /datum/equipment_preset/uscm_ship/so/pmc
 	name = "PMC Overwatch (PltCo)"
 	paygrades = list("PMC-OW" = JOB_PLAYTIME_TIER_0)

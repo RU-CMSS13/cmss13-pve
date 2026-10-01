@@ -41,6 +41,7 @@ em {font-style: normal; font-weight: bold;}
 .deptradio {color: #993399;}
 .comradio {color: #004080;}
 .syndradio {color: #6D3F40;}
+.opforvdv {color: #3A3DFF;}
 .centradio {color: #5C5C8A;}
 .airadio {color: #FF00FF;}
 

@@ -30,6 +30,9 @@ endmap
 map laituri
 endmap
 
+map navaga
+endmap
+
 map rover
 endmap
 

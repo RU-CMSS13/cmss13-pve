@@ -102,6 +102,22 @@
 	if(option == CPL_VARIANT)
 		gear_preset = gear_preset_secondary
 
+/datum/job/marine/medic/ai/upp/airborne
+	title = JOB_SQUAD_MEDIC_UPP_AIRBORNE
+	gear_preset = /datum/equipment_preset/uscm/medic/upp/airborne
+	gear_preset_secondary = /datum/equipment_preset/uscm/medic/upp/airborne/junior_sergeant
+	gear_preset_tertiary = /datum/equipment_preset/uscm/medic/upp/airborne/senior_private
+	gear_preset_quaternary = /datum/equipment_preset/uscm/medic/upp/airborne/private
+
+/datum/job/marine/medic/ai/upp/airborne/handle_job_options(option)
+	gear_preset = initial(gear_preset)
+	if(option == PVT_VARIANT)
+		gear_preset = gear_preset_quaternary
+	if(option == SR_PVT_VARIANT)
+		gear_preset = gear_preset_tertiary
+	if(option == JSGT_VARIANT)
+		gear_preset = gear_preset_secondary
+
 /datum/job/marine/medic/ai/forecon
 	title = JOB_SQUAD_MEDIC_FORECON
 	gear_preset = /datum/equipment_preset/uscm/medic/forecon
@@ -136,6 +152,11 @@
 	name = JOB_SQUAD_MEDIC_FORECON_UPP
 	squad = SQUAD_SISSI
 	job = /datum/job/marine/medic/ai/upp/forecon
+
+/obj/effect/landmark/start/marine/medic/upp/airborne
+	name = JOB_SQUAD_MEDIC_UPP_AIRBORNE
+	squad = SQUAD_UPP_AIRBORNE
+	job = /datum/job/marine/medic/ai/upp/airborne
 
 /datum/job/marine/medic/ai/pmc
 	title = JOB_PMCPLAT_MEDIC

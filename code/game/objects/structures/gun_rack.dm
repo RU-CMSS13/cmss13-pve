@@ -229,6 +229,17 @@
 /obj/structure/gun_rack/ag80/empty
 	initial_stored = 0
 
+/obj/structure/gun_rack/ak82
+	icon_state = "ak82"
+	desc = "Some off-branded gun rack. Per SOF and UPPA regulations, weapons should be stored in secure safes and only given out when necessary. Of course, most (but not all!) units overlook this regulation, only storing their firearms in safes when inspection arrives."
+	max_stored = 6
+	initial_stored = 6
+	allowed_type = /obj/item/weapon/gun/rifle/ak82
+	populate_type = /obj/item/weapon/gun/rifle/ak82
+
+/obj/structure/gun_rack/ak82/unloaded
+	populate_type = /obj/item/weapon/gun/rifle/ak82/unloaded
+
 /obj/structure/gun_rack/nsg
 	name = "NSG L23A1 pulse rifle rack"
 	icon_state = "nsg"

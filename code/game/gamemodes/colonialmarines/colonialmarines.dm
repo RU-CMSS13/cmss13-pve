@@ -456,8 +456,10 @@
 				if(FACTION_UPP)
 					if(human.assigned_squad && human.assigned_squad.name == SQUAD_SISSI)
 						human.play_screen_text("<span class='maptext' style=font-size:24pt;text-align:left valign='top'><u>[uppertext(GLOB.round_statistics.round_name)]</u></span><br>" + "[SSmapping.configs[GROUND_MAP].map_name]<br>" + "[worldtime2text("hh:mm")], [time2text(REALTIMEOFDAY, "DD-MMM-[GLOB.game_year]")]<br>" + "Fox Stalkers<br>" + "[human.job], [human]<br>", /atom/movable/screen/text/screen_text/picture/fox_stalkers)
-					else
+					if(human.assigned_squad && human.assigned_squad.name == SQUAD_UPP)
 						human.play_screen_text("<span class='maptext' style=font-size:24pt;text-align:left valign='top'><u>[uppertext(GLOB.round_statistics.round_name)]</u></span><br>" + "[SSmapping.configs[GROUND_MAP].map_name]<br>" + "[worldtime2text("hh:mm")], [time2text(REALTIMEOFDAY, "DD-MMM-[GLOB.game_year]")]<br>" + "Red Dawn<br>" + "[human.job], [human]<br>", /atom/movable/screen/text/screen_text/picture/red_dawn)
+					if(human.assigned_squad && human.assigned_squad.name == SQUAD_UPP_AIRBORNE)
+						human.play_screen_text("<span class='maptext' style=font-size:24pt;text-align:left valign='top'><u>[uppertext(GLOB.round_statistics.round_name)]</u></span><br>" + "[SSmapping.configs[GROUND_MAP].map_name]<br>" + "[worldtime2text("hh:mm")], [time2text(REALTIMEOFDAY, "DD-MMM-[GLOB.game_year]")]<br>" + "Crimson Comet<br>" + "[human.job], [human]<br>", /atom/movable/screen/text/screen_text/picture/crimson_comet)
 				if(FACTION_PMC)
 					human.play_screen_text("<span class='maptext' style=font-size:24pt;text-align:left valign='top'><u>[uppertext(GLOB.round_statistics.round_name)]</u></span><br>" + "[SSmapping.configs[GROUND_MAP].map_name]<br>" + "[worldtime2text("hh:mm")], [time2text(REALTIMEOFDAY, "DD-MMM-[GLOB.game_year]")]<br>" + "Azure-15<br>" + "[human.job], [human]<br>", /atom/movable/screen/text/screen_text/picture/azure)
 				if(FACTION_TWE)
