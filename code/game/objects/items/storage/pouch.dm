@@ -530,6 +530,10 @@
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/pistol/vp78(src)
 
+/obj/item/storage/pouch/magazine/pistol/large/type73/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/pistol/t73(src)
+
 /obj/item/storage/pouch/magazine/pulse_rifle/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/rifle(src)

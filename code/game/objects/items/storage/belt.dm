@@ -2302,6 +2302,28 @@
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/revolver/upp(src)
 
+/obj/item/storage/belt/gun/type47/sof/canc_blackops
+	desc = "This UPP-designed sidearm rig can very snugly and securely fit a M48A5, Type-73, NP92, or a ZHNK-72, and their magazines or speedloaders. However, it lacks versatility in stored weaponry."
+	can_hold = list(
+		/obj/item/weapon/gun/pistol/t73,
+		/obj/item/ammo_magazine/pistol/t73,
+		/obj/item/ammo_magazine/pistol/t73_impact,
+		/obj/item/weapon/gun/pistol/np92,
+		/obj/item/ammo_magazine/pistol/np92,
+		/obj/item/ammo_magazine/pistol/np92/suppressed/tranq,
+		/obj/item/weapon/gun/revolver/upp,
+		/obj/item/ammo_magazine/revolver/upp,
+		/obj/item/ammo_magazine/revolver/upp/shrapnel,
+		/obj/item/weapon/gun/pistol/m1911/socom/officer,
+		/obj/item/ammo_magazine/pistol/m1911,
+		/obj/item/ammo_magazine/pistol/m1911/super,
+	)
+
+/obj/item/storage/belt/gun/type47/sof/canc_blackops/m48a5/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/m1911/socom/officer())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/pistol/m1911(src)
+
 //Crazy Ivan's belt reskin
 /obj/item/storage/belt/gun/type47/ivan
 	name = "The Rack"
