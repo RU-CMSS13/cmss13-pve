@@ -5434,3 +5434,8 @@
 
 /turf/open/floor/almayer_hull/outerhull_dir_alt/northwest
 	dir = NORTHWEST
+
+// SSV Pallada
+
+/turf/open/floor/plating/plating_catwalk/strata_green
+	icon = 'icons/turf/floors/strata_floor_green.dmi'
