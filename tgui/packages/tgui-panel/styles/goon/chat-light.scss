@@ -41,6 +41,14 @@ img.icon {
   vertical-align: bottom;
 }
 
+img.icon.accent_tag {
+  width: 96px;
+  height: 60px;
+  vertical-align: middle;
+  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: pixelated;
+}
+
 a {
   color: #0000ff;
 }
