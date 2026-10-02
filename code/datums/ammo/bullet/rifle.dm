@@ -6,7 +6,7 @@
 
 //====== 10X24 Pulse Rifle
 /datum/ammo/bullet/rifle
-	name = "light-explosive 10x24 bullet"
+	name = "10x24 bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	damage = 40
 	penetration = ARMOR_PENETRATION_TIER_1
@@ -63,7 +63,7 @@
 
 
 /datum/ammo/bullet/rifle/ap
-	name = "light-explosive armor-piercing 10x24 bullet"
+	name = "armor-piercing 10x24 bullet"
 
 	damage = 30
 	penetration = ARMOR_PENETRATION_TIER_8

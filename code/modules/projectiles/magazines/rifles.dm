@@ -5,8 +5,8 @@
 //M41A (MK2) PULSE RIFLE AMMUNITION
 
 /obj/item/ammo_magazine/rifle
-	name = "\improper M41A LE magazine (10x24mm)"
-	desc = "A 10mm Light Explosive assault rifle magazine."
+	name = "\improper M41A magazine (10x24mm)"
+	desc = "A 10mm assault rifle magazine."
 	caliber = "10x24mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
 	icon_state = "m41a"
@@ -19,8 +19,8 @@
 	ammo_band_icon_empty = "+m41a_band_e"
 
 /obj/item/ammo_magazine/rifle/extended
-	name = "\improper M41A LE extended magazine (10x24mm)"
-	desc = "A 10mm assault Light Explosive extended rifle magazine."
+	name = "\improper M41A extended magazine (10x24mm)"
+	desc = "A 10mm assault extended rifle magazine."
 	icon_state = "m41a_extended"
 	max_rounds = 85
 	bonus_overlay = "m41a_ex"
@@ -47,8 +47,8 @@
 	current_rounds = 0
 
 /obj/item/ammo_magazine/rifle/ap
-	name = "\improper M41A LEAP magazine (10x24mm)"
-	desc = "A 10mm Light Explosive Armor Piercing magazine."
+	name = "\improper M41A AP magazine (10x24mm)"
+	desc = "A 10mm Armor Piercing magazine."
 	default_ammo = /datum/ammo/bullet/rifle/ap
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
@@ -87,7 +87,7 @@
 
 /obj/item/ammo_magazine/rifle/m41aMK1
 	name = "\improper M41A LE magazine (10x24mm)"
-	desc = "A long rectangular box magazine for the M41A. Holds 99 caseless M303 Light Explosive 10x24mm rounds."
+	desc = "A long rectangular box magazine for the M41A. Holds 99 caseless 10x24mm rounds."
 	icon_state = "m41a_mk1"
 	max_rounds = 99
 	gun_type = /obj/item/weapon/gun/rifle/m41aMK1
@@ -103,14 +103,14 @@
 	ammo_band_color = AMMO_BAND_COLOR_RUBBER
 
 /obj/item/ammo_magazine/rifle/m41aMK1/ap
-	name = "\improper M41A LEAP magazine (10x24mm)"
-	desc = "A long rectangular box magazine for the M41A. Holds 99 caseless 10x24mm M305 steelcore Light Explosive Armor Piercing rounds."
+	name = "\improper M41A AP magazine (10x24mm)"
+	desc = "A long rectangular box magazine for the M41A. Holds 99 caseless 10x24mm steelcore armor piercing rounds."
 	default_ammo = /datum/ammo/bullet/rifle/ap
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
 /obj/item/ammo_magazine/rifle/m41aMK1/heap
 	name = "\improper M41A HEAP magazine (10x24mm)"
-	desc = "A long rectangular box magazine for the M41A. Holds 99 caseless 10x24mm M309 Armor Piercing High Explosive rounds."
+	desc = "A long rectangular box magazine for the M41A. Holds 99 caseless 10x24mm High-Explosive Armor-Piercing rounds."
 	default_ammo = /datum/ammo/bullet/rifle/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 

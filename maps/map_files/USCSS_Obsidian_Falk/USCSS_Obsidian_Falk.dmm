@@ -8831,11 +8831,11 @@
 	dir = 8;
 	light_power = 0.7
 	},
-/obj/item/ammo_box/magazine/large{
+/obj/item/ammo_box/magazine/mk1/large{
 	pixel_x = -5;
 	pixel_y = -6
 	},
-/obj/item/ammo_box/magazine/large,
+/obj/item/ammo_box/magazine/mk1/large,
 /turf/open/floor/corsat/cargo,
 /area/firefly/squad_omega)
 "axm" = (
@@ -9123,9 +9123,9 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/squad_omega)
 "ayl" = (
-/obj/structure/gun_rack/m41a2_elite/unloaded/platoon,
+/obj/structure/gun_rack/m41/elite/unloaded/platoon,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/gun_rack/m41a2_elite/unloaded/platoon{
+/obj/structure/gun_rack/m41/elite/unloaded/platoon{
 	pixel_y = 27
 	},
 /turf/open/floor/corsat/cargo,

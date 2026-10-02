@@ -292,11 +292,6 @@
 /obj/item/storage/pouch/firstaid/ert/wy
 	icon_state = "wy_firstaid"
 
-/obj/item/storage/pouch/firstaid/wy_pve
-	desc = "A first aid pouch capable of storing a variety of basic medical supplies. It can hold ointments, bandages, injectors, splints and pill packets. This one has some extra stuff."
-	icon_state = "wy_firstaid"
-	storage_slots = 6
-
 ///Pistol pouch.
 /obj/item/storage/pouch/pistol
 	name = "sidearm pouch"
@@ -1537,6 +1532,14 @@
 	new /obj/item/tool/wirecutters/tactical(src)
 	new /obj/item/tool/crowbar/tactical(src)
 	new /obj/item/tool/weldingtool(src)
+	new /obj/item/device/multitool(src)
+	new /obj/item/tool/wrench(src)
+
+/obj/item/storage/pouch/tools/black/pmc/fill_preset_inventory()
+	new /obj/item/tool/screwdriver/tactical(src)
+	new /obj/item/tool/wirecutters/tactical(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/weldingtool/largetank(src)
 	new /obj/item/device/multitool(src)
 	new /obj/item/tool/wrench(src)
 

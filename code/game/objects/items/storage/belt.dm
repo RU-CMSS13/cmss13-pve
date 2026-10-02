@@ -1387,15 +1387,9 @@
 	else
 		return ..()
 
-/obj/item/storage/belt/grenade/wy
-	name="\improper WY-TM-386 pattern M40 Grenade rig"
-	desc="The WY-TM-386 is the standard load-bearing equipment of the W-Y security forces. It consists of a modular belt with various clips. This version is designed to carry bulk quantities of M40 pattern and AGM pattern Grenades."
-	storage_slots = 20
-	max_storage_space = 60
-
 /obj/item/storage/belt/grenade/upp
 	name="\improper Type 39 pattern grenade rig"
-	desc = "The Type 39 grenade rig is the standard-issue load-bearing equipment of the UPP military. It consists of a modular belt with various clips for secure fastening on the armor, and two big pouches for general grenade storage. Requisition department department recommends to avoid accidental falls and drops on full pouches."
+	desc = "The Type 39 grenade rig is the standard-issue load-bearing equipment of the UPP military. It consists of a modular belt with various clips for secure fastening on the armor, and two big pouches for general grenade storage. Requisition department recommends to avoid accidental falls and drops on full pouches."
 	icon_state = "upp_grenadebelt"
 	item_state = "upp_grenadebelt"
 	has_gamemode_skin = FALSE
@@ -1436,11 +1430,6 @@
 		new /obj/item/explosive/grenade/high_explosive/impact(src)
 		new /obj/item/explosive/grenade/high_explosive/airburst/buckshot(src)
 
-/obj/item/storage/belt/grenade/large/wy
-	name="\improper WY-TM-386 pattern M40 Grenade rig Mk. II"
-	desc="The WY-TM-386 Mk. II is is an upgraded version of the m40 grenade rig, with more storage capacity."
-	storage_slots = 25
-	max_storage_space = 75
 
 /obj/item/storage/belt/grenade/large/upp
 	name="\improper Type 40 pattern grenade rig"
@@ -2542,8 +2531,8 @@
 
 /obj/item/storage/belt/gun/smartgunner/commando/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78/whiteout())
-	new /obj/item/ammo_magazine/pistol/vp78/incendiary
-	new /obj/item/ammo_magazine/pistol/vp78/incendiary
+	new /obj/item/ammo_magazine/pistol/vp78/incendiary(src)
+	new /obj/item/ammo_magazine/pistol/vp78/incendiary(src)
 	new /obj/item/ammo_magazine/smartgun/dirty(src)
 	new /obj/item/ammo_magazine/smartgun/dirty(src)
 	new /obj/item/ammo_magazine/smartgun/dirty(src)

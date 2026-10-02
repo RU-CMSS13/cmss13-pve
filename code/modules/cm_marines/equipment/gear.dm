@@ -165,9 +165,9 @@
 
 /obj/item/reagent_container/food/snacks/protein_pack/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 12)
+	reagents.add_reagent("nutriment", 8)
 	reagents.add_reagent("coco", 8)
-	bitesize = 5
+	bitesize = 4
 
 /obj/item/reagent_container/food/snacks/protein_pack2
 	name = "strawberry Preemptive Action nutrition bar"
@@ -179,9 +179,9 @@
 
 /obj/item/reagent_container/food/snacks/protein_pack2/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 12)
+	reagents.add_reagent("nutriment", 8)
 	reagents.add_reagent("strawberrypowder", 8)
-	bitesize = 5
+	bitesize = 4
 
 /obj/item/reagent_container/food/snacks/protein_pack3
 	name = "vanilla Preemptive Action nutrition bar"
@@ -193,9 +193,9 @@
 
 /obj/item/reagent_container/food/snacks/protein_pack3/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 12)
+	reagents.add_reagent("nutriment", 8)
 	reagents.add_reagent("vanilla", 8)
-	bitesize = 5
+	bitesize = 4
 
 /obj/item/reagent_container/food/snacks/mre_pack
 	name = "\improper generic MRE pack"
@@ -212,8 +212,8 @@
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal1/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 50)
-	bitesize = 10
+	reagents.add_reagent("nutriment", 9)
+	bitesize = 3
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal2
 	name = "\improper mechanically prepared meal (ham and potatoes)"
@@ -222,8 +222,8 @@
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal2/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 30)
-	bitesize = 6
+	reagents.add_reagent("nutriment", 9)
+	bitesize = 2
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal3
 	name = "\improper mechanically prepared meal (spaghetti)"
@@ -232,8 +232,8 @@
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal3/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 30)
-	bitesize = 6
+	reagents.add_reagent("nutriment", 9)
+	bitesize = 3
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal4
 	name = "\improper mechanically prepared meal (pizza)"
@@ -242,8 +242,8 @@
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal4/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 30)
-	bitesize = 6
+	reagents.add_reagent("nutriment", 9)
+	bitesize = 3
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal5
 	name = "\improper mechanically prepared meal (chicken)"
@@ -252,8 +252,8 @@
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal5/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 30)
-	bitesize = 6
+	reagents.add_reagent("nutriment", 9)
+	bitesize = 3
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal6
 	name = "\improper mechanically prepared meal (vegetarian tofu)"
@@ -262,8 +262,8 @@
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal6/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 30)
-	bitesize = 6
+	reagents.add_reagent("nutriment", 9)
+	bitesize = 3
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal7
 	name = "\improper mechanically prepared meal (macaroni and cheese)"
@@ -272,8 +272,8 @@
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal7/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 30)
-	bitesize = 6
+	reagents.add_reagent("nutriment", 9)
+	bitesize = 3
 
 /obj/item/reagent_container/food/snacks/mre_pack/xmas1
 	name = "\improper mechanically prepared meal (sugar cookies)"
@@ -283,7 +283,7 @@
 
 /obj/item/reagent_container/food/snacks/mre_pack/xmas1/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 30)
+	reagents.add_reagent("nutriment", 15)
 	reagents.add_reagent("sugar", 9)
 	bitesize = 8
 
@@ -295,7 +295,7 @@
 
 /obj/item/reagent_container/food/snacks/mre_pack/xmas2/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 30)
+	reagents.add_reagent("nutriment", 15)
 	reagents.add_reagent("sugar", 9)
 	bitesize = 8
 
@@ -307,7 +307,7 @@
 
 /obj/item/reagent_container/food/snacks/mre_pack/xmas3/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 30)
+	reagents.add_reagent("nutriment", 15)
 	reagents.add_reagent("sugar", 9)
 	bitesize = 8
 
@@ -318,8 +318,8 @@
 
 /obj/item/reagent_container/food/snacks/mre_pack/thanksgiving/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 25)
-	bitesize = 5
+	reagents.add_reagent("nutriment", 10)
+	bitesize = 3
 
 /obj/item/reagent_container/food/snacks/mre_pack/thanksgiving2
 	name = "\improper mechanically prepared meal (steak and potato)"
@@ -328,8 +328,8 @@
 
 /obj/item/reagent_container/food/snacks/mre_pack/thanksgiving2/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 25)
-	bitesize = 5
+	reagents.add_reagent("nutriment", 10)
+	bitesize = 3
 
 /obj/item/reagent_container/food/snacks/mre_pack/thanksgiving3
 	name = "\improper mechanically prepared meal (shrimp and rice)"
@@ -338,8 +338,8 @@
 
 /obj/item/reagent_container/food/snacks/mre_pack/thanksgiving3/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 25)
-	bitesize = 5
+	reagents.add_reagent("nutriment", 10)
+	bitesize = 3
 
 //UPP Tray Food
 
@@ -353,7 +353,7 @@
 
 /obj/item/reagent_container/food/snacks/mre_pack/upp/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 50)
+	reagents.add_reagent("nutriment", 15)
 
 /obj/item/reagent_container/food/snacks/mre_pack/upp/meal1
 	name = "\improper UPP Prepared Meal (Chow mein)"
@@ -418,7 +418,7 @@
 
 /obj/item/reagent_container/food/snacks/mre_pack/rmc/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 50)
+	reagents.add_reagent("nutriment", 15)
 
 /obj/item/reagent_container/food/snacks/mre_pack/rmc/meal1
 	name = "\improper RMC Prepared Meal (Roast Beef)"
