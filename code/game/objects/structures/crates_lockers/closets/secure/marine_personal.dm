@@ -255,3 +255,41 @@
 
 /obj/structure/closet/secure_closet/marine_personal/rmc/troop_commander
 	job = JOB_TWE_RMC_LIEUTENANT
+
+// ==WY STRIKE TEAM PMC== //
+
+/obj/structure/closet/secure_closet/marine_personal/pmc/small/spawn_gear()
+	new /obj/item/clothing/under/marine/veteran/pmc/leader/commando(src)
+	new /obj/item/clothing/head/cmcap/weyyu(src)
+	new /obj/item/device/radio/headset/distress/pmc/platoon(src)
+	new /obj/item/clothing/shoes/veteran/pmc/commando/knife(src)
+
+/obj/structure/closet/secure_closet/marine_personal/pmc/small/rto
+	job = JOB_SQUAD_RTO
+
+/obj/structure/closet/secure_closet/marine_personal/pmc/small/rto/spawn_gear()
+	new /obj/item/clothing/head/cmcap/weyyu/guard/engineer(src)
+	new /obj/item/clothing/under/marine/veteran/pmc/engineer(src)
+	new /obj/item/device/radio/headset/distress/pmc/platoon(src)
+	new /obj/item/clothing/shoes/veteran/pmc/commando/knife(src)
+
+/obj/structure/closet/secure_closet/marine_personal/pmc/small/rifleman
+	job = JOB_SQUAD_MARINE
+
+/obj/structure/closet/secure_closet/marine_personal/pmc/small/smartgunner
+	job = JOB_SQUAD_SMARTGUN
+
+/obj/structure/closet/secure_closet/marine_personal/pmc/small/corpsman
+	job = JOB_SQUAD_MEDIC
+
+/obj/structure/closet/secure_closet/marine_personal/pmc/small/squad_leader
+	job = JOB_SQUAD_TEAM_LEADER
+
+/obj/structure/closet/secure_closet/marine_personal/pmc/small/platoon_leader
+	job = JOB_SQUAD_LEADER
+
+/obj/structure/closet/secure_closet/marine_personal/pmc/small/platoon_leader/spawn_gear()
+	new /obj/item/clothing/under/marine/veteran/pmc/leader/commando/leader(src)
+	new /obj/item/clothing/head/cmcap/weyyu/guard/lead/commando(src)
+	new /obj/item/device/radio/headset/distress/pmc/platoon(src)
+	new /obj/item/clothing/shoes/veteran/pmc/commando/knife(src)

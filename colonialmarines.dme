@@ -963,6 +963,7 @@
 #include "code\game\machinery\colony_floodlights.dm"
 #include "code\game\machinery\constructable_frame.dm"
 #include "code\game\machinery\cryo.dm"
+#include "code\game\machinery\cryoease.dm"
 #include "code\game\machinery\cryopod.dm"
 #include "code\game\machinery\deployable.dm"
 #include "code\game\machinery\door_control.dm"
