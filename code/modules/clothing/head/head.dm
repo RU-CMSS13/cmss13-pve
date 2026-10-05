@@ -1045,7 +1045,7 @@
 	icon = 'icons/obj/items/clothing/hats/hats_by_faction/TWE.dmi'
 	item_icons = list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/TWE.dmi'
-)
+	)
 
 /obj/item/clothing/head/beanie/royal_marine/turban
 	name = "royal marine turban"
