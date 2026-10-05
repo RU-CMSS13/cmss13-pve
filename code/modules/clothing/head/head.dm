@@ -485,6 +485,14 @@
 	name = "\improper PMC guard leader tactical cap"
 	icon_state = "guard_lead_cap"
 
+// USCSS Cyclops
+
+/obj/item/clothing/head/cmcap/weyyu/guard/engineer
+	name = "\improper W-Y Commando engineer tactical cap"
+
+/obj/item/clothing/head/cmcap/weyyu/guard/lead/commando
+	name = "\improper W-Y Commando leader tactical cap"
+
 /obj/item/clothing/head/cmo
 	name = "\improper Chief Medical Officer's Peaked Cap"
 	desc = "A peaked cap given to high-ranking civilian medical officers. Looks just a touch silly."

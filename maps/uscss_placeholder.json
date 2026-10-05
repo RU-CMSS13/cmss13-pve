@@ -1,0 +1,8 @@
+{
+    "map_name": "USCSS Placeholder",
+    "map_path": "map_files/USCSS_Placeholder",
+    "map_file": "uscss_placeholder.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "platoon": "/datum/squad/marine/pmc/small"
+}

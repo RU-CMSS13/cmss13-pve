@@ -1,6 +1,8 @@
+#include "modules\implants\corporate_explosive_implant.dm"
 #include "modules\mob\living\carbon\human\emote.dm"
 //хуйня которую я не знаю куда запихать
 // admin tools
+#include "admin_tools\corporate_implant_panel.dm"
 #include "admin_tools\dice.dm"
 #include "admin_tools\whitelist_tools.dm"
 // pixel shifting
