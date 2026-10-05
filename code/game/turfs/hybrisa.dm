@@ -1274,3 +1274,15 @@
 	icon = 'icons/turf/walls/hybrisa_spaceport_walls.dmi'
 	icon_state = "hwall"
 	walltype = WALL_REINFORCED
+
+/turf/open/floor/hybrisa/tile/tilegrey/broken
+	icon_state = "tilegrey_broken"
+
+/turf/open/floor/hybrisa/tile/tilegrey/broken/north
+	dir = NORTH
+
+/turf/open/floor/hybrisa/tile/tilegrey/broken/east
+	dir = EAST
+
+/turf/open/floor/hybrisa/tile/tilegrey/broken/west
+	dir = WEST

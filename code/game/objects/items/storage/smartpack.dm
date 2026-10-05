@@ -322,6 +322,17 @@
 	item_state = "w_smartpack"
 	icon_state = "w_smartpack"
 
+/obj/item/storage/backpack/marine/smartpack/a1
+	name = "\improper S-V42A1  backpack"
+	desc = "A revised joint project between the USCM and Weyland-Yutani. It is said to be top-class engineering and state of the art technology with a built-in shoulder-lamp."
+	item_state = "smartpack_a1"
+	icon_state = "smartpack_a1"
+
+/obj/item/storage/backpack/marine/smartpack/a1/lb_black
+	name = "\improper LB-S-V42A1 backpack"
+	desc = "A Lasalle Bionational redesign of the S-V42 backpack, bearing a remarkable resemblance to a joint USCM and Weyland-Yutani project. Lasalle insists the similarities are purely coincidental. It features an integrated shoulder lamp."
+	item_state = "b_smartpack_a1"
+	icon_state = "b_smartpack_a1"
 
 #undef BACKPACK_LIGHT_LEVEL
 #undef PROTECTIVE_COST

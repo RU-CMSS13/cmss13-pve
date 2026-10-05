@@ -291,3 +291,6 @@
 	else
 		..(sourcemob, message, verb, language, italics)
 #endif // ifdef OBJECTS_PROXY_SPEECH
+
+/obj/structure/machinery/recharge_station/alt
+	icon = 'icons/obj/structures/machinery/synth_repair_station.dmi'

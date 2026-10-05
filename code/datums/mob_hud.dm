@@ -28,6 +28,7 @@ GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, flatten_numeric_alist(alist(
 	MOB_HUD_HUNTER = new /datum/mob_hud/hunter_hud(),
 	MOB_HUD_HUNTER_CLAN = new /datum/mob_hud/hunter_clan(),
 	MOB_HUD_EXECUTE = new /datum/mob_hud/execute_hud(),
+	MOB_HUD_FACTION_LB = new /datum/mob_hud/faction/lasalle_bionational(),
 	)))
 
 /datum/mob_hud
@@ -225,6 +226,9 @@ GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, flatten_numeric_alist(alist(
 
 /datum/mob_hud/faction/conam
 	faction_to_check = FACTION_CONAM
+
+/datum/mob_hud/faction/lasalle_bionational
+	faction_to_check = FACTION_LASALLE_BIONATIONAL
 
 /datum/mob_hud/faction/twe
 	faction_to_check = FACTION_TWE

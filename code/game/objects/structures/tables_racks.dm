@@ -717,3 +717,8 @@
 	. = ..()
 	if(.)
 		deconstruct(FALSE)
+
+/obj/structure/surface/rack/long
+	icon_state = "longrack"
+	parts = /obj/item/frame/rack
+	debris = list(/obj/item/frame/rack)

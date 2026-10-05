@@ -605,3 +605,54 @@ GLOBAL_DATUM_INIT(above_blackness_backdrop, /atom/movable/above_blackness_backdr
 
 #undef DOUBLE_BAND
 #undef TRIPLE_BAND
+
+/obj/structure/stairs/perspective/ramp
+	icon = 'icons/obj/structures/stairs/perspective_stairs_ramp.dmi'
+	icon_state = "ramp_multi"
+
+/obj/structure/stairs/rock/engineer_temple //instance these for the required icons
+	icon = 'icons/obj/structures/stairs/stairs_temple.dmi'
+	icon_state = "rock_stairs"
+
+/obj/structure/ore_box/alt
+	name = "metal ore box"
+	desc = "A heavy metal box used for storing ore."
+	icon_state = "orebox_alt_1"
+
+/obj/structure/ore_box/alt/alt_1
+	icon_state = "orebox_alt_2"
+
+/obj/structure/ore_box/alt/alt_2
+	icon_state = "orebox_alt_3"
+
+/obj/structure/ore_box/alt/alt_3
+	icon_state = "orebox_alt_4"
+
+/obj/structure/ore_box/alt/metal_container_colorable
+	name = "metal container"
+	desc = "A heavy metal container used for storing various materials."
+	icon_state = "metal_box"
+
+/obj/structure/ore_box/alt/attack_alien(mob/living/carbon/xenomorph/xeno)
+	if(xeno.a_intent == INTENT_HARM)
+		if(unslashable)
+			return
+		xeno.animation_attack_on(src)
+		xeno.visible_message(SPAN_DANGER("[xeno] slices [src] apart!"))
+		playsound(src, 'sound/effects/metalhit.ogg')
+		to_chat(xeno, SPAN_WARNING("We slice the [src] apart!"))
+		deconstruct(FALSE)
+		return XENO_ATTACK_ACTION
+	else
+		attack_hand(xeno)
+		return XENO_NONCOMBAT_ACTION
+
+/obj/structure/ore_box/alt/handle_tail_stab(mob/living/carbon/xenomorph/xeno, blunt_stab)
+	if(unslashable)
+		return TAILSTAB_COOLDOWN_NONE
+	playsound(src, 'sound/effects/metalhit.ogg', 25, 1)
+	deconstruct(FALSE)
+	xeno.visible_message(SPAN_DANGER("[xeno] destroys [src] with its tail!"),
+	SPAN_DANGER("We destroy [src] with our tail!"), null, 5, CHAT_TYPE_XENO_COMBAT)
+	xeno.emote("tail")
+	return TAILSTAB_COOLDOWN_NORMAL

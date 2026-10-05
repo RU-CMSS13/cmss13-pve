@@ -578,3 +578,14 @@
 
 /turf/closed/shuttle/dropship_clf/Fire/transparent
 	opacity = FALSE
+
+/turf/closed/shuttle/ert/transparent
+	opacity = FALSE
+
+/turf/closed/shuttle/dropship_lb
+	name = "\improper UD2-LB 'Remedy'"
+	icon = 'icons/turf/dropship_lb.dmi'
+	icon_state = "0,0"
+
+/turf/closed/shuttle/dropship_lb/transparent
+	opacity = FALSE

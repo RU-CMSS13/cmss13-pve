@@ -2384,3 +2384,19 @@
 
 /obj/item/storage/internal/accessory/black_vest/m3grenade/pmc
 	storage_slots = 15
+
+/obj/item/clothing/accessory/patch/seegson
+	name = "Seegson Corporation patch"
+	desc = "An old corporate patch bearing the logo of Seegson Corporation, once known for its cheap, unreliable technology. Wearing it implies loyalty to profit over people."
+	icon_state = "seegson"
+	item_state_slots = list(WEAR_AS_GARB = "seegson")
+
+/obj/item/clothing/accessory/patch/lasalle
+	name = "Lasalle Bionational Corporation patch"
+	desc = "A patch bearing the insignia of Lasalle Bionational Corporation. Known for cutting-edge biological research and controversial experiments, it's emblem represents progress pursued at any cost."
+	icon_state = "lasalle"
+	item_state_slots = list(WEAR_AS_GARB = "lasalle")
+
+/obj/item/clothing/accessory/storage/droppouch/black
+	name = "black drop pouch"
+	icon_state = "drop_pouch_black"

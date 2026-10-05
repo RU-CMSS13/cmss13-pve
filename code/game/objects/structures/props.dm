@@ -2079,3 +2079,145 @@
 	light_color = "#BB3F3F"
 	light_range = 2
 	light_power = 1
+
+/obj/structure/prop/invuln/working_joe/large_storage
+	name = "synthetic storage unit"
+	desc = "A vertical storage bay designed to house inactive Working Joe synthetics, keeping them bagged, preserved, and ready for deployment."
+	icon = 'icons/obj/structures/machinery/working_joe_storage.dmi'
+	icon_state = "working_joe_storage_bluebag1_alt"
+	unslashable = FALSE
+	wrenchable = FALSE
+	bound_height = 32
+	bound_width = 32
+	light_on = 1
+	light_color = "#dcc687"
+	light_range = 2
+	light_power = 1
+	explo_proof = FALSE
+	unacidable = FALSE
+
+/obj/effect/working_joe/corpse
+	icon = 'icons/obj/structures/props/working_joe_corpse.dmi'
+	icon_state = "working_joe_corpse"
+	layer = TURF_LAYER
+	plane = FLOOR_PLANE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+
+/obj/structure/prop/invuln/joey/bag
+	name = "synthetic storage unit"
+	desc = "A vertical storage bay designed to house inactive Working Joe synthetics, keeping them bagged, preserved, and ready for deployment."
+	icon = 'icons/obj/structures/machinery/working_joe_storage.dmi'
+	icon_state = "working_joe_storage_bluebag1_alt"
+	bound_height = 32
+	bound_width = 32
+	light_on = 1
+	light_color = "#dcc687"
+	light_range = 2
+	light_power = 1
+	explo_proof = FALSE
+
+/obj/structure/prop/fire_colony
+	icon = 'icons/obj/structures/props/ice_colony/props.dmi'
+	icon_state = "pyro_tray_1"
+	density = TRUE
+
+/obj/structure/prop/fire_colony/dense
+	projectile_coverage = 10
+	health = 75
+
+/obj/structure/prop/fire_colony/dense/attack_alien(mob/living/carbon/xenomorph/xeno)
+	if(xeno.a_intent == INTENT_HARM)
+		if(unslashable)
+			return
+		xeno.animation_attack_on(src)
+		playsound(loc, 'sound/effects/metalhit.ogg', 25, 1)
+		xeno.visible_message(SPAN_DANGER("[xeno] slices [src] apart!"),
+		SPAN_DANGER("We slice [src] apart!"), null, 5, CHAT_TYPE_XENO_COMBAT)
+		deconstruct(FALSE)
+		return XENO_ATTACK_ACTION
+	else
+		attack_hand(xeno)
+		return XENO_NONCOMBAT_ACTION
+
+/obj/structure/prop/fire_colony/dense/handle_tail_stab(mob/living/carbon/xenomorph/xeno, blunt_stab)
+	if(unslashable)
+		return TAILSTAB_COOLDOWN_NONE
+	playsound(src, 'sound/effects/metalhit.ogg', 25, 1)
+	deconstruct(FALSE)
+	xeno.visible_message(SPAN_DANGER("[xeno] destroys [src] with its tail!"),
+	SPAN_DANGER("We destroy [src] with our tail!"), null, 5, CHAT_TYPE_XENO_COMBAT)
+	xeno.emote("tail")
+	return TAILSTAB_COOLDOWN_NORMAL
+
+/obj/item/fire_colony
+	icon = 'icons/obj/structures/props/ice_colony/props.dmi'
+	name = "pyrotrinium tray"
+
+/obj/item/fire_colony/pyrotrinium_tray
+	icon = 'icons/obj/structures/props/ice_colony/props.dmi'
+	name = "pyrotrinium tray_1"
+	desc = "It is a tray filled with dark red, clustered pyrotrinium crystals."
+	icon_state = "pyro_tray_empty"
+	w_class = SIZE_MASSIVE
+
+/obj/item/fire_colony/pyrotrinium_tray/tray_4
+	icon_state = "pyro_tray_4"
+
+/obj/item/fire_colony/pyrotrinium_tray/tray_5
+	icon_state = "pyro_tray_5"
+
+/obj/item/fire_colony/pyrotrinium_tray/tray_6
+	icon_state = "pyro_tray_6"
+
+/obj/item/fire_colony/pyrotrinium_tray/tray_7
+	icon_state = "pyro_tray_7"
+
+/obj/item/fire_colony/pyrotrinium_crystal
+	icon = 'icons/obj/structures/props/ice_colony/props.dmi'
+	name = "pyrotrinium crystal"
+	desc = "It is a giant pyrotrinium crystal cluster."
+	icon_state = "pyro_crystal"
+	w_class = SIZE_LARGE
+	black_market_value = 1
+
+/obj/item/fire_colony/pyrotrinium_crystal/crystal_2
+	icon_state = "pyro_crystal_2"
+
+/obj/item/fire_colony/pyrotrinium_crystal/crystal_3
+	icon_state = "pyro_crystal_3"
+
+/obj/item/fire_colony/pyrotrinium_crystal/crystal_4
+	icon_state = "pyro_crystal_4"
+
+/obj/item/fire_colony/pyrotrinium_crystal/crystal_5
+	icon_state = "pyro_crystal_5"
+
+/obj/item/fire_colony/pyrotrinium_crystal/crystal_6
+	icon_state = "pyro_crystal_6"
+
+/obj/item/fire_colony/pyrotrinium_crystal/crystal_7
+	icon_state = "pyro_crystal_7"
+
+/obj/structure/prop/fire_colony/dense/planter_box/plated/dark
+	icon_state = "planter_box_lava"
+	name = "plated grow box"
+	desc = "The planter box is empty."
+	projectile_coverage = FALSE
+	density = FALSE
+	layer = TURF_LAYER
+	plane = FLOOR_PLANE
+
+/obj/structure/prop/fire_colony/dense/broken_ai_core
+	name = "sabotaged AI core"
+	desc = "The sabotaged central AI core that once coordinated the colony's 'Working Joe' network. It's screens and casing have been torn apart and it's internals deliberately destroyed, leaving it far beyond any practical repair."
+	icon = 'icons/obj/structures/machinery/ai.dmi'
+	icon_state = "hydra-damaged"
+	anchored = TRUE
+	density = TRUE
+	layer = OBJ_LAYER
+	bound_height = 64
+	bound_width = 96
+	unslashable = TRUE
+	unacidable = TRUE
+	explo_proof = TRUE
+	projectile_coverage = TRUE

@@ -123,3 +123,9 @@
 	desc = "These look pretty fancy."
 	icon_state = "white"
 	item_state = "white"
+
+/obj/item/clothing/gloves/black_leather
+	name = "stylish leather gloves"
+	desc = "Supple, black leather gloves crafted from the finest leather. Stylish, durable, and ready for work or play."
+	icon_state = "black_leather"
+	item_state = "black"

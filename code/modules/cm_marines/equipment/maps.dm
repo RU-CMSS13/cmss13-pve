@@ -236,6 +236,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_LV522_CHANCES_CLAIM_FORECON = new /obj/item/map/lv522_map(),
 		MAP_LV759_HYBRISA_PROSPERA = new /obj/item/map/lv759_map(),
 		MAP_LV759_HYBRISA_PROSPERA_REPAIRED = new /obj/item/map/lv759_map(),
+		MAP_FIRE_COLONY = new /obj/item/map/fire_colony(),
 		MAP_NEW_VARADERO = new /obj/item/map/new_varadero(),
 		MAP_NEW_VARADERO_REPAIRED = new /obj/item/map/new_varadero(),
 		MAP_DERELICT_ALMAYER = new /obj/item/map/almayer(),
@@ -329,3 +330,9 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 /obj/item/tacmap_map/Destroy()
 	QDEL_NULL(map)
 	return ..()
+
+/obj/item/map/fire_colony
+	name = "\improper LV-376 map"
+	desc = "A map of the Lasalle Bionational owned colony on LV-376, commonly known as 'Charon's Crucible'."
+	html_link = "images/1/18/Map_icecolony.png"
+	color = "#d2440c"

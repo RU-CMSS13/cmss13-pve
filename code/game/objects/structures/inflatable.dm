@@ -14,13 +14,11 @@
 		return
 	if(do_after(user, 0.5 SECONDS, INTERRUPT_ALL, BUSY_ICON_BUILD, src))
 		playsound(loc, 'sound/items/zip.ogg', 25, TRUE)
-		to_chat(user, SPAN_NOTICE(" You inflate [src]."))
+		to_chat(user, SPAN_NOTICE("You inflate [src]."))
 		var/obj/structure/inflatable/R = new inflatable_type(usr.loc)
 		src.transfer_fingerprints_to(R)
 		R.add_fingerprint(user)
 		qdel(src)
-
-
 
 /obj/item/inflatable/door
 	name = "inflatable door"
@@ -28,8 +26,6 @@
 	icon = 'icons/obj/items/inflatable.dmi'
 	icon_state = "folded_door"
 	inflatable_type = /obj/structure/inflatable/door
-
-
 
 /obj/structure/inflatable
 	name = "inflatable wall"
@@ -43,6 +39,9 @@
 
 	health = 50
 	var/deflated = FALSE
+	var/icon_suffix = ""
+	var/obj/item/inflatable/origin = /obj/item/inflatable
+	var/obj/structure/inflatable/poped_type = /obj/structure/inflatable/popped
 
 /obj/structure/inflatable/bullet_act(obj/projectile/Proj)
 	health -= Proj.damage
@@ -77,21 +76,24 @@
 		user.visible_message(SPAN_DANGER("[user] tears at [src]!"))
 
 /obj/structure/inflatable/attack_animal(mob/user as mob)
-	if(!isanimal(user)) return
+	if(!isanimal(user))
+		return
 	var/mob/living/simple_animal/M = user
-	if(M.melee_damage_upper <= 0) return
+	if(M.melee_damage_upper <= 0)
+		return
 	attack_generic(M, M.melee_damage_upper)
 
 
 /obj/structure/inflatable/attackby(obj/item/W as obj, mob/user as mob)
-	if(!istype(W)) return
+	if(!istype(W))
+		return
 
 	if (can_puncture(W))
 		visible_message(SPAN_DANGER("<b>[user] pierces [src] with [W]!</b>"))
 		deflate(1)
 	if(W.damtype == BRUTE || W.damtype == BURN)
 		hit(W.force)
-		..()
+		. = ..()
 	return
 
 /obj/structure/inflatable/proc/hit(damage, sound_effect = 1)
@@ -110,21 +112,21 @@
 	playsound(loc, 'sound/machines/hiss.ogg', 25, 1)
 	if(violent)
 		visible_message("[src] rapidly deflates!")
-		flick("wall_popping", src)
+		flick("wall_popping[icon_suffix]", src)
 		sleep(10)
 		deconstruct(FALSE)
 	else
 		visible_message("[src] slowly deflates.")
-		flick("wall_deflating", src)
+		flick("wall_deflating[icon_suffix]", src)
 		spawn(50)
 			deconstruct(TRUE)
 
 
 /obj/structure/inflatable/deconstruct(disassembled = TRUE)
 	if(!disassembled)
-		new /obj/structure/inflatable/popped(loc)
+		new poped_type(loc)
 	else
-		var/obj/item/inflatable/R = new /obj/item/inflatable(loc)
+		var/obj/item/inflatable/R = new origin(loc)
 		src.transfer_fingerprints_to(R)
 	return ..()
 
@@ -155,14 +157,12 @@
 	icon = 'icons/obj/items/inflatable.dmi'
 	icon_state = "wall_popped"
 
-
 /obj/structure/inflatable/popped/door
 	name = "popped inflatable door"
 	desc = "This used to be an inflatable door, now it's just a mess of plastic."
 
 	icon = 'icons/obj/items/inflatable.dmi'
 	icon_state = "door_popped"
-
 
 /obj/structure/inflatable/door //Based on mineral door code
 	name = "inflatable door"
@@ -175,6 +175,7 @@
 
 	var/open = FALSE
 	var/isSwitchingStates = FALSE
+	poped_type = /obj/structure/inflatable/popped/door
 
 /obj/structure/inflatable/door/attack_remote(mob/user as mob) //those aren't machinery, they're just big fucking slabs of a mineral
 	if(isRemoteControlling(user)) //so the AI can't open it
@@ -184,10 +185,12 @@
 	return TryToSwitchState(user)
 
 /obj/structure/inflatable/door/proc/TryToSwitchState(atom/user)
-	if(isSwitchingStates) return
+	if(isSwitchingStates)
+		return
 	if(ismob(user))
 		var/mob/M = user
-		if(world.time - user.last_bumped <= 60) return //NOTE do we really need that?
+		if(world.time - user.last_bumped <= 60)
+			return //NOTE do we really need that?
 		if(M.client)
 			if(iscarbon(M))
 				var/mob/living/carbon/C = M
@@ -205,7 +208,7 @@
 /obj/structure/inflatable/door/proc/open()
 	isSwitchingStates = TRUE
 	//playsound(loc, 'sound/effects/stonedoor_openclose.ogg', 25, 1)
-	flick("door_opening",src)
+	flick("door_opening[icon_suffix]",src)
 	addtimer(CALLBACK(src, PROC_REF(finish_open)), 1 SECONDS, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
 
 /obj/structure/inflatable/door/proc/finish_open()
@@ -220,7 +223,7 @@
 /obj/structure/inflatable/door/proc/close()
 	isSwitchingStates = TRUE
 	//playsound(loc, 'sound/effects/stonedoor_openclose.ogg', 25, 1)
-	flick("door_closing",src)
+	flick("door_closing[icon_suffix]",src)
 	addtimer(CALLBACK(src, PROC_REF(finish_close)), 1 SECONDS, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
 
 /obj/structure/inflatable/door/proc/finish_close()
@@ -234,41 +237,40 @@
 
 /obj/structure/inflatable/door/update_icon()
 	if(open)
-		icon_state = "door_open"
+		icon_state = "door_open[icon_suffix]"
 	else
-		icon_state = "door_closed"
+		icon_state = "door_closed[icon_suffix]"
 
 /obj/structure/inflatable/door/deflate(violent=0)
 	set waitfor = 0
 	playsound(loc, 'sound/machines/hiss.ogg', 25, 1)
 	if(violent)
 		visible_message("[src] rapidly deflates!")
-		flick("door_popping",src)
+		flick("door_popping[icon_suffix]",src)
 		sleep(10)
-		new /obj/structure/inflatable/popped/door(loc)
+		new poped_type(loc)
 		//var/obj/item/inflatable/door/torn/R = new /obj/item/inflatable/door/torn(loc)
 		//src.transfer_fingerprints_to(R)
 		qdel(src)
 	else
-		//to_chat(user, SPAN_NOTICE(" You slowly deflate the inflatable wall."))
+		//to_chat(user, SPAN_NOTICE("You slowly deflate the inflatable wall."))
 		visible_message("[src] slowly deflates.")
-		flick("door_deflating", src)
+		flick("door_deflating[icon_suffix]", src)
 		spawn(50)
-			var/obj/item/inflatable/door/R = new /obj/item/inflatable/door(loc)
+			var/obj/item/inflatable/R = new origin(loc)
 			src.transfer_fingerprints_to(R)
 			qdel(src)
-
-
-
-
-
 
 /obj/item/storage/briefcase/inflatable
 	name = "inflatable barrier box"
 	desc = "Contains inflatable walls and doors."
 	icon = 'icons/obj/items/storage/boxes.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/items/storage_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/items/storage_righthand.dmi',
+	)
 	icon_state = "inf_box"
-	item_state = "syringe_kit"
+	item_state = "box"
 	max_storage_space = 21
 
 /obj/item/storage/briefcase/inflatable/Initialize()
@@ -280,3 +282,68 @@
 	new /obj/item/inflatable(src)
 	new /obj/item/inflatable(src)
 	new /obj/item/inflatable(src)
+
+/obj/item/storage/briefcase/inflatable/small
+	w_class = SIZE_MEDIUM
+
+///// wall
+
+/obj/structure/inflatable/black
+	icon_state = "wall_black"
+	icon_suffix = "_black"
+	origin = /obj/item/inflatable/black
+	poped_type = /obj/structure/inflatable/popped/black
+
+/obj/item/inflatable/black
+	icon_state = "folded_wall_black"
+	inflatable_type = /obj/structure/inflatable/black
+
+/obj/structure/inflatable/orange
+	icon_state = "wall_orange"
+	icon_suffix = "_orange"
+	origin = /obj/item/inflatable/orange
+	poped_type = /obj/structure/inflatable/popped/orange
+
+/obj/item/inflatable/orange
+	icon_state = "folded_wall_orange"
+	inflatable_type = /obj/structure/inflatable/orange
+
+//// door
+
+/obj/structure/inflatable/door/black
+	icon_state = "door_closed_black"
+	icon_suffix = "_black"
+	origin = /obj/item/inflatable/door/black
+	poped_type = /obj/structure/inflatable/popped/door/black
+
+/obj/item/inflatable/door/black
+	icon_state = "folded_door_black"
+	inflatable_type = /obj/structure/inflatable/door/black
+
+/obj/structure/inflatable/door/orange
+	icon_state = "door_closed_orange"
+	icon_suffix = "_orange"
+	origin = /obj/item/inflatable/door/orange
+	poped_type = /obj/structure/inflatable/popped/door/orange
+
+/obj/item/inflatable/door/orange
+	icon_state = "folded_door_orange"
+	inflatable_type = /obj/structure/inflatable/door/orange
+
+//// popped
+
+/obj/structure/inflatable/popped/door/black
+	icon_state = "door_popped_black"
+	icon_suffix = "_black"
+
+/obj/structure/inflatable/popped/door/orange
+	icon_state = "door_popped_orange"
+	icon_suffix = "_orange"
+
+/obj/structure/inflatable/popped/black
+	icon_state = "wall_popped_black"
+	icon_suffix = "_black"
+
+/obj/structure/inflatable/popped/orange
+	icon_state = "wall_popped_orange"
+	icon_suffix = "_orange"

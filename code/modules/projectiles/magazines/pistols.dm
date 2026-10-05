@@ -416,3 +416,22 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 	icon_state = "skorpion" //PLACEHOLDER
 	gun_type = /obj/item/weapon/gun/pistol/skorpion
 	max_rounds = 20
+
+/obj/item/ammo_magazine/pistol/mod88
+	name = "\improper 88M4 AP magazine (9mm)"
+	desc = "A 9mm pistol magazine for the Mod88."
+	default_ammo = /datum/ammo/bullet/pistol/ap
+	caliber = "9mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/WY/pistols.dmi'
+	icon_state = "88m4"
+	max_rounds = 19
+	gun_type = /obj/item/weapon/gun/pistol/mod88
+	ammo_band_icon = "+88m4_band"
+	ammo_band_icon_empty = "+88m4_band_e"
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/pistol/mod88/penetrating
+	name = "\improper 88M4 wall-penetrating magazine (9mm)"
+	desc = "A wall-penetrating 9mm pistol magazine for the Mod88."
+	default_ammo = /datum/ammo/bullet/pistol/ap/penetrating
+	ammo_band_color = AMMO_BAND_COLOR_PENETRATING

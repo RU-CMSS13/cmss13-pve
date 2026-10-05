@@ -71,3 +71,17 @@
 	contents = list()
 	new /obj/item/clothing/suit/bio_suit/scientist( src )
 	new /obj/item/clothing/head/bio_hood/scientist( src )
+
+/obj/structure/closet/bionational_closet
+	name = "Lasalle Bionational biohazard suit closet"
+	desc = "It's a storage unit for Lasalle Bionational biohazard gear."
+	icon_state = "bion"
+	icon_closed = "bion"
+	icon_opened = "bionopen"
+
+/obj/structure/closet/bionational_closet/Initialize()
+	. = ..()
+	new /obj/item/clothing/accessory/patch/lasalle( src )
+	new /obj/item/clothing/suit/bio_suit/lasalle( src )
+	new /obj/item/clothing/head/bio_hood/lasalle( src )
+	new /obj/item/clothing/mask/gas/pmc/lasalle( src )
