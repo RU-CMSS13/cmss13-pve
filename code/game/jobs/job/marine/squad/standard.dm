@@ -178,8 +178,10 @@
 
 /datum/job/marine/standard/ai/pmc/small/rto
 	title = JOB_PMCPLAT_SMALL_RTO
-	gear_preset = /datum/equipment_preset/uscm/rto/upp
+	gear_preset = /datum/equipment_preset/uscm/pmc/rto
 	job_options = null
+	total_positions = 1
+	spawn_positions = 1
 
 /obj/effect/landmark/start/marine/pmc/small/rto
 	name = JOB_PMCPLAT_SMALL_RTO

@@ -515,6 +515,8 @@
 	. = ..()
 	MD.iff_signal = FACTION_PMC
 
+/obj/item/weapon/gun/smartgun/dirty/empty
+	current_mag = null
 
 //TERMINATOR SMARTGUN
 /obj/item/weapon/gun/smartgun/dirty/elite

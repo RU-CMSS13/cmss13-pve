@@ -1,0 +1,11995 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ai" = (
+/obj/structure/machinery/computer/supply_drop_console/limited/alternate,
+/turf/open/floor/corsat/box,
+/area/golden_arrow/supply)
+"al" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/door/airlock/almayer/secure/glass{
+	req_access = list();
+	name = "\improper Preparations Wing"
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/squad_one)
+"at" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/structure/machinery/prop/almayer/CICmap/pmc{
+	icon_state = "map";
+	pixel_x = -3;
+	pixel_y = 11
+	},
+/obj/item/reagent_container/food/drinks/cans/soylent{
+	pixel_x = 12;
+	pixel_y = 12
+	},
+/obj/structure/machinery/door_control{
+	id = "squadarmory";
+	name = "gear lockers door-control";
+	req_one_access = list(216, 211);
+	pixel_x = 13;
+	pixel_y = -1
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/briefing)
+"aw" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/corsat/red/west,
+/area/golden_arrow/platoonarmory)
+"aA" = (
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/small_pmc,
+/obj/effect/landmark/start/marine/medic/pmc/small,
+/turf/open/floor/almayer/silverfull2,
+/area/golden_arrow/cryo_cells)
+"aB" = (
+/obj/effect/decal/hybrisa/warning/redandwhite_NEcorner{
+	pixel_y = 1;
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"aD" = (
+/obj/structure/prop/invuln/lifeboat_hatch_placeholder/terminal{
+	layer = 2.1
+	},
+/obj/structure/sign/safety/manualopenclose,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"aJ" = (
+/obj/structure/blocker/invisible_wall,
+/obj/effect/decal/hybrisa/warning/redandwhite_E{
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"aK" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 8
+	},
+/turf/open/floor/corsat/box,
+/area/golden_arrow/medical)
+"aL" = (
+/obj/structure/pipes/vents/pump{
+	dir = 1
+	},
+/turf/open/floor/corsat/arrow_west,
+/area/golden_arrow/squad_one)
+"aO" = (
+/obj/structure/machinery/door/airlock/almayer/secure/glass{
+	req_access = list();
+	name = "\improper Hypersleep Bay"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/cryo_cells)
+"aR" = (
+/turf/open/floor/corsat/officesquares,
+/area/golden_arrow/briefing)
+"aT" = (
+/obj/structure/closet/secure_closet/marine_personal/pmc/small/rto{
+	pixel_x = -8;
+	pixel_y = 0
+	},
+/obj/structure/closet/secure_closet/marine_personal/pmc/small/smartgunner{
+	pixel_x = 7;
+	pixel_y = 0
+	},
+/obj/structure/machinery/light/blue/alt{
+	dir = 2
+	},
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/cryo_cells)
+"aY" = (
+/turf/open/floor/corsat/whitecorner,
+/area/golden_arrow/hangar)
+"bf" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_SWcorner,
+/obj/effect/decal/hybrisa/warning/redandwhite_N{
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/medical)
+"bo" = (
+/obj/effect/decal/hybrisa/warning/redandwhite_W,
+/turf/open/floor/corsat/arrow_west,
+/area/golden_arrow/prep_hallway)
+"bq" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_SEcorner{
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/briefing)
+"br" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delayone,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"bs" = (
+/obj/structure/pipes/vents/scrubber{
+	dir = 1
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_S{
+	pixel_y = 0
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"bx" = (
+/obj/structure/machinery/door/airlock/almayer/secure{
+	req_access = list();
+	dir = 2;
+	name = "\improper Head"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/cryo_cells)
+"by" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 1
+	},
+/obj/structure/prop/dam/crane{
+	bound_height = 32;
+	climbable = 1;
+	layer = 3.5;
+	pixel_y = -23
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"bJ" = (
+/obj/structure/closet/secure_closet/marine_personal/pmc/small/corpsman,
+/obj/structure/machinery/light/blue/alt{
+	dir = 1
+	},
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/cryo_cells)
+"bK" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/briefing)
+"bM" = (
+/turf/open/floor/prison/whitecorners2/north,
+/area/golden_arrow/squad_one)
+"bP" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/white,
+/area/golden_arrow/hangar)
+"bT" = (
+/obj/structure/stairs/perspective{
+	dir = 8;
+	icon_state = "p_stair_full"
+	},
+/turf/open/floor/plating/prison,
+/area/golden_arrow/squad_one)
+"bW" = (
+/turf/open/floor/corsat/white,
+/area/golden_arrow/lower_cargo)
+"bX" = (
+/obj/structure/platform/metal/hybrisa/metalplatform6/east,
+/turf/open/floor/prison/floor_plate_alt/west,
+/area/golden_arrow/squad_one)
+"bZ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/hybrisa/warning/redandwhite_NWcorner{
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/briefing)
+"cb" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/white/north,
+/area/golden_arrow/hangar)
+"cc" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 6
+	},
+/turf/open/floor/almayer/silverfull2,
+/area/golden_arrow/cryo_cells)
+"co" = (
+/obj/item/prop/helmetgarb/prescription_bottle{
+	desc = "A bottle of go-pills- for when cryosleep treats you a bit rougher than usual. Bad for you in the long-run, but...";
+	layer = 2.97;
+	name = "go-pills";
+	pixel_x = 15;
+	pixel_y = 11
+	},
+/obj/structure/surface/table/almayer{
+	color = "#aeaeae"
+	},
+/obj/item/clock{
+	pixel_x = -5;
+	pixel_y = 10
+	},
+/obj/item/attachable/scope/mini_iff{
+	pixel_y = 1;
+	pixel_x = -1
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/briefing)
+"cu" = (
+/obj/effect/decal/hybrisa/warning/redandwhite_N{
+	pixel_y = 1
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/corsat/red,
+/area/golden_arrow/platoonarmory)
+"cw" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/barricade/handrail/wire{
+	dir = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/squad_one)
+"cx" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/roof/cargocrane_tracks/vertical,
+/turf/open/floor/corsat/white/west,
+/area/golden_arrow/hangar)
+"cB" = (
+/obj/structure/window/framed/corsat,
+/turf/open/floor/plating/prison,
+/area/golden_arrow/cryo_cells)
+"cF" = (
+/obj/structure/machinery/disposal{
+	density = 0;
+	layer = 3.2;
+	pixel_y = 16
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"cH" = (
+/obj/structure/largecrate/supply/supplies/flares,
+/turf/open/floor/corsat/cargo,
+/area/golden_arrow/supply)
+"cL" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/door_control{
+	id = "squadblastdoor";
+	pixel_x = 22;
+	name = "Armory Blast Door Control"
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_NEcorner{
+	pixel_y = 1;
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/prep_hallway)
+"cQ" = (
+/obj/effect/decal/hybrisa/warning/redandwhite_N{
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/briefing)
+"cW" = (
+/obj/effect/decal/hybrisa/warning/redandwhite_N{
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/arrow_south,
+/area/golden_arrow/hangar)
+"cZ" = (
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 8
+	},
+/turf/open/floor/corsat/arrow_east,
+/area/golden_arrow/squad_one)
+"dk" = (
+/obj/structure/stairs/perspective{
+	dir = 4;
+	icon_state = "p_stair_full"
+	},
+/turf/open/floor/plating/prison,
+/area/golden_arrow/squad_one)
+"dp" = (
+/obj/structure/machinery/door_control{
+	id = "squadblastdoor";
+	pixel_x = -22;
+	name = "Armory Blast Door Control"
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_S{
+	pixel_y = 0
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_NWcorner{
+	pixel_y = 1
+	},
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/platoonarmory)
+"dw" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/three{
+	faction = "PMC"
+	},
+/turf/open/floor/plating/prison,
+/area/golden_arrow/briefing)
+"dA" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = -10
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice2";
+	pixel_y = 22
+	},
+/obj/structure/machinery/light/blue/alt{
+	dir = 1
+	},
+/turf/open/floor/almayer/silverfull,
+/area/golden_arrow/cryo_cells)
+"dD" = (
+/obj/structure/window/framed/almayer/hull,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	name = "\improper Overwatch Office Shutters";
+	unacidable = 1;
+	id = "overwatch"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/platoon_commander_rooms)
+"dF" = (
+/turf/open/floor/prison/floor_plate_alt/west,
+/area/golden_arrow/squad_one)
+"dG" = (
+/obj/structure/pipes/vents/scrubber{
+	dir = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/briefing)
+"dH" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = -1;
+	pixel_x = 9
+	},
+/turf/open/floor/almayer/silverfull,
+/area/golden_arrow/cryo_cells)
+"dK" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/largecrate/random/barrel/true_random,
+/obj/structure/largecrate/random/barrel/true_random{
+	pixel_x = -9;
+	pixel_y = 21
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"dL" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/prop/magazine/book/theartofwar{
+	pixel_x = 8;
+	pixel_y = 6
+	},
+/obj/item/paper_bin/uscm{
+	pixel_x = -8;
+	pixel_y = 5
+	},
+/obj/item/tool/pen{
+	pixel_x = -8
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoon_commander_rooms)
+"dM" = (
+/obj/structure/machinery/door/poddoor/hybrisa/ultra_reinforced_door{
+	name = "\improper Hangar Lockdown Blast Door";
+	dir = 4
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/lower_cargo)
+"dO" = (
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	layer = 3.4
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/turf/open/floor/hybrisa/carpet/carpetdarkerblue,
+/area/golden_arrow/dorms)
+"dR" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/smooth/endcap_right,
+/area/golden_arrow/hangar)
+"dS" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/golden_arrow/platoon_commander_rooms)
+"dW" = (
+/obj/structure/machinery/chem_dispenser/canteen,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/squad_one)
+"dX" = (
+/turf/open/floor/almayer_hull/outerhull_dir/southwest,
+/area/space)
+"dY" = (
+/obj/structure/largecrate/random/barrel/true_random,
+/obj/structure/machinery/light/blue/alt{
+	dir = 4
+	},
+/turf/open/floor/corsat/white/east,
+/area/golden_arrow/hangar)
+"ea" = (
+/obj/structure/pipes/vents/pump,
+/obj/structure/roof/cargocrane_tracks/vertical,
+/obj/effect/decal/hybrisa/warning/redandwhite_W,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"ec" = (
+/turf/open/floor/corsat/brown/east,
+/area/golden_arrow/lower_cargo)
+"eg" = (
+/obj/structure/closet/secure_closet/personal/cabinet{
+	req_access = null
+	},
+/obj/item/clothing/suit/storage/jacket/marine/service,
+/obj/item/clothing/suit/storage/jacket/marine/service/tanker,
+/turf/open/floor/almayer/edge/smooth/northeast,
+/area/golden_arrow/platoon_commander_rooms)
+"el" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 10
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_E{
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/arrow_east,
+/area/golden_arrow/prep_hallway)
+"em" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = -10
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/cryo_cells)
+"eq" = (
+/obj/structure/sign/safety/opens_up{
+	pixel_x = -17;
+	pixel_y = -4
+	},
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = -17;
+	pixel_y = 8
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_N{
+	pixel_y = 1
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_SWcorner,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/platoonarmory)
+"er" = (
+/obj/structure/machinery/cm_vending/sorted/marine_food,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/squad_one)
+"ex" = (
+/turf/open/floor/prison/whitecorners2/east,
+/area/golden_arrow/squad_one)
+"eE" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/door/airlock/almayer/secure/glass{
+	req_access = list();
+	name = "\improper Squad Team Leader Office";
+	req_one_access = list(216,211)
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/briefing)
+"eF" = (
+/turf/open/floor/corsat/white/west,
+/area/golden_arrow/lower_cargo)
+"eG" = (
+/obj/structure/surface/rack{
+	color = "#6b675e";
+	layer = 2.79
+	},
+/obj/item/weapon/gun/rifle/m41a/corporate/commando/regular{
+	pixel_y = 8
+	},
+/obj/item/weapon/gun/rifle/m41a/corporate/commando/regular{
+	pixel_y = -1
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/platoonarmory)
+"eH" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"eI" = (
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"eQ" = (
+/obj/structure/ladder{
+	height = -1;
+	id = "rover3"
+	},
+/obj/structure/sign/safety/medical{
+	pixel_y = 12;
+	pixel_x = 31
+	},
+/obj/structure/sign/safety/cryo{
+	pixel_x = 31
+	},
+/turf/open/floor/plating/prison,
+/area/golden_arrow/hangar)
+"eT" = (
+/obj/structure/machinery/disposal{
+	density = 0;
+	layer = 3.2;
+	pixel_y = 16
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = -10
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice2";
+	pixel_y = 22
+	},
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/dorms)
+"eX" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 1;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/briefing)
+"eZ" = (
+/obj/structure/machinery/autolathe,
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = -1;
+	pixel_x = 9
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"fa" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/golden_arrow/cargo_shuttle/lower)
+"ff" = (
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 4;
+	name = "\improper Hangar Lockdown Blast Door"
+	},
+/turf/open/floor/almayer/edge/smooth/north,
+/area/golden_arrow/hangar)
+"fg" = (
+/turf/open/floor/corsat/white,
+/area/golden_arrow/prep_hallway)
+"fi" = (
+/obj/structure/cargo_container/lockmart/left,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"fq" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 6
+	},
+/turf/open/floor/corsat/arrow_south,
+/area/golden_arrow/prep_hallway)
+"ft" = (
+/obj/structure/machinery/light/blue/alt{
+	dir = 2;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/squad_one)
+"fA" = (
+/turf/open/floor/corsat/arrow_west,
+/area/golden_arrow/hangar)
+"fC" = (
+/obj/structure/machinery/door/poddoor/almayer/grey/locked{
+	name = "\improper Cargo Elevator";
+	id = "cargolock"
+	},
+/turf/open/space/basic,
+/area/space)
+"fF" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/open/floor/corsat/officesquares,
+/area/golden_arrow/dorms)
+"fI" = (
+/obj/structure/cargo_container/arious/right{
+	opacity = 0
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"fJ" = (
+/obj/structure/machinery/cm_vending/sorted/tech/electronics_storage{
+	req_one_access = list()
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"fM" = (
+/obj/structure/closet/firecloset,
+/obj/structure/machinery/light/blue/alt{
+	dir = 2
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"fQ" = (
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 4;
+	name = "\improper Hangar Lockdown Blast Door"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/hangar)
+"fW" = (
+/obj/structure/machinery/shower{
+	pixel_y = 16
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/golden_arrow/cryo_cells)
+"gb" = (
+/turf/open/floor/corsat/brown/northeast,
+/area/golden_arrow/lower_cargo)
+"gc" = (
+/obj/structure/machinery/computer/cameras/wooden_tv/prop{
+	dir = 4;
+	layer = 3.2;
+	pixel_x = -8;
+	pixel_y = 6
+	},
+/obj/item/prop/helmetgarb/rabbitsfoot{
+	pixel_x = 6;
+	pixel_y = 10
+	},
+/obj/item/device/camera{
+	pixel_x = 7;
+	pixel_y = -2
+	},
+/obj/structure/sign/poster{
+	desc = "One of those hot, tanned babes back the beaches of good ol' Earth.";
+	icon_state = "poster12";
+	name = "Beach Babe Pinup";
+	pixel_x = -30;
+	pixel_y = 6;
+	serial_number = 12
+	},
+/obj/structure/sign/poster/hunk{
+	pixel_x = -27
+	},
+/obj/structure/machinery/light/blue/alt{
+	dir = 8
+	},
+/obj/structure/surface/table/reinforced/black,
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/dorms)
+"gd" = (
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/small_pmc,
+/obj/effect/landmark/start/marine/leader/pmc/small,
+/turf/open/floor/almayer/silverfull2,
+/area/golden_arrow/cryo_cells)
+"gh" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/light/blue/alt{
+	dir = 8
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/squad_one)
+"gn" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = -1;
+	pixel_x = 9
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/hybrisa/warning/redandwhite_E{
+	pixel_x = 1
+	},
+/obj/structure/machinery/light/blue/alt{
+	dir = 8
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/engineering)
+"gt" = (
+/obj/effect/decal/hybrisa/warning/redandwhite_W,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/platoonarmory)
+"gu" = (
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/squad_one)
+"gv" = (
+/obj/structure/sign/safety/ammunition{
+	pixel_x = 7;
+	pixel_y = -25
+	},
+/obj/structure/gun_rack/flamer/unloaded{
+	pixel_x = 0;
+	pixel_y = 0
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/platoonarmory)
+"gw" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/golden_arrow/prep_hallway)
+"gy" = (
+/obj/structure/machinery/light/blue/alt{
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"gB" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = -1;
+	pixel_x = 9
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/cryo_cells)
+"gE" = (
+/obj/structure/machinery/prop/almayer/computer/PC/large/dark{
+	pixel_y = 26;
+	layer = 2.9
+	},
+/obj/structure/sign/safety/terminal{
+	pixel_x = -17;
+	pixel_y = 25
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/smooth/northwest,
+/area/golden_arrow/platoon_commander_rooms)
+"gG" = (
+/obj/structure/prop/almayer/computers/mission_planning_system{
+	pixel_x = -6;
+	pixel_y = 0;
+	name = "\improper dispenser frame";
+	desc = "just frame"
+	},
+/obj/structure/cryoease_dispenser{
+	pixel_x = -7;
+	pixel_y = 0
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/cryo_cells)
+"gH" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 1
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 9
+	},
+/turf/open/floor/plating/plating_catwalk/aicore/white,
+/area/golden_arrow/cryo_cells)
+"gJ" = (
+/obj/structure/largecrate,
+/obj/structure/largecrate{
+	pixel_y = 16
+	},
+/turf/open/floor/corsat/cargo,
+/area/golden_arrow/supply)
+"gN" = (
+/obj/structure/machinery/medical_pod/autodoc{
+	dir = 1;
+	pixel_y = 6
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/medical)
+"gQ" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera"
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_W,
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/engineering)
+"gW" = (
+/obj/structure/machinery/cryopod/alt/right,
+/turf/open/floor/corsat/cargo,
+/area/golden_arrow/cryo_cells)
+"hb" = (
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_E{
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/white,
+/area/golden_arrow/prep_hallway)
+"hd" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer/silverfull,
+/area/golden_arrow/cryo_cells)
+"he" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/hybrisa/warning/redandwhite_S{
+	pixel_y = 0
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"hl" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"hu" = (
+/obj/item/clothing/shoes/swimmingfins,
+/obj/item/clothing/shoes/swimmingfins,
+/obj/item/clothing/shoes/swimmingfins,
+/obj/item/clothing/shoes/swimmingfins,
+/obj/item/clothing/mask/snorkel,
+/obj/item/clothing/mask/snorkel,
+/obj/item/clothing/mask/snorkel,
+/obj/item/clothing/mask/snorkel,
+/obj/structure/closet/crate/supply,
+/turf/open/floor/corsat/cargo,
+/area/golden_arrow/supply)
+"hv" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_E{
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/briefing)
+"hw" = (
+/obj/structure/pipes/standard/manifold/hidden/supply,
+/turf/open/floor/corsat/officesquares,
+/area/golden_arrow/dorms)
+"hx" = (
+/obj/item/storage/toolbox/mechanical/green{
+	pixel_y = 10;
+	pixel_x = 4
+	},
+/obj/item/storage/toolbox/mechanical/green{
+	pixel_x = -3;
+	pixel_y = 0
+	},
+/obj/structure/surface/table/reinforced/black,
+/turf/open/floor/corsat/cargo,
+/area/golden_arrow/engineering)
+"hy" = (
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"hA" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/light/blue/alt{
+	dir = 2
+	},
+/obj/item/storage/box/guncase/heavy/motiondetectors/pmc{
+	pixel_x = 0;
+	pixel_y = 14
+	},
+/obj/item/storage/box/guncase/heavy/es7{
+	pixel_x = 0;
+	pixel_y = 7
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/platoonarmory)
+"hC" = (
+/obj/structure/sign/safety/landingzone{
+	pixel_x = -19
+	},
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full";
+	dir = 1
+	},
+/obj/structure/platform/metal/hybrisa/metalplatform6/west,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"hH" = (
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/briefing)
+"hK" = (
+/turf/open/floor/strata/fake_wood,
+/area/golden_arrow/dorms)
+"hL" = (
+/obj/structure/window/framed/corsat/cell,
+/turf/open/floor/plating/prison,
+/area/golden_arrow/engineering)
+"hN" = (
+/obj/effect/hybrisa/misc/fake/wire/blue{
+	dir = 4;
+	pixel_y = 4
+	},
+/obj/effect/hybrisa/misc/fake/wire/red{
+	dir = 4;
+	pixel_y = -4
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/golden_arrow/hangar)
+"hQ" = (
+/obj/structure/window/framed/almayer,
+/turf/open/floor/plating/prison,
+/area/golden_arrow/squad_one)
+"hS" = (
+/obj/effect/decal/hybrisa/warning/redandwhite_N{
+	pixel_y = 1
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 6
+	},
+/turf/open/floor/corsat/redcorner,
+/area/golden_arrow/platoonarmory)
+"hU" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/golden_arrow/platoon_commander_rooms)
+"hY" = (
+/obj/structure/platform/metal/hybrisa/metalplatform6/west,
+/obj/structure/platform/metal/hybrisa/metalplatform6,
+/turf/open/floor/prison/floor_plate_alt/west,
+/area/golden_arrow/squad_one)
+"ia" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate/green,
+/turf/open/floor/corsat/cargo,
+/area/golden_arrow/supply)
+"ib" = (
+/obj/structure/machinery/prop{
+	desc = "Yeah, it got fucked up during FORECON operation in iron forests of LV-711. Literally - the trees there were too tough even for tanks: threads, transmission and even turret rotation motors are now chilling somewhere in repair bay.";
+	icon = 'icons/obj/vehicles/tank.dmi';
+	icon_state = "tank_base";
+	layer = 3.9;
+	name = "M34A2 Longstreet Light Tank 'Lawnmower'";
+	pixel_x = -16;
+	pixel_y = -17
+	},
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"id" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 5
+	},
+/turf/open/floor/corsat/bluegrey/southwest,
+/area/golden_arrow/cryo_cells)
+"if" = (
+/obj/structure/machinery/power/smes/buildable,
+/obj/item/clothing/ears/earmuffs{
+	icon_state = "earmuffs2";
+	item_state = "earmuffs2";
+	pixel_y = 16
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/golden_arrow/engineering)
+"ii" = (
+/turf/open/floor/almayer/silverfull,
+/area/golden_arrow/cryo_cells)
+"im" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"io" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/sign/safety/terminal{
+	layer = 2.96;
+	pixel_x = 8;
+	pixel_y = 26
+	},
+/obj/structure/machinery/prop/almayer/CICmap/pmc{
+	icon_state = "map";
+	pixel_x = 0;
+	pixel_y = 8
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_SWcorner,
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/briefing)
+"ip" = (
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/six{
+	faction = "PMC"
+	},
+/turf/open/floor/plating/prison,
+/area/golden_arrow/briefing)
+"iu" = (
+/obj/structure/flora/pottedplant/random{
+	pixel_x = 1;
+	pixel_y = 3
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 9
+	},
+/obj/structure/machinery/light/blue/alt{
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/prep_hallway)
+"iz" = (
+/obj/structure/machinery/shower{
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/golden_arrow/cryo_cells)
+"iA" = (
+/obj/structure/machinery/door/poddoor/railing{
+	id = "garrow_elevator_upper"
+	},
+/turf/open/floor/corsat/brown,
+/area/golden_arrow/cargo_shuttle/upper)
+"iF" = (
+/obj/structure/window/framed/corsat/research,
+/turf/open/floor/plating/prison,
+/area/golden_arrow/medical)
+"iG" = (
+/obj/structure/sign/safety/water{
+	pixel_x = 7;
+	pixel_y = 26
+	},
+/obj/structure/machinery/light/small/blue{
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/golden_arrow/cryo_cells)
+"iH" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"iL" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/roof/cargocrane_tracks/horizontal,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"iN" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/corsat/arrow_east,
+/area/golden_arrow/platoonarmory)
+"iO" = (
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/structure/roof/cargocrane_tracks/horizontal,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"iZ" = (
+/turf/open/floor/corsat/brown/southeast,
+/area/golden_arrow/lower_cargo)
+"jh" = (
+/obj/structure/stairs/perspective{
+	dir = 8;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform/metal/hybrisa/metalplatform6,
+/turf/open/floor/plating/prison,
+/area/golden_arrow/squad_one)
+"ji" = (
+/turf/open/floor/almayer_hull/outerhull_dir/southeast,
+/area/space)
+"jk" = (
+/turf/open/floor/corsat/arrow_north,
+/area/golden_arrow/prep_hallway)
+"ju" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/computer/shuttle/dropship/flight/remote_control{
+	name = "Midway Remote Control Console";
+	shuttleId = "dropship_midway"
+	},
+/obj/structure/sign/safety/commline_connection{
+	pixel_x = -17;
+	pixel_y = 15
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/platoon_commander_rooms)
+"jz" = (
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 2;
+	name = "\improper Hangar Lockdown Blast Door"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"jF" = (
+/obj/structure/machinery/light/blue/alt{
+	dir = 1
+	},
+/obj/structure/closet/secure_closet/platoon_sergeant_forecon/pmc_small,
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/platoonarmory)
+"jI" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/prop/almayer{
+	icon = 'icons/obj/items/harvest.dmi';
+	icon_state = "lime";
+	name = "plastic lime";
+	desc = "A lime made of plastic. Looks like it's been taken straight out of a display fruit bowl.";
+	pixel_x = 4;
+	pixel_y = 7
+	},
+/obj/item/prop/almayer{
+	icon = 'icons/obj/items/harvest.dmi';
+	icon_state = "lime";
+	name = "plastic lime";
+	desc = "A lime made of plastic. Looks like it's been taken straight out of a display fruit bowl."
+	},
+/turf/open/floor/prison/whitefull2,
+/area/golden_arrow/squad_one)
+"jL" = (
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/cryo_cells)
+"jN" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 6
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/briefing)
+"jO" = (
+/obj/structure/machinery/power/reactor{
+	name = "\improper S-52 fusion reactor 17"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/engineering)
+"jQ" = (
+/obj/effect/hybrisa/misc/fake/wire/red{
+	dir = 4;
+	pixel_y = -4
+	},
+/obj/effect/hybrisa/misc/fake/wire/blue{
+	dir = 4;
+	pixel_y = 4
+	},
+/obj/structure/flora/pottedplant/random,
+/obj/structure/roof/hybrisa/billboardsandsigns/billboardsmedium/billboard1{
+	dir = 10;
+	layer = 9;
+	pixel_x = -1;
+	pixel_y = 34
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/golden_arrow/briefing)
+"jS" = (
+/obj/structure/platform/metal/hybrisa/metalplatform6,
+/turf/open/floor/prison/white2/north,
+/area/golden_arrow/squad_one)
+"jZ" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/supply)
+"kb" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = -1;
+	pixel_x = 9
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_3";
+	pixel_y = 22;
+	pixel_x = 9
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_y = 25
+	},
+/turf/open/floor/corsat/bluegrey,
+/area/golden_arrow/cryo_cells)
+"kc" = (
+/obj/structure/platform/metal/hybrisa/metalplatform6/west,
+/turf/open/floor/prison/floor_plate_alt/west,
+/area/golden_arrow/squad_one)
+"kd" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/golden_arrow/cargo_shuttle/upper)
+"kl" = (
+/obj/effect/decal/hybrisa/warning/redandwhite_W,
+/turf/open/floor/corsat/cargo,
+/area/golden_arrow/platoonarmory)
+"km" = (
+/obj/structure/largecrate/random/case,
+/turf/open/floor/corsat/brown/northeast,
+/area/golden_arrow/lower_cargo)
+"kr" = (
+/obj/effect/decal/hybrisa/warning/redandwhite_S{
+	pixel_y = 0
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"kt" = (
+/obj/structure/sink{
+	pixel_y = 21;
+	layer = 3.1
+	},
+/obj/structure/mirror{
+	pixel_y = 35;
+	pixel_x = -1
+	},
+/turf/open/floor/almayer/edge/smooth/north,
+/area/golden_arrow/platoon_commander_rooms)
+"kx" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/structure/roof/cargocrane_tracks/vertical/endcap1,
+/obj/effect/decal/hybrisa/warning/redandwhite_SWcorner,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"kD" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = -1;
+	pixel_x = 9
+	},
+/obj/structure/machinery/light/blue/alt{
+	dir = 2
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"kJ" = (
+/turf/open/floor/almayer_hull,
+/area/space)
+"kS" = (
+/obj/structure/sign/safety/rewire{
+	pixel_x = 32
+	},
+/obj/structure/machinery/door/poddoor/railing{
+	id = "garrow_elevator_upper"
+	},
+/turf/open/floor/corsat/brown,
+/area/golden_arrow/cargo_shuttle/upper)
+"kV" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/manifold/hidden/supply,
+/obj/effect/decal/hybrisa/warning/redandwhite_S{
+	pixel_y = 0
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/engineering)
+"kW" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 4;
+	name = "\improper Hangar Lockdown Blast Door"
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/hangar)
+"kY" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/supply)
+"kZ" = (
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"ld" = (
+/obj/structure/closet{
+	desc = "It's a fancy storage unit for long-life foodstuffs.";
+	name = "long-life foodstuff storage"
+	},
+/obj/item/reagent_container/food/condiment/sugar,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/storage/box/powderedmilk,
+/obj/item/storage/box/cheeseslices,
+/obj/item/reagent_container/food/condiment/juice/egg,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/structure/sign/safety/fridge{
+	pixel_x = 31;
+	pixel_y = 7
+	},
+/obj/structure/sign/safety/galley{
+	pixel_x = 31;
+	pixel_y = -5
+	},
+/obj/structure/platform/metal/hybrisa/metalplatform6,
+/turf/open/floor/prison/west,
+/area/golden_arrow/squad_one)
+"le" = (
+/obj/structure/ladder{
+	id = "rover3"
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow,
+/turf/open/floor/plating/prison,
+/area/golden_arrow/prep_hallway)
+"lg" = (
+/obj/structure/machinery/door/airlock/almayer/secure{
+	name = "\improper Command Corridor"
+	},
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 4;
+	name = "\improper Command Corridor Blast Door";
+	id = "cmdcorridor"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/hangar)
+"lj" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/obj/structure/mirror{
+	pixel_x = 28
+	},
+/turf/open/floor/plating/plating_catwalk/aicore/white,
+/area/golden_arrow/cryo_cells)
+"lk" = (
+/obj/structure/pipes/vents/pump,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = -10
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice2";
+	pixel_y = 22
+	},
+/obj/structure/sign/safety/uscss_cyclops/omega{
+	pixel_y = 30;
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/bluegrey/southeast,
+/area/golden_arrow/cryo_cells)
+"ll" = (
+/turf/open/floor/almayer/edge/smooth,
+/area/golden_arrow/platoon_commander_rooms)
+"lz" = (
+/obj/structure/machinery/door/poddoor/almayer{
+	dir = 4;
+	name = "\improper Vehicle Bay Blast Door";
+	id = "vehiclebay"
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/hangar)
+"lF" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	name = "Ready Bay Blast Door";
+	closed_layer = 3.3;
+	layer = 3.3;
+	open_layer = 3.3;
+	id = "squadblastdoor"
+	},
+/turf/open/floor/almayer/pod_landing_floor,
+/area/golden_arrow/prep_hallway)
+"lQ" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	id = "Delta_1";
+	name = "\improper Bathroom"
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/cryo_cells)
+"lR" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/largecrate/random/barrel/true_random{
+	pixel_x = 13;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"mb" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 1
+	},
+/obj/structure/bed/chair,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"md" = (
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"me" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/power/apc/almayer/south,
+/turf/open/floor/corsat/arrow_west,
+/area/golden_arrow/cryo_cells)
+"mm" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 1
+	},
+/turf/open/floor/almayer/silverfull,
+/area/golden_arrow/cryo_cells)
+"ms" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/smooth,
+/area/golden_arrow/platoon_commander_rooms)
+"mx" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/vents/scrubber{
+	dir = 1
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = -10
+	},
+/turf/open/floor/corsat/bluegrey/northeast,
+/area/golden_arrow/cryo_cells)
+"mD" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/golden_arrow/prep_hallway)
+"mH" = (
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = -16;
+	pixel_y = 6
+	},
+/obj/structure/sign/safety/one{
+	pixel_x = -16;
+	pixel_y = -6
+	},
+/obj/vehicle/powerloader{
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"mN" = (
+/obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated{
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated{
+	pixel_y = -4
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8
+	},
+/obj/structure/surface/table/reinforced/black,
+/obj/item/storage/surgical_case/elite/commando{
+	pixel_x = 0;
+	pixel_y = 13
+	},
+/obj/item/device/helmet_visor/medical/advanced/pmc{
+	pixel_x = -3;
+	pixel_y = -12
+	},
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/medical)
+"mO" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/janitorialcart{
+	pixel_y = 8
+	},
+/obj/item/tool/mop,
+/obj/structure/machinery/light/blue/alt{
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"mS" = (
+/obj/structure/sign/banners/maximumeffort{
+	pixel_y = 29;
+	desc = "A large banner strung up on the wall intended to give the marines a boost in confidence."
+	},
+/obj/structure/surface/rack{
+	color = "#6b675e";
+	layer = 2.79
+	},
+/obj/item/weapon/gun/rifle/m41a/corporate/commando/regular{
+	pixel_y = 8
+	},
+/obj/item/weapon/gun/rifle/m41a/corporate/commando/regular{
+	pixel_y = -1
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/platoonarmory)
+"mW" = (
+/obj/structure/machinery/cm_vending/sorted/medical/no_access{
+	pixel_y = 6;
+	pixel_x = -5
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/blood{
+	req_access = list();
+	pixel_y = 9;
+	pixel_x = 18
+	},
+/obj/structure/medical_supply_link/green,
+/turf/open/floor/corsat/officetiles,
+/area/golden_arrow/medical)
+"mX" = (
+/turf/open/floor/corsat/arrow_north,
+/area/golden_arrow/briefing)
+"na" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 1
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/paper_bin{
+	pixel_x = -5;
+	pixel_y = 6
+	},
+/obj/item/reagent_container/food/drinks/coffee/marine{
+	pixel_x = 8;
+	pixel_y = 11
+	},
+/obj/item/tool/pen{
+	pixel_x = -7;
+	pixel_y = 2
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"nb" = (
+/obj/structure/machinery/cm_vending/gear/medic_chemical,
+/obj/structure/machinery/light/small/red,
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/medical)
+"ne" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/roof/cargocrane_tracks/horizontal,
+/obj/effect/decal/hybrisa/warning/redandwhite_N{
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"nl" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/space)
+"nm" = (
+/obj/structure/pipes/standard/manifold/hidden/supply,
+/obj/effect/decal/hybrisa/warning/redandwhite_SEcorner,
+/obj/effect/decal/hybrisa/warning/redandwhite_SWcorner,
+/obj/structure/machinery/light/blue/alt{
+	dir = 2
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/medical)
+"nn" = (
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/briefing)
+"nv" = (
+/turf/closed/wall/r_wall/biodome,
+/area/golden_arrow/platoon_commander_rooms)
+"nw" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/hybrisa/warning/redandwhite_NWcorner{
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/engineering)
+"nB" = (
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/lower_cargo)
+"nD" = (
+/obj/structure/machinery/power/apc/almayer/east,
+/obj/effect/decal/hybrisa/warning/redandwhite_W,
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/engineering)
+"nG" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera"
+	},
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 8
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/squad_one)
+"nK" = (
+/turf/closed/wall/r_wall/biodome,
+/area/golden_arrow/squad_one)
+"nN" = (
+/turf/open/floor/corsat/arrow_east,
+/area/golden_arrow/platoonarmory)
+"nQ" = (
+/obj/structure/machinery/camera/autoname/golden_arrow,
+/turf/open/floor/almayer/silverfull,
+/area/golden_arrow/cryo_cells)
+"nX" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/smooth/north,
+/area/golden_arrow/hangar)
+"nY" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/janitorialcart{
+	pixel_y = 8
+	},
+/obj/item/tool/mop,
+/obj/structure/pipes/vents/scrubber,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/squad_one)
+"nZ" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer/edge/smooth/north,
+/area/golden_arrow/hangar)
+"oa" = (
+/turf/open/floor/corsat/officetiles,
+/area/golden_arrow/briefing)
+"ok" = (
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/pmc/small,
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/platoonarmory)
+"oo" = (
+/obj/structure/machinery/photocopier,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/supply)
+"oq" = (
+/obj/structure/roof/cargocrane_tracks/tjoint,
+/turf/open/floor/corsat/white/west,
+/area/golden_arrow/hangar)
+"ou" = (
+/obj/structure/machinery/computer/cameras/almayer/vehicle{
+	dir = 4;
+	network = list("Golden Arrow","Vehicle","Midway");
+	pixel_x = -17;
+	pixel_y = 5
+	},
+/obj/structure/machinery/prop/almayer/CICmap{
+	density = 0;
+	dir = 4;
+	icon_state = "shuttle";
+	layer = 2.97;
+	name = "Tactical Map Display";
+	pixel_x = -17;
+	pixel_y = 19
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 19;
+	pixel_x = -15
+	},
+/turf/open/floor/almayer/edge/smooth/northwest,
+/area/golden_arrow/platoon_commander_rooms)
+"oy" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 1
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = -10
+	},
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/dorms)
+"oC" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/structure/machinery/faxmachine/corporate/highcom{
+	pixel_y = 4
+	},
+/obj/structure/prop/hybrisa/misc/picture{
+	pixel_y = 28;
+	pixel_x = 4
+	},
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/briefing)
+"oD" = (
+/obj/structure/machinery/landinglight/ds1,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"oE" = (
+/obj/structure/surface/rack{
+	color = "#6b675e";
+	layer = 2.79;
+	pixel_x = -1;
+	pixel_y = 2
+	},
+/obj/item/storage/backpack/marine/satchel/rto/pmc_net{
+	pixel_x = 0;
+	pixel_y = 8
+	},
+/turf/open/floor/corsat/cargo,
+/area/golden_arrow/briefing)
+"oH" = (
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4
+	},
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4;
+	pixel_x = 1;
+	pixel_y = 3
+	},
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4;
+	pixel_x = 2;
+	pixel_y = 6
+	},
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4;
+	pixel_x = 3;
+	pixel_y = 9
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"oI" = (
+/obj/structure/pipes/vents/pump{
+	dir = 8
+	},
+/turf/open/floor/corsat/officesquares,
+/area/golden_arrow/dorms)
+"oL" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/small_pmc,
+/obj/effect/landmark/start/marine/pmc/small/rto,
+/turf/open/floor/almayer/silverfull2,
+/area/golden_arrow/cryo_cells)
+"oM" = (
+/obj/structure/machinery/power/apc/almayer/north,
+/obj/effect/decal/hybrisa/warning/redandwhite_W,
+/turf/open/floor/corsat/cargo,
+/area/golden_arrow/platoonarmory)
+"oN" = (
+/obj/structure/machinery/cm_vending/clothing/medic/pmc{
+	req_access = list(202)
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/medical)
+"oO" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full";
+	dir = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"oP" = (
+/obj/structure/roof/cargocrane_tracks/vertical,
+/turf/open/floor/corsat/white/west,
+/area/golden_arrow/hangar)
+"oQ" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"oU" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = -1;
+	pixel_x = 9
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"oX" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/vp70/extended{
+	pixel_x = 0;
+	pixel_y = 12
+	},
+/obj/item/ammo_box/magazine/vp78{
+	pixel_x = 0;
+	pixel_y = 2
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/platoonarmory)
+"oY" = (
+/turf/open/floor/corsat/brown/west,
+/area/golden_arrow/lower_cargo)
+"pa" = (
+/turf/closed/wall/r_wall/biodome,
+/area/golden_arrow/briefing)
+"pb" = (
+/obj/structure/machinery/landinglight/ds1/delayone,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"pe" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_ew_full_cap";
+	dir = 8
+	},
+/obj/structure/platform,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/supply)
+"ph" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"po" = (
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_S{
+	pixel_y = 0
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/briefing)
+"ps" = (
+/obj/structure/machinery/door/airlock/almayer/engineering/glass{
+	dir = 2;
+	name = "\improper Substation";
+	req_one_access = list()
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/engineering)
+"pv" = (
+/turf/closed/wall/r_wall/biodome,
+/area/golden_arrow/cryo_cells)
+"pA" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_W,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/briefing)
+"pD" = (
+/obj/structure/sink{
+	pixel_y = 23
+	},
+/obj/structure/platform_decoration/metal/hybrisa/metalplatformdeco6,
+/turf/open/floor/prison/floor_plate_alt/west,
+/area/golden_arrow/squad_one)
+"pJ" = (
+/obj/effect/hybrisa/misc/fake/wire/red{
+	dir = 4;
+	pixel_y = -4
+	},
+/obj/effect/hybrisa/misc/fake/wire/blue{
+	dir = 4;
+	pixel_y = 4
+	},
+/obj/structure/machinery/light/blue/alt{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/golden_arrow/cryo_cells)
+"pM" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 5
+	},
+/obj/structure/roof/cargocrane_tracks/horizontal,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"pN" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/briefing)
+"pQ" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 9
+	},
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/two{
+	faction = "PMC"
+	},
+/turf/open/floor/plating/prison,
+/area/golden_arrow/briefing)
+"pU" = (
+/obj/structure/cargo_container/wy/right,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"qe" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/corsat/officesquares,
+/area/golden_arrow/dorms)
+"qf" = (
+/obj/structure/cargo_container/wy/mid,
+/turf/open/floor/corsat/arrow_south,
+/area/golden_arrow/hangar)
+"qj" = (
+/turf/open/floor/corsat/omega,
+/area/golden_arrow/briefing)
+"qn" = (
+/obj/structure/machinery/cm_vending/sorted/tech/tool_storage{
+	req_one_access = list()
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"qq" = (
+/obj/structure/largecrate/random/secure,
+/turf/open/floor/corsat/brown/southwest,
+/area/golden_arrow/lower_cargo)
+"qt" = (
+/obj/structure/surface/table/almayer,
+/obj/item/ashtray/plastic{
+	pixel_x = 8;
+	pixel_y = 4
+	},
+/obj/item/toy/deck{
+	pixel_x = -4;
+	pixel_y = 4
+	},
+/obj/item/clothing/mask/cigarette{
+	pixel_x = 8;
+	pixel_y = 4
+	},
+/obj/item/clothing/mask/cigarette{
+	pixel_x = 7;
+	pixel_y = 1
+	},
+/obj/structure/machinery/light/blue/alt{
+	dir = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"qu" = (
+/obj/structure/prop/almayer/computers/sensor_computer1,
+/turf/open/floor/corsat/box,
+/area/golden_arrow/supply)
+"qx" = (
+/obj/effect/decal/hybrisa/warning/redandwhite_N{
+	pixel_y = 1
+	},
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 1
+	},
+/turf/open/floor/corsat/redcorner/west,
+/area/golden_arrow/platoonarmory)
+"qA" = (
+/obj/structure/barricade/handrail/wire{
+	dir = 1
+	},
+/obj/structure/barricade/handrail/wire{
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/squad_one)
+"qH" = (
+/obj/effect/decal/hybrisa/warning/redandwhite_E{
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/white/north,
+/area/golden_arrow/prep_hallway)
+"qK" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/computer/overwatch/almayer{
+	dir = 8;
+	layer = 3.2;
+	pixel_x = -17;
+	pixel_y = 20
+	},
+/obj/item/clothing/glasses/hud/health{
+	pixel_x = -8;
+	pixel_y = 12
+	},
+/obj/item/reagent_container/food/drinks/coffeecup/uscm{
+	pixel_y = 32
+	},
+/obj/structure/machinery/door_control{
+	pixel_y = -3;
+	id = "overwatch";
+	name = "Window Shutter"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/ashtray/plastic{
+	pixel_x = 8;
+	pixel_y = 4
+	},
+/turf/open/floor/almayer/edge/smooth/west,
+/area/golden_arrow/platoon_commander_rooms)
+"qM" = (
+/obj/structure/machinery/light/blue/alt{
+	dir = 8
+	},
+/obj/structure/machinery/disposal{
+	pixel_x = -1;
+	pixel_y = 2
+	},
+/turf/open/floor/corsat/cargo,
+/area/golden_arrow/prep_hallway)
+"qN" = (
+/obj/structure/cargo_container/arious/leftmid,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"qO" = (
+/obj/structure/machinery/door_control/brbutton{
+	pixel_y = 28;
+	id = "cmdcorridor";
+	name = "command corridor blast door control"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"qP" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 5
+	},
+/obj/structure/machinery/light/blue/alt{
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"qY" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full";
+	dir = 1
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
+	pixel_x = 24
+	},
+/obj/structure/platform/metal/hybrisa/metalplatform6/east,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"rc" = (
+/obj/item/storage/firstaid/softpack/burn{
+	pixel_y = 9;
+	pixel_x = -9;
+	layer = 3.01
+	},
+/obj/item/storage/firstaid/softpack/brute{
+	pixel_y = 1;
+	pixel_x = -9
+	},
+/obj/item/paper_bin/uscm{
+	pixel_x = 6;
+	pixel_y = 7
+	},
+/obj/item/tool/pen{
+	pixel_x = 4;
+	pixel_y = 3
+	},
+/obj/structure/surface/table/reinforced/black,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/medical)
+"rl" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/medical)
+"rm" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/roof/cargocrane_tracks/horizontal/endcap1,
+/obj/effect/decal/hybrisa/warning/redandwhite_N{
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"rp" = (
+/turf/open/floor/corsat/spiralblueoffice,
+/area/golden_arrow/briefing)
+"ru" = (
+/turf/open/floor/corsat/arrow_south,
+/area/golden_arrow/squad_one)
+"rB" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/golden_arrow/supply)
+"rC" = (
+/obj/structure/machinery/medical_pod/autodoc{
+	pixel_y = 6
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/medical)
+"rE" = (
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = -2;
+	pixel_y = 24
+	},
+/obj/structure/sign/safety/opens_up{
+	pixel_x = 10;
+	pixel_y = 24
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_W,
+/turf/open/floor/corsat/white/north,
+/area/golden_arrow/prep_hallway)
+"rF" = (
+/obj/structure/roof/cargocrane_tracks/vertical,
+/obj/effect/decal/hybrisa/warning/redandwhite_W,
+/turf/open/floor/corsat/white/west,
+/area/golden_arrow/hangar)
+"rN" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = -1;
+	pixel_x = 9
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 6
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_SEcorner{
+	pixel_x = 1;
+	pixel_y = 0
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/engineering)
+"rQ" = (
+/turf/open/floor/almayer/edge/smooth/north,
+/area/golden_arrow/hangar)
+"rW" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/squad_one)
+"sc" = (
+/obj/structure/roof/cargocrane_tracks/horizontal,
+/turf/open/floor/corsat/arrow_east,
+/area/golden_arrow/hangar)
+"sf" = (
+/obj/structure/cargo_container/lockmart/mid,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"sj" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = -10
+	},
+/turf/open/floor/corsat/officesquares,
+/area/golden_arrow/dorms)
+"sl" = (
+/obj/structure/cargo_container/wy/right,
+/turf/open/floor/corsat/arrow_south,
+/area/golden_arrow/hangar)
+"sm" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/vehicle_locker/cabinet/cups{
+	pixel_y = 27;
+	pixel_x = -8
+	},
+/obj/structure/vehicle_locker/cabinet/cups/flip{
+	pixel_x = 7;
+	pixel_y = 27
+	},
+/obj/item/reagent_container/food/condiment/peppermill{
+	pixel_y = -1;
+	pixel_x = -8
+	},
+/obj/item/reagent_container/food/condiment/saltshaker{
+	pixel_x = -3;
+	pixel_y = -1
+	},
+/obj/item/reagent_container/food/drinks/flask/canteen{
+	pixel_x = 6;
+	pixel_y = 5
+	},
+/obj/item/reagent_container/food/drinks/flask/canteen{
+	pixel_x = 6
+	},
+/turf/open/floor/almayer/silverfull2,
+/area/golden_arrow/squad_one)
+"sx" = (
+/turf/open/floor/corsat/whitecorner/north,
+/area/golden_arrow/hangar)
+"sy" = (
+/obj/item/storage/box/bodybags{
+	pixel_y = 11;
+	pixel_x = -5
+	},
+/obj/item/storage/box/bodybags{
+	pixel_y = 3;
+	pixel_x = -5
+	},
+/obj/item/ashtray/plastic{
+	pixel_y = -1;
+	pixel_x = 6
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 19;
+	pixel_x = -15
+	},
+/obj/structure/surface/table/reinforced/black,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/medical)
+"sE" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 19;
+	pixel_x = -15
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 19;
+	pixel_x = 16
+	},
+/turf/open/floor/almayer/edge/smooth/northeast,
+/area/golden_arrow/platoon_commander_rooms)
+"sG" = (
+/obj/item/facepaint/sniper{
+	pixel_x = 8;
+	pixel_y = 2
+	},
+/obj/structure/sign/banners/united_americas_flag{
+	pixel_y = 30
+	},
+/obj/item/prop/helmetgarb/flair_initech{
+	pixel_x = -5;
+	pixel_y = 7
+	},
+/obj/item/prop/helmetgarb/prescription_bottle{
+	pixel_x = -1
+	},
+/obj/item/prop/helmetgarb/prescription_bottle{
+	pixel_x = -8;
+	pixel_y = -3
+	},
+/obj/structure/surface/table/reinforced/black,
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/dorms)
+"sI" = (
+/turf/open/floor/almayer/edge/smooth/endcap_right,
+/area/golden_arrow/hangar)
+"sQ" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/nade_box/smoke{
+	pixel_y = 6;
+	pixel_x = -1
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/platoonarmory)
+"sR" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = -1;
+	pixel_x = 9
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/hybrisa/warning/redandwhite_E{
+	pixel_x = 1
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/engineering)
+"sV" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/hybrisa/warning/redandwhite_S{
+	pixel_y = 0
+	},
+/turf/open/floor/corsat/red/north,
+/area/golden_arrow/platoonarmory)
+"sW" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/structure/phone_base/rotary/no_dnd/pmc{
+	name = "Oversight Communications Receiver";
+	phone_category = "Command";
+	phone_id = "Strike Ops Lead";
+	pixel_x = 6;
+	pixel_y = 10
+	},
+/obj/structure/sign/poster/wylogo{
+	pixel_y = 32;
+	layer = 2.9
+	},
+/obj/item/tool/stamp/weyyu{
+	pixel_x = 9;
+	pixel_y = 0
+	},
+/obj/item/paper_bin{
+	pixel_x = -7;
+	pixel_y = 7
+	},
+/obj/item/tool/pen{
+	pixel_x = -8;
+	pixel_y = 5
+	},
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/briefing)
+"ta" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/rounds/smartgun{
+	pixel_y = 10;
+	pixel_x = 0
+	},
+/obj/item/prop/helmetgarb/gunoil{
+	pixel_x = -6;
+	pixel_y = 4
+	},
+/obj/structure/sign/safety/ammunition{
+	pixel_x = 2;
+	pixel_y = 25
+	},
+/obj/structure/sign/safety/hazard{
+	pixel_x = 14;
+	pixel_y = 25
+	},
+/obj/item/tool/hand_labeler{
+	pixel_x = 5;
+	pixel_y = 2
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/platoonarmory)
+"tb" = (
+/obj/structure/machinery/computer/crew/alt{
+	dir = 8
+	},
+/obj/structure/machinery/computer/med_data/laptop{
+	dir = 8;
+	pixel_y = -14
+	},
+/obj/item/device/flashlight/pen{
+	pixel_y = 6;
+	pixel_x = -5
+	},
+/obj/item/clothing/accessory/stethoscope,
+/obj/structure/surface/table/reinforced/black,
+/obj/structure/machinery/light/blue/alt{
+	dir = 4
+	},
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/medical)
+"te" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoon_commander_rooms)
+"tf" = (
+/obj/structure/machinery/shower{
+	pixel_y = 16
+	},
+/obj/structure/sign/safety/water{
+	pixel_x = 22;
+	pixel_y = 26
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/golden_arrow/cryo_cells)
+"tk" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/golden_arrow/cryo_cells)
+"tn" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/golden_arrow/dorms)
+"tt" = (
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
+"tu" = (
+/turf/open/floor/corsat/arrow_west,
+/area/golden_arrow/lower_cargo)
+"tv" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_S{
+	pixel_y = 0
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/briefing)
+"tw" = (
+/obj/structure/machinery/sleep_console{
+	dir = 8
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_E{
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/arrow_east,
+/area/golden_arrow/medical)
+"tE" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 1
+	},
+/obj/structure/closet/emcloset,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"tF" = (
+/obj/effect/decal/hybrisa/warning/redandwhite_S{
+	pixel_y = 0
+	},
+/turf/open/floor/corsat/red/north,
+/area/golden_arrow/platoonarmory)
+"tH" = (
+/turf/closed/wall/r_wall/biodome,
+/area/golden_arrow/medical)
+"tL" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/vehicle/powerloader,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"tO" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/supply)
+"tQ" = (
+/obj/structure/machinery/disposal{
+	density = 0;
+	layer = 3.2;
+	pixel_y = 16
+	},
+/obj/structure/sign/safety/bathunisex{
+	pixel_y = 34;
+	pixel_x = 15
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/cryo_cells)
+"tR" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/roof/cargocrane_tracks/vertical,
+/obj/effect/decal/hybrisa/warning/redandwhite_W,
+/turf/open/floor/corsat/white/west,
+/area/golden_arrow/hangar)
+"tU" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"tW" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delaythree,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"tX" = (
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/corsat/arrow_west,
+/area/golden_arrow/squad_one)
+"tY" = (
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"uf" = (
+/obj/structure/closet/secure_closet,
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/dorms)
+"ui" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/obj/structure/mirror{
+	pixel_x = 28
+	},
+/turf/open/floor/plating/plating_catwalk/aicore/white,
+/area/golden_arrow/cryo_cells)
+"um" = (
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/briefing)
+"un" = (
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/small_pmc,
+/obj/effect/landmark/start/marine/pmc/small,
+/turf/open/floor/almayer/silverfull2,
+/area/golden_arrow/cryo_cells)
+"uv" = (
+/obj/structure/sign/safety/medical{
+	pixel_y = -24;
+	pixel_x = 16
+	},
+/obj/structure/closet/emcloset{
+	pixel_x = -7;
+	pixel_y = 0
+	},
+/obj/structure/closet/firecloset{
+	pixel_x = 8;
+	pixel_y = 0
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/prep_hallway)
+"uw" = (
+/obj/item/storage/belt/utility/full,
+/obj/structure/surface/table/reinforced/black,
+/obj/structure/machinery/light/blue/alt{
+	dir = 2
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"uD" = (
+/obj/structure/cargo_container/wy/left,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"uF" = (
+/obj/structure/roof/cargocrane_tracks/horizontal,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/corsat/arrow_east,
+/area/golden_arrow/hangar)
+"uH" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 4;
+	pixel_x = 0;
+	pixel_y = 6
+	},
+/turf/open/floor/corsat/officesquares,
+/area/golden_arrow/medical)
+"uI" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/tool/kitchen/rollingpin{
+	pixel_y = 4;
+	pixel_x = -6
+	},
+/obj/item/tool/kitchen/knife{
+	pixel_x = 9
+	},
+/obj/item/trash/plate{
+	pixel_x = -3
+	},
+/obj/item/trash/plate{
+	pixel_x = -2;
+	pixel_y = 2
+	},
+/obj/item/trash/plate{
+	pixel_x = -3;
+	pixel_y = 4
+	},
+/turf/open/floor/almayer/silverfull2,
+/area/golden_arrow/squad_one)
+"uL" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/vehicle_locker/cabinet/utensils{
+	pixel_x = -7;
+	pixel_y = 27
+	},
+/obj/structure/vehicle_locker/cabinet/utensils/flip{
+	pixel_x = 8;
+	pixel_y = 27
+	},
+/obj/item/reagent_container/food/condiment/hotsauce/sriracha{
+	pixel_y = 7
+	},
+/obj/item/reagent_container/food/condiment/hotsauce/tabasco{
+	pixel_x = 8;
+	pixel_y = 4
+	},
+/turf/open/floor/almayer/silverfull2,
+/area/golden_arrow/squad_one)
+"uW" = (
+/obj/structure/machinery/door/poddoor/almayer{
+	dir = 4;
+	name = "\improper Storage Bay One Blast Door";
+	id = "cargobay1"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/hangar)
+"uZ" = (
+/turf/open/space/basic,
+/area/space)
+"vb" = (
+/obj/structure/pipes/vents/scrubber{
+	dir = 1
+	},
+/turf/open/floor/corsat/arrow_east,
+/area/golden_arrow/squad_one)
+"vc" = (
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 1
+	},
+/turf/open/floor/corsat/bluegrey,
+/area/golden_arrow/cryo_cells)
+"vd" = (
+/obj/structure/pipes/vents/pump,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"ve" = (
+/obj/structure/prop/ice_colony/tiger_rug{
+	desc = "It's a rug, made from real tiger! Well, not *real* real tiger - this pelt belonged to similar-looking species, native to LV-842, that Snake Eaters ran over with their ATV. It still has some tire prints visible here and there...";
+	dir = 4;
+	icon_state = "HotlineAlt";
+	layer = 2.5;
+	name = "moon tiger rug";
+	pixel_x = -13
+	},
+/turf/open/floor/corsat/officesquares,
+/area/golden_arrow/dorms)
+"vg" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/firealarm{
+	pixel_y = 28
+	},
+/obj/structure/machinery/faxmachine/uscm/command/capt,
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/platoon_commander_rooms)
+"vh" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"vi" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"vj" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/four{
+	faction = "PMC"
+	},
+/turf/open/floor/plating/prison,
+/area/golden_arrow/briefing)
+"vm" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"vo" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/hybrisa/warning/redandwhite_E{
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"vw" = (
+/obj/structure/machinery/door/poddoor/hybrisa/ultra_reinforced_door{
+	name = "\improper Hangar Lockdown Blast Door";
+	dir = 4
+	},
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/lower_cargo)
+"vx" = (
+/obj/structure/platform_decoration/metal/hybrisa/metalplatformdeco6/east,
+/turf/open/floor/prison/floor_plate_alt/west,
+/area/golden_arrow/squad_one)
+"vB" = (
+/obj/structure/pipes/vents/pump,
+/obj/effect/decal/hybrisa/warning/redandwhite_S{
+	pixel_y = 0
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/medical)
+"vD" = (
+/obj/structure/sign/calendar/wy{
+	pixel_x = 31
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/briefing)
+"vG" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/briefing)
+"vM" = (
+/obj/docking_port/stationary/trijent_elevator/shipmap_elevator/cargo{
+	id = "garrow_cargo_elevator_upper";
+	name = "Cargo Elevator Upper";
+	elevator_network = "ArrowCargo";
+	airlock_exit = "north";
+	airlock_area = /area/golden_arrow/cargo_shuttle/upper
+	},
+/turf/open/floor/almayer/empty/golden_arrow,
+/area/golden_arrow/cargo_shuttle/upper)
+"vP" = (
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 4;
+	name = "\improper Hangar Lockdown Blast Door"
+	},
+/obj/structure/roof/cargocrane_tracks/horizontal,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"vX" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/golden_arrow/medical)
+"vY" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	name = "Ready Bay Blast Door";
+	closed_layer = 3.3;
+	layer = 3.3;
+	open_layer = 3.3;
+	id = "squadblastdoor"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/almayer/pod_landing_floor,
+/area/golden_arrow/prep_hallway)
+"wb" = (
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/item/reagent_container/food/drinks/cans/beer{
+	layer = 3.3;
+	pixel_x = -4;
+	pixel_y = 15
+	},
+/obj/item/toy/plush/therapy/red{
+	desc = "A USCM approved plush doll. It's not soft and hardly comforting!";
+	force = 15;
+	layer = 4.1;
+	name = "Commando Huggs";
+	pixel_x = 3;
+	pixel_y = 3;
+	throwforce = 15
+	},
+/obj/item/clothing/head/cmcap{
+	layer = 4.1;
+	pixel_x = 2;
+	pixel_y = 10
+	},
+/obj/item/tool/screwdriver/tactical{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/attachable/attached_gun/grenade/mk1{
+	pixel_y = -7
+	},
+/obj/structure/surface/table/reinforced/black,
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/dorms)
+"wc" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/corsat/bluegrey,
+/area/golden_arrow/cryo_cells)
+"wf" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"wn" = (
+/obj/structure/machinery/door/poddoor/railing{
+	id = "garrow_elevator_lower"
+	},
+/turf/open/floor/corsat/brown,
+/area/golden_arrow/cargo_shuttle/lower)
+"wv" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/prep_hallway)
+"ww" = (
+/obj/structure/surface/rack{
+	color = "#6b675e";
+	layer = 2.79
+	},
+/obj/item/weapon/gun/rifle/m41a/elite/commando{
+	pixel_y = 0
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/briefing)
+"wI" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/golden_arrow/squad_one)
+"wO" = (
+/obj/structure/sign/safety/elevator{
+	pixel_x = 13;
+	pixel_y = 26
+	},
+/obj/structure/sign/safety/hazard{
+	pixel_x = 1;
+	pixel_y = 26
+	},
+/turf/open/floor/corsat/white/north,
+/area/golden_arrow/hangar)
+"wR" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/whitecorners2/west,
+/area/golden_arrow/squad_one)
+"wT" = (
+/obj/effect/decal/hybrisa/warning/redandwhite_NWcorner{
+	pixel_y = 1
+	},
+/obj/structure/pipes/vents/scrubber{
+	dir = 1
+	},
+/obj/structure/machinery/sentry_holder/wy{
+	dir = 8;
+	pixel_x = 24;
+	layer = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/platoonarmory)
+"wU" = (
+/obj/structure/closet/secure_closet/engineering_welding{
+	req_one_access = list();
+	pixel_x = -8
+	},
+/obj/structure/closet/secure_closet/engineering_electrical{
+	pixel_x = 8;
+	pixel_y = 0;
+	req_one_access = null
+	},
+/turf/open/floor/corsat/cargo,
+/area/golden_arrow/engineering)
+"wZ" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = -10
+	},
+/obj/structure/machinery/light/blue/alt{
+	dir = 2
+	},
+/turf/open/floor/almayer/silverfull,
+/area/golden_arrow/cryo_cells)
+"xj" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"xl" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/prop/almayer/handheld1{
+	pixel_x = -8
+	},
+/obj/item/prop/almayer/handheld1{
+	pixel_x = 9;
+	pixel_y = 12
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"xm" = (
+/obj/structure/roof/cargocrane_tracks/horizontal/endcap1,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"xn" = (
+/obj/structure/machinery/vending/snack/packaged{
+	pixel_x = -7;
+	pixel_y = 14;
+	density = 0
+	},
+/obj/structure/machinery/vending/coffee{
+	pixel_x = 15;
+	pixel_y = 13;
+	density = 0
+	},
+/obj/structure/machinery/light/blue/alt{
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/prep_hallway)
+"xr" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/ashtray/plastic{
+	pixel_x = -9;
+	pixel_y = 14
+	},
+/turf/open/floor/prison/whitefull2,
+/area/golden_arrow/squad_one)
+"xv" = (
+/obj/structure/machinery/medical_pod/sleeper,
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/medical)
+"xw" = (
+/obj/structure/blocker/invisible_wall,
+/obj/structure/machinery/light/blue/alt{
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"xx" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/golden_arrow/lower_cargo)
+"xC" = (
+/obj/structure/ladder{
+	id = "rover1"
+	},
+/turf/open/floor/plating/prison,
+/area/golden_arrow/prep_hallway)
+"xF" = (
+/obj/structure/largecrate/random/secure{
+	pixel_y = 10
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"xI" = (
+/obj/structure/sign/safety/terminal{
+	layer = 2.96;
+	pixel_x = 10;
+	pixel_y = -24
+	},
+/obj/item/device/quiet_silent_healthanalyzer{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/structure/surface/table/reinforced/black,
+/obj/item/storage/belt/medical/lifesaver/wy{
+	pixel_x = 0;
+	pixel_y = 4
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_SWcorner,
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/medical)
+"xN" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/whitecorner/east,
+/area/golden_arrow/hangar)
+"xP" = (
+/obj/structure/largecrate/random/case/small,
+/turf/open/floor/corsat/brown/east,
+/area/golden_arrow/lower_cargo)
+"yh" = (
+/obj/effect/decal/hybrisa/warning/redandwhite_W,
+/turf/open/floor/corsat/white,
+/area/golden_arrow/prep_hallway)
+"yi" = (
+/obj/structure/machinery/light/blue/alt{
+	dir = 1
+	},
+/turf/open/floor/corsat/white/north,
+/area/golden_arrow/lower_cargo)
+"ym" = (
+/obj/structure/prop{
+	can_buckle = 1;
+	desc = "Rover barely uses it's OB cannon anyway, so this poor baby is stuck here...";
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "ob_warhead_1";
+	layer = 5.2;
+	name = "\improper comfy HE orbital warhead";
+	pixel_y = -10
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"yo" = (
+/obj/item/prop/geiger_counter{
+	desc = "An attempted upgrade to the B8 smart-scope that used an onboard AGI to automatically resolve firing solutions, resulting in IFF with none of the downsides of the B8. Unfortunately, it was not to be- the battery pack was too big and clumsy, and the electronics too fragile.";
+	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi';
+	icon_state = "sniperscope";
+	name = "unpowered B10 Smart-Scope";
+	pixel_x = 2;
+	pixel_y = 9
+	},
+/obj/structure/surface/table/almayer{
+	color = "#aeaeae"
+	},
+/obj/item/attachable/pkpbarrel{
+	desc = "A spare barrel for the M41A, in case of wear-and-tear and overheating. You'd need to deconstruct the entire gun to swap this out.";
+	name = "spare m41a barrel";
+	pixel_x = -14;
+	pixel_y = -2
+	},
+/obj/item/reagent_container/food/drinks/coffeecup{
+	pixel_y = 1;
+	pixel_x = 5
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/briefing)
+"yu" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/cryo_cells)
+"yw" = (
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/structure/largecrate/random/case/small,
+/obj/structure/prop/almayer/sadar_decoration{
+	pixel_y = 29
+	},
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/dorms)
+"yx" = (
+/obj/structure/closet/coffin/woodencrate,
+/obj/item/clothing/accessory/storage/droppouch,
+/obj/item/clothing/accessory/storage/droppouch,
+/turf/open/floor/corsat/cargo,
+/area/golden_arrow/supply)
+"yy" = (
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 4;
+	name = "\improper Hangar Lockdown Blast Door"
+	},
+/turf/open/floor/almayer/edge/smooth/endcap_right,
+/area/golden_arrow/hangar)
+"yz" = (
+/turf/open/floor/almayer_hull/outerhull_dir/west,
+/area/space)
+"yA" = (
+/turf/open/floor/corsat/brown/north,
+/area/golden_arrow/lower_cargo)
+"yC" = (
+/turf/open/floor/corsat/box,
+/area/golden_arrow/lower_cargo)
+"yJ" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_ew_full_cap";
+	dir = 8
+	},
+/obj/structure/sign/safety/ammunition{
+	pixel_x = 12;
+	pixel_y = 25
+	},
+/obj/structure/sign/safety/west{
+	pixel_y = 25
+	},
+/obj/structure/platform/metal/stair_cut/hybrisa_metal_left,
+/turf/open/floor/plating/prison,
+/area/golden_arrow/squad_one)
+"yM" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"yU" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = -1;
+	pixel_x = 9
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_3";
+	pixel_y = 22;
+	pixel_x = 9
+	},
+/obj/structure/machinery/light/blue/alt{
+	dir = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"yY" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/golden_arrow/platoonarmory)
+"za" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 10
+	},
+/turf/open/floor/almayer/edge/smooth,
+/area/golden_arrow/platoon_commander_rooms)
+"zd" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/blue/alt{
+	dir = 4
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_SEcorner{
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/arrow_north,
+/area/golden_arrow/prep_hallway)
+"zg" = (
+/turf/open/floor/corsat/brown/southwest,
+/area/golden_arrow/lower_cargo)
+"zk" = (
+/obj/structure/machinery/door_control/brbutton{
+	pixel_y = 28;
+	id = "vehiclebay";
+	name = "vehicle bay blast door control"
+	},
+/obj/structure/surface/table/almayer,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"zn" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/briefing)
+"zt" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/light/blue/alt{
+	dir = 4;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/briefing)
+"zw" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/briefing)
+"zB" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 19;
+	pixel_x = -15
+	},
+/turf/open/floor/almayer/edge/smooth/north,
+/area/golden_arrow/platoon_commander_rooms)
+"zF" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = -1;
+	pixel_x = 9
+	},
+/obj/structure/pipes/vents/pump{
+	dir = 4
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_NEcorner{
+	pixel_y = 1
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/engineering)
+"zL" = (
+/obj/structure/closet/secure_closet/smartgunner/pmc_small,
+/obj/structure/machinery/light/blue/alt{
+	dir = 1
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/platoonarmory)
+"zS" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = -1;
+	pixel_x = 9
+	},
+/obj/structure/machinery/light/blue/alt{
+	dir = 2
+	},
+/turf/open/floor/almayer/silverfull2,
+/area/golden_arrow/cryo_cells)
+"zV" = (
+/obj/structure/pipes/vents/pump{
+	dir = 4
+	},
+/turf/open/floor/corsat/officesquares,
+/area/golden_arrow/briefing)
+"zZ" = (
+/obj/item/toy/plush/shark,
+/turf/open/floor/plating/prison,
+/area/golden_arrow/briefing)
+"Ab" = (
+/obj/structure/machinery/disposal,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/supply)
+"Ai" = (
+/obj/structure/machinery/door/poddoor/almayer/grey/locked{
+	name = "\improper Hangar Lockdown Blast Door";
+	id = "lowercargolocks"
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/lower_cargo)
+"Ak" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/corsat/arrow_south,
+/area/golden_arrow/squad_one)
+"Am" = (
+/obj/structure/roof/cargocrane_tracks/horizontal/endcap2,
+/turf/open/floor/corsat/arrow_west,
+/area/golden_arrow/hangar)
+"Ao" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 2
+	},
+/turf/open/floor/prison/white2,
+/area/golden_arrow/squad_one)
+"Aq" = (
+/obj/structure/machinery/light/blue/alt{
+	dir = 4
+	},
+/turf/open/floor/corsat/white/east,
+/area/golden_arrow/hangar)
+"At" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair/comfy/black{
+	dir = 2
+	},
+/turf/open/floor/prison/white2,
+/area/golden_arrow/squad_one)
+"Ax" = (
+/obj/structure/ladder{
+	height = -1;
+	id = "rover2"
+	},
+/obj/structure/machinery/light/blue/alt{
+	dir = 2
+	},
+/turf/open/floor/plating/prison,
+/area/golden_arrow/hangar)
+"AB" = (
+/turf/open/floor/almayer_hull/outerhull_dir/north,
+/area/golden_arrow/hangar)
+"AC" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/open/floor/corsat/officesquares,
+/area/golden_arrow/dorms)
+"AE" = (
+/obj/structure/largecrate,
+/obj/structure/largecrate{
+	pixel_y = 16
+	},
+/obj/structure/machinery/light/blue/alt{
+	dir = 1
+	},
+/turf/open/floor/corsat/cargo,
+/area/golden_arrow/supply)
+"AI" = (
+/obj/structure/platform{
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/supply)
+"AJ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 10
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"AM" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair/comfy/black{
+	dir = 4
+	},
+/turf/open/floor/prison/white2/east,
+/area/golden_arrow/squad_one)
+"AU" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
+	pixel_y = -25
+	},
+/turf/open/floor/corsat/white,
+/area/golden_arrow/hangar)
+"AV" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair/comfy/black{
+	dir = 8
+	},
+/turf/open/floor/prison/white2/west,
+/area/golden_arrow/squad_one)
+"Be" = (
+/turf/closed/wall/r_wall/biodome,
+/area/golden_arrow/prep_hallway)
+"Bf" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/one{
+	faction = "PMC"
+	},
+/turf/open/floor/plating/prison,
+/area/golden_arrow/briefing)
+"Bk" = (
+/obj/effect/decal/hybrisa/warning/redandwhite_SWcorner,
+/obj/structure/machinery/sentry_holder/wy{
+	dir = 8;
+	pixel_x = 24;
+	layer = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/platoonarmory)
+"Bo" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"Bq" = (
+/obj/structure/machinery/door/poddoor/almayer{
+	dir = 4;
+	name = "\improper Storage Bay Two Blast Door";
+	id = "cargobay2"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/hangar)
+"Bu" = (
+/turf/open/floor/prison/white2/north,
+/area/golden_arrow/squad_one)
+"BA" = (
+/obj/structure/machinery/light/blue/alt{
+	dir = 2
+	},
+/turf/open/floor/almayer_hull/outerhull_dir/north,
+/area/golden_arrow/hangar)
+"BB" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delaytwo,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"BC" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"BE" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"BP" = (
+/turf/open/space/basic,
+/area/golden_arrow/synthcloset)
+"BS" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/blue/alt{
+	dir = 2
+	},
+/turf/open/floor/corsat/white,
+/area/golden_arrow/hangar)
+"Cb" = (
+/obj/structure/cargo_container/wy/left,
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"Cc" = (
+/obj/structure/bed/chair/comfy/teal{
+	name = "Theta squad chair"
+	},
+/obj/structure/machinery/light/blue/alt{
+	dir = 1;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/briefing)
+"Cd" = (
+/obj/structure/ladder{
+	id = "cargobay";
+	height = -1
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/lower_cargo)
+"Cl" = (
+/obj/effect/decal/hybrisa/trash{
+	icon_state = "trash_4";
+	pixel_x = -1;
+	pixel_y = 2
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_W,
+/obj/structure/bed/chair/comfy/teal{
+	name = "Theta squad chair";
+	dir = 1;
+	pixel_x = 4;
+	pixel_y = 14
+	},
+/turf/open/floor/corsat/officesquares,
+/area/golden_arrow/briefing)
+"Cq" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/corsat/white,
+/area/golden_arrow/hangar)
+"Cs" = (
+/obj/structure/platform,
+/obj/structure/machinery/light/blue/alt{
+	dir = 4
+	},
+/turf/open/floor/corsat/arrow_north,
+/area/golden_arrow/supply)
+"Cx" = (
+/obj/structure/roof/cargocrane_tracks/vertical,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_W,
+/turf/open/floor/corsat/white/west,
+/area/golden_arrow/hangar)
+"Cy" = (
+/turf/open/floor/corsat/white/north,
+/area/golden_arrow/hangar)
+"CC" = (
+/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar{
+	roundstart_template = /datum/map_template/shuttle/pmc
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
+"CI" = (
+/obj/structure/window/framed/corsat/hull,
+/turf/open/floor/plating/prison,
+/area/golden_arrow/hangar)
+"CJ" = (
+/obj/structure/machinery/disposal{
+	density = 0;
+	layer = 3.2;
+	pixel_y = 16
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera"
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_SEcorner{
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/medical)
+"CO" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/small_pmc,
+/obj/effect/landmark/start/marine/pmc/small,
+/turf/open/floor/almayer/silverfull2,
+/area/golden_arrow/cryo_cells)
+"CR" = (
+/turf/open/floor/corsat/whitecorner/east,
+/area/golden_arrow/lower_cargo)
+"CU" = (
+/obj/structure/largecrate/random/barrel/red,
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/dorms)
+"CX" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"Dk" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 1;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/medical)
+"Dn" = (
+/obj/effect/hybrisa/misc/fake/wire/red{
+	dir = 4;
+	pixel_y = -4
+	},
+/obj/effect/hybrisa/misc/fake/wire/blue{
+	dir = 4;
+	pixel_y = 4
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/golden_arrow/platoonarmory)
+"Dp" = (
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
+"Dw" = (
+/obj/structure/prop/invuln/lifeboat_hatch_placeholder{
+	layer = 2.1
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"DD" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/hybrisa/warning/redandwhite_W,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/platoonarmory)
+"DE" = (
+/obj/structure/stairs/perspective{
+	dir = 4;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform/metal/hybrisa/metalplatform6,
+/turf/open/floor/plating/prison,
+/area/golden_arrow/squad_one)
+"DL" = (
+/obj/structure/machinery/door/poddoor/almayer/grey/locked{
+	name = "\improper Cargo Elevator";
+	id = "cargolock"
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/hangar)
+"DX" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"DZ" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 4;
+	pixel_x = -1;
+	pixel_y = 12
+	},
+/turf/open/floor/corsat/box,
+/area/golden_arrow/briefing)
+"Ee" = (
+/turf/open/floor/corsat/brown,
+/area/golden_arrow/lower_cargo)
+"Eg" = (
+/obj/effect/hybrisa/misc/fake/wire/blue{
+	dir = 4;
+	pixel_y = 4
+	},
+/obj/effect/hybrisa/misc/fake/wire/red{
+	dir = 4;
+	pixel_y = -4
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/golden_arrow/platoonarmory)
+"Eh" = (
+/obj/structure/pipes/vents/scrubber{
+	dir = 8
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_E{
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"Ei" = (
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/pmc/small,
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/briefing)
+"Ej" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/corsat/arrow_north,
+/area/golden_arrow/briefing)
+"Ek" = (
+/obj/structure/window/framed/corsat,
+/turf/open/floor/plating/prison,
+/area/golden_arrow/squad_one)
+"En" = (
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4;
+	pixel_x = -6;
+	pixel_y = 3
+	},
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4;
+	pixel_x = -4;
+	pixel_y = 5
+	},
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4;
+	pixel_x = -2;
+	pixel_y = 7
+	},
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4;
+	pixel_y = 9
+	},
+/obj/effect/hybrisa/misc/fake/wire/blue{
+	dir = 4;
+	pixel_y = 4
+	},
+/obj/effect/hybrisa/misc/fake/wire/red{
+	dir = 4;
+	pixel_y = -4
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/golden_arrow/briefing)
+"Eq" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/squad_one)
+"ED" = (
+/obj/structure/pipes/vents/pump,
+/obj/structure/sign/calendar/wy{
+	pixel_y = 31
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/briefing)
+"EF" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_S{
+	pixel_y = 0
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/engineering)
+"EG" = (
+/obj/effect/landmark/personal_weapon,
+/obj/structure/surface/table/reinforced/black,
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/dorms)
+"EH" = (
+/obj/item/bedsheet/brown,
+/obj/structure/bed,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/platoon_commander_rooms)
+"EN" = (
+/obj/structure/pipes/vents/scrubber{
+	dir = 4
+	},
+/obj/structure/roof/cargocrane_tracks/tjoint3,
+/obj/effect/decal/hybrisa/warning/redandwhite_W,
+/turf/open/floor/corsat/white/west,
+/area/golden_arrow/hangar)
+"EO" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/paper_bin{
+	pixel_x = 7;
+	pixel_y = 8
+	},
+/obj/item/tool/pen/clicky{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/structure/machinery/power/apc/almayer/south,
+/obj/structure/surface/table/reinforced/black,
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/dorms)
+"EP" = (
+/obj/structure/sign/safety/ladder{
+	pixel_x = 31;
+	pixel_y = -8
+	},
+/obj/structure/sign/safety/north{
+	pixel_x = 31;
+	pixel_y = 4
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_N{
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/arrow_south,
+/area/golden_arrow/hangar)
+"EQ" = (
+/obj/structure/machinery/power/apc/almayer/south,
+/turf/open/floor/corsat/white,
+/area/golden_arrow/hangar)
+"ER" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/door/airlock/almayer/secure/glass{
+	req_access = list();
+	name = "\improper Tactical Data Specialist Office";
+	req_one_access = list(216,211,204)
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/briefing)
+"ES" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_ew_full_cap"
+	},
+/obj/structure/sign/safety/cryo{
+	pixel_y = 25
+	},
+/obj/structure/sign/safety/east{
+	pixel_x = 12;
+	pixel_y = 25
+	},
+/obj/structure/platform/metal/stair_cut/hybrisa_metal_right,
+/turf/open/floor/plating/prison,
+/area/golden_arrow/squad_one)
+"ET" = (
+/obj/structure/machinery/photocopier/wyphotocopier{
+	pixel_x = 1;
+	pixel_y = 2
+	},
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/briefing)
+"Fd" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/hybrisa/warning/redandwhite_E{
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"Fj" = (
+/obj/structure/machinery/door_control{
+	id = "lowercargolocks";
+	name = "lowercargolocks";
+	needs_power = 0
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/lower_cargo)
+"Fn" = (
+/obj/item/prop/magazine/book/starshiptroopers{
+	layer = 4.1;
+	pixel_y = 47
+	},
+/obj/structure/machinery/light/blue/alt{
+	dir = 4
+	},
+/turf/open/floor/strata/fake_wood,
+/area/golden_arrow/dorms)
+"Fo" = (
+/turf/open/floor/almayer/silverfull2,
+/area/golden_arrow/cryo_cells)
+"Fq" = (
+/turf/closed/wall/r_wall/biodome,
+/area/golden_arrow/dorms)
+"Fx" = (
+/obj/item/stack/sheet/metal{
+	amount = 50
+	},
+/obj/item/stack/sheet/plasteel{
+	amount = 40;
+	pixel_x = 7;
+	pixel_y = 6
+	},
+/obj/structure/closet/crate/construction,
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = -1;
+	pixel_x = 9
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_3";
+	pixel_y = 22;
+	pixel_x = 9
+	},
+/turf/open/floor/corsat/cargo,
+/area/golden_arrow/engineering)
+"Fz" = (
+/turf/open/floor/corsat/white/east,
+/area/golden_arrow/lower_cargo)
+"FH" = (
+/turf/open/floor/corsat/white/north,
+/area/golden_arrow/prep_hallway)
+"FP" = (
+/obj/structure/machinery/washing_machine,
+/obj/structure/machinery/washing_machine{
+	layer = 3.5;
+	pixel_y = 15
+	},
+/turf/open/floor/corsat/cargo,
+/area/golden_arrow/cryo_cells)
+"FQ" = (
+/turf/open/floor/prison/whitecorners2/southwest,
+/area/golden_arrow/squad_one)
+"FU" = (
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/engineering)
+"FV" = (
+/turf/open/floor/corsat/omega,
+/area/golden_arrow/cryo_cells)
+"Gb" = (
+/obj/structure/ladder{
+	height = -1;
+	id = "rover1"
+	},
+/turf/open/floor/plating/prison,
+/area/golden_arrow/hangar)
+"Ge" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/reagent_container/food/snacks/resin_fruit{
+	desc = "Never let Joes cook alien cuisine. Eugh.";
+	name = "arcturian curry"
+	},
+/obj/item/tool/kitchen/utensil/spoon{
+	desc = "Its tongs molded together after someone tried a bite of that arcturian curry.";
+	name = "melted fork";
+	pixel_x = -9;
+	pixel_y = 5
+	},
+/turf/open/floor/prison/whitefull2,
+/area/golden_arrow/squad_one)
+"Gf" = (
+/obj/structure/machinery/power/apc/almayer/north,
+/obj/structure/flora/pottedplant/random,
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/platoon_commander_rooms)
+"Gs" = (
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/structure/roof/cargocrane_tracks/horizontal,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"Gz" = (
+/obj/structure/pipes/vents/scrubber{
+	dir = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/prep_hallway)
+"GE" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/blue/alt{
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/supply)
+"GH" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/hybrisa/warning/redandwhite_N{
+	pixel_y = 1
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/corsat/red,
+/area/golden_arrow/platoonarmory)
+"GI" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_NWcorner{
+	pixel_y = 1
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_SEcorner{
+	pixel_x = 1
+	},
+/obj/structure/machinery/door/airlock/almayer/medical/glass{
+	name = "\improper Medical Preparation";
+	req_one_access = list(216, 211, 202)
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/medical)
+"Hd" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/briefing)
+"Hf" = (
+/turf/open/floor/almayer/empty/golden_arrow,
+/area/golden_arrow/cargo_shuttle/upper)
+"Hi" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"Hj" = (
+/obj/effect/decal/hybrisa/warning/redandwhite_W,
+/obj/structure/machinery/light/blue/alt{
+	dir = 4
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/engineering)
+"Hm" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/device/cassette_tape/pop3{
+	pixel_y = -2;
+	pixel_x = 17
+	},
+/obj/item/weapon/straight_razor{
+	pixel_x = -3;
+	pixel_y = -1
+	},
+/obj/item/clothing/head/cmcap/bridge{
+	pixel_y = 6;
+	pixel_x = 5
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/platoon_commander_rooms)
+"Hn" = (
+/obj/structure/platform_decoration/metal/hybrisa/metalplatformdeco6/west,
+/turf/open/floor/prison/floor_plate_alt/west,
+/area/golden_arrow/squad_one)
+"Hp" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"Hx" = (
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/hangar)
+"HA" = (
+/turf/open/floor/almayer/edge/smooth/southeast,
+/area/golden_arrow/platoon_commander_rooms)
+"HF" = (
+/obj/structure/machinery/light/small/blue{
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/golden_arrow/cryo_cells)
+"HI" = (
+/turf/open/floor/corsat/spiralblueoffice,
+/area/golden_arrow/medical)
+"HK" = (
+/obj/effect/decal/hybrisa/warning/redandwhite_SWcorner,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/briefing)
+"HR" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/hangar)
+"HX" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/smooth/southwest,
+/area/golden_arrow/platoon_commander_rooms)
+"HY" = (
+/obj/structure/machinery/photocopier,
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/platoon_commander_rooms)
+"HZ" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/arrow_west,
+/area/golden_arrow/hangar)
+"Ia" = (
+/obj/structure/platform/metal/hybrisa/metalplatform6,
+/turf/open/floor/prison/whitecorners2/east,
+/area/golden_arrow/squad_one)
+"Ic" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"If" = (
+/obj/structure/surface/rack{
+	color = "#98a3ab"
+	},
+/obj/item/storage/firstaid/toxin,
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/cryo_cells)
+"Ii" = (
+/obj/structure/machinery/door/airlock/almayer/command/reinforced{
+	dir = 1;
+	name = "\improper Platoon Commander's Office";
+	req_one_access_txt = "19;12"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/platoon_commander_rooms)
+"Im" = (
+/turf/open/floor/corsat/arrow_east,
+/area/golden_arrow/lower_cargo)
+"Ip" = (
+/obj/structure/machinery/light/blue/alt{
+	dir = 4;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/officetiles,
+/area/golden_arrow/briefing)
+"Ir" = (
+/obj/structure/closet/secure_closet/marine_personal/pmc/small/platoon_leader{
+	pixel_x = 7;
+	pixel_y = 0
+	},
+/obj/structure/closet/secure_closet/marine_personal/pmc/small/squad_leader{
+	pixel_x = -8;
+	pixel_y = 0
+	},
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/cryo_cells)
+"It" = (
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 8
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"Ix" = (
+/obj/effect/decal/hybrisa/warning/redandwhite_E{
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/briefing)
+"Iy" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/golden_arrow/synthcloset)
+"IA" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/roof/cargocrane_tracks/horizontal,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"IE" = (
+/obj/structure/roof/cargocrane_tracks/tjoint2,
+/obj/effect/decal/hybrisa/warning/redandwhite_NWcorner{
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/white/west,
+/area/golden_arrow/hangar)
+"IF" = (
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/prep_hallway)
+"IG" = (
+/turf/open/floor/corsat/whitecorner/north,
+/area/golden_arrow/lower_cargo)
+"IH" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"IN" = (
+/obj/structure/machinery/light/blue/alt{
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"IQ" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
+"IW" = (
+/obj/structure/pipes/vents/scrubber{
+	dir = 8
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_SWcorner,
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/engineering)
+"IX" = (
+/obj/item/prop/colony/game{
+	pixel_y = 10;
+	pixel_x = -4
+	},
+/obj/item/tool/lighter{
+	pixel_x = 13;
+	pixel_y = 15
+	},
+/obj/item/prop/helmetgarb/compass{
+	pixel_x = 13
+	},
+/obj/item/prop/helmetgarb/bullet_pipe,
+/obj/structure/sign/safety/hvac{
+	pixel_x = -17;
+	pixel_y = 12
+	},
+/obj/structure/surface/table/reinforced/black,
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/dorms)
+"IY" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"IZ" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/hybrisa/wy_huge_logo,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"Jb" = (
+/obj/structure/machinery/autodoc_console{
+	dir = 1;
+	pixel_y = 6
+	},
+/obj/structure/sign/safety/autodoc{
+	pixel_x = -17
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_E{
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/arrow_east,
+/area/golden_arrow/medical)
+"Jf" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/hybrisa/warning/redandwhite_W,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/briefing)
+"Jg" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/dorms)
+"Jr" = (
+/obj/structure/platform/metal/hybrisa/metalplatform6,
+/turf/open/floor/prison/whitecorners2/north,
+/area/golden_arrow/squad_one)
+"Jt" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/five{
+	faction = "PMC"
+	},
+/turf/open/floor/plating/prison,
+/area/golden_arrow/briefing)
+"JK" = (
+/obj/structure/machinery/power/apc/almayer/south,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/supply)
+"JL" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = -16;
+	pixel_y = 6
+	},
+/obj/structure/sign/safety/two{
+	pixel_x = -16;
+	pixel_y = -6
+	},
+/obj/structure/largecrate/random/barrel/true_random{
+	pixel_x = -6;
+	pixel_y = 2
+	},
+/obj/structure/largecrate/random/barrel/true_random{
+	pixel_x = 10;
+	pixel_y = 5
+	},
+/obj/structure/largecrate/random/barrel/true_random{
+	pixel_x = 2;
+	pixel_y = 24
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"JM" = (
+/obj/structure/sign/safety/high_voltage{
+	pixel_x = -17;
+	pixel_y = -6
+	},
+/obj/structure/sign/safety/hazard{
+	pixel_x = -17;
+	pixel_y = 6
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = -1;
+	pixel_x = 9
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/hybrisa/warning/redandwhite_E{
+	pixel_x = 1
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/engineering)
+"JO" = (
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/squad_one)
+"JP" = (
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/corsat/red/east,
+/area/golden_arrow/platoonarmory)
+"JR" = (
+/turf/open/floor/corsat/white/east,
+/area/golden_arrow/hangar)
+"JW" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/smooth/west,
+/area/golden_arrow/platoon_commander_rooms)
+"Kr" = (
+/obj/structure/machinery/power/terminal{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/golden_arrow/engineering)
+"Ku" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/golden_arrow/prep_hallway)
+"Kw" = (
+/obj/structure/largecrate,
+/obj/structure/largecrate/supply/ammo/m41amk1{
+	pixel_y = 15
+	},
+/obj/structure/machinery/light/blue/alt{
+	dir = 2
+	},
+/turf/open/floor/corsat/cargo,
+/area/golden_arrow/supply)
+"Kz" = (
+/obj/effect/decal/hybrisa/warning/redandwhite_E{
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"KD" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/corsat/bluegrey/west,
+/area/golden_arrow/cryo_cells)
+"KE" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/hybrisa/coffee_machine{
+	pixel_x = 2;
+	pixel_y = 12
+	},
+/obj/item/reagent_container/food/drinks/coffeecup/wy{
+	pixel_x = 3;
+	pixel_y = 28
+	},
+/obj/item/paper_bin{
+	pixel_y = 10;
+	pixel_x = -14
+	},
+/obj/item/tool/pen/clicky{
+	pixel_x = -15;
+	pixel_y = 6
+	},
+/obj/item/notepad/black{
+	layer = 3;
+	pixel_x = 1;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/briefing)
+"KH" = (
+/obj/structure/pipes/vents/pump,
+/obj/effect/decal/hybrisa/warning/redandwhite_S{
+	pixel_y = 0
+	},
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/medical)
+"KO" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"KP" = (
+/obj/structure/ladder{
+	id = "rover2"
+	},
+/obj/structure/sign/safety/ladder{
+	pixel_x = 1;
+	pixel_y = 26
+	},
+/obj/structure/sign/safety/south{
+	pixel_x = 14;
+	pixel_y = 26
+	},
+/turf/open/floor/plating/prison,
+/area/golden_arrow/prep_hallway)
+"KQ" = (
+/obj/structure/largecrate/random/case/double{
+	pixel_x = -1;
+	pixel_y = -5
+	},
+/obj/structure/largecrate/random/case/small{
+	pixel_x = 1;
+	pixel_y = 14
+	},
+/turf/open/floor/corsat/arrow_west,
+/area/golden_arrow/hangar)
+"KT" = (
+/obj/structure/pipes/vents/pump,
+/obj/structure/machinery/power/apc/almayer/west,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/squad_one)
+"KZ" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/implantcase/death_alarm{
+	pixel_x = 6;
+	pixel_y = 7
+	},
+/obj/item/implantcase/loyalty{
+	pixel_y = 9;
+	pixel_x = 6
+	},
+/obj/item/implantcase/loyalty{
+	pixel_y = 11;
+	pixel_x = 6
+	},
+/obj/item/clipboard{
+	pixel_x = -8;
+	pixel_y = 7
+	},
+/obj/item/reagent_container/food/drinks/coffeecup/wy{
+	pixel_x = 8;
+	pixel_y = 14
+	},
+/obj/item/paper{
+	pixel_x = -9;
+	pixel_y = 8
+	},
+/obj/item/tool/pen{
+	pixel_x = -10;
+	pixel_y = 5
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/briefing)
+"La" = (
+/obj/structure/machinery/door/poddoor/hybrisa/ultra_reinforced_door{
+	name = "\improper Hangar Lockdown Blast Door";
+	dir = 1
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/lower_cargo)
+"Lb" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/roof/cargocrane_tracks/horizontal,
+/obj/effect/decal/hybrisa/warning/redandwhite_N{
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"Le" = (
+/obj/effect/decal/hybrisa/warning/redandwhite_W,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/briefing)
+"Li" = (
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/supply)
+"Lo" = (
+/obj/structure/bed/chair{
+	dir = 8;
+	icon_state = "chair_alt";
+	pixel_x = 3;
+	pixel_y = 3;
+	buckling_x = -4;
+	buckling_y = 12
+	},
+/turf/open/floor/corsat/officetiles,
+/area/golden_arrow/briefing)
+"Lu" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/hybrisa/warning/redandwhite_E{
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"Lv" = (
+/turf/open/floor/corsat/arrow_south,
+/area/golden_arrow/lower_cargo)
+"LA" = (
+/obj/structure/machinery/cm_vending/sorted/marine_food,
+/obj/structure/machinery/camera/autoname/golden_arrow,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/squad_one)
+"LC" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
+	name = "\improper Supply Bay"
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/supply)
+"LD" = (
+/obj/structure/platform/metal/hybrisa/metalplatform6,
+/obj/structure/machinery/light/blue/alt{
+	dir = 2;
+	pixel_y = 1
+	},
+/turf/open/floor/prison/west,
+/area/golden_arrow/squad_one)
+"LE" = (
+/obj/effect/decal/hybrisa/WY/WY1,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/briefing)
+"LF" = (
+/obj/structure/ladder{
+	id = "cargobay"
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"LM" = (
+/obj/structure/machinery/door/poddoor/almayer{
+	dir = 4;
+	name = "\improper Vehicle Bay Blast Door";
+	id = "vehiclebay"
+	},
+/obj/structure/roof/cargocrane_tracks/horizontal,
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/hangar)
+"LO" = (
+/turf/open/floor/almayer_hull/outerhull_dir/east,
+/area/space)
+"LS" = (
+/obj/structure/largecrate/random/barrel/true_random,
+/turf/open/floor/corsat/brown/northwest,
+/area/golden_arrow/lower_cargo)
+"LV" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_x = -27
+	},
+/obj/structure/platform/metal/hybrisa/metalplatform6,
+/turf/open/floor/prison/west,
+/area/golden_arrow/squad_one)
+"Mh" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/golden_arrow/briefing)
+"Mi" = (
+/turf/open/floor/almayer,
+/area/golden_arrow/platoon_commander_rooms)
+"Mq" = (
+/obj/structure/machinery/body_scanconsole{
+	dir = 8
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 19;
+	pixel_x = -15
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_E{
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/arrow_east,
+/area/golden_arrow/medical)
+"MH" = (
+/obj/structure/pipes/standard/manifold/hidden/supply,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"MI" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 5
+	},
+/turf/open/floor/corsat/red/west,
+/area/golden_arrow/platoonarmory)
+"MP" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/light/blue/alt{
+	dir = 4
+	},
+/turf/open/floor/corsat/bluegrey/west,
+/area/golden_arrow/cryo_cells)
+"MS" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
+	pixel_x = 24
+	},
+/turf/open/floor/corsat/white/east,
+/area/golden_arrow/hangar)
+"MU" = (
+/obj/structure/largecrate/random/mini/ammo{
+	pixel_x = -11;
+	pixel_y = -4
+	},
+/obj/structure/largecrate/random/mini/ammo{
+	pixel_x = -11;
+	pixel_y = 7
+	},
+/obj/structure/largecrate/random/mini/ammo{
+	pixel_x = 7;
+	pixel_y = -4
+	},
+/obj/structure/largecrate/random/mini/ammo{
+	pixel_x = 7;
+	pixel_y = 7
+	},
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = 32;
+	pixel_y = 6
+	},
+/obj/structure/sign/safety/three{
+	pixel_x = 32;
+	pixel_y = -6
+	},
+/turf/open/floor/corsat/white/east,
+/area/golden_arrow/hangar)
+"MW" = (
+/obj/structure/roof/cargocrane_tracks/vertical,
+/obj/effect/decal/hybrisa/warning/redandwhite_W,
+/turf/open/floor/corsat/white/northwest,
+/area/golden_arrow/hangar)
+"Nb" = (
+/obj/structure/machinery/telecomms/relay/preset/tower,
+/turf/open/floor/almayer,
+/area/golden_arrow/engineering)
+"Nc" = (
+/obj/structure/machinery/door/airlock/almayer/medical/glass{
+	dir = 2;
+	name = "\improper Medical Subsection";
+	req_one_access = list()
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/medical)
+"Ns" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"NC" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/window/framed/almayer/hull,
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 4;
+	name = "\improper Command Corridor Blast Door";
+	id = "cmdcorridor"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/hangar)
+"ND" = (
+/obj/structure/machinery/disposal{
+	density = 0;
+	layer = 3.2;
+	pixel_y = 16
+	},
+/turf/open/floor/corsat/white/north,
+/area/golden_arrow/hangar)
+"NE" = (
+/obj/effect/decal/hybrisa/warning/redandwhite_W,
+/obj/structure/machinery/light/blue/alt{
+	dir = 2;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/briefing)
+"NG" = (
+/obj/structure/machinery/door_control{
+	id = "cargolock";
+	name = "GM cargo lock control";
+	pixel_y = -24;
+	needs_power = 0
+	},
+/turf/open/space/basic,
+/area/space)
+"NO" = (
+/obj/structure/machinery/light/blue/alt{
+	dir = 2
+	},
+/obj/structure/closet/crate/explosives,
+/obj/item/ammo_box/magazine/nade_box/m15/pmc,
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/platoonarmory)
+"NT" = (
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 4;
+	name = "\improper Hangar Lockdown Blast Door"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"NZ" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"Od" = (
+/obj/structure/window/framed/corsat/security,
+/obj/structure/machinery/door/poddoor/hybrisa{
+	dir = 8
+	},
+/turf/open/floor/plating/prison,
+/area/golden_arrow/briefing)
+"Oh" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/device/flashlight/lamp,
+/obj/item/prop/tableflag/uscm{
+	pixel_x = 7;
+	pixel_y = 14
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoon_commander_rooms)
+"Or" = (
+/obj/structure/machinery/shower{
+	pixel_y = 16
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = -1;
+	pixel_x = 9
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_3";
+	pixel_y = 22;
+	pixel_x = 9
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/golden_arrow/cryo_cells)
+"Ov" = (
+/obj/structure/machinery/door/poddoor/hybrisa/ultra_reinforced_door{
+	name = "\improper Hangar Lockdown Blast Door";
+	dir = 1
+	},
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/lower_cargo)
+"OC" = (
+/turf/open/floor/corsat/omega,
+/area/golden_arrow/platoonarmory)
+"OD" = (
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"OE" = (
+/obj/docking_port/stationary/trijent_elevator/shipmap_elevator/cargo{
+	id = "garrow_cargo_elevator_storage";
+	name = "Cargo Elevator Storage";
+	roundstart_template = /datum/map_template/shuttle/trijent_elevator/golden_arrow/cargo;
+	elevator_network = "ArrowCargo";
+	airlock_area = /area/golden_arrow/cargo_shuttle/lower;
+	airlock_exit = "north"
+	},
+/turf/open/floor/corsat,
+/area/golden_arrow/cargo_shuttle/lower)
+"OI" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 4
+	},
+/turf/open/floor/prison/white2/east,
+/area/golden_arrow/squad_one)
+"OM" = (
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/corsat/bluegrey/west,
+/area/golden_arrow/cryo_cells)
+"OO" = (
+/obj/structure/machinery/light/blue/alt{
+	dir = 4
+	},
+/turf/open/floor/strata/fake_wood,
+/area/golden_arrow/dorms)
+"OQ" = (
+/obj/effect/decal/hybrisa/warning/redandwhite_S{
+	pixel_y = 0
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 9
+	},
+/turf/open/floor/corsat/redcorner/east,
+/area/golden_arrow/platoonarmory)
+"OS" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/silverfull,
+/area/golden_arrow/cryo_cells)
+"OV" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/cryo_cells)
+"Pc" = (
+/obj/effect/decal/hybrisa/warning/redandwhite_N{
+	pixel_y = 1
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/engineering)
+"Po" = (
+/obj/structure/closet/crate/construction,
+/obj/item/stack/sandbags_empty/half,
+/obj/item/stack/sandbags_empty/half,
+/obj/item/stack/sandbags_empty/half,
+/obj/item/stack/sandbags_empty/half,
+/turf/open/floor/corsat/cargo,
+/area/golden_arrow/engineering)
+"Pr" = (
+/obj/structure/platform_decoration/metal/hybrisa/metalplatformdeco6/north,
+/turf/open/floor/prison/floor_plate_alt/west,
+/area/golden_arrow/squad_one)
+"Py" = (
+/obj/effect/decal/hybrisa/warning/redandwhite_W,
+/turf/open/floor/corsat/omega,
+/area/golden_arrow/platoonarmory)
+"PG" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/plating/plating_catwalk/aicore/white,
+/area/golden_arrow/cryo_cells)
+"PI" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 19;
+	pixel_x = 2
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 19;
+	pixel_x = -2
+	},
+/obj/item/ashtray/plastic{
+	icon_state = "ashtray_full_bl";
+	pixel_x = -13;
+	pixel_y = -13
+	},
+/obj/item/clothing/mask/cigarette/weed{
+	pixel_x = -12;
+	pixel_y = 3
+	},
+/obj/item/clothing/mask/cigarette/weed{
+	pixel_x = -10;
+	pixel_y = 1
+	},
+/obj/item/tool/lighter/zippo/blue{
+	pixel_x = 10;
+	pixel_y = -6
+	},
+/obj/structure/curtain/red{
+	pixel_y = 6
+	},
+/turf/open/floor/corsat/arrow_south,
+/area/golden_arrow/hangar)
+"PS" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/squad_one)
+"PT" = (
+/obj/structure/largecrate/supply/supplies/mre,
+/turf/open/floor/corsat/cargo,
+/area/golden_arrow/supply)
+"Qa" = (
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/small_pmc,
+/obj/effect/landmark/start/marine/smartgunner/pmc/small,
+/turf/open/floor/almayer/silverfull2,
+/area/golden_arrow/cryo_cells)
+"Qh" = (
+/obj/structure/filingcabinet/chestdrawer{
+	pixel_y = 18;
+	pixel_x = -8;
+	density = 0
+	},
+/obj/structure/filingcabinet{
+	pixel_y = 18;
+	pixel_x = 7;
+	density = 0
+	},
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/briefing)
+"Qi" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/hybrisa/warning/redandwhite_N{
+	pixel_y = 1
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/engineering)
+"Qj" = (
+/obj/structure/machinery/light/blue/alt{
+	dir = 1
+	},
+/turf/open/floor/corsat/white/north,
+/area/golden_arrow/hangar)
+"Qm" = (
+/obj/structure/barricade/handrail/wire{
+	dir = 1
+	},
+/obj/structure/barricade/handrail/wire{
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/squad_one)
+"Qn" = (
+/obj/structure/cargo_container/lockmart/right,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"Qw" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = -1;
+	pixel_x = 9
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/cryo_cells)
+"Qy" = (
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/engineering)
+"QB" = (
+/obj/structure/platform_decoration/metal/hybrisa/metalplatformdeco6,
+/turf/open/floor/prison/floor_plate_alt/west,
+/area/golden_arrow/squad_one)
+"QI" = (
+/obj/structure/machinery/light/blue/alt{
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/lower_cargo)
+"QJ" = (
+/obj/structure/roof/cargocrane_tracks/vertical,
+/obj/effect/decal/hybrisa/warning/redandwhite_W,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"QL" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/corsat/bluegrey/north,
+/area/golden_arrow/cryo_cells)
+"QM" = (
+/turf/open/floor/corsat/officesquares,
+/area/golden_arrow/dorms)
+"QN" = (
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/structure/surface/table/reinforced/black,
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/dorms)
+"QO" = (
+/obj/structure/roof/cargocrane_tracks/horizontal/endcap2,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"QS" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_S{
+	pixel_y = 0
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/engineering)
+"QW" = (
+/obj/structure/machinery/power/apc/almayer/north,
+/turf/open/floor/corsat/cargo,
+/area/golden_arrow/briefing)
+"Rb" = (
+/obj/item/tool/hand_labeler{
+	pixel_x = 5
+	},
+/obj/item/clothing/head/cmcap/boonie/tan{
+	pixel_x = -7;
+	pixel_y = 9
+	},
+/obj/structure/sign/prop3{
+	pixel_x = -30
+	},
+/obj/item/toy/deck/uno{
+	pixel_x = -10;
+	pixel_y = -6
+	},
+/obj/item/clothing/mask/cigarette{
+	pixel_x = 2;
+	pixel_y = -6
+	},
+/obj/item/clothing/mask/cigarette{
+	pixel_x = 5;
+	pixel_y = -9
+	},
+/obj/structure/machinery/light/blue/alt{
+	dir = 8
+	},
+/obj/structure/surface/table/reinforced/black,
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/dorms)
+"Rc" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/engineering)
+"Rh" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 5
+	},
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"Rj" = (
+/obj/effect/landmark/observer_start,
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/pmc/small,
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/platoonarmory)
+"Rn" = (
+/obj/effect/hybrisa/misc/fake/wire/red{
+	dir = 4;
+	pixel_y = -4
+	},
+/obj/effect/hybrisa/misc/fake/wire/blue{
+	dir = 4;
+	pixel_y = 4
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/golden_arrow/cryo_cells)
+"Rq" = (
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/structure/largecrate/random/case/double,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/dorms)
+"Rr" = (
+/obj/effect/decal/hybrisa/warning/redandwhite_S{
+	pixel_y = 0
+	},
+/turf/open/floor/corsat/officesquares,
+/area/golden_arrow/medical)
+"Rz" = (
+/turf/open/space/basic,
+/area/golden_arrow/hangar)
+"RA" = (
+/obj/structure/machinery/door/airlock/almayer/secure/glass{
+	req_access = list();
+	name = "\improper Hypersleep Bay"
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/cryo_cells)
+"RF" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 1
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/prop/almayer/comp_open,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"RG" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/corsat/officesquares,
+/area/golden_arrow/dorms)
+"RT" = (
+/obj/structure/closet/crate/ammo/alt/flame,
+/obj/item/storage/box/guncase/heavy/fuel/pmc,
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 1;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/platoonarmory)
+"RU" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/obj/item/paper/sop,
+/obj/structure/machinery/light/small/blue{
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk/aicore/white,
+/area/golden_arrow/cryo_cells)
+"Sb" = (
+/turf/open/floor/corsat,
+/area/golden_arrow/cargo_shuttle/lower)
+"Sd" = (
+/obj/structure/machinery/shower{
+	dir = 1
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = -1;
+	pixel_x = 9
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/golden_arrow/cryo_cells)
+"Sh" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/clipboard{
+	pixel_x = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/platoon_commander_rooms)
+"Si" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"Sk" = (
+/obj/structure/blocker/invisible_wall,
+/obj/effect/decal/hybrisa/warning/redandwhite_SEcorner{
+	pixel_x = 1;
+	pixel_y = 0
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"Sn" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"So" = (
+/obj/structure/machinery/door/airlock/almayer/secure/glass{
+	req_access = list();
+	name = "\improper Preparations Wing"
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/squad_one)
+"Sp" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/corsat/white/east,
+/area/golden_arrow/hangar)
+"Ss" = (
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/small_pmc,
+/obj/effect/landmark/start/marine/tl/pmc/small,
+/turf/open/floor/almayer/silverfull2,
+/area/golden_arrow/cryo_cells)
+"Sw" = (
+/obj/structure/bed/chair/office/dark,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 19;
+	pixel_x = -15
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/smooth/north,
+/area/golden_arrow/platoon_commander_rooms)
+"Sz" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/squad_one)
+"SF" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"SH" = (
+/obj/structure/machinery/medical_pod/bodyscanner,
+/obj/structure/sign/safety/med_life_support{
+	pixel_x = 33
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 19;
+	pixel_x = -15
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 19;
+	pixel_x = 16
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/medical)
+"SW" = (
+/obj/item/device/flashlight/lamp/tripod/grey,
+/turf/open/floor/corsat/brown/southeast,
+/area/golden_arrow/lower_cargo)
+"SX" = (
+/turf/open/floor/corsat/white/southwest,
+/area/golden_arrow/hangar)
+"Td" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"Tf" = (
+/turf/closed/wall/r_wall/biodome,
+/area/golden_arrow/engineering)
+"Tj" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/arrow_north,
+/area/golden_arrow/prep_hallway)
+"Tn" = (
+/obj/structure/machinery/door/airlock/almayer/command/reinforced{
+	name = "\improper Platoon Commander's Quarters"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoon_commander_rooms)
+"Tq" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/obj/structure/machinery/light/small/blue{
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk/aicore/white,
+/area/golden_arrow/cryo_cells)
+"Tr" = (
+/obj/structure/filingcabinet/medical{
+	pixel_y = 3;
+	pixel_x = 7;
+	name = "medical records";
+	density = 0
+	},
+/obj/structure/flora/pottedplant{
+	icon_state = "pottedplant_20";
+	pixel_x = 7;
+	pixel_y = 15;
+	layer = 2.9
+	},
+/turf/open/floor/corsat/officetiles,
+/area/golden_arrow/medical)
+"Tx" = (
+/obj/structure/machinery/power/apc/almayer/south,
+/turf/open/floor/corsat/cargo,
+/area/golden_arrow/prep_hallway)
+"Tz" = (
+/turf/open/floor/corsat/box,
+/area/golden_arrow/hangar)
+"TI" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/door/airlock/almayer/secure{
+	req_access = list();
+	dir = 2;
+	name = "\improper Quarters"
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/cryo_cells)
+"TR" = (
+/obj/structure/sign/safety/hvac{
+	pixel_x = -16
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/supply)
+"TV" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	name = "Ready Bay Blast Door";
+	closed_layer = 3.3;
+	layer = 3.3;
+	open_layer = 3.3;
+	id = "squadblastdoor"
+	},
+/turf/open/floor/almayer/pod_landing_floor,
+/area/golden_arrow/prep_hallway)
+"TZ" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 8
+	},
+/turf/open/floor/prison/white2/west,
+/area/golden_arrow/squad_one)
+"Uc" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"Ud" = (
+/obj/structure/pipes/standard/manifold/hidden/supply,
+/turf/open/floor/corsat/bluegrey/north,
+/area/golden_arrow/cryo_cells)
+"Uf" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/corsat/red/west,
+/area/golden_arrow/platoonarmory)
+"Ui" = (
+/obj/structure/machinery/vending/cigarette/wy{
+	pixel_x = 3;
+	pixel_y = 14;
+	layer = 2.97;
+	density = 0
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/prep_hallway)
+"Ul" = (
+/obj/structure/machinery/light/small/red{
+	dir = 2
+	},
+/obj/structure/closet/secure_closet/platoon_sergeant/pmc_small,
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/briefing)
+"Us" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_S{
+	pixel_y = 0
+	},
+/obj/effect/decal/hybrisa/warning/redandwhite_NEcorner{
+	pixel_y = 1;
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/medical)
+"Uy" = (
+/turf/open/floor/corsat/white/north,
+/area/golden_arrow/lower_cargo)
+"UB" = (
+/obj/structure/closet/secure_closet/marine_personal/pmc/small/rifleman{
+	pixel_x = -8;
+	pixel_y = 0
+	},
+/obj/structure/closet/secure_closet/marine_personal/pmc/small/rifleman{
+	pixel_x = 7;
+	pixel_y = 0
+	},
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/cryo_cells)
+"UG" = (
+/obj/structure/cargo_container/wy/mid,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 6
+	},
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"UK" = (
+/obj/structure/machinery/landinglight/ds1/delaythree,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"UT" = (
+/obj/structure/machinery/power/terminal{
+	dir = 1
+	},
+/obj/item/cell/potato,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/golden_arrow/engineering)
+"UV" = (
+/obj/structure/cargo_container/arious/mid{
+	opacity = 0
+	},
+/obj/structure/machinery/light/blue/alt{
+	dir = 2
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"Vb" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/barricade/handrail/wire{
+	dir = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/squad_one)
+"Vh" = (
+/obj/structure/largecrate/random/case,
+/obj/structure/largecrate/supply/ammo/m41amk1/forecon{
+	pixel_y = 10
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"Vj" = (
+/turf/open/floor/almayer/edge/smooth/east,
+/area/golden_arrow/platoon_commander_rooms)
+"Vq" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = -1;
+	pixel_x = 9
+	},
+/turf/open/floor/almayer/silverfull2,
+/area/golden_arrow/cryo_cells)
+"Vs" = (
+/obj/structure/machinery/light/blue/alt{
+	dir = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"Vy" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
+	name = "\improper Briefing"
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/briefing)
+"VC" = (
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/supply)
+"VD" = (
+/obj/structure/largecrate/random/case/double,
+/turf/open/floor/corsat/white/east,
+/area/golden_arrow/hangar)
+"VF" = (
+/obj/item/roller{
+	pixel_y = 17
+	},
+/obj/item/roller{
+	pixel_y = 23
+	},
+/obj/structure/machinery/recharger,
+/obj/item/reagent_container/spray/cleaner{
+	pixel_x = -14;
+	pixel_y = 2
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 19;
+	pixel_x = -15
+	},
+/obj/structure/sign/nosmoking_1{
+	pixel_y = 28
+	},
+/obj/structure/surface/table/reinforced/black,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/medical)
+"VN" = (
+/obj/structure/machinery/power/smes/buildable,
+/obj/item/storage/pouch/electronics{
+	pixel_x = 6;
+	pixel_y = 17
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/golden_arrow/engineering)
+"VO" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/light/blue/alt{
+	dir = 4;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/squad_one)
+"VQ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/hybrisa/misc/fake/wire/red{
+	dir = 4;
+	pixel_y = -4
+	},
+/obj/effect/hybrisa/misc/fake/wire/blue{
+	dir = 4;
+	pixel_y = 4
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/golden_arrow/platoonarmory)
+"VS" = (
+/obj/effect/decal/hybrisa/warning/redandwhite_NEcorner{
+	pixel_y = 1;
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/briefing)
+"VT" = (
+/obj/structure/pipes/vents/pump{
+	dir = 1
+	},
+/turf/open/floor/almayer/edge/smooth/southwest,
+/area/golden_arrow/platoon_commander_rooms)
+"VV" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/door/airlock/almayer/secure/glass{
+	req_access = list();
+	name = "\improper Operation Leader Office";
+	req_one_access = list(216,211)
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/briefing)
+"VX" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/golden_arrow/engineering)
+"VZ" = (
+/obj/structure/surface/table/reinforced/black,
+/turf/open/floor/prison/whitefull2,
+/area/golden_arrow/squad_one)
+"Wa" = (
+/obj/structure/reagent_dispensers/fueltank,
+/obj/structure/sign/safety/fire_haz{
+	pixel_x = 7;
+	pixel_y = -25
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"Wh" = (
+/obj/structure/prop/almayer/whiteboard{
+	pixel_y = 25;
+	density = 0
+	},
+/turf/open/floor/corsat/omega,
+/area/golden_arrow/briefing)
+"Wl" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"Wv" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 19;
+	pixel_x = -15
+	},
+/turf/open/floor/corsat/arrow_north,
+/area/golden_arrow/medical)
+"Wz" = (
+/obj/structure/machinery/light/small/red{
+	dir = 8
+	},
+/obj/structure/closet/secure_closet/squad_rto/pmc_small{
+	pixel_y = -1
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/briefing)
+"WE" = (
+/obj/structure/closet/crate/ammo/alt{
+	pixel_y = 6
+	},
+/obj/item/ammo_box/magazine/large/ext{
+	pixel_x = 0;
+	pixel_y = -4
+	},
+/obj/item/ammo_box/magazine/ext{
+	pixel_x = -2;
+	pixel_y = 9
+	},
+/obj/item/ammo_box/magazine/m39/pve{
+	pixel_x = 3;
+	pixel_y = 0
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/platoonarmory)
+"WH" = (
+/obj/structure/machinery/disposal{
+	density = 0;
+	layer = 3.2;
+	pixel_y = 16
+	},
+/turf/open/floor/almayer/edge/smooth/north,
+/area/golden_arrow/hangar)
+"WJ" = (
+/obj/structure/bedsheetbin{
+	pixel_y = 14
+	},
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/light/small/blue{
+	dir = 1;
+	light_color = "#dae2ff";
+	light_power = 0.5
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = -1;
+	pixel_x = 9
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_3";
+	pixel_y = 22;
+	pixel_x = 9
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/cryo_cells)
+"WP" = (
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 8;
+	name = "\improper Hangar Lockdown Blast Door";
+	id = "hangarlockdownwest"
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/prep_hallway)
+"WR" = (
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/lower_cargo)
+"Xc" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/officesquares,
+/area/golden_arrow/dorms)
+"Xd" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/hybrisa/warning/redandwhite_S{
+	pixel_y = 0
+	},
+/turf/open/floor/corsat/redcorner/north,
+/area/golden_arrow/platoonarmory)
+"Xi" = (
+/obj/structure/platform/metal/hybrisa/metalplatform6/east,
+/obj/structure/platform/metal/hybrisa/metalplatform6,
+/turf/open/floor/prison/floor_plate_alt/west,
+/area/golden_arrow/squad_one)
+"Xl" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/corsat/arrow_north,
+/area/golden_arrow/engineering)
+"Xo" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/vents/pump{
+	dir = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/supply)
+"Xp" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/golden_arrow/hangar)
+"Xt" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 6
+	},
+/turf/open/floor/corsat/bluegrey/northwest,
+/area/golden_arrow/cryo_cells)
+"Xu" = (
+/obj/item/device/flashlight/lamp/tripod/grey,
+/turf/open/floor/corsat/brown/northeast,
+/area/golden_arrow/lower_cargo)
+"Xw" = (
+/turf/open/floor/corsat/whitecorner/east,
+/area/golden_arrow/hangar)
+"XA" = (
+/obj/structure/machinery/autodoc_console{
+	pixel_y = 6
+	},
+/obj/structure/sign/safety/autodoc{
+	pixel_x = 32
+	},
+/obj/structure/machinery/power/apc/almayer/south,
+/obj/effect/decal/hybrisa/warning/redandwhite_W,
+/turf/open/floor/corsat/arrow_west,
+/area/golden_arrow/medical)
+"XG" = (
+/obj/structure/machinery/disposal{
+	density = 0;
+	layer = 3.2;
+	pixel_y = 16
+	},
+/obj/structure/platform_decoration/metal/hybrisa/metalplatformdeco6/north,
+/turf/open/floor/prison/floor_plate_alt/west,
+/area/golden_arrow/squad_one)
+"XJ" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/microwave{
+	density = 0;
+	pixel_y = 9
+	},
+/obj/structure/machinery/microwave{
+	density = 0;
+	pixel_y = 23
+	},
+/turf/open/floor/almayer/silverfull2,
+/area/golden_arrow/squad_one)
+"XL" = (
+/obj/structure/machinery/camera/autoname/golden_arrow,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"XO" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/smooth/southeast,
+/area/golden_arrow/platoon_commander_rooms)
+"XQ" = (
+/obj/structure/machinery/light/blue/alt{
+	dir = 8
+	},
+/turf/open/floor/almayer/silverfull,
+/area/golden_arrow/cryo_cells)
+"XR" = (
+/obj/structure/machinery/power/terminal,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/golden_arrow/engineering)
+"XS" = (
+/turf/open/floor/corsat/white,
+/area/golden_arrow/hangar)
+"XU" = (
+/obj/structure/largecrate/random/secure,
+/obj/structure/largecrate/random/secure{
+	pixel_y = 17;
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"XV" = (
+/obj/structure/surface/rack{
+	color = "#98a3ab"
+	},
+/obj/item/storage/firstaid/o2,
+/turf/open/floor/corsat/spiralplate,
+/area/golden_arrow/cryo_cells)
+"Yb" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/blue/alt{
+	dir = 2;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/squad_one)
+"Yd" = (
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"Ye" = (
+/turf/open/floor/almayer_hull/outerhull_dir,
+/area/space)
+"Yf" = (
+/obj/effect/decal/hybrisa/warning/redandwhite_N{
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"Yh" = (
+/obj/structure/roof/cargocrane_tracks/horizontal,
+/obj/effect/decal/hybrisa/warning/redandwhite_N{
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"Ym" = (
+/obj/structure/sign/safety/flightcontrol{
+	pixel_x = 31;
+	pixel_y = 1
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"Yo" = (
+/obj/structure/window/framed/corsat/hull,
+/turf/open/floor/plating/prison,
+/area/golden_arrow/briefing)
+"Yz" = (
+/turf/open/floor/corsat/arrow_west,
+/area/golden_arrow/cryo_cells)
+"YB" = (
+/turf/open/floor/corsat/brown/northwest,
+/area/golden_arrow/lower_cargo)
+"YI" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/almayer/silverfull,
+/area/golden_arrow/cryo_cells)
+"YN" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"YT" = (
+/obj/structure/pipes/vents/scrubber{
+	dir = 1
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = -10
+	},
+/turf/open/floor/corsat/officesquares,
+/area/golden_arrow/dorms)
+"YY" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 9
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/hangar)
+"Ze" = (
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/structure/barricade/handrail/wire{
+	dir = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/squad_one)
+"Zh" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = -10
+	},
+/turf/open/floor/corsat/officesquares,
+/area/golden_arrow/dorms)
+"Zk" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/hybrisa/warning/redandwhite_N{
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/hangar)
+"Zo" = (
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	layer = 3.4
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/obj/item/toy/plush/bee{
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/turf/open/floor/hybrisa/carpet/carpetdarkerblue,
+/area/golden_arrow/dorms)
+"Zs" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"ZG" = (
+/obj/structure/machinery/light/blue/alt{
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/lower_cargo)
+"ZJ" = (
+/obj/structure/supply_drop/echo,
+/turf/open/floor/plating/prison,
+/area/golden_arrow/supply)
+"ZQ" = (
+/obj/structure/machinery/light/blue/alt{
+	dir = 8;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/briefing)
+"ZT" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = -1;
+	pixel_x = 9
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/sign/safety/uscss_cyclops/omega{
+	pixel_y = -30
+	},
+/turf/open/floor/corsat/bluegrey/north,
+/area/golden_arrow/cryo_cells)
+"ZV" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/corsat/red/east,
+/area/golden_arrow/platoonarmory)
+"ZW" = (
+/obj/vehicle/powerloader,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+
+(1,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(2,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(3,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(4,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Xp
+Xp
+Xp
+Xp
+uZ
+uZ
+uZ
+Xp
+Xp
+Xp
+Xp
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(5,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Xp
+Xp
+Xp
+Rz
+Rz
+Xp
+Xp
+Xp
+Xp
+Xp
+Rz
+Rz
+Xp
+Xp
+Xp
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(6,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Xp
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Xp
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Xp
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(7,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Xp
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Xp
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Xp
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(8,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Xp
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Xp
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Iy
+Iy
+Iy
+Iy
+Iy
+Iy
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(9,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Xp
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Xp
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Iy
+BP
+BP
+BP
+BP
+Iy
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(10,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Xp
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Xp
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Iy
+BP
+BP
+BP
+BP
+Iy
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(11,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Xp
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Xp
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Iy
+BP
+BP
+BP
+BP
+Iy
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(12,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Xp
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Xp
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Iy
+BP
+BP
+BP
+BP
+Iy
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(13,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Xp
+Xp
+Xp
+Xp
+Xp
+Xp
+Xp
+Xp
+uW
+uW
+uW
+uW
+Xp
+Xp
+Xp
+Bq
+Bq
+Bq
+Bq
+Xp
+Iy
+Iy
+Iy
+Iy
+Iy
+Iy
+Xp
+Xp
+Xp
+Xp
+Xp
+Xp
+Xp
+Xp
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(14,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Xp
+Yd
+Cb
+xw
+kZ
+ib
+Hi
+IN
+fA
+fA
+fA
+fA
+mH
+IN
+JL
+KQ
+HZ
+HZ
+fA
+Yd
+mO
+Yd
+Yd
+Yd
+oH
+Hi
+XU
+qP
+fi
+uD
+Xp
+eI
+eI
+Xp
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(15,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Xp
+Yd
+UG
+Wl
+Wl
+Wl
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+It
+BC
+BC
+BC
+vi
+vi
+vi
+vi
+BC
+BC
+BC
+BC
+hl
+Rh
+Ic
+sf
+qf
+jz
+eI
+eI
+jz
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(16,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Xp
+Yd
+pU
+Sk
+aJ
+aJ
+Kz
+Kz
+Lu
+Kz
+Kz
+vo
+Kz
+Eh
+Kz
+Kz
+Kz
+Kz
+vo
+vo
+Kz
+Fd
+Kz
+Kz
+aB
+KO
+Uc
+Ic
+Qn
+sl
+jz
+eI
+eI
+jz
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(17,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Xp
+Vs
+Uc
+kr
+Yd
+Bo
+im
+eH
+Si
+Bo
+im
+eH
+Si
+Bo
+im
+eH
+Si
+Bo
+im
+eH
+Si
+Bo
+im
+Yd
+Yf
+tY
+Uc
+tY
+tY
+PI
+jz
+eI
+eI
+jz
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(18,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Xp
+Xp
+Xp
+Yd
+Uc
+he
+UK
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+by
+Yf
+vd
+MH
+ym
+Yd
+qN
+Xp
+eI
+eI
+Xp
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(19,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+AB
+Xp
+Yd
+Yd
+Ic
+he
+Zs
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Ns
+Yf
+tY
+Uc
+vm
+Yd
+UV
+Xp
+Xp
+Xp
+Xp
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(20,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+BA
+Xp
+Vs
+tY
+Ic
+Dw
+br
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+mb
+Yf
+Yd
+IZ
+YN
+Yd
+fI
+Xp
+Xp
+Xp
+Xp
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(21,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+AB
+CI
+Yd
+tY
+Uc
+aD
+oD
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+yM
+Zk
+Yd
+Hp
+tY
+Tz
+hN
+hC
+cW
+Gb
+Xp
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(22,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+AB
+CI
+Yd
+tY
+tU
+bs
+UK
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+CC
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+oQ
+rm
+Yd
+Hp
+tY
+Tz
+hN
+oO
+cW
+Ax
+Xp
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(23,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+AB
+CI
+Sn
+KO
+Ic
+Dw
+BB
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Ns
+Yh
+Yd
+Hp
+CX
+Tz
+hN
+qY
+EP
+eQ
+Xp
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(24,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+BA
+Xp
+qt
+tY
+Ic
+aD
+pb
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+RF
+Yh
+tY
+Ic
+CX
+tE
+Tf
+Tf
+Tf
+VX
+VX
+VX
+VX
+VX
+VX
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(25,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+AB
+Xp
+DX
+Yd
+Ic
+kr
+oD
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+na
+Yh
+tY
+Ic
+tY
+fM
+Tf
+Fx
+rN
+gn
+JM
+sR
+zF
+eZ
+VX
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(26,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Xp
+Xp
+Xp
+Yd
+Ic
+kr
+tW
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+xl
+Lb
+NZ
+MH
+xm
+Yd
+hL
+Po
+QS
+XR
+VN
+Kr
+Pc
+Wa
+VX
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(27,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Xp
+Vs
+Ic
+kr
+iH
+IH
+ph
+IY
+SF
+IH
+ph
+IY
+SF
+IH
+ph
+IY
+SF
+IH
+ph
+IY
+SF
+IH
+ph
+Yd
+ne
+Yd
+hy
+IA
+BE
+ps
+Xl
+kV
+FU
+Qy
+Rc
+Pc
+uw
+VX
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(28,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Xp
+cF
+Ic
+kx
+QJ
+ea
+QJ
+MW
+Cx
+rF
+rF
+Cx
+rF
+EN
+rF
+rF
+rF
+tR
+tR
+rF
+rF
+rF
+rF
+rF
+IE
+oP
+cx
+oq
+SX
+hL
+wU
+EF
+XR
+if
+UT
+Qi
+fJ
+VX
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(29,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Xp
+ZW
+AJ
+BC
+BC
+Td
+BC
+cb
+OD
+wf
+BC
+BC
+BC
+Gs
+BC
+vi
+BC
+vi
+vi
+BC
+BC
+BC
+vi
+BC
+BC
+BC
+md
+pM
+EQ
+Tf
+hx
+IW
+Hj
+gQ
+nD
+nw
+qn
+VX
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(30,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Xp
+Yd
+gy
+Yd
+Yd
+iH
+Ym
+Cy
+Ic
+aY
+JR
+dY
+Xw
+sc
+aY
+MU
+VD
+MS
+Aq
+JR
+JR
+JR
+JR
+Aq
+JR
+Sp
+Xw
+iL
+AU
+VX
+VX
+VX
+VX
+VX
+VX
+VX
+VX
+VX
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(31,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+dS
+dS
+dS
+dD
+dD
+dD
+dS
+lg
+NC
+lg
+Xp
+Xp
+lz
+LM
+lz
+Xp
+Xp
+kd
+kd
+kd
+kd
+kd
+kd
+kd
+kd
+Xp
+ND
+iL
+bP
+LC
+TR
+GE
+oo
+Ab
+rB
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(32,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+dS
+ju
+ou
+qK
+JW
+VT
+dS
+qO
+xj
+eI
+Xp
+zk
+Cy
+Am
+XS
+Yd
+Xp
+kd
+Hf
+Hf
+Hf
+Hf
+Hf
+vM
+kd
+LF
+Cy
+iO
+Cq
+tO
+kY
+Xo
+jZ
+yx
+rB
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(33,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+dS
+vg
+Sw
+dL
+te
+za
+Ii
+nZ
+YY
+dR
+Xp
+xF
+Yd
+Yd
+Yd
+Yd
+Xp
+kd
+Hf
+Hf
+Hf
+Hf
+Hf
+Hf
+kd
+Xp
+wO
+iL
+bP
+rB
+PT
+VC
+jZ
+cH
+rB
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(34,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+dS
+HY
+zB
+Oh
+Mi
+ll
+dS
+WH
+IQ
+sI
+Xp
+XL
+vh
+Yd
+Yd
+Yd
+Xp
+kd
+Hf
+Hf
+Hf
+Hf
+Hf
+Hf
+iA
+DL
+sx
+iL
+BS
+rB
+AE
+VC
+VC
+ia
+rB
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(35,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+dS
+Gf
+sE
+hU
+Vj
+HA
+dS
+rQ
+IQ
+sI
+Xp
+yU
+oU
+oU
+oU
+kD
+Xp
+kd
+Hf
+Hf
+Hf
+Hf
+Hf
+Hf
+iA
+DL
+tY
+iL
+XS
+rB
+qu
+jZ
+VC
+Kw
+rB
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(36,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+dS
+dS
+dS
+nv
+Tn
+nv
+dS
+nX
+tt
+sI
+Xp
+tL
+Yd
+vh
+vh
+Yd
+Xp
+kd
+Hf
+Hf
+Hf
+Hf
+Hf
+Hf
+iA
+DL
+KO
+iL
+XS
+rB
+ai
+VC
+VC
+gJ
+rB
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(37,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+dS
+gE
+HX
+Hm
+dS
+nX
+Hx
+sI
+Xp
+lR
+vh
+vh
+Yd
+Yd
+Xp
+kd
+Hf
+Hf
+Hf
+Hf
+Hf
+Hf
+kS
+DL
+xN
+iL
+bP
+rB
+AI
+pe
+VC
+hu
+rB
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(38,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+dS
+kt
+ms
+Sh
+dS
+rQ
+HR
+sI
+Xp
+dK
+vh
+Yd
+vh
+Yd
+Xp
+kd
+Hf
+Hf
+Hf
+Hf
+Hf
+Hf
+kd
+Xp
+Qj
+iL
+bP
+rB
+ZJ
+Cs
+Li
+JK
+rB
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(39,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+dS
+eg
+XO
+EH
+dS
+rQ
+IQ
+dR
+Xp
+Xp
+Xp
+Xp
+Xp
+Xp
+Xp
+kd
+Hf
+Hf
+Hf
+Hf
+Hf
+Hf
+kd
+Vh
+Cy
+uF
+XS
+rB
+rB
+rB
+rB
+rB
+rB
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(40,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+dS
+dS
+dS
+dS
+dS
+rQ
+tt
+dR
+Xp
+uZ
+uZ
+uZ
+uZ
+uZ
+kd
+kd
+kd
+kd
+kd
+kd
+kd
+kd
+kd
+Xp
+NT
+vP
+NT
+Xp
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(41,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Xp
+rQ
+IQ
+dR
+Xp
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+NG
+Xp
+eI
+QO
+eI
+Xp
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(42,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Xp
+rQ
+HR
+sI
+Xp
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Xp
+NT
+NT
+NT
+Xp
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(43,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Xp
+eI
+eI
+eI
+Xp
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+fC
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(44,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Xp
+fQ
+fQ
+fQ
+Xp
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(45,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Xp
+eI
+eI
+eI
+Xp
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(46,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Xp
+ff
+kW
+yy
+Xp
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(47,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(48,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(49,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(50,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(51,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(52,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(53,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(54,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(55,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(56,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(57,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(58,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(59,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(60,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Ku
+WP
+WP
+WP
+Ku
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(61,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Ku
+FH
+IF
+fg
+Ku
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(62,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Ku
+WP
+WP
+WP
+Ku
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(63,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Ku
+Ku
+rE
+bo
+yh
+Ku
+Ku
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(64,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Ku
+xn
+FH
+Gz
+fg
+qM
+Ku
+vX
+vX
+vX
+vX
+vX
+vX
+kJ
+yz
+yz
+yz
+yz
+dX
+uZ
+"}
+(65,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Ku
+Ku
+Ui
+FH
+mD
+fg
+Tx
+Ku
+vX
+sy
+rc
+CJ
+Jb
+vX
+kJ
+kJ
+kJ
+kJ
+kJ
+Ye
+uZ
+"}
+(66,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Ku
+xC
+Tj
+FH
+mD
+fg
+IF
+uv
+tH
+VF
+aK
+vB
+rC
+vX
+kJ
+kJ
+kJ
+kJ
+kJ
+Ye
+uZ
+"}
+(67,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Ku
+KP
+jk
+FH
+gw
+fg
+wv
+fq
+Nc
+Wv
+rl
+nm
+tH
+vX
+kJ
+kJ
+kJ
+kJ
+kJ
+Ye
+uZ
+"}
+(68,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Ku
+le
+zd
+qH
+el
+hb
+cL
+iu
+iF
+Mq
+tw
+Us
+gN
+vX
+kJ
+kJ
+kJ
+kJ
+kJ
+Ye
+uZ
+"}
+(69,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+Ku
+Be
+Be
+lF
+TV
+vY
+Be
+Be
+tH
+SH
+xv
+bf
+XA
+vX
+kJ
+kJ
+kJ
+kJ
+kJ
+Ye
+uZ
+"}
+(70,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+yY
+ta
+eq
+DD
+Py
+gt
+dp
+oX
+tH
+tH
+iF
+GI
+tH
+vX
+nl
+kJ
+kJ
+kJ
+kJ
+Ye
+uZ
+"}
+(71,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+yY
+zL
+hS
+ZV
+ZV
+JP
+OQ
+hA
+tH
+mW
+HI
+KH
+Dk
+nb
+vX
+kJ
+kJ
+kJ
+kJ
+Ye
+uZ
+"}
+(72,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+yY
+mS
+cu
+Eg
+ok
+Dn
+tF
+sQ
+iF
+Tr
+uH
+Rr
+Dk
+oN
+vX
+kJ
+kJ
+kJ
+kJ
+Ye
+uZ
+"}
+(73,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+yY
+eG
+cu
+Eg
+Rj
+VQ
+sV
+gv
+tH
+mN
+tb
+xI
+tH
+vX
+vX
+kJ
+kJ
+kJ
+kJ
+Ye
+uZ
+"}
+(74,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+yY
+WE
+GH
+Eg
+ok
+Dn
+tF
+RT
+pa
+pa
+pa
+pa
+pa
+Mh
+kJ
+kJ
+kJ
+kJ
+kJ
+Ye
+uZ
+"}
+(75,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+yY
+jF
+qx
+aw
+Uf
+MI
+Xd
+NO
+pa
+zZ
+pa
+Wz
+ww
+Mh
+Mh
+Mh
+Mh
+kJ
+kJ
+Ye
+uZ
+"}
+(76,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+yY
+oM
+wT
+nN
+OC
+iN
+Bk
+kl
+pa
+pa
+pa
+zw
+zw
+pa
+QW
+oE
+Mh
+kJ
+kJ
+Ye
+uZ
+"}
+(77,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+wI
+wI
+nK
+nK
+So
+Ek
+al
+nK
+nK
+nK
+pa
+io
+Cl
+NE
+pa
+Cc
+co
+Mh
+kJ
+kJ
+Ye
+uZ
+"}
+(78,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+wI
+sm
+LV
+Ek
+aL
+PS
+tX
+gh
+nG
+KT
+pa
+KE
+zV
+ET
+pa
+ED
+yo
+Mh
+kJ
+kJ
+Ye
+uZ
+"}
+(79,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+wI
+uL
+LD
+nK
+yJ
+dk
+DE
+qA
+rW
+Yb
+pa
+pa
+ER
+pa
+pa
+eE
+pa
+Mh
+kJ
+kJ
+Ye
+uZ
+"}
+(80,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+wI
+nK
+XG
+kc
+vx
+dF
+Pr
+hY
+Vb
+gu
+pa
+jQ
+vG
+ZQ
+bK
+nn
+dG
+Mh
+Mh
+kJ
+Ye
+uZ
+"}
+(81,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+wI
+er
+bM
+FQ
+OI
+AM
+OI
+Jr
+Vb
+gu
+pa
+qj
+bq
+Ix
+Ix
+hv
+VS
+hH
+Mh
+kJ
+Ye
+uZ
+"}
+(82,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+wI
+LA
+Bu
+Ao
+VZ
+Ge
+xr
+jS
+cw
+ru
+Vy
+mX
+tv
+Jt
+dw
+Bf
+cQ
+LE
+Yo
+kJ
+Ye
+uZ
+"}
+(83,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+wI
+er
+Bu
+At
+jI
+VZ
+VZ
+jS
+Ze
+Ak
+pN
+Ej
+po
+ip
+vj
+pQ
+cQ
+hH
+Yo
+kJ
+Ye
+uZ
+"}
+(84,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+wI
+dW
+ex
+wR
+AV
+TZ
+TZ
+Ia
+Vb
+Sz
+pa
+Wh
+HK
+pA
+Le
+Jf
+bZ
+hH
+Mh
+kJ
+Ye
+uZ
+"}
+(85,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+xx
+dM
+dM
+dM
+dM
+dM
+xx
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+wI
+nK
+pD
+bX
+Hn
+dF
+QB
+Xi
+Vb
+gu
+pa
+En
+jN
+zt
+Hd
+Hd
+zn
+Mh
+Mh
+kJ
+Ye
+uZ
+"}
+(86,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+xx
+Uy
+nB
+nB
+nB
+bW
+xx
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+wI
+XJ
+LD
+nK
+ES
+bT
+jh
+Qm
+rW
+ft
+pa
+pa
+VV
+pa
+Od
+pa
+Mh
+Mh
+Mh
+kJ
+Ye
+uZ
+"}
+(87,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+fa
+fa
+fa
+fa
+fa
+fa
+fa
+fa
+xx
+xx
+vw
+vw
+vw
+vw
+vw
+xx
+xx
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+wI
+uI
+ld
+hQ
+vb
+Eq
+cZ
+VO
+JO
+nY
+pa
+Qh
+aR
+oa
+at
+DZ
+eX
+ww
+Mh
+kJ
+Ye
+uZ
+"}
+(88,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+fa
+Sb
+Sb
+Sb
+Sb
+Sb
+OE
+fa
+Cd
+WR
+Uy
+tu
+tu
+tu
+bW
+WR
+xx
+xx
+xx
+xx
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+tk
+pv
+pv
+pv
+RA
+cB
+aO
+pv
+pv
+pv
+pv
+sW
+rp
+Lo
+KZ
+um
+eX
+Ul
+Mh
+kJ
+Ye
+uZ
+"}
+(89,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+fa
+Sb
+Sb
+Sb
+Sb
+Sb
+Sb
+fa
+xx
+xx
+yi
+YB
+oY
+qq
+bW
+WR
+WR
+QI
+WR
+xx
+xx
+xx
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+tk
+tf
+HF
+pv
+Yz
+gG
+me
+pv
+iG
+iz
+pv
+oC
+aR
+Ip
+vD
+um
+eX
+Ei
+Mh
+kJ
+Ye
+uZ
+"}
+(90,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+fa
+Sb
+Sb
+Sb
+Sb
+Sb
+Sb
+wn
+Ai
+eF
+IG
+km
+ec
+SW
+bW
+YB
+oY
+zg
+eF
+Ov
+eF
+La
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+tk
+fW
+jL
+Xt
+KD
+MP
+OM
+id
+yu
+iz
+pv
+pv
+Fq
+Fq
+Fq
+Fq
+tn
+tn
+tn
+kJ
+Ye
+uZ
+"}
+(91,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+fa
+Sb
+Sb
+Sb
+Sb
+Sb
+Sb
+wn
+Ai
+nB
+nB
+nB
+nB
+nB
+bW
+yA
+yC
+Ee
+Lv
+Ov
+nB
+La
+uZ
+uZ
+uZ
+uZ
+tk
+tk
+tk
+tk
+tk
+tk
+Or
+gB
+ZT
+pv
+pv
+pv
+kb
+Qw
+Sd
+pv
+pv
+Fq
+Fq
+uf
+uf
+Fq
+Fq
+tn
+kJ
+Ye
+uZ
+"}
+(92,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+fa
+Sb
+Sb
+Sb
+Sb
+Sb
+Sb
+wn
+Ai
+nB
+nB
+nB
+nB
+nB
+bW
+yA
+yC
+Ee
+Lv
+Ov
+nB
+La
+uZ
+uZ
+uZ
+uZ
+tk
+RU
+pv
+Tq
+pv
+pv
+fW
+jL
+QL
+UB
+pv
+If
+wc
+jL
+iz
+pv
+pv
+sG
+gc
+oI
+Xc
+Rb
+IX
+tn
+kJ
+Ye
+uZ
+"}
+(93,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+fa
+Sb
+Sb
+Sb
+Sb
+Sb
+Sb
+wn
+Ai
+Fz
+CR
+LS
+oY
+qq
+bW
+Xu
+ec
+iZ
+Fz
+Ov
+Fz
+La
+uZ
+uZ
+uZ
+tk
+tk
+lQ
+pv
+lQ
+pv
+tQ
+jL
+FV
+QL
+aT
+pv
+bJ
+wc
+FV
+yu
+yu
+pv
+EG
+fF
+qe
+Xc
+AC
+EO
+tn
+kJ
+Ye
+uZ
+"}
+(94,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+fa
+Sb
+Sb
+Sb
+Sb
+Sb
+Sb
+fa
+xx
+xx
+yi
+gb
+xP
+iZ
+bW
+WR
+WR
+ZG
+WR
+xx
+xx
+xx
+uZ
+uZ
+uZ
+tk
+FP
+ii
+Fo
+cc
+bx
+hd
+OV
+OV
+Ud
+Ir
+pv
+XV
+vc
+OV
+OV
+hd
+TI
+Jg
+RG
+hw
+ve
+QM
+CU
+tn
+kJ
+Ye
+uZ
+"}
+(95,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+fa
+Sb
+Sb
+Sb
+Sb
+Sb
+Sb
+fa
+Fj
+xx
+Uy
+Im
+Im
+Im
+bW
+WR
+xx
+xx
+xx
+xx
+uZ
+uZ
+uZ
+uZ
+uZ
+tk
+FP
+YI
+PG
+gH
+pv
+dA
+em
+em
+mx
+pv
+pv
+pv
+lk
+em
+em
+wZ
+pv
+eT
+sj
+YT
+Zh
+sj
+oy
+tn
+kJ
+Ye
+uZ
+"}
+(96,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+fa
+fa
+fa
+fa
+fa
+fa
+fa
+fa
+xx
+xx
+vw
+vw
+vw
+vw
+vw
+xx
+xx
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+tk
+WJ
+dH
+Vq
+zS
+pv
+nQ
+ii
+ii
+ii
+ii
+XQ
+ii
+ii
+ii
+OS
+mm
+pv
+yw
+hK
+wb
+QN
+hK
+Rq
+tn
+kJ
+Ye
+uZ
+"}
+(97,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+xx
+Uy
+nB
+nB
+nB
+bW
+xx
+uZ
+uZ
+jO
+jO
+jO
+jO
+jO
+uZ
+uZ
+tk
+tk
+lj
+ui
+lj
+pv
+gd
+gd
+Rn
+oL
+CO
+Rn
+un
+Ss
+Rn
+Qa
+aA
+pv
+dO
+Fn
+dO
+Zo
+OO
+dO
+tn
+kJ
+Ye
+uZ
+"}
+(98,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+xx
+dM
+dM
+dM
+dM
+dM
+xx
+uZ
+uZ
+jO
+Nb
+jO
+jO
+jO
+uZ
+uZ
+uZ
+tk
+tk
+tk
+tk
+tk
+gW
+gW
+pJ
+gW
+gW
+Rn
+gW
+gW
+pJ
+gW
+gW
+tk
+tn
+tn
+tn
+tn
+tn
+tn
+tn
+LO
+ji
+uZ
+"}
+(99,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+jO
+jO
+jO
+jO
+jO
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+tk
+tk
+tk
+tk
+tk
+tk
+tk
+tk
+tk
+tk
+tk
+tk
+tk
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}
+(100,1,1) = {"
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+uZ
+"}

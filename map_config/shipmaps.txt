@@ -45,5 +45,8 @@ endmap
 map uscss_onyx_karain
 endmap
 
+map uscss_placeholder
+endmap
+
 map hms_brynhild
 endmap

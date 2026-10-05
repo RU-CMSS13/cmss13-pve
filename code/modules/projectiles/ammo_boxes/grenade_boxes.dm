@@ -176,6 +176,12 @@
 	overlay_icon_type = "m15"
 	overlay_grenade_type = "m15"
 
+/obj/item/ammo_box/magazine/nade_box/m15/pmc
+	name = "\improper M12 blast grenade box"
+	desc = "A secure box holding 25 M12-model high-explosive grenades. Highly explosive, produced for private security firms."
+	magazine_type = /obj/item/explosive/grenade/high_explosive/pmc
+	allowed_magazines = list(/obj/item/explosive/grenade/high_explosive/pmc)
+
 /obj/item/ammo_box/magazine/nade_box/super
 	name = "\improper M40-2 \"super\" HEDP grenade box"
 	desc = "A secure box holding 25 modified M40-2 High-Explosive Dual-Purpose grenades. Highly explosive, don't store near the flamer fuel."

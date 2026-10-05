@@ -1866,6 +1866,16 @@
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/smg/m39/ap(src)
 
+/obj/item/storage/belt/gun/m39/pmc_small
+	name = "\improper WY-TM702 pattern M39 holster rig"
+	desc = "Special issue variant of the WY-TM702 designed to holster a M39 submachine gun and two spare magazines."
+	storage_slots = 5
+
+/obj/item/storage/belt/gun/m39/pmc_small/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/smg/m39/elite/pve(src))
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/smg/m39/pve(src)
+
 #define MAXIMUM_MAGAZINE_COUNT 2
 
 /obj/item/storage/belt/gun/bizon
