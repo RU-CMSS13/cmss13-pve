@@ -410,6 +410,7 @@
 /datum/component/overlay_lighting/proc/on_toggle(atom/source, new_value)
 	SIGNAL_HANDLER
 	if(new_value) //Truthy value input, turn on.
+		check_holder() // The holder can be stale if we were equipped in nullspace and the wearer was moved afterwards
 		turn_on()
 		return
 	turn_off() //Falsey value, turn off.
