@@ -1578,6 +1578,8 @@
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/lb_merc)
 	item_state_slots = list(WEAR_JACKET = "lb_merc")
+	lamp_icon = "lamp_neon"
+	lamp_light_color = LIGHT_COLOR_XENON
 	light_color = LIGHT_COLOR_XENON
 
 /obj/item/clothing/suit/storage/marine/veteran/lb_merc/Initialize()
@@ -1614,7 +1616,9 @@
 		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/LASALLE.dmi'
 	)
 
+	lamp_light_color = LIGHT_COLOR_XENON
 	light_color = LIGHT_COLOR_XENON
+	lamp_icon = "lamp_neon"
 
 /obj/item/clothing/suit/storage/marine/veteran/pmc/light/corporate/lasalle_security/Initialize()
 	. = ..()
