@@ -380,6 +380,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		add_verb(src, /client/proc/toggle_vehicle_blockers)
 		add_verb(src, /client/proc/toggle_ai_xeno_weeding)
 		add_verb(src, /client/proc/toggle_rappel_menu)
+		add_verb(src, /client/proc/open_corporate_implant_panel) // RU-PVE
 		add_verb(src, /client/proc/toggle_fire_support_menu)
 		add_verb(src, /client/proc/gm_lighting)
 		add_verb(src, /client/proc/disallow_to_join) // RU-PVE
@@ -418,6 +419,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		/client/proc/toggle_vehicle_blockers,
 		/client/proc/toggle_ai_xeno_weeding,
 		/client/proc/toggle_rappel_menu,
+		/client/proc/open_corporate_implant_panel, // RU-PVE
 		/client/proc/toggle_fire_support_menu,
 		/client/proc/admin_marine_announcement,
 		/client/proc/screen_alert_menu,

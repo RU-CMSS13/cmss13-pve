@@ -14,6 +14,13 @@
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 	skills = /datum/skills/pfc
 
+// RU-PVE START
+/datum/equipment_preset/uscm/pmc/load_status(mob/living/carbon/human/new_human, client/mob_client)
+	. = ..()
+	var/obj/item/implant/corporate_explosive/implant = new()
+	implant.do_implant(new_human, "head")
+// RU-PVE END
+
 // rto
 /datum/equipment_preset/uscm/pmc/rto
 	name = "Tactical Data Specialist"

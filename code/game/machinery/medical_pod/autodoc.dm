@@ -223,7 +223,7 @@
 	if(!ishuman(M))
 		return list()
 	var/surgery_list = list()
-	var/known_implants = list(/obj/item/implant/chem, /obj/item/implant/death_alarm, /obj/item/implant/loyalty, /obj/item/implant/tracking, /obj/item/implant/neurostim)
+	var/known_implants = list(/obj/item/implant/chem, /obj/item/implant/death_alarm, /obj/item/implant/loyalty, /obj/item/implant/tracking, /obj/item/implant/neurostim, /obj/item/implant/corporate_explosive) // RU-PVE
 
 	for(var/obj/limb/L in M.limbs)
 		if(L)
@@ -312,7 +312,7 @@
 	surgery = 1
 	update_icon()
 
-	var/known_implants = list(/obj/item/implant/chem, /obj/item/implant/death_alarm, /obj/item/implant/loyalty, /obj/item/implant/tracking, /obj/item/implant/neurostim)
+	var/known_implants = list(/obj/item/implant/chem, /obj/item/implant/death_alarm, /obj/item/implant/loyalty, /obj/item/implant/tracking, /obj/item/implant/neurostim, /obj/item/implant/corporate_explosive) // RU-PVE - corporate_explosive
 
 	for(var/datum/autodoc_surgery/A in surgery_todo_list)
 		if(A.type_of_surgery == EXTERNAL_SURGERY)
@@ -900,7 +900,7 @@
 				updateUsrDialog()
 
 			if(href_list["object"])
-				var/known_implants = list(/obj/item/implant/chem, /obj/item/implant/death_alarm, /obj/item/implant/loyalty, /obj/item/implant/tracking, /obj/item/implant/neurostim)
+				var/known_implants = list(/obj/item/implant/chem, /obj/item/implant/death_alarm, /obj/item/implant/loyalty, /obj/item/implant/tracking, /obj/item/implant/neurostim, /obj/item/implant/corporate_explosive) // RU-PVE - corporate_explosive
 				for(var/obj/limb/L in connected.occupant.limbs)
 					if(L)
 						if(istype(L,/obj/limb/chest))
