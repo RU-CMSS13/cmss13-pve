@@ -86,7 +86,7 @@
 //M41A (MK1) TRUE AND ORIGINAL
 
 /obj/item/ammo_magazine/rifle/m41aMK1
-	name = "\improper M41A LE magazine (10x24mm)"
+	name = "\improper M41A magazine (10x24mm)"
 	desc = "A long rectangular box magazine for the M41A. Holds 99 caseless 10x24mm rounds."
 	icon_state = "m41a_mk1"
 	max_rounds = 99

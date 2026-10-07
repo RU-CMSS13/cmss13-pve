@@ -1376,7 +1376,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	bag_open_time = 2 SECONDS
 
 /obj/item/storage/backpack/marine/ammo_rack/upp
-	name = "\improper UCCR5 ammo rack"
+	name = "\improper UCCF5 ammo rack"
 	desc = "A UPP military standard issue Union Combat Carry-Frame MK5 with buckles designed to hold multiple ammo cans and grenade boxes. Helps you lug around extra ammunition or supplies."
 	has_gamemode_skin = FALSE
 	storage_slots = 3
@@ -1384,7 +1384,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	base_icon_state = "upp_frame"
 
 /obj/item/storage/backpack/marine/ammo_rack/upp/recon
-	name = "\improper UCCR5-R ammo rack"
+	name = "\improper UCCF5-R ammo rack"
 	desc = "A UPP military standard issue Union Combat Carry-Frame MK5 with buckles designed to hold multiple ammo cans and grenade boxes. Helps you lug around extra ammunition or supplies. Additional straps and buckles have improved stability of the package, making it easier to carry even fully loaded."
 	move_delay_mult = 0
 
