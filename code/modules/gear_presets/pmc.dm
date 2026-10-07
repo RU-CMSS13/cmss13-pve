@@ -805,7 +805,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/reagent_scanner, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/device/taperecorder, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/device/camera, WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/folder/black, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/notepad/black, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/pen, WEAR_IN_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/pmc/guard/medic, WEAR_JACKET)
