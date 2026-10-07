@@ -5111,13 +5111,11 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "lf" = (
-/obj/item/ammo_box/magazine/type71,
-/obj/item/ammo_box/magazine/type71,
-/obj/item/ammo_box/magazine/type71,
-/obj/item/ammo_box/magazine/ag80,
-/obj/item/ammo_box/magazine/ag80,
-/obj/item/ammo_box/magazine/ag80,
 /obj/structure/closet/crate/secure/upp/alt,
+/obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/type71,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "lg" = (
@@ -5190,10 +5188,11 @@
 	light_range = 5;
 	dir = 1
 	},
-/obj/structure/surface/rack{
-	color = "#8B9490"
-	},
-/obj/item/ammo_box/rounds/smartgun/upp,
+/obj/structure/closet/crate/secure/upp/alt,
+/obj/item/ammo_box/magazine/ag80,
+/obj/item/ammo_box/magazine/ag80,
+/obj/item/ammo_box/magazine/ag80,
+/obj/item/ammo_box/magazine/ag80,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "lp" = (
@@ -5761,10 +5760,6 @@
 /obj/item/ammo_box/magazine/type73{
 	pixel_y = 0;
 	pixel_x = 2
-	},
-/obj/item/stack/sheet/cardboard/medium_stack{
-	pixel_x = -15;
-	pixel_y = -8
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
