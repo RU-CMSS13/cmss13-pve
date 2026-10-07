@@ -206,6 +206,8 @@
 
 	for(var/gear_item in gear)
 		var/datum/gear/gear = GLOB.gear_datums_by_name[gear_item]
+		if(!istype(gear))
+			continue
 		var/obj/item/item = new gear.path()
 
 		if(!preview_dummy.equip_to_appropriate_slot(item))

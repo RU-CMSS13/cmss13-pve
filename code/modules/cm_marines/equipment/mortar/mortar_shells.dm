@@ -47,9 +47,9 @@
 	name = "\improper 80mm incendiary mortar shell"
 	desc = "An 80mm mortar shell, loaded with a Type B napalm charge. Perfect for long-range area denial."
 	icon_state = "mortar_ammo_inc"
-	var/radius = 8
+	var/radius = 5
 	var/flame_level = BURN_TIME_TIER_5 + 5 //Type B standard, 50 base + 5 from chemfire code.
-	var/burn_level = BURN_LEVEL_TIER_7
+	var/burn_level = BURN_LEVEL_TIER_2
 	var/flameshape = FLAMESHAPE_DEFAULT
 	var/fire_type = FIRE_VARIANT_TYPE_B //Armor Shredding Greenfire
 
@@ -75,9 +75,9 @@
 	name = "\improper 80mm white-phosphorus mortar shell"
 	desc = "An 80mm mortar shell, loaded to the brim with white phosphorus. Used for both concealment via smoke and as an incendiary device."
 	icon_state = "mortar_ammo_wp"
-	var/radius = 8
+	var/radius = 5
 	var/flame_level = BURN_TIME_TIER_4
-	var/burn_level = BURN_LEVEL_TIER_9
+	var/burn_level = BURN_LEVEL_TIER_5
 	var/flameshape = FLAMESHAPE_IRREGULAR
 	var/fire_type = FIRE_VARIANT_TYPE_X //Bluefire
 
