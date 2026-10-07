@@ -1160,7 +1160,7 @@
 	w_class = SIZE_LARGE
 	max_w_class = SIZE_SMALL
 	storage_flags = NONE
-	storage_slots = 5
+	storage_slots = 4
 
 /obj/item/clothing/accessory/storage/holster
 	name = "shoulder holster"
@@ -1175,7 +1175,7 @@
 	var/obj/item/weapon/gun/current_gun
 	var/sheatheSound = 'sound/weapons/gun_pistol_sheathe.ogg'
 	var/drawSound = 'sound/weapons/gun_pistol_draw.ogg'
-	storage_slots = 4
+	storage_slots = 3
 	storage_flags = STORAGE_ALLOW_QUICKDRAW|STORAGE_FLAGS_POUCH
 	can_hold = list(
 
@@ -1827,7 +1827,6 @@
 	hold = /obj/item/storage/internal/accessory/black_vest/m3shotgun
 
 /obj/item/storage/internal/accessory/black_vest/m3shotgun
-	storage_slots = 10
 	can_hold = list(
 		/obj/item/ammo_magazine/handful,
 	)
@@ -1837,7 +1836,7 @@
 	name = "\improper M3 Pattern Small Pouch Webbing"
 	desc = "A set of M3 pattern webbing fully outfitted with pouches and pockets to carry a whole array of small items."
 	icon_state = "m3webbingsmall"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/plus
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
 	slot = ACCESSORY_SLOT_M3UTILITY
 
 //Pre-load for MARSOC props
@@ -1894,7 +1893,7 @@
 	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade
 
 /obj/item/storage/internal/accessory/black_vest/m3grenade
-	storage_slots = 10
+	storage_slots = 7
 	can_hold = list(
 		/obj/item/explosive/grenade/high_explosive,
 		/obj/item/explosive/grenade/high_explosive/super,
@@ -1948,7 +1947,7 @@
 	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade/recon
 
 /obj/item/storage/internal/accessory/black_vest/m3grenade/recon
-	storage_slots = 15
+	storage_slots = 10
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon/shotgun
 	name = "\improper M3-R Pattern Shell Webbing"
@@ -1957,7 +1956,7 @@
 	hold = /obj/item/storage/internal/accessory/black_vest/m3shotgun/recon
 
 /obj/item/storage/internal/accessory/black_vest/m3shotgun/recon
-	storage_slots = 10
+	storage_slots = 7
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon/medic
 	name = "\improper M3-R Pattern Corpsman Webbing"
@@ -1987,6 +1986,11 @@
 /obj/item/storage/internal/accessory/black_vest/m3generic/recon
 	storage_slots = 7
 	can_hold = list(
+		/obj/item/device/healthanalyzer,
+		/obj/item/reagent_container/dropper,
+		/obj/item/reagent_container/pill,
+		/obj/item/reagent_container/glass/bottle,
+		/obj/item/reagent_container/syringe,
 		/obj/item/storage/pill_bottle,
 		/obj/item/stack/medical,
 		/obj/item/reagent_container/hypospray,
@@ -1995,11 +1999,10 @@
 		/obj/item/tool/surgery/surgical_line,
 		/obj/item/tool/surgery/synthgraft,
 		/obj/item/reagent_container/blood,
+		/obj/item/roller,
 		/obj/item/bodybag,
+		/obj/item/tool/surgery/FixOVein,
 	)
-
-/obj/item/storage/internal/accessory/black_vest/m3generic/plus // RU-CM PVE edit
-	storage_slots = 6
 
 /obj/item/clothing/accessory/storage/webbing/m56
 	name = "\improper Clip-on Pouch"
@@ -2092,7 +2095,7 @@
 	name = "\improper Type 78 Pattern Small Pouch Webbing"
 	desc = "A set of UPP webbing fully outfitted with pouches and pockets to carry a while array of small items."
 	icon_state = "upp_webbing_small"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/plus
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
 	flags_atom = NO_SNOW_TYPE
 	slot = ACCESSORY_SLOT_M3UTILITY
 
@@ -2100,22 +2103,13 @@
 	name = "\improper Type 78 Pattern Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to UPP armor. This one is the slimmed down model designed for general purpose storage."
 	icon_state = "upp_webbing_large"
-	hold = /obj/item/storage/internal/accessory/webbing/m3generic/plus
+	hold = /obj/item/storage/internal/accessory/webbing/m3generic
 	flags_atom = NO_SNOW_TYPE
 	slot = ACCESSORY_SLOT_M3UTILITY
 
-/obj/item/storage/internal/accessory/webbing/m3generic/plus
-	bypass_w_limit = list(
-		/obj/item/ammo_magazine/rifle,
-		/obj/item/ammo_magazine/smg,
-		/obj/item/ammo_magazine/sniper,
-		/obj/item/ammo_magazine/plasma,
-		/obj/item/ammo_magazine/flamer_tank, // RU-CM PVE edit
-	)
-
 /obj/item/clothing/accessory/storage/webbing/m3/m40/upp
 	name = "\improper Type 82 Pattern Grenade Webbing"
-	desc = "A set of UPP webbing with small pouches that can carry up to 10 grenades, hand or impact."
+	desc = "A half-apron set of UPP webbing with multiple pockets for grenades, hand or impact."
 	icon_state = "upp_webbing_grenade"
 	flags_atom = NO_SNOW_TYPE
 	slot = ACCESSORY_SLOT_M3UTILITY
@@ -2133,10 +2127,9 @@
 	new /obj/item/ammo_magazine/rifle/type71(src)
 
 /obj/item/clothing/accessory/storage/webbing/m3/uppsmall/upp_juggernaut
-	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/plus/upp_juggernaut
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/upp_juggernaut
 
-/obj/item/storage/internal/accessory/black_vest/m3generic/plus/upp_juggernaut/fill_preset_inventory()
-	new /obj/item/smartgun_battery/upp(src)
+/obj/item/storage/internal/accessory/black_vest/m3generic/upp_juggernaut/fill_preset_inventory()
 	new /obj/item/smartgun_battery/upp(src)
 	new /obj/item/ammo_magazine/pistol/t73(src)
 	new /obj/item/ammo_magazine/pistol/t73(src)
@@ -2144,13 +2137,11 @@
 	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
 
 /obj/item/clothing/accessory/storage/webbing/m3/uppsmall/upp_breacher
-	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/plus/upp_breacher
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/upp_breacher
 
-/obj/item/storage/internal/accessory/black_vest/m3generic/plus/upp_breacher/fill_preset_inventory()
+/obj/item/storage/internal/accessory/black_vest/m3generic/upp_breacher/fill_preset_inventory()
 	new /obj/item/explosive/plastic/breaching_charge(src)
 	new /obj/item/explosive/plastic/breaching_charge(src)
-	new /obj/item/explosive/plastic/breaching_charge(src)
-	new /obj/item/explosive/plastic(src)
 	new /obj/item/explosive/plastic(src)
 	new /obj/item/explosive/plastic(src)
 
