@@ -2802,7 +2802,9 @@
 /area/firefly/supply)
 "ahZ" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
-	name = "\improper A-15 Overwatch Office"
+	name = "\improper A-15 Overwatch Office";
+	req_one_access_txt = "207;215;216";
+	req_access = list()
 	},
 /turf/open/floor/corsat/marked,
 /area/firefly/briefing)
