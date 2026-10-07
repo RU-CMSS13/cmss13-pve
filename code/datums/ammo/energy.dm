@@ -76,9 +76,9 @@
 	icon_state = "arcane_barrage"
 	flags_ammo_behavior = AMMO_ENERGY|AMMO_HITS_TARGET_TURF|AMMO_ANTISTRUCT
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
-	damage = 500
+	damage = 150
 	damage_type = BURN
-	penetration = ARMOR_PENETRATION_TIER_10 //It's a freaking plasma beam
+	penetration = ARMOR_PENETRATION_TIER_8 //It's a freaking plasma beam
 	accurate_range = 20
 	effective_range_max = 11
 	max_range = 20
@@ -126,7 +126,7 @@
 
 /datum/ammo/energy/plasma/heavy
 	name = "heavy plasma bolt"
-	damage = 750
+	damage = 300
 	penetration = ARMOR_PENETRATION_TIER_10
 	accurate_range = 13
 	effective_range_max = 8
@@ -162,11 +162,11 @@
 	name = "plasma pistol bolt"
 	icon_state = "ion"
 
-	damage = 75
+	damage = 40
 	shell_speed = AMMO_SPEED_TIER_2
 
 /datum/ammo/energy/yautja/pistol/incendiary
-	damage = 75
+	damage = 10
 
 /datum/ammo/energy/yautja/pistol/incendiary/set_bullet_traits()
 	. = ..()
@@ -179,7 +179,7 @@
 	shrapnel_chance = 0
 	penetration = ARMOR_PENETRATION_TIER_10
 	accuracy = HIT_ACCURACY_TIER_MAX
-	damage = 30
+	damage = 15
 	icon_state = "shrapnel_plasma"
 	damage_type = BURN
 
@@ -202,7 +202,7 @@
 	icon_state = "pulse1"
 	flags_ammo_behavior = AMMO_IGNORE_RESIST
 	shell_speed = AMMO_SPEED_TIER_6
-	damage = 100
+	damage = 35
 
 /datum/ammo/energy/yautja/caster/bolt/stun
 	name = "high power stun bolt"
@@ -233,7 +233,7 @@
 	shell_speed = AMMO_SPEED_TIER_4
 	accuracy = HIT_ACCURACY_TIER_8
 
-	damage = 300
+	damage = 55
 
 	accurate_range = 8
 	max_range = 8
@@ -303,7 +303,7 @@
 	debilitate = list(0,2,0,0,0,0,0,0)
 	flags_ammo_behavior = AMMO_IGNORE_RESIST
 
-	damage = 250
+	damage = 55
 	penetration = ARMOR_PENETRATION_TIER_10
 
 /datum/ammo/energy/yautja/rifle/bolt/on_hit_mob(mob/hit_mob, obj/projectile/hit_projectile)

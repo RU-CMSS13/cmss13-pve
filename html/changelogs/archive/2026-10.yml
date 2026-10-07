@@ -1,0 +1,9 @@
+2026-10-01:
+  chaos-creations:
+  - bugfix: fix from PvP for examine thing
+2026-10-06:
+  Kugamo:
+  - code_imp: removed an unnecessary chair variable
+  - bugfix: shimmied mobs now get their offsets reset if the object being shimmied
+      around gets destroyed
+  - qol: you can now shimmy past seated people in immovable seats!

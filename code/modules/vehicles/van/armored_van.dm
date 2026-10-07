@@ -94,11 +94,6 @@
 	pixel_x = -48
 	pixel_y = -48
 
-/obj/effect/vehicle_spawner/van/armored/Initialize()
-	. = ..()
-	spawn_vehicle()
-	qdel(src)
-
 //PRESET: no hardpoints
 /obj/effect/vehicle_spawner/van/armored/spawn_vehicle()
 	var/obj/vehicle/multitile/van/armored/ARM_VAN = new (loc)
