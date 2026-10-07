@@ -197,6 +197,7 @@
 #define NOBIOSCAN (1<<6)
 #define AI_CONTROLLED (1<<7)
 #define BLOOD_BURSTING (1<<8) // Being chestburst by a bloodburster.
+#define MOB_FLAYED (1<<10)	//set if the mob has been flayed
 
 //=================================================
 

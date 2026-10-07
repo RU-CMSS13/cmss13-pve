@@ -411,13 +411,6 @@
 	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_PLATE3, ACCESSORY_SLOT_ARMOR_C, ACCESSORY_SLOT_DECORKNEE)
 	specialty = "\improper 6B85-02 pattern"
 
-/obj/item/clothing/suit/marine/faction/upp/recon/leader
-	name = "\improper 6B85-K pattern UPP armor"
-	armor_bomb = CLOTHING_ARMOR_MEDIUM
-	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
-	specialty = "\improper 6B85-K pattern"
-
 /obj/item/clothing/suit/marine/faction/upp/heavy
 	name = "\improper 6B99-2 pattern UPP heavy assault armor"
 	desc = "An extreme sidegrade of 6B92 armor, with the intent to increase soldier's survivability as much, as possible. An ablative layers of composite armor weighting more than 100 pounds, supported by the servo-assisters in each limb, and powered by the baterries for 24 hours of estimated work. Due to the lack of powerful heat dispersion system, the suit becomes an oven to it's owner, and each step takes more and more strenght even with servo-assisters. Yet still, it is the best answer to the question of life and death."
@@ -592,10 +585,16 @@
 	desc = "A lightweight UPP-issued armor vest designed for space operations forces. It features polymer-ceramic composite plating for improved protection while allowing greater mobility. Equipped with modular pouches for ammunition and gear, it ensures rapid access to essential supplies."
 	icon_state = "sof_vest"
 	item_state = "sof_vest"
-	flags_armor_protection = (BODY_FLAG_CHEST|BODY_FLAG_ARMS|BODY_FLAG_GROIN|BODY_FLAG_LEGS)
-	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_energy = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
+	armor_rad = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_MEDIUM
 	slowdown = SLOWDOWN_ARMOR_LIGHT
+	flags_armor_protection = (BODY_FLAG_CHEST|BODY_FLAG_ARMS|BODY_FLAG_LEGS)
 	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PLATE3, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORKNEE)
 	restricted_accessory_slots = list(, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_PLATE3, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORKNEE)
 
@@ -604,13 +603,14 @@
 	desc = "A heavily reinforced UPP-issued tactical vest designed for space operations forces operating in high-risk environments. The CCC5-L Heavy-Plated Tactical Vest features additional polymer-ceramic composite plating across the chest and torso, providing superior protection against ballistic and explosive threats. Despite its bulk, the vest maintains a balance between protection and mobility, with modular pouches for quick access to essential gear."
 	icon_state = "sof_vest_plate_heavy"
 	item_state = "sof_vest_plate_heavy"
-	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
-	armor_bomb = CLOTHING_ARMOR_HIGHPLUS
-	armor_bio = CLOTHING_ARMOR_HIGH
+	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
-	slowdown = SLOWDOWN_ARMOR_LOWHEAVY
+	slowdown = SLOWDOWN_ARMOR_MEDIUM
+	flags_armor_protection = (BODY_FLAG_CHEST|BODY_FLAG_ARMS|BODY_FLAG_GROIN|BODY_FLAG_LEGS)
 
 /obj/item/clothing/suit/marine/faction/upp/sof/heavy/standard
 // Armor with cosmetic attachies
@@ -628,9 +628,7 @@
 	icon_state = "sof_vest_plate"
 	item_state = "sof_vest_plate"
 
-	armor_bullet = CLOTHING_ARMOR_HIGH
-	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	slowdown = SLOWDOWN_ARMOR_MEDIUM
 
 /obj/item/clothing/suit/marine/faction/upp/sof/medium/alt
@@ -1036,14 +1034,6 @@
 		/obj/item/weapon/gun/smartgun/rmc,
 	)
 
-/obj/item/clothing/suit/marine/veteran/royal_marine/leader
-	name = "\improper Kestrel command cuirass"
-	desc = "Standard RMC issue Kestrel Personal Armor designed by Weyland-Yutani subsidary. Advanced composite ballistic protection, biomonitoring system, LCS brackets. This variant carries a command relay for monitoring squad vitals."
-	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bomb = CLOTHING_ARMOR_MEDIUM
-	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
-
 /atom/movable/marine_light
 	light_system = DIRECTIONAL_LIGHT
 
@@ -1269,8 +1259,8 @@
 		/obj/item/weapon/gun/smartgun,
 		/obj/item/weapon/gun/smartgun/dirty,
 	)
-	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PLATE2, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE, ACCESSORY_SLOT_DECORNECK)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PLATE2, ACCESSORY_SLOT_DECORKNEE, ACCESSORY_SLOT_DECORNECK)
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PLATE2, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PLATE2, ACCESSORY_SLOT_DECORKNEE, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT)
 
 /obj/item/clothing/suit/marine/veteran/pmc/smartgun/heavy
 //Just the normal armor with attachies
@@ -1279,8 +1269,12 @@
 	. = ..()
 	var/obj/item/clothing/accessory/pmcpads/shoulders = new()
 	src.attach_accessory(null, shoulders, TRUE)
+	var/obj/item/clothing/accessory/pmcpads/greaves/greaves = new()
+	src.attach_accessory(null, greaves, TRUE)
 	var/obj/item/clothing/accessory/pmcpads/kneepads/kneepads = new()
 	src.attach_accessory(null, kneepads, TRUE)
+	var/obj/item/clothing/accessory/pmcpads/bracers/armguards = new()
+	src.attach_accessory(null, armguards, TRUE)
 
 /obj/item/clothing/suit/marine/veteran/pmc/guard
 	name = "\improper M4 pattern PMC guard armor"

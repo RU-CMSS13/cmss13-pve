@@ -305,7 +305,7 @@ Defined in conflicts.dm of the #defines folder.
 	inherent_traits = list(TRAIT_TOOL_CAN_OPENER_CRUDE)
 
 	attach_icon = "bayonet_a"
-	melee_mod = 25
+	melee_mod = 20
 	slot = "muzzle"
 	pixel_shift_x = 14 //Below the muzzle.
 	pixel_shift_y = 18
@@ -417,7 +417,6 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/extended_barrel/New()
 	..()
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_4
-	damage_mod = BULLET_DAMAGE_MULT_TIER_2
 	velocity_mod = AMMO_SPEED_TIER_1
 
 /obj/item/attachable/heavy_barrel
@@ -431,12 +430,15 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/heavy_barrel/New()
 	..()
+	accuracy_mod = -HIT_ACCURACY_MULT_TIER_3
 	damage_mod = BULLET_DAMAGE_MULT_TIER_6
-	velocity_mod = AMMO_SPEED_TIER_1
+	delay_mod = FIRE_DELAY_TIER_11
+
+	accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_7
 
 /obj/item/attachable/heavy_barrel/Attach(obj/item/weapon/gun/G)
 	if(G.gun_category == GUN_CATEGORY_SHOTGUN)
-		damage_mod = BULLET_DAMAGE_MULT_TIER_6
+		damage_mod = BULLET_DAMAGE_MULT_TIER_3
 	else
 		damage_mod = BULLET_DAMAGE_MULT_TIER_6
 	..()
@@ -748,6 +750,7 @@ Defined in conflicts.dm of the #defines folder.
 	..()
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_4
 	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_1
+	movement_onehanded_acc_penalty_mod = MOVEMENT_ACCURACY_PENALTY_MULT_TIER_5
 
 /obj/item/attachable/reddot/upp
 	name = "EKP-9-M Red Dot Sight"
@@ -763,10 +766,11 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/reflex/New()
 	..()
-	accuracy_mod = HIT_ACCURACY_MULT_TIER_4
+	accuracy_mod = HIT_ACCURACY_MULT_TIER_3
 	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_2
 	scatter_mod = -SCATTER_AMOUNT_TIER_10
 	burst_scatter_mod = -1
+	movement_onehanded_acc_penalty_mod = MOVEMENT_ACCURACY_PENALTY_MULT_TIER_5
 
 /obj/item/attachable/reflex/upp
 	name = "PK-12 Reflex Sight"
@@ -926,18 +930,6 @@ Defined in conflicts.dm of the #defines folder.
 		qdel(src) //Delete da old flashlight
 	else
 		. = ..()
-
-/obj/item/attachable/quickfire
-	name = "quickfire adapter"
-	desc = "An enhanced and upgraded autoloading mechanism to fire rounds more quickly."
-	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi'
-	slot = "rail"
-	icon_state = "autoloader"
-	attach_icon = "autoloader_a"
-
-/obj/item/attachable/quickfire/New()
-	..()
-	delay_mod = -0.30
 
 /obj/item/attachable/flashlight/grip //Grip Light is here because it is a child object. Having it further down might cause a future coder a headache.
 	name = "underbarrel flashlight grip"
@@ -2046,7 +2038,6 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "A standard wooden stock for the Ithaca pump-action shotgun. More cumbersome than the standard issue stakeout, but reduces recoil and improves accuracy. Allegedly makes a pretty good club in a fight too."
 	slot = "stock"
 	icon_state = "stock"
-	melee_mod = 20
 	wield_delay_mod = WIELD_DELAY_FAST
 	pixel_shift_x = 32
 	pixel_shift_y = 15
@@ -2076,7 +2067,6 @@ Defined in conflicts.dm of the #defines folder.
 	pixel_shift_x = 32
 	pixel_shift_y = 15
 	hud_offset_mod = 2
-	melee_mod = 20
 
 /obj/item/attachable/stock/double/New()
 	..()
@@ -2173,7 +2163,6 @@ Defined in conflicts.dm of the #defines folder.
 	pixel_shift_x = 15
 	pixel_shift_y = 15
 	hud_offset_mod = 2
-	melee_mod = 20
 
 /obj/item/attachable/stock/type23/New()
 	..()
@@ -2342,7 +2331,7 @@ Defined in conflicts.dm of the #defines folder.
 	name = "\improper M41A solid stock"
 	desc = "A rare stock distributed in small numbers to USCM forces. Compatible with the M41A, this stock reduces recoil and improves accuracy, but at a reduction to handling and agility. Also enhances the thwacking of things with the stock-end of the rifle."
 	slot = "stock"
-	melee_mod = 20
+	melee_mod = 10
 	size_mod = 1
 	icon_state = "riflestock"
 	attach_icon = "riflestock_a"
@@ -2369,7 +2358,7 @@ Defined in conflicts.dm of the #defines folder.
 	name = "\improper M41A extendable stock"
 	desc = "The M41A's standard polymer extendable stock. When extended, it improves scatter, accuracy, and recoil, but slightly hinders agility."
 	slot = "stock"
-	melee_mod = 20
+	melee_mod = 5
 	size_mod = 1
 	icon_state = "m41_folding"
 	attach_icon = "m41_folding_a"
@@ -2906,7 +2895,7 @@ Defined in conflicts.dm of the #defines folder.
 	slot = "stock"
 	wield_delay_mod = WIELD_DELAY_NONE
 	flags_attach_features = NO_FLAGS
-	melee_mod = 40 //the thought of a upp spec beating people to death with a pk makes me laugh
+	melee_mod = 20 //the thought of a upp spec beating people to death with a pk makes me laugh
 	size_mod = 0
 
 /obj/item/attachable/stock/pkpstock/para
@@ -3014,7 +3003,7 @@ Defined in conflicts.dm of the #defines folder.
 	slot = "stock"
 	wield_delay_mod = WIELD_DELAY_NONE
 	flags_attach_features = NO_FLAGS
-	melee_mod = 25
+	melee_mod = 15
 	size_mod = 0
 
 /obj/item/attachable/stock/type71/New()
@@ -3812,7 +3801,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/grenade/type71
 	name = "\improper Type 83 overslung grenade launcher"
-	desc = "Unorthodox design, this single-round grenade launchers was made specifically for few UPP guns. It can be quickly connected to electronic firing mechanism of the rifle, albeit wiring is prone to failures."
+	desc = "Unorthodox design, this single-round grenade launchers was made specifically for use with Type 71 pulse rifles. It can be quickly connected to electronic firing mechanism of the rifle, albeit wiring is prone to failures."
 	icon_state = "type83"
 	attach_icon = "type83_a"
 	caliber = "40x103mm"
@@ -3820,8 +3809,8 @@ Defined in conflicts.dm of the #defines folder.
 	max_rounds = 1
 	max_range = 14
 	attachment_firing_delay = 5
-	pixel_shift_x = 20
-	pixel_shift_y = 16
+	pixel_shift_x = 19
+	pixel_shift_y = 13
 	has_breech = FALSE
 
 /obj/item/attachable/attached_gun/grenade/type71/preloaded
@@ -3886,14 +3875,14 @@ Defined in conflicts.dm of the #defines folder.
 	if(intense_mode)
 		to_chat(user, SPAN_WARNING("You change \the [src] back to using a normal and more stable flame."))
 		round_usage_per_tile = 1
-		burn_level = BURN_LEVEL_TIER_4
+		burn_level = BURN_LEVEL_TIER_1
 		burn_duration = BURN_TIME_TIER_1
 		max_range = 5
 		intense_mode = FALSE
 	else
 		to_chat(user, SPAN_WARNING("You change \the [src] to use a more intense and volatile flame."))
 		round_usage_per_tile = 5
-		burn_level = BURN_LEVEL_TIER_6
+		burn_level = BURN_LEVEL_TIER_5
 		burn_duration = BURN_TIME_TIER_2
 		max_range = 2
 		intense_mode = TRUE
@@ -4092,9 +4081,9 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/shotgun/af13/set_bullet_traits()
 	LAZYADD(traits_to_give_attached, list(
-		BULLET_TRAIT_ENTRY_ID("turfs", /datum/element/bullet_trait_damage_boost, 1.5, GLOB.damage_boost_turfs),
+		BULLET_TRAIT_ENTRY_ID("turfs", /datum/element/bullet_trait_damage_boost, 5, GLOB.damage_boost_turfs),
 		BULLET_TRAIT_ENTRY_ID("breaching", /datum/element/bullet_trait_damage_boost, 10.8, GLOB.damage_boost_breaching),
-		BULLET_TRAIT_ENTRY_ID("pylons", /datum/element/bullet_trait_damage_boost, 2, GLOB.damage_boost_pylons)
+		BULLET_TRAIT_ENTRY_ID("pylons", /datum/element/bullet_trait_damage_boost, 5, GLOB.damage_boost_pylons)
 	))
 
 /obj/item/attachable/attached_gun/shotgun/af13/reload_attachment(obj/item/ammo_magazine/handful/mag, mob/user)
@@ -4139,9 +4128,9 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/shotgun/af13b/set_bullet_traits()
 	LAZYADD(traits_to_give_attached, list(
-		BULLET_TRAIT_ENTRY_ID("turfs", /datum/element/bullet_trait_damage_boost, 1.5, GLOB.damage_boost_turfs), // 3 hits to break down regular walls, about 6 to break down r-walls
+		BULLET_TRAIT_ENTRY_ID("turfs", /datum/element/bullet_trait_damage_boost, 1.1*5, GLOB.damage_boost_turfs), // 3 hits to break down regular walls, about 6 to break down r-walls
 		BULLET_TRAIT_ENTRY_ID("breaching", /datum/element/bullet_trait_damage_boost, 2*10.8, GLOB.damage_boost_breaching), // 2-taps the R doors
-		BULLET_TRAIT_ENTRY_ID("pylons", /datum/element/bullet_trait_damage_boost, 2, GLOB.damage_boost_pylons)
+		BULLET_TRAIT_ENTRY_ID("pylons", /datum/element/bullet_trait_damage_boost, 2*5, GLOB.damage_boost_pylons)
 	))
 
 /obj/item/attachable/attached_gun/shotgun/af13b/reload_attachment(obj/item/ammo_magazine/handful/mag, mob/user)
