@@ -40,6 +40,8 @@ GLOBAL_VAR_INIT(cas_tracking_id_increment, 0) //this var used to assign unique t
 
 	var/hardcore = FALSE
 
+	var/list/required_command_roles // RU-PVE ADDITION
+
 /datum/game_mode/New()
 	..()
 	if(taskbar_icon)
@@ -65,6 +67,24 @@ GLOBAL_VAR_INIT(cas_tracking_id_increment, 0) //this var used to assign unique t
 			return TRUE
 	return FALSE
 
+// RU-PVE START
+/datum/game_mode/proc/check_command_roles()
+	if(!GLOB.require_command_roles || !length(required_command_roles))
+		return TRUE
+	var/list/titles = get_command_role_titles()
+	if(!length(titles)) // This platoon has no command roles to fill
+		return TRUE
+	return GLOB.RoleAuthority.has_command_role_candidate(titles)
+
+/// Returns the titles of this mode's roles whose job type is in `required_command_roles`. Platoons use their own titles (e.g. JOB_PMCPLAT_SMALL_LEADER), so we match by type.
+/datum/game_mode/proc/get_command_role_titles()
+	var/list/titles = list()
+	for(var/role_name in get_roles_list())
+		var/datum/job/job = GLOB.RoleAuthority.roles_by_name[role_name]
+		if(job && is_type_in_list(job, required_command_roles))
+			titles += role_name
+	return titles
+// RU-PVE END
 
 ///pre_setup()
 ///Attempts to select players for special roles the mode might have.
