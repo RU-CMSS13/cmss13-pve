@@ -5,7 +5,7 @@
 	item_state = "machete"
 	flags_atom = FPRINT|QUICK_DRAWABLE|CONDUCT
 	flags_equip_slot = SLOT_WAIST
-	force = MELEE_FORCE_TIER_11
+	force = MELEE_FORCE_STRONG
 	throwforce = MELEE_FORCE_WEAK
 	sharp = IS_SHARP_ITEM_BIG
 	flags_human_ai = MELEE_WEAPON_ITEM
@@ -54,12 +54,12 @@
 	desc = "An older issue USCM machete, never left testing. Designed in the Central African Republic. The notching made it hard to clean, and as such the USCM refused to adopt it - despite the superior bludgeoning power offered. Difficult to carry with the usual kit ."
 	icon_state = "arnold-machete"
 	item_state = "arnold-machete"
-	force = MELEE_FORCE_TIER_12
+	force = MELEE_FORCE_TIER_11
 
 /obj/item/weapon/sword/machete/arnold/weak
 	name = "\improper M2100 machete"
 	desc = "An older issue USCM machete, never left testing. Designed in the Central African Republic. The notching made it hard to clean, and as such the USCM refused to adopt it - despite the superior bludgeoning power offered. This one has been poorly maintained and as such can't really outperform adopted M2132 machete."
-	force = MELEE_FORCE_TIER_10
+	force = MELEE_FORCE_STRONG
 
 /obj/item/weapon/sword/hefa
 	name = "HEFA sword"
@@ -107,7 +107,7 @@
 	desc = "A finely made Japanese sword, with a well sharpened blade. The blade has been filed to a molecular edge, and is extremely deadly. Commonly found in the hands of mercenaries and yakuza."
 	icon_state = "katana"
 	item_state = "katana"
-	force = MELEE_FORCE_TIER_10
+	force = MELEE_FORCE_VERY_STRONG
 
 //To do: replace the toys.
 /obj/item/weapon/sword/katana/replica
@@ -589,7 +589,7 @@
 	throw_range = 6
 	hitsound = 'sound/weapons/slash.ogg'
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
-	attack_speed = 7
+	attack_speed = 9
 	inherent_traits = list(TRAIT_TOOL_CAN_OPENER_CRUDE)
 
 /obj/item/weapon/knife/marine/kabar
@@ -597,14 +597,12 @@
 	icon_state = "knife_kabar"
 	item_state = "knife_kabar"
 	desc = "An old school Marine Corps combat knife. The iconic look of the knife and its association with the Corps' cultural history has seen it remain popular among marines well after its replacement as standard-issue. Fits neatly into boot-mounted holsters, and can - in emergencies - be utilized to dig out shrapnel."
-	attack_speed = 7
 
 /obj/item/weapon/knife/marine/baker
 	name = "\improper M1 Baker-pattern fighting knife"
 	icon_state = "knife_baker"
 	item_state = "knife_baker"
 	desc = "A modern take on an older design, issued primarily to US army members & some elements of the USASF. Fits neatly into boot-mounted holsters, and can - in emergencies - be utilized to dig out shrapnel."
-	attack_speed = 7
 
 /obj/item/weapon/knife/marine/bowie
 	name = "\improper Bowie fighting knife"
@@ -612,25 +610,19 @@
 	item_state = "knife_bowie"
 	desc = "A large, devastating fighting knife of the old American west. Not an antique in of itself, but a high quality piece of equipment for the discerning outdoorsman. Now THIS is a knife."
 	w_class = SIZE_SMALL
-	force = MELEE_FORCE_TIER_8
+	force = MELEE_FORCE_TIER_6
 	throwforce = MELEE_FORCE_WEAK
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
-	attack_speed = 8
 
 /obj/item/weapon/knife/marine/bowie/kukri
 	name = "\improper Kukri utility knife"
 	icon_state = "knife_kukri"
 	desc = "A large, recurved fighting knife originating from the Indian subcontinent. Traditionally wielded by the Gurkhas of Nepal or their extrasolar colonial descendants, it's rare to see one in the hands of outsiders."
 	flags_equip_slot = SLOT_WAIST
-	force = MELEE_FORCE_TIER_10
-	throwforce = MELEE_FORCE_WEAK
-	w_class = SIZE_MEDIUM
-	attack_speed = 7
 
 /obj/item/weapon/knife/marine/sas
 	name = "\improper Fairbairn-Sykes fighting knife"
 	icon_state = "knife_fairbairn"
 	item_state = "knife_gerber"
 	desc = "This isn't for dressing game or performing camp chores. It's for killing men and has done so successfully for a number of centuries. When all else has failed you, this knife will be in your hand, ready to execute its grim task."
-	attack_speed = 7
