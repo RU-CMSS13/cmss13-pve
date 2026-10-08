@@ -673,7 +673,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 
 /obj/item/storage/backpack/marine/satchel/rto/twe_net/small
 	name = "\improper Wireless Set No.207 Small Radio Telephone Pack"
-	max_storage_space = 14
+	max_storage_space = 13
 
 /obj/item/storage/backpack/marine/satchel/rto/pmc_net
 	name = "\improper Wireless Set No.208 Radio Telephone Pack"
@@ -683,7 +683,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	networks_receive = list(FACTION_PMC)
 	networks_transmit = list(FACTION_PMC)
 	actions_types = list(/datum/action/item_action/rto_pack/use_phone/pmc)
-	max_storage_space = 24
+	max_storage_space = 21
 	worn_accessible = FALSE
 	bag_open_time = 2 SECONDS
 
@@ -703,7 +703,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 
 /obj/item/storage/backpack/marine/satchel/rto/pmc_net/small
 	name = "\improper Wireless Set No.208 Small Radio Telephone Pack"
-	max_storage_space = 18
+	max_storage_space = 16
 
 
 /obj/item/storage/backpack/marine/smock
@@ -1288,7 +1288,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	name = "\improper PMC combat backpack"
 	desc = "Ergonomic, protected, high capacity backpack, designed for Weyland-Yutani PMCs."
 	icon_state = "pmc_backpack"
-	max_storage_space = 24
+	max_storage_space = 21
 	worn_accessible = FALSE
 
 /obj/item/storage/backpack/pmc/backpack/commando
@@ -1394,7 +1394,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	desc = "A UPP military standard-issue Union Combat BackPack MK4. Very robust and heavy."
 	icon_state = "marinepack_upp"
 	item_state = "marinepack_upp"
-	max_storage_space = 24
+	max_storage_space = 21
 	bag_open_time = 3 SECONDS
 
 /obj/item/storage/backpack/marine/upp/medic
@@ -1405,7 +1405,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	bag_open_time = 2 SECONDS
 
 /obj/item/storage/backpack/marine/ammo_rack/upp
-	name = "\improper UCCR5 ammo rack"
+	name = "\improper UCCF5 ammo rack"
 	desc = "A UPP military standard issue Union Combat Carry-Frame MK5 with buckles designed to hold multiple ammo cans and grenade boxes. Helps you lug around extra ammunition or supplies."
 	has_gamemode_skin = FALSE
 	storage_slots = 3
@@ -1413,7 +1413,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	base_icon_state = "upp_frame"
 
 /obj/item/storage/backpack/marine/ammo_rack/upp/recon
-	name = "\improper UCCR5-R ammo rack"
+	name = "\improper UCCF5-R ammo rack"
 	desc = "A UPP military standard issue Union Combat Carry-Frame MK5 with buckles designed to hold multiple ammo cans and grenade boxes. Helps you lug around extra ammunition or supplies. Additional straps and buckles have improved stability of the package, making it easier to carry even fully loaded."
 	move_delay_mult = 0
 

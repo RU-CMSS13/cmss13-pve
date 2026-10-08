@@ -235,7 +235,7 @@
 	name = "first-aid pouch"
 	desc = "A first aid pouch capable of storing a variety of basic medical supplies. It can hold ointments, bandages, injectors, splints and pill packets."
 	icon_state = "firstaid"
-	storage_slots = 5
+	storage_slots = 4
 	can_hold = list(
 		/obj/item/stack/medical/ointment,
 		/obj/item/reagent_container/hypospray/autoinjector,
@@ -280,7 +280,7 @@
 /obj/item/storage/pouch/firstaid/ert
 	desc = "A first aid pouch capable of storing a variety of basic medical supplies. It can hold ointments, bandages, injectors, splints and pill packets. This one has some extra stuff."
 	icon_state = "firstaid"
-	storage_slots = 6
+	storage_slots = 5
 
 /obj/item/storage/pouch/firstaid/ert/fill_preset_inventory()
 	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine/skillless(src)
@@ -291,11 +291,6 @@
 
 /obj/item/storage/pouch/firstaid/ert/wy
 	icon_state = "wy_firstaid"
-
-/obj/item/storage/pouch/firstaid/wy_pve
-	desc = "A first aid pouch capable of storing a variety of basic medical supplies. It can hold ointments, bandages, injectors, splints and pill packets. This one has some extra stuff."
-	icon_state = "wy_firstaid"
-	storage_slots = 6
 
 ///Pistol pouch.
 /obj/item/storage/pouch/pistol
@@ -955,7 +950,7 @@
 	name = "advanced first aid pouch"
 	desc = "A pouch designed for carrying supplies to assist medical personnel and quickly respond to injuries on the battlefield without immediately treating them."
 	icon_state = "frt_med"
-	storage_slots = 6
+	storage_slots = 5
 	can_hold = list(
 		/obj/item/device/healthanalyzer,
 		/obj/item/stack/medical,
@@ -1541,6 +1536,14 @@
 	new /obj/item/tool/wirecutters/tactical(src)
 	new /obj/item/tool/crowbar/tactical(src)
 	new /obj/item/tool/weldingtool(src)
+	new /obj/item/device/multitool(src)
+	new /obj/item/tool/wrench(src)
+
+/obj/item/storage/pouch/tools/black/pmc/fill_preset_inventory()
+	new /obj/item/tool/screwdriver/tactical(src)
+	new /obj/item/tool/wirecutters/tactical(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/weldingtool/largetank(src)
 	new /obj/item/device/multitool(src)
 	new /obj/item/tool/wrench(src)
 
