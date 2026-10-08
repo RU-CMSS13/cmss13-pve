@@ -174,3 +174,6 @@
 /datum/map_template/interior/twe_apc/command
 	name = "Type 200/FCV-C Command Light APC"
 	interior_id = "twe_command_apc"
+/datum/map_template/interior/hovercraft
+	name = "Hovercraft"
+	interior_id = "hovercraft"

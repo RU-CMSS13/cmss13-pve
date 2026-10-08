@@ -206,6 +206,12 @@ GLOBAL_LIST_INIT(mapless_maps, list(MAP_RUNTIME, MAP_CHINOOK, MAIN_SHIP_DEFAULT_
 	html_link = "images/4/46/Cape_River.png"
 	color = "red"
 
+/obj/item/map/sekhmet_swamp_map
+	name = "\improper SI-391 Sekhmet Swamp map"
+	desc = "An overview of the Sekhmet Swamp medical research facility colony schematics."
+	html_link = "images/1/18/Map_icecolony.png"
+	color = "#8cab00"
+
 /obj/item/map/galaxy
 	name = "\improper Galaxy map"
 	desc = "A diagrammatic map of the milky way, laid out by sector."
@@ -258,6 +264,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_WHITE_ANTRE_RESEARCH_FACILITY = new /obj/item/map/white_antre_map(),
 		MAP_CONAM_81_ABYSSAL = new /obj/item/map/new_varadero(),
 		MAP_CAPE_RIVER = new /obj/item/map/cape_river(),
+		MAP_SEKHMET_SWAMP = new /obj/item/map/sekhmet_swamp_map()
 	)
 
 //used by marine equipment machines to spawn the correct map.

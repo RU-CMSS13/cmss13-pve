@@ -10,33 +10,63 @@
 /area/sekhmet/outside
 	name = "Sekhmet Exterior"
 	ceiling = CEILING_NONE
+	ambience_exterior = AMBIENCE_JUNGLE_ALT
 /area/sekhmet/int_glass
 	name = "Sekhmet Glass"
 	ceiling = CEILING_GLASS
+	soundscape_playlist = SCAPE_PL_LV759_INDOORS
+	ambience_exterior = AMBIENCE_HYBRISA_INTERIOR
 /area/sekhmet/int_reg
 	name = "Sekhmet Metal"
 	ceiling = CEILING_METAL
+	soundscape_playlist = SCAPE_PL_LV759_INDOORS
+	ambience_exterior = AMBIENCE_HYBRISA_INTERIOR
 /area/sekhmet/int_heavy
 	name = "Sekhmet Reinforced"
-	ceiling = CEILING_REINFORCED_METAL
+	ceiling = CEILING_UNDERGROUND_METAL_BLOCK_CAS
+	soundscape_playlist = SCAPE_PL_LV759_INDOORS
+	ambience_exterior = AMBIENCE_HYBRISA_INTERIOR
 /area/sekhmet/caves
 	name = "Sekhmet Caves"
-	ceiling = CEILING_DEEP_UNDERGROUND
+	ceiling = CEILING_SANDSTONE_ALLOW_CAS
 //============================================================SHUTTLES
 /area/sekhmet/shuttles/drop1
 	name = "Sekhmet - Military Landing Pad"
 	icon_state = "shuttle"
 	icon = 'icons/turf/area_varadero.dmi'
 	minimap_color = MINIMAP_AREA_LZ
+	is_landing_zone = TRUE
+	soundscape_playlist = SCAPE_PL_LV759_INDOORS
+	ambience_exterior = AMBIENCE_HYBRISA_INTERIOR
+
 /area/sekhmet/shuttles/drop2
 	name = "Sekhmet - Open Field"
 	icon_state = "shuttle2"
 	icon = 'icons/turf/area_varadero.dmi'
 	minimap_color = MINIMAP_AREA_LZ
+	ceiling = CEILING_NONE
+	is_landing_zone = TRUE
+	ambience_exterior = AMBIENCE_JUNGLE_ALT
+
 /area/sekhmet/shuttles/drop3
 	name = "Sekhmet - Research Landing Pad"
 	icon_state = "shuttle"
 	icon = 'icons/turf/area_varadero.dmi'
+	minimap_color = MINIMAP_AREA_LZ
+	ceiling = CEILING_NONE
+	ambience_exterior = AMBIENCE_JUNGLE_ALT
+
+//============================================================ Communications
+/area/sekhmet/int_reg/telecomm
+	name = "Sekhmet - Communications Relay"
+	icon_state = "ass_line"
+
+/area/sekhmet/int_reg/telecomm/lz1_southeast
+	name = "Sekhmet - South-East LZ2 Communications Relay"
+	minimap_color = MINIMAP_AREA_LZ
+
+/area/sekhmet/int_reg/telecomm/lz2_northeast
+	name = "Sekhmet - North-East LZ2 Communications Relay"
 	minimap_color = MINIMAP_AREA_LZ
 //============================================================NORTHWEST PORTION (military base, swamps, communication lower, air filtration, caves)
 /area/sekhmet/int_reg/military_hangar
@@ -44,10 +74,11 @@
 	icon_state = "away1"
 /area/sekhmet/int_reg/catwalk
 	name = "Swamp Catwalk"
-	icon_state = "away2"
+	icon_state = "away1"
 /area/sekhmet/outside/swamp
 	name = "Sekhmet Swamp"
 	icon_state = "northwest"
+	ambience_exterior = AMBIENCE_SWAMP
 /area/sekhmet/int_reg/comms_lower
 	name = "Sekhmet Lower Commmunication Hall"
 	icon_state = "away3"
@@ -57,6 +88,9 @@
 /area/sekhmet/caves/west_cave
 	name = "Sekhmet West Caves"
 	icon_state = "cave"
+/area/sekhmet/int_reg/small_power
+	name = "Sekhmet Small Power Station"
+	icon_state = "away3"
 //============================================================SOUTHWEST PORTION (airfield, medbay, warehouse)
 /area/sekhmet/outside/airfield
 	name = "Sekhmet Clearing"
@@ -69,7 +103,7 @@
 	icon_state = "away1"
 /area/sekhmet/int_reg/warehouse
 	name = "Sekhmet Warehouse"
-	icon_state = "cargo"
+	icon_state = "yellow"
 /area/sekhmet/outside/southroad
 	name = "Sekhmet Southern Path"
 	icon_state = "south"
@@ -79,7 +113,7 @@
 //============================================================CENTRAL PORTION (central complex, yard, roadways, comms)
 /area/sekhmet/outside/central_road
 	name = "Sekhmet Central Path"
-	icon_state = "away2"
+	icon_state = "northwest"
 /area/sekhmet/int_glass/complex_generic
 	name = "Sekhmet Central Complex"
 	icon_state = "away1"
@@ -103,7 +137,7 @@
 	icon_state = "yellow"
 /area/sekhmet/int_reg/engineering
 	name = "Sekhmet Engineering"
-	icon_state = "SMES"
+	icon_state = "ass_line"
 /area/sekhmet/int_heavy/entry_zone
 	name = "Sekhmet Entry Zone"
 	icon_state = "red"
@@ -115,11 +149,13 @@
 	name = "Sekhmet Eastern Jungle"
 	icon_state = "east"
 /area/sekhmet/caves/temple
-	name = "Sekhmet Ruins"
+	name = "Sekhmet North-East Caves"
+	ceiling = CEILING_UNDERGROUND_BLOCK_CAS
 	icon_state = "cave"
 /area/sekhmet/outside/temple_outer
-	name = "Sekhmet Outer Ruins"
+	name = "Sekhmet North Eastern Jungle"
 	icon_state = "northwest"
+	ceiling = CEILING_DEEP_UNDERGROUND
 /area/sekhmet/outside/southeast_road
 	name = "Sekhmet Southeastern Path"
 	icon_state = "southeast"
