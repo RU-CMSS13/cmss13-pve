@@ -247,7 +247,6 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_DERELICT_ALMAYER = new /obj/item/map/almayer(),
 		MAP_LV522_LUKES_LANDING = new /obj/item/map/lv522_map(),
 		MAP_LV295_BLACKSITE = new /obj/item/map/lv522_map(),
-		MAP_SI391_SEKHMET = new /obj/item/map/lazarus_landing_map(),
 		MAP_BMG290_OTOGI_EGRESS_POINT = new /obj/item/map/new_varadero(),
 		MAP_CANYON_32B = new /obj/item/map/canyon_32b(),
 		MAP_BOSENMORI_BASHO = new /obj/item/map/lazarus_landing_map(),
