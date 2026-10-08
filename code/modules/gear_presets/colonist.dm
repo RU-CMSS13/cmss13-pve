@@ -1436,6 +1436,139 @@
 	new_human.equip_to_slot(new /obj/item/clothing/accessory/patch/cmb/brazil_police, WEAR_ACCESSORY)
 	..()
 
+/datum/equipment_preset/colonist/twe/fire_fighter
+	name = "TWE Civilian, Fire Protection Specialist"
+	assignment = "Fire Protection Specialist"
+	paygrades = list(PAY_SHORT_FPS = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "FPS"
+	skills = /datum/skills/civilian/survivor/fire_fighter
+	flags = EQUIPMENT_PRESET_EXTRA
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_MEDBAY, ACCESS_CIVILIAN_COMMAND, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_LOGISTICS, ACCESS_CIVILIAN_ENGINEERING)
+	ethnicity = JAPANESE_ETHNICITY
+	languages = list(LANGUAGE_JAPANESE, LANGUAGE_ENGLISH)
+
+/datum/equipment_preset/colonist/twe/fire_fighter/load_gear(mob/living/carbon/human/new_human)
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/tank/oxygen/yellow, WEAR_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/hybrisa/firefighter, WEAR_HEAD)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/utility/gray, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/twe, WEAR_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/light/vest/fire_light, WEAR_JACKET)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/wy, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/softpack/fire, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/combat, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/red, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/extinguisher, WEAR_IN_BELT)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/combat, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/combat, WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/bruise_pack/random_amount, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/splint/random_amount, WEAR_R_STORE)
+	//other
+	var/random_firefighter_equipment = rand(1,50)
+	switch(random_firefighter_equipment)
+		if(1 to 35)
+			new_human.equip_to_slot_or_del(new /obj/item/device/radio, WEAR_J_STORE)
+		if(35 to 50)
+			new_human.equip_to_slot_or_del(new /obj/item/device/radio, WEAR_IN_JACKET)
+			new_human.equip_to_slot_or_del(new /obj/item/maintenance_jack, WEAR_J_STORE)
+
+/datum/equipment_preset/colonist/twe/fire_fighter/leader
+	name = "TWE Civilian, Fire Protection Officer"
+	assignment = "Fire Protection Oficer"
+	paygrades = list(PAY_SHORT_FPO = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "FPO"
+	skills = /datum/skills/civilian/survivor/fire_fighter/leader
+	flags = EQUIPMENT_PRESET_EXTRA
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_MEDBAY, ACCESS_CIVILIAN_COMMAND, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_LOGISTICS, ACCESS_CIVILIAN_ENGINEERING)
+	ethnicity = JAPANESE_ETHNICITY
+	languages = list(LANGUAGE_JAPANESE, LANGUAGE_ENGLISH)
+
+/datum/equipment_preset/colonist/twe/fire_fighter/leader/load_gear(mob/living/carbon/human/new_human)
+	//back
+	var/random_fpo_equip = rand(1,2)
+	switch(random_fpo_equip)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/twohanded/breacher/firefighter, WEAR_BACK)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/twohanded/fireaxe, WEAR_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/hybrisa/firefighter, WEAR_HEAD)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/utility/gray, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/twe, WEAR_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/light/vest/fire_light, WEAR_JACKET)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/wy, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/softpack/burn, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/combat, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/red, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/extinguisher, WEAR_IN_BELT)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/combat, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/combat, WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medkit/wy/full_advanced, WEAR_R_STORE)
+
+/datum/equipment_preset/colonist/twe/paramedic
+	name = "TWE Civilian, Paramedic"
+	assignment = "Emergency Medical Technician - Paramedic"
+	paygrades = list(PAY_SHORT_CPARA = JOB_PLAYTIME_TIER_0)
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "EMT - Paramedic"
+	skills = /datum/skills/civilian/survivor/paramedic
+	idtype = /obj/item/card/id/silver
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_MEDBAY, ACCESS_CIVILIAN_COMMAND, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_LOGISTICS, ACCESS_CIVILIAN_ENGINEERING)
+	role_comm_title = "Para"
+
+/datum/equipment_preset/colonist/twe/paramedic/load_gear(mob/living/carbon/human/new_human)
+
+	var/choice = rand(1,25)
+
+	switch(choice)
+		if(1 to 9)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/hybrisa/EMT_red_utility, WEAR_JACKET)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/hybrisa/paramedic/red, WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/latex, WEAR_HANDS)
+		if(10 to 19)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/hybrisa/EMT_green_utility, WEAR_JACKET)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/hybrisa/paramedic, WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/latex, WEAR_HANDS)
+		if(20 to 24)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/hybrisa/paramedic, WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/medical_green, WEAR_JACKET)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/full/with_defib_and_analyzer, WEAR_WAIST)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/latex, WEAR_HANDS)
+		if(25)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/hybrisa/EMT_red_utility, WEAR_JACKET)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/hybrisa/paramedic/red, WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/hybrisa/medtech, WEAR_HEAD)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/full/with_defib_and_analyzer, WEAR_WAIST)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/combat, WEAR_HANDS)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian, WEAR_FEET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health, WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/med, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/full/with_suture_and_graft, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/surgical_case/regular, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/softpack/adv, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/softpack/adv, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medkit/full, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/autoinjector/full, WEAR_L_STORE)
+
 #undef AMERICAN_ETHNICITY
 #undef LATIN_AMERICAN_ETHNICITY
 #undef JAPANESE_ETHNICITY

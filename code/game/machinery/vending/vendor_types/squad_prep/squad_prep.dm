@@ -708,6 +708,13 @@
 		list("Tactical Beanie", round(scale * 10), /obj/item/clothing/head/beanie/royal_marine, VENDOR_ITEM_REGULAR),
 		list("Radio Headset", round(scale * 10), /obj/item/device/radio/headset/almayer/marine/solardevils/rmc, VENDOR_ITEM_REGULAR),
 
+		list("CBRN UNIT EQUIPMENT", -1, null, null, null),
+		list("CPS Mk.III boots", round(scale * 10), /obj/item/clothing/shoes/marine/pve_mopp/twe, VENDOR_ITEM_REGULAR),
+		list("CPS Mk.III suit", round(scale * 10), /obj/item/clothing/under/marine/pve_mopp/twe, VENDOR_ITEM_REGULAR),
+		list("CPS Mk.III gloves", round(scale * 10), /obj/item/clothing/gloves/marine/veteran/cbrn/twe, VENDOR_ITEM_REGULAR),
+		list("CPS Mk.II mask", round(scale * 10), /obj/item/clothing/mask/gas/pve_mopp/twe, VENDOR_ITEM_REGULAR),
+		list("L8A3 ballistic helmet", round(scale * 10), /obj/item/clothing/head/helmet/marine/veteran/pmc/rmc/cbrn, VENDOR_ITEM_REGULAR),
+
 		list("WEBBINGS", -1, null, null),
 		list("82 Pattern Magazine Webbing", round(scale * 10), /obj/item/clothing/accessory/storage/webbing/m3/uppmags/rmc, VENDOR_ITEM_REGULAR),
 		list("67 Pattern Webbing", round(scale * 10), /obj/item/clothing/accessory/storage/webbing/m3/uppsmall/rmc, VENDOR_ITEM_REGULAR),

@@ -1565,6 +1565,24 @@
 	armor_rad = CLOTHING_ARMOR_HIGHPLUS
 	hood_type = /obj/item/clothing/head/helmet/marine/cbrn_hood/upp
 
+/obj/item/clothing/under/marine/pve_mopp/twe
+	name = "\improper CPS Mk.III suit"
+	desc = "CPS Mk.III Suit. Developed by Blucher & Respirex Technologies for the CBRN troops of the Three World Empire. A third-generation model, it provides better protection against chemicals and radiation, as well as pistol rounds, at the cost of increased bulk and the inability to use a helmet."
+	desc_lore = null
+	icon = 'icons/obj/items/clothing/uniforms/uniforms_by_faction/TWE.dmi'
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_faction/TWE.dmi',
+	)
+	icon_state = "twe_cbrn"
+	worn_state = "twe_cbrn"
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	armor_bio = CLOTHING_ARMOR_HIGH
+	armor_rad = CLOTHING_ARMOR_HIGHPLUS
+	max_heat_protection_temperature = ARMOR_MAX_HEAT_PROT
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+
 //=USASF & ARMY=\\
 
 /obj/item/clothing/under/navy/officer

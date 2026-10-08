@@ -1108,6 +1108,20 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	built_in_visors = list(new /obj/item/device/helmet_visor/medical/advanced/rmc/alt)
 	start_down_visor_type = /obj/item/device/helmet_visor/medical/advanced/rmc/alt
 
+/obj/item/clothing/head/helmet/marine/veteran/pmc/rmc/cbrn
+	name = "\improper L8A3 ballistic helmet"
+	desc = "A High-cut ballistic helmet. Designed by Lindenthal-Ehrenfeld Militärindustrie it is intended to be used by Royal Marines Commando as part of the kestrel armour system."
+	icon = 'icons/obj/items/clothing/hats/hats_by_faction/TWE.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/TWE.dmi'
+	)
+	icon_state = "rmc_helm1"
+	item_state = "rmc_helm1"
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	clothing_traits = list(TRAIT_EAR_PROTECTION)
+	built_in_visors = list(new /obj/item/device/helmet_visor/medical/advanced/rmc/alt)
+	start_down_visor_type = /obj/item/device/helmet_visor/medical/advanced/rmc/alt
+
 /obj/item/clothing/head/helmet/marine/veteran/pmc/sniper
 	name = "\improper Mk12 marksman helmet"
 	desc = "A non-standard issue helmet used by marksmen & snipers of the RMC, though this one has been painted white for service with Weyland Yutani's elite tactical teams. Lacks an incorporated rebreather unit, owing to the open-face design. It incorporates a tactical camera, IFF signal transponder, and heads up display lens with night vision. Also features white/black hot IR viewing modes from the camera system."
@@ -2215,6 +2229,35 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	force = 0 //"The M3 MOPP mask would be a normal weapon if you were to hit someone with it."
 	throwforce = 0
 	flags_inventory = BLOCKSHARPOBJ|BLOCKGASEFFECT|SPOREPROOF
+	flags_marine_helmet = NO_FLAGS
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_inv_hide = HIDEEARS|HIDEALLHAIR
+	built_in_visors = list()
+
+/obj/item/clothing/head/helmet/marine/cbrn_hood/twe
+	name = "\improper CPS Mk.III helmet"
+	desc = "CPS Mk.III Helmet. Developed by Blucher & Respirex Technologies for the CBRN troops of the Three World Empire. A third-generation model, it provides better protection against chemicals and radiation, as well as pistol rounds, at the cost of increased bulk and the inability to use a helmet."
+	icon = 'icons/obj/items/clothing/masks.dmi'
+	icon_state = "twe_cbrn_hood_alt"
+	item_state = "twe_cbrn_hood_alt"
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/mask.dmi'
+	)
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	max_heat_protection_temperature = ARMOR_MAX_HEAT_PROT
+	flags_cold_protection = BODY_FLAG_HEAD
+	flags_heat_protection = BODY_FLAG_HEAD
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_HIGH
+	armor_rad = CLOTHING_ARMOR_HIGHPLUS
+	armor_internaldamage = CLOTHING_ARMOR_HIGH
+	force = 0 //"The M3 MOPP mask would be a normal weapon if you were to hit someone with it."
+	throwforce = 0
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR|SPOREPROOF
+	flags_inv_hide = HIDEEARS|HIDEALLHAIR
 	flags_marine_helmet = NO_FLAGS
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	flags_inv_hide = HIDEEARS|HIDEALLHAIR
