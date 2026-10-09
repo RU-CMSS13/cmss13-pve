@@ -174,6 +174,9 @@
 	desc = "A lighting fixture that is fitted with a bright blue fluorescent light tube. Looking at it for too long makes your eyes go watery."
 	light_color = LIGHT_COLOR_XENON
 
+/obj/structure/machinery/light/blue/alt
+	light_color = "#66FFFF"
+
 /obj/structure/machinery/light/red
 	icon_state = "rtube1"
 	base_state = "rtube"
@@ -218,10 +221,28 @@
 	light_type = /obj/item/light_bulb/bulb
 	light_color = LIGHT_COLOR_RED_BULB
 
+/obj/structure/machinery/light/small/chapaev
+	light_color = "#e7c0a4"
+	light_power = 0.8
+	light_range = 4
+
+/obj/structure/machinery/light/small/chapaev/burned
+	icon_state = "bulb-burned"
+	status = LIGHT_BURNED
+
 /obj/structure/machinery/light/double
 	icon_state = "ptube1"
 	base_state = "ptube"
 	desc = "A lighting fixture that can be fitted with two bright blue fluorescent light tubes for that extra eye-watering goodness."
+
+/obj/structure/machinery/light/double/chapaev
+	light_color = "#e7c0a4"
+	light_power = 0.8
+	light_range = 5
+
+/obj/structure/machinery/light/double/chapaev/burned
+	icon_state = "ptube-burned"
+	status = LIGHT_BURNED
 
 /obj/structure/machinery/light/double/blue
 	icon_state = "bptube1"

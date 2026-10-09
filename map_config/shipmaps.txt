@@ -30,6 +30,9 @@ endmap
 map laituri
 endmap
 
+map pallada
+endmap
+
 map rover
 endmap
 
@@ -40,6 +43,9 @@ map uscss_obsidian_falk
 endmap
 
 map uscss_onyx_karain
+endmap
+
+map uscss_placeholder
 endmap
 
 map hms_brynhild

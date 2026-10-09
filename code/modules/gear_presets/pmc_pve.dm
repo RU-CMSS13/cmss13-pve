@@ -14,6 +14,23 @@
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 	skills = /datum/skills/pfc
 
+// RU-PVE START
+/datum/equipment_preset/uscm/pmc/load_status(mob/living/carbon/human/new_human, client/mob_client)
+	. = ..()
+	var/obj/item/implant/corporate_explosive/implant = new()
+	implant.do_implant(new_human, "head")
+// RU-PVE END
+
+// rto
+/datum/equipment_preset/uscm/pmc/rto
+	name = "Tactical Data Specialist"
+	paygrades = list("PMC-TDS" = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "TDS"
+	access = list(ACCESS_WY_GENERAL, ACCESS_WY_ENGINEERING)
+	assignment = JOB_PMCPLAT_SMALL_RTO
+	rank = JOB_SQUAD_RTO
+	skills = /datum/skills/pfc
+
 /datum/equipment_preset/uscm/pmc/sl
 	name = "Operations Leader"
 	paygrades = list("PMC-FOL" = JOB_PLAYTIME_TIER_0)

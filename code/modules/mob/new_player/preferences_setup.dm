@@ -327,15 +327,17 @@
 			return /datum/equipment_preset/pmc/medic
 //PMC Taskforce(small)
 		if(JOB_PMCPLAT_SMALL_LEADER)
-			return /datum/equipment_preset/pmc/leader
+			return /datum/equipment_preset/pmc/commando/leader/low_threat
 		if(JOB_PMCPLAT_SMALL_FTL)
-			return /datum/equipment_preset/pmc/leader
+			return /datum/equipment_preset/pmc/commando/standard/low_threat
 		if(JOB_PMCPLAT_SMALL_SG)
-			return /datum/equipment_preset/pmc/gunner
+			return /datum/equipment_preset/pmc/commando/gunner/low_threat
 		if(JOB_PMCPLAT_SMALL_STANDARD)
-			return /datum/equipment_preset/pmc/standard
+			return /datum/equipment_preset/pmc/commando/standard/low_threat
 		if(JOB_PMCPLAT_SMALL_MEDIC)
-			return /datum/equipment_preset/pmc/medic
+			return /datum/equipment_preset/pmc/commando/standard/low_threat
+		if(JOB_PMCPLAT_SMALL_RTO)
+			return /datum/equipment_preset/pmc/technician
 //RMC Troop
 		if(JOB_TWE_RMC_RIFLEMAN)
 			return /datum/equipment_preset/royal_marine/standard

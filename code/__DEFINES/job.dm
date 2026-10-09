@@ -333,7 +333,7 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_PMCPLAT_SMALL_SG "Strike Heavy Weapons Specialist"
 #define JOB_PMCPLAT_SMALL_STANDARD "Strike Tactical Unit"
 #define JOB_PMCPLAT_SMALL_MEDIC "Strike Medical Specialist"
-
+#define JOB_PMCPLAT_SMALL_RTO "Strike Tactical Data Specialist"
 
 //-------- Con-Amalagated --------//
 

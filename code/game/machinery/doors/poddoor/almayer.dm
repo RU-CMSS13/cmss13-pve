@@ -119,3 +119,14 @@
 /obj/structure/machinery/door/poddoor/almayer/white/closed
 	density = TRUE
 	opacity = TRUE
+
+/obj/structure/machinery/door/poddoor/almayer/dark
+	icon_state = "almayer_pdoor1"
+	base_icon_state = "almayer_pdoor"
+
+/obj/structure/machinery/door/poddoor/almayer/dark/open
+	density = FALSE
+
+/obj/structure/machinery/door/poddoor/almayer/dark/closed
+	density = TRUE
+	opacity = TRUE

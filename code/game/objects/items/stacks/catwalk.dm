@@ -29,3 +29,9 @@
 
 /obj/item/stack/catwalk/proc/build(turf/build_turf)
 	build_turf.ChangeTurf(turf_type)
+
+/obj/item/stack/catwalk/strata_green
+	icon = 'icons/turf/floors/strata_floor_green.dmi'
+	icon_state = "catwalk_strata_tile"
+
+	turf_type = /turf/open/floor/plating/plating_catwalk/strata_green
