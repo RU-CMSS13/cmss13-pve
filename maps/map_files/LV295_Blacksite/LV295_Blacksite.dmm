@@ -3840,12 +3840,6 @@
 	},
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv295/indoors/sublevel_1/droms)
-"cOM" = (
-/obj/effect/big_fog{
-	desc = s
-	},
-/turf/closed/wall/strata_ice/dirty,
-/area/lv295/oob)
 "cOV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/heavyduty{
@@ -4335,12 +4329,8 @@
 /area/lv295/indoors/sublevel_1/entrance)
 "dhn" = (
 /obj/structure/platform,
-/obj/effect/big_fog{
-	desc = s
-	},
-/obj/effect/big_fog{
-	desc = s
-	},
+/obj/effect/big_fog,
+/obj/effect/big_fog,
 /turf/open/gm/river/no_overlay,
 /area/lv295/indoors/sublevel_r/reactor)
 "dhD" = (
@@ -6243,9 +6233,7 @@
 	color = "#000000"
 	},
 /obj/effect/big_fog,
-/obj/effect/big_fog{
-	desc = s
-	},
+/obj/effect/big_fog,
 /turf/open/floor/shiva/multi_tiles/west,
 /area/lv295/indoors/sublevel_r/reactor)
 "eLl" = (
@@ -8461,21 +8449,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_1/droms)
-"gwE" = (
-/obj/effect/big_fog{
-	desc = s
-	},
-/obj/effect/big_fog{
-	desc = s
-	},
-/obj/effect/big_fog{
-	desc = s
-	},
-/obj/effect/big_fog{
-	desc = s
-	},
-/turf/open/gm/river/no_overlay,
-/area/lv295/indoors/sublevel_r/reactor)
 "gxi" = (
 /obj/structure/bed{
 	icon_state = "abed"
@@ -8917,13 +8890,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/lv295/outdoors/compound)
-"gQc" = (
-/obj/structure/platform,
-/obj/effect/big_fog{
-	desc = s
-	},
-/turf/open/gm/river/no_overlay,
-/area/lv295/indoors/sublevel_r/reactor)
 "gQi" = (
 /obj/structure/machinery/light/double/blue{
 	light_color = "#dae2ff";
@@ -9174,13 +9140,6 @@
 "hcu" = (
 /turf/open/floor/shiva/floor3,
 /area/lv295/indoors/sublevel_r/engi)
-"hcK" = (
-/obj/effect/big_fog,
-/obj/effect/big_fog{
-	desc = s
-	},
-/turf/closed/wall/strata_outpost/reinforced/hull,
-/area/lv295/indoors/sublevel_r/reactor)
 "hcV" = (
 /obj/structure/machinery/light/double/blue{
 	light_color = "#dae2ff"
@@ -9510,13 +9469,6 @@
 	color = "#000000"
 	},
 /turf/open/floor/shiva/multi_tiles/southeast,
-/area/lv295/indoors/sublevel_r/reactor)
-"hsm" = (
-/obj/structure/platform_decoration,
-/obj/effect/big_fog{
-	desc = s
-	},
-/turf/open/gm/river/no_overlay,
 /area/lv295/indoors/sublevel_r/reactor)
 "hsI" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
@@ -15726,9 +15678,7 @@
 /obj/structure/platform_decoration{
 	dir = 8
 	},
-/obj/effect/big_fog{
-	desc = s
-	},
+/obj/effect/big_fog,
 /turf/open/gm/river/no_overlay,
 /area/lv295/indoors/sublevel_r/reactor)
 "mbJ" = (
@@ -17343,16 +17293,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_1/entrance)
-"nhy" = (
-/obj/structure/platform{
-	dir = 8
-	},
-/obj/effect/big_fog,
-/obj/effect/big_fog{
-	desc = s
-	},
-/turf/open/gm/river/no_overlay,
-/area/lv295/indoors/sublevel_r/reactor)
 "nhH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/double/blue{
@@ -17404,9 +17344,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/obj/effect/big_fog{
-	desc = s
-	},
+/obj/effect/big_fog,
 /turf/open/gm/river/no_overlay,
 /area/lv295/indoors/sublevel_r/reactor)
 "niA" = (
@@ -21256,12 +21194,8 @@
 "qpc" = (
 /obj/structure/machinery/light/double,
 /obj/structure/platform,
-/obj/effect/big_fog{
-	desc = s
-	},
-/obj/effect/big_fog{
-	desc = s
-	},
+/obj/effect/big_fog,
+/obj/effect/big_fog,
 /turf/open/gm/river/no_overlay,
 /area/lv295/indoors/sublevel_r/reactor)
 "qpR" = (
@@ -23077,12 +23011,6 @@
 	},
 /turf/open/floor/prison/cell_stripe,
 /area/lv295/indoors/sublevel_1/droms)
-"rBF" = (
-/obj/effect/big_fog{
-	desc = s
-	},
-/turf/closed/wall/strata_outpost/reinforced/hull,
-/area/lv295/indoors/sublevel_r/reactor)
 "rBI" = (
 /obj/structure/bed/chair/comfy{
 	dir = 1
@@ -24013,12 +23941,8 @@
 /turf/open/floor/shiva/red/north,
 /area/lv295/indoors/sublevel_r/security)
 "spm" = (
-/obj/effect/big_fog{
-	desc = s
-	},
-/obj/effect/big_fog{
-	desc = s
-	},
+/obj/effect/big_fog,
+/obj/effect/big_fog,
 /turf/closed/wall/mineral/uranium,
 /area/lv295/indoors/sublevel_r/reactor)
 "spu" = (
@@ -25286,9 +25210,7 @@
 	color = "#000000"
 	},
 /obj/effect/big_fog,
-/obj/effect/big_fog{
-	desc = s
-	},
+/obj/effect/big_fog,
 /turf/open/floor/shiva/multi_tiles/west,
 /area/lv295/indoors/sublevel_r/reactor)
 "tkr" = (
@@ -25820,9 +25742,7 @@
 	layer = 3.02
 	},
 /obj/effect/big_fog,
-/obj/effect/big_fog{
-	desc = s
-	},
+/obj/effect/big_fog,
 /turf/open/gm/river/no_overlay,
 /area/lv295/indoors/sublevel_r/reactor)
 "tCX" = (
@@ -27628,15 +27548,9 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv295/indoors/sublevel_1/maint)
 "uOy" = (
-/obj/effect/big_fog{
-	desc = s
-	},
-/obj/effect/big_fog{
-	desc = s
-	},
-/obj/effect/big_fog{
-	desc = s
-	},
+/obj/effect/big_fog,
+/obj/effect/big_fog,
+/obj/effect/big_fog,
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/lv295/indoors/sublevel_r/reactor)
 "uPx" = (
@@ -29383,9 +29297,7 @@
 	dir = 1
 	},
 /obj/effect/big_fog,
-/obj/effect/big_fog{
-	desc = s
-	},
+/obj/effect/big_fog,
 /turf/open/gm/river/no_overlay,
 /area/lv295/indoors/sublevel_r/reactor)
 "whg" = (
@@ -30408,9 +30320,7 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "#000000"
 	},
-/obj/effect/big_fog{
-	desc = s
-	},
+/obj/effect/big_fog,
 /turf/open/floor/shiva/yellowcorners/west,
 /area/lv295/indoors/sublevel_r/reactor)
 "wSS" = (
@@ -32136,12 +32046,8 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/obj/effect/big_fog{
-	desc = s
-	},
-/obj/effect/big_fog{
-	desc = s
-	},
+/obj/effect/big_fog,
+/obj/effect/big_fog,
 /turf/open/gm/river/no_overlay,
 /area/lv295/indoors/sublevel_r/reactor)
 "yla" = (
@@ -34326,9 +34232,9 @@ lVY
 rpG
 rpG
 ekP
-hcK
+iXl
 rpG
-cOM
+jzA
 uua
 iuu
 "}
@@ -34529,7 +34435,7 @@ eGz
 iBG
 bdz
 ykR
-nhy
+ykR
 jYv
 rtQ
 iXl
@@ -34736,7 +34642,7 @@ tHP
 fki
 fki
 fki
-gQc
+jpF
 rpG
 iuu
 "}
@@ -35042,8 +34948,8 @@ tHP
 fki
 spm
 dhn
-rBF
-rBF
+ekP
+ekP
 iuu
 "}
 (29,1,1) = {"
@@ -35247,7 +35153,7 @@ rwF
 uWC
 gth
 vaF
-rBF
+ekP
 iuu
 "}
 (31,1,1) = {"
@@ -35349,7 +35255,7 @@ fki
 iYz
 fki
 rZL
-rBF
+ekP
 iuu
 "}
 (32,1,1) = {"
@@ -35449,7 +35355,7 @@ tHP
 gRs
 xaP
 oWz
-hsm
+mUw
 bDc
 rpG
 iuu
@@ -35651,7 +35557,7 @@ wIv
 lVY
 jqc
 tHP
-gwE
+ucX
 uWC
 rZL
 ekP
