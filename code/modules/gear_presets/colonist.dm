@@ -1502,12 +1502,12 @@
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/hybrisa/firefighter, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/hybrisa/firefighter/officer, WEAR_HEAD)
 	//uniform
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/utility/gray, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/twe, WEAR_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/light/vest/fire_light, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/light/vest/fire_light/officer	, WEAR_JACKET)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/wy, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/softpack/burn, WEAR_IN_BELT)

@@ -5420,9 +5420,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv295/indoors/sublevel_1)
-"eaJ" = (
-/turf/open/floor/plating,
-/area/shuttle/elevator4/ground)
 "eby" = (
 /obj/structure/mirror{
 	pixel_x = -29
@@ -5689,7 +5686,7 @@
 /area/lv295/indoors/sublevel_4)
 "eno" = (
 /turf/open/floor/plating,
-/area/shuttle/elevator3/ground)
+/area/lv295/indoors/sublevel_2)
 "enB" = (
 /obj/structure/bed/chair{
 	dir = 8
@@ -17841,7 +17838,7 @@
 	airlock_area = /area/shuttle/elevator4/ground
 	},
 /turf/open/floor/plating,
-/area/shuttle/elevator4/ground)
+/area/lv295/indoors/sublevel_3)
 "nyl" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
@@ -19357,7 +19354,7 @@
 	airlock_area = /area/shuttle/elevator4/underground
 	},
 /turf/open/floor/plating,
-/area/shuttle/elevator4/underground)
+/area/lv295/indoors/sublevel_4)
 "oOf" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/vents/pump,
@@ -19746,9 +19743,6 @@
 /obj/structure/blocker/invisible_wall,
 /turf/open/auto_turf/snow/layer0,
 /area/lv295/outdoors/compound)
-"pgl" = (
-/turf/closed/wall/strata_ice/dirty,
-/area/shuttle/elevator3/underground)
 "pgp" = (
 /obj/structure/machinery/light/double/blue{
 	light_color = "#dae2ff"
@@ -20280,7 +20274,7 @@
 	roundstart_template = /datum/map_template/shuttle/trijent_elevator/ice_elevator/omicorn
 	},
 /turf/open/floor/plating,
-/area/shuttle/elevator3/ground)
+/area/lv295/indoors/sublevel_2)
 "pEo" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#000000"
@@ -22883,9 +22877,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv295/indoors/sublevel_1/maint)
-"rvA" = (
-/turf/open/floor/plating,
-/area/shuttle/elevator3/underground)
 "rvI" = (
 /obj/structure/pipes/standard/manifold/hidden/green,
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -29490,7 +29481,7 @@
 /area/lv295/indoors/sublevel_r/security)
 "wjH" = (
 /turf/open/floor/plating,
-/area/shuttle/elevator4/underground)
+/area/lv295/indoors/sublevel_4)
 "wjL" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -30616,6 +30607,9 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_2)
 "xdf" = (
+/obj/structure/machinery/door/airlock/upp_utility{
+	name = "Maintenance Hatch"
+	},
 /turf/open/floor/corsat/marked,
 /area/lv295/indoors/sublevel_r)
 "xdj" = (
@@ -44100,11 +44094,11 @@ vje
 uYG
 iuu
 gFP
-rvA
-rvA
-rvA
-rvA
-rvA
+vTD
+vTD
+vTD
+vTD
+vTD
 luQ
 kfu
 biZ
@@ -44202,11 +44196,11 @@ vje
 uYG
 iuu
 gFP
-rvA
-rvA
-rvA
-rvA
-rvA
+vTD
+vTD
+vTD
+vTD
+vTD
 luQ
 jEB
 hvJ
@@ -44304,11 +44298,11 @@ vje
 uYG
 iuu
 gFP
-rvA
-rvA
-rvA
-rvA
-rvA
+vTD
+vTD
+vTD
+vTD
+vTD
 dze
 ecR
 hvJ
@@ -44406,11 +44400,11 @@ vje
 uYG
 iuu
 gFP
-rvA
-rvA
-rvA
-rvA
-rvA
+vTD
+vTD
+vTD
+vTD
+vTD
 dze
 ecR
 hvJ
@@ -44508,11 +44502,11 @@ vje
 uYG
 iuu
 gFP
-rvA
-rvA
-rvA
-rvA
-rvA
+vTD
+vTD
+vTD
+vTD
+vTD
 dze
 ecR
 pbN
@@ -44610,11 +44604,11 @@ vje
 uYG
 iuu
 gFP
-pgl
-rvA
-rvA
-rvA
-rvA
+xVi
+vTD
+vTD
+vTD
+vTD
 dze
 ecR
 pbN
@@ -44712,11 +44706,11 @@ vje
 uYG
 iuu
 gFP
-pgl
-pgl
-rvA
-rvA
-rvA
+xVi
+xVi
+vTD
+vTD
+vTD
 luQ
 rMy
 xic
@@ -44814,11 +44808,11 @@ vje
 uYG
 iuu
 gFP
-pgl
-pgl
-pgl
-rvA
-rvA
+xVi
+xVi
+xVi
+vTD
+vTD
 luQ
 jEY
 pbN
@@ -50016,10 +50010,10 @@ dUo
 uAC
 iuu
 gFP
-eaJ
-eaJ
-eaJ
-eaJ
+vTD
+vTD
+vTD
+vTD
 nxQ
 uva
 tJV
@@ -50118,11 +50112,11 @@ uZR
 uAC
 iuu
 gFP
-eaJ
-eaJ
-eaJ
-eaJ
-eaJ
+vTD
+vTD
+vTD
+vTD
+vTD
 luQ
 kfu
 kfu
@@ -50220,11 +50214,11 @@ emF
 uAC
 iuu
 gFP
-eaJ
-eaJ
-eaJ
-eaJ
-eaJ
+vTD
+vTD
+vTD
+vTD
+vTD
 dze
 ecR
 dGO
@@ -50322,11 +50316,11 @@ emF
 uAC
 iuu
 gFP
-eaJ
-eaJ
-eaJ
-eaJ
-eaJ
+vTD
+vTD
+vTD
+vTD
+vTD
 dze
 ruY
 opm
@@ -50424,11 +50418,11 @@ hFk
 uAC
 iuu
 gFP
-eaJ
-eaJ
-eaJ
-eaJ
-eaJ
+vTD
+vTD
+vTD
+vTD
+vTD
 dze
 ruY
 opm
@@ -50526,11 +50520,11 @@ jvy
 uAC
 iuu
 gFP
-eaJ
-eaJ
-eaJ
-eaJ
-eaJ
+vTD
+vTD
+vTD
+vTD
+vTD
 dze
 ecR
 wjd
@@ -50628,11 +50622,11 @@ uXc
 uAC
 iuu
 gFP
-eaJ
-eaJ
-eaJ
-eaJ
-eaJ
+vTD
+vTD
+vTD
+vTD
+vTD
 luQ
 dLL
 kfu
@@ -50730,11 +50724,11 @@ jYm
 uAC
 iuu
 gFP
-eaJ
-eaJ
-eaJ
-eaJ
-eaJ
+vTD
+vTD
+vTD
+vTD
+vTD
 luQ
 luQ
 luQ
