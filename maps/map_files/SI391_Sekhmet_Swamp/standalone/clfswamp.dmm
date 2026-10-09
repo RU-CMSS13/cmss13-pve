@@ -117,7 +117,7 @@
 /turf/open/auto_turf/swamp_grass/layer1,
 /area/sekhmet/outside/southroad)
 "gt" = (
-/obj/effect/vehicle_spawner/van/fixed{
+/obj/effect/vehicle_spawner/clf_van/fixed{
 	dir = 1
 	},
 /turf/open/floor/kutjevo/grey,
@@ -673,6 +673,7 @@
 "Bk" = (
 /obj/effect/decal/hybrisa/dirt,
 /obj/structure/closet,
+/obj/item/defenses/handheld/planted_flag/clf,
 /turf/open/floor/strata/floor3/east,
 /area/sekhmet/int_reg/yard)
 "Cp" = (
