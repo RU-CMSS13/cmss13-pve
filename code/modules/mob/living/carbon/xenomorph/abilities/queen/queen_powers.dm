@@ -241,7 +241,7 @@
 
 		if(length(possible_xenos) > 1)
 			var/mob/living/carbon/xenomorph/selected_xeno = tgui_input_list(X, "Target", "Watch which leader?", possible_xenos, theme="hive_status")
-			if(!selected_xeno || selected_xeno.hive_pos == NORMAL_XENO || selected_xeno == X.observed_xeno || selected_xeno.stat == DEAD || selected_xeno.z != X.z || !X.check_state())
+			if(!selected_xeno || selected_xeno.hive_pos == NORMAL_XENO || selected_xeno == X.observed_xeno || selected_xeno.stat == DEAD || !X.check_state())
 				return
 			X.overwatch(selected_xeno)
 		else if(length(possible_xenos))
@@ -722,6 +722,30 @@
 		if(W && W.hivenumber == X.hivenumber && W.parent && !W.hibernate && !LinkBlocked(W, weed_turf, turf_to_get))
 			node = W.parent
 			break
+
+	// Weeds on the level below, next to an open space edge
+	var/turf/below = SSmapping.get_turf_below(turf_to_get)
+	if(!node && below && istype(below, /turf/closed))
+		for(var/direction in GLOB.cardinals)
+			if(!istype(get_step(turf_to_get, direction), /turf/open_space))
+				continue
+			var/turf/weed_turf = get_step(below, direction)
+			var/obj/effect/alien/weeds/W = locate() in weed_turf
+			if(W && W.hivenumber == X.hivenumber && W.parent && !W.hibernate && !LinkBlocked(W, weed_turf, turf_to_get))
+				node = W.parent
+				break
+
+	// Weeds on the level above, on top of a wall next to us
+	var/turf/above = SSmapping.get_turf_above(turf_to_get)
+	if(!node && above && istype(above, /turf/open_space))
+		for(var/direction in GLOB.cardinals)
+			if(!istype(get_step(turf_to_get, direction), /turf/closed))
+				continue
+			var/turf/weed_turf = get_step(above, direction)
+			var/obj/effect/alien/weeds/W = locate() in weed_turf
+			if(W && W.hivenumber == X.hivenumber && W.parent && !W.hibernate && !LinkBlocked(W, weed_turf, turf_to_get))
+				node = W.parent
+				break
 
 	if(!node)
 		to_chat(X, SPAN_XENOWARNING("You can only plant weeds near weeds with a connected node!"))
