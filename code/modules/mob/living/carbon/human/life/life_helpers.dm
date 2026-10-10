@@ -224,3 +224,4 @@
 	apply_effect(10, EYE_BLUR)
 	apply_effect(10, PARALYZE)
 	updatehealth() //One more time, so it doesn't show the target as dead on HUDs
+	move_eyelids(EYELID_SWITCH, 0.2, 3, EYELID_LOOP)	//start moving eyelids normally again
