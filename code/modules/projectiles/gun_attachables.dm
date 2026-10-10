@@ -299,6 +299,7 @@ Defined in conflicts.dm of the #defines folder.
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	attack_speed = 9
 	flags_equip_slot = SLOT_FACE
+	flags_inv_hide = HIDEMOUTHCLENCHED
 	flags_armor_protection = SLOT_FACE
 	flags_item = CAN_DIG_SHRAPNEL
 	flags_human_ai = MELEE_WEAPON_ITEM
