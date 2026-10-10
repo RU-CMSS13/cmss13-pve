@@ -2,6 +2,7 @@
 	name = ORIGIN_UPP
 	desc = "You were born in the Union of Progressive Peoples."
 	tag_icon = "upp" // RU PVE ADDITION
+	tag_color = "#d63a3a" // RU PVE ADDITION
 
 /datum/origin/upp/cradle
 	name = ORIGIN_UPP_CRADLE

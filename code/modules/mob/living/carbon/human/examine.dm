@@ -597,6 +597,11 @@
 			temp_msg += " <a href='byond://?src=\ref[src];use_stethoscope=1'>\[Use Stethoscope\]</a>"
 		msg += "\n<span class = 'deptradio'>Medical actions: [temp_msg]\n"
 
+	// RU PVE ADDITION START
+	if(accent_prefix && !(skipjumpsuit && skipface))
+		msg += "\n[icon2html('icons/accent_tags.dmi', user, accent_prefix, extra_classes = "accent_tag")] [SPAN_BOLD(origin)]\n"
+	// RU PVE ADDITION END
+
 	var/flavor = print_flavor_text()
 	if(flavor)
 		msg += "[flavor]\n"
