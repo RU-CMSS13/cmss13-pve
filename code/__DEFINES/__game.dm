@@ -46,11 +46,11 @@
 #define MAP_WHITE_ANTRE_RESEARCH_FACILITY "White Antre Research Facility"
 #define MAP_CONAM_81_ABYSSAL "Con-Am 81 'Abyssal'"
 #define MAP_CAPE_RIVER "Cape River Mining Colony"
+#define MAP_SEKHMET_SWAMP "SI-391 Sekhmet Swamp"
 #define MAP_CHINOOK "Chinook 91 GSO" //admin level
 #define MAP_DERELICT_ALMAYER "Derelict Almayer"
 #define MAP_LV522_LUKES_LANDING "LV-522 Lukes Landing"
 #define MAP_LV295_BLACKSITE "LV295 Blacksite"
-#define MAP_SI391_SEKHMET "SI-391 Sekhmet Swamp"
 #define MAP_BMG290_OTOGI_EGRESS_POINT "BMG-290 Otogi Egress Point" //mapjam
 #define MAP_TAIPEI "Taipei Way-Station" //mapjam LAGO
 #define MAP_CANYON_32B "Canyon 32B"
@@ -390,6 +390,7 @@
 #define WALL_FOREST "forest_veg"
 #define WALL_FOREST_ROCK "rock_forest"
 #define WALL_FOREST_ROCK_DIRTY "rock_forest_dirty"
+#define WALL_SWAMP "swamp_veg"
 #define WALL_STRATA_OUTPOST_RIBBED "strata_ribbed_outpost_"
 #define WALL_STRATA_OUTPOST_BARE "strata_bare_outpost_"
 #define WALL_SHIVA_ICE "shiva_ice"

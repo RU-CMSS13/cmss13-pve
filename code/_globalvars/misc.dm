@@ -152,3 +152,6 @@ GLOBAL_VAR_INIT(gm_set_zombie_random_helmet, FALSE)
 GLOBAL_VAR_INIT(gm_set_zombie_helmet_chance, 25)
 /// Zombie individually set disable auto clean, stops callback qdels for droppedlimbs and perma corpses
 GLOBAL_VAR_INIT(gm_set_zombie_disable_auto_clean, FALSE)
+
+/// List of giant lizards that are alive.
+GLOBAL_LIST_EMPTY(giant_lizards_alive)
