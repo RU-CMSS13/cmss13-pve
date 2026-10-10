@@ -1,3 +1,4 @@
+#include "game\machinery\keypad_door_control.dm"
 #include "modules\implants\corporate_explosive_implant.dm"
 #include "modules\mob\living\carbon\human\emote.dm"
 //хуйня которую я не знаю куда запихать
