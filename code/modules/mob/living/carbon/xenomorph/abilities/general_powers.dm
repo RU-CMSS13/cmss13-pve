@@ -275,7 +275,7 @@
 	if(!SSmapping.same_z_map(target_turf.z, X.z))
 		to_chat(X, SPAN_XENOWARNING("This area is too far away to affect!"))
 		return
-	if(!X.hive.allow_no_queen_actions && (!X.hive.living_xeno_queen || X.hive.living_xeno_queen.z != X.z))
+	if(!X.hive.allow_no_queen_actions && (!X.hive.living_xeno_queen || !SSmapping.same_z_map(X.hive.living_xeno_queen.z, X.z)))
 		to_chat(X, SPAN_XENOWARNING("We have no queen, the psychic link is gone!"))
 		return
 
@@ -380,6 +380,9 @@
 	if(!A)
 		return
 
+	while(istype(A, /turf/open_space))
+		A = SSmapping.get_turf_below(A)
+
 	if(A.layer >= FLY_LAYER)//anything above that shouldn't be pounceable (hud stuff)
 		return
 
@@ -408,13 +411,30 @@
 	if (!tracks_target)
 		A = get_turf(A)
 
-	if(A.z != X.z && X.mob_size >= MOB_SIZE_BIG)
-		if (!do_after(X, 2 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
+	//everyone gets (extra) timer to pounce up
+	if(A.z != X.z)
+		var/maximum_z = max(A.z, X.z)
+		var/list/turf/path = get_line(locate(X.x, X.y, maximum_z), locate(A.x, A.y, maximum_z))
+		for(var/turf/turf_in_path in path)
+			while(istype(turf_in_path, /turf/open_space))
+				turf_in_path = SSmapping.get_turf_below(turf_in_path)
+
+			if(turf_in_path.density && istype(turf_in_path, /turf/closed/wall))
+				var/turf/closed/wall/wall_in_path = turf_in_path
+				if(wall_in_path.hull)
+					to_chat(X, SPAN_WARNING("You can't jump over an object in your path."))
+					return
+
+			for(var/obj/structure/cur_obj in turf_in_path.contents)
+				if(cur_obj.density && cur_obj.unslashable && cur_obj.unacidable)
+					to_chat(X, SPAN_WARNING("You can't jump over an object in your path."))
+					return
+
+		if (!do_after(X, 0.5 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_HOSTILE))
 			return
 
-	//everyone gets (extra) timer to pounce up
-	if(A.z > X.z)
-		if (!do_after(X, 0.5 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_HOSTILE))
+	if(A.z != X.z && X.mob_size >= MOB_SIZE_BIG)
+		if (!do_after(X, 2 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
 			return
 
 	apply_cooldown()
@@ -444,6 +464,8 @@
 	pre_pounce_effects()
 
 	X.pounce_distance = get_dist(X, A)
+	if(X.z != A.z)
+		X.pounce_distance += 2
 	X.throw_atom(A, distance, throw_speed, X, launch_type = LOW_LAUNCH, pass_flags = pounce_pass_flags, collision_callbacks = pounce_callbacks)
 	SEND_SIGNAL(owner, COMSIG_XENO_USED_POUNCE, A)
 	X.update_icons()

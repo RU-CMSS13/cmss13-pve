@@ -227,10 +227,12 @@
 		ping_receivers += humans
 
 	var/list/ping_candidates = SSquadtree.players_in_range(range_bounds, cur_turf.z, QTREE_EXCLUDE_OBSERVER | QTREE_SCAN_MOBS)
-	if(SSmapping.get_turf_above(cur_turf))
-		ping_candidates += SSquadtree.players_in_range(range_bounds, cur_turf.z+1, QTREE_EXCLUDE_OBSERVER | QTREE_SCAN_MOBS)
-	if(SSmapping.get_turf_below(cur_turf))
-		ping_candidates += SSquadtree.players_in_range(range_bounds, cur_turf.z-1, QTREE_EXCLUDE_OBSERVER | QTREE_SCAN_MOBS)
+	var/turf/above = SSmapping.get_turf_above(cur_turf)
+	var/turf/below = SSmapping.get_turf_below(cur_turf)
+	if(above)
+		ping_candidates += SSquadtree.players_in_range(range_bounds, above.z, QTREE_EXCLUDE_OBSERVER | QTREE_SCAN_MOBS)
+	if(below)
+		ping_candidates += SSquadtree.players_in_range(range_bounds, below.z, QTREE_EXCLUDE_OBSERVER | QTREE_SCAN_MOBS)
 
 	for(var/A in ping_candidates)
 		var/mob/living/M = A //do this to skip the unnecessary istype() check; everything in ping_candidate is a mob already

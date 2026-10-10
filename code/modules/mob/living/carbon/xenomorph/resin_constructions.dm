@@ -102,6 +102,11 @@ GLOBAL_VAR_INIT(resin_lz_allowed, FALSE)
 		resin_wall.hivenumber = hivenumber
 		resin_wall.set_resin_builder(builder)
 		set_hive_data(resin_wall, hivenumber)
+		while(resin_wall.upper_wall)
+			resin_wall = resin_wall.upper_wall
+			resin_wall.hivenumber = hivenumber
+			resin_wall.set_resin_builder(builder)
+			set_hive_data(resin_wall, hivenumber)
 
 	return build_turf
 

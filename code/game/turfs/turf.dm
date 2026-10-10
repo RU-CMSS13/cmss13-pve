@@ -26,7 +26,7 @@
 
 /turf
 	icon = 'icons/turf/floors/floors.dmi'
-	plane = TURF_PLANE
+	plane = GAME_PLANE
 	var/intact_tile = 1 //used by floors to distinguish floor with/without a floortile(e.g. plating).
 	var/can_bloody = TRUE //Can blood spawn on this turf?
 	var/list/linked_pylons
@@ -134,11 +134,14 @@
 	plane = OPEN_SPACE_PLANE_START
 	vis_flags = VIS_HIDE
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	anchored = TRUE
+	flags_atom = NO_ZFALL
 
 /obj/vis_contents_holder/Initialize(mapload, vis, offset, backdrop = TRUE)
 	. = ..()
 	plane -= offset
-	vis_contents += GLOB.openspace_backdrop_one_for_all
+	if(backdrop)
+		vis_contents += GLOB.openspace_backdrop_one_for_all
 	vis_contents += vis
 	name = null // Makes it invisible on right click
 
@@ -482,9 +485,15 @@
 	var/list/old_hybrid_lights_affecting = hybrid_lights_affecting?.Copy()
 	var/old_directional_opacity = directional_opacity
 
+	var/list/post_change_callbacks = list()
+	SEND_SIGNAL(src, COMSIG_PRE_TURF_CHANGE, path, new_baseturfs, flags, post_change_callbacks)
+
 	changing_turf = TRUE
 	qdel(src) //Just get the side effects and call Destroy
 	var/turf/W = new path(src)
+
+	for(var/datum/callback/callback as anything in post_change_callbacks)
+		callback.InvokeAsync(W)
 
 	for(var/atom/movable/thing as anything in W.contents)
 		SEND_SIGNAL(thing, COMSIG_ATOM_TURF_CHANGE, src)
