@@ -364,6 +364,25 @@
 	var/obj/item/clothing/accessory/upppads/legs/greaves = new()
 	src.attach_accessory(null, greaves, FALSE)
 
+/obj/item/clothing/suit/marine/smartgunner/upp/vdv
+	name = "\improper 6B91-D pattern UPP armor"
+	desc = "A 'Desantnaya' adaptation of the famous 6B91-2, designed specifically for the Union's paratroopers. Engineers at the Ministry of Industry succeeded in significantly reducing its weight, though at the expense of protection."
+	slowdown = SLOWDOWN_ARMOR_MEDIUM
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+
+/obj/item/clothing/suit/storage/marine/smartgunner/upp/vdv/Initialize()
+	. = ..()
+	pockets.bypass_w_limit = list(
+		/obj/item/ammo_magazine/minigun,
+		/obj/item/ammo_magazine/pkp,
+		)
+
+/obj/item/clothing/suit/marine/smartgunner/upp/vdv/standard/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/upppads/legs/greaves = new()
+	src.attach_accessory(null, greaves, FALSE)
+
 /obj/item/clothing/suit/marine/faction/upp/light
 	name = "\improper 6B72-03 pattern UPP armor"
 	desc = "Vintage UPP armor system Vadasz. Provides basic ballistic/shrapnel protection for armor crew or rear echelon forces with wraparound soft armor and ceramic composite chestplate. Lightweight, but lacking protection class and coverage. Still issued to the Territorial Guard and People's Armed Police tactical teams, and utilized by some spetznaz."
@@ -382,6 +401,14 @@
 	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PLATE3, ACCESSORY_SLOT_ARMOR_C, ACCESSORY_SLOT_DECORKNEE)
 	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_ARMOR_C, ACCESSORY_SLOT_PLATE3, ACCESSORY_SLOT_DECORKNEE)
 	specialty = "\improper 6B72-03 pattern"
+
+/obj/item/clothing/suit/marine/faction/upp/light/vdv
+	name = "\improper 6B72-D pattern UPP armor"
+	desc = "A modified version of the UPP Vadasz armor system designed for airborne troops. Unlike the 6B72-03, it is constructed from higher-grade materials, allowing it to provide enhanced protection for the wearer without significantly increasing the system's weight or overall bulk."
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+
+
 
 /obj/item/clothing/suit/marine/faction/upp/light/armor
 

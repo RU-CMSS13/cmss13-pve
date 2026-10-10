@@ -71,6 +71,17 @@ OverrideTimelock(/datum/job/marine/leader, list(
 	else
 		gear_preset = gear_preset_secondary
 
+/datum/job/marine/leader/ai/upp/airborne
+	title = JOB_SQUAD_LEADER_UPP_AIRBORNE
+	gear_preset = /datum/equipment_preset/uscm/leader/upp/airborne
+	gear_preset_secondary = /datum/equipment_preset/uscm/leader/upp/airborne/sergeant_major
+	job_options = list(SRSGT_VARIANT = "SrSGT", SGTMJR_VARIANT = "SGTMJR")
+
+/datum/job/marine/leader/ai/upp/airborne/handle_job_options(option)
+	gear_preset = initial(gear_preset)
+	if(option == SGTMJR_VARIANT)
+		gear_preset = gear_preset_secondary
+
 /datum/job/marine/leader/ai/forecon
 	title = JOB_SQUAD_LEADER_FORECON
 	gear_preset = /datum/equipment_preset/uscm/leader/forecon
@@ -87,6 +98,11 @@ OverrideTimelock(/datum/job/marine/leader, list(
 	name = JOB_SQUAD_LEADER_UPP
 	squad = SQUAD_UPP
 	job = /datum/job/marine/leader/ai/upp
+
+/obj/effect/landmark/start/marine/leader/upp/airborne
+	name = JOB_SQUAD_LEADER_UPP_AIRBORNE
+	squad = SQUAD_UPP_AIRBORNE
+	job = /datum/job/marine/leader/ai/upp/airborne
 
 /datum/job/marine/leader/ai/upp/forecon
 	title = JOB_SQUAD_LEADER_FORECON_UPP

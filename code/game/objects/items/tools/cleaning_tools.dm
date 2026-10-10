@@ -169,3 +169,8 @@
 /obj/item/tool/soap/syndie
 	desc = "An untrustworthy bar of soap. Smells of fear."
 	icon_state = "soapsyndie"
+
+/obj/item/tool/soap/hard
+	name = "hard soap"
+	desc = "A bar of hard soap bearing the embossed UPPAC logo. The reverse side is marked with the inscriptions 'GOST 30266-2153' and '76%'"
+	color = "#756e2a"
