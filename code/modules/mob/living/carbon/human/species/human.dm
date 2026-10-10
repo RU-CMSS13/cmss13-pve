@@ -91,6 +91,11 @@
 	uses_skin_color = TRUE
 	special_body_types = TRUE
 
+	speech_sounds = list(MALE = "male_speak", FEMALE = "female_speak")
+	ask_sounds = list(MALE = "male_ask", FEMALE = "female_ask")
+	exclaim_sounds = list(MALE = "male_exclaim", FEMALE = "female_exclaim")
+	speech_chance = 100
+
 /datum/species/human/handle_on_fire(humanoidmob)
 	. = ..()
 	INVOKE_ASYNC(humanoidmob, TYPE_PROC_REF(/mob, emote), pick("pain", "scream"))
