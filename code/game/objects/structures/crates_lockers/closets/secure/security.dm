@@ -139,6 +139,7 @@
 
 
 
+
 /obj/structure/closet/secure_closet/security/cargo/Initialize()
 	. = ..()
 	new /obj/item/clothing/accessory/armband/cargo(src)

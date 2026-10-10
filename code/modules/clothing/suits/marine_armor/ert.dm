@@ -436,6 +436,13 @@
 	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN|CANTSTRIP
 	desc = "An extreme sidegrade of 6B92 armor, with the intent to increase soldier's survivability as much, as possible. An ablative layers of composite armor weighting more than 100 pounds, supported by the servo-assisters in each limb, and powered by the baterries for 24 hours of estimated work. Due to the lack of powerful heat dispersion system, the suit becomes an oven to it's owner, and each step takes more and more strenght even with servo-assisters. Yet still, it is the best answer to the question of life and death. Looks like this suit is tighly bolts in with the body. You'll most likely be able to take it off yourself, but don't have hope to strip it from the deadman."
 
+/obj/item/clothing/suit/marine/faction/upp/heavy/nostrip/super
+	armor_bullet = CLOTHING_ARMOR_ULTRAHIGH
+	armor_bomb = CLOTHING_ARMOR_GIGAHIGH
+	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
+	fire_intensity_resistance = 100
+	max_heat_protection_temperature = ARMOR_MAX_HEAT_PROT
+
 /obj/item/clothing/suit/marine/smartgunner/upp/heavy
 	name = "\improper 6B99-4 pattern UPP heavy assault armor"
 	desc = "An extreme sidegrade of 6B92 armor, with the intent to increase soldier's survivability as much, as possible. An ablative layers of composite armor weighting more than 100 pounds, supported by the servo-assisters in each limb, and powered by the baterries for 24 hours of estimated work. This model kept the advanced computery and wire placement for the work with heavy machineguns without making suit itself too much heavy for the use. An extreme heat and bulkiness tho are still an issue."
@@ -503,6 +510,33 @@
 	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE)
 	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
 	specialty = "\improper Type 12 CANC harness"
+
+/obj/item/clothing/suit/marine/faction/upp/canc_blackops
+	name = "\improper Type 28 CANC armor"
+	desc = "Experimental Armor Type 28. Developed by the scientific division of CANC under the leadership of Laoban Hansun, in collaboration with the finest engineers from Hyperdyne. The use of the same titanium nanocrystalline alloy found in UPP armor plates made it possible to increase the wearer's protection without significantly increasing the armor's weight, while the use of advanced Kevlar variants helped preserve enhanced mobility."
+	icon_state = "canc_blackops"
+	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_inventory = null
+	time_to_unequip = 10
+	time_to_equip = 10
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_bomb = CLOTHING_ARMOR_VERYHIGH
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_VERYHIGH
+	armor_rad = CLOTHING_ARMOR_VERYHIGH
+	armor_internaldamage = CLOTHING_ARMOR_HIGH
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
+	specialty = "\improper Type 28 CANC armor"
+
+/obj/item/clothing/suit/marine/faction/upp/canc_blackops/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/pmc/canc_blackops/webbing = new()
+	src.attach_accessory(null, webbing, TRUE)
 
 /obj/item/clothing/suit/marine/faction/upp/jacket
 	name = "\improper UH4 camouflaged jacket"
