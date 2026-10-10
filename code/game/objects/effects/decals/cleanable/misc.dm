@@ -244,3 +244,19 @@
 /obj/effect/decal/cleanable/hybrisa/trash
 	icon = 'icons/effects/hybrisa_decals.dmi'
 	icon_state = "trash_1"
+
+/obj/effect/broken_tile
+	icon = 'icons/effects/broken_tiles.dmi'
+	icon_state = "triple"
+	layer = TURF_LAYER
+	plane = FLOOR_PLANE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+
+/obj/effect/broken_tile/double
+	icon_state = "double"
+
+/obj/effect/broken_tile/single
+	icon_state = "single"
+
+/obj/effect/broken_tile/angle
+	icon_state = "angle"

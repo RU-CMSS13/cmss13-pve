@@ -269,3 +269,23 @@
 /obj/effect/landmark/corpsespawner/wy/manager/burst
 	name = "Burst Corporate Supervisor"
 	equip_path = /datum/equipment_preset/corpse/wy/manager/burst
+
+/obj/effect/landmark/corpsespawner/working_joe
+	name = "Deactivated Working Joe"
+	equip_path = /datum/equipment_preset/corpse/working_joe
+
+/obj/effect/landmark/corpsespawner/working_joe/fireproof
+	name = "Deactivated Working Joe"
+	equip_path = /datum/equipment_preset/corpse/working_joe/fireproof
+
+/obj/effect/landmark/corpsespawner/upp_spy
+	name = "Corpse - Suspicious Colonist"
+	equip_path = /datum/equipment_preset/corpse/upp_spy
+
+/obj/effect/landmark/corpsespawner/lb_merc
+	name = "Corpse - HIG - Operative"
+	equip_path = /datum/equipment_preset/corpse/lb_merc
+
+/obj/effect/landmark/corpsespawner/lb_merc/burst
+
+	equip_path = /datum/equipment_preset/corpse/lb_merc/burst

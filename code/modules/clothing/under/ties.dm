@@ -608,6 +608,18 @@
 	desc = "A colorful corporate patch bearing the logo of the Con-Amalagated Corporation. Once a powerful conglomerate within the Sol System, now relegated to a middle-power on the verge of financial collapse. This patch is popular amongst collectors due to its color scheme."
 	icon_state = "conampatch"
 
+/obj/item/clothing/accessory/patch/seegson
+	name = "Seegson Corporation patch"
+	desc = "An old corporate patch bearing the logo of Seegson Corporation, once known for its cheap, unreliable technology. Wearing it implies loyalty to profit over people."
+	icon_state = "seegson"
+	item_state_slots = list(WEAR_AS_GARB = "seegson")
+
+/obj/item/clothing/accessory/patch/lasalle
+	name = "Lasalle Bionational Corporation patch"
+	desc = "A patch bearing the insignia of Lasalle Bionational Corporation. Known for cutting-edge biological research and controversial experiments, it's emblem represents progress pursued at any cost."
+	icon_state = "lasalle"
+	item_state_slots = list(WEAR_AS_GARB = "lasalle")
+
 // Misc
 
 /obj/item/clothing/accessory/dogtags
@@ -1128,6 +1140,10 @@
 
 /obj/item/clothing/accessory/storage/droppouch/wy
 	icon_state = "wy_drop_pouch"
+
+/obj/item/clothing/accessory/storage/droppouch/black
+	name = "black drop pouch"
+	icon_state = "drop_pouch_black"
 
 /obj/item/storage/internal/accessory/drop_pouch
 	w_class = SIZE_LARGE //Allow storage containers that's medium or below

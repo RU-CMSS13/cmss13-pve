@@ -1514,3 +1514,15 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	icon = 'icons/mob/humans/onmob/contained/medical_imp.dmi'
 	contained_sprite = TRUE
 	has_gamemode_skin = FALSE
+
+/obj/item/storage/backpack/satchel/white
+	icon_state = "satchel_white"
+	item_state = "satchel_white"
+
+/obj/item/storage/backpack/satchel/black/lockable
+	name = "secure leather satchel"
+	is_id_lockable = TRUE
+
+/obj/item/storage/backpack/satchel/white/lockable
+	name = "secure leather satchel"
+	is_id_lockable = TRUE

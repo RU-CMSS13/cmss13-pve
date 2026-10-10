@@ -574,3 +574,9 @@
 	desc = "Comfortable seat for a gunner."
 	seat = VEHICLE_GUNNER
 	required_skill = SKILL_VEHICLE_DEFAULT
+
+/obj/structure/bed/chair/vehicle/comfy
+	icon = 'icons/obj/vehicles/interiors/seats.dmi'
+
+/obj/structure/bed/chair/vehicle/comfy/alt
+	icon_state = "alt_vehicle_seat"

@@ -179,10 +179,18 @@
 
 /datum/job/civilian/survivor/commanding_officer/set_spawn_positions()
 	var/list/CO_survivor_types = SSmapping.configs[GROUND_MAP].CO_survivor_types
-	if(length(CO_survivor_types))
+	if(length(CO_survivor_types) || has_CO_spawner())
 		total_positions = 1
 		spawn_positions = 1
 	return spawn_positions
+
+/// Whether a map insert has placed a survivor spawner with dedicated CO equipment
+/datum/job/civilian/survivor/commanding_officer/proc/has_CO_spawner()
+	for(var/priority in GLOB.survivor_spawns_by_priority)
+		for(var/obj/effect/landmark/survivor_spawner/spawner as anything in GLOB.survivor_spawns_by_priority[priority])
+			if(spawner.CO_equipment)
+				return TRUE
+	return FALSE
 
 /datum/job/civilian/survivor/commanding_officer/handle_equip_gear(mob/living/carbon/human/equipping_human, obj/effect/landmark/survivor_spawner/picked_spawner)
 	if(picked_spawner.CO_equipment)

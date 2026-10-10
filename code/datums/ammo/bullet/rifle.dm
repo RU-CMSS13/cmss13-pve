@@ -814,3 +814,16 @@
 	name = "high-explosive armor-piercing 5.5x50 bullet"
 	damage = 55
 	penetration = ARMOR_PENETRATION_TIER_6
+
+/datum/ammo/bullet/rifle/w_ek_17
+	name = "7.6mm rifle bullet"
+
+	damage = 35
+	penetration = ARMOR_PENETRATION_TIER_1
+	accurate_range = 14
+	effective_range_max = 6
+	max_range = 22
+	accuracy = HIT_ACCURACY_TIER_3
+	scatter = SCATTER_AMOUNT_TIER_10
+	shell_speed = AMMO_SPEED_TIER_6
+	damage_falloff = DAMAGE_FALLOFF_TIER_5

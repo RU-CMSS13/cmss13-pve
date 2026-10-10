@@ -61,6 +61,7 @@
 #define MAP_BOSENMORI_BASHO "Bosenmori Basho"
 #define MAP_REDEMPTION_VALLEY "Redemption Valley" //valley with a military outpost and agricultural hamlet
 #define MAP_BINHAI_SUPPLY_STATION "Binhai Supply Station" //UPP asteroid base
+#define MAP_FIRE_COLONY "LV-376 Charon's Crucible"//heavily modified ice colony V2 - low-medium pop
 
 #define MAP_NAVALIS "Navalis Platform 13"//multiz version
 #define MAP_NAVALIS_SINGLE "Navalis Platform 13 (singlez)" //singlez version
@@ -400,6 +401,8 @@
 #define WALL_SHIVA_FAB_PINK "shiva_fab_pnk"
 #define WALL_SHIVA_FAB_WHITE "shiva_fab_wht"
 #define WALL_SHIVA_FAB_RED "shiva_fab_red"
+#define WALL_SHIVA_FAB_DARK "shiva_fab_dark"
+#define WALL_ENGINEER_RUIN "engineer_stone"
 #define WALL_DOME "dome"
 #define WALL_DOMER "r_dome"
 #define WALL_SOLARIS "solaris_interior"
