@@ -145,3 +145,6 @@ endmap
 
 map binhai_supply_station
 endmap
+
+map forest_valley
+endmap
