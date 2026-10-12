@@ -211,6 +211,10 @@
 	light_type = /obj/item/light_bulb/bulb
 	light_color = LIGHT_COLOR_XENON_UA
 
+/obj/structure/machinery/light/small/blue/rover
+	light_color = "#dae2ff"
+	light_power = 0.5
+
 /obj/structure/machinery/light/small/red
 	icon_state = "bulb1"
 	base_state = "bulb"
@@ -255,6 +259,10 @@
 	base_state = "bptube"
 	desc = "A lighting fixture that can be fitted with two bright fluorescent light tubes for that extra eye-watering goodness."
 	light_color = LIGHT_COLOR_XENON_UA
+
+/obj/structure/machinery/light/double/blue/rover
+	light_color = "#dae2ff"
+	light_power = 0.7
 
 /obj/structure/machinery/light/spot
 	name = "spotlight"
