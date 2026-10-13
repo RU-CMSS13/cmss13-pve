@@ -52,6 +52,7 @@
 		/datum/action/xeno_action/onclick/plant_weeds/pathogen/macro_one, // Macro 1
 		/datum/action/xeno_action/onclick/choose_resin/pathogen/not_primary,
 		/datum/action/xeno_action/activable/secrete_resin/pathogen, // Macro 3 // Shared macro with Conditor
+		/datum/action/xeno_action/onclick/tacmap,
 	)
 	inherent_verbs = list(
 		/mob/living/carbon/xenomorph/proc/vent_crawl,

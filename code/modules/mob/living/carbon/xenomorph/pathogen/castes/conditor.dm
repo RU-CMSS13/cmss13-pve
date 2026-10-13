@@ -64,6 +64,7 @@
 		/datum/action/xeno_action/activable/secrete_resin/pathogen/thick, // Macro 3 // Shared macro with Neomorph
 		/datum/action/xeno_action/onclick/shift_spits/conditor, // Macro 4
 		/datum/action/xeno_action/onclick/pathogen_paralyze, //Macro 5
+		/datum/action/xeno_action/onclick/tacmap,
 	)
 	inherent_verbs = list(
 		/mob/living/carbon/xenomorph/proc/vent_crawl,

@@ -6,11 +6,11 @@
 	melee_damage_lower = XENO_DAMAGE_TIER_5 //Stats TBC
 	melee_damage_upper = XENO_DAMAGE_TIER_6
 	melee_vehicle_damage = XENO_DAMAGE_TIER_7
-	max_health = XENO_HEALTH_TIER_12
+	max_health = 3500 * XENO_UNIVERSAL_HPMULT // PVE boss edition, between the Matriarch and the Archon
 	plasma_gain = XENO_PLASMA_GAIN_TIER_8
 	plasma_max = XENO_PLASMA_TIER_8
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_10
-	armor_deflection = XENO_ARMOR_TIER_2
+	armor_deflection = XENO_ARMOR_FACTOR_TIER_5 // PVE boss edition
 	evasion = XENO_EVASION_LOW
 	speed = XENO_SPEED_TIER_8
 
@@ -46,11 +46,12 @@
 		/datum/action/xeno_action/onclick/xeno_resting/pathogen,
 		/datum/action/xeno_action/watch_xeno/pathogen,
 		/datum/action/xeno_action/activable/tail_stab/pathogen/tier3,
-		/datum/action/xeno_action/onclick/feralrush, // Macro 1
+		/datum/action/xeno_action/onclick/feralrush/aberration, // Macro 1
 		/datum/action/xeno_action/onclick/predalien_roar/aberration, //Macro 2
-		/datum/action/xeno_action/activable/feral_smash, //Macro 3
-		/datum/action/xeno_action/activable/feralfrenzy, //Macro 4
+		/datum/action/xeno_action/activable/feral_smash/aberration, //Macro 3
+		/datum/action/xeno_action/activable/feralfrenzy/aberration, //Macro 4
 		/datum/action/xeno_action/onclick/toggle_gut_targeting, //Macro 5
+		/datum/action/xeno_action/onclick/tacmap,
 	)
 	claw_type = CLAW_TYPE_VERY_SHARP
 

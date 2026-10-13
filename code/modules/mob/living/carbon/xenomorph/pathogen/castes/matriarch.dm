@@ -6,11 +6,11 @@
 	melee_damage_lower = XENO_DAMAGE_TIER_6
 	melee_damage_upper = XENO_DAMAGE_TIER_8
 	melee_vehicle_damage = XENO_DAMAGE_TIER_8
-	max_health = XENO_HEALTH_KING
+	max_health = XENO_HEALTH_KING * 2 // PVE X2 boss edition
 	plasma_gain = XENO_PLASMA_GAIN_TIER_9
 	plasma_max = XENO_PLASMA_TIER_10
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_10
-	armor_deflection = XENO_ARMOR_TIER_4
+	armor_deflection = XENO_ARMOR_TIER_5 // PVE boss edition
 	evasion = XENO_EVASION_LOW
 	speed = XENO_SPEED_TIER_1
 
@@ -57,6 +57,7 @@
 		//, // Macro 4
 		/datum/action/xeno_action/onclick/pathogen_paralyze, //Macro 5
 		/datum/action/xeno_action/onclick/blight_wave, // Screech Macro
+		/datum/action/xeno_action/onclick/tacmap,
 	)
 	claw_type = CLAW_TYPE_VERY_SHARP
 

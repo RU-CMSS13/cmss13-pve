@@ -55,6 +55,7 @@
 		/datum/action/xeno_action/activable/cyclone, // Macro 3
 		/datum/action/xeno_action/activable/mycotoxin, // Macro 4
 		/datum/action/xeno_action/onclick/pathogen_paralyze, //Macro 5
+		/datum/action/xeno_action/onclick/tacmap,
 	)
 	claw_type = CLAW_TYPE_VERY_SHARP
 

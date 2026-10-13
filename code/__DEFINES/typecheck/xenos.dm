@@ -29,6 +29,7 @@
 #define is_pathogen_creature(A) (istype(A, /mob/living/carbon/xenomorph)) && (istype(A?:caste, /datum/caste_datum/pathogen))
 #define isbloodburster(A) (istype(A, /mob/living/carbon/xenomorph/bloodburster))
 #define isneomorph(A) (istype(A, /mob/living/carbon/xenomorph/neomorph))
+#define isneophyte(A) (istype(A, /mob/living/carbon/xenomorph/neophyte))
 #define isconditor(A) (istype(A, /mob/living/carbon/xenomorph/conditor))
 #define ispopper(A) (istype(A, /mob/living/carbon/xenomorph/popper))
 #define ismatriarch(A) (istype(A, /mob/living/carbon/xenomorph/matriarch))

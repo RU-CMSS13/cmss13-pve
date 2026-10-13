@@ -61,7 +61,7 @@
 		/datum/action/xeno_action/watch_xeno/pathogen,
 		/datum/action/xeno_action/activable/tail_stab/pathogen,
 		/datum/action/xeno_action/onclick/xenohide/pathogen,
-		/datum/action/xeno_action/activable/pounce/runner/pathogen, // Macro 1
+		/datum/action/xeno_action/activable/pounce/runner/pathogen/bloodburster, // Macro 1
 		/datum/action/xeno_action/onclick/tacmap,
 	)
 	inherent_verbs = list(

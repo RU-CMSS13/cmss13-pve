@@ -8,11 +8,11 @@
 	melee_damage_lower = XENO_DAMAGE_TIER_4
 	melee_damage_upper = XENO_DAMAGE_TIER_6
 	melee_vehicle_damage = XENO_DAMAGE_TIER_9
-	max_health = XENO_HEALTH_QUEEN
+	max_health = XENO_HEALTH_QUEEN * 4 // PVE X4 boss edition
 	plasma_gain = XENO_PLASMA_GAIN_TIER_8
 	plasma_max = XENO_PLASMA_TIER_10
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_10
-	armor_deflection = XENO_ARMOR_TIER_2
+	armor_deflection = XENO_ARMOR_TIER_7 // PVE boss edition
 	evasion = XENO_EVASION_NONE
 	speed = XENO_SPEED_TIER_1
 
@@ -72,6 +72,7 @@
 		/datum/action/xeno_action/onclick/choose_resin/pathogen/not_primary,
 		/datum/action/xeno_action/activable/secrete_resin/pathogen/archon, // Macro 4
 		/datum/action/xeno_action/onclick/pathogen_paralyze, //Macro 5
+		/datum/action/xeno_action/onclick/tacmap,
 	)
 	claw_type = CLAW_TYPE_VERY_SHARP
 

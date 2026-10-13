@@ -1,6 +1,6 @@
 /datum/admins/var/create_pathogen_creatures_html = null
 /datum/admins/proc/create_pathogen_creatures(mob/user)
-	if(!create_xenos_html)
+	if(!create_pathogen_creatures_html)
 		var/hive_types = XENO_HIVE_PATHOGEN
 		var/xeno_types = jointext(ALL_PATHOGEN_CREATURES, ";")
 		create_pathogen_creatures_html = file2text('html/create_xenos.html')

@@ -207,6 +207,9 @@
 		if(locate(/datum/disease/black_goo) in human.viruses)
 			to_chat(user, SPAN_XENOWARNING("<b>You sense your target is infected.</b>"))
 
+	target.Daze(4)
+	target.Slow(2)
+
 /obj/item/weapon/zombie_claws/afterattack(obj/possible_door as obj, mob/user as mob, proximity)
 	if(attempting_pry)
 		return
