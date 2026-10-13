@@ -1,8 +1,9 @@
 /datum/caste_datum/pathogen/venator
 	caste_type = PATHOGEN_CREATURE_VENATOR
+	fire_immunity = FIRE_VULNERABILITY
 	tier = 3
 
-	melee_damage_lower = XENO_DAMAGE_TIER_6
+	melee_damage_lower = XENO_DAMAGE_TIER_6 //Stats TBC
 	melee_damage_upper = XENO_DAMAGE_TIER_6
 	melee_vehicle_damage = XENO_DAMAGE_TIER_7
 	max_health = XENO_HEALTH_TIER_12
@@ -13,7 +14,7 @@
 	evasion = XENO_EVASION_LOW
 	speed = XENO_SPEED_TIER_5
 
-	attack_delay = 0 // VERY high slash damage, but attacks relatively slowly
+	attack_delay = -1
 
 	available_strains = list()
 	behavior_delegate_type = /datum/behavior_delegate/pathogen_base/venator
@@ -22,11 +23,13 @@
 	caste_desc = "Rage, rage, and rage some more."
 	evolves_to = list()
 
-	heal_resting = 1.6
+	heal_resting = 1.4
 	is_intelligent = TRUE
 
 	minimap_icon = "venator"
 	evolution_allowed = FALSE
+	royal_caste = TRUE
+	minimum_evolve_time = 15 MINUTES
 
 /mob/living/carbon/xenomorph/venator
 	caste_type = PATHOGEN_CREATURE_VENATOR
@@ -38,13 +41,17 @@
 	pixel_x = -8
 	old_x = -8
 	tier = 3
-	organ_value = 10000
+	organ_value = 8000
 	base_actions = list(
-		/datum/action/xeno_action/onclick/xeno_resting,
-		/datum/action/xeno_action/watch_xeno,
-		/datum/action/xeno_action/activable/tail_stab/pathogen_t3,
-		/datum/action/xeno_action/activable/venator_abduct,
-		/datum/action/xeno_action/onclick/blight_slash,
+		/datum/action/xeno_action/onclick/toggle_seethrough/pathogen,
+		/datum/action/xeno_action/onclick/xeno_resting/pathogen,
+		/datum/action/xeno_action/watch_xeno/pathogen,
+		/datum/action/xeno_action/activable/tail_stab/pathogen/tier3,
+		/datum/action/xeno_action/activable/venator_abduct, // Macro 1
+		/datum/action/xeno_action/onclick/empower/venator, //Macro 2
+		/datum/action/xeno_action/activable/venator_savage, // Macro 3
+		/datum/action/xeno_action/activable/prae_impale/venator, // Macro 4
+		/datum/action/xeno_action/onclick/pathogen_paralyze, //Macro 5
 		/datum/action/xeno_action/onclick/tacmap,
 	)
 	claw_type = CLAW_TYPE_VERY_SHARP
@@ -55,7 +62,7 @@
 
 	icon_xeno = 'icons/mob/pathogen/venator.dmi'
 	icon_xenonid = 'icons/mob/pathogen/venator.dmi'
-	//need_weeds = FALSE
+
 
 	weed_food_icon = 'icons/mob/xenos/weeds_48x48.dmi'
 	mycelium_food_icon = 'icons/mob/pathogen/pathogen_weeds_48x48.dmi'
@@ -64,21 +71,17 @@
 
 	AUTOWIKI_SKIP(TRUE)
 	hivenumber = XENO_HIVE_PATHOGEN
-	speaking_noise = "neo_talk"
+	speaking_noise = "pathogen_talk"
 
 	mob_size = MOB_SIZE_BIG
 	acid_blood_damage = 0
 	bubble_icon = "pathogenroyal"
 
-/mob/living/carbon/xenomorph/venator/Initialize(mapload, mob/living/carbon/xenomorph/old_xeno, hivenumber)
-	. = ..()
-	make_pathogen_speaker()
-
-/datum/action/xeno_action/activable/tail_stab/pathogen_t3
+/datum/action/xeno_action/activable/tail_stab/pathogen/tier3
 	name = "Spike Lash"
 	stab_range = 3
 
-/datum/action/xeno_action/activable/tail_stab/pathogen_t3/ability_act(mob/living/carbon/xenomorph/stabbing_xeno, mob/living/carbon/target, obj/limb/limb)
+/datum/action/xeno_action/activable/tail_stab/pathogen/tier3/ability_act(mob/living/carbon/xenomorph/stabbing_xeno, mob/living/carbon/target, obj/limb/limb)
 
 	target.last_damage_data = create_cause_data(initial(stabbing_xeno.caste_type), stabbing_xeno)
 
@@ -138,6 +141,8 @@
 
 /datum/action/xeno_action/activable/venator_abduct
 	name = "Tentacle Grab"
+	button_icon_state = "template_pathogen"
+	icon_file = 'icons/mob/hud/actions_pathogen.dmi'
 	action_icon_state = "abduct"
 	ability_primacy = XENO_PRIMARY_ACTION_1
 	action_type = XENO_ACTION_CLICK
@@ -281,7 +286,162 @@
 /datum/action/xeno_action/activable/venator_abduct/proc/remove_tail_overlay(mob/living/carbon/human/overlayed_human, image/tail_image)
 	overlayed_human.overlays -= tail_image
 
+/datum/action/xeno_action/activable/venator_savage
+	name = "Savage"
+	button_icon_state = "template_pathogen"
+	icon_file = 'icons/mob/hud/actions_pathogen.dmi'
+	action_icon_state = "rav_scissor_cut"
+	action_type = XENO_ACTION_CLICK
+	ability_primacy = XENO_PRIMARY_ACTION_3
+	xeno_cooldown = 6 SECONDS
+	plasma_cost = 25
 
+	// Config
+	var/damage = 40
+
+	var/superslow_duration = 3 SECONDS
+	var/attack_desc = "tentacle spikes"
+
+/datum/action/xeno_action/activable/venator_savage/archon
+	ability_primacy = XENO_PRIMARY_ACTION_1
+	damage = 50
+	superslow_duration = 4.5 SECONDS
+	attack_desc = "rending claws"
+
+/datum/action/xeno_action/activable/venator_savage/use_ability(atom/target_atom)
+	var/mob/living/carbon/xenomorph/xeno = owner
+
+	if (!action_cooldown_check())
+		return
+
+	if (!xeno.check_state())
+		return
+
+	// Determine whether or not we should daze here
+	var/should_sslow = FALSE
+	var/datum/behavior_delegate/pathogen_base/venator/venator_delegate = xeno.behavior_delegate
+	if(istype(venator_delegate))
+		if(venator_delegate.empower_targets >= venator_delegate.super_empower_threshold)
+			should_sslow = TRUE
+	else if(istype(xeno.behavior_delegate, /datum/behavior_delegate/pathogen_base/archon))
+		var/datum/behavior_delegate/pathogen_base/archon/archon_delegate = xeno.behavior_delegate
+		if(archon_delegate.kills >= archon_delegate.max_kills/2)
+			should_sslow = TRUE
+
+	// Get line of turfs
+	var/list/turf/target_turfs = list()
+
+	var/facing = Get_Compass_Dir(xeno, target_atom)
+	var/turf/turf = xeno.loc
+	var/turf/temp = xeno.loc
+	var/list/telegraph_atom_list = list()
+
+	for (var/step in 0 to 3)
+		temp = get_step(turf, facing)
+		if(facing in GLOB.diagonals) // check if it goes through corners
+			var/reverse_face = GLOB.reverse_dir[facing]
+
+			var/turf/back_left = get_step(temp, turn(reverse_face, 45))
+			var/turf/back_right = get_step(temp, turn(reverse_face, -45))
+			if((!back_left || back_left.density) && (!back_right || back_right.density))
+				break
+		if(!temp || temp.density || temp.opacity)
+			break
+
+		var/blocked = FALSE
+		for(var/obj/structure/structure_blocker in temp)
+			if(istype(structure_blocker, /obj/structure/window/framed))
+				var/obj/structure/window/framed/framed_window = structure_blocker
+				if(!framed_window.unslashable)
+					framed_window.deconstruct(disassembled = FALSE)
+			if(istype(structure_blocker, /obj/structure/fence))
+				var/obj/structure/fence/fence = structure_blocker
+				if(!fence.unslashable)
+					fence.health -= 50
+					fence.healthcheck()
+
+			if(structure_blocker.opacity)
+				blocked = TRUE
+				break
+		if(blocked)
+			break
+
+		turf = temp
+		target_turfs += turf
+		telegraph_atom_list += new /obj/effect/xenomorph/xeno_telegraph/red(turf, 0.25 SECONDS)
+
+	// Extract our 'optimal' turf, if it exists
+	if (length(target_turfs) >= 2)
+		xeno.animation_attack_on(target_turfs[length(target_turfs)], 15)
+
+	// Hmm today I will kill a marine while looking away from them
+	xeno.face_atom(target_atom)
+	xeno.emote("roar")
+	xeno.visible_message(SPAN_XENODANGER("[xeno] sweeps its [attack_desc] through the area in front of it!"), SPAN_XENODANGER("We sweep our [attack_desc] through the area in front of us!"))
+
+	// Loop through our turfs, finding any humans there and dealing damage to them
+	for (var/turf/target_turf in target_turfs)
+		for (var/mob/living/carbon/carbon_target in target_turf)
+			if (carbon_target.stat == DEAD)
+				continue
+
+			if (HAS_TRAIT(carbon_target, TRAIT_NESTED))
+				continue
+
+			if(xeno.can_not_harm(carbon_target))
+				continue
+			xeno.flick_attack_overlay(carbon_target, "slash")
+			carbon_target.apply_armoured_damage(damage, ARMOR_MELEE, BRUTE)
+			playsound(get_turf(carbon_target), "alien_claw_flesh", 30, TRUE)
+
+			if(should_sslow)
+				new /datum/effects/xeno_slow/superslow(carbon_target, xeno, ttl = superslow_duration)
+
+	apply_cooldown()
+	return ..()
+
+/datum/action/xeno_action/activable/prae_impale/venator
+	button_icon_state = "template_pathogen"
+	icon_file = 'icons/mob/hud/actions_pathogen.dmi'
+	ability_primacy = XENO_PRIMARY_ACTION_4
+
+/datum/action/xeno_action/onclick/empower/venator
+	button_icon_state = "template_pathogen"
+	icon_file = 'icons/mob/hud/actions_pathogen.dmi'
 
 /datum/behavior_delegate/pathogen_base/venator
 	name = "Base Venator Behavior Delegate"
+
+	var/shield_decay_time = 15 SECONDS // Time in deciseconds before our shield decays
+	var/empower_targets = 0
+	var/super_empower_threshold = 3
+	var/dmg_buff_per_target = 2
+
+/datum/behavior_delegate/pathogen_base/venator/melee_attack_modify_damage(original_damage, mob/living/carbon/carbon)
+	var/damage_plus
+	if(empower_targets)
+		damage_plus = dmg_buff_per_target * empower_targets
+
+	return original_damage + damage_plus
+
+/datum/behavior_delegate/pathogen_base/venator/append_to_stat()
+	. = list()
+	var/shield_total = 0
+	for (var/datum/xeno_shield/xeno_shield in bound_xeno.xeno_shields)
+		if (xeno_shield.shield_source == XENO_SHIELD_SOURCE_RAVAGER)
+			shield_total += xeno_shield.amount
+
+	. += "Shield: [shield_total]"
+	. += "Bonus Slash Damage: [dmg_buff_per_target * empower_targets]"
+
+/datum/behavior_delegate/pathogen_base/venator/on_life()
+	var/datum/xeno_shield/rav_shield
+	for (var/datum/xeno_shield/xeno_shield in bound_xeno.xeno_shields)
+		if (xeno_shield.shield_source == XENO_SHIELD_SOURCE_RAVAGER)
+			rav_shield = xeno_shield
+			break
+
+	if (rav_shield && ((rav_shield.last_damage_taken + shield_decay_time) < world.time))
+		QDEL_NULL(rav_shield)
+		to_chat(bound_xeno, SPAN_XENODANGER("We feel our shield decay!"))
+		bound_xeno.overlay_shields()

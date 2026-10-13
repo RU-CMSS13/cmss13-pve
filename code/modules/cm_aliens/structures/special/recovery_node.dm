@@ -14,6 +14,12 @@
 	if((isxeno(user) || isobserver(user)) && linked_hive)
 		. += "Recovers the health of adjacent Xenomorphs."
 
+/obj/effect/alien/resin/special/recovery/pathogen
+	name = PATHOGEN_STRUCTURE_RECOVERY
+	icon = 'icons/mob/pathogen/pathogen_structures64x64.dmi'
+	forced_hive = TRUE
+	hivenumber = XENO_HIVE_PATHOGEN
+
 /obj/effect/alien/resin/special/recovery/process()
 	if(last_healed && world.time < last_healed + heal_cooldown)
 		return

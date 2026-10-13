@@ -768,10 +768,14 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 			M = /mob/living/carbon/xenomorph/runner/acider
 		if(PATHOGEN_CREATURE_BURSTER)
 			M = /mob/living/carbon/xenomorph/bloodburster
+		if(PATHOGEN_CREATURE_ABER_BURSTER)
+			M = /mob/living/carbon/xenomorph/bloodburster/aberrant
 		if(PATHOGEN_CREATURE_POPPER)
 			M = /mob/living/carbon/xenomorph/popper
 		if(PATHOGEN_CREATURE_SPRINTER)
 			M = /mob/living/carbon/xenomorph/sprinter
+		if(PATHOGEN_CREATURE_NEOPHYTE)
+			M = /mob/living/carbon/xenomorph/neophyte
 		if(PATHOGEN_CREATURE_NEOMORPH)
 			M = /mob/living/carbon/xenomorph/neomorph
 		if(PATHOGEN_CREATURE_BLIGHT)
@@ -780,6 +784,18 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 			M = /mob/living/carbon/xenomorph/venator
 		if(PATHOGEN_CREATURE_BRUTE)
 			M = /mob/living/carbon/xenomorph/brute
+		if(PATHOGEN_CREATURE_HARBINGER)
+			M = /mob/living/carbon/xenomorph/harbinger
+		if(PATHOGEN_CREATURE_CONDITOR)
+			M = /mob/living/carbon/xenomorph/conditor
+		if(PATHOGEN_CREATURE_MATRIARCH)
+			M = /mob/living/carbon/xenomorph/matriarch
+		if(PATHOGEN_CREATURE_ABERRATION)
+			M = /mob/living/carbon/xenomorph/aberration
+		if(PATHOGEN_CREATURE_ARCHON)
+			M = /mob/living/carbon/xenomorph/archon
+//		if(PATHOGEN_CREATURE_OVERMIND)
+//			M = /mob/living/carbon/xenomorph/overmind
 	return M
 
 

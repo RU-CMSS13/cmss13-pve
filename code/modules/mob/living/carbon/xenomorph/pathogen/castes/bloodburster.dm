@@ -1,5 +1,6 @@
 /datum/caste_datum/pathogen/bloodburster
 	caste_type = PATHOGEN_CREATURE_BURSTER
+	fire_immunity = FIRE_VULNERABILITY
 	caste_desc = "A tiny sharp-clawed terror that just tore its way out of a living host."
 	tier = 0
 	melee_damage_lower = XENO_DAMAGE_TIER_1
@@ -9,14 +10,14 @@
 	plasma_max = XENO_NO_PLASMA
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_1
 	armor_deflection = XENO_NO_ARMOR
-	max_health = XENO_HEALTH_TIER_1
+	max_health = XENO_HEALTH_LESSER_DRONE
 	evasion = XENO_EVASION_LOW
 	speed = XENO_SPEED_TIER_10
 	attack_delay = -4
 
 	available_strains = list()
 	behavior_delegate_type = /datum/behavior_delegate/pathogen_base/bloodburster
-	evolves_to = list(PATHOGEN_CREATURE_SPRINTER, PATHOGEN_CREATURE_NEOMORPH)
+	evolves_to = list(PATHOGEN_CREATURE_SPRINTER, PATHOGEN_CREATURE_NEOPHYTE)
 	deevolves_to = list()
 
 	tackle_min = 4
@@ -25,9 +26,16 @@
 	tacklestrength_min = 4
 	tacklestrength_max = 4
 
-	heal_resting = 0.75
+	heal_resting = 1.2
 
 	minimap_icon = "bloodburster"
+
+/datum/caste_datum/pathogen/bloodburster/aberrant
+	caste_type = PATHOGEN_CREATURE_ABER_BURSTER
+	evolves_to = list(PATHOGEN_CREATURE_ABERRATION)
+
+	minimap_icon = "aber_bloodburster"
+	minimum_evolve_time = 0
 
 /mob/living/carbon/xenomorph/bloodburster
 	caste_type = PATHOGEN_CREATURE_BURSTER
@@ -43,16 +51,17 @@
 	base_pixel_y = -20
 	pull_speed = -0.5
 	viewsize = 9
-	organ_value = 5000
+	organ_value = 2000
 
 	mob_size = MOB_SIZE_XENO_VERY_SMALL
 
 	base_actions = list(
-		/datum/action/xeno_action/onclick/xeno_resting,
-		/datum/action/xeno_action/watch_xeno,
-		/datum/action/xeno_action/activable/tail_stab,
-		/datum/action/xeno_action/onclick/xenohide,
-		/datum/action/xeno_action/activable/pounce/runner,
+		/datum/action/xeno_action/onclick/toggle_seethrough/pathogen,
+		/datum/action/xeno_action/onclick/xeno_resting/pathogen,
+		/datum/action/xeno_action/watch_xeno/pathogen,
+		/datum/action/xeno_action/activable/tail_stab/pathogen,
+		/datum/action/xeno_action/onclick/xenohide/pathogen,
+		/datum/action/xeno_action/activable/pounce/runner/pathogen, // Macro 1
 		/datum/action/xeno_action/onclick/tacmap,
 	)
 	inherent_verbs = list(
@@ -71,11 +80,13 @@
 
 	AUTOWIKI_SKIP(TRUE)
 	hivenumber = XENO_HIVE_PATHOGEN
-	speaking_noise = "neo_talk"
+	speaking_noise = "pathogen_talk"
 	acid_blood_damage = 0
 	bubble_icon = "pathogen"
 
+	age = XENO_NO_AGE
 	var/bloody_state = LARVA_STATE_BLOODY
+	var/burrowable = TRUE //Can it be safely burrowed if it has no player?
 
 /mob/living/carbon/xenomorph/bloodburster/Life()
 	// Check if no longer bloody or mature
@@ -139,10 +150,6 @@
 	else
 		icon_state = "[state]Bloodburster"
 
-/mob/living/carbon/xenomorph/bloodburster/Initialize(mapload, mob/living/carbon/xenomorph/old_xeno, hivenumber)
-	. = ..()
-	make_pathogen_speaker()
-
 /datum/behavior_delegate/pathogen_base/bloodburster
 	name = "Base Bloodburster Behavior Delegate"
 
@@ -153,11 +160,14 @@
 	if(hide)
 		hide.post_attack()
 
-/mob/living/carbon/xenomorph/bloodburster/initialize_pass_flags(datum/pass_flags_container/pass_flags_container)
+/mob/living/carbon/xenomorph/bloodburster/initialize_pass_flags(datum/pass_flags_container/pass_flags)
 	..()
-	if (pass_flags_container)
-		pass_flags_container.flags_pass |= PASS_FLAGS_CRAWLER
+	if (pass_flags)
+		pass_flags.flags_pass = PASS_MOB_THRU|PASS_FLAGS_CRAWLER
+		pass_flags.flags_can_pass_all = PASS_ALL^PASS_OVER_THROW_ITEM
 
+/mob/living/carbon/xenomorph/bloodburster/alter_ghost(mob/dead/observer/ghost)
+	ghost.icon_state = PATHOGEN_CREATURE_BURSTER
 
 /mob/living/carbon/xenomorph/bloodburster/cause_unbearable_pain(mob/living/carbon/victim)
 	if(loc != victim)
@@ -169,12 +179,12 @@
 	to_chat(victim, message)
 	addtimer(CALLBACK(src, PROC_REF(cause_unbearable_pain), victim), rand(1, 3) SECONDS, TIMER_UNIQUE|TIMER_NO_HASH_WAIT)
 
-
-
 /mob/living/carbon/xenomorph/bloodburster/chest_burst(mob/living/carbon/victim)
 	set waitfor = 0
 	if(victim.chestburst || loc != victim)
 		return
+	if(!client)
+		free_for_ghosts(TRUE)
 	victim.mob_flags |= BLOOD_BURSTING
 	victim.chestburst = TRUE
 	to_chat(src, SPAN_DANGER("We start bursting out of [victim]'s body!"))
@@ -248,10 +258,44 @@
 				victim_human.internal_organs_by_name -= i
 				victim_human.internal_organs -= O
 		victim.death(cause) // Certain species were still surviving bursting (predators), DEFINITELY kill them this time.
-		victim.chestburst = 2
+		victim.chestburst = 3
 		victim.update_burst()
 
 /obj/item/alien_embryo/bloodburster
 	icon = 'icons/mob/pathogen/bloodburster.dmi'
 	flags_embryo = FLAG_EMBRYO_PATHOGEN
 	hivenumber = XENO_HIVE_PATHOGEN
+
+/mob/living/carbon/xenomorph/bloodburster/aberrant
+	AUTOWIKI_SKIP(TRUE)
+
+	icon_xeno = 'icons/mob/pathogen/aberration_bloodburster.dmi'
+	icon_state = "Aberration Bloodburster"
+	caste_type = PATHOGEN_CREATURE_ABER_BURSTER
+	burrowable = FALSE //Not interchangeable with regular bursters in the blight core.
+
+/mob/living/carbon/xenomorph/bloodburster/aberrant/Initialize(mapload, mob/living/carbon/xenomorph/oldxeno, h_number)
+	. = ..()
+	hunter_data.dishonored = TRUE
+	hunter_data.dishonored_reason = "An aberration upon the honor of us all!"
+	hunter_data.dishonored_set = src
+	hud_set_hunter()
+
+/mob/living/carbon/xenomorph/bloodburster/aberrant/update_icons()
+	var/state = "" //Icon convention, two different sprite sets
+
+	if(bloody_state == LARVA_STATE_BLOODY)
+		state = "Bloody "
+
+	if(stat == DEAD)
+		icon_state = "[state]Aberration Bloodburster Dead"
+	else if(handcuffed || legcuffed)
+		icon_state = "[state]Aberration Bloodburster Cuff"
+
+	else if(body_position == LYING_DOWN)
+		if(!HAS_TRAIT(src, TRAIT_INCAPACITATED) && !HAS_TRAIT(src, TRAIT_FLOORED))
+			icon_state = "[state]Aberration Bloodburster Sleeping"
+		else
+			icon_state = "[state]Aberration Bloodburster Stunned"
+	else
+		icon_state = "[state]Aberration Bloodburster"

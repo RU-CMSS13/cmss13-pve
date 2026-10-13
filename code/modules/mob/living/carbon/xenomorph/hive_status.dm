@@ -85,15 +85,19 @@
 		XENO_STRUCTURE_PYLON = 2,
 	)
 
-	var/global/list/hive_structure_types = list(
+	var/list/hive_structure_types = list(
 		XENO_STRUCTURE_CORE = /datum/construction_template/xenomorph/core,
 		XENO_STRUCTURE_CLUSTER = /datum/construction_template/xenomorph/cluster,
 		XENO_STRUCTURE_EGGMORPH = /datum/construction_template/xenomorph/eggmorph,
 		XENO_STRUCTURE_RECOVERY = /datum/construction_template/xenomorph/recovery,
-		PATHOGEN_STRUCTURE_CORE = /datum/construction_template/xenomorph/pathogen_core,
 	)
 
 	var/list/list/hive_structures = list() //Stringref list of structures that have been built
+
+	/// Lazylist of possible caste defines the hive disallows evolution to
+	var/list/blacklisted_castes = ALL_PATHOGEN_CREATURES
+	/// List of caste defines associated with a maximum capacity number.
+	var/list/restricted_castes = null
 	var/list/list/hive_constructions = list() //Stringref list of structures that are being built
 
 	var/datum/hive_status_ui/hive_ui
@@ -846,6 +850,21 @@
 
 	return allies[faction]
 
+/// Returns number of xenos in the given hive that are the searched caste.
+/datum/hive_status/proc/get_caste_count(caste_to_check)
+	if(!caste_to_check)
+		return
+	var/caste_count = 0
+	for(var/mob/living/carbon/xenomorph/xeno as anything in totalXenos)
+		//don't show xenos in the thunderdome when admins test stuff.
+		if(should_block_game_interaction(xeno))
+			var/area/cur_area = get_area(xeno)
+			if(!(cur_area.flags_atom & AREA_ALLOW_XENO_JOIN))
+				continue
+		if(xeno.caste_type == caste_to_check)
+			caste_count++
+	return caste_count
+
 /datum/hive_status/proc/can_delay_round_end(mob/living/carbon/xenomorph/xeno)
 	if(HAS_TRAIT(src, TRAIT_NO_HIVE_DELAY))
 		return FALSE
@@ -1570,7 +1589,7 @@
 	icon_state = "attack"
 
 /datum/hive_status/pathogen
-	name = "Pathogen Confluence"
+	name = FACTION_PATHOGEN
 	reporting_id = "pathogen"
 	hivenumber = XENO_HIVE_PATHOGEN
 	prefix = ""
@@ -1582,6 +1601,7 @@
 	allow_no_queen_actions = TRUE
 	allow_queen_evolve = FALSE
 	allow_no_queen_evo = TRUE
+	queen_leader_limit = 5
 
 	destruction_allowed = NORMAL_XENO
 
@@ -1594,20 +1614,45 @@
 		/datum/caste_datum/pathogen/blight = 4,
 		/datum/caste_datum/pathogen/brute = 1,
 		/datum/caste_datum/pathogen/venator = 2,
+		/datum/caste_datum/pathogen/conditor = 2,
 	)
+
+	restricted_castes = list(
+		PATHOGEN_CREATURE_ARCHON = 1,
+		PATHOGEN_CREATURE_HARBINGER = 2,
+	)
+	blacklisted_castes = ALL_XENO_CASTES
 
 	hive_structures_limit = list(
 		PATHOGEN_STRUCTURE_CORE = 1,
-		PATHOGEN_STRUCTURE_COCOON = 3,
+		PATHOGEN_STRUCTURE_COCOON = 6,
+		PATHOGEN_STRUCTURE_CLUSTER = 8,
+		PATHOGEN_STRUCTURE_PYLON = 2,
+		PATHOGEN_STRUCTURE_RECOVERY = 6,
+		PATHOGEN_STRUCTURE_SPORECASTER = 3,
+		PATHOGEN_STRUCTURE_FOGGER = 3,
 	)
+
+	hive_structure_types = list(
+		PATHOGEN_STRUCTURE_CORE = /datum/construction_template/xenomorph/pathogen_core,
+		PATHOGEN_STRUCTURE_CLUSTER = /datum/construction_template/xenomorph/pathogen_cluster,
+		PATHOGEN_STRUCTURE_RECOVERY = /datum/construction_template/xenomorph/patho_recovery,
+		PATHOGEN_STRUCTURE_SPORECASTER = /datum/construction_template/xenomorph/sporecaster,
+		PATHOGEN_STRUCTURE_FOGGER = /datum/construction_template/xenomorph/fogger
+	)
+
+	var/max_poppers = 8
+	var/matriarch_enabled = FALSE
+	/// Ckey of the player who rolled Queen, so they don't need admin approval.
+	var/last_overmind
 
 /datum/hive_status/pathogen/get_xeno_counts()
 	// Every caste is manually defined here so you get
 	var/list/xeno_counts = list(
-		list(PATHOGEN_CREATURE_BURSTER = 0, PATHOGEN_CREATURE_POPPER = 0),
-		list(PATHOGEN_CREATURE_SPRINTER = 0),
+		list(PATHOGEN_CREATURE_BURSTER = 0, PATHOGEN_CREATURE_POPPER = 0, PATHOGEN_CREATURE_ARCHON = 0),
+		list(PATHOGEN_CREATURE_NEOPHYTE = 0, PATHOGEN_CREATURE_SPRINTER = 0),
 		list(PATHOGEN_CREATURE_NEOMORPH = 0, PATHOGEN_CREATURE_BLIGHT = 0),
-		list(PATHOGEN_CREATURE_BRUTE = 0, PATHOGEN_CREATURE_VENATOR = 0)
+		list(PATHOGEN_CREATURE_CONDITOR = 0, PATHOGEN_CREATURE_BRUTE = 0, PATHOGEN_CREATURE_VENATOR = 0, PATHOGEN_CREATURE_HARBINGER = 0)
 	)
 
 	for(var/mob/living/carbon/xenomorph/xeno as anything in totalXenos)
@@ -1629,3 +1674,19 @@
 	xeno_message(SPAN_XENOANNOUNCE("The confluence location has been set as \the [A]."), 3, hivenumber)
 	hive_location = C
 	hive_ui.update_hive_location()
+
+/datum/hive_status/pathogen/can_delay_round_end(mob/living/carbon/xenomorph/xeno)
+	if(HAS_TRAIT(src, TRAIT_NO_HIVE_DELAY))
+		return FALSE
+
+	var/danger_mobs = 0
+	for(var/mob/living/carbon/xenomorph/mob in totalXenos)
+		if(ispopper(mob) || !mob.counts_for_roundend)
+			continue
+		if(mob == living_xeno_queen)
+			continue
+		danger_mobs++
+
+	if(!danger_mobs)
+		return FALSE
+	return TRUE
