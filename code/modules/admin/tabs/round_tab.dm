@@ -68,7 +68,13 @@
 	set name = "Toggle Pathogen Round"
 	set desc = "Force-toggle a pathogen round for the round type."
 	set category = "Server.Round"
-	if(GLOB.master_mode != "Distress Signal")
+	var/infestation_mode = FALSE
+	for(var/datum/game_mode/mode_type as anything in config.gamemode_cache)
+		if(initial(mode_type.config_tag) != GLOB.master_mode)
+			continue
+		infestation_mode = initial(mode_type.flags_round_type) & MODE_INFESTATION
+		break
+	if(!infestation_mode)
 		to_chat(usr, SPAN_WARNING("You cannot toggle Pathogen round when the mode is not distress."))
 		return FALSE
 	if(SSticker.current_state > GAME_STATE_PREGAME)
