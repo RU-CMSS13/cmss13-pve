@@ -22,7 +22,7 @@
 		to_chat(xeno, SPAN_WARNING("We can't do that here."))
 		return
 
-	var/is_weedable = turf.is_weedable()
+	var/is_weedable = turf.is_weedable
 	if(!is_weedable)
 		to_chat(xeno, SPAN_WARNING("Bad place for a garden!"))
 		return
@@ -591,7 +591,7 @@
 	return ..()
 
 /turf/proc/check_xeno_trap_placement(mob/living/carbon/xenomorph/X)
-	if(is_weedable() < FULLY_WEEDABLE || !can_xeno_build(src))
+	if(is_weedable < FULLY_WEEDABLE || !can_xeno_build(src))
 		to_chat(X, SPAN_XENOWARNING("We can't do that here."))
 		return FALSE
 
@@ -720,7 +720,7 @@
 		qdel(structure_template)
 		return FALSE
 
-	if(T.is_weedable() < FULLY_WEEDABLE)
+	if(T.is_weedable < FULLY_WEEDABLE)
 		to_chat(X, SPAN_WARNING("\The [T] can't support a [structure_template.name]!"))
 		qdel(structure_template)
 		return FALSE

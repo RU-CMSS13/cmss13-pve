@@ -165,6 +165,7 @@
 // Unweedable
 
 /turf/open/hybrisa/street/underground_unweedable
+	is_weedable = NOT_WEEDABLE
 	name = "floor"
 	icon = 'icons/turf/floors/hybrisafloors.dmi'
 	icon_state = "underground"
@@ -177,20 +178,15 @@
 	allow_construction = FALSE
 
 
-/turf/open/hybrisa/street/underground_unweedable/is_weedable()
-	return NOT_WEEDABLE
-
 // Engineer Ship Hull
 
 /turf/open/floor/hybrisa/engineership/ship_hull
+	is_weedable = NOT_WEEDABLE
 	name = "strange metal wall"
 	desc = "Nigh indestructible walls that make up the hull of an unknown ancient ship, looks like nothing you can do will penetrate the hull."
 	icon = 'icons/turf/floors/engineership.dmi'
 	icon_state = "engineerwallfloor1"
 	allow_construction = FALSE
-
-/turf/open/floor/hybrisa/engineership/ship_hull/is_weedable()
-	return NOT_WEEDABLE
 
 /turf/open/floor/hybrisa/engineership/ship_hull/non_weedable_hull
 	icon_state = "outerhull_dir"
@@ -1027,13 +1023,11 @@
 // Pillars
 
 /turf/open/floor/hybrisa/engineership/pillars
+	is_weedable = NOT_WEEDABLE
 	name = "strange metal pillar"
 	desc = "A strange metal pillar, unlike any metal you've seen before."
 	icon_state = "eng_pillar1"
 	allow_construction = FALSE
-
-/turf/open/floor/hybrisa/engineership/pillars/is_weedable()
-	return NOT_WEEDABLE
 
 /turf/open/floor/hybrisa/engineership/pillars/north/pillar1
 	icon_state = "eng_pillar1"

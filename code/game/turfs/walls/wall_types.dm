@@ -552,13 +552,12 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	unacidable = TRUE
 	desc = "A wall made of molted old resin. This place is more alive than you are."
 
-/turf/closed/wall/mineral/bone/is_weedable()
-	return NOT_WEEDABLE
-
 /turf/closed/wall/mineral/bone_resin/k_series //mineral wall because, reasons bro.
 	desc = "A wall made of molted resin. Seems these yellow xenomorphs are fast builders."
 	color = "#ffff80"
+
 /turf/closed/wall/mineral/bone
+	is_weedable = NOT_WEEDABLE
 
 //Misc walls
 

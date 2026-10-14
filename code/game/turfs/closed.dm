@@ -338,8 +338,9 @@
 	layer = ABOVE_TURF_LAYER
 	unacidable = TRUE
 
-/turf/closed/shuttle/is_weedable()
-	return FULLY_WEEDABLE
+/turf/closed/shuttle/Initialize(mapload, ...)
+	. = ..()
+	is_weedable = FULLY_WEEDABLE
 
 /turf/closed/shuttle/dropship
 	icon = 'icons/turf/walls/walls.dmi'
