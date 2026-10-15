@@ -150,7 +150,7 @@
 	plasma_cost = 180
 
 	// Config
-	var/max_distance = 6
+	var/max_distance = 8 // RU PVE EDIT // PVP = 6
 	var/windup = 8 DECISECONDS
 
 /datum/action/xeno_action/activable/venator_abduct/use_ability(atom/atom)

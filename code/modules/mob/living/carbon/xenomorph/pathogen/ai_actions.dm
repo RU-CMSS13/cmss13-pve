@@ -184,7 +184,7 @@
 	return new /datum/xeno_ai_movement/linger/venator(src)
 
 /datum/xeno_ai_movement/linger/venator
-	linger_range = 5
+	linger_range = 6
 
 	var/state = VENATOR_AI_STALK
 	/// Who we dragged out and are trying to kill
@@ -227,6 +227,51 @@
 	COOLDOWN_START(src, retreat_cooldown, duration)
 	taunt(taunts)
 
+/datum/xeno_ai_movement/linger/venator/proc/find_retreat_turf()
+	var/mob/living/carbon/xenomorph/moving_xeno = parent
+	var/list/threats = list()
+	for(var/mob/living/carbon/human/threat in view(world.view, moving_xeno))
+		if(threat.stat == DEAD || moving_xeno.can_not_harm(threat))
+			continue
+		threats += threat
+	if(!length(threats) && moving_xeno.current_target)
+		threats += moving_xeno.current_target
+	if(!length(threats))
+		return
+
+	var/list/blocked_dirs = list()
+	for(var/atom/threat as anything in threats)
+		var/threat_dir = get_dir(moving_xeno, threat)
+		blocked_dirs |= list(threat_dir, turn(threat_dir, 45), turn(threat_dir, -45))
+
+	var/turf/best_turf
+	var/best_score = -INFINITY
+	for(var/turf/candidate as anything in RANGE_TURFS(retreat_range, moving_xeno))
+		if(candidate.density || get_dist(candidate, moving_xeno) < retreat_range - 4)
+			continue
+
+		var/blocked = FALSE
+		for(var/obj/structure/obstacle in candidate)
+			if(obstacle.density)
+				blocked = TRUE
+				break
+		if(blocked)
+			continue
+
+		var/closest_threat = INFINITY
+		for(var/atom/threat as anything in threats)
+			closest_threat = min(closest_threat, get_dist(candidate, threat))
+
+		var/score = closest_threat
+		if(get_dir(moving_xeno, candidate) in blocked_dirs)
+			score -= retreat_range // Only if there is nowhere else to go.
+
+		if(score > best_score)
+			best_score = score
+			best_turf = candidate
+
+	return best_turf
+
 /datum/xeno_ai_movement/linger/venator/ai_move_target(delta_time)
 	var/mob/living/carbon/xenomorph/moving_xeno = parent
 	if(moving_xeno.throwing)
@@ -259,7 +304,7 @@
 				return ..()
 
 			if(!retreat_turf || get_dist(retreat_turf, moving_xeno) <= 0)
-				retreat_turf = get_random_turf_in_range_unblocked(moving_xeno.current_target, retreat_range + 2, retreat_range - 2)
+				retreat_turf = find_retreat_turf()
 
 			if(retreat_turf && !moving_xeno.move_to_next_turf(retreat_turf))
 				retreat_turf = null
