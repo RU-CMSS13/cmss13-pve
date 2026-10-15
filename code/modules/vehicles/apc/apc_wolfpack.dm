@@ -88,7 +88,7 @@
 			/obj/vehicle/multitile/proc/activate_horn,
 		))
 	else if(seat == VEHICLE_GUNNER)
-		remove_verb(,.client, list(
+		remove_verb(M.client, list(
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
 			/obj/vehicle/multitile/proc/toggle_gyrostabilizer,
 			/obj/vehicle/multitile/proc/switch_hardpoint,
