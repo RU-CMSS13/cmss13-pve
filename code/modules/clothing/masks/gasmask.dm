@@ -81,7 +81,7 @@
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "cbrn_hood"
 	item_state = "cbrn_hood"
-	flags_inventory = SPOREPROOF
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR|SPOREPROOF|SPOREPROOF
 	flags_inv_hide = HIDEEARS|HIDEFACE|HIDEALLHAIR
 	item_icons = list(
 		WEAR_FACE = 'icons/mob/humans/onmob/head_1.dmi'
@@ -102,6 +102,16 @@
 	desc = "The UPP PMK/5 gasmask mask includes a full covering cowl that securely attaches to the OP-4M suit, and additional ventilation system strapped on the back of the hood. It is capable of protecting of a variety of radiological and biological threats."
 	icon_state = "upp_cbrn_hood_alt"
 	item_state = "upp_cbrn_hood_alt"
+
+/obj/item/clothing/mask/gas/pve_mopp/twe
+	name = "\improper CPS Mk.II mask"
+	desc = "CPS Mk.II Mask. Developed by Blucher & Respirex Technologies for the CBRN troops of the Three World Empire. Protects its wearer from basic chemical, radiological, and biological threats. Thanks to the use of better materials than those used in the M3 MOPP, wearing this suit is much more comfortable."
+	icon = 'icons/obj/items/clothing/masks.dmi'
+	item_icons = list(
+		WEAR_FACE = 'icons/mob/humans/onmob/mask.dmi'
+	)
+	icon_state = "twe_cbrn_hood"
+	item_state = "twe_cbrn_hood"
 
 /obj/item/clothing/mask/gas/pmc
 	name = "\improper tactical filtration mask"

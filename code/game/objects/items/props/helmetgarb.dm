@@ -100,6 +100,7 @@
 #define NVG_SHAPE_BROKEN 2
 #define NVG_SHAPE_PATCHED 3
 #define NVG_SHAPE_FINE 4
+#define NVG_SHAPE_MARSOC 5
 
 /obj/item/prop/helmetgarb/helmet_nvg
 	name = "\improper M2 night vision goggles"
@@ -131,8 +132,12 @@
 
 /obj/item/prop/helmetgarb/helmet_nvg/Initialize(mapload, ...)
 	. = ..()
-	if(shape != NVG_SHAPE_COSMETIC)
+	if(shape == NVG_SHAPE_FINE)
 		AddComponent(/datum/component/cell, cell_max_charge, TRUE, charge_drain = 2)
+		RegisterSignal(src, COMSIG_CELL_TRY_RECHARGING, PROC_REF(cell_try_recharge))
+		RegisterSignal(src, COMSIG_CELL_OUT_OF_CHARGE, PROC_REF(on_power_out))
+	if(shape == NVG_SHAPE_MARSOC)
+		AddComponent(/datum/component/cell, cell_max_charge, TRUE, charge_drain = 0)
 		RegisterSignal(src, COMSIG_CELL_TRY_RECHARGING, PROC_REF(cell_try_recharge))
 		RegisterSignal(src, COMSIG_CELL_OUT_OF_CHARGE, PROC_REF(on_power_out))
 
@@ -485,8 +490,12 @@
 /obj/item/prop/helmetgarb/helmet_nvg/marsoc //for Marine Raiders
 	name = "\improper Tactical M3 night vision goggles"
 	desc = "With an integrated self-recharging battery, nothing can stop you. Put them on your helmet and press the button and it's go-time."
-	shape = NVG_SHAPE_FINE
-	cell_max_charge = -1
+	shape = NVG_SHAPE_MARSOC
+	cell_max_charge = 10000
+
+/obj/item/prop/helmetgarb/helmet_nvg/marsoc/Initialize(mapload, ...)
+	. = ..()
+	AddComponent(/datum/component/cell, cell_max_charge, TRUE, charge_drain = 0)
 
 /obj/item/prop/helmetgarb/helmet_nvg/upp
 	name = "\improper NZP-44 'Cyclop' night vision goggles"
@@ -499,13 +508,18 @@
 /obj/item/prop/helmetgarb/helmet_nvg/upp/frogmen // for recon frogmen
 	name = "\improper NZP-50 'Huginn' night vision goggles"
 	desc = "With an integrated self-recharging battery, enemies of the Union will not hide from your vision. Put them on your helmet and press the button and it's go-time."
-	shape = NVG_SHAPE_FINE
-	cell_max_charge = -1
+	shape = NVG_SHAPE_MARSOC
+	cell_max_charge = 10000
+
+/obj/item/prop/helmetgarb/helmet_nvg/upp/frogmen/Initialize(mapload, ...)
+	. = ..()
+	AddComponent(/datum/component/cell, cell_max_charge, TRUE, charge_drain = 0)
 
 #undef NVG_SHAPE_COSMETIC
 #undef NVG_SHAPE_BROKEN
 #undef NVG_SHAPE_PATCHED
 #undef NVG_SHAPE_FINE
+#undef NVG_SHAPE_MARSOC
 
 /obj/item/prop/helmetgarb/flair_initech
 	name = "\improper Initech flair"

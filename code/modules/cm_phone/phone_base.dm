@@ -90,6 +90,13 @@
 	icon_state = "rotary_phone"
 	desc = "The finger plate is a little stiff."
 
+/obj/structure/phone_base/upp_net/kolokol
+	name = "R-459 'Kolokol' Radio Telephone Station"
+	desc = "A powerful UPP radio station used at military outposts. Due to its high power output, it can receive signals even through thick layers of concrete and earth, relaying them to a repeater. If the signal is within 200 kilometers, however, it can transmit and receive directly without the need for a repeater."
+	icon = 'icons/obj/items/clothing/backpacks.dmi'
+	icon_state = "upp_rto_backpack"
+	phone_icon = "upp_rpb_phone"
+
 /obj/structure/phone_base/clf_net
 	networks_receive = list(FACTION_CLF)
 	networks_transmit = list(FACTION_CLF)

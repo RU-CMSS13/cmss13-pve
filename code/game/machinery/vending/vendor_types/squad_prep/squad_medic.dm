@@ -343,6 +343,9 @@ GLOBAL_LIST_INIT(cm_vending_clothing_rmc_medic, list(
 		list("MEDICAL SET (MANDATORY)", 0, null, null, null),
 		list("Essential Medical Set", 0, /obj/effect/essentials_set/rmcmedic, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 
+		list("CBRN EQUIPMENT", 0, null, null, null),
+		list("CPS Mk.III Kit", 0, list(/obj/item/clothing/shoes/marine/pve_mopp/twe, /obj/item/clothing/under/marine/pve_mopp/twe, /obj/item/clothing/gloves/marine/veteran/cbrn/twe, /obj/item/clothing/head/helmet/marine/cbrn_hood/twe, /obj/item/clothing/glasses/night/medhud/no_nvg), MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+
 		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
 		list("Heavy-duty Medical Backpack", 0, /obj/item/storage/backpack/rmc/medic, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_RECOMMENDED),
 

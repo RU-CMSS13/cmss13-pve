@@ -380,8 +380,14 @@
 	armor_bio = CLOTHING_ARMOR_LOW
 	armor_rad = CLOTHING_ARMOR_LOW
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
-	flags_inventory = COVEREYES|BLOCKSHARPOBJ
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR|SPOREPROOF
 	flags_inv_hide = HIDEEARS|HIDEEYES|HIDETOPHAIR
+
+/obj/item/clothing/head/helmet/hybrisa/firefighter/officer
+	name = "HS-SHIELD-X 700 helmet"
+	desc = "The HS-SHIELD-X 700 (Hyperdyne Systems - Safety Helmet Integrated for Extreme Danger). A closed helmet designed to protect the wearer from hazardous environments, this specific model is designed to be effective in high heat environments and protect the user from smoke inhalation. It has a built in semi-closed breathing system. This helmet was designed by Hyperdyne Systems. Model 700 is made for Fire Protection Officers."
+	icon_state = "kelland_mining_helmet"
+	item_state = "kelland_mining_helmet"
 
 // Kelland Mining
 
@@ -536,6 +542,12 @@
 		return
 
 	return COMPONENT_NO_IGNITE
+
+/obj/item/clothing/suit/storage/marine/light/vest/fire_light/officer
+	name = "O-PT-LT firesuit"
+	desc = "The 'Officer PyroTex LT' is an advanced, lightweight firesuit developed by 'Watatsumi'. It provides protection against fire and heat, while also offering a degree of protection from blunt force trauma."
+	icon_state = "kellandmining_oversuit"
+	item_state = "kellandmining_oversuit"
 
 // Kelland Mining
 

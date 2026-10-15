@@ -587,6 +587,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	icon = 'icons/turf/walls/hangar.dmi'
 	icon_state = "hangar"
 	walltype = WALL_HANGAR
+	hull = 1
 
 //Prison wall
 

@@ -1071,6 +1071,20 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "canc"
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
 
+/obj/item/clothing/head/helmet/marine/veteran/canc/blackops
+	name = "\improper Type 107-C helmet"
+	desc = "Experimental Helmet Type 107-C. Developed by the CANC scientific divison in collaboration with engineers from Hyperdyne. Constructed from the same titanium nanocrystalline alloy used in UPP armor plates, and reinforced with additional para-aramid plating. In addition to its integrated air filtration system, the helmet is equipped with advanced hearing protection, communication systems, and mounting ports for additional visors. On top of that, the helmet also features a high-resolution camera, allowing targets to be observed even in IR mode."
+	icon_state = "canc_blackops"
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR|SPOREPROOF
+	eye_protection = EYE_PROTECTION_FLASH
+	clothing_traits = list(TRAIT_EAR_PROTECTION)
+	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
+
 /obj/item/clothing/head/helmet/marine/veteran/pmc
 	name = "\improper Mk10 combat helmet"
 	desc = "Standard issue high molecular density polymer combat helmet used by Weyland Yutani's elite tactical teams. Designed by Weyland-Yutani, initially as a hard hat, the project was eventually retrofitted into a cheap, reliable combat helmet system that incorporates a tactical camera, IFF signal transponder, and heads up display lens. Also features white/black hot IR viewing modes from the camera system."
@@ -1090,6 +1104,20 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 /obj/item/clothing/head/helmet/marine/veteran/pmc/rmc
 	desc = "Standard issue high molecular density polymer combat helmet used by RMC. Designed by Weyland-Yutani, initially as a hard hat, the project was eventually retrofitted into a cheap, reliable combat helmet system that incorporates a tactical camera, IFF signal transponder, and heads up display lens. Also features white/black hot IR viewing modes from the camera system."
 	icon_state = "rmc_helmet"
+	built_in_visors = list(new /obj/item/device/helmet_visor/medical/advanced/rmc/alt)
+	start_down_visor_type = /obj/item/device/helmet_visor/medical/advanced/rmc/alt
+
+/obj/item/clothing/head/helmet/marine/veteran/pmc/rmc/cbrn
+	name = "\improper L8A3 ballistic helmet"
+	desc = "A High-cut ballistic helmet. Designed by Lindenthal-Ehrenfeld Militärindustrie it is intended to be used by Royal Marines Commando as part of the kestrel armour system."
+	icon = 'icons/obj/items/clothing/hats/hats_by_faction/TWE.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/TWE.dmi'
+	)
+	icon_state = "rmc_helm1"
+	item_state = "rmc_helm1"
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	clothing_traits = list(TRAIT_EAR_PROTECTION)
 	built_in_visors = list(new /obj/item/device/helmet_visor/medical/advanced/rmc/alt)
 	start_down_visor_type = /obj/item/device/helmet_visor/medical/advanced/rmc/alt
 
@@ -2175,6 +2203,63 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_bomb = CLOTHING_ARMOR_ULTRAHIGH
 	armor_bio = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
+
+/obj/item/clothing/head/helmet/marine/cbrn_hood/upp
+	name = "\improper HRPS-200M PMK/5 gasmask"
+	desc = "The UPP PMK/5 gas mask includes a fully enclosing hood, which is securely attached to the HRPS-200M suit, and an additional ventilation system mounted on the back of the hood. It is able to protect against radiological and biological threats, as well as from open fire."
+	icon = 'icons/obj/items/clothing/masks.dmi'
+	icon_state = "upp_cbrn_hood_alt"
+	item_state = "upp_cbrn_hood_alt"
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/mask.dmi'
+	)
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	max_heat_protection_temperature = ARMOR_MAX_HEAT_PROT
+	flags_cold_protection = BODY_FLAG_HEAD
+	flags_heat_protection = BODY_FLAG_HEAD
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_HIGH
+	armor_rad = CLOTHING_ARMOR_HIGHPLUS
+	armor_internaldamage = CLOTHING_ARMOR_HIGH
+	force = 0 //"The M3 MOPP mask would be a normal weapon if you were to hit someone with it."
+	throwforce = 0
+	flags_inventory = BLOCKSHARPOBJ|BLOCKGASEFFECT|SPOREPROOF
+	flags_marine_helmet = NO_FLAGS
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_inv_hide = HIDEEARS|HIDEALLHAIR
+	built_in_visors = list()
+
+/obj/item/clothing/head/helmet/marine/cbrn_hood/twe
+	name = "\improper CPS Mk.III helmet"
+	desc = "CPS Mk.III Helmet. Developed by Blucher & Respirex Technologies for the CBRN troops of the Three World Empire. A third-generation model, it provides better protection against chemicals and radiation, as well as pistol rounds, at the cost of increased bulk and the inability to use a helmet."
+	icon = 'icons/obj/items/clothing/masks.dmi'
+	icon_state = "twe_cbrn_hood_alt"
+	item_state = "twe_cbrn_hood_alt"
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/mask.dmi'
+	)
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	max_heat_protection_temperature = ARMOR_MAX_HEAT_PROT
+	flags_cold_protection = BODY_FLAG_HEAD
+	flags_heat_protection = BODY_FLAG_HEAD
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_HIGH
+	armor_rad = CLOTHING_ARMOR_HIGHPLUS
+	armor_internaldamage = CLOTHING_ARMOR_HIGH
+	force = 0 //"The M3 MOPP mask would be a normal weapon if you were to hit someone with it."
+	throwforce = 0
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR|SPOREPROOF
+	flags_inv_hide = HIDEEARS|HIDEALLHAIR
+	flags_marine_helmet = NO_FLAGS
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_inv_hide = HIDEEARS|HIDEALLHAIR
+	built_in_visors = list()
 
 //=ROYAL MARINES=\\
 

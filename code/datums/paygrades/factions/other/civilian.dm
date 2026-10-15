@@ -59,3 +59,15 @@
 	name = "Rebel Commander"
 	prefix = "CMDR."
 	officer_grade = GRADE_OFFICER
+
+/datum/paygrade/civilian/fire_fighter
+	paygrade = PAY_SHORT_FPS
+	name = "Fire Protection Specialist"
+	prefix = "FPS."
+	pay_multiplier = 1.3
+
+/datum/paygrade/civilian/fire_fighter
+	paygrade = PAY_SHORT_FPO
+	name = "Fire Protection Officer"
+	prefix = "FPO."
+	pay_multiplier = 1.6

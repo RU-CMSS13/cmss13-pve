@@ -307,6 +307,21 @@
 	explosive_power = 90
 	explosive_falloff = 35
 
+//UPP player-given claymore. Actually it's just reskine of strong mine.
+
+/obj/item/explosive/mine/strong/upp
+	name = "\improper MON-50/2 Directional fragmentation mine"
+	desc = "The MON-50/2 DFM is modeled after the pre-spaceflight mines. Its design is simple as they are effective. This is made with the IFF signals of UPP."
+	icon_state = "m20p"
+	hard_iff_lock = TRUE
+	color = "#009933"
+	iff_signal = FACTION_UPP
+
+/obj/item/explosive/mine/strong/upp/active
+	icon_state = "m20p_active"
+	base_icon_state = "m20p"
+	map_deployed = TRUE
+
 //ditto, but armed.
 /obj/item/explosive/mine/strong/active
 	icon_state = "m20_active"
