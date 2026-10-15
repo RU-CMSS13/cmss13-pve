@@ -24,6 +24,7 @@
 		"right_pocket" = null,
 		"armor" = null,
 		"uniform" = null,
+		"webbing" = null,
 	)
 
 	/// Static list of storage slots that the AI pays attention to for inventory appraisal
@@ -64,6 +65,10 @@
 			if(isclothing(tied_human.w_uniform))
 				var/obj/item/clothing/accessory/storage/storage_accessory = locate(/obj/item/clothing/accessory/storage) in tied_human.w_uniform.accessories
 				storage_object = storage_accessory.hold
+		if("webbing")
+			if(isclothing(tied_human.wear_suit))
+				var/obj/item/clothing/accessory/storage/webbing/m3/webbing_accessory = locate(/obj/item/clothing/accessory/storage/webbing/m3) in tied_human.wear_suit.accessories
+				storage_object = webbing_accessory.hold
 	return storage_object
 
 /// Given a location and a reference, puts a referenced object into the AI's hand if possible
@@ -165,10 +170,14 @@
 		var/obj/item/clothing/accessory/storage/storage_accessory = locate(/obj/item/clothing/accessory/storage) in tied_human.w_uniform.accessories
 		if(storage_accessory)
 			container_refs["uniform"] = storage_accessory.hold
+	if(isclothing(tied_human.wear_suit))
+		var/obj/item/clothing/accessory/storage/webbing/m3/webbing_accessory = locate(/obj/item/clothing/accessory/storage/webbing/m3) in tied_human.wear_suit.accessories
+		if(webbing_accessory)
+			container_refs["webbing"] = webbing_accessory.hold
 
 /// Currently doesn't support recursive storage
 /// Used to determine what the AI has in their inventory
-/datum/human_ai_brain/proc/appraise_inventory(belt = TRUE, back = TRUE, pocket_l = TRUE, pocket_r = TRUE, armor = TRUE, uniform = TRUE)
+/datum/human_ai_brain/proc/appraise_inventory(belt = TRUE, back = TRUE, pocket_l = TRUE, pocket_r = TRUE, armor = TRUE, uniform = TRUE, webbing = TRUE)
 	if(previous_faction != tied_human.faction)
 		previous_faction = tied_human.faction
 		var/datum/human_ai_faction/our_faction = SShuman_ai.human_ai_factions[tied_human.faction]
@@ -201,6 +210,9 @@
 
 	if(uniform && isclothing(tied_human.w_uniform))
 		appraise_uniform()
+
+	if(webbing && isclothing(tied_human.wear_suit))
+		appraise_webbing()
 
 /datum/human_ai_brain/proc/appraise_belt()
 	if(isgun(tied_human.belt) && (tied_human.belt != primary_weapon))
@@ -307,6 +319,21 @@
 	RegisterSignal(located_storage, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
 	item_slot_appraisal_loop(located_storage.hold, "uniform")
 
+/datum/human_ai_brain/proc/appraise_webbing()
+	var/obj/item/clothing/accessory/storage/webbing/m3/located_webbing = locate(/obj/item/clothing/accessory/storage/webbing/m3) in tied_human.wear_suit.accessories
+	if(!located_webbing)
+		return
+
+	for(var/id in equipment_map)
+		for(var/obj/item/item as anything in equipment_map[id])
+			if(equipment_map[id][item] != "webbing")
+				continue
+
+			equipment_map[id] -= item
+
+	RegisterSignal(located_webbing, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
+	item_slot_appraisal_loop(located_webbing.hold, "webbing")
+
 /datum/human_ai_brain/proc/item_slot_appraisal_loop(obj/item/container_to_loop, slot_to_assign)
 	for(var/obj/item/inv_item as anything in container_to_loop)
 		RegisterSignal(inv_item, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
@@ -374,7 +401,7 @@
 
 	for(var/slot in container_refs)
 		if(container_refs[slot] == dropped)
-			appraise_inventory(slot == "belt", slot == "backpack", slot == "left_pocket", slot == "right_pocket", slot == "armor", slot == "uniform")
+			appraise_inventory(slot == "belt", slot == "backpack", slot == "left_pocket", slot == "right_pocket", slot == "armor", slot == "uniform", slot == "webbing")
 			break
 
 	for(var/id in equipment_map)
