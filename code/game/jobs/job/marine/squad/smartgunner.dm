@@ -84,18 +84,15 @@
 /datum/job/marine/smartgunner/ai/upp
 	title = JOB_SQUAD_SMARTGUN_UPP
 	gear_preset = /datum/equipment_preset/uscm/sg/upp
-	gear_preset_secondary = /datum/equipment_preset/uscm/sg/upp/corporal
-	gear_preset_tertiary = /datum/equipment_preset/uscm/sg/upp/senior_private
-	gear_preset_quaternary = /datum/equipment_preset/uscm/sg/upp/private
-	job_options = list(PVT_VARIANT = "PVT", SR_PVT_VARIANT = "SrPVT", CPL_VARIANT = "CPL", JSGT_VARIANT = "JrSGT")
+	gear_preset_secondary = /datum/equipment_preset/uscm/sg/upp/senior_private
+	gear_preset_tertiary = /datum/equipment_preset/uscm/sg/upp/private
+	job_options = list(PVT_VARIANT = "PVT", SR_PVT_VARIANT = "SrPVT", JSGT_VARIANT = "JrSGT")
 
 /datum/job/marine/smartgunner/ai/upp/handle_job_options(option)
 	gear_preset = initial(gear_preset)
 	if(option == PVT_VARIANT)
-		gear_preset = gear_preset_quaternary
-	if(option == SR_PVT_VARIANT)
 		gear_preset = gear_preset_tertiary
-	if(option == CPL_VARIANT)
+	if(option == SR_PVT_VARIANT)
 		gear_preset = gear_preset_secondary
 
 /datum/job/marine/smartgunner/ai/forecon
@@ -128,9 +125,15 @@
 	spawn_positions = 1
 	gear_preset = /datum/equipment_preset/uscm/sg/upp/forecon
 	gear_preset_secondary = /datum/equipment_preset/uscm/sg/upp/forecon/junior_sergeant
-	gear_preset_tertiary = /datum/equipment_preset/uscm/sg/upp/forecon/corporal
-	gear_preset_quaternary = /datum/equipment_preset/uscm/sg/upp/forecon/senior_private
-	job_options = list(SR_PVT_VARIANT = "SrPVT", CPL_VARIANT = "CPL", JSGT_VARIANT = "JrSGT", SGT_VARIANT = "SGT")
+	gear_preset_tertiary = /datum/equipment_preset/uscm/sg/upp/forecon/senior_private
+	job_options = list(SR_PVT_VARIANT = "SrPVT", JSGT_VARIANT = "JrSGT", SGT_VARIANT = "SGT")
+
+/datum/job/marine/smartgunner/ai/upp/forecon/handle_job_options(option)
+	gear_preset = initial(gear_preset)
+	if(option == SR_PVT_VARIANT)
+		gear_preset = gear_preset_tertiary
+	if(option == JSGT_VARIANT)
+		gear_preset = gear_preset_secondary
 
 /obj/effect/landmark/start/marine/smartgunner/upp/forecon
 	name = JOB_SQUAD_SMARTGUN_FORECON_UPP
