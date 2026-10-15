@@ -216,12 +216,67 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 	if(length(overwritten_roles_for_mode))
 		temp_roles_for_mode = overwritten_roles_for_mode
 
+	var/list/roles_to_assign = temp_roles_for_mode.Copy() // RU-PVE ADDITION
+
+	// RU-PVE START
+	if(GLOB.require_command_roles && length(G.required_command_roles))
+		assign_command_role(G.get_command_role_titles(), roles_to_assign, unassigned_players)
+	// RU-PVE END
+
 	// Assign the roles, this time for real, respecting limits we have established.
-	assign_roles(temp_roles_for_mode.Copy(), unassigned_players)
+	assign_roles(roles_to_assign, unassigned_players) // RU-PVE EDIT
 
 	unassigned_players = null
 
 	/*===============================================================*/
+
+// RU-PVE START
+/datum/authority/branch/role/proc/get_wanted_command_role(mob/new_player/player, list/role_names, priority)
+	var/datum/preferences/prefs = player.client?.prefs
+	if(!prefs)
+		return null
+
+	for(var/role_name in role_names)
+		if(prefs.get_job_priority(role_name) != priority)
+			continue
+		var/datum/job/job = roles_by_name[role_name]
+		if(job && check_role_entry(player, job))
+			return role_name
+
+	return null
+
+/datum/authority/branch/role/proc/has_command_role_candidate(list/role_names)
+	for(var/mob/new_player/player as anything in GLOB.new_player_list)
+		if(!player.ready || !player.client || player.client.total_enter_lock)
+			continue
+		for(var/priority in PRIME_PRIORITY to HIGH_PRIORITY)
+			if(get_wanted_command_role(player, role_names, priority))
+				return TRUE
+	return FALSE
+
+/datum/authority/branch/role/proc/assign_command_role(list/role_names, list/roles_to_assign, list/unassigned_players)
+	for(var/priority in PRIME_PRIORITY to HIGH_PRIORITY)
+		for(var/mob/new_player/player as anything in unassigned_players)
+			var/role_name = get_wanted_command_role(player, role_names & roles_to_assign, priority)
+			if(!role_name)
+				continue
+
+			var/datum/job/job = roles_to_assign[role_name]
+			if(!assign_role(player, job))
+				continue
+
+			log_debug("ASSIGNMENT: We have assigned command role [role_name] to [player] at priority [priority].")
+			player.client.player_data?.adjust_stat(PLAYER_STAT_UNASSIGNED_ROUND_STREAK, STAT_CATEGORY_MISC, 0, TRUE)
+			unassigned_players -= player
+
+			if(job.spawn_positions != -1 && job.current_positions >= job.spawn_positions)
+				roles_to_assign -= role_name
+				log_debug("ASSIGNMENT: We have ran out of slots for [role_name] and it has been removed from roles to assign.")
+			return TRUE
+
+	log_debug("ASSIGNMENT: No player was found for command roles.")
+	return FALSE
+// RU-PVE END
 
 /// Assign roles to the players. Return roles that are still available.
 /datum/authority/branch/role/proc/assign_roles(list/roles_to_assign, list/unassigned_players)

@@ -212,7 +212,8 @@ GLOBAL_LIST_INIT(admin_verbs_server, list(
 	/client/proc/cmd_debug_del_all,
 	/datum/admins/proc/togglejoin,
 	/client/proc/toggle_cdn,
-	/client/proc/toggle_admin_only_observe, // RU-PVE
+	/client/proc/toggle_admin_only_observe, // RU-PVE ADDITION
+	/client/proc/toggle_require_command_roles, // RU-PVE ADDITION
 	/datum/admins/proc/toggle_intro,
 ))
 
@@ -364,7 +365,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		add_verb(src, /client/proc/togglebuildmodeself)
 		add_verb(src, /client/proc/toggle_game_master)
 		add_verb(src, /client/proc/open_resin_panel)
-		add_verb(src, /client/proc/roll_dices) // RU-PVE
+		add_verb(src, /client/proc/roll_dices) // RU-PVE ADDITION
 		add_verb(src, /client/proc/open_sound_panel)
 		add_verb(src, /client/proc/toggle_join_xeno)
 		add_verb(src, /client/proc/admin_marine_announcement)
@@ -382,8 +383,8 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		add_verb(src, /client/proc/toggle_rappel_menu)
 		add_verb(src, /client/proc/toggle_fire_support_menu)
 		add_verb(src, /client/proc/gm_lighting)
-		add_verb(src, /client/proc/disallow_to_join) // RU-PVE
-		add_verb(src, /client/proc/allow_to_join) // RU-PVE
+		add_verb(src, /client/proc/disallow_to_join) // RU-PVE ADDITION
+		add_verb(src, /client/proc/allow_to_join) // RU-PVE ADDITION
 	if(CLIENT_HAS_RIGHTS(src, R_SERVER))
 		add_verb(src, GLOB.admin_verbs_server)
 	if(CLIENT_HAS_RIGHTS(src, R_DEBUG))
@@ -411,7 +412,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		/client/proc/togglebuildmodeself,
 		/client/proc/toggle_game_master,
 		/client/proc/open_resin_panel,
-		/client/proc/roll_dices, // RU-PVE
+		/client/proc/roll_dices, // RU-PVE ADDITION
 		/client/proc/open_sound_panel,
 		/client/proc/toggle_join_xeno,
 		/client/proc/game_master_rename_platoon,
@@ -430,8 +431,8 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		/client/proc/toggle_intro,
 		/client/proc/gm_lighting,
 		/client/proc/gm_base_lighting,
-		/client/proc/disallow_to_join, // RU-PVE
-		/client/proc/allow_to_join, // RU-PVE
+		/client/proc/disallow_to_join, // RU-PVE ADDITION
+		/client/proc/allow_to_join, // RU-PVE ADDITION
 		GLOB.admin_verbs_admin,
 		GLOB.admin_verbs_ban,
 		GLOB.admin_verbs_minor_event,
@@ -712,6 +713,17 @@ GLOBAL_VAR_INIT(admin_only_observe, FALSE)
 	GLOB.admin_only_observe = !GLOB.admin_only_observe
 	message_admins("[key_name_admin(usr)] toggled admin-only observe [GLOB.admin_only_observe ? "ON" : "OFF"].")
 	log_admin("[key_name(usr)] toggled admin-only observe [GLOB.admin_only_observe ? "ON" : "OFF"].")
+
+GLOBAL_VAR_INIT(require_command_roles, TRUE)
+
+/client/proc/toggle_require_command_roles()
+	set name = "Toggle Require Command Roles"
+	set category = "Server"
+	if(!check_rights(R_SERVER))
+		return
+	GLOB.require_command_roles = !GLOB.require_command_roles
+	message_admins("[key_name_admin(usr)] toggled required command roles for round start [GLOB.require_command_roles ? "ON" : "OFF"].")
+	log_admin("[key_name(usr)] toggled required command roles for round start [GLOB.require_command_roles ? "ON" : "OFF"].")
 
 // RU-PVE END
 
