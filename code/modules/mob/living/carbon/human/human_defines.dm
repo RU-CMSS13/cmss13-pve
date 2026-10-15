@@ -52,6 +52,7 @@
 	var/personal_faction = ""
 	var/religion = ""
 	var/accent_prefix = "" // RU PVE ADDITION
+	var/accent_glyph = "" // RU PVE ADDITION
 
 	//Equipment slots
 	var/obj/item/clothing/suit/wear_suit = null
