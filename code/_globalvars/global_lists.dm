@@ -209,6 +209,13 @@ GLOBAL_LIST_INIT(language_keys, setup_language_keys()) //table of say codes for 
 // Origins
 GLOBAL_REFERENCE_LIST_INDEXED(origins, /datum/origin, name)
 GLOBAL_LIST_INIT(player_origins, FACTION_ORIGINS)
+// RU PVE ADDITION - GLYPHS
+GLOBAL_LIST_INIT(accent_glyphs, list(
+	"!", "#", "$", "%", "&", "+", "=", "?", "@", "~", "^",
+	"/", "\\", "(", ")", "{", "}", "\[", "]", "<", ">", "|",
+	"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
+	"N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
+))
 
 //Xeno hives
 GLOBAL_LIST_INIT_TYPED(hive_datum, /datum/hive_status, list(
