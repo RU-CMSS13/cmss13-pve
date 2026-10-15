@@ -76,7 +76,6 @@ GLOBAL_VAR_INIT(cas_tracking_id_increment, 0) //this var used to assign unique t
 		return TRUE
 	return GLOB.RoleAuthority.has_command_role_candidate(titles)
 
-/// Returns the titles of this mode's roles whose job type is in `required_command_roles`. Platoons use their own titles (e.g. JOB_PMCPLAT_SMALL_LEADER), so we match by type.
 /datum/game_mode/proc/get_command_role_titles()
 	var/list/titles = list()
 	for(var/role_name in get_roles_list())
