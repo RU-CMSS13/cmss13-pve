@@ -143,6 +143,7 @@
 		log_game("[usr.key] AM failed due to disconnect.")
 		return
 	client.screen.Cut()
+	client.render_plates_shown = alist()
 	if(!client)
 		log_game("[usr.key] AM failed due to disconnect.")
 		return
@@ -234,10 +235,14 @@
 	if(!client)
 		return
 
+	if(istype(client.eye, /mob/hologram))
+		var/mob/hologram/eye = client.eye
+		eye.change_level()
+		return
+
 	if(client.view != world.view)
 		to_chat(src, SPAN_WARNING("You cannot look up while zoomed!"))
 		return
-
 
 	if(HAS_TRAIT(src, TRAIT_ABILITY_BURROWED))
 		to_chat(src, SPAN_WARNING("We cannot look up here, we are burrowed!"))
@@ -247,7 +252,10 @@
 		to_chat(src, SPAN_WARNING("You cannot look up here."))
 		return
 
-	var/turf/above = locate(x, y, z+1)
+	var/turf/above = SSmapping.get_turf_above(loc)
+	if(!isturf(above))
+		to_chat(src, SPAN_WARNING("You cannot look up here."))
+		return
 
 	if(!istransparentturf(above))
 		to_chat(src, SPAN_WARNING("You cannot look up here."))
