@@ -7,3 +7,21 @@
   - bugfix: shimmied mobs now get their offsets reset if the object being shimmied
       around gets destroyed
   - qol: you can now shimmy past seated people in immovable seats!
+2026-10-08:
+  Vany3045:
+  - rscadd: Smallpouch to the USCM FORECON.
+  - balance: reduced capacity for the PMC backpack from 24 to standard 21.
+  - balance: reduced capacity for the PMC first aid pouch from 6 back to 5.
+  - balance: various tweaks to the hAI presets of PMCs.
+  - balance: Replaces M4A3 HP/AP ammo boxes on Golden Arrow to the standard variant.
+  - rscdel: Removes Large Magazine pouch and Shotgun Ammo belt from PMC vendor.
+  - rscdel: Removes M39 from Golden Arrow.
+  - rscdel: Removes revolvers from standard USCM and UPP platoons. FORECONs still
+      remain with them.
+  - rscdel: Removes random leftover L54 magazine box from Brynhild closed ammo stache.
+      Replaced with VP70 ext. magazine box.
+  - rscdel: Removes Field Operations Beret from PMC platoon leader cryo closet.
+  - bugfix: Fixes duplicate rank pins in RMC LT cryo closet.
+  - bugfix: Fixes M44 speedloader duplicate in FORECON vendor.
+  - bugfix: Replaces Makeshift ammo rack on Pudong Bunker with actual UPP variant.
+  - bugfix: Fixes PMC squad leader uniform.
