@@ -4,6 +4,14 @@
 	name_plural = "Guardians"
 	icobase = 'icons/mob/humans/species/t_guardian.dmi'
 	deform = 'icons/mob/humans/species/t_guardian.dmi'
+	limb_overlays = list(
+		"head" = "guardian_head",
+		"torso" = "guardian_torso",
+		"r_arm" = "guardian_right_arm",
+		"l_arm" = "guardian_left_arm",
+		"r_leg" = "guardian_right_leg",
+		"l_leg" = "guardian_left_leg",
+	)
 	eyes = "blank_s"
 	unarmed_type = /datum/unarmed_attack/punch
 	blood_color = BLOOD_COLOR_ZOMBIE
@@ -32,26 +40,63 @@
 	acid_blood_dodge_chance = 100
 
 /datum/species/guardian/handle_post_spawn(mob/living/carbon/human/human)
-	new/obj/item/alien_embryo/dormant(human)
+	. = ..()
+	if(human.hud_list)
+		implant_embryo(human)
+
+/datum/species/guardian/proc/implant_embryo(mob/living/carbon/human/human)
+	if(!(locate(/obj/item/alien_embryo/dormant) in human))
+		new /obj/item/alien_embryo/dormant(human)
 
 /datum/species/guardian/handle_death(mob/living/carbon/human/dying_guardian, gibbed)
+	if(gibbed)
+		return
+	var/obj/item/alien_embryo/dormant/embryo = locate() in dying_guardian
+	if(!embryo)
+		return
 	playsound(get_turf(dying_guardian), "glassbreak", 25, FALSE)
-	var/mob/living/carbon/xenomorph/larva/infesting_larva = locate() in dying_guardian //if a larva already exists, use it
+	INVOKE_ASYNC(embryo, TYPE_PROC_REF(/obj/item/alien_embryo/dormant, burst))
 
-	if(infesting_larva)
-		infesting_larva.chest_burst(dying_guardian)
-		return
-
-	for(var/obj/item/alien_embryo/embryo in dying_guardian) //else if this hive's embryo already exists, convert to larva and use it
-		embryo.become_larva()
-		infesting_larva = locate() in dying_guardian
-		break
-
-	if(infesting_larva)
-		infesting_larva.chest_burst(dying_guardian)
-		return
+/obj/item/alien_embryo/dormant
+	stage = 6
 
 /obj/item/alien_embryo/dormant/Initialize(mapload, ...)
 	. = ..()
-	stage = 6
 	STOP_PROCESSING(SSobj, src)
+
+/obj/item/alien_embryo/dormant/proc/burst()
+	var/mob/living/carbon/host = loc
+	if(!istype(host) || host != affected_mob)
+		return
+	become_larva()
+	qdel(src)
+	if(QDELETED(host))
+		return
+	var/mob/living/carbon/xenomorph/larva/larva = locate() in host
+	larva?.chest_burst(host)
+
+/datum/action/human_action/guardian_burst
+	name = "Initiate Chestburst"
+	icon_file = 'icons/mob/hud/actions_xeno.dmi'
+	action_icon_state = "gut"
+
+/datum/action/human_action/guardian_burst/can_use_action()
+	. = ..()
+	if(!.)
+		return
+	var/mob/living/carbon/human/guardian = owner
+	return istype(guardian) && guardian.stat != DEAD && (locate(/obj/item/alien_embryo/dormant) in guardian)
+
+/datum/action/human_action/guardian_burst/action_activate()
+	. = ..()
+	if(!can_use_action())
+		return
+	if(tgui_alert(owner, "The larva will tear its way out of you, and you will die. Continue?", name, list("Yes", "No")) != "Yes")
+		return
+	if(!can_use_action())
+		return
+	var/mob/living/carbon/human/guardian = owner
+	var/obj/item/alien_embryo/dormant/embryo = locate() in guardian
+	remove_from(guardian)
+	guardian.visible_message(SPAN_DANGER("[guardian] clutches [guardian.p_their()] chest!"), SPAN_XENODANGER("You let the larva out."))
+	embryo.burst()

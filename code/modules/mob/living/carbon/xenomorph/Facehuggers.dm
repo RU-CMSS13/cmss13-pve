@@ -356,6 +356,8 @@
 /obj/item/clothing/mask/facehugger/proc/go_active()
 	if(stat == DEAD)
 		return
+	if(istype(loc, /obj/item/storage/hugger_box)) // Kept dormant until let out
+		return
 
 	if(stat != CONSCIOUS)
 		icon_state = "[initial(icon_state)]"

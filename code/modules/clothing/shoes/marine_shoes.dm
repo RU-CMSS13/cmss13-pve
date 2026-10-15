@@ -358,6 +358,6 @@
 
 /obj/item/clothing/shoes/guardian
 	name = "guardian boots"
-	desc = "placeholder"
+	desc = "Heavy plated boots fused to the legs of a hive guardian."
 	icon_state = "guardian_boots"
 	item_state = "guardian_boots"

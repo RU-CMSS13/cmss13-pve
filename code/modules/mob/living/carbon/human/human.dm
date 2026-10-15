@@ -1586,8 +1586,9 @@
 
 /mob/living/carbon/human/guardian/Initialize(mapload)
 	. = ..(mapload, new_species = SPECIES_GUARDIAN)
-	var/obj/item/alien_embryo/dormant/embryo = new /obj/item/alien_embryo/dormant(src)
-	embryo.stage = 6
+	var/datum/species/guardian/guardian_species = species
+	if(istype(guardian_species))
+		guardian_species.implant_embryo(src)
 
 /mob/living/carbon/human/synthetic/Initialize(mapload)
 	. = ..(mapload, SYNTH_GEN_THREE)

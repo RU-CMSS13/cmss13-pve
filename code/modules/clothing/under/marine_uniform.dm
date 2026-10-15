@@ -1635,7 +1635,7 @@
 
 /obj/item/clothing/under/rank/guardian
 	name = "guardian pants"
-	desc = "placeholder"
+	desc = "Tough, resin-stained trousers worn by a hive guardian."
 	icon_state = "guardian_uniform"
 	worn_state = "guardian_uniform"
 	flags_jumpsuit = FALSE
