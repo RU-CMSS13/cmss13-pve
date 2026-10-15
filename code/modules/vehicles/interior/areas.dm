@@ -132,3 +132,6 @@
 /area/interior/vehicle/twe_apc/command
 	name = "\improper TWE Command APC interior"
 	icon_state = "apc"
+/area/interior/vehicle/hovercraft
+	name = "hovercraft interior"
+	icon_state = "van"

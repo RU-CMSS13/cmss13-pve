@@ -129,10 +129,6 @@
 	name = "Weyland-Yutani Van"
 	interior_id = "white_van"
 
-/datum/map_template/interior/clf_van
-	name = "CLF Technical"
-	interior_id = "clf_van"
-
 /datum/map_template/interior/box_van
 	name = "Box Van"
 	interior_id = "box_van"
@@ -174,3 +170,6 @@
 /datum/map_template/interior/twe_apc/command
 	name = "Type 200/FCV-C Command Light APC"
 	interior_id = "twe_command_apc"
+/datum/map_template/interior/hovercraft
+	name = "Hovercraft"
+	interior_id = "hovercraft"

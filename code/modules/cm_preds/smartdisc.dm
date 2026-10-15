@@ -199,7 +199,7 @@
 			var/mob/living/L = A
 			if(L.faction == faction)
 				continue
-			else if(L in friends)
+			else if(WEAKREF(L) in friends)
 				continue
 			else if(isyautja(L))
 				continue
@@ -239,7 +239,7 @@
 	if(!stat)
 		switch(stance)
 			if(HOSTILE_STANCE_IDLE)
-				target_mob = FindTarget()
+				target_mob_ref = WEAKREF(FindTarget())
 
 			if(HOSTILE_STANCE_ATTACK)
 				MoveToTarget()
@@ -249,6 +249,7 @@
 
 /mob/living/simple_animal/hostile/smartdisc/AttackTarget()
 	stop_automated_movement = 1
+	var/mob/living/target_mob = target_mob_ref?.resolve()
 	if(!target_mob || SA_attackable(target_mob))
 		LoseTarget()
 		return 0
@@ -260,6 +261,7 @@
 		return 1
 
 /mob/living/simple_animal/hostile/smartdisc/AttackingTarget()
+	var/mob/living/target_mob = target_mob_ref?.resolve()
 	if(QDELETED(target_mob))  return
 	if(!Adjacent(target_mob))  return
 	if(isliving(target_mob))

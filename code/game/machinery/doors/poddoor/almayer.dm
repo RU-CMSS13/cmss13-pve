@@ -60,9 +60,14 @@
 	opacity = TRUE
 
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor
+	name = "Lockdown"
 	density = TRUE
 	opacity = TRUE
 	vehicle_resistant = TRUE
+	needs_power = FALSE
+	unacidable = TRUE
+	emp_proof = TRUE
+	explo_proof = TRUE
 
 /obj/structure/machinery/door/poddoor/almayer/grey
 	icon_state ="grey_pdoor1"
