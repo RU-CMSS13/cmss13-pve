@@ -27,17 +27,9 @@
 	name = "Shoulder-length Hair"
 	icon_state = "hair_long_shoulder"
 
-/datum/sprite_accessory/hair/longalt
-	name = "Shoulder-length Hair Alt"
-	icon_state = "hair_longfringe"
-
 /datum/sprite_accessory/hair/longer
 	name = "Long Hair"
 	icon_state = "hair_vlong"
-
-/datum/sprite_accessory/hair/longeralt
-	name = "Long Hair Alt"
-	icon_state = "hair_vlongfringe"
 
 /datum/sprite_accessory/hair/longest
 	name = "Very Long Hair"
@@ -829,6 +821,8 @@
 	icon_state = "hair_emo_fringe"
 	gender = FEMALE
 
+// PVE
+
 /datum/sprite_accessory/hair/eighties
 	name = "The Eighties"
 	icon_state = "hair_80s"
@@ -880,6 +874,8 @@
 /datum/sprite_accessory/hair/fluffylong //ignore
 	name = "Fluffy (Long)"
 	icon_state = "hair_fluffy_long"
+
+// RU PVE
 
 /datum/sprite_accessory/hair/pulato
 	name = "Pulato"

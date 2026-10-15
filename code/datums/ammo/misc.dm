@@ -28,7 +28,7 @@
 	flags_ammo_behavior = AMMO_IGNORE_ARMOR|AMMO_HITS_TARGET_TURF
 
 	max_range = 6
-	damage = 40
+	damage = 35
 
 /datum/ammo/flamethrower/set_bullet_traits()
 	. = ..()
@@ -52,7 +52,7 @@
 	flags_ammo_behavior = AMMO_IGNORE_ARMOR|AMMO_IGNORE_COVER|AMMO_FLAME|AMMO_HITS_TARGET_TURF
 	flamer_reagent_id = "utnapthal"
 	max_range = 8
-	damage = 100
+	damage = 50
 	shell_speed = AMMO_SPEED_TIER_4
 
 /datum/ammo/flamethrower/tank_flamer/drop_flame(turf/turf, datum/cause_data/cause_data)
@@ -487,7 +487,7 @@
 	accuracy = HIT_ACCURACY_TIER_MAX
 	accurate_range = 12
 	max_range = 7
-	damage = 60
+	damage = 35
 	shell_speed = AMMO_SPEED_TIER_2
 
 /datum/ammo/rifle/sharp/on_embed(mob/embedded_mob, obj/limb/target_organ)
