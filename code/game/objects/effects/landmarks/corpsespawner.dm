@@ -72,6 +72,14 @@
 	name = "Colonial Liberation Front Soldier"
 	equip_path = /datum/equipment_preset/corpse/clf
 
+/obj/effect/landmark/corpsespawner/clf/burst
+	name = "Burst Colonial Liberation Front Soldier"
+	equip_path = /datum/equipment_preset/corpse/clf/burst
+
+/obj/effect/landmark/corpsespawner/upp
+	name = "Union of Progressive Peoples Soldier"
+	equip_path = /datum/equipment_preset/corpse/upp
+
 /obj/effect/landmark/corpsespawner/miner
 	name = "Shaft Miner"
 	equip_path = /datum/equipment_preset/corpse/miner

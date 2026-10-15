@@ -24,6 +24,8 @@
 		/datum/job/marine/standard/ai = JOB_SQUAD_MARINE,
 	)
 
+	required_command_roles = list(/datum/job/command/bridge/ai, /datum/job/marine/leader, /datum/job/marine/tl)  // RU-PVE ADDITION
+
 	static_comms_amount = 0
 	requires_comms = FALSE
 	toggleable_flags = MODE_NO_JOIN_AS_XENO|MODE_HARDCORE_PERMA|MODE_DISABLE_FS_PORTRAIT

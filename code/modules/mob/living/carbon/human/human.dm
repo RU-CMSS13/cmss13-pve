@@ -1924,7 +1924,32 @@
 
 // RU PVE ADDITION
 
+#define HUMAN_AI_ACCENT_GLYPH "*"
+
 /mob/living/carbon/human/get_accent_icon()
-	if(accent_prefix && accent_prefix != "")
-		return "[icon2html('icons/accent_tags.dmi', GLOB.clients, accent_prefix)] "
-	return ""
+	var/datum/origin/speaker_origin = GLOB.origins[origin]
+	if(!speaker_origin)
+		return ""
+	var/glyph = HUMAN_AI_ACCENT_GLYPH
+	if(client || !GetComponent(/datum/component/human_ai))
+		if(!accent_glyph)
+			accent_glyph = pick(GLOB.accent_glyphs)
+		glyph = accent_glyph
+	return "<b style='color:[speaker_origin.tag_color]'>[html_encode(glyph)]</b> "
+
+#undef HUMAN_AI_ACCENT_GLYPH
+
+/mob/living/carbon/human/verb/change_accent_glyph()
+	set name = "Change Glyph"
+	set desc = "Changes the symbol shown before your name in chat."
+	set category = "IC"
+
+	var/new_glyph = tgui_input_text(src, "Enter one symbol: [jointext(GLOB.accent_glyphs, " ")]", "Change Glyph", accent_glyph, max_length = 1, encode = FALSE)
+	if(!new_glyph)
+		return
+	new_glyph = uppertext(new_glyph)
+	if(!(new_glyph in GLOB.accent_glyphs))
+		to_chat(src, SPAN_WARNING("You can't use \"[html_encode(new_glyph)]\" as a glyph."))
+		return
+	accent_glyph = new_glyph
+	to_chat(src, SPAN_NOTICE("Your glyph is now \"[html_encode(accent_glyph)]\"."))

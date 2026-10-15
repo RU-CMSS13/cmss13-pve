@@ -638,6 +638,7 @@
 #include "code\datums\looping_sounds\item_sounds.dm"
 #include "code\datums\looping_sounds\misc_sounds.dm"
 #include "code\datums\origin\civilian.dm"
+#include "code\datums\origin\lb.dm"
 #include "code\datums\origin\origin.dm"
 #include "code\datums\origin\pmc.dm"
 #include "code\datums\origin\twe.dm"
