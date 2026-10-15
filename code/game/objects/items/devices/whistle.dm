@@ -5,6 +5,7 @@
 	w_class = SIZE_TINY
 	flags_atom = FPRINT|CONDUCT
 	flags_equip_slot = SLOT_FACE
+	flags_inv_hide = HIDEMOUTHCLENCHED
 	actions_types = list(/datum/action/item_action/toggle/use)
 
 	var/volume = 60
