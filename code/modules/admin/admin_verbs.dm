@@ -365,6 +365,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		add_verb(src, /client/proc/togglebuildmodeself)
 		add_verb(src, /client/proc/toggle_game_master)
 		add_verb(src, /client/proc/open_resin_panel)
+		add_verb(src, /client/proc/open_xeno_ai_spawner_panel)
 		add_verb(src, /client/proc/roll_dices) // RU-PVE
 		add_verb(src, /client/proc/open_sound_panel)
 		add_verb(src, /client/proc/toggle_join_xeno)
@@ -412,6 +413,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		/client/proc/togglebuildmodeself,
 		/client/proc/toggle_game_master,
 		/client/proc/open_resin_panel,
+		/client/proc/open_xeno_ai_spawner_panel,
 		/client/proc/roll_dices, // RU-PVE
 		/client/proc/open_sound_panel,
 		/client/proc/toggle_join_xeno,
