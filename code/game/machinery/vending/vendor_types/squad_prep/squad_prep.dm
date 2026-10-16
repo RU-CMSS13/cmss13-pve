@@ -626,7 +626,7 @@
 		list("WY-TM612 General Utility Pouch", round(scale * 15), /obj/item/storage/backpack/general_belt/wy, VENDOR_ITEM_REGULAR),
 
 		list("POUCHES", -1, null, null, null),
-		list("First-Aid Pouch", floor(scale * 15), /obj/item/storage/pouch/firstaid/wy_pve, VENDOR_ITEM_REGULAR),
+		list("First-Aid Pouch", floor(scale * 15), /obj/item/storage/pouch/firstaid/wy, VENDOR_ITEM_REGULAR),
 		list("Flare Pouch (Full)", floor(scale * 15), /obj/item/storage/pouch/flare/full, VENDOR_ITEM_REGULAR),
 		list("Magazine Pouch", floor(scale * 15), /obj/item/storage/pouch/magazine/wy, VENDOR_ITEM_REGULAR),
 		list("Medium General Pouch", floor(scale * 15), /obj/item/storage/pouch/general/medium/wy, VENDOR_ITEM_REGULAR),
