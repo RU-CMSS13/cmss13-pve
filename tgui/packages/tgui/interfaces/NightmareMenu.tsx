@@ -1,3 +1,4 @@
+import { BooleanLike } from 'common/react';
 import { useState } from 'react';
 
 import { useBackend } from '../backend';
@@ -27,11 +28,11 @@ type Insert = {
   group: string;
   landmark: string;
   file: string;
-  keep: boolean;
+  keep: BooleanLike;
   notes: string;
   override: 0 | 1 | null;
-  landmark_found: boolean;
-  loaded: boolean;
+  landmark_found: BooleanLike;
+  loaded: BooleanLike;
 };
 
 type NightmareContext = {
@@ -43,9 +44,9 @@ type NightmareContext = {
 
 type Data = {
   status: number;
-  disabled: boolean;
-  editable: boolean;
-  ran: boolean;
+  disabled: BooleanLike;
+  editable: BooleanLike;
+  ran: BooleanLike;
   contexts: NightmareContext[];
 };
 
@@ -135,7 +136,7 @@ export const NightmareMenu = () => {
 
 const ScenarioSection = (props: {
   readonly context: NightmareContext;
-  readonly editable: boolean;
+  readonly editable: BooleanLike;
 }) => {
   const { act } = useBackend<Data>();
   const { context, editable } = props;
@@ -173,7 +174,7 @@ const ScenarioSection = (props: {
 
 const InsertsSection = (props: {
   readonly context: NightmareContext;
-  readonly editable: boolean;
+  readonly editable: BooleanLike;
 }) => {
   const { act, data } = useBackend<Data>();
   const { context, editable } = props;
@@ -240,7 +241,7 @@ const InsertGroup = (props: {
   readonly contextId: string;
   readonly name: string;
   readonly inserts: Insert[];
-  readonly editable: boolean;
+  readonly editable: BooleanLike;
 }) => {
   const { data } = useBackend<Data>();
   const { contextId, name, inserts, editable } = props;
@@ -269,7 +270,7 @@ const InsertGroup = (props: {
 const InsertRow = (props: {
   readonly contextId: string;
   readonly insert: Insert;
-  readonly editable: boolean;
+  readonly editable: BooleanLike;
 }) => {
   const { act } = useBackend<Data>();
   const { contextId, insert, editable } = props;
@@ -288,12 +289,12 @@ const InsertRow = (props: {
       <Stack.Item grow basis={0}>
         <Box bold>
           {insert.file}
-          {insert.keep && (
+          {!!insert.keep && (
             <Box inline color="label" ml={1}>
               (adds on top)
             </Box>
           )}
-          {insert.loaded && (
+          {!!insert.loaded && (
             <Box inline color="good" ml={1}>
               Loaded
             </Box>
@@ -305,30 +306,33 @@ const InsertRow = (props: {
         </Box>
       </Stack.Item>
       <Stack.Item>
-        <Button
-          selected={insert.override === null}
-          disabled={!editable}
-          tooltip="Loads by its own chance and conditions."
-          onClick={() => setOverride('auto')}
-        >
-          Auto
-        </Button>
-        <Button
-          color={insert.override === 1 ? 'good' : 'transparent'}
-          disabled={!editable}
-          tooltip="Always loads, replacing whatever rolled for its landmark. Only one replacing insert can be forced per landmark."
-          onClick={() => setOverride('force')}
-        >
-          Force
-        </Button>
-        <Button
-          color={insert.override === 0 ? 'bad' : 'transparent'}
-          disabled={!editable}
-          tooltip="Never loads."
-          onClick={() => setOverride('block')}
-        >
-          Block
-        </Button>
+        {editable ? (
+          <>
+            <Button
+              selected={insert.override === null}
+              tooltip="Loads by its own chance and conditions."
+              onClick={() => setOverride('auto')}
+            >
+              Auto
+            </Button>
+            <Button
+              color={insert.override === 1 ? 'good' : 'transparent'}
+              tooltip="Always loads, replacing whatever rolled for its landmark. Only one replacing insert can be forced per landmark."
+              onClick={() => setOverride('force')}
+            >
+              Force
+            </Button>
+            <Button
+              color={insert.override === 0 ? 'bad' : 'transparent'}
+              tooltip="Never loads."
+              onClick={() => setOverride('block')}
+            >
+              Block
+            </Button>
+          </>
+        ) : (
+          <OverrideLabel override={insert.override} />
+        )}
       </Stack.Item>
       <Stack.Item>
         <Button
@@ -350,4 +354,15 @@ const InsertRow = (props: {
       </Stack.Item>
     </Stack>
   );
+};
+
+const OverrideLabel = (props: { readonly override: Insert['override'] }) => {
+  const { override } = props;
+  if (override === 1) {
+    return <Box color="good">Forced</Box>;
+  }
+  if (override === 0) {
+    return <Box color="bad">Blocked</Box>;
+  }
+  return <Box color="label">Auto</Box>;
 };
