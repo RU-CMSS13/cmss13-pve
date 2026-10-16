@@ -130,6 +130,10 @@
 	icon_state = "armor_chair"
 	color = "red"
 
+/obj/effect/landmark/interior/spawn/vehicle_driver_seat/armor/wy
+	icon = 'icons/obj/vehicles/interiors/general_wy.dmi'
+	icon_state = "armor_chair"
+
 /obj/effect/landmark/interior/spawn/vehicle_driver_seat/armor/on_load(datum/interior/I)
 	var/obj/structure/bed/chair/comfy/vehicle/driver/armor/S = new(loc)
 
@@ -174,6 +178,9 @@
 	icon = 'icons/obj/vehicles/interiors/general.dmi'
 	icon_state = "armor_chair"
 	color = "blue"
+
+/obj/effect/landmark/interior/spawn/vehicle_gunner_seat/armor/wy
+	icon = 'icons/obj/vehicles/interiors/general_wy.dmi'
 
 /obj/effect/landmark/interior/spawn/vehicle_gunner_seat/armor/on_load(datum/interior/I)
 	var/obj/structure/bed/chair/comfy/vehicle/gunner/armor/S = new(loc)
@@ -264,6 +271,9 @@
 	icon_state = "armor_chair"
 	color = "#00ad00"
 
+/obj/effect/landmark/interior/spawn/vehicle_support_gunner_seat/wy
+	icon = 'icons/obj/vehicles/interiors/general_wy.dmi'
+
 /obj/effect/landmark/interior/spawn/vehicle_support_gunner_seat/on_load(datum/interior/I)
 	var/obj/structure/bed/chair/comfy/vehicle/support_gunner/S = new(loc)
 
@@ -282,6 +292,9 @@
 /obj/effect/landmark/interior/spawn/vehicle_support_gunner_seat/second
 	name = "2nd support gunner's seat spawner"
 	color = "#b1b100"
+
+/obj/effect/landmark/interior/spawn/vehicle_support_gunner_seat/second/wy
+	icon = 'icons/obj/vehicles/interiors/general_wy.dmi'
 
 /obj/effect/landmark/interior/spawn/vehicle_support_gunner_seat/second/on_load(datum/interior/I)
 	var/obj/structure/bed/chair/comfy/vehicle/support_gunner/second/S = new(loc)
@@ -328,6 +341,9 @@
 	icon_state = "weapons_loader"
 	color = "#00920c"
 
+/obj/effect/landmark/interior/spawn/weapons_loader/wy
+	icon = 'icons/obj/vehicles/interiors/general_wy.dmi'
+
 /obj/effect/landmark/interior/spawn/weapons_loader/on_load(datum/interior/I)
 	var/obj/structure/weapons_loader/R = new(loc)
 
@@ -370,6 +386,9 @@
 	icon_state = "viewport"
 	layer = INTERIOR_DOOR_LAYER
 	color = "#009cb8"
+
+/obj/effect/landmark/interior/spawn/interior_viewport/wy
+	icon = 'icons/obj/vehicles/interiors/general_wy.dmi'
 
 /obj/effect/landmark/interior/spawn/interior_viewport/on_load(datum/interior/I)
 	var/obj/structure/interior_viewport/V = new(loc)

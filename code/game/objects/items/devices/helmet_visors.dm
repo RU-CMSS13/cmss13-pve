@@ -86,21 +86,6 @@
 	desc = "The guts of a Personal-Augmented-Viewer HUD unit. Fitted as-standard in almost all helmets in use by UA forces."
 	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY)
 
-//fucking mess
-/obj/item/device/helmet_visor/ua/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
-	. = ..()
-
-	user.client.color = "#E0FFFF"
-	user.overlay_fullscreen("optic", /atom/movable/screen/fullscreen/flash/noise/optic)
-	ADD_TRAIT(user, TRAIT_HUD_SIGHT, src)
-
-/obj/item/device/helmet_visor/ua/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
-	. = ..()
-
-	user.client.color = initial(user.client.color)
-	user.clear_fullscreen("optic", 0.5 SECONDS)
-	REMOVE_TRAIT(user, TRAIT_HUD_SIGHT, src)
-
 /obj/item/device/helmet_visor/upp
 	name = "KKV-66M visor"
 	desc = "The KKV-66M \"Geist\" is an augmented-reality Heads Up Display developed by Germany. Standard for all helmets in use by the UPP's armed forces."
@@ -109,61 +94,16 @@
 	helmet_overlay = "meson_sight_right"
 	hud_type = list(MOB_HUD_FACTION_UPP)
 
-//fucking mess
-/obj/item/device/helmet_visor/upp/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
-	. = ..()
-
-	user.client.color = "#fff1e0"
-	user.overlay_fullscreen("optic", /atom/movable/screen/fullscreen/flash/noise/optic)
-	ADD_TRAIT(user, TRAIT_HUD_SIGHT, src)
-
-/obj/item/device/helmet_visor/upp/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
-	. = ..()
-
-	user.client.color = initial(user.client.color)
-	user.clear_fullscreen("optic", 0.5 SECONDS)
-	REMOVE_TRAIT(user, TRAIT_HUD_SIGHT, src)
-
 /obj/item/device/helmet_visor/twe
 	name = "HBS visor"
 	desc = "One of the older programm visors issued to the IASF forces of Three World Empire. Provides a basic amount of information."
 	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_IASF)
-
-//fucking mess
-/obj/item/device/helmet_visor/twe/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
-	. = ..()
-
-	user.client.color = "#E0FFFF"
-	user.overlay_fullscreen("optic", /atom/movable/screen/fullscreen/flash/noise/optic)
-	ADD_TRAIT(user, TRAIT_HUD_SIGHT, src)
-
-/obj/item/device/helmet_visor/twe/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
-	. = ..()
-
-	user.client.color = initial(user.client.color)
-	user.clear_fullscreen("optic", 0.5 SECONDS)
-	REMOVE_TRAIT(user, TRAIT_HUD_SIGHT, src)
 
 /obj/item/device/helmet_visor/pmc
 	name = "C/PAV-Mk.1 visor"
 	desc = "The guts of a Personal-Augmented-Viewer HUD unit. Modified by corporate technicians to display relevant information."
 	hud_type = list(MOB_HUD_FACTION_WY, MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_PMC)
 	helmet_overlay = "hud_sight_right"
-
-//fucking mess
-/obj/item/device/helmet_visor/pmc/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
-	. = ..()
-
-	user.client.color = "#E0FFFF"
-	user.overlay_fullscreen("optic", /atom/movable/screen/fullscreen/flash/noise/optic)
-	ADD_TRAIT(user, TRAIT_HUD_SIGHT, src)
-
-/obj/item/device/helmet_visor/pmc/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
-	. = ..()
-
-	user.client.color = initial(user.client.color)
-	user.clear_fullscreen("optic", 0.5 SECONDS)
-	REMOVE_TRAIT(user, TRAIT_HUD_SIGHT, src)
 
 /obj/item/device/helmet_visor/pmc/alt
 	name = "C/PAV-Mk.2 visor"
@@ -568,17 +508,3 @@
 	action_icon_string = "hud_sight_red"
 	helmet_overlay = "hud_sight_upp_heavy"
 	hud_type = list(MOB_HUD_FACTION_UPP, MOB_HUD_MEDICAL_BASIC)
-
-/obj/item/device/helmet_visor/upp_heavy/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
-	. = ..()
-
-	user.client.color = "#ffd9d9"
-	user.overlay_fullscreen("optic", /atom/movable/screen/fullscreen/flash/noise/optic)
-	ADD_TRAIT(user, TRAIT_HUD_SIGHT, src)
-
-/obj/item/device/helmet_visor/upp_heavy/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
-	. = ..()
-
-	user.client.color = initial(user.client.color)
-	user.clear_fullscreen("optic", 0.5 SECONDS)
-	REMOVE_TRAIT(user, TRAIT_HUD_SIGHT, src)

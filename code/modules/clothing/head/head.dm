@@ -500,6 +500,15 @@
 	icon_state = "corrections"
 	item_state = "corrections"
 
+/obj/item/clothing/head/cmcap/seegsoncap
+	name = "Seegson Cap"
+	desc = "A Seegson worker's cap looks old and worn. Issued to workers at stations and some colonies, it looks stylish, but doesn't protect the head while working. The tag on the back reads: Seegson in pursuit of affordable quality. Some workers say the company's androids Working Joe themselves used to wear this cap, but the company abandoned it due to both the idea and the extra expense."
+	icon_state = "seegson_cap"
+	icon = 'icons/obj/items/clothing/hats.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/head_0.dmi'
+)
+
 //============================//BERETS\\=================================\\
 //=======================================================================\\
 //Berets DO NOT have armor, so they have their own category. PMC caps are helmets, so they're in helmets.dm.
@@ -1027,6 +1036,15 @@
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	item_icons = list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
+	)
+
+/obj/item/clothing/head/cmcap/royal_marine/cap
+	name = "royal marine cap"
+	desc = "A black cap for the Royal Commandos of the Three World Empire, featuring state insignia. It exudes genuine British patriotism toward the Empire and the Emperor."
+	icon_state = "twe_cap"
+	icon = 'icons/obj/items/clothing/hats/hats_by_faction/TWE.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/TWE.dmi'
 	)
 
 /obj/item/clothing/head/beanie/royal_marine/turban

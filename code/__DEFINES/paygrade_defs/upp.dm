@@ -10,20 +10,17 @@
 /// UE2, Senior Private
 #define PAY_SHORT_UE2 "UE2"
 
-/// UE3, Corporal
+/// UE3, Junior Sergeant
 #define PAY_SHORT_UE3 "UE3"
 
-/// UE4, Junior Sergeant
+/// UE4, Sergeant
 #define PAY_SHORT_UE4 "UE4"
 
-/// UE5, Sergeant
+/// UE5, Senior Sergeant
 #define PAY_SHORT_UE5 "UE5"
 
-/// UE6, Senior Sergeant
+/// UE6, Sergeant Major
 #define PAY_SHORT_UE6 "UE6"
-
-/// UE7, Sergeant Major
-#define PAY_SHORT_UE7 "UE7"
 
 /// UC1, Junior Kommando
 #define PAY_SHORT_UK1 "UK1"

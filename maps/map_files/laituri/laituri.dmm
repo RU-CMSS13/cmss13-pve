@@ -1955,7 +1955,7 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/prep_hallway)
 "mq" = (
-/obj/structure/machinery/cm_vending/sorted/marine_food/upp,
+/obj/structure/machinery/cm_vending/sorted/marine_food/upp/recon,
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
 	pixel_y = 10;
@@ -5396,7 +5396,7 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/canteen)
 "tN" = (
-/obj/structure/machinery/cm_vending/sorted/marine_food/upp,
+/obj/structure/machinery/cm_vending/sorted/marine_food/upp/recon,
 /obj/structure/barricade/handrail/strata{
 	dir = 8
 	},
@@ -5408,7 +5408,7 @@
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/canteen)
 "tP" = (
-/obj/structure/machinery/cm_vending/sorted/marine_food/upp,
+/obj/structure/machinery/cm_vending/sorted/marine_food/upp/recon,
 /obj/structure/machinery/light/small{
 	light_power = 0.8;
 	light_range = 4;

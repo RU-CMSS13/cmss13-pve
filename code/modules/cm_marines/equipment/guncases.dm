@@ -1381,3 +1381,29 @@
 	new /obj/item/storage/box/packet/high_explosive/upp/impact(src)
 	new /obj/item/storage/box/packet/high_explosive/upp/ap(src)
 	new /obj/item/storage/box/packet/high_explosive/upp/incend(src)
+
+/obj/item/storage/box/guncase/heavy/es7
+	name = "\improper ES-7 shockgun case"
+	desc = "A heavy case for storing an ES-7 Supernova Electrostatic Shockgun, an archaic electrostatic 20ga shotgun design based on old Earth designs."
+	icon_state = "wyes7case"
+	storage_slots = 3
+	can_hold = list(/obj/item/weapon/gun/shotgun/es7, /obj/item/ammo_magazine/shotgun/beanbag/es7, /obj/item/ammo_magazine/shotgun/beanbag/es7/slug)
+
+/obj/item/storage/box/guncase/heavy/es7/fill_preset_inventory()
+	new /obj/item/weapon/gun/shotgun/es7(src)
+	new /obj/item/ammo_magazine/shotgun/beanbag/es7(src)
+	new /obj/item/ammo_magazine/shotgun/beanbag/es7/slug(src)
+
+/obj/item/storage/box/guncase/heavy/es7/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays += image(icon, "wyes7case_lid_open")
+	else
+		overlays += image(icon, "wyes7case_lid")
+		return
+	if(locate(/obj/item/weapon/gun/shotgun/es7) in contents)
+		overlays += image(icon, "+es7")
+	if(locate(/obj/item/ammo_magazine/shotgun/beanbag/es7) in contents)
+		overlays += image(icon, "+es7shock")
+	if(locate(/obj/item/ammo_magazine/shotgun/beanbag/es7/slug) in contents)
+		overlays += image(icon, "+es7slug")
