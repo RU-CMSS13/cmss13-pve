@@ -81,6 +81,7 @@
 #include "duplicate_sprite_accessories.dm"
 #include "emote_panels.dm"
 #include "missing_icons.dm"
+#include "nightmare_inserts.dm"
 #include "resist.dm"
 #include "spawn_humans.dm"
 #include "spritesheets.dm"
