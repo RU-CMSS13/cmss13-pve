@@ -303,6 +303,9 @@
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "flamer_fuel"
 
+/obj/item/ammo_magazine/flamer_tank/survivor/update_icon()
+	overlays.Cut() // No reagent stripe sprite for the improvised tank
+
 /obj/item/ammo_magazine/flamer_tank/survivor/empty
 	flamer_chem = null
 

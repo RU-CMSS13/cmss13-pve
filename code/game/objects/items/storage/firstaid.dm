@@ -1427,3 +1427,8 @@
 	icon_state = "oxycodone_packet"
 	desc = "This packet contains oxycodone pills. A highly effective painkiller. Once you take them out, they don't go back in. Don't take more than 1 pill in a short period."
 	pill_type_to_fill = /obj/item/reagent_container/pill/oxycodone
+
+/obj/item/storage/pill_bottle/packet/kelo_oxy_mix
+	name = "Kelotane/Oxycodone mix pill packet"
+	desc = "This packet contains a Kelotane-Oxycodone (2:1) mix of pills. Heals burn damage, while also providing effective pain relief. Once you take them out, they don't go back in. Don't take more than 2 pills in a short period."
+	pill_type_to_fill = /obj/item/reagent_container/pill/kelo_oxy_mix

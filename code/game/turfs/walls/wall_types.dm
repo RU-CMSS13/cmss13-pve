@@ -1549,3 +1549,6 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	desc = "A thick and chunky metal wall. The surface is barren and imposing."
 	hull = 1
 
+/turf/closed/wall/shiva/prefabricated/dark
+	icon_state = "shiva_fab_dark"
+	walltype = WALL_SHIVA_FAB_DARK

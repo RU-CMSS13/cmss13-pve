@@ -811,3 +811,13 @@
 /obj/item/weapon/twohanded/folded_metal_chair/mob_launch_collision(mob/living/L)
 	playsound(get_turf(src), 'sound/weapons/metal_chair_slam.ogg', 50, 1)
 	..()
+
+/obj/structure/bed/chair/comfy/blue_dark
+	icon_state = "comfychair_bdark"
+
+/obj/structure/bed/chair/comfy/stool
+	name = "comfy stool"
+	desc = "Uh-hoh, the bar is heating up."
+	icon_state = "stool_diner"
+	anchored = TRUE
+	can_buckle = FALSE

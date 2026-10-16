@@ -2933,3 +2933,45 @@
 	desc = "A silver framed picture of someone wearing a corporate issue deepsea powered hardsuit, the base of the frame has some words inscribed, 'site director'."
 	icon = 'icons/obj/structures/props/wall_decorations/decals.dmi'
 	icon_state = "pictureframe"
+
+/obj/structure/blackgoocontainer/submerged
+	icon_state = "blackgoocontainer4"
+	desc = "A strange alien container. It exudes an aura of otherworldly mystery. It's submerged partially in the ground."
+	icon = 'icons/obj/items/black_goo_stuff.dmi'
+	density = FALSE
+
+/obj/structure/machinery/hybrisa/coffee_machine/alt
+	icon_state = "coffeealt"
+	vends = "coffeealt"
+	base_state = "coffeealt"
+
+/obj/structure/cargo_container/hybrisa/containersextended/colorable_big_left
+	name = "reinforced cargo container"
+	desc = "A small reinforced industrial shipping container."
+	icon_state = "colorable_crate_l"
+
+/obj/structure/cargo_container/hybrisa/containersextended/colorable_big_right
+	name = "reinforced cargo container"
+	desc = "A small reinforced industrial shipping container."
+	icon_state = "colorable_crate_r"
+
+/obj/structure/cargo_container/hybrisa/containersextended/colorable_small
+	name = "reinforced cargo container"
+	desc = "A small reinforced industrial shipping container."
+	icon_state = "colorable_crate_small"
+
+/obj/structure/prop/hybrisa/misc/prop_deco_edging
+	name = "decorative edging"
+	desc = "Decorative edging for bordering stuff, very fancy."
+	icon = 'icons/obj/structures/props/hybrisa/platforms.dmi'
+	icon_state = "stone_edging"
+	density = FALSE
+	anchored = TRUE
+	unacidable = TRUE
+	layer = TURF_LAYER
+	plane = FLOOR_PLANE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+
+/obj/structure/prop/hybrisa/misc/prop_deco_edging/corner
+	icon = 'icons/obj/structures/props/hybrisa/platforms.dmi'
+	icon_state = "stone_edging_deco"

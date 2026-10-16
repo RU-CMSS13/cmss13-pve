@@ -358,3 +358,19 @@
 	icon_state = "coffeecuppajoelidstack"
 	w_class = SIZE_TINY
 	throwforce = 1
+
+/obj/item/trash/burger/alt
+	name = "Burger wrapper"
+	icon_state = "unbranded_burger"
+	desc = "A greasy plastic film that once held a Cheeseburger."
+
+/obj/item/trash/buritto/alt
+	name = "Burrito wrapper"
+	icon_state = "unbranded_burrito"
+	desc = "A foul-smelling plastic film that once held a microwave burrito."
+
+/obj/item/trash/hotdog/alt
+	name = "Hotdog wrapper"
+	icon_state = "unbranded_hotdog"
+	desc = "A musty plastic film that once held a hotdog."
+

@@ -247,6 +247,11 @@ export const RADIO_CHANNELS = [
     color: '#d65d95',
   },
   {
+    name: 'Lasalle Bionational',
+    freq: 1401,
+    color: '#47a0bc',
+  },
+  {
     name: 'Common',
     freq: 1461,
     color: '#1ecc43',
