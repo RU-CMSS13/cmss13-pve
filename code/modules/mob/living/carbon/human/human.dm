@@ -1873,6 +1873,33 @@
 			platoon = "Gamma Troop"
 	play_screen_text("<u>[SSmapping.configs[SHIP_MAP].map_name]<br></u>" + "[platoon]<br><br>" + human_manifest, alert_type)
 
+/mob/living/carbon/human/verb/important_action(msg as text)
+	set category = "IC"
+	set name = "Important Action"
+
+	do_important_action(msg)
+
+/mob/living/carbon/human/proc/do_important_action(msg)
+	msg = strip_html(msg)
+	if(!msg) return
+	usr.manual_emote("<u>[msg]</u>")
+	if(usr.client)
+		if(usr.client.prefs.muted & MUTE_PRAY)
+			to_chat(usr, SPAN_DANGER("You cannot use important action (muted)."))
+			return
+		if(src.client.handle_spam_prevention(msg,MUTE_PRAY))
+			return
+
+	var/prefix = SPAN_PURPLE("IMPORTANT ACTION: ")
+
+	msg = SPAN_BIGNOTICE("[prefix][key_name(src, 1)] [ADMIN_SM(src)] [ADMIN_JMP_USER(src)] [ADMIN_PP(src)]: [msg]")
+	log_admin(msg)
+	for(var/client/admin in GLOB.admins)
+		if(AHOLD_IS_MOD(admin.admin_holder))
+			to_chat(admin, SPAN_STAFF_IC(msg))
+			if(admin.prefs.toggles_sound & SOUND_ARES_MESSAGE)
+				admin << 'sound/machines/terminal_alert.ogg'
+
 /mob/living/carbon/human/point_to_atom(atom/A, turf/T)
 	if(isitem(A))
 		var/obj/item/item = A
@@ -1897,7 +1924,32 @@
 
 // RU PVE ADDITION
 
+#define HUMAN_AI_ACCENT_GLYPH "*"
+
 /mob/living/carbon/human/get_accent_icon()
-	if(accent_prefix && accent_prefix != "")
-		return "[icon2html('icons/accent_tags.dmi', GLOB.clients, accent_prefix)] "
-	return ""
+	var/datum/origin/speaker_origin = GLOB.origins[origin]
+	if(!speaker_origin)
+		return ""
+	var/glyph = HUMAN_AI_ACCENT_GLYPH
+	if(client || !GetComponent(/datum/component/human_ai))
+		if(!accent_glyph)
+			accent_glyph = pick(GLOB.accent_glyphs)
+		glyph = accent_glyph
+	return "<b style='color:[speaker_origin.tag_color]'>[html_encode(glyph)]</b> "
+
+#undef HUMAN_AI_ACCENT_GLYPH
+
+/mob/living/carbon/human/verb/change_accent_glyph()
+	set name = "Change Glyph"
+	set desc = "Changes the symbol shown before your name in chat."
+	set category = "IC"
+
+	var/new_glyph = tgui_input_text(src, "Enter one symbol: [jointext(GLOB.accent_glyphs, " ")]", "Change Glyph", accent_glyph, max_length = 1, encode = FALSE)
+	if(!new_glyph)
+		return
+	new_glyph = uppertext(new_glyph)
+	if(!(new_glyph in GLOB.accent_glyphs))
+		to_chat(src, SPAN_WARNING("You can't use \"[html_encode(new_glyph)]\" as a glyph."))
+		return
+	accent_glyph = new_glyph
+	to_chat(src, SPAN_NOTICE("Your glyph is now \"[html_encode(accent_glyph)]\"."))

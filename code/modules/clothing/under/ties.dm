@@ -510,6 +510,27 @@
 	desc = "A fire-resistant shoulder patch. Was worn by workers and then later prisoners on the Fiorina 'Fury' 161 facility, a rare relic, after the facility went dark in 2179."
 	icon_state = "fury161patch"
 
+//Seegson patches
+/obj/item/clothing/accessory/patch/seegson_patch
+	name = "Seegson patch"
+	desc = "The patch issued by a Seegson conglomerate employee is old and worn, but still holds its shape despite being made of cheap materials."
+	desc_lore = "Does anyone still remember a company called Seegson? A second-rate company producing cheap knockoffs, as the colonial newspaper began calling it after 2135."
+	icon_state = "seegsonpatch"
+
+//Lasalle patches
+/obj/item/clothing/accessory/patch/lasalle_patch_alt
+	name = "Lasalle Bionational patch"
+	desc = "The patch issued to Lasalle Bionational employees is fire-resistant and acid-resistant. It smells foul, reeking of the company's lab."
+	desc_lore = "Lasalle is famous for its scientists, who, after leaving Weyland Yutani, went on to start their own company and become involved in agriculture and bioweapons development. But it seems you were just a technical worker or a janitor, since all that remains of your work is a patch."
+	icon_state = "lasallepatch"
+
+//Hyperdyne patches
+/obj/item/clothing/accessory/patch/hyperdyne_patch
+	name = "Hyperdyne Systems patch"
+	desc = "A patch worn by employees of Hyperdyne Systems, once a great developer of synthetics and a creator of some fine weapons and space exploration."
+	desc_lore = "It seems you previously worked for this corporation, whether it was part of Weyland Yutani at the time or whether it had already bought out its assets. The important thing is that you remember your time there, but it's more likely you were just a laborer working in a manufacturing site, now company entirely on the UPP market."
+	icon_state = "hyperdynepatch"
+
 //Flag patches
 /obj/item/clothing/accessory/patch/ua
 	name = "UA flag patch"
@@ -517,7 +538,6 @@
 	icon_state = "uaflagpatch"
 
 /obj/item/clothing/accessory/patch/brazil
-
 	name = "Brazilian flag patch"
 	desc = "A fire-resistant shoulder patch, with the flag of Brazil, a large South American nation of Earth."
 	icon_state = "brazilpatch"
@@ -890,6 +910,17 @@
 	new /obj/item/tool/wirecutters(src)
 	new /obj/item/device/multitool(src)
 
+/obj/item/clothing/accessory/storage/tool_webbing/small/upp
+	hold = /obj/item/storage/internal/accessory/tool_webbing/small/upp
+
+/obj/item/storage/internal/accessory/tool_webbing/small/upp/fill_preset_inventory()
+	new /obj/item/tool/screwdriver/tactical(src)
+	new /obj/item/tool/wrench(src)
+	new /obj/item/tool/weldingtool(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/wirecutters/tactical(src)
+	new /obj/item/device/multitool/upp(src)
+
 /obj/item/clothing/accessory/storage/tool_webbing/equipped
 	hold = /obj/item/storage/internal/accessory/tool_webbing/equipped
 
@@ -1129,7 +1160,7 @@
 	w_class = SIZE_LARGE
 	max_w_class = SIZE_SMALL
 	storage_flags = NONE
-	storage_slots = 5
+	storage_slots = 4
 
 /obj/item/clothing/accessory/storage/holster
 	name = "shoulder holster"
@@ -1139,13 +1170,12 @@
 	hold = /obj/item/storage/internal/accessory/holster
 
 /obj/item/storage/internal/accessory/holster
-	storage_slots = 5
 	w_class = SIZE_LARGE
 	max_w_class = SIZE_MEDIUM
 	var/obj/item/weapon/gun/current_gun
 	var/sheatheSound = 'sound/weapons/gun_pistol_sheathe.ogg'
 	var/drawSound = 'sound/weapons/gun_pistol_draw.ogg'
-	storage_slots = 4
+	storage_slots = 3
 	storage_flags = STORAGE_ALLOW_QUICKDRAW|STORAGE_FLAGS_POUCH
 	can_hold = list(
 
@@ -1797,7 +1827,6 @@
 	hold = /obj/item/storage/internal/accessory/black_vest/m3shotgun
 
 /obj/item/storage/internal/accessory/black_vest/m3shotgun
-	storage_slots = 10
 	can_hold = list(
 		/obj/item/ammo_magazine/handful,
 	)
@@ -1807,7 +1836,7 @@
 	name = "\improper M3 Pattern Small Pouch Webbing"
 	desc = "A set of M3 pattern webbing fully outfitted with pouches and pockets to carry a whole array of small items."
 	icon_state = "m3webbingsmall"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/plus
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
 	slot = ACCESSORY_SLOT_M3UTILITY
 
 //Pre-load for MARSOC props
@@ -1864,7 +1893,7 @@
 	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade
 
 /obj/item/storage/internal/accessory/black_vest/m3grenade
-	storage_slots = 10
+	storage_slots = 7
 	can_hold = list(
 		/obj/item/explosive/grenade/high_explosive,
 		/obj/item/explosive/grenade/high_explosive/super,
@@ -1918,7 +1947,7 @@
 	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade/recon
 
 /obj/item/storage/internal/accessory/black_vest/m3grenade/recon
-	storage_slots = 15
+	storage_slots = 10
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon/shotgun
 	name = "\improper M3-R Pattern Shell Webbing"
@@ -1927,7 +1956,7 @@
 	hold = /obj/item/storage/internal/accessory/black_vest/m3shotgun/recon
 
 /obj/item/storage/internal/accessory/black_vest/m3shotgun/recon
-	storage_slots = 10
+	storage_slots = 7
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon/medic
 	name = "\improper M3-R Pattern Corpsman Webbing"
@@ -1957,6 +1986,11 @@
 /obj/item/storage/internal/accessory/black_vest/m3generic/recon
 	storage_slots = 7
 	can_hold = list(
+		/obj/item/device/healthanalyzer,
+		/obj/item/reagent_container/dropper,
+		/obj/item/reagent_container/pill,
+		/obj/item/reagent_container/glass/bottle,
+		/obj/item/reagent_container/syringe,
 		/obj/item/storage/pill_bottle,
 		/obj/item/stack/medical,
 		/obj/item/reagent_container/hypospray,
@@ -1965,11 +1999,10 @@
 		/obj/item/tool/surgery/surgical_line,
 		/obj/item/tool/surgery/synthgraft,
 		/obj/item/reagent_container/blood,
+		/obj/item/roller,
 		/obj/item/bodybag,
+		/obj/item/tool/surgery/FixOVein,
 	)
-
-/obj/item/storage/internal/accessory/black_vest/m3generic/plus // RU-CM PVE edit
-	storage_slots = 6
 
 /obj/item/clothing/accessory/storage/webbing/m56
 	name = "\improper Clip-on Pouch"
@@ -2062,7 +2095,7 @@
 	name = "\improper Type 78 Pattern Small Pouch Webbing"
 	desc = "A set of UPP webbing fully outfitted with pouches and pockets to carry a while array of small items."
 	icon_state = "upp_webbing_small"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/plus
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
 	flags_atom = NO_SNOW_TYPE
 	slot = ACCESSORY_SLOT_M3UTILITY
 
@@ -2070,22 +2103,13 @@
 	name = "\improper Type 78 Pattern Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to UPP armor. This one is the slimmed down model designed for general purpose storage."
 	icon_state = "upp_webbing_large"
-	hold = /obj/item/storage/internal/accessory/webbing/m3generic/plus
+	hold = /obj/item/storage/internal/accessory/webbing/m3generic
 	flags_atom = NO_SNOW_TYPE
 	slot = ACCESSORY_SLOT_M3UTILITY
 
-/obj/item/storage/internal/accessory/webbing/m3generic/plus
-	bypass_w_limit = list(
-		/obj/item/ammo_magazine/rifle,
-		/obj/item/ammo_magazine/smg,
-		/obj/item/ammo_magazine/sniper,
-		/obj/item/ammo_magazine/plasma,
-		/obj/item/ammo_magazine/flamer_tank, // RU-CM PVE edit
-	)
-
 /obj/item/clothing/accessory/storage/webbing/m3/m40/upp
 	name = "\improper Type 82 Pattern Grenade Webbing"
-	desc = "A set of UPP webbing with small pouches that can carry up to 10 grenades, hand or impact."
+	desc = "A half-apron set of UPP webbing with multiple pockets for grenades, hand or impact."
 	icon_state = "upp_webbing_grenade"
 	flags_atom = NO_SNOW_TYPE
 	slot = ACCESSORY_SLOT_M3UTILITY
@@ -2103,10 +2127,9 @@
 	new /obj/item/ammo_magazine/rifle/type71(src)
 
 /obj/item/clothing/accessory/storage/webbing/m3/uppsmall/upp_juggernaut
-	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/plus/upp_juggernaut
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/upp_juggernaut
 
-/obj/item/storage/internal/accessory/black_vest/m3generic/plus/upp_juggernaut/fill_preset_inventory()
-	new /obj/item/smartgun_battery/upp(src)
+/obj/item/storage/internal/accessory/black_vest/m3generic/upp_juggernaut/fill_preset_inventory()
 	new /obj/item/smartgun_battery/upp(src)
 	new /obj/item/ammo_magazine/pistol/t73(src)
 	new /obj/item/ammo_magazine/pistol/t73(src)
@@ -2114,13 +2137,11 @@
 	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
 
 /obj/item/clothing/accessory/storage/webbing/m3/uppsmall/upp_breacher
-	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/plus/upp_breacher
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/upp_breacher
 
-/obj/item/storage/internal/accessory/black_vest/m3generic/plus/upp_breacher/fill_preset_inventory()
+/obj/item/storage/internal/accessory/black_vest/m3generic/upp_breacher/fill_preset_inventory()
 	new /obj/item/explosive/plastic/breaching_charge(src)
 	new /obj/item/explosive/plastic/breaching_charge(src)
-	new /obj/item/explosive/plastic/breaching_charge(src)
-	new /obj/item/explosive/plastic(src)
 	new /obj/item/explosive/plastic(src)
 	new /obj/item/explosive/plastic(src)
 
@@ -2247,7 +2268,7 @@
 	hold = /obj/item/storage/internal/accessory/webbing/m3mag/pmc
 
 /obj/item/storage/internal/accessory/webbing/m3mag/pmc
-	storage_slots = 5
+	storage_slots = 4
 
 //Partial Pre-load For Props
 //===
@@ -2255,7 +2276,6 @@
 	hold = /obj/item/storage/internal/accessory/webbing/m3mag/pmc/one
 
 /obj/item/storage/internal/accessory/webbing/m3mag/pmc/one/fill_preset_inventory()
-	new /obj/item/ammo_magazine/smg/m39/ap(src)
 	new /obj/item/ammo_magazine/smg/m39/ap(src)
 	new /obj/item/ammo_magazine/smg/m39/ap(src)
 	new /obj/item/ammo_magazine/smg/m39/ap(src)
@@ -2269,13 +2289,11 @@
 	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
 	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
 	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
-	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
 
 /obj/item/clothing/accessory/storage/webbing/m3/mag/pmc/presetthree
 	hold = /obj/item/storage/internal/accessory/webbing/m3mag/pmc/three
 
 /obj/item/storage/internal/accessory/webbing/m3mag/pmc/three/fill_preset_inventory()
-	new /obj/item/ammo_magazine/sniper/elite/basic(src)
 	new /obj/item/ammo_magazine/sniper/elite/basic(src)
 	new /obj/item/ammo_magazine/sniper/elite/basic(src)
 	new /obj/item/ammo_magazine/sniper/elite/basic(src)
@@ -2289,13 +2307,11 @@
 	new /obj/item/ammo_magazine/rifle/nsg23(src)
 	new /obj/item/ammo_magazine/rifle/nsg23(src)
 	new /obj/item/ammo_magazine/rifle/nsg23(src)
-	new /obj/item/ammo_magazine/rifle/nsg23(src)
 
 /obj/item/clothing/accessory/storage/webbing/m3/mag/pmc/presetfive
 	hold = /obj/item/storage/internal/accessory/webbing/m3mag/pmc/five
 
 /obj/item/storage/internal/accessory/webbing/m3mag/pmc/five/fill_preset_inventory()
-	new /obj/item/ammo_magazine/rifle/extended(src)
 	new /obj/item/ammo_magazine/rifle/extended(src)
 	new /obj/item/ammo_magazine/rifle/extended(src)
 	new /obj/item/ammo_magazine/rifle/extended(src)
@@ -2309,7 +2325,6 @@
 	new /obj/item/ammo_magazine/rifle/ap(src)
 	new /obj/item/ammo_magazine/rifle/ap(src)
 	new /obj/item/ammo_magazine/rifle/ap(src)
-	new /obj/item/ammo_magazine/rifle/ap(src)
 
 /obj/item/clothing/accessory/storage/webbing/m3/mag/pmc/presetseven
 	hold = /obj/item/storage/internal/accessory/webbing/m3mag/pmc/seven
@@ -2319,13 +2334,11 @@
 	new /obj/item/ammo_magazine/rifle/heap(src)
 	new /obj/item/ammo_magazine/rifle/heap(src)
 	new /obj/item/ammo_magazine/rifle/heap(src)
-	new /obj/item/ammo_magazine/rifle/heap(src)
 
 /obj/item/clothing/accessory/storage/webbing/m3/mag/pmc/preseteight
 	hold = /obj/item/storage/internal/accessory/webbing/m3mag/pmc/eight
 
 /obj/item/storage/internal/accessory/webbing/m3mag/pmc/eight/fill_preset_inventory()
-	new /obj/item/ammo_magazine/smg/m39(src)
 	new /obj/item/ammo_magazine/smg/m39(src)
 	new /obj/item/ammo_magazine/smg/m39(src)
 	new /obj/item/ammo_magazine/smg/m39(src)
@@ -2360,7 +2373,3 @@
 	name = "\improper 76 Pattern Grenade Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to Weyland Yutani PMC armor. This webbing is fitted with loops for storing M40-hull grenades."
 	icon_state = "wy_webbing_m40"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade/pmc
-
-/obj/item/storage/internal/accessory/black_vest/m3grenade/pmc
-	storage_slots = 15

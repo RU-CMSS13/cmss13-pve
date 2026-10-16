@@ -29,8 +29,8 @@
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 
 	var/notification_sound = TRUE // Whether the bracer pings when a message comes or not
-	var/charge = 2000
-	var/charge_max = 2000
+	var/charge = 1500
+	var/charge_max = 1500
 	/// The amount charged per process
 	var/charge_rate = 30
 	/// Cooldown on draining power from APC
@@ -254,8 +254,8 @@
 	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 
-	charge = 5000
-	charge_max = 5000
+	charge = 3000
+	charge_max = 3000
 
 	cloak_alpha = 10
 

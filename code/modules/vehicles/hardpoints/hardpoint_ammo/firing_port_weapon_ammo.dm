@@ -6,7 +6,7 @@
 	icon_state = "cupola_1"
 	w_class = SIZE_LARGE
 	default_ammo = /datum/ammo/bullet/rifle/heavy/tracer
-	max_rounds = 75
+	max_rounds = 700
 	gun_type = /obj/item/hardpoint/special/firing_port_weapon
 
 /obj/item/ammo_magazine/hardpoint/firing_port_weapon/update_icon()
