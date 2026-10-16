@@ -18,6 +18,12 @@
 
 	var/datum/xeno_ai_movement/ai_movement_handler
 
+	/// Minimum time between two abilities used by the AI, so that they are not chained into instant combos. 0 to disable
+	var/ai_ability_delay = 0
+
+	/// Started whenever an ability goes on cooldown, reference ai_ability_delay for the duration
+	COOLDOWN_DECLARE(ai_ability_cooldown)
+
 	/// The time interval before this xeno should forcefully get a new target
 	var/forced_retarget_time = (10 SECONDS)
 
@@ -94,6 +100,9 @@
 		return TRUE
 
 	for(var/x in registered_ai_abilities)
+		if(!COOLDOWN_FINISHED(src, ai_ability_cooldown))
+			break
+
 		var/datum/action/xeno_action/XA = x
 		if(QDELETED(XA) || XA.owner != src)
 			unregister_ai_action(XA)

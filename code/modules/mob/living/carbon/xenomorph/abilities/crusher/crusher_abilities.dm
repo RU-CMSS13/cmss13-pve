@@ -69,6 +69,10 @@
 	xeno_cooldown = 26 SECONDS
 	var/shield_amount = 200
 
+/datum/action/xeno_action/onclick/crusher_shield/pathogen
+	button_icon_state = "template_pathogen"
+	icon_file = 'icons/mob/hud/actions_pathogen.dmi'
+
 /datum/action/xeno_action/activable/fling/charger
 	name = "Headbutt"
 	action_icon_state = "ram"
