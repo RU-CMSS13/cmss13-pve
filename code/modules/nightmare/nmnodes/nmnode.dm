@@ -69,11 +69,11 @@
 
 /// Adds one insert to the catalogue. Its id matches the landmark and path of the /datum/nmtask/mapload it would schedule
 /datum/nmnode/proc/add_catalogue_insert(datum/nmcontext/context, list/inserts, list/notes, group, filepath, landmark, keep)
-	var/id = "[landmark]|[filepath]"
-	if(inserts[id])
+	var/insert_id = NIGHTMARE_INSERT_ID(landmark, filepath)
+	if(inserts[insert_id])
 		return
-	inserts[id] = list(
-		"id" = id,
+	inserts[insert_id] = list(
+		"id" = insert_id,
 		"group" = group,
 		"landmark" = landmark,
 		"path" = filepath,

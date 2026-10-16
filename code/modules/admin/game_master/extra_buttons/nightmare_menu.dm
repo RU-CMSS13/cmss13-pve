@@ -36,6 +36,7 @@ GLOBAL_DATUM_INIT(nightmare_menu, /datum/nightmare_menu, new)
 	// Nightmare only gets a start_time once it runs, so DONE without one means an admin skipped it
 	data["disabled"] = (SSnightmare.stat == NIGHTMARE_STATUS_DONE && !SSnightmare.start_time)
 	data["editable"] = can_edit()
+	data["ran"] = !!(SSnightmare.stat == NIGHTMARE_STATUS_DONE && SSnightmare.start_time)
 
 	var/list/contexts = list()
 	for(var/context_name in menu_contexts)
@@ -56,6 +57,7 @@ GLOBAL_DATUM_INIT(nightmare_menu, /datum/nightmare_menu, new)
 			inserts += list(insert + list(
 				"override" = context.insert_overrides[id],
 				"landmark_found" = !!GLOB.nightmare_landmarks[insert["landmark"]],
+				"loaded" = !!context.loaded_inserts[id],
 			))
 		contexts += list(list(
 			"id" = context_name,
@@ -119,6 +121,14 @@ GLOBAL_DATUM_INIT(nightmare_menu, /datum/nightmare_menu, new)
 				return
 			switch(params["override"])
 				if("force")
+					// Replacing inserts delete the landmark, so only the first forced one at a landmark would load
+					if(!insert["keep"])
+						for(var/other_id in context.insert_overrides)
+							var/list/other = context.inserts[other_id]
+							if(other_id == id || !context.insert_overrides[other_id] || other["keep"] || other["landmark"] != insert["landmark"])
+								continue
+							context.insert_overrides -= other_id
+							to_chat(user, SPAN_NOTICE("Nightmare insert '[other["file"]]' set back to auto, only one replacing insert can be forced at '[insert["landmark"]]'."))
 					context.insert_overrides[id] = TRUE
 				if("block")
 					context.insert_overrides[id] = FALSE

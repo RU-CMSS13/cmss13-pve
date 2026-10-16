@@ -10,6 +10,8 @@
 	var/list/inserts
 	/// Admin overrides of inserts, as list(insert id = TRUE to force it, FALSE to block it)
 	var/list/insert_overrides = list()
+	/// Ids of the inserts that were loaded, as list(insert id = TRUE)
+	var/list/loaded_inserts = list()
 	/// Config values used internally relevant to context
 	var/list/config = list()
 	/// Scheduler task type
@@ -25,6 +27,7 @@
 	directory = null
 	inserts = null
 	insert_overrides = null
+	loaded_inserts = null
 	return ..()
 
 /datum/nmcontext/New(name)
@@ -59,6 +62,9 @@
 
 /datum/nmcontext/proc/run_tasks()
 	. = scheduler.invoke_sync()
+	for(var/datum/nmtask/mapload/task in scheduler.donetasks)
+		if(task.loaded)
+			loaded_inserts[NIGHTMARE_INSERT_ID(task.landmark, task.filepath)] = TRUE
 
 /// Removes the scheduled inserts admins blocked and schedules the ones they forced. Called once the base nodes are resolved
 /datum/nmcontext/proc/apply_insert_overrides()
@@ -66,7 +72,7 @@
 		return
 	var/list/scheduled = list()
 	for(var/datum/nmtask/mapload/task in scheduler.tasks)
-		var/id = "[task.landmark]|[task.filepath]"
+		var/id = NIGHTMARE_INSERT_ID(task.landmark, task.filepath)
 		if(insert_overrides[id] == FALSE)
 			scheduler.remove_task(task)
 			log_debug("Nightmare: Admin blocked insert [id]")

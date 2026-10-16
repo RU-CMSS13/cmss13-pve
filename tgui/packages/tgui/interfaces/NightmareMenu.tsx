@@ -31,6 +31,7 @@ type Insert = {
   notes: string;
   override: 0 | 1 | null;
   landmark_found: boolean;
+  loaded: boolean;
 };
 
 type NightmareContext = {
@@ -44,6 +45,7 @@ type Data = {
   status: number;
   disabled: boolean;
   editable: boolean;
+  ran: boolean;
   contexts: NightmareContext[];
 };
 
@@ -173,7 +175,7 @@ const InsertsSection = (props: {
   readonly context: NightmareContext;
   readonly editable: boolean;
 }) => {
-  const { act } = useBackend<Data>();
+  const { act, data } = useBackend<Data>();
   const { context, editable } = props;
   const [searchText, setSearchText] = useState('');
 
@@ -193,10 +195,11 @@ const InsertsSection = (props: {
   const overridden = context.inserts.filter(
     (insert) => insert.override !== null,
   ).length;
+  const loaded = context.inserts.filter((insert) => insert.loaded).length;
 
   return (
     <Section
-      title={`Inserts (${context.inserts.length})`}
+      title={`Inserts (${context.inserts.length}${data.ran ? `, ${loaded} loaded` : ''})`}
       buttons={
         <Button
           icon="undo"
@@ -239,14 +242,16 @@ const InsertGroup = (props: {
   readonly inserts: Insert[];
   readonly editable: boolean;
 }) => {
+  const { data } = useBackend<Data>();
   const { contextId, name, inserts, editable } = props;
   const overridden = inserts.filter(
     (insert) => insert.override !== null,
   ).length;
+  const loaded = inserts.filter((insert) => insert.loaded).length;
 
   return (
     <Collapsible
-      title={`${name} (${inserts.length})${overridden ? ` - ${overridden} changed` : ''}`}
+      title={`${name} (${inserts.length})${overridden ? ` - ${overridden} changed` : ''}${data.ran ? ` - ${loaded} loaded` : ''}`}
       color={overridden ? 'purple' : 'default'}
     >
       {inserts.map((insert) => (
@@ -276,7 +281,7 @@ const InsertRow = (props: {
     });
   const lookTooltip = insert.landmark_found
     ? undefined
-    : 'The landmark is not on the map yet, another insert places it.';
+    : 'The landmark is not on the map: another insert places it, or a loaded insert replaced it.';
 
   return (
     <Stack align="center" mb={0.5} ml={1}>
@@ -286,6 +291,11 @@ const InsertRow = (props: {
           {insert.keep && (
             <Box inline color="label" ml={1}>
               (adds on top)
+            </Box>
+          )}
+          {insert.loaded && (
+            <Box inline color="good" ml={1}>
+              Loaded
             </Box>
           )}
         </Box>
@@ -306,7 +316,7 @@ const InsertRow = (props: {
         <Button
           color={insert.override === 1 ? 'good' : 'transparent'}
           disabled={!editable}
-          tooltip="Always loads, replacing whatever rolled for its landmark."
+          tooltip="Always loads, replacing whatever rolled for its landmark. Only one replacing insert can be forced per landmark."
           onClick={() => setOverride('force')}
         >
           Force
