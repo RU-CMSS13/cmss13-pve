@@ -39,6 +39,12 @@
 
 #define WY_ORIGINS list(ORIGIN_WY, ORIGIN_WY_SEC, ORIGIN_WY_PMC)
 
+// LASALLE BIONATIONAL
+
+#define ORIGIN_LB "Lasalle Bionational Corporation"
+#define ORIGIN_LB_SEC "Lasalle Bionational Security Forces"
+#define ORIGIN_LB_MERC "Lasalle Bionational Hazard Intervention Group"
+
 // TWE
 #define ORIGIN_TWE "Three World Empire"
 #define ORIGIN_TWE_BLIGHTY "TWE (Commonwealth & Colonies)"

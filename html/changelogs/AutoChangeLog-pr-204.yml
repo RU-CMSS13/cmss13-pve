@@ -1,0 +1,4 @@
+author: "chaos-creations"
+delete-after: True
+changes:
+  - admin: "command lock for starting round"
