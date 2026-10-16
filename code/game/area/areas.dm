@@ -432,3 +432,6 @@
 	name = "Sky"
 	icon_state = "lv-626"
 	flags_area = AREA_UNWEEDABLE
+
+/area/sky/level4
+	name = "Upper Sky"
