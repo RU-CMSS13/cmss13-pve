@@ -3883,7 +3883,7 @@
 /obj/structure/bed,
 /obj/item/bedsheet/brown{
 	layer = 3.4;
-	color = s;
+	color = "#8B9490";
 	anchored = 1
 	},
 /turf/open/floor/strata/multi_tiles,
@@ -6003,8 +6003,7 @@
 "Fn" = (
 /obj/item/stool{
 	can_buckle = 1;
-	pixel_y = 17;
-	buckling_y = 17
+	pixel_y = 17
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/pilot_workshop)
