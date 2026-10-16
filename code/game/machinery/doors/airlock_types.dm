@@ -430,6 +430,9 @@
 	icon = 'icons/obj/structures/doors/securedoor_glass.dmi'
 	opacity = FALSE
 
+/obj/structure/machinery/door/airlock/almayer/secure/glass/autoname
+	autoname = TRUE
+
 /obj/structure/machinery/door/airlock/almayer/secure/colony
 	req_access = null
 	req_one_access = list(ACCESS_CIVILIAN_PUBLIC)

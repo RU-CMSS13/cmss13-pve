@@ -2100,6 +2100,57 @@
 /turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3
 	icon_state = "ai_floor3"
 
+// White variants
+
+/turf/open/floor/almayer/aicore/white
+	icon_state = "w_ai_floor1"
+
+/turf/open/floor/almayer/aicore/glowing/white
+	icon_state = "w_ai_floor2"
+
+/turf/open/floor/almayer/aicore/no_build/white
+	icon_state = "w_ai_floor1"
+
+/turf/open/floor/almayer/aicore/no_build/white/ai_arrow
+	icon_state = "w_ai_arrow"
+
+/turf/open/floor/almayer/aicore/no_build/white/ai_arrow/east
+	dir = EAST
+
+/turf/open/floor/almayer/aicore/no_build/white/ai_arrow/west
+	dir = WEST
+
+/turf/open/floor/almayer/aicore/no_build/white/ai_silver
+	icon_state = "w_ai_silver"
+
+/turf/open/floor/almayer/aicore/no_build/white/ai_silver/east
+	dir = EAST
+
+/turf/open/floor/almayer/aicore/no_build/white/ai_silver/west
+	dir = WEST
+
+/turf/open/floor/almayer/aicore/no_build/white/ai_silvercorner
+	icon_state = "w_ai_silvercorner"
+
+/turf/open/floor/almayer/aicore/no_build/white/ai_cargo
+	icon_state = "w_ai_cargo"
+
+/turf/open/floor/almayer/aicore/no_build/white/ai_floor2
+	icon_state = "w_ai_floor2"
+
+/turf/open/floor/almayer/aicore/no_build/white/ai_plates
+	icon_state = "w_ai_plates"
+
+/turf/open/floor/almayer/aicore/glowing/no_build/white
+	icon_state = "w_ai_floor2"
+
+/turf/open/floor/almayer/aicore/glowing/no_build/white/ai_floor3
+	icon_state = "w_ai_floor3"
+
+/turf/open/floor/almayer/aicore/glowing/no_build/white/ai_floor3_4range
+	icon_state = "w_ai_floor3"
+	light_range = 4
+
 // RESEARCH STUFF
 /turf/open/floor/almayer/research/containment/entrance
 	icon_state = "containment_entrance"
@@ -5434,3 +5485,8 @@
 
 /turf/open/floor/almayer_hull/outerhull_dir_alt/northwest
 	dir = NORTHWEST
+
+// SSV Pallada
+
+/turf/open/floor/plating/plating_catwalk/strata_green
+	icon = 'icons/turf/floors/strata_floor_green.dmi'

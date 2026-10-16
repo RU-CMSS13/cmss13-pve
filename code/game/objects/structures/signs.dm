@@ -807,3 +807,30 @@
 
 /obj/structure/sign/conam/variant3/damage2
 	icon_state = "conam_logo_3_damage_1"
+
+// USCSS Cyclops
+
+/obj/structure/sign/safety/uscss_cyclops
+	icon = 'icons/obj/structures/props/cyclopes_props.dmi'
+	icon_state = "MissingNo."
+	desc = "placeholder"
+
+/obj/structure/sign/safety/uscss_cyclops/theta
+	name = "Theta Squad"
+	icon_state = "theta"
+
+/obj/structure/sign/safety/uscss_cyclops/omega
+	name = "Omega Squad"
+	icon_state = "omega"
+
+/obj/structure/sign/safety/uscss_cyclops/omega/leader
+	name = "Omega Squad"
+	icon_state = "leader"
+
+/obj/structure/sign/safety/uscss_cyclops/gamma
+	name = "Gamma Squad"
+	icon_state = "gamma"
+
+/obj/structure/sign/safety/uscss_cyclops/sigma
+	name = "Sigma Squad"
+	icon_state = "sigma"

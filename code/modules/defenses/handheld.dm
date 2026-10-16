@@ -174,6 +174,22 @@
 	icon_state = "UPP uac_sentry_handheld"
 	defense_type = /obj/structure/machinery/defenses/sentry/upp
 
+/obj/item/defenses/handheld/sentry/upp/get_upgrade_list()
+	. = list(
+		"Flamer Upgrade" = image(icon = 'icons/obj/structures/machinery/defenses/upp_defenses.dmi', icon_state = "Normal upp_flamer_handheld"),
+		"Mini-Sentry Upgrade" = image(icon = 'icons/obj/structures/machinery/defenses/upp_defenses.dmi', icon_state = "Light upp_sentry_handheld"),
+		"Flag Upgrade" = image(icon = 'icons/obj/structures/machinery/defenses/upp_defenses.dmi', icon_state = "UPP planted_flag_handheld")
+	)
+
+/obj/item/defenses/handheld/sentry/upp/upgrade_string_to_type(upgrade_string)
+	switch(upgrade_string)
+		if("Flamer Upgrade" )
+			return /obj/item/defenses/handheld/sentry/flamer/upp
+		if("Mini-Sentry Upgrade")
+			return /obj/item/defenses/handheld/sentry/upp/light
+		if("Flag Upgrade")
+			return /obj/item/defenses/handheld/planted_flag/upp
+
 /obj/item/defenses/handheld/sentry/upp/light
 	name = "handheld UPP SDS-R8 light sentry"
 	desc = "A compact version of the UPP defense sentry SDS-R7. Designed for deployment in the field."

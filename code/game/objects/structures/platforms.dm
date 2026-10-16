@@ -668,6 +668,10 @@
 /obj/structure/platform/metal/strata/alt/west
 	dir = WEST
 
+/obj/structure/platform_decoration/strata/metal/alt
+	name = "raised metal corner"
+	desc = "A raised level of metal, often used to elevate areas above others. This is the corner."
+	icon_state = "alt_strata_metalplatform_deco"
 
 // Hunter Platforms
 

@@ -767,6 +767,35 @@
 	vendor_theme = VENDOR_THEME_CLF
 	allow_supply_link_restock = FALSE
 
+/obj/structure/machinery/cm_vending/sorted/medical/marinemed/upp
+	name = "\improper MinZdrav Dispenser"
+	desc = "Medical Pharmaceutical dispenser. Provided by Ministry of Health of UPP."
+	icon_state = "marinemed"
+	req_access = list()
+	req_one_access = list()
+	vendor_theme = VENDOR_THEME_UPP
+
+	chem_refill = list(
+		/obj/item/reagent_container/hypospray/autoinjector/skillless,
+		/obj/item/reagent_container/hypospray/autoinjector/skillless/tramadol,
+	)
+
+/obj/structure/machinery/cm_vending/sorted/medical/marinemed/upp/populate_product_list(scale)
+	listed_products = list(
+		list("AUTOINJECTORS", -1, null, null),
+		list("First-Aid Autoinjector", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/skillless, VENDOR_ITEM_REGULAR),
+		list("Pain-Stop Autoinjector", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/skillless/tramadol, VENDOR_ITEM_REGULAR),
+
+		list("DEVICES", -1, null, null),
+		list("Health Diagnostic Equipment", floor(scale * 2), /obj/item/device/healthanalyzer/soul, VENDOR_ITEM_REGULAR),
+		list("FIELD SUPPLIES", -1, null, null),
+		list("Fire Extinguisher (portable)", 5, /obj/item/tool/extinguisher/mini, VENDOR_ITEM_REGULAR),
+		list("Ointment", floor(scale * 8), /obj/item/stack/medical/ointment, VENDOR_ITEM_REGULAR),
+		list("Roll of Gauze", floor(scale * 8), /obj/item/stack/medical/bruise_pack, VENDOR_ITEM_REGULAR),
+		list("Splints", floor(scale * 8), /obj/item/stack/medical/splint, VENDOR_ITEM_REGULAR),
+		list("ShMB/4 Gasmask", 4, /obj/item/clothing/mask/gas/military/upp, VENDOR_ITEM_REGULAR)
+	)
+
 /obj/structure/machinery/cm_vending/sorted/medical/blood
 	name = "\improper MM Blood Dispenser"
 	desc = "The MarineMed brand blood dispensary is the premier, top-of-the-line blood dispenser of 2105! Get yours today!" //Don't update this year, the joke is it's old.
