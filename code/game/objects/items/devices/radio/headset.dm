@@ -783,6 +783,18 @@
 	initial_keys = list(/obj/item/device/encryptionkey/upp/forecon)
 	volume = RADIO_VOLUME_QUIET
 
+/obj/item/device/radio/headset/almayer/marine/solardevils/upp/airborne
+	name = "UPP Paratroop headset"
+	desc = "A special headset used by UPP paratroopers."
+	frequency = UPP_VDV_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/upp/airborne)
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/upp/airborne/medic
+	name = "UPP-MED Paratroop headset"
+	desc = "A special headset used by UPP paratroopers. Channels are as follows: #m - medical."
+	frequency = UPP_VDV_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/upp/airborne/medic)
+
 /obj/item/device/radio/headset/almayer/marine/solardevils/upp/territorial
 	name = "UPP Territorial Guard headset"
 	desc = "A special headset used by the UPP's Territorial Guard. Lacks access to Naval Infantry channels. Also provides local colony comms. To access the colony channel use :o."

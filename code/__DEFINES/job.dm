@@ -25,6 +25,7 @@
 #define SQUAD_LRRP "Snake Eaters"
 #define SQUAD_LRRP_2 "Ocelot Grapplers"
 #define SQUAD_SISSI "Fox Stalkers"
+#define SQUAD_UPP_AIRBORNE "Crimson Comet"
 
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"
@@ -453,6 +454,15 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_UPP_MAY_GENERAL "Major General"
 #define JOB_UPP_LT_GENERAL "Lieutenant General"
 #define JOB_UPP_GENERAL "General"
+
+//-------- UPP Airborne --------//
+
+#define JOB_SO_UPP_AIRBORNE "VDV Platoon Commander"
+#define JOB_SQUAD_LEADER_UPP_AIRBORNE  "VDV Platoon Sergeant"
+#define JOB_SQUAD_TEAM_LEADER_UPP_AIRBORNE "VDV Squad Sergeant"
+#define JOB_SQUAD_MEDIC_UPP_AIRBORNE "VDV Platoon Sanitar"
+#define JOB_SQUAD_SMARTGUN_UPP_AIRBORNE "VDV Machinegunner"
+#define JOB_SQUAD_MARINE_UPP_AIRBORNE "Paratrooper"
 
 //-------- UPP Small --------//
 
