@@ -9,9 +9,7 @@
 	icon_state = "lower_2";
 	layer = 2
 	},
-/turf/open/floor/coagulation{
-	icon_state = "0,5"
-	},
+/turf/open/floor/coagulation/icon0_5,
 /area/desert_dam/building/water_treatment_two/purification)
 "am" = (
 /obj/structure/surface/rack,
@@ -20,10 +18,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/turf/open/floor{
-	dir = 4;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/darkyellow2/east,
 /area/desert_dam/building/substation/northwest)
 "ao" = (
 /obj/structure/platform,
@@ -31,10 +26,7 @@
 /turf/open/gm/river/desert/deep,
 /area/desert_dam/interior/dam_interior/engine_room)
 "aq" = (
-/turf/open/floor{
-	dir = 1;
-	icon_state = "warning"
-	},
+/turf/open/floor/warning/north,
 /area/desert_dam/interior/dam_interior/engine_room)
 "au" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -50,20 +42,14 @@
 /area/kutjevo/exterior/scrubland)
 "av" = (
 /obj/structure/largecrate/random/case,
-/turf/open/floor/prison{
-	icon_state = "sterile_white"
-	},
+/turf/open/floor/prison/sterile_white,
 /area/kutjevo/exterior/scrubland)
 "aw" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached18"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached18,
 /area/kutjevo/exterior/scrubland)
 "ax" = (
-/turf/open/floor/coagulation{
-	icon_state = "0,8"
-	},
+/turf/open/floor/coagulation/icon0_8,
 /area/desert_dam/building/water_treatment_two/purification)
 "ay" = (
 /obj/structure/shuttle/part/dropship1/transparent/engine_right_cap,
@@ -98,19 +84,14 @@
 /area/kutjevo/exterior/scrubland)
 "aN" = (
 /obj/structure/closet/toolcloset,
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe/west,
 /area/desert_dam/building/water_treatment_one/control_room)
 "aO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached13"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached13,
 /area/desert_dam/building/administration/control_room)
 "aQ" = (
 /obj/structure/prop/turbine_extras/left,
@@ -129,9 +110,7 @@
 /area/desert_dam/interior/dam_interior/smes_main)
 "aT" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe,
 /area/desert_dam/building/water_treatment_two/purification)
 "aW" = (
 /obj/structure/machinery/power/terminal{
@@ -140,9 +119,7 @@
 /turf/open/floor/plating,
 /area/desert_dam/interior/dam_interior/smes_main)
 "bc" = (
-/turf/open/floor/coagulation{
-	icon_state = "0,5"
-	},
+/turf/open/floor/coagulation/icon0_5,
 /area/desert_dam/building/water_treatment_one/purification)
 "bd" = (
 /obj/structure/platform/strata/metal{
@@ -155,15 +132,10 @@
 	layer = 3.5
 	},
 /obj/structure/platform/strata/metal,
-/turf/open/floor/strata{
-	icon_state = "floor3"
-	},
+/turf/open/floor/strata/floor3,
 /area/kutjevo/exterior/scrubland)
 "bf" = (
-/obj/structure/machinery/power/apc{
-	pixel_y = -24;
-	start_charge = 0
-	},
+/obj/structure/machinery/power/apc/no_power/south,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/desert_dam/building/water_treatment_one/purification)
@@ -179,16 +151,11 @@
 /area/kutjevo/exterior/scrubland)
 "bm" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe/east,
 /area/desert_dam/building/water_treatment_one/purification)
 "bn" = (
 /obj/structure/largecrate/random,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached1"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached1,
 /area/kutjevo/exterior/scrubland)
 "bo" = (
 /obj/structure/prop/ice_colony/ground_wire{
@@ -202,10 +169,7 @@
 /obj/item/stack/sheet/metal{
 	amount = 10
 	},
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/prison/darkyellow2/north,
 /area/desert_dam/interior/dam_interior/smes_main)
 "br" = (
 /obj/effect/blocker/water/toxic/Group_1,
@@ -236,9 +200,7 @@
 	dir = 8
 	},
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/desert/desert_shore/desert_shore1{
-	dir = 8
-	},
+/turf/open/desert/desert_shore/desert_shore1/west,
 /area/kutjevo/exterior/scrubland)
 "bB" = (
 /obj/structure/surface/table,
@@ -262,9 +224,7 @@
 /area/kutjevo/exterior/scrubland)
 "bG" = (
 /obj/structure/machinery/portable_atmospherics/powered/scrubber,
-/turf/open/floor/prison{
-	dir = 10
-	},
+/turf/open/floor/prison/southwest,
 /area/desert_dam/interior/dam_interior/atmos_storage)
 "bM" = (
 /obj/effect/decal/cleanable/blood/oil,
@@ -277,17 +237,11 @@
 "bT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "blue"
-	},
+/turf/open/floor/prison/blue/east,
 /area/desert_dam/building/administration/control_room)
 "bU" = (
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/floor{
-	dir = 8;
-	icon_state = "warning"
-	},
+/turf/open/floor/warning/west,
 /area/desert_dam/interior/dam_interior/engine_room)
 "bV" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -305,16 +259,12 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/generic,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "cd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "ch" = (
 /obj/effect/decal/cleanable/dirt,
@@ -329,38 +279,27 @@
 /turf/open/gm/river/desert/deep,
 /area/kutjevo/exterior/scrubland)
 "cn" = (
-/turf/open/floor{
-	dir = 4;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/darkyellow2/east,
 /area/desert_dam/building/substation/northwest)
 "cp" = (
 /obj/structure/machinery/landinglight/ds1/delaytwo,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached1"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached1,
 /area/desert_dam/building/administration/control_room)
 "cq" = (
 /obj/structure/platform{
 	dir = 1
 	},
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/gm/river/desert/shallow_corner{
-	dir = 4
-	},
+/turf/open/gm/river/desert/shallow_corner/east,
 /area/kutjevo/exterior/scrubland)
 "ct" = (
 /obj/structure/floodgate,
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/gm/river/desert/shallow_corner{
-	dir = 1
-	},
+/turf/open/gm/river/desert/shallow_corner/north,
 /area/kutjevo/exterior/scrubland)
 "cy" = (
 /obj/structure/machinery/door/airlock/hatch/cockpit,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "cD" = (
 /obj/effect/blocker/water/toxic/Group_1,
@@ -371,9 +310,7 @@
 /turf/open/auto_turf/sand/layer1,
 /area/kutjevo/exterior/scrubland)
 "cI" = (
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached18"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached18,
 /area/kutjevo/exterior/scrubland)
 "cN" = (
 /obj/structure/prop/vehicles/tank{
@@ -383,9 +320,7 @@
 /area/kutjevo/exterior/scrubland)
 "cO" = (
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/floor/coagulation{
-	icon_state = "8,8"
-	},
+/turf/open/floor/coagulation/icon8_8,
 /area/desert_dam/building/water_treatment_one/purification)
 "cT" = (
 /obj/structure/flora/grass/desert/heavygrass_6,
@@ -394,10 +329,7 @@
 "cU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/building/water_treatment_two/purification)
 "cX" = (
 /obj/structure/flora/grass/desert/heavygrass_3,
@@ -423,21 +355,14 @@
 /turf/open/auto_turf/sand/layer1,
 /area/kutjevo/exterior/scrubland)
 "dl" = (
-/turf/open/floor/coagulation{
-	icon_state = "0,4"
-	},
+/turf/open/floor/coagulation/icon0_4,
 /area/desert_dam/building/water_treatment_two/purification)
 "dq" = (
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe/west,
 /area/kutjevo/exterior/scrubland)
 "dr" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor{
-	icon_state = "dark2"
-	},
+/turf/open/floor/dark2,
 /area/desert_dam/building/substation/northwest)
 "dz" = (
 /obj/structure/platform/kutjevo/rock{
@@ -451,30 +376,20 @@
 	fill_from_loc = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/strata{
-	icon_state = "floor3"
-	},
+/turf/open/floor/strata/floor3,
 /area/kutjevo/exterior/scrubland)
 "dE" = (
 /obj/structure/largecrate/supply/supplies/metal,
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe/east,
 /area/kutjevo/exterior/scrubland)
 "dF" = (
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached18"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached18,
 /area/desert_dam/building/administration/control_room)
 "dH" = (
-/turf/open/floor/plating{
-	dir = 6;
-	icon_state = "warnplate"
-	},
+/turf/open/floor/plating/warnplate/southeast,
 /area/desert_dam/building/substation/northwest)
 "dI" = (
 /obj/structure/machinery/colony_floodlight,
@@ -518,9 +433,7 @@
 /obj/effect/attach_point/crew_weapon/dropship1,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/generic,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "ef" = (
 /obj/structure/platform_decoration/strata/metal{
@@ -539,10 +452,7 @@
 	},
 /obj/effect/spawner/random/toolbox,
 /obj/effect/spawner/random/toolbox,
-/turf/open/floor/prison{
-	dir = 5;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/prison/darkyellow2/northeast,
 /area/desert_dam/interior/dam_interior/smes_main)
 "eo" = (
 /obj/structure/prop/invuln/fire{
@@ -565,9 +475,7 @@
 /obj/structure/machinery/landinglight/ds1/delaytwo{
 	dir = 8
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached3"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached3,
 /area/desert_dam/building/administration/control_room)
 "eC" = (
 /obj/structure/platform/kutjevo/rock{
@@ -577,10 +485,7 @@
 /area/kutjevo/exterior/scrubland)
 "eE" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/building/water_treatment_one/purification)
 "eH" = (
 /obj/structure/prop/static_tank/fuel{
@@ -591,10 +496,7 @@
 /area/kutjevo/exterior/scrubland)
 "eI" = (
 /obj/structure/prop/almayer/computers/mapping_computer,
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "blue"
-	},
+/turf/open/floor/prison/blue/north,
 /area/desert_dam/building/administration/control_room)
 "eK" = (
 /obj/structure/surface/rack,
@@ -605,18 +507,14 @@
 /area/kutjevo/exterior/scrubland)
 "eM" = (
 /obj/structure/largecrate/supply/supplies/plasteel,
-/turf/open/floor/prison{
-	icon_state = "sterile_white"
-	},
+/turf/open/floor/prison/sterile_white,
 /area/kutjevo/exterior/scrubland)
 "eO" = (
 /obj/structure/filtration/machine_96x96{
 	icon_state = "distribution"
 	},
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/gm/river/desert/shallow_corner{
-	dir = 1
-	},
+/turf/open/gm/river/desert/shallow_corner/north,
 /area/kutjevo/exterior/scrubland)
 "eP" = (
 /obj/structure/shuttle/part/dropship1/transparent/engine_right_exhaust,
@@ -630,15 +528,11 @@
 /obj/structure/machinery/landinglight/ds1/delaytwo{
 	dir = 4
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached1"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached1,
 /area/desert_dam/building/administration/control_room)
 "eR" = (
 /obj/structure/machinery/disposal,
-/turf/open/floor/prison{
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/prison/darkyellow2,
 /area/desert_dam/interior/dam_interior/control_room)
 "eS" = (
 /obj/item/tool/weldingtool{
@@ -653,24 +547,15 @@
 /turf/open/gm/river/desert/deep,
 /area/kutjevo/exterior/scrubland)
 "eV" = (
-/obj/structure/machinery/power/apc{
-	dir = 4;
-	pixel_x = 28;
-	start_charge = 0
-	},
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "blue"
-	},
+/obj/structure/machinery/power/apc/no_power/east,
+/turf/open/floor/prison/blue/east,
 /area/desert_dam/building/administration/control_room)
 "eW" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 1
 	},
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/desert/desert_shore/desert_shore1{
-	dir = 8
-	},
+/turf/open/desert/desert_shore/desert_shore1/west,
 /area/kutjevo/exterior/scrubland)
 "eX" = (
 /obj/structure/platform{
@@ -680,26 +565,18 @@
 	dir = 4
 	},
 /obj/structure/platform,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached3"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached3,
 /area/desert_dam/building/administration/control_room)
 "eZ" = (
 /obj/structure/machinery/door/airlock/almayer/engineering/colony{
 	dir = 2;
 	name = "\improper Engine Room"
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/interior/dam_interior/engine_room)
 "fa" = (
 /obj/structure/machinery/computer3/powermonitor,
-/turf/open/floor{
-	dir = 1;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/darkyellow2/north,
 /area/desert_dam/interior/dam_interior/control_room)
 "fd" = (
 /obj/structure/machinery/iv_drip,
@@ -710,9 +587,7 @@
 	dir = 8;
 	id = "starboard_door"
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "ff" = (
 /obj/structure/machinery/power/reactor/colony,
@@ -728,9 +603,7 @@
 /area/kutjevo/exterior/scrubland)
 "fi" = (
 /obj/structure/machinery/floodlight/landing,
-/turf/open/floor{
-	icon_state = "asteroidplating"
-	},
+/turf/open/floor/asteroidplating,
 /area/desert_dam/building/administration/control_room)
 "fj" = (
 /obj/structure/barricade/metal{
@@ -754,10 +627,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/turf/open/floor{
-	dir = 4;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/darkyellow2/east,
 /area/desert_dam/building/substation/northwest)
 "fx" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -773,15 +643,11 @@
 /turf/open/asphalt/cement_sunbleached,
 /area/desert_dam/building/administration/control_room)
 "fG" = (
-/turf/open/floor/plating{
-	icon_state = "platingdmg1"
-	},
+/turf/open/floor/plating/platingdmg1,
 /area/kutjevo/exterior/scrubland)
 "fH" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 10
-	},
+/turf/open/floor/prison/southwest,
 /area/desert_dam/interior/dam_interior/control_room)
 "fI" = (
 /obj/structure/barricade/wooden{
@@ -795,15 +661,10 @@
 /turf/open/auto_turf/sand/layer1,
 /area/kutjevo/exterior/scrubland)
 "fM" = (
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached15"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached15,
 /area/desert_dam/building/administration/control_room)
 "fP" = (
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "darkyellowcorners2"
-	},
+/turf/open/floor/prison/darkyellowcorners2/east,
 /area/desert_dam/interior/dam_interior/smes_main)
 "fU" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -817,33 +678,22 @@
 /turf/open/asphalt,
 /area/desert_dam/building/administration/control_room)
 "fW" = (
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "bluecorner"
-	},
+/turf/open/floor/prison/bluecorner/west,
 /area/desert_dam/building/administration/control_room)
 "fX" = (
 /obj/structure/closet/radiation,
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe/west,
 /area/desert_dam/building/water_treatment_one/control_room)
 "fY" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	icon_state = "darkyellowcorners2"
-	},
+/turf/open/floor/prison/darkyellowcorners2,
 /area/desert_dam/interior/dam_interior/engine_room)
 "gb" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
 	dir = 2;
 	name = "\improper SMES"
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/interior/dam_interior/smes_main)
 "ge" = (
 /obj/item/prop/helmetgarb/family_photo{
@@ -853,28 +703,19 @@
 /turf/open/auto_turf/sand/layer0,
 /area/kutjevo/exterior/scrubland)
 "gh" = (
-/obj/structure/machinery/power/apc{
-	dir = 1;
-	pixel_y = 24;
-	start_charge = 0
-	},
+/obj/structure/machinery/power/apc/no_power/north,
 /obj/effect/decal/cleanable/blood/xeno,
 /turf/open/floor/prison,
 /area/desert_dam/building/water_treatment_one/control_room)
 "gp" = (
 /obj/structure/machinery/cm_vending/sorted/tech/electronics_storage,
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "green"
-	},
+/turf/open/floor/prison/green/north,
 /area/desert_dam/interior/dam_interior/atmos_storage)
 "gr" = (
 /obj/structure/surface/rack,
 /obj/item/circuitboard/apc,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating{
-	icon_state = "warnplate"
-	},
+/turf/open/floor/plating/warnplate,
 /area/kutjevo/exterior/scrubland)
 "gw" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -887,17 +728,12 @@
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
 	name = "\improper Backup SMES"
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/interior/dam_interior/control_room)
 "gD" = (
 /obj/structure/machinery/light,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/prison/darkyellow2,
 /area/desert_dam/interior/dam_interior/engine_room)
 "gE" = (
 /obj/structure/machinery/light{
@@ -934,9 +770,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "gN" = (
 /obj/structure/platform{
@@ -957,9 +791,7 @@
 	pixel_x = 2;
 	pixel_y = 7
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached12"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached12,
 /area/desert_dam/building/administration/control_room)
 "gT" = (
 /obj/effect/decal/cleanable/dirt,
@@ -967,15 +799,10 @@
 /obj/structure/bed/chair/dropship/pilot{
 	dir = 1
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "gU" = (
-/turf/open/floor/plating{
-	dir = 4;
-	icon_state = "warnplate"
-	},
+/turf/open/floor/plating/warnplate/east,
 /area/desert_dam/building/substation/northwest)
 "gV" = (
 /obj/structure/window/framed/hangar,
@@ -997,10 +824,7 @@
 /obj/effect/decal/cleanable/blood{
 	icon_state = "xgib4"
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/building/water_treatment_one/control_room)
 "gZ" = (
 /obj/effect/decal/warning_stripes{
@@ -1013,10 +837,7 @@
 /area/desert_dam/building/administration/control_room)
 "ha" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/interior/dam_interior/engine_room)
 "hb" = (
 /obj/structure/desertdam/decals/road_stop{
@@ -1027,10 +848,7 @@
 /area/desert_dam/building/administration/control_room)
 "hc" = (
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/floor{
-	dir = 1;
-	icon_state = "warning"
-	},
+/turf/open/floor/warning/north,
 /area/desert_dam/interior/dam_interior/engine_room)
 "hh" = (
 /obj/structure/desertdam/decals/road_stop{
@@ -1040,21 +858,14 @@
 /area/kutjevo/exterior/scrubland)
 "hi" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/building/water_treatment_one/purification)
 "hj" = (
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/gm/river/desert/shallow_edge{
-	dir = 8
-	},
+/turf/open/gm/river/desert/shallow_edge/west,
 /area/kutjevo/exterior/scrubland)
 "hk" = (
-/turf/open/floor/coagulation{
-	icon_state = "2,0"
-	},
+/turf/open/floor/coagulation/icon2_0,
 /area/desert_dam/building/water_treatment_two/purification)
 "hp" = (
 /obj/structure/prop/ice_colony/surveying_device{
@@ -1064,9 +875,7 @@
 /area/kutjevo/exterior/scrubland)
 "hr" = (
 /obj/structure/fence,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached1"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached1,
 /area/kutjevo/exterior/scrubland)
 "hv" = (
 /obj/structure/prop/ice_colony/ground_wire{
@@ -1076,16 +885,10 @@
 /area/kutjevo/exterior/scrubland)
 "hx" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating{
-	dir = 4;
-	icon_state = "warnplate"
-	},
+/turf/open/floor/plating/warnplate/east,
 /area/desert_dam/building/substation/northwest)
 "hz" = (
-/turf/open/floor{
-	dir = 10;
-	icon_state = "warning"
-	},
+/turf/open/floor/warning/southwest,
 /area/desert_dam/interior/dam_interior/engine_room)
 "hB" = (
 /turf/closed/wall/r_wall/bunker{
@@ -1095,19 +898,13 @@
 "hD" = (
 /obj/structure/surface/table,
 /obj/effect/spawner/random/toolbox,
-/turf/open/floor{
-	dir = 4;
-	icon_state = "darkyellowcorners2"
-	},
+/turf/open/floor/darkyellowcorners2/east,
 /area/desert_dam/interior/dam_interior/control_room)
 "hE" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
 	name = "\improper Floodgate Control"
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/building/water_treatment_two/purification)
 "hF" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1126,36 +923,27 @@
 "hL" = (
 /obj/structure/machinery/floodlight,
 /obj/structure/machinery/camera/autoname/almayer,
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "green"
-	},
+/turf/open/floor/prison/green/north,
 /area/desert_dam/interior/dam_interior/atmos_storage)
 "hM" = (
 /turf/open/gm/river/desert/shallow,
 /area/desert_dam/building/water_treatment_two/purification)
 "hN" = (
-/turf/open/floor/prison{
-	icon_state = "blue"
-	},
+/turf/open/floor/prison/blue,
 /area/desert_dam/building/administration/control_room)
 "hO" = (
 /obj/structure/girder,
 /obj/item/prop/tableflag/uscm{
 	pixel_y = 16
 	},
-/turf/open/floor/plating{
-	icon_state = "platingdmg1"
-	},
+/turf/open/floor/plating/platingdmg1,
 /area/kutjevo/exterior/scrubland)
 "hP" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N"
 	},
 /obj/structure/largecrate/random/barrel,
-/turf/open/floor/prison{
-	icon_state = "sterile_white"
-	},
+/turf/open/floor/prison/sterile_white,
 /area/kutjevo/exterior/scrubland)
 "hW" = (
 /obj/structure/window/framed/colony/reinforced,
@@ -1163,15 +951,11 @@
 /area/desert_dam/interior/dam_interior/engine_room)
 "hX" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/coagulation{
-	icon_state = "0,8"
-	},
+/turf/open/floor/coagulation/icon0_8,
 /area/desert_dam/building/water_treatment_one/purification)
 "hY" = (
 /obj/structure/largecrate/random,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached3"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached3,
 /area/kutjevo/exterior/scrubland)
 "hZ" = (
 /obj/structure/shuttle/part/dropship1/transparent/engine_right_cap,
@@ -1195,21 +979,14 @@
 /area/desert_dam/building/administration/control_room)
 "ig" = (
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/gm/river/desert/shallow_edge{
-	dir = 1
-	},
+/turf/open/gm/river/desert/shallow_edge/north,
 /area/kutjevo/exterior/scrubland)
 "ih" = (
 /obj/structure/cargo_container/wy/right,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached12"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached12,
 /area/desert_dam/building/administration/control_room)
 "ik" = (
-/turf/open/floor{
-	dir = 6;
-	icon_state = "warning"
-	},
+/turf/open/floor/warning/southeast,
 /area/desert_dam/interior/dam_interior/engine_room)
 "il" = (
 /obj/effect/decal/cleanable/liquid_fuel,
@@ -1222,9 +999,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 10
-	},
+/turf/open/floor/prison/southwest,
 /area/desert_dam/interior/dam_interior/control_room)
 "iq" = (
 /obj/structure/flora/grass/desert/heavygrass_4,
@@ -1235,9 +1010,7 @@
 /turf/open/asphalt,
 /area/kutjevo/exterior/scrubland)
 "is" = (
-/turf/open/floor{
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/darkyellow2,
 /area/desert_dam/building/substation/northwest)
 "it" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -1252,10 +1025,7 @@
 /obj/item/cell{
 	pixel_y = 3
 	},
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe/west,
 /area/kutjevo/exterior/scrubland)
 "iM" = (
 /obj/structure/prop/structure_lattice{
@@ -1269,9 +1039,7 @@
 	icon_state = "0,2"
 	},
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/desert/desert_shore/desert_shore1{
-	dir = 1
-	},
+/turf/open/desert/desert_shore/desert_shore1/north,
 /area/kutjevo/exterior/scrubland)
 "iP" = (
 /obj/structure/largecrate/random/secure,
@@ -1282,15 +1050,10 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached3"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached3,
 /area/desert_dam/building/administration/control_room)
 "iS" = (
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "darkyellowcorners2"
-	},
+/turf/open/floor/prison/darkyellowcorners2/west,
 /area/desert_dam/interior/dam_interior/smes_main)
 "iW" = (
 /obj/structure/girder/displaced,
@@ -1301,9 +1064,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/turf/open/floor/prison{
-	dir = 10
-	},
+/turf/open/floor/prison/southwest,
 /area/desert_dam/interior/dam_interior/engine_room)
 "iY" = (
 /obj/structure/closet/crate,
@@ -1319,17 +1080,13 @@
 	amount = 50
 	},
 /obj/item/storage/briefcase/inflatable,
-/turf/open/floor/prison{
-	dir = 10
-	},
+/turf/open/floor/prison/southwest,
 /area/desert_dam/interior/dam_interior/atmos_storage)
 "iZ" = (
 /turf/open/gm/river/desert/deep,
 /area/kutjevo/exterior/scrubland)
 "jh" = (
-/turf/open/floor/prison{
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe,
 /area/desert_dam/building/water_treatment_one/purification)
 "ji" = (
 /obj/structure/platform,
@@ -1356,16 +1113,11 @@
 /turf/open/floor/plating,
 /area/kutjevo/exterior/scrubland)
 "jp" = (
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached2"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached2,
 /area/desert_dam/building/administration/control_room)
 "jr" = (
 /obj/structure/largecrate/supply/generator,
-/turf/open/floor/plating{
-	dir = 1;
-	icon_state = "warnplate"
-	},
+/turf/open/floor/plating/warnplate/north,
 /area/kutjevo/exterior/scrubland)
 "js" = (
 /obj/structure/surface/rack,
@@ -1373,33 +1125,22 @@
 /obj/item/clothing/mask/gas,
 /obj/item/clothing/mask/gas,
 /obj/item/tool/weldpack,
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "green"
-	},
+/turf/open/floor/prison/green/west,
 /area/desert_dam/interior/dam_interior/atmos_storage)
 "jv" = (
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached3"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached3,
 /area/desert_dam/building/administration/control_room)
 "jA" = (
-/turf/open/floor/plating{
-	dir = 10;
-	icon_state = "warnplate"
-	},
+/turf/open/floor/plating/warnplate/southwest,
 /area/desert_dam/building/substation/northwest)
 "jD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/building/water_treatment_two/purification)
 "jG" = (
 /obj/structure/flora/tree/joshua,
@@ -1407,9 +1148,7 @@
 /area/kutjevo/exterior/scrubland)
 "jI" = (
 /obj/structure/reagent_dispensers/fueltank,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached12"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached12,
 /area/desert_dam/building/administration/control_room)
 "jP" = (
 /obj/structure/fence,
@@ -1419,25 +1158,18 @@
 /obj/structure/filtration/machine_64x96{
 	icon_state = "filtration_machine_B_1"
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/building/water_treatment_one/purification)
 "jS" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/stack/rods,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "jT" = (
 /obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 4
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached1"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached1,
 /area/desert_dam/building/administration/control_room)
 "jU" = (
 /obj/structure/barricade/metal{
@@ -1459,10 +1191,7 @@
 /turf/open/floor/prison,
 /area/desert_dam/building/water_treatment_one/purification)
 "kd" = (
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "blue"
-	},
+/turf/open/floor/prison/blue/southwest,
 /area/desert_dam/building/administration/control_room)
 "kf" = (
 /obj/structure/platform_decoration/strata/metal{
@@ -1474,9 +1203,7 @@
 /turf/open/asphalt/cement,
 /area/kutjevo/exterior/scrubland)
 "kh" = (
-/turf/open/floor/coagulation{
-	icon_state = "8,0"
-	},
+/turf/open/floor/coagulation/icon8_0,
 /area/desert_dam/building/water_treatment_one/purification)
 "ki" = (
 /obj/structure/surface/table/woodentable/poor,
@@ -1496,10 +1223,7 @@
 /area/desert_dam/building/water_treatment_one/control_room)
 "kr" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating{
-	dir = 8;
-	icon_state = "warnplate"
-	},
+/turf/open/floor/plating/warnplate/west,
 /area/kutjevo/exterior/scrubland)
 "ks" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -1511,16 +1235,12 @@
 /turf/open/asphalt,
 /area/desert_dam/building/administration/control_room)
 "ku" = (
-/turf/open/floor/prison{
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/prison/darkyellow2,
 /area/desert_dam/interior/dam_interior/engine_room)
 "ky" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/random,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached4"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached4,
 /area/desert_dam/building/administration/control_room)
 "kH" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -1529,10 +1249,7 @@
 /area/kutjevo/exterior/scrubland)
 "kJ" = (
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe/east,
 /area/desert_dam/building/water_treatment_one/purification)
 "kK" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -1545,15 +1262,11 @@
 /obj/structure/largecrate/random/secure{
 	fill_from_loc = 1
 	},
-/turf/open/floor/strata{
-	icon_state = "floor3"
-	},
+/turf/open/floor/strata/floor3,
 /area/kutjevo/exterior/scrubland)
 "kP" = (
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/desert/desert_shore/desert_shore1{
-	dir = 4
-	},
+/turf/open/desert/desert_shore/desert_shore1/east,
 /area/kutjevo/exterior/scrubland)
 "kS" = (
 /obj/structure/surface/rack,
@@ -1581,10 +1294,7 @@
 	},
 /obj/item/tool/weldpack,
 /obj/item/tool/weldpack,
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe/west,
 /area/kutjevo/exterior/scrubland)
 "kY" = (
 /obj/structure/cargo_container/ferret/mid,
@@ -1615,9 +1325,7 @@
 	},
 /area/kutjevo/exterior/scrubland)
 "lq" = (
-/turf/open/floor{
-	icon_state = "neutral"
-	},
+/turf/open/floor/neutral,
 /area/desert_dam/interior/dam_interior/engine_room)
 "lt" = (
 /obj/structure/flora/grass/desert/heavygrass_10,
@@ -1633,19 +1341,14 @@
 /obj/structure/stairs{
 	dir = 8
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached18"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached18,
 /area/kutjevo/exterior/scrubland)
 "lB" = (
 /obj/structure/surface/table,
 /turf/open/floor/prison,
 /area/desert_dam/building/water_treatment_two/floodgate_control)
 "lE" = (
-/turf/open/floor{
-	dir = 4;
-	icon_state = "darkyellowcorners2"
-	},
+/turf/open/floor/darkyellowcorners2/east,
 /area/desert_dam/building/substation/northwest)
 "lH" = (
 /obj/structure/machinery/light{
@@ -1671,33 +1374,24 @@
 /area/kutjevo/exterior/scrubland)
 "ma" = (
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/desert/desert_shore/shore_corner1{
-	dir = 8
-	},
+/turf/open/desert/desert_shore/shore_corner1/west,
 /area/kutjevo/exterior/scrubland)
 "me" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/engidoor/glass/colony{
 	dir = 1
 	},
-/turf/open/floor{
-	dir = 5;
-	icon_state = "vault"
-	},
+/turf/open/floor/vault2/northeast,
 /area/desert_dam/building/substation/northwest)
 "mf" = (
 /obj/structure/floodgate,
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/gm/river/desert/shallow_corner{
-	dir = 8
-	},
+/turf/open/gm/river/desert/shallow_corner/west,
 /area/kutjevo/exterior/scrubland)
 "mg" = (
 /obj/structure/filtration/machine_32x32{
 	icon_state = "filtration_segment_A_0"
 	},
-/turf/open/floor/coagulation{
-	icon_state = "2,0"
-	},
+/turf/open/floor/coagulation/icon2_0,
 /area/desert_dam/building/water_treatment_two/purification)
 "mm" = (
 /obj/structure/platform{
@@ -1713,9 +1407,7 @@
 /obj/structure/stairs{
 	dir = 4
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached18"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached18,
 /area/kutjevo/exterior/scrubland)
 "mr" = (
 /obj/structure/prop/dam/large_boulder/boulder2,
@@ -1723,10 +1415,7 @@
 /area/kutjevo/exterior/scrubland)
 "mw" = (
 /obj/effect/decal/cleanable/blood/gibs/body,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/building/water_treatment_one/control_room)
 "my" = (
 /obj/structure/flora/tree/joshua,
@@ -1742,9 +1431,7 @@
 /area/kutjevo/exterior/scrubland)
 "mA" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating{
-	icon_state = "warnplate"
-	},
+/turf/open/floor/plating/warnplate,
 /area/kutjevo/exterior/scrubland)
 "mB" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1755,10 +1442,7 @@
 /area/kutjevo/exterior/scrubland)
 "mD" = (
 /obj/structure/machinery/portable_atmospherics/canister/air,
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "green"
-	},
+/turf/open/floor/prison/green/east,
 /area/desert_dam/interior/dam_interior/atmos_storage)
 "mE" = (
 /obj/structure/curtain/red,
@@ -1779,15 +1463,10 @@
 	pixel_x = -4;
 	pixel_y = 8
 	},
-/turf/open/floor/plating{
-	icon_state = "platingdmg2"
-	},
+/turf/open/floor/plating/platingdmg2,
 /area/kutjevo/exterior/scrubland)
 "mQ" = (
-/turf/open/floor{
-	dir = 4;
-	icon_state = "warning"
-	},
+/turf/open/floor/warning/east,
 /area/desert_dam/interior/dam_interior/engine_room)
 "mT" = (
 /obj/item/prop/colony/usedbandage{
@@ -1813,9 +1492,7 @@
 /area/kutjevo/exterior/scrubland)
 "na" = (
 /obj/item/storage/belt/utility/full,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin11"
-	},
+/turf/open/shuttle/dropship/rasputin11,
 /area/kutjevo/exterior/scrubland)
 "nb" = (
 /obj/structure/surface/table,
@@ -1832,9 +1509,7 @@
 /obj/item/trash/uscm_mre{
 	pixel_y = 10
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "nd" = (
 /obj/structure/machinery/colony_floodlight,
@@ -1842,9 +1517,7 @@
 /area/kutjevo/exterior/scrubland)
 "nk" = (
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/desert/desert_shore/shore_edge1{
-	dir = 4
-	},
+/turf/open/desert/desert_shore/shore_edge1/east,
 /area/kutjevo/exterior/scrubland)
 "nm" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1856,31 +1529,22 @@
 /obj/structure/filtration/machine_32x32{
 	icon_state = "filtration_segment_B_0"
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/building/water_treatment_two/purification)
 "nr" = (
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached1"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached1,
 /area/desert_dam/building/administration/control_room)
 "ns" = (
 /obj/structure/largecrate/random/barrel/white{
 	fill_from_loc = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/strata{
-	icon_state = "floor3"
-	},
+/turf/open/floor/strata/floor3,
 /area/kutjevo/exterior/scrubland)
 "nu" = (
 /obj/structure/surface/rack,
 /obj/item/clothing/head/welding,
-/turf/open/floor/prison{
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/prison/darkyellow2,
 /area/desert_dam/interior/dam_interior/control_room)
 "nv" = (
 /obj/structure/barricade/sandbags/wired{
@@ -1895,27 +1559,14 @@
 /area/kutjevo/exterior/scrubland)
 "ny" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/interior/dam_interior/engine_room)
 "nB" = (
-/obj/structure/machinery/power/apc{
-	dir = 8;
-	pixel_x = -30;
-	start_charge = 0
-	},
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "darkyellow2"
-	},
+/obj/structure/machinery/power/apc/no_power/west,
+/turf/open/floor/prison/darkyellow2/west,
 /area/desert_dam/interior/dam_interior/smes_main)
 "nC" = (
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe/east,
 /area/kutjevo/exterior/scrubland)
 "nD" = (
 /obj/structure/machinery/light,
@@ -1933,10 +1584,7 @@
 /area/kutjevo/exterior/scrubland)
 "nN" = (
 /obj/structure/machinery/cm_vending/sorted/tech/comp_storage,
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "green"
-	},
+/turf/open/floor/prison/green/north,
 /area/desert_dam/interior/dam_interior/atmos_storage)
 "nO" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1949,9 +1597,7 @@
 /turf/open/gm/dirt2,
 /area/kutjevo/exterior/scrubland)
 "nX" = (
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached13"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached13,
 /area/kutjevo/exterior/scrubland)
 "nZ" = (
 /obj/structure/barricade/wooden,
@@ -1970,9 +1616,7 @@
 /obj/structure/surface/rack,
 /obj/item/device/analyzer/plant_analyzer,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating{
-	icon_state = "warnplate"
-	},
+/turf/open/floor/plating/warnplate,
 /area/kutjevo/exterior/scrubland)
 "ok" = (
 /obj/structure/prop/turbine_extras,
@@ -1987,19 +1631,13 @@
 /obj/item/stack/sheet/mineral/phoron{
 	amount = 15
 	},
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/prison/darkyellow2/north,
 /area/desert_dam/interior/dam_interior/smes_main)
 "ov" = (
 /obj/structure/machinery/power/monitor{
 	name = "Core Power Monitoring"
 	},
-/turf/open/floor{
-	dir = 1;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/darkyellow2/north,
 /area/desert_dam/interior/dam_interior/control_room)
 "ow" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -2020,9 +1658,7 @@
 /area/desert_dam/building/administration/control_room)
 "oA" = (
 /obj/structure/cargo_container/seegson/left,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached3"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached3,
 /area/desert_dam/building/administration/control_room)
 "oB" = (
 /obj/effect/decal/cleanable/dirt,
@@ -2030,29 +1666,20 @@
 	icon_state = "3"
 	},
 /obj/item/shard/shrapnel,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "oD" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/prison/darkyellow2,
 /area/desert_dam/interior/dam_interior/control_room)
 "oH" = (
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "darkyellowcorners2"
-	},
+/turf/open/floor/prison/darkyellowcorners2/north,
 /area/desert_dam/interior/dam_interior/control_room)
 "oJ" = (
 /obj/structure/machinery/landinglight/ds1{
 	dir = 1
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached9"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached9,
 /area/desert_dam/building/administration/control_room)
 "oK" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -2070,14 +1697,10 @@
 /area/desert_dam/building/administration/control_room)
 "oR" = (
 /obj/structure/largecrate/random/secure,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached13"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached13,
 /area/kutjevo/exterior/scrubland)
 "oT" = (
-/turf/open/floor/prison{
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe,
 /area/desert_dam/building/water_treatment_two/purification)
 "oU" = (
 /obj/structure/barricade/sandbags/wired{
@@ -2087,19 +1710,14 @@
 /area/kutjevo/exterior/scrubland)
 "oV" = (
 /obj/structure/largecrate/supply/supplies/sandbags,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin4"
-	},
+/turf/open/shuttle/dropship/light_grey_bottom_left,
 /area/kutjevo/exterior/scrubland)
 "oW" = (
 /obj/structure/shuttle/part/dropship1/transparent/nose_top_left,
 /turf/open/auto_turf/sand/layer0,
 /area/kutjevo/exterior/scrubland)
 "oX" = (
-/turf/open/floor/prison{
-	dir = 6;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/prison/darkyellow2/southeast,
 /area/desert_dam/interior/dam_interior/engine_room)
 "oY" = (
 /obj/structure/floodgate{
@@ -2112,20 +1730,14 @@
 /obj/structure/surface/rack,
 /obj/effect/spawner/random/technology_scanner,
 /obj/item/tool/weldpack,
-/turf/open/floor{
-	dir = 4;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/darkyellow2/east,
 /area/desert_dam/building/substation/northwest)
 "pc" = (
 /obj/structure/flora/grass/desert/lightgrass_7,
 /turf/open/auto_turf/sand/layer1,
 /area/kutjevo/exterior/scrubland)
 "pd" = (
-/turf/open/floor{
-	dir = 6;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/darkyellow2/southeast,
 /area/desert_dam/building/substation/northwest)
 "pf" = (
 /obj/structure/machinery/light,
@@ -2133,17 +1745,11 @@
 /turf/open/floor/prison,
 /area/desert_dam/building/water_treatment_one/purification)
 "pg" = (
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/building/water_treatment_two/floodgate_control)
 "ph" = (
 /obj/structure/reagent_dispensers/water_cooler,
-/turf/open/floor/prison{
-	dir = 6;
-	icon_state = "blue"
-	},
+/turf/open/floor/prison/blue/southeast,
 /area/desert_dam/building/administration/control_room)
 "pi" = (
 /obj/item/shard,
@@ -2157,20 +1763,11 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/prison/darkyellow2/east,
 /area/desert_dam/interior/dam_interior/engine_room)
 "pl" = (
-/obj/structure/machinery/power/apc{
-	dir = 1;
-	pixel_y = 24;
-	start_charge = 0
-	},
-/turf/open/floor{
-	icon_state = "neutral"
-	},
+/obj/structure/machinery/power/apc/no_power/north,
+/turf/open/floor/neutral,
 /area/desert_dam/interior/dam_interior/engine_room)
 "pm" = (
 /obj/structure/desertdam/decals/road_stop{
@@ -2191,16 +1788,12 @@
 /area/desert_dam/building/administration/control_room)
 "px" = (
 /obj/vehicle/powerloader,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached12"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached12,
 /area/desert_dam/building/administration/control_room)
 "pz" = (
 /obj/structure/surface/table,
 /obj/effect/spawner/random/toolbox,
-/turf/open/floor/prison{
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe,
 /area/desert_dam/interior/dam_interior/engine_room)
 "pA" = (
 /turf/closed/wall/hangar{
@@ -2233,26 +1826,19 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/turf/open/floor/prison{
-	dir = 10
-	},
+/turf/open/floor/prison/southwest,
 /area/desert_dam/interior/dam_interior/engine_room)
 "pO" = (
 /obj/structure/flora/grass/desert/lightgrass_6,
 /turf/open/auto_turf/sand/layer1,
 /area/kutjevo/exterior/scrubland)
 "pQ" = (
-/turf/open/floor/coagulation{
-	icon_state = "8,3"
-	},
+/turf/open/floor/coagulation/icon8_3,
 /area/desert_dam/building/water_treatment_one/purification)
 "pS" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/interior/dam_interior/engine_room)
 "pU" = (
 /obj/item/tool/pickaxe/plasmacutter{
@@ -2273,9 +1859,7 @@
 /obj/structure/machinery/landinglight/ds1{
 	dir = 4
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached1"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached1,
 /area/desert_dam/building/administration/control_room)
 "pZ" = (
 /obj/structure/window/framed/hangar/reinforced,
@@ -2296,10 +1880,7 @@
 /area/kutjevo/exterior/scrubland)
 "qd" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "blue"
-	},
+/turf/open/floor/prison/blue/east,
 /area/desert_dam/building/administration/control_room)
 "qf" = (
 /obj/structure/shuttle/part/dropship1/transparent/engine_right_exhaust,
@@ -2323,9 +1904,7 @@
 	icon_state = "lower_2";
 	layer = 2
 	},
-/turf/open/floor/coagulation{
-	icon_state = "8,3"
-	},
+/turf/open/floor/coagulation/icon8_3,
 /area/desert_dam/building/water_treatment_two/purification)
 "ql" = (
 /obj/docking_port/stationary/marine_dropship/lz1,
@@ -2341,17 +1920,13 @@
 /obj/effect/decal/cleanable/blood/drip{
 	icon_state = "3"
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "qp" = (
 /obj/structure/pipes/vents/pump{
 	dir = 1
 	},
-/turf/open/floor{
-	icon_state = "neutral"
-	},
+/turf/open/floor/neutral,
 /area/desert_dam/interior/dam_interior/engine_room)
 "qq" = (
 /obj/structure/largecrate/random/case/double,
@@ -2365,10 +1940,7 @@
 /turf/open/gm/river/desert/shallow,
 /area/desert_dam/building/water_treatment_one/purification)
 "qu" = (
-/turf/open/floor{
-	dir = 1;
-	icon_state = "darkyellowcorners2"
-	},
+/turf/open/floor/darkyellowcorners2/north,
 /area/desert_dam/building/substation/northwest)
 "qv" = (
 /obj/structure/surface/table,
@@ -2378,10 +1950,7 @@
 /obj/item/stack/sheet/mineral/phoron{
 	amount = 15
 	},
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/prison/darkyellow2/north,
 /area/desert_dam/interior/dam_interior/smes_main)
 "qw" = (
 /turf/closed/shuttle/dropship1{
@@ -2393,30 +1962,20 @@
 /obj/structure/largecrate/random/mini/wooden{
 	pixel_y = 14
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached2"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached2,
 /area/kutjevo/exterior/scrubland)
 "qA" = (
 /obj/structure/machinery/cm_vending/sorted/tech/tool_storage,
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "green"
-	},
+/turf/open/floor/prison/green/north,
 /area/desert_dam/interior/dam_interior/atmos_storage)
 "qD" = (
 /obj/structure/surface/table,
 /obj/item/stack/cable_coil,
 /obj/effect/spawner/random/toolbox,
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/prison/darkyellow2/north,
 /area/desert_dam/interior/dam_interior/smes_main)
 "qE" = (
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached18"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached18,
 /area/desert_dam/building/administration/control_room)
 "qF" = (
 /obj/structure/prop/ice_colony/surveying_device{
@@ -2428,10 +1987,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "blue"
-	},
+/turf/open/floor/prison/blue/east,
 /area/desert_dam/building/administration/control_room)
 "qL" = (
 /obj/structure/window/reinforced/tinted{
@@ -2439,9 +1995,7 @@
 	},
 /obj/structure/machinery/computer/atmos_alert,
 /obj/structure/surface/table/reinforced,
-/turf/open/floor/prison{
-	icon_state = "bright_clean2"
-	},
+/turf/open/floor/prison/bright_clean2,
 /area/desert_dam/building/administration/control_room)
 "qM" = (
 /obj/effect/decal/cleanable/dirt,
@@ -2452,16 +2006,12 @@
 	pixel_x = -4;
 	pixel_y = -9
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "qP" = (
 /obj/structure/floodgate,
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/gm/river/desert/shallow_edge{
-	dir = 9
-	},
+/turf/open/gm/river/desert/shallow_edge/northwest,
 /area/kutjevo/exterior/scrubland)
 "qQ" = (
 /obj/structure/cargo_container/horizontal/blue/top{
@@ -2474,24 +2024,17 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached3"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached3,
 /area/desert_dam/building/administration/control_room)
 "qS" = (
-/turf/open/floor/prison{
-	icon_state = "darkyellowcorners2"
-	},
+/turf/open/floor/prison/darkyellowcorners2,
 /area/desert_dam/interior/dam_interior/control_room)
 "qT" = (
 /obj/structure/machinery/defenses/sentry/premade/deployable/almayer,
 /turf/open/auto_turf/sand/layer0,
 /area/kutjevo/exterior/scrubland)
 "qV" = (
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe/east,
 /area/desert_dam/building/water_treatment_one/purification)
 "qY" = (
 /obj/structure/shuttle/part/dropship1/transparent/engine_left_cap,
@@ -2512,10 +2055,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/building/water_treatment_one/control_room)
 "rg" = (
 /obj/structure/barricade/metal{
@@ -2530,10 +2070,7 @@
 /turf/open/asphalt,
 /area/kutjevo/exterior/scrubland)
 "rt" = (
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "darkyellowcorners2"
-	},
+/turf/open/floor/prison/darkyellowcorners2/east,
 /area/desert_dam/interior/dam_interior/control_room)
 "rC" = (
 /obj/structure/platform{
@@ -2549,10 +2086,7 @@
 /turf/open/auto_turf/sand/layer0,
 /area/kutjevo/exterior/scrubland)
 "rG" = (
-/turf/open/floor/plating{
-	dir = 1;
-	icon_state = "warnplate"
-	},
+/turf/open/floor/plating/warnplate/north,
 /area/kutjevo/exterior/scrubland)
 "rI" = (
 /obj/structure/platform/strata/metal{
@@ -2567,27 +2101,18 @@
 /obj/item/clothing/mask/gas,
 /obj/item/clothing/mask/gas,
 /obj/item/tool/weldpack,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "green"
-	},
+/turf/open/floor/prison/green/southwest,
 /area/desert_dam/interior/dam_interior/atmos_storage)
 "rM" = (
-/turf/open/floor/coagulation{
-	icon_state = "8,8"
-	},
+/turf/open/floor/coagulation/icon8_8,
 /area/desert_dam/building/water_treatment_one/purification)
 "rP" = (
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/gm/river/desert/shallow_corner{
-	dir = 8
-	},
+/turf/open/gm/river/desert/shallow_corner/west,
 /area/kutjevo/exterior/scrubland)
 "rR" = (
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/desert/desert_shore/shore_corner2{
-	dir = 4
-	},
+/turf/open/desert/desert_shore/shore_corner2/east,
 /area/kutjevo/exterior/scrubland)
 "rT" = (
 /obj/structure/flora/grass/desert/lightgrass_8,
@@ -2597,9 +2122,7 @@
 /obj/structure/bed/chair/office/light{
 	dir = 4
 	},
-/turf/open/floor/prison{
-	icon_state = "bright_clean2"
-	},
+/turf/open/floor/prison/bright_clean2,
 /area/desert_dam/building/administration/control_room)
 "rX" = (
 /obj/structure/machinery/defenses/sentry/premade/deployable/almayer{
@@ -2634,10 +2157,7 @@
 "sl" = (
 /obj/structure/machinery/computer/atmos_alert,
 /obj/structure/surface/table,
-/turf/open/floor/prison{
-	dir = 5;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/prison/darkyellow2/northeast,
 /area/desert_dam/interior/dam_interior/control_room)
 "sm" = (
 /obj/structure/largecrate/random,
@@ -2645,27 +2165,20 @@
 /area/kutjevo/exterior/scrubland)
 "sn" = (
 /obj/structure/prop/almayer/computers/sensor_computer1,
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "blue"
-	},
+/turf/open/floor/prison/blue/north,
 /area/desert_dam/building/administration/control_room)
 "so" = (
 /obj/structure/machinery/floodlight/landing,
 /obj/structure/machinery/landinglight/ds1/delaytwo{
 	dir = 8
 	},
-/turf/open/floor{
-	icon_state = "asteroidplating"
-	},
+/turf/open/floor/asteroidplating,
 /area/desert_dam/building/administration/control_room)
 "ss" = (
 /obj/structure/bed/chair/office/light{
 	dir = 1
 	},
-/turf/open/floor/prison{
-	dir = 10
-	},
+/turf/open/floor/prison/southwest,
 /area/desert_dam/interior/dam_interior/control_room)
 "su" = (
 /obj/structure/prop/dam/truck,
@@ -2679,24 +2192,18 @@
 /turf/open/gm/dirt2,
 /area/kutjevo/exterior/scrubland)
 "sy" = (
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached12"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached12,
 /area/desert_dam/building/administration/control_room)
 "sz" = (
 /obj/structure/largecrate/random,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached3"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached3,
 /area/desert_dam/building/administration/control_room)
 "sC" = (
 /obj/structure/bed/chair/vehicle{
 	pixel_x = -8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "sD" = (
 /obj/structure/platform_decoration/kutjevo/rock,
@@ -2707,48 +2214,33 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	icon_state = "bright_clean2"
-	},
+/turf/open/floor/prison/bright_clean2,
 /area/desert_dam/building/administration/control_room)
 "sI" = (
 /obj/structure/filtration/machine_64x128{
 	icon_state = "filtration_1"
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/building/water_treatment_one/purification)
 "sK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/supply/supplies/metal,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "sL" = (
 /obj/structure/machinery/door/airlock/dropship_hatch{
 	id = "port_door"
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "sM" = (
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "green"
-	},
+/turf/open/floor/prison/green/west,
 /area/desert_dam/interior/dam_interior/atmos_storage)
 "sN" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 1
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/building/water_treatment_one/control_room)
 "sQ" = (
 /obj/structure/bed/bedroll{
@@ -2763,20 +2255,14 @@
 /area/kutjevo/exterior/scrubland)
 "sU" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe/west,
 /area/desert_dam/building/water_treatment_two/purification)
 "sV" = (
 /obj/structure/machinery/portable_atmospherics/canister/air,
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "green"
-	},
+/turf/open/floor/prison/green/east,
 /area/desert_dam/interior/dam_interior/atmos_storage)
 "td" = (
 /obj/structure/platform/strata/metal{
@@ -2791,9 +2277,7 @@
 	dir = 4;
 	pixel_y = -5
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "tg" = (
 /turf/closed/shuttle/dropship1{
@@ -2810,19 +2294,14 @@
 /obj/structure/filtration/machine_96x96{
 	icon_state = "disinfection"
 	},
-/turf/open/floor/coagulation{
-	icon_state = "8,3"
-	},
+/turf/open/floor/coagulation/icon8_3,
 /area/desert_dam/building/water_treatment_one/purification)
 "tn" = (
 /obj/structure/prop/dam/truck,
 /turf/open/auto_turf/sand/layer1,
 /area/kutjevo/exterior/scrubland)
 "tp" = (
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/interior/dam_interior/engine_room)
 "tq" = (
 /obj/effect/decal/cleanable/liquid_fuel,
@@ -2836,10 +2315,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/prison/darkyellow2/east,
 /area/desert_dam/interior/dam_interior/smes_main)
 "tu" = (
 /obj/structure/prop/ice_colony/ground_wire,
@@ -2861,15 +2337,11 @@
 /area/desert_dam/interior/dam_interior/engine_room)
 "tC" = (
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/gm/river/desert/shallow_edge{
-	dir = 4
-	},
+/turf/open/gm/river/desert/shallow_edge/east,
 /area/kutjevo/exterior/scrubland)
 "tF" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/prison/darkyellow2,
 /area/desert_dam/interior/dam_interior/engine_room)
 "tG" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -2889,9 +2361,7 @@
 /area/kutjevo/exterior/scrubland)
 "tL" = (
 /obj/structure/fence,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached20"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached20,
 /area/kutjevo/exterior/scrubland)
 "tM" = (
 /obj/item/ammo_box/rounds{
@@ -2961,16 +2431,12 @@
 /area/desert_dam/building/administration/control_room)
 "ul" = (
 /obj/structure/machinery/colony_floodlight,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached18"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached18,
 /area/kutjevo/exterior/scrubland)
 "um" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating{
-	icon_state = "warnplate"
-	},
+/turf/open/floor/plating/warnplate,
 /area/kutjevo/exterior/scrubland)
 "uo" = (
 /obj/structure/platform/strata/metal{
@@ -2983,9 +2449,7 @@
 /obj/structure/machinery/landinglight/ds1{
 	dir = 4
 	},
-/turf/open/floor{
-	icon_state = "asteroidplating"
-	},
+/turf/open/floor/asteroidplating,
 /area/desert_dam/building/administration/control_room)
 "uy" = (
 /obj/structure/platform_decoration/strata/metal,
@@ -3002,10 +2466,7 @@
 /turf/open/asphalt,
 /area/kutjevo/exterior/scrubland)
 "uK" = (
-/turf/open/floor/plating{
-	dir = 8;
-	icon_state = "warnplate"
-	},
+/turf/open/floor/plating/warnplate/west,
 /area/desert_dam/building/substation/northwest)
 "uP" = (
 /obj/effect/decal/cleanable/dirt,
@@ -3015,15 +2476,11 @@
 	},
 /obj/effect/decal/cleanable/blood/drip,
 /obj/structure/largecrate/supply/supplies/plasteel,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "uS" = (
 /obj/structure/largecrate/random/secure,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached2"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached2,
 /area/kutjevo/exterior/scrubland)
 "uT" = (
 /obj/item/device/multitool{
@@ -3039,16 +2496,12 @@
 	pixel_y = -5
 	},
 /obj/item/shard/shrapnel,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "vc" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached1"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached1,
 /area/desert_dam/building/administration/control_room)
 "vd" = (
 /obj/structure/platform/kutjevo/rock{
@@ -3058,11 +2511,7 @@
 /turf/open/auto_turf/sand/layer0,
 /area/kutjevo/exterior/scrubland)
 "vh" = (
-/obj/structure/machinery/power/apc{
-	dir = 1;
-	pixel_y = 24;
-	start_charge = 0
-	},
+/obj/structure/machinery/power/apc/no_power/north,
 /turf/open/floor/prison,
 /area/desert_dam/building/water_treatment_two/floodgate_control)
 "vk" = (
@@ -3081,36 +2530,26 @@
 /obj/item/stack/sheet/wood{
 	amount = 10
 	},
-/turf/open/floor/prison{
-	icon_state = "sterile_white"
-	},
+/turf/open/floor/prison/sterile_white,
 /area/kutjevo/exterior/scrubland)
 "vs" = (
-/turf/open/floor/coagulation{
-	icon_state = "8,8"
-	},
+/turf/open/floor/coagulation/icon8_8,
 /area/desert_dam/building/water_treatment_two/purification)
 "vt" = (
 /obj/structure/machinery/light,
-/turf/open/floor/prison{
-	dir = 10
-	},
+/turf/open/floor/prison/southwest,
 /area/desert_dam/interior/dam_interior/engine_room)
 "vu" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin10"
-	},
+/turf/open/shuttle/dropship/light_grey_top,
 /area/kutjevo/exterior/scrubland)
 "vy" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/generic,
 /obj/structure/cargo_container/horizontal/blue/middle,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "vz" = (
 /obj/structure/window/reinforced/tinted{
@@ -3121,16 +2560,11 @@
 /obj/item/clipboard,
 /obj/item/tool/stamp,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	icon_state = "bright_clean2"
-	},
+/turf/open/floor/prison/bright_clean2,
 /area/desert_dam/building/administration/control_room)
 "vC" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor{
-	dir = 5;
-	icon_state = "vault"
-	},
+/turf/open/floor/vault2/northeast,
 /area/desert_dam/building/substation/northwest)
 "vD" = (
 /obj/item/shard{
@@ -3144,24 +2578,17 @@
 /obj/effect/decal/cleanable/blood/oil,
 /obj/structure/prop/tank{
 	pixel_x = -7;
-	pixel_y = 7;
-	plane = -5
+	pixel_y = 7
 	},
 /obj/structure/prop/server_equipment/laptop/closed{
 	pixel_x = 3;
-	pixel_y = 18;
-	plane = -5
+	pixel_y = 18
 	},
-/turf/open/floor/prison{
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe,
 /area/kutjevo/exterior/scrubland)
 "vF" = (
 /obj/structure/pipes/vents/pump/on,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/interior/dam_interior/smes_main)
 "vI" = (
 /obj/structure/barricade/wooden{
@@ -3171,16 +2598,10 @@
 /turf/open/gm/dirt2,
 /area/kutjevo/exterior/scrubland)
 "vJ" = (
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/building/water_treatment_one/purification)
 "vP" = (
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "blue"
-	},
+/turf/open/floor/prison/blue/east,
 /area/desert_dam/building/administration/control_room)
 "vT" = (
 /obj/effect/decal/cleanable/dirt,
@@ -3197,9 +2618,7 @@
 "wb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/supply/ammo/sentry,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "wc" = (
 /obj/structure/window/framed/hangar,
@@ -3228,23 +2647,15 @@
 /obj/structure/machinery/door/airlock/almayer/engineering/colony{
 	name = "\improper SMES"
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/interior/dam_interior/engine_room)
 "wq" = (
-/turf/open/floor/prison{
-	icon_state = "bright_clean2"
-	},
+/turf/open/floor/prison/bright_clean2,
 /area/desert_dam/building/administration/control_room)
 "wr" = (
 /obj/structure/surface/table,
 /obj/item/device/analyzer,
-/turf/open/floor{
-	dir = 1;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/darkyellow2/north,
 /area/desert_dam/interior/dam_interior/control_room)
 "wt" = (
 /obj/structure/machinery/power/port_gen/pacman,
@@ -3254,25 +2665,17 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/prison/darkyellow2/west,
 /area/desert_dam/interior/dam_interior/control_room)
 "wz" = (
 /obj/structure/machinery/landinglight/ds1/delayone{
 	dir = 8
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached2"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached2,
 /area/desert_dam/building/administration/control_room)
 "wB" = (
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/building/water_treatment_one/purification)
 "wC" = (
 /obj/structure/desertdam/decals/road_stop{
@@ -3292,10 +2695,7 @@
 	pixel_x = -18;
 	pixel_y = 10
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "floor_marked"
-	},
+/turf/open/floor/prison/floor_marked/southwest,
 /area/kutjevo/exterior/scrubland)
 "wG" = (
 /obj/structure/stairs{
@@ -3310,47 +2710,31 @@
 /turf/open/auto_turf/sand/layer1,
 /area/kutjevo/exterior/scrubland)
 "wL" = (
-/obj/structure/machinery/power/apc{
-	dir = 8;
-	pixel_x = -30;
-	start_charge = 0
-	},
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "darkyellow2"
-	},
+/obj/structure/machinery/power/apc/no_power/west,
+/turf/open/floor/prison/darkyellow2/west,
 /area/desert_dam/interior/dam_interior/control_room)
 "wM" = (
 /obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 4
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached15"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached15,
 /area/desert_dam/building/administration/control_room)
 "wR" = (
 /obj/structure/pipes/vents/pump{
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/interior/dam_interior/control_room)
 "wU" = (
 /obj/structure/machinery/landinglight/ds1/delayone{
 	dir = 4
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached1"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached1,
 /area/desert_dam/building/administration/control_room)
 "wZ" = (
 /obj/structure/largecrate/supply/supplies/flares,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached4"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached4,
 /area/desert_dam/building/administration/control_room)
 "xc" = (
 /turf/closed/shuttle/dropship1{
@@ -3362,10 +2746,7 @@
 /turf/open/auto_turf/sand/layer1,
 /area/kutjevo/exterior/scrubland)
 "xf" = (
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "bluecorner"
-	},
+/turf/open/floor/prison/bluecorner/east,
 /area/desert_dam/building/administration/control_room)
 "xj" = (
 /obj/structure/machinery/power/reactor/colony,
@@ -3390,33 +2771,23 @@
 	pixel_y = 33
 	},
 /obj/structure/surface/rack,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin8"
-	},
+/turf/open/shuttle/dropship/light_grey_bottom_right,
 /area/kutjevo/exterior/scrubland)
 "xr" = (
 /obj/structure/shuttle/part/dropship1/transparent/outer_left_weapons,
 /turf/open/auto_turf/sand/layer0,
 /area/kutjevo/exterior/scrubland)
 "xs" = (
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe/north,
 /area/desert_dam/interior/dam_interior/engine_room)
 "xt" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	dir = 2
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/interior/dam_interior/engine_room)
 "xv" = (
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached14"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached14,
 /area/desert_dam/building/administration/control_room)
 "xx" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -3433,9 +2804,7 @@
 	icon_state = "lower_1"
 	},
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/floor/coagulation{
-	icon_state = "0,5"
-	},
+/turf/open/floor/coagulation/icon0_5,
 /area/desert_dam/building/water_treatment_one/purification)
 "xB" = (
 /obj/structure/prop/invuln/fire{
@@ -3451,15 +2820,11 @@
 	dir = 8;
 	pixel_y = -5
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "xJ" = (
 /obj/effect/decal/cleanable/blood,
-/turf/open/floor/prison{
-	icon_state = "bright_clean2"
-	},
+/turf/open/floor/prison/bright_clean2,
 /area/desert_dam/building/administration/control_room)
 "xK" = (
 /obj/structure/window/framed/hangar,
@@ -3470,24 +2835,16 @@
 /turf/open/floor/plating,
 /area/desert_dam/building/administration/control_room)
 "xP" = (
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "blue"
-	},
+/turf/open/floor/prison/blue/west,
 /area/desert_dam/building/administration/control_room)
 "xR" = (
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached18"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached18,
 /area/kutjevo/exterior/scrubland)
 "xS" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/building/water_treatment_one/control_room)
 "xU" = (
 /obj/structure/prop/ice_colony/ground_wire,
@@ -3506,23 +2863,17 @@
 "yb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached12"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached12,
 /area/desert_dam/building/administration/control_room)
 "yc" = (
 /obj/effect/decal/cleanable/blood,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin8"
-	},
+/turf/open/shuttle/dropship/light_grey_bottom_right,
 /area/kutjevo/exterior/scrubland)
 "yd" = (
 /obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 8
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached14"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached14,
 /area/desert_dam/building/administration/control_room)
 "ye" = (
 /obj/structure/platform/kutjevo/rock{
@@ -3540,22 +2891,14 @@
 /turf/open/auto_turf/sand/layer1,
 /area/kutjevo/exterior/scrubland)
 "yi" = (
-/turf/open/floor{
-	dir = 1;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/darkyellow2/north,
 /area/desert_dam/building/substation/northwest)
 "yl" = (
-/turf/open/floor/prison{
-	icon_state = "darkyellowcorners2"
-	},
+/turf/open/floor/prison/darkyellowcorners2,
 /area/desert_dam/interior/dam_interior/smes_main)
 "yn" = (
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/building/water_treatment_one/control_room)
 "yr" = (
 /obj/structure/prop/turbine,
@@ -3568,23 +2911,16 @@
 /area/kutjevo/exterior/scrubland)
 "yx" = (
 /obj/effect/decal/cleanable/blood/oil,
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe/north,
 /area/kutjevo/exterior/scrubland)
 "yy" = (
 /obj/structure/machinery/landinglight/ds1,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached4"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached4,
 /area/desert_dam/building/administration/control_room)
 "yD" = (
-/turf/open/floor/coagulation{
-	icon_state = "8,0"
-	},
+/turf/open/floor/coagulation/icon8_0,
 /area/desert_dam/building/water_treatment_two/purification)
 "yE" = (
 /obj/effect/decal/cleanable/liquid_fuel,
@@ -3597,23 +2933,15 @@
 /turf/open/gm/dirt2,
 /area/kutjevo/exterior/scrubland)
 "yI" = (
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached14"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached14,
 /area/kutjevo/exterior/scrubland)
 "yM" = (
 /obj/structure/machinery/floodlight,
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "green"
-	},
+/turf/open/floor/prison/green/north,
 /area/desert_dam/interior/dam_interior/atmos_storage)
 "yN" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe/north,
 /area/desert_dam/building/water_treatment_two/purification)
 "yV" = (
 /obj/structure/platform,
@@ -3621,9 +2949,7 @@
 /area/kutjevo/exterior/scrubland)
 "yY" = (
 /obj/structure/machinery/light,
-/turf/open/floor{
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/darkyellow2,
 /area/desert_dam/building/substation/northwest)
 "yZ" = (
 /obj/structure/barricade/wooden{
@@ -3645,14 +2971,10 @@
 /area/kutjevo/exterior/scrubland)
 "zg" = (
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/gm/river/desert/shallow_corner{
-	dir = 4
-	},
+/turf/open/gm/river/desert/shallow_corner/east,
 /area/kutjevo/exterior/scrubland)
 "zj" = (
-/turf/open/floor/coagulation{
-	icon_state = "0,0"
-	},
+/turf/open/floor/coagulation/icon0_0,
 /area/desert_dam/building/water_treatment_one/purification)
 "zl" = (
 /turf/closed/shuttle/dropship1{
@@ -3670,10 +2992,7 @@
 /turf/open/asphalt,
 /area/kutjevo/exterior/scrubland)
 "zu" = (
-/turf/open/floor{
-	dir = 5;
-	icon_state = "vault"
-	},
+/turf/open/floor/vault2/northeast,
 /area/desert_dam/building/substation/northwest)
 "zv" = (
 /obj/structure/window/reinforced/tinted{
@@ -3683,9 +3002,7 @@
 /obj/structure/surface/table/reinforced,
 /obj/item/clipboard,
 /obj/item/tool/stamp,
-/turf/open/floor/prison{
-	icon_state = "bright_clean2"
-	},
+/turf/open/floor/prison/bright_clean2,
 /area/desert_dam/building/administration/control_room)
 "zw" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -3704,9 +3021,7 @@
 /obj/structure/machinery/power/terminal{
 	dir = 1
 	},
-/turf/open/floor/plating{
-	icon_state = "warnplate"
-	},
+/turf/open/floor/plating/warnplate,
 /area/desert_dam/building/substation/northwest)
 "zC" = (
 /obj/structure/platform_decoration/strata/metal{
@@ -3721,9 +3036,7 @@
 /area/desert_dam/interior/dam_interior/atmos_storage)
 "zM" = (
 /obj/structure/cargo_container/kelland/left,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached3"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached3,
 /area/desert_dam/building/administration/control_room)
 "zN" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -3735,9 +3048,7 @@
 /obj/structure/machinery/landinglight/ds1/delayone{
 	dir = 4
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached9"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached9,
 /area/desert_dam/building/administration/control_room)
 "zR" = (
 /obj/structure/platform{
@@ -3760,32 +3071,22 @@
 /obj/effect/decal/warning_stripes{
 	pixel_y = 30
 	},
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/prison/darkyellow2/west,
 /area/desert_dam/interior/dam_interior/control_room)
 "zW" = (
 /obj/structure/platform_decoration{
 	dir = 8
 	},
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/gm/river/desert/shallow_edge{
-	dir = 9
-	},
+/turf/open/gm/river/desert/shallow_edge/northwest,
 /area/kutjevo/exterior/scrubland)
 "zX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cargo_container/kelland/left,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "Ab" = (
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/building/water_treatment_two/purification)
 "Ac" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -3812,9 +3113,7 @@
 /area/kutjevo/exterior/scrubland)
 "Ai" = (
 /obj/structure/machinery/portable_atmospherics/powered/pump,
-/turf/open/floor/prison{
-	icon_state = "green"
-	},
+/turf/open/floor/prison/green,
 /area/desert_dam/interior/dam_interior/atmos_storage)
 "Ak" = (
 /obj/structure/platform/strata/metal{
@@ -3829,29 +3128,20 @@
 "Am" = (
 /obj/structure/surface/table,
 /obj/structure/machinery/cell_charger,
-/turf/open/floor/prison{
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/prison/darkyellow2,
 /area/desert_dam/interior/dam_interior/control_room)
 "Aq" = (
 /obj/structure/machinery/colony_floodlight,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached12"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached12,
 /area/kutjevo/exterior/scrubland)
 "Ax" = (
 /obj/structure/platform{
 	dir = 1
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached3"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached3,
 /area/desert_dam/building/administration/control_room)
 "AA" = (
-/turf/open/floor{
-	dir = 5;
-	icon_state = "warning"
-	},
+/turf/open/floor/warning/northeast,
 /area/desert_dam/interior/dam_interior/engine_room)
 "AC" = (
 /obj/structure/shuttle/part/dropship1/transparent/engine_left_cap,
@@ -3873,9 +3163,7 @@
 /obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 8
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached3"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached3,
 /area/desert_dam/building/administration/control_room)
 "AK" = (
 /turf/closed/shuttle/dropship1{
@@ -3883,9 +3171,7 @@
 	},
 /area/kutjevo/exterior/scrubland)
 "AL" = (
-/turf/open/floor/coagulation{
-	icon_state = "0,5"
-	},
+/turf/open/floor/coagulation/icon0_5,
 /area/desert_dam/building/water_treatment_two/purification)
 "AM" = (
 /obj/structure/machinery/landinglight/ds1/delaytwo{
@@ -3902,10 +3188,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/turf/open/floor/prison{
-	dir = 9;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/prison/darkyellow2/northwest,
 /area/desert_dam/interior/dam_interior/smes_main)
 "AU" = (
 /obj/structure/platform/strata/metal{
@@ -3925,16 +3208,12 @@
 /area/desert_dam/building/administration/control_room)
 "AZ" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	icon_state = "bright_clean2"
-	},
+/turf/open/floor/prison/bright_clean2,
 /area/desert_dam/building/administration/control_room)
 "Bf" = (
 /obj/structure/machinery/floodlight/landing,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor{
-	icon_state = "asteroidplating"
-	},
+/turf/open/floor/asteroidplating,
 /area/desert_dam/building/administration/control_room)
 "Bn" = (
 /obj/structure/machinery/light{
@@ -3959,10 +3238,7 @@
 	amount = 50
 	},
 /obj/item/storage/briefcase/inflatable,
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "green"
-	},
+/turf/open/floor/prison/green/east,
 /area/desert_dam/interior/dam_interior/atmos_storage)
 "Bs" = (
 /obj/structure/machinery/power/smes/buildable{
@@ -3977,9 +3253,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	icon_state = "bright_clean2"
-	},
+/turf/open/floor/prison/bright_clean2,
 /area/desert_dam/building/administration/control_room)
 "BD" = (
 /turf/closed/shuttle/dropship1/transparent{
@@ -4014,22 +3288,16 @@
 /turf/open/auto_turf/sand/layer0,
 /area/kutjevo/exterior/scrubland)
 "BJ" = (
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached9"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached9,
 /area/kutjevo/exterior/scrubland)
 "BK" = (
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "BP" = (
 /obj/structure/machinery/landinglight/ds1/delayone{
 	dir = 8
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached3"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached3,
 /area/desert_dam/building/administration/control_room)
 "BQ" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/comdoor{
@@ -4037,10 +3305,7 @@
 	name = "\improper Administration Control Room"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor{
-	dir = 5;
-	icon_state = "vault"
-	},
+/turf/open/floor/vault2/northeast,
 /area/desert_dam/building/administration/control_room)
 "BT" = (
 /obj/structure/surface/table,
@@ -4054,10 +3319,7 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 1
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/building/water_treatment_two/floodgate_control)
 "BX" = (
 /obj/structure/prop/static_tank/fuel{
@@ -4070,18 +3332,13 @@
 /area/kutjevo/exterior/scrubland)
 "Ca" = (
 /obj/structure/machinery/power/port_gen/pacman,
-/turf/open/floor/prison{
-	dir = 6;
-	icon_state = "green"
-	},
+/turf/open/floor/prison/green/southeast,
 /area/desert_dam/interior/dam_interior/atmos_storage)
 "Cd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin11"
-	},
+/turf/open/shuttle/dropship/rasputin11,
 /area/kutjevo/exterior/scrubland)
 "Cg" = (
 /obj/structure/prop/ice_colony/surveying_device,
@@ -4096,17 +3353,11 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/interior/dam_interior/engine_room)
 "Ck" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating{
-	dir = 6;
-	icon_state = "warnplate"
-	},
+/turf/open/floor/plating/warnplate/southeast,
 /area/kutjevo/exterior/scrubland)
 "Cl" = (
 /obj/structure/flora/grass/desert/lightgrass_1,
@@ -4114,9 +3365,7 @@
 /area/kutjevo/exterior/scrubland)
 "Cn" = (
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/desert/desert_shore/shore_corner1{
-	dir = 4
-	},
+/turf/open/desert/desert_shore/shore_corner1/east,
 /area/kutjevo/exterior/scrubland)
 "Co" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -4135,9 +3384,7 @@
 /obj/structure/prop/invuln/fire{
 	icon_state = "dynamic_1"
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached18"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached18,
 /area/kutjevo/exterior/scrubland)
 "Cx" = (
 /turf/closed/wall/hangar{
@@ -4150,29 +3397,20 @@
 	layer = 2
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/coagulation{
-	icon_state = "0,5"
-	},
+/turf/open/floor/coagulation/icon0_5,
 /area/desert_dam/building/water_treatment_two/purification)
 "CB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/strata{
-	icon_state = "floor3"
-	},
+/turf/open/floor/strata/floor3,
 /area/kutjevo/exterior/scrubland)
 "CC" = (
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/building/water_treatment_two/purification)
 "CD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached18"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached18,
 /area/kutjevo/exterior/scrubland)
 "CG" = (
 /obj/structure/shuttle/part/dropship1/transparent/engine_left_cap,
@@ -4183,9 +3421,7 @@
 /turf/open/auto_turf/sand/layer0,
 /area/kutjevo/exterior/scrubland)
 "CL" = (
-/turf/open/floor{
-	icon_state = "dark2"
-	},
+/turf/open/floor/dark2,
 /area/desert_dam/building/substation/northwest)
 "CM" = (
 /obj/structure/flora/grass/desert/lightgrass_4,
@@ -4201,10 +3437,7 @@
 /obj/structure/filtration/machine_96x96{
 	icon_state = "sedimentation_A_1"
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/building/water_treatment_one/purification)
 "CU" = (
 /obj/structure/platform/strata/metal{
@@ -4214,9 +3447,7 @@
 /area/kutjevo/exterior/scrubland)
 "CW" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached1"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached1,
 /area/desert_dam/building/administration/control_room)
 "CY" = (
 /turf/closed/wall/hangar{
@@ -4236,10 +3467,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/building/water_treatment_one/control_room)
 "Db" = (
 /obj/structure/machinery/light{
@@ -4249,14 +3477,10 @@
 /area/desert_dam/building/water_treatment_two/purification)
 "Df" = (
 /obj/structure/filtration/machine_96x96/filtration,
-/turf/open/floor/coagulation{
-	icon_state = "4,8"
-	},
+/turf/open/floor/coagulation/icon4_8,
 /area/desert_dam/building/water_treatment_two/purification)
 "Di" = (
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached3"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached3,
 /area/desert_dam/building/administration/control_room)
 "Dj" = (
 /obj/item/tool/wrench{
@@ -4271,9 +3495,7 @@
 /area/kutjevo/exterior/scrubland)
 "Dn" = (
 /obj/structure/girder/displaced,
-/turf/open/floor/plating{
-	icon_state = "platingdmg1"
-	},
+/turf/open/floor/plating/platingdmg1,
 /area/kutjevo/exterior/scrubland)
 "Do" = (
 /turf/closed/wall/hangar{
@@ -4298,18 +3520,13 @@
 /obj/structure/surface/rack,
 /obj/effect/spawner/random/tech_supply,
 /obj/effect/spawner/random/tech_supply,
-/turf/open/floor{
-	dir = 4;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/darkyellow2/east,
 /area/desert_dam/building/substation/northwest)
 "Dv" = (
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/turf/open/floor/prison{
-	dir = 10
-	},
+/turf/open/floor/prison/southwest,
 /area/desert_dam/interior/dam_interior/engine_room)
 "Dw" = (
 /obj/structure/machinery/power/port_gen/pacman,
@@ -4324,25 +3541,16 @@
 /area/desert_dam/interior/dam_interior/engine_room)
 "DC" = (
 /obj/structure/machinery/colony_floodlight,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "floor_marked"
-	},
+/turf/open/floor/prison/floor_marked/southwest,
 /area/kutjevo/exterior/scrubland)
 "DE" = (
 /obj/structure/machinery/light,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/building/water_treatment_two/purification)
 "DF" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/interior/dam_interior/control_room)
 "DG" = (
 /obj/structure/barricade/plasteel{
@@ -4357,18 +3565,13 @@
 /area/kutjevo/exterior/scrubland)
 "DM" = (
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/gm/river/desert/shallow_edge{
-	dir = 5
-	},
+/turf/open/gm/river/desert/shallow_edge/northeast,
 /area/kutjevo/exterior/scrubland)
 "DO" = (
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "blue"
-	},
+/turf/open/floor/prison/blue/west,
 /area/desert_dam/building/administration/control_room)
 "DP" = (
 /obj/structure/largecrate/random/case/double,
@@ -4385,18 +3588,13 @@
 /obj/structure/surface/table/reinforced,
 /obj/item/paper_bin,
 /obj/item/tool/pen/blue,
-/turf/open/floor/prison{
-	icon_state = "bright_clean2"
-	},
+/turf/open/floor/prison/bright_clean2,
 /area/desert_dam/building/administration/control_room)
 "DU" = (
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/interior/dam_interior/engine_room)
 "Eb" = (
 /obj/item/tool/warning_cone,
@@ -4408,21 +3606,14 @@
 /area/kutjevo/exterior/scrubland)
 "Ef" = (
 /obj/effect/decal/cleanable/blood/oil,
-/turf/open/floor/prison{
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe,
 /area/kutjevo/exterior/scrubland)
 "Ei" = (
 /obj/structure/girder/reinforced,
-/turf/open/floor/plating{
-	icon_state = "platingdmg3"
-	},
+/turf/open/floor/plating/platingdmg3,
 /area/kutjevo/exterior/scrubland)
 "Ej" = (
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/building/water_treatment_one/control_room)
 "Ek" = (
 /turf/closed/shuttle/dropship1/transparent{
@@ -4432,15 +3623,10 @@
 "Em" = (
 /obj/structure/surface/table,
 /obj/item/storage/pill_bottle/packet/bicaridine,
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe/north,
 /area/kutjevo/exterior/scrubland)
 "Ep" = (
-/turf/open/floor/coagulation{
-	icon_state = "2,0"
-	},
+/turf/open/floor/coagulation/icon2_0,
 /area/desert_dam/building/water_treatment_one/purification)
 "Es" = (
 /obj/structure/prop/invuln/fire{
@@ -4463,14 +3649,10 @@
 /area/kutjevo/exterior/scrubland)
 "Ex" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "Ey" = (
-/turf/open/floor/prison{
-	dir = 10
-	},
+/turf/open/floor/prison/southwest,
 /area/desert_dam/interior/dam_interior/control_room)
 "EA" = (
 /obj/effect/decal/cleanable/liquid_fuel,
@@ -4483,10 +3665,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/building/water_treatment_one/purification)
 "EH" = (
 /obj/structure/shuttle/part/dropship1/left_inner_wing_connector,
@@ -4496,24 +3675,17 @@
 /obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 1
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached4"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached4,
 /area/desert_dam/building/administration/control_room)
 "EJ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/rack,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin5"
-	},
+/turf/open/shuttle/dropship/light_grey_left_to_right,
 /area/kutjevo/exterior/scrubland)
 "EK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/building/water_treatment_one/purification)
 "EL" = (
 /obj/structure/window/framed/hangar,
@@ -4521,10 +3693,7 @@
 /area/desert_dam/building/water_treatment_one/purification)
 "EO" = (
 /obj/structure/surface/table,
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe/north,
 /area/kutjevo/exterior/scrubland)
 "EQ" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -4533,32 +3702,22 @@
 /turf/open/asphalt,
 /area/desert_dam/building/administration/control_room)
 "ER" = (
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe/north,
 /area/kutjevo/exterior/scrubland)
 "ES" = (
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached13"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached13,
 /area/desert_dam/building/administration/control_room)
 "ET" = (
-/turf/open/floor/prison{
-	icon_state = "green"
-	},
+/turf/open/floor/prison/green,
 /area/desert_dam/interior/dam_interior/atmos_storage)
 "EW" = (
 /obj/structure/largecrate/random/barrel/green{
 	fill_from_loc = 1
 	},
-/turf/open/floor/plating{
-	dir = 9;
-	icon_state = "warnplate"
-	},
+/turf/open/floor/plating/warnplate/northwest,
 /area/kutjevo/exterior/scrubland)
 "EX" = (
 /obj/structure/prop/dam/boulder/boulder1,
@@ -4571,61 +3730,44 @@
 /area/desert_dam/building/water_treatment_two/purification)
 "Fa" = (
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/floor/coagulation{
-	icon_state = "8,3"
-	},
+/turf/open/floor/coagulation/icon8_3,
 /area/desert_dam/building/water_treatment_one/purification)
 "Fb" = (
 /obj/structure/surface/rack,
 /obj/item/stack/sheet/metal{
 	amount = 10
 	},
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/prison/darkyellow2/north,
 /area/desert_dam/interior/dam_interior/smes_main)
 "Fc" = (
 /obj/structure/stairs{
 	dir = 8
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached3"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached3,
 /area/desert_dam/building/administration/control_room)
 "Fe" = (
 /obj/item/tool/pickaxe/drill{
 	pixel_x = -5;
 	pixel_y = 21
 	},
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe/north,
 /area/kutjevo/exterior/scrubland)
 "Ff" = (
 /obj/structure/machinery/colony_floodlight,
-/turf/open/asphalt{
-	icon_state = "tile"
-	},
+/turf/open/asphalt/tile,
 /area/kutjevo/exterior/scrubland)
 "Fg" = (
 /obj/structure/bed/chair/vehicle{
 	pixel_x = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "Fi" = (
 /obj/structure/filtration/machine_32x32{
 	icon_state = "filtration_segment_B_1"
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/building/water_treatment_two/purification)
 "Fj" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -4636,9 +3778,7 @@
 /area/desert_dam/building/administration/control_room)
 "Fm" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin5"
-	},
+/turf/open/shuttle/dropship/light_grey_left_to_right,
 /area/kutjevo/exterior/scrubland)
 "Fo" = (
 /turf/closed/shuttle/dropship1{
@@ -4669,9 +3809,7 @@
 /obj/item/clipboard,
 /obj/item/tool/stamp,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	icon_state = "bright_clean2"
-	},
+/turf/open/floor/prison/bright_clean2,
 /area/desert_dam/building/administration/control_room)
 "Ft" = (
 /obj/effect/decal/cleanable/dirt,
@@ -4681,9 +3819,7 @@
 /obj/structure/machinery/camera/autoname{
 	dir = 1
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin5"
-	},
+/turf/open/shuttle/dropship/light_grey_left_to_right,
 /area/kutjevo/exterior/scrubland)
 "Fz" = (
 /obj/effect/decal/cleanable/dirt,
@@ -4694,38 +3830,22 @@
 	dir = 2;
 	name = "\improper Treatment Controlroom"
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/building/water_treatment_one/control_room)
 "FF" = (
-/obj/structure/machinery/power/apc{
-	dir = 1;
-	pixel_y = 24;
-	start_charge = 0
-	},
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "green"
-	},
+/obj/structure/machinery/power/apc/no_power/north,
+/turf/open/floor/prison/green/north,
 /area/desert_dam/interior/dam_interior/atmos_storage)
 "FG" = (
 /obj/structure/filtration/machine_64x96{
 	icon_state = "filtration_machine_A_1"
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/building/water_treatment_one/purification)
 "FI" = (
 /obj/structure/largecrate/supply/medicine/iv,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating{
-	dir = 8;
-	icon_state = "warnplate"
-	},
+/turf/open/floor/plating/warnplate/west,
 /area/kutjevo/exterior/scrubland)
 "FJ" = (
 /obj/structure/largecrate/random/barrel/blue,
@@ -4752,9 +3872,7 @@
 /obj/structure/bed/chair/vehicle{
 	pixel_x = 8
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "FT" = (
 /obj/structure/largecrate/random,
@@ -4765,24 +3883,16 @@
 	pixel_x = 12;
 	pixel_y = 10
 	},
-/turf/open/floor/prison{
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe,
 /area/kutjevo/exterior/scrubland)
 "FW" = (
 /obj/structure/largecrate/supply/medicine/blood,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating{
-	dir = 5;
-	icon_state = "warnplate"
-	},
+/turf/open/floor/plating/warnplate/northeast,
 /area/kutjevo/exterior/scrubland)
 "FX" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/prison/darkyellow2/west,
 /area/desert_dam/interior/dam_interior/control_room)
 "Ga" = (
 /obj/effect/decal/cleanable/dirt,
@@ -4790,10 +3900,7 @@
 /turf/open/auto_turf/sand/layer0,
 /area/kutjevo/exterior/scrubland)
 "Gb" = (
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/building/water_treatment_one/purification)
 "Gd" = (
 /obj/structure/platform/strata/metal{
@@ -4814,15 +3921,11 @@
 /area/kutjevo/exterior/scrubland)
 "Gh" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe,
 /area/kutjevo/exterior/scrubland)
 "Gj" = (
 /obj/structure/largecrate/supply/supplies/mre,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached1"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached1,
 /area/kutjevo/exterior/scrubland)
 "Gl" = (
 /obj/structure/machinery/light{
@@ -4834,22 +3937,14 @@
 /obj/item/clothing/head/welding,
 /obj/structure/surface/rack,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/interior/dam_interior/smes_main)
 "Gr" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/building/water_treatment_one/control_room)
 "Gs" = (
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached15"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached15,
 /area/kutjevo/exterior/scrubland)
 "Gu" = (
 /obj/structure/shuttle/part/dropship1/right_inner_wing_connector,
@@ -4858,9 +3953,7 @@
 "Gv" = (
 /obj/structure/machinery/landinglight/ds1/delayone,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached4"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached4,
 /area/desert_dam/building/administration/control_room)
 "Gz" = (
 /obj/structure/machinery/light{
@@ -4871,30 +3964,22 @@
 /area/desert_dam/building/water_treatment_two/purification)
 "GB" = (
 /obj/structure/platform,
-/turf/open/desert/desert_shore/shore_edge1{
-	dir = 4
-	},
+/turf/open/desert/desert_shore/shore_edge1/east,
 /area/kutjevo/exterior/scrubland)
 "GC" = (
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/asphalt{
-	icon_state = "tile"
-	},
+/turf/open/asphalt/tile,
 /area/kutjevo/exterior/scrubland)
 "GD" = (
 /obj/effect/attach_point/crew_weapon/dropship1,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "GE" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe,
 /area/desert_dam/interior/dam_interior/engine_room)
 "GF" = (
 /obj/structure/window/reinforced/tinted{
@@ -4905,9 +3990,7 @@
 /obj/item/paper_bin,
 /obj/item/tool/pen/blue,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	icon_state = "bright_clean2"
-	},
+/turf/open/floor/prison/bright_clean2,
 /area/desert_dam/building/administration/control_room)
 "GL" = (
 /obj/structure/prop/invuln/fire,
@@ -4923,9 +4006,7 @@
 	icon_state = "3"
 	},
 /obj/structure/closet/crate/secure/mortar_ammo/mortar_kit,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin11"
-	},
+/turf/open/shuttle/dropship/rasputin11,
 /area/kutjevo/exterior/scrubland)
 "GO" = (
 /obj/effect/decal/cleanable/dirt,
@@ -4937,19 +4018,14 @@
 /turf/open/auto_turf/sand/layer1,
 /area/kutjevo/exterior/scrubland)
 "GR" = (
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/prison/darkyellow2/west,
 /area/desert_dam/interior/dam_interior/smes_main)
 "GS" = (
 /obj/structure/largecrate/random/case/small,
 /turf/open/auto_turf/sand/layer1,
 /area/kutjevo/exterior/scrubland)
 "Ha" = (
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin2"
-	},
+/turf/open/shuttle/dropship/rasputin2,
 /area/kutjevo/exterior/scrubland)
 "Hb" = (
 /obj/structure/window/reinforced/tinted{
@@ -4961,9 +4037,7 @@
 /obj/structure/surface/table/reinforced,
 /obj/item/clipboard,
 /obj/item/tool/stamp,
-/turf/open/floor/prison{
-	icon_state = "bright_clean2"
-	},
+/turf/open/floor/prison/bright_clean2,
 /area/desert_dam/building/administration/control_room)
 "Hd" = (
 /obj/structure/barricade/metal{
@@ -4979,18 +4053,14 @@
 /area/desert_dam/building/administration/control_room)
 "Hf" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached13"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached13,
 /area/desert_dam/building/administration/control_room)
 "Hh" = (
 /turf/open/floor/plating,
 /area/desert_dam/building/administration/control_room)
 "Hi" = (
 /obj/structure/girder,
-/turf/open/floor/plating{
-	icon_state = "platingdmg3"
-	},
+/turf/open/floor/plating/platingdmg3,
 /area/kutjevo/exterior/scrubland)
 "Hj" = (
 /obj/structure/barricade/sandbags/wired{
@@ -5007,16 +4077,8 @@
 	},
 /area/kutjevo/exterior/scrubland)
 "Ho" = (
-/turf/open/floor{
-	dir = 8;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/darkyellow2/west,
 /area/desert_dam/building/substation/northwest)
-"Hq" = (
-/turf/open/floor{
-	icon_state = "warning"
-	},
-/area/desert_dam/interior/dam_interior/engine_room)
 "Hs" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/power/port_gen/pacman/super,
@@ -5028,10 +4090,7 @@
 	amount = 25
 	},
 /obj/effect/spawner/random/toolbox,
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/prison/darkyellow2/north,
 /area/desert_dam/interior/dam_interior/smes_main)
 "Hx" = (
 /obj/structure/machinery/computer/turbine_computer,
@@ -5047,9 +4106,7 @@
 /area/kutjevo/exterior/scrubland)
 "HB" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached12"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached12,
 /area/desert_dam/building/administration/control_room)
 "HC" = (
 /turf/open/floor/prison,
@@ -5069,9 +4126,7 @@
 /obj/structure/bed/chair/office/light{
 	dir = 8
 	},
-/turf/open/floor/prison{
-	icon_state = "bright_clean2"
-	},
+/turf/open/floor/prison/bright_clean2,
 /area/desert_dam/building/administration/control_room)
 "Ib" = (
 /obj/structure/surface/table,
@@ -5083,18 +4138,13 @@
 /area/kutjevo/exterior/scrubland)
 "If" = (
 /obj/structure/machinery/power/port_gen/pacman,
-/turf/open/floor/prison{
-	icon_state = "green"
-	},
+/turf/open/floor/prison/green,
 /area/desert_dam/interior/dam_interior/atmos_storage)
 "Ii" = (
 /obj/structure/surface/table,
 /obj/effect/spawner/random/tool,
 /obj/effect/spawner/random/tech_supply,
-/turf/open/floor{
-	dir = 5;
-	icon_state = "darkblue2"
-	},
+/turf/open/floor/darkblue2/northeast,
 /area/desert_dam/building/administration/control_room)
 "Ij" = (
 /obj/item/tool/screwdriver{
@@ -5135,9 +4185,7 @@
 	pixel_x = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "Iy" = (
 /obj/structure/curtain/red,
@@ -5147,9 +4195,7 @@
 /turf/closed/wall/kutjevo/rock,
 /area/kutjevo/exterior/scrubland)
 "II" = (
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached2"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached2,
 /area/kutjevo/exterior/scrubland)
 "IM" = (
 /obj/item/tool/shovel/etool{
@@ -5165,31 +4211,21 @@
 /area/kutjevo/exterior/scrubland)
 "IO" = (
 /obj/structure/prop/almayer/computers/sensor_computer2,
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "blue"
-	},
+/turf/open/floor/prison/blue/north,
 /area/desert_dam/building/administration/control_room)
 "IS" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached9"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached9,
 /area/desert_dam/building/administration/control_room)
 "IV" = (
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached13"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached13,
 /area/desert_dam/building/administration/control_room)
 "IX" = (
 /obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	pixel_y = 6
 	},
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "blue"
-	},
+/turf/open/floor/prison/blue/north,
 /area/desert_dam/building/administration/control_room)
 "IY" = (
 /obj/structure/platform{
@@ -5200,9 +4236,7 @@
 /area/desert_dam/building/administration/control_room)
 "Jb" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin2"
-	},
+/turf/open/shuttle/dropship/rasputin2,
 /area/kutjevo/exterior/scrubland)
 "Jc" = (
 /obj/structure/floodgate{
@@ -5262,24 +4296,16 @@
 /area/kutjevo/exterior/scrubland)
 "Jx" = (
 /obj/structure/largecrate/supply/medicine/blood,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached3"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached3,
 /area/kutjevo/exterior/scrubland)
 "Jy" = (
 /obj/structure/machinery/recharge_station,
-/turf/open/floor{
-	dir = 5;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/darkyellow2/northeast,
 /area/desert_dam/building/substation/northwest)
 "Jz" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/interior/dam_interior/smes_main)
 "JB" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5290,10 +4316,7 @@
 /obj/structure/largecrate/supply/ammo/m41amk1{
 	pixel_y = 11
 	},
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe/west,
 /area/kutjevo/exterior/scrubland)
 "JH" = (
 /obj/structure/powerloader_wreckage/ft,
@@ -5301,9 +4324,7 @@
 /area/kutjevo/exterior/scrubland)
 "JI" = (
 /obj/item/clothing/head/welding,
-/turf/open/floor/prison{
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe,
 /area/kutjevo/exterior/scrubland)
 "JK" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5326,9 +4347,7 @@
 	pixel_x = 7;
 	pixel_y = -10
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached9"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached9,
 /area/kutjevo/exterior/scrubland)
 "JP" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5341,10 +4360,7 @@
 /turf/open/gm/dirt2,
 /area/kutjevo/exterior/scrubland)
 "JS" = (
-/turf/open/floor{
-	dir = 5;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/darkyellow2/northeast,
 /area/desert_dam/building/substation/northwest)
 "JT" = (
 /obj/structure/platform/strata/metal{
@@ -5356,24 +4372,18 @@
 /obj/structure/stairs/perspective{
 	color = "#6e6e6e"
 	},
-/turf/open/floor/strata{
-	icon_state = "floor3"
-	},
+/turf/open/floor/strata/floor3,
 /area/kutjevo/exterior/scrubland)
 "JV" = (
 /obj/structure/girder,
 /obj/item/shard/shrapnel,
-/turf/open/floor/plating{
-	icon_state = "platingdmg3"
-	},
+/turf/open/floor/plating/platingdmg3,
 /area/kutjevo/exterior/scrubland)
 "JY" = (
 /obj/effect/attach_point/crew_weapon/dropship1,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "Kc" = (
 /obj/structure/shuttle/part/dropship1/transparent/right_inner_bottom_wing,
@@ -5397,10 +4407,7 @@
 "Ke" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/vomit,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/interior/dam_interior/smes_main)
 "Kn" = (
 /obj/structure/platform{
@@ -5415,9 +4422,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/reagent_dispensers/beerkeg/alt,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached12"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached12,
 /area/desert_dam/building/administration/control_room)
 "Ks" = (
 /obj/structure/machinery/light{
@@ -5430,9 +4435,7 @@
 	pixel_y = 14
 	},
 /obj/structure/largecrate/random/case/small,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached1"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached1,
 /area/kutjevo/exterior/scrubland)
 "Ky" = (
 /obj/structure/machinery/landinglight/ds1/delayone{
@@ -5440,9 +4443,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached14"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached14,
 /area/desert_dam/building/administration/control_room)
 "Kz" = (
 /turf/open/floor/plating,
@@ -5452,9 +4453,7 @@
 	dir = 4
 	},
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/desert/desert_shore/shore_corner1{
-	dir = 1
-	},
+/turf/open/desert/desert_shore/shore_corner1/north,
 /area/kutjevo/exterior/scrubland)
 "KE" = (
 /obj/structure/platform_decoration/kutjevo/rock{
@@ -5465,18 +4464,14 @@
 "KG" = (
 /obj/structure/platform,
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/gm/river/desert/shallow_edge{
-	dir = 4
-	},
+/turf/open/gm/river/desert/shallow_edge/east,
 /area/kutjevo/exterior/scrubland)
 "KH" = (
 /obj/structure/prop/dam/boulder/boulder3,
 /turf/open/auto_turf/sand/layer1,
 /area/kutjevo/exterior/scrubland)
 "KM" = (
-/turf/open/floor/prison{
-	dir = 10
-	},
+/turf/open/floor/prison/southwest,
 /area/desert_dam/interior/dam_interior/atmos_storage)
 "KO" = (
 /obj/structure/machinery/disposal,
@@ -5492,17 +4487,13 @@
 /obj/structure/machinery/door/airlock/hatch/cockpit{
 	name = "dropship"
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin14"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
 /area/kutjevo/exterior/scrubland)
 "KW" = (
 /obj/structure/prop/dam/van/damaged,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached4"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached4,
 /area/desert_dam/building/administration/control_room)
 "KY" = (
 /obj/structure/platform{
@@ -5512,9 +4503,7 @@
 	dir = 4
 	},
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/desert/desert_shore/shore_edge1{
-	dir = 1
-	},
+/turf/open/desert/desert_shore/shore_edge1/north,
 /area/kutjevo/exterior/scrubland)
 "KZ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5531,9 +4520,7 @@
 /area/kutjevo/exterior/scrubland)
 "Lb" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached3"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached3,
 /area/desert_dam/building/administration/control_room)
 "Lc" = (
 /obj/structure/largecrate/random/secure,
@@ -5549,14 +4536,10 @@
 "Lh" = (
 /obj/structure/platform,
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/gm/river/desert/shallow_edge{
-	dir = 8
-	},
+/turf/open/gm/river/desert/shallow_edge/west,
 /area/kutjevo/exterior/scrubland)
 "Lj" = (
-/turf/open/floor/coagulation{
-	icon_state = "8,3"
-	},
+/turf/open/floor/coagulation/icon8_3,
 /area/desert_dam/building/water_treatment_two/purification)
 "Ln" = (
 /obj/vehicle/powerloader{
@@ -5570,9 +4553,7 @@
 /area/kutjevo/exterior/scrubland)
 "Lr" = (
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/desert/desert_shore/desert_shore1{
-	dir = 8
-	},
+/turf/open/desert/desert_shore/desert_shore1/west,
 /area/kutjevo/exterior/scrubland)
 "Lu" = (
 /obj/structure/prop/invuln/fire{
@@ -5591,19 +4572,14 @@
 "LB" = (
 /obj/structure/floodgate,
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/gm/river/desert/shallow_edge{
-	dir = 4
-	},
+/turf/open/gm/river/desert/shallow_edge/east,
 /area/kutjevo/exterior/scrubland)
 "LE" = (
 /obj/effect/blocker/water/toxic/Group_1,
 /turf/open/desert/desert_shore/desert_shore1,
 /area/kutjevo/exterior/scrubland)
 "LF" = (
-/turf/open/floor{
-	dir = 5;
-	icon_state = "vault"
-	},
+/turf/open/floor/vault2/northeast,
 /area/desert_dam/building/administration/control_room)
 "LG" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5611,9 +4587,7 @@
 /turf/open/floor/strata,
 /area/kutjevo/exterior/scrubland)
 "LH" = (
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached3"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached3,
 /area/kutjevo/exterior/scrubland)
 "LI" = (
 /obj/structure/prop/dam/van/damaged{
@@ -5633,24 +4607,17 @@
 /obj/effect/decal/cleanable/liquid_fuel,
 /obj/effect/decal/cleanable/liquid_fuel,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached18"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached18,
 /area/kutjevo/exterior/scrubland)
 "LL" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "darkyellowcorners2"
-	},
+/turf/open/floor/prison/darkyellowcorners2/west,
 /area/desert_dam/interior/dam_interior/control_room)
 "LN" = (
 /obj/effect/decal/cleanable/blood{
 	icon_state = "gib6"
 	},
-/turf/open/floor/prison{
-	icon_state = "bright_clean2"
-	},
+/turf/open/floor/prison/bright_clean2,
 /area/desert_dam/building/administration/control_room)
 "LO" = (
 /obj/structure/surface/table,
@@ -5662,10 +4629,7 @@
 "LP" = (
 /obj/structure/largecrate/supply/supplies/water,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating{
-	dir = 4;
-	icon_state = "warnplate"
-	},
+/turf/open/floor/plating/warnplate/east,
 /area/kutjevo/exterior/scrubland)
 "LR" = (
 /turf/closed/shuttle/dropship1{
@@ -5694,9 +4658,7 @@
 /turf/open/auto_turf/sand/layer1,
 /area/kutjevo/exterior/scrubland)
 "Mc" = (
-/turf/open/floor/prison{
-	dir = 10
-	},
+/turf/open/floor/prison/southwest,
 /area/desert_dam/interior/dam_interior/engine_room)
 "Me" = (
 /obj/structure/machinery/light{
@@ -5718,27 +4680,18 @@
 /turf/open/floor/plating,
 /area/kutjevo/exterior/scrubland)
 "Ml" = (
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe/north,
 /area/desert_dam/building/water_treatment_two/purification)
 "Mm" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/interior/dam_interior/smes_main)
 "Mn" = (
 /obj/structure/filtration/machine_32x32{
 	icon_state = "filtration_segment_A_1"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/building/water_treatment_one/purification)
 "Mq" = (
 /obj/structure/largecrate/random/barrel/blue,
@@ -5748,9 +4701,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/prison/darkyellow2,
 /area/desert_dam/interior/dam_interior/engine_room)
 "Mt" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5759,9 +4710,7 @@
 	},
 /area/desert_dam/interior/dam_interior/engine_room)
 "Mu" = (
-/turf/open/floor/prison{
-	icon_state = "sterile_white"
-	},
+/turf/open/floor/prison/sterile_white,
 /area/kutjevo/exterior/scrubland)
 "MA" = (
 /obj/structure/flora/grass/desert/lightgrass_1,
@@ -5781,10 +4730,7 @@
 /turf/open/asphalt,
 /area/desert_dam/building/administration/control_room)
 "MC" = (
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/interior/dam_interior/control_room)
 "MH" = (
 /obj/structure/largecrate/random{
@@ -5806,28 +4752,18 @@
 /area/desert_dam/interior/dam_interior/engine_room)
 "ML" = (
 /obj/item/stack/sheet/wood,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/building/water_treatment_one/control_room)
 "MP" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating{
-	dir = 10;
-	icon_state = "warnplate"
-	},
+/turf/open/floor/plating/warnplate/southwest,
 /area/kutjevo/exterior/scrubland)
 "MQ" = (
-/turf/open/asphalt{
-	icon_state = "tile"
-	},
+/turf/open/asphalt/tile,
 /area/kutjevo/exterior/scrubland)
 "MR" = (
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/gm/river/desert/shallow_edge{
-	dir = 6
-	},
+/turf/open/gm/river/desert/shallow_edge/southeast,
 /area/kutjevo/exterior/scrubland)
 "MS" = (
 /obj/structure/shuttle/part/dropship1/nose_front_left,
@@ -5846,9 +4782,7 @@
 /turf/open/auto_turf/sand/layer1,
 /area/kutjevo/exterior/scrubland)
 "Ng" = (
-/turf/open/floor/coagulation{
-	icon_state = "4,8"
-	},
+/turf/open/floor/coagulation/icon4_8,
 /area/desert_dam/building/water_treatment_two/purification)
 "Ni" = (
 /obj/structure/platform_decoration{
@@ -5858,9 +4792,7 @@
 /area/kutjevo/exterior/scrubland)
 "Nl" = (
 /obj/structure/surface/rack,
-/turf/open/floor/prison{
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe,
 /area/desert_dam/interior/dam_interior/engine_room)
 "Nm" = (
 /obj/structure/shuttle/part/dropship1/transparent/right_outer_bottom_wing,
@@ -5885,9 +4817,7 @@
 "Ny" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	icon_state = "bright_clean2"
-	},
+/turf/open/floor/prison/bright_clean2,
 /area/desert_dam/building/administration/control_room)
 "ND" = (
 /turf/open/gm/dirt2,
@@ -5895,9 +4825,7 @@
 "NF" = (
 /obj/structure/platform,
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/desert/desert_shore/shore_corner1{
-	dir = 8
-	},
+/turf/open/desert/desert_shore/shore_corner1/west,
 /area/kutjevo/exterior/scrubland)
 "NH" = (
 /obj/structure/platform{
@@ -5909,9 +4837,7 @@
 /obj/structure/machinery/landinglight/ds1{
 	dir = 8
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached3"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached3,
 /area/desert_dam/building/administration/control_room)
 "NK" = (
 /obj/structure/platform_decoration{
@@ -5924,9 +4850,7 @@
 /turf/open/floor/strata,
 /area/kutjevo/exterior/scrubland)
 "NM" = (
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached9"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached9,
 /area/desert_dam/building/administration/control_room)
 "NN" = (
 /obj/effect/decal/cleanable/liquid_fuel,
@@ -5937,9 +4861,7 @@
 /area/kutjevo/exterior/scrubland)
 "NS" = (
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/desert/desert_shore/shore_edge1{
-	dir = 8
-	},
+/turf/open/desert/desert_shore/shore_edge1/west,
 /area/kutjevo/exterior/scrubland)
 "NX" = (
 /turf/closed/shuttle{
@@ -5964,9 +4886,7 @@
 "Oi" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cargo_container/kelland/right,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "Oj" = (
 /obj/structure/largecrate/random/barrel/green,
@@ -5974,9 +4894,7 @@
 /area/kutjevo/exterior/scrubland)
 "Ol" = (
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/desert/desert_shore/shore_edge1{
-	dir = 1
-	},
+/turf/open/desert/desert_shore/shore_edge1/north,
 /area/kutjevo/exterior/scrubland)
 "Oo" = (
 /obj/structure/desertdam/decals/road_edge,
@@ -5993,18 +4911,13 @@
 /obj/structure/filtration/machine_32x32{
 	icon_state = "filtration_catwalk"
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/building/water_treatment_two/purification)
 "Ot" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 1
 	},
-/turf/open/floor/prison{
-	icon_state = "bright_clean2"
-	},
+/turf/open/floor/prison/bright_clean2,
 /area/desert_dam/building/administration/control_room)
 "Ou" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6035,9 +4948,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "N"
 	},
-/turf/open/floor/prison{
-	icon_state = "sterile_white"
-	},
+/turf/open/floor/prison/sterile_white,
 /area/kutjevo/exterior/scrubland)
 "OB" = (
 /turf/open/floor/plating/plating_catwalk,
@@ -6058,10 +4969,7 @@
 /turf/open/floor/strata,
 /area/kutjevo/exterior/scrubland)
 "OJ" = (
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/prison/darkyellow2/east,
 /area/desert_dam/interior/dam_interior/smes_main)
 "ON" = (
 /obj/structure/largecrate/random/barrel/red,
@@ -6071,22 +4979,15 @@
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/building/water_treatment_one/control_room)
 "OS" = (
 /obj/structure/machinery/landinglight/ds1,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached3"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached3,
 /area/desert_dam/building/administration/control_room)
 "OT" = (
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/gm/river/desert/shallow_edge{
-	dir = 10
-	},
+/turf/open/gm/river/desert/shallow_edge/southwest,
 /area/kutjevo/exterior/scrubland)
 "OU" = (
 /obj/structure/platform/kutjevo/rock{
@@ -6101,10 +5002,7 @@
 /obj/structure/filtration/machine_64x96{
 	icon_state = "filtration_machine_B_1"
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/building/water_treatment_two/purification)
 "OZ" = (
 /obj/item/tool/pickaxe,
@@ -6129,16 +5027,10 @@
 "Pi" = (
 /obj/structure/surface/rack,
 /obj/effect/landmark/crap_item,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/building/water_treatment_two/floodgate_control)
 "Pj" = (
-/turf/open/floor{
-	dir = 9;
-	icon_state = "warning"
-	},
+/turf/open/floor/warning/northwest,
 /area/desert_dam/interior/dam_interior/engine_room)
 "Pk" = (
 /obj/structure/cargo_container/arious/rightmid,
@@ -6148,10 +5040,7 @@
 /obj/structure/filtration/machine_32x32{
 	icon_state = "filtration_catwalk"
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/building/water_treatment_one/purification)
 "Px" = (
 /obj/structure/prop/vehicles/crawler{
@@ -6172,9 +5061,7 @@
 /area/kutjevo/exterior/scrubland)
 "PG" = (
 /obj/structure/machinery/landinglight/ds1,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached4"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached4,
 /area/desert_dam/building/administration/control_room)
 "PH" = (
 /turf/closed/shuttle/dropship1{
@@ -6182,16 +5069,11 @@
 	},
 /area/kutjevo/exterior/scrubland)
 "PJ" = (
-/turf/open/floor/plating{
-	dir = 8;
-	icon_state = "warnplate"
-	},
+/turf/open/floor/plating/warnplate/west,
 /area/kutjevo/exterior/scrubland)
 "PK" = (
 /obj/structure/reagent_dispensers/watertank,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached3"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached3,
 /area/desert_dam/building/administration/control_room)
 "PL" = (
 /obj/structure/surface/table/woodentable/poor,
@@ -6206,23 +5088,17 @@
 /area/kutjevo/exterior/scrubland)
 "PM" = (
 /obj/structure/machinery/landinglight/ds1/delaytwo,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached4"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached4,
 /area/desert_dam/building/administration/control_room)
 "PQ" = (
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached1"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached1,
 /area/kutjevo/exterior/scrubland)
 "PS" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/drip{
 	icon_state = "2"
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "PW" = (
 /obj/structure/platform/strata/metal{
@@ -6234,9 +5110,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/prop/almayer/CICmap,
 /obj/structure/surface/table/reinforced/prison,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin5"
-	},
+/turf/open/shuttle/dropship/light_grey_left_to_right,
 /area/kutjevo/exterior/scrubland)
 "Qa" = (
 /turf/open/asphalt,
@@ -6245,10 +5119,7 @@
 /obj/structure/pipes/vents/pump{
 	dir = 8
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/building/water_treatment_one/control_room)
 "Qg" = (
 /obj/structure/prop/turbine_extras,
@@ -6259,25 +5130,17 @@
 	dir = 4;
 	indestructible = 1
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached18"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached18,
 /area/kutjevo/exterior/scrubland)
 "Qn" = (
-/turf/open/floor{
-	dir = 7;
-	icon_state = "warning"
-	},
+/turf/open/floor/warning,
 /area/desert_dam/interior/dam_interior/engine_room)
 "Qo" = (
 /obj/structure/filtration/machine_96x96{
 	icon_state = "sedimentation_A_1";
 	pixel_y = -16
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/building/water_treatment_two/purification)
 "Qr" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6288,10 +5151,7 @@
 /obj/item/shard{
 	icon_state = "medium"
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/building/water_treatment_one/purification)
 "Qx" = (
 /obj/structure/window/reinforced/tinted{
@@ -6299,9 +5159,7 @@
 	},
 /obj/structure/machinery/computer/communications,
 /obj/structure/surface/table/reinforced,
-/turf/open/floor/prison{
-	icon_state = "bright_clean2"
-	},
+/turf/open/floor/prison/bright_clean2,
 /area/desert_dam/building/administration/control_room)
 "Qz" = (
 /obj/structure/flora/tree/joshua,
@@ -6309,22 +5167,15 @@
 /area/kutjevo/exterior/scrubland)
 "QB" = (
 /obj/structure/cargo_container/wy/mid,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached12"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached12,
 /area/desert_dam/building/administration/control_room)
 "QC" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/building/water_treatment_two/purification)
 "QE" = (
 /obj/structure/fence,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached13"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached13,
 /area/kutjevo/exterior/scrubland)
 "QG" = (
 /obj/structure/platform{
@@ -6346,46 +5197,31 @@
 /obj/structure/machinery/landinglight/ds1/delayone{
 	dir = 4
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached15"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached15,
 /area/desert_dam/building/administration/control_room)
 "QM" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/building/water_treatment_one/control_room)
 "QN" = (
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "darkyellowcorners2"
-	},
+/turf/open/floor/prison/darkyellowcorners2/west,
 /area/desert_dam/interior/dam_interior/control_room)
 "QP" = (
 /obj/effect/decal/cleanable/liquid_fuel,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached18"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached18,
 /area/kutjevo/exterior/scrubland)
 "QQ" = (
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/prison/darkyellow2/east,
 /area/desert_dam/interior/dam_interior/engine_room)
 "QX" = (
 /obj/structure/surface/rack,
 /turf/open/gm/dirt2,
 /area/kutjevo/exterior/scrubland)
 "QY" = (
-/turf/open/floor/coagulation{
-	icon_state = "8,7-2"
-	},
+/turf/open/floor/coagulation/icon8_7_2,
 /area/desert_dam/building/water_treatment_two/purification)
 "Ra" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6410,10 +5246,7 @@
 "Rf" = (
 /obj/structure/largecrate/supply/explosives/grenades,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating{
-	dir = 4;
-	icon_state = "warnplate"
-	},
+/turf/open/floor/plating/warnplate/east,
 /area/kutjevo/exterior/scrubland)
 "Ri" = (
 /obj/structure/bed/roller,
@@ -6432,14 +5265,10 @@
 /obj/effect/decal/cleanable/blood/drip{
 	icon_state = "3"
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "Rl" = (
-/turf/open/floor/coagulation{
-	icon_state = "4,8"
-	},
+/turf/open/floor/coagulation/icon4_8,
 /area/desert_dam/building/water_treatment_one/purification)
 "Rm" = (
 /obj/structure/flora/grass/desert/heavygrass_3,
@@ -6457,10 +5286,7 @@
 /turf/open/floor/plating,
 /area/desert_dam/interior/dam_interior/engine_room)
 "Rs" = (
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/interior/dam_interior/smes_main)
 "Rt" = (
 /obj/structure/shuttle/part/dropship1/transparent/nose_center,
@@ -6482,9 +5308,7 @@
 "Rz" = (
 /obj/structure/platform,
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/desert/desert_shore/desert_shore1{
-	dir = 8
-	},
+/turf/open/desert/desert_shore/desert_shore1/west,
 /area/kutjevo/exterior/scrubland)
 "RB" = (
 /obj/effect/blocker/water/toxic/Group_1,
@@ -6503,9 +5327,7 @@
 /obj/structure/surface/table/reinforced,
 /obj/item/paper_bin,
 /obj/item/tool/pen/blue,
-/turf/open/floor/prison{
-	icon_state = "bright_clean2"
-	},
+/turf/open/floor/prison/bright_clean2,
 /area/desert_dam/building/administration/control_room)
 "RI" = (
 /obj/structure/largecrate/random/barrel/blue{
@@ -6524,18 +5346,14 @@
 /area/kutjevo/exterior/scrubland)
 "RN" = (
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/desert/desert_shore/desert_shore1{
-	dir = 1
-	},
+/turf/open/desert/desert_shore/desert_shore1/north,
 /area/kutjevo/exterior/scrubland)
 "RO" = (
 /obj/structure/platform{
 	dir = 1
 	},
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/gm/river/desert/shallow_edge{
-	dir = 6
-	},
+/turf/open/gm/river/desert/shallow_edge/southeast,
 /area/kutjevo/exterior/scrubland)
 "RP" = (
 /obj/structure/prop/structure_lattice{
@@ -6555,27 +5373,19 @@
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	indestructible = 1
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached13"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached13,
 /area/kutjevo/exterior/scrubland)
 "Sc" = (
 /obj/structure/surface/table,
 /obj/structure/machinery/faxmachine,
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "blue"
-	},
+/turf/open/floor/prison/blue/north,
 /area/desert_dam/building/administration/control_room)
 "Sd" = (
 /obj/structure/closet/firecloset,
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/turf/open/floor/prison{
-	dir = 9;
-	icon_state = "blue"
-	},
+/turf/open/floor/prison/blue/northwest,
 /area/desert_dam/building/administration/control_room)
 "Sh" = (
 /obj/structure/prop/dam/crane/damaged{
@@ -6590,56 +5400,40 @@
 /area/kutjevo/exterior/scrubland)
 "Sl" = (
 /obj/structure/largecrate/random/secure,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached9"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached9,
 /area/desert_dam/building/administration/control_room)
 "So" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "Sp" = (
 /obj/effect/blocker/water/toxic/Group_1/delay,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/building/water_treatment_one/purification)
 "Sq" = (
 /obj/structure/filtration/machine_32x32{
 	icon_state = "filtration_segment_A_1"
 	},
-/turf/open/floor/coagulation{
-	icon_state = "2,0"
-	},
+/turf/open/floor/coagulation/icon2_0,
 /area/desert_dam/building/water_treatment_two/purification)
 "Ss" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
 	dir = 2;
 	name = "\improper SMES"
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/interior/dam_interior/control_room)
 "Sv" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached4"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached4,
 /area/desert_dam/building/administration/control_room)
 "Sw" = (
 /obj/structure/machinery/landinglight/ds1/delaytwo{
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached3"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached3,
 /area/desert_dam/building/administration/control_room)
 "Sz" = (
 /obj/structure/prop/dam/truck,
@@ -6648,18 +5442,14 @@
 /turf/open/auto_turf/sand/layer0,
 /area/kutjevo/exterior/scrubland)
 "SC" = (
-/turf/open/floor/prison{
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe,
 /area/kutjevo/exterior/scrubland)
 "SI" = (
 /obj/structure/floodgate{
 	icon_state = "0,2"
 	},
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/gm/river/desert/shallow_edge{
-	dir = 1
-	},
+/turf/open/gm/river/desert/shallow_edge/north,
 /area/kutjevo/exterior/scrubland)
 "SK" = (
 /obj/structure/desertdam/decals/road_edge,
@@ -6670,9 +5460,7 @@
 /area/desert_dam/interior/dam_interior/smes_main)
 "SR" = (
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/gm/river/desert/shallow_corner{
-	dir = 1
-	},
+/turf/open/gm/river/desert/shallow_corner/north,
 /area/kutjevo/exterior/scrubland)
 "ST" = (
 /obj/structure/window/framed/hangar,
@@ -6694,15 +5482,10 @@
 /area/desert_dam/building/administration/control_room)
 "SX" = (
 /obj/structure/machinery/floodlight,
-/turf/open/floor/prison{
-	dir = 5;
-	icon_state = "green"
-	},
+/turf/open/floor/prison/green/northeast,
 /area/desert_dam/interior/dam_interior/atmos_storage)
 "Th" = (
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached12"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached12,
 /area/kutjevo/exterior/scrubland)
 "Tl" = (
 /obj/effect/decal/cleanable/blood/oil,
@@ -6714,16 +5497,10 @@
 /area/kutjevo/exterior/scrubland)
 "To" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/building/water_treatment_two/purification)
 "Tr" = (
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/prison/darkyellow2/east,
 /area/desert_dam/interior/dam_interior/control_room)
 "Tv" = (
 /obj/structure/prop/dam/truck/mining,
@@ -6756,9 +5533,7 @@
 "TM" = (
 /obj/structure/cargo_container/wy/left,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached12"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached12,
 /area/desert_dam/building/administration/control_room)
 "TN" = (
 /turf/closed/shuttle/dropship1{
@@ -6778,14 +5553,10 @@
 "TP" = (
 /obj/structure/platform,
 /obj/effect/decal/cleanable/blood/oil,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached3"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached3,
 /area/desert_dam/building/administration/control_room)
 "TQ" = (
-/turf/open/floor/prison{
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe,
 /area/desert_dam/interior/dam_interior/engine_room)
 "TS" = (
 /obj/effect/blocker/water/toxic/Group_1,
@@ -6796,24 +5567,18 @@
 /area/desert_dam/building/administration/control_room)
 "TZ" = (
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/desert/desert_shore/shore_corner1{
-	dir = 1
-	},
+/turf/open/desert/desert_shore/shore_corner1/north,
 /area/kutjevo/exterior/scrubland)
 "Ua" = (
 /obj/structure/platform{
 	dir = 1
 	},
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/desert/desert_shore/desert_shore1{
-	dir = 4
-	},
+/turf/open/desert/desert_shore/desert_shore1/east,
 /area/kutjevo/exterior/scrubland)
 "Uc" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached2"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached2,
 /area/desert_dam/building/administration/control_room)
 "Ud" = (
 /obj/structure/prop/ice_colony/ground_wire{
@@ -6842,9 +5607,7 @@
 "Ul" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cargo_container/horizontal/blue/top,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "Um" = (
 /obj/structure/floodgate{
@@ -6855,31 +5618,21 @@
 "Un" = (
 /obj/item/clothing/head/welding,
 /obj/structure/surface/rack,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/interior/dam_interior/smes_main)
 "Uo" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin11"
-	},
+/turf/open/shuttle/dropship/rasputin11,
 /area/kutjevo/exterior/scrubland)
 "Uq" = (
 /obj/structure/machinery/photocopier,
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "blue"
-	},
+/turf/open/floor/prison/blue/east,
 /area/desert_dam/building/administration/control_room)
 "Ur" = (
-/turf/open/floor{
-	icon_state = "darkyellowcorners2"
-	},
+/turf/open/floor/darkyellowcorners2,
 /area/desert_dam/building/substation/northwest)
 "Us" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6892,9 +5645,7 @@
 "Ut" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	icon_state = "bright_clean2"
-	},
+/turf/open/floor/prison/bright_clean2,
 /area/desert_dam/building/administration/control_room)
 "Uu" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -6928,15 +5679,11 @@
 /turf/open/gm/dirt2,
 /area/kutjevo/exterior/scrubland)
 "UB" = (
-/turf/open/floor/coagulation{
-	icon_state = "0,8"
-	},
+/turf/open/floor/coagulation/icon0_8,
 /area/desert_dam/building/water_treatment_one/purification)
 "UH" = (
 /obj/structure/machinery/cm_vending/sorted/tech/electronics_storage,
-/turf/open/floor/prison{
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe,
 /area/desert_dam/interior/dam_interior/engine_room)
 "UI" = (
 /obj/structure/machinery/landinglight/ds1{
@@ -6948,9 +5695,7 @@
 /obj/structure/machinery/landinglight/ds1/delaytwo{
 	dir = 1
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached2"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached2,
 /area/desert_dam/building/administration/control_room)
 "UO" = (
 /obj/structure/prop/dam/truck/cargo,
@@ -6979,9 +5724,7 @@
 "UZ" = (
 /obj/effect/decal/cleanable/liquid_fuel,
 /obj/effect/decal/cleanable/liquid_fuel,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached18"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached18,
 /area/kutjevo/exterior/scrubland)
 "Va" = (
 /obj/structure/barricade/plasteel{
@@ -6995,9 +5738,7 @@
 /area/kutjevo/exterior/scrubland)
 "Vd" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/coagulation{
-	icon_state = "8,8"
-	},
+/turf/open/floor/coagulation/icon8_8,
 /area/desert_dam/building/water_treatment_two/purification)
 "Vi" = (
 /obj/structure/largecrate/supply/supplies/sandbags,
@@ -7007,26 +5748,17 @@
 /obj/structure/filtration/machine_96x96{
 	icon_state = "disinfection"
 	},
-/turf/open/floor/coagulation{
-	icon_state = "8,3"
-	},
+/turf/open/floor/coagulation/icon8_3,
 /area/desert_dam/building/water_treatment_two/purification)
 "Vl" = (
-/obj/structure/machinery/power/apc{
-	dir = 4;
-	pixel_x = 28;
-	start_charge = 0
-	},
+/obj/structure/machinery/power/apc/no_power/east,
 /turf/open/floor/prison,
 /area/desert_dam/building/water_treatment_two/purification)
 "Vo" = (
 /obj/structure/filtration/machine_32x32{
 	icon_state = "filtration_segment_B_1"
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/building/water_treatment_one/purification)
 "Vq" = (
 /obj/structure/machinery/light{
@@ -7043,9 +5775,7 @@
 	dir = 1;
 	pixel_x = -8
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "Vw" = (
 /obj/effect/decal/cleanable/dirt,
@@ -7054,15 +5784,10 @@
 /area/kutjevo/exterior/scrubland)
 "VA" = (
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/gm/river/desert/shallow_edge{
-	dir = 9
-	},
+/turf/open/gm/river/desert/shallow_edge/northwest,
 /area/kutjevo/exterior/scrubland)
 "VF" = (
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/interior/dam_interior/engine_room)
 "VL" = (
 /obj/structure/prop/invuln/fire{
@@ -7076,9 +5801,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/generic,
 /obj/structure/cargo_container/horizontal/blue/bottom,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "VU" = (
 /obj/structure/barricade/metal{
@@ -7119,10 +5842,7 @@
 "We" = (
 /obj/structure/surface/rack,
 /obj/effect/spawner/random/tool,
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe/west,
 /area/desert_dam/building/water_treatment_one/control_room)
 "Wi" = (
 /obj/structure/machinery/light{
@@ -7142,19 +5862,14 @@
 /area/kutjevo/exterior/scrubland)
 "Wx" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating{
-	dir = 4;
-	icon_state = "warnplate"
-	},
+/turf/open/floor/plating/warnplate/east,
 /area/kutjevo/exterior/scrubland)
 "Wy" = (
 /obj/structure/machinery/power/smes/batteryrack/substation,
 /turf/open/floor/plating,
 /area/desert_dam/building/substation/northwest)
 "Wz" = (
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached4"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached4,
 /area/desert_dam/building/administration/control_room)
 "WA" = (
 /obj/structure/prop/ice_colony/surveying_device/measuring_device,
@@ -7175,29 +5890,21 @@
 "WD" = (
 /obj/structure/largecrate/supply/floodlights,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/strata{
-	icon_state = "floor3"
-	},
+/turf/open/floor/strata/floor3,
 /area/kutjevo/exterior/scrubland)
 "WF" = (
 /obj/structure/girder/reinforced,
 /obj/effect/decal/cleanable/liquid_fuel,
-/turf/open/floor/plating{
-	icon_state = "platingdmg3"
-	},
+/turf/open/floor/plating/platingdmg3,
 /area/kutjevo/exterior/scrubland)
 "WG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "WH" = (
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/floor{
-	icon_state = "neutral"
-	},
+/turf/open/floor/neutral,
 /area/desert_dam/interior/dam_interior/engine_room)
 "WI" = (
 /obj/structure/desertdam/decals/road_edge,
@@ -7235,22 +5942,15 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	icon_state = "bright_clean2"
-	},
+/turf/open/floor/prison/bright_clean2,
 /area/desert_dam/building/administration/control_room)
 "WW" = (
 /obj/structure/machinery/disposal,
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "blue"
-	},
+/turf/open/floor/prison/blue/east,
 /area/desert_dam/building/administration/control_room)
 "WY" = (
 /obj/structure/machinery/landinglight/ds1/delayone,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached4"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached4,
 /area/desert_dam/building/administration/control_room)
 "WZ" = (
 /obj/structure/stairs{
@@ -7264,9 +5964,7 @@
 /area/kutjevo/exterior/scrubland)
 "Xe" = (
 /obj/structure/largecrate/random/barrel/yellow,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached1"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached1,
 /area/desert_dam/building/administration/control_room)
 "Xf" = (
 /turf/closed/shuttle/dropship1{
@@ -7282,10 +5980,7 @@
 /obj/structure/filtration/machine_32x32{
 	icon_state = "filtration_segment_B_0"
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/building/water_treatment_one/purification)
 "Xo" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -7304,9 +5999,7 @@
 /area/kutjevo/exterior/scrubland)
 "Xz" = (
 /obj/effect/blocker/water/toxic/Group_1,
-/turf/open/floor/prison{
-	dir = 10
-	},
+/turf/open/floor/prison/southwest,
 /area/desert_dam/interior/dam_interior/engine_room)
 "XG" = (
 /turf/closed/shuttle/dropship1/transparent{
@@ -7314,9 +6007,7 @@
 	},
 /area/kutjevo/exterior/scrubland)
 "XI" = (
-/turf/open/floor/strata{
-	icon_state = "floor3"
-	},
+/turf/open/floor/strata/floor3,
 /area/kutjevo/exterior/scrubland)
 "XO" = (
 /turf/closed/wall/hangar{
@@ -7343,22 +6034,13 @@
 /area/kutjevo/exterior/scrubland)
 "Yc" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "darkyellowcorners2"
-	},
+/turf/open/floor/prison/darkyellowcorners2/north,
 /area/desert_dam/interior/dam_interior/smes_main)
 "Yf" = (
-/turf/open/floor{
-	dir = 8;
-	icon_state = "warning"
-	},
+/turf/open/floor/warning/west,
 /area/desert_dam/interior/dam_interior/engine_room)
 "Yh" = (
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe/west,
 /area/desert_dam/building/water_treatment_two/purification)
 "Yj" = (
 /obj/structure/barricade/sandbags/wired{
@@ -7373,9 +6055,7 @@
 /obj/structure/largecrate/random/barrel/blue{
 	fill_from_loc = 1
 	},
-/turf/open/floor/strata{
-	icon_state = "floor3"
-	},
+/turf/open/floor/strata/floor3,
 /area/kutjevo/exterior/scrubland)
 "Yt" = (
 /obj/effect/decal/cleanable/dirt,
@@ -7391,9 +6071,7 @@
 /obj/structure/extinguisher_cabinet/alt{
 	pixel_y = 30
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin4"
-	},
+/turf/open/shuttle/dropship/light_grey_bottom_left,
 /area/kutjevo/exterior/scrubland)
 "Yw" = (
 /obj/effect/decal/cleanable/blood/oil,
@@ -7422,22 +6100,15 @@
 /area/kutjevo/exterior/scrubland)
 "YD" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "darkyellow2"
-	},
+/turf/open/floor/prison/darkyellow2/east,
 /area/desert_dam/interior/dam_interior/engine_room)
 "YG" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/strata{
-	icon_state = "floor3"
-	},
+/turf/open/floor/strata/floor3,
 /area/kutjevo/exterior/scrubland)
 "YL" = (
 /obj/structure/machinery/landinglight/ds1/delaythree,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached4"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached4,
 /area/desert_dam/building/administration/control_room)
 "YN" = (
 /turf/open/auto_turf/sand/layer2,
@@ -7445,40 +6116,28 @@
 "YQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached3"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached3,
 /area/desert_dam/building/administration/control_room)
 "YR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached1"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached1,
 /area/desert_dam/building/administration/control_room)
 "YX" = (
 /obj/structure/surface/table,
 /obj/structure/machinery/faxmachine,
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "blue"
-	},
+/turf/open/floor/prison/blue/east,
 /area/desert_dam/building/administration/control_room)
 "YY" = (
-/turf/open/floor/coagulation{
-	icon_state = "0,0"
-	},
+/turf/open/floor/coagulation/icon0_0,
 /area/desert_dam/building/water_treatment_two/purification)
 "Zb" = (
 /obj/structure/window/framed/hangar/reinforced,
 /turf/open/floor/plating,
 /area/desert_dam/building/water_treatment_two/floodgate_control)
 "Zd" = (
-/turf/open/floor/prison{
-	dir = 9;
-	icon_state = "green"
-	},
+/turf/open/floor/prison/green/northwest,
 /area/desert_dam/interior/dam_interior/atmos_storage)
 "Zf" = (
 /obj/structure/barricade/sandbags/wired{
@@ -7507,10 +6166,7 @@
 "Zl" = (
 /obj/structure/surface/table,
 /obj/effect/landmark/crap_item,
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "blue"
-	},
+/turf/open/floor/prison/blue/east,
 /area/desert_dam/building/administration/control_room)
 "Zm" = (
 /obj/structure/surface/rack,
@@ -7521,10 +6177,7 @@
 	dir = 2;
 	name = "\improper Engine Room"
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "bright_clean"
-	},
+/turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/interior/dam_interior/engine_room)
 "Zs" = (
 /obj/structure/platform_decoration/kutjevo/rock{
@@ -7540,18 +6193,13 @@
 /obj/structure/filtration/machine_64x96{
 	icon_state = "filtration_machine_A_1"
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
+/turf/open/floor/prison/whitegreenfull/southwest,
 /area/desert_dam/building/water_treatment_two/purification)
 "Zw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/kutjevo/exterior/scrubland)
 "Zy" = (
 /obj/structure/prop/structure_lattice{
@@ -7580,9 +6228,7 @@
 /obj/structure/machinery/computer/communications,
 /obj/structure/surface/table/reinforced,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	icon_state = "bright_clean2"
-	},
+/turf/open/floor/prison/bright_clean2,
 /area/desert_dam/building/administration/control_room)
 "ZE" = (
 /turf/open/floor/greengrid,
@@ -7614,10 +6260,7 @@
 /turf/open/auto_turf/sand/layer0,
 /area/kutjevo/exterior/scrubland)
 "ZQ" = (
-/turf/open/floor{
-	dir = 8;
-	icon_state = "darkyellowcorners2"
-	},
+/turf/open/floor/darkyellowcorners2/west,
 /area/desert_dam/building/substation/northwest)
 "ZR" = (
 /obj/structure/prop/invuln/ice_prefab/standalone/trim,
@@ -42128,7 +40771,7 @@ Mc
 Mc
 Xz
 aq
-Hq
+Qn
 Mc
 Dv
 Mc
@@ -47564,7 +46207,7 @@ Mc
 Mc
 Mc
 aq
-Hq
+Qn
 Mc
 pN
 Mc

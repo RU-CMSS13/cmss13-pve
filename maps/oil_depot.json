@@ -23,7 +23,7 @@
         580,
         0.0
     ],
-    "map_item_type": "/obj/item/map/whiskey_outpost_map",
+    "map_item_type": "/obj/item/map/oil_depot",
     "announce_text": "Our forces need help on USCM Oil Depot 276 on the planet \"Sorrow.\" The ###SHIPNAME### has been dispatched to assist.",
     "monkey_types": [
         "stok"

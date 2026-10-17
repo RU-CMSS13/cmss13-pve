@@ -157,6 +157,9 @@
 /turf/open/floor/plating/platingdmg3
 	icon_state = "platingdmg3"
 
+/turf/open/floor/plating/gcircuit
+	icon_state = "gcircuit"
+
 /turf/open/floor/plating/platingdmg3/west
 	dir = WEST
 
@@ -324,6 +327,9 @@
 
 /turf/open/floor/plating/plating_catwalk/strata
 	icon = 'icons/turf/floors/strata_floor.dmi'
+
+/turf/open/floor/plating/plating_catwalk/no_build
+	allow_construction = FALSE
 
 /turf/open/floor/plating/plating_catwalk/shiva
 	icon = 'icons/turf/floors/ice_colony/shiva_floor.dmi'
@@ -2033,6 +2039,30 @@
 /turf/open/floor/almayer/no_build/test_floor4
 	icon_state = "test_floor4"
 
+/turf/open/floor/almayer/no_build/east
+	dir = EAST
+
+/turf/open/floor/almayer/no_build/tcomms
+	icon_state = "tcomms"
+
+/turf/open/floor/almayer/no_build/silver
+	icon_state = "silver"
+
+/turf/open/floor/almayer/no_build/silver/east
+	dir = EAST
+
+/turf/open/floor/almayer/no_build/silver/west
+	dir = WEST
+
+/turf/open/floor/almayer/no_build/cargo_arrow
+	icon_state = "cargo_arrow"
+
+/turf/open/floor/almayer/no_build/cargo_arrow/east
+	dir = EAST
+
+/turf/open/floor/almayer/no_build/cargo_arrow/west
+	dir = WEST
+
 /turf/open/floor/almayer/aicore
 	icon = 'icons/turf/floors/aicore.dmi'
 	icon_state = "ai_floor1"
@@ -2297,6 +2327,9 @@
 /turf/open/floor/wood/wood_broken7
 	icon_state = "wood-broken7"
 
+/turf/open/floor/wood/grey
+	color = "#A39898"
+
 /turf/open/floor/vault
 	icon_state = "rockvault"
 
@@ -2371,6 +2404,9 @@
 
 /turf/open/floor/bluegrid/bcircuitoff
 	icon_state = "bcircuitoff"
+
+/turf/open/floor/bluegrid/bcircuita
+	icon_state = "bcircuita"
 
 /turf/open/floor/bluegrid/damaged3
 	icon_state = "damaged3"
@@ -4187,12 +4223,23 @@
 /turf/open/floor/corsat/officetiles
 	icon_state = "officetiles"
 
+/turf/open/floor/corsat/lightspiral
+	icon_state = "lightspiral"
+
+/turf/open/floor/corsat/spiraloffice
+	icon_state = "spiraloffice"
+
 /turf/open/floor/corsat/spiralblueoffice
 	icon_state = "spiralblueoffice"
 	light_color = "#0090ff"
 	light_on = 1
 	light_power = 2
 	light_range = 4
+
+/turf/open/floor/corsat/spiralblueoffice/unlit
+	light_on = 0
+	light_power = 0
+	light_range = 0
 
 /turf/open/floor/grey_dark2
 	color = "#525151"

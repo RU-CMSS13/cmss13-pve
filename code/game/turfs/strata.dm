@@ -315,6 +315,9 @@
 /turf/open/floor/strata/blue1
 	icon_state = "blue1"
 
+/turf/open/floor/strata/blue2
+	icon_state = "blue2"
+
 /turf/open/floor/strata/blue3/north
 	dir = NORTH
 
@@ -326,6 +329,9 @@
 
 /turf/open/floor/strata/damaged3
 	icon_state = "damaged3"
+
+/turf/open/floor/strata/damaged4
+	icon_state = "damaged4"
 
 /turf/open/floor/strata/fake_wood
 	icon_state = "fake_wood"
@@ -524,3 +530,21 @@
 
 /turf/open/floor/strata/yellow3/northwest
 	dir = NORTHWEST
+
+/turf/open/floor/strata/yellow1
+	icon_state = "yellow1"
+
+/turf/open/floor/strata/yellow2
+	icon_state = "yellow2"
+
+/turf/open/floor/strata/yellow4
+	icon_state = "yellow4"
+
+/turf/open/floor/strata/yellow4/north
+	dir = NORTH
+
+/turf/open/floor/strata/yellow4/east
+	dir = EAST
+
+/turf/open/floor/strata/yellow4/west
+	dir = WEST
