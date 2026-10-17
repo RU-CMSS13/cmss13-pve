@@ -325,6 +325,7 @@
 		damage += (X.frenzy_aura * FRENZY_DAMAGE_MULTIPLIER)
 
 	X.animation_attack_on(src)
+	ai_brain?.on_attacked(X)
 
 	//Somehow we will deal no damage on this attack
 	if(!damage)
@@ -374,6 +375,8 @@
 	take_damage_type(damage * (0.33 + penetration/100), dam_type, firer)
 
 	healthcheck()
+
+	ai_brain?.on_shot(P)
 
 //to handle IFF bullets
 /obj/vehicle/multitile/proc/get_target_lock(access_to_check)

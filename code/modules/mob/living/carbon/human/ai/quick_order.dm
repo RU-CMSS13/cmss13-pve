@@ -7,6 +7,7 @@
 	var/turf/cornerA
 	var/turf/cornerB
 	var/list/ai_humans_selected = list()
+	var/list/datum/vehicle_ai_brain/ai_vehicles_selected = list()
 
 /datum/human_ai_quick_order/Destroy(force, ...)
 	holder.click_intercept = null
@@ -30,7 +31,7 @@
 /datum/human_ai_quick_order/proc/InterceptClickOn(mob/user, params, atom/object)
 	var/list/modifiers = params2list(params)
 	if(LAZYACCESS(modifiers, ALT_CLICK) || LAZYACCESS(modifiers, MIDDLE_CLICK))
-		if(!length(ai_humans_selected))
+		if(!length(ai_humans_selected) && !length(ai_vehicles_selected))
 			to_chat(holder, SPAN_BOLDNOTICE("You need to have an area selected first."))
 			return
 
@@ -51,6 +52,7 @@
 		to_chat(holder, SPAN_NOTICE("Region selection canceled!"))
 		deselect_region()
 		ai_humans_selected.Cut()
+		ai_vehicles_selected.Cut()
 
 /datum/human_ai_quick_order/proc/select_tile(turf/T, corner_to_select)
 	var/overlaystate
@@ -78,7 +80,14 @@
 			if(brain)
 				ai_humans_selected += brain
 
-	to_chat(holder, SPAN_BOLDNOTICE("[length(ai_humans_selected)] AI selected in region."))
+	ai_vehicles_selected.Cut()
+	for(var/obj/vehicle/multitile/vehicle as anything in GLOB.all_multi_vehicles)
+		if(!vehicle.ai_brain || vehicle.z != cornerA.z)
+			continue
+		if(ISINRANGE(vehicle.x, min(cornerA.x, cornerB.x), max(cornerA.x, cornerB.x)) && ISINRANGE(vehicle.y, min(cornerA.y, cornerB.y), max(cornerA.y, cornerB.y)))
+			ai_vehicles_selected += vehicle.ai_brain
+
+	to_chat(holder, SPAN_BOLDNOTICE("[length(ai_humans_selected)] AI and [length(ai_vehicles_selected)] AI vehicles selected in region."))
 
 /datum/human_ai_quick_order/proc/do_order(mob/user, params, atom/object)
 	return
@@ -95,6 +104,17 @@
 		else
 			brain.quick_approach = null
 			brain.target_turf = get_turf(object)
+
+	for(var/datum/vehicle_ai_brain/vehicle_brain as anything in ai_vehicles_selected)
+		if(QDELETED(vehicle_brain))
+			continue
+		vehicle_brain.hold_position = FALSE
+		if(LAZYACCESS(modifiers, ALT_CLICK))
+			vehicle_brain.destination = get_turf(object)
+		else
+			vehicle_brain.destination = null
+			vehicle_brain.target_turf = get_turf(object)
+			vehicle_brain.enter_combat()
 
 	to_chat(holder, SPAN_BOLDNOTICE("Order sent."))
 
@@ -124,6 +144,13 @@
 			brain.hold_position = TRUE
 		else
 			brain.hold_position = FALSE
+
+	for(var/datum/vehicle_ai_brain/vehicle_brain as anything in ai_vehicles_selected)
+		if(QDELETED(vehicle_brain))
+			continue
+		vehicle_brain.hold_position = LAZYACCESS(modifiers, ALT_CLICK) ? TRUE : FALSE
+		if(vehicle_brain.hold_position)
+			vehicle_brain.destination = null
 
 	if(LAZYACCESS(modifiers, ALT_CLICK))
 		to_chat(holder, SPAN_BOLDNOTICE("Selected AI now holding position."))

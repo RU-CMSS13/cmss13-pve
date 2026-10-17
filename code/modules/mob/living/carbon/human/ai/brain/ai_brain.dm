@@ -120,6 +120,10 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 		lose_target()
 		return
 
+	// Vehicle AI drives and shoots for us while we sit in its seat
+	if(is_vehicle_crew_seated())
+		return
+
 	if(tied_human.resting)
 		tied_human.set_resting(FALSE, TRUE)
 

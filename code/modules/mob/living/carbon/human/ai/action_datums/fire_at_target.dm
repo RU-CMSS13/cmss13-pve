@@ -78,14 +78,7 @@
 
 	RegisterSignal(tied_human, COMSIG_MOB_FIRED_GUN, PROC_REF(on_gun_fire), TRUE)
 
-	// Handling point-blank through attack()
-	var/atom/movable/current_target = brain.current_target
-	if(current_target && (get_dist(tied_human, current_target) <= 1))
-		currently_firing = FALSE
-		primary_weapon.set_target(null)
-		INVOKE_ASYNC(tied_human, TYPE_PROC_REF(/mob, do_click), current_target, "", list())
-		return ONGOING_ACTION_UNFINISHED
-
+	// Adjacent targets are shot normally, do_click() only point-blanks for mobs with a client
 	primary_weapon?.set_target(target_turf)
 	primary_weapon?.start_fire(object = target_turf, bypass_checks = TRUE)
 	return ONGOING_ACTION_UNFINISHED
@@ -182,10 +175,6 @@
 		brain.lose_target()
 		stop_firing(brain)
 		qdel(src)
-		return
-
-	if(brain.current_target && (get_dist(tied_human, brain.current_target) <= 1))
-		currently_firing = FALSE
 		return
 
 	if(!firing_line_check(brain, shoot_next))
