@@ -55,6 +55,9 @@ endmap
 map kutjevo
 endmap
 
+map kutjevo_ru
+endmap
+
 map sorokyne_strata
 	minplayers 130
 endmap
@@ -144,4 +147,13 @@ map redemption_valley
 endmap
 
 map binhai_supply_station
+endmap
+
+map lv671
+endmap
+
+map oil_depot
+endmap
+
+map derelict_almayer_infested
 endmap

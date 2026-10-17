@@ -297,8 +297,38 @@
 /turf/open/floor/kutjevo/colors/green/edge
 	icon_state = "green3"
 
+/turf/open/floor/kutjevo/colors/green/edge/southwest
+	dir = SOUTHWEST
+
+/turf/open/floor/kutjevo/colors/green/edge/north
+	dir = NORTH
+
+/turf/open/floor/kutjevo/colors/green/edge/east
+	dir = EAST
+
+/turf/open/floor/kutjevo/colors/green/edge/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/kutjevo/colors/green/edge/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/kutjevo/colors/green/edge/west
+	dir = WEST
+
+/turf/open/floor/kutjevo/colors/green/edge/northwest
+	dir = NORTHWEST
+
 /turf/open/floor/kutjevo/colors/green/inner_corner
 	icon_state = "green4"
+
+/turf/open/floor/kutjevo/colors/green/inner_corner/north
+	dir = NORTH
+
+/turf/open/floor/kutjevo/colors/green/inner_corner/east
+	dir = EAST
+
+/turf/open/floor/kutjevo/colors/green/inner_corner/west
+	dir = WEST
 
 //CYAN//
 
