@@ -9521,7 +9521,7 @@
 /obj/item/prop/magazine/book/uppbooklet{
 	pixel_y = 6;
 	pixel_x = -7;
-	desc = "A red booklet bearing the UPPAC insignia. This small volume serves as the bible for every Union servicemember, containing all the "commandments" by which a true soldier of the Armed Collective is expected to serve.";
+	desc = "A red booklet bearing the UPPAC insignia. This small volume serves as the bible for every Union servicemember, containing all the \"commandments\" by which a true soldier of the Armed Collective is expected to serve.";
 	name = "General Military Regulations of the UPP Armed Collective"
 	},
 /obj/structure/machinery/door_control{

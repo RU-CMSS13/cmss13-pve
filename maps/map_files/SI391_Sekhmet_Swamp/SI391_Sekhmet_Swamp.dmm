@@ -18099,7 +18099,7 @@
 /obj/structure/surface/table/woodentable{
 	color = "#8B7B5B"
 	},
-/obj/item/clothing/accessory/patch/upp/airborne,
+/obj/item/clothing/accessory/patch/upp/vdv,
 /turf/open/floor/strata/fake_wood,
 /area/sekhmet/int_heavy/low_level_gen)
 "lbS" = (
