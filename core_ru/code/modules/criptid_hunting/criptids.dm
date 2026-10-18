@@ -143,6 +143,9 @@
 	speed = XENO_SPEED_TIER_7
 	attack_delay = 0
 
+/mob/living/carbon/xenomorph/criptic_wendigo/werewolf
+	icon = 'core_ru/code/modules/criptid_hunting/wendigo_alt.dmi'
+
 /mob/living/carbon/xenomorph/criptic_wendigo/banshee
 	AUTOWIKI_SKIP(TRUE)
 
