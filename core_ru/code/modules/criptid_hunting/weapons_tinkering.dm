@@ -87,8 +87,8 @@
 	w_class = SIZE_SMALL
 
 /obj/item/criptic/scrap/attack_hand(mob/user)
-	if(locate(/obj/structure/criptic/gunbench) in get_turf(src))
-		var/obj/structure/criptic/gunbench/G = loc
+	var/obj/structure/criptic/gunbench/G = locate(/obj/structure/criptic/gunbench) in get_turf(src)
+	if(G)
 		G.resources -= src
 		SetTransform(1)
 
@@ -106,8 +106,8 @@
 	w_class = SIZE_SMALL
 
 /obj/item/criptic/blueprint/attack_hand(mob/user)
-	if(locate(/obj/structure/criptic/gunbench) in get_turf(src))
-		var/obj/structure/criptic/gunbench/G = loc
+	var/obj/structure/criptic/gunbench/G = locate(/obj/structure/criptic/gunbench) in get_turf(src)
+	if(G)
 		G.resources -= src
 		SetTransform(1)
 
@@ -320,8 +320,8 @@
 	return FALSE
 
 /obj/item/weapon/gun/attack_hand(mob/user)
-	if(locate(/obj/structure/criptic/gunbench) in get_turf(src))
-		var/obj/structure/criptic/gunbench/G = loc
+	var/obj/structure/criptic/gunbench/G = locate(/obj/structure/criptic/gunbench) in get_turf(src)
+	if(G)
 		G.target_gun = null
 		pixel_x = initial(pixel_x)
 		pixel_y = initial(pixel_y)
