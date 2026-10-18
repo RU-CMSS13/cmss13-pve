@@ -513,6 +513,9 @@
 	return FALSE
 
 /obj/vehicle/multitile/handle_vehicle_bump(obj/vehicle/multitile/V)
+	if(V.can_shove(src) && shove_wreck(V))
+		return TRUE
+
 	var/damage
 
 	if(last_move_dir == REVERSE_DIR(V.last_move_dir)) //crashing into each other
@@ -840,6 +843,8 @@
 	var/wreck_push_progress = 0
 	/// world.time of the last push on the wreck
 	var/last_wreck_push = 0
+	/// The direction the vehicle last tried to move in, so a wreck it runs into knows which way it is shoved
+	var/attempted_move_dir
 
 /// A destroyed vehicle is dead weight that gets pushed a tile at a time by walking into it, slowly by people and faster by big xenos
 /obj/vehicle/multitile/proc/push_wreck(mob/living/pusher)
@@ -866,6 +871,23 @@
 	if(try_move(push_dir, force = TRUE))
 		visible_message(SPAN_NOTICE("[pusher] pushes \the [src]."))
 
+/// TRUE if this vehicle shoves the other one aside when it runs into it: only wrecks, and only by something stronger than a car
+/obj/vehicle/multitile/proc/can_shove(obj/vehicle/multitile/other_vehicle)
+	return istype(other_vehicle) && (other_vehicle.health <= 0) && (health > 0) && !(vehicle_flags & VEHICLE_CLASS_WEAK)
+
+/// Shoves the wreck a tile the way the vehicle drives, returns TRUE if it moved
+/obj/vehicle/multitile/proc/shove_wreck(obj/vehicle/multitile/pusher)
+	var/direction = pusher.attempted_move_dir
+	if(!direction || !can_push_wreck(direction) || !try_move(direction, force = TRUE))
+		return FALSE
+
+	// Pushing dead weight slows it down
+	pusher.move_momentum = trunc(pusher.move_momentum / 2)
+	interior_crash_effect()
+	playsound(src, 'sound/effects/metal_crash.ogg', 20)
+	visible_message(SPAN_DANGER("\The [pusher] shoves \the [src] aside!"))
+	return TRUE
+
 /// TRUE if the wreck can be pushed in the direction without running anything over
 /obj/vehicle/multitile/proc/can_push_wreck(direction)
 	var/turf/new_loc = get_step(src, direction)
@@ -881,7 +903,7 @@
 	for(var/turf/new_turf as anything in CORNER_BLOCK(min_turf, width, height))
 		if(new_turf in locs)
 			continue
-		if(new_turf.density)
+		if(new_turf.density || istype(new_turf, /turf/open/space) || istype(new_turf, /turf/open_space))
 			return FALSE
 		for(var/atom/movable/thing as anything in new_turf)
 			if(thing != src && (thing.density || isliving(thing)))

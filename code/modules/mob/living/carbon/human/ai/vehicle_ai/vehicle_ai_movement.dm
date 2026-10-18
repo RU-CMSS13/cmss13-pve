@@ -57,7 +57,8 @@
 			continue
 		if(!thing.density || ismob(thing))
 			continue
-		if(istype(thing, /obj/vehicle))
+		// Wrecks get shoved along like anything else in the way
+		if(istype(thing, /obj/vehicle) && !vehicle.can_shove(thing))
 			return -1
 		// Heavy vehicles barely slow down for it, they only go around for a way that isn't longer
 		. += vehicle.ai_crushes_obstacles ? 1 : crush_penalty
@@ -321,9 +322,11 @@
 	src.goal = goal
 	src.goal_radius = goal_radius
 
-	// Other vehicles cover more turfs than their loc, so mark them all as blocked
+	// Other vehicles cover more turfs than their loc, so mark them all as blocked. Wrecks we shove are costed like obstacles
 	for(var/obj/vehicle/multitile/other_vehicle as anything in GLOB.all_multi_vehicles)
 		if(other_vehicle == brain.vehicle || other_vehicle.z != start.z || get_dist(other_vehicle, start) > VEHICLE_AI_MAX_PATHFINDING_RANGE + 3)
+			continue
+		if(brain.vehicle.can_shove(other_vehicle))
 			continue
 		for(var/turf/vehicle_turf as anything in other_vehicle.locs)
 			turf_costs[vehicle_turf] = -1

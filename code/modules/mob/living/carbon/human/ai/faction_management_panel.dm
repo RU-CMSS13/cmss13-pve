@@ -50,7 +50,7 @@
 	switch(action)
 		if("create_faction")
 			var/gotten_faction = params["faction"]
-			if(!(gotten_faction in FACTION_LIST_HUMANOID + FACTION_LIST_XENOMORPH) || (gotten_faction in SShuman_ai.human_ai_factions))
+			if(!(gotten_faction in (FACTION_LIST_HUMANOID + FACTION_LIST_XENOMORPH)) || (gotten_faction in SShuman_ai.human_ai_factions))
 				return
 
 			var/datum/human_ai_faction/new_faction = new()
@@ -69,7 +69,7 @@
 		if("set_relation")
 			var/datum/human_ai_faction/faction_obj = SShuman_ai.human_ai_factions[params["faction"]]
 			var/other_faction = params["other"]
-			if(!faction_obj || !(other_faction in FACTION_LIST_HUMANOID + FACTION_LIST_XENOMORPH) || (other_faction == faction_obj.faction))
+			if(!faction_obj || !(other_faction in (FACTION_LIST_HUMANOID + FACTION_LIST_XENOMORPH)) || (other_faction == faction_obj.faction))
 				return
 
 			set_relation(faction_obj, other_faction, params["relation"])

@@ -631,7 +631,7 @@
 
 		if("set_faction")
 			var/new_faction = params["faction"]
-			if((new_faction != HUMAN_AI_SPAWNER_PRESET_DEFAULT) && !(new_faction in FACTION_LIST_HUMANOID + "Normal Hive"))
+			if((new_faction != HUMAN_AI_SPAWNER_PRESET_DEFAULT) && !(new_faction in (FACTION_LIST_HUMANOID + "Normal Hive")))
 				return
 
 			selected_faction = new_faction
@@ -639,7 +639,7 @@
 
 		if("set_species")
 			var/new_species = params["species"]
-			if((new_species != HUMAN_AI_SPAWNER_PRESET_DEFAULT) && !(new_species in list(SPECIES_HUMAN, SPECIES_ZOMBIE) + SYNTH_TYPES))
+			if((new_species != HUMAN_AI_SPAWNER_PRESET_DEFAULT) && !(new_species in (list(SPECIES_HUMAN, SPECIES_ZOMBIE) + SYNTH_TYPES)))
 				return
 
 			selected_species = new_species
