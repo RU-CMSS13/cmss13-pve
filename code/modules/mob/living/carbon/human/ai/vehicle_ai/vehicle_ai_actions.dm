@@ -90,6 +90,27 @@
 	brain.fire_weapons(brain.current_target)
 	return ONGOING_ACTION_UNFINISHED
 
+/// Fires everything at what the game master ordered, before anything the crew picks itself
+/datum/vehicle_ai_action/fire_on_order
+	name = "Fire On Order"
+	action_flags = VEHICLE_AI_ACTION_GUNNING
+
+/datum/vehicle_ai_action/fire_on_order/get_weight(datum/vehicle_ai_brain/brain)
+	return brain.get_ordered_fire_target() ? 15 : 0
+
+/datum/vehicle_ai_action/fire_on_order/Destroy(force, ...)
+	brain?.stop_all_weapons()
+	return ..()
+
+/datum/vehicle_ai_action/fire_on_order/trigger_action()
+	. = ..()
+	if(.)
+		return
+
+	// As far as the guns reach, the game master sees what the crew can't
+	brain.fire_weapons(brain.get_ordered_fire_target(), INFINITY)
+	return ONGOING_ACTION_UNFINISHED
+
 /// Turns the turret to where we were shot from or last saw the enemy, so it is ready once they show up
 /datum/vehicle_ai_action/aim_at_threat
 	name = "Aim At Threat"
@@ -110,6 +131,27 @@
 	return ONGOING_ACTION_UNFINISHED
 
 // Driving
+
+/// Drives out of the way of a friendly vehicle that asked to pass
+/datum/vehicle_ai_action/driving/make_way
+	name = "Make Way"
+
+/datum/vehicle_ai_action/driving/make_way/get_weight(datum/vehicle_ai_brain/brain)
+	if(!brain.make_way_turf || (world.time > brain.make_way_until) || !brain.can_drive())
+		return 0
+
+	return 14
+
+/datum/vehicle_ai_action/driving/make_way/trigger_action()
+	. = ..()
+	if(.)
+		return
+
+	if(brain.drive_to(brain.make_way_turf, 0) == VEHICLE_AI_DRIVE_MOVING)
+		return ONGOING_ACTION_UNFINISHED
+
+	brain.make_way_turf = null
+	return ONGOING_ACTION_COMPLETED
 
 /datum/vehicle_ai_action/driving/move_to_destination
 	name = "Move To Destination"

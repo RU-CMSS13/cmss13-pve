@@ -69,6 +69,50 @@
 			"area" = get_area_name(ai_human, TRUE),
 		))
 
+	data["vehicles"] = list()
+	for(var/datum/vehicle_ai_brain/vehicle_brain as anything in SSvehicle_ai.brains)
+		var/obj/vehicle/multitile/vehicle = vehicle_brain.vehicle
+		if(!vehicle)
+			continue
+
+		var/status = "Idle"
+		if(vehicle.health <= 0)
+			status = "Destroyed"
+		else if(vehicle_brain.crew_evacuated)
+			status = "Abandoned"
+		else if(!vehicle_brain.can_use_seat(VEHICLE_DRIVER) && !vehicle_brain.can_use_seat(VEHICLE_GUNNER))
+			status = "No crew"
+		else if(vehicle_brain.in_combat || vehicle_brain.get_ordered_fire_target())
+			status = "Fighting"
+		else if(vehicle_brain.hold_position)
+			status = "Holding"
+		else if(vehicle_brain.destination)
+			status = "Moving"
+
+		var/list/crew_names = list()
+		for(var/mob/living/carbon/human/crewman as anything in vehicle_brain.crew)
+			crew_names += "[crewman.real_name][(crewman.stat == DEAD) ? " (dead)" : ""]"
+
+		data["vehicles"] += list(list(
+			"name" = vehicle.name,
+			"ref" = REF(vehicle),
+			"brain_ref" = REF(vehicle_brain),
+			"faction" = vehicle_brain.faction,
+			"health" = floor(max(vehicle.health, 0) / initial(vehicle.health) * 100),
+			"status" = status,
+			"squad_id" = vehicle_brain.squad?.id,
+			"crew" = crew_names,
+			"area" = get_area_name(vehicle, TRUE),
+		))
+
+	data["vehicle_squads"] = list()
+	for(var/datum/vehicle_ai_squad/vehicle_squad as anything in SSvehicle_ai.squads)
+		data["vehicle_squads"] += list(list(
+			"id" = vehicle_squad.id,
+			"name" = vehicle_squad.get_name(),
+			"members" = length(vehicle_squad.members),
+		))
+
 	data["squads"] = list()
 	for(var/datum/human_ai_squad/squad as anything in SShuman_ai.squads)
 		data["squads"] += list(list(
@@ -199,6 +243,73 @@
 			qdel(order)
 			return TRUE
 
+		// Vehicles
+		if("create_vehicle_squad")
+			new /datum/vehicle_ai_squad()
+			return TRUE
+
+		if("rename_vehicle_squad")
+			var/datum/vehicle_ai_squad/vehicle_squad = get_vehicle_squad(params["squad"])
+			if(!vehicle_squad)
+				return
+
+			var/new_name = tgui_input_text(user, "Input the new name of the squad, only game masters see it", "Rename Squad", vehicle_squad.get_name(), MAX_NAME_LEN)
+			if(!new_name || QDELETED(vehicle_squad))
+				return
+
+			vehicle_squad.name = new_name
+			return TRUE
+
+		if("disband_vehicle_squad")
+			var/datum/vehicle_ai_squad/vehicle_squad = get_vehicle_squad(params["squad"])
+			if(!vehicle_squad)
+				return
+
+			qdel(vehicle_squad)
+			return TRUE
+
+		if("set_vehicle_squad")
+			var/datum/vehicle_ai_brain/vehicle_brain = locate(params["brain_ref"]) in SSvehicle_ai.brains
+			if(!vehicle_brain)
+				return
+
+			var/datum/vehicle_ai_squad/vehicle_squad = get_vehicle_squad(params["squad"])
+			if(vehicle_squad)
+				vehicle_squad.add_member(vehicle_brain)
+			else
+				vehicle_brain.squad?.remove_member(vehicle_brain)
+			return TRUE
+
+		if("select_vehicles")
+			var/list/datum/vehicle_ai_brain/to_select = list()
+			var/datum/vehicle_ai_squad/vehicle_squad = get_vehicle_squad(params["squad"])
+			if(vehicle_squad)
+				to_select = vehicle_squad.members.Copy()
+			else
+				var/datum/vehicle_ai_brain/vehicle_brain = locate(params["brain_ref"]) in SSvehicle_ai.brains
+				if(vehicle_brain)
+					to_select += vehicle_brain
+			if(!length(to_select) || !user.client)
+				return
+
+			// Handed to the orders tab of the human AI spawner, where they get their orders
+			user.client.open_human_ai_spawner_tab("orders")
+			var/datum/human_ai_spawner_menu/spawner_menu = user.client.human_spawn_menu
+			if(!spawner_menu)
+				return
+			spawner_menu.clear_selection()
+			for(var/datum/vehicle_ai_brain/vehicle_brain as anything in to_select)
+				spawner_menu.select_unit(user, vehicle_brain)
+			return TRUE
+
+		if("delete_vehicle")
+			var/datum/vehicle_ai_brain/vehicle_brain = locate(params["brain_ref"]) in SSvehicle_ai.brains
+			if(!vehicle_brain?.vehicle)
+				return
+
+			qdel(vehicle_brain.vehicle)
+			return TRUE
+
 		if("toggle_patrol_placing")
 			var/client/user_client = user.client
 			if(!user_client)
@@ -236,6 +347,15 @@
 			current_click_intercept_action = null
 			release_click_intercept(user)
 			return TRUE
+
+/datum/human_ai_management_menu/proc/get_vehicle_squad(squad_id)
+	RETURN_TYPE(/datum/vehicle_ai_squad)
+	var/id = text2num("[squad_id]")
+	if(!id)
+		return
+	for(var/datum/vehicle_ai_squad/vehicle_squad as anything in SSvehicle_ai.squads)
+		if(vehicle_squad.id == id)
+			return vehicle_squad
 
 /// Stops intercepting clicks, handing them back to the game master panel if it is open
 /datum/human_ai_management_menu/proc/release_click_intercept(mob/user)

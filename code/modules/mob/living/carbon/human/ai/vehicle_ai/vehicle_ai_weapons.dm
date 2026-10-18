@@ -88,12 +88,14 @@
 			return TRUE
 	return FALSE
 
-/// Shoots every weapon that can hit the target and turns the turret towards it. Returns TRUE if anything fired
-/datum/vehicle_ai_brain/proc/fire_weapons(atom/target)
+/// Shoots every weapon that can hit the target and turns the turret towards it, up to max_distance if given. Returns TRUE if anything fired
+/datum/vehicle_ai_brain/proc/fire_weapons(atom/target, max_distance)
 	. = FALSE
 	var/turf/target_turf = get_turf(target)
 	if(!target_turf)
 		return
+
+	var/reach = isnull(max_distance) ? get_engage_distance(target) : max_distance
 
 	var/obj/item/hardpoint/holder/turret = get_turret()
 	var/turret_should_turn = FALSE
@@ -118,7 +120,7 @@
 
 		var/turf/muzzle_turf = weapon.get_origin_turf()
 		var/distance = get_dist(muzzle_turf, target_turf)
-		if(distance > min(get_weapon_range(weapon), get_engage_distance(target)))
+		if(distance > min(get_weapon_range(weapon), reach))
 			stop_weapon(weapon)
 			continue
 

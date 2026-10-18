@@ -126,6 +126,11 @@ type BackendContext = {
   vehicle_ai: BooleanLike;
   vehicle_infinite_ammo: BooleanLike;
   vehicle_lock_doors: BooleanLike;
+  vehicle_mode: 'single' | 'squad';
+  vehicle_formation: string;
+  vehicle_formations: string[];
+  vehicle_squad: SquadEntry[];
+  max_vehicle_squad: number;
 
   selected_units: Unit[];
   selecting_area: BooleanLike;
@@ -869,6 +874,8 @@ const VehiclesTab = (props) => {
     vehicle_ai,
     vehicle_infinite_ammo,
     vehicle_lock_doors,
+    vehicle_mode,
+    vehicle_squad,
   } = data;
   const [search, setSearch] = useState('');
 
@@ -876,6 +883,7 @@ const VehiclesTab = (props) => {
   const vehicle = vehicle_categories
     .flatMap((entry) => entry.vehicles)
     .find((entry) => entry.path === selected_vehicle);
+  const squadMode = vehicle_mode === 'squad';
 
   return (
     <Stack fill>
@@ -900,20 +908,37 @@ const VehiclesTab = (props) => {
                 <Box bold color="label" mb={0.5}>
                   {category.name}
                 </Box>
-                {vehicles.map((entry) => (
-                  <Box pb={0.5} key={entry.path}>
-                    <Button
-                      fluid
-                      textAlign="center"
-                      selected={entry.path === selected_vehicle}
-                      onClick={() =>
-                        act('select_vehicle', { path: entry.path })
-                      }
-                    >
-                      {entry.name}
-                    </Button>
-                  </Box>
-                ))}
+                {vehicles.map((entry) => {
+                  const count =
+                    vehicle_squad.find((squad) => squad.path === entry.path)
+                      ?.count || 0;
+                  return (
+                    <Box pb={0.5} key={entry.path}>
+                      <Button
+                        fluid
+                        textAlign="center"
+                        selected={
+                          squadMode
+                            ? count > 0
+                            : entry.path === selected_vehicle
+                        }
+                        tooltip={squadMode ? 'Add one to the squad' : undefined}
+                        onClick={() =>
+                          squadMode
+                            ? act('set_vehicle_squad_count', {
+                                path: entry.path,
+                                count: count + 1,
+                              })
+                            : act('select_vehicle', { path: entry.path })
+                        }
+                      >
+                        {squadMode && count > 0
+                          ? `${count}x ${entry.name}`
+                          : entry.name}
+                      </Button>
+                    </Box>
+                  );
+                })}
               </Box>
             );
           })}
@@ -921,15 +946,57 @@ const VehiclesTab = (props) => {
       </Stack.Item>
       <Divider vertical />
       <Stack.Item basis="44%">
-        <Section fill scrollable title={vehicle ? vehicle.name : 'Vehicle'}>
+        <Section
+          fill
+          scrollable
+          title={
+            squadMode ? 'Vehicle Squad' : vehicle ? vehicle.name : 'Vehicle'
+          }
+        >
           <Stack vertical>
             <Stack.Item>
-              <ClickSpawnButton tooltip="LMB to spawn the vehicle centered on the clicked turf, MMB on an AI vehicle to delete it" />
+              <Stack>
+                <Stack.Item grow>
+                  <Button
+                    fluid
+                    textAlign="center"
+                    selected={!squadMode}
+                    tooltip="A click spawns the selected vehicle"
+                    onClick={() => act('set_vehicle_mode', { mode: 'single' })}
+                  >
+                    Single
+                  </Button>
+                </Stack.Item>
+                <Stack.Item grow>
+                  <Button
+                    fluid
+                    textAlign="center"
+                    selected={squadMode}
+                    tooltip="A click spawns every vehicle of the squad lined up from the clicked turf"
+                    onClick={() => act('set_vehicle_mode', { mode: 'squad' })}
+                  >
+                    Squad
+                  </Button>
+                </Stack.Item>
+              </Stack>
             </Stack.Item>
-            {!vehicle && (
-              <Stack.Item>
-                <NoticeBox info>Pick a vehicle on the left</NoticeBox>
-              </Stack.Item>
+            <Stack.Item>
+              <ClickSpawnButton
+                tooltip={
+                  squadMode
+                    ? 'LMB to spawn the squad, the first vehicle on the clicked turf. MMB on an AI vehicle to delete it'
+                    : 'LMB to spawn the vehicle centered on the clicked turf, MMB on an AI vehicle to delete it'
+                }
+              />
+            </Stack.Item>
+            {squadMode ? (
+              <VehicleSquadOptions />
+            ) : (
+              !vehicle && (
+                <Stack.Item>
+                  <NoticeBox info>Pick a vehicle on the left</NoticeBox>
+                </Stack.Item>
+              )
             )}
             <Stack.Item>
               <LabeledList>
@@ -998,6 +1065,88 @@ const VehiclesTab = (props) => {
   );
 };
 
+const VehicleSquadOptions = (props) => {
+  const { data, act } = useBackend<BackendContext>();
+  const {
+    vehicle_squad,
+    vehicle_formation,
+    vehicle_formations,
+    max_vehicle_squad,
+  } = data;
+
+  return (
+    <>
+      <Stack.Item>
+        <LabeledList>
+          <LabeledList.Item label="Formation">
+            <Dropdown
+              width="100%"
+              options={vehicle_formations}
+              selected={vehicle_formation}
+              onSelected={(value) =>
+                act('set_vehicle_formation', { formation: value })
+              }
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Size">
+            {squadSize(vehicle_squad)} / {max_vehicle_squad}
+          </LabeledList.Item>
+        </LabeledList>
+      </Stack.Item>
+      <Stack.Item>
+        {vehicle_squad.length ? (
+          vehicle_squad.map((entry) => (
+            <Stack key={entry.path} align="center" pb={0.5}>
+              <Stack.Item grow>
+                {entry.count}x {entry.name}
+              </Stack.Item>
+              <Stack.Item>
+                <Button
+                  icon="minus"
+                  onClick={() =>
+                    act('set_vehicle_squad_count', {
+                      path: entry.path,
+                      count: entry.count - 1,
+                    })
+                  }
+                />
+              </Stack.Item>
+              <Stack.Item>
+                <Button
+                  icon="times"
+                  color="bad"
+                  onClick={() =>
+                    act('set_vehicle_squad_count', {
+                      path: entry.path,
+                      count: 0,
+                    })
+                  }
+                />
+              </Stack.Item>
+            </Stack>
+          ))
+        ) : (
+          <Box textAlign="center" italic color="label">
+            Click vehicles on the left to add them to the squad. Spawned with an
+            AI crew, the squad gets selected for orders.
+          </Box>
+        )}
+      </Stack.Item>
+      {!!vehicle_squad.length && (
+        <Stack.Item>
+          <Button
+            fluid
+            textAlign="center"
+            onClick={() => act('clear_vehicle_squad')}
+          >
+            Clear Squad
+          </Button>
+        </Stack.Item>
+      )}
+    </>
+  );
+};
+
 const OrdersTab = (props) => {
   const { data, act } = useBackend<BackendContext>();
   const { order_click_intercept, selected_units, selecting_area } = data;
@@ -1034,9 +1183,14 @@ const OrdersTab = (props) => {
                 <LabeledList.Item label="Alt+LMB">
                   Rush there, ignoring enemies on the way
                 </LabeledList.Item>
+                <LabeledList.Item label="Ctrl+LMB">
+                  Fire at the clicked thing or spot for 20 seconds, whatever
+                  else they see
+                </LabeledList.Item>
                 <LabeledList.Item label="Vehicles">
                   Drive all the way there with either click, their guns keep
-                  firing on the move
+                  firing on the move. Sent together, they keep to the speed of
+                  the slowest one
                 </LabeledList.Item>
               </LabeledList>
               {!!selecting_area && (
@@ -1075,7 +1229,7 @@ const OrdersTab = (props) => {
                     fluid
                     textAlign="center"
                     icon="ban"
-                    tooltip="Cancel where the selected AI were sent"
+                    tooltip="Cancel where the selected AI were sent and what they were ordered to fire at"
                     onClick={() => act('order_stop')}
                   >
                     Stop

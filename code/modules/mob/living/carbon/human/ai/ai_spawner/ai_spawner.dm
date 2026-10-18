@@ -131,6 +131,11 @@
 		"Cheetah 2B command tank" = /obj/effect/vehicle_spawner/upptank/command/fixed, \
 		"ZSL-68 Pilgrim (minigun)" = /obj/effect/vehicle_spawner/apc/uppapc/minigun, \
 		"ZSL-68 Pilgrim (minigun, HJ-35)" = /obj/effect/vehicle_spawner/apc/uppapc/minigunhj35, \
+		"Kheshig-1M van" = /obj/effect/vehicle_spawner/uppvan/fixed, \
+		"Kheshig-1M-T van (turret)" = /obj/effect/vehicle_spawner/uppvant/fixed, \
+		"Kheshig-1M-Medical van" = /obj/effect/vehicle_spawner/uppvan/medical/fixed, \
+		"Kheshig-1M-logistics van" = /obj/effect/vehicle_spawner/uppvan/logistics/fixed, \
+		"Kheshig-1M-Prisoner van" = /obj/effect/vehicle_spawner/uppvan/prisoner/fixed, \
 	), \
 	"W-Y" = list( \
 		"M577-WY APC" = /obj/effect/vehicle_spawner/apc_pmc/fixed, \
@@ -141,7 +146,21 @@
 		"Type 200 Senshi" = /obj/effect/vehicle_spawner/twe_apc/fixed/armed, \
 		"Type 200 Senshi command" = /obj/effect/vehicle_spawner/twe_apc/command/fixed/armed, \
 	), \
+	"Civilian" = list( \
+		"Van" = /obj/effect/vehicle_spawner/van/fixed, \
+		"White van" = /obj/effect/vehicle_spawner/white_van/fixed, \
+		"Box van" = /obj/effect/vehicle_spawner/box_van/fixed, \
+		"Ambulance" = /obj/effect/vehicle_spawner/box_van/ambulance/fixed, \
+		"Police car" = /obj/effect/vehicle_spawner/box_van/cop_car/fixed, \
+		"Pizza van" = /obj/effect/vehicle_spawner/box_van/pizza_van/fixed, \
+		"Armored van" = /obj/effect/vehicle_spawner/van/armored, \
+		"Armored van (MG)" = /obj/effect/vehicle_spawner/van/armored/mg, \
+	), \
 )
+
+/// How a vehicle squad is lined up from the clicked turf: one behind the other, or side by side
+#define HUMAN_AI_SPAWNER_VEHICLE_FORMATIONS list("Column", "Line")
+#define HUMAN_AI_SPAWNER_MAX_VEHICLE_SQUAD 8
 
 /// Faction and crew picked when a vehicle of the category is selected
 #define HUMAN_AI_SPAWNER_VEHICLE_DEFAULTS list( \
@@ -149,6 +168,7 @@
 	"UPP" = list(FACTION_UPP, /datum/equipment_preset/upp/tank/ammo_rig), \
 	"W-Y" = list(FACTION_PMC, /datum/equipment_preset/pmc/crewman), \
 	"TWE" = list(FACTION_TWE, /datum/equipment_preset/other/tank), \
+	"Civilian" = list(FACTION_COLONIST, /datum/equipment_preset/colonist), \
 )
 
 /// Equipment presets that can crew AI vehicles
@@ -161,7 +181,12 @@
 	/datum/equipment_preset/us_army/tank, \
 	/datum/equipment_preset/usa/tank, \
 	/datum/equipment_preset/other/tank, \
+	/datum/equipment_preset/colonist, \
+	/datum/equipment_preset/clf/soldier, \
 )
+
+/// How long units ordered to fire at something keep at it
+#define HUMAN_AI_SPAWNER_FIRE_ORDER_TIME (20 SECONDS)
 
 /// Types of click intercepts used by /datum/human_ai_spawner_menu variable current_click_intercept_action
 #define SPAWN_CLICK_INTERCEPT_ACTION "spawn_click_intercept_action"
@@ -287,6 +312,15 @@
 
 	/// If only the vehicle's faction can get in, like when its crew locks the doors
 	var/vehicle_lock_doors = FALSE
+
+	/// If a click spawns the selected vehicle or the whole vehicle squad
+	var/vehicle_mode = HUMAN_AI_SPAWNER_MODE_SINGLE
+
+	/// The vehicles to spawn in squad mode, organized as vehicle spawner path = amount
+	var/list/vehicle_squad = list()
+
+	/// The HUMAN_AI_SPAWNER_VEHICLE_FORMATIONS entry the vehicle squad is lined up in
+	var/vehicle_formation = "Column"
 
 
 	// Order stuff
@@ -455,6 +489,8 @@
 		))
 
 	data["vehicle_categories"] = vehicle_ui_data
+	data["vehicle_formations"] = HUMAN_AI_SPAWNER_VEHICLE_FORMATIONS
+	data["max_vehicle_squad"] = HUMAN_AI_SPAWNER_MAX_VEHICLE_SQUAD
 
 	data["crew_presets"] = list()
 	for(var/crew_path in crew_presets)
@@ -527,6 +563,16 @@
 	data["vehicle_ai"] = vehicle_ai
 	data["vehicle_infinite_ammo"] = vehicle_infinite_ammo
 	data["vehicle_lock_doors"] = vehicle_lock_doors
+	data["vehicle_mode"] = vehicle_mode
+	data["vehicle_formation"] = vehicle_formation
+	data["vehicle_squad"] = list()
+	for(var/vehicle_path in vehicle_squad)
+		var/list/vehicle_data = vehicles_by_path[vehicle_path]
+		data["vehicle_squad"] += list(list(
+			"path" = vehicle_path,
+			"name" = vehicle_data ? vehicle_data["name"] : vehicle_path,
+			"count" = vehicle_squad[vehicle_path],
+		))
 
 	// Order stuff
 	data["selected_units"] = get_selection_ui_data()
@@ -773,11 +819,51 @@
 				return
 
 			selected_vehicle = vehicle_data["path"]
-			var/list/category_defaults = HUMAN_AI_SPAWNER_VEHICLE_DEFAULTS
-			var/list/defaults = category_defaults[vehicle_data["category"]]
-			if(defaults)
-				vehicle_faction = defaults[1]
-				vehicle_crew = defaults[2]
+			apply_vehicle_defaults(vehicle_data)
+			return TRUE
+
+		if("set_vehicle_mode")
+			var/new_mode = params["mode"]
+			if(!(new_mode in list(HUMAN_AI_SPAWNER_MODE_SINGLE, HUMAN_AI_SPAWNER_MODE_SQUAD)))
+				return
+
+			vehicle_mode = new_mode
+			return TRUE
+
+		if("set_vehicle_squad_count")
+			var/vehicle_path = params["path"]
+			var/list/vehicle_data = vehicles_by_path[vehicle_path]
+			if(!vehicle_data)
+				return
+
+			var/new_count = text2num(params["count"])
+			if(!isnum(new_count))
+				return
+
+			var/squad_size = 0
+			for(var/squad_vehicle in vehicle_squad)
+				squad_size += vehicle_squad[squad_vehicle]
+			// The first vehicle of a squad picks its faction and crew, like selecting it does
+			if(!squad_size)
+				apply_vehicle_defaults(vehicle_data)
+
+			new_count = clamp(round(new_count), 0, HUMAN_AI_SPAWNER_MAX_VEHICLE_SQUAD - squad_size + vehicle_squad[vehicle_path])
+			if(new_count)
+				vehicle_squad[vehicle_path] = new_count
+			else
+				vehicle_squad -= vehicle_path
+			return TRUE
+
+		if("clear_vehicle_squad")
+			vehicle_squad = list()
+			return TRUE
+
+		if("set_vehicle_formation")
+			var/new_formation = params["formation"]
+			if(!(new_formation in HUMAN_AI_SPAWNER_VEHICLE_FORMATIONS))
+				return
+
+			vehicle_formation = new_formation
 			return TRUE
 
 		if("set_vehicle_faction")
@@ -956,7 +1042,10 @@
 				if(HUMAN_AI_SPAWNER_TAB_SQUADS)
 					spawn_squad_preset(user, spawn_turf)
 				if(HUMAN_AI_SPAWNER_TAB_VEHICLES)
-					spawn_vehicle(user, spawn_turf)
+					if(vehicle_mode == HUMAN_AI_SPAWNER_MODE_SQUAD)
+						spawn_vehicle_squad(user, spawn_turf)
+					else
+						spawn_vehicle(user, spawn_turf)
 			return TRUE
 
 		if(ORDER_CLICK_INTERCEPT_ACTION)
@@ -1214,19 +1303,31 @@
 
 	squad_preset.spawn_ai(spawn_turf, user)
 
+/// Picks the faction and crew made for the vehicle's category
+/datum/human_ai_spawner_menu/proc/apply_vehicle_defaults(list/vehicle_data)
+	var/list/category_defaults = HUMAN_AI_SPAWNER_VEHICLE_DEFAULTS
+	var/list/defaults = category_defaults[vehicle_data["category"]]
+	if(defaults)
+		vehicle_faction = defaults[1]
+		vehicle_crew = defaults[2]
+
 /// Spawns the selected vehicle facing the chosen direction, crewed by AI if asked to
 /datum/human_ai_spawner_menu/proc/spawn_vehicle(mob/user, turf/spawn_turf)
 	if(!selected_vehicle)
 		to_chat(user, SPAN_WARNING("Pick a vehicle first."))
 		return
 
-	var/vehicle_spawner_type = text2path(selected_vehicle)
+	create_vehicle(text2path(selected_vehicle), spawn_turf, get_spawn_dir(user))
+
+/// Spawns the vehicle on the turf facing the direction, crewed by AI if asked to. Returns the vehicle
+/datum/human_ai_spawner_menu/proc/create_vehicle(vehicle_spawner_type, turf/spawn_turf, direction)
+	RETURN_TYPE(/obj/vehicle/multitile)
 	var/list/old_vehicles = GLOB.all_multi_vehicles.Copy()
 	new vehicle_spawner_type(spawn_turf)
 
 	// Spawners make their vehicle and delete themselves in Initialize()
 	for(var/obj/vehicle/multitile/new_vehicle as anything in GLOB.all_multi_vehicles - old_vehicles)
-		switch(get_spawn_dir(user))
+		switch(direction)
 			if(EAST)
 				new_vehicle.try_rotate(90)
 			if(WEST)
@@ -1237,6 +1338,44 @@
 
 		if(vehicle_ai)
 			new_vehicle.enable_ai(vehicle_faction, vehicle_crew, vehicle_infinite_ammo, vehicle_lock_doors)
+		return new_vehicle
+
+/// Spawns the whole vehicle squad lined up from the clicked turf and selects it for orders
+/datum/human_ai_spawner_menu/proc/spawn_vehicle_squad(mob/user, turf/spawn_turf)
+	if(!length(vehicle_squad))
+		to_chat(user, SPAN_WARNING("The vehicle squad is empty, add some vehicles to it first."))
+		return
+
+	var/direction = get_spawn_dir(user)
+	var/list/obj/vehicle/multitile/vehicles = list()
+	var/spacing = 0
+	for(var/vehicle_path in vehicle_squad)
+		for(var/i in 1 to vehicle_squad[vehicle_path])
+			var/obj/vehicle/multitile/new_vehicle = create_vehicle(text2path(vehicle_path), spawn_turf, direction)
+			if(!new_vehicle)
+				continue
+			vehicles += new_vehicle
+			spacing = max(spacing, max(new_vehicle.bound_width, new_vehicle.bound_height) / world.icon_size + 1)
+
+	// A column goes back from the clicked turf, a line spreads to both sides of it
+	var/column = (vehicle_formation == "Column")
+	var/line_dir = column ? REVERSE_DIR(direction) : turn(direction, -90)
+	var/step_x = (line_dir & EAST) ? 1 : ((line_dir & WEST) ? -1 : 0)
+	var/step_y = (line_dir & NORTH) ? 1 : ((line_dir & SOUTH) ? -1 : 0)
+	for(var/index in 1 to length(vehicles))
+		var/offset = (column ? (index - 1) : (index - 1 - (length(vehicles) - 1) / 2)) * spacing
+		var/turf/place = locate(clamp(spawn_turf.x + round(step_x * offset), 1, world.maxx), clamp(spawn_turf.y + round(step_y * offset), 1, world.maxy), spawn_turf.z)
+		vehicles[index].forceMove(place)
+
+	if(!vehicle_ai)
+		return
+	// Listed together in the human AI management panel
+	var/datum/vehicle_ai_squad/new_squad = new()
+	clear_selection()
+	for(var/obj/vehicle/multitile/new_vehicle as anything in vehicles)
+		if(new_vehicle.ai_brain)
+			new_squad.add_member(new_vehicle.ai_brain)
+			select_unit(user, new_vehicle.ai_brain)
 
 /datum/human_ai_spawner_menu/proc/handle_order_click(mob/user, list/modifiers, atom/object)
 	var/turf/clicked_turf = get_turf(object)
@@ -1249,6 +1388,10 @@
 
 	if(LAZYACCESS(modifiers, ALT_CLICK))
 		order_move(user, clicked_turf, TRUE)
+		return
+
+	if(LAZYACCESS(modifiers, CTRL_CLICK))
+		order_fire(user, object)
 		return
 
 	var/adding = LAZYACCESS(modifiers, SHIFT_CLICK)
@@ -1438,22 +1581,111 @@
 		to_chat(user, SPAN_WARNING("Select some AI first."))
 		return
 
-	for(var/datum/human_ai_brain/brain as anything in selected_humans)
+	// Every vehicle gets a spot of its own, so they don't end up ramming each other there.
+	// The guns keep firing while the vehicle drives, so it goes all the way there either way instead of stopping at the first enemy
+	// A group drives at the speed of its slowest vehicle
+	var/convoy_move_delay = 0
+	if(length(selected_vehicles) > 1)
+		for(var/datum/vehicle_ai_brain/vehicle_brain as anything in selected_vehicles)
+			if(vehicle_brain.can_drive())
+				convoy_move_delay = max(convoy_move_delay, vehicle_brain.get_full_speed_delay())
+
+	var/list/turf/reserved_turfs = list()
+	var/list/turf/parking_turfs = list()
+	for(var/datum/vehicle_ai_brain/vehicle_brain as anything in sort_by_distance(selected_vehicles, destination))
+		var/turf/parking_turf = vehicle_brain.find_parking_turf(destination, reserved_turfs) || destination
+		vehicle_brain.reserve_parking(parking_turf, reserved_turfs)
+		parking_turfs[vehicle_brain] = parking_turf
+		vehicle_brain.hold_position = FALSE
+		vehicle_brain.destination = parking_turf
+		vehicle_brain.convoy_move_delay = (vehicle_brain.get_full_speed_delay() < convoy_move_delay) ? convoy_move_delay : 0
+	keep_parking_order(parking_turfs, destination)
+
+	// Infantry spreads out around the turf, off the vehicles' spots
+	var/list/turf/infantry_turfs = get_squad_turfs(destination, 3) - reserved_turfs
+	for(var/datum/human_ai_brain/brain as anything in sort_by_distance(selected_humans, destination))
+		var/turf/human_turf = length(infantry_turfs) ? infantry_turfs[1] : destination
+		infantry_turfs -= human_turf
 		brain.hold_position = FALSE
 		if(rush)
-			brain.quick_approach = destination
+			brain.quick_approach = human_turf
 		else
 			brain.quick_approach = null
-			brain.target_turf = destination
-
-	// The guns keep firing while the vehicle drives, so it goes all the way there either way instead of stopping at the first enemy
-	for(var/datum/vehicle_ai_brain/vehicle_brain as anything in selected_vehicles)
-		vehicle_brain.hold_position = FALSE
-		vehicle_brain.destination = destination
+			brain.target_turf = human_turf
 
 	var/image/order_image = image('icons/turf/overlays.dmi', destination, rush ? "redOverlay" : "greenOverlay")
 	order_image.plane = ABOVE_LIGHTING_PLANE
 	flick_overlay_to_clients(order_image, list(user.client), 1 SECONDS)
+
+/// Has the selected units fire at the clicked thing for a while, or at the turf if it isn't lying out in the open
+/datum/human_ai_spawner_menu/proc/order_fire(mob/user, atom/object)
+	if(!length(selected_humans) && !length(selected_vehicles))
+		to_chat(user, SPAN_WARNING("Select some AI first."))
+		return
+
+	var/atom/fire_target = (isturf(object) || isturf(object.loc)) ? object : get_turf(object)
+	for(var/datum/human_ai_brain/brain as anything in selected_humans)
+		brain.order_fire_at(fire_target, HUMAN_AI_SPAWNER_FIRE_ORDER_TIME)
+
+	for(var/datum/vehicle_ai_brain/vehicle_brain as anything in selected_vehicles)
+		vehicle_brain.order_fire_at(fire_target, HUMAN_AI_SPAWNER_FIRE_ORDER_TIME)
+
+	var/image/order_image = image('icons/turf/overlays.dmi', get_turf(fire_target), "yellow")
+	order_image.plane = ABOVE_LIGHTING_PLANE
+	flick_overlay_to_clients(order_image, list(user.client), 1 SECONDS)
+
+/**
+ * Swaps the parking spots around so the vehicles keep their order across the way they drive,
+ * the one furthest left getting the spot furthest left and so on, so their ways there don't cross.
+ * Only done for vehicles of one size, a smaller spot could be too small for a bigger vehicle
+ */
+/datum/human_ai_spawner_menu/proc/keep_parking_order(list/parking_turfs, turf/destination)
+	var/list/datum/vehicle_ai_brain/vehicle_brains = parking_turfs.Copy()
+	if(length(vehicle_brains) < 2)
+		return
+
+	var/datum/vehicle_ai_brain/first_brain = vehicle_brains[1]
+	var/center_x = 0
+	var/center_y = 0
+	var/list/spot_keys = list()
+	for(var/datum/vehicle_ai_brain/vehicle_brain as anything in vehicle_brains)
+		var/obj/vehicle/multitile/vehicle = vehicle_brain.vehicle
+		if((vehicle.bound_width != first_brain.vehicle.bound_width) || (vehicle.bound_height != first_brain.vehicle.bound_height))
+			return
+		// The fallback when no spot was free is shared
+		if(spot_keys[parking_turfs[vehicle_brain]])
+			return
+		spot_keys[parking_turfs[vehicle_brain]] = TRUE
+		center_x += vehicle.x
+		center_y += vehicle.y
+	center_x /= length(vehicle_brains)
+	center_y /= length(vehicle_brains)
+
+	// Across the way from the vehicles to the turf
+	var/across_x = center_y - destination.y
+	var/across_y = destination.x - center_x
+	if(!across_x && !across_y)
+		across_x = 1
+
+	var/list/vehicle_order = list()
+	var/list/spot_order = list()
+	for(var/datum/vehicle_ai_brain/vehicle_brain as anything in vehicle_brains)
+		vehicle_order[vehicle_brain] = (vehicle_brain.vehicle.x * across_x) + (vehicle_brain.vehicle.y * across_y)
+		var/turf/spot = parking_turfs[vehicle_brain]
+		spot_order[spot] = (spot.x * across_x) + (spot.y * across_y)
+	vehicle_order = sortTim(vehicle_order, GLOBAL_PROC_REF(cmp_numeric_asc), TRUE)
+	spot_order = sortTim(spot_order, GLOBAL_PROC_REF(cmp_numeric_asc), TRUE)
+	for(var/index in 1 to length(vehicle_order))
+		var/datum/vehicle_ai_brain/vehicle_brain = vehicle_order[index]
+		vehicle_brain.destination = spot_order[index]
+
+/// Returns the human or vehicle AI brains sorted by how close their body is to the turf, nearest first
+/datum/human_ai_spawner_menu/proc/sort_by_distance(list/unit_brains, turf/target_turf)
+	var/list/distances = list()
+	for(var/datum/unit_brain as anything in unit_brains)
+		var/atom/unit = get_unit_body(unit_brain)
+		distances[unit_brain] = unit ? get_dist(unit, target_turf) : INFINITY
+	return sortTim(distances, GLOBAL_PROC_REF(cmp_numeric_asc), TRUE)
 
 /datum/human_ai_spawner_menu/proc/order_hold(mob/user, hold)
 	for(var/datum/human_ai_brain/brain as anything in selected_humans)
@@ -1466,14 +1698,16 @@
 		if(hold)
 			vehicle_brain.destination = null
 
-/// Cancels where the selected units were sent, they go back to what they would do on their own
+/// Cancels where the selected units were sent and what they were ordered to fire at, they go back to what they would do on their own
 /datum/human_ai_spawner_menu/proc/order_stop(mob/user)
 	for(var/datum/human_ai_brain/brain as anything in selected_humans)
+		brain.clear_fire_order()
 		brain.quick_approach = null
 		if(!brain.current_target)
 			brain.target_turf = null
 
 	for(var/datum/vehicle_ai_brain/vehicle_brain as anything in selected_vehicles)
+		vehicle_brain.clear_fire_order()
 		vehicle_brain.destination = null
 		if(!vehicle_brain.current_target)
 			vehicle_brain.target_turf = null
@@ -1521,7 +1755,10 @@
 #undef HUMAN_AI_SPAWNER_DIRECTIONS
 #undef HUMAN_AI_SPAWNER_VEHICLES
 #undef HUMAN_AI_SPAWNER_VEHICLE_DEFAULTS
+#undef HUMAN_AI_SPAWNER_VEHICLE_FORMATIONS
+#undef HUMAN_AI_SPAWNER_MAX_VEHICLE_SQUAD
 #undef HUMAN_AI_SPAWNER_VEHICLE_CREWS
 
+#undef HUMAN_AI_SPAWNER_FIRE_ORDER_TIME
 #undef SPAWN_CLICK_INTERCEPT_ACTION
 #undef ORDER_CLICK_INTERCEPT_ACTION

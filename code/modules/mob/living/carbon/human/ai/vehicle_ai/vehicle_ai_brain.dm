@@ -30,6 +30,7 @@
 	. = ..()
 	src.vehicle = vehicle
 	vehicle.ai_brain = src
+	right_of_way = ++last_right_of_way
 	set_faction(faction)
 	RegisterSignal(vehicle, COMSIG_PARENT_QDELETING, PROC_REF(on_vehicle_delete))
 	SSvehicle_ai.brains += src
@@ -37,6 +38,7 @@
 /datum/vehicle_ai_brain/Destroy(force, ...)
 	SSvehicle_ai.brains -= src
 	SSvehicle_ai.current_run -= src
+	squad?.remove_member(src)
 	reset_ai()
 	release_crew()
 	if(vehicle)
@@ -55,6 +57,7 @@
 	in_combat = FALSE
 	target_turf = null
 	destination = null
+	clear_fire_order()
 	lose_target()
 	clear_path()
 	stop_all_weapons()
@@ -74,6 +77,10 @@
 	// The interior loads after the vehicle, so the crew boards once it's ready
 	if(crew_preset && vehicle.interior?.ready)
 		spawn_crew()
+
+	// Keeping to the speed of the others only lasts until we get where we were sent
+	if(convoy_move_delay && !destination)
+		convoy_move_delay = 0
 
 	// Buckling into a seat sets the vehicle's IFF to the crewman's faction, keep ours unless someone is driving
 	if(!vehicle.seats[VEHICLE_DRIVER])

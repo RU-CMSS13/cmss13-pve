@@ -25,6 +25,23 @@
 	var/friendly_wait_time = 4 SECONDS
 	/// world.time when friendlies started blocking the way, 0 if they aren't
 	var/friendly_blocked_since = 0
+	/// How long the AI waits for a friendly vehicle in its way to move before driving around it
+	var/vehicle_wait_time = 8 SECONDS
+	/// world.time when another vehicle started blocking the way, 0 if none is
+	var/vehicle_blocked_since = 0
+	/// Path cost of each turf under a friendly vehicle, which is asked to make way when the path goes through it
+	var/friendly_vehicle_penalty = 30
+	/// A turf to drive to so a friendly vehicle can pass, see /datum/vehicle_ai_action/driving/make_way
+	var/turf/make_way_turf
+	/// world.time after which the AI stops trying to reach make_way_turf
+	var/make_way_until = 0
+	/// When two vehicles going somewhere block each other, the one with the lower number goes first
+	var/right_of_way = 0
+	/// Driving somewhere with slower vehicles, the least time between two moves so it keeps to their speed. 0 to drive at its own
+	var/convoy_move_delay = 0
+	/// world.time of the last move or turn, see convoy_move_delay
+	var/last_drive_step = 0
+	var/static/last_right_of_way = 0
 
 	/// Throttles new path searches
 	COOLDOWN_DECLARE(repath_cooldown)
@@ -137,10 +154,19 @@
 	if(world.time < vehicle.next_move)
 		return FALSE
 
+	if(convoy_move_delay && (world.time < last_drive_step + convoy_move_delay))
+		return FALSE
+
 	var/turf/old_loc = vehicle.loc
 	var/old_dir = vehicle.dir
 	var/turning_around = (direction == turn(vehicle.dir, 180) && straight_steps > max_reverse_steps)
 	var/moving = !turning_around && (direction == vehicle.dir || direction == turn(vehicle.dir, 180))
+	var/obj/vehicle/multitile/blocking_vehicle = moving && get_vehicle_in_way(direction)
+	if(blocking_vehicle)
+		wait_for_vehicle(blocking_vehicle, direction)
+		return FALSE
+	vehicle_blocked_since = 0
+
 	if(moving && friendly_in_way(direction))
 		// Honk and give them a moment, then go around
 		if(!friendly_blocked_since)
@@ -168,6 +194,7 @@
 
 	if(vehicle.loc != old_loc || vehicle.dir != old_dir)
 		failed_moves = 0
+		last_drive_step = world.time
 		return TRUE
 
 	// Ramming through something that breaks or folds is progress, only what stays in the way gets us stuck
@@ -200,6 +227,149 @@
 			if(possible_friendly.stat != DEAD && faction_check(possible_friendly))
 				return TRUE
 	return FALSE
+
+/// How long the vehicle takes to drive a tile at full speed
+/datum/vehicle_ai_brain/proc/get_full_speed_delay()
+	return vehicle.move_delay * vehicle.misc_multipliers["move"]
+
+/// Returns another vehicle the next step in the direction would run into, other than a wreck we shove
+/datum/vehicle_ai_brain/proc/get_vehicle_in_way(direction)
+	RETURN_TYPE(/obj/vehicle/multitile)
+	for(var/turf/ahead_turf as anything in get_turfs_ahead(direction))
+		for(var/obj/vehicle/multitile/other_vehicle in ahead_turf)
+			if(other_vehicle != vehicle && !vehicle.can_shove(other_vehicle))
+				return other_vehicle
+
+/// Doesn't ram the vehicle in the way: a friendly one is asked to make way and waited for, anything else is driven around
+/datum/vehicle_ai_brain/proc/wait_for_vehicle(obj/vehicle/multitile/blocking_vehicle, direction)
+	if(!can_ask_to_make_way(blocking_vehicle))
+		vehicle_blocked_since = 0
+		avoid_turfs_ahead(direction)
+		clear_path()
+		return
+
+	if(!vehicle_blocked_since)
+		vehicle_blocked_since = world.time
+		blocking_vehicle.ai_brain?.make_way_for(src, direction)
+		if(world.time >= vehicle.next_honk)
+			vehicle.next_honk = world.time + 10 SECONDS
+			vehicle.perform_honk()
+			crew_say(move_lines, VEHICLE_DRIVER)
+		return
+
+	// Getting out of a long corridor takes a while
+	var/wait_time = blocking_vehicle.ai_brain?.make_way_turf ? max(vehicle_wait_time, blocking_vehicle.ai_brain.make_way_until - vehicle_blocked_since) : vehicle_wait_time
+	if(world.time > vehicle_blocked_since + wait_time)
+		vehicle_blocked_since = 0
+		avoid_turfs_ahead(direction)
+		clear_path()
+
+/// TRUE if the vehicle is on our side and someone can drive it out of the way
+/datum/vehicle_ai_brain/proc/can_ask_to_make_way(obj/vehicle/multitile/other_vehicle)
+	if(!other_vehicle.vehicle_faction || !faction_check(other_vehicle))
+		return FALSE
+	return other_vehicle.ai_brain || other_vehicle.seats[VEHICLE_DRIVER]
+
+/// Asked by a friendly vehicle we are in the way of, drives somewhere off the way it is taking
+/datum/vehicle_ai_brain/proc/make_way_for(datum/vehicle_ai_brain/other_brain, direction)
+	if(!can_drive() || (make_way_until > world.time))
+		return
+
+	// Both going somewhere, the one with the right of way goes first
+	if(destination && other_brain.destination && (right_of_way < other_brain.right_of_way))
+		return
+
+	var/turf/side_turf = find_make_way_turf(other_brain.get_planned_turfs(direction))
+	if(!side_turf)
+		return
+
+	make_way_turf = side_turf
+	make_way_until = world.time + 15 SECONDS
+
+/// Returns the turfs the vehicle covers on its way, along its path or straight on in the direction if it has none
+/datum/vehicle_ai_brain/proc/get_planned_turfs(direction)
+	RETURN_TYPE(/list)
+	. = list()
+	var/turf/center = get_turf(vehicle)
+	var/list/turf/centers = list(center)
+	if(length(current_path))
+		centers += current_path
+	else
+		var/turf/ahead = center
+		for(var/i in 1 to 8)
+			ahead = get_step(ahead, direction)
+			if(!ahead)
+				break
+			centers += ahead
+
+	for(var/turf/planned_center as anything in centers)
+		for(var/turf/footprint_turf as anything in get_footprint(planned_center))
+			.[footprint_turf] = TRUE
+
+/// Returns the nearest place the vehicle can drive to where it covers none of the avoided turfs
+/datum/vehicle_ai_brain/proc/find_make_way_turf(list/avoided_turfs)
+	var/turf/start = get_turf(vehicle)
+	var/list/turf/visited = list()
+	visited[start] = TRUE
+	var/list/turf/queue = list(start)
+	var/index = 0
+	while((index < length(queue)) && (index < flee_search_nodes))
+		index++
+		var/turf/current = queue[index]
+		if(current != start)
+			var/clear = TRUE
+			for(var/turf/footprint_turf as anything in get_footprint(current))
+				if(avoided_turfs[footprint_turf])
+					clear = FALSE
+					break
+			if(clear)
+				return current
+
+		for(var/direction in GLOB.cardinals)
+			var/turf/neighbor = get_step(current, direction)
+			if(!neighbor || visited[neighbor])
+				continue
+			visited[neighbor] = TRUE
+			if(can_occupy(neighbor))
+				queue += neighbor
+
+/**
+ * Returns the nearest place around the turf the whole vehicle fits on without covering any of the reserved turfs,
+ * so vehicles sent to the same turf don't end up ramming each other there
+ */
+/datum/vehicle_ai_brain/proc/find_parking_turf(turf/around, list/reserved_turfs, max_distance = 10)
+	var/list/turf/visited = list()
+	visited[around] = TRUE
+	var/list/turf/queue = list(around)
+	var/index = 0
+	while(index < length(queue))
+		index++
+		var/turf/current = queue[index]
+		if(can_occupy(current))
+			var/clear = TRUE
+			for(var/turf/footprint_turf as anything in get_footprint(current))
+				if(reserved_turfs[footprint_turf])
+					clear = FALSE
+					break
+			if(clear)
+				return current
+
+		for(var/direction in GLOB.cardinals)
+			var/turf/neighbor = get_step(current, direction)
+			if(!neighbor || visited[neighbor] || (get_dist(around, neighbor) > max_distance))
+				continue
+			visited[neighbor] = TRUE
+			queue += neighbor
+
+/// Reserves the turfs the vehicle would cover parked at the center, and a tile around them so the next one keeps a gap
+/datum/vehicle_ai_brain/proc/reserve_parking(turf/center, list/reserved_turfs)
+	var/list/turf/footprint = get_footprint(center)
+	if(!length(footprint))
+		return
+	var/turf/low = footprint[1]
+	var/turf/high = footprint[length(footprint)]
+	for(var/turf/reserved_turf as anything in block(max(low.x - 1, 1), max(low.y - 1, 1), center.z, min(high.x + 1, world.maxx), min(high.y + 1, world.maxy), center.z))
+		reserved_turfs[reserved_turf] = TRUE
 
 /// Counts the walls and dense things other than mobs on the turfs, what the vehicle has to break through
 /datum/vehicle_ai_brain/proc/count_obstacles(list/turf/turfs)
@@ -328,8 +498,10 @@
 			continue
 		if(brain.vehicle.can_shove(other_vehicle))
 			continue
+		// Friendly ones are asked to make way, so the path only goes through them when going around is much longer
+		var/vehicle_turf_cost = brain.can_ask_to_make_way(other_vehicle) ? brain.friendly_vehicle_penalty : -1
 		for(var/turf/vehicle_turf as anything in other_vehicle.locs)
-			turf_costs[vehicle_turf] = -1
+			turf_costs[vehicle_turf] = vehicle_turf_cost
 
 	g_scores[start] = 0
 	heap_push(start, get_heuristic(start))

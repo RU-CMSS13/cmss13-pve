@@ -223,6 +223,11 @@
 		seat.unbuckle()
 	crewman_say(crewman, bail_out_lines, important = TRUE)
 
+	// Out through the nearest door like anyone else, the human AI walks there itself
+	var/datum/human_ai_brain/crewman_brain = crewman.get_ai_brain()
+	if(crewman_brain?.bail_out(vehicle))
+		return
+
 	for(var/entrance in vehicle.entrances)
 		var/list/entrance_coords = vehicle.entrances[entrance]
 		if(vehicle.interior.exit(crewman, locate(vehicle.x + entrance_coords[1], vehicle.y + entrance_coords[2], vehicle.z)))

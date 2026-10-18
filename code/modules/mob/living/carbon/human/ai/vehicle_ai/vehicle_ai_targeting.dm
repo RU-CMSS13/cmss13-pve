@@ -17,6 +17,10 @@
 	var/atom/movable/current_target
 	/// Last turf our target was seen at
 	var/turf/target_turf
+	/// What the AI was ordered to fire at, an atom or a turf, until ordered_fire_until
+	var/atom/ordered_fire_target
+	/// world.time when the order to fire at ordered_fire_target runs out
+	var/ordered_fire_until = 0
 
 	COOLDOWN_DECLARE(target_scan)
 
@@ -84,8 +88,36 @@
 		seen = view(view_distance, center)
 	return (target in seen)
 
-/// Returns what the guns should point at: the target, or where the enemy was last seen or shot from while in combat
+/// Has the AI fire everything at the target for a while instead of anything it sees, a turf is fired at too
+/datum/vehicle_ai_brain/proc/order_fire_at(atom/target, duration)
+	clear_fire_order()
+	ordered_fire_target = target
+	ordered_fire_until = world.time + duration
+	if(!isturf(target))
+		RegisterSignal(target, COMSIG_PARENT_QDELETING, PROC_REF(clear_fire_order))
+
+/datum/vehicle_ai_brain/proc/clear_fire_order()
+	SIGNAL_HANDLER
+	if(ordered_fire_target && !isturf(ordered_fire_target))
+		UnregisterSignal(ordered_fire_target, COMSIG_PARENT_QDELETING)
+	ordered_fire_target = null
+
+/// Returns what the AI is ordered to fire at, null once the order ran out or the target is destroyed
+/datum/vehicle_ai_brain/proc/get_ordered_fire_target()
+	if(!ordered_fire_target)
+		return
+
+	if((world.time > ordered_fire_until) || (!isturf(ordered_fire_target) && is_target_destroyed(ordered_fire_target)))
+		clear_fire_order()
+		return
+
+	return ordered_fire_target
+
+/// Returns what the guns should point at: what they were ordered at, the target, or where the enemy was last seen or shot from while in combat
 /datum/vehicle_ai_brain/proc/get_aim_target()
+	var/atom/ordered_target = get_ordered_fire_target()
+	if(ordered_target)
+		return ordered_target
 	if(current_target)
 		return current_target
 	if(in_combat && target_turf && (target_turf.z == vehicle.z))

@@ -98,6 +98,8 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 
 /datum/human_ai_brain/proc/reset_ai()
 	end_cover()
+	clear_fire_order()
+	bail_out_door = null
 
 	in_combat = FALSE
 	target_turf = null
@@ -140,11 +142,13 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 		lose_target()
 		target_turf = null
 
-	if(!current_target && COOLDOWN_FINISHED(src, target_scan_cooldown))
+	// An order to fire at something takes the place of a target
+	var/atom/ordered_fire = get_ordered_fire_target()
+	if(!current_target && !ordered_fire && COOLDOWN_FINISHED(src, target_scan_cooldown))
 		COOLDOWN_START(src, target_scan_cooldown, get_target_scan_delay())
 		set_target(get_target())
 
-	if(current_target)
+	if(current_target || ordered_fire)
 		enter_combat()
 
 	if(!iszombie(tied_human) && COOLDOWN_FINISHED(src, item_search_cooldown))
@@ -398,8 +402,8 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	if(faction_check(shooter))
 		return FALSE
 
-	// Somewhere we can't aim at, like the interior of a vehicle
-	if(shooter.z != tied_human.z)
+	// Somewhere we can't aim at, like the interior of a vehicle. An order to fire at something comes first
+	if((shooter.z != tied_human.z) || get_ordered_fire_target())
 		return TRUE
 
 	if(get_dist(tied_human, shooter) <= view_distance)

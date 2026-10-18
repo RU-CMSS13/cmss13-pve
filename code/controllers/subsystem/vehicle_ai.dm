@@ -9,6 +9,10 @@ SUBSYSTEM_DEF(vehicle_ai)
 	var/list/datum/vehicle_ai_brain/current_run = list()
 	/// Assoc list of action type : action singleton used to weigh actions, see get_actions()
 	var/list/datum/vehicle_ai_action/actions
+	/// Squads of AI vehicles that game masters made
+	var/list/datum/vehicle_ai_squad/squads = list()
+	/// The id of the last squad made, so every squad gets a new one
+	var/last_squad_id = 0
 
 /datum/controller/subsystem/vehicle_ai/stat_entry(msg)
 	msg = "P:[length(brains)]"
