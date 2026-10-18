@@ -15,7 +15,8 @@
 	var/datum/equipment_preset/preset = crew_preset
 	crew_preset = null
 	for(var/seat_role in crew_seats)
-		if(!(seat_role in vehicle.seats) || vehicle.seats[seat_role])
+		// Some vehicles only list a seat role once someone sits in it, so going by the seats inside
+		if(vehicle.seats[seat_role])
 			continue
 
 		var/obj/structure/bed/chair/comfy/vehicle/seat = get_interior_seat(seat_role)
@@ -25,6 +26,12 @@
 		var/mob/living/carbon/human/crewman = new(get_turf(seat))
 		// Equipped first, the AI looks through its inventory when it is added
 		arm_equipment(crewman, preset, TRUE)
+		// Whatever the preset, the crew can sit in every seat of their vehicle
+		if(crewman.skills && (crewman.skills.get_skill_level(SKILL_VEHICLE) < SKILL_VEHICLE_CREWMAN))
+			crewman.skills.set_skill(SKILL_VEHICLE, SKILL_VEHICLE_CREWMAN)
+		// A crew of another faction would fight for it once it bails out
+		if(crewman.faction != faction)
+			crewman.set_faction(faction)
 		var/datum/component/human_ai/ai_component = crewman.AddComponent(/datum/component/human_ai)
 		fill_ammo_rig(crewman)
 		add_crewman(crewman)
@@ -100,19 +107,42 @@
 		if(is_crewman_seated(crewman))
 			return crewman
 
-/// Moves a full magazine for the weapon from a crewman's storage into the weapon's backup clips, like loading the weapons loader
-/datum/vehicle_ai_brain/proc/load_crew_magazine(obj/item/hardpoint/weapon)
+/// Returns a magazine for the weapon that a seated crewman carries, if any
+/datum/vehicle_ai_brain/proc/find_crew_magazine(obj/item/hardpoint/weapon)
+	RETURN_TYPE(/obj/item/ammo_magazine/hardpoint)
 	for(var/mob/living/carbon/human/crewman as anything in crew)
 		if(!is_crewman_seated(crewman))
 			continue
 		for(var/obj/item/storage/container in crewman)
 			for(var/obj/item/ammo_magazine/hardpoint/magazine in container)
-				if(magazine.type != weapon.ammo.type || magazine.current_rounds <= 0)
-					continue
-				container.remove_from_storage(magazine, weapon)
-				LAZYADD(weapon.backup_clips, magazine)
-				return TRUE
-	return FALSE
+				if((magazine.type == weapon.ammo.type) && (magazine.current_rounds > 0))
+					return magazine
+
+/// Moves a full magazine for the weapon from a crewman's storage into the weapon's backup clips, like loading the weapons loader
+/datum/vehicle_ai_brain/proc/load_crew_magazine(obj/item/hardpoint/weapon)
+	var/obj/item/ammo_magazine/hardpoint/magazine = find_crew_magazine(weapon)
+	if(!magazine)
+		return FALSE
+
+	var/obj/item/storage/container = magazine.loc
+	container.remove_from_storage(magazine, weapon)
+	LAZYADD(weapon.backup_clips, magazine)
+	return TRUE
+
+/// Returns TRUE if the vehicle is no use to its crew anymore: wrecked, or stuck in place with nothing left to shoot
+/datum/vehicle_ai_brain/proc/is_knocked_out()
+	if(vehicle.health <= 0)
+		return TRUE
+
+	for(var/obj/item/hardpoint/locomotion/locomotion in vehicle.hardpoints)
+		if(locomotion.health > 0)
+			return FALSE
+
+	for(var/obj/item/hardpoint/weapon as anything in get_weapons())
+		if(weapon_can_fire(weapon))
+			return FALSE
+
+	return TRUE
 
 /// Moves surviving crew into the seats that matter most, so a lone crewman mans the guns instead of the wheel
 /datum/vehicle_ai_brain/proc/reassign_crew_seats()

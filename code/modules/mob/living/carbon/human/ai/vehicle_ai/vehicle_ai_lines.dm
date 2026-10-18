@@ -108,6 +108,21 @@
 		"Taking over the %SEAT%!",
 		"I've got the %SEAT%!",
 	)
+	/// Lines said by the driver when driving away from enemies the vehicle can't fight
+	var/list/flee_lines = list(
+		"We can't fight that, pulling back!",
+		"Get us out of here!",
+		"Falling back!",
+		"Reversing, reversing!",
+		"Nothing to shoot back with, we're leaving!",
+	)
+	/// Lines said by the driver when cornered and driving into the enemy
+	var/list/ram_lines = list(
+		"Nowhere to go, hold on!",
+		"Run them over!",
+		"Floor it, through them!",
+		"Brace, we're going through!",
+	)
 	/// Lines said by the driver when friendlies stand in the way
 	var/list/move_lines = list(
 		"MOVE!",
@@ -182,7 +197,7 @@
 		return mob_target.stat == DEAD
 	if(istype(target, /obj/vehicle/multitile))
 		var/obj/vehicle/multitile/vehicle_target = target
-		return vehicle_target.health <= 0
+		return !vehicle_target.ai_can_fight()
 	if(isdefenses(target))
 		var/obj/structure/machinery/defenses/defense_target = target
 		return !defense_target.turned_on

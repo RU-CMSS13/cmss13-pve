@@ -70,6 +70,24 @@
 	var/obj/item/hardpoint/holder/turret = get_turret()
 	return turret && turret.health > 0
 
+/// TRUE if the weapon isn't broken and has ammunition or can be reloaded
+/datum/vehicle_ai_brain/proc/weapon_can_fire(obj/item/hardpoint/weapon)
+	if(weapon.health <= 0)
+		return FALSE
+
+	var/obj/item/hardpoint/holder/weapon_holder = weapon.loc
+	if(istype(weapon_holder) && (weapon_holder.health <= 0))
+		return FALSE
+
+	return infinite_ammo || (weapon.ammo?.current_rounds > 0) || LAZYLEN(weapon.backup_clips) || find_crew_magazine(weapon)
+
+/// TRUE if a seated crewman can shoot back with one of the weapons, else the vehicle is better off driving away
+/datum/vehicle_ai_brain/proc/can_fight_back()
+	for(var/obj/item/hardpoint/weapon as anything in get_weapons())
+		if(can_use_seat(weapon.allowed_seat) && weapon_can_fire(weapon))
+			return TRUE
+	return FALSE
+
 /// Shoots every weapon that can hit the target and turns the turret towards it. Returns TRUE if anything fired
 /datum/vehicle_ai_brain/proc/fire_weapons(atom/target)
 	. = FALSE

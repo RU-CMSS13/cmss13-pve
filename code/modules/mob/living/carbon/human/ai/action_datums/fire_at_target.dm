@@ -113,6 +113,17 @@
 			if(brain.faction_check(possible_friendly))
 				return FALSE
 
+	var/turf/target_turf = get_turf(target)
+	if(brain.ally_behind_target(get_turf(tied_human), target_turf))
+		return FALSE
+
+	// Rockets and flames hit everyone around where they land
+	var/splash_radius = brain.gun_data?.splash_radius
+	if(splash_radius)
+		for(var/mob/living/carbon/human/possible_friendly in range(splash_radius, target_turf))
+			if((possible_friendly.stat != DEAD) && brain.faction_check(possible_friendly))
+				return FALSE
+
 	return TRUE
 
 /datum/ai_action/fire_at_target/proc/on_gun_fire(datum/source, obj/item/weapon/gun/fired)

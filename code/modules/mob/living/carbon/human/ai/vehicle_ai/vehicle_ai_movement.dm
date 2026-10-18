@@ -59,7 +59,8 @@
 			continue
 		if(istype(thing, /obj/vehicle))
 			return -1
-		. += crush_penalty
+		// Heavy vehicles barely slow down for it, they only go around for a way that isn't longer
+		. += vehicle.ai_crushes_obstacles ? 1 : crush_penalty
 
 /// TRUE if the whole vehicle can drive onto the turfs around the given center
 /datum/vehicle_ai_brain/proc/can_occupy(turf/center)
@@ -205,7 +206,7 @@
 		if(blocked_turfs[blocked_turf] <= world.time)
 			blocked_turfs -= blocked_turf
 
-	pathfinder = new(src, get_turf(vehicle), goal, radius)
+	pathfinder = new(src, get_turf(vehicle), goal, radius, !vehicle.ai_crushes_obstacles)
 
 /datum/vehicle_ai_brain/proc/clear_path()
 	QDEL_NULL(pathfinder)
@@ -232,6 +233,10 @@
 	var/goal_radius = 0
 	/// Total tiles the search may look at before giving up
 	var/max_nodes = 2500
+	/// If TRUE, the path may not go through anything the vehicle would have to crush. If there is no such path, a search that may is started
+	var/clear_only = FALSE
+	/// Total tiles a clear_only search may look at, it gives up sooner since another search follows
+	var/clear_only_max_nodes = 1000
 	/// Path cost added each time the path turns, since the vehicle has to stop and rotate
 	var/turn_penalty = 2
 	/// Tiles looked at so far
@@ -251,10 +256,13 @@
 	/// Assoc list of turf : path cost of that one turf, -1 if the vehicle can't drive on it
 	var/list/turf_costs = list()
 
-/datum/vehicle_ai_pathfinder/New(datum/vehicle_ai_brain/brain, turf/start, turf/goal, goal_radius)
+/datum/vehicle_ai_pathfinder/New(datum/vehicle_ai_brain/brain, turf/start, turf/goal, goal_radius, clear_only = FALSE)
 	. = ..()
 	src.brain = brain
 	src.start = start
+	src.clear_only = clear_only
+	if(clear_only)
+		max_nodes = clear_only_max_nodes
 	src.goal = goal
 	src.goal_radius = goal_radius
 
@@ -324,6 +332,12 @@
 
 /datum/vehicle_ai_pathfinder/proc/finish(list/turf/path)
 	var/datum/vehicle_ai_brain/owner = brain
+	// No way around, crush through
+	if(!path && clear_only)
+		owner.pathfinder = new /datum/vehicle_ai_pathfinder(owner, start, goal, goal_radius, FALSE)
+		qdel(src)
+		return
+
 	qdel(src)
 	owner.set_path(path)
 
@@ -350,7 +364,7 @@
 		if(isnull(turf_cost))
 			turf_cost = brain.get_turf_drive_cost(footprint_turf)
 			turf_costs[footprint_turf] = turf_cost
-		if(turf_cost < 0)
+		if((turf_cost < 0) || (clear_only && turf_cost > 0))
 			. = -1
 			break
 		. += turf_cost

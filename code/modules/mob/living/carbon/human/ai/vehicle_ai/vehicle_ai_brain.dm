@@ -64,7 +64,7 @@
 	ongoing_actions.Cut()
 
 /datum/vehicle_ai_brain/process(delta_time)
-	if(vehicle.health <= 0)
+	if(is_knocked_out())
 		if(length(ongoing_actions) || current_target)
 			reset_ai()
 		if(!crew_evacuated && length(crew))

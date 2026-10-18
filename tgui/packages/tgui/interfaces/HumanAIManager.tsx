@@ -2,407 +2,394 @@ import { BooleanLike } from 'common/react';
 import { useState } from 'react';
 
 import { useBackend } from '../backend';
-import { Button, Divider, Section, Stack } from '../components';
+import {
+  Box,
+  Button,
+  Collapsible,
+  Dropdown,
+  Icon,
+  Input,
+  NoticeBox,
+  ProgressBar,
+  Section,
+  Stack,
+} from '../components';
 import { Window } from '../layouts';
-
-type Squad = {
-  id: number;
-  order: string;
-  members: string;
-  ref: string;
-  squad_leader: string;
-  name: string;
-};
 
 type AIHuman = {
   name: string;
-  health: number;
-  loc: number[];
-  faction: string;
   ref: string;
   brain_ref: string;
-  in_combat: BooleanLike;
-  squad_id: number;
+  faction: string;
+  health: number;
+  status: string;
+  squad_id: number | null;
+  is_leader: BooleanLike;
   can_assign_squad: BooleanLike;
+  area: string;
+};
+
+type Squad = {
+  id: number;
+  name: string;
+  leader: string | null;
+  order_ref: string | null;
+  members: number;
 };
 
 type Order = {
   name: string;
-  type: string;
-  data: any[];
+  desc: string;
   ref: string;
+  waypoints: number;
+  brains: number;
 };
 
 type BackendContext = {
-  orders: Order[];
   ai_humans: AIHuman[];
   squads: Squad[];
+  orders: Order[];
+  placing_patrol: BooleanLike;
+  patrol_waypoints: number;
 };
 
-const AIContext = (props, context) => {
+const ALL_FACTIONS = 'All factions';
+
+const STATUS_COLORS = {
+  Fighting: 'bad',
+  Holding: 'average',
+  Moving: 'teal',
+  Patrolling: 'teal',
+  'On gun': 'orange',
+  Crewing: 'orange',
+  Player: 'good',
+};
+
+export const HumanAIManager = (props) => {
   const { data, act } = useBackend<BackendContext>();
-  const [squadAssignmentMode, setSquadAssignmentMode] = useState(false);
-  const [orderAssignmentMode, setOrderAssignmentMode] = useState(false);
-  const [selectedSquad, setSelectedSquad] = useState(-1);
+  const { ai_humans, squads } = data;
+  const [search, setSearch] = useState('');
+  const [faction, setFaction] = useState(ALL_FACTIONS);
+  const [fightingOnly, setFightingOnly] = useState(false);
+
+  const factions = [
+    ALL_FACTIONS,
+    ...Array.from(new Set(ai_humans.map((human) => human.faction))).sort(),
+  ];
+  const searchText = search.trim().toLowerCase();
+  const shown = ai_humans.filter(
+    (human) =>
+      (!searchText || human.name.toLowerCase().includes(searchText)) &&
+      (faction === ALL_FACTIONS || human.faction === faction) &&
+      (!fightingOnly || human.status === 'Fighting'),
+  );
+  const unassigned = shown.filter((human) => !human.squad_id);
+
   return (
-    <Stack fill vertical>
-      <div>
-        <div
-          style={{
-            float: 'left',
-            display: 'inline-block',
-            paddingRight: '6px',
-          }}
-        >
-          <Button content="New Squad" onClick={() => act('create_squad')} />
-        </div>
-        <div
-          style={{
-            float: 'left',
-            display: 'inline-block',
-            paddingRight: '6px',
-          }}
-        >
+    <Window title="Human AI Manager" width={900} height={720}>
+      <Window.Content>
+        <Stack fill vertical>
+          <Stack.Item>
+            <Stack align="center">
+              <Stack.Item grow>
+                <Input
+                  fluid
+                  placeholder="Search by name..."
+                  value={search}
+                  onInput={(e, value) => setSearch(value)}
+                />
+              </Stack.Item>
+              <Stack.Item>
+                <Dropdown
+                  width="14em"
+                  options={factions}
+                  selected={faction}
+                  onSelected={(value) => setFaction(value)}
+                />
+              </Stack.Item>
+              <Stack.Item>
+                <Button.Checkbox
+                  checked={fightingOnly}
+                  onClick={() => setFightingOnly(!fightingOnly)}
+                >
+                  Fighting only
+                </Button.Checkbox>
+              </Stack.Item>
+              <Stack.Item>
+                <Button icon="plus" onClick={() => act('create_squad')}>
+                  New Squad
+                </Button>
+              </Stack.Item>
+            </Stack>
+          </Stack.Item>
+          <Stack.Item grow>
+            <Section
+              fill
+              scrollable
+              title={`AI (${shown.length} of ${ai_humans.length})`}
+            >
+              {squads.map((squad) => (
+                <SquadGroup
+                  key={squad.id}
+                  squad={squad}
+                  members={shown.filter((human) => human.squad_id === squad.id)}
+                />
+              ))}
+              <Collapsible open title={`No squad (${unassigned.length})`}>
+                {unassigned.length ? (
+                  unassigned.map((human) => (
+                    <AIRow key={human.brain_ref} human={human} />
+                  ))
+                ) : (
+                  <Box italic color="label">
+                    Everyone is in a squad
+                  </Box>
+                )}
+              </Collapsible>
+            </Section>
+          </Stack.Item>
+          <Stack.Item>
+            <PatrolSection />
+          </Stack.Item>
+        </Stack>
+      </Window.Content>
+    </Window>
+  );
+};
+
+const SquadGroup = (props: {
+  readonly squad: Squad;
+  readonly members: AIHuman[];
+}) => {
+  const { data, act } = useBackend<BackendContext>();
+  const { orders } = data;
+  const { squad, members } = props;
+
+  const patrolOptions = [
+    { displayText: 'No patrol', value: '' },
+    ...orders.map((order) => ({
+      displayText: order.desc || order.name,
+      value: order.ref,
+    })),
+  ];
+  const order = orders.find((entry) => entry.ref === squad.order_ref);
+
+  return (
+    <Collapsible
+      open
+      title={`${squad.name} (${squad.members})${squad.leader ? ` - led by ${squad.leader}` : ''}`}
+      buttons={
+        <>
+          <Dropdown
+            width="12em"
+            options={patrolOptions}
+            selected={squad.order_ref || ''}
+            displayText={order ? order.desc || order.name : 'No patrol'}
+            onSelected={(value) =>
+              act('set_squad_order', { squad: squad.id, order: value })
+            }
+          />
           <Button
-            content="Squad Assignment Mode"
-            onClick={() => {
-              setSquadAssignmentMode(!squadAssignmentMode);
-              setOrderAssignmentMode(false);
-            }}
-            color={squadAssignmentMode ? 'green' : 'red'}
+            icon="pen"
+            tooltip="Rename"
+            onClick={() => act('rename_squad', { squad: squad.id })}
           />
-        </div>
-        <div
-          style={{
-            float: 'left',
-            display: 'inline-block',
-            paddingRight: '6px',
+          <Button.Confirm
+            icon="trash"
+            color="bad"
+            tooltip="Disband the squad, its AI stay"
+            onClick={() => act('disband_squad', { squad: squad.id })}
+          />
+        </>
+      }
+    >
+      {members.length ? (
+        members.map((human) => <AIRow key={human.brain_ref} human={human} />)
+      ) : (
+        <Box italic color="label">
+          {squad.members ? 'Nobody matches the filters' : 'Empty squad'}
+        </Box>
+      )}
+    </Collapsible>
+  );
+};
+
+const AIRow = (props: { readonly human: AIHuman }) => {
+  const { data, act } = useBackend<BackendContext>();
+  const { squads } = data;
+  const { human } = props;
+
+  const squadOptions = [
+    { displayText: 'No squad', value: '0' },
+    ...squads.map((squad) => ({
+      displayText: squad.name,
+      value: `${squad.id}`,
+    })),
+  ];
+  const squad = squads.find((entry) => entry.id === human.squad_id);
+
+  return (
+    <Stack align="center" pb={0.5}>
+      <Stack.Item>
+        <Button
+          compact
+          icon="location-arrow"
+          tooltip={`Jump to (${human.area})`}
+          onClick={() => act('jump_to', { ref: human.ref })}
+        />
+      </Stack.Item>
+      <Stack.Item grow>
+        {!!human.is_leader && <Icon name="star" color="gold" mr={0.5} />}
+        {human.name}
+      </Stack.Item>
+      <Stack.Item width="9em" color="label">
+        {human.faction}
+      </Stack.Item>
+      <Stack.Item width="6em">
+        <ProgressBar
+          value={human.health / 100}
+          ranges={{
+            good: [0.7, Infinity],
+            average: [0.3, 0.7],
+            bad: [-Infinity, 0.3],
           }}
         >
-          <Button
-            content="Order Assignment Mode"
-            onClick={() => {
-              setSquadAssignmentMode(false);
-              setOrderAssignmentMode(!orderAssignmentMode);
-            }}
-            color={orderAssignmentMode ? 'green' : 'red'}
-          />
-        </div>
-      </div>
-      <Divider />
-      <div>
-        {data.orders.map((order) => (
-          <CreatedOrder
-            order={order}
-            key={order.ref}
-            selectedSquad={selectedSquad}
-            orderAssignmentMode={orderAssignmentMode}
-            squadAssignmentMode={squadAssignmentMode}
-          />
-        ))}
-      </div>
-      <Divider />
-      <div>
-        {data.ai_humans.map((human) => (
-          <HumanAIReadout
-            human={human}
-            key={human.ref}
-            selectedSquad={selectedSquad}
-            orderAssignmentMode={orderAssignmentMode}
-            squadAssignmentMode={squadAssignmentMode}
-          />
-        ))}
-      </div>
-      <Divider />
-      <div>
-        {data.squads.map((squad) => (
-          <SquadReadout
-            squad={squad}
-            key={squad.ref}
-            selectedSquad={selectedSquad}
-            orderAssignmentMode={orderAssignmentMode}
-            squadAssignmentMode={squadAssignmentMode}
-            setSelectedSquad={setSelectedSquad}
-          />
-        ))}
-      </div>
+          {human.health}%
+        </ProgressBar>
+      </Stack.Item>
+      <Stack.Item width="5.5em" color={STATUS_COLORS[human.status] || 'label'}>
+        {human.status}
+      </Stack.Item>
+      <Stack.Item>
+        <Dropdown
+          width="10em"
+          disabled={!human.can_assign_squad}
+          options={squadOptions}
+          selected={`${human.squad_id || 0}`}
+          displayText={squad ? squad.name : 'No squad'}
+          onSelected={(value) =>
+            act('set_squad', { brain_ref: human.brain_ref, squad: value })
+          }
+        />
+      </Stack.Item>
+      <Stack.Item>
+        <Button
+          compact
+          icon="star"
+          disabled={!human.squad_id || !!human.is_leader}
+          tooltip="Make squad leader"
+          onClick={() => act('set_leader', { brain_ref: human.brain_ref })}
+        />
+      </Stack.Item>
+      <Stack.Item>
+        <Button
+          compact
+          icon="user"
+          tooltip="View variables of the human"
+          onClick={() => act('view_variables', { ref: human.ref })}
+        />
+      </Stack.Item>
+      <Stack.Item>
+        <Button
+          compact
+          icon="brain"
+          tooltip="View variables of the AI"
+          onClick={() => act('view_variables', { ref: human.brain_ref })}
+        />
+      </Stack.Item>
+      <Stack.Item>
+        <Button.Confirm
+          compact
+          icon="trash"
+          color="bad"
+          tooltip="Delete"
+          onClick={() => act('delete_ai', { brain_ref: human.brain_ref })}
+        />
+      </Stack.Item>
     </Stack>
   );
 };
 
-const CreatedOrder = (props) => {
-  const order: Order = props.order;
+const PatrolSection = (props) => {
   const { data, act } = useBackend<BackendContext>();
-  const orderAssignmentMode: boolean = props.orderAssignmentMode;
-  const selectedSquad = props.selectedSquad;
-  return (
-    <div
-      style={{
-        float: 'left',
-        display: 'inline-block',
-        paddingRight: '6px',
-      }}
-    >
-      <Section title={`${order.name}`}>
-        {orderAssignmentMode ? (
-          <>
-            <Button
-              content="Assign"
-              tooltip="Assign order to selected squad"
-              onClick={() =>
-                act('assign_order', {
-                  order: order.ref,
-                  squad: selectedSquad,
-                })
-              }
-              color="green"
-              disabled={selectedSquad === -1}
-              style={{
-                float: 'left',
-              }}
-            />
-            <Button.Confirm
-              color="red"
-              confirmContent="Confirm?"
-              onClick={() =>
-                act('delete_object', {
-                  ref: order.ref,
-                })
-              }
-            >
-              Del
-            </Button.Confirm>
-            <br />
-            <br />
-          </>
-        ) : (
-          <>
-            <Button
-              content="VV"
-              tooltip={order.ref}
-              onClick={() =>
-                act('view_variables', {
-                  ref: order.ref,
-                })
-              }
-            />
-            <Button.Confirm
-              color="red"
-              confirmContent="Confirm?"
-              onClick={() =>
-                act('delete_object', {
-                  ref: order.ref,
-                })
-              }
-            >
-              Del
-            </Button.Confirm>
-          </>
-        )}
-        {order.data[0].map((data_name, i) => (
-          <div key={data_name}>
-            {data_name}: {order.data[1][i]}
-          </div>
-        ))}
-      </Section>
-    </div>
-  );
-};
+  const { orders, placing_patrol, patrol_waypoints } = data;
 
-const HumanAIReadout = (props) => {
-  const human: AIHuman = props.human;
-  const context: BackendContext = props.context;
-  const squadAssignmentMode = props.squadAssignmentMode;
-  const selectedSquad = props.selectedSquad;
-  const { data, act } = useBackend<BackendContext>();
-  const gottenSquad: Squad = data.squads[selectedSquad];
   return (
-    <div
-      style={{
-        float: 'left',
-        display: 'inline-block',
-        paddingRight: '6px',
-      }}
+    <Section
+      title="Patrols"
+      buttons={
+        <>
+          <Button
+            icon="map-pin"
+            selected={placing_patrol}
+            tooltip="LMB on the map adds a waypoint, MMB removes the last one"
+            onClick={() => act('toggle_patrol_placing')}
+          >
+            Place Waypoints
+          </Button>
+          <Button
+            icon="undo"
+            disabled={!patrol_waypoints}
+            onClick={() => act('undo_waypoint')}
+          />
+          <Button
+            icon="times"
+            disabled={!patrol_waypoints}
+            onClick={() => act('clear_waypoints')}
+          />
+          <Button
+            icon="check"
+            color="good"
+            disabled={!patrol_waypoints}
+            onClick={() => act('create_patrol')}
+          >
+            Create ({patrol_waypoints})
+          </Button>
+        </>
+      }
     >
-      <Section title={`${human.name}`}>
-        <div>
-          {squadAssignmentMode ? (
-            <>
+      {!!placing_patrol && (
+        <NoticeBox info>
+          Click the turfs to walk through in order, the patrol goes back and
+          forth between the first and the last
+        </NoticeBox>
+      )}
+      {orders.length ? (
+        orders.map((order) => (
+          <Stack key={order.ref} align="center" pb={0.5}>
+            <Stack.Item grow>
+              <Box bold inline>
+                {order.desc || order.name}
+              </Box>
+            </Stack.Item>
+            <Stack.Item color="label">
+              {order.waypoints} waypoints, {order.brains} AI
+            </Stack.Item>
+            <Stack.Item>
               <Button
-                content="Assign"
-                tooltip="Assign AI to selected squad"
-                onClick={() =>
-                  act('assign_to_squad', {
-                    ai: human.brain_ref,
-                    squad: selectedSquad,
-                  })
-                }
-                color="green"
-                disabled={
-                  selectedSquad === -1 ||
-                  human.squad_id === selectedSquad ||
-                  !human.can_assign_squad
-                }
-                style={{
-                  float: 'left',
-                }}
+                compact
+                icon="code"
+                tooltip="View variables"
+                onClick={() => act('view_variables', { ref: order.ref })}
               />
-              <Button
-                content="SL"
-                tooltip="Set this AI to be the squad leader of its squad."
-                onClick={() =>
-                  act('assign_sl', {
-                    ai: human.brain_ref,
-                    squad: selectedSquad,
-                  })
-                }
-                color={
-                  gottenSquad !== undefined &&
-                  gottenSquad.squad_leader === human.name
-                    ? 'green'
-                    : 'red'
-                }
-                disabled={selectedSquad === human.squad_id ? false : true}
-                style={{
-                  float: 'left',
-                }}
-              />
-            </>
-          ) : (
-            <>
-              <Button
-                content="JMP"
-                onClick={() =>
-                  act('jump_to', {
-                    ref: human.ref,
-                  })
-                }
-              />
-              <Button
-                content="VV (H)"
-                tooltip={human.ref}
-                onClick={() =>
-                  act('view_variables', {
-                    ref: human.ref,
-                  })
-                }
-                style={{
-                  float: 'left',
-                }}
-              />
-              <br />
-              <Button
-                content="VV (B)"
-                tooltip={human.brain_ref}
-                onClick={() =>
-                  act('view_variables', {
-                    ref: human.brain_ref,
-                  })
-                }
-                style={{
-                  float: 'left',
-                }}
-              />
+            </Stack.Item>
+            <Stack.Item>
               <Button.Confirm
-                color="red"
-                confirmContent="Confirm?"
-                onClick={() => {
-                  act('delete_object', {
-                    ref: human.brain_ref,
-                  });
-                  act('delete_object', {
-                    ref: human.ref,
-                  });
-                }}
-              >
-                Del
-              </Button.Confirm>
-            </>
-          )}
-        </div>
-        <br />
-        <br />
-        Health: {human.health}% <br />
-        Faction: {human.faction} <br />
-        In Combat: {human.in_combat} <br />
-        Squad #: {human.squad_id} <br />
-        Loc: {human.loc[0]}, {human.loc[1]}, {human.loc[2]}
-      </Section>
-    </div>
-  );
-};
-
-const SquadReadout = (props) => {
-  const squad: Squad = props.squad;
-  const context: BackendContext = props.context;
-  const { data, act } = useBackend<BackendContext>();
-  const squadAssignmentMode = props.squadAssignmentMode;
-  const selectedSquad = props.selectedSquad;
-  const setSelectedSquad = props.setSelectedSquad;
-  const orderAssignmentMode: boolean = props.orderAssignmentMode;
-  return (
-    <div
-      style={{
-        float: 'left',
-        display: 'inline-block',
-        paddingRight: '6px',
-      }}
-    >
-      <Section title={`${squad.id}`}>
-        {squadAssignmentMode || orderAssignmentMode ? (
-          <Button
-            content="Select"
-            tooltip={squad.ref}
-            onClick={() => setSelectedSquad(squad.id)}
-            color={squad.id === selectedSquad ? 'green' : 'red'}
-          />
-        ) : (
-          <Button
-            content="VV"
-            tooltip={squad.ref}
-            onClick={() =>
-              act('view_variables', {
-                ref: squad.ref,
-              })
-            }
-          />
-        )}
-        <Button
-          content="Rename"
-          tooltip={'Set squad name, visible to GMs.'}
-          onClick={() =>
-            act('rename_squad', {
-              squad: squad.id,
-            })
-          }
-        />
-        <Button.Confirm
-          color="red"
-          confirmContent="Confirm?"
-          onClick={() =>
-            act('delete_object', {
-              ref: squad.ref,
-            })
-          }
-        >
-          Del
-        </Button.Confirm>
-        <br />
-        <br />
-        Members: {squad.members} <br />
-        Order: {squad.order} <br />
-        Squad Leader: {squad.squad_leader}
-      </Section>
-    </div>
-  );
-};
-
-export const HumanAIManager = (props) => {
-  return (
-    <Window width={1850} height={610} title="Human AI Manager">
-      <Window.Content scrollable>
-        <AIContext />
-      </Window.Content>
-    </Window>
+                compact
+                icon="trash"
+                color="bad"
+                tooltip="Delete"
+                onClick={() => act('delete_order', { ref: order.ref })}
+              />
+            </Stack.Item>
+          </Stack>
+        ))
+      ) : (
+        <Box italic color="label">
+          No patrols yet. Place waypoints, create the patrol and pick it for a
+          squad above.
+        </Box>
+      )}
+    </Section>
   );
 };

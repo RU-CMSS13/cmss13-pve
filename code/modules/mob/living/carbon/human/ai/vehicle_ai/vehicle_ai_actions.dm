@@ -165,6 +165,9 @@
 	if(!brain.in_combat || !brain.target_turf || brain.hold_position || !brain.can_drive())
 		return 0
 
+	if(!brain.can_fight_back())
+		return 0
+
 	if(!COOLDOWN_FINISHED(brain, approach_retry))
 		return 0
 
@@ -209,3 +212,165 @@
 
 	brain.turn_to(brain.get_hull_aim_dir(brain.current_target))
 	return ONGOING_ACTION_UNFINISHED
+
+/datum/vehicle_ai_brain
+	/// A vehicle that can't shoot back drives until it is this far from where its enemy was last seen
+	var/flee_distance = 12
+	/// How many places for the vehicle the search for a way out may look at
+	var/flee_search_nodes = 800
+	/// The way out doesn't lead closer than this to the enemy
+	var/flee_threat_clearance = 2
+	/// How long a cornered vehicle tries to run its enemy over before looking for a way out again
+	var/ram_time = 6 SECONDS
+
+/datum/vehicle_ai_action/driving/flee
+	name = "Flee"
+	/// The turf we are driving away to
+	var/turf/flee_turf
+	/// world.time until which we try to run the enemy over instead, 0 if we aren't cornered
+	var/ramming_until = 0
+	/// A way out that gets us less than this much further from the enemy is no way out, unless it gets us out of reach
+	var/min_flee_gain = 4
+
+/datum/vehicle_ai_action/driving/flee/get_weight(datum/vehicle_ai_brain/brain)
+	if(!brain.in_combat || brain.hold_position || !brain.can_drive())
+		return 0
+
+	if(!brain.current_target && (!brain.target_turf || (get_dist(brain.vehicle, brain.target_turf) >= brain.flee_distance)))
+		return 0
+
+	if(brain.can_fight_back())
+		return 0
+
+	return 11
+
+/datum/vehicle_ai_action/driving/flee/Added()
+	brain.crew_say(brain.flee_lines, VEHICLE_DRIVER)
+
+/datum/vehicle_ai_action/driving/flee/trigger_action()
+	. = ..()
+	if(.)
+		return
+
+	var/turf/threat_turf = brain.current_target ? get_turf(brain.current_target) : brain.target_turf
+	if(ramming_until)
+		if(world.time < ramming_until)
+			ram(brain.current_target)
+			return ONGOING_ACTION_UNFINISHED
+		// Moving around may have opened a way out
+		ramming_until = 0
+		brain.clear_path()
+
+	if(!flee_turf)
+		var/list/turf/path = brain.find_flee_path(threat_turf, min_flee_gain)
+		if(!path)
+			ramming_until = world.time + brain.ram_time
+			if(isliving(brain.current_target))
+				brain.crew_say(brain.ram_lines, VEHICLE_DRIVER)
+			return ONGOING_ACTION_UNFINISHED
+
+		// The search already found the way, the pathfinder takes over only if we get stuck on it
+		brain.clear_path()
+		flee_turf = path[1]
+		brain.current_path = path
+		brain.path_goal = flee_turf
+
+	// The way out can be a single step, so only standing on it counts as there
+	switch(brain.drive_to(flee_turf, 0))
+		if(VEHICLE_AI_DRIVE_ARRIVED)
+			// Still in danger, keep going
+			flee_turf = null
+		if(VEHICLE_AI_DRIVE_FAILED)
+			flee_turf = null
+			brain.clear_path()
+
+	return ONGOING_ACTION_UNFINISHED
+
+/// Cornered, drives into the enemy to run it over. Vehicles and emplacements can't be, so it just waits for a way out
+/datum/vehicle_ai_action/driving/flee/proc/ram(atom/movable/target)
+	if(!isliving(target))
+		return
+
+	// Ran into it, pull away for another go
+	if(get_dist(brain.vehicle, target) <= 1)
+		brain.clear_path()
+		var/target_dir = get_cardinal_dir(brain.vehicle, target)
+		brain.drive_step((target_dir == REVERSE_DIR(brain.vehicle.dir)) ? brain.vehicle.dir : REVERSE_DIR(brain.vehicle.dir))
+		return
+
+	if(brain.drive_to(get_turf(target), 1) == VEHICLE_AI_DRIVE_FAILED)
+		brain.clear_path()
+
+/**
+ * Looks for a way away from the threat, going along corridors and around corners like the vehicle would drive.
+ * Takes the closest place at least flee_distance from the threat, else the furthest one that gets us min_gain further away.
+ * Unless the vehicle crushes its way through anyway, open ground is tried first. Returns the path there, next step last, or null if there is no way out
+ */
+/datum/vehicle_ai_brain/proc/find_flee_path(turf/threat_turf, min_gain)
+	RETURN_TYPE(/list)
+	if(!vehicle.ai_crushes_obstacles)
+		. = search_flee_path(threat_turf, min_gain, TRUE)
+	if(!.)
+		. = search_flee_path(threat_turf, min_gain, FALSE)
+
+/datum/vehicle_ai_brain/proc/search_flee_path(turf/threat_turf, min_gain, clear_only)
+	RETURN_TYPE(/list)
+	var/turf/start = get_turf(vehicle)
+	if(!start || !threat_turf || (threat_turf.z != start.z))
+		return
+
+	var/list/turf/came_from = list()
+	came_from[start] = start
+	var/list/turf/queue = list(start)
+	// Assoc list of turf : drive cost, footprints of neighbouring places overlap a lot
+	var/list/turf_costs = list()
+
+	var/turf/best_turf
+	var/best_distance = min(get_dist(start, threat_turf) + min_gain, flee_distance) - 1
+	var/index = 0
+	while((index < length(queue)) && (index < flee_search_nodes))
+		index++
+		var/turf/current = queue[index]
+		var/distance = get_dist(current, threat_turf)
+		if(distance > best_distance)
+			best_turf = current
+			best_distance = distance
+			// Breadth first, so this is the closest place out of reach
+			if(distance >= flee_distance)
+				break
+
+		for(var/direction in GLOB.cardinals)
+			var/turf/neighbor = get_step(current, direction)
+			if(!neighbor || came_from[neighbor])
+				continue
+			came_from[neighbor] = current
+			if(get_dist(neighbor, threat_turf) <= flee_threat_clearance)
+				continue
+			if(!can_flee_through(neighbor, turf_costs, clear_only))
+				continue
+			queue += neighbor
+
+	if(!best_turf)
+		return
+
+	var/list/turf/path = list()
+	var/turf/node = best_turf
+	while(node != start)
+		path += node
+		node = came_from[node]
+	return path
+
+/// TRUE if the whole vehicle fits around the center, without anything to crush in the way if clear_only
+/datum/vehicle_ai_brain/proc/can_flee_through(turf/center, list/turf_costs, clear_only)
+	var/list/turf/footprint = get_footprint(center)
+	if(!footprint)
+		return FALSE
+
+	for(var/turf/footprint_turf as anything in footprint)
+		var/cost = turf_costs[footprint_turf]
+		if(isnull(cost))
+			cost = get_turf_drive_cost(footprint_turf)
+			turf_costs[footprint_turf] = cost
+		if((cost < 0) || (clear_only && cost > 0))
+			return FALSE
+	return TRUE

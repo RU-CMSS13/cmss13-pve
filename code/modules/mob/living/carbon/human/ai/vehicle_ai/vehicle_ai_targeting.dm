@@ -61,7 +61,7 @@
 
 	if(istype(target, /obj/vehicle/multitile))
 		var/obj/vehicle/multitile/vehicle_target = target
-		return vehicle_target.health > 0 && !faction_check(vehicle_target)
+		return vehicle_target.ai_is_threat() && !faction_check(vehicle_target)
 
 	if(isdefenses(target))
 		var/obj/structure/machinery/defenses/defense_target = target

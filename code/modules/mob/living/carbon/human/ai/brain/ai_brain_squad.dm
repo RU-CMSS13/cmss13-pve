@@ -18,13 +18,14 @@
 	for(var/datum/human_ai_brain/brain as anything in ai_in_squad)
 		remove_from_squad(brain)
 	SShuman_ai.squads -= src
+	SShuman_ai.squad_id_dict -= "[id]"
 	squad_leader = null
 	return ..()
 
 /datum/human_ai_squad/proc/add_to_squad(datum/human_ai_brain/adding)
-	if(adding.squad_id && (adding.squad_id in SShuman_ai.squad_id_dict))
-		var/datum/human_ai_squad/squad = SShuman_ai.squad_id_dict[adding.squad_id]
-		squad.remove_from_squad(adding)
+	if(adding.squad_id)
+		var/datum/human_ai_squad/squad = SShuman_ai.get_squad("[adding.squad_id]")
+		squad?.remove_from_squad(adding)
 	adding.squad_id = id
 	ai_in_squad += adding
 
@@ -70,7 +71,7 @@
 		set_squad_leader(null)
 
 	for(var/datum/human_ai_brain/squaddie as anything in ai_in_squad)
-		if(squaddie?.tied_human.client)
+		if(!squaddie.tied_human || squaddie.tied_human.client)
 			continue
 
 		if(squaddie.tied_human.is_mob_incapacitated())

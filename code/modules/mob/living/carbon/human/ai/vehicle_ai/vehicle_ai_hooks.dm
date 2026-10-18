@@ -1,6 +1,11 @@
 /obj/vehicle/multitile
 	/// The AI driving this vehicle, if any
 	var/datum/vehicle_ai_brain/ai_brain
+	/// If FALSE, the AI drives around things it would have to crush and only goes through them when there is no other way
+	var/ai_crushes_obstacles = FALSE
+
+/obj/vehicle/multitile/tank
+	ai_crushes_obstacles = TRUE
 
 /// Hands the vehicle over to an AI fighting for the given faction, crewed by human AI of the given preset
 /obj/vehicle/multitile/proc/enable_ai(faction, datum/equipment_preset/crew_preset, infinite_ammo = FALSE)
@@ -15,6 +20,33 @@
 
 /obj/vehicle/multitile/proc/disable_ai()
 	QDEL_NULL(ai_brain)
+
+/// Returns TRUE if the vehicle isn't wrecked and can still drive or shoot, whether anyone is inside or not
+/obj/vehicle/multitile/proc/ai_can_fight()
+	if(health <= 0)
+		return FALSE
+
+	for(var/obj/item/hardpoint/hardpoint as anything in get_hardpoints_copy())
+		if(hardpoint.health <= 0)
+			continue
+
+		var/obj/item/hardpoint/holder/hardpoint_holder = hardpoint.loc
+		if(istype(hardpoint_holder) && (hardpoint_holder.health <= 0))
+			continue
+
+		if(istype(hardpoint, /obj/item/hardpoint/locomotion) || istype(hardpoint, /obj/item/hardpoint/primary) || istype(hardpoint, /obj/item/hardpoint/secondary))
+			return TRUE
+
+	return FALSE
+
+/// Returns TRUE if the vehicle is worth shooting at: someone alive sits at its controls and it can still drive or shoot
+/obj/vehicle/multitile/proc/ai_is_threat()
+	for(var/seat_role in seats)
+		var/mob/living/seated_mob = seats[seat_role]
+		if(seated_mob && (seated_mob.stat != DEAD))
+			return ai_can_fight()
+
+	return FALSE
 
 /// TRUE if the AI can drive the vehicle right now, mirroring the checks done for a driver in relaymove()
 /obj/vehicle/multitile/proc/ai_can_move()

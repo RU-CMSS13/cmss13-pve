@@ -43,6 +43,8 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	var/combat_decay_time_min = 15 SECONDS
 	/// The maximum amount of time that can pass before this AI can leave combat
 	var/combat_decay_time_max = 30 SECONDS
+	/// When the AI leaves combat if nothing keeps it fighting
+	var/combat_end_time = 0
 
 	/// If this AI can seek cover while not possessing a gun
 	var/cover_without_gun = FALSE
@@ -113,6 +115,9 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	lose_injured_ally()
 
 /datum/human_ai_brain/process(delta_time)
+	if(in_combat && (world.time >= combat_end_time))
+		exit_combat()
+
 	if(tied_human.is_mob_incapacitated())
 		for(var/action in ongoing_actions)
 			qdel(action)
@@ -130,46 +135,70 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	if(tied_human.buckled)
 		tied_human.set_buckled(FALSE) // AI never buckle themselves into chairs at the moment, change if this becomes the case
 
-	if(!current_target)
+	// Wrecks and abandoned vehicles aren't worth the ammo
+	if(current_target && !ismob(current_target) && !is_object_target_valid(current_target))
+		lose_target()
+		target_turf = null
+
+	if(!current_target && COOLDOWN_FINISHED(src, target_scan_cooldown))
+		COOLDOWN_START(src, target_scan_cooldown, get_target_scan_delay())
 		set_target(get_target())
 
 	if(current_target)
 		enter_combat()
 
-	if(!iszombie(tied_human))
+	if(!iszombie(tied_human) && COOLDOWN_FINISHED(src, item_search_cooldown))
+		COOLDOWN_START(src, item_search_cooldown, item_search_delay)
 		item_search(range(2, tied_human))
 
-	// List all allowed action types for AI to consider
-	var/list/allowed_actions = action_whitelist || (GLOB.AI_actions.Copy() - action_blacklist)
-	for(var/datum/ongoing_action as anything in ongoing_actions)
-		if(is_type_in_list(ongoing_action, allowed_actions))
-			allowed_actions -= ongoing_action.type
+	var/list/ongoing_types = list()
+	for(var/datum/ai_action/ongoing_action as anything in ongoing_actions)
+		ongoing_types[ongoing_action.type] = TRUE
 
-	// Create assoc list of selected AI actions and their weight
+	// Create assoc list of allowed AI actions that aren't ongoing and their weight
 	var/list/possible_actions = list()
-	for(var/action_type in shuffle(allowed_actions))
+	for(var/action_type in (action_whitelist || GLOB.AI_actions))
+		if(ongoing_types[action_type] || (action_type in action_blacklist))
+			continue
+
 		var/datum/ai_action/glob_ref = GLOB.AI_actions[action_type]
 		var/weight = glob_ref.get_weight(src)
 		if(weight) // No weight means we shouldn't consider this action at all
 			possible_actions[action_type] = weight
 
-	// Sorts all allowed actions by their weight
-	var/list/sorted_actions = sortTim(possible_actions, GLOBAL_PROC_REF(cmp_numeric_dsc), TRUE)
+	// Sorts all allowed actions by their weight, shuffled first so that actions of equal weight take turns
+	var/list/sorted_actions = length(possible_actions) ? sortTim(shuffle(possible_actions, TRUE), GLOBAL_PROC_REF(cmp_numeric_dsc), TRUE) : possible_actions
 
 	// Choose what actions to start in current process() iteration
 	for(var/action_type as anything in sorted_actions)
 		var/datum/ai_action/possible_action = GLOB.AI_actions[action_type]
 
-		var/list/conflicting_actions = possible_action.get_conflicts(src)
+		var/weight = sorted_actions[action_type]
+		var/list/conflicting_actions = possible_action.get_cached_conflicts(src)
+		var/list/datum/ai_action/blocking_actions = list()
 		for(var/datum/ai_action/ongoing_action as anything in ongoing_actions)
-			if(ongoing_action.type in conflicting_actions)
-				possible_action = null
-				break
+			if(conflicting_actions[ongoing_action.type])
+				blocking_actions += ongoing_action
 
-		if(!possible_action)
-			continue
+		if(length(blocking_actions))
+			if(!possible_action.preempts_actions)
+				continue
 
-		ongoing_actions += new action_type(src)
+			var/outweighs_blockers = TRUE
+			for(var/datum/ai_action/blocking_action as anything in blocking_actions)
+				if(blocking_action.started_weight >= weight)
+					outweighs_blockers = FALSE
+					break
+
+			if(!outweighs_blockers)
+				continue
+
+			for(var/datum/ai_action/blocking_action as anything in blocking_actions)
+				qdel(blocking_action)
+
+		var/datum/ai_action/new_action = new action_type(src)
+		new_action.started_weight = weight
+		ongoing_actions += new_action
 #if defined(TESTING) && defined(HUMAN_AI_TESTING)
 		message_admins("action of type [action_type] was added to [tied_human.real_name]")
 #endif
@@ -200,12 +229,14 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	current_target = null
 
 /datum/human_ai_brain/proc/update_target_pos()
-	if(current_target)
-		if(tied_human in viewers(view_distance, current_target))
-			target_turf = get_turf(current_target)
-		else
-			COOLDOWN_START(src, fire_offscreen, 2 SECONDS)
-			lose_target()
+	if(!current_target)
+		return
+
+	if((get_dist(tied_human, current_target) <= view_distance) && (tied_human in viewers(view_distance, current_target)))
+		target_turf = get_turf(current_target)
+	else
+		COOLDOWN_START(src, fire_offscreen, 2 SECONDS)
+		lose_target()
 
 /datum/human_ai_brain/proc/on_target_delete(datum/source, force)
 	SIGNAL_HANDLER
@@ -233,12 +264,18 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 		ignore_looting = FALSE
 
 /datum/human_ai_brain/proc/setup_detection_radius()
-	if(length(detection_turfs))
-		clear_detection_radius()
+	var/list/new_turfs = list()
+	for(var/turf/open/floor in RANGE_TURFS(1, tied_human))
+		new_turfs += floor
 
-	for(var/turf/open/floor in range(1, tied_human))
-		RegisterSignal(floor, COMSIG_TURF_ENTERED, PROC_REF(on_detection_turf_enter))
-		detection_turfs += floor
+	// After a step most of the turfs are the same, only swap the signals on the ones that changed
+	for(var/turf/open/old_floor as anything in detection_turfs - new_turfs)
+		UnregisterSignal(old_floor, COMSIG_TURF_ENTERED)
+
+	for(var/turf/open/new_floor as anything in new_turfs - detection_turfs)
+		RegisterSignal(new_floor, COMSIG_TURF_ENTERED, PROC_REF(on_detection_turf_enter))
+
+	detection_turfs = new_turfs
 
 /datum/human_ai_brain/proc/clear_detection_radius()
 	for(var/turf/open/floor as anything in detection_turfs)
@@ -252,6 +289,12 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 		return
 
 	if(entering == tied_human)
+		return
+
+	if(istype(entering, /obj/item/explosive/grenade))
+		var/obj/item/explosive/grenade/nade = entering
+		if(nade.active && (nade.fuse_type == TIMED_FUSE))
+			active_grenade_found = nade
 		return
 
 	if(istype(entering, /obj/projectile))
@@ -311,7 +354,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 		try_cover(Get_Angle(current_target, tied_human), current_target)
 
 	in_combat = TRUE
-	addtimer(CALLBACK(src, PROC_REF(exit_combat)), rand(combat_decay_time_min, combat_decay_time_max), TIMER_UNIQUE | TIMER_NO_HASH_WAIT | TIMER_OVERRIDE)
+	combat_end_time = world.time + rand(combat_decay_time_min, combat_decay_time_max)
 	SShuman_ai.combat_ever_started = TRUE
 
 /datum/human_ai_brain/proc/exit_combat()

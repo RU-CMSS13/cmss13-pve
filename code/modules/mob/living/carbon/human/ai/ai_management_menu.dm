@@ -1,64 +1,97 @@
-/datum/human_ai_management_menu
+/// Click intercept used by /datum/human_ai_management_menu to place patrol waypoints
+#define PATROL_CLICK_INTERCEPT_ACTION "patrol_click_intercept_action"
+/// How long a patrol waits at each of its waypoints
+#define PATROL_WAYPOINT_WAIT (10 SECONDS)
 
-/datum/human_ai_management_menu/New()
+/datum/human_ai_management_menu
+	/// Holds what type of click intercept we are using
+	var/current_click_intercept_action
+	/// Waypoints of the patrol being placed
+	var/list/turf/patrol_waypoints = list()
+	/// Images marking patrol_waypoints for the game master
+	var/list/image/waypoint_images = list()
+	/// The client that sees waypoint_images
+	var/client/waypoint_viewer
 
 /datum/human_ai_management_menu/tgui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, "HumanAIManager")
+		ui = new(user, src, "HumanAIManager", "Human AI Manager")
 		ui.open()
 
 /datum/human_ai_management_menu/ui_state(mob/user)
 	return GLOB.admin_state
 
+/datum/human_ai_management_menu/ui_close(mob/user)
+	. = ..()
+	current_click_intercept_action = null
+	release_click_intercept(user)
+	clear_waypoints()
+
 /datum/human_ai_management_menu/ui_data(mob/user)
 	var/list/data = list()
 
-	data["orders"] = list()
-	for(var/datum/ai_order/order as anything in SShuman_ai.existing_orders)
-		data["orders"] += list(list(
-			"name" = order.name,
-			"type" = order.type,
-			"data" = order.tgui_data(),
-			"ref" = REF(order),
-		)
-	)
+	data["placing_patrol"] = (user.client?.click_intercept == src) && (current_click_intercept_action == PATROL_CLICK_INTERCEPT_ACTION)
+	data["patrol_waypoints"] = length(patrol_waypoints)
 
 	data["ai_humans"] = list()
 	for(var/datum/human_ai_brain/brain as anything in GLOB.human_ai_brains)
-		if(!brain.tied_human || brain.tied_human.stat == DEAD)
+		var/mob/living/carbon/human/ai_human = brain.tied_human
+		if(!ai_human || (ai_human.stat == DEAD))
 			continue
 
+		var/status = "Idle"
+		if(ai_human.client)
+			status = "Player"
+		else if(brain.is_vehicle_crew_seated())
+			status = "Crewing"
+		else if(brain.is_manning_gun())
+			status = "On gun"
+		else if(brain.in_combat)
+			status = "Fighting"
+		else if(brain.hold_position)
+			status = "Holding"
+		else if(brain.quick_approach || brain.target_turf)
+			status = "Moving"
+		else if(istype(brain.current_order, /datum/ai_order/patrol))
+			status = "Patrolling"
+
 		data["ai_humans"] += list(list(
-			"name" = brain.tied_human.real_name,
-			"health" = FLOOR((brain.tied_human.health / brain.tied_human.maxHealth * 100), 1),
-			"loc" = list(brain.tied_human.x, brain.tied_human.y, brain.tied_human.z),
-			"faction" = brain.tied_human.faction,
-			"ref" = REF(brain.tied_human),
+			"name" = ai_human.real_name,
+			"ref" = REF(ai_human),
 			"brain_ref" = REF(brain),
-			"in_combat" = brain.in_combat,
+			"faction" = ai_human.faction,
+			"health" = floor(ai_human.health / ai_human.maxHealth * 100),
+			"status" = status,
 			"squad_id" = brain.squad_id,
+			"is_leader" = brain.is_squad_leader,
 			"can_assign_squad" = brain.can_assign_squad,
+			"area" = get_area_name(ai_human, TRUE),
 		))
 
 	data["squads"] = list()
 	for(var/datum/human_ai_squad/squad as anything in SShuman_ai.squads)
-		var/list/name_list = list()
-		for(var/datum/human_ai_brain/brain as anything in squad.ai_in_squad)
-			name_list += brain.tied_human?.real_name
 		data["squads"] += list(list(
 			"id" = squad.id,
-			"name" = squad.name,
-			"members" = english_list(name_list),
-			"order" = squad.current_order?.name,
-			"ref" = REF(squad),
-			"squad_leader" = squad.squad_leader?.tied_human?.real_name,
+			"name" = squad.name || "Squad #[squad.id]",
+			"leader" = squad.squad_leader?.tied_human?.real_name,
+			"order_ref" = squad.current_order ? REF(squad.current_order) : null,
+			"members" = length(squad.ai_in_squad),
 		))
 
-	return data
-
-/datum/human_ai_management_menu/ui_static_data(mob/user)
-	var/list/data = list()
+	data["orders"] = list()
+	for(var/datum/ai_order/order as anything in SShuman_ai.existing_orders)
+		var/waypoint_count = 0
+		if(istype(order, /datum/ai_order/patrol))
+			var/datum/ai_order/patrol/patrol = order
+			waypoint_count = length(patrol.waypoints)
+		data["orders"] += list(list(
+			"name" = order.name,
+			"desc" = order.desc,
+			"ref" = REF(order),
+			"waypoints" = waypoint_count,
+			"brains" = length(order.brains),
+		))
 
 	return data
 
@@ -67,28 +100,31 @@
 	if(.)
 		return
 
+	var/mob/user = ui.user
 	switch(action)
 		if("view_variables")
-			if(!params["ref"])
-				return
-
 			var/datum/gotten_ref = locate(params["ref"])
 			if(!istype(gotten_ref))
 				return
 
-			ui.user.client?.debug_variables(gotten_ref)
+			user.client?.debug_variables(gotten_ref)
 			return TRUE
 
 		if("jump_to")
-			if(!params["ref"])
+			var/atom/movable/jump_target = locate(params["ref"])
+			if(!istype(jump_target) || !get_turf(jump_target))
 				return
 
-			var/mob/living/carbon/human/ai_human = locate(params["ref"])
+			user.client?.jump_to_turf(get_turf(jump_target))
+			return TRUE
 
-			if(istype(ui.user, /mob/dead/observer))
-				var/mob/dead/observer/ghost = ui.user
-				if(ai_human?.loc)
-					ghost.JumpToCoord(ai_human.x, ai_human.y, ai_human.z)
+		if("delete_ai")
+			var/datum/human_ai_brain/brain = locate(params["brain_ref"]) in GLOB.human_ai_brains
+			var/mob/living/carbon/human/ai_human = brain?.tied_human
+			if(!ai_human || ai_human.client)
+				return
+
+			qdel(ai_human)
 			return TRUE
 
 		if("create_squad")
@@ -96,48 +132,176 @@
 			return TRUE
 
 		if("rename_squad")
-			if(!params["squad"])
+			var/datum/human_ai_squad/squad = SShuman_ai.get_squad("[params["squad"]]")
+			if(!squad)
 				return
 
-			var/datum/human_ai_squad/squad = SShuman_ai.get_squad("[params["squad"]]")
-			squad.name = tgui_input_text(ui.user, "Input new squad name", "Input")
+			var/new_name = tgui_input_text(user, "Input the new name of the squad, only game masters see it", "Rename Squad", squad.name, MAX_NAME_LEN)
+			if(!new_name || QDELETED(squad))
+				return
+
+			squad.name = new_name
 			return TRUE
 
-		if("assign_to_squad")
-			if(!params["squad"] || !params["ai"])
+		if("disband_squad")
+			var/datum/human_ai_squad/squad = SShuman_ai.get_squad("[params["squad"]]")
+			if(!squad)
 				return
 
-			var/datum/human_ai_brain/brain = locate(params["ai"])
-			if(!brain.can_assign_squad)
+			qdel(squad)
+			return TRUE
+
+		if("set_squad")
+			var/datum/human_ai_brain/brain = locate(params["brain_ref"]) in GLOB.human_ai_brains
+			if(!brain?.can_assign_squad)
+				return
+
+			var/new_squad_id = text2num(params["squad"])
+			if(!new_squad_id)
+				SShuman_ai.get_squad("[brain.squad_id]")?.remove_from_squad(brain)
 				return TRUE
 
-			brain.add_to_squad(params["squad"])
-			return TRUE
-
-		if("assign_order")
-			if(!params["squad"] || !params["order"])
+			var/datum/human_ai_squad/squad = SShuman_ai.get_squad("[new_squad_id]")
+			if(!squad)
 				return
 
-			var/datum/human_ai_squad/squad = SShuman_ai.get_squad("[params["squad"]]")
-			squad.set_current_order(locate(params["order"]))
+			squad.add_to_squad(brain)
+			if(!squad.squad_leader)
+				squad.set_squad_leader(brain)
 			return TRUE
 
-		if("assign_sl")
-			if(!params["squad"] || !params["ai"])
+		if("set_leader")
+			var/datum/human_ai_brain/brain = locate(params["brain_ref"]) in GLOB.human_ai_brains
+			var/datum/human_ai_squad/squad = SShuman_ai.get_squad("[brain?.squad_id]")
+			if(!squad)
 				return
 
-			var/datum/brain = locate(params["ai"])
-			var/datum/human_ai_squad/squad = SShuman_ai.get_squad("[params["squad"]]")
 			squad.set_squad_leader(brain)
 			return TRUE
 
-		if("delete_object") // This UI is fully GM-only so I'm not worried about someone abusing this
-			if(!params["ref"])
+		if("set_squad_order")
+			var/datum/human_ai_squad/squad = SShuman_ai.get_squad("[params["squad"]]")
+			if(!squad)
 				return
 
-			var/datum/ref_to_del = locate(params["ref"])
-			qdel(ref_to_del)
+			var/datum/ai_order/order = locate(params["order"]) in SShuman_ai.existing_orders
+			if(squad.current_order)
+				squad.remove_current_order()
+			if(order)
+				squad.set_current_order(order)
 			return TRUE
+
+		if("delete_order")
+			var/datum/ai_order/order = locate(params["ref"]) in SShuman_ai.existing_orders
+			if(!order)
+				return
+
+			qdel(order)
+			return TRUE
+
+		if("toggle_patrol_placing")
+			var/client/user_client = user.client
+			if(!user_client)
+				return
+
+			if(current_click_intercept_action == PATROL_CLICK_INTERCEPT_ACTION && user_client.click_intercept == src)
+				current_click_intercept_action = null
+				release_click_intercept(user)
+				return TRUE
+
+			current_click_intercept_action = PATROL_CLICK_INTERCEPT_ACTION
+			user_client.click_intercept = src
+			return TRUE
+
+		if("undo_waypoint")
+			if(length(patrol_waypoints))
+				remove_last_waypoint()
+			return TRUE
+
+		if("clear_waypoints")
+			clear_waypoints()
+			return TRUE
+
+		if("create_patrol")
+			if(!length(patrol_waypoints))
+				return
+
+			var/description = tgui_input_text(user, "Describe the patrol, only game masters see it.", "Patrol Description")
+			if(!description || !length(patrol_waypoints))
+				return
+
+			var/datum/ai_order/patrol/patrol = new(list(patrol_waypoints.Copy(), PATROL_WAYPOINT_WAIT))
+			patrol.desc = description
+			clear_waypoints()
+			current_click_intercept_action = null
+			release_click_intercept(user)
+			return TRUE
+
+/// Stops intercepting clicks, handing them back to the game master panel if it is open
+/datum/human_ai_management_menu/proc/release_click_intercept(mob/user)
+	var/client/user_client = user.client
+	if(user_client?.click_intercept != src)
+		return
+
+	user_client.click_intercept = null
+	if(user_client.game_master_menu && SStgui.get_open_ui(user, user_client.game_master_menu))
+		user_client.click_intercept = user_client.game_master_menu
+
+/datum/human_ai_management_menu/proc/InterceptClickOn(mob/user, params, atom/object)
+	if(current_click_intercept_action != PATROL_CLICK_INTERCEPT_ACTION)
+		return FALSE
+
+	var/list/modifiers = params2list(params)
+	if(LAZYACCESS(modifiers, MIDDLE_CLICK))
+		remove_last_waypoint()
+		return TRUE
+
+	var/turf/waypoint = get_turf(object)
+	if(!waypoint)
+		return TRUE
+
+	if(length(patrol_waypoints))
+		var/turf/last_waypoint = patrol_waypoints[length(patrol_waypoints)]
+		var/distance = get_dist(last_waypoint, waypoint)
+		if((last_waypoint.z != waypoint.z) || (distance > HUMAN_AI_MAX_PATHFINDING_RANGE))
+			to_chat(user, SPAN_WARNING("This waypoint is too far from the previous one, AI can walk at most [HUMAN_AI_MAX_PATHFINDING_RANGE] tiles between them."))
+			return TRUE
+
+	add_waypoint(user, waypoint)
+	return TRUE
+
+/datum/human_ai_management_menu/proc/add_waypoint(mob/user, turf/waypoint)
+	if(waypoint_viewer != user.client)
+		clear_waypoint_images()
+		waypoint_viewer = user.client
+
+	patrol_waypoints += waypoint
+	var/image/waypoint_image = image('icons/turf/overlays.dmi', waypoint, "blueOverlay")
+	waypoint_image.plane = ABOVE_LIGHTING_PLANE
+	waypoint_image.maptext = MAPTEXT("<b>[length(patrol_waypoints)]</b>")
+	waypoint_images += waypoint_image
+	waypoint_viewer?.images += waypoint_image
+
+/datum/human_ai_management_menu/proc/remove_last_waypoint()
+	if(!length(patrol_waypoints))
+		return
+
+	patrol_waypoints.len--
+	var/image/waypoint_image = waypoint_images[length(waypoint_images)]
+	waypoint_images.len--
+	waypoint_viewer?.images -= waypoint_image
+
+/datum/human_ai_management_menu/proc/clear_waypoints()
+	patrol_waypoints.Cut()
+	clear_waypoint_images()
+
+/datum/human_ai_management_menu/proc/clear_waypoint_images()
+	waypoint_viewer?.images -= waypoint_images
+	waypoint_images.Cut()
+	waypoint_viewer = null
+
+#undef PATROL_CLICK_INTERCEPT_ACTION
+#undef PATROL_WAYPOINT_WAIT
 
 /client/proc/open_human_ai_management_panel()
 	set name = "Human AI Management Panel"

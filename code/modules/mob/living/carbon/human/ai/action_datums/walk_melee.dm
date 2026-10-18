@@ -17,6 +17,11 @@
 
 	return 3
 
+// Walking up to the target while cooking a grenade gets us caught in the blast
+/datum/ai_action/walk_melee/get_conflicts(datum/human_ai_brain/brain)
+	. = ..()
+	. += /datum/ai_action/throw_grenade
+
 /datum/ai_action/walk_melee/trigger_action()
 	. = ..()
 
