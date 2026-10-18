@@ -90,6 +90,25 @@
 	brain.fire_weapons(brain.current_target)
 	return ONGOING_ACTION_UNFINISHED
 
+/// Turns the turret to where we were shot from or last saw the enemy, so it is ready once they show up
+/datum/vehicle_ai_action/aim_at_threat
+	name = "Aim At Threat"
+	action_flags = VEHICLE_AI_ACTION_GUNNING
+
+/datum/vehicle_ai_action/aim_at_threat/get_weight(datum/vehicle_ai_brain/brain)
+	if(brain.current_target || !brain.get_aim_target() || !brain.has_working_turret())
+		return 0
+
+	return 5
+
+/datum/vehicle_ai_action/aim_at_threat/trigger_action()
+	. = ..()
+	if(.)
+		return
+
+	brain.aim_turret(brain.get_turret(), brain.get_aim_target())
+	return ONGOING_ACTION_UNFINISHED
+
 // Driving
 
 /datum/vehicle_ai_action/driving/move_to_destination
@@ -197,10 +216,11 @@
 	name = "Face Target"
 
 /datum/vehicle_ai_action/driving/face_target/get_weight(datum/vehicle_ai_brain/brain)
-	if(!brain.current_target || !brain.can_drive())
+	var/atom/aim_target = brain.get_aim_target()
+	if(!aim_target || !brain.can_drive())
 		return 0
 
-	if(!brain.get_hull_aim_dir(brain.current_target))
+	if(!brain.get_hull_aim_dir(aim_target))
 		return 0
 
 	return 7
@@ -210,7 +230,7 @@
 	if(.)
 		return
 
-	brain.turn_to(brain.get_hull_aim_dir(brain.current_target))
+	brain.turn_to(brain.get_hull_aim_dir(brain.get_aim_target()))
 	return ONGOING_ACTION_UNFINISHED
 
 /datum/vehicle_ai_brain

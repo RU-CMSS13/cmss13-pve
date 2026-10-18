@@ -343,6 +343,12 @@
 	healthcheck()
 	return XENO_ATTACK_ACTION
 
+// A wreck is a hollow frame, bullets fly through it
+/obj/vehicle/multitile/get_projectile_hit_boolean(obj/projectile/P)
+	if(health <= 0)
+		return FALSE
+	return ..()
+
 //Differentiates between damage types from different bullets
 //Applies a linear transformation to bullet damage that will generally decrease damage done
 /obj/vehicle/multitile/bullet_act(obj/projectile/P)

@@ -8,8 +8,8 @@
 #define HUMAN_AI_SPAWNER_MODE_SINGLE "single"
 #define HUMAN_AI_SPAWNER_MODE_SQUAD "squad"
 #define HUMAN_AI_SPAWNER_MODE_NEST "nest"
-#define HUMAN_AI_SPAWNER_MODE_OVERWATCH "overwatch"
-#define HUMAN_AI_SPAWNER_MODES list(HUMAN_AI_SPAWNER_MODE_SINGLE, HUMAN_AI_SPAWNER_MODE_SQUAD, HUMAN_AI_SPAWNER_MODE_NEST, HUMAN_AI_SPAWNER_MODE_OVERWATCH)
+#define HUMAN_AI_SPAWNER_MODE_SNIPER "sniper"
+#define HUMAN_AI_SPAWNER_MODES list(HUMAN_AI_SPAWNER_MODE_SINGLE, HUMAN_AI_SPAWNER_MODE_SQUAD, HUMAN_AI_SPAWNER_MODE_NEST, HUMAN_AI_SPAWNER_MODE_SNIPER)
 
 /// Category of the presets that game masters add during the round
 #define HUMAN_AI_SPAWNER_CUSTOM_CATEGORY "Custom"
@@ -27,8 +27,8 @@
 #define HUMAN_AI_SPAWNER_DEFAULT_SQUAD_RADIUS 2
 #define HUMAN_AI_SPAWNER_MAX_SQUAD_RADIUS 7
 #define HUMAN_AI_SPAWNER_MAX_SPARE_AMMO 5
-/// How far from their post machinegunners and snipers watch
-#define HUMAN_AI_SPAWNER_MAX_OVERWATCH_RANGE 30
+/// How far from their post snipers and machinegunners watch
+#define HUMAN_AI_SPAWNER_MAX_SNIPER_RANGE 30
 
 /// Mounted guns that MG nests are built around, by the name shown in the menu
 #define HUMAN_AI_SPAWNER_NEST_GUNS list( \
@@ -37,8 +37,24 @@
 	"Scoped M56D nest" = /obj/structure/machinery/m56d_hmg/mg_turret, \
 )
 
-/// Presets made for overwatch posts, listed under these categories
-#define HUMAN_AI_SPAWNER_OVERWATCH_PRESETS list( \
+/// Presets made for MG nests and sniper posts, listed under these categories
+#define HUMAN_AI_SPAWNER_POST_PRESETS list( \
+	"Snipers" = list( \
+		/datum/equipment_preset/clf/soldier/bolt, \
+		/datum/equipment_preset/clf/soldier/svd, \
+		/datum/equipment_preset/rebel/sniper, \
+		/datum/equipment_preset/canc/remnant/marksman, \
+		/datum/equipment_preset/canc/remnant/marksman/snowman, \
+		/datum/equipment_preset/canc/remnant/marksman/type88, \
+		/datum/equipment_preset/canc/remnant/marksman/type88/snowman, \
+		/datum/equipment_preset/pmc/sniper, \
+		/datum/equipment_preset/upp/sniper, \
+		/datum/equipment_preset/uscm/specialist_equipped/sniper, \
+		/datum/equipment_preset/other/freelancer/marksman, \
+		/datum/equipment_preset/royal_marine/sniper/ai, \
+		/datum/equipment_preset/colonist/security/guard/marksman, \
+		/datum/equipment_preset/mercenary/sentinel/marksman, \
+	), \
 	"Machinegunners" = list( \
 		/datum/equipment_preset/rebel/soldier, \
 		/datum/equipment_preset/clf/soldier, \
@@ -61,23 +77,10 @@
 		/datum/equipment_preset/clf/soldier/machinegunner, \
 		/datum/equipment_preset/mercenary/sentinel/mg, \
 	), \
-	"Snipers" = list( \
-		/datum/equipment_preset/clf/soldier/bolt, \
-		/datum/equipment_preset/clf/soldier/svd, \
-		/datum/equipment_preset/rebel/sniper, \
-		/datum/equipment_preset/canc/remnant/marksman, \
-		/datum/equipment_preset/canc/remnant/marksman/snowman, \
-		/datum/equipment_preset/canc/remnant/marksman/type88, \
-		/datum/equipment_preset/canc/remnant/marksman/type88/snowman, \
-		/datum/equipment_preset/pmc/sniper, \
-		/datum/equipment_preset/upp/sniper, \
-		/datum/equipment_preset/uscm/specialist_equipped/sniper, \
-		/datum/equipment_preset/other/freelancer/marksman, \
-		/datum/equipment_preset/royal_marine/sniper/ai, \
-		/datum/equipment_preset/colonist/security/guard/marksman, \
-		/datum/equipment_preset/mercenary/sentinel/marksman, \
-	), \
 )
+
+/// The preset category a mode opens with the first time it is picked
+#define HUMAN_AI_SPAWNER_MODE_CATEGORIES list(HUMAN_AI_SPAWNER_MODE_NEST = "Machinegunners", HUMAN_AI_SPAWNER_MODE_SNIPER = "Snipers")
 
 /// Where MG nests and vehicles face when spawned, 0 being the way the game master faces
 #define HUMAN_AI_SPAWNER_DIRECTIONS list("Your facing" = 0, "North" = NORTH, "East" = EAST, "South" = SOUTH, "West" = WEST)
@@ -213,6 +216,9 @@
 	/// The preset category shown in the infantry tab
 	var/category
 
+	/// Assoc list of mode = list(category, selected preset) it was left with, so every mode keeps its own like a tab. Squad mode shares single mode's
+	var/list/mode_selections = list()
+
 	/// The equipment preset path selected to be spawned in single and nest mode
 	var/selected_preset
 
@@ -252,8 +258,8 @@
 	/// The name of the direction that MG nests and vehicles face
 	var/spawn_direction = "Your facing"
 
-	/// Where the next overwatch AI stands, picked by the first click in overwatch mode
-	var/turf/overwatch_post
+	/// Where the next sniper stands, picked by the first click in sniper mode
+	var/turf/sniper_post
 
 
 	// Squad stuff
@@ -279,6 +285,9 @@
 	/// If the vehicle AI never runs out of ammunition
 	var/vehicle_infinite_ammo = FALSE
 
+	/// If only the vehicle's faction can get in, like when its crew locks the doors
+	var/vehicle_lock_doors = FALSE
+
 
 	// Order stuff
 
@@ -294,7 +303,7 @@
 	/// The first corner of the area being selected
 	var/turf/selection_corner
 
-	/// Marks selection_corner or overwatch_post for the game master
+	/// Marks selection_corner or sniper_post for the game master
 	var/image/corner_image
 
 	/// The client that sees corner_image
@@ -324,17 +333,17 @@
 		add_preset(preset_type::path, preset_type::faction, preset_type::name, preset_type::desc)
 
 	// These can already be listed under their faction, so they skip add_preset()
-	var/list/overwatch_presets = HUMAN_AI_SPAWNER_OVERWATCH_PRESETS
-	for(var/overwatch_category in overwatch_presets)
-		for(var/datum/equipment_preset/preset_path as anything in overwatch_presets[overwatch_category])
+	var/list/post_presets = HUMAN_AI_SPAWNER_POST_PRESETS
+	for(var/post_category in post_presets)
+		for(var/datum/equipment_preset/preset_path as anything in post_presets[post_category])
 			var/list/listed_data = presets_by_path["[preset_path]"]
 			var/list/preset_data = list(
 				"name" = preset_path::name,
-				"description" = listed_data ? listed_data["description"] : "Spawn in overwatch mode to have them hold a post.",
+				"description" = listed_data ? listed_data["description"] : "Made for MG nests and sniper posts.",
 				"path" = "[preset_path]",
-				"category" = overwatch_category,
+				"category" = post_category,
 			)
-			LAZYADD(preset_categories[overwatch_category], list(preset_data))
+			LAZYADD(preset_categories[post_category], list(preset_data))
 			if(!listed_data)
 				presets_by_path["[preset_path]"] = preset_data
 
@@ -424,7 +433,7 @@
 	current_click_intercept_action = null
 	release_click_intercept(user)
 	selection_corner = null
-	overwatch_post = null
+	sniper_post = null
 	update_corner_image()
 	clear_selection()
 
@@ -472,7 +481,7 @@
 	data["max_squad_size"] = HUMAN_AI_SPAWNER_MAX_SQUAD_SIZE
 	data["max_squad_radius"] = HUMAN_AI_SPAWNER_MAX_SQUAD_RADIUS
 	data["max_spare_ammo"] = HUMAN_AI_SPAWNER_MAX_SPARE_AMMO
-	data["max_overwatch_range"] = HUMAN_AI_SPAWNER_MAX_OVERWATCH_RANGE
+	data["max_sniper_range"] = HUMAN_AI_SPAWNER_MAX_SNIPER_RANGE
 
 	return data
 
@@ -502,7 +511,7 @@
 	data["nest_gun"] = nest_gun
 	data["nest_spare_ammo"] = nest_spare_ammo
 	data["spawn_direction"] = spawn_direction
-	data["overwatch_post"] = !!overwatch_post
+	data["sniper_post"] = !!sniper_post
 	data["zombie_random_helmet"] = GLOB.gm_set_zombie_random_helmet
 	data["zombie_helmet_chance"] = GLOB.gm_set_zombie_helmet_chance
 	data["zombie_delimb_multi"] = GLOB.gm_set_zombie_delimb_multi || 1
@@ -517,6 +526,7 @@
 	data["vehicle_crew"] = "[vehicle_crew]"
 	data["vehicle_ai"] = vehicle_ai
 	data["vehicle_infinite_ammo"] = vehicle_infinite_ammo
+	data["vehicle_lock_doors"] = vehicle_lock_doors
 
 	// Order stuff
 	data["selected_units"] = get_selection_ui_data()
@@ -563,9 +573,7 @@
 			if(!(new_mode in HUMAN_AI_SPAWNER_MODES))
 				return
 
-			mode = new_mode
-			overwatch_post = null
-			update_corner_image()
+			switch_mode(new_mode)
 			return TRUE
 
 		if("set_category")
@@ -796,6 +804,10 @@
 			vehicle_infinite_ammo = !vehicle_infinite_ammo
 			return TRUE
 
+		if("toggle_vehicle_lock_doors")
+			vehicle_lock_doors = !vehicle_lock_doors
+			return TRUE
+
 		//Order Section
 		if("toggle_click_order")
 			toggle_click_intercept(user, ORDER_CLICK_INTERCEPT_ACTION)
@@ -840,6 +852,43 @@
 				user.client?.jump_to_turf(get_turf(unit))
 			return TRUE
 
+/// Picks the mode, which comes back with the category and preset it was left with
+/datum/human_ai_spawner_menu/proc/switch_mode(new_mode)
+	var/old_key = get_mode_selection_key(mode)
+	var/new_key = get_mode_selection_key(new_mode)
+	mode = new_mode
+	sniper_post = null
+	update_corner_image()
+	if(old_key == new_key)
+		return
+
+	mode_selections[old_key] = list(category, selected_preset)
+	var/list/saved_selection = mode_selections[new_key]
+	if(saved_selection)
+		if(preset_categories[saved_selection[1]])
+			category = saved_selection[1]
+		selected_preset = presets_by_path[saved_selection[2]] ? saved_selection[2] : null
+		return
+
+	// The first time it opens the presets made for it
+	var/list/mode_categories = HUMAN_AI_SPAWNER_MODE_CATEGORIES
+	var/new_category = mode_categories[new_mode]
+	if(!preset_categories[new_category])
+		return
+	category = new_category
+	if(!category_has_preset(new_category, selected_preset))
+		selected_preset = null
+
+/// Squad mode shares its category and preset with single mode
+/datum/human_ai_spawner_menu/proc/get_mode_selection_key(checked_mode)
+	return (checked_mode == HUMAN_AI_SPAWNER_MODE_SQUAD) ? HUMAN_AI_SPAWNER_MODE_SINGLE : checked_mode
+
+/datum/human_ai_spawner_menu/proc/category_has_preset(checked_category, preset_path)
+	for(var/list/preset_data as anything in preset_categories[checked_category])
+		if(preset_data["path"] == preset_path)
+			return TRUE
+	return FALSE
+
 /// Opens the tab, dropping the click mode of the previous one
 /datum/human_ai_spawner_menu/proc/set_tab(mob/user, new_tab)
 	if(!(new_tab in HUMAN_AI_SPAWNER_TABS) || (new_tab == tab))
@@ -849,7 +898,7 @@
 	current_click_intercept_action = null
 	release_click_intercept(user)
 	selection_corner = null
-	overwatch_post = null
+	sniper_post = null
 	update_corner_image()
 
 /// Turns the given click intercept on, or off if it is the one already in use
@@ -859,7 +908,7 @@
 		return
 
 	selection_corner = null
-	overwatch_post = null
+	sniper_post = null
 	update_corner_image()
 
 	if(current_click_intercept_action == intercept_action && user_client.click_intercept == src)
@@ -962,8 +1011,8 @@
 		if(HUMAN_AI_SPAWNER_MODE_NEST)
 			spawn_nest(user, spawn_turf)
 
-		if(HUMAN_AI_SPAWNER_MODE_OVERWATCH)
-			spawn_overwatch(user, spawn_turf)
+		if(HUMAN_AI_SPAWNER_MODE_SNIPER)
+			spawn_sniper(user, spawn_turf)
 
 /// Spawns a human of the preset with the chosen options. Returns the human
 /datum/human_ai_spawner_menu/proc/spawn_human(mob/user, preset_path, turf/spawn_turf, facing = user.dir)
@@ -1113,48 +1162,48 @@
  * The first click picks the post the AI holds, the second one the center of the area it watches.
  * The AI then stays there facing that way with a long view, like a machinegunner or sniper nest.
  */
-/datum/human_ai_spawner_menu/proc/spawn_overwatch(mob/user, turf/clicked_turf)
+/datum/human_ai_spawner_menu/proc/spawn_sniper(mob/user, turf/clicked_turf)
 	if(!selected_preset)
 		to_chat(user, SPAN_WARNING("Pick a preset first."))
 		return
 
-	if(!overwatch_post || (overwatch_post.z != clicked_turf.z))
+	if(!sniper_post || (sniper_post.z != clicked_turf.z))
 		if(is_blocked_turf(clicked_turf))
 			to_chat(user, SPAN_WARNING("There is no room to stand there."))
 			return
-		overwatch_post = clicked_turf
+		sniper_post = clicked_turf
 		update_corner_image(user)
 		return
 
 	// Clicking the post again picks another one
-	if(clicked_turf == overwatch_post)
-		overwatch_post = null
+	if(clicked_turf == sniper_post)
+		sniper_post = null
 		update_corner_image()
 		return
 
-	var/distance = get_dist(overwatch_post, clicked_turf)
-	if(distance > HUMAN_AI_SPAWNER_MAX_OVERWATCH_RANGE)
-		to_chat(user, SPAN_WARNING("That is [distance] tiles away from the post, the AI watches up to [HUMAN_AI_SPAWNER_MAX_OVERWATCH_RANGE] tiles."))
+	var/distance = get_dist(sniper_post, clicked_turf)
+	if(distance > HUMAN_AI_SPAWNER_MAX_SNIPER_RANGE)
+		to_chat(user, SPAN_WARNING("That is [distance] tiles away from the post, the AI watches up to [HUMAN_AI_SPAWNER_MAX_SNIPER_RANGE] tiles."))
 		return
 
-	for(var/turf/line_turf as anything in get_line(overwatch_post, clicked_turf))
+	for(var/turf/line_turf as anything in get_line(sniper_post, clicked_turf))
 		if(line_turf.density)
 			to_chat(user, SPAN_WARNING("A wall is in the way, the AI could not see there."))
 			return
 
-	var/direction = get_cardinal_dir(overwatch_post, clicked_turf)
-	var/mob/living/carbon/human/new_human = spawn_human(user, selected_preset, overwatch_post, direction)
+	var/direction = get_cardinal_dir(sniper_post, clicked_turf)
+	var/mob/living/carbon/human/new_human = spawn_human(user, selected_preset, sniper_post, direction)
 	var/datum/human_ai_brain/brain = new_human.get_ai_brain()
 	if(brain)
 		// Both nests behave the same, but the one matching the gun reads better when viewing variables
 		if(istype(brain.gun_data, /datum/firearm_appraisal/sniper) || istype(brain.gun_data, /datum/firearm_appraisal/boltaction))
-			brain.sniper_home = overwatch_post
+			brain.sniper_home = sniper_post
 			brain.sniper_dir = direction
 		else
-			brain.machinegunner_home = overwatch_post
+			brain.machinegunner_home = sniper_post
 			brain.machinegunner_dir = direction
 
-	overwatch_post = null
+	sniper_post = null
 	update_corner_image()
 
 /datum/human_ai_spawner_menu/proc/spawn_squad_preset(mob/user, turf/spawn_turf)
@@ -1187,7 +1236,7 @@
 				new_vehicle.try_rotate(90)
 
 		if(vehicle_ai)
-			new_vehicle.enable_ai(vehicle_faction, vehicle_crew, vehicle_infinite_ammo)
+			new_vehicle.enable_ai(vehicle_faction, vehicle_crew, vehicle_infinite_ammo, vehicle_lock_doors)
 
 /datum/human_ai_spawner_menu/proc/handle_order_click(mob/user, list/modifiers, atom/object)
 	var/turf/clicked_turf = get_turf(object)
@@ -1316,14 +1365,14 @@
 	selection_images.Cut()
 	selection_viewer = null
 
-/// Shows the first corner of the area being selected or the picked overwatch post to the game master, or hides it
+/// Shows the first corner of the area being selected or the picked sniper post to the game master, or hides it
 /datum/human_ai_spawner_menu/proc/update_corner_image(mob/user)
 	if(corner_image)
 		corner_viewer?.images -= corner_image
 		corner_image = null
 		corner_viewer = null
 
-	var/turf/marked_turf = selection_corner || overwatch_post
+	var/turf/marked_turf = selection_corner || sniper_post
 	if(!marked_turf || !user?.client)
 		return
 
@@ -1397,15 +1446,10 @@
 			brain.quick_approach = null
 			brain.target_turf = destination
 
+	// The guns keep firing while the vehicle drives, so it goes all the way there either way instead of stopping at the first enemy
 	for(var/datum/vehicle_ai_brain/vehicle_brain as anything in selected_vehicles)
 		vehicle_brain.hold_position = FALSE
-		// A vehicle that can't shoot would drive away from where it was sent to fight
-		if(rush || !vehicle_brain.can_fight_back())
-			vehicle_brain.destination = destination
-		else
-			vehicle_brain.destination = null
-			vehicle_brain.target_turf = destination
-			vehicle_brain.enter_combat()
+		vehicle_brain.destination = destination
 
 	var/image/order_image = image('icons/turf/overlays.dmi', destination, rush ? "redOverlay" : "greenOverlay")
 	order_image.plane = ABOVE_LIGHTING_PLANE
@@ -1453,7 +1497,7 @@
 #undef HUMAN_AI_SPAWNER_MODE_SINGLE
 #undef HUMAN_AI_SPAWNER_MODE_SQUAD
 #undef HUMAN_AI_SPAWNER_MODE_NEST
-#undef HUMAN_AI_SPAWNER_MODE_OVERWATCH
+#undef HUMAN_AI_SPAWNER_MODE_SNIPER
 #undef HUMAN_AI_SPAWNER_MODES
 
 #undef HUMAN_AI_SPAWNER_CUSTOM_CATEGORY
@@ -1469,10 +1513,11 @@
 #undef HUMAN_AI_SPAWNER_DEFAULT_SQUAD_RADIUS
 #undef HUMAN_AI_SPAWNER_MAX_SQUAD_RADIUS
 #undef HUMAN_AI_SPAWNER_MAX_SPARE_AMMO
-#undef HUMAN_AI_SPAWNER_MAX_OVERWATCH_RANGE
+#undef HUMAN_AI_SPAWNER_MAX_SNIPER_RANGE
 
 #undef HUMAN_AI_SPAWNER_NEST_GUNS
-#undef HUMAN_AI_SPAWNER_OVERWATCH_PRESETS
+#undef HUMAN_AI_SPAWNER_POST_PRESETS
+#undef HUMAN_AI_SPAWNER_MODE_CATEGORIES
 #undef HUMAN_AI_SPAWNER_DIRECTIONS
 #undef HUMAN_AI_SPAWNER_VEHICLES
 #undef HUMAN_AI_SPAWNER_VEHICLE_DEFAULTS

@@ -1,6 +1,10 @@
 /datum/vehicle_ai_brain
 	/// Distance for view checks
 	var/view_distance = 9
+	/// Vehicles are big and loud, so they are made out this far with a clear line of sight
+	var/vehicle_spot_distance = 10
+	/// A vehicle we fight is followed with the guns this far, as long as there is a clear line of sight to it
+	var/vehicle_engage_distance = 14
 	/// If FALSE, targets further than dark_vision_range away are only seen when they stand in light
 	var/has_nightvision = FALSE
 	/// How far the AI sees targets standing in the dark
@@ -23,7 +27,7 @@
 		return
 
 	var/list/seen = view(view_distance, center)
-	if(current_target && (!(current_target in seen) || !is_valid_target(current_target, center)))
+	if(current_target && (!can_see_target(current_target, center, seen, TRUE) || !is_valid_target(current_target, center)))
 		if(is_target_destroyed(current_target))
 			crew_say(kill_lines, VEHICLE_GUNNER, important = TRUE)
 		lose_target()
@@ -38,22 +42,64 @@
 		if(!is_valid_target(thing, center))
 			continue
 
-		var/score = get_dist(center, thing)
-		// Armor and emplacements are the bigger threat
-		if(istype(thing, /obj/vehicle/multitile) || isdefenses(thing))
-			score -= 3
+		var/score = get_target_score(thing, center)
 		if(score < best_score)
 			best_target = thing
+			best_score = score
+
+	// Vehicles past the view distance
+	for(var/obj/vehicle/multitile/other_vehicle as anything in GLOB.all_multi_vehicles)
+		if(other_vehicle.z != center.z || (other_vehicle in seen) || get_dist(center, other_vehicle) > vehicle_spot_distance)
+			continue
+		if(!is_valid_target(other_vehicle, center) || !has_line_of_sight(other_vehicle))
+			continue
+
+		var/score = get_target_score(other_vehicle, center)
+		if(score < best_score)
+			best_target = other_vehicle
 			best_score = score
 
 	if(best_target)
 		set_target(best_target)
 
+/// Lower is a better target
+/datum/vehicle_ai_brain/proc/get_target_score(atom/movable/target, turf/center)
+	. = get_dist(center, target)
+	// Armor and emplacements are the bigger threat
+	if(istype(target, /obj/vehicle/multitile) || isdefenses(target))
+		. -= 3
+
+/**
+ * TRUE if the target can be seen from the center. Vehicles stand out further than view_distance,
+ * and once fought they are followed up to vehicle_engage_distance. seen is view(view_distance, center) if already at hand
+ */
+/datum/vehicle_ai_brain/proc/can_see_target(atom/movable/target, turf/center, list/seen, fighting = FALSE)
+	if(istype(target, /obj/vehicle/multitile))
+		var/distance = get_dist(center, target)
+		if(distance <= view_distance && seen)
+			return (target in seen)
+		return (distance <= (fighting ? vehicle_engage_distance : vehicle_spot_distance)) && has_line_of_sight(target)
+
+	if(!seen)
+		seen = view(view_distance, center)
+	return (target in seen)
+
+/// Returns what the guns should point at: the target, or where the enemy was last seen or shot from while in combat
+/datum/vehicle_ai_brain/proc/get_aim_target()
+	if(current_target)
+		return current_target
+	if(in_combat && target_turf && (target_turf.z == vehicle.z))
+		return target_turf
+
+/// How far the guns may reach out for the target
+/datum/vehicle_ai_brain/proc/get_engage_distance(atom/target)
+	return istype(target, /obj/vehicle/multitile) ? vehicle_engage_distance : view_distance
+
 /datum/vehicle_ai_brain/proc/is_valid_target(atom/movable/target, turf/center)
 	if(QDELETED(target) || target == vehicle)
 		return FALSE
 
-	if(get_dist(center, target) > view_distance)
+	if(get_dist(center, target) > get_engage_distance(target))
 		return FALSE
 
 	if(iscarbon(target))

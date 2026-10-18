@@ -805,6 +805,11 @@
 /obj/vehicle/multitile/Collided(atom/A)
 	. = ..()
 
+	// Anyone walking into a wreck pushes it, a charging crusher shoves it below
+	var/mob/living/living_bumper = A
+	if(istype(living_bumper) && !living_bumper.throwing)
+		push_wreck(living_bumper)
+
 	if(iscrusher(A))
 		var/mob/living/carbon/xenomorph/crusher/C = A
 		if(!C.throwing)
@@ -823,3 +828,65 @@
 		log_attack("\The [src] was rammed [do_move ? "and pushed " : " "]by [key_name(C)].")
 		playsound(loc, 'sound/effects/metal_crash.ogg', 35)
 		interior_crash_effect()
+
+//WRECK PUSHING
+/// How much pushing moves a wreck a tile, each push adds the pusher's mob size
+#define WRECK_PUSH_EFFORT 4
+/// The pushing done is lost if nobody pushes the wreck for this long
+#define WRECK_PUSH_TIMEOUT (2 SECONDS)
+
+/obj/vehicle/multitile
+	/// How much pushing the wreck has had since it last moved, see push_wreck()
+	var/wreck_push_progress = 0
+	/// world.time of the last push on the wreck
+	var/last_wreck_push = 0
+
+/// A destroyed vehicle is dead weight that gets pushed a tile at a time by walking into it, slowly by people and faster by big xenos
+/obj/vehicle/multitile/proc/push_wreck(mob/living/pusher)
+	if(health > 0 || pusher.stat != CONSCIOUS || pusher.buckled || pusher.body_position != STANDING_UP || pusher.mob_size <= MOB_SIZE_SMALL)
+		return
+
+	var/push_dir = pusher.dir
+	if(!(push_dir in GLOB.cardinals) || !(get_dir(pusher, src) & push_dir))
+		return
+
+	if(world.time > last_wreck_push + WRECK_PUSH_TIMEOUT)
+		wreck_push_progress = 0
+		to_chat(pusher, SPAN_NOTICE("You strain against \the [src]..."))
+	last_wreck_push = world.time
+	wreck_push_progress += pusher.mob_size
+	if(wreck_push_progress < WRECK_PUSH_EFFORT)
+		return
+
+	wreck_push_progress = 0
+	if(!can_push_wreck(push_dir))
+		to_chat(pusher, SPAN_WARNING("\The [src] won't budge, something is in the way."))
+		return
+
+	if(try_move(push_dir, force = TRUE))
+		visible_message(SPAN_NOTICE("[pusher] pushes \the [src]."))
+
+/// TRUE if the wreck can be pushed in the direction without running anything over
+/obj/vehicle/multitile/proc/can_push_wreck(direction)
+	var/turf/new_loc = get_step(src, direction)
+	if(!new_loc)
+		return FALSE
+
+	var/turf/min_turf = locate(new_loc.x + bound_x / world.icon_size, new_loc.y + bound_y / world.icon_size, z)
+	var/width = bound_width / world.icon_size
+	var/height = bound_height / world.icon_size
+	if(!min_turf || (min_turf.x + width - 1 > world.maxx) || (min_turf.y + height - 1 > world.maxy))
+		return FALSE
+
+	for(var/turf/new_turf as anything in CORNER_BLOCK(min_turf, width, height))
+		if(new_turf in locs)
+			continue
+		if(new_turf.density)
+			return FALSE
+		for(var/atom/movable/thing as anything in new_turf)
+			if(thing != src && (thing.density || isliving(thing)))
+				return FALSE
+	return TRUE
+
+#undef WRECK_PUSH_EFFORT
+#undef WRECK_PUSH_TIMEOUT

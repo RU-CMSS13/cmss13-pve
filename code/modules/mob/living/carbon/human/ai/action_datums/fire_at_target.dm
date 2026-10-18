@@ -14,6 +14,10 @@
 	if(!brain.primary_weapon)
 		return 0
 
+	// Shots aimed at another z-level fly off somewhere on ours
+	if(brain.target_turf && (brain.target_turf.z != brain.tied_human.z))
+		return 0
+
 	if(!COOLDOWN_FINISHED(brain, stop_fire_cooldown))
 		return 0
 
@@ -70,6 +74,9 @@
 		return ONGOING_ACTION_COMPLETED
 
 	var/turf/target_turf = brain.target_turf
+	if(!target_turf || (target_turf.z != tied_human.z))
+		return ONGOING_ACTION_COMPLETED
+
 	if((get_dist(tied_human, target_turf) > gun_data.maximum_range) && !should_fire_offscreen)
 		return ONGOING_ACTION_COMPLETED
 

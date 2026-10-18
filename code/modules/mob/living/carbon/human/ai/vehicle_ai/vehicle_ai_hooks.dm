@@ -8,7 +8,7 @@
 	ai_crushes_obstacles = TRUE
 
 /// Hands the vehicle over to an AI fighting for the given faction, crewed by human AI of the given preset
-/obj/vehicle/multitile/proc/enable_ai(faction, datum/equipment_preset/crew_preset, infinite_ammo = FALSE)
+/obj/vehicle/multitile/proc/enable_ai(faction, datum/equipment_preset/crew_preset, infinite_ammo = FALSE, lock_doors = FALSE)
 	RETURN_TYPE(/datum/vehicle_ai_brain)
 	if(!ai_brain)
 		new /datum/vehicle_ai_brain(src, faction)
@@ -16,6 +16,8 @@
 		ai_brain.set_faction(faction)
 	ai_brain.crew_preset = crew_preset
 	ai_brain.infinite_ammo = infinite_ammo
+	// The crew gets up to fight whoever climbs in, so the doors are open unless asked otherwise
+	door_locked = lock_doors
 	return ai_brain
 
 /obj/vehicle/multitile/proc/disable_ai()

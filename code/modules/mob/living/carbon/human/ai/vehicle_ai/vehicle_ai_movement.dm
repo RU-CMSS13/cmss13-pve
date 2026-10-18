@@ -22,7 +22,7 @@
 	/// Path cost added for each dense object the vehicle would have to crush
 	var/crush_penalty = 3
 	/// How long the AI waits for friendlies to get out of its way before driving around them
-	var/friendly_wait_time = 3 SECONDS
+	var/friendly_wait_time = 4 SECONDS
 	/// world.time when friendlies started blocking the way, 0 if they aren't
 	var/friendly_blocked_since = 0
 
@@ -144,6 +144,7 @@
 		// Honk and give them a moment, then go around
 		if(!friendly_blocked_since)
 			friendly_blocked_since = world.time
+			ask_to_make_way(direction)
 			if(world.time >= vehicle.next_honk)
 				vehicle.next_honk = world.time + 10 SECONDS
 				vehicle.perform_honk()
@@ -155,6 +156,9 @@
 		return FALSE
 	friendly_blocked_since = 0
 
+	var/list/turf/turfs_ahead = moving ? get_turfs_ahead(direction) : null
+	var/obstacles_ahead = moving ? count_obstacles(turfs_ahead) : 0
+
 	if(turning_around)
 		vehicle.try_rotate(90)
 	else
@@ -165,7 +169,12 @@
 		failed_moves = 0
 		return TRUE
 
-	// Braking and crushing obstacles fail some moves, so only give up after several in a row
+	// Ramming through something that breaks or folds is progress, only what stays in the way gets us stuck
+	if(moving && (count_obstacles(turfs_ahead) < obstacles_ahead))
+		failed_moves = 0
+		return FALSE
+
+	// Braking fails some moves too, so only give up after several in a row
 	failed_moves++
 	if(failed_moves >= max_failed_moves)
 		failed_moves = 0
@@ -191,10 +200,56 @@
 				return TRUE
 	return FALSE
 
-/// Marks the turfs the vehicle failed to drive into, so the next path goes around them
+/// Counts the walls and dense things other than mobs on the turfs, what the vehicle has to break through
+/datum/vehicle_ai_brain/proc/count_obstacles(list/turf/turfs)
+	. = 0
+	for(var/turf/checked_turf as anything in turfs)
+		if(checked_turf.density)
+			.++
+		for(var/atom/movable/thing as anything in checked_turf)
+			if(thing.density && !ismob(thing) && thing != vehicle)
+				.++
+
+/// Marks the turfs the vehicle failed to drive into, so the next path goes around them. Only the ones with something in the way, if any have
 /datum/vehicle_ai_brain/proc/avoid_turfs_ahead(direction)
-	for(var/turf/ahead_turf as anything in get_turfs_ahead(direction))
+	var/list/turf/turfs_ahead = get_turfs_ahead(direction)
+	var/list/turf/blocking_turfs = list()
+	for(var/turf/ahead_turf as anything in turfs_ahead)
+		if(count_obstacles(list(ahead_turf)))
+			blocking_turfs += ahead_turf
+
+	for(var/turf/ahead_turf as anything in (length(blocking_turfs) ? blocking_turfs : turfs_ahead))
 		blocked_turfs[ahead_turf] = world.time + blocked_turf_time
+
+/// Asks the friendly human AI standing in the way to step aside
+/datum/vehicle_ai_brain/proc/ask_to_make_way(direction)
+	for(var/turf/ahead_turf as anything in get_turfs_ahead(direction))
+		for(var/mob/living/carbon/human/friendly in ahead_turf)
+			if(friendly.client || (friendly.stat != CONSCIOUS) || !faction_check(friendly))
+				continue
+			var/datum/human_ai_brain/friendly_brain = friendly.get_ai_brain()
+			var/turf/side_turf = friendly_brain && get_make_way_turf(ahead_turf, direction)
+			if(side_turf)
+				friendly_brain.make_way(side_turf)
+
+/// Returns a free turf right beside the way the vehicle drives in the direction, for someone standing on the turf to step to
+/datum/vehicle_ai_brain/proc/get_make_way_turf(turf/standing_turf, direction)
+	var/vertical = (direction == NORTH) || (direction == SOUTH)
+	var/low = INFINITY
+	var/high = -INFINITY
+	for(var/turf/footprint_turf as anything in get_footprint(get_turf(vehicle)))
+		var/across = vertical ? footprint_turf.x : footprint_turf.y
+		low = min(low, across)
+		high = max(high, across)
+
+	// The nearer side first
+	var/standing_across = vertical ? standing_turf.x : standing_turf.y
+	var/list/sides = ((standing_across - low) <= (high - standing_across)) ? list(low - 1, high + 1) : list(high + 1, low - 1)
+	for(var/across in sides)
+		for(var/along_shift in list(0, 1, -1))
+			var/turf/side_turf = vertical ? locate(across, standing_turf.y + along_shift, standing_turf.z) : locate(standing_turf.x + along_shift, across, standing_turf.z)
+			if(side_turf && !is_blocked_turf(side_turf))
+				return side_turf
 
 /datum/vehicle_ai_brain/proc/start_path(turf/goal, radius)
 	clear_path()

@@ -105,25 +105,26 @@
 			stop_weapon(weapon)
 			continue
 
+		// The turret keeps turning to the target while it is out of reach or the gun reloads
+		if(!weapon.in_firing_arc(target))
+			stop_weapon(weapon)
+			if(turret && weapon.loc == turret)
+				turret_should_turn = TRUE
+			continue
+
 		if(weapon.ammo.current_rounds <= 0)
 			stop_weapon(weapon)
 			continue
 
 		var/turf/muzzle_turf = weapon.get_origin_turf()
 		var/distance = get_dist(muzzle_turf, target_turf)
-		if(distance > min(get_weapon_range(weapon), view_distance))
+		if(distance > min(get_weapon_range(weapon), get_engage_distance(target)))
 			stop_weapon(weapon)
 			continue
 
 		var/area_weapon = is_area_weapon(weapon)
 		if(area_weapon && (distance < area_weapon_min_range || (target_turf in vehicle.locs)))
 			stop_weapon(weapon)
-			continue
-
-		if(!weapon.in_firing_arc(target))
-			stop_weapon(weapon)
-			if(turret && weapon.loc == turret)
-				turret_should_turn = TRUE
 			continue
 
 		if(!firing_line_clear(muzzle_turf, target_turf, has_iff(weapon)))

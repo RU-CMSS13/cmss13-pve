@@ -298,30 +298,8 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 		return
 
 	if(istype(entering, /obj/projectile))
-		var/obj/projectile/bullet = entering
-
 		enter_combat()
-
-		if(length(neutral_factions))
-			if(ismob(bullet.firer))
-				var/mob/mob_firer = bullet.firer
-				if(mob_firer.faction in neutral_factions)
-					on_neutral_faction_betray(mob_firer.faction)
-
-			else if(isdefenses(bullet.firer))
-				var/obj/structure/machinery/defenses/defense_firer = bullet.firer
-				for(var/faction in defense_firer.faction_group)
-					if(faction in neutral_factions)
-						on_neutral_faction_betray(faction)
-
-		if(faction_check(bullet.firer))
-			return
-
-		if(get_dist(tied_human, bullet.firer) <= view_distance)
-			set_target(bullet.firer)
-		else
-			COOLDOWN_START(src, fire_offscreen, 4 SECONDS)
-			target_turf = get_turf(bullet.firer)
+		react_to_bullet(entering)
 
 /datum/human_ai_brain/proc/on_move(atom/oldloc, direction, forced)
 	setup_detection_radius()
@@ -385,28 +363,48 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 
 	enter_combat()
 
-	if(length(neutral_factions))
-		if(ismob(bullet.firer))
-			var/mob/mob_firer = bullet.firer
-			if(mob_firer.faction in neutral_factions)
-				on_neutral_faction_betray(mob_firer.faction)
+	if(!react_to_bullet(bullet))
+		return
 
-		else if(isdefenses(bullet.firer))
-			var/obj/structure/machinery/defenses/defense_firer = bullet.firer
-			for(var/faction in defense_firer.faction_group)
+	var/atom/shooter = bullet.get_shooter()
+	if(!current_cover)
+		try_cover(bullet.angle, shooter)
+	else if(in_cover)
+		on_shot_inside_cover(bullet.angle, shooter)
+
+/// Turns on whoever fired the bullet, or towards where it came from if they are out of sight. Returns FALSE if a friendly fired it
+/datum/human_ai_brain/proc/react_to_bullet(obj/projectile/bullet)
+	var/atom/shooter = bullet.get_shooter()
+	if(!shooter)
+		return FALSE
+
+	if(length(neutral_factions))
+		if(ismob(shooter))
+			var/mob/mob_shooter = shooter
+			if(mob_shooter.faction in neutral_factions)
+				on_neutral_faction_betray(mob_shooter.faction)
+
+		else if(isdefenses(shooter))
+			var/obj/structure/machinery/defenses/defense_shooter = shooter
+			for(var/faction in defense_shooter.faction_group)
 				if(faction in neutral_factions)
 					on_neutral_faction_betray(faction)
 
-	if(faction_check(bullet.firer))
-		return
+		else if(istype(shooter, /obj/vehicle/multitile))
+			var/obj/vehicle/multitile/vehicle_shooter = shooter
+			if(vehicle_shooter.vehicle_faction in neutral_factions)
+				on_neutral_faction_betray(vehicle_shooter.vehicle_faction)
 
-	if(get_dist(tied_human, bullet.firer) <= view_distance)
-		set_target(bullet.firer)
+	if(faction_check(shooter))
+		return FALSE
+
+	// Somewhere we can't aim at, like the interior of a vehicle
+	if(shooter.z != tied_human.z)
+		return TRUE
+
+	if(get_dist(tied_human, shooter) <= view_distance)
+		set_target(shooter)
 	else
 		COOLDOWN_START(src, fire_offscreen, 4 SECONDS)
-		target_turf = get_turf(bullet.firer)
-
-	if(!current_cover)
-		try_cover(bullet.angle, bullet.firer)
-	else if(in_cover)
-		on_shot_inside_cover(bullet.angle, bullet.firer)
+		target_turf = get_turf(shooter)
+	return TRUE

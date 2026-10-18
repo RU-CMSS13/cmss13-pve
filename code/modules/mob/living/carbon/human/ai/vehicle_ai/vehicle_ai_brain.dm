@@ -158,7 +158,6 @@
 /datum/vehicle_ai_brain/proc/set_faction(new_faction)
 	faction = new_faction
 	vehicle.vehicle_faction = new_faction
-	vehicle.door_locked = TRUE
 
 /// Returns the human AI faction that holds our friendly and neutral factions, if there is one
 /datum/vehicle_ai_brain/proc/get_faction_data()
@@ -246,7 +245,7 @@
 
 /// Called when a projectile hits the vehicle
 /datum/vehicle_ai_brain/proc/on_shot(obj/projectile/bullet)
-	var/atom/firer = bullet.firer
+	var/atom/firer = bullet.get_shooter()
 	if(!firer || firer == vehicle)
 		return
 
@@ -264,15 +263,24 @@
 	on_attacked(firer)
 
 /// Called when something hostile attacks the vehicle, for example a xeno slashing it
-/datum/vehicle_ai_brain/proc/on_attacked(atom/attacker)
+/datum/vehicle_ai_brain/proc/on_attacked(atom/movable/attacker)
 	if(!attacker || faction_check(attacker))
 		return
 
-	if(!current_target)
+	// Somewhere we can't aim at, like the interior of a vehicle
+	var/turf/attacker_turf = get_turf(attacker)
+	if(attacker_turf?.z != vehicle.z)
+		enter_combat()
+		return
+
+	// Armor shooting at us matters more than whoever we were busy with
+	var/retarget = !current_target || (istype(attacker, /obj/vehicle/multitile) && !istype(current_target, /obj/vehicle/multitile))
+	if(retarget && (attacker != current_target))
 		var/turf/center = get_turf(vehicle)
-		if(isturf(attacker.loc) && is_valid_target(attacker, center) && (attacker in view(view_distance, center)))
+		// Whoever shoots at us gives away where they are, so it is fought as far as we could follow it
+		if(isturf(attacker.loc) && is_valid_target(attacker, center) && can_see_target(attacker, center, fighting = TRUE))
 			set_target(attacker)
-		else
-			target_turf = get_turf(attacker)
+		else if(!current_target)
+			target_turf = attacker_turf
 
 	enter_combat()

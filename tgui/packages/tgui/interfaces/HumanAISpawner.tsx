@@ -91,13 +91,13 @@ type BackendContext = {
   max_squad_size: number;
   max_squad_radius: number;
   max_spare_ammo: number;
-  max_overwatch_range: number;
+  max_sniper_range: number;
 
   tab: Tab;
   spawn_click_intercept: BooleanLike;
   order_click_intercept: BooleanLike;
 
-  mode: 'single' | 'squad' | 'nest' | 'overwatch';
+  mode: 'single' | 'squad' | 'nest' | 'sniper';
   category: string | null;
   selected_preset: string | null;
   spawn_count: number;
@@ -112,7 +112,7 @@ type BackendContext = {
   nest_gun: string;
   nest_spare_ammo: number;
   spawn_direction: string;
-  overwatch_post: BooleanLike;
+  sniper_post: BooleanLike;
   zombie_random_helmet: BooleanLike;
   zombie_helmet_chance: number;
   zombie_delimb_multi: number;
@@ -125,6 +125,7 @@ type BackendContext = {
   vehicle_crew: string;
   vehicle_ai: BooleanLike;
   vehicle_infinite_ammo: BooleanLike;
+  vehicle_lock_doors: BooleanLike;
 
   selected_units: Unit[];
   selecting_area: BooleanLike;
@@ -429,11 +430,11 @@ const InfantrySpawnOptions = (props) => {
               <Button
                 fluid
                 textAlign="center"
-                selected={mode === 'overwatch'}
-                tooltip="Two clicks: where the selected preset stands, then the center of the area it watches"
-                onClick={() => act('set_mode', { mode: 'overwatch' })}
+                selected={mode === 'sniper'}
+                tooltip="Two clicks: where the sniper stands, then the center of the area it watches"
+                onClick={() => act('set_mode', { mode: 'sniper' })}
               >
-                Overwatch
+                Sniper
               </Button>
             </Stack.Item>
           </Stack>
@@ -458,8 +459,8 @@ const InfantrySpawnOptions = (props) => {
               <NoticeBox info>
                 {mode === 'nest'
                   ? 'Pick a preset for the gunner'
-                  : mode === 'overwatch'
-                    ? 'Pick a preset on the left, the Machinegunners and Snipers categories are made for this'
+                  : mode === 'sniper'
+                    ? 'Pick a sniper on the left. Machinegunners from their category hold a post the same way'
                     : 'Pick a preset on the left'}
               </NoticeBox>
             </Stack.Item>
@@ -490,7 +491,7 @@ const InfantrySpawnOptions = (props) => {
         )}
         {mode === 'squad' && <SquadOptions />}
         {mode === 'nest' && <NestOptions />}
-        {mode === 'overwatch' && <OverwatchOptions />}
+        {mode === 'sniper' && <SniperOptions />}
         <Stack.Item>
           <Divider />
           <HumanOptions />
@@ -597,23 +598,23 @@ const NestOptions = (props) => {
   );
 };
 
-const OverwatchOptions = (props) => {
+const SniperOptions = (props) => {
   const { data } = useBackend<BackendContext>();
-  const { overwatch_post, max_overwatch_range } = data;
+  const { sniper_post, max_sniper_range } = data;
 
   return (
     <Stack.Item>
-      {overwatch_post ? (
+      {sniper_post ? (
         <NoticeBox info>
-          Click the center of the area to watch, up to {max_overwatch_range}{' '}
-          tiles from the post marked blue with no walls between. Click the post
-          again to pick another one.
+          Click the center of the area to watch, up to {max_sniper_range} tiles
+          from the post marked blue with no walls between. Click the post again
+          to pick another one.
         </NoticeBox>
       ) : (
         <Box color="label">
           The first click picks where the AI stands, the second one the center
           of the area it watches. It holds the post facing there and sees up to{' '}
-          {max_overwatch_range} tiles.
+          {max_sniper_range} tiles.
         </Box>
       )}
     </Stack.Item>
@@ -867,6 +868,7 @@ const VehiclesTab = (props) => {
     vehicle_crew,
     vehicle_ai,
     vehicle_infinite_ammo,
+    vehicle_lock_doors,
   } = data;
   const [search, setSearch] = useState('');
 
@@ -980,6 +982,14 @@ const VehiclesTab = (props) => {
               >
                 Infinite ammo
               </Button.Checkbox>
+              <Button.Checkbox
+                checked={vehicle_lock_doors}
+                disabled={!vehicle_ai}
+                tooltip="Only the vehicle's faction can get in. Unlocked, the crew gets up to fight whoever climbs in"
+                onClick={() => act('toggle_vehicle_lock_doors')}
+              >
+                Locked doors
+              </Button.Checkbox>
             </Stack.Item>
           </Stack>
         </Section>
@@ -1023,6 +1033,10 @@ const OrdersTab = (props) => {
                 </LabeledList.Item>
                 <LabeledList.Item label="Alt+LMB">
                   Rush there, ignoring enemies on the way
+                </LabeledList.Item>
+                <LabeledList.Item label="Vehicles">
+                  Drive all the way there with either click, their guns keep
+                  firing on the move
                 </LabeledList.Item>
               </LabeledList>
               {!!selecting_area && (
