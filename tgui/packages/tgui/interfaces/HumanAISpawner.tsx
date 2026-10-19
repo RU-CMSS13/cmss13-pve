@@ -568,6 +568,7 @@ const SquadOptions = (props) => {
 const NestOptions = (props) => {
   const { data, act } = useBackend<BackendContext>();
   const { nest_guns, nest_gun, nest_spare_ammo, max_spare_ammo } = data;
+  const no_gun = nest_gun === 'None';
 
   return (
     <Stack.Item>
@@ -583,21 +584,26 @@ const NestOptions = (props) => {
         <LabeledList.Item label="Facing">
           <DirectionDropdown />
         </LabeledList.Item>
-        <LabeledList.Item label="Spare ammo">
-          <NumberInput
-            width="4em"
-            minValue={0}
-            maxValue={max_spare_ammo}
-            step={1}
-            unit="boxes"
-            value={nest_spare_ammo}
-            onChange={(value) => act('set_nest_spare_ammo', { amount: value })}
-          />
-        </LabeledList.Item>
+        {!no_gun && (
+          <LabeledList.Item label="Spare ammo">
+            <NumberInput
+              width="4em"
+              minValue={0}
+              maxValue={max_spare_ammo}
+              step={1}
+              unit="boxes"
+              value={nest_spare_ammo}
+              onChange={(value) =>
+                act('set_nest_spare_ammo', { amount: value })
+              }
+            />
+          </LabeledList.Item>
+        )}
       </LabeledList>
       <Box color="label" mt={0.5}>
-        The gun goes on the clicked turf, the gunner and the spare ammo behind
-        it.
+        {no_gun
+          ? 'The gunner holds the clicked turf with their own gun.'
+          : 'The gun goes on the clicked turf, the gunner and the spare ammo behind it.'}
       </Box>
     </Stack.Item>
   );

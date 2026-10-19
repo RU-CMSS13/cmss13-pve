@@ -36,6 +36,8 @@
 	"M2C" = /obj/structure/machinery/m56d_hmg/auto, \
 	"Scoped M56D nest" = /obj/structure/machinery/m56d_hmg/mg_turret, \
 )
+/// Gun option that spawns the gunner on the clicked turf with only their own gun
+#define HUMAN_AI_SPAWNER_NEST_NO_GUN "None"
 
 /// Presets made for MG nests and sniper posts, listed under these categories
 #define HUMAN_AI_SPAWNER_POST_PRESETS list( \
@@ -275,7 +277,7 @@
 	var/outfit = FALSE
 
 	/// The name of the gun the MG nest is built around
-	var/nest_gun = "M2C"
+	var/nest_gun = HUMAN_AI_SPAWNER_NEST_NO_GUN
 
 	/// How many spare ammo boxes are left behind the gun of an MG nest
 	var/nest_spare_ammo = 2
@@ -505,7 +507,7 @@
 		data["vehicle_factions"] += faction_name
 	data["species"] = list(SPECIES_HUMAN, SPECIES_ZOMBIE) + SYNTH_TYPES
 	data["equipment_options"] = HUMAN_AI_SPAWNER_EQUIPMENT
-	data["nest_guns"] = list()
+	data["nest_guns"] = list(HUMAN_AI_SPAWNER_NEST_NO_GUN)
 	for(var/gun_name in HUMAN_AI_SPAWNER_NEST_GUNS)
 		data["nest_guns"] += gun_name
 	data["directions"] = list()
@@ -713,7 +715,7 @@
 
 		if("set_nest_gun")
 			var/new_gun = params["gun"]
-			if(!(new_gun in HUMAN_AI_SPAWNER_NEST_GUNS))
+			if(!(new_gun in HUMAN_AI_SPAWNER_NEST_GUNS) && new_gun != HUMAN_AI_SPAWNER_NEST_NO_GUN)
 				return
 
 			nest_gun = new_gun
@@ -1223,13 +1225,26 @@
 
 	return reachable_turfs
 
-/// Builds a mounted gun facing the chosen direction with the selected preset manning it from behind
+/// Builds a mounted gun facing the chosen direction with the selected preset manning it from behind, or without the gun the preset holds the turf alone
 /datum/human_ai_spawner_menu/proc/spawn_nest(mob/user, turf/gun_turf)
 	if(!selected_preset)
 		to_chat(user, SPAN_WARNING("Pick a preset for the gunner first."))
 		return
 
 	var/direction = get_spawn_dir(user)
+	if(nest_gun == HUMAN_AI_SPAWNER_NEST_NO_GUN)
+		if(is_blocked_turf(gun_turf))
+			to_chat(user, SPAN_WARNING("There is no room for the gunner there."))
+			return
+
+		// Holds the clicked turf with their own gun, like a nest without the mounted gun
+		var/mob/living/carbon/human/lone_gunner = spawn_human(user, selected_preset, gun_turf, direction)
+		var/datum/human_ai_brain/brain = lone_gunner.get_ai_brain()
+		if(brain)
+			brain.machinegunner_home = gun_turf
+			brain.machinegunner_dir = direction
+		return
+
 	var/turf/handles_turf = get_step(gun_turf, REVERSE_DIR(direction))
 	if(is_blocked_turf(gun_turf) || !handles_turf || is_blocked_turf(handles_turf))
 		to_chat(user, SPAN_WARNING("There is no room for the gun and its gunner there."))
@@ -1750,6 +1765,7 @@
 #undef HUMAN_AI_SPAWNER_MAX_SNIPER_RANGE
 
 #undef HUMAN_AI_SPAWNER_NEST_GUNS
+#undef HUMAN_AI_SPAWNER_NEST_NO_GUN
 #undef HUMAN_AI_SPAWNER_POST_PRESETS
 #undef HUMAN_AI_SPAWNER_MODE_CATEGORIES
 #undef HUMAN_AI_SPAWNER_DIRECTIONS
