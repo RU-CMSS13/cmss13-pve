@@ -5,15 +5,26 @@
  */
 
 import { BooleanLike, classes } from 'common/react';
-import { PropsWithChildren, ReactNode } from 'react';
+import { CSSProperties, PropsWithChildren, ReactNode } from 'react';
 
 import { Box, unit } from './Box';
 import { Divider } from './Divider';
 import { Tooltip } from './Tooltip';
 
-export const LabeledList = (props: PropsWithChildren) => {
-  const { children } = props;
-  return <table className="LabeledList">{children}</table>;
+type LabeledListProps = PropsWithChildren<
+  Partial<{
+    className: string | BooleanLike;
+    style: CSSProperties;
+  }>
+>;
+
+export const LabeledList = (props: LabeledListProps) => {
+  const { children, className, style } = props;
+  return (
+    <table className={classes(['LabeledList', className])} style={style}>
+      {children}
+    </table>
+  );
 };
 
 type LabeledListItemProps = Partial<{

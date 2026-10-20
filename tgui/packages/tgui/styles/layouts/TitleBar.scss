@@ -52,11 +52,28 @@ $shadow-color: rgba(0, 0, 0, 0.1) !default;
   pointer-events: none;
 }
 
+.TitleBar__title--buttonsRight {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .TitleBar__buttons {
   pointer-events: initial;
   display: inline-block;
   width: 100%;
   margin-left: 10px;
+}
+
+.TitleBar__buttons--right {
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  gap: base.rem(6px);
+  height: 32px;
+  height: base.rem(32px);
+  width: auto;
+  margin-left: 0;
 }
 
 .TitleBar__dragZone {
