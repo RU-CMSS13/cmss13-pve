@@ -340,6 +340,11 @@
 	desc = "This prototype motion detector sacrifices versatility, having only the long-range mode, for size, being so small it can even fit in pockets. This one has been modified with an after-market IFF sensor to filter out Vanguard's Arrow Incorporated signals instead of USCM ones. Fight fire with fire!"
 	iff_signal = FACTION_CONTRACTOR
 
+/obj/item/device/motiondetector/m717/hacked/freelancer
+	name = "hacked M717 pocket motion detector"
+	desc = "This prototype motion detector sacrifices versatility, having only the long-range mode, for size, being so small it can even fit in pockets. This one's been reprogrammed to detect all non-freelancer movement instead."
+	iff_signal = FACTION_FREELANCER
+
 /obj/item/device/motiondetector/hacked
 	name = "hacked M314 motion detector"
 	desc = "A device that usually picks up non-USCM signals, but this one's been hacked to detect all non-UPP movement instead. Fight fire with fire!"
