@@ -1492,4 +1492,9 @@ GLOBAL_LIST_INIT(apc_wire_descriptions, flatten_numeric_alist(alist(
 	pixel_x = -30
 	dir = 8
 
+// apc that start broken
+/obj/structure/machinery/power/apc/fully_broken/no_cell/north
+	pixel_y = 32
+	dir = 1
+
 #undef APC_UPDATE_ICON_COOLDOWN
