@@ -64,6 +64,10 @@
 	name = "Corporate Liaison"
 	equip_path = /datum/equipment_preset/corpse/liaison
 
+/obj/effect/landmark/corpsespawner/cmb
+	name = "Corpse - Colonial Marshals Deputy"
+	equip_path = /datum/equipment_preset/corpse/cmb
+
 /obj/effect/landmark/corpsespawner/administrator
 	name = "Colony Administrator"
 	equip_path = /datum/equipment_preset/corpse/administrator
