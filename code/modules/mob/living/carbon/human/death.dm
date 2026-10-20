@@ -61,6 +61,10 @@
 		disable_special_items()
 		disable_headsets() //Disable radios for dead people to reduce load
 
+		if(eyelid_timer)	//whatever state their eyes were in when dying, it stays so
+			deltimer(eyelid_timer)
+			eyelid_timer = null
+
 	if(pulledby && isxeno(pulledby)) // Xenos lose grab on dead humans
 		pulledby.stop_pulling()
 
