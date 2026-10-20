@@ -434,9 +434,9 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the Union of Progressive Peoples Armed Collective."
 	icon_state = "upppatch"
 
-/obj/item/clothing/accessory/patch/upp/airborne
-	name = "UPP Airborne Reconnaissance patch"
-	desc = "A fire-resistant shoulder patch, worn by the men and women of the 173rd Airborne Reconnaissance Platoon."
+/obj/item/clothing/accessory/patch/upp/vdv
+	name = "UPP Airborne Forces patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the UPP Airborne Forces."
 	icon_state = "vdvpatch"
 
 /obj/item/clothing/accessory/patch/upp/recon

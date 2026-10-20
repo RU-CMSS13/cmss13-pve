@@ -17,7 +17,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/eng(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/black/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp/airborne(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/upp_pfb(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/metal/med_small_stack(new_human), WEAR_IN_BACK)
 
@@ -53,25 +52,21 @@
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/labcoat/short(new_human), WEAR_JACKET)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp/airborne, WEAR_ACCESSORY)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/upp_pfb(new_human), WEAR_IN_BACK)
 		if(12 to 24)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/labcoat/short(new_human), WEAR_JACKET)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup/brown(new_human), WEAR_FEET)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp/airborne, WEAR_ACCESSORY)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/upp_pfb(new_human), WEAR_IN_BACK)
 		if(25)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/radiation, WEAR_HEAD)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/radiation(new_human), WEAR_JACKET)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup/brown(new_human), WEAR_FEET)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp/airborne, WEAR_ACCESSORY)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/upp_pfb(new_human), WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/phosphorus/upp(new_human), WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/phosphorus/upp(new_human), WEAR_IN_BACK)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp/airborne(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/color/white/alt(new_human), WEAR_BODY)
 
 	add_survivor_weapon_pistol(new_human)
@@ -108,7 +103,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/type47/sof, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/black/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/upp_pfb(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp/airborne(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/upp/pap, WEAR_BODY)
 
 	add_survivor_weapon_security(new_human)
@@ -243,7 +237,6 @@
 		if(2)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/labcoat(new_human), WEAR_JACKET)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp/airborne(new_human), WEAR_ACCESSORY)
 
 	var/random_professional_uniform= rand(1,3)
 	switch(random_professional_uniform)
@@ -447,8 +440,6 @@
 
 /datum/equipment_preset/survivor/upp_fire_fighter/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp/airborne, WEAR_ACCESSORY)
-
 	var/random_gear = rand(1,50)
 	switch(random_gear)
 		if(1 to 30) // Firefighter
@@ -498,7 +489,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/full(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp/airborne, WEAR_ACCESSORY)
 
 	add_survivor_weapon_pistol(new_human)
 	..()
