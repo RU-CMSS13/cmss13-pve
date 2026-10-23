@@ -636,3 +636,18 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 
 	occupant.mind.transfer_to(new_player)
 	SEND_SIGNAL(occupant, COMSIG_MOB_END_TUTORIAL)
+
+// USCSS Cyclops
+
+/obj/structure/machinery/cryopod/alt
+	icon_state = "body_scanner_open"
+	dir = EAST
+
+/obj/structure/machinery/cryopod/alt/right
+	dir = WEST
+
+/obj/structure/machinery/cryopod/alt/update_icon()
+	if(occupant)
+		icon_state = "body_scanner_closed"
+	else
+		icon_state = "body_scanner_open"

@@ -1023,6 +1023,9 @@
 	icon_state = "echodrop"
 	squad = SQUAD_MARINE_5
 
+/obj/structure/supply_drop/alpha/chapaev
+	squad = SQUAD_UPP
+
 #undef HIDE_ALMAYER
 #undef HIDE_GROUND
 #undef HIDE_NONE
