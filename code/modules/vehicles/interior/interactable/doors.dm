@@ -82,8 +82,13 @@
 			nade.activate(user)
 		return
 
-	else
-		attack_hand(user)
+	var/datum/vehicle_door/door = get_door()
+	if(door && istype(object, /obj/item/grab) && user.a_intent == INTENT_HELP)
+		var/obj/item/grab/G = object
+		door.try_push_out(user, G.grabbed_thing, src)
+		return
+
+	attack_hand(user)
 
 /obj/structure/interior_exit/attack_ghost(mob/dead/observer/user)
 	if(!interior)
@@ -110,12 +115,21 @@
 		if(SOUTH)
 			layer = INTERIOR_WALL_SOUTH_LAYER
 
+/obj/structure/interior_exit/vehicle/proc/get_door()
+	var/obj/vehicle/multitile/V = interior?.exterior
+	return V?.get_door(entrance_id)
+
 /obj/structure/interior_exit/vehicle/proc/get_exit_turf()
 	var/obj/vehicle/multitile/V = interior.exterior
 	var/list/entrance_coords = V.entrances[entrance_id]
 	return locate(V.x + entrance_coords[1], V.y + entrance_coords[2], V.z)
 
 /obj/structure/interior_exit/vehicle/attack_hand(mob/M)
+	// Vehicles with doors are left through the doorway
+	var/datum/vehicle_door/door = get_door()
+	if(door && ishuman(M))
+		door.handle_inside_click(M, src)
+		return
 
 	// Check if drag anything
 	var/atom/dragged_atom

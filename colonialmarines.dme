@@ -2796,6 +2796,7 @@
 #include "code\modules\vehicles\interior\interactable\weapons_loader.dm"
 #include "code\modules\vehicles\multitile\multitile.dm"
 #include "code\modules\vehicles\multitile\multitile_bump.dm"
+#include "code\modules\vehicles\multitile\multitile_doors.dm"
 #include "code\modules\vehicles\multitile\multitile_hardpoints.dm"
 #include "code\modules\vehicles\multitile\multitile_interaction.dm"
 #include "code\modules\vehicles\multitile\multitile_movement.dm"

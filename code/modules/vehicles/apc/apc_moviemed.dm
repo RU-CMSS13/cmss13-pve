@@ -13,6 +13,11 @@
 
 	passengers_slots = 8
 
+	door_types = list(/datum/vehicle_door/apc_movie/medical)
+
+/datum/vehicle_door/apc_movie/medical
+	closed_icon_state = "door_med_closed"
+
 /obj/vehicle/multitile/apc/movie/med/initialize_cameras(change_tag = FALSE)
 	if(!camera)
 		camera = new /obj/structure/machinery/camera/vehicle(src)

@@ -21,6 +21,8 @@
 		"right front" = list(-2, 0)
 	)
 
+	door_types = list(/datum/vehicle_door/apc_movie)
+
 	seats = list(
 		VEHICLE_DRIVER = null,
 		VEHICLE_GUNNER = null,
@@ -124,6 +126,18 @@
 				"8" = list(30, 24)
 			)
 	return ..()
+
+/datum/vehicle_door/apc_movie
+	name = "side door"
+	entrance_ids = list("right rear", "right front")
+	doorway_entrance = "right rear"
+	occupant_offsets = list(
+		"1" = list(1, 14),
+		"2" = list(0, -15),
+		"4" = list(13, 8),
+		"8" = list(-13, 5),
+	)
+	occupant_behind_dirs = WEST
 
 /*
 ** PRESETS SPAWNERS
