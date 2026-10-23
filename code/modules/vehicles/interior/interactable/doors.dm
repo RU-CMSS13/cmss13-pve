@@ -67,23 +67,36 @@
 			msg_admin_niche("[key_name(user)] attempted to prime \a [nade.name] in [get_area(src)] [ADMIN_JMP(src.loc)]")
 			return
 
+		var/datum/vehicle_door/door = get_door()
+		if(door && !door.can_throw_through(user))
+			return
+
 		user.visible_message(SPAN_WARNING("[user] takes position to throw [nade] through the door."),
 		SPAN_WARNING("You take position to throw [nade] through the door."))
 		if(!do_after(user, 1 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
+			return
+		if(door && !door.can_throw_through(user))
 			return
 
 		user.visible_message(SPAN_WARNING("[user] throws [nade] through the door!"),
 		SPAN_WARNING("You throw [nade] through the door."))
 
 		var/turf/exit_turf = get_exit_turf()
+		// The door swings open to let the grenade out
+		door?.set_open(TRUE)
 		user.drop_held_item()
 		interior.exit(nade, exit_turf)
 		if(!nade.active)
 			nade.activate(user)
 		return
 
-	else
-		attack_hand(user)
+	var/datum/vehicle_door/door = get_door()
+	if(door && istype(object, /obj/item/grab) && user.a_intent == INTENT_HELP)
+		var/obj/item/grab/G = object
+		door.try_push_out(user, G.grabbed_thing, src)
+		return
+
+	attack_hand(user)
 
 /obj/structure/interior_exit/attack_ghost(mob/dead/observer/user)
 	if(!interior)
@@ -110,12 +123,21 @@
 		if(SOUTH)
 			layer = INTERIOR_WALL_SOUTH_LAYER
 
+/obj/structure/interior_exit/vehicle/proc/get_door()
+	var/obj/vehicle/multitile/V = interior?.exterior
+	return V?.get_door(entrance_id)
+
 /obj/structure/interior_exit/vehicle/proc/get_exit_turf()
 	var/obj/vehicle/multitile/V = interior.exterior
 	var/list/entrance_coords = V.entrances[entrance_id]
 	return locate(V.x + entrance_coords[1], V.y + entrance_coords[2], V.z)
 
 /obj/structure/interior_exit/vehicle/attack_hand(mob/M)
+	// Vehicles with doors are left through the doorway
+	var/datum/vehicle_door/door = get_door()
+	if(door && ishuman(M))
+		door.handle_inside_click(M, src)
+		return
 
 	// Check if drag anything
 	var/atom/dragged_atom

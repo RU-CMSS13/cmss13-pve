@@ -111,6 +111,7 @@
 	rotate_entrances(deg)
 	rotate_bounds(deg)
 	setDir(turn(dir, deg), TRUE)
+	update_door_occupants()
 
 	last_move_dir = dir
 
@@ -275,6 +276,7 @@
 		return
 
 	var/fling_distance = ceil(abs(move_momentum)/move_max_momentum) * 2
+	eject_door_occupants(fling_distance + 1)
 	var/turf/target = interior.get_middle_turf()
 
 	for (var/x in 0 to fling_distance-1)

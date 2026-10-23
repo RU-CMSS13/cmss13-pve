@@ -102,6 +102,8 @@
 					return
 		else
 			to_chat(user, SPAN_INFO("Use [SPAN_HELPFUL("HELP")] intent to put a pulled object or creature into the vehicle without getting inside yourself."))
+			if(handle_door_click(user))
+				return
 			handle_player_entrance(user)
 			return
 
@@ -124,6 +126,10 @@
 			if(mob_x == entrance_coord[1] && mob_y == entrance_coord[2])
 				entrance_used = entrance
 				break
+		var/datum/vehicle_door/door = get_door(entrance_used)
+		if(door && !door.open)
+			to_chat(user, SPAN_WARNING("\The [src]'s [door.name] is closed."))
+			return
 		if(entrance_used) //if we are at a door, throw it in, else do nothing.
 			user.visible_message(SPAN_WARNING("[user] takes position to throw [nade] through the door of the [src]."),
 			SPAN_WARNING("You take position to throw [nade] through the door of the [src]."))
@@ -179,6 +185,9 @@
 		else
 			playsound(user, 'sound/items/detector.ogg', 60, FALSE, 7, 2)
 			to_chat(user, SPAN_WARNING("\The [MD] can't pick up any signatures, so the vehicle should be empty. In theory."))
+		return
+
+	if(handle_door_click(user))
 		return
 
 	if(user.a_intent != INTENT_HARM)
@@ -278,6 +287,14 @@
 
 //Special case for entering the vehicle without using the verb
 /obj/vehicle/multitile/attack_hand(mob/user)
+	var/datum/vehicle_door/occupied_door = get_occupied_door(user)
+	if(occupied_door)
+		occupied_door.try_return_inside()
+		return
+
+	if(handle_door_click(user))
+		return
+
 	var/mob_x = user.x - src.x
 	var/mob_y = user.y - src.y
 	for(var/entrance in entrances)
@@ -298,6 +315,11 @@
 	user.forceMove(middle)
 
 /obj/vehicle/multitile/attack_alien(mob/living/carbon/xenomorph/X)
+	// Slashing at the door hits whoever stands in it
+	var/mob/living/door_occupant = get_door_occupant_in_front(X)
+	if(door_occupant && X.a_intent != INTENT_HELP)
+		return door_occupant.attack_alien(X)
+
 	// If they're on help intent, attempt to enter the vehicle
 	if(X.a_intent == INTENT_HELP)
 		handle_player_entrance(X)
@@ -350,6 +372,9 @@
 	var/ammo_flags = P.ammo.flags_ammo_behavior | P.projectile_override_flags
 	var/penetration = P.ammo.penetration
 	var/firer = P.firer
+
+	if(door_occupant_intercept_projectile(P))
+		return
 
 	//IFF bullets magically stop themselves short of hitting friendly vehicles,
 	//because both sentries and smartgun users keep trying to shoot through them
@@ -555,6 +580,14 @@
 		if(mob_x == entrance_coord[1] && mob_y == entrance_coord[2])
 			entrance_used = entrance
 			break
+
+	var/datum/vehicle_door/door = get_door(entrance_used)
+	if(door && !door.open)
+		to_chat(user, SPAN_WARNING("\The [src]'s [door.name] is closed."))
+		return
+	if(door?.occupant)
+		to_chat(user, SPAN_WARNING("[door.occupant] is standing in \the [door.name]."))
+		return
 
 	to_chat(user, SPAN_NOTICE("You start trying to fit [dragged_atom] into \the [src]..."))
 	if(!do_after(user, 1 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_GENERIC))

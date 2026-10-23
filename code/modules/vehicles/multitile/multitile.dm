@@ -144,6 +144,10 @@
 	//Exits will be loaded by the interior manager and sorted by tag to match
 	var/list/entrances = list()
 
+	/// Types of /datum/vehicle_door to create, each covering some of the entrances
+	var/list/door_types
+	var/list/datum/vehicle_door/doors
+
 	var/list/misc_multipliers = list(
 		"move" = 1.0,
 		"accuracy" = 1.0,
@@ -178,6 +182,9 @@
 	rotate_entrances(angle_to_turn)
 	rotate_bounds(angle_to_turn)
 
+	for(var/door_type in door_types)
+		LAZYADD(doors, new door_type(src))
+
 	if(bound_width > world.icon_size || bound_height > world.icon_size)
 		light_holder = new(src)
 		light_holder.set_light_flags(LIGHT_ATTACHED)
@@ -211,6 +218,7 @@
 
 /obj/vehicle/multitile/Destroy()
 	QDEL_NULL(light_holder)
+	QDEL_NULL_LIST(doors)
 
 	if(!QDELETED(interior))
 		QDEL_NULL(interior)
@@ -240,6 +248,10 @@
 		var/image/damage_overlay = image(icon, icon_state = "damaged_frame", layer = layer+0.1)
 		damage_overlay.alpha = 255 * (1 - (health / initial(health)))
 		overlays += damage_overlay
+
+	for(var/datum/vehicle_door/door as anything in doors)
+		if(!door.open)
+			overlays += image(icon, icon_state = door.closed_icon_state, layer = layer+0.01)
 
 	var/amt_hardpoints = LAZYLEN(hardpoints)
 	if(amt_hardpoints)

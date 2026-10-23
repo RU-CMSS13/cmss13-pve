@@ -100,6 +100,8 @@
 		return
 
 	V.door_locked = !V.door_locked
+	if(V.door_locked)
+		V.close_doors()
 	to_chat(M, SPAN_NOTICE("You [V.door_locked ? "lock" : "unlock"] the vehicle doors."))
 
 //opens vehicle status window with HP and ammo of hardpoints
