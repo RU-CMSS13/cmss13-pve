@@ -22,7 +22,7 @@
 	/// Used to update icon only once every 10 ticks
 	var/icon_update_tick = 0
 	/// implants to not remove
-	var/known_implants = list(/obj/item/implant/chem, /obj/item/implant/death_alarm, /obj/item/implant/loyalty, /obj/item/implant/tracking, /obj/item/implant/neurostim)
+	var/known_implants = list(/obj/item/implant/chem, /obj/item/implant/death_alarm, /obj/item/implant/loyalty, /obj/item/implant/tracking, /obj/item/implant/neurostim, /obj/item/implant/corporate_explosive) // RU-PVE
 	///stun time upon exiting, if at all
 	var/exit_stun = 2
 

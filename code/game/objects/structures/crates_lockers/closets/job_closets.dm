@@ -82,6 +82,9 @@
 
 /obj/structure/closet/secure_closet/platoon_sergeant/Initialize()
 	. = ..()
+	spawn_contents()
+
+/obj/structure/closet/secure_closet/platoon_sergeant/proc/spawn_contents()
 	new /obj/item/clothing/head/helmet/marine/leader(src)
 	new /obj/item/device/binoculars/range/designator/sergeant(src)
 	new /obj/item/device/whistle(src)
@@ -123,6 +126,9 @@
 
 /obj/structure/closet/secure_closet/smartgunner/Initialize()
 	. = ..()
+	spawn_contents()
+
+/obj/structure/closet/secure_closet/smartgunner/proc/spawn_contents()
 	new /obj/item/weapon/gun/smartgun/empty(src)
 	new /obj/item/smartgun_battery(src)
 	new /obj/item/clothing/suit/marine/smartgunner(src)
@@ -198,3 +204,64 @@
 	new /obj/item/ammo_magazine/smartgun/holo_targeting(src)
 	new /obj/item/ammo_magazine/smartgun/holo_targeting(src)
 	new /obj/item/clothing/glasses/night/m56_goggles/rmc(src)
+
+/obj/structure/closet/secure_closet/smartgunner/pmc_small
+	name = "strike heavy weapons specialist locker"
+	desc = "A secure storage unit for a strike heavy weapons specialist."
+	req_one_access = list(ACCESS_WY_SENIOR_LEAD, ACCESS_PMC_GUNNER)
+
+/obj/structure/closet/secure_closet/smartgunner/pmc_small/spawn_contents()
+	new /obj/item/weapon/gun/smartgun/dirty/empty(src)
+	new /obj/item/smartgun_battery(src)
+	new /obj/item/smartgun_battery(src)
+	new /obj/item/clothing/suit/marine/veteran/pmc/smartgun/commando(src)
+	new /obj/item/clothing/head/helmet/marine/veteran/pmc/enclosed/commando/sg(src)
+	new /obj/item/storage/belt/gun/smartgunner/pmc(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/clothing/glasses/night/m56_goggles/no_nightvision(src)
+	new /obj/item/storage/large_holster/machete/smartgunner/full(src)
+	new /obj/item/clothing/accessory/storage/webbing/m56(src)
+	new /obj/item/clothing/accessory/storage/webbing/m56/grenade(src)
+
+/obj/structure/closet/secure_closet/platoon_sergeant_forecon/pmc_small
+	name = "strike team leader locker"
+	desc = "A secure storage unit for a strike team leader."
+	req_one_access = list(ACCESS_WY_SENIOR_LEAD, ACCESS_WY_PMC_TL)
+
+/obj/structure/closet/secure_closet/platoon_sergeant_forecon/pmc_small/Initialize()
+	. = ..()
+	new /obj/item/clothing/glasses/hud/sensor(src)
+	new /obj/item/storage/belt/gun/m39/pmc_small(src)
+
+/obj/structure/closet/secure_closet/squad_rto/pmc_small
+	name = "strike tactical data specialist locker"
+	desc = "A secure storage unit for a strike tactical data specialist."
+	req_one_access = list(ACCESS_WY_SENIOR_LEAD, ACCESS_WY_PMC_TL, ACCESS_WY_ENGINEERING)
+
+/obj/structure/closet/secure_closet/squad_rto/pmc_small/Initialize()
+	. = ..()
+	new /obj/item/clothing/head/helmet/marine/veteran/pmc/enclosed/engineer(src)
+	new /obj/item/clothing/suit/marine/veteran/pmc/engineer(src)
+	new /obj/item/clothing/gloves/marine/veteran/pmc/black(src)
+	new /obj/item/clothing/glasses/welding/superior(src)
+	new /obj/item/storage/pouch/tools/tactical/pmc_small(src)
+	new /obj/item/storage/backpack/marine/engineerpack/ert/pmc(src)
+	new /obj/item/storage/box/guncase/heavy/sentry/pmc_platoon(src)
+	new /obj/item/explosive/grenade/sebb(src)
+	new /obj/item/explosive/grenade/sebb(src)
+
+/obj/structure/closet/secure_closet/platoon_sergeant/pmc_small
+	name = "strike operations leader locker"
+	desc = "A secure storage unit for a strike operations leader."
+	req_one_access = list(ACCESS_WY_SENIOR_LEAD)
+
+/obj/structure/closet/secure_closet/platoon_sergeant/pmc_small/spawn_contents()
+	new /obj/item/clothing/head/helmet/marine/veteran/pmc/enclosed/commando/leader(src)
+	new /obj/item/clothing/suit/marine/veteran/pmc/commando/leader(src)
+	new /obj/item/clothing/gloves/marine/veteran/pmc/commando/leader(src)
+	new /obj/item/storage/backpack/pmc/backpack/commando/leader(src)
+	new /obj/item/storage/pouch/medical/socmed/commando_low_threat(src)
+	new /obj/item/device/binoculars/range/designator/sergeant(src)
+	new /obj/item/device/whistle(src)
