@@ -98,17 +98,25 @@
 	playsound(vehicle, open ? 'sound/machines/door_open.ogg' : 'sound/machines/door_close.ogg', 25, TRUE)
 	vehicle.update_icon()
 
-/// Opening or closing the door from outside
-/datum/vehicle_door/proc/try_toggle(mob/living/user)
+/// Opening or closing the door from outside, or from inside through the interior exit
+/datum/vehicle_door/proc/try_toggle(mob/living/user, atom/exit)
 	if(occupant)
 		to_chat(user, SPAN_WARNING("[occupant] is standing in \the [name]!"))
 		return
-	if(vehicle.is_locked_for(user))
+	// The lock only keeps the door from being opened
+	if(!open && (exit ? (vehicle.door_locked && vehicle.health > 0) : vehicle.is_locked_for(user)))
 		to_chat(user, SPAN_WARNING("\The [vehicle] is locked!"))
 		return
 	set_open(!open)
 	user.visible_message(SPAN_NOTICE("[user] [open ? "opens" : "closes"] \the [vehicle]'s [name]."),
 	SPAN_NOTICE("You [open ? "open" : "close"] \the [vehicle]'s [name]."))
+
+/// Whether something can be thrown out through the door from inside, the door opening for it
+/datum/vehicle_door/proc/can_throw_through(mob/living/user)
+	if(!open && vehicle.door_locked && vehicle.health > 0)
+		to_chat(user, SPAN_WARNING("\The [vehicle] is locked!"))
+		return FALSE
+	return TRUE
 
 /// Closes the door when the driver locks the vehicle, the occupant goes back inside
 /datum/vehicle_door/proc/force_close()
@@ -189,8 +197,12 @@
 		INVOKE_ASYNC(shoved, TYPE_PROC_REF(/atom/movable, throw_atom), target, shove_distance, SPEED_FAST, user)
 	return TRUE
 
-/// Clicking the interior exit: grab intent pulls the occupant back inside, otherwise the user steps into the doorway
+/// Clicking the interior exit: disarm intent opens or closes the door, grab intent pulls the occupant back inside,
+/// otherwise the user steps into the doorway
 /datum/vehicle_door/proc/handle_inside_click(mob/living/carbon/human/user, atom/exit)
+	if(user.a_intent == INTENT_DISARM)
+		try_toggle(user, exit)
+		return
 	if(occupant && user.a_intent == INTENT_GRAB)
 		try_pull_in(user, exit)
 		return

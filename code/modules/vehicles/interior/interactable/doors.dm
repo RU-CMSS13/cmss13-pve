@@ -67,15 +67,23 @@
 			msg_admin_niche("[key_name(user)] attempted to prime \a [nade.name] in [get_area(src)] [ADMIN_JMP(src.loc)]")
 			return
 
+		var/datum/vehicle_door/door = get_door()
+		if(door && !door.can_throw_through(user))
+			return
+
 		user.visible_message(SPAN_WARNING("[user] takes position to throw [nade] through the door."),
 		SPAN_WARNING("You take position to throw [nade] through the door."))
 		if(!do_after(user, 1 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
+			return
+		if(door && !door.can_throw_through(user))
 			return
 
 		user.visible_message(SPAN_WARNING("[user] throws [nade] through the door!"),
 		SPAN_WARNING("You throw [nade] through the door."))
 
 		var/turf/exit_turf = get_exit_turf()
+		// The door swings open to let the grenade out
+		door?.set_open(TRUE)
 		user.drop_held_item()
 		interior.exit(nade, exit_turf)
 		if(!nade.active)
