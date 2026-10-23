@@ -1692,6 +1692,14 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 
+/// Vehicle AI crew, carries ammunition for its vehicle in the M103 rig
+/datum/equipment_preset/upp/tank/ammo_rig
+	name = "UPP Vehicle Crewman (Ammo Rig)"
+
+/datum/equipment_preset/upp/tank/ammo_rig/load_gear(mob/living/carbon/human/new_human)
+	..()
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/tank/large, WEAR_WAIST)
+
 /datum/equipment_preset/upp/pilot
 	name = "UPP Pilot"
 	flags = EQUIPMENT_PRESET_EXTRA

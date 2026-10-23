@@ -185,6 +185,15 @@
 
 
 /////////////////////////////
+//      MOUNTED GUNS       //
+/////////////////////////////
+// Too sturdy to bash through, and likely our own
+/obj/structure/machinery/m56d_hmg/human_ai_obstacle(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain, direction, turf/target)
+	if(get_turf(src) == target)
+		return 0
+	return INFINITY
+
+/////////////////////////////
 //         SENTRY          //
 /////////////////////////////
 /obj/structure/machinery/defenses/human_ai_obstacle(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain, direction, turf/target)

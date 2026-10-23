@@ -189,6 +189,13 @@
 		return max(0, damage - floor((distance_travelled - effective_range_max) * damage_falloff))
 	return damage
 
+/// Returns what fired this as seen from where it flies: the vehicle for shots from its weapons, since the crew firing them sits in the interior
+/obj/projectile/proc/get_shooter()
+	var/obj/item/hardpoint/hardpoint = shot_from
+	if(istype(hardpoint) && hardpoint.owner)
+		return hardpoint.owner
+	return firer
+
 // Target, firer, shot from (i.e. the gun), projectile range, projectile speed, original target (who was aimed at, not where projectile is going towards)
 /obj/projectile/proc/fire_at(atom/target, atom/F, atom/S, range = 30, speed = 1, atom/original_override, suppress_light = FALSE)
 	SHOULD_NOT_SLEEP(TRUE)

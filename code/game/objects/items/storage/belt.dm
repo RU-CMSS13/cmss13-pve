@@ -2706,6 +2706,22 @@
 		/obj/item/ammo_magazine/hardpoint/turret_smoke,
 		/obj/item/ammo_magazine/hardpoint/boyars_dualcannon,
 		/obj/item/ammo_magazine/hardpoint/flare_launcher,
+		/obj/item/ammo_magazine/hardpoint/p17702,
+		/obj/item/ammo_magazine/hardpoint/railgun,
+		/obj/item/ammo_magazine/hardpoint/t60p3m,
+		/obj/item/ammo_magazine/hardpoint/hj35launcher,
+	)
+
+/// Issued to vehicle AI crew, so the vehicle has a spare magazine for every weapon
+/obj/item/storage/belt/tank/large
+	name = "\improper M103A1 pattern vehicle ammo rig"
+	desc = "A rarer mark of the M103 with a third pouch, made for crewmen who have to keep a vehicle supplied on their own."
+	storage_slots = 3
+	max_storage_space = 3
+	// Whatever vehicle the crew gets, its ammunition has to fit
+	max_w_class = SIZE_MASSIVE
+	can_hold = list(
+		/obj/item/ammo_magazine/hardpoint,
 	)
 
 /obj/item/storage/belt/marine/sharp

@@ -25,6 +25,8 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 	var/disposable = FALSE
 	/// The selection weight of the weapon type. If an AI has multiple weapons, it'll use weighting to determine its primary. In short, higher weight = more powerful
 	var/primary_weight = 1
+	/// How far from where its shots land the weapon hurts people, the AI holds fire while allies are that close to the target
+	var/splash_radius = 0
 
 /// List of things we do before beginning to spray bullets based off weapon type
 /datum/firearm_appraisal/proc/before_fire(obj/item/weapon/gun/firearm, mob/living/carbon/user, datum/human_ai_brain/AI)
@@ -212,6 +214,7 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 		/obj/item/weapon/gun/flamer,
 	)
 	primary_weight = 7
+	splash_radius = 1
 
 /datum/firearm_appraisal/rpg
 	minimum_range = 2
@@ -221,6 +224,7 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 	)
 	disposable = TRUE
 	primary_weight = 15
+	splash_radius = 2
 
 /datum/firearm_appraisal/rpg/multi_use
 	gun_types = list(
