@@ -289,5 +289,6 @@
 			set_target(attacker)
 		else if(!current_target)
 			target_turf = attacker_turf
+			target_turf_unseen = TRUE
 
 	enter_combat()

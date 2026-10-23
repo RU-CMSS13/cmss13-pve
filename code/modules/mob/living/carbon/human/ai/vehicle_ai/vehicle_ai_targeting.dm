@@ -17,6 +17,8 @@
 	var/atom/movable/current_target
 	/// Last turf our target was seen at
 	var/turf/target_turf
+	/// TRUE if target_turf is where we were attacked from by someone we couldn't see
+	var/target_turf_unseen = FALSE
 	/// What the AI was ordered to fire at, an atom or a turf, until ordered_fire_until
 	var/atom/ordered_fire_target
 	/// world.time when the order to fire at ordered_fire_target runs out
@@ -151,8 +153,7 @@
 	if(target.stat == DEAD)
 		return FALSE
 
-	var/datum/human_ai_faction/faction_data = get_faction_data()
-	if(faction_data && !faction_data.get_shoot_to_kill() && (target.stat == UNCONSCIOUS || (locate(/datum/effects/crit) in target.effects_list)))
+	if(!shoots_to_kill() && (target.stat == UNCONSCIOUS || (locate(/datum/effects/crit) in target.effects_list)))
 		return FALSE
 
 	if(faction_check(target))
@@ -173,6 +174,11 @@
 
 	return TRUE
 
+/// If FALSE, the AI doesn't finish off downed enemies or drive after the ones it sees
+/datum/vehicle_ai_brain/proc/shoots_to_kill()
+	var/datum/human_ai_faction/faction_data = get_faction_data()
+	return faction_data?.get_shoot_to_kill()
+
 /datum/vehicle_ai_brain/proc/set_target(atom/movable/new_target)
 	if(!new_target)
 		return
@@ -182,6 +188,7 @@
 	RegisterSignal(new_target, COMSIG_PARENT_QDELETING, PROC_REF(on_target_delete))
 	current_target = new_target
 	target_turf = get_turf(current_target)
+	target_turf_unseen = FALSE
 
 /datum/vehicle_ai_brain/proc/lose_target()
 	if(current_target)

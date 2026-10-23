@@ -232,6 +232,10 @@
 	if(!COOLDOWN_FINISHED(brain, approach_retry))
 		return 0
 
+	// Without shoot to kill only fire from out of sight is driven up to, enemies in sight aren't chased
+	if(!brain.shoots_to_kill() && (brain.current_target || !brain.target_turf_unseen))
+		return 0
+
 	if(brain.current_target && (get_dist(brain.vehicle, brain.target_turf) <= brain.max_engage_distance) && brain.has_line_of_sight(brain.target_turf))
 		return 0
 
