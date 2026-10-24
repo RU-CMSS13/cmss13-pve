@@ -1190,7 +1190,7 @@ const OrdersTab = (props) => {
                   Rush there, ignoring enemies on the way
                 </LabeledList.Item>
                 <LabeledList.Item label="Ctrl+LMB">
-                  Fire at the clicked thing or spot for 20 seconds, whatever
+                  Fire at the clicked thing or spot for 10 seconds, whatever
                   else they see
                 </LabeledList.Item>
                 <LabeledList.Item label="Vehicles">

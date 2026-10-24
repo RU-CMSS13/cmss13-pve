@@ -25,6 +25,10 @@
 	var/friendly_wait_time = 4 SECONDS
 	/// world.time when friendlies started blocking the way, 0 if they aren't
 	var/friendly_blocked_since = 0
+	/// Assoc list of turf : world.time until which the AI drives over the friendlies lying there that can't get out of its way, if it can't go around them
+	var/list/turf/run_over_turfs = list()
+	/// Path cost of a turf in run_over_turfs, so the path only goes over the friendly when going around is much longer
+	var/run_over_penalty = 10
 	/// How long the AI waits for a friendly vehicle in its way to move before driving around it
 	var/vehicle_wait_time = 8 SECONDS
 	/// world.time when another vehicle started blocking the way, 0 if none is
@@ -64,7 +68,7 @@
 	if(blocked_turfs[checked_turf] > world.time)
 		return -1
 
-	. = 0
+	. = (run_over_turfs[checked_turf] > world.time) ? run_over_penalty : 0
 	for(var/atom/movable/thing as anything in checked_turf)
 		if(thing == vehicle)
 			continue
@@ -178,7 +182,7 @@
 				crew_say(move_lines, VEHICLE_DRIVER)
 		else if(world.time > friendly_blocked_since + friendly_wait_time)
 			friendly_blocked_since = 0
-			avoid_turfs_ahead(direction)
+			avoid_friendlies_ahead(direction)
 			clear_path()
 		return FALSE
 	friendly_blocked_since = 0
@@ -220,13 +224,48 @@
 		return list()
 	return next_footprint - get_footprint(center)
 
-/// TRUE if a friendly that the vehicle would run over is standing in the way
+/// TRUE if a friendly that the vehicle would run over is standing in the way. Ones it already waited for that can't get up are driven over
 /datum/vehicle_ai_brain/proc/friendly_in_way(direction)
 	for(var/turf/ahead_turf as anything in get_turfs_ahead(direction))
+		var/run_over = run_over_turfs[ahead_turf] > world.time
 		for(var/mob/living/carbon/possible_friendly in ahead_turf)
-			if(possible_friendly.stat != DEAD && faction_check(possible_friendly))
-				return TRUE
+			if(possible_friendly.stat == DEAD || !faction_check(possible_friendly))
+				continue
+			if(run_over && !can_step_aside(possible_friendly))
+				continue
+			return TRUE
 	return FALSE
+
+/// TRUE if the friendly is able to get out of the vehicle's way by itself
+/datum/vehicle_ai_brain/proc/can_step_aside(mob/living/carbon/friendly)
+	return !friendly.is_mob_incapacitated()
+
+/**
+ * Marks the turfs of the friendlies that didn't make way, so the next path goes around them.
+ * Ones that can't get up, like the wounded, are only costed, so the vehicle drives over them when there is no other way.
+ */
+/datum/vehicle_ai_brain/proc/avoid_friendlies_ahead(direction)
+	var/marked = FALSE
+	for(var/turf/ahead_turf as anything in get_turfs_ahead(direction))
+		var/has_helpless = FALSE
+		var/has_able = FALSE
+		for(var/mob/living/carbon/possible_friendly in ahead_turf)
+			if(possible_friendly.stat == DEAD || !faction_check(possible_friendly))
+				continue
+			if(can_step_aside(possible_friendly))
+				has_able = TRUE
+			else
+				has_helpless = TRUE
+
+		if(has_able)
+			blocked_turfs[ahead_turf] = world.time + blocked_turf_time
+			marked = TRUE
+		else if(has_helpless)
+			run_over_turfs[ahead_turf] = world.time + blocked_turf_time
+			marked = TRUE
+
+	if(!marked)
+		avoid_turfs_ahead(direction)
 
 /// How long the vehicle takes to drive a tile at full speed
 /datum/vehicle_ai_brain/proc/get_full_speed_delay()
@@ -431,6 +470,9 @@
 	for(var/turf/blocked_turf as anything in blocked_turfs.Copy())
 		if(blocked_turfs[blocked_turf] <= world.time)
 			blocked_turfs -= blocked_turf
+	for(var/turf/run_over_turf as anything in run_over_turfs.Copy())
+		if(run_over_turfs[run_over_turf] <= world.time)
+			run_over_turfs -= run_over_turf
 
 	pathfinder = new(src, get_turf(vehicle), goal, radius, !vehicle.ai_crushes_obstacles)
 

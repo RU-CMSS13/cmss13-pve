@@ -101,6 +101,9 @@
 	if(found_injured_ally)
 		UnregisterSignal(found_injured_ally, COMSIG_PARENT_QDELETING)
 		UnregisterSignal(found_injured_ally, COMSIG_MOB_DEATH)
+		var/patient_ref = REF(found_injured_ally)
+		if(patient_medics[patient_ref] == src)
+			patient_medics -= patient_ref
 	found_injured_ally = null
 
 /// Returns the most hurt ally in sight that we can treat

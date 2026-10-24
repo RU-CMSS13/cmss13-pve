@@ -5,6 +5,8 @@
 	var/patient_rest_delay = 15 SECONDS
 	/// Assoc list of ally ref = world.time from which a medic may treat them again
 	var/list/patient_rest_times = list()
+	/// Assoc list of ally ref = brain of the medic treating them, so that several medics don't overdose one patient
+	var/static/list/patient_medics = list()
 	COOLDOWN_DECLARE(patient_search_cooldown)
 
 /// Returns the health analyzer that makes us a medic, if we carry one
@@ -23,6 +25,10 @@
 		return FALSE
 
 	if(patient_rest_times[REF(patient)] > world.time)
+		return FALSE
+
+	var/datum/human_ai_brain/other_medic = patient_medics[REF(patient)]
+	if(other_medic && (other_medic != src) && !QDELETED(other_medic) && (other_medic.found_injured_ally == patient))
 		return FALSE
 
 	if(!faction_check(patient) || !healing_start_check(patient))
@@ -44,6 +50,8 @@
 	COOLDOWN_START(src, patient_search_cooldown, patient_search_delay)
 	var/mob/living/carbon/human/patient = get_injured_ally()
 	set_injured_ally(patient)
+	if(patient)
+		patient_medics[REF(patient)] = src
 	return patient
 
 /// Leaves the patient alone for a while

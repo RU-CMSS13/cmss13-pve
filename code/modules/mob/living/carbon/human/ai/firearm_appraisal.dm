@@ -65,6 +65,11 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 				user.drop_held_item(mag)
 	else
 		firearm?.attackby(mag, user)
+		// Loading that takes a while, like a rocket, is interrupted by moving, so the mag goes back for the next try instead of being dropped
+		if(!QDELETED(mag) && user.is_holding(mag))
+			var/storage_slot = AI.storage_has_room(mag)
+			if(!storage_slot || !AI.store_item(mag, storage_slot, HUMAN_AI_AMMUNITION))
+				user.drop_held_item(mag)
 	sleep(AI.short_action_delay * AI.action_delay_mult)
 	user.swap_hand()
 	AI.wield_primary_sleep()

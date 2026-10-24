@@ -188,7 +188,7 @@
 )
 
 /// How long units ordered to fire at something keep at it
-#define HUMAN_AI_SPAWNER_FIRE_ORDER_TIME (20 SECONDS)
+#define HUMAN_AI_SPAWNER_FIRE_ORDER_TIME (10 SECONDS)
 
 /// Types of click intercepts used by /datum/human_ai_spawner_menu variable current_click_intercept_action
 #define SPAWN_CLICK_INTERCEPT_ACTION "spawn_click_intercept_action"
