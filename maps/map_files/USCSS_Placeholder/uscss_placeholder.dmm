@@ -471,7 +471,7 @@
 /area/space)
 "dY" = (
 /obj/structure/largecrate/random/barrel/true_random,
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 4
 	},
 /turf/open/floor/corsat/white/east,
@@ -640,22 +640,14 @@
 /turf/open/floor/corsat/arrow_south,
 /area/golden_arrow/prep_hallway)
 "ft" = (
-/obj/structure/machinery/light/blue/alt{
-	dir = 2;
-	pixel_y = 1
+/obj/structure/machinery/light/double/chapaev{
+	dir = 2
 	},
 /turf/open/floor/corsat/squares,
 /area/golden_arrow/squad_one)
 "fA" = (
 /turf/open/floor/corsat/arrow_west,
 /area/golden_arrow/hangar)
-"fC" = (
-/obj/structure/machinery/door/poddoor/almayer/grey/locked{
-	name = "\improper Cargo Elevator";
-	id = "cargolock"
-	},
-/turf/open/space/basic,
-/area/space)
 "fF" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -676,7 +668,7 @@
 /area/golden_arrow/engineering)
 "fM" = (
 /obj/structure/closet/firecloset,
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 2
 	},
 /turf/open/floor/corsat/plate,
@@ -723,10 +715,10 @@
 /obj/structure/sign/poster/hunk{
 	pixel_x = -27
 	},
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/surface/table/reinforced/black,
+/obj/structure/machinery/light/double/chapaev{
 	dir = 8
 	},
-/obj/structure/surface/table/reinforced/black,
 /turf/open/floor/corsat/spiralplate,
 /area/golden_arrow/dorms)
 "gd" = (
@@ -737,7 +729,7 @@
 /area/golden_arrow/cryo_cells)
 "gh" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 8
 	},
 /turf/open/floor/corsat/squares,
@@ -753,7 +745,7 @@
 /obj/effect/decal/hybrisa/warning/redandwhite_E{
 	pixel_x = 1
 	},
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 8
 	},
 /turf/open/floor/strata/multi_tiles/west,
@@ -790,7 +782,7 @@
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/golden_arrow/prep_hallway)
 "gy" = (
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 4
 	},
 /turf/open/floor/corsat/plate,
@@ -943,9 +935,6 @@
 /area/golden_arrow/hangar)
 "hA" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/light/blue/alt{
-	dir = 2
-	},
 /obj/item/storage/box/guncase/heavy/motiondetectors/pmc{
 	pixel_x = 0;
 	pixel_y = 14
@@ -953,6 +942,9 @@
 /obj/item/storage/box/guncase/heavy/es7{
 	pixel_x = 0;
 	pixel_y = 7
+	},
+/obj/structure/machinery/light/double/chapaev{
+	dir = 2
 	},
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/platoonarmory)
@@ -988,10 +980,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/golden_arrow/hangar)
-"hQ" = (
-/obj/structure/window/framed/almayer,
-/turf/open/floor/plating/prison,
-/area/golden_arrow/squad_one)
 "hS" = (
 /obj/effect/decal/hybrisa/warning/redandwhite_N{
 	pixel_y = 1
@@ -1090,7 +1078,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 4
 	},
 /turf/open/floor/corsat/plate,
@@ -1182,10 +1170,10 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "jF" = (
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/closet/secure_closet/platoon_sergeant_forecon/pmc_small,
+/obj/structure/machinery/light/double/chapaev{
 	dir = 1
 	},
-/obj/structure/closet/secure_closet/platoon_sergeant_forecon/pmc_small,
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/platoonarmory)
 "jI" = (
@@ -1313,7 +1301,7 @@
 	pixel_y = -1;
 	pixel_x = 9
 	},
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 2
 	},
 /turf/open/floor/corsat/plate,
@@ -1562,7 +1550,7 @@
 	pixel_y = 8
 	},
 /obj/item/tool/mop,
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 8
 	},
 /turf/open/floor/corsat/plate,
@@ -1639,7 +1627,7 @@
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /obj/effect/decal/hybrisa/warning/redandwhite_SEcorner,
 /obj/effect/decal/hybrisa/warning/redandwhite_SWcorner,
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 2
 	},
 /turf/open/floor/corsat/plate,
@@ -2014,7 +2002,7 @@
 	pixel_x = 7;
 	pixel_y = 1
 	},
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 1
 	},
 /turf/open/floor/corsat/plate,
@@ -2077,12 +2065,12 @@
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/platoon_commander_rooms)
 "qM" = (
-/obj/structure/machinery/light/blue/alt{
-	dir = 8
-	},
 /obj/structure/machinery/disposal{
 	pixel_x = -1;
 	pixel_y = 2
+	},
+/obj/structure/machinery/light/double/chapaev{
+	dir = 8
 	},
 /turf/open/floor/corsat/cargo,
 /area/golden_arrow/prep_hallway)
@@ -2102,7 +2090,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
 	},
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 8
 	},
 /turf/open/floor/corsat/plate,
@@ -2418,7 +2406,7 @@
 	},
 /obj/item/clothing/accessory/stethoscope,
 /obj/structure/surface/table/reinforced/black,
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 4
 	},
 /turf/open/floor/corsat/spiralplate,
@@ -2582,7 +2570,7 @@
 "uw" = (
 /obj/item/storage/belt/utility/full,
 /obj/structure/surface/table/reinforced/black,
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 2
 	},
 /turf/open/floor/corsat/plate,
@@ -2955,7 +2943,7 @@
 	pixel_y = 13;
 	density = 0
 	},
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 8
 	},
 /turf/open/floor/corsat/plate,
@@ -2974,7 +2962,7 @@
 /area/golden_arrow/medical)
 "xw" = (
 /obj/structure/blocker/invisible_wall,
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 8
 	},
 /turf/open/floor/corsat/plate,
@@ -3025,7 +3013,7 @@
 /turf/open/floor/corsat/white,
 /area/golden_arrow/prep_hallway)
 "yi" = (
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 1
 	},
 /turf/open/floor/corsat/white/north,
@@ -3141,7 +3129,7 @@
 	pixel_y = 22;
 	pixel_x = 9
 	},
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 1
 	},
 /turf/open/floor/corsat/plate,
@@ -3157,11 +3145,11 @@
 /area/golden_arrow/platoon_commander_rooms)
 "zd" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/blue/alt{
-	dir = 4
-	},
 /obj/effect/decal/hybrisa/warning/redandwhite_SEcorner{
 	pixel_x = 1
+	},
+/obj/structure/machinery/light/double/chapaev{
+	dir = 4
 	},
 /turf/open/floor/corsat/arrow_north,
 /area/golden_arrow/prep_hallway)
@@ -3186,9 +3174,8 @@
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 4
 	},
-/obj/structure/machinery/light/blue/alt{
-	dir = 4;
-	pixel_y = 1
+/obj/structure/machinery/light/double/chapaev{
+	dir = 4
 	},
 /turf/open/floor/corsat/squares,
 /area/golden_arrow/briefing)
@@ -3225,7 +3212,7 @@
 /area/golden_arrow/engineering)
 "zL" = (
 /obj/structure/closet/secure_closet/smartgunner/pmc_small,
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 1
 	},
 /turf/open/floor/corsat/marked,
@@ -3237,7 +3224,7 @@
 	pixel_y = -1;
 	pixel_x = 9
 	},
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 2
 	},
 /turf/open/floor/almayer/silverfull2,
@@ -3278,7 +3265,7 @@
 /turf/open/floor/prison/white2,
 /area/golden_arrow/squad_one)
 "Aq" = (
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 4
 	},
 /turf/open/floor/corsat/white/east,
@@ -3295,7 +3282,7 @@
 	height = -1;
 	id = "rover2"
 	},
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 2
 	},
 /turf/open/floor/plating/prison,
@@ -3314,7 +3301,7 @@
 /obj/structure/largecrate{
 	pixel_y = 16
 	},
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 1
 	},
 /turf/open/floor/corsat/cargo,
@@ -3391,9 +3378,7 @@
 /turf/open/floor/prison/white2/north,
 /area/golden_arrow/squad_one)
 "BA" = (
-/obj/structure/machinery/light/blue/alt{
-	dir = 2
-	},
+/obj/structure/machinery/light/dropship/green,
 /turf/open/floor/almayer_hull/outerhull_dir/north,
 /area/golden_arrow/hangar)
 "BB" = (
@@ -3416,7 +3401,7 @@
 /area/golden_arrow/synthcloset)
 "BS" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 2
 	},
 /turf/open/floor/corsat/white,
@@ -3430,9 +3415,8 @@
 /obj/structure/bed/chair/comfy/teal{
 	name = "Theta squad chair"
 	},
-/obj/structure/machinery/light/blue/alt{
-	dir = 1;
-	pixel_y = 1
+/obj/structure/machinery/light/double/chapaev{
+	dir = 1
 	},
 /turf/open/floor/corsat/squares,
 /area/golden_arrow/briefing)
@@ -3465,7 +3449,7 @@
 /area/golden_arrow/hangar)
 "Cs" = (
 /obj/structure/platform,
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 4
 	},
 /turf/open/floor/corsat/arrow_north,
@@ -3783,7 +3767,7 @@
 	layer = 4.1;
 	pixel_y = 47
 	},
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 4
 	},
 /turf/open/floor/strata/fake_wood,
@@ -3882,7 +3866,7 @@
 /area/golden_arrow/prep_hallway)
 "GE" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 8
 	},
 /turf/open/floor/corsat/plate,
@@ -3930,7 +3914,7 @@
 /area/golden_arrow/hangar)
 "Hj" = (
 /obj/effect/decal/hybrisa/warning/redandwhite_W,
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 4
 	},
 /turf/open/floor/strata/multi_tiles/west,
@@ -4030,9 +4014,8 @@
 /turf/open/floor/corsat/arrow_east,
 /area/golden_arrow/lower_cargo)
 "Ip" = (
-/obj/structure/machinery/light/blue/alt{
-	dir = 4;
-	pixel_y = 1
+/obj/structure/machinery/light/double/chapaev{
+	dir = 4
 	},
 /turf/open/floor/corsat/officetiles,
 /area/golden_arrow/briefing)
@@ -4088,7 +4071,7 @@
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/hangar)
 "IN" = (
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 8
 	},
 /turf/open/floor/corsat/plate,
@@ -4260,7 +4243,7 @@
 /obj/structure/largecrate/supply/ammo/m41amk1{
 	pixel_y = 15
 	},
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 2
 	},
 /turf/open/floor/corsat/cargo,
@@ -4431,9 +4414,8 @@
 /area/golden_arrow/supply)
 "LD" = (
 /obj/structure/platform/metal/hybrisa/metalplatform6,
-/obj/structure/machinery/light/blue/alt{
-	dir = 2;
-	pixel_y = 1
+/obj/structure/machinery/light/double/chapaev{
+	dir = 2
 	},
 /turf/open/floor/prison/west,
 /area/golden_arrow/squad_one)
@@ -4587,9 +4569,8 @@
 /area/golden_arrow/hangar)
 "NE" = (
 /obj/effect/decal/hybrisa/warning/redandwhite_W,
-/obj/structure/machinery/light/blue/alt{
-	dir = 2;
-	pixel_y = 1
+/obj/structure/machinery/light/double/chapaev{
+	dir = 2
 	},
 /turf/open/floor/corsat/spiralplate,
 /area/golden_arrow/briefing)
@@ -4603,11 +4584,11 @@
 /turf/open/space/basic,
 /area/space)
 "NO" = (
-/obj/structure/machinery/light/blue/alt{
-	dir = 2
-	},
 /obj/structure/closet/crate/explosives,
 /obj/item/ammo_box/magazine/nade_box/m15/pmc,
+/obj/structure/machinery/light/double/chapaev{
+	dir = 2
+	},
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/platoonarmory)
 "NT" = (
@@ -4702,7 +4683,7 @@
 /turf/open/floor/corsat/bluegrey/west,
 /area/golden_arrow/cryo_cells)
 "OO" = (
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 4
 	},
 /turf/open/floor/strata/fake_wood,
@@ -4822,7 +4803,7 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/engineering)
 "Qj" = (
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 1
 	},
 /turf/open/floor/corsat/white/north,
@@ -4858,7 +4839,7 @@
 /turf/open/floor/prison/floor_plate_alt/west,
 /area/golden_arrow/squad_one)
 "QI" = (
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 8
 	},
 /turf/open/floor/corsat/plate,
@@ -4927,10 +4908,10 @@
 	pixel_x = 5;
 	pixel_y = -9
 	},
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/surface/table/reinforced/black,
+/obj/structure/machinery/light/double/chapaev{
 	dir = 8
 	},
-/obj/structure/surface/table/reinforced/black,
 /turf/open/floor/corsat/spiralplate,
 /area/golden_arrow/dorms)
 "Rc" = (
@@ -5016,7 +4997,7 @@
 	dir = 4
 	},
 /obj/item/paper/sop,
-/obj/structure/machinery/light/small/blue{
+/obj/structure/machinery/light/small/chapaev{
 	dir = 8
 	},
 /turf/open/floor/plating/plating_catwalk/aicore/white,
@@ -5158,7 +5139,7 @@
 /obj/structure/toilet{
 	dir = 4
 	},
-/obj/structure/machinery/light/small/blue{
+/obj/structure/machinery/light/small/chapaev{
 	dir = 8
 	},
 /turf/open/floor/plating/plating_catwalk/aicore/white,
@@ -5299,7 +5280,7 @@
 /obj/structure/cargo_container/arious/mid{
 	opacity = 0
 	},
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 2
 	},
 /turf/open/floor/corsat/plate,
@@ -5333,7 +5314,7 @@
 /turf/open/floor/almayer/silverfull2,
 /area/golden_arrow/cryo_cells)
 "Vs" = (
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 1
 	},
 /turf/open/floor/corsat/plate,
@@ -5384,9 +5365,8 @@
 /area/golden_arrow/engineering)
 "VO" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/light/blue/alt{
-	dir = 4;
-	pixel_y = 1
+/obj/structure/machinery/light/double/chapaev{
+	dir = 4
 	},
 /turf/open/floor/corsat/squares,
 /area/golden_arrow/squad_one)
@@ -5502,11 +5482,6 @@
 	pixel_y = 14
 	},
 /obj/structure/surface/table/almayer,
-/obj/structure/machinery/light/small/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.5
-	},
 /obj/structure/prop/invuln/overhead_pipe{
 	icon = 'icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
@@ -5518,6 +5493,9 @@
 	icon_state = "wallpipe_3";
 	pixel_y = 22;
 	pixel_x = 9
+	},
+/obj/structure/machinery/light/small/chapaev{
+	dir = 1
 	},
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/cryo_cells)
@@ -5651,9 +5629,8 @@
 /area/golden_arrow/cryo_cells)
 "Yb" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/blue/alt{
-	dir = 2;
-	pixel_y = 1
+/obj/structure/machinery/light/double/chapaev{
+	dir = 2
 	},
 /turf/open/floor/corsat/squares,
 /area/golden_arrow/squad_one)
@@ -5772,7 +5749,7 @@
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/hangar)
 "ZG" = (
-/obj/structure/machinery/light/blue/alt{
+/obj/structure/machinery/light/double/chapaev{
 	dir = 4
 	},
 /turf/open/floor/corsat/plate,
@@ -5782,9 +5759,8 @@
 /turf/open/floor/plating/prison,
 /area/golden_arrow/supply)
 "ZQ" = (
-/obj/structure/machinery/light/blue/alt{
-	dir = 8;
-	pixel_y = 1
+/obj/structure/machinery/light/double/chapaev{
+	dir = 8
 	},
 /turf/open/floor/corsat/squares,
 /area/golden_arrow/briefing)
@@ -8451,7 +8427,7 @@ uZ
 uZ
 uZ
 uZ
-fC
+uZ
 uZ
 uZ
 uZ
@@ -11186,7 +11162,7 @@ uZ
 wI
 uI
 ld
-hQ
+Ek
 vb
 Eq
 cZ
