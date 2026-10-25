@@ -188,6 +188,16 @@
 	. = ..()
 	if(. != CHECKS_PASSED)
 		return
+
+	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_HARDCORE_LIGHTS))
+		if(!light_holder.connected_suit)
+			light_holder.connected_suit = src
+		if(power_current <= 0)
+			balloon_alert(user, "Not enough power!", COLOR_WHITE)
+			return
+		if(!light_holder.process())
+			START_PROCESSING(SSobj,light_holder)
+
 	set_light_range(initial(light_range))
 	set_light_power(floor(initial(light_power) * 0.5))
 	set_light_on(toggle_on)
@@ -849,6 +859,16 @@
 	. = ..()
 	if(. != CHECKS_PASSED)
 		return
+
+	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_HARDCORE_LIGHTS))
+		if(!light_holder.connected_suit)
+			light_holder.connected_suit = src
+		if(power_current <= 0)
+			balloon_alert(user, "Not enough power!", COLOR_WHITE)
+			return
+		if(!light_holder.process())
+			START_PROCESSING(SSobj,light_holder)
+
 	set_light_range(initial(light_range))
 	set_light_power(FLOOR(initial(light_power) * 0.5, 1))
 	set_light_on(toggle_on)

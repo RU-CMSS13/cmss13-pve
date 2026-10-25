@@ -56,6 +56,20 @@
 /obj/item/device/flashlight/attack_self(mob/user)
 	..()
 
+	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_HARDCORE_LIGHTS))
+		if(needs_battery)
+			if(!battery)
+				balloon_alert(user, "No battery inside!", COLOR_WHITE)
+				return FALSE
+			if(battery.charge <= 0)
+				balloon_alert(user, "Not enough power!", COLOR_WHITE)
+				return FALSE
+			else
+				if(!process())
+					START_PROCESSING(SSobj,src)
+				if(process())
+					STOP_PROCESSING(SSobj,src)
+
 	if(!toggleable)
 		to_chat(user, SPAN_WARNING("You cannot toggle \the [src.name] on or off."))
 		return FALSE
@@ -85,6 +99,34 @@
 	return 0
 
 /obj/item/device/flashlight/attackby(obj/item/item as obj, mob/user as mob)
+	if(istype(item,/obj/item/cell) && MODE_HAS_TOGGLEABLE_FLAG(MODE_HARDCORE_LIGHTS))
+		var/obj/item/cell/C = item
+		if(put_in_battery_type && battery_type == C.type)
+			if(battery)
+				battery.forceMove(get_turf(loc))
+				battery = null
+				if(process())
+					playsound(src.loc, breaking_sound, 25, 1)
+					turn_off_light()
+					STOP_PROCESSING(SSobj,src)
+			user.drop_held_item(C)
+			C.forceMove(src)
+			battery = C
+			return
+		else
+			if(C.type == /obj/item/cell)
+				if(battery)
+					battery.forceMove(get_turf(loc))
+					battery = null
+					if(process())
+						playsound(src.loc, breaking_sound, 25, 1)
+						turn_off_light()
+						STOP_PROCESSING(SSobj,src)
+				user.drop_held_item(C)
+				C.forceMove(src)
+				battery = C
+				return
+
 	if(HAS_TRAIT(item, TRAIT_TOOL_SCREWDRIVER))
 		if(!raillight_compatible) //No fancy messages, just no
 			return

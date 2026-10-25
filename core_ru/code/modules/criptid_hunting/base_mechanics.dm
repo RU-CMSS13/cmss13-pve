@@ -89,6 +89,10 @@
 	var/mission_name = "The Hunt" // also for GM purposes
 	var/automatic_messaging_delay = 300
 
+	var/fear_the_night_gm = FALSE
+	var/until_dawn = 6000
+	var/list/lightturfs = list()
+
 /obj/structure/criptic/mission_controller/proc/show_mission_name()
 	show_blurb(GLOB.player_list, 30, "[mission_name]", null, "center", "center", color, null, null, 1)
 
@@ -96,13 +100,27 @@
 	if(!busy_now)
 		busy_now = TRUE
 		addtimer(CALLBACK(src, PROC_REF(unbusy)), 30)
-		show_blurb(GLOB.player_list, 45, "Clues Found: | [current_clues_found]/[needed_amount] |", null, "EAST-1,NORTH-2", "right", COLOR_GRAY, null, null, 1)
-		spawn(15)
-			show_blurb(GLOB.player_list, 35, "Hunt Timer: | <span class='langchat' style='color:#ff0000'>[duration2text()]</span> |", null, "EAST-1,NORTH-3", "right", COLOR_GRAY, null, null, 1)
+		if(!fear_the_night_gm)
+			show_blurb(GLOB.player_list, 45, "Clues Found: | [current_clues_found]/[needed_amount] |", null, "EAST-1,NORTH-2", "right", COLOR_GRAY, null, null, 1)
+			spawn(15)
+				show_blurb(GLOB.player_list, 35, "Hunt Timer: | <span class='langchat' style='color:#ff0000'>[duration2text()]</span> |", null, "EAST-1,NORTH-3", "right", COLOR_GRAY, null, null, 1)
 
-		if(current_clues_found >= needed_amount)
-			spawn(30)
-				show_blurb(GLOB.player_list, 35, "WIPE OUT THE STAIN", null, "EAST-1,NORTH-5", "right", COLOR_RED, null, null, 1)
+			if(current_clues_found >= needed_amount)
+				spawn(30)
+					show_blurb(GLOB.player_list, 35, "WIPE OUT THE STAIN", null, "EAST-1,NORTH-5", "right", COLOR_RED, null, null, 1)
+		else
+			if(until_dawn > 0)
+				show_blurb(GLOB.player_list, 35, "SUN WILL COME IN: <span class='langchat' style='color:#ff0000'>[until_dawn]</span>", null, "EAST-7,NORTH-3", "center", COLOR_GRAY, null, null, 1)
+			else
+				for(var/turf/current_turf as anything in lightturfs)
+					var/area/current_area = current_turf.loc
+					if(!current_area.daytime_affected)
+						continue
+					current_turf.set_light(1, 0.7, l_color="#dda56e")
+					CHECK_TICK
+
+				show_blurb(GLOB.player_list, 35, "THE NIGHT IS FINALLY GONE", null, "EAST-7,NORTH-3", "center", LIGHT_COLOR_CANDLE, null, null, 1)
+				STOP_PROCESSING(SSobj,src)
 		return TRUE
 	else
 		return FALSE
@@ -111,8 +129,30 @@
 	busy_now = FALSE
 
 /obj/structure/criptic/mission_controller/proc/start_the_hunt()
-	for(var/obj/structure/criptic/clue/C in world)
-		needed_amount += 1
+	if(!fear_the_night_gm)
+		for(var/obj/structure/criptic/clue/C in world)
+			needed_amount += 1
+
+	if(fear_the_night_gm)
+		SSticker.mode.toggleable_flags |= MODE_HARDCORE_LIGHTS
+		lightturfs = block(locate(world.maxx, world.maxy, src.z), locate(1, 1, src.z))
+		for(var/turf/current_turf as anything in lightturfs)
+			var/area/current_area = current_turf.loc
+			if(!current_area.daytime_affected)
+				continue
+			current_turf.set_light(1, 0, l_color=COLOR_WHITE)
+			CHECK_TICK
+
+		for(var/mob/living/carbon/human/H in GLOB.player_list)
+			if(H.stat == DEAD)
+				continue
+			if(H.fear_the_night)
+				continue
+			H.fear_the_night = TRUE
+
+		for(var/obj/item/device/flashlight/F in world)
+			if(F.on && F.needs_battery)
+				START_PROCESSING(SSobj,F)
 
 	show_mission_name()
 	show_current_progress()
@@ -120,6 +160,9 @@
 	START_PROCESSING(SSobj,src)
 
 /obj/structure/criptic/mission_controller/process()
+	if(fear_the_night_gm && until_dawn > 0)
+		until_dawn -= 1
+
 	if(automatic_messaging_delay <= 0)
 		automatic_messaging_delay = 300
 		show_current_progress()

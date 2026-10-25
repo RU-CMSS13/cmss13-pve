@@ -22,3 +22,6 @@
 #include "modules/criptid_hunting/weapons_tinkering.dm"
 
 #include "modules/criptid_hunting/weapons_override.dm"
+
+#include "modules/fear_the_night/true_darkness.dm"
+#include "modules/fear_the_night/flashlight_rework.dm"

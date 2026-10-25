@@ -80,6 +80,8 @@
 #define MODE_DISABLE_INTRO_BLURB (1<<16) // Show intro blurb when first launching dropship or not
 #define MODE_DISABLE_FS_PORTRAIT (1<<17) // Show fire support portrait when calling in fire support or not
 
+#define MODE_HARDCORE_LIGHTS (1<<18)
+
 #define ROUNDSTATUS_FOG_DOWN 1
 #define ROUNDSTATUS_PODDOORS_OPEN 2
 
