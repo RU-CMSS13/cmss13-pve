@@ -1,0 +1,6 @@
+author: "Maxssliks"
+delete-after: True
+changes:
+  - rscadd: "UPP ranks pins"
+  - rscadd: "TWE RMC cap to loadout"
+  - rscadd: "remove corporal rank from UPP"

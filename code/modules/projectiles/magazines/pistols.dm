@@ -16,8 +16,8 @@
 	ammo_band_icon_empty = "+m4a3_band_e"
 
 /obj/item/ammo_magazine/pistol/hp
-	name = "\improper M4A3 A27 magazine (9x19mm)"
-	desc = "A pistol magazine. This one contains A27 bullets, which have noticeably higher damage and AP then regular and AP bullets, these bullets are made to make small power sidearm much stronger against military and alien threats."
+	name = "\improper M4A3 hollowpoint magazine (9x19mm)"
+	desc = "A pistol magazine. This one contains hollowpoint bullets, which have noticeably higher stopping power on unarmored targets, and noticeably less on armored targets."
 	default_ammo = /datum/ammo/bullet/pistol/hollow
 	ammo_band_color = AMMO_BAND_COLOR_HOLLOWPOINT
 
@@ -68,7 +68,7 @@
 	default_ammo = /datum/ammo/bullet/pistol/heavy
 	caliber = ".45"
 	icon_state = "m1911"
-	max_rounds = 8
+	max_rounds = 7
 	gun_type = /obj/item/weapon/gun/pistol/m1911
 	ammo_band_icon = "+m1911_band"
 	ammo_band_icon_empty = "+m1911_band_e"

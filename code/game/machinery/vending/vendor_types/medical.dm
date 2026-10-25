@@ -248,7 +248,6 @@
 		/obj/item/reagent_container/hypospray/autoinjector/oxycodone,
 		/obj/item/reagent_container/hypospray/autoinjector/tramadol,
 		/obj/item/reagent_container/hypospray/autoinjector/tricord,
-		/obj/item/reagent_container/hypospray/autoinjector/iron,
 
 		/obj/item/reagent_container/hypospray/autoinjector/skillless,
 		/obj/item/reagent_container/hypospray/autoinjector/skillless/tramadol,
@@ -507,7 +506,7 @@
 		list("Pill Bottle (Kelotane)", floor(scale * 4), /obj/item/storage/pill_bottle/kelotane, VENDOR_ITEM_REGULAR),
 		list("Pill Bottle (Peridaxon)", floor(scale * 3), /obj/item/storage/pill_bottle/peridaxon, VENDOR_ITEM_REGULAR),
 		list("Pill Bottle (Tramadol)", floor(scale * 4), /obj/item/storage/pill_bottle/tramadol, VENDOR_ITEM_REGULAR),
-		list("Pill Bottle (Tricordazine)", floor(scale * 4), /obj/item/storage/pill_bottle/tricord, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Tricordazine)", floor(scale * 3), /obj/item/storage/pill_bottle/tricord, VENDOR_ITEM_REGULAR),
 
 		list("MEDICAL UTILITIES", -1, null, null),
 		list("Surgical Line", floor(scale * 2), /obj/item/tool/surgery/surgical_line, VENDOR_ITEM_REGULAR),
@@ -709,7 +708,6 @@
 		list("Pill Bottle (Kelotane)", floor(scale * 3), /obj/item/storage/pill_bottle/kelotane, VENDOR_ITEM_REGULAR),
 		list("Pill Bottle (Peridaxon)", floor(scale * 2), /obj/item/storage/pill_bottle/peridaxon, VENDOR_ITEM_REGULAR),
 		list("Pill Bottle (Tramadol)", floor(scale * 3), /obj/item/storage/pill_bottle/tramadol, VENDOR_ITEM_REGULAR),
-		list("Pill Bottle (Tricordazine)", floor(scale * 3), /obj/item/storage/pill_bottle/tricord, VENDOR_ITEM_REGULAR),
 
 		list("MEDICAL UTILITIES", -1, null, null),
 		list("Surgical Line", floor(scale * 2), /obj/item/tool/surgery/surgical_line, VENDOR_ITEM_REGULAR),
