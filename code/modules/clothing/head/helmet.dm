@@ -1054,7 +1054,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_bullet = CLOTHING_ARMOR_HIGH
 	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
-	flags_atom = NO_NAME_OVERRIDE
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	built_in_visors = list(new /obj/item/device/helmet_visor/night_vision/marine_raider, new /obj/item/device/helmet_visor/security)
 	start_down_visor_type = /obj/item/device/helmet_visor/night_vision/marine_raider
 
@@ -1086,7 +1086,6 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
 	flags_marine_helmet = HELMET_DAMAGE_OVERLAY|HELMET_GARB_OVERLAY
 	built_in_visors = list(new /obj/item/device/helmet_visor/pmc)
-	start_down_visor_type = /obj/item/device/helmet_visor/pmc
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/rmc
 	desc = "Standard issue high molecular density polymer combat helmet used by RMC. Designed by Weyland-Yutani, initially as a hard hat, the project was eventually retrofitted into a cheap, reliable combat helmet system that incorporates a tactical camera, IFF signal transponder, and heads up display lens. Also features white/black hot IR viewing modes from the camera system."
@@ -1120,7 +1119,6 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR
 	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
 	built_in_visors = list(new /obj/item/device/helmet_visor/pmc/alt)
-	start_down_visor_type = /obj/item/device/helmet_visor/pmc/alt
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc
 	name = "\improper Mk16 tactical helmet"
@@ -1938,14 +1936,6 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 	specialty = "6B84 helmet"
 	max_inserted_visors = 2
-
-/obj/item/clothing/head/helmet/upp/frogmen/leader
-	name = "\improper 6B84-K light helmet"
-	desc = "Command variant of the 6B84, distinguished by an extra tactical relay wired into the standard datalink. Issued to squad leaders so they can keep their team and command net separate without swapping headsets mid-op."
-	icon_state = "upp_helmet_frogmen"
-	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
-	specialty = "6B84-K helmet"
 
 /obj/item/clothing/head/helmet/marine/veteran/van_bandolier
 	name = "pith helmet"

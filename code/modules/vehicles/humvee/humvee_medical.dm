@@ -76,15 +76,6 @@
 
 	vehicle_ram_multiplier = VEHICLE_TRAMPLE_DAMAGE_APC_REDUCTION
 
-/obj/effect/vehicle_spawner/humvee/medical/Initialize()
-	. = ..()
-
-	var/turf/gotten_turf = get_turf(src)
-	if(gotten_turf && gotten_turf.z)
-		SSminimaps.add_marker(src, gotten_turf.z, MINIMAP_FLAG_USCM, "arc", 'icons/ui_icons/map_blips_large.dmi')
-	spawn_vehicle()
-	qdel(src)
-
 /obj/effect/vehicle_spawner/humvee/medical/spawn_vehicle()
 	var/obj/vehicle/multitile/humvee/medical/humvee = new (loc)
 
