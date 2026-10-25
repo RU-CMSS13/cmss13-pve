@@ -1,4 +1,13 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/structure/window/framed/corsat,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
+	},
+/turf/open/floor/plating/prison,
+/area/golden_arrow/squad_one)
 "ai" = (
 /obj/structure/machinery/computer/supply_drop_console/limited/alternate,
 /turf/open/floor/corsat/box,
@@ -10,6 +19,11 @@
 /obj/structure/machinery/door/airlock/almayer/secure/glass{
 	req_access = list();
 	name = "\improper Preparations Wing"
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
 	},
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/squad_one)
@@ -5053,6 +5067,11 @@
 /obj/structure/machinery/door/airlock/almayer/secure/glass{
 	req_access = list();
 	name = "\improper Preparations Wing"
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
 	},
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/squad_one)
@@ -10549,7 +10568,7 @@ wI
 nK
 nK
 So
-Ek
+aa
 al
 nK
 nK
