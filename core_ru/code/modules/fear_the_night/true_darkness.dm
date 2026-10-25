@@ -28,7 +28,7 @@
 		sanity_current = clamp(sanity_current - 1, 0, sanity_max)
 		overlay_fullscreen_timer(2 SECONDS, 10, "darkness", /atom/movable/screen/fullscreen/true_darkness_damage)
 
-	if(sanity_current < sanity_max && total_light >= 0.3)
+	if(sanity_current < sanity_max && total_light >= 0.4)
 		if(sanity_warning_shown)
 			sanity_warning_shown = FALSE
 			show_blurb(src, 5, "Warm light...finally...", null, "EAST-7,NORTH-8.5", "center", LIGHT_COLOR_CANDLE, null, null, 1)

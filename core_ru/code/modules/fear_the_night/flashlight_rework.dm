@@ -23,7 +23,7 @@
 			connected_suit.power_current = clamp(connected_suit.power_current - 1, 0, connected_suit.power_amount)
 
 	if(!light_on && connected_suit && connected_suit.power_current < connected_suit.power_amount)
-		connected_suit.power_current = clamp(connected_suit.power_current + 0.5, 0, connected_suit.power_amount)
+		connected_suit.power_current = clamp(connected_suit.power_current + 0.2, 0, connected_suit.power_amount)
 
 	if(ishuman(connected_suit.loc))
 		connected_suit.maptext = SPAN_LANGCHAT("|[connected_suit.power_current]/[connected_suit.power_amount]|%")
