@@ -182,7 +182,10 @@
 /// If you're hit by an acid DoT
 #define EFFECTS_LAYER 1
 
-#define TOTAL_LAYERS 42
+/// Wrist-worn devices (SIMI computer). Only an overlays_standing index: the image is drawn between SUIT_SQUAD_LAYER and GLASSES_LAYER so it shows over the suit while the gloves under it stay at GLOVES_LAYER.
+#define WRIST_LAYER 43
+
+#define TOTAL_LAYERS 43
 //////////////////////////////////
 
 //Synthetic Defines

@@ -261,6 +261,7 @@
 	new /obj/item/clothing/head/helmet/marine/veteran/pmc/enclosed/commando/leader(src)
 	new /obj/item/clothing/suit/marine/veteran/pmc/commando/leader(src)
 	new /obj/item/clothing/gloves/marine/veteran/pmc/commando/leader(src)
+	new /obj/item/clothing/gloves/synth/wy/pmc/leader(src)
 	new /obj/item/storage/backpack/pmc/backpack/commando/leader(src)
 	new /obj/item/storage/pouch/medical/socmed/commando_low_threat(src)
 	new /obj/item/device/binoculars/range/designator/sergeant(src)
