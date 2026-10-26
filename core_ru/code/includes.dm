@@ -1,5 +1,6 @@
 #include "game\machinery\keypad_door_control.dm"
 #include "modules\implants\corporate_explosive_implant.dm"
+#include "modules\implants\implant_control_action.dm"
 #include "modules\mob\living\carbon\human\emote.dm"
 //хуйня которую я не знаю куда запихать
 // admin tools

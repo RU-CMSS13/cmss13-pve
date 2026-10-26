@@ -220,6 +220,8 @@
 
 /obj/item/clothing/gloves/synth/attack_hand(mob/living/carbon/human/user)
 	if(has_phone && istype(user) && user.gloves == src)
+		if(!check_wearer_access(user)) // RU-PVE
+			return
 		SEND_SIGNAL(src, COMSIG_ATOM_PHONE_BUTTON_USE, user)
 		return
 	return ..()
@@ -260,11 +262,21 @@
 	if(battery_charge <= battery_charge_max * 0.1)
 		return SIMI_STATUS_LOWPOWER
 	var/mob/living/carbon/human/holder = loc
-	if(!issynth(holder) && !human_adapted)
+	if((!issynth(holder) && !human_adapted) || !allowed(holder)) // RU-PVE - allowed()
 		set_phone_enabled(FALSE)
 		return SIMI_STATUS_NOACCESS
 	set_phone_enabled(TRUE)
 	return SIMI_STATUS_IDLE
+
+// RU-PVE START
+/// Checks the wearer's ID against req_access, and tells them if the computer refuses to work for them.
+/obj/item/clothing/gloves/synth/proc/check_wearer_access(mob/user)
+	if(allowed(user))
+		return TRUE
+	to_chat(user, SPAN_WARNING("[name] beeps, \"Access denied.\""))
+	playsound(src, 'sound/machines/terminal_error.ogg', 25, TRUE)
+	return FALSE
+// RU-PVE END
 
 /obj/item/clothing/gloves/synth/proc/set_phone_enabled(enabled)
 	var/datum/component/phone/phone = GetComponent(/datum/component/phone)

@@ -9,11 +9,12 @@ type Implant = {
   job: string;
   status: string;
   area: string;
-  player: BooleanLike;
+  player?: BooleanLike;
   ref: string;
 };
 
 type Data = {
+  admin: BooleanLike;
   armed: BooleanLike;
   implants: Implant[];
 };
@@ -31,7 +32,7 @@ const statusColor = (status: string) => {
 
 export const CorporateImplantPanel = () => {
   const { act, data } = useBackend<Data>();
-  const { armed, implants } = data;
+  const { admin, armed, implants } = data;
 
   return (
     <Window width={700} height={450}>
@@ -69,7 +70,7 @@ export const CorporateImplantPanel = () => {
                 <Table.Row key={implant.ref} className="candystripe">
                   <Table.Cell>
                     {implant.name}
-                    {implant.player ? null : (
+                    {!admin || implant.player ? null : (
                       <Box inline color="label" ml={1}>
                         (AI / no client)
                       </Box>
@@ -81,11 +82,13 @@ export const CorporateImplantPanel = () => {
                   </Table.Cell>
                   <Table.Cell>{implant.area}</Table.Cell>
                   <Table.Cell collapsing>
-                    <Button
-                      icon="eye"
-                      tooltip="Jump to"
-                      onClick={() => act('jump', { ref: implant.ref })}
-                    />
+                    {admin ? (
+                      <Button
+                        icon="eye"
+                        tooltip="Jump to"
+                        onClick={() => act('jump', { ref: implant.ref })}
+                      />
+                    ) : null}
                     <Button
                       icon="bolt"
                       color="average"

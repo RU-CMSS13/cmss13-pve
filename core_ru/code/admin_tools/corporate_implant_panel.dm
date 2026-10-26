@@ -29,29 +29,13 @@ GLOBAL_DATUM_INIT(corporate_implant_panel, /datum/corporate_implant_panel, new)
 /datum/corporate_implant_panel/ui_data(mob/user)
 	var/list/data = list()
 
+	data["admin"] = TRUE
 	data["armed"] = (user.ckey in armed_ckeys)
 	data["implants"] = list()
 	for(var/obj/item/implant/corporate_explosive/implant as anything in GLOB.corporate_explosive_implants)
-		var/mob/living/carbon/human/host = implant.get_host()
-		if(!host || implant.detonated)
-			continue
-
-		var/status = "Alive"
-		switch(host.stat)
-			if(UNCONSCIOUS)
-				status = "Unconscious"
-			if(DEAD)
-				status = "Dead"
-
-		var/area/host_area = get_area(host)
-		data["implants"] += list(list(
-			"name" = host.real_name,
-			"job" = host.job || "Unknown",
-			"status" = status,
-			"area" = host_area?.name || "Unknown",
-			"player" = !!host.client,
-			"ref" = REF(implant),
-		))
+		var/list/implant_data = implant.get_ui_data(show_client = TRUE)
+		if(implant_data)
+			data["implants"] += list(implant_data)
 
 	return data
 

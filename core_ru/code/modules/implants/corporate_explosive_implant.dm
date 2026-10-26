@@ -1,6 +1,6 @@
 GLOBAL_LIST_EMPTY_TYPED(corporate_explosive_implants, /obj/item/implant/corporate_explosive)
 
-/// Head bomb given to Weyland-Yutani PMC presets. Only a game master can trigger it, from the Corporate Implants panel.
+/// Head bomb given to Weyland-Yutani PMC presets. Triggered by a game master from the Corporate Implants panel, or by an operations leader from their PK-130L wrist computer.
 /obj/item/implant/corporate_explosive
 	name = "corporate compliance implant"
 	desc = "A tiny shaped charge wired into the base of the skull. Standard Weyland-Yutani contract enforcement."
@@ -36,6 +36,31 @@ GLOBAL_LIST_EMPTY_TYPED(corporate_explosive_implants, /obj/item/implant/corporat
 	if(!istype(part, /obj/limb/head) || (part.status & LIMB_DESTROYED))
 		return null
 	return host
+
+/// Returns the row of the CorporateImplantPanel UI for this implant, or null if there is no one to warn or detonate.
+/// show_client tells whether the host is player-controlled, which only game masters should see.
+/obj/item/implant/corporate_explosive/proc/get_ui_data(show_client = FALSE)
+	var/mob/living/carbon/human/host = get_host()
+	if(!host || detonated)
+		return null
+
+	var/status = "Alive"
+	switch(host.stat)
+		if(UNCONSCIOUS)
+			status = "Unconscious"
+		if(DEAD)
+			status = "Dead"
+
+	var/area/host_area = get_area(host)
+	. = list(
+		"name" = host.real_name,
+		"job" = host.job || "Unknown",
+		"status" = status,
+		"area" = host_area?.name || "Unknown",
+		"ref" = REF(src),
+	)
+	if(show_client)
+		.["player"] = !!host.client
 
 /// Gives the host a stabbing pain at the implant site, as a warning from the corporation.
 /obj/item/implant/corporate_explosive/proc/warn_host(mob/user)

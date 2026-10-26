@@ -53,12 +53,14 @@
 
 /obj/item/clothing/gloves/synth/wy/pmc/leader
 	name = "PK-130L SIMI wrist-mounted computer"
-	desc = "Developed by a joint effort between Weyland-Yutani CIART and the USCM R&D Division, the SIMI portable computer is the ultimate solution for situational awareness, personnel monitoring and communication. This one is a stripped-down model adapted for W-Y operations leaders, with only an internal phone, a tactical map, a motion detector and an emergency injector. It recharges in a standard recharger."
+	desc = "Developed by a joint effort between Weyland-Yutani CIART and the USCM R&D Division, the SIMI portable computer is the ultimate solution for situational awareness, personnel monitoring and communication. This one is a stripped-down model adapted for W-Y operations leaders, with only an internal phone, a tactical map, a motion detector, an emergency injector and a compliance implant uplink. It only works for a wearer with an operations leader's ID, and recharges in a standard recharger."
 	human_adapted = TRUE
 	phone_category = PHONE_MARINE
 	ability_chips_max = 0
+	req_access = list(ACCESS_WY_SENIOR_LEAD)
 	actions_list_inherent = list(
 		/datum/action/human_action/synth_bracer/tactical_map/pmc,
 		/datum/action/human_action/synth_bracer/motion_detector,
 		/datum/action/human_action/synth_bracer/med_injector,
+		/datum/action/human_action/synth_bracer/implant_control,
 	)
