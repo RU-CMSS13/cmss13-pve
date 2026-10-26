@@ -174,8 +174,9 @@
 	playsound(loc, pick(creepyasssounds), 25, 1)
 
 	for(var/obj/structure/criptic/mission_controller/M in world)
-		M.current_clues_found += 1
-		M.show_current_progress()
+		if(!M.fear_the_night_gm)
+			M.current_clues_found += 1
+			M.show_current_progress()
 
 	user.client.screen -= representation
 	user.client.connected_sound = null

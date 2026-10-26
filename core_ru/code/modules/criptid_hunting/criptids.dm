@@ -145,6 +145,10 @@
 
 /mob/living/carbon/xenomorph/criptic_wendigo/werewolf
 	icon = 'core_ru/code/modules/criptid_hunting/wendigo_alt.dmi'
+	icon_xeno = 'core_ru/code/modules/criptid_hunting/wendigo_alt.dmi'
+	icon_xenonid = 'core_ru/code/modules/criptid_hunting/wendigo_alt.dmi'
+	pixel_y = 0
+	old_y = 0
 
 /mob/living/carbon/xenomorph/criptic_wendigo/banshee
 	AUTOWIKI_SKIP(TRUE)

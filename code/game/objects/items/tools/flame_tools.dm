@@ -28,13 +28,13 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	item_state = "candle1"
 	w_class = SIZE_TINY
 
-	var/wax = 3000
+	var/wax = 1500
 
 /obj/item/tool/candle/update_icon()
 	var/i
-	if(wax>1500)
+	if(wax>750)
 		i = 1
-	else if(wax>250)
+	else if(wax>150)
 		i = 2
 	else i = 3
 	icon_state = "candle[i][heat_source ? "_lit" : ""]"
@@ -769,6 +769,12 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 /obj/item/tool/lighter/attack_self(mob/living/user)
 	if(user.r_hand == src || user.l_hand == src)
 		if(!heat_source)
+
+			if(MODE_HAS_TOGGLEABLE_FLAG(MODE_HARDCORE_LIGHTS))
+				if(fuel <= 0)
+					balloon_alert(user, "It's empty!", COLOR_WHITE)
+					return FALSE
+
 			heat_source = 1500
 			icon_state = icon_on
 			item_state = icon_on
@@ -799,6 +805,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 
 /obj/item/tool/lighter/proc/turn_off(mob/living/bearer, silent = 1)
 	if(heat_source)
+
 		heat_source = 0
 		icon_state = icon_off
 		item_state = icon_off

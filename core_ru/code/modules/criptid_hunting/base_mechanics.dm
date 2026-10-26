@@ -763,3 +763,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/criptic/utility/cig_pack, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre,WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
+
+/obj/structure/ladder
+	var/custom_sprite = FALSE
+
+/obj/structure/ladder/update_icon()
+	if(custom_sprite)
+		return
+	..()

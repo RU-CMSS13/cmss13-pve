@@ -25,3 +25,4 @@
 
 #include "modules/fear_the_night/true_darkness.dm"
 #include "modules/fear_the_night/flashlight_rework.dm"
+#include "modules/fear_the_night/power_gen.dm"

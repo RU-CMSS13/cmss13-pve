@@ -356,35 +356,49 @@
 /obj/item/criptic/utility/cigarette/attack_self(mob/user)
 	. = ..()
 	pop_out()
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		if(H.sanity_current < H.sanity_max)
+			show_blurb(H, 15, "I feel...slightly better", null, "WEST+6:22,2:14", "center", LIGHT_COLOR_CANDLE, null, null, 1)
+			H.sanity_current = clamp(H.sanity_current + 15, 0, H.sanity_max)
+			new /obj/effect/temp_visual/healing(get_turf(src))
+
 	var/list/atom/possible_points = list()
+	var/list/nearby_clues = list()
 
-	for(var/atom/A in view(user))
-		if(A.uv_scannable)
-			possible_points += A
+	for(var/obj/structure/criptic/clue/C in range(30, get_turf(user)))
+		if(C.revealed)
+			continue
+		nearby_clues += C
 
-	if(!length(possible_points))
-		for(var/obj/O in view(user))
-			if(O.type in ignore_them)
-				continue
-			possible_points += O
+	if(length(nearby_clues))
+		for(var/atom/A in view(user))
+			if(A.uv_scannable)
+				possible_points += A
 
-	if(!length(possible_points))
-		for(var/turf/open/T in view(user))
-			possible_points += T
+		if(!length(possible_points))
+			for(var/obj/O in view(user))
+				if(O.type in ignore_them)
+					continue
+				possible_points += O
 
-	var/atom/new_clue = pick(possible_points)
-	if(!new_clue.uv_scannable)
-		new_clue.uv_scannable = TRUE
-		new_clue.uv_slogan = "Seems interesting..."
-		new_clue.uv_onfind = "It might lead us to the next evidence..."
+		if(!length(possible_points))
+			for(var/turf/open/T in view(user))
+				possible_points += T
 
-		if(ishuman(user))
-			var/mob/living/carbon/human/H = user
-			H.hint_visibility = 7
-			H.show_hint(new_clue,"trail", 1, new_clue.uv_slogan)
-			H.naturally_hinted += new_clue
+		var/atom/new_clue = pick(possible_points)
+		if(!new_clue.uv_scannable)
+			new_clue.uv_scannable = TRUE
+			new_clue.uv_slogan = "Seems interesting..."
+			new_clue.uv_onfind = "It might lead us to the next evidence..."
 
-			addtimer(CALLBACK(H, TYPE_PROC_REF(/mob/living/carbon/human, reset_cigbuff)), 10 SECONDS)
+			if(ishuman(user))
+				var/mob/living/carbon/human/H = user
+				H.hint_visibility = 7
+				H.show_hint(new_clue,"trail", 1, new_clue.uv_slogan)
+				H.naturally_hinted += new_clue
+
+				addtimer(CALLBACK(H, TYPE_PROC_REF(/mob/living/carbon/human, reset_cigbuff)), 10 SECONDS)
 
 	animation_flash_color(src, COLOR_GREEN)
 	sleep(0.5 SECONDS)

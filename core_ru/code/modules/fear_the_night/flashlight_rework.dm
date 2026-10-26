@@ -117,3 +117,39 @@
 
 /obj/item/device/flashlight/tnr
 	put_in_battery_type = /obj/item/cell
+
+/obj/item/tool/candle
+	light_system = MOVABLE_LIGHT
+
+/obj/item/tool/lighter
+	var/fuel = 100
+
+/obj/item/tool/lighter/get_examine_text(mob/user)
+	. = ..()
+
+	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_HARDCORE_LIGHTS))
+		if(fuel < initial(fuel) / 2 && fuel > 0)
+			. += SPAN_ORANGE("It's almost done...")
+		if(fuel <= 0)
+			. += SPAN_RED("It's empty!")
+
+/obj/item/tool/lighter/process()
+	if(fuel > 0)
+		fuel = clamp(fuel - 1, 0, initial(fuel))
+
+	if(fuel <= 0)
+		turn_off_no_mob(0)
+
+/obj/item/tool/lighter/proc/turn_off_no_mob(silent = 1)
+	if(heat_source)
+		heat_source = 0
+		icon_state = icon_off
+		item_state = icon_off
+		if(!silent)
+			if(istype(src, /obj/item/tool/lighter/zippo))
+				playsound(src.loc,"zippo_close",10, 1, 3)
+
+		set_light_on(FALSE)
+		STOP_PROCESSING(SSobj, src)
+		return 1
+	return 0
