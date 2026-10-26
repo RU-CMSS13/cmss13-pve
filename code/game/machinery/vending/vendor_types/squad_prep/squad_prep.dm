@@ -603,7 +603,7 @@
 
 		list("ARMOR", -1, null, null),
 		list("Mk17 Tactical Helmet", round(scale * 15), /obj/item/clothing/head/helmet/marine/veteran/pmc/enclosed/commando, VENDOR_ITEM_REGULAR),
-		list("MY7 Pattern Armor", round(scale * 15), /obj/item/clothing/suit/marine/veteran/pmc, VENDOR_ITEM_REGULAR),
+		list("MY7 Pattern Armor", round(scale * 15), /obj/item/clothing/suit/marine/veteran/pmc/commando, VENDOR_ITEM_REGULAR),
 
 		list("WEBBINGS", -1, null, null),
 		list("67 Pattern Small Webbing", round(scale * 10), /obj/item/clothing/accessory/storage/webbing/m3/uppsmall/pmc, VENDOR_ITEM_REGULAR),

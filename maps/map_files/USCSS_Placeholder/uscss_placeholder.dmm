@@ -1534,13 +1534,13 @@
 	dir = 8
 	},
 /obj/structure/surface/table/reinforced/black,
-/obj/item/storage/surgical_case/elite/commando{
-	pixel_x = 0;
-	pixel_y = 13
-	},
 /obj/item/device/helmet_visor/medical/advanced/pmc{
 	pixel_x = -3;
 	pixel_y = -12
+	},
+/obj/item/storage/firstaid/whiteout/medical/commando{
+	pixel_x = 0;
+	pixel_y = 13
 	},
 /turf/open/floor/corsat/spiralplate,
 /area/golden_arrow/medical)
