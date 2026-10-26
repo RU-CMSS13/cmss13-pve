@@ -215,6 +215,9 @@
 /turf/open/desert/desert_shore/shore_corner1/west
 	dir = WEST
 
+/turf/open/desert/desert_shore/shore_corner1/east
+	dir = EAST
+
 /turf/open/desert/desert_shore/shore_corner2/north
 	dir = NORTH
 
