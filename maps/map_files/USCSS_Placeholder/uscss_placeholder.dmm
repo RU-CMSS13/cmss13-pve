@@ -4572,6 +4572,11 @@
 /obj/structure/machinery/light/double/chapaev{
 	dir = 2
 	},
+/obj/structure/closet/crate/ruv/pmc{
+	pixel_x = 4;
+	pixel_y = 2;
+	anchored = 1
+	},
 /turf/open/floor/corsat/spiralplate,
 /area/golden_arrow/briefing)
 "NG" = (

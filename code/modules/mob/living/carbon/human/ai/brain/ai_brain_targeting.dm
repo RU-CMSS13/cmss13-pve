@@ -141,7 +141,7 @@
 
 
 /datum/human_ai_brain/proc/can_target(mob/living/carbon/target)
-	if(!istype(target))
+	if(!istype(target) && !isruv(target))
 		return FALSE
 
 	if(target.stat == DEAD)
