@@ -1329,3 +1329,91 @@
 	dir = SOUTHEAST
 /obj/structure/platform_decoration/wood/southwest
 	dir = SOUTHWEST
+
+/obj/structure/platform/metal/stair_cut/lava_metal_left
+	icon_state = "lava_metalplatform_stair"
+
+/obj/structure/platform/metal/stair_cut/lava_metal_right
+	icon_state = "lava_metalplatform_stair_alt"
+
+/obj/structure/platform/metal/lava_metal
+	name = "raised metal edge"
+	desc = "A raised level of metal, often used to elevate areas above others. You could probably climb it."
+	icon_state = "lava_metalplatform"
+
+/obj/structure/platform/metal/lava_metal/north
+	dir = NORTH
+
+/obj/structure/platform/metal/lava_metal/east
+	dir = EAST
+
+/obj/structure/platform/metal/lava_metal/west
+	dir = WEST
+
+/obj/structure/platform/stone/lava
+	name = "lava rock edge"
+	desc = "A rugged chunk of volcanic rock. Its jagged surface and blackened edges seem precarious but climbable."
+	icon_state = "lava_platform"
+
+/obj/structure/platform/stone/lava/north
+	dir = NORTH
+
+/obj/structure/platform/stone/lava/east
+	dir = EAST
+
+/obj/structure/platform/stone/lava/west
+	dir = WEST
+
+/obj/structure/platform/stone/engineer
+	name = "stone platform"
+	desc = "A platform supporting elevated ground, made of stone."
+	icon_state = "engineer_stone_wall"
+
+/obj/structure/platform/stone/engineer/north
+	dir = NORTH
+
+/obj/structure/platform/stone/engineer/east
+	dir = EAST
+
+/obj/structure/platform/stone/engineer/west
+	dir = WEST
+
+/obj/structure/platform_decoration/metal/lava_metal
+	name = "raised metal corner"
+	desc = "A raised level of metal, often used to elevate areas above others. This is the corner."
+	icon_state = "lava_metalplatform_deco"
+
+/obj/structure/platform_decoration/metal/lava_metal/north
+	dir = NORTH
+
+/obj/structure/platform_decoration/metal/lava_metal/east
+	dir = EAST
+
+/obj/structure/platform_decoration/metal/lava_metal/west
+	dir = WEST
+
+/obj/structure/platform_decoration/stone/lava
+	name = "lava rock corner"
+	desc = "A rounded corner of volcanic rock, smoothed by molten flows yet still bearing a rugged texture."
+	icon_state = "lava_platform_deco"
+
+/obj/structure/platform_decoration/stone/lava/north
+	dir = NORTH
+
+/obj/structure/platform_decoration/stone/lava/east
+	dir = EAST
+
+/obj/structure/platform_decoration/stone/lava/west
+	dir = WEST
+
+/obj/structure/platform_decoration/stone/engineer
+	icon_state = "engineer_stone_deco"
+
+/obj/structure/platform_decoration/stone/engineer/north
+	dir = NORTH
+
+/obj/structure/platform_decoration/stone/engineer/east
+	dir = EAST
+
+/obj/structure/platform_decoration/stone/engineer/west
+	dir = WEST

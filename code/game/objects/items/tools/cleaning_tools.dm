@@ -169,3 +169,12 @@
 /obj/item/tool/soap/syndie
 	desc = "An untrustworthy bar of soap. Smells of fear."
 	icon_state = "soapsyndie"
+
+/obj/item/tool/warning_cone/blue // utility work.
+	icon_state = "cone_blue"
+
+/obj/item/tool/warning_cone/red // extreme danger or restricted area.
+	icon_state = "cone_red"
+
+/obj/item/tool/warning_cone/green // various or good to pass.
+	icon_state = "cone_green"

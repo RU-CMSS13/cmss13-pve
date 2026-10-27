@@ -417,6 +417,9 @@
 				if("Faction Hyperdyne HUD")
 					H = GLOB.huds[MOB_HUD_FACTION_HC]
 					H.add_hud_to(src, src)
+				if("Faction Lasalle Bionational HUD")
+					H = GLOB.huds[MOB_HUD_FACTION_LB]
+					H.add_hud_to(src, src)
 
 	see_invisible = INVISIBILITY_OBSERVER
 

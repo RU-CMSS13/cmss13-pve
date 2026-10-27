@@ -1632,3 +1632,133 @@
 	item_icons = list(
 		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
 	)
+
+/obj/item/clothing/under/lasalle
+	name = "lasalle bionational uniform"
+	desc = "A heavy-duty uniform commonly worn by Lasalle Bionational workers & civilians."
+	icon_state = "civilian_base"
+	item_state = "civilian_base"
+	icon = 'icons/obj/items/clothing/uniforms/uniforms_by_faction/LASALLE.dmi'
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_faction/LASALLE.dmi',
+	)
+
+/obj/item/clothing/under/lasalle/grey
+	icon_state = "civilian_base_grey"
+	item_state = "civilian_base_grey"
+
+/obj/item/clothing/under/lasalle/yellow
+	icon_state = "civilian_base_yellow"
+	item_state = "civilian_base_yellow"
+
+/obj/item/clothing/under/marine/seegson_security
+	name = "Seegson security uniform"
+	desc = "An armored uniform worn by Seegson corporate security members."
+	icon = 'icons/obj/items/clothing/uniforms/uniforms_by_faction/SEEGSON.dmi'
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_faction/SEEGSON.dmi',
+	)
+	icon_state = "seegson_security_uniform"
+	worn_state = "seegson_security_uniform"
+
+	flags_atom = FPRINT|NO_NAME_OVERRIDE|NO_SNOW_TYPE
+
+/obj/item/clothing/under/rank/synthetic/joe/fire
+	name = "\improper Working Joe Hazardous Uniform"
+	desc = "A reinforced uniform used for Synthetic labor in hazardous areas. Tomorrow, Together."
+	icon_state = "working_joe_fire"
+	worn_state = "working_joe_fire"
+	flags_inventory = CANTSTRIP
+	armor_melee = CLOTHING_ARMOR_LOW
+	armor_bullet = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_VERYLOW
+	armor_bio = CLOTHING_ARMOR_HARDCORE
+	armor_rad = CLOTHING_ARMOR_ULTRAHIGHPLUS
+	fire_intensity_resistance = BURN_LEVEL_TIER_1
+	max_heat_protection_temperature = ARMOR_MAX_HEAT_PROT
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
+
+/obj/item/clothing/under/rank/synthetic/joe/fire/overalls
+	name = "\improper Working Joe Hazardous Uniform"
+	desc = "A reinforced uniform used for Synthetic labor in hazardous areas. Comes with an additional layer for liquid hazards. Tomorrow, Together."
+	icon_state = "working_joe_fire_overalls"
+	worn_state = "working_joe_fire_overalls"
+	unacidable = TRUE
+
+/obj/item/clothing/under/marine/veteran/pmc/corporate/lasalle_security
+	name = "\improper Lasalle Bionational corporate security uniform"
+	desc = "An armored uniform worn by Lasalle Bionational corporate security members."
+	icon_state = "lasalle_security_uniform"
+	worn_state = "lasalle_security_uniform"
+	icon = 'icons/obj/items/clothing/uniforms/uniforms_by_faction/LASALLE.dmi'
+
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_faction/LASALLE.dmi'
+	)
+
+	suit_restricted = null
+
+/obj/item/clothing/under/marine/veteran/pmc/corporate/lasalle_security/Initialize()
+	. = ..()
+
+/obj/item/clothing/under/rank/scientist/lasalle
+	name = "research duty uniform"
+	desc = "A sterile sleeveless research uniform, commonly issued to research and scientific personnel operating in corporate laboratory facilities."
+	icon = 'icons/obj/items/clothing/uniforms/uniforms_by_faction/LASALLE.dmi'
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_faction/LASALLE.dmi',
+	)
+	icon_state = "science_outfit"
+	worn_state = "science_outfit"
+	armor_melee = CLOTHING_ARMOR_NONE
+	armor_bullet = CLOTHING_ARMOR_NONE
+	armor_laser = CLOTHING_ARMOR_NONE
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_NONE
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+	armor_rad = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_LOW
+	flags_jumpsuit = FALSE
+
+/obj/item/clothing/under/rank/scientist/lasalle/blue
+	icon_state = "science_outfit_blue"
+	worn_state = "science_outfit_blue"
+
+/obj/item/clothing/under/rank/scientist/lasalle/purple
+	icon_state = "science_outfit_purple"
+	worn_state = "science_outfit_purple"
+
+/obj/item/clothing/under/rank/scientist/lasalle/green
+	icon_state = "science_outfit_green"
+	worn_state = "science_outfit_green"
+
+/obj/item/clothing/under/lasalle/drysuit
+	icon_state = "civilian_base_alt"
+	item_state = "civilian_base_alt"
+
+/obj/item/clothing/under/lasalle/grey/drysuit
+	icon_state = "civilian_base_grey_alt"
+	item_state = "civilian_base_grey_alt"
+
+/obj/item/clothing/under/lasalle/yellow/drysuit
+	icon_state = "civilian_base_yellow_alt"
+	item_state = "civilian_base_yellow_alt"
+
+/obj/item/clothing/under/marine/veteran/lb_merc
+	name = "\improper HIG combat jumpsuit"
+	desc = "A fitted black combat jumpsuit designed for Lasalle Bionational - Hazard Intervention Group operators. It bears the insignia of Lasalle Bionational."
+
+	icon = 'icons/obj/items/clothing/uniforms/uniforms_by_faction/LASALLE.dmi'
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_faction/LASALLE.dmi',
+	)
+	icon_state = "lb_merc"
+	worn_state = "lb_merc"
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+
+/obj/item/clothing/under/marine/veteran/lb_merc/Initialize()
+	. = ..()

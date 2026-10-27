@@ -447,3 +447,7 @@
 	desc = "Have you got the CuppaJoe Smile? Stay perky! Freeze-dried CuppaJoe's Coffee."
 	icon_state = "coffeecuppajoe"
 	center_of_mass = "x=15;y=10"
+
+/obj/item/reagent_container/food/drinks/coffeecup/alt
+	icon_state = "coffeecupblue"
+	item_state = "coffeecupblue"
