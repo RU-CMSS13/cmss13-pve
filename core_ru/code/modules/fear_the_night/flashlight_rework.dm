@@ -72,10 +72,8 @@
 
 /obj/item/device/flashlight/process()
 	if(battery.charge <= 0)
-		playsound(src.loc, breaking_sound, 25, 1)
 		if(on)
 			turn_off_light()
-		STOP_PROCESSING(SSobj,src)
 
 	if(battery.charge > 0)
 		battery.use(flashlight_hungriness)
@@ -84,7 +82,6 @@
 		playsound(src.loc, breaking_sound, 25, 1)
 		if(on)
 			turn_off_light()
-		STOP_PROCESSING(SSobj,src)
 
 /obj/item/device/flashlight/clicked(mob/user, list/mods)
 	if(mods[ALT_CLICK] && needs_battery)
@@ -95,9 +92,6 @@
 		battery = null
 		if(on)
 			turn_off_light()
-		if(process())
-			playsound(src.loc, breaking_sound, 25, 1)
-			STOP_PROCESSING(SSobj,src)
 		return TRUE
 	return ..()
 
@@ -180,6 +174,8 @@
 	light_system = DIRECTIONAL_LIGHT
 	var/power_amount = 10
 	var/power_current = 10
+	maptext_width = 48
+	maptext_height = 48
 
 /obj/item/clothing/head/hardhat/dropped(mob/user)
 	. = ..()
@@ -188,7 +184,7 @@
 /obj/item/clothing/head/hardhat/process()
 	if(light_on)
 		if(power_current < 0)
-			turn_light(loc, !light_on)
+			turn_light(loc, FALSE)
 		else
 			power_current = clamp(power_current - 0.3, 0, power_amount)
 

@@ -405,6 +405,9 @@
 /obj/item/criptic/instrument/afterattack(atom/target, mob/living/carbon/human/user, proximity_flag, click_parameters)
 	. = ..()
 
+	if(!Adjacent(user))
+		return FALSE
+
 	if(istype(target, /turf/open))
 		for(var/obj/structure/criptic/clue/C in target)
 			if(!(C.type in clue_type_to_reveal))

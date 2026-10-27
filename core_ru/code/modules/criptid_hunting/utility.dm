@@ -358,7 +358,7 @@
 	var/list/atom/possible_points = list()
 	var/list/nearby_clues = list()
 
-	for(var/obj/structure/criptic/clue/C in range(30, get_turf(user)))
+	for(var/obj/structure/criptic/clue/C in range(15, get_turf(user)))
 		if(C.revealed)
 			continue
 		nearby_clues += C
@@ -376,18 +376,20 @@
 			return FALSE
 
 	if(length(nearby_clues))
-		for(var/atom/A in view(user))
+		for(var/atom/A in view(user.loc))
 			if(A.uv_scannable)
 				possible_points += A
 
 		if(!length(possible_points))
-			for(var/obj/O in view(user))
+			for(var/obj/O in view(user.loc))
 				if(O.type in ignore_them)
+					continue
+				if(!istype(O.loc,/turf/open))
 					continue
 				possible_points += O
 
 		if(!length(possible_points))
-			for(var/turf/open/T in view(user))
+			for(var/turf/open/T in view(user.loc))
 				possible_points += T
 
 		var/atom/new_clue = pick(possible_points)

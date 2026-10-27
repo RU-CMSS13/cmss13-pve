@@ -89,6 +89,8 @@
 
 /obj/item/device/flashlight/proc/turn_off_light(mob/bearer)
 	if(on)
+		playsound(src.loc, breaking_sound, 25, 1)
+		STOP_PROCESSING(SSobj,src)
 		on = FALSE
 		set_light_on(on)
 		update_icon()
