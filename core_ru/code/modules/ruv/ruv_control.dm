@@ -92,8 +92,10 @@
 	commander = user
 	RegisterSignal(user, COMSIG_MOB_PRE_CLICK, PROC_REF(on_commander_click))
 	RegisterSignal(user, COMSIG_PARENT_QDELETING, PROC_REF(on_commander_deleted))
+	RegisterSignal(user, COMSIG_MOB_LOGGED_IN, PROC_REF(on_commander_logged_in))
 	update_commander_actions()
 	update_order_marker()
+	show_status_display()
 
 /mob/living/simple_animal/ruv/proc/clear_commander()
 	if(!commander)
@@ -103,12 +105,19 @@
 	var/mob/living/carbon/human/user = commander
 	commander = null
 	pending_order = null
-	UnregisterSignal(user, list(COMSIG_MOB_PRE_CLICK, COMSIG_PARENT_QDELETING))
+	UnregisterSignal(user, list(COMSIG_MOB_PRE_CLICK, COMSIG_PARENT_QDELETING, COMSIG_MOB_LOGGED_IN))
+	user.client?.remove_from_screen(status_display)
 	QDEL_LIST(commander_actions)
 
 /mob/living/simple_animal/ruv/proc/on_commander_deleted()
 	SIGNAL_HANDLER
 	clear_commander()
+
+/// Login wipes the client's screen and images
+/mob/living/simple_animal/ruv/proc/on_commander_logged_in()
+	SIGNAL_HANDLER
+	show_status_display()
+	update_order_marker()
 
 /mob/living/simple_animal/ruv/proc/try_connect(mob/living/carbon/human/user)
 	if(commander != user)
@@ -132,10 +141,7 @@
 	RegisterSignal(user, list(COMSIG_MOB_DEATH, COMSIG_MOB_LOGOUT, COMSIG_MOB_GHOSTIZE), PROC_REF(on_operator_lost))
 	user.reset_view()
 	apply_terminal_view(user)
-	status_display.place_for(user)
 	update_commander_actions()
-	update_status_display()
-	user.client?.add_to_screen(status_display)
 	playsound(user, 'sound/machines/terminal_on.ogg', 25, TRUE)
 	to_chat(user, SPAN_NOTICE("You connect to [src]. Move to drive it and click to use its module."))
 
@@ -154,7 +160,6 @@
 		COMSIG_MOB_GHOSTIZE,
 	))
 	remove_terminal_view(user)
-	user.client?.remove_from_screen(status_display)
 	user.reset_view()
 	update_commander_actions()
 	to_chat(user, SPAN_NOTICE("You disconnect from [src]."))
@@ -319,8 +324,15 @@
 	overlays += tens
 	overlays += ones
 
+/mob/living/simple_animal/ruv/proc/show_status_display()
+	if(!commander?.client || !status_display)
+		return
+	status_display.place_for(commander)
+	update_status_display()
+	commander.client.add_to_screen(status_display)
+
 /mob/living/simple_animal/ruv/proc/update_status_display()
-	if(!operator || !status_display)
+	if(!commander || !status_display)
 		return
 	status_display.update(health / maxHealth * 100, cell ? cell.percent() : 0)
 
