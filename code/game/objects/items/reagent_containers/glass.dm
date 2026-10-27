@@ -428,6 +428,40 @@
 	tier = pick("C5","T4")
 	. = ..()
 
+/obj/item/reagent_container/glass/beaker/vial/meralyne
+	name = "vial (meralyne)"
+
+/obj/item/reagent_container/glass/beaker/vial/meralyne/Initialize()
+	. = ..()
+	reagents.add_reagent("meralyne", 30)
+	update_icon()
+
+/obj/item/reagent_container/glass/beaker/vial/dermaline
+	name = "vial (dermaline)"
+
+/obj/item/reagent_container/glass/beaker/vial/dermaline/Initialize()
+	. = ..()
+	reagents.add_reagent("dermaline", 30)
+	update_icon()
+
+/obj/item/reagent_container/glass/beaker/vial/oxycodone
+	name = "vial (oxycodone)"
+
+/obj/item/reagent_container/glass/beaker/vial/oxycodone/Initialize()
+	. = ..()
+	reagents.add_reagent("oxycodone", 30)
+	update_icon()
+
+/obj/item/reagent_container/glass/beaker/vial/imialk
+	name = "vial (ImiAlk)"
+	desc = "Contains ImiAlk - used to heal brain and ear damage."
+
+/obj/item/reagent_container/glass/beaker/vial/imialk/Initialize()
+	. = ..()
+	reagents.add_reagent("imidazoline", 15)
+	reagents.add_reagent("alkysine", 15)
+	update_icon()
+
 /obj/item/reagent_container/glass/beaker/cryoxadone
 	name = "cryoxadone beaker"
 
