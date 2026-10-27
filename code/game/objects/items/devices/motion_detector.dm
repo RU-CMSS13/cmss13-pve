@@ -239,6 +239,11 @@
 		if(M == loc) continue //device user isn't detected
 		if(M.get_target_lock(iff_signal))
 			continue
+		if(M.status_flags & INCORPOREAL)
+			ping_count++
+			if(human_user)
+				show_blip(human_user, M, "queen_eye")
+			continue
 		if(world.time > M.l_move_time + 20)
 			continue //hasn't moved recently
 

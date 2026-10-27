@@ -152,6 +152,9 @@
 
 	/// Holds the human squad spawner panel for this client
 	var/datum/human_ai_spawner_menu/human_spawn_menu
+
+	/// Holds the xeno spawner panel for this client
+	var/datum/xeno_ai_spawner_menu/xeno_spawn_menu
 	/// Sets LOOC messaging cooldown
 	COOLDOWN_DECLARE(looc_cooldown)
 
