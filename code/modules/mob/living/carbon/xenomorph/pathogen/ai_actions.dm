@@ -1,13 +1,5 @@
 // Abilities that spread the infection (blight wave, spore sacs, spore injection, mycotoxin) are deliberately left to players.
 
-/// Amount of living hostile humans the xeno can see within the given range.
-/mob/living/carbon/xenomorph/proc/count_ai_targets_in_range(range = 2)
-	. = 0
-	for(var/mob/living/carbon/human/human in view(range, src))
-		if(human.stat == DEAD || can_not_harm(human))
-			continue
-		.++
-
 // ################## Shared ##################
 
 // Delay for actions
