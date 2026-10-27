@@ -40,6 +40,7 @@ GLOBAL_LIST_INIT(admin_verbs_default, list(
 	/datum/admins/proc/toggleooc, /*toggles ooc on/off for everyone*/
 	/datum/admins/proc/togglelooc, /*toggles ooc on/off for everyone*/
 	/datum/admins/proc/setlooccooldoown,
+	/datum/admins/proc/toggle_intro_music, // RU-PVE ADDITION
 	/datum/admins/proc/toggledsay, /*toggles dsay on/off for everyone*/
 	/client/proc/check_antagonists,
 	/client/proc/check_round_status,
@@ -382,6 +383,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		add_verb(src, /client/proc/toggle_vehicle_blockers)
 		add_verb(src, /client/proc/toggle_ai_xeno_weeding)
 		add_verb(src, /client/proc/toggle_rappel_menu)
+		add_verb(src, /client/proc/toggle_nightmare_menu)
 		add_verb(src, /client/proc/toggle_fire_support_menu)
 		add_verb(src, /client/proc/gm_lighting)
 		add_verb(src, /client/proc/disallow_to_join) // RU-PVE ADDITION
@@ -420,6 +422,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		/client/proc/toggle_vehicle_blockers,
 		/client/proc/toggle_ai_xeno_weeding,
 		/client/proc/toggle_rappel_menu,
+		/client/proc/toggle_nightmare_menu,
 		/client/proc/toggle_fire_support_menu,
 		/client/proc/admin_marine_announcement,
 		/client/proc/screen_alert_menu,

@@ -18,7 +18,12 @@
 /datum/game_mode/proc/titan_online()
 	var/name = "TITAN 1200 Report"
 	var/input = "TITAN unit online. Good morning, marines."
-	shipwide_ai_announcement(input, name, 'sound/theme/hyper_sleep.ogg')
+// RU-PVE EDIT START
+	if(GLOB.intro_music)
+		shipwide_ai_announcement(input, name, 'sound/theme/hyper_sleep.ogg')
+	else
+		shipwide_ai_announcement(input, name)
+// RU-PVE EDIT END
 
 /datum/game_mode/proc/request_ert(user, ares = FALSE)
 	if(!user)

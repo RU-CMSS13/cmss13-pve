@@ -802,6 +802,7 @@ GLOBAL_LIST_INIT(whitelisted_client_procs, list(
 				continue
 
 		remove_from_screen(object)
+	render_plates_shown = alist()
 
 ///opens the particle editor UI for the in_atom object for this client
 /client/proc/open_particle_editor(atom/movable/in_atom)

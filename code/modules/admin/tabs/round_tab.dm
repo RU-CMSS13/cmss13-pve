@@ -216,6 +216,17 @@
 		message_admins("[SPAN_NOTICE("[key_name(usr)] [SSticker.intro_sequence ? "has enabled the cryo intro sequence" : "disabled the cryo intro sequence"].")]")
 		return
 
+/datum/admins/proc/toggle_intro_music() // RU-PVE ADDITION
+	set name = "Toggle Intro Music"
+	set desc = "Toggles the music played with the TITAN online announcement at round start"
+	set category = "Server.Round"
+
+	if(SSticker.current_state != GAME_STATE_PREGAME)
+		to_chat(usr, SPAN_WARNING("Error: Toggle Intro Music: Game has already started or has not finished setting up."))
+		return
+	GLOB.intro_music = !GLOB.intro_music
+	message_admins("[key_name(usr)] [GLOB.intro_music ? "enabled" : "disabled"] the intro music.")
+
 /client/proc/toggle_cdn()
 	set name = "Toggle CDN"
 	set category = "Server"

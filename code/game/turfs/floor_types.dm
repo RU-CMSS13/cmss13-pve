@@ -206,10 +206,8 @@
 	icon = 'icons/turf/almayer.dmi'
 
 /turf/open/floor/plating/almayer/no_build
+	is_weedable = NOT_WEEDABLE
 	allow_construction = FALSE
-
-/turf/open/floor/plating/almayer/no_build/is_weedable()
-	return NOT_WEEDABLE
 
 /turf/open/floor/plating/airless
 	icon_state = "plating"
@@ -1848,13 +1846,11 @@
 
 /// Base type of the requisitions and vehicle bay elevator pits.
 /turf/open/floor/almayer/empty
+	is_weedable = NOT_WEEDABLE
 	name = "\proper empty space"
 	desc = "There seems to be an awful lot of machinery down below..."
 	icon = 'icons/turf/floors/floors.dmi'
 	icon_state = "black"
-
-/turf/open/floor/almayer/empty/is_weedable()
-	return NOT_WEEDABLE
 
 /turf/open/floor/almayer/empty/ex_act(severity) //Should make it indestructible
 	return
@@ -2162,14 +2158,12 @@
 //Outerhull
 
 /turf/open/floor/almayer_hull
+	is_weedable = NOT_WEEDABLE
 	icon = 'icons/turf/almayer.dmi'
 	icon_state = "outerhull"
 	name = "hull"
 	hull_floor = TRUE
 	allow_construction = FALSE
-
-/turf/open/floor/almayer_hull/is_weedable()
-	return NOT_WEEDABLE
 
 /turf/open/floor/almayer_hull/outerhull_dir
 	icon_state = "outerhull_dir"
@@ -5265,22 +5259,19 @@
 	icon = 'icons/obj/structures/props/hybrisa/grates.dmi'
 	icon_state = "solidgrate1"
 
-//turf/open/floor/plating/catwalk/grate/is_weedable()
-//	return NOT_WEEDABLE
+//	is_weedable = NOT_WEEDABLE
 
 /turf/open/floor/plating/catwalk/grate/alt
 	icon_state = "solidgrate5"
 
 /turf/open/floor/plating/catwalk/grate/net
+	is_weedable = NOT_WEEDABLE
 	name = "safety net"
 	desc = "Special net intended to catch anyone, or anything, that falls off the rig. Difficult to move around in, but preferable to falling into the endless ocean below."
 	icon = 'icons/obj/structures/props/ice_colony/props.dmi'
 	icon_state = "soil_grid"
 	allow_construction = FALSE
 	var/slow_amt = 4
-
-/turf/open/floor/plating/catwalk/grate/net/is_weedable()
-	return NOT_WEEDABLE
 
 /turf/open/floor/plating/catwalk/grate/net/Entered(atom/movable/AM)
 	if(iscarbon(AM))
@@ -5300,11 +5291,9 @@
 	..()
 
 /turf/open/floor/plating/catwalk/grate/lattice
+	is_weedable = NOT_WEEDABLE
 	icon = 'icons/obj/structures/props/hybrisa/piping_wiring.dmi'
 	icon_state = "latticefull"
-
-/turf/open/floor/plating/catwalk/grate/lattice/is_weedable()
-	return NOT_WEEDABLE
 
 //Outerhull Weedable
 

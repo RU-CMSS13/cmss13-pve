@@ -21,6 +21,10 @@
 		node.invoke(context)
 	return TRUE
 
+/datum/nmnode/branch/catalogue_inserts(datum/nmcontext/context, list/inserts, list/notes, group)
+	notes = notes + get_notes()
+	for(var/datum/nmnode/node as anything in nodes)
+		node.catalogue_inserts(context, inserts, notes, group)
 
 /// Same as branch, but load node data from another included file
 /datum/nmnode/branch/include
@@ -42,6 +46,13 @@
 	resolved_nodes += nodes
 	for(var/datum/nmnode/node as anything in nodes)
 		node.invoke(context)
+
+/datum/nmnode/branch/include/catalogue_inserts(datum/nmcontext/context, list/inserts, list/notes, group)
+	var/list/datum/nmnode/nodes = SSnightmare.parse_file(context.get_file_path(filepath, "nightmare"))
+	notes = notes + get_notes()
+	for(var/datum/nmnode/node as anything in nodes)
+		node.catalogue_inserts(context, inserts, notes, group)
+	QDEL_LIST(nodes)
 
 /// Same as branch, but selects a subset of the given nodes
 /// amount: how many items to pick
@@ -66,6 +77,9 @@
 	. = ..()
 	if(!.) return
 	var/list/datum/nmnode/pickables = choices.Copy()
+	// Only picked definitions get resolved, so catalogue every possible one here
+	for(var/datum/nmnode/scenario_def/def in pickables)
+		def.catalogue(context)
 	for(var/datum/nmnode/node as anything in pickables)
 		pickables[node] = isnum(node.raw["weight"]) ? node.raw["weight"] : 1
 	var/list/datum/nmnode/picked = list()
@@ -80,3 +94,14 @@
 		picked += node
 		node.resolve(context)
 	return TRUE
+
+/datum/nmnode/picker/catalogue_inserts(datum/nmcontext/context, list/inserts, list/notes, group)
+	notes = notes + get_notes()
+	if(name != id)
+		group = name
+	var/total_weight = 0
+	for(var/datum/nmnode/node as anything in choices)
+		total_weight += isnum(node.raw["weight"]) ? node.raw["weight"] : 1
+	for(var/datum/nmnode/node as anything in choices)
+		var/weight = isnum(node.raw["weight"]) ? node.raw["weight"] : 1
+		node.catalogue_inserts(context, inserts, notes + "picks [amount], weight [weight]/[total_weight]", group)
