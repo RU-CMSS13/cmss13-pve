@@ -218,3 +218,9 @@
 	apply_effect(10, EYE_BLUR)
 	apply_effect(10, PARALYZE)
 	updatehealth() //One more time, so it doesn't show the target as dead on HUDs
+	if(eyelid_timer)
+		deltimer(eyelid_timer)
+		eyelid_timer = null
+	next_blink_at = 0
+	if(eyelids_status != EYELID_CLOSED_VOLUNTARILY)
+		apply_eyelid_state(EYELID_OPEN)

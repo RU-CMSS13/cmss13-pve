@@ -976,6 +976,8 @@
 		number += wear_mask.eye_protection
 	if(glasses)
 		number += glasses.eye_protection
+	if(number == 0 && eyelids_status == EYELID_CLOSED_VOLUNTARILY)
+		return EYE_PROTECTION_FLAVOR
 
 	return number
 
