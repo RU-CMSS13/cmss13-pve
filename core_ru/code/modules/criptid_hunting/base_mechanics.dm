@@ -789,3 +789,32 @@
 	if(custom_sprite)
 		return
 	..()
+
+/obj/structure/criptic/night_shrine
+	name = "book"
+	desc = "Used for ritual performing"
+
+	icon = 'core_ru/code/modules/criptid_hunting/psydon_cross.dmi'
+
+	icon_state = "psydon_abandoned_cross"
+
+	health = 300
+
+/obj/structure/criptic/night_shrine/Initialize(mapload, ...)
+	. = ..()
+	show_blurb(GLOB.player_list, 35, "ELDRITCH SHRINE APPEARED SOMEWHERE NEARBY", null, "EAST-7,NORTH-3", "center", COLOR_DARK_RED, null, null, 1)
+	add_filter("shrine", 1, list("type" = "outline", "color" = COLOR_LIGHT_GREEN, "size" = 1))
+
+/obj/structure/criptic/night_shrine/Destroy()
+	playsound(loc, 'sound/voice/deep_alien_screech.ogg', 50, 0, status = 0)
+	for(var/obj/structure/criptic/mission_controller/M in world)
+		balloon_alert_to_viewers("Time were reduced by 500!", COLOR_WHITE)
+		M.until_dawn -= 500
+		M.show_current_progress()
+
+	for(var/mob/living/carbon/xenomorph/criptic_wendigo/W in world)
+		W.maxHealth = W.maxHealth / 2
+		if(W.maxHealth < 100)
+			W.maxHealth = 100
+
+	. = ..()

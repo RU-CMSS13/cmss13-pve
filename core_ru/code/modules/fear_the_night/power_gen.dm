@@ -61,6 +61,7 @@
 			maptext = SPAN_LANGCHAT("|[minigame_progress]/[minigame_goal]|")
 
 		if(minigame_progress >= minigame_goal)
+			balloon_alert(player, "Done!", COLOR_WHITE)
 			broken = FALSE
 			player = null
 			maptext = ""

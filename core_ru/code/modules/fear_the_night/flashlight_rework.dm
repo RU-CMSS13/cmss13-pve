@@ -70,18 +70,20 @@
 		else
 			battery = new /obj/item/cell(src)
 
+		if(MODE_HAS_TOGGLEABLE_FLAG(MODE_HARDCORE_LIGHTS))
+			if(on)
+				START_PROCESSING(SSobj,src)
+
 /obj/item/device/flashlight/process()
 	if(battery.charge <= 0)
-		if(on)
-			turn_off_light()
+		turn_off_light()
 
 	if(battery.charge > 0)
 		battery.use(flashlight_hungriness)
 
 	if(!battery)
 		playsound(src.loc, breaking_sound, 25, 1)
-		if(on)
-			turn_off_light()
+		turn_off_light()
 
 /obj/item/device/flashlight/clicked(mob/user, list/mods)
 	if(mods[ALT_CLICK] && needs_battery)
@@ -90,8 +92,7 @@
 		battery.forceMove(get_turf(loc))
 		user.put_in_hands(battery)
 		battery = null
-		if(on)
-			turn_off_light()
+		turn_off_light()
 		return TRUE
 	return ..()
 

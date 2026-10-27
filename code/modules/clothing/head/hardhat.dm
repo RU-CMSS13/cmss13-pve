@@ -60,8 +60,7 @@
 		if(power_current <= 0)
 			balloon_alert(user, "Not enough power!", COLOR_WHITE)
 			return
-		if(!process())
-			START_PROCESSING(SSobj,src)
+		START_PROCESSING(SSobj,src)
 
 	set_light_on(toggle_on)
 

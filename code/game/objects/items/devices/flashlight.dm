@@ -56,19 +56,13 @@
 /obj/item/device/flashlight/attack_self(mob/user)
 	..()
 
-	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_HARDCORE_LIGHTS))
-		if(needs_battery)
-			if(!battery)
-				balloon_alert(user, "No battery inside!", COLOR_WHITE)
-				return FALSE
-			if(battery.charge <= 0)
-				balloon_alert(user, "Not enough power!", COLOR_WHITE)
-				return FALSE
-			else
-				if(!process())
-					START_PROCESSING(SSobj,src)
-				if(process())
-					STOP_PROCESSING(SSobj,src)
+	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_HARDCORE_LIGHTS) && needs_battery)
+		if(!battery)
+			balloon_alert(user, "No battery inside!", COLOR_WHITE)
+			return FALSE
+		if(battery.charge <= 0)
+			balloon_alert(user, "Not enough power!", COLOR_WHITE)
+			return FALSE
 
 	if(!toggleable)
 		to_chat(user, SPAN_WARNING("You cannot toggle \the [src.name] on or off."))
@@ -79,12 +73,16 @@
 		return FALSE
 
 	on = !on
+	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_HARDCORE_LIGHTS) && needs_battery)
+		if(!on)
+			STOP_PROCESSING(SSobj,src)
+		if(on)
+			START_PROCESSING(SSobj,src)
 	set_light_on(on)
 	update_icon()
 	for(var/xman in actions)
 		var/datum/action/active = xman
 		active.update_button_icon()
-
 	return TRUE
 
 /obj/item/device/flashlight/proc/turn_off_light(mob/bearer)
@@ -107,11 +105,7 @@
 			if(battery)
 				battery.forceMove(get_turf(loc))
 				battery = null
-				if(on)
-					turn_off_light()
-				if(process())
-					playsound(src.loc, breaking_sound, 25, 1)
-					STOP_PROCESSING(SSobj,src)
+				turn_off_light()
 			user.drop_held_item(C)
 			C.forceMove(src)
 			battery = C
@@ -121,10 +115,7 @@
 				if(battery)
 					battery.forceMove(get_turf(loc))
 					battery = null
-					if(process())
-						playsound(src.loc, breaking_sound, 25, 1)
-						turn_off_light()
-						STOP_PROCESSING(SSobj,src)
+					turn_off_light()
 				user.drop_held_item(C)
 				C.forceMove(src)
 				battery = C
