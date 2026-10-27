@@ -5,6 +5,7 @@
 
 
 /turf/open/space
+	is_weedable = NOT_WEEDABLE
 	icon = 'icons/turf/floors/space.dmi'
 	name = "\proper space"
 	icon_state = "0"

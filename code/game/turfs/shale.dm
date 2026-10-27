@@ -1,10 +1,8 @@
 //these are the companion turfs to the auto-turf used on chances claim, since I (triiodine) fucked up the layer system
 /turf/open/shale
+	is_weedable = SEMI_WEEDABLE
 	icon = 'icons/turf/floors/auto_shale.dmi'
 	icon_state = "shale_0"
-
-/turf/open/shale/is_weedable()
-	return TRUE
 
 /turf/open/shale/get_dirt_type()
 	return DIRT_TYPE_SHALE

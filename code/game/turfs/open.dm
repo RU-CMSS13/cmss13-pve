@@ -151,6 +151,7 @@
 
 // Black & invisible to the mouse. used by vehicle interiors
 /turf/open/void
+	is_weedable = NOT_WEEDABLE
 	name = "void"
 	icon = 'icons/turf/floors/space.dmi'
 	icon_state = "black"
@@ -165,9 +166,6 @@
 /turf/open/void/vehicle/unopacity
 	density = TRUE
 	opacity = FALSE
-
-/turf/open/void/is_weedable()
-	return NOT_WEEDABLE
 
 /turf/open/river
 	can_bloody = FALSE
@@ -287,6 +285,7 @@
 // Mars grounds
 
 /turf/open/mars
+	is_weedable = SEMI_WEEDABLE
 	name = "sand"
 	icon = 'icons/turf/floors/bigred.dmi'
 	icon_state = "mars_sand_1"
@@ -575,6 +574,7 @@
 	icon_state = "desert_dug"
 
 /turf/open/gm/grass
+	is_weedable = SEMI_WEEDABLE
 	name = "grass"
 	icon_state = "grass1"
 	baseturfs = /turf/open/gm/grass
@@ -635,6 +635,7 @@
 	minimap_color = MINIMAP_DIRT
 
 /turf/open/gm/dirtgrassborder
+	is_weedable = SEMI_WEEDABLE
 	name = "grass"
 	icon_state = "grassdirt_edge"
 	baseturfs = /turf/open/gm/dirtgrassborder
@@ -730,6 +731,7 @@
 	icon_state = "wall3"
 
 /turf/open/gm/river
+	is_weedable = NOT_WEEDABLE
 	name = "river"
 	icon_state = "seashallow"
 	can_bloody = FALSE
@@ -925,6 +927,7 @@
 			to_chat(rivermob, SPAN_WARNING("Moving through the incredibly deep ocean slows you down a lot!"))
 
 /turf/open/gm/coast
+	is_weedable = NOT_WEEDABLE
 	name = "coastline"
 	icon_state = "beach"
 	baseturfs = /turf/open/gm/coast
@@ -999,14 +1002,12 @@
 
 //ELEVATOR SHAFT-----------------------------------//
 /turf/open/gm/empty
+	is_weedable = NOT_WEEDABLE
 	name = "empty space"
 	icon = 'icons/turf/floors/floors.dmi'
 	icon_state = "black"
 	density = TRUE
 	supports_surgery = FALSE
-
-/turf/open/gm/empty/is_weedable()
-	return NOT_WEEDABLE
 
 
 
@@ -1035,8 +1036,8 @@
 	. = ..()
 	setDir(pick(NORTH,SOUTH,EAST,WEST,NORTHEAST,NORTHWEST,SOUTHEAST,SOUTHWEST))
 
-/turf/open/ice/noweed/is_weedable() //used for new prison ice block xenos
-	return NOT_WEEDABLE
+/turf/open/ice/noweed //used for new prison ice block xenos
+	is_weedable = NOT_WEEDABLE
 
 
 
@@ -1152,6 +1153,7 @@
 
 
 /turf/open/jungle
+	is_weedable = NOT_WEEDABLE
 	allow_construction = FALSE
 	var/bushes_spawn = 1
 	var/plants_spawn = 1
