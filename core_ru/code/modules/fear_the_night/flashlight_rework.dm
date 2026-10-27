@@ -167,3 +167,33 @@
 /obj/item/device/flashlight/flare/on/illumination/Initialize()
 	. = ..()
 	fuel = rand(1.0 MINUTES, 2.0 MINUTES) // Approximately half the effective duration of a flare, but justified since it's invincible
+
+/obj/item/storage/box/flare
+	storage_slots = 6
+	max_storage_space = 6
+
+/obj/item/weapon/gun/flamer
+	light_range = 1
+	light_power = 0.3
+
+/obj/item/clothing/head/hardhat
+	light_system = DIRECTIONAL_LIGHT
+	var/power_amount = 10
+	var/power_current = 10
+
+/obj/item/clothing/head/hardhat/dropped(mob/user)
+	. = ..()
+	maptext = ""
+
+/obj/item/clothing/head/hardhat/process()
+	if(light_on)
+		if(power_current < 0)
+			turn_light(loc, !light_on)
+		else
+			power_current = clamp(power_current - 0.3, 0, power_amount)
+
+	if(!light_on && power_current < power_amount)
+		power_current = clamp(power_current + 0.1, 0, power_amount)
+
+	if(ishuman(loc))
+		maptext = SPAN_LANGCHAT("|[power_current]/[power_amount]|%")

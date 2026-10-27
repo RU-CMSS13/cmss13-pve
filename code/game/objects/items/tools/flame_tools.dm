@@ -27,6 +27,8 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	icon_state = "candle1"
 	item_state = "candle1"
 	w_class = SIZE_TINY
+	light_range = CANDLE_LUM
+	light_power = 0.5
 
 	var/wax = 1500
 
@@ -62,7 +64,9 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 			flavor_text = SPAN_NOTICE("[usr] lights [src].")
 		for(var/mob/O in viewers(usr, null))
 			O.show_message(flavor_text, SHOW_MESSAGE_VISIBLE)
-		set_light(CANDLE_LUM)
+		set_light_range(light_range)
+		set_light_on(TRUE)
+//		set_light(CANDLE_LUM)
 		update_icon()
 		START_PROCESSING(SSobj, src)
 
@@ -83,7 +87,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	if(heat_source)
 		heat_source = 0
 		update_icon()
-		set_light(0)
+		set_light_on(FALSE)
 		STOP_PROCESSING(SSobj, src)
 
 ///////////
@@ -98,8 +102,8 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	var/smoketime = 10 SECONDS
 	var/burnt_name = "burnt match"
 	w_class = SIZE_TINY
-	light_range = 2
-	light_power = 1
+	light_range = 1
+	light_power = 0.3
 
 	attack_verb = list("burnt", "singed")
 

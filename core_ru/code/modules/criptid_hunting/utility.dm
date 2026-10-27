@@ -355,14 +355,6 @@
 
 /obj/item/criptic/utility/cigarette/attack_self(mob/user)
 	. = ..()
-	pop_out()
-	if(ishuman(user))
-		var/mob/living/carbon/human/H = user
-		if(H.sanity_current < H.sanity_max)
-			show_blurb(H, 15, "I feel...slightly better", null, "WEST+6:22,2:14", "center", LIGHT_COLOR_CANDLE, null, null, 1)
-			H.sanity_current = clamp(H.sanity_current + 15, 0, H.sanity_max)
-			new /obj/effect/temp_visual/healing(get_turf(src))
-
 	var/list/atom/possible_points = list()
 	var/list/nearby_clues = list()
 
@@ -370,6 +362,18 @@
 		if(C.revealed)
 			continue
 		nearby_clues += C
+
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		if(H.sanity_current < H.sanity_max)
+			show_blurb(H, 15, "I feel...slightly better", null, "WEST+6:22,2:14", "center", LIGHT_COLOR_CANDLE, null, null, 1)
+			H.sanity_current = clamp(H.sanity_current + 15, 0, H.sanity_max)
+			new /obj/effect/temp_visual/healing(get_turf(src))
+
+		if(H.sanity_current >= H.sanity_max && !length(nearby_clues))
+			balloon_alert(H, "Not sure if i really need it right now...", COLOR_WHITE)
+			animation_flash_color(src, COLOR_RED)
+			return FALSE
 
 	if(length(nearby_clues))
 		for(var/atom/A in view(user))
@@ -400,6 +404,7 @@
 
 				addtimer(CALLBACK(H, TYPE_PROC_REF(/mob/living/carbon/human, reset_cigbuff)), 10 SECONDS)
 
+	pop_out()
 	animation_flash_color(src, COLOR_GREEN)
 	sleep(0.5 SECONDS)
 	qdel(src)

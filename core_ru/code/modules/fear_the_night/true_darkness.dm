@@ -15,15 +15,15 @@
 	var/sanity_current = 100
 
 	var/sanity_warning_shown = FALSE
+	var/light_debugger_on = FALSE
 
 /mob/living/carbon/human/proc/do_sanity_check()
 	set waitfor = 0
 
-	// Считаем среднюю освещённость в радиусе 2-3 клеток
 	var/total_light = 0
 	var/checked_tiles = 0
-	for(var/turf/nearby in range(2, src))
-		var/tile_light = nearby.get_lumcount() + nearby.dynamic_lumcount
+	for(var/turf/open/nearby in view(1, src.loc))
+		var/tile_light = nearby.get_lumcount() + (nearby.dynamic_lumcount / 2)
 		if(tile_light > 0)
 			total_light += tile_light
 			checked_tiles++
@@ -31,16 +31,17 @@
 	var/average_light = checked_tiles > 0 ? (total_light / checked_tiles) : 0
 
 	// Дебаг
-	to_chat(src, "Avg light: [average_light] across [checked_tiles] tiles")
+	if(light_debugger_on)
+		to_chat(src, "Avg light: [average_light] across [checked_tiles] tiles")
 
-	if(sanity_current > 0 && average_light <= 0.15)  // Повышен порог
+	if(sanity_current > 0 && average_light <= 0.20)
 		if(!sanity_warning_shown)
 			sanity_warning_shown = TRUE
 			show_blurb(src, 5, "Darkness slowly consumes you...", null, "EAST-7,NORTH-8.5", "center", COLOR_GRAY, null, null, 1)
 		sanity_current = clamp(sanity_current - 1, 0, sanity_max)
 		overlay_fullscreen_timer(2 SECONDS, 10, "darkness", /atom/movable/screen/fullscreen/true_darkness_damage)
 
-	if(sanity_current < sanity_max && average_light >= 0.4)  // Ниже порог восстановления
+	if(sanity_current < sanity_max && average_light >= 0.5)
 		if(sanity_warning_shown)
 			sanity_warning_shown = FALSE
 			show_blurb(src, 5, "Warm light...finally...", null, "EAST-7,NORTH-8.5", "center", LIGHT_COLOR_CANDLE, null, null, 1)
@@ -62,6 +63,7 @@
 			new_body.ckey = ckey
 		sleep(5)
 		qdel(src)
+	return TRUE
 
 /mob/living/carbon/human/Life()
 	if(stat != DEAD && fear_the_night)

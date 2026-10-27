@@ -189,6 +189,6 @@
 		var/mob/living/carbon/xenomorph/criptic_wendigo/W = target
 		if(!W.fur_dropped)
 			W.fur_dropped = TRUE
-			new /obj/item/criptic/clue_item/criptid_cloth(get_turf(src))
+			new /obj/item/criptic/clue_item/criptid_cloth(get_turf(W))
 
 	. = ..()

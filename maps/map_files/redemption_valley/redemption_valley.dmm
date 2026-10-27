@@ -1129,10 +1129,6 @@
 	},
 /turf/open/gm/river,
 /area/redemptionvalley/valley/proper)
-"aAw" = (
-/obj/structure/criptic/clue/item,
-/turf/open/auto_turf/strata_grass/layer0_mud,
-/area/redemptionvalley/valley/proper)
 "aAH" = (
 /obj/structure/surface/table/reinforced/prison,
 /turf/open/floor/prison/bright_clean,
@@ -2037,10 +2033,6 @@
 	},
 /turf/open/floor/plating,
 /area/redemptionvalley/oob/buttons)
-"bwD" = (
-/obj/structure/criptic/clue/sound_clue,
-/turf/open/floor/hybrisa/carpet/carpetblack,
-/area/redemptionvalley/valleyroof/swampvillage)
 "bwH" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
@@ -3223,11 +3215,6 @@
 	},
 /turf/open/floor/plating,
 /area/redemptionvalley/valleyroof/foresthouse)
-"cQm" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/criptic/clue/item,
-/turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/redemptionvalley/valley/Westbound)
 "cQU" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 8
@@ -8373,7 +8360,6 @@
 /area/redemptionvalley/valleyroof/housefive)
 "jFN" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/criptic/clue/sound_clue,
 /turf/open/floor/interior/wood/alt,
 /area/redemptionvalley/valleyroof/foresthouse)
 "jGq" = (
@@ -8605,11 +8591,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata,
 /area/redemptionvalley/valleyroof/company)
-"jXe" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/criptic/clue/item,
-/turf/open/gm/dirt2,
-/area/redemptionvalley/valley/proper)
 "jXl" = (
 /obj/structure/platform/wood/west,
 /obj/structure/flora/bush/ausbushes/reedbush,
@@ -14171,13 +14152,6 @@
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/gm/river/ocean/deep_water,
 /area/redemptionvalley/valley/Westbound)
-"rvi" = (
-/obj/structure/flora/bush/ausbushes/grassybush{
-	icon_state = "fullgrass_1"
-	},
-/obj/structure/criptic/clue/sound_clue,
-/turf/open/auto_turf/strata_grass/layer0,
-/area/redemptionvalley/valley/proper)
 "rvN" = (
 /obj/structure/surface/table/holotable,
 /turf/open/floor/prison/kitchen,
@@ -15299,10 +15273,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/warnplate/east,
 /area/redemptionvalley/valleyroof/store)
-"sUw" = (
-/obj/structure/criptic/clue/item,
-/turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/redemptionvalley/valley/proper)
 "sUM" = (
 /obj/structure/prop/tyrargo/boards/boards_2{
 	dir = 4;
@@ -17332,10 +17302,6 @@
 /obj/structure/bed/sofa/vert/grey/top,
 /turf/open/floor/kutjevo/fake_wood,
 /area/redemptionvalley/valleyroof/housetwo)
-"vCf" = (
-/obj/structure/criptic/clue/sound_clue,
-/turf/open/floor/kutjevo/multi_tiles/southeast,
-/area/redemptionvalley/valleyroof/housefour)
 "vCC" = (
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
 /area/redemptionvalley/valleyroof/hydro)
@@ -26700,7 +26666,7 @@ ejm
 ejm
 qgO
 jaH
-jXe
+jaH
 tmO
 qgO
 qgO
@@ -29885,7 +29851,7 @@ mxG
 aaN
 mxG
 vUJ
-cQm
+dkP
 jDd
 jDd
 dkP
@@ -39596,7 +39562,7 @@ tmO
 tmO
 tmO
 myI
-aAw
+tmO
 tmO
 cVT
 uFX
@@ -50580,7 +50546,7 @@ mIa
 pMy
 oLW
 wxw
-vCf
+ccs
 qUz
 ccs
 pMy
@@ -67014,7 +66980,7 @@ oSJ
 nqV
 vlJ
 tmO
-aAw
+tmO
 myI
 tVS
 uob
@@ -68026,7 +67992,7 @@ uHY
 eZp
 jhP
 dJt
-bwD
+dBj
 erg
 eZp
 bfo
@@ -72935,7 +72901,7 @@ khE
 qgO
 hfz
 qgO
-rvi
+pIu
 mUT
 qgO
 lLl
@@ -76781,7 +76747,7 @@ qgO
 qgO
 paN
 eNN
-sUw
+paN
 paN
 paN
 kUt

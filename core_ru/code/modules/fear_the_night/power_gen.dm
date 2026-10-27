@@ -212,7 +212,9 @@
 		turn_off()
 	broken = TRUE
 
-	animate(src, pixel_x = rand(-2,2), pixel_y = rand(-2,2), time = 3, loop = -1, easing = JUMP_EASING)
+	show_blurb(GLOB.player_list, 35, "GENERATOR NEARBY WERE SHUT DOWN", null, "EAST-7,NORTH-3", "center", COLOR_DARK_RED, null, null, 1)
+
+	animate(src, pixel_x = rand(-2,2), pixel_y = rand(-2,2), time = 3, easing = JUMP_EASING)
 	for(var/i in 1 to 4)
 		animate(pixel_x = rand(-2,2), pixel_y = rand(-2,2), time = 3, easing = JUMP_EASING)
 
