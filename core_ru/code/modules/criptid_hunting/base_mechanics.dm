@@ -111,22 +111,34 @@
 		else
 			if(until_dawn > 0)
 				show_blurb(GLOB.player_list, 35, "SUN WILL COME IN: <span class='langchat' style='color:#ff0000'>[until_dawn]</span>", null, "EAST-7,NORTH-3", "center", COLOR_GRAY, null, null, 1)
-			else
-				for(var/turf/current_turf as anything in lightturfs)
-					var/area/current_area = current_turf.loc
-					if(!current_area.daytime_affected)
-						continue
-					current_turf.set_light(1, 0.7, l_color="#dda56e")
-					CHECK_TICK
-
-				show_blurb(GLOB.player_list, 35, "THE NIGHT IS FINALLY GONE", null, "EAST-7,NORTH-3", "center", LIGHT_COLOR_CANDLE, null, null, 1)
-				STOP_PROCESSING(SSobj,src)
 		return TRUE
 	else
 		return FALSE
 
 /obj/structure/criptic/mission_controller/proc/unbusy()
 	busy_now = FALSE
+
+/obj/structure/criptic/mission_controller/proc/end_the_night()
+	until_dawn = -1
+
+	for(var/turf/current_turf as anything in lightturfs)
+		var/area/current_area = current_turf.loc
+		if(!current_area.daytime_affected)
+			continue
+		current_turf.set_light(1, 0.7, l_color="#dda56e")
+		CHECK_TICK
+
+	show_blurb(GLOB.player_list, 35, "THE NIGHT IS FINALLY GONE", null, "EAST-7,NORTH-3", "center", LIGHT_COLOR_CANDLE, null, null, 1)
+	spawn(10)
+		var/creautre_alive = FALSE
+		for(var/mob/living/carbon/xenomorph/criptic_wendigo/C in world)
+			if(C.stat != DEAD)
+				creautre_alive = TRUE
+		if(!length(GLOB.alive_human_list))
+			show_blurb(GLOB.player_list, 20, "And every last man with it...", null, "EAST-7,NORTH-4.5", "center", COLOR_DARK_RED, null, null, 1)
+		if(creautre_alive && length(GLOB.alive_human_list))
+			show_blurb(GLOB.player_list, 20, "But not the hunter...", null, "EAST-7,NORTH-4.5", "center", COLOR_DARK_RED, null, null, 1)
+	STOP_PROCESSING(SSobj,src)
 
 /obj/structure/criptic/mission_controller/proc/start_the_hunt()
 	if(!fear_the_night_gm)
@@ -162,6 +174,9 @@
 /obj/structure/criptic/mission_controller/process()
 	if(fear_the_night_gm && until_dawn > 0)
 		until_dawn -= 1
+
+	if(fear_the_night_gm && until_dawn <= 0)
+		end_the_night()
 
 	if(automatic_messaging_delay <= 0)
 		automatic_messaging_delay = 300

@@ -105,9 +105,10 @@
 			if(battery)
 				battery.forceMove(get_turf(loc))
 				battery = null
+				if(on)
+					turn_off_light()
 				if(process())
 					playsound(src.loc, breaking_sound, 25, 1)
-					turn_off_light()
 					STOP_PROCESSING(SSobj,src)
 			user.drop_held_item(C)
 			C.forceMove(src)

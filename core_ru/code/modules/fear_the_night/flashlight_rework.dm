@@ -73,12 +73,18 @@
 /obj/item/device/flashlight/process()
 	if(battery.charge <= 0)
 		playsound(src.loc, breaking_sound, 25, 1)
-		turn_off_light()
-
+		if(on)
+			turn_off_light()
 		STOP_PROCESSING(SSobj,src)
 
 	if(battery.charge > 0)
 		battery.use(flashlight_hungriness)
+
+	if(!battery)
+		playsound(src.loc, breaking_sound, 25, 1)
+		if(on)
+			turn_off_light()
+		STOP_PROCESSING(SSobj,src)
 
 /obj/item/device/flashlight/clicked(mob/user, list/mods)
 	if(mods[ALT_CLICK] && needs_battery)
@@ -87,9 +93,10 @@
 		battery.forceMove(get_turf(loc))
 		user.put_in_hands(battery)
 		battery = null
+		if(on)
+			turn_off_light()
 		if(process())
 			playsound(src.loc, breaking_sound, 25, 1)
-			turn_off_light()
 			STOP_PROCESSING(SSobj,src)
 		return TRUE
 	return ..()
@@ -110,13 +117,13 @@
 	needs_battery = FALSE
 
 /obj/item/device/flashlight/combat
-	put_in_battery_type = /obj/item/cell
+	battery_type = /obj/item/cell
 
 /obj/item/device/flashlight/lamp
 	flashlight_hungriness = 10
 
 /obj/item/device/flashlight/tnr
-	put_in_battery_type = /obj/item/cell
+	battery_type = /obj/item/cell
 
 /obj/item/tool/candle
 	light_system = MOVABLE_LIGHT
@@ -153,3 +160,10 @@
 		STOP_PROCESSING(SSobj, src)
 		return 1
 	return 0
+
+/obj/item/device/flashlight/flare
+	fuel = 5 MINUTES
+
+/obj/item/device/flashlight/flare/on/illumination/Initialize()
+	. = ..()
+	fuel = rand(1.0 MINUTES, 2.0 MINUTES) // Approximately half the effective duration of a flare, but justified since it's invincible

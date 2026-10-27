@@ -37,7 +37,7 @@
 
 	var/total_uses = 0
 	var/total_uses_allowed = 5
-	var/list/mob/living/carbon/xenomorph/criptids = list(/mob/living/carbon/xenomorph/criptic_wendigo, /mob/living/carbon/xenomorph/criptic_wendigo/banshee)
+	var/list/mob/living/carbon/xenomorph/criptids = list(/mob/living/carbon/xenomorph/criptic_wendigo, /mob/living/carbon/xenomorph/criptic_wendigo/werewolf, /mob/living/carbon/xenomorph/criptic_wendigo/banshee)
 
 /obj/item/criptic/utility/protective_cross/attack_self(mob/user)
 	. = ..()

@@ -19,16 +19,28 @@
 /mob/living/carbon/human/proc/do_sanity_check()
 	set waitfor = 0
 
-	var/turf/T = get_turf(src)
-	var/total_light = T.get_lumcount() + T.dynamic_lumcount
-	if(sanity_current > 0 && total_light <= 0.1)
+	// Считаем среднюю освещённость в радиусе 2-3 клеток
+	var/total_light = 0
+	var/checked_tiles = 0
+	for(var/turf/nearby in range(2, src))
+		var/tile_light = nearby.get_lumcount() + nearby.dynamic_lumcount
+		if(tile_light > 0)
+			total_light += tile_light
+			checked_tiles++
+
+	var/average_light = checked_tiles > 0 ? (total_light / checked_tiles) : 0
+
+	// Дебаг
+	to_chat(src, "Avg light: [average_light] across [checked_tiles] tiles")
+
+	if(sanity_current > 0 && average_light <= 0.15)  // Повышен порог
 		if(!sanity_warning_shown)
 			sanity_warning_shown = TRUE
 			show_blurb(src, 5, "Darkness slowly consumes you...", null, "EAST-7,NORTH-8.5", "center", COLOR_GRAY, null, null, 1)
 		sanity_current = clamp(sanity_current - 1, 0, sanity_max)
 		overlay_fullscreen_timer(2 SECONDS, 10, "darkness", /atom/movable/screen/fullscreen/true_darkness_damage)
 
-	if(sanity_current < sanity_max && total_light >= 0.5)
+	if(sanity_current < sanity_max && average_light >= 0.4)  // Ниже порог восстановления
 		if(sanity_warning_shown)
 			sanity_warning_shown = FALSE
 			show_blurb(src, 5, "Warm light...finally...", null, "EAST-7,NORTH-8.5", "center", LIGHT_COLOR_CANDLE, null, null, 1)

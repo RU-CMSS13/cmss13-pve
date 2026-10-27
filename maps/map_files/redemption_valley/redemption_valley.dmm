@@ -343,10 +343,6 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/redemptionvalley/valley/proper)
 "abW" = (
-/obj/effect/projector{
-	name = "redemption_western_cave_up";
-	vector_x = 258
-	},
 /obj/structure/ladder/rope{
 	layer = 3;
 	id = "western_cave_up";
@@ -699,7 +695,9 @@
 /turf/open/space/basic,
 /area/space)
 "afn" = (
-/obj/item/device/flashlight/lamp/tripod/grey,
+/obj/item/device/flashlight/lamp/tripod/grey{
+	anchored = 1
+	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/redemptionvalley/caverns/east)
 "afo" = (
@@ -716,7 +714,9 @@
 /turf/open/gm/dirt2,
 /area/redemptionvalley/valley/checkpoint)
 "afs" = (
-/obj/item/device/flashlight/lamp/tripod/grey,
+/obj/item/device/flashlight/lamp/tripod/grey{
+	anchored = 1
+	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/auto_turf/sand_white/layer0,
 /area/redemptionvalley/caverns/east)
@@ -734,12 +734,9 @@
 /turf/open/void,
 /area/redemptionvalley/caverns/entry)
 "afz" = (
-/obj/effect/projector{
-	name = "redemption_western_cave_up";
-	vector_x = 258
-	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/redemptionvalley/caverns/east)
+/obj/item/criptic/scrap,
+/turf/open/floor/prison,
+/area/redemptionvalley/valleyroof/storage)
 "afI" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 4
@@ -791,10 +788,6 @@
 /obj/structure/machinery/power/apc/power/east,
 /turf/open/floor/prison,
 /area/redemptionvalley/valleyroof/drillsite)
-"aiI" = (
-/obj/structure/criptic/clue/item,
-/turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/redemptionvalley/valley/proper)
 "ajq" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -1019,7 +1012,9 @@
 /turf/open/gm/dirt2,
 /area/redemptionvalley/valley/checkpoint)
 "atK" = (
-/obj/item/device/flashlight/lamp/tripod,
+/obj/item/device/flashlight/lamp/tripod{
+	anchored = 1
+	},
 /turf/open/floor/interior/wood_sat,
 /area/redemptionvalley/valley/proper)
 "atU" = (
@@ -1113,19 +1108,6 @@
 	},
 /turf/open/floor/prison,
 /area/redemptionvalley/valleyroof/housefour)
-"azH" = (
-/obj/structure/machinery/washing_machine{
-	pixel_y = 16;
-	density = 0
-	},
-/obj/structure/machinery/washing_machine{
-	layer = 3.5;
-	pixel_y = 31;
-	density = 0
-	},
-/obj/item/cell,
-/turf/open/floor/prison/kitchen,
-/area/redemptionvalley/valleyroof/laundro)
 "aAa" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
@@ -1146,6 +1128,10 @@
 	layer = 3.02
 	},
 /turf/open/gm/river,
+/area/redemptionvalley/valley/proper)
+"aAw" = (
+/obj/structure/criptic/clue/item,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/redemptionvalley/valley/proper)
 "aAH" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -1602,6 +1588,10 @@
 "aYa" = (
 /turf/open/floor/interior/wood/alt2,
 /area/redemptionvalley/valleyroof/church)
+"aYm" = (
+/obj/item/criptic/scrap,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/redemptionvalley/valley/proper)
 "aYs" = (
 /obj/structure/platform/shiva/catwalk{
 	dir = 1
@@ -1719,7 +1709,8 @@
 	icon_state = "interior_door";
 	name = "van interior wall";
 	height = 2;
-	pixel_y = 32
+	pixel_y = 32;
+	custom_sprite = 1
 	},
 /turf/open/shuttle/vehicle/floor_3_11,
 /area/interior/vehicle/van)
@@ -2046,6 +2037,10 @@
 	},
 /turf/open/floor/plating,
 /area/redemptionvalley/oob/buttons)
+"bwD" = (
+/obj/structure/criptic/clue/sound_clue,
+/turf/open/floor/hybrisa/carpet/carpetblack,
+/area/redemptionvalley/valleyroof/swampvillage)
 "bwH" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
@@ -2507,6 +2502,16 @@
 	color = "black"
 	},
 /area/space)
+"bTQ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/largecrate{
+	name = "farm food supply"
+	},
+/obj/item/cell,
+/turf/open/floor/prison,
+/area/redemptionvalley/valleyroof/storage)
 "bTS" = (
 /obj/structure/flora/bush/ausbushes/genericbush,
 /obj/structure/prop/invuln/prop_fog/mist,
@@ -2796,6 +2801,10 @@
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/gm/river/ocean/deep_water,
 /area/redemptionvalley/valley/Westbound)
+"cna" = (
+/obj/item/criptic/scrap,
+/turf/open/gm/dirt2,
+/area/redemptionvalley/valley/checkpoint)
 "cnv" = (
 /obj/structure/surface/rack{
 	pixel_y = 18;
@@ -2825,11 +2834,6 @@
 /obj/structure/machinery/door/airlock/almayer/generic,
 /turf/open/floor/prison,
 /area/redemptionvalley/valleyroof/admin)
-"cpa" = (
-/obj/structure/flora/grass/tallgrass/crop,
-/obj/item/criptic/scrap,
-/turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/redemptionvalley/valley/proper)
 "cpk" = (
 /obj/structure/machinery/power/apc/power/east,
 /turf/open/floor/prison,
@@ -2856,10 +2860,6 @@
 	},
 /obj/structure/flora/tree/tyrargo/tree_4,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/redemptionvalley/valley/proper)
-"csg" = (
-/obj/item/criptic/scrap,
-/turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/redemptionvalley/valley/proper)
 "csw" = (
 /obj/structure/surface/table/holotable,
@@ -3223,6 +3223,11 @@
 	},
 /turf/open/floor/plating,
 /area/redemptionvalley/valleyroof/foresthouse)
+"cQm" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/criptic/clue/item,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/redemptionvalley/valley/Westbound)
 "cQU" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 8
@@ -3455,10 +3460,6 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/redemptionvalley/valley/proper)
-"dcz" = (
-/obj/structure/criptic/clue/sound_clue,
-/turf/open/floor/kutjevo/multi_tiles/southeast,
-/area/redemptionvalley/valleyroof/housefour)
 "dcG" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "Pod5"
@@ -3486,7 +3487,9 @@
 /obj/structure/barricade/handrail/kutjevo{
 	dir = 4
 	},
-/obj/item/device/flashlight/lamp/tripod,
+/obj/item/device/flashlight/lamp/tripod{
+	anchored = 1
+	},
 /turf/open/floor/interior/wood_sat,
 /area/redemptionvalley/valley/proper)
 "deO" = (
@@ -3538,10 +3541,6 @@
 	color = "#999999"
 	},
 /turf/open/auto_turf/sand_white/layer0,
-/area/redemptionvalley/valley/proper)
-"dhS" = (
-/obj/item/criptic/utility/fuel,
-/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/redemptionvalley/valley/proper)
 "dif" = (
 /obj/structure/machinery/light/small{
@@ -3850,7 +3849,9 @@
 /turf/open/floor/prison,
 /area/redemptionvalley/valleyroof/store)
 "dzf" = (
-/obj/item/device/flashlight/lamp/tripod,
+/obj/item/device/flashlight/lamp/tripod{
+	anchored = 1
+	},
 /turf/open/gm/dirt2,
 /area/redemptionvalley/valley/proper)
 "dzC" = (
@@ -4804,10 +4805,6 @@
 /obj/effect/decal/cleanable/hybrisa/dirt,
 /turf/open/floor/plating,
 /area/redemptionvalley/valley/proper)
-"eFi" = (
-/obj/item/criptic/scrap,
-/turf/open/gm/dirt2,
-/area/redemptionvalley/valley/checkpoint)
 "eFk" = (
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "fullgrass_1"
@@ -4834,6 +4831,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/marked,
 /area/redemptionvalley/valleyroof/store)
+"eHF" = (
+/obj/structure/surface/table/holotable,
+/obj/item/criptic/utility/pills/healing,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/redemptionvalley/valleyroof/cafe)
 "eIo" = (
 /obj/structure/platform/shiva/catwalk{
 	dir = 4;
@@ -5277,11 +5279,6 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/Westbound)
-"fhD" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/item/criptic/utility/fuel,
-/turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/redemptionvalley/valley/proper)
 "fin" = (
 /obj/structure/barricade/handrail/kutjevo{
 	dir = 1
@@ -5289,7 +5286,9 @@
 /obj/structure/barricade/handrail/kutjevo{
 	dir = 8
 	},
-/obj/item/device/flashlight/lamp/tripod,
+/obj/item/device/flashlight/lamp/tripod{
+	anchored = 1
+	},
 /turf/open/floor/interior/wood_sat,
 /area/redemptionvalley/valley/proper)
 "fit" = (
@@ -5683,14 +5682,6 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/redemptionvalley/valley/proper)
-"fMm" = (
-/obj/structure/platform/strata/metal,
-/obj/structure/platform/strata/metal{
-	dir = 8
-	},
-/obj/item/criptic/scrap,
-/turf/open/gm/dirt2,
-/area/redemptionvalley/valley/proper)
 "fMC" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/redemptionvalley/valleyroof/hydro)
@@ -5779,15 +5770,12 @@
 /turf/open/floor/prison/darkyellow2/north,
 /area/redemptionvalley/valleyroof/engi)
 "fQZ" = (
-/obj/effect/projector{
-	name = "redemption_western_cave_up";
-	vector_x = 258
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
 	},
-/obj/structure/prop/rock/brown{
-	dir = 9
-	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/redemptionvalley/caverns/east)
+/obj/item/cell,
+/turf/open/floor/prison,
+/area/redemptionvalley/valleyroof/store)
 "fSo" = (
 /obj/structure/bookcase,
 /turf/open/floor/interior/wood/alt2,
@@ -5874,14 +5862,6 @@
 /obj/structure/flora/tree/tyrargo/tree_3,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/Westbound)
-"fVL" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo"
-	},
-/obj/structure/surface/rack,
-/obj/item/criptic/utility/fuel,
-/turf/open/floor/prison,
-/area/redemptionvalley/valleyroof/storage)
 "fWl" = (
 /obj/structure/closet,
 /obj/item/clothing/head/chefhat,
@@ -6001,7 +5981,8 @@
 "gjy" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/device/flashlight/lamp/candelabra{
-	pixel_y = 20
+	pixel_y = 20;
+	anchored = 1
 	},
 /turf/open/floor/prison/floor_plate,
 /area/redemptionvalley/valleyroof/church)
@@ -6034,6 +6015,16 @@
 	},
 /turf/open/gm/dirt2,
 /area/redemptionvalley/valley/checkpoint)
+"gnp" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/largecrate/random/secure{
+	pixel_x = -5
+	},
+/obj/item/criptic/instrument/brush,
+/turf/open/floor/prison,
+/area/redemptionvalley/valleyroof/store)
 "goW" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
@@ -6076,6 +6067,10 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/redemptionvalley/valleyroof/medical)
+"grR" = (
+/obj/item/criptic/utility/fuel,
+/turf/open/gm/dirt2,
+/area/redemptionvalley/valley/checkpoint)
 "grV" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 1
@@ -6171,26 +6166,6 @@
 /obj/structure/blocker/invisible_wall,
 /turf/open/void,
 /area/redemptionvalley/caverns/entry)
-"gAF" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo"
-	},
-/obj/structure/closet/crate,
-/obj/item/reagent_container/food/snacks/grown/wheat,
-/obj/item/reagent_container/food/snacks/grown/wheat,
-/obj/item/reagent_container/food/snacks/grown/wheat,
-/obj/item/reagent_container/food/snacks/grown/wheat,
-/obj/item/reagent_container/food/snacks/grown/wheat,
-/obj/item/reagent_container/food/snacks/grown/wheat,
-/obj/item/reagent_container/food/snacks/grown/wheat,
-/obj/item/reagent_container/food/snacks/grown/wheat,
-/obj/item/reagent_container/food/snacks/grown/wheat,
-/obj/item/reagent_container/food/snacks/grown/wheat,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/cell,
-/obj/item/criptic/utility/fuel,
-/turf/open/floor/prison,
-/area/redemptionvalley/valleyroof/drillsite)
 "gAN" = (
 /obj/structure/filingcabinet/chestdrawer{
 	pixel_x = 9
@@ -6212,13 +6187,6 @@
 /obj/structure/flora/bush/ausbushes/lavendergrass,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/redemptionvalley/valley/proper)
-"gBK" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo"
-	},
-/obj/item/cell,
-/turf/open/floor/prison,
-/area/redemptionvalley/valleyroof/store)
 "gBN" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -6392,7 +6360,9 @@
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "fullgrass_1"
 	},
-/obj/item/device/flashlight/lamp/tripod,
+/obj/item/device/flashlight/lamp/tripod{
+	anchored = 1
+	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "gXa" = (
@@ -6521,16 +6491,6 @@
 	},
 /turf/open/floor/prison/kitchen,
 /area/redemptionvalley/valleyroof/cafe)
-"hfN" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo"
-	},
-/obj/structure/largecrate/random/secure{
-	pixel_x = -5
-	},
-/obj/item/criptic/instrument/brush,
-/turf/open/floor/prison,
-/area/redemptionvalley/valleyroof/store)
 "hfO" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 8;
@@ -6632,7 +6592,9 @@
 /obj/structure/platform_decoration/strata/metal{
 	dir = 8
 	},
-/obj/item/device/flashlight/lamp/tripod,
+/obj/item/device/flashlight/lamp/tripod{
+	anchored = 1
+	},
 /turf/open/gm/dirt2,
 /area/redemptionvalley/valley/proper)
 "hkV" = (
@@ -6830,10 +6792,6 @@
 	pixel_x = 10
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/strata_grass/layer0,
-/area/redemptionvalley/valley/proper)
-"hxm" = (
-/obj/item/cell/crap,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "hxn" = (
@@ -7308,7 +7266,9 @@
 /obj/structure/barricade/handrail/kutjevo{
 	dir = 4
 	},
-/obj/item/device/flashlight/lamp/tripod,
+/obj/item/device/flashlight/lamp/tripod{
+	anchored = 1
+	},
 /turf/open/floor/interior/wood_sat,
 /area/redemptionvalley/valley/proper)
 "ibO" = (
@@ -7444,6 +7404,19 @@
 /obj/structure/bed/hybrisa/prisonbed,
 /turf/open/floor/interior/wood/alt,
 /area/redemptionvalley/valleyroof/swampvillage)
+"ipG" = (
+/obj/structure/machinery/washing_machine{
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/machinery/washing_machine{
+	layer = 3.5;
+	pixel_y = 31;
+	density = 0
+	},
+/obj/item/cell,
+/turf/open/floor/prison/kitchen,
+/area/redemptionvalley/valleyroof/laundro)
 "ipM" = (
 /obj/item/trash/semki,
 /turf/open/floor/interior/wood/alt,
@@ -7637,6 +7610,10 @@
 /obj/structure/platform_decoration/wood,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
+"iGu" = (
+/obj/item/criptic/scrap,
+/turf/open/gm/dirt2,
+/area/redemptionvalley/caverns/bunker)
 "iGS" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
@@ -7818,10 +7795,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/redemptionvalley/valley/checkpoint)
-"iUn" = (
-/obj/item/criptic/scrap,
-/turf/open/floor/prison,
-/area/redemptionvalley/valleyroof/storage)
 "iUt" = (
 /obj/structure/surface/rack,
 /obj/item/device/analyzer/plant_analyzer{
@@ -8010,11 +7983,6 @@
 	},
 /turf/open/floor/prison,
 /area/redemptionvalley/valleyroof/security)
-"jet" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/item/criptic/scrap,
-/turf/open/floor/prison,
-/area/redemptionvalley/valleyroof/storage)
 "jfa" = (
 /obj/structure/phone_base/colony_net{
 	pixel_y = 29;
@@ -8180,6 +8148,10 @@
 "jmK" = (
 /obj/structure/fence/dark,
 /turf/open/asphalt/cement_darkened,
+/area/redemptionvalley/valley/proper)
+"jnc" = (
+/obj/item/cell/crap,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "jng" = (
 /obj/structure/flora/bush/ausbushes/grassybush{
@@ -8404,6 +8376,10 @@
 /obj/structure/criptic/clue/sound_clue,
 /turf/open/floor/interior/wood/alt,
 /area/redemptionvalley/valleyroof/foresthouse)
+"jGq" = (
+/obj/item/criptic/utility/fuel,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/redemptionvalley/valley/proper)
 "jGx" = (
 /obj/structure/platform/strata/metal,
 /obj/structure/platform/strata/metal{
@@ -8629,6 +8605,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata,
 /area/redemptionvalley/valleyroof/company)
+"jXe" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/criptic/clue/item,
+/turf/open/gm/dirt2,
+/area/redemptionvalley/valley/proper)
 "jXl" = (
 /obj/structure/platform/wood/west,
 /obj/structure/flora/bush/ausbushes/reedbush,
@@ -8774,10 +8755,6 @@
 	},
 /turf/open/floor/prison,
 /area/redemptionvalley/valleyroof/store)
-"kln" = (
-/obj/item/criptic/scrap,
-/turf/open/auto_turf/strata_grass/layer0,
-/area/redemptionvalley/valley/proper)
 "klC" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/redemptionvalley/valley/proper)
@@ -9068,7 +9045,9 @@
 /turf/open/floor/strata,
 /area/redemptionvalley/valleyroof/server)
 "kDK" = (
-/obj/item/device/flashlight/lamp/tripod,
+/obj/item/device/flashlight/lamp/tripod{
+	anchored = 1
+	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "kDT" = (
@@ -9437,7 +9416,8 @@
 	pixel_x = -29;
 	name = "truck";
 	height = 1;
-	dir = 1
+	dir = 1;
+	custom_sprite = 1
 	},
 /turf/open/space/basic,
 /area/space)
@@ -9625,12 +9605,12 @@
 /turf/open/floor/prison/sterile_white,
 /area/redemptionvalley/valleyroof/company)
 "lqs" = (
-/obj/effect/projector{
-	name = "redemption_western_cave_up";
-	vector_x = 258
+/obj/structure/platform/wood/west{
+	dir = 2
 	},
-/turf/open/gm/dirt2,
-/area/redemptionvalley/caverns/east)
+/obj/item/criptic/scrap,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/redemptionvalley/valley/proper)
 "lqE" = (
 /obj/effect/decal/cleanable/liquid_fuel,
 /obj/effect/decal/cleanable/liquid_fuel,
@@ -9805,6 +9785,31 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/redemptionvalley/valley/proper)
+"lJQ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/closet/crate,
+/obj/item/reagent_container/food/snacks/grown/wheat,
+/obj/item/reagent_container/food/snacks/grown/wheat,
+/obj/item/reagent_container/food/snacks/grown/wheat,
+/obj/item/reagent_container/food/snacks/grown/wheat,
+/obj/item/reagent_container/food/snacks/grown/wheat,
+/obj/item/reagent_container/food/snacks/grown/wheat,
+/obj/item/reagent_container/food/snacks/grown/wheat,
+/obj/item/reagent_container/food/snacks/grown/wheat,
+/obj/item/reagent_container/food/snacks/grown/wheat,
+/obj/item/reagent_container/food/snacks/grown/wheat,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/cell,
+/obj/item/criptic/utility/fuel,
+/turf/open/floor/prison,
+/area/redemptionvalley/valleyroof/drillsite)
+"lKE" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/criptic/utility/fuel,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/redemptionvalley/valley/proper)
 "lKL" = (
 /obj/structure/bed/sofa/vert/grey/bot,
 /turf/open/floor/kutjevo/fake_wood,
@@ -9917,10 +9922,6 @@
 	},
 /turf/open/gm/dirt2,
 /area/redemptionvalley/valley/proper)
-"lVT" = (
-/obj/item/criptic/utility/fuel,
-/turf/open/gm/dirt2,
-/area/redemptionvalley/valley/checkpoint)
 "lWp" = (
 /obj/structure/bed/chair{
 	pixel_y = 3;
@@ -10142,21 +10143,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkyellow2/west,
 /area/redemptionvalley/valleyroof/engi)
-"mjU" = (
-/obj/structure/closet{
-	pixel_x = -8;
-	pixel_y = 15;
-	can_be_stacked = 1
-	},
-/obj/structure/closet{
-	pixel_x = 8;
-	pixel_y = 15;
-	can_be_stacked = 1
-	},
+"mjW" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/cell/crap,
-/turf/open/floor/prison/cell_stripe,
-/area/redemptionvalley/valleyroof/admin)
+/obj/item/criptic/scrap,
+/turf/open/floor/prison,
+/area/redemptionvalley/valleyroof/storage)
 "mkn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light,
@@ -10218,6 +10209,16 @@
 	},
 /turf/open/floor/prison,
 /area/redemptionvalley/valleyroof/hydro)
+"mnC" = (
+/obj/structure/surface/table/holotable,
+/obj/item/cell/crap,
+/obj/item/cell/crap{
+	pixel_y = 6;
+	pixel_x = -7
+	},
+/obj/item/criptic/instrument/phone,
+/turf/open/floor/kutjevo/tan/multi_tiles/west,
+/area/redemptionvalley/valleyroof/company)
 "mnK" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -10312,16 +10313,6 @@
 	},
 /turf/open/gm/dirt2,
 /area/redemptionvalley/valley/proper)
-"msQ" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo"
-	},
-/obj/structure/largecrate{
-	name = "farm food supply"
-	},
-/obj/item/cell,
-/turf/open/floor/prison,
-/area/redemptionvalley/valleyroof/storage)
 "msX" = (
 /obj/structure/machinery/power/monitor{
 	name = "Main Power Grid Monitoring"
@@ -10587,13 +10578,6 @@
 	pixel_x = 3;
 	pixel_y = 5
 	},
-/turf/open/auto_turf/strata_grass/layer0,
-/area/redemptionvalley/valley/proper)
-"mRf" = (
-/obj/structure/platform/wood/west{
-	dir = 2
-	},
-/obj/item/criptic/scrap,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "mRp" = (
@@ -11440,11 +11424,6 @@
 /obj/effect/decal/cleanable/hybrisa/dirt,
 /turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/valley/proper)
-"nZN" = (
-/obj/structure/machinery/portable_atmospherics/hydroponics,
-/obj/item/criptic/instrument/brush,
-/turf/open/floor/prison/yellowfull,
-/area/redemptionvalley/valleyroof/hydro)
 "oaE" = (
 /obj/structure/platform/shiva/catwalk{
 	dir = 4;
@@ -11700,13 +11679,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/redemptionvalley/valleyroof/security)
-"ouu" = (
-/obj/structure/flora/bush/ausbushes/grassybush{
-	icon_state = "fullgrass_1"
-	},
-/obj/item/criptic/scrap,
-/turf/open/auto_turf/strata_grass/layer0,
-/area/redemptionvalley/valley/proper)
 "ouN" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1;
@@ -12108,11 +12080,6 @@
 /obj/structure/blocker/invisible_wall,
 /turf/open/void,
 /area/redemptionvalley/caverns/entry)
-"oVG" = (
-/obj/structure/surface/table/holotable,
-/obj/item/criptic/utility/pills/healing,
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/redemptionvalley/valleyroof/cafe)
 "oWj" = (
 /obj/structure/bed/chair/comfy{
 	dir = 8
@@ -12261,6 +12228,10 @@
 	layer = 3.02
 	},
 /turf/open/gm/dirt2,
+/area/redemptionvalley/valley/checkpoint)
+"pdk" = (
+/obj/item/criptic/scrap,
+/turf/open/auto_turf/sand_white/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "pff" = (
 /obj/item/stack/sheet/wood,
@@ -12418,6 +12389,11 @@
 /obj/structure/girder,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/Westbound)
+"pqB" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/criptic/scrap,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/redemptionvalley/valley/proper)
 "pqZ" = (
 /obj/structure/prop/hybrisa/fakeplatforms/platform4{
 	dir = 1
@@ -12660,6 +12636,10 @@
 	},
 /turf/open/floor/wood,
 /area/redemptionvalley/valleyroof/medical)
+"pEX" = (
+/obj/item/criptic/utility/fuel,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/redemptionvalley/valley/proper)
 "pFf" = (
 /obj/effect/decal/cleanable/hybrisa/trash{
 	icon_state = "trash_15";
@@ -12688,6 +12668,10 @@
 /obj/structure/platform_decoration/metal/hybrisa/metalplatformdeco6/north,
 /turf/open/floor/hybrisa/carpet/carpetblack,
 /area/redemptionvalley/valleyroof/spawn_area)
+"pHJ" = (
+/obj/item/criptic/scrap,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/redemptionvalley/valley/Westbound)
 "pHP" = (
 /obj/structure/platform/shiva/catwalk,
 /turf/open/floor/plating,
@@ -12737,10 +12721,6 @@
 /obj/structure/flora/bush/ausbushes/reedbush,
 /obj/structure/prop/invuln/prop_fog/mist,
 /turf/open/gm/river,
-/area/redemptionvalley/valley/proper)
-"pJp" = (
-/obj/item/criptic/scrap,
-/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/redemptionvalley/valley/proper)
 "pJr" = (
 /obj/structure/machinery/power/apc/power/east,
@@ -13492,7 +13472,9 @@
 /obj/structure/platform/strata/metal{
 	dir = 4
 	},
-/obj/item/device/flashlight/lamp/tripod,
+/obj/item/device/flashlight/lamp/tripod{
+	anchored = 1
+	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/redemptionvalley/valley/proper)
 "qBZ" = (
@@ -13835,7 +13817,9 @@
 /turf/closed/wall/wood/plain,
 /area/redemptionvalley/valleyroof/church)
 "qXo" = (
-/obj/item/device/flashlight/lamp/tripod,
+/obj/item/device/flashlight/lamp/tripod{
+	anchored = 1
+	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/redemptionvalley/valley/proper)
 "qXv" = (
@@ -14102,10 +14086,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/redemptionvalley/valleyroof/admin)
-"roC" = (
-/obj/item/criptic/scrap,
-/turf/open/auto_turf/strata_grass/layer0,
-/area/redemptionvalley/valley/Westbound)
 "rpD" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -14191,6 +14171,13 @@
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/gm/river/ocean/deep_water,
 /area/redemptionvalley/valley/Westbound)
+"rvi" = (
+/obj/structure/flora/bush/ausbushes/grassybush{
+	icon_state = "fullgrass_1"
+	},
+/obj/structure/criptic/clue/sound_clue,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/redemptionvalley/valley/proper)
 "rvN" = (
 /obj/structure/surface/table/holotable,
 /turf/open/floor/prison/kitchen,
@@ -14460,11 +14447,6 @@
 	},
 /turf/open/floor/whitegreenfull,
 /area/redemptionvalley/valleyroof/store)
-"rNW" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/item/criptic/scrap,
-/turf/open/auto_turf/strata_grass/layer0_mud,
-/area/redemptionvalley/valley/proper)
 "rOa" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -14632,6 +14614,11 @@
 	},
 /turf/open/floor/plating/warnplate,
 /area/redemptionvalley/valleyroof/housefive)
+"rYd" = (
+/obj/structure/machinery/portable_atmospherics/hydroponics,
+/obj/item/criptic/instrument/brush,
+/turf/open/floor/prison/yellowfull,
+/area/redemptionvalley/valleyroof/hydro)
 "rYY" = (
 /obj/structure/platform/strata/metal,
 /turf/open/auto_turf/strata_grass/layer0_mud,
@@ -14795,11 +14782,6 @@
 /obj/item/criptic/utility/pills/healing,
 /turf/open/floor/prison/whitegreen/east,
 /area/redemptionvalley/valleyroof/medical)
-"snD" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/criptic/clue/item,
-/turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/redemptionvalley/valley/Westbound)
 "snG" = (
 /obj/structure/filingcabinet/chestdrawer{
 	pixel_y = 19;
@@ -14973,6 +14955,10 @@
 	},
 /turf/open/floor/plating,
 /area/redemptionvalley/valleyroof/store)
+"syN" = (
+/obj/item/criptic/scrap,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/redemptionvalley/valley/proper)
 "sza" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/gm/dirt2,
@@ -15022,10 +15008,6 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/redemptionvalley/valleyroof/company)
-"sBO" = (
-/obj/item/criptic/scrap,
-/turf/open/auto_turf/sand_white/layer0,
-/area/redemptionvalley/valley/checkpoint)
 "sCk" = (
 /turf/open/floor/prison/kitchen,
 /area/redemptionvalley/valleyroof/cafe)
@@ -15038,13 +15020,6 @@
 	},
 /turf/open/floor/plating,
 /area/redemptionvalley/valleyroof/swampvillage)
-"sCT" = (
-/obj/structure/flora/bush/ausbushes/grassybush{
-	icon_state = "fullgrass_1"
-	},
-/obj/structure/criptic/clue/sound_clue,
-/turf/open/auto_turf/strata_grass/layer0,
-/area/redemptionvalley/valley/proper)
 "sCY" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 9
@@ -15136,11 +15111,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/red/north,
 /area/redemptionvalley/valleyroof/security)
-"sHx" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/criptic/clue/item,
-/turf/open/gm/dirt2,
-/area/redemptionvalley/valley/proper)
 "sIh" = (
 /obj/structure/window/framed/strata/reinforced,
 /obj/structure/curtain/red,
@@ -15173,7 +15143,8 @@
 	icon_state = "armored_truck_wy_black";
 	pixel_x = -29;
 	name = "truck";
-	height = 1
+	height = 1;
+	custom_sprite = 1
 	},
 /turf/open/asphalt,
 /area/redemptionvalley/valley/proper)
@@ -15230,10 +15201,14 @@
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/gm/river/ocean/deep_water,
 /area/redemptionvalley/valley/Westbound)
-"sQW" = (
+"sQd" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/surface/rack,
 /obj/item/criptic/utility/fuel,
-/turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/redemptionvalley/valley/proper)
+/turf/open/floor/prison,
+/area/redemptionvalley/valleyroof/storage)
 "sRg" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 1
@@ -15248,6 +15223,16 @@
 /obj/item/criptic/blueprint/uv,
 /turf/open/floor/prison/yellow/southeast,
 /area/redemptionvalley/valleyroof/hydro)
+"sRQ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/largecrate{
+	name = "farm food supply"
+	},
+/obj/item/cell/crap,
+/turf/open/floor/prison,
+/area/redemptionvalley/valleyroof/store)
 "sSm" = (
 /obj/structure/surface/table/reinforced/prison{
 	color = "#8B7B5B"
@@ -15314,6 +15299,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/warnplate/east,
 /area/redemptionvalley/valleyroof/store)
+"sUw" = (
+/obj/structure/criptic/clue/item,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/redemptionvalley/valley/proper)
 "sUM" = (
 /obj/structure/prop/tyrargo/boards/boards_2{
 	dir = 4;
@@ -15414,7 +15403,9 @@
 /turf/closed/wall/biodome,
 /area/redemptionvalley/valleyroof/housethree)
 "taa" = (
-/obj/item/device/flashlight/lamp/tripod,
+/obj/item/device/flashlight/lamp/tripod{
+	anchored = 1
+	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/redemptionvalley/valley/proper)
 "tas" = (
@@ -15573,10 +15564,6 @@
 /obj/structure/curtain/medical,
 /turf/open/floor/strata,
 /area/redemptionvalley/valleyroof/medical)
-"tjm" = (
-/obj/item/criptic/scrap,
-/turf/open/gm/dirt2,
-/area/redemptionvalley/caverns/bunker)
 "tjA" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -15712,6 +15699,21 @@
 	},
 /turf/open/floor/interior/wood_sat/damage,
 /area/redemptionvalley/valley/proper)
+"tuU" = (
+/obj/structure/closet{
+	pixel_x = -8;
+	pixel_y = 15;
+	can_be_stacked = 1
+	},
+/obj/structure/closet{
+	pixel_x = 8;
+	pixel_y = 15;
+	can_be_stacked = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/cell/crap,
+/turf/open/floor/prison/cell_stripe,
+/area/redemptionvalley/valleyroof/admin)
 "tvG" = (
 /obj/structure/prop/tyrargo/boards/boards_1{
 	dir = 8;
@@ -15721,6 +15723,13 @@
 	},
 /turf/open/floor/plating,
 /area/redemptionvalley/valleyroof/swampvillage)
+"tvV" = (
+/obj/structure/flora/bush/ausbushes/grassybush{
+	icon_state = "fullgrass_1"
+	},
+/obj/item/criptic/scrap,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/redemptionvalley/valley/proper)
 "tvY" = (
 /obj/structure/platform/wood/west{
 	dir = 1
@@ -15838,6 +15847,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/redemptionvalley/valleyroof/security)
+"tJY" = (
+/obj/structure/platform/strata/metal,
+/obj/structure/platform/strata/metal{
+	dir = 8
+	},
+/obj/item/criptic/scrap,
+/turf/open/gm/dirt2,
+/area/redemptionvalley/valley/proper)
 "tKY" = (
 /obj/structure/machinery/light/small,
 /turf/open/floor/interior/wood/alt,
@@ -16155,7 +16172,9 @@
 /turf/open/floor/prison,
 /area/redemptionvalley/valleyroof/engi)
 "uej" = (
-/obj/item/device/flashlight/lamp/tripod,
+/obj/item/device/flashlight/lamp/tripod{
+	anchored = 1
+	},
 /turf/open/gm/dirt2,
 /area/redemptionvalley/valley/checkpoint)
 "uek" = (
@@ -16354,10 +16373,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/aicore,
 /area/redemptionvalley/valleyroof/housefive)
-"uoL" = (
-/obj/structure/criptic/clue/sound_clue,
-/turf/open/floor/hybrisa/carpet/carpetblack,
-/area/redemptionvalley/valleyroof/swampvillage)
 "upk" = (
 /obj/effect/decal/cleanable/hybrisa/dirt,
 /obj/structure/surface/table/gamblingtable,
@@ -16434,9 +16449,9 @@
 "usC" = (
 /turf/open/floor/kutjevo/multi_tiles/southeast,
 /area/redemptionvalley/valleyroof/company)
-"usY" = (
-/obj/structure/criptic/clue/item,
-/turf/open/auto_turf/strata_grass/layer0_mud,
+"usE" = (
+/obj/item/criptic/scrap,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "uuo" = (
 /obj/effect/decal/warning_stripes{
@@ -16701,6 +16716,11 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/redemptionvalley/valleyroof/tentcamp)
+"uOY" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/criptic/instrument/brush,
+/turf/open/floor/prison,
+/area/redemptionvalley/valleyroof/housefour)
 "uQg" = (
 /obj/structure/machinery/vending/dinnerware,
 /obj/structure/machinery/light{
@@ -17194,7 +17214,9 @@
 /turf/open/floor/kutjevo/tan/multi_tiles/southeast,
 /area/redemptionvalley/valleyroof/housesix)
 "vsJ" = (
-/obj/item/device/flashlight/lamp/tripod,
+/obj/item/device/flashlight/lamp/tripod{
+	anchored = 1
+	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/redemptionvalley/valley/proper)
 "vtp" = (
@@ -17310,6 +17332,10 @@
 /obj/structure/bed/sofa/vert/grey/top,
 /turf/open/floor/kutjevo/fake_wood,
 /area/redemptionvalley/valleyroof/housetwo)
+"vCf" = (
+/obj/structure/criptic/clue/sound_clue,
+/turf/open/floor/kutjevo/multi_tiles/southeast,
+/area/redemptionvalley/valleyroof/housefour)
 "vCC" = (
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
 /area/redemptionvalley/valleyroof/hydro)
@@ -17452,16 +17478,6 @@
 	},
 /turf/open/floor/prison/cell_stripe,
 /area/redemptionvalley/valleyroof/admin)
-"vJQ" = (
-/obj/structure/surface/table/holotable,
-/obj/item/cell/crap,
-/obj/item/cell/crap{
-	pixel_y = 6;
-	pixel_x = -7
-	},
-/obj/item/criptic/instrument/phone,
-/turf/open/floor/kutjevo/tan/multi_tiles/west,
-/area/redemptionvalley/valleyroof/company)
 "vKc" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkyellow2/west,
@@ -18040,7 +18056,9 @@
 /turf/open/floor/plating/platingdmg1,
 /area/redemptionvalley/valleyroof/swampvillage)
 "wBQ" = (
-/obj/item/device/flashlight/lamp/tripod/grey,
+/obj/item/device/flashlight/lamp/tripod/grey{
+	anchored = 1
+	},
 /turf/open/gm/dirt2,
 /area/redemptionvalley/caverns/bunker)
 "wCx" = (
@@ -18369,6 +18387,11 @@
 "wXH" = (
 /turf/open/asphalt,
 /area/redemptionvalley/valley/proper)
+"wYD" = (
+/obj/structure/flora/grass/tallgrass/crop,
+/obj/item/criptic/scrap,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/redemptionvalley/valley/proper)
 "wZt" = (
 /obj/structure/platform/wood/east,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -18604,11 +18627,6 @@
 /obj/structure/bed/chair,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/redemptionvalley/valleyroof/cafe)
-"xmL" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/item/criptic/instrument/brush,
-/turf/open/floor/prison,
-/area/redemptionvalley/valleyroof/housefour)
 "xnu" = (
 /obj/structure/flora/bush/ausbushes/ppflowers,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -18688,16 +18706,6 @@
 /obj/structure/sign/safety/west,
 /turf/closed/wall/strata_outpost/reinforced,
 /area/redemptionvalley/valley/proper)
-"xsM" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo"
-	},
-/obj/structure/largecrate{
-	name = "farm food supply"
-	},
-/obj/item/cell/crap,
-/turf/open/floor/prison,
-/area/redemptionvalley/valleyroof/store)
 "xtj" = (
 /obj/structure/cargo_container/lockmart/right,
 /turf/open/auto_turf/sand_white/layer0,
@@ -26692,7 +26700,7 @@ ejm
 ejm
 qgO
 jaH
-sHx
+jXe
 tmO
 qgO
 qgO
@@ -29225,7 +29233,7 @@ qgO
 qgO
 fNZ
 mwA
-hfN
+gnp
 oTU
 oQD
 mwA
@@ -29877,7 +29885,7 @@ mxG
 aaN
 mxG
 vUJ
-snD
+cQm
 jDd
 jDd
 dkP
@@ -29981,7 +29989,7 @@ qgO
 qgO
 fNZ
 mwA
-gBK
+fQZ
 oTU
 cWm
 xEX
@@ -30486,7 +30494,7 @@ yeM
 fNZ
 mwA
 mwA
-xsM
+sRQ
 biP
 hfB
 mUA
@@ -31306,7 +31314,7 @@ sMf
 sMf
 sMf
 clk
-tjm
+iGu
 clk
 clk
 mvI
@@ -31646,7 +31654,7 @@ ugq
 pOI
 adt
 adH
-roC
+pHJ
 mxG
 mxG
 mxG
@@ -32108,7 +32116,7 @@ jpT
 jpT
 cOa
 abW
-lqs
+jpT
 cOa
 cOa
 ejm
@@ -32358,9 +32366,9 @@ ejm
 cOa
 jpT
 jpT
-lqs
-lqs
-lqs
+jpT
+jpT
+jpT
 cOa
 cOa
 ejm
@@ -32610,9 +32618,9 @@ ejm
 cOa
 cOa
 cOa
-lqs
-lqs
-fQZ
+jpT
+jpT
+wRO
 cOa
 cOa
 ejm
@@ -32862,9 +32870,9 @@ ejm
 ejm
 ejm
 cOa
-lqs
-afz
-afz
+jpT
+cOa
+cOa
 cOa
 ejm
 ejm
@@ -34288,7 +34296,7 @@ eYp
 nET
 eYp
 eYp
-iUn
+afz
 wJR
 gKS
 qgO
@@ -35041,7 +35049,7 @@ fNZ
 wJR
 kbf
 qKC
-iUn
+afz
 xtP
 rpD
 rOa
@@ -35546,7 +35554,7 @@ wJR
 iLp
 eYp
 eYp
-jet
+mjW
 mWU
 mWU
 wJR
@@ -36484,7 +36492,7 @@ mgX
 wJR
 wJR
 lOz
-msQ
+bTQ
 rpD
 tMs
 wJR
@@ -36987,7 +36995,7 @@ qgO
 mgX
 wJR
 xdc
-iUn
+afz
 rpD
 jRl
 eYp
@@ -37742,7 +37750,7 @@ pIu
 lSu
 fNZ
 wJR
-fVL
+sQd
 xtP
 pBD
 hsX
@@ -37998,7 +38006,7 @@ eYp
 eYp
 aUT
 cRM
-iUn
+afz
 aaR
 wJR
 gKS
@@ -39588,7 +39596,7 @@ tmO
 tmO
 tmO
 myI
-usY
+aAw
 tmO
 cVT
 uFX
@@ -42496,7 +42504,7 @@ lew
 mfJ
 eQy
 jqE
-kln
+usE
 lQu
 qgO
 qgO
@@ -42754,7 +42762,7 @@ qgO
 qgO
 qgO
 pIu
-kln
+usE
 qgO
 kot
 qgO
@@ -43001,10 +43009,10 @@ qgO
 qgO
 qgO
 qgO
-fhD
+lKE
 qgO
 qgO
-kln
+usE
 qgO
 qgO
 qgO
@@ -43182,7 +43190,7 @@ qUC
 qUC
 qUC
 hhG
-sBO
+pdk
 qUC
 mUc
 uvh
@@ -44185,10 +44193,10 @@ sck
 sck
 sMf
 sck
-eFi
+cna
 sck
 emJ
-lVT
+grR
 emJ
 emJ
 sck
@@ -44860,7 +44868,7 @@ pIu
 pIu
 pIu
 pIu
-kln
+usE
 fNZ
 hjy
 ptW
@@ -45115,7 +45123,7 @@ jZq
 bRO
 fCA
 hjy
-mjU
+tuU
 tjA
 qaz
 rmM
@@ -45196,8 +45204,8 @@ jLL
 sck
 sck
 sck
-eFi
-eFi
+cna
+cna
 sck
 sck
 pCZ
@@ -46120,7 +46128,7 @@ xOL
 nwM
 brn
 lWp
-oVG
+eHF
 bMr
 hjy
 cFL
@@ -46606,7 +46614,7 @@ tmO
 myI
 hON
 eRt
-azH
+ipG
 bqH
 qDe
 eRt
@@ -48212,7 +48220,7 @@ sck
 emJ
 emJ
 emJ
-eFi
+cna
 sck
 sck
 oNz
@@ -48373,7 +48381,7 @@ psT
 psT
 psT
 bKa
-fMm
+tJY
 bMr
 bMr
 unb
@@ -48873,7 +48881,7 @@ qgO
 qgO
 qgO
 qgO
-pJp
+aYm
 myI
 tmO
 fbC
@@ -49127,7 +49135,7 @@ qgO
 qgO
 qgO
 lqo
-rNW
+pqB
 tmO
 bXW
 mgX
@@ -49479,7 +49487,7 @@ rYY
 nZr
 eCR
 ajY
-gAF
+lJQ
 arL
 ahf
 ixf
@@ -50572,7 +50580,7 @@ mIa
 pMy
 oLW
 wxw
-dcz
+vCf
 qUz
 ccs
 pMy
@@ -57159,7 +57167,7 @@ szn
 nmD
 rxp
 bvU
-vJQ
+mnC
 xwb
 ssk
 swO
@@ -57933,7 +57941,7 @@ aao
 vNe
 aan
 mmC
-kln
+usE
 qgO
 jjy
 lle
@@ -58186,8 +58194,8 @@ vNe
 aan
 mmC
 pIu
-kln
-mRf
+usE
+lqs
 eZp
 cyI
 hrG
@@ -58942,7 +58950,7 @@ vNe
 aan
 tmO
 tmO
-kln
+usE
 cYi
 oem
 uSz
@@ -59120,7 +59128,7 @@ vnp
 paN
 paN
 paN
-sQW
+pEX
 paN
 paN
 paN
@@ -60172,7 +60180,7 @@ hhA
 qSf
 vzt
 pSZ
-xmL
+uOY
 uRU
 gKS
 qgO
@@ -67006,7 +67014,7 @@ oSJ
 nqV
 vlJ
 tmO
-usY
+aAw
 myI
 tVS
 uob
@@ -67771,7 +67779,7 @@ eZp
 eZp
 bfo
 vlJ
-kln
+usE
 jjy
 iER
 dGk
@@ -68018,7 +68026,7 @@ uHY
 eZp
 jhP
 dJt
-uoL
+bwD
 erg
 eZp
 bfo
@@ -70737,7 +70745,7 @@ wMX
 wMX
 wMX
 wMX
-cpa
+wYD
 wMX
 wMX
 wMX
@@ -70773,7 +70781,7 @@ qgO
 pUV
 pUV
 xpf
-ouu
+tvV
 qgO
 jjy
 uHY
@@ -71239,7 +71247,7 @@ wMX
 wMX
 wMX
 dBC
-csg
+syN
 paN
 paN
 eze
@@ -72300,7 +72308,7 @@ eZp
 bfo
 wyi
 qgO
-kln
+usE
 qgO
 pIu
 qgO
@@ -72724,7 +72732,7 @@ fMC
 fMC
 gld
 sYD
-nZN
+rYd
 qZT
 xJz
 fce
@@ -72927,7 +72935,7 @@ khE
 qgO
 hfz
 qgO
-sCT
+rvi
 mUT
 qgO
 lLl
@@ -73030,7 +73038,7 @@ hfz
 qgO
 lSu
 eLb
-dhS
+jGq
 myI
 pbw
 eaR
@@ -73936,7 +73944,7 @@ lqE
 mKx
 abq
 fMD
-hxm
+jnc
 lco
 qgO
 qgO
@@ -74521,7 +74529,7 @@ paN
 paN
 paN
 paN
-csg
+syN
 paN
 paN
 paN
@@ -76773,7 +76781,7 @@ qgO
 qgO
 paN
 eNN
-aiI
+sUw
 paN
 paN
 kUt
