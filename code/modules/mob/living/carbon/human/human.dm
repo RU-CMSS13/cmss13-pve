@@ -21,8 +21,6 @@
 	if(SSticker?.mode?.hardcore)
 		hardcore = TRUE //For WO disposing of corpses
 
-	move_eyelids(EYELID_SWITCH, 0.2, 3, EYELID_LOOP)
-
 /mob/living/carbon/human/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()
 	if (PF)

@@ -39,8 +39,7 @@
 
 			if(ishuman(attacking_mob) && stat == DEAD && attacking_mob.zone_selected == "eyes")
 				if(eyelids_status == EYELID_OPEN)
-					eyelids_status = EYELID_CLOSED
-					update_body()
+					apply_eyelid_state(EYELID_CLOSED)
 					attacking_mob.visible_message(SPAN_NOTICE("[attacking_mob] respectfully closes the lifeless eyes of [src]."), SPAN_NOTICE("You respectfully close the lifeless eyes of [src]."), null, 7)
 					return 1
 
@@ -199,6 +198,13 @@
 		t_him = "her"
 	if (w_uniform)
 		w_uniform.add_fingerprint(M)
+
+	if(is_napping)
+		M.visible_message(SPAN_NOTICE("[M] shakes [src] awake!"), SPAN_NOTICE("You shake [src] awake!"), null, 4)
+		to_chat(src, SPAN_NOTICE("[M] shakes you awake!"))
+		wake_from_nap(rapid_blink = TRUE)
+		playsound(loc, 'sound/weapons/thudswoosh.ogg', 25, 1, 7)
+		return
 
 	if(HAS_TRAIT(src, TRAIT_FLOORED) || HAS_TRAIT(src, TRAIT_KNOCKEDOUT) || body_position == LYING_DOWN || sleeping)
 		if(client)
