@@ -613,6 +613,12 @@
 		playsound(src, "paper_writing", 15, TRUE)
 	return TRUE
 
+#define COMPASS_LOCATE_DELAY (10 SECONDS)
+#define COMPASS_LOCATE_DURATION (15 SECONDS)
+#define COMPASS_LOCATE_RADIUS 12
+/// Most tiles the guess is off by along each axis, small enough for the user to stay inside the circle
+#define COMPASS_LOCATE_ERROR (COMPASS_LOCATE_RADIUS / 2)
+
 /obj/item/prop/helmetgarb/compass
 	name = "compass"
 	desc = "It always faces north. Are you sure it is not broken?"
@@ -622,10 +628,43 @@
 
 /obj/item/prop/helmetgarb/compass/get_examine_text(mob/user)
 	. = ..()
-	if(is_ground_level(user.z) && !SSmapping.configs[GROUND_MAP].environment_traits[ZTRAIT_IN_SPACE])
+	if(is_working(user))
 		. += SPAN_NOTICE("It seems you are facing [dir2text(user.dir)].")
 		return
 	. += SPAN_NOTICE("The needle is not moving.")
+
+/// Finds roughly where the user is on the tactical map open in their other hand
+/obj/item/prop/helmetgarb/compass/attack_self(mob/user)
+	. = ..()
+	var/obj/item/map/tactical/map = user.get_inactive_hand()
+	if(!istype(map) || !map.is_open_for(user))
+		to_chat(user, SPAN_WARNING("You need an open tactical map in your other hand to work out where you are."))
+		return
+	if(!is_working(user))
+		to_chat(user, SPAN_WARNING("The needle is not moving."))
+		return
+
+	user.visible_message(SPAN_NOTICE("[user] starts checking [user.p_their()] bearings with [src] and [map]."), SPAN_NOTICE("You start working out where you are on [map]..."))
+	if(!do_after(user, COMPASS_LOCATE_DELAY, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_GENERIC))
+		return
+	if(user.get_inactive_hand() != map || !map.is_open_for(user))
+		return
+
+	var/turf/user_turf = get_turf(user)
+	var/turf/guess = locate( \
+		clamp(user_turf.x + rand(-COMPASS_LOCATE_ERROR, COMPASS_LOCATE_ERROR), 1, world.maxx), \
+		clamp(user_turf.y + rand(-COMPASS_LOCATE_ERROR, COMPASS_LOCATE_ERROR), 1, world.maxy), \
+		user_turf.z)
+	map.tacmap.add_timed_marker(guess, COMPASS_LOCATE_RADIUS, "#ff8c00", COMPASS_LOCATE_DURATION)
+	to_chat(user, SPAN_NOTICE("You mark roughly where you are on [map]."))
+
+/obj/item/prop/helmetgarb/compass/proc/is_working(mob/user)
+	return is_ground_level(user.z) && !SSmapping.configs[GROUND_MAP].environment_traits[ZTRAIT_IN_SPACE]
+
+#undef COMPASS_LOCATE_DELAY
+#undef COMPASS_LOCATE_DURATION
+#undef COMPASS_LOCATE_RADIUS
+#undef COMPASS_LOCATE_ERROR
 
 /obj/item/prop/helmetgarb/bug_spray
 	name = "insect repellent"

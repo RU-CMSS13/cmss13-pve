@@ -1,5 +1,7 @@
 GLOBAL_LIST_INIT(mapless_maps, list(MAP_RUNTIME, MAP_CHINOOK, MAIN_SHIP_DEFAULT_NAME) | SHIP_MAP_NAMES)
 
+#define TACTICAL_MAP_OPEN_DELAY (6 SECONDS)
+
 /obj/item/map
 	name = "map"
 	icon = 'icons/obj/items/marine-items.dmi'
@@ -154,6 +156,50 @@ GLOBAL_LIST_INIT(mapless_maps, list(MAP_RUNTIME, MAP_CHINOOK, MAIN_SHIP_DEFAULT_
 /obj/item/map/Destroy()
 	being_studied = FALSE
 	return ..()
+
+
+// Paper map of the area of operations, shown as a tacmap without blips
+/obj/item/map/tactical
+	name = "tactical map"
+	desc = "A laminated printout of orbital scans of the area of operations. With a compass in your other hand you could roughly work out where you are on it."
+	/// The tacmap this map opens
+	var/datum/tacmap/paper/tacmap
+
+/obj/item/map/tactical/Initialize(mapload, ...)
+	. = ..()
+	tacmap = new(src)
+
+/obj/item/map/tactical/Destroy()
+	QDEL_NULL(tacmap)
+	return ..()
+
+/obj/item/map/tactical/attack_self(mob/user)
+	if(folded)
+		return ..()
+	if(is_open_for(user))
+		return
+
+	to_chat(user, SPAN_NOTICE("You start unfolding [src]..."))
+	if(!do_after(user, TACTICAL_MAP_OPEN_DELAY, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_GENERIC))
+		return
+	if(folded || !user.is_holding(src))
+		return
+	return ..()
+
+/obj/item/map/tactical/initialize_map(mob/user)
+	tacmap.tgui_interact(user)
+
+/obj/item/map/tactical/toggle_fold(mob/user)
+	. = ..()
+	if(folded)
+		SStgui.close_uis(tacmap)
+
+/obj/item/map/tactical/dropped(mob/user)
+	. = ..()
+	SStgui.close_uis(tacmap)
+
+/obj/item/map/tactical/proc/is_open_for(mob/user)
+	return !!SStgui.get_open_ui(user, tacmap)
 
 
 /obj/item/map/lazarus_landing_map
@@ -427,3 +473,5 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 /obj/item/tacmap_map/Destroy()
 	QDEL_NULL(map)
 	return ..()
+
+#undef TACTICAL_MAP_OPEN_DELAY

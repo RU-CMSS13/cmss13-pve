@@ -535,6 +535,8 @@ SUBSYSTEM_DEF(minimaps)
 		return FALSE
 	var/flat_tacmap_png = SSassets.transport.get_asset_url(flat_tacmap_key)
 	var/datum/flattened_tacmap/new_flat = new(flat_tacmap_png, flat_tacmap_key)
+	var/list/levels = SSmapping.levels_by_trait(targeted_ztrait)
+	new_flat.z_level = levels[target_z]
 
 	if(faction in FACTION_LIST_HUMANOID )
 		GLOB.uscm_unannounced_map = new_flat
@@ -1110,6 +1112,8 @@ SUBSYSTEM_DEF(minimaps)
 	var/flat_tacmap
 	var/asset_key
 	var/time
+	/// Z-level of the flattened map, which the drawings announced over it belong to
+	var/z_level
 
 /datum/flattened_tacmap/New(flat_tacmap, asset_key)
 	src.flat_tacmap = flat_tacmap
@@ -1132,6 +1136,137 @@ SUBSYSTEM_DEF(minimaps)
 /datum/tacmap/drawing/proc/on_tacmap_fire(faction)
 	distribute_current_map_png(faction)
 	last_update_time = world.time
+
+/**
+ * Tacmap of a paper map: the terrain without any blips, the drawings announced for the user's faction and temporary markers.
+ * Drawn in the UI rather than in a map view, as nothing can be drawn over a map view.
+ */
+/datum/tacmap/paper
+	/// Temporary markers on the map
+	var/list/datum/tacmap_marker/markers = list()
+	/// Asset keys of the terrain images by z-level; list("[z]" = key)
+	var/static/list/terrain_asset_keys = list()
+
+/datum/tacmap/paper/Destroy()
+	QDEL_LIST(markers)
+	return ..()
+
+/datum/tacmap/paper/tgui_interact(mob/user, datum/tgui/ui)
+	var/list/levels = SSmapping.levels_by_trait(targeted_ztrait)
+	if(!length(levels))
+		return
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(ui)
+		return
+	// Open on the level the user is standing on
+	var/turf/user_turf = get_turf(user)
+	target_z = max(levels.Find(user_turf?.z), 1)
+	send_terrain(user)
+	ui = new(user, src, "PaperTacticalMap")
+	ui.open()
+
+/datum/tacmap/paper/ui_static_data(mob/user)
+	. = list()
+	.["mapSize"] = MINIMAP_PIXEL_SIZE
+
+/datum/tacmap/paper/ui_data(mob/user)
+	. = list()
+	var/list/levels = SSmapping.levels_by_trait(targeted_ztrait)
+	var/shown_level = levels[target_z]
+	var/terrain_key = terrain_asset_keys["[shown_level]"]
+	.["mapImage"] = terrain_key ? SSassets.transport.get_asset_url(terrain_key) : null
+	.["canChangeZ"] = length(levels) > 1
+
+	// Drawings are made over the map of the level they were announced on
+	var/datum/flattened_tacmap/announced = get_tacmap_data_png(user.faction)
+	var/datum/svg_overlay/drawing = get_tacmap_data_svg(user.faction)
+	.["svgData"] = (announced?.z_level == shown_level) ? drawing?.svg_data : null
+
+	var/list/marker_data = list()
+	for(var/datum/tacmap_marker/marker as anything in markers)
+		if(marker.z_level != shown_level)
+			continue
+		marker_data += list(list("x" = marker.x, "y" = marker.y, "radius" = marker.radius, "color" = marker.color))
+	.["markers"] = marker_data
+
+/datum/tacmap/paper/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
+	. = ..()
+	if(.)
+		return
+	if(action != "changeZ")
+		return
+
+	var/amount = params["amount"]
+	if(amount != 1 && amount != -1)
+		return
+	var/list/levels = SSmapping.levels_by_trait(targeted_ztrait)
+	var/new_z = target_z + amount
+	if(new_z < 1 || new_z > length(levels) || !SSmapping.same_z_map(levels[target_z], levels[new_z]))
+		return
+	target_z = new_z
+	send_terrain(ui.user)
+	return TRUE
+
+/datum/tacmap/paper/ui_status(mob/user)
+	if(user.stat != CONSCIOUS || !user.is_holding(owner))
+		return UI_CLOSE
+	return UI_INTERACTIVE
+
+/datum/tacmap/paper/ui_close(mob/user)
+	. = ..()
+	QDEL_LIST(markers)
+	var/obj/item/map/paper_map = owner
+	if(istype(paper_map))
+		paper_map.set_studied(FALSE, user)
+
+/// Sends the user the terrain image of the shown level, making it on first use
+/datum/tacmap/paper/proc/send_terrain(mob/user)
+	if(!user.client)
+		return
+	var/list/levels = SSmapping.levels_by_trait(targeted_ztrait)
+	var/shown_level = levels[target_z]
+	var/terrain_key = terrain_asset_keys["[shown_level]"]
+	if(terrain_key)
+		SSassets.transport.send_assets(user.client, terrain_key)
+		return
+	var/datum/hud_displays/level_display = SSminimaps.minimaps_by_z["[shown_level]"]
+	if(!level_display?.hud_image)
+		return
+	terrain_asset_keys["[shown_level]"] = icon2html(level_display.hud_image, user.client, keyonly = TRUE)
+
+/// Shows a circle around the location for the duration
+/datum/tacmap/paper/proc/add_timed_marker(turf/location, radius_tiles, color, duration)
+	var/datum/tacmap_marker/marker = new(location, radius_tiles, color)
+	markers += marker
+	addtimer(CALLBACK(src, PROC_REF(remove_marker), marker), duration)
+	SStgui.update_uis(src)
+	return marker
+
+/datum/tacmap/paper/proc/remove_marker(datum/tacmap_marker/marker)
+	if(!(marker in markers))
+		return
+	markers -= marker
+	qdel(marker)
+	SStgui.update_uis(src)
+
+/// A temporary circle on a paper tacmap
+/datum/tacmap_marker
+	var/z_level
+	/// Centre of the circle in pixels of the minimap image, from its top left corner
+	var/x
+	var/y
+	/// Radius in pixels of the minimap image
+	var/radius
+	var/color
+
+/datum/tacmap_marker/New(turf/location, radius_tiles, color)
+	z_level = location.z
+	var/datum/hud_displays/level_display = SSminimaps.minimaps_by_z["[z_level]"]
+	// A turf's centre on the minimap is where its blip is centred
+	x = location.x * MINIMAP_SCALE + level_display?.x_offset
+	y = MINIMAP_PIXEL_SIZE - (location.y * MINIMAP_SCALE + level_display?.y_offset)
+	radius = radius_tiles * MINIMAP_SCALE
+	src.color = color
 
 /// Gets the MINIMAP_FLAG for the provided faction or hivenumber if one exists
 /proc/get_minimap_flag_for_faction(faction)
