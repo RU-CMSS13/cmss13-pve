@@ -1,6 +1,6 @@
 GLOBAL_LIST_INIT(mapless_maps, list(MAP_RUNTIME, MAP_CHINOOK, MAIN_SHIP_DEFAULT_NAME) | SHIP_MAP_NAMES)
 
-#define TACTICAL_MAP_OPEN_DELAY (6 SECONDS)
+#define TACTICAL_MAP_HANDLE_DELAY (3 SECONDS)
 
 /obj/item/map
 	name = "map"
@@ -176,11 +176,12 @@ GLOBAL_LIST_INIT(mapless_maps, list(MAP_RUNTIME, MAP_CHINOOK, MAIN_SHIP_DEFAULT_
 /obj/item/map/tactical/attack_self(mob/user)
 	if(folded)
 		return ..()
-	if(is_open_for(user))
+	if(is_open_for(user) || user.action_busy)
 		return
 
 	to_chat(user, SPAN_NOTICE("You start unfolding [src]..."))
-	if(!do_after(user, TACTICAL_MAP_OPEN_DELAY, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_GENERIC))
+	playsound(src, "map_unfold", 25, TRUE)
+	if(!do_after(user, TACTICAL_MAP_HANDLE_DELAY, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_GENERIC))
 		return
 	if(folded || !user.is_holding(src))
 		return
@@ -190,6 +191,16 @@ GLOBAL_LIST_INIT(mapless_maps, list(MAP_RUNTIME, MAP_CHINOOK, MAIN_SHIP_DEFAULT_
 	tacmap.tgui_interact(user)
 
 /obj/item/map/tactical/toggle_fold(mob/user)
+	if(!user || user.action_busy)
+		return
+	// The parent tells them to hold it
+	if(!user.is_holding(src))
+		return ..()
+
+	to_chat(user, SPAN_NOTICE("You start [folded ? "unfolding" : "folding up"] [src]..."))
+	playsound(src, folded ? "map_unfold" : "map_fold", 20, TRUE)
+	if(!do_after(user, TACTICAL_MAP_HANDLE_DELAY, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_GENERIC))
+		return
 	. = ..()
 	if(folded)
 		SStgui.close_uis(tacmap)
@@ -474,4 +485,4 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 	QDEL_NULL(map)
 	return ..()
 
-#undef TACTICAL_MAP_OPEN_DELAY
+#undef TACTICAL_MAP_HANDLE_DELAY

@@ -1,5 +1,12 @@
 #define CANVAS_COOLDOWN_TIME 10 SECONDS
 #define FLATTEN_MAP_COOLDOWN_TIME 10 SECONDS
+/// Size of the UI canvas that drawings are stored in the coordinates of
+#define TACMAP_CANVAS_SIZE 684
+/// Most line segments drawn on a paper map per level, where the command canvas starts warning about complexity
+#define TACMAP_NOTES_MAX_SEGMENTS 500
+#define TACMAP_NOTES_MAX_STROKE_POINTS 200
+#define TACMAP_NOTES_MAX_MARKERS 30
+#define TACMAP_NOTES_LABEL_LENGTH 30
 
 /**
  *  # Minimaps subsystem
@@ -1146,6 +1153,14 @@ SUBSYSTEM_DEF(minimaps)
 	var/list/datum/tacmap_marker/markers = list()
 	/// Asset keys of the terrain images by z-level; list("[z]" = key)
 	var/static/list/terrain_asset_keys = list()
+	/// Lines drawn on the map by z-level, in canvas coordinates; list("[z]" = list(list("color" = color, "points" = list(x1, y1, x2, y2, ...))))
+	var/list/note_strokes_by_z = list()
+	/// Markers placed on the map by z-level, in canvas coordinates; list("[z]" = list(list("type" = type, "x" = x, "y" = y, "label" = label)))
+	var/list/note_markers_by_z = list()
+	/// Colours that can be drawn with, the same as on the command canvas
+	var/static/list/note_colors = list("#000000", "#fc0000", "#f59a07", "#0561f5", "#c002fa", "#02c245", "#5c351e")
+	/// Types of markers that can be placed, drawn by the UI
+	var/static/list/note_marker_types = list("danger", "enemy", "objective", "rally", "mine", "wounded")
 
 /datum/tacmap/paper/Destroy()
 	QDEL_LIST(markers)
@@ -1168,6 +1183,10 @@ SUBSYSTEM_DEF(minimaps)
 /datum/tacmap/paper/ui_static_data(mob/user)
 	. = list()
 	.["mapSize"] = MINIMAP_PIXEL_SIZE
+	.["noteColors"] = note_colors
+	.["noteMarkerTypes"] = note_marker_types
+	.["maxStrokePoints"] = TACMAP_NOTES_MAX_STROKE_POINTS
+	.["maxLabelLength"] = TACMAP_NOTES_LABEL_LENGTH
 
 /datum/tacmap/paper/ui_data(mob/user)
 	. = list()
@@ -1189,23 +1208,107 @@ SUBSYSTEM_DEF(minimaps)
 		marker_data += list(list("x" = marker.x, "y" = marker.y, "radius" = marker.radius, "color" = marker.color))
 	.["markers"] = marker_data
 
+	.["canWrite"] = has_pen(user)
+	.["noteStrokes"] = note_strokes_by_z["[shown_level]"] || list()
+	.["noteMarkers"] = note_markers_by_z["[shown_level]"] || list()
+
 /datum/tacmap/paper/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
 	. = ..()
 	if(.)
 		return
-	if(action != "changeZ")
-		return
 
-	var/amount = params["amount"]
-	if(amount != 1 && amount != -1)
-		return
+	var/mob/user = ui.user
 	var/list/levels = SSmapping.levels_by_trait(targeted_ztrait)
-	var/new_z = target_z + amount
-	if(new_z < 1 || new_z > length(levels) || !SSmapping.same_z_map(levels[target_z], levels[new_z]))
+	if(action == "changeZ")
+		var/amount = params["amount"]
+		if(amount != 1 && amount != -1)
+			return
+		var/new_z = target_z + amount
+		if(new_z < 1 || new_z > length(levels) || !SSmapping.same_z_map(levels[target_z], levels[new_z]))
+			return
+		target_z = new_z
+		send_terrain(user)
+		return TRUE
+
+	// Everything else edits the notes
+	if(!has_pen(user))
+		to_chat(user, SPAN_WARNING("You need a pen in your other hand to write on [owner]."))
 		return
-	target_z = new_z
-	send_terrain(ui.user)
-	return TRUE
+	var/level_key = "[levels[target_z]]"
+	if(!note_strokes_by_z[level_key])
+		note_strokes_by_z[level_key] = list()
+	if(!note_markers_by_z[level_key])
+		note_markers_by_z[level_key] = list()
+	var/list/strokes = note_strokes_by_z[level_key]
+	var/list/note_markers = note_markers_by_z[level_key]
+
+	switch(action)
+		if("addStroke")
+			var/color = params["color"]
+			var/list/points = params["points"]
+			if(!(color in note_colors) || !islist(points))
+				return
+			var/point_count = length(points)
+			if(point_count < 4 || point_count % 2 || point_count > TACMAP_NOTES_MAX_STROKE_POINTS * 2)
+				return
+			var/segment_count = point_count / 2 - 1
+			for(var/list/stroke as anything in strokes)
+				var/list/stroke_points = stroke["points"]
+				segment_count += length(stroke_points) / 2 - 1
+			if(segment_count > TACMAP_NOTES_MAX_SEGMENTS)
+				to_chat(user, SPAN_WARNING("There is no room left on [owner] for more lines."))
+				return
+			var/list/clean_points = list()
+			for(var/point in points)
+				if(!isnum(point))
+					return
+				clean_points += clamp(round(point, 1), 0, TACMAP_CANVAS_SIZE)
+			strokes += list(list("color" = color, "points" = clean_points))
+			playsound(owner, "paper_writing", 15, TRUE)
+			return TRUE
+
+		if("addMarker")
+			var/marker_type = params["type"]
+			var/marker_x = params["x"]
+			var/marker_y = params["y"]
+			if(!(marker_type in note_marker_types) || !isnum(marker_x) || !isnum(marker_y))
+				return
+			if(length(note_markers) >= TACMAP_NOTES_MAX_MARKERS)
+				to_chat(user, SPAN_WARNING("There is no room left on [owner] for more markers."))
+				return
+			var/label = params["label"]
+			label = istext(label) ? copytext_char(trim(sanitize_simple(strip_html_simple(label))), 1, TACMAP_NOTES_LABEL_LENGTH + 1) : ""
+			note_markers += list(list(
+				"type" = marker_type,
+				"x" = clamp(round(marker_x, 1), 0, TACMAP_CANVAS_SIZE),
+				"y" = clamp(round(marker_y, 1), 0, TACMAP_CANVAS_SIZE),
+				"label" = label
+			))
+			playsound(owner, "paper_writing", 15, TRUE)
+			return TRUE
+
+		if("eraseStroke", "eraseMarker")
+			var/list/erased_from = action == "eraseStroke" ? strokes : note_markers
+			// Indices come from the UI, so they start at 0
+			var/index = params["index"]
+			if(!isnum(index) || index != floor(index) || index < 0 || index >= length(erased_from))
+				return
+			erased_from.Cut(index + 1, index + 2)
+			playsound(owner, "paper_writing", 10, TRUE)
+			return TRUE
+
+		if("undo")
+			if(!length(strokes))
+				return
+			strokes.len--
+			playsound(owner, "paper_writing", 10, TRUE)
+			return TRUE
+
+		if("clear")
+			strokes.Cut()
+			note_markers.Cut()
+			playsound(owner, "pageturn", 20, TRUE)
+			return TRUE
 
 /datum/tacmap/paper/ui_status(mob/user)
 	if(user.stat != CONSCIOUS || !user.is_holding(owner))
@@ -1215,6 +1318,7 @@ SUBSYSTEM_DEF(minimaps)
 /datum/tacmap/paper/ui_close(mob/user)
 	. = ..()
 	QDEL_LIST(markers)
+	playsound(owner, "map_fold", 15, TRUE)
 	var/obj/item/map/paper_map = owner
 	if(istype(paper_map))
 		paper_map.set_studied(FALSE, user)
@@ -1233,6 +1337,11 @@ SUBSYSTEM_DEF(minimaps)
 	if(!level_display?.hud_image)
 		return
 	terrain_asset_keys["[shown_level]"] = icon2html(level_display.hud_image, user.client, keyonly = TRUE)
+
+/// Whether the user holds something to write with in the hand not holding the map
+/datum/tacmap/paper/proc/has_pen(mob/user)
+	var/obj/item/other_hand = user.get_active_hand() == owner ? user.get_inactive_hand() : user.get_active_hand()
+	return other_hand && (HAS_TRAIT(other_hand, TRAIT_TOOL_PEN) || istype(other_hand, /obj/item/toy/crayon))
 
 /// Shows a circle around the location for the duration
 /datum/tacmap/paper/proc/add_timed_marker(turf/location, radius_tiles, color, duration)
@@ -1325,3 +1434,8 @@ SUBSYSTEM_DEF(minimaps)
 
 #undef CANVAS_COOLDOWN_TIME
 #undef FLATTEN_MAP_COOLDOWN_TIME
+#undef TACMAP_CANVAS_SIZE
+#undef TACMAP_NOTES_MAX_SEGMENTS
+#undef TACMAP_NOTES_MAX_STROKE_POINTS
+#undef TACMAP_NOTES_MAX_MARKERS
+#undef TACMAP_NOTES_LABEL_LENGTH

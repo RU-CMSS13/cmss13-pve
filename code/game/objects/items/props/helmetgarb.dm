@@ -643,6 +643,8 @@
 	if(!is_working(user))
 		to_chat(user, SPAN_WARNING("The needle is not moving."))
 		return
+	if(user.action_busy)
+		return
 
 	user.visible_message(SPAN_NOTICE("[user] starts checking [user.p_their()] bearings with [src] and [map]."), SPAN_NOTICE("You start working out where you are on [map]..."))
 	if(!do_after(user, COMPASS_LOCATE_DELAY, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_GENERIC))
