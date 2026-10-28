@@ -132,7 +132,7 @@
 	spawn(10)
 		var/creautre_alive = FALSE
 		for(var/mob/living/carbon/xenomorph/criptic_wendigo/C in world)
-			if(C.stat != DEAD)
+			if(C.stat == CONSCIOUS && C.the_big_bad)
 				creautre_alive = TRUE
 		if(!length(GLOB.alive_human_list))
 			show_blurb(GLOB.player_list, 20, "And every last man with it...", null, "EAST-7,NORTH-4.5", "center", COLOR_DARK_RED, null, null, 1)
@@ -303,6 +303,7 @@
 	var/atom/movable/screen/exit_button/exit
 
 	var/busy = FALSE
+	var/otherwise_revealable = FALSE
 
 /obj/structure/criptic/clue/Initialize(mapload, ...)
 	. = ..()
@@ -405,7 +406,7 @@
 /obj/item/criptic/instrument/afterattack(atom/target, mob/living/carbon/human/user, proximity_flag, click_parameters)
 	. = ..()
 
-	if(!Adjacent(user))
+	if(!Adjacent(target))
 		return FALSE
 
 	if(istype(target, /turf/open))
@@ -413,6 +414,8 @@
 			if(!(C.type in clue_type_to_reveal))
 				continue
 			if(C.revealed)
+				continue
+			if(C.otherwise_revealable)
 				continue
 
 			if(!C.covered && do_after(user, 20, INTERRUPT_ALL, BUSY_ICON_GENERIC))
@@ -790,31 +793,102 @@
 		return
 	..()
 
+/mob/living
+	var/the_big_bad = FALSE
+
 /obj/structure/criptic/night_shrine
-	name = "book"
+	name = "shrine"
 	desc = "Used for ritual performing"
+	layer = 5
+	density = TRUE
+	anchored = TRUE
 
 	icon = 'core_ru/code/modules/criptid_hunting/psydon_cross.dmi'
 
 	icon_state = "psydon_abandoned_cross"
+	var/removal_process_started = FALSE
+	var/removal_process_progress = 0
+	var/removal_process_end_at = 60
+	var/wisp_chance = 5
 
-	health = 300
+	var/list/cleaners = list()
+
+	maptext_height = 48
+	maptext_width = 48
+	maptext_y = -7
+	maptext_x = 5
 
 /obj/structure/criptic/night_shrine/Initialize(mapload, ...)
 	. = ..()
-	show_blurb(GLOB.player_list, 35, "ELDRITCH SHRINE APPEARED SOMEWHERE NEARBY", null, "EAST-7,NORTH-3", "center", COLOR_DARK_RED, null, null, 1)
-	add_filter("shrine", 1, list("type" = "outline", "color" = COLOR_LIGHT_GREEN, "size" = 1))
+	show_blurb(GLOB.player_list, 35, "ELDRITCH SHRINE APPEARED NEARBY", null, "EAST-7,NORTH-3", "center", COLOR_DARK_RED, null, null, 1)
 
-/obj/structure/criptic/night_shrine/Destroy()
+/obj/structure/criptic/night_shrine/attack_hand(mob/user)
+	. = ..()
+	if(!removal_process_started)
+		removal_process_started = TRUE
+
+		animate(src, pixel_x = rand(-2,2), pixel_y = rand(-2,2), time = 3, loop = -1, easing = JUMP_EASING)
+		for(var/i in 1 to 4)
+			animate(pixel_x = rand(-2,2), pixel_y = rand(-2,2), time = 3, easing = JUMP_EASING)
+		add_filter("shrine", 1, list("type" = "outline", "color" = COLOR_LIGHT_GREEN, "size" = 1))
+
+		START_PROCESSING(SSobj,src)
+		return TRUE
+
+/obj/structure/criptic/night_shrine/process()
+
+	for(var/mob/living/carbon/human/H in cleaners)
+		if(get_dist(H, src) > 2)
+			cleaners -= H
+		if(H.stat != CONSCIOUS)
+			cleaners -= H
+
+	for(var/mob/living/carbon/human/H in orange(2))
+		if(H in cleaners)
+			continue
+		if(H.stat == CONSCIOUS)
+			cleaners += H
+
+	if(length(cleaners) && removal_process_progress < removal_process_end_at)
+		removal_process_progress = clamp(removal_process_progress + 1, 0, removal_process_end_at)
+		maptext = SPAN_LANGCHAT("|[removal_process_progress]/[removal_process_end_at]|")
+		/*if(prob(wisp_chance))
+			spawn_a_wisp()
+		else
+			wisp_chance = clamp(wisp_chance + 5, 0, 80)*/
+
+	if(length(cleaners) && removal_process_progress >= removal_process_end_at)
+		end_the_cleaning()
+		STOP_PROCESSING(SSobj,src)
+
+	if(!length(cleaners))
+		stop_the_cleaning()
+		STOP_PROCESSING(SSobj,src)
+
+/obj/structure/criptic/night_shrine/proc/end_the_cleaning()
+	maptext = ""
+
 	playsound(loc, 'sound/voice/deep_alien_screech.ogg', 50, 0, status = 0)
+	balloon_alert_to_viewers("Time were reduced by 500!", COLOR_WHITE)
 	for(var/obj/structure/criptic/mission_controller/M in world)
-		balloon_alert_to_viewers("Time were reduced by 500!", COLOR_WHITE)
 		M.until_dawn -= 500
 		M.show_current_progress()
-
+	sleep(5)
+	balloon_alert_to_viewers("Monster is weaker now!", COLOR_WHITE)
 	for(var/mob/living/carbon/xenomorph/criptic_wendigo/W in world)
-		W.maxHealth = W.maxHealth / 2
-		if(W.maxHealth < 100)
-			W.maxHealth = 100
+		if(W.the_big_bad)
+			var/new_hp = W.maxHealth / 2
+			if(new_hp < 100)
+				new_hp = 100
+			W.maxHealth = new_hp
 
-	. = ..()
+	show_blurb(GLOB.player_list, 35, "SENSATION IS GONE...FOR NOW...", null, "EAST-7,NORTH-3", "center", COLOR_DARK_RED, null, null, 1)
+
+	animate(src, alpha = 0, time = 0.5 SECONDS, easing = SINE_EASING | EASE_IN)
+	sleep(5)
+	qdel(src)
+
+/obj/structure/criptic/night_shrine/proc/stop_the_cleaning()
+	removal_process_started = FALSE
+	removal_process_progress = 0
+	maptext = ""

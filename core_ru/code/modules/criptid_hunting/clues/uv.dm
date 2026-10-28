@@ -49,7 +49,7 @@
 	if(found && time_to_fade <= 0)
 		found = FALSE
 		time_to_fade = 5
-		animate(src, alpha = 00, time = 0.5 SECONDS, easing = SINE_EASING | EASE_IN)
+		animate(src, alpha = 0, time = 0.5 SECONDS, easing = SINE_EASING | EASE_IN)
 
 /obj/item/criptic/battery
 	name = "battery"

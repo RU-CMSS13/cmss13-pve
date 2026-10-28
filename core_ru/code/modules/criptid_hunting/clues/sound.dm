@@ -159,6 +159,7 @@
 
 	var/atom/movable/screen/sound_clue/representation
 	var/in_search = FALSE
+	otherwise_revealable = TRUE
 
 /obj/structure/criptic/clue/sound_clue/Initialize(mapload, ...)
 	. = ..()

@@ -34,6 +34,7 @@
 /mob/living/carbon/xenomorph/criptic_wendigo
 	AUTOWIKI_SKIP(TRUE)
 
+	the_big_bad = TRUE
 	caste_type = XENO_CASTE_WENDIGO
 	name = XENO_CASTE_WENDIGO
 	desc = "A disgusting beast from hell, it has deer horns."
@@ -153,6 +154,7 @@
 /mob/living/carbon/xenomorph/criptic_wendigo/banshee
 	AUTOWIKI_SKIP(TRUE)
 
+	the_big_bad = FALSE
 	caste_type = XENO_CASTE_BANSHEE
 	name = XENO_CASTE_BANSHEE
 	desc = "A disgusting beast from hell, it has tendrils."
