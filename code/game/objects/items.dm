@@ -1122,3 +1122,7 @@ cases. Override_icon_state should be a list.*/
 
 /obj/item/proc/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
 	return FALSE
+
+/// Returns TRUE if the item is used up and a human AI should throw it away
+/obj/item/proc/ai_is_spent()
+	return FALSE
