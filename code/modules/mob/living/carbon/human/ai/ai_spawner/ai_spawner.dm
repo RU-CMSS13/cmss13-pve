@@ -169,8 +169,8 @@
 	"USCM" = list(FACTION_MARINE, /datum/equipment_preset/uscm/tank/ammo_rig), \
 	"UPP" = list(FACTION_UPP, /datum/equipment_preset/upp/tank/ammo_rig), \
 	"W-Y" = list(FACTION_PMC, /datum/equipment_preset/pmc/crewman), \
-	"TWE" = list(FACTION_TWE, /datum/equipment_preset/other/tank), \
-	"Civilian" = list(FACTION_COLONIST, /datum/equipment_preset/colonist), \
+	"TWE" = list(FACTION_TWE, /datum/equipment_preset/royal_marine/crewman), \
+	"Civilian" = list(FACTION_COLONIST, /datum/equipment_preset/colonist/bluecollar), \
 )
 
 /// Equipment presets that can crew AI vehicles
@@ -182,8 +182,9 @@
 	/datum/equipment_preset/pmc/crewman, \
 	/datum/equipment_preset/us_army/tank, \
 	/datum/equipment_preset/usa/tank, \
+	/datum/equipment_preset/royal_marine/crewman, \
 	/datum/equipment_preset/other/tank, \
-	/datum/equipment_preset/colonist, \
+	/datum/equipment_preset/colonist/bluecollar, \
 	/datum/equipment_preset/clf/soldier, \
 )
 
