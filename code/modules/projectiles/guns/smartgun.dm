@@ -66,7 +66,7 @@
 	var/range = 7
 	var/angle = 2
 	var/list/angle_list = list(180,135,90,60,30)
-	var/obj/item/device/motiondetector/sg/MD
+	var/obj/item/device/motiondetector/integrated/MD
 	var/long_range_cooldown = 2
 	var/recycletime = 120
 	var/cover_open = FALSE
@@ -515,6 +515,8 @@
 	. = ..()
 	MD.iff_signal = FACTION_PMC
 
+/obj/item/weapon/gun/smartgun/dirty/empty
+	current_mag = null
 
 //TERMINATOR SMARTGUN
 /obj/item/weapon/gun/smartgun/dirty/elite

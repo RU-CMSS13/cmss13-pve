@@ -319,3 +319,12 @@
 /obj/structure/filtration/machine_64x128/filtrationtank/broken
 	desc = "A massive tank intended to hold large amounts of liquid. This one appears damaged."
 	icon_state = "filtration_1"
+
+/obj/structure/filtration/machine_32x64/destructible
+	name = "silo tank"
+	icon = 'icons/obj/structures/props/industrial/32x64.dmi'
+	icon_state = "solo_tank"
+	density = TRUE
+	anchored = TRUE
+	bound_width = 32
+	bound_height = 64

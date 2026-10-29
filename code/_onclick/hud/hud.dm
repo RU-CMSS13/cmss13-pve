@@ -19,6 +19,7 @@
 	var/atom/movable/screen/l_hand_hud_object
 	var/atom/movable/screen/action_intent
 	var/atom/movable/screen/mov_intent/move_intent
+	var/atom/movable/screen/sprint_bar/sprint_bar
 	var/atom/movable/screen/alien_plasma_display
 	var/atom/movable/screen/alien_armor_display
 	var/atom/movable/screen/locate_leader
@@ -124,6 +125,7 @@
 	l_hand_hud_object = null
 	action_intent = null
 	move_intent = null
+	sprint_bar = null
 	alien_plasma_display = null
 	alien_armor_display = null
 	locate_leader = null
@@ -308,6 +310,22 @@
 	using.icon_state = (mymob.m_intent == MOVE_INTENT_RUN ? "running" : "walking")
 	static_inventory += using
 	move_intent = using
+
+/datum/hud/proc/draw_sprint_bar(datum/custom_hud/ui_datum, ui_alpha, ui_color)
+	var/mob/living/owner = mymob
+	var/datum/component/sprint/sprint = owner.GetComponent(/datum/component/sprint)
+	if(!sprint || !owner.stamina?.has_stamina)
+		return
+	sprint_bar = new /atom/movable/screen/sprint_bar()
+	sprint_bar.icon = ui_datum.ui_style_icon
+	sprint_bar.screen_loc = ui_datum.ui_sprint
+	if(ui_alpha)
+		sprint_bar.base_alpha = ui_alpha
+	if(ui_color)
+		sprint_bar.base_color = ui_color
+	sprint_bar.alpha = 0
+	static_inventory += sprint_bar
+	sprint.update_hud()
 
 /datum/hud/proc/draw_drop(datum/custom_hud/ui_datum, ui_alpha, ui_color)
 	var/atom/movable/screen/using = new /atom/movable/screen/drop()

@@ -174,6 +174,9 @@
 	desc = "A lighting fixture that is fitted with a bright blue fluorescent light tube. Looking at it for too long makes your eyes go watery."
 	light_color = LIGHT_COLOR_XENON
 
+/obj/structure/machinery/light/blue/alt
+	light_color = "#66FFFF"
+
 /obj/structure/machinery/light/red
 	icon_state = "rtube1"
 	base_state = "rtube"
@@ -208,6 +211,10 @@
 	light_type = /obj/item/light_bulb/bulb
 	light_color = LIGHT_COLOR_XENON_UA
 
+/obj/structure/machinery/light/small/blue/rover
+	light_color = "#dae2ff"
+	light_power = 0.5
+
 /obj/structure/machinery/light/small/red
 	icon_state = "bulb1"
 	base_state = "bulb"
@@ -218,10 +225,28 @@
 	light_type = /obj/item/light_bulb/bulb
 	light_color = LIGHT_COLOR_RED_BULB
 
+/obj/structure/machinery/light/small/chapaev
+	light_color = "#e7c0a4"
+	light_power = 0.8
+	light_range = 4
+
+/obj/structure/machinery/light/small/chapaev/burned
+	icon_state = "bulb-burned"
+	status = LIGHT_BURNED
+
 /obj/structure/machinery/light/double
 	icon_state = "ptube1"
 	base_state = "ptube"
 	desc = "A lighting fixture that can be fitted with two bright blue fluorescent light tubes for that extra eye-watering goodness."
+
+/obj/structure/machinery/light/double/chapaev
+	light_color = "#e7c0a4"
+	light_power = 0.8
+	light_range = 5
+
+/obj/structure/machinery/light/double/chapaev/burned
+	icon_state = "ptube-burned"
+	status = LIGHT_BURNED
 
 /obj/structure/machinery/light/double/blue
 	icon_state = "bptube1"
@@ -234,6 +259,10 @@
 	base_state = "bptube"
 	desc = "A lighting fixture that can be fitted with two bright fluorescent light tubes for that extra eye-watering goodness."
 	light_color = LIGHT_COLOR_XENON_UA
+
+/obj/structure/machinery/light/double/blue/rover
+	light_color = "#dae2ff"
+	light_power = 0.7
 
 /obj/structure/machinery/light/spot
 	name = "spotlight"
@@ -888,4 +917,11 @@
 
 /obj/structure/machinery/landinglight/ds2/spoke/turn_on()
 	icon_state = initial(icon_state) + "1"
+	set_light(3)
+
+/obj/structure/machinery/landinglight/spoke
+	icon_state = "lz_spoke_light_off"
+
+/obj/structure/machinery/landinglight/spoke/turn_on()
+	icon_state = "lz_spoke_light_on"
 	set_light(3)

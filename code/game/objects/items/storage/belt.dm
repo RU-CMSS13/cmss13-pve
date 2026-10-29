@@ -1855,6 +1855,16 @@
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/smg/m39/ap(src)
 
+/obj/item/storage/belt/gun/m39/pmc_small
+	name = "\improper WY-TM702 pattern M39 holster rig"
+	desc = "Special issue variant of the WY-TM702 designed to holster a M39 submachine gun and two spare magazines."
+	storage_slots = 5
+
+/obj/item/storage/belt/gun/m39/pmc_small/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/smg/m39/elite/pve(src))
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/smg/m39/pve(src)
+
 #define MAXIMUM_MAGAZINE_COUNT 2
 
 /obj/item/storage/belt/gun/bizon
@@ -2706,6 +2716,22 @@
 		/obj/item/ammo_magazine/hardpoint/turret_smoke,
 		/obj/item/ammo_magazine/hardpoint/boyars_dualcannon,
 		/obj/item/ammo_magazine/hardpoint/flare_launcher,
+		/obj/item/ammo_magazine/hardpoint/p17702,
+		/obj/item/ammo_magazine/hardpoint/railgun,
+		/obj/item/ammo_magazine/hardpoint/t60p3m,
+		/obj/item/ammo_magazine/hardpoint/hj35launcher,
+	)
+
+/// Issued to vehicle AI crew, so the vehicle has a spare magazine for every weapon
+/obj/item/storage/belt/tank/large
+	name = "\improper M103A1 pattern vehicle ammo rig"
+	desc = "A rarer mark of the M103 with a third pouch, made for crewmen who have to keep a vehicle supplied on their own."
+	storage_slots = 3
+	max_storage_space = 3
+	// Whatever vehicle the crew gets, its ammunition has to fit
+	max_w_class = SIZE_MASSIVE
+	can_hold = list(
+		/obj/item/ammo_magazine/hardpoint,
 	)
 
 /obj/item/storage/belt/marine/sharp
@@ -2901,3 +2927,28 @@
 
 #undef MAXIMUM_MORTARSHELL_COUNT
 
+/obj/item/storage/belt/marine/wy/generic
+	name = "\improper TM401 pattern ammo load rig"
+	desc = "A slightly outdated rig, by modern standards - The TM401 is the standard load-bearing equipment of various corporate & military forces. It consists of a modular belt with various clips. This is the standard variant, designed for bulk ammunition-carrying operations."
+
+/obj/item/storage/belt/medical/lifesaver/wy/lb_merc
+	name = "\improper LB-TM624 pattern medical bag"
+	desc = "The LB-TM624 is the standard load-bearing equipment of the L-B security forces. This configuration mounts a duffel bag filled with a range of injectors and light medical supplies, and is common among medics. \nRight click its sprite and click \"toggle belt mode\" to take pills out of bottles by simply clicking them."
+
+/obj/item/storage/belt/gun/m4a3/wy/lb_merc
+	name = "\improper LB-TM891 pattern general pistol holster rig"
+	desc = "The LB-TM891 is the standard load-bearing equipment of the L-B security forces. It consists of a modular belt with various clips. This version has a holster assembly that allows one to carry the most common pistols. It also contains side pouches that can store most pistol magazines."
+
+/obj/item/storage/belt/gun/m4a3/wy/lb_merc/b92fs_suppressed/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/b92fs/suppressed())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/pistol/b92fs(src)
+
+/obj/item/storage/belt/gun/m4a3/wy/lb_merc/b92fs_suppressed_near_empty/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/b92fs/suppressed())
+	for(var/i = 1 to 3)
+		new /obj/item/ammo_magazine/pistol/b92fs(src)
+
+/obj/item/storage/belt/marine/wy/generic/w_ek_17/fill_preset_inventory() // W/EK 17 Carbine
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/rifle/w_ek_17 (src)

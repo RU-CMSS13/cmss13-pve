@@ -44,6 +44,10 @@ SUBSYSTEM_DEF(xeno_ai)
 
 	valid_targets += GLOB.all_active_defenses
 
+	for(var/mob/living/simple_animal/ruv/bot as anything in GLOB.ruvs)
+		if(bot.stat != DEAD && isturf(bot.loc) && !hive.faction_is_ally(bot.faction))
+			valid_targets += bot
+
 	return valid_targets
 
 /datum/controller/subsystem/xeno_ai/stat_entry(msg)

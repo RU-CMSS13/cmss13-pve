@@ -485,6 +485,14 @@
 	name = "\improper PMC guard leader tactical cap"
 	icon_state = "guard_lead_cap"
 
+// USCSS Cyclops
+
+/obj/item/clothing/head/cmcap/weyyu/guard/engineer
+	name = "\improper W-Y Commando engineer tactical cap"
+
+/obj/item/clothing/head/cmcap/weyyu/guard/lead/commando
+	name = "\improper W-Y Commando leader tactical cap"
+
 /obj/item/clothing/head/cmo
 	name = "\improper Chief Medical Officer's Peaked Cap"
 	desc = "A peaked cap given to high-ranking civilian medical officers. Looks just a touch silly."
@@ -1115,3 +1123,25 @@
 	desc = "A distinguished service cap worn by officers of the Imperial Armed Space Force. Featuring a crimson band, gold IASF emblem, and a black patent peak, it reflects the discipline and authority of the Empire’s airborne command."
 	icon_state = "iasf_co_cap"
 	item_state = "iasf_co_cap"
+
+/obj/item/clothing/head/science_coif
+	name = "sterile coif"
+	desc = "A close-fitting sterile head covering, protecting the wearer from hazardous materials, intended for laboratory and cleanroom environments."
+	icon = 'icons/obj/items/clothing/hats/hats.dmi'
+	icon_state = "scientist_coif"
+	blood_overlay_type = "surgcap"
+	icon = 'icons/obj/items/clothing/hats/hats_by_faction/LASALLE.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/LASALLE.dmi'
+	)
+
+	flags_inv_hide = HIDEALLHAIR
+
+/obj/item/clothing/head/science_coif/blue
+	icon_state = "scientist_coif_blue"
+
+/obj/item/clothing/head/science_coif/purple
+	icon_state = "scientist_coif_purple"
+
+/obj/item/clothing/head/science_coif/green
+	icon_state = "scientist_coif_green"

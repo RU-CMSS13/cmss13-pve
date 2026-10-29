@@ -1626,6 +1626,17 @@
 	new /obj/item/explosive/plastic/breaching_charge(src)
 	new /obj/item/explosive/plastic/breaching_charge(src)
 
+/obj/item/storage/pouch/tools/tactical/pmc_small/fill_preset_inventory()
+	new /obj/item/tool/screwdriver/tactical(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/wirecutters/tactical(src)
+	new /obj/item/tool/wrench(src)
+	new /obj/item/tool/weldingtool/largetank(src)
+	new /obj/item/stack/cable_coil(src)
+	new /obj/item/device/multitool(src)
+	new /obj/item/tool/shovel/etool/folded(src)
+	new /obj/item/device/lightreplacer(src)
+
 /obj/item/storage/pouch/tools/tactical/upp
 	name = "synthetic tools pouch"
 	desc = "Special issue tools pouch for UPP synthetics. Due to the enhanced strength of the synthetic and its inability to feel discomfort, this pouch is designed to maximize internal space with no concern for its wearer's comfort."
@@ -1844,3 +1855,42 @@
 	can_hold = /obj/item/tool/shovel/etool
 	storage_slots = null
 	max_storage_space = 2
+
+/obj/item/storage/pouch/survival/full/lasalle
+	icon_state = "soctools"
+
+/obj/item/storage/pouch/survival/full/lasalle/fill_preset_inventory()
+	new /obj/item/device/flashlight/lantern/alt(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/storage/pill_bottle/packet/kelo_oxy_mix(src) // fire colony has lot's of map hazards, effective kelo/oxy mix is necessary here, probably not on other maps.
+	new /obj/item/stack/medical/ointment(src)
+	new /obj/item/device/radio(src)
+	new /obj/item/attachable/bayonet/lb(src)
+	new /obj/item/stack/medical/splint(src)
+
+/obj/item/storage/pouch/firstaid/ert/wy/near_empty
+	icon_state = "wy_firstaid"
+
+/obj/item/storage/pouch/firstaid/ert/wy/near_empty/fill_preset_inventory()
+	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine/skillless(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/tramadol/skillless(src)
+
+/obj/item/storage/pouch/document
+	name = "large document pouch"
+	desc = "It can contain papers, folders, disks, technical manuals, and clipboards."
+	icon_state = "document"
+	storage_slots = 21
+	max_w_class = SIZE_MEDIUM
+	max_storage_space = 21
+	storage_flags = STORAGE_FLAGS_POUCH|STORAGE_CLICK_GATHER
+	can_hold = list(
+		/obj/item/paper,
+		/obj/item/clipboard,
+		/obj/item/folder,
+		/obj/item/disk,
+	)
+
+/obj/item/storage/pouch/document/small
+	name = "small document pouch"
+	desc = "A smaller version of the document pouch. It can contain papers, folders, disks, technical manuals, and clipboards."
+	storage_slots = 7

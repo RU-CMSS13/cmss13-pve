@@ -356,6 +356,8 @@
 /obj/item/clothing/mask/facehugger/proc/go_active()
 	if(stat == DEAD)
 		return
+	if(istype(loc, /obj/item/storage/hugger_box)) // Kept dormant until let out
+		return
 
 	if(stat != CONSCIOUS)
 		icon_state = "[initial(icon_state)]"
@@ -453,7 +455,7 @@
 	qdel(src)
 
 /proc/can_hug(mob/living/carbon/M, hivenumber)
-	if(!istype(M) || isxeno(M) || issynth(M) || iszombie(M) || isHellhound(M) || M.stat == DEAD || !M.huggable)
+	if(!istype(M) || isxeno(M) || issynth(M) || iszombie(M) || iswalker(M) || isHellhound(M) || M.stat == DEAD || !M.huggable)
 		return FALSE
 
 	if(M.ally_of_hivenumber(hivenumber))

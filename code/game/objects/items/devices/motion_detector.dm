@@ -189,9 +189,11 @@
 	if(ishuman(loc))
 		return loc
 
-/obj/item/device/motiondetector/sg
+/obj/item/device/motiondetector/integrated
+	name = "integrated motion detector"
+	desc = "A motion sensing component from another device."
 
-/obj/item/device/motiondetector/sg/get_user()
+/obj/item/device/motiondetector/integrated/get_user()
 	var/atom/A = loc
 	if(ishuman(A.loc))
 		return A.loc
@@ -238,6 +240,11 @@
 		var/mob/living/M = A //do this to skip the unnecessary istype() check; everything in ping_candidate is a mob already
 		if(M == loc) continue //device user isn't detected
 		if(M.get_target_lock(iff_signal))
+			continue
+		if(M.status_flags & INCORPOREAL)
+			ping_count++
+			if(human_user)
+				show_blip(human_user, M, "queen_eye")
 			continue
 		if(world.time > M.l_move_time + 20)
 			continue //hasn't moved recently

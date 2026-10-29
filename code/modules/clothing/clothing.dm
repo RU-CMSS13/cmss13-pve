@@ -247,6 +247,10 @@
 			cell.reliability -= 10 / severity
 
 // Called just before an attack_hand(), in mob/UnarmedAttack()
+/// Returns an image drawn over the suit instead of with the gloves, for wrist-worn devices.
+/obj/item/clothing/gloves/proc/get_wrist_overlay(mob/user_mob)
+	return null
+
 /obj/item/clothing/gloves/proc/Touch(atom/A, proximity)
 	return 0 // return 1 to cancel attack_hand()
 

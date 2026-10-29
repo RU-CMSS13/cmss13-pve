@@ -61,6 +61,7 @@
 #define MAP_BOSENMORI_BASHO "Bosenmori Basho"
 #define MAP_REDEMPTION_VALLEY "Redemption Valley" //valley with a military outpost and agricultural hamlet
 #define MAP_BINHAI_SUPPLY_STATION "Binhai Supply Station" //UPP asteroid base
+#define MAP_FIRE_COLONY "LV-376 Charon's Crucible"//heavily modified ice colony V2 - low-medium pop
 
 #define MAP_NAVALIS "Navalis Platform 13"//multiz version
 
@@ -215,7 +216,7 @@
 #define DOCK_ATTEMPT_TIMEOUT 20 SECONDS
 #define DROPSHIP_WARMUP_TIME 10 SECONDS
 #define DROPSHIP_DROP_MSG_DELAY 5 SECONDS
-#define DROPSHIP_TRANSIT_DURATION 100 SECONDS
+#define DROPSHIP_TRANSIT_DURATION 30 MINUTES // 100 SECONDS
 #define DROPSHIP_CORSAT_DURATION 30 SECONDS
 #define ELEVATOR_TRANSIT_DURATION 5 SECONDS
 #define TRANSIT_POD_TRANSIT_DURATION 30 SECONDS
@@ -378,6 +379,8 @@
 #define WALL_MEMBRANE "membrane"
 #define WALL_THICKMEMBRANE "thickmembrane"
 #define WALL_BONE_RESIN "bone_resin"
+#define WALL_PATHOGEN "mycelium"
+#define WALL_PATHOGEN_THICK "thickmycelium"
 #define WALL_CAVE "cavewall"
 #define WALL_WOOD "wood"
 #define WALL_GOLD "gold"
@@ -399,6 +402,8 @@
 #define WALL_SHIVA_FAB_PINK "shiva_fab_pnk"
 #define WALL_SHIVA_FAB_WHITE "shiva_fab_wht"
 #define WALL_SHIVA_FAB_RED "shiva_fab_red"
+#define WALL_SHIVA_FAB_DARK "shiva_fab_dark"
+#define WALL_ENGINEER_RUIN "engineer_stone"
 #define WALL_DOME "dome"
 #define WALL_DOMER "r_dome"
 #define WALL_SOLARIS "solaris_interior"

@@ -333,7 +333,7 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_PMCPLAT_SMALL_SG "Strike Heavy Weapons Specialist"
 #define JOB_PMCPLAT_SMALL_STANDARD "Strike Tactical Unit"
 #define JOB_PMCPLAT_SMALL_MEDIC "Strike Medical Specialist"
-
+#define JOB_PMCPLAT_SMALL_RTO "Strike Tactical Data Specialist"
 
 //-------- Con-Amalagated --------//
 
@@ -372,6 +372,34 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_HC_CHIEF_EXECUTIVE "Corporate Chief Executive"
 #define JOB_HC_DEPUTY_DIRECTOR "HC Deputy Director"
 #define JOB_HC_DIRECTOR "HC Director"
+
+//-------- Lasalle Bionational --------//
+
+#define JOB_LB_SEC "L-B Corporate Security"
+#define JOB_LB_SEC_SYNTH "L-B Corporate Security Synthetic"
+#define JOB_LB_TRAINEE "Corporate Trainee"
+#define JOB_LB_JUNIOR_EXECUTIVE "Corporate Junior Executive"
+#define JOB_LB_CORPORATE_LIAISON "Corporate Liaison"
+#define JOB_LB_EXECUTIVE "Corporate Executive"
+#define JOB_LB_SENIOR_EXECUTIVE "Corporate Senior Executive"
+#define JOB_LB_EXECUTIVE_SPECIALIST "Corporate Executive Specialist"
+#define JOB_LB_LEGAL_SPECIALIST "Corporate Legal Specialist"
+#define JOB_LB_EXECUTIVE_SUPERVISOR "Corporate Executive Supervisor"
+#define JOB_LB_LEGAL_SUPERVISOR "Corporate Legal Supervisor"
+#define JOB_LB_ASSISTANT_MANAGER "Corporate Assistant Manager"
+#define JOB_LB_DIVISION_MANAGER "Corporate Division Manager"
+#define JOB_LB_CHIEF_EXECUTIVE "Corporate Chief Executive"
+#define JOB_LB_DEPUTY_DIRECTOR "L-B Deputy Director"
+#define JOB_LB_DIRECTOR "L-B Director"
+
+#define JOB_LB_MERC "HIG (Operator)"
+#define JOB_LB_MERC_MEDIC "HIG (Medical Specialist)"
+#define JOB_LB_MERC_ENGI "HIG (Technical Specialist)"
+#define JOB_LB_MERC_SP "HIG (Senior Operator)"
+#define JOB_LB_MERC_TL "HIG (Team Leader)"
+#define JOB_LB_MERC_COMMANDER "HIG (Operations Commander)"
+#define JOB_LB_MERC_SG "HIG (Smartgunner)"
+#define JOB_LB_MERC_SYN "HIG (Support Synthetic)"
 
 //---- Contractors ----//
 #define JOB_CONTRACTOR "VAIPO Mercenary"
@@ -522,8 +550,9 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_TWE_RMC_LIEUTENANT "Troop Commander"
 #define JOB_TWE_RMC_COMMANDER "Squadron Commander"
 #define JOB_TWE_RMC_PILOT "Aircrewman"
+#define JOB_TWE_RMC_CREWMAN "Vehicle Crewman"
 
-#define TWE_COMMANDO_JOB_LIST list(JOB_TWE_RMC_RIFLEMAN, JOB_TWE_RMC_MEDIC, JOB_TWE_RMC_ENGI, JOB_TWE_RMC_BREACHER, JOB_TWE_RMC_SMARTGUNNER, JOB_TWE_RMC_MARKSMAN ,JOB_TWE_RMC_TEAMLEADER, JOB_TWE_RMC_SECTIONLEADER, JOB_TWE_RMC_TROOPLEADER, JOB_TWE_RMC_LIEUTENANT, JOB_TWE_RMC_COMMANDER, JOB_TWE_RMC_PILOT)
+#define TWE_COMMANDO_JOB_LIST list(JOB_TWE_RMC_RIFLEMAN, JOB_TWE_RMC_MEDIC, JOB_TWE_RMC_ENGI, JOB_TWE_RMC_BREACHER, JOB_TWE_RMC_SMARTGUNNER, JOB_TWE_RMC_MARKSMAN ,JOB_TWE_RMC_TEAMLEADER, JOB_TWE_RMC_SECTIONLEADER, JOB_TWE_RMC_TROOPLEADER, JOB_TWE_RMC_LIEUTENANT, JOB_TWE_RMC_COMMANDER, JOB_TWE_RMC_PILOT, JOB_TWE_RMC_CREWMAN)
 
 //-------- IASF --------//
 
