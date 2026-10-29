@@ -25,6 +25,7 @@
 	var/ui_resist = "EAST-2:26,2:7"
 	var/ui_acti = "EAST-2:26,1:5"
 	var/ui_movi = "EAST-3:24,1:5"
+	var/ui_sprint = "EAST-3:24,2:5"
 	var/ui_zonesel = "EAST-1:28,1:5"
 
 	//Gun buttons

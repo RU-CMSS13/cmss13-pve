@@ -14,6 +14,7 @@
 	if(!real_name || !name)
 		change_real_name(src, "unknown")
 	AddElement(/datum/element/strippable, GLOB.strippable_human_items, TYPE_PROC_REF(/mob/living/carbon/human, should_strip))
+	AddComponent(/datum/component/sprint)
 	. = ..()
 
 	prev_gender = gender // Debug for plural genders

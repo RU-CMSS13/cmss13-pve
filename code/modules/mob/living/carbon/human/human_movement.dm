@@ -112,6 +112,69 @@
 
 	move_delay = .
 
+/mob/living/carbon/human/toggle_mov_intent()
+	if(m_intent == MOVE_INTENT_WALK)
+		var/datum/component/sprint/sprint = GetComponent(/datum/component/sprint)
+		if(sprint && !sprint.can_start_running())
+			to_chat(src, SPAN_WARNING("You are too winded to run."))
+			return FALSE
+	return ..()
+
+/// Sprint stamina spent per running step, built mostly from the same factors as calculate_stamina_loss_per_pushup()
+/mob/living/carbon/human/proc/calculate_sprint_cost()
+	var/sprint_cost = SPRINT_COST_PER_STEP
+
+	// Lean is the default body type, so it pays the base cost unlike in pushups
+	var/type_index = GLOB.body_type_spectrum.Find(body_type)
+	var/type_base = GLOB.body_type_spectrum.Find(BODY_TYPE_LEAN)
+	if(type_index && type_base)
+		sprint_cost -= (type_index - type_base) * 0.1
+
+	var/size_index = GLOB.body_size_spectrum.Find(body_size)
+	var/size_base = GLOB.body_size_spectrum.Find(BODY_SIZE_AVERAGE)
+	if(size_index && size_base)
+		sprint_cost += (size_index - size_base) * 0.1
+
+	if(wear_suit)
+		sprint_cost += wear_suit.slowdown * 0.5
+	// Backpacks have no slowdown, so their size stands in for the load
+	if(back)
+		sprint_cost += back.w_class * 0.04
+
+	if(pain.get_pain_percentage() >= 20)
+		sprint_cost += 0.25
+	if(nutrition <= NUTRITION_LOW)
+		sprint_cost += 0.25
+
+	switch(skills?.get_skill_level(SKILL_ENDURANCE))
+		if(SKILL_ENDURANCE_NONE)
+			sprint_cost *= 1.5
+		if(SKILL_ENDURANCE_WEAK)
+			sprint_cost *= 1.25
+		if(SKILL_ENDURANCE_MASTER)
+			sprint_cost *= 0.8
+		if(SKILL_ENDURANCE_EXPERT)
+			sprint_cost *= 0.65
+		if(SKILL_ENDURANCE_MAX)
+			sprint_cost *= 0.5
+
+	var/leg_mult = 1
+	for(var/limb_name in list("l_leg", "r_leg", "l_foot", "r_foot"))
+		var/obj/limb/leg = get_limb(limb_name)
+		if(!leg || !(leg.status & LIMB_BROKEN))
+			continue
+		leg_mult = max(leg_mult, (leg.status & LIMB_SPLINTED) ? 1.5 : 2)
+	sprint_cost *= leg_mult
+
+	// Move order, strength is the leader's leadership skill
+	if(mobility_aura)
+		sprint_cost *= max(1 - 0.1 * mobility_aura, 0.5)
+
+	if(isyautja(src))
+		sprint_cost /= 2
+
+	return max(sprint_cost, SPRINT_COST_MIN)
+
 /mob/living/carbon/human/Process_Spacemove(check_drift = 0)
 	//Can we act
 	if(is_mob_restrained()) return 0
