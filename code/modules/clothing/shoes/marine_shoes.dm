@@ -393,3 +393,9 @@
 
 /obj/item/clothing/shoes/veteran/pmc/lb_merc/Initialize()
 	. = ..()
+
+/obj/item/clothing/shoes/guardian
+	name = "guardian boots"
+	desc = "Heavy plated boots fused to the legs of a hive guardian."
+	icon_state = "guardian_boots"
+	item_state = "guardian_boots"

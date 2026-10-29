@@ -1588,6 +1588,12 @@
 /mob/living/carbon/human/yiren/Initialize(mapload)
 	. = ..(mapload, new_species = "Yiren")
 
+/mob/living/carbon/human/guardian/Initialize(mapload)
+	. = ..(mapload, new_species = SPECIES_GUARDIAN)
+	var/datum/species/guardian/guardian_species = species
+	if(istype(guardian_species))
+		guardian_species.implant_embryo(src)
+
 /mob/living/carbon/human/synthetic/Initialize(mapload)
 	. = ..(mapload, SYNTH_GEN_THREE)
 

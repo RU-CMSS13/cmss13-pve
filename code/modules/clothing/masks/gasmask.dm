@@ -293,3 +293,10 @@
 		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/clothing/masks_righthand.dmi',
 	)
 
+
+/obj/item/clothing/mask/gas/guardian
+	name = "guardian mask"
+	desc = "A sealed breathing mask grown into the face of a hive guardian. It does not look like it was ever meant to come off."
+	icon_state = "guardian_mask"
+	item_state = "guardian_mask"
+	flags_inventory = COVERMOUTH|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|CANTSTRIP

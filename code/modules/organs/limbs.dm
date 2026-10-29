@@ -779,6 +779,10 @@ This function completely restores a damaged organ to perfect condition.
 
 	. += limb
 
+	var/overlay_state = species.limb_overlays?[icon_name]
+	if(overlay_state)
+		. += image(species.icobase, overlay_state, -(BODYPARTS_LAYER - 0.5))
+
 	return
 
 /// generates a key for the purpose of caching the icon to avoid duplicate generations
