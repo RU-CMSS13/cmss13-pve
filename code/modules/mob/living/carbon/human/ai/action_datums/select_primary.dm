@@ -25,6 +25,11 @@
 	var/obj/item/weapon/gun/best_secondary
 	var/datum/firearm_appraisal/best_secondary_appraisal
 	for(var/obj/item/weapon/gun/secondary as anything in brain.secondary_weapons)
+		// Lost or taken from us, so it can't be drawn
+		if(!brain.is_in_inventory(secondary))
+			brain.remove_secondary_weapon(secondary)
+			continue
+
 		if(!secondary.ai_can_use(tied_human, brain))
 			continue
 
@@ -44,15 +49,12 @@
 
 	var/obj/item/weapon/gun/primary_weapon = brain.primary_weapon
 	if(primary_weapon && brain.tied_human.is_holding(primary_weapon))
-		var/possible_storage_loc = brain.storage_has_room(primary_weapon)
-		if((primary_weapon.flags_equip_slot & SLOT_BACK) && !tied_human.back)
-			tied_human.equip_to_slot(primary_weapon, WEAR_BACK, TRUE)
-		else if(!tied_human.s_store && tied_human.wear_suit && ((primary_weapon.flags_equip_slot & SLOT_SUIT_STORE) || is_type_in_list(primary_weapon, tied_human.wear_suit.allowed)))
-			tied_human.equip_to_slot(primary_weapon, WEAR_J_STORE, TRUE)
-		else if(possible_storage_loc)
-			brain.store_item(primary_weapon, possible_storage_loc)
+		primary_weapon.unwield(tied_human)
+		brain.holster_primary()
 
-	brain.add_secondary_weapon(primary_weapon)
+	brain.remove_secondary_weapon(best_secondary)
 	brain.set_primary_weapon(best_secondary)
+	if(primary_weapon && brain.is_in_inventory(primary_weapon))
+		brain.add_secondary_weapon(primary_weapon)
 	brain.tried_reload = FALSE
 	return best_secondary

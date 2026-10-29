@@ -136,5 +136,8 @@
 
 #define VV_HK_ADD_ITEMS_TO_VENDOR "add_items_to_vendor"
 
+// /obj/vehicle/multitile
+#define VV_HK_TOGGLE_VEHICLE_AI "toggle_vehicle_ai"
+
 // /obj/structure/pipes/vents
 #define VV_HK_GAS "release_gas"
