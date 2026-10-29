@@ -191,6 +191,7 @@
 		list("Firearm Lubricant", round(scale * 15), /obj/item/prop/helmetgarb/gunoil, VENDOR_ITEM_REGULAR),
 		list("LRRP Bedroll", round(scale * 15), /obj/item/roller/bedroll, VENDOR_ITEM_REGULAR),
 		list("Marine Issue Compass", round(scale * 15), /obj/item/prop/helmetgarb/compass, VENDOR_ITEM_REGULAR),
+		list("Marine Issue Map", round(scale * 15), /obj/item/map/tactical, VENDOR_ITEM_REGULAR),
 
 		list("PATCHES", -1, null, null, null),
 		list("Solar Devils Shoulder Patch", round(scale * 15), /obj/item/clothing/accessory/patch/devils, VENDOR_ITEM_REGULAR),
@@ -301,6 +302,8 @@
 		list("Firearm Lubricant", round(scale * 15), /obj/item/prop/helmetgarb/gunoil, VENDOR_ITEM_REGULAR),
 		list("Bedroll", round(scale * 20), /obj/item/roller/bedroll, VENDOR_ITEM_REGULAR),
 		list("Canteen", round(scale * 20), /obj/item/reagent_container/food/drinks/flask/canteen, VENDOR_ITEM_REGULAR),
+		list("Naval Infantry Issue Compass", round(scale * 15), /obj/item/prop/helmetgarb/compass, VENDOR_ITEM_REGULAR),
+		list("Naval Infantry Issue Map", round(scale * 15), /obj/item/map/tactical, VENDOR_ITEM_REGULAR),
 
 		list("PATCHES", -1, null, null, null),
 		list("UPP Naval Infantry Shoulder Patch", round(scale * 15), /obj/item/clothing/accessory/patch/upp/naval, VENDOR_ITEM_REGULAR),
@@ -494,6 +497,7 @@
 		list("Bedroll", round(scale * 20), /obj/item/roller/bedroll, VENDOR_ITEM_REGULAR),
 		list("Canteen", round(scale * 20), /obj/item/reagent_container/food/drinks/flask/canteen, VENDOR_ITEM_REGULAR),
 		list("Naval Infantry Issue Compass", round(scale * 20), /obj/item/prop/helmetgarb/compass, VENDOR_ITEM_REGULAR),
+		list("Naval Infantry Issue Map", round(scale * 20), /obj/item/map/tactical, VENDOR_ITEM_REGULAR),
 		)
 
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/pmc
@@ -580,6 +584,8 @@
 		list("Firearm Lubricant", round(scale * 15), /obj/item/prop/helmetgarb/gunoil, VENDOR_ITEM_REGULAR),
 		list("Helmet platemask", round(scale * 15), /obj/item/prop/helmetgarb/rmc_platemask, VENDOR_ITEM_REGULAR),
 		list("Helmet goggles", round(scale * 15), /obj/item/prop/helmetgarb/rmc_goggles, VENDOR_ITEM_REGULAR),
+		list("Tactical Compass", round(scale * 15), /obj/item/prop/helmetgarb/compass, VENDOR_ITEM_REGULAR),
+		list("Tactical Map", round(scale * 15), /obj/item/map/tactical, VENDOR_ITEM_REGULAR),
 
 		list("PATCHES", -1, null, null, null),
 		list("Weyland-Yutani Square patch", round(scale * 15), /obj/item/clothing/accessory/patch/wysquare, VENDOR_ITEM_REGULAR),
@@ -836,6 +842,7 @@
 		list("Firearm Lubricant", round(scale * 15), /obj/item/prop/helmetgarb/gunoil, VENDOR_ITEM_REGULAR),
 		list("LRRP Bedroll", round(scale * 20), /obj/item/roller/bedroll, VENDOR_ITEM_REGULAR),
 		list("Marine Issue Compass", round(scale * 20), /obj/item/prop/helmetgarb/compass, VENDOR_ITEM_REGULAR),
+		list("Marine Issue Map", round(scale * 20), /obj/item/map/tactical, VENDOR_ITEM_REGULAR),
 
 		list("PATCHES", -1, null, null, null),
 		list("FORECON Shoulder Patch", round(scale * 15), /obj/item/clothing/accessory/patch/forecon, VENDOR_ITEM_REGULAR),
@@ -909,6 +916,8 @@
 		list("Canteen", round(scale * 20), /obj/item/reagent_container/food/drinks/flask/canteen, VENDOR_ITEM_REGULAR),
 		list("Helmet platemask", round(scale * 15), /obj/item/prop/helmetgarb/rmc_platemask, VENDOR_ITEM_REGULAR),
 		list("Helmet goggles", round(scale * 15), /obj/item/prop/helmetgarb/rmc_goggles, VENDOR_ITEM_REGULAR),
+		list("Royal Marine Commando Issue Compass", round(scale * 15), /obj/item/prop/helmetgarb/compass, VENDOR_ITEM_REGULAR),
+		list("Royal Marine Commando Issue Map", round(scale * 15), /obj/item/map/tactical, VENDOR_ITEM_REGULAR),
 
 		list("PATCHES", -1, null, null, null),
 		list("Royal Marine Commando Shoulder Patch", round(scale * 15), /obj/item/clothing/accessory/patch/royal_marines, VENDOR_ITEM_REGULAR),

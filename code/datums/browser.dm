@@ -254,7 +254,39 @@
 		mob.unset_interaction()
 	return
 
-/proc/show_browser(client/target, browser_content, browser_name, id = null, window_options = null, closeref, width, height, existing_container = FALSE)
+/**
+ * Shows a browser window to the target.
+ *
+ * @param target The client (or mob, which is resolved to its client) that will see the window.
+ * @param browser_content The HTML body/content to display inside the window.
+ * @param browser_name Title shown in the window's title bar.
+ * @param id Optional window ID. If null, `browser_name` is used as the window ID.
+ * @param window_options Optional string of BYOND window options (e.g. "can_close=1;can_minimize=1").
+ * @param closeref Optional atom reference passed to the browser's internal onclose handler.
+ *                 Only used when `use_onclose` is TRUE.
+ * @param width Optional window width in pixels.
+ * @param height Optional window height in pixels.
+ * @param existing_container If truthy, treated as the name of a pre-defined skin element
+ *                           the browser should open into instead of a new window.
+ * @param use_onclose If TRUE (default), the browser will automatically register its own
+ *                    onclose handler after a short delay (via setup_onclose).
+ *                    Set to FALSE when you need to call onclose() yourself with a custom
+ *                    atom ref *after* show_browser returns. This is necessary because
+ *                    setup_onclose runs asynchronously and will overwrite any earlier
+ *                    onclose registration (see issue #13245).
+ */
+/proc/show_browser( \
+	client/target, \
+	browser_content, \
+	browser_name, \
+	id = null, \
+	window_options = null, \
+	closeref, \
+	width, \
+	height, \
+	existing_container = FALSE, \
+	use_onclose = TRUE \
+)
 	if(!target)
 		return
 	if(!istype(target))
@@ -277,7 +309,7 @@
 	popup.set_content(browser_content)
 	if(window_options)
 		popup.set_window_options(window_options)
-	popup.open()
+	popup.open(use_onclose)
 
 /datum/browser/modal
 	var/opentime = 0
