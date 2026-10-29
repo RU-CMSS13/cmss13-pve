@@ -1,5 +1,6 @@
 /datum/caste_datum/pathogen/sprinter
 	caste_type = PATHOGEN_CREATURE_SPRINTER
+	fire_immunity = FIRE_VULNERABILITY
 	caste_desc = "A fast, four-legged terror, but weak in sustained combat."
 	tier = 1
 	melee_damage_lower = XENO_DAMAGE_TIER_2
@@ -9,10 +10,10 @@
 	plasma_max = XENO_PLASMA_TIER_2
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_1
 	armor_deflection = XENO_NO_ARMOR
-	max_health = XENO_HEALTH_TIER_3
+	max_health = XENO_HEALTH_TIER_2
 	evasion = XENO_EVASION_HIGH
 	speed = XENO_SPEED_RUNNER
-	attack_delay = -1
+	attack_delay = -3
 
 	available_strains = list()
 	behavior_delegate_type = /datum/behavior_delegate/pathogen_base/sprinter
@@ -26,6 +27,7 @@
 	tacklestrength_max = 4
 
 	heal_resting = 1.4
+	minimum_evolve_time = 5 MINUTES
 
 	minimap_icon = "sprinter"
 
@@ -45,19 +47,21 @@
 	base_pixel_y = -20
 	pull_speed = -0.5
 	viewsize = 9
-	organ_value = 500 //worthless
+	organ_value = 3000
 
 	mob_size = MOB_SIZE_XENO_SMALL
 
 	base_actions = list(
-		/datum/action/xeno_action/onclick/xeno_resting,
-		/datum/action/xeno_action/watch_xeno,
-		/datum/action/xeno_action/activable/tail_stab,
-		/datum/action/xeno_action/onclick/xenohide,
-		/datum/action/xeno_action/activable/pounce/runner,
-		/datum/action/xeno_action/activable/runner_skillshot,
-		/datum/action/xeno_action/onclick/toggle_long_range/runner,
-		/datum/action/xeno_action/onclick/blight_slash,
+		/datum/action/xeno_action/onclick/toggle_seethrough/pathogen,
+		/datum/action/xeno_action/onclick/xeno_resting/pathogen,
+		/datum/action/xeno_action/watch_xeno/pathogen,
+		/datum/action/xeno_action/activable/tail_stab/pathogen,
+		/datum/action/xeno_action/onclick/xenohide/pathogen,
+		/datum/action/xeno_action/activable/pounce/runner/pathogen, // Macro 1
+		/datum/action/xeno_action/activable/runner_skillshot/sprinter, // Macro 2
+		/datum/action/xeno_action/onclick/toggle_long_range/runner/sprinter, // Macro 3
+		//, // Macro 4
+		//, // Macro 5
 		/datum/action/xeno_action/onclick/tacmap,
 	)
 	inherent_verbs = list(
@@ -66,7 +70,7 @@
 
 	icon_xeno = 'icons/mob/pathogen/sprinter.dmi'
 	icon_xenonid = 'icons/mob/pathogen/sprinter.dmi'
-	//need_weeds = FALSE
+
 
 	weed_food_icon = 'icons/mob/xenos/weeds_64x64.dmi'
 	mycelium_food_icon = 'icons/mob/pathogen/pathogen_weeds_64x64.dmi'
@@ -75,17 +79,13 @@
 
 	AUTOWIKI_SKIP(TRUE)
 	hivenumber = XENO_HIVE_PATHOGEN
-	speaking_noise = "neo_talk"
+	speaking_noise = "pathogen_talk"
 	acid_blood_damage = 0
 	bubble_icon = "pathogen"
 
 	var/linger_range = 5
 	var/linger_deviation = 1
 	var/pull_direction
-
-/mob/living/carbon/xenomorph/sprinter/Initialize(mapload, mob/living/carbon/xenomorph/old_xeno, hivenumber)
-	. = ..()
-	make_pathogen_speaker()
 
 /mob/living/carbon/xenomorph/sprinter/initialize_pass_flags(datum/pass_flags_container/pass_flags_container)
 	..()

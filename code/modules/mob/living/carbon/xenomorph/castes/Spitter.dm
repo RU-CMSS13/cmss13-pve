@@ -49,7 +49,7 @@
 		/datum/action/xeno_action/activable/tail_stab/spitter,
 		/datum/action/xeno_action/activable/corrosive_acid,
 		/datum/action/xeno_action/activable/xeno_spit/ai,
-		/datum/action/xeno_action/onclick/charge_spit,
+		/datum/action/xeno_action/onclick/charge_spit/ai,
 		/datum/action/xeno_action/activable/spray_acid/spitter/ai,
 		/datum/action/xeno_action/onclick/tacmap,
 	)
@@ -68,6 +68,7 @@
 	var/linger_range = 5
 	var/linger_deviation = 1
 
+	ai_ability_delay = 3 SECONDS
 
 /datum/action/xeno_action/activable/xeno_spit/ai
 	default_ai_action = TRUE
@@ -75,7 +76,26 @@
 	xeno_cooldown = 8 SECONDS
 
 /datum/action/xeno_action/activable/xeno_spit/ai/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
-	return DT_PROB(ai_prob_chance, delta_time) && (get_dist(parent, parent.current_target) <= 7) && !check_for_obstacles_projectile(parent, parent.current_target, GLOB.ammo_list[/datum/ammo/xeno/acid/spatter]) && use_ability_async(parent.current_target)
+	return DT_PROB(ai_prob_chance, delta_time) && (get_dist(parent, parent.current_target) <= 7) && !check_for_obstacles_projectile(parent, parent.current_target, parent.ammo) && use_ability_async(parent.current_target)
+
+/datum/action/xeno_action/onclick/charge_spit/ai
+	default_ai_action = TRUE
+	ai_prob_chance = 50
+
+/datum/action/xeno_action/onclick/charge_spit/ai/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
+	if(buffs_active || !DT_PROB(ai_prob_chance, delta_time))
+		return
+
+	var/datum/action/xeno_action/activable/xeno_spit/spit = get_action(parent, /datum/action/xeno_action/activable/xeno_spit)
+	if(!spit || spit.spitting || !spit.action_cooldown_check())
+		return
+
+	if(check_for_obstacles_projectile(parent, parent.current_target, GLOB.ammo_list[/datum/ammo/xeno/acid/spatter]))
+		return
+
+	// The charge only lasts a few seconds, so the spit goes out right away instead of waiting for ai_ability_delay.
+	use_ability_async()
+	spit.use_ability_async(parent.current_target)
 
 /datum/action/xeno_action/activable/spray_acid/spitter/ai
 	default_ai_action = TRUE
@@ -87,7 +107,7 @@
 
 /proc/check_for_obstacles_projectile(mob/firer, mob/target, datum/ammo/ammo_datum)
 	var/list/turf/path = get_line(firer, target, include_start_atom = FALSE)
-	if(!length(path) || get_dist(firer, target) > ammo_datum.max_range)
+	if(!length(path) || (ammo_datum && get_dist(firer, target) > ammo_datum.max_range))
 		return TRUE
 
 	for(var/turf/T in path)

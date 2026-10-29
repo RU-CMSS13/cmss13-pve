@@ -35,6 +35,10 @@
 	action_icon_state = "resting"
 	action_type = XENO_ACTION_CLICK
 
+/datum/action/xeno_action/onclick/xeno_resting/pathogen
+	button_icon_state = "template_pathogen"
+	icon_file = 'icons/mob/hud/actions_pathogen.dmi'
+
 /datum/action/xeno_action/onclick/xeno_resting/can_use_action()
 	var/mob/living/carbon/xenomorph/X = owner
 	if(X && !X.buckled && !X.is_mob_incapacitated())
@@ -60,6 +64,11 @@
 	if(X && !X.buckled && !X.is_mob_incapacitated())
 		return TRUE
 
+/datum/action/xeno_action/onclick/shift_spits/conditor
+	button_icon_state = "template_pathogen"
+	icon_file = 'icons/mob/hud/actions_pathogen.dmi'
+	ability_primacy = XENO_PRIMARY_ACTION_4
+
 // Regurgitate
 /datum/action/xeno_action/onclick/regurgitate
 	name = "Regurgitate"
@@ -79,6 +88,17 @@
 
 /datum/action/xeno_action/onclick/choose_resin/queen_macro //so it doesn't screw other macros up
 	ability_primacy = XENO_PRIMARY_ACTION_4 //it's important that hivelord and drone have the same macros because their playstyle is similar, but it's not as important for queen since her playstyle is very different
+
+/datum/action/xeno_action/onclick/choose_resin/pathogen
+	name = "Choose Mycelium Structure"
+	button_icon_state = "template_pathogen"
+	icon_file = 'icons/mob/hud/actions_pathogen.dmi'
+
+/datum/action/xeno_action/onclick/choose_resin/pathogen/not_primary
+	ability_primacy = XENO_NOT_PRIMARY_ACTION
+
+/datum/action/xeno_action/onclick/choose_resin/pathogen/overmind_macro //so it doesn't screw other macros up
+	ability_primacy = XENO_PRIMARY_ACTION_4
 
 // Secrete Resin
 /datum/action/xeno_action/activable/secrete_resin
@@ -112,6 +132,21 @@
 /datum/action/xeno_action/activable/secrete_resin/hivelord
 	name = "Secrete Thick Resin"
 	thick = TRUE
+
+/datum/action/xeno_action/activable/secrete_resin/pathogen
+	name = "Shape Mycelium"
+	button_icon_state = "template_pathogen"
+	icon_file = 'icons/mob/hud/actions_pathogen.dmi'
+
+/datum/action/xeno_action/activable/secrete_resin/pathogen/archon
+	ability_primacy = XENO_PRIMARY_ACTION_4
+
+/datum/action/xeno_action/activable/secrete_resin/pathogen/thick
+	name = "Shape Thick Mycelium"
+	thick = TRUE
+
+/datum/action/xeno_action/activable/secrete_resin/pathogen/overmind_macro
+	ability_primacy = XENO_PRIMARY_ACTION_5
 
 //resin marker
 /datum/action/xeno_action/activable/info_marker
@@ -188,6 +223,11 @@
 	var/mob/living/carbon/xenomorph/X = owner
 	if(X && !X.buckled && !X.is_mob_incapacitated() && (!X.current_aura || X.plasma_stored >= plasma_cost))
 		return TRUE
+
+/datum/action/xeno_action/onclick/emit_pheromones/pathogen
+	name = "Emit Pheremone Spores (30)"
+	button_icon_state = "template_pathogen"
+	icon_file = 'icons/mob/hud/actions_pathogen.dmi'
 
 // Pounce
 // Subtype this to customize behavior, or do it at runtime
@@ -430,6 +470,10 @@
 	action_type = XENO_ACTION_CLICK
 	listen_signal = COMSIG_KB_XENO_HIDE
 
+/datum/action/xeno_action/onclick/xenohide/pathogen
+	button_icon_state = "template_pathogen"
+	icon_file = 'icons/mob/hud/actions_pathogen.dmi'
+
 /datum/action/xeno_action/onclick/xenohide/can_use_action()
 	var/mob/living/carbon/xenomorph/X = owner
 	if(X && !X.buckled && !X.is_mob_incapacitated())
@@ -489,6 +533,11 @@
 /datum/action/xeno_action/activable/xeno_spit/queen_macro //so it doesn't screw other macros up
 	ability_primacy = XENO_PRIMARY_ACTION_3
 
+/datum/action/xeno_action/activable/xeno_spit/conditor
+	button_icon_state = "template_pathogen"
+	icon_file = 'icons/mob/hud/actions_pathogen.dmi'
+	ability_primacy = XENO_PRIMARY_ACTION_2
+
 /datum/action/xeno_action/activable/bombard
 	name = "Bombard"
 	ability_name = "bombard"
@@ -517,6 +566,10 @@
 	var/stab_range = 2
 	/// Used for defender's tail 'stab'.
 	var/blunt_stab = FALSE
+
+/datum/action/xeno_action/activable/tail_stab/pathogen
+	button_icon_state = "template_pathogen"
+	icon_file = 'icons/mob/hud/actions_pathogen.dmi'
 
 /datum/action/xeno_action/onclick/evolve
 	name = "Evolve"
@@ -630,6 +683,10 @@
 /datum/action/xeno_action/onclick/toggle_seethrough
 	name = "Toggle Seethrough"
 	action_icon_state = "xenohide"
+
+/datum/action/xeno_action/onclick/toggle_seethrough/pathogen
+	button_icon_state = "template_pathogen"
+	icon_file = 'icons/mob/hud/actions_pathogen.dmi'
 
 
 /datum/action/xeno_action/onclick/toggle_seethrough/use_ability(atom/target)

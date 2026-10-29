@@ -1,28 +1,30 @@
 /datum/caste_datum/pathogen/blight
 	caste_type = PATHOGEN_CREATURE_BLIGHT
+	fire_immunity = FIRE_VULNERABILITY
 	tier = 2
 
 	melee_damage_lower = XENO_DAMAGE_TIER_4
 	melee_damage_upper = XENO_DAMAGE_TIER_4
 	melee_vehicle_damage = XENO_DAMAGE_TIER_4
-	max_health = XENO_HEALTH_TIER_10
+	max_health = XENO_HEALTH_TIER_7
 	plasma_gain = XENO_PLASMA_GAIN_TIER_8
-	plasma_max = XENO_PLASMA_TIER_6
+	plasma_max = XENO_PLASMA_TIER_4
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_2
 	armor_deflection = XENO_ARMOR_TIER_1
 	evasion = XENO_EVASION_LOW
-	speed = XENO_SPEED_TIER_8
+	speed = XENO_SPEED_TIER_9
 
-	attack_delay = 1.7
+	attack_delay = 1.5
 
 	available_strains = list()
 	behavior_delegate_type = /datum/behavior_delegate/pathogen_base/blight
 
 	deevolves_to = list(PATHOGEN_CREATURE_SPRINTER)
 	caste_desc = "A fast, powerful combatant."
-	evolves_to = list(PATHOGEN_CREATURE_VENATOR)
+	evolves_to = list(PATHOGEN_CREATURE_VENATOR, PATHOGEN_CREATURE_HARBINGER)
 
-	heal_resting = 1.5
+	heal_resting = 1.2
+	minimum_evolve_time = 10 MINUTES
 
 	minimap_icon = "blight"
 
@@ -36,15 +38,14 @@
 	pixel_x = -12
 	old_x = -12
 	tier = 2
-	organ_value = 10000
+	organ_value = 5000
 	base_actions = list(
-		/datum/action/xeno_action/onclick/xeno_resting,
-		/datum/action/xeno_action/watch_xeno,
-		/datum/action/xeno_action/activable/tail_stab,
-		/datum/action/xeno_action/onclick/lurker_invisibility/blight,
-		/datum/action/xeno_action/activable/pounce/lurker,
-		/datum/action/xeno_action/onclick/plant_weeds/pathogen,
-		/datum/action/xeno_action/onclick/blight_slash,
+		/datum/action/xeno_action/onclick/toggle_seethrough/pathogen,
+		/datum/action/xeno_action/onclick/xeno_resting/pathogen,
+		/datum/action/xeno_action/watch_xeno/pathogen,
+		/datum/action/xeno_action/activable/tail_stab/pathogen,
+		/datum/action/xeno_action/activable/pounce/lurker/pathogen, // Macro 1
+		/datum/action/xeno_action/onclick/lurker_invisibility/blight, // Macro 2
 		/datum/action/xeno_action/onclick/tacmap,
 	)
 	inherent_verbs = list(
@@ -57,7 +58,7 @@
 
 	icon_xeno = 'icons/mob/pathogen/blight.dmi'
 	icon_xenonid = 'icons/mob/pathogen/blight.dmi'
-	//need_weeds = FALSE
+
 
 	weed_food_icon = 'icons/mob/xenos/weeds_48x48.dmi'
 	mycelium_food_icon = 'icons/mob/pathogen/pathogen_weeds_48x48.dmi'
@@ -66,16 +67,12 @@
 
 	AUTOWIKI_SKIP(TRUE)
 	hivenumber = XENO_HIVE_PATHOGEN
-	speaking_noise = "neo_talk"
+	speaking_noise = "pathogen_talk"
 	acid_blood_damage = 0
 	bubble_icon = "pathogen"
 
 	forced_retarget_time = (2 SECONDS)
 	var/pull_direction
-
-/mob/living/carbon/xenomorph/blight/Initialize(mapload, mob/living/carbon/xenomorph/old_xeno, hivenumber)
-	. = ..()
-	make_pathogen_speaker()
 
 /mob/living/carbon/xenomorph/blight/launch_towards(datum/launch_metadata/LM)
 	if(!current_target)
@@ -89,7 +86,6 @@
 		else
 			pull_direction &= (EAST|WEST)
 	return ..()
-
 
 /mob/living/carbon/xenomorph/blight/init_movement_handler()
 	return new /datum/xeno_ai_movement/linger/lurking(src)
@@ -200,6 +196,10 @@
 	var/time_left = timeleft(lurker_invisibility_action.cooldown_timer_id) / 10
 	. += "Invisibility Recharge: [time_left] second\s."
 
+	var/datum/hive_status/pathogen/hive = GLOB.hive_datum[XENO_HIVE_PATHOGEN]
+	if(hive)
+		. += "Pathogen Poppers: [hive.get_popper_num()]/[hive.max_poppers]"
+
 /datum/behavior_delegate/pathogen_base/blight/on_collide(atom/movable/movable_atom)
 	. = ..()
 
@@ -220,6 +220,10 @@
 	to_chat(bound_xeno, SPAN_XENOHIGHDANGER("We bumped into someone and lost our invisibility!"))
 	lurker_invisibility_action.invisibility_off(0.5) // partial refund of remaining time
 
+/datum/action/xeno_action/onclick/lurker_invisibility/blight
+	button_icon_state = "template_pathogen"
+	icon_file = 'icons/mob/hud/actions_pathogen.dmi'
+	action_icon_state = "invisibility"
 
 /datum/action/xeno_action/onclick/lurker_invisibility/blight/invisibility_off(refund_multiplier = 0.0)
 	var/mob/living/carbon/xenomorph/xeno = owner
@@ -236,7 +240,7 @@
 	animate(xeno, alpha = initial(xeno.alpha), time = 0.1 SECONDS, easing = QUAD_EASING)
 	to_chat(xeno, SPAN_XENOHIGHDANGER("We feel our invisibility end!"))
 
-	button.icon_state = "template"
+	button.icon_state = "template_xeno"
 	xeno.update_icons()
 
 	xeno.speed_modifier += speed_buff
