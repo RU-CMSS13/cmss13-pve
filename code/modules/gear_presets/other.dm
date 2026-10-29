@@ -789,8 +789,25 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/guardian(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/guardian(new_human), WEAR_FACE)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/guardian(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/hugger_box/cultist(new_human), WEAR_L_HAND)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/hugger_box/cultist(new_human), WEAR_R_HAND)
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/hugger_box/cultist(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/hugger_box/cultist(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
+	//waist and suit storage
+	switch(rand(1, 3))
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/ar10(new_human), WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/ar10(new_human), WEAR_WAIST)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/mar40(new_human), WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/mar40(new_human), WEAR_WAIST)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m16(new_human), WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/m16(new_human), WEAR_WAIST)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_R_STORE)
 
 /datum/equipment_preset/other/xeno_cultist/guard/load_status(mob/living/carbon/human/new_human, hivenumber = XENO_HIVE_NORMAL)
 	. = ..()
