@@ -119,13 +119,21 @@
 	density = TRUE
 	opacity = TRUE
 
+/obj/structure/machinery/door/poddoor/almayer/dark/closed
+	name = "\improper Lockdown"
+	icon_state = "darkdoor1"
+	base_icon_state = "darkdoor"
+	density = TRUE
+	opacity = TRUE
+
+/obj/structure/machinery/door/poddoor/almayer/dark/open
+	name = "\improper Lockdown"
+	icon_state = "darkdoor1"
+	base_icon_state = "darkdoor"
+	density = FALSE
+	opacity = FALSE
+
 /obj/structure/machinery/door/poddoor/almayer/dark
 	icon_state = "almayer_pdoor1"
 	base_icon_state = "almayer_pdoor"
 
-/obj/structure/machinery/door/poddoor/almayer/dark/open
-	density = FALSE
-
-/obj/structure/machinery/door/poddoor/almayer/dark/closed
-	density = TRUE
-	opacity = TRUE
