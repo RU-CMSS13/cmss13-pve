@@ -108,7 +108,7 @@
 
 /atom/movable/screen/sound_clue/Initialize()
 	. = ..()
-	set_screenpos(rand(-200,200), rand(-200,200))
+	set_screenpos(rand(-160,160), rand(-160,160))
 
 /atom/movable/screen/sound_clue/MouseEntered(location, control, params)
 	. = ..()
