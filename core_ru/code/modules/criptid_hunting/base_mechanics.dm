@@ -796,10 +796,54 @@
 /mob/living
 	var/the_big_bad = FALSE
 
+/obj/structure/criptic/wisp
+	name = "wisp"
+	desc = "Dark ghost of a soul long gone"
+	layer = 7
+	anchored = TRUE
+
+	icon = 'core_ru/code/modules/criptid_hunting/chaplainRitual.dmi'
+	icon_state = "sprite-healing"
+
+	var/existing_for = 5 SECONDS
+	var/captured = FALSE
+	var/obj/structure/criptic/night_shrine/shrine
+
+/obj/structure/criptic/wisp/Initialize(mapload, ...)
+	. = ..()
+	pixel_x = pick(-96,-64,-32,32,64,96)
+	pixel_y = pick(-96,-64,-32,32,64,96)
+	SetTransform(1.5)
+
+	spawn(existing_for)
+		if(!captured)
+			end_wisp_life()
+
+/obj/structure/criptic/wisp/clicked(mob/user, list/mods)
+	. = ..()
+	if(isliving(user) && !captured)
+		captured = TRUE
+		end_wisp_life()
+		return TRUE
+
+/obj/structure/criptic/wisp/proc/end_wisp_life()
+	if(captured)
+		add_filter("wisp", 1, list("type" = "outline", "color" = COLOR_LIGHT_GREEN, "size" = 1))
+		sleep(3)
+		animate(src, alpha = 0, pixel_y = src.pixel_y + 32, time = 1 SECONDS, easing = SINE_EASING | EASE_IN)
+		sleep(10)
+		qdel(src)
+
+	else
+		shrine.removal_process_progress = clamp(shrine.removal_process_progress - 5, 0, shrine.removal_process_end_at)
+		animate(src, alpha = 0, pixel_y = 0, pixel_x = 0, time = 1 SECONDS, easing = SINE_EASING | EASE_IN)
+		sleep(10)
+		qdel(src)
+
 /obj/structure/criptic/night_shrine
 	name = "shrine"
 	desc = "Used for ritual performing"
-	layer = 5
+	layer = 7
 	density = TRUE
 	anchored = TRUE
 
@@ -809,7 +853,7 @@
 	var/removal_process_started = FALSE
 	var/removal_process_progress = 0
 	var/removal_process_end_at = 60
-	var/wisp_chance = 5
+	var/wisp_chance = 15
 
 	var/list/cleaners = list()
 
@@ -843,7 +887,7 @@
 		if(H.stat != CONSCIOUS)
 			cleaners -= H
 
-	for(var/mob/living/carbon/human/H in orange(2))
+	for(var/mob/living/carbon/human/H in orange(3,src))
 		if(H in cleaners)
 			continue
 		if(H.stat == CONSCIOUS)
@@ -852,10 +896,10 @@
 	if(length(cleaners) && removal_process_progress < removal_process_end_at)
 		removal_process_progress = clamp(removal_process_progress + 1, 0, removal_process_end_at)
 		maptext = SPAN_LANGCHAT("|[removal_process_progress]/[removal_process_end_at]|")
-		/*if(prob(wisp_chance))
+		if(prob(wisp_chance))
 			spawn_a_wisp()
 		else
-			wisp_chance = clamp(wisp_chance + 5, 0, 80)*/
+			wisp_chance = clamp(wisp_chance + 5, 0, 80)
 
 	if(length(cleaners) && removal_process_progress >= removal_process_end_at)
 		end_the_cleaning()
@@ -865,6 +909,12 @@
 		stop_the_cleaning()
 		STOP_PROCESSING(SSobj,src)
 
+/obj/structure/criptic/night_shrine/proc/spawn_a_wisp()
+	wisp_chance = initial(wisp_chance)
+
+	var/obj/structure/criptic/wisp/W = new /obj/structure/criptic/wisp(get_turf(src))
+	W.shrine = src
+
 /obj/structure/criptic/night_shrine/proc/end_the_cleaning()
 	maptext = ""
 
@@ -873,7 +923,7 @@
 	for(var/obj/structure/criptic/mission_controller/M in world)
 		M.until_dawn -= 500
 		M.show_current_progress()
-	sleep(5)
+	sleep(15)
 	balloon_alert_to_viewers("Monster is weaker now!", COLOR_WHITE)
 	for(var/mob/living/carbon/xenomorph/criptic_wendigo/W in world)
 		if(W.the_big_bad)
@@ -885,10 +935,13 @@
 	show_blurb(GLOB.player_list, 35, "SENSATION IS GONE...FOR NOW...", null, "EAST-7,NORTH-3", "center", COLOR_DARK_RED, null, null, 1)
 
 	animate(src, alpha = 0, time = 0.5 SECONDS, easing = SINE_EASING | EASE_IN)
-	sleep(5)
+	sleep(10)
 	qdel(src)
 
 /obj/structure/criptic/night_shrine/proc/stop_the_cleaning()
 	removal_process_started = FALSE
 	removal_process_progress = 0
 	maptext = ""
+
+	remove_filter("shrine")
+	animate(src, pixel_x = 0, pixel_y = 0, time = 0, loop = 0)
