@@ -181,7 +181,7 @@
 			lit_turf.dynamic_lumcount += lum_power
 			affected_turfs += lit_turf
 	else
-		for(var/turf/lit_turf in view(lumcount_range, get_turf(current_holder)))
+		for(var/turf/lit_turf in view(lumcount_range / 2, get_turf(current_holder)))
 			lit_turf.dynamic_lumcount += lum_power
 			affected_turfs += lit_turf
 

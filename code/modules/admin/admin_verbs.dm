@@ -148,6 +148,7 @@ GLOBAL_LIST_INIT(admin_verbs_minor_event, list(
 	/client/proc/toggle_sniper_upgrade,
 	/client/proc/toggle_attack_dead,
 	/client/proc/toggle_strip_drag,
+	/client/proc/toggle_flashlight_hardmode,
 	/client/proc/toggle_disposal_mobs,
 	/client/proc/toggle_uniform_strip,
 	/client/proc/toggle_strong_defibs,

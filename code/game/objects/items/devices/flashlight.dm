@@ -56,6 +56,14 @@
 /obj/item/device/flashlight/attack_self(mob/user)
 	..()
 
+	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_HARDCORE_LIGHTS) && needs_battery)
+		if(!battery)
+			balloon_alert(user, "No battery inside!", COLOR_WHITE)
+			return FALSE
+		if(battery.charge <= 0)
+			balloon_alert(user, "Not enough power!", COLOR_WHITE)
+			return FALSE
+
 	if(!toggleable)
 		to_chat(user, SPAN_WARNING("You cannot toggle \the [src.name] on or off."))
 		return FALSE
@@ -65,16 +73,22 @@
 		return FALSE
 
 	on = !on
+	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_HARDCORE_LIGHTS) && needs_battery)
+		if(!on)
+			STOP_PROCESSING(SSobj,src)
+		if(on)
+			START_PROCESSING(SSobj,src)
 	set_light_on(on)
 	update_icon()
 	for(var/xman in actions)
 		var/datum/action/active = xman
 		active.update_button_icon()
-
 	return TRUE
 
 /obj/item/device/flashlight/proc/turn_off_light(mob/bearer)
 	if(on)
+		playsound(src.loc, breaking_sound, 25, 1)
+		STOP_PROCESSING(SSobj,src)
 		on = FALSE
 		set_light_on(on)
 		update_icon()
@@ -85,6 +99,28 @@
 	return 0
 
 /obj/item/device/flashlight/attackby(obj/item/item as obj, mob/user as mob)
+	if(istype(item,/obj/item/cell) && MODE_HAS_TOGGLEABLE_FLAG(MODE_HARDCORE_LIGHTS))
+		var/obj/item/cell/C = item
+		if(put_in_battery_type && battery_type == C.type)
+			if(battery)
+				battery.forceMove(get_turf(loc))
+				battery = null
+				turn_off_light()
+			user.drop_held_item(C)
+			C.forceMove(src)
+			battery = C
+			return
+		else
+			if(C.type == /obj/item/cell)
+				if(battery)
+					battery.forceMove(get_turf(loc))
+					battery = null
+					turn_off_light()
+				user.drop_held_item(C)
+				C.forceMove(src)
+				battery = C
+				return
+
 	if(HAS_TRAIT(item, TRAIT_TOOL_SCREWDRIVER))
 		if(!raillight_compatible) //No fancy messages, just no
 			return
