@@ -810,7 +810,7 @@
 
 /obj/effect/temp_visual/dark_presence/Initialize(mapload)
 	. = ..()
-	animate(src, transform = matrix(1.5, MATRIX_SCALE), alpha = 100, time = 5 SECONDS)
+	animate(src, transform = matrix(2, MATRIX_SCALE), alpha = 255, time = 5 SECONDS)
 
 /obj/structure/criptic/dead_body
 	name = "body"
@@ -835,11 +835,12 @@
 					possible_clues += C
 
 			if(!length(possible_clues))
-				user.show_hint(src)
+				user.hide_hint(src)
 				show_blurb(user, 20, "And see nothing...", null, "EAST-7,NORTH-4.5", "center", COLOR_GRAY, null, null, 1)
 				REMOVE_TRAIT(user, TRAIT_IMMOBILIZED, INTERACTION_TRAIT)
 
 			else
+				user.hide_hint(src)
 				clue = pick(possible_clues)
 				var/x_offset = (clue.x - user.x) * 32
 				var/y_offset = (clue.y - user.y) * 32
@@ -870,8 +871,8 @@
 	icon_state = "shrine_circle"
 
 	var/obj/structure/criptic/night_shrine/shrine
-	pixel_x = -64
-	pixel_y = -64
+	pixel_x = -16
+	pixel_y = -30
 
 /obj/structure/criptic/shrine_circle/Initialize(mapload, ...)
 	. = ..()
@@ -1012,7 +1013,7 @@
 	for(var/obj/structure/criptic/mission_controller/M in world)
 		M.until_dawn -= 500
 		M.show_current_progress()
-	sleep(15)
+	sleep(20)
 	balloon_alert_to_viewers("Monster is weaker now!", COLOR_WHITE)
 	for(var/mob/living/carbon/xenomorph/criptic_wendigo/W in world)
 		if(W.the_big_bad)
@@ -1023,8 +1024,14 @@
 
 	show_blurb(GLOB.player_list, 35, "SENSATION IS GONE...FOR NOW...", null, "EAST-7,NORTH-3", "center", COLOR_DARK_RED, null, null, 1)
 
+	for(var/obj/structure/criptic/shrine_circle/circle in get_turf(src))
+		qdel(circle)
+
+	for(var/obj/structure/criptic/wisp/wisp in get_turf(src))
+		qdel(wisp)
+
 	animate(src, alpha = 0, time = 0.5 SECONDS, easing = SINE_EASING | EASE_IN)
-	sleep(10)
+	sleep(20)
 	qdel(src)
 
 /obj/structure/criptic/night_shrine/proc/stop_the_cleaning()
