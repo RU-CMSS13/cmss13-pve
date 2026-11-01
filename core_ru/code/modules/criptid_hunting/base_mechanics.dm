@@ -804,6 +804,10 @@
 	layer = 7
 	alpha = 0
 
+	light_on = TRUE
+	light_range = 3
+	light_power = 1
+
 /obj/effect/temp_visual/dark_presence/Initialize(mapload)
 	. = ..()
 	animate(src, transform = matrix(1.5, MATRIX_SCALE), alpha = 100, time = 5 SECONDS)
@@ -841,9 +845,18 @@
 				var/y_offset = (clue.y - user.y) * 32
 				animate(user.client, pixel_x = x_offset, pixel_y = y_offset, time = 6 SECONDS, easing = CUBIC_EASING)
 				sleep(6 SECONDS)
+				user.client.pixel_x = 0
+				user.client.pixel_y = 0
+				user.client.perspective = EYE_PERSPECTIVE
+				user.client.eye = clue
 				new /obj/effect/temp_visual/dark_presence(get_turf(clue))
 				sleep(7 SECONDS)
+				user.client.perspective = MOB_PERSPECTIVE
+				user.client.eye = user
+				user.client.pixel_x = x_offset
+				user.client.pixel_y = y_offset
 				animate(user.client, pixel_x = 0, pixel_y = 0, time = 6 SECONDS, easing = CUBIC_EASING)
+				sleep(7 SECONDS)
 				REMOVE_TRAIT(user, TRAIT_IMMOBILIZED, INTERACTION_TRAIT)
 		return TRUE
 
