@@ -10,6 +10,12 @@
 		return
 
 	SSticker.mode.toggleable_flags ^= MODE_HARDCORE_LIGHTS
+
+	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_HARDCORE_LIGHTS))
+		for(var/obj/item/device/flashlight/F in world)
+			if(F.on && F.needs_battery)
+				START_PROCESSING(SSobj,F)
+
 	message_admins("[src] has [MODE_HAS_TOGGLEABLE_FLAG(MODE_HARDCORE_LIGHTS) ? "toggled flashlight hardcoreness" : "returned flashlights to basics"].")
 
 /atom/movable/marine_light
@@ -28,7 +34,7 @@
 	if(ishuman(connected_suit.loc))
 		connected_suit.maptext = SPAN_LANGCHAT("|[connected_suit.power_current]/[connected_suit.power_amount]|%")
 
-/obj/item/clothing/suit
+/obj/item/clothing
 	var/power_amount = 30
 	var/power_current = 30
 	maptext_width = 48
@@ -47,7 +53,7 @@
 	var/put_in_battery_type = TRUE
 	var/battery_type = /obj/item/cell/crap
 
-	var/flashlight_hungriness = 5
+	var/flashlight_hungriness = 2
 
 	var/obj/item/cell/battery
 
@@ -112,13 +118,15 @@
 	needs_battery = FALSE
 
 /obj/item/device/flashlight/combat
-	battery_type = /obj/item/cell
+	battery_type = /obj/item/cell/high
+	flashlight_hungriness = 1
 
 /obj/item/device/flashlight/lamp
 	flashlight_hungriness = 10
 
 /obj/item/device/flashlight/tnr
-	battery_type = /obj/item/cell
+	battery_type = /obj/item/cell/high
+	flashlight_hungriness = 1
 
 /obj/item/tool/candle
 	light_system = MOVABLE_LIGHT
@@ -173,8 +181,8 @@
 
 /obj/item/clothing/head/hardhat
 	light_system = DIRECTIONAL_LIGHT
-	var/power_amount = 10
-	var/power_current = 10
+	power_amount = 10
+	power_current = 10
 	maptext_width = 48
 	maptext_height = 48
 

@@ -10,7 +10,7 @@
 	var/broken = FALSE
 
 	var/fuel = 0
-	var/fuel_max = 150
+	var/fuel_max = 600
 
 	var/mob/living/carbon/human/player
 

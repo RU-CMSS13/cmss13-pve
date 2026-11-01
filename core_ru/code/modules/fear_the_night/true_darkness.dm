@@ -75,3 +75,48 @@
 	for(var/obj/structure/machinery/light/light in orange(20,src))
 		if(prob(70))
 			light.flicker(rand(5,15))
+
+/turf/proc/disable_manufactured_lights()
+	var/list/atom/disabling_list = list()
+	for(var/mob/living/carbon/human/H in orange(20,src))
+		for(var/atom/A in H)
+			if(istype(A,/obj/item/clothing/suit/marine) || istype(A,/obj/item/clothing/suit/storage/marine) || istype(A,/obj/item/clothing/head/hardhat) || istype(A,/obj/item/device/flashlight))
+				disabling_list |= A
+
+	for(var/atom/A in orange(20,src))
+		if(!istype(A,/obj/item))
+			continue
+		if(istype(A,/obj/item/clothing/suit/marine) || istype(A,/obj/item/clothing/suit/storage/marine) || istype(A,/obj/item/clothing/head/hardhat) || istype(A,/obj/item/device/flashlight))
+			disabling_list |= A
+
+	for(var/obj/item/device/flashlight/F in disabling_list)
+		if(!F.on)
+			continue
+		if(istype(F,/obj/item/device/flashlight/flare))
+			var/obj/item/device/flashlight/flare/flare = F
+			flare.fuel = 0
+
+		else
+			F.turn_off_light()
+			F.unusable = TRUE
+			addtimer(CALLBACK(F, TYPE_PROC_REF(/obj/item/device/flashlight, reset_workstate)), 10 SECONDS)
+
+	for(var/obj/item/I in disabling_list)
+		if(istype(I,/obj/item/clothing/suit/marine) || istype(I,/obj/item/clothing/suit/storage/marine) || istype(I,/obj/item/clothing/head/hardhat))
+			var/obj/item/clothing/C = I
+			C.power_amount = 0
+			C.unusable = TRUE
+			addtimer(CALLBACK(C, TYPE_PROC_REF(/obj/item/clothing, reset_workstate)), 5 SECONDS)
+
+/obj/item/clothing
+	var/unusable = FALSE
+
+/obj/item/clothing/proc/reset_workstate()
+	unusable = FALSE
+
+/obj/item/device/flashlight
+	var/unusable = FALSE
+
+/obj/item/device/flashlight/proc/reset_workstate()
+	unusable = FALSE
+

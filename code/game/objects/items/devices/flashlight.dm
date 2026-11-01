@@ -59,9 +59,15 @@
 	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_HARDCORE_LIGHTS) && needs_battery)
 		if(!battery)
 			balloon_alert(user, "No battery inside!", COLOR_WHITE)
+			animation_flash_color(src, COLOR_RED)
 			return FALSE
 		if(battery.charge <= 0)
 			balloon_alert(user, "Not enough power!", COLOR_WHITE)
+			animation_flash_color(src, COLOR_RED)
+			return FALSE
+		if(unusable)
+			balloon_alert(user, "Something wrong!", COLOR_WHITE)
+			animation_flash_color(src, COLOR_RED)
 			return FALSE
 
 	if(!toggleable)

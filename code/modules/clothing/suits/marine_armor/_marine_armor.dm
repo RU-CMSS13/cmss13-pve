@@ -194,7 +194,12 @@
 			light_holder.connected_suit = src
 		if(power_current <= 0)
 			balloon_alert(user, "Not enough power!", COLOR_WHITE)
+			animation_flash_color(src, COLOR_RED)
 			return
+		if(unusable)
+			balloon_alert(user, "Something wrong!", COLOR_WHITE)
+			animation_flash_color(src, COLOR_RED)
+			return FALSE
 		START_PROCESSING(SSobj,light_holder)
 
 	set_light_range(initial(light_range))
@@ -864,7 +869,12 @@
 			light_holder.connected_suit = src
 		if(power_current <= 0)
 			balloon_alert(user, "Not enough power!", COLOR_WHITE)
+			animation_flash_color(src, COLOR_RED)
 			return
+		if(unusable)
+			balloon_alert(user, "Something wrong!", COLOR_WHITE)
+			animation_flash_color(src, COLOR_RED)
+			return FALSE
 		START_PROCESSING(SSobj,light_holder)
 
 	set_light_range(initial(light_range))

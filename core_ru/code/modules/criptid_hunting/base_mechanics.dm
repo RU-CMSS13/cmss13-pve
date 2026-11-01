@@ -678,13 +678,13 @@
 		icon_state = "[icon_state_on]"
 		activated = TRUE
 
-		user.anchored = TRUE
+		ADD_TRAIT(user, TRAIT_IMMOBILIZED, INTERACTION_TRAIT)
 		var/obj/structure/criptic/ritual/R = new /obj/structure/criptic/ritual(get_turf(loc))
 		R.begin_the_ritual()
 
 		if(do_after(user, 15 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC))
 			W.forceMove(get_turf(src))
-			user.anchored = FALSE
+			REMOVE_TRAIT(user, TRAIT_IMMOBILIZED, INTERACTION_TRAIT)
 
 			var/list/box = RANGE_TURFS(arena_radius, loc)
 			for(var/turf/T as anything in box)
@@ -796,6 +796,78 @@
 /mob/living
 	var/the_big_bad = FALSE
 
+
+/obj/effect/temp_visual/dark_presence
+	duration = 10 SECONDS
+	icon = 'core_ru/code/modules/criptid_hunting/chaplainRitual.dmi'
+	icon_state = "buff-dark-obj"
+	layer = 7
+	alpha = 0
+
+/obj/effect/temp_visual/dark_presence/Initialize(mapload)
+	. = ..()
+	animate(src, transform = matrix(1.5, MATRIX_SCALE), alpha = 100, time = 5 SECONDS)
+
+/obj/structure/criptic/dead_body
+	name = "body"
+	desc = "Dead body..."
+	anchored = TRUE
+
+	icon = 'core_ru/code/modules/criptid_hunting/rogueicons/rw_deadbodies.dmi'
+	icon_state = "mpes10"
+	var/used = FALSE
+
+/obj/structure/criptic/dead_body/attack_hand(mob/living/carbon/human/user)
+	. = ..()
+	if(!used)
+		used = TRUE
+		ADD_TRAIT(user, TRAIT_IMMOBILIZED, INTERACTION_TRAIT)
+		user.show_hint(src,"auspex", 1, "You trying to look into the eyes of the dead...")
+		if(do_after(user, 10, INTERRUPT_ALL, BUSY_ICON_BUILD))
+			var/list/possible_clues = list()
+			var/atom/clue
+			for(var/obj/structure/criptic/clue/C in orange(30,src))
+				if(!C.revealed)
+					possible_clues += C
+
+			if(!length(possible_clues))
+				user.show_hint(src)
+				show_blurb(user, 20, "And see nothing...", null, "EAST-7,NORTH-4.5", "center", COLOR_GRAY, null, null, 1)
+				REMOVE_TRAIT(user, TRAIT_IMMOBILIZED, INTERACTION_TRAIT)
+
+			else
+				clue = pick(possible_clues)
+				var/x_offset = (clue.x - user.x) * 32
+				var/y_offset = (clue.y - user.y) * 32
+				animate(user.client, pixel_x = x_offset, pixel_y = y_offset, time = 6 SECONDS, easing = CUBIC_EASING)
+				sleep(6 SECONDS)
+				new /obj/effect/temp_visual/dark_presence(get_turf(clue))
+				sleep(7 SECONDS)
+				animate(user.client, pixel_x = 0, pixel_y = 0, time = 6 SECONDS, easing = CUBIC_EASING)
+				REMOVE_TRAIT(user, TRAIT_IMMOBILIZED, INTERACTION_TRAIT)
+		return TRUE
+
+/obj/structure/criptic/shrine_circle
+	name = "circle"
+	desc = "Circle!"
+	mouse_opacity = FALSE
+	anchored = TRUE
+
+	icon = 'core_ru/code/modules/criptid_hunting/shrine_circle.dmi'
+	icon_state = "shrine_circle"
+
+	var/obj/structure/criptic/night_shrine/shrine
+	pixel_x = -64
+	pixel_y = -64
+
+/obj/structure/criptic/shrine_circle/Initialize(mapload, ...)
+	. = ..()
+	SetTransform(3)
+
+/obj/structure/criptic/shrine_circle/process()
+	if(!shrine.removal_process_started)
+		qdel(src)
+
 /obj/structure/criptic/wisp
 	name = "wisp"
 	desc = "Dark ghost of a soul long gone"
@@ -875,6 +947,10 @@
 		for(var/i in 1 to 4)
 			animate(pixel_x = rand(-2,2), pixel_y = rand(-2,2), time = 3, easing = JUMP_EASING)
 		add_filter("shrine", 1, list("type" = "outline", "color" = COLOR_LIGHT_GREEN, "size" = 1))
+
+		var/obj/structure/criptic/shrine_circle/circle = new /obj/structure/criptic/shrine_circle(get_turf(src))
+		circle.shrine = src
+		START_PROCESSING(SSobj,circle)
 
 		START_PROCESSING(SSobj,src)
 		return TRUE
