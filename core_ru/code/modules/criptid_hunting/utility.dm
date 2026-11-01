@@ -377,6 +377,8 @@
 
 	if(length(nearby_clues))
 		for(var/atom/A in view(user.loc))
+			if(!A.mouse_opacity)
+				continue
 			if(A.uv_scannable)
 				possible_points += A
 
@@ -385,6 +387,8 @@
 				if(O.type in ignore_them)
 					continue
 				if(!istype(O.loc,/turf/open))
+					continue
+				if(!O.mouse_opacity)
 					continue
 				possible_points += O
 
