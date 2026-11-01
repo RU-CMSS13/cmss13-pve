@@ -20,7 +20,7 @@
 	var/brushable_radius = 7
 
 /mob/living/carbon/human/Life()
-
+	CAN_BE_REDEFINED(TRUE)
 	if(ishuman(src) && client)
 		for(var/atom/A as anything in revealed_hints)
 			if((get_dist(src, A) > hint_visibility) && (A in naturally_hinted))
@@ -789,6 +789,7 @@
 	var/custom_sprite = FALSE
 
 /obj/structure/ladder/update_icon()
+	CAN_BE_REDEFINED(TRUE)
 	if(custom_sprite)
 		return
 	..()

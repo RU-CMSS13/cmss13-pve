@@ -2,6 +2,7 @@
 	var/datum/ammo/additional_ammo_type
 
 /obj/item/weapon/gun/get_examine_text(mob/user)
+	CAN_BE_REDEFINED(TRUE)
 	. = ..()
 
 	if(additional_ammo_type && additional_ammo_type.silver)
@@ -14,6 +15,7 @@
 		. += SPAN_BLUE("It's loaded with salt bullets.")
 
 /obj/item/weapon/gun/ready_in_chamber()
+	CAN_BE_REDEFINED(TRUE)
 	if(additional_ammo_type)
 		QDEL_NULL(in_chamber)
 		if(current_mag && current_mag.current_rounds > 0)
@@ -25,6 +27,7 @@
 		..()
 
 /obj/item/weapon/gun/lever_action/ready_lever_action_internal_mag()
+	CAN_BE_REDEFINED(TRUE)
 	if(additional_ammo_type)
 		if(isnull(current_mag) || !length(current_mag.chamber_contents))
 			return
@@ -38,6 +41,7 @@
 		..()
 
 /obj/item/weapon/gun/revolver/ready_in_chamber()
+	CAN_BE_REDEFINED(TRUE)
 	if(additional_ammo_type)
 		if(current_mag)
 			if(current_mag.current_rounds > 0)
@@ -52,6 +56,7 @@
 		..()
 
 /obj/item/weapon/gun/shotgun/ready_shotgun_tube()
+	CAN_BE_REDEFINED(TRUE)
 	if(additional_ammo_type)
 		if(isnull(current_mag) || !length(current_mag.chamber_contents))
 			return
@@ -70,6 +75,7 @@
 	var/salt = FALSE
 
 /datum/ammo/on_hit_mob(mob/M, obj/projectile/P, mob/user)
+	CAN_BE_REDEFINED(TRUE)
 	. = ..()
 
 	if((silver && M.weak_to_silver) || (uv && M.weak_to_uv) || (salt && M.weak_to_salt))
@@ -78,6 +84,7 @@
 		M.AddComponent(/datum/component/damage_over_time_simple, 10, 5, BURN)
 
 /datum/ammo/bullet/pistol/heavy/super/highimpact/on_hit_mob(mob/M, obj/projectile/P)
+	CAN_BE_REDEFINED(TRUE)
 	if((silver && M.weak_to_silver) || (uv && M.weak_to_uv) || (salt && M.weak_to_salt))
 		M.AddComponent(/datum/component/status_effect/toxic_buildup, 20)
 		M.AddComponent(/datum/component/bonus_damage_stack, 100, world.time, 280, 1)
@@ -86,6 +93,7 @@
 	..()
 
 /datum/ammo/bullet/revolver/heavy/on_hit_mob(mob/entity, obj/projectile/bullet)
+	CAN_BE_REDEFINED(TRUE)
 	if((silver && entity.weak_to_silver) || (uv && entity.weak_to_uv) || (salt && entity.weak_to_salt))
 		entity.AddComponent(/datum/component/status_effect/toxic_buildup, 20)
 		entity.AddComponent(/datum/component/bonus_damage_stack, 100, world.time, 280, 1)
@@ -94,6 +102,7 @@
 	..()
 
 /datum/ammo/bullet/revolver/upp/shrapnel/on_hit_mob(mob/M, obj/projectile/P)
+	CAN_BE_REDEFINED(TRUE)
 	if((silver && M.weak_to_silver) || (uv && M.weak_to_uv) || (salt && M.weak_to_salt))
 		M.AddComponent(/datum/component/status_effect/toxic_buildup, 20)
 		M.AddComponent(/datum/component/bonus_damage_stack, 100, world.time, 280, 1)
@@ -102,6 +111,7 @@
 	..()
 
 /datum/ammo/bullet/revolver/mateba/highimpact/on_hit_mob(mob/M, obj/projectile/P)
+	CAN_BE_REDEFINED(TRUE)
 	if((silver && M.weak_to_silver) || (uv && M.weak_to_uv) || (salt && M.weak_to_salt))
 		M.AddComponent(/datum/component/status_effect/toxic_buildup, 20)
 		M.AddComponent(/datum/component/bonus_damage_stack, 100, world.time, 280, 1)
@@ -110,6 +120,7 @@
 	..()
 
 /datum/ammo/bullet/rifle/heavy/on_hit_mob(mob/M,obj/projectile/P)
+	CAN_BE_REDEFINED(TRUE)
 	if((silver && M.weak_to_silver) || (uv && M.weak_to_uv) || (salt && M.weak_to_salt))
 		M.AddComponent(/datum/component/status_effect/toxic_buildup, 20)
 		M.AddComponent(/datum/component/bonus_damage_stack, 100, world.time, 280, 1)
@@ -118,6 +129,7 @@
 	..()
 
 /datum/ammo/bullet/rifle/heavy/rmcdmr/on_hit_mob(mob/M,obj/projectile/P)
+	CAN_BE_REDEFINED(TRUE)
 	if((silver && M.weak_to_silver) || (uv && M.weak_to_uv) || (salt && M.weak_to_salt))
 		M.AddComponent(/datum/component/status_effect/toxic_buildup, 20)
 		M.AddComponent(/datum/component/bonus_damage_stack, 100, world.time, 280, 1)
@@ -126,6 +138,7 @@
 	..()
 
 /datum/ammo/bullet/rifle/heavy/impdet/on_hit_mob(mob/entity, obj/projectile/bullet)
+	CAN_BE_REDEFINED(TRUE)
 	if((silver && entity.weak_to_silver) || (uv && entity.weak_to_uv) || (salt && entity.weak_to_salt))
 		entity.AddComponent(/datum/component/status_effect/toxic_buildup, 20)
 		entity.AddComponent(/datum/component/bonus_damage_stack, 100, world.time, 280, 1)
@@ -134,6 +147,7 @@
 	..()
 
 /datum/ammo/bullet/rifle/heavy/upp/flak/on_hit_mob(mob/target, obj/projectile/fired_proj)
+	CAN_BE_REDEFINED(TRUE)
 	if((silver && target.weak_to_silver) || (uv && target.weak_to_uv) || (salt && target.weak_to_salt))
 		target.AddComponent(/datum/component/status_effect/toxic_buildup, 20)
 		target.AddComponent(/datum/component/bonus_damage_stack, 100, world.time, 280, 1)
@@ -142,6 +156,7 @@
 	..()
 
 /datum/ammo/bullet/rifle/heavy/upp/flak_spread/on_hit_mob(mob/target, obj/projectile/fired_proj)
+	CAN_BE_REDEFINED(TRUE)
 	if((silver && target.weak_to_silver) || (uv && target.weak_to_uv) || (salt && target.weak_to_salt))
 		target.AddComponent(/datum/component/status_effect/toxic_buildup, 20)
 		target.AddComponent(/datum/component/bonus_damage_stack, 100, world.time, 280, 1)
@@ -150,6 +165,7 @@
 	..()
 
 /datum/ammo/bullet/rifle/heavy/incendiary/on_hit_mob(mob/M,obj/projectile/P)
+	CAN_BE_REDEFINED(TRUE)
 	if((silver && M.weak_to_silver) || (uv && M.weak_to_uv) || (salt && M.weak_to_salt))
 		M.AddComponent(/datum/component/status_effect/toxic_buildup, 20)
 		M.AddComponent(/datum/component/bonus_damage_stack, 100, world.time, 280, 1)
@@ -158,6 +174,7 @@
 	..()
 
 /datum/ammo/bullet/rifle/heavy/flak/on_hit_mob(mob/M,obj/projectile/P)
+	CAN_BE_REDEFINED(TRUE)
 	if((silver && M.weak_to_silver) || (uv && M.weak_to_uv) || (salt && M.weak_to_salt))
 		M.AddComponent(/datum/component/status_effect/toxic_buildup, 20)
 		M.AddComponent(/datum/component/bonus_damage_stack, 100, world.time, 280, 1)
@@ -166,6 +183,7 @@
 	..()
 
 /datum/ammo/bullet/shotgun/slug/on_hit_mob(mob/M,obj/projectile/P)
+	CAN_BE_REDEFINED(TRUE)
 	if((silver && M.weak_to_silver) || (uv && M.weak_to_uv) || (salt && M.weak_to_salt))
 		M.AddComponent(/datum/component/status_effect/toxic_buildup, 20)
 		M.AddComponent(/datum/component/bonus_damage_stack, 100, world.time, 280, 1)
@@ -174,6 +192,7 @@
 	..()
 
 /datum/ammo/bullet/shotgun/slug/special/on_hit_mob(mob/M,obj/projectile/P)
+	CAN_BE_REDEFINED(TRUE)
 	if((silver && M.weak_to_silver) || (uv && M.weak_to_uv) || (salt && M.weak_to_salt))
 		M.AddComponent(/datum/component/status_effect/toxic_buildup, 20)
 		M.AddComponent(/datum/component/bonus_damage_stack, 100, world.time, 280, 1)
@@ -182,6 +201,7 @@
 	..()
 
 /datum/ammo/bullet/shotgun/flechette/on_hit_mob(mob/M,obj/projectile/P)
+	CAN_BE_REDEFINED(TRUE)
 	if((silver && M.weak_to_silver) || (uv && M.weak_to_uv) || (salt && M.weak_to_salt))
 		M.AddComponent(/datum/component/status_effect/toxic_buildup, 20)
 		M.AddComponent(/datum/component/bonus_damage_stack, 100, world.time, 280, 1)
@@ -190,6 +210,7 @@
 	..()
 
 /datum/ammo/bullet/shotgun/flechette/special/on_hit_mob(mob/M,obj/projectile/P)
+	CAN_BE_REDEFINED(TRUE)
 	if((silver && M.weak_to_silver) || (uv && M.weak_to_uv) || (salt && M.weak_to_salt))
 		M.AddComponent(/datum/component/status_effect/toxic_buildup, 20)
 		M.AddComponent(/datum/component/bonus_damage_stack, 100, world.time, 280, 1)
@@ -198,6 +219,7 @@
 	..()
 
 /datum/ammo/bullet/shotgun/flechette_spread/special/on_hit_mob(mob/M,obj/projectile/P)
+	CAN_BE_REDEFINED(TRUE)
 	if((silver && M.weak_to_silver) || (uv && M.weak_to_uv) || (salt && M.weak_to_salt))
 		M.AddComponent(/datum/component/status_effect/toxic_buildup, 20)
 		M.AddComponent(/datum/component/bonus_damage_stack, 100, world.time, 280, 1)
@@ -206,6 +228,7 @@
 	..()
 
 /datum/ammo/bullet/shotgun/buckshot/on_hit_mob(mob/M,obj/projectile/P)
+	CAN_BE_REDEFINED(TRUE)
 	if((silver && M.weak_to_silver) || (uv && M.weak_to_uv) || (salt && M.weak_to_salt))
 		M.AddComponent(/datum/component/status_effect/toxic_buildup, 20)
 		M.AddComponent(/datum/component/bonus_damage_stack, 100, world.time, 280, 1)
@@ -214,6 +237,7 @@
 	..()
 
 /datum/ammo/bullet/shotgun/spread/on_hit_mob(mob/M,obj/projectile/P)
+	CAN_BE_REDEFINED(TRUE)
 	if((silver && M.weak_to_silver) || (uv && M.weak_to_uv) || (salt && M.weak_to_salt))
 		M.AddComponent(/datum/component/status_effect/toxic_buildup, 20)
 		M.AddComponent(/datum/component/bonus_damage_stack, 100, world.time, 280, 1)
@@ -222,6 +246,7 @@
 	..()
 
 /datum/ammo/bullet/shotgun/heavy/buckshot/on_hit_mob(mob/M,obj/projectile/P)
+	CAN_BE_REDEFINED(TRUE)
 	if((silver && M.weak_to_silver) || (uv && M.weak_to_uv) || (salt && M.weak_to_salt))
 		M.AddComponent(/datum/component/status_effect/toxic_buildup, 20)
 		M.AddComponent(/datum/component/bonus_damage_stack, 100, world.time, 280, 1)
@@ -230,6 +255,7 @@
 	..()
 
 /datum/ammo/bullet/shotgun/heavy/slug/on_hit_mob(mob/M,obj/projectile/P)
+	CAN_BE_REDEFINED(TRUE)
 	if((silver && M.weak_to_silver) || (uv && M.weak_to_uv) || (salt && M.weak_to_salt))
 		M.AddComponent(/datum/component/status_effect/toxic_buildup, 20)
 		M.AddComponent(/datum/component/bonus_damage_stack, 100, world.time, 280, 1)
@@ -238,6 +264,7 @@
 	..()
 
 /datum/ammo/bullet/shotgun/twobore/on_hit_mob(mob/living/M, obj/projectile/P)
+	CAN_BE_REDEFINED(TRUE)
 	if((silver && M.weak_to_silver) || (uv && M.weak_to_uv) || (salt && M.weak_to_salt))
 		M.AddComponent(/datum/component/status_effect/toxic_buildup, 20)
 		M.AddComponent(/datum/component/bonus_damage_stack, 100, world.time, 280, 1)
@@ -246,6 +273,7 @@
 	..()
 
 /datum/ammo/bullet/shotgun/slug/medium/on_hit_mob(mob/M,obj/projectile/P)
+	CAN_BE_REDEFINED(TRUE)
 	if((silver && M.weak_to_silver) || (uv && M.weak_to_uv) || (salt && M.weak_to_salt))
 		M.AddComponent(/datum/component/status_effect/toxic_buildup, 20)
 		M.AddComponent(/datum/component/bonus_damage_stack, 100, world.time, 280, 1)
@@ -254,6 +282,7 @@
 	..()
 
 /datum/ammo/bullet/sniper/on_hit_mob(mob/M,obj/projectile/P)
+	CAN_BE_REDEFINED(TRUE)
 	if((silver && M.weak_to_silver) || (uv && M.weak_to_uv) || (salt && M.weak_to_salt))
 		M.AddComponent(/datum/component/status_effect/toxic_buildup, 20)
 		M.AddComponent(/datum/component/bonus_damage_stack, 100, world.time, 280, 1)
@@ -262,6 +291,7 @@
 	..()
 
 /datum/ammo/bullet/sniper/upp/flak/on_hit_mob(mob/M,obj/projectile/P)
+	CAN_BE_REDEFINED(TRUE)
 	if((silver && M.weak_to_silver) || (uv && M.weak_to_uv) || (salt && M.weak_to_salt))
 		M.AddComponent(/datum/component/status_effect/toxic_buildup, 20)
 		M.AddComponent(/datum/component/bonus_damage_stack, 100, world.time, 280, 1)
@@ -270,6 +300,7 @@
 	..()
 
 /datum/ammo/bullet/sniper/anti_materiel/on_hit_mob(mob/target_mob,obj/projectile/aimed_projectile)
+	CAN_BE_REDEFINED(TRUE)
 	if((silver && target_mob.weak_to_silver) || (uv && target_mob.weak_to_uv) || (salt && target_mob.weak_to_salt))
 		target_mob.AddComponent(/datum/component/status_effect/toxic_buildup, 20)
 		target_mob.AddComponent(/datum/component/bonus_damage_stack, 100, world.time, 280, 1)

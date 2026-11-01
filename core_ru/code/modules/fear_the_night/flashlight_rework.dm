@@ -68,6 +68,7 @@
 
 
 /obj/item/device/flashlight/Initialize()
+	CAN_BE_REDEFINED(TRUE)
 	. = ..()
 
 	if(needs_battery)
@@ -168,6 +169,7 @@
 	fuel = 5 MINUTES
 
 /obj/item/device/flashlight/flare/on/illumination/Initialize()
+	CAN_BE_REDEFINED(TRUE)
 	. = ..()
 	fuel = rand(1.0 MINUTES, 2.0 MINUTES) // Approximately half the effective duration of a flare, but justified since it's invincible
 

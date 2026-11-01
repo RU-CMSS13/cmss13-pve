@@ -320,6 +320,7 @@
 	return FALSE
 
 /obj/item/weapon/gun/attack_hand(mob/user)
+	CAN_BE_REDEFINED(TRUE)
 	var/obj/structure/criptic/gunbench/G = locate(/obj/structure/criptic/gunbench) in get_turf(src)
 	if(G)
 		G.target_gun = null
