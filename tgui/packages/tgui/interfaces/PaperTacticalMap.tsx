@@ -59,6 +59,9 @@ const STROKE_STEP = 6;
 // How close a click has to be to a line or marker to erase it
 const ERASE_DISTANCE = 12;
 const MARKER_SIZE = 10;
+// The terrain is sent right before the window opens, so it may not have arrived when first loaded
+const TERRAIN_RETRY_DELAY = 500;
+const TERRAIN_MAX_RETRIES = 20;
 
 const MARKER_NAMES: Record<string, string> = {
   danger: 'Danger',
@@ -237,6 +240,25 @@ type MapSceneProps = {
 const MapScene = (props: MapSceneProps) => {
   const { data } = useBackend<Data>();
   const { mapImage, markers, mapSize } = data;
+  // Remounting the image makes it load again
+  const [terrainAttempt, setTerrainAttempt] = useState(0);
+  const [terrainFailed, setTerrainFailed] = useState(false);
+
+  useEffect(() => {
+    setTerrainAttempt(0);
+    setTerrainFailed(false);
+  }, [mapImage]);
+
+  useEffect(() => {
+    if (!terrainFailed || terrainAttempt >= TERRAIN_MAX_RETRIES) {
+      return;
+    }
+    const timer = setTimeout(() => {
+      setTerrainFailed(false);
+      setTerrainAttempt(terrainAttempt + 1);
+    }, TERRAIN_RETRY_DELAY);
+    return () => clearTimeout(timer);
+  }, [terrainFailed, terrainAttempt]);
 
   if (!mapImage) {
     return (
@@ -261,10 +283,17 @@ const MapScene = (props: MapSceneProps) => {
       onMouseLeave={props.onMouseUp}
     >
       <image
+        key={terrainAttempt}
         href={mapImage}
         width={CANVAS_SIZE}
         height={CANVAS_SIZE}
+        visibility={
+          terrainFailed && terrainAttempt < TERRAIN_MAX_RETRIES
+            ? 'hidden'
+            : undefined
+        }
         style={{ imageRendering: 'pixelated' }}
+        onError={() => setTerrainFailed(true)}
       />
       {props.children}
       <g transform={`scale(${CANVAS_SIZE / mapSize})`}>
