@@ -13,7 +13,21 @@
 	icon_state_found = pick("black_spiral_dancers","garou","howl","war_against_wyrm")
 
 /obj/structure/criptic/clue/uv/runes/reveal_itself()
-	. = ..()
+	if(map_marker)
+		for(var/obj/item/map/tactical/T in maps)
+			T.tacmap.remove_marker(map_marker)
+			maps -= T
+		if(!length(maps))
+			map_marker = null
+
+	for(var/obj/structure/criptic/mission_controller/M in world)
+		M.current_clues_found += 1
+		M.show_current_progress()
+
+	revealed = TRUE
+	alpha = 0
+	icon_state = "[icon_state_found]"
+	animate(src, alpha = 100, time = 1 SECONDS, easing = SINE_EASING | EASE_IN)
 	add_filter("firerune", 1, list("type" = "outline", "color" = "#ff8411", "size" = 1))
 	set_light_range(1)
 

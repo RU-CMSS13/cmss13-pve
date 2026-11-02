@@ -4,6 +4,13 @@
 	mouse_opacity = FALSE
 
 /obj/structure/criptic/clue/photo/reveal_itself()
+	if(map_marker)
+		for(var/obj/item/map/tactical/T in maps)
+			T.tacmap.remove_marker(map_marker)
+			maps -= T
+		if(!length(maps))
+			map_marker = null
+
 	for(var/obj/structure/criptic/mission_controller/M in world)
 		M.current_clues_found += 1
 		M.show_current_progress()

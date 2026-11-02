@@ -25,6 +25,13 @@
 	connected_image.icon_state = icon_state_found
 
 /obj/structure/criptic/clue/item/reveal_itself()
+	if(map_marker)
+		for(var/obj/item/map/tactical/T in maps)
+			T.tacmap.remove_marker(map_marker)
+			maps -= T
+		if(!length(maps))
+			map_marker = null
+
 	icon_state_found = "nothing"
 
 	for(var/obj/structure/criptic/mission_controller/M in world)

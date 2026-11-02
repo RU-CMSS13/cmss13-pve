@@ -351,16 +351,6 @@
 	revealed = TRUE
 	icon_state = "[icon_state_found]"
 
-/obj/structure/criptic/clue/uv/reveal_itself()
-	for(var/obj/structure/criptic/mission_controller/M in world)
-		M.current_clues_found += 1
-		M.show_current_progress()
-
-	revealed = TRUE
-	alpha = 0
-	icon_state = "[icon_state_found]"
-	animate(src, alpha = 100, time = 1 SECONDS, easing = SINE_EASING | EASE_IN)
-
 /obj/item/criptic/instrument
 	name = "paranormal phone"
 	desc = "Can detect abnormalities nearby while active"
@@ -785,6 +775,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre,WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
 
+/atom
+	var/list/obj/item/map/tactical/maps = list()
+	var/map_marker = null
+
 /obj/structure/ladder
 	var/custom_sprite = FALSE
 
@@ -796,7 +790,6 @@
 
 /mob/living
 	var/the_big_bad = FALSE
-
 
 /obj/effect/temp_visual/dark_presence
 	duration = 10 SECONDS
@@ -828,7 +821,7 @@
 		used = TRUE
 		ADD_TRAIT(user, TRAIT_IMMOBILIZED, INTERACTION_TRAIT)
 		user.show_hint(src,"auspex", 1, "You trying to look into the eyes of the dead...")
-		if(do_after(user, 10, INTERRUPT_ALL, BUSY_ICON_BUILD))
+		if(do_after(user, 30, INTERRUPT_ALL, BUSY_ICON_BUILD))
 			var/list/possible_clues = list()
 			var/atom/clue
 			for(var/obj/structure/criptic/clue/C in orange(30,src))
@@ -860,6 +853,21 @@
 				animate(user.client, pixel_x = 0, pixel_y = 0, time = 6 SECONDS, easing = CUBIC_EASING)
 				sleep(7 SECONDS)
 				REMOVE_TRAIT(user, TRAIT_IMMOBILIZED, INTERACTION_TRAIT)
+
+				for(var/obj/item/map/tactical/T in user)
+					user.balloon_alert(user, "New point appeared on your map!", COLOR_WHITE)
+					var/turf/user_turf = get_turf(clue)
+					var/turf/guess = locate( \
+						clamp(user_turf.x + rand(-(8/2), 8/2), 1, world.maxx), \
+						clamp(user_turf.y + rand(-(8/2), 8/2), 1, world.maxy), \
+						user_turf.z)
+
+					var/datum/tacmap_marker/marker = new(guess, 4, LIGHT_COLOR_HOLY_MAGIC)
+					T.tacmap.markers += marker
+					SStgui.update_uis(T.tacmap)
+
+					clue.maps += T
+					clue.map_marker = marker
 		return TRUE
 
 /obj/structure/criptic/shrine_circle
@@ -952,6 +960,21 @@
 /obj/structure/criptic/night_shrine/Initialize(mapload, ...)
 	. = ..()
 	show_blurb(GLOB.player_list, 35, "ELDRITCH SHRINE APPEARED NEARBY", null, "EAST-7,NORTH-3", "center", COLOR_DARK_RED, null, null, 1)
+	for(var/mob/living/carbon/human/H in GLOB.player_list)
+		for(var/obj/item/map/tactical/T in H)
+			H.balloon_alert(H, "New point appeared on your map!", COLOR_WHITE)
+			var/turf/user_turf = get_turf(src)
+			var/turf/guess = locate( \
+				clamp(user_turf.x + rand(-(12/2), 12/2), 1, world.maxx), \
+				clamp(user_turf.y + rand(-(12/2), 12/2), 1, world.maxy), \
+				user_turf.z)
+
+			var/datum/tacmap_marker/marker = new(guess, 24, COLOR_DARK_RED)
+			T.tacmap.markers += marker
+			SStgui.update_uis(T.tacmap)
+
+			maps += T
+			map_marker = marker
 
 /obj/structure/criptic/night_shrine/attack_hand(mob/user)
 	. = ..()
@@ -1008,6 +1031,13 @@
 
 /obj/structure/criptic/night_shrine/proc/end_the_cleaning()
 	maptext = ""
+
+	if(map_marker)
+		for(var/obj/item/map/tactical/T in maps)
+			T.tacmap.remove_marker(map_marker)
+			maps -= T
+		if(!length(maps))
+			map_marker = null
 
 	playsound(loc, 'sound/voice/deep_alien_screech.ogg', 50, 0, status = 0)
 	balloon_alert_to_viewers("Time were reduced by 500!", COLOR_WHITE)
