@@ -8,6 +8,10 @@
 		if(!I)
 			to_chat(H, SPAN_NOTICE("You are not holding anything to equip."))
 			return
+		if(H.body_position == LYING_DOWN && !H.can_use_hands_lying())
+			return
+		if(!H.wounded_action_delay() || H.get_active_hand() != I)
+			return
 		if(!H.equip_to_appropriate_slot(I, 0))
 			to_chat(H, SPAN_DANGER("You are unable to equip that."))
 
