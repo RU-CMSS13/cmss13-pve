@@ -59,6 +59,8 @@
 	var/alt_name = ""
 	var/message_range = GLOB.world_view_size
 	var/italics = 0
+	var/sound/speech_sound
+	var/sound_vol = 75
 
 	if(!able_to_speak)
 		to_chat(src, SPAN_DANGER("You try to speak, but nothing comes out!"))
@@ -103,10 +105,16 @@
 		var/ending = copytext_char(message, length(message))
 		if(ending=="!")
 			verb = pick(speaking.exclaim_verb)
+			if(species?.speech_sounds && prob(species.speech_chance))
+				speech_sound = sound(get_sfx(pick(species.exclaim_sounds[gender])))
 		else if(ending=="?")
 			verb = pick(speaking.ask_verb)
+			if(species?.speech_sounds && prob(species.speech_chance))
+				speech_sound = sound(get_sfx(pick(species.ask_sounds[gender])))
 		else
 			verb = pick(speaking.speech_verb)
+			if(species?.speech_sounds && prob(species.speech_chance))
+				speech_sound = sound(get_sfx(pick(species.speech_sounds[gender])))
 		// This is broadcast to all mobs with the language,
 		// irrespective of distance or anything else.
 		if(speaking.flags & HIVEMIND)
@@ -155,12 +163,6 @@
 					var/earpiece = get_type_in_ears(/obj/item/device/radio)
 					if(earpiece)
 						used_radios += earpiece
-
-		var/sound/speech_sound
-		var/sound_vol
-		if(species?.speech_sounds && prob(species.speech_chance))
-			speech_sound = sound(pick(species.speech_sounds))
-			sound_vol = 70
 
 		//speaking into radios
 		if(length(used_radios))
