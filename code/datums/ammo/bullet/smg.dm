@@ -187,7 +187,7 @@
 	damage = 25
 	accurate_range = 5
 	effective_range_max = 8
-	penetration = ARMOR_PENETRATION_TIER_2
+	penetration = ARMOR_PENETRATION_TIER_1
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
 	scatter = SCATTER_AMOUNT_TIER_6
 
@@ -197,6 +197,6 @@
 	damage = 20
 	accurate_range = 6
 	effective_range_max = 9
-	penetration = ARMOR_PENETRATION_TIER_4
+	penetration = ARMOR_PENETRATION_TIER_3
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
 	scatter = SCATTER_AMOUNT_TIER_6
