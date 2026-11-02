@@ -44,3 +44,9 @@ endmap
 
 map hms_brynhild
 endmap
+
+map golden_arrow_movielike
+endmap
+
+map rover_movielike
+endmap
