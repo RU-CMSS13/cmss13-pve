@@ -30,6 +30,7 @@ const DEFAULT_SIZE: [number, number] = [400, 600];
 
 type Props = Partial<{
   buttons: ReactNode;
+  buttonsRight: boolean;
   canClose: boolean;
   height: number;
   theme: string;
@@ -45,6 +46,7 @@ export const Window = (props: Props) => {
     title,
     children,
     buttons,
+    buttonsRight = false,
     width,
     height,
   } = props;
@@ -104,6 +106,7 @@ export const Window = (props: Props) => {
           dispatch(backendSuspendStart());
         }}
         canClose={canClose}
+        buttonsRight={buttonsRight}
       >
         {buttons}
       </TitleBar>
@@ -170,6 +173,7 @@ const statusToColor = (status) => {
 };
 
 type TitleBarProps = Partial<{
+  buttonsRight: boolean;
   canClose: boolean;
   className: string;
   fancy: boolean;
@@ -187,6 +191,7 @@ const TitleBar = (props: TitleBarProps) => {
     status,
     canClose,
     fancy,
+    buttonsRight,
     onDragStart,
     onClose,
     children,
@@ -198,6 +203,10 @@ const TitleBar = (props: TitleBarProps) => {
       title === title.toLowerCase() &&
       toTitleCase(title)) ||
     title;
+  const rightButtonsInset =
+    (process.env.NODE_ENV !== 'production' ? 52 : 0) +
+    (fancy && canClose ? 45 : 0) +
+    8;
 
   return (
     <div className={classes(['TitleBar', className])}>
@@ -214,10 +223,34 @@ const TitleBar = (props: TitleBarProps) => {
         className="TitleBar__dragZone"
         onMouseDown={(e) => fancy && onDragStart && onDragStart(e)}
       />
-      <div className="TitleBar__title">
+      <div
+        className={classes([
+          'TitleBar__title',
+          buttonsRight && !!children && 'TitleBar__title--buttonsRight',
+        ])}
+        style={
+          buttonsRight && !!children
+            ? {
+                right: rightButtonsInset + 12,
+              }
+            : undefined
+        }
+      >
         {finalTitle}
-        {!!children && <div className="TitleBar__buttons">{children}</div>}
+        {!!children && !buttonsRight && (
+          <div className="TitleBar__buttons">{children}</div>
+        )}
       </div>
+      {!!children && buttonsRight && (
+        <div
+          className={classes(['TitleBar__buttons', 'TitleBar__buttons--right'])}
+          style={{
+            right: rightButtonsInset,
+          }}
+        >
+          {children}
+        </div>
+      )}
       {process.env.NODE_ENV !== 'production' && (
         <div
           className="TitleBar__devBuildIndicator"
