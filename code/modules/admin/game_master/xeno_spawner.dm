@@ -102,6 +102,16 @@
 	/// How far from the clicked turf the squad is spread
 	var/squad_radius = XENO_SPAWNER_DEFAULT_SQUAD_RADIUS
 
+	/// Associated list of game master submenus opened by middle clicking while click spawning, organized by object_type = game_master_submenu
+	var/static/list/submenu_types = list(
+		/obj/structure/pipes/vents = /datum/game_master_submenu/ambush/vents,
+		/obj/structure/tunnel = /datum/game_master_submenu/ambush/tunnels,
+		/mob/living/carbon/human = /datum/game_master_submenu/infest,
+	)
+
+	/// List of current submenus
+	var/list/datum/game_master_submenu/current_submenus = list()
+
 
 	// Behavior stuff
 
@@ -380,6 +390,8 @@
 			if(LAZYACCESS(modifiers, MIDDLE_CLICK))
 				if(isxeno(object))
 					qdel(object)
+				else
+					open_submenu(user, object)
 				return TRUE
 
 			var/turf/spawn_turf = get_turf(object)
@@ -405,6 +417,26 @@
 			return TRUE
 
 	return FALSE
+
+/// Opens the submenu of the object, reusing the one already made for it
+/datum/xeno_ai_spawner_menu/proc/open_submenu(mob/user, atom/object)
+	for(var/datum/game_master_submenu/submenu as anything in current_submenus)
+		if(submenu.referenced_atom == object)
+			submenu.tgui_interact(user)
+			return
+
+	for(var/submenu_type in submenu_types)
+		if(istype(object, submenu_type))
+			var/new_submenu_type = submenu_types[submenu_type]
+			var/datum/game_master_submenu/new_submenu = new new_submenu_type(user, object)
+			current_submenus += new_submenu
+			RegisterSignal(new_submenu, COMSIG_PARENT_QDELETING, PROC_REF(submenu_deleted))
+			return
+
+/datum/xeno_ai_spawner_menu/proc/submenu_deleted(datum/game_master_submenu/submenu)
+	SIGNAL_HANDLER
+
+	current_submenus -= submenu
 
 /// Spawns amount xenos of the caste, spreading them over spawn_turfs in order
 /datum/xeno_ai_spawner_menu/proc/spawn_xenos(mob/user, caste, amount, list/turf/spawn_turfs)

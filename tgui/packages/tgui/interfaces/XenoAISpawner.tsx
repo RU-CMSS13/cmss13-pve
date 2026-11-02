@@ -228,7 +228,7 @@ const SpawnOptions = (props) => {
             fontSize="15px"
             textAlign="center"
             selected={spawn_click_intercept}
-            tooltip="LMB to spawn, MMB on a xeno to delete it"
+            tooltip="LMB to spawn, MMB on a xeno to delete it, MMB on a human, vent or tunnel to open its control menu"
             onClick={() => act('toggle_click_spawn')}
           >
             Click Spawn

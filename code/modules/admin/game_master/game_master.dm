@@ -55,16 +55,6 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 	var/client/game_master_client
 
-	/// Associated list of game master submenus organized by object_type = game_master_submenu
-	var/list/submenu_types = list(
-		/obj/structure/pipes/vents = /datum/game_master_submenu/ambush/vents,
-		/obj/structure/tunnel = /datum/game_master_submenu/ambush/tunnels,
-		/mob/living/carbon/human = /datum/game_master_submenu/infest,
-	)
-
-	/// List of current submenus
-	var/list/current_submenus
-
 	/// Holds what type of click intercept we are using
 	var/current_click_intercept_action
 
@@ -91,8 +81,6 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 	tgui_interact(game_master_client.mob)
 
-	current_submenus = list()
-
 	game_master_phone = new(null)
 	game_master_phone.AddComponent(/datum/component/phone/virtual, "Game Master", "white", "Company Command", null, PHONE_DND_ON, list(FACTION_MARINE, FACTION_COLONIST, FACTION_PMC, FACTION_TWE, FACTION_UPP), list(FACTION_MARINE, FACTION_COLONIST, FACTION_PMC, FACTION_TWE, FACTION_UPP), null, using_client)
 
@@ -105,8 +93,6 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 /datum/game_master/Destroy(force, ...)
 	. = ..()
-	submenu_types = null
-	current_submenus = null
 	QDEL_NULL(game_master_phone)
 
 	for(var/datum/component/ai_behavior_override/override in GLOB.all_ai_behavior_overrides)
@@ -242,8 +228,6 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 /datum/game_master/proc/InterceptClickOn(mob/user, params, atom/object)
 
-	var/list/modifiers = params2list(params)
-
 	switch(current_click_intercept_action)
 		if(OBJECTIVE_CLICK_INTERCEPT_ACTION)
 			var/turf/object_turf = get_turf(object)
@@ -306,20 +290,6 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			GLOB.data_core.manifest_inject(target)
 			to_chat(user, SPAN_NOTICE("Record created for [target.real_name]"))
 			return TRUE
-		else
-			if(LAZYACCESS(modifiers, MIDDLE_CLICK))
-				for(var/datum/game_master_submenu/submenu in current_submenus)
-					if(submenu.referenced_atom == object)
-						submenu.tgui_interact(user)
-						return TRUE
-
-				for(var/submenu_type in submenu_types)
-					if(istype(object, submenu_type))
-						var/new_submenu_type = submenu_types[submenu_type]
-						current_submenus += new new_submenu_type(user, object)
-						return TRUE
-
-				return TRUE
 
 /datum/game_master/proc/reset_click_overrides()
 	objective_click_intercept = FALSE
