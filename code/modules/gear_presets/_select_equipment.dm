@@ -2030,3 +2030,29 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 		if(10)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/type23/flechette, WEAR_J_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/shotgun/upp/heavyflech, WEAR_WAIST)
+
+//UPP AIRBORNE
+
+/datum/equipment_preset/proc/add_upp_vdv_head(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/maybeberet = pick(
+		/obj/item/clothing/head/helmet/upp/frogmen/vdv,
+		/obj/item/clothing/head/cmcap/upp,
+		/obj/item/clothing/head/cmcap/upp/beret/vdv,
+	)
+	new_human.equip_to_slot_or_del(new maybeberet, WEAR_HEAD)
+
+/datum/equipment_preset/proc/add_upp_vdv_uniform(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/obj/item/clothing/under/marine/veteran/upp/uniform = new()
+	var/random_uniform = rand(1,4)
+	switch(random_uniform)
+		if(1)
+			uniform.roll_suit_jacket(new_human)
+		if(2 to 3)
+			uniform.roll_suit_sleeves(new_human)
+	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp/vdv, WEAR_ACCESSORY)

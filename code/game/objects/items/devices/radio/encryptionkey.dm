@@ -349,6 +349,16 @@
 	name = "\improper UPP Recon Radio Encryption Key"
 	icon_state = "upp_key"
 	channels = list(RADIO_CHANNEL_UPP_RCN = TRUE)
+
+/obj/item/device/encryptionkey/upp/airborne
+	name = "\improper UPP Airborne Radio Encryption Key"
+	icon_state = "upp_key"
+	channels = list(RADIO_CHANNEL_UPP_VDV = TRUE)
+
+/obj/item/device/encryptionkey/upp/airborne/medic
+	name = "\improper UPP Airborne Medical Radio Encryption Key"
+	icon_state = "upp_key"
+	channels = list(RADIO_CHANNEL_UPP_VDV = TRUE, RADIO_CHANNEL_UPP_MED = TRUE)
 //---------------------------------------------------
 //CLF Keys
 /obj/item/device/encryptionkey/clf

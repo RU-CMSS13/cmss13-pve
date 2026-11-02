@@ -218,6 +218,17 @@
 	usable = TRUE
 	faction = FACTION_UPP
 
+/datum/squad/marine/upp/airborne
+	name = SQUAD_UPP_AIRBORNE
+	equipment_color = "#3a3dff"
+	chat_color = "#3a3dff"
+	minimap_color = "#3a3dff"
+	access = list(ACCESS_UPP_GENERAL)
+	radio_freq = UPP_VDV_FREQ
+	use_stripe_overlay = FALSE
+	usable = TRUE
+	faction = FACTION_UPP
+
 /datum/squad/marine/bravo
 	name = SQUAD_MARINE_2
 	equipment_color = "#ffc32d"

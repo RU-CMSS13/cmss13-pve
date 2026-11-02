@@ -447,6 +447,39 @@
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
 
 //-------------------------------------------------------
+//UPP - Norcomm AK-82 RIFLE
+
+/obj/item/ammo_magazine/rifle/ak82
+	name = "\improper AK82 magazine (9.7x16mm)"
+	desc = "A 9.7x16mm high-capacity magazine for the AK82 rifle."
+	caliber = "9.7x16mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "ag80"
+	ammo_band_icon = "+ag80_band"
+	ammo_band_icon_empty = "+ag80_band_e"
+	default_ammo = /datum/ammo/bullet/rifle/ag80 //need to reference the actual ammo designed for the carbine
+	max_rounds = 99
+	gun_type = /obj/item/weapon/gun/rifle/ak82
+
+/obj/item/ammo_magazine/rifle/ak82/ap
+	name = "\improper AK82 AP magazine (9.7x16mm)"
+	desc = "A 9.7x16mm high-capacity magazine for the AK82 rifle. This one is loaded with steelcore armor piercing rounds."
+	default_ammo = /datum/ammo/bullet/rifle/ag80/ap //need to reference the actual ammo designed for the carbine
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/rifle/ak82/heap
+	name = "\improper AK82 HEAP magazine (9.7x16mm)"
+	desc = "A 9.7x16mm high-capacity magazine for the AK82 rifle. This one is loaded with high-explosive armor piercing rounds."
+	default_ammo = /datum/ammo/bullet/rifle/ag80/heap //need to reference the actual ammo designed for the carbine
+	ammo_band_color = AMMO_BAND_COLOR_HEAP
+
+/obj/item/ammo_magazine/rifle/ak82/rubber
+	name = "\improper AK82 rubber magazine (9.7x16mm)"
+	desc = "A 9.7x16mm high-capacity magazine for the AK82 rifle. This one is loaded with less-than lethal rubber rounds."
+	default_ammo = /datum/ammo/bullet/rifle/ag80/rubber //need to reference the actual ammo designed for the carbine
+	ammo_band_color = AMMO_BAND_COLOR_RUBBER
+
+//-------------------------------------------------------
 //CANC LW-317 RIFLE
 
 /obj/item/ammo_magazine/rifle/lw317
