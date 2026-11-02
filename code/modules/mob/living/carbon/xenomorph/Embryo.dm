@@ -27,8 +27,16 @@
 		if(iscarbon(affected_mob))
 			var/mob/living/carbon/affected_carbon = affected_mob
 			affected_carbon.med_hud_set_status()
+		update_icon()
 	else
 		return INITIALIZE_HINT_QDEL
+
+/obj/item/alien_embryo/update_icon()
+	if(flags_embryo & FLAG_EMBRYO_PATHOGEN)
+		if(isyautja(affected_mob) || (flags_embryo & FLAG_EMBRYO_PREDATOR))
+			icon = 'icons/mob/pathogen/aberration_bloodburster.dmi'
+		else
+			icon = 'icons/mob/pathogen/bloodburster.dmi'
 
 /obj/item/alien_embryo/Destroy()
 	if(affected_mob)
@@ -245,10 +253,13 @@
 	var/mob/living/carbon/xenomorph/new_xeno
 
 	if(isyautja(affected_mob) || (flags_embryo & FLAG_EMBRYO_PREDATOR))
-		new_xeno = new /mob/living/carbon/xenomorph/larva/predalien(affected_mob)
+		if(flags_embryo & FLAG_EMBRYO_PATHOGEN)
+			new_xeno = new /mob/living/carbon/xenomorph/bloodburster/aberrant(affected_mob)
+		else
+			new_xeno = new /mob/living/carbon/xenomorph/larva/predalien(affected_mob)
 		yautja_announcement(SPAN_YAUTJABOLDBIG("WARNING!\n\nAn abomination has been detected at [get_area_name(new_xeno)]. It is a stain upon our purity and is unfit for life. Exterminate it immediately.\n\nHeavy Armory unlocked."))
 		SEND_GLOBAL_SIGNAL(COMSIG_GLOB_YAUTJA_ARMORY_OPENED)
-	if(flags_embryo & FLAG_EMBRYO_PATHOGEN)
+	else if(flags_embryo & FLAG_EMBRYO_PATHOGEN)
 		new_xeno = new /mob/living/carbon/xenomorph/bloodburster(affected_mob)
 	else
 		new_xeno = new /mob/living/carbon/xenomorph/larva(affected_mob)

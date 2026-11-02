@@ -86,6 +86,10 @@
 	light_range = 4
 	light_color = LIGHT_COLOR_TUNGSTEN
 	light_system = MOVABLE_LIGHT
+	/// Icon state prefix of the on-armor lamp overlay
+	var/lamp_icon = "lamp"
+	/// Colour of the lamp light, uses the default light colours when null
+	var/lamp_light_color
 
 	var/flashlight_cooldown = 0 //Cooldown for toggling the light
 	var/locate_cooldown = 0 //Cooldown for SL locator
@@ -138,9 +142,9 @@
 	armor_overlays["lamp"] = null
 	if(flags_marine_armor & ARMOR_LAMP_OVERLAY)
 		if(flags_marine_armor & ARMOR_LAMP_ON)
-			I = image('icons/obj/items/clothing/cm_suits.dmi', src, "lamp-on")
+			I = image('icons/obj/items/clothing/cm_suits.dmi', src, "[lamp_icon]-on")
 		else
-			I = image('icons/obj/items/clothing/cm_suits.dmi', src, "lamp-off")
+			I = image('icons/obj/items/clothing/cm_suits.dmi', src, "[lamp_icon]-off")
 		armor_overlays["lamp"] = I
 		overlays += I
 	else armor_overlays["lamp"] = null
@@ -190,12 +194,16 @@
 		return
 	set_light_range(initial(light_range))
 	set_light_power(floor(initial(light_power) * 0.5))
+	if(lamp_light_color)
+		set_light_color(lamp_light_color)
 	set_light_on(toggle_on)
 	flags_marine_armor ^= ARMOR_LAMP_ON
 
 	light_holder.set_light_flags(LIGHT_ATTACHED)
 	light_holder.set_light_range(initial(light_range))
 	light_holder.set_light_power(initial(light_power))
+	if(lamp_light_color)
+		light_holder.set_light_color(lamp_light_color)
 	light_holder.set_light_on(toggle_on)
 
 	if(!toggle_on)

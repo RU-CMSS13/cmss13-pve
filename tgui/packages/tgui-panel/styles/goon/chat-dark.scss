@@ -1027,6 +1027,10 @@ em {
   color: hsl(23, 100%, 55%);
 }
 
+.lbradio {
+  color: hsl(199, 44%, 53%);
+}
+
 .pmcradio {
   color: #4dc5ce;
 }
@@ -1220,6 +1224,15 @@ em {
   color: #ff3838;
   font-weight: bold;
   font-size: 140%;
+}
+
+.effinghighdanger {
+  color: hsl(0, 100%, 61%);
+  font-weight: bold;
+  font-size: 200%;
+
+  /*Animation*/
+  animation: glitch 0.5s infinite;
 }
 
 .xenohighdanger {

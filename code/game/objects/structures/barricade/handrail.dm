@@ -190,6 +190,9 @@
 	icon_state = "wire_rail"
 	climb_delay = CLIMB_DELAY_SHORT
 
+/obj/structure/barricade/handrail/wire/brown
+	icon_state = "wire_rail_brown"
+
 /obj/structure/barricade/handrail/sandstone
 	name = "sandstone handrail"
 	icon_state = "hr_stone"

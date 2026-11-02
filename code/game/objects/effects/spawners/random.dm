@@ -141,6 +141,20 @@
 				prob(1);/obj/item/attachable/heavy_barrel,\
 				prob(1);/obj/item/attachable/scope/mini)
 
+/obj/effect/spawner/random/attachment/upp
+	name = "Random UPP Attachment"
+
+/obj/effect/spawner/random/attachment/upp/item_to_spawn()
+	return pick(prob(1);/obj/item/attachable/reddot/upp,\
+				prob(1);/obj/item/attachable/reflex/upp,\
+				prob(1);/obj/item/attachable/flashlight/grip/upp,\
+				prob(1);/obj/item/attachable/scope/upp,\
+				prob(1);/obj/item/attachable/scope/mini/upp,\
+				prob(1);/obj/item/attachable/scope/mini/upp/type73,\
+				prob(1);/obj/item/attachable/verticalgrip/upp,\
+				prob(1);/obj/item/attachable/angledgrip/upp,\
+				prob(1);/obj/item/attachable/lasersight/upp)
+
 /obj/effect/spawner/random/balaclavas
 	name = "Random Balaclava"
 	desc = "This is a randomly chosen balaclava."

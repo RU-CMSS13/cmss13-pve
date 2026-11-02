@@ -37,7 +37,8 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	":2" = RADIO_CHANNEL_REBEL_UA, ".2" = RADIO_CHANNEL_REBEL_UA, "#2" = RADIO_CHANNEL_REBEL_UA,
 	":3" = RADIO_CHANNEL_REBEL_TWE, ".3" = RADIO_CHANNEL_REBEL_TWE, "#3" = RADIO_CHANNEL_REBEL_TWE,
 	":4" = RADIO_CHANNEL_UPP_RCN, ".4" = RADIO_CHANNEL_UPP_RCN, "#4" = RADIO_CHANNEL_UPP_RCN,
-	//5-9 available, CLF not in use, channels available for overwrite.
+	":5" = RADIO_CHANNEL_LASALLE_BIONATIONAL, ".5" = RADIO_CHANNEL_LASALLE_BIONATIONAL, "#5" = RADIO_CHANNEL_LASALLE_BIONATIONAL,
+	//6-9 available, CLF not in use, channels available for overwrite.
 ))
 
 /proc/channel_to_prefix(channel)

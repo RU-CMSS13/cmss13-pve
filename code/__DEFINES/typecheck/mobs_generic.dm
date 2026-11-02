@@ -13,6 +13,7 @@
 #define isbear(A) (istype(A, /mob/living/simple_animal/hostile/bear))
 #define iscarp(A) (istype(A, /mob/living/simple_animal/hostile/carp))
 #define isclown(A) (istype(A, /mob/living/simple_animal/hostile/retaliate/clown))
+#define isruv(A) (istype(A, /mob/living/simple_animal/ruv))
 #define iscarbon(A) (istype(A, /mob/living/carbon))
 #define isliving(A) (istype(A, /mob/living))
 #define isobserver(A) (istype(A, /mob/dead/observer))

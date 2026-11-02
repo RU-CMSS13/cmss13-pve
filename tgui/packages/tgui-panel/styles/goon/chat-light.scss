@@ -1058,6 +1058,10 @@ h2.alert {
   color: hsl(23, 100%, 55%);
 }
 
+.lbradio {
+  color: hsl(199, 44%, 53%);
+}
+
 .pmcradio {
   color: #136957;
 }
@@ -1247,6 +1251,15 @@ h2.alert {
   color: #ff0000;
   font-weight: bold;
   font-size: 140%;
+}
+
+.effinghighdanger {
+  color: hsl(0, 100%, 50%);
+  font-weight: bold;
+  font-size: 200%;
+
+  /*Animation*/
+  animation: glitch 0.5s infinite;
 }
 
 .xenohighdanger {

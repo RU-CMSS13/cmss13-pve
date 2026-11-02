@@ -41,26 +41,12 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	SSticker.mode.toggleable_flags ^= MODE_NO_MAKE_BARRICADES
 	message_admins("[src] has [MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_MAKE_BARRICADES) ? "disabled" : "enabled"] Barricade Creation.")
 
-// Spawn stuff
-#define DEFAULT_SPAWN_XENO_STRING XENO_CASTE_DRONE
-#define GAME_MASTER_AI_XENOS list(XENO_CASTE_DRONE, XENO_CASTE_SOLDIER, XENO_CASTE_RUNNER, RUNNER_ACIDER, XENO_CASTE_LURKER, XENO_CASTE_CRUSHER, XENO_CASTE_DEFENDER, XENO_CASTE_SENTINEL, XENO_CASTE_SPITTER, XENO_CASTE_CARRIER, XENO_CASTE_PRAETORIAN, XENO_CASTE_RAVAGER, XENO_CASTE_PREDALIEN, XENO_CASTE_QUEEN, XENO_CASTE_KING, XENO_CASTE_FACEHUGGER, PATHOGEN_CREATURE_POPPER, PATHOGEN_CREATURE_NEOMORPH, PATHOGEN_CREATURE_SPRINTER, PATHOGEN_CREATURE_BLIGHT, PATHOGEN_CREATURE_BRUTE)
-#define DEFAULT_SPAWN_HIVE_STRING XENO_HIVE_NORMAL
-
-#define DEFAULT_XENO_AMOUNT_TO_SPAWN 1
-
-// Behavior stuff
-#define DEFAULT_BEHAVIOR_STRING "Attack"
-#define SELECTABLE_XENO_BEHAVIORS list("Attack", "Capture", "Hive", "Build")
-#define SELECTABLE_XENO_BEHAVIORS_ASSOC list("Attack" = /datum/component/ai_behavior_override/attack, "Capture" = /datum/component/ai_behavior_override/capture, "Hive" = /datum/component/ai_behavior_override/hive, "Build" = /datum/component/ai_behavior_override/build)
-
 // Objective stuff
 #define OBJECTIVE_NUMBER_OPTIONS list("zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
 #define OBJECTIVE_COLOR_OPTIONS list("red", "purple", "blue")
 #define OBJECTIVE_COLOR_OPTIONS_ASSOC list("red" = COLOR_RED, "purple" = COLOR_PURPLE, "blue" = COLOR_BLUE)
 
 /// Types of click intercepts used by /datum/game_master variable current_click_intercept_action
-#define SPAWN_CLICK_INTERCEPT_ACTION "spawn_click_intercept_action"
-#define BEHAVIOR_CLICK_INTERCEPT_ACTION "behavior_click_intercept_action"
 #define OBJECTIVE_CLICK_INTERCEPT_ACTION "objective_click_intercept_action"
 #define RECORD_CREATE_CLICK_INTERCEPT_ACTION "record_create_click_intercept_action"
 
@@ -81,33 +67,6 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 	/// Holds what type of click intercept we are using
 	var/current_click_intercept_action
-
-
-	// Spawn stuff
-
-	/// The xeno selected to be spawned in the spawn section
-	var/selected_xeno = DEFAULT_SPAWN_XENO_STRING
-
-	/// The hive selected to be spawned in the spawn section
-	var/selected_hive = DEFAULT_SPAWN_HIVE_STRING
-
-	/// The amount of xenos to spawn in the spawn section
-	var/xeno_spawn_count = DEFAULT_XENO_AMOUNT_TO_SPAWN
-
-	/// If the spawned xeno is an AI in the spawn section
-	var/spawn_ai = TRUE
-
-	/// If we are currently using the click intercept for the spawn section
-	var/spawn_click_intercept = FALSE
-
-
-	// Behavior stuff
-
-	/// The current behavior to add when clicking with behavior_click_intercept on
-	var/selected_behavior = DEFAULT_BEHAVIOR_STRING
-
-	/// If we are currently using click intercept for the behavior section
-	var/behavior_click_intercept = FALSE
 
 
 	// Objective stuff
@@ -160,17 +119,6 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 	var/list/data = list()
 
-	// Spawn stuff
-	data["selected_xeno"] = selected_xeno
-	data["selected_hive"] = selected_hive
-	data["spawn_ai"] = spawn_ai
-	data["spawn_click_intercept"] = spawn_click_intercept
-	data["xeno_spawn_count"] = xeno_spawn_count
-
-	// Behavior stuff
-	data["selected_behavior"] = selected_behavior
-	data["behavior_click_intercept"] = behavior_click_intercept
-
 	// Objective stuff
 	data["objective_click_intercept"] = objective_click_intercept
 	data["game_master_objectives"] = length(GLOB.game_master_objectives) ? GLOB.game_master_objectives : ""
@@ -184,55 +132,15 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 	return data
 
-/datum/game_master/ui_static_data(mob/user)
-	. = ..()
-
-	var/list/data = list()
-
-	data["spawnable_xenos"] = GAME_MASTER_AI_XENOS
-
-	data["spawnable_hives"] = ALL_XENO_HIVES
-
-	data["selectable_behaviors"] = SELECTABLE_XENO_BEHAVIORS
-
-	return data
-
 /datum/game_master/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
 	. = ..()
 
 	switch(action)
 
 		//Spawn Section
-		if("set_xeno_spawns")
-			var/new_number = text2num(params["value"])
-			if(!new_number)
-				return
-
-			xeno_spawn_count = clamp(new_number, 1, 10)
-			return
-
-		if("set_selected_xeno")
-			selected_xeno = params["new_xeno"]
-			xeno_spawn_count = DEFAULT_XENO_AMOUNT_TO_SPAWN
-			return
-
-		if("set_selected_hive")
-			selected_hive = params["new_hive"]
-			xeno_spawn_count = DEFAULT_XENO_AMOUNT_TO_SPAWN
-			return
-
-		if("xeno_spawn_ai_toggle")
-			spawn_ai = !spawn_ai
-			return
-
-		if("toggle_click_spawn")
-			if(spawn_click_intercept)
-				reset_click_overrides()
-				return
-
-			reset_click_overrides()
-			spawn_click_intercept = TRUE
-			current_click_intercept_action = SPAWN_CLICK_INTERCEPT_ACTION
+		if("open_xeno_spawner")
+			var/client/user_client = ui.user.client
+			user_client?.open_xeno_ai_spawner_panel()
 			return
 
 		if("toggle_click_record_creation")
@@ -243,39 +151,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			reset_click_overrides()
 			record_create_click_intercept = TRUE
 			current_click_intercept_action = RECORD_CREATE_CLICK_INTERCEPT_ACTION
-			return
-
-		if("delete_all_xenos")
-			if(tgui_alert(ui.user, "Do you want to delete all xenos?", "Confirmation", list("Yes", "No")) != "Yes")
-				return
-
-			for(var/mob/living/carbon/xenomorph/cycled_xeno in GLOB.alive_mob_list)
-				qdel(cycled_xeno)
-
-			return
-
-		if("delete_xenos_in_view")
-			if(tgui_alert(ui.user, "Do you want to delete all xenos within your view range?", "Confirmation", list("Yes", "No")) != "Yes")
-				return
-
-			for(var/mob/living/carbon/xenomorph/viewed_xeno in view(ui.user.client))
-				qdel(viewed_xeno)
-
-			return
-
-		//Behavior Section
-		if("set_selected_behavior")
-			selected_behavior = params["new_behavior"]
-			return
-
-		if("toggle_click_behavior")
-			if(behavior_click_intercept)
-				reset_click_overrides()
-				return
-
-			reset_click_overrides()
-			behavior_click_intercept = TRUE
-			current_click_intercept_action = BEHAVIOR_CLICK_INTERCEPT_ACTION
+			ui.user.client?.click_intercept = src
 			return
 
 		//Objective Section
@@ -287,6 +163,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			reset_click_overrides()
 			objective_click_intercept = TRUE
 			current_click_intercept_action = OBJECTIVE_CLICK_INTERCEPT_ACTION
+			ui.user.client?.click_intercept = src
 			return
 
 		if("jump_to")
@@ -342,6 +219,10 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 	reset_click_overrides()
 
+	// The xeno spawner panel shows the same markers, leave them to it while it is open
+	if(user_client?.xeno_spawn_menu && SStgui.get_open_ui(user, user_client.xeno_spawn_menu))
+		return
+
 	for(var/datum/component/ai_behavior_override/override in GLOB.all_ai_behavior_overrides)
 		game_master_client.images -= override.behavior_image
 
@@ -364,37 +245,6 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	var/list/modifiers = params2list(params)
 
 	switch(current_click_intercept_action)
-		if(SPAWN_CLICK_INTERCEPT_ACTION)
-			if(LAZYACCESS(modifiers, MIDDLE_CLICK))
-				if(isxeno(object))
-					qdel(object)
-				return TRUE
-
-			var/spawning_xeno_type = GLOB.RoleAuthority.get_caste_by_text(selected_xeno)
-
-			if(!spawning_xeno_type)
-				to_chat(user, SPAN_NOTICE(SPAN_BOLD("Unable to find xeno type by name: [selected_xeno]")))
-				return
-
-			var/turf/spawn_turf = get_turf(object)
-
-			for(var/i = 1 to xeno_spawn_count)
-				new spawning_xeno_type(spawn_turf, null, selected_hive, !spawn_ai)
-
-			return TRUE
-
-		if(BEHAVIOR_CLICK_INTERCEPT_ACTION)
-			var/behavior_type = SELECTABLE_XENO_BEHAVIORS_ASSOC[selected_behavior]
-
-			if(LAZYACCESS(modifiers, MIDDLE_CLICK))
-				if(object.datum_components?[behavior_type])
-					var/component_to_remove = object.datum_components[behavior_type]
-					qdel(component_to_remove)
-				return TRUE
-
-			object.AddComponent(behavior_type)
-			return TRUE
-
 		if(OBJECTIVE_CLICK_INTERCEPT_ACTION)
 			var/turf/object_turf = get_turf(object)
 
@@ -472,9 +322,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 				return TRUE
 
 /datum/game_master/proc/reset_click_overrides()
-	spawn_click_intercept = FALSE
 	objective_click_intercept = FALSE
-	behavior_click_intercept = FALSE
 	record_create_click_intercept = FALSE
 	current_click_intercept_action = null
 
@@ -496,18 +344,9 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	SSminimaps.remove_marker(removing_datum)
 
 
-#undef DEFAULT_SPAWN_XENO_STRING
-#undef GAME_MASTER_AI_XENOS
-#undef DEFAULT_SPAWN_HIVE_STRING
-#undef DEFAULT_XENO_AMOUNT_TO_SPAWN
-
 #undef OBJECTIVE_NUMBER_OPTIONS
 #undef OBJECTIVE_COLOR_OPTIONS
 #undef OBJECTIVE_COLOR_OPTIONS_ASSOC
 
-#undef DEFAULT_BEHAVIOR_STRING
-#undef SELECTABLE_XENO_BEHAVIORS
-#undef SELECTABLE_XENO_BEHAVIORS_ASSOC
-
-#undef SPAWN_CLICK_INTERCEPT_ACTION
 #undef OBJECTIVE_CLICK_INTERCEPT_ACTION
+#undef RECORD_CREATE_CLICK_INTERCEPT_ACTION

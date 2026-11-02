@@ -142,3 +142,6 @@ endmap
 
 map binhai_supply_station
 endmap
+
+map fire_colony
+endmap

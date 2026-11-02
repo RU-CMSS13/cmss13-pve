@@ -280,3 +280,23 @@
 	item_state = "sec_mask"
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	flags_inv_hide = HIDEFACE
+
+/obj/item/clothing/mask/gas/pmc/lasalle
+	name = "LBN-4 gasmask"
+	desc = "A lightly reinforced gasmask developed by Lasalle Bionational for hazardous security and industrial operations."
+	icon_state = "lasalle_gas"
+	item_state = "lasalle_gas"
+	icon = 'icons/obj/items/clothing/masks/gasmasks.dmi'
+	item_icons = list(
+		WEAR_FACE = 'icons/mob/humans/onmob/clothing/masks/gasmasks.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/clothing/masks_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/clothing/masks_righthand.dmi',
+	)
+
+
+/obj/item/clothing/mask/gas/guardian
+	name = "guardian mask"
+	desc = "A sealed breathing mask grown into the face of a hive guardian. It does not look like it was ever meant to come off."
+	icon_state = "guardian_mask"
+	item_state = "guardian_mask"
+	flags_inventory = COVERMOUTH|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|CANTSTRIP

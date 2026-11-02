@@ -378,6 +378,7 @@ Applied by gun suicide and high impact bullet executions, removed by rejuvenate,
 
 /mob/living/carbon/human/update_inv_gloves()
 	remove_overlay(GLOVES_LAYER)
+	remove_overlay(WRIST_LAYER)
 	var/image/I
 	if(gloves)
 		if(client && hud_used && hud_used.hud_shown && hud_used.inventory_shown && hud_used.ui_datum)
@@ -386,6 +387,11 @@ Applied by gun suicide and high impact bullet executions, removed by rejuvenate,
 
 		if(!(wear_suit && wear_suit.flags_inv_hide & HIDEGLOVES))
 			I = gloves.get_mob_overlay(src, WEAR_HANDS)
+			var/image/wrist_overlay = gloves.get_wrist_overlay(src)
+			if(wrist_overlay)
+				wrist_overlay.layer = -(SUIT_SQUAD_LAYER - 0.5)
+				overlays_standing[WRIST_LAYER] = wrist_overlay
+				apply_overlay(WRIST_LAYER)
 
 	else if(hands_blood_color && species.blood_mask)
 		I = overlay_image(species.blood_mask, "hands_blood", hands_blood_color, RESET_COLOR)

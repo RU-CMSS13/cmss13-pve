@@ -150,6 +150,7 @@
 	var/show_age_prefix = TRUE
 	var/show_name_numbers = TRUE
 	var/show_only_numbers = FALSE
+	var/static_name = FALSE
 	var/evolution_stored = 0 //How much evolution they have stored
 	var/evolution_threshold = 200
 	var/tier = 1 //This will track their "tier" to restrict/limit evolutions
@@ -354,7 +355,7 @@
 		src.hivenumber = hivenumber
 	//putting the organ in for research
 	if(organ_value != 0)
-		var/obj/item/organ/xeno/organ = new() //give
+		var/obj/item/organ/xeno/organ //give
 		if(hivenumber == XENO_HIVE_PATHOGEN)
 			organ = new /obj/item/organ/xeno/pathogen()
 		else
@@ -514,6 +515,8 @@
 
 /mob/living/carbon/xenomorph/proc/handle_screech_act(mob/self, mob/living/carbon/xenomorph/queen/queen)
 	SIGNAL_HANDLER
+	if(tier == 4 || is_hive_ruler())
+		return COMPONENT_SCREECH_ACT_CANCEL
 	if(queen.can_not_harm(src))
 		return COMPONENT_SCREECH_ACT_CANCEL
 
@@ -589,6 +592,9 @@
 	full_designation = "[name_client_prefix][nicknumber][name_client_postfix]"
 	if(!HAS_TRAIT(src, TRAIT_NO_COLOR))
 		color = in_hive.color
+
+	if(static_name) //I hate this but it will do as a temporary measure
+		return
 
 	if(!HAS_TRAIT(src, TRAIT_PATHOGEN_OVERMIND))
 		var/age_display = show_age_prefix ? age_prefix : ""
@@ -749,6 +755,8 @@
 
 	if(HAS_TRAIT(src,TRAIT_ABILITY_BURROWED))
 		return
+	if(status_flags & INCORPOREAL)
+		return FALSE //Incorporeal things can't grab or be grabbed.
 	if(!isliving(AM))
 		return FALSE
 	var/mob/living/L = AM
@@ -798,6 +806,10 @@
 	add_to_all_mob_huds()
 	var/datum/mob_hud/MH = GLOB.huds[MOB_HUD_XENO_INFECTION]
 	MH.add_hud_to(src, src)
+
+	if(is_pathogen_creature(src))
+		MH = GLOB.huds[MOB_HUD_MYCOTOXIN]
+		MH.add_hud_to(src, src)
 
 // Transfer any observing players over to the xeno's new body (`target`) on evolve/de-evolve.
 /mob/living/carbon/xenomorph/transfer_observers_to(atom/target)

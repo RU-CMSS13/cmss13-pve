@@ -318,3 +318,37 @@
 	icon = 'icons/mob/xenos/effects.dmi'
 	icon_state = "pool_splash"
 	effect_duration = 10 SECONDS
+
+/obj/effect/overlay/temp/acid_glob
+	name = "acid glob impact animation"
+	effect_duration = 5 SECONDS
+
+	icon = 'icons/obj/items/weapons/projectiles.dmi'
+	icon_state = "acid_glob"
+
+/obj/effect/overlay/temp/acid_glob/Initialize(mapload, atom/owner)
+	. = ..()
+	transform = matrix().Turn(-180)
+	add_filter("motionblur", 1, motion_blur_filter(x = 0, y = 1))
+	layer = ABOVE_MOB_LAYER
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	pixel_y = 96
+	animate(src, pixel_y = 0, time=5 SECONDS)
+	animate(icon_state=null, icon=null, time=2) // to vanish it immediately
+
+/obj/effect/overlay/temp/neuro_glob
+	name = "neuro glob impact animation"
+	effect_duration = 5 SECONDS
+
+	icon = 'icons/obj/items/weapons/projectiles.dmi'
+	icon_state = "neuro_glob"
+
+/obj/effect/overlay/temp/neuro_glob/Initialize(mapload, atom/owner)
+	. = ..()
+	transform = matrix().Turn(-180)
+	add_filter("motionblur", 1, motion_blur_filter(x = 0, y = 1))
+	layer = ABOVE_MOB_LAYER
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	pixel_y = 96
+	animate(src, pixel_y = 0, time=5 SECONDS)
+	animate(icon_state=null, icon=null, time=2) // to vanish it immediately

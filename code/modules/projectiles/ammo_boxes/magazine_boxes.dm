@@ -109,6 +109,10 @@
 /obj/item/ammo_box/magazine/large/heap/empty
 	empty = TRUE
 
+/obj/item/ammo_box/magazine/large/ext
+	name = "magazine box (ext M41A x 32)"
+	magazine_type = /obj/item/ammo_magazine/rifle/extended
+
 //-----------------------M20A Rifle Mag Boxes-----------------------
 
 /obj/item/ammo_box/magazine/m20a

@@ -1,8 +1,8 @@
 
 
 /obj/item/device/walkman
-	name = "Seegson C-Series magnetic tape recorder"
-	desc = "A classic-style portable audio recorder used to record or play music and audio tapes. Now when you go EVA you can bring your country jams with you!"
+	name = "Seegson C-60 cassette player"
+	desc = "A newly released Seegson cassette player, nicknamed the 'space-walkman' due to it's similarity to the 200 year old walkman. Crazy how these never went out of style."
 	icon = 'icons/obj/items/walkman.dmi'
 	icon_state = "walkman"
 	w_class = SIZE_SMALL

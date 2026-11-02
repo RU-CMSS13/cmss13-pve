@@ -388,6 +388,24 @@
 		if(MOVE_INTENT_RUN)
 			icon_state = "running"
 
+/atom/movable/screen/sprint_bar
+	name = "sprint stamina"
+	icon = 'icons/mob/hud/human_midnight.dmi'
+	icon_state = "sprint20"
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	/// alpha and color from the HUD style, restored when the bar shows again or stops being winded
+	var/base_alpha = 255
+	var/base_color
+
+/// Hidden while full, tinted while there is too little to start running
+/atom/movable/screen/sprint_bar/proc/set_fraction(fraction, winded)
+	icon_state = "sprint[floor(fraction * SPRINT_BAR_STEPS)]"
+	color = winded ? SPRINT_BAR_WINDED_COLOR : base_color
+	var/full = fraction >= 1
+	var/target_alpha = full ? 0 : base_alpha
+	if(alpha != target_alpha)
+		animate(src, alpha = target_alpha, time = full ? 1 SECONDS : 0)
+
 /mob/living/carbon/xenomorph/toggle_mov_intent()
 	. = ..()
 	if(.)
@@ -511,7 +529,7 @@
 	if(!user.hive)
 		to_chat(user, SPAN_WARNING("We don't belong to a hive!"))
 		return FALSE
-	if(!user.hive.living_xeno_queen)
+	if(!user.hive.living_xeno_queen && !user.hive.allow_no_queen_actions)
 		to_chat(user, SPAN_WARNING("Without a queen our psychic link is broken!"))
 		return FALSE
 	if(HAS_TRAIT(user, TRAIT_ABILITY_BURROWED) || user.is_mob_incapacitated() || user.buckled)

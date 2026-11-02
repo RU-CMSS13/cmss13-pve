@@ -63,6 +63,8 @@
 
 	bubble_icon = "alienroyal"
 
+	ai_ability_delay = 2 SECONDS
+
 /mob/living/carbon/xenomorph/king/Destroy()
 	UnregisterSignal(src, COMSIG_MOVABLE_PRE_MOVE)
 

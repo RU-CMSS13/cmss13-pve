@@ -163,3 +163,69 @@
 
 	if(containers_ready) //at least 1 container has finished, ring the bell
 		playsound(freezer.loc, 'sound/machines/ding.ogg', 150)
+
+/obj/structure/closet/secure_closet/freezer/alt
+	name = "\improper refrigerator"
+	icon_state = "altfridge1"
+	icon_closed = "altfridge"
+	icon_locked = "altfridge1"
+	icon_opened = "altfridgeopen"
+	icon_broken = "altfridgebroken"
+	icon_off = "altfridge1"
+
+/obj/structure/closet/secure_closet/freezer/alt/update_icon()
+	if(broken)
+		icon_state = icon_broken
+	else
+		if(!opened)
+			if(locked)
+				icon_state = icon_locked
+			else
+				icon_state = icon_closed
+		else
+			icon_state = icon_opened
+
+/obj/structure/closet/secure_closet/freezer/alt/fridge/full
+	name = "\improper refrigerator"
+
+/obj/structure/closet/secure_closet/freezer/alt/fridge/full/Initialize()
+	. = ..()
+	for(var/i = 0, i < 2, i++)
+		new /obj/item/reagent_container/food/condiment/sugar(src)
+	for(var/i = 0, i < 6, i++)
+		new /obj/item/reagent_container/food/snacks/flour(src)
+		new /obj/item/reagent_container/food/condiment/enzyme(src)
+		new /obj/item/reagent_container/food/condiment/chocolate_syrup(src)
+
+/obj/structure/closet/secure_closet/freezer/alt_1
+	name = "\improper refrigerator"
+	icon_state = "alt1fridge1"
+	icon_closed = "alt1fridge"
+	icon_locked = "alt1fridge1"
+	icon_opened = "alt1fridgeopen"
+	icon_broken = "alt1fridgebroken"
+	icon_off = "alt1fridge1"
+
+/obj/structure/closet/secure_closet/freezer/alt_1/update_icon()
+	if(broken)
+		icon_state = icon_broken
+	else
+		if(!opened)
+			if(locked)
+				icon_state = icon_locked
+			else
+				icon_state = icon_closed
+		else
+			icon_state = icon_opened
+
+/obj/structure/closet/secure_closet/freezer/alt_1/fridge/full
+	name = "\improper refrigerator"
+
+/obj/structure/closet/secure_closet/freezer/alt_1/fridge/full/Initialize()
+	. = ..()
+	for(var/i = 0, i < 2, i++)
+		new /obj/item/reagent_container/food/condiment/sugar(src)
+	for(var/i = 0, i < 6, i++)
+		new /obj/item/reagent_container/food/snacks/flour(src)
+		new /obj/item/reagent_container/food/condiment/enzyme(src)
+		new /obj/item/reagent_container/food/condiment/chocolate_syrup(src)

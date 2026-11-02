@@ -11,7 +11,7 @@
 	black_market_value = 35
 	var/obj/item/charging = null
 	var/percent_charge_complete = 0
-	var/list/allowed_devices = list(/obj/item/weapon/baton, /obj/item/cell, /obj/item/weapon/gun/energy, /obj/item/device/defibrillator, /obj/item/tool/portadialysis, /obj/item/clothing/suit/auto_cpr, /obj/item/smartgun_battery, /obj/item/device/helmet_visor/night_vision)
+	var/list/allowed_devices = list(/obj/item/weapon/baton, /obj/item/cell, /obj/item/weapon/gun/energy, /obj/item/device/defibrillator, /obj/item/tool/portadialysis, /obj/item/clothing/suit/auto_cpr, /obj/item/smartgun_battery, /obj/item/device/helmet_visor/night_vision, /obj/item/clothing/gloves/synth)
 
 	var/charge_amount = 1000
 
@@ -190,6 +190,20 @@
 					update_use_power(USE_POWER_ACTIVE)
 					update_icon()
 					return
+
+			percent_charge_complete = 100
+			update_use_power(USE_POWER_IDLE)
+			update_icon()
+			return
+
+		if(istype(charging, /obj/item/clothing/gloves/synth))
+			var/obj/item/clothing/gloves/synth/charging_bracer = charging
+			if(charging_bracer.battery_charge < charging_bracer.battery_charge_max)
+				charging_bracer.battery_charge = min(charging_bracer.battery_charge + SIMI_RECHARGER_RATE, charging_bracer.battery_charge_max)
+				percent_charge_complete = charging_bracer.battery_charge / charging_bracer.battery_charge_max * 100
+				update_use_power(USE_POWER_ACTIVE)
+				update_icon()
+				return
 
 			percent_charge_complete = 100
 			update_use_power(USE_POWER_IDLE)

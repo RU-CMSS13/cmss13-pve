@@ -65,6 +65,9 @@ SUBSYSTEM_DEF(pathfinding)
 					if(isxeno(current_run.agent))
 						for(var/atom/A as anything in L)
 							distance_between += A.xeno_ai_obstacle(current_run.agent, direction, target)
+					else if(isruv(current_run.agent))
+						for(var/atom/A as anything in L)
+							distance_between += A.ruv_obstacle(current_run.agent, target)
 					else
 						var/datum/component/human_ai/ai_component = current_run.agent.GetComponent(/datum/component/human_ai)
 						var/datum/human_ai_brain/brain = ai_component.ai_brain

@@ -781,3 +781,18 @@
 	inactive_icon_state = "riot_shield_clf"
 	activated = TRUE
 	flags_equip_slot = null
+
+/obj/item/clothing/glasses/science/blue
+	icon_state = "blue"
+	item_state = "glasses"
+
+/obj/item/clothing/glasses/sunglasses/big/chrome
+	name = "\improper BiMex Chromeline Shades"
+	desc = "Large stylish chrome-framed shades favored by corporate personnel for their sharp appearance and practical eye protection."
+	desc_lore = "Part of BiMex's executive-oriented 'ChromeLine' series, these oversized shades combine stylish chromatic flavor with durable industrial-grade lenses. Capable of shrugging off small shrapnel impacts"
+	icon_state = "chrome_shades"
+	item_state = "chrome_shades"
+	eye_protection = EYE_PROTECTION_FLASH
+	clothing_traits = list(TRAIT_BIMEX)
+	flags_equip_slot = SLOT_EYES|SLOT_FACE
+	flags_obj = OBJ_IS_HELMET_GARB

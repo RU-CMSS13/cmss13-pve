@@ -95,3 +95,9 @@
 	prop_gun_type = /obj/item/weapon/gun/launcher/rocket/anti_tank
 	custom_gun_name = "\improper Spent M83A2 SADAR"
 	custom_gun_desc = "A spent M83A2 tube. It's been kept as a trophy after a lucky tank kill nearly a thousand meters out. Someone has engraved a single tally-mark on the side to begin recording a kill-count."
+
+/obj/effect/spawner/prop_gun/type71
+	prop_gun_type = /obj/item/weapon/gun/rifle/type71/carbine
+	custom_gun_name = "\improper Broken Type-71S pulse carbine"
+	custom_gun_desc = "An older Type-71 variant with a shortened barrel, originally designed for vehicle crews and rear-line personnel by Vietnam and China. \
+	This one has seen better days - its famous blistering fire-rate is a thing of the past. The trigger is missing, the barrel is bent even further, and it no longer appropriately feeds magazines."
