@@ -402,6 +402,10 @@
 				sound = pick('sound/effects/thud1.ogg','sound/effects/thud2.ogg','sound/effects/thud3.ogg')
 			if("paper_writing")
 				sound = pick('sound/items/writing_noises/paper_writing_1.wav', 'sound/items/writing_noises/paper_writing_2.wav', 'sound/items/writing_noises/paper_writing_3.wav', 'sound/items/writing_noises/paper_writing_4.ogg')
+			if("map_unfold")
+				sound = pick('sound/items/paper_map/map_unfold_1.ogg', 'sound/items/paper_map/map_unfold_2.ogg')
+			if("map_fold")
+				sound = pick('sound/items/paper_map/map_fold_1.ogg', 'sound/items/paper_map/map_fold_2.ogg', 'sound/items/paper_map/map_fold_3.ogg', 'sound/items/paper_map/map_fold_4.ogg')
 			if("gurgle")
 				sound = pick('sound/effects/gurgle1.ogg', 'sound/effects/gurgle2.ogg', 'sound/effects/gurgle3.ogg', 'sound/effects/gurgle4.ogg')
 			// Weapons/bullets
