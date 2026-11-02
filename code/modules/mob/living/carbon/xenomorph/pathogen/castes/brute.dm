@@ -1,19 +1,20 @@
 /datum/caste_datum/pathogen/brute
 	caste_type = PATHOGEN_CREATURE_BRUTE
+	fire_immunity = FIRE_VULNERABILITY
 	tier = 3
 
-	melee_damage_lower = XENO_DAMAGE_TIER_6
-	melee_damage_upper = XENO_DAMAGE_TIER_7
+	melee_damage_lower = XENO_DAMAGE_TIER_6 //Stats TBC
+	melee_damage_upper = XENO_DAMAGE_TIER_6
 	melee_vehicle_damage = XENO_DAMAGE_TIER_8
-	max_health = XENO_HEALTH_TIER_14
+	max_health = XENO_HEALTH_TIER_12
 	plasma_gain = XENO_PLASMA_GAIN_TIER_8
-	plasma_max = XENO_PLASMA_TIER_7
+	plasma_max = XENO_PLASMA_TIER_5
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_10
 	armor_deflection = XENO_ARMOR_TIER_3
 	evasion = XENO_EVASION_NONE
 	speed = XENO_SPEED_TIER_4
 
-	attack_delay = 0 // VERY high slash damage, but attacks relatively slowly
+	attack_delay = 0
 
 	available_strains = list()
 	behavior_delegate_type = /datum/behavior_delegate/pathogen_base/brute
@@ -22,10 +23,12 @@
 	caste_desc = "Why run if you can whack them to death."
 	evolves_to = list()
 
-	heal_resting = 1.8
+	heal_resting = 1.2
 
 	minimap_icon = "brute"
 	evolution_allowed = FALSE
+	royal_caste = TRUE
+	minimum_evolve_time = 15 MINUTES
 
 /mob/living/carbon/xenomorph/brute
 	caste_type = PATHOGEN_CREATURE_BRUTE
@@ -37,15 +40,16 @@
 	pixel_x = -16
 	old_x = -16
 	tier = 3
-	organ_value = 10000
+	organ_value = 8000
 	base_actions = list(
-		/datum/action/xeno_action/onclick/xeno_resting,
-		/datum/action/xeno_action/watch_xeno,
-		/datum/action/xeno_action/onclick/emit_pheromones,
-		/datum/action/xeno_action/activable/tail_stab/pathogen_t3/brute,
-		/datum/action/xeno_action/onclick/crusher_stomp/pathogen_brute,
-		/datum/action/xeno_action/activable/oppressor_punch,
-		/datum/action/xeno_action/onclick/crusher_shield,
+		/datum/action/xeno_action/onclick/toggle_seethrough/pathogen,
+		/datum/action/xeno_action/onclick/xeno_resting/pathogen,
+		/datum/action/xeno_action/watch_xeno/pathogen,
+		/datum/action/xeno_action/onclick/emit_pheromones/pathogen,
+		/datum/action/xeno_action/activable/tail_stab/pathogen/tier3/brute,
+		/datum/action/xeno_action/onclick/crusher_stomp/pathogen_brute, // Macro 1
+		/datum/action/xeno_action/activable/oppressor_punch/pathogen, // Macro 2
+		/datum/action/xeno_action/onclick/crusher_shield/pathogen, // Macro 3
 		/datum/action/xeno_action/onclick/tacmap,
 	)
 	claw_type = CLAW_TYPE_VERY_SHARP
@@ -55,7 +59,7 @@
 
 	icon_xeno = 'icons/mob/pathogen/brute.dmi'
 	icon_xenonid = 'icons/mob/pathogen/brute.dmi'
-	//need_weeds = FALSE
+
 
 	weed_food_icon = 'icons/mob/xenos/weeds_64x64.dmi'
 	mycelium_food_icon = 'icons/mob/pathogen/pathogen_weeds_64x64.dmi'
@@ -64,25 +68,25 @@
 
 	AUTOWIKI_SKIP(TRUE)
 	hivenumber = XENO_HIVE_PATHOGEN
-	speaking_noise = "neo_talk"
+	speaking_noise = "pathogen_talk"
 
 	mob_size = MOB_SIZE_BIG
 	acid_blood_damage = 0
 	bubble_icon = "pathogenroyal"
 	aura_strength = 3
 
-/mob/living/carbon/xenomorph/brute/Initialize(mapload, mob/living/carbon/xenomorph/old_xeno, hivenumber)
+/mob/living/carbon/xenomorph/brute/Initialize()
 	. = ..()
 	make_pathogen_speaker()
+	AddComponent(/datum/component/footstep, 4, 25, 11, 2, "alien_footstep_medium")
 
-/datum/action/xeno_action/activable/tail_stab/pathogen_t3/brute
+/datum/action/xeno_action/activable/tail_stab/pathogen/tier3/brute
 	name = "Arm Whack"
 	blunt_stab = TRUE
 	stab_range = 2
 
 /datum/action/xeno_action/onclick/crusher_stomp/pathogen_brute
 	ability_primacy = XENO_PRIMARY_ACTION_1
-
 
 /datum/behavior_delegate/pathogen_base/brute
 	name = "Base Brute Behavior Delegate"
@@ -129,10 +133,6 @@
 		log_attack("[key_name(bound_xeno)] slashed [key_name(aoe_targets)]")
 		aoe_targets.apply_armoured_damage(get_xeno_damage_slash(aoe_targets, damage), ARMOR_MELEE, BRUTE, bound_xeno.zone_selected)
 
-	var/datum/action/xeno_action/activable/pounce/crusher_charge/cAction = get_action(bound_xeno, /datum/action/xeno_action/activable/pounce/crusher_charge)
-	if (!cAction.action_cooldown_check())
-		cAction.reduce_cooldown(cdr_amount)
-
 	var/datum/action/xeno_action/onclick/crusher_shield/sAction = get_action(bound_xeno, /datum/action/xeno_action/onclick/crusher_shield)
 	if (!sAction.action_cooldown_check())
 		sAction.reduce_cooldown(base_cdr_amount)
@@ -144,4 +144,8 @@
 		if (XS.shield_source == XENO_SHIELD_SOURCE_CRUSHER)
 			shield_total += XS.amount
 
-	. += "Shield: [shield_total]"
+	. += "Personal Shield: [shield_total]"
+
+	var/datum/hive_status/pathogen/hive = GLOB.hive_datum[XENO_HIVE_PATHOGEN]
+	if(hive)
+		. += "Pathogen Poppers: [hive.get_popper_num()]/[hive.max_poppers]"

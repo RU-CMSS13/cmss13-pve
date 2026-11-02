@@ -1,17 +1,18 @@
 /datum/caste_datum/pathogen/popper
 	caste_type = PATHOGEN_CREATURE_POPPER
-	tier = 1
+	fire_immunity = FIRE_VULNERABILITY
+	tier = 0
 
 	melee_damage_lower = 15
 	melee_damage_upper = XENO_DAMAGE_TIER_1
 	melee_vehicle_damage = 0
-	max_health = XENO_HEALTH_LESSER_DRONE
+	max_health = XENO_HEALTH_LARVA
 	plasma_gain = XENO_PLASMA_GAIN_TIER_2
 	plasma_max = XENO_PLASMA_TIER_10
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_2
 	armor_deflection = XENO_NO_ARMOR
 	evasion = XENO_EVASION_MEDIUM
-	speed = XENO_SPEED_TIER_8
+	speed = XENO_SPEED_TIER_7
 
 	attack_delay = 0
 
@@ -20,31 +21,38 @@
 
 	caste_desc = "A fast, powerful combatant."
 	evolves_to = list()
+	evolution_allowed = FALSE
 
 	heal_resting = 1
+	max_build_dist = 1
 
 	minimap_icon = "popper"
+
+/datum/caste_datum/pathogen/popper/New()
+	. = ..()
+	resin_build_order = GLOB.resin_build_order_pathogen_base
 
 /mob/living/carbon/xenomorph/popper
 	caste_type = PATHOGEN_CREATURE_POPPER
 	name = PATHOGEN_CREATURE_POPPER
-	desc = "A sleek, fast alien with sharp claws."
+	desc = "A crawling bag of spores. What nightmare are you living in?"
 	icon_size = 32
 	icon_state = "Popper Walking"
 	plasma_types = list()
 	tier = 0
 	base_pixel_x = 0
 	base_pixel_y = -20
-	organ_value = 10000
+	organ_value = 0
 	crit_health = -50
 	base_actions = list(
-		/datum/action/xeno_action/onclick/xeno_resting,
-		/datum/action/xeno_action/watch_xeno,
-		/datum/action/xeno_action/onclick/plant_weeds/pathogen/popper,
-		/datum/action/xeno_action/onclick/emit_pheromones,
-		/datum/action/xeno_action/onclick/place_spore_sac,
-		/datum/action/xeno_action/onclick/release_spores,
-		/datum/action/xeno_action/onclick/tacmap,
+		/datum/action/xeno_action/onclick/xeno_resting/pathogen,
+		/datum/action/xeno_action/watch_xeno/pathogen,
+		/datum/action/xeno_action/onclick/emit_pheromones/pathogen,
+		/datum/action/xeno_action/onclick/plant_weeds/pathogen/macro_one, //first macro
+		/datum/action/xeno_action/onclick/choose_resin/pathogen, //second macro
+		/datum/action/xeno_action/activable/secrete_resin/pathogen, //third macro
+		/datum/action/xeno_action/onclick/place_spore_sac/fatal, // fourth macro
+		/datum/action/xeno_action/activable/direct_spore_infect,
 	)
 	inherent_verbs = list(
 		/mob/living/carbon/xenomorph/proc/vent_crawl,
@@ -57,7 +65,7 @@
 
 	icon_xeno = 'icons/mob/pathogen/popper.dmi'
 	icon_xenonid = 'icons/mob/pathogen/popper.dmi'
-	need_weeds = FALSE
+	need_weeds = TRUE
 
 	weed_food_icon = 'icons/mob/xenos/weeds_48x48.dmi'
 	mycelium_food_icon = 'icons/mob/pathogen/pathogen_weeds_48x48.dmi'
@@ -67,53 +75,92 @@
 
 	AUTOWIKI_SKIP(TRUE)
 	hivenumber = XENO_HIVE_PATHOGEN
-	speaking_noise = "neo_talk"
+	speaking_noise = "pathogen_talk"
 
 	mob_size = MOB_SIZE_XENO_VERY_SMALL
 	acid_blood_damage = 25
 	bubble_icon = "pathogen"
 	aura_strength = 2
+	counts_for_slots = FALSE
 
-/mob/living/carbon/xenomorph/popper/Initialize(mapload, mob/living/carbon/xenomorph/old_xeno, hivenumber)
-	. = ..()
-	make_pathogen_speaker()
+	age = XENO_NO_AGE
+	show_only_numbers = TRUE
+	counts_for_roundend = FALSE
+	var/spore_morphed = FALSE
+
+/mob/living/carbon/xenomorph/popper/initialize_pass_flags(datum/pass_flags_container/pass_flags)
+	..()
+	if(pass_flags)
+		pass_flags.flags_pass = PASS_MOB_THRU|PASS_FLAGS_CRAWLER
+		pass_flags.flags_can_pass_all = PASS_ALL^PASS_OVER_THROW_ITEM
+
+/mob/living/carbon/xenomorph/popper/ghostize(can_reenter_corpse = FALSE, aghosted = FALSE, transfer = FALSE)
+	var/mob/dead/observer/ghost = ..()
+	ghost?.bypass_time_of_death_checks_hugger = spore_morphed
+	return ghost
 
 /mob/living/carbon/xenomorph/popper/death(cause, gibbed)
 	. = ..()
+	if(spore_morphed)
+		return
 	if(prob(5)) // This is because poppers will be used as drone equivalent, having 100% is death sentence for players without MOPP
-		new /obj/effect/pathogen/spore_cloud(loc)
+		new /obj/effect/pathogen/spore_cloud(loc, ckey)
 
 /mob/living/carbon/xenomorph/popper/start_pulling(atom/movable/AM)
 	return
 
 /datum/action/xeno_action/onclick/place_spore_sac
-	name = "Place spore sac (700)"
-	action_icon_state = "place_trap"
+	name = "Place blight spore sac (700)"
+	button_icon_state = "template_pathogen"
+	icon_file = 'icons/mob/hud/actions_pathogen.dmi'
+	action_icon_state = "plant_sac"
 	plasma_cost = 700
 	action_type = XENO_ACTION_CLICK
-	ability_primacy = XENO_PRIMARY_ACTION_2
+	ability_primacy = XENO_PRIMARY_ACTION_4
+	var/fatal_use = FALSE
+
+/datum/action/xeno_action/onclick/place_spore_sac/fatal
+	name = "Spore Morph (FATAL)"
+	action_icon_state = "spore_morph"
+	fatal_use = TRUE
 
 /datum/action/xeno_action/onclick/place_spore_sac/use_ability(atom/A)
-	var/mob/living/carbon/xenomorph/popper = owner
-	if(!popper.check_state())
+	var/mob/living/carbon/xenomorph/patho_owner = owner
+	if(!patho_owner.check_state())
 		return
 
-	var/turf/target_turf = get_turf(popper)
+	var/turf/target_turf = get_turf(patho_owner)
 	if(!istype(target_turf))
-		to_chat(popper, SPAN_XENOWARNING("We can't do that here."))
+		to_chat(patho_owner, SPAN_XENOWARNING("We can't do that here."))
 		return
 	var/area/turf_area = get_area(target_turf)
 	if(istype(turf_area,/area/shuttle/drop1/lz1) || istype(turf_area,/area/shuttle/drop2/lz2) || SSinterior.in_interior(owner))
-		to_chat(popper, SPAN_WARNING("We sense this is not a suitable area for creating a spore sac."))
+		to_chat(patho_owner, SPAN_WARNING("We sense this is not a suitable area for creating a blight spore sac."))
 		return
-	if(!target_turf.check_spore_sac_placement(popper))
+	if(isnull(turf_area) || !(turf_area.is_resin_allowed))
+		if(!turf_area || turf_area.flags_area & AREA_UNWEEDABLE)
+			to_chat(patho_owner, SPAN_XENOWARNING("This area is unsuited to host the confluence!"))
+			return
+		to_chat(patho_owner, SPAN_XENOWARNING("It's too early to spread the confluence this far."))
 		return
-	if(!popper.check_plasma(plasma_cost))
+	if(!target_turf.check_spore_sac_placement(patho_owner))
 		return
-	popper.use_plasma(plasma_cost)
-	playsound(popper.loc, "alien_resin_build", 25)
-	new /obj/effect/pathogen/spore_sac(target_turf)
-	to_chat(popper, SPAN_XENONOTICE("We place a spore sac on the ground."))
+	if(!patho_owner.check_plasma(plasma_cost))
+		return
+	if(fatal_use)
+		to_chat(patho_owner, SPAN_XENOHIGHDANGER("Creating this spore sac will consume all our energy and we will die!"))
+	if(!do_after(patho_owner, 5 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
+		return
+	patho_owner.use_plasma(plasma_cost)
+	playsound(patho_owner.loc, "alien_resin_build", 25)
+	new /obj/effect/pathogen/spore_sac/three_uses(target_turf)
+	to_chat(patho_owner, SPAN_XENONOTICE("We place a blight spore sac on the ground."))
+	if(fatal_use)
+		to_chat(patho_owner, SPAN_XENOHIGHDANGER("The spore sac consumes all our energy!"))
+		if(ispopper(patho_owner))
+			var/mob/living/carbon/xenomorph/popper/popper = patho_owner
+			popper.spore_morphed = TRUE
+		patho_owner.gib(create_cause_data("Spore Morphing", patho_owner.key))
 	return ..()
 
 /turf/proc/check_spore_sac_placement(mob/living/carbon/xenomorph/xeno)
@@ -152,6 +199,10 @@
 		to_chat(xeno, SPAN_XENOWARNING("This is too close to a contaminant!"))
 		return FALSE
 
+	if(locate(/obj/effect/pathogen/spore_sac) in range(2, src))
+		to_chat(xeno, SPAN_XENOWARNING("This is too close to an existing spore sac!"))
+		return FALSE
+
 	for(var/mob/living/body in src)
 		if(body.stat == DEAD)
 			to_chat(xeno, SPAN_XENOWARNING("The body is in the way!"))
@@ -160,7 +211,7 @@
 	return TRUE
 
 /datum/action/xeno_action/onclick/release_spores
-	name = "Release Spore Cloud (200)"
+	name = "Release Blight Spore Cloud (200)"
 	action_icon_state = "gas mine"
 	plasma_cost = 200
 	action_type = XENO_ACTION_CLICK
@@ -183,17 +234,15 @@
 	popper.use_plasma(plasma_cost)
 	playsound(popper.loc, "alien_resin_build", 25)
 	new /obj/effect/pathogen/spore_cloud(target_turf)
-	popper.visible_message(SPAN_DANGER("[src] releases a cloud of spores!"), SPAN_XENONOTICE("We release a spore cloud."))
+	popper.visible_message(SPAN_DANGER("[src] releases a cloud of spores!"), SPAN_XENONOTICE("We release a blight spore cloud."))
 	return ..()
-
-
 
 /datum/resin_construction/resin_obj/popper_cocoon
 	name = PATHOGEN_STRUCTURE_COCOON
 	desc = "A cocoon to grow a Pathogen Popper."
 	construction_name = "mycelial cocoon"
-	cost = 800
-	max_per_xeno = 3
+	cost = 500
+	max_per_xeno = 6
 
 	build_path = /obj/effect/alien/resin/special/popper_cocoon
 
@@ -209,6 +258,8 @@
 	pixel_y = 0
 	forced_hive = TRUE
 	hivenumber = XENO_HIVE_PATHOGEN
+
+	broadcast_destroy = FALSE
 
 	var/growth_state = POPPER_COCOON_GROWING
 	var/mature_time
@@ -261,6 +312,8 @@
 /obj/effect/alien/resin/special/popper_cocoon/healthcheck()
 	if(health > 0)
 		return
+	if(growth_state == POPPER_COCOON_DEAD)
+		return // Already dead.
 
 	flick("cocoon_pop", src)
 	STOP_PROCESSING(SSobj, src)
@@ -268,10 +321,16 @@
 	growth_state = POPPER_COCOON_DEAD
 
 	xeno_message("Confluence: \A [name] has been destroyed at [sanitize_area(get_area_name(src))]!", 3, XENO_HIVE_PATHOGEN)
+	addtimer(CALLBACK(src, PROC_REF(decay)), 30 SECONDS)
 
 /obj/effect/alien/resin/special/popper_cocoon/proc/hatch(mob/dead/observer/user)
 	if(growth_state != POPPER_COCOON_GROWN) // No dooubling up
 		to_chat(user, SPAN_WARNING("There is no Popper left in this cocoon!"))
+		return FALSE
+
+	var/datum/hive_status/pathogen/hive = GLOB.hive_datum[XENO_HIVE_PATHOGEN]
+	if(!hive.has_popper_slot())
+		to_chat(user, SPAN_WARNING("The Mycelial Confluence cannot support another Popper at this time!"))
 		return FALSE
 
 	growth_state = POPPER_COCOON_HATCHED
@@ -304,6 +363,8 @@
 	return TRUE
 
 /obj/effect/alien/resin/special/popper_cocoon/proc/decay()
+	if(growth_state == POPPER_COCOON_HATCHED)
+		xeno_message("Confluence: \A [name] has decayed after hatching!", 2, XENO_HIVE_PATHOGEN)
 	if(mature_time)
 		deltimer(mature_time)
 	mature_time = null
@@ -316,6 +377,10 @@
 	playsound(popper, 'sound/effects/xeno_newlarva.ogg', 25, TRUE)
 	popper.generate_name()
 	popper.timeofdeath = user.timeofdeath
+	to_chat(user, SPAN_PATHOGEN_ANNOUNCE("You are now a Pathogen Popper!"))
+	to_chat(user, SPAN_PATHOGEN_LEADER("You exist to spread mycelium and infect hosts with spores."))
+	to_chat(user, SPAN_PATHOGEN_LEADER("You can create spore sacs by sacrificing your life, or release spores when killed."))
+	to_chat(user, SPAN_PATHOGEN_LEADER("You are ineffective in combat and do minimal damage."))
 	msg_admin_niche("[key_name(popper)] has joined as a Pathogen Popper at ([source.x],[source.y],[source.z]).")
 
 /datum/hive_status/proc/can_spawn_as_popper(mob/dead/observer/user)
@@ -331,19 +396,24 @@
 			to_chat(user, SPAN_WARNING("You are banished from the [src], you may not rejoin unless the Overmind re-admits you."))
 			return FALSE
 
-	var/mob/living/carbon/human/original_human = user.mind?.original
-	if(istype(original_human) && !original_human.undefibbable && !original_human.chestburst && HAS_TRAIT_FROM(original_human, TRAIT_NESTED, TRAIT_SOURCE_BUCKLE))
-		to_chat(user, SPAN_WARNING("You cannot become a Popper until you are no longer alive in a nest."))
-		return FALSE
+	if(!user.bypass_time_of_death_checks_hugger)
+		var/mob/living/carbon/human/original_human = user.mind?.original
+		if(istype(original_human) && !original_human.undefibbable && !original_human.chestburst && HAS_TRAIT_FROM(original_human, TRAIT_NESTED, TRAIT_SOURCE_BUCKLE))
+			to_chat(user, SPAN_WARNING("You cannot become a Popper until you are no longer alive in a nest."))
+			return FALSE
 
-	if(world.time - user.client?.player_details.larva_queue_time < XENO_JOIN_DEAD_TIME)
-		var/time_left = floor((user.client.player_details.larva_queue_time + XENO_JOIN_DEAD_TIME - world.time) / 10)
-		to_chat(user, SPAN_WARNING("You ghosted too recently. You cannot become a Popper until [XENO_JOIN_DEAD_TIME / 600] minutes have passed ([time_left] seconds remaining)."))
-		return FALSE
+		if(world.time - user.client?.player_details.larva_queue_time < XENO_JOIN_DEAD_TIME)
+			var/time_left = floor((user.client.player_details.larva_queue_time + XENO_JOIN_DEAD_TIME - world.time) / 10)
+			to_chat(user, SPAN_WARNING("You ghosted too recently. You cannot become a Popper until [XENO_JOIN_DEAD_TIME / 600] minutes have passed ([time_left] seconds remaining)."))
+			return FALSE
 
-	if(world.time - user.timeofdeath < JOIN_AS_LESSER_DRONE_DELAY)
-		var/time_left = floor((user.timeofdeath + JOIN_AS_LESSER_DRONE_DELAY - world.time) / 10)
-		to_chat(user, SPAN_WARNING("You ghosted too recently. You cannot become a Popper until [JOIN_AS_LESSER_DRONE_DELAY / 10] seconds have passed ([time_left] seconds remaining)."))
+		if(world.time - user.timeofdeath < JOIN_AS_LESSER_DRONE_DELAY)
+			var/time_left = floor((user.timeofdeath + JOIN_AS_LESSER_DRONE_DELAY - world.time) / 10)
+			to_chat(user, SPAN_WARNING("You ghosted too recently. You cannot become a Popper until [JOIN_AS_LESSER_DRONE_DELAY / 10] seconds have passed ([time_left] seconds remaining)."))
+			return FALSE
+
+	if(!has_popper_slot())
+		to_chat(user, SPAN_WARNING("The Mycelial Confluence cannot support another Popper at this time!"))
 		return FALSE
 
 	if(!user.client)
@@ -352,12 +422,16 @@
 	return TRUE
 
 /datum/game_mode/proc/attempt_to_join_as_pathogen_popper(mob/xeno_candidate)
-	var/datum/hive_status/hive
+	var/datum/hive_status/pathogen/hive
 
 	hive = GLOB.hive_datum[XENO_HIVE_PATHOGEN]
 
 	if(length(hive.totalXenos) <= 0)
 		to_chat(xeno_candidate, SPAN_WARNING("The confluence isn't active at this point for you to join."))
+		return FALSE
+
+	if(!hive.has_popper_slot())
+		to_chat(xeno_candidate, SPAN_WARNING("The Mycelial Confluence cannot support another Popper at this time!"))
 		return FALSE
 
 
@@ -391,4 +465,97 @@
 
 	selected_structure.hatch(xeno_candidate)
 	return TRUE
+
+/datum/hive_status/proc/has_popper_slot()
+	return FALSE
+
+/datum/hive_status/proc/get_popper_num()
+	var/popper_num = 0
+	for(var/mob/living/carbon/xenomorph/xeno as anything in totalXenos)
+		if(ispopper(xeno))
+			popper_num++
+	return popper_num
+
+/datum/hive_status/pathogen/has_popper_slot()
+	if(get_popper_num() >= max_poppers)
+		return FALSE
+	return TRUE
+
+/datum/action/xeno_action/activable/direct_spore_infect
+	name = "Spore Injection (FATAL)"
+	action_icon_state = "tail_attack"
+	action_type = XENO_ACTION_CLICK
+	charge_time = 3 SECONDS
+	xeno_cooldown = 20 SECONDS
+	ability_primacy = XENO_TAIL_STAB
+	var/fatal_use = TRUE
+
+/datum/action/xeno_action/activable/direct_spore_infect/use_ability(atom/targetted_atom)
+	var/mob/living/carbon/xenomorph/patho_owner = owner
+	if(HAS_TRAIT(patho_owner, TRAIT_ABILITY_BURROWED) || patho_owner.is_ventcrawling)
+		to_chat(patho_owner, SPAN_XENOWARNING("We must be above ground to do this."))
+		return
+
+	if(!patho_owner.check_state() || patho_owner.cannot_slash)
+		return FALSE
+
+	if(!action_cooldown_check())
+		return FALSE
+
+	if(world.time <= patho_owner.next_move)
+		return FALSE
+
+	if(patho_owner.z != targetted_atom.z)
+		var/turf/xeno_turf = get_turf(patho_owner)
+		var/turf/xeno_turf_above = SSmapping.get_turf_above(xeno_turf)
+		var/turf/xeno_turf_below = SSmapping.get_turf_below(xeno_turf)
+		if(xeno_turf_above?.z != targetted_atom.z && xeno_turf_below?.z != targetted_atom.z)
+			return
+
+	if(!patho_owner.Adjacent(targetted_atom))
+		return FALSE
+
+	var/list/turf/path = get_line(patho_owner, targetted_atom, include_start_atom = FALSE)
+	for(var/turf/path_turf as anything in path)
+		if(path_turf.density)
+			to_chat(patho_owner, SPAN_WARNING("There's something blocking us!"))
+			return FALSE
+		for(var/obj/path_contents in path_turf.contents)
+			if(path_contents != targetted_atom && path_contents.density && !path_contents.throwpass)
+				to_chat(patho_owner, SPAN_WARNING("There's something blocking us!"))
+				return FALSE
+
+	if(!ishuman(targetted_atom))
+		return FALSE
+
+	if(patho_owner.can_not_harm(targetted_atom))
+		return FALSE
+
+	var/mob/living/carbon/target = targetted_atom
+
+	if(fatal_use)
+		to_chat(patho_owner, SPAN_XENOHIGHDANGER("Injecting the target with spores will consume all our energy and we will die!"))
+
+	if(!do_after(patho_owner, 5 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE, target))
+		return
+
+	if(!patho_owner.Adjacent(targetted_atom))
+		return FALSE
+
+	if(!fatal_use && !check_and_use_plasma_owner())
+		return FALSE
+
+	var/obj/effect/pathogen/spore_cloud/silent/spores = new(target.loc, owner.ckey, TRUE)
+	if(isyautja(target))
+		spores.attempt_yautja_inhale(target, TRUE)
+	else
+		spores.attempt_inhale(target, TRUE)
+
+	if(fatal_use)
+		if(ispopper(patho_owner))
+			var/mob/living/carbon/xenomorph/popper/popper = patho_owner
+			popper.spore_morphed = TRUE
+		patho_owner.gib(create_cause_data("Spore Injection", patho_owner.key))
+
+	return ..()
 

@@ -61,6 +61,8 @@
 	weed_food_states = list("Defender_1","Defender_2","Defender_3")
 	weed_food_states_flipped = list("Defender_1","Defender_2","Defender_3")
 
+	ai_ability_delay = 3 SECONDS
+
 /mob/living/carbon/xenomorph/defender/handle_special_state()
 	if(fortify)
 		return TRUE
@@ -103,6 +105,9 @@
 	xeno_cooldown = 15 SECONDS
 
 /datum/action/xeno_action/activable/tail_stab/slam/ai/process_ai(mob/living/carbon/xenomorph/using_xeno, delta_time)
+	if(get_dist(using_xeno, using_xeno.current_target) > stab_range)
+		return
+
 	if(DT_PROB(ai_prob_chance, delta_time))
 		use_ability_async(using_xeno.current_target)
 
@@ -112,8 +117,11 @@
 	xeno_cooldown = 10 SECONDS
 
 /datum/action/xeno_action/activable/headbutt/ai/process_ai(mob/living/carbon/xenomorph/using_xeno, delta_time)
+	// The AI lowers its crest up close, and with the crest lowered the headbutt only reaches adjacent targets.
+	if(!using_xeno.Adjacent(using_xeno.current_target))
+		return
+
 	if(DT_PROB(ai_prob_chance, delta_time))
-		using_xeno.dir = using_xeno.ai_movement_handler.home_turf ? get_dir(using_xeno, using_xeno.ai_movement_handler.home_turf) : pick(NORTH, SOUTH, EAST, WEST) /// Pick at random if there is no valid direction.
 		use_ability_async(using_xeno.current_target)
 
 /datum/action/xeno_action/onclick/toggle_crest/ai
@@ -135,22 +143,12 @@
 	default_ai_action = TRUE
 	xeno_cooldown = 12 SECONDS
 
-	var/list/humans_near = list()
-
 /datum/action/xeno_action/onclick/tail_sweep/ai/process_ai(mob/living/carbon/xenomorph/using_xeno, delta_time)
-	humans_near.Cut()
-
-	for(var/mob/living/carbon/human/inrange in view(using_xeno))
-		if(get_dist(using_xeno, inrange) < 5 && inrange.stat != DEAD)
-			humans_near |= inrange
-
 	if(!DT_PROB(ai_prob_chance, delta_time))
 		return
 
-	if(length(humans_near) < 3)
-		return
-
-	if(get_dist(using_xeno, using_xeno.current_target) <= 2)
+	// The sweep only hits adjacent mobs.
+	if(using_xeno.count_ai_targets_in_range(1) < 2)
 		return
 
 	if(using_xeno.action_busy)
