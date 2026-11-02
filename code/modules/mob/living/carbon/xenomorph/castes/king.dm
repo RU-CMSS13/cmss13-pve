@@ -1,4 +1,4 @@
-/datum/caste_datum/king
+/datum/caste_datum/king // huh
 	caste_type = XENO_CASTE_KING
 	caste_desc = "The end of the line."
 	tier = 4
