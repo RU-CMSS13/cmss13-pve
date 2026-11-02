@@ -514,3 +514,10 @@
 	flags_inv_hide = NO_FLAGS
 	siemens_coefficient = 0.6
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS
+
+/obj/item/clothing/suit/armor/vest/guardian
+	name = "guardian armor"
+	desc = "Chitin-reinforced plating bolted over the chest of a hive guardian."
+	icon_state = "guardian_torso"
+	item_state = "guardian_torso"
+	flags_inventory = CANTSTRIP

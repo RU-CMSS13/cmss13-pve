@@ -772,6 +772,32 @@
 	new_human.default_lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
 	new_human.update_sight()
 
+/datum/equipment_preset/other/xeno_cultist/guard
+	name = "Cultist - Hive Guard"
+	skills = /datum/skills/clf
+
+	assignment = "Hive Guard"
+	rank = "Hive Guard"
+
+/datum/equipment_preset/other/xeno_cultist/guard/load_race(mob/living/carbon/human/new_human)
+	new_human.set_species(SPECIES_GUARDIAN)
+	new_human.h_style = "Bald"
+	new_human.f_style = "Shaved"
+
+/datum/equipment_preset/other/xeno_cultist/guard/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/guardian(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/guardian(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/guardian(new_human), WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/guardian(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/hugger_box/cultist(new_human), WEAR_L_HAND)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/hugger_box/cultist(new_human), WEAR_R_HAND)
+
+/datum/equipment_preset/other/xeno_cultist/guard/load_status(mob/living/carbon/human/new_human, hivenumber = XENO_HIVE_NORMAL)
+	. = ..()
+	for(var/datum/action/human_action/activable/cult/obtain_equipment/action in new_human.actions)
+		action.remove_from(new_human)
+	give_action(new_human, /datum/action/human_action/guardian_burst)
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/other/professor_dummy
