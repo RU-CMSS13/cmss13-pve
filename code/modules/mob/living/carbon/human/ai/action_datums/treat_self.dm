@@ -19,7 +19,7 @@
 	if(!length(brain.equipment_map[HUMAN_AI_HEALTHITEMS]))
 		return 0
 
-	if(brain.cant_be_treated_stacks >= brain.treatment_stack_threshold)
+	if(!COOLDOWN_FINISHED(brain, treatment_search_cooldown))
 		return 0
 
 	if(!brain.healing_start_check(brain.tied_human))
@@ -27,29 +27,28 @@
 
 	return 4
 
-/datum/ai_action/treat_self/Destroy(force, ...)
-	brain.healing_someone = FALSE
-	return ..()
-
 /datum/ai_action/treat_self/trigger_action()
 	. = ..()
+
+	// Finish what we started first, the item is already in our hand
+	if(brain.healing_someone)
+		return ONGOING_ACTION_UNFINISHED
 
 	if(brain.current_target)
 		return ONGOING_ACTION_COMPLETED
 
-	if(!length(brain.equipment_map[HUMAN_AI_HEALTHITEMS]))
-		return ONGOING_ACTION_COMPLETED
-
-	var/mob/living/tied_human = brain.tied_human
+	var/mob/living/carbon/human/tied_human = brain.tied_human
 	if(tied_human.on_fire)
 		return ONGOING_ACTION_COMPLETED
 
-	if(brain.healing_someone)
-		return ONGOING_ACTION_UNFINISHED
+	if(!brain.healing_start_check(tied_human))
+		return ONGOING_ACTION_COMPLETED
 
-	if(brain.healing_start_check(tied_human))
-		if(!brain.start_healing(tied_human))
-			brain.cant_be_treated_stacks++
-		return ONGOING_ACTION_UNFINISHED
+	var/obj/item/treatment = brain.find_treatment(tied_human)
+	if(!treatment)
+		// Nothing we carry helps right now, so don't look through it every tick
+		COOLDOWN_START(brain, treatment_search_cooldown, brain.treatment_search_delay)
+		return ONGOING_ACTION_COMPLETED
 
-	return ONGOING_ACTION_COMPLETED
+	brain.apply_treatment(tied_human, treatment)
+	return ONGOING_ACTION_UNFINISHED

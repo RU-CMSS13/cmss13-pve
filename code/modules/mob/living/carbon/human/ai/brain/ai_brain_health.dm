@@ -1,45 +1,20 @@
+/// trans_to_ingest() puts a swallowed pill's reagents into the blood 9.5 seconds later, over half a second
+#define PILL_ABSORPTION_TIME (10.5 SECONDS)
+
 /datum/human_ai_brain
-	/// What items the AI considers when trying to heal brute damage
+	/// What items the AI considers when trying to heal brute damage, besides medicine with brute_heal_reagents
 	var/static/list/brute_heal_items = list(
 		/obj/item/stack/medical/advanced/bruise_pack,
-		/obj/item/reagent_container/hypospray/autoinjector/meralyne,
-		/obj/item/reagent_container/hypospray/autoinjector/bicaridine,
-		/obj/item/reagent_container/hypospray/autoinjector/tricord,
-		/obj/item/storage/pill_bottle/bicaridine,
-		/obj/item/storage/pill_bottle/merabica,
-		/obj/item/storage/pill_bottle/tricord,
 		/obj/item/tool/weldingtool,
 		/obj/item/stack/nanopaste,
 	)
 
-	/// What items the AI considers when trying to heal burn damage
+	/// What items the AI considers when trying to heal burn damage, besides medicine with burn_heal_reagents
 	var/static/list/burn_heal_items = list(
 		/obj/item/stack/medical/advanced/ointment,
-		/obj/item/reagent_container/hypospray/autoinjector/dermaline,
-		/obj/item/reagent_container/hypospray/autoinjector/kelotane,
-		/obj/item/reagent_container/hypospray/autoinjector/tricord,
-		/obj/item/storage/pill_bottle/kelotane,
-		/obj/item/storage/pill_bottle/keloderm,
-		/obj/item/storage/pill_bottle/tricord,
+		/obj/item/stack/medical/ointment,
 		/obj/item/stack/cable_coil,
 		/obj/item/stack/nanopaste,
-	)
-
-	/// What items the AI considers when trying to heal toxin damage
-	var/static/list/tox_heal_items = list(
-		/obj/item/reagent_container/hypospray/autoinjector/antitoxin,
-		/obj/item/reagent_container/hypospray/autoinjector/tricord,
-		/obj/item/storage/pill_bottle/antitox,
-		/obj/item/storage/pill_bottle/tricord,
-	)
-
-	/// What items the AI considers when trying to heal oxygen damage
-	var/static/list/oxy_heal_items = list(
-		/obj/item/reagent_container/hypospray/autoinjector/dexalinp,
-		/obj/item/reagent_container/hypospray/autoinjector/tricord,
-		/obj/item/storage/pill_bottle/dexalin,
-		/obj/item/storage/pill_bottle/dexalinplus,
-		/obj/item/storage/pill_bottle/tricord,
 	)
 
 	/// What items the AI considers when trying to fix bleeding
@@ -53,15 +28,49 @@
 		/obj/item/stack/medical/splint,
 	)
 
-	/// What items the AI considers when trying to reduce pain
-	var/static/list/painkiller_items = list(
-		/obj/item/reagent_container/hypospray/autoinjector/tramadol,
-		/obj/item/reagent_container/hypospray/autoinjector/oxycodone,
-		/obj/item/storage/pill_bottle/tramadol,
+	/// Medicine treating everything at once that is spent after one use, saved for when the AI is about to go down
+	var/static/list/emergency_heal_items = list(
+		/obj/item/reagent_container/hypospray/autoinjector/emergency,
+	)
+
+	/// Reagents the AI looks for in its pills, injectors and hyposprays when trying to heal brute damage
+	var/static/list/brute_heal_reagents = list(
+		"bicaridine",
+		"meralyne",
+		"tricordrazine",
+	)
+
+	/// Reagents the AI looks for in its medicine when trying to heal burn damage
+	var/static/list/burn_heal_reagents = list(
+		"kelotane",
+		"dermaline",
+		"tricordrazine",
+	)
+
+	/// Reagents the AI looks for in its medicine when trying to heal toxin damage
+	var/static/list/tox_heal_reagents = list(
+		"anti_toxin",
+		"tricordrazine",
+	)
+
+	/// Reagents the AI looks for in its medicine when trying to heal oxygen damage
+	var/static/list/oxy_heal_reagents = list(
+		"dexalin",
+		"dexalinp",
+		"tricordrazine",
+	)
+
+	/// Reagents the AI looks for in its medicine when trying to reduce pain. Painkillers don't stack, so only one is taken at a time
+	var/static/list/painkiller_reagents = list(
+		"tramadol",
+		"oxycodone",
+		"paracetamol",
 	)
 
 	/// At what percentage of max HP to start searching for medical treatment
 	var/healing_start_threshold = 0.7
+	/// At what percentage of max HP to use emergency_heal_items
+	var/emergency_heal_threshold = 0.4
 	/// Requires this much damage of one type to consider it a problem
 	var/damage_problem_threshold = 5
 	/// Pain percentage (out of 100) for the AI to consider using painkillers
@@ -73,14 +82,12 @@
 	/// Reference for found injured ally
 	var/mob/living/carbon/human/found_injured_ally
 
-	/// Cooldown on using pills to avoid OD. This isn't the best solution as it prevents the AI from using more than 1 pill of any kind every 20s, but it'll work for now
-	COOLDOWN_DECLARE(pill_use_cooldown)
+	/// Reagents of the pills the AI has fed that have not reached the blood yet, as list(mob ref = list(reagent id = amount))
+	var/list/pending_ingested_reagents = list()
 
-	/// How many stacks of "wasn't able to treat" this AI has. If these stacks pass a certain threshold, the AI can no longer be treated by others for a small period of time. Stacks decay when not being accumulated
-	var/cant_be_treated_stacks = 0
-
-	/// How many stacks are required to stop this AI from recieving treatment
-	var/treatment_stack_threshold = 10
+	/// How long the AI waits before looking for treatment again when nothing it carries helps
+	var/treatment_search_delay = 5 SECONDS
+	COOLDOWN_DECLARE(treatment_search_cooldown)
 
 /datum/human_ai_brain/proc/set_injured_ally(mob/living/new_target)
 	if(!new_target)
@@ -94,310 +101,206 @@
 	if(found_injured_ally)
 		UnregisterSignal(found_injured_ally, COMSIG_PARENT_QDELETING)
 		UnregisterSignal(found_injured_ally, COMSIG_MOB_DEATH)
+		var/patient_ref = REF(found_injured_ally)
+		if(patient_medics[patient_ref] == src)
+			patient_medics -= patient_ref
 	found_injured_ally = null
 
+/// Returns the most hurt ally in sight that we can treat
 /datum/human_ai_brain/proc/get_injured_ally()
-	var/list/viable_targets = list()
-	var/atom/movable/closest_target
-	var/smallest_distance = INFINITY
-
-	for(var/mob/living/carbon/human/possible_buddy as anything in GLOB.alive_human_list)
-		if(possible_buddy == tied_human)
+	RETURN_TYPE(/mob/living/carbon/human)
+	var/lowest_health = INFINITY
+	for(var/mob/living/carbon/human/possible_patient in view(view_distance, tied_human))
+		if(!can_treat_patient(possible_patient))
 			continue
 
-		if(tied_human.z != possible_buddy.z)
-			continue
+		var/health_ratio = possible_patient.health / possible_patient.maxHealth
+		if(health_ratio < lowest_health)
+			lowest_health = health_ratio
+			. = possible_patient
 
-		if(!faction_check(possible_buddy))
-			continue
+/// Returns TRUE if the fight is over and we carry something that patches us up
+/datum/human_ai_brain/proc/wants_treatment()
+	if(in_combat || current_target || !length(equipment_map[HUMAN_AI_HEALTHITEMS]) || !COOLDOWN_FINISHED(src, treatment_search_cooldown))
+		return FALSE
 
-		if(!(tied_human in viewers(view_distance, possible_buddy)))
-			continue
-
-		var/distance = get_dist(tied_human, possible_buddy)
-		if(distance > view_distance)
-			continue
-
-		if(!healing_start_check(possible_buddy))
-			continue
-
-		viable_targets += possible_buddy
-
-		if(smallest_distance <= distance)
-			continue
-
-		closest_target = possible_buddy
-		smallest_distance = distance
-
-	if(length(viable_targets) > 1)
-		return pick(viable_targets)
-
-	return closest_target
+	return healing_start_check(tied_human) && find_treatment(tied_human)
 
 /datum/human_ai_brain/proc/healing_start_check(mob/living/carbon/human/target)
-	return ((target.health / target.maxHealth) <= healing_start_threshold) || target.is_bleeding() || target.has_broken_limbs()
+	return ((target.health / target.maxHealth) <= healing_start_threshold) || target.is_bleeding() || has_unsplinted_fracture(target)
 
-/datum/human_ai_brain/proc/increment_treatment_stacks()
-	cant_be_treated_stacks++
-	addtimer(CALLBACK(src, PROC_REF(clear_treatment_stacks)), 5 SECONDS, TIMER_UNIQUE | TIMER_NO_HASH_WAIT | TIMER_OVERRIDE)
+/// Returns TRUE if the target has a broken limb that a splint can still help
+/datum/human_ai_brain/proc/has_unsplinted_fracture(mob/living/carbon/human/target)
+	for(var/obj/limb/limb as anything in target.limbs)
+		if((limb.status & LIMB_BROKEN) && !(limb.status & (LIMB_SPLINTED|LIMB_DESTROYED|LIMB_ROBOT|LIMB_SYNTHSKIN)))
+			return TRUE
+	return FALSE
 
-/datum/human_ai_brain/proc/clear_treatment_stacks()
-	cant_be_treated_stacks = 0
+/// Returns the item the AI should use next on the target, or null if nothing it carries helps right now
+/datum/human_ai_brain/proc/find_treatment(mob/living/carbon/human/target)
+	RETURN_TYPE(/obj/item)
 
-/datum/human_ai_brain/proc/start_healing(mob/living/carbon/human/target)
+	if((target.health / target.maxHealth) <= emergency_heal_threshold)
+		. = find_heal_item(target, emergency_heal_items, emergency = TRUE)
+		if(.)
+			return
+
+	// Prioritize bleeding, then brute, then broken bones, then burn, then tox, then oxy, then pain.
+	if(target.is_bleeding())
+		. = find_heal_item(target, bleed_heal_items)
+		if(.)
+			return
+
+	if(target.getBruteLoss() > damage_problem_threshold)
+		. = find_heal_item(target, brute_heal_items, brute_heal_reagents)
+		if(.)
+			return
+
+	// Doesn't support bone-healing chems
+	if(has_unsplinted_fracture(target))
+		. = find_heal_item(target, bonebreak_heal_items)
+		if(.)
+			return
+
+	if(target.getFireLoss() > damage_problem_threshold)
+		. = find_heal_item(target, burn_heal_items, burn_heal_reagents)
+		if(.)
+			return
+
+	if(target.getToxLoss() > damage_problem_threshold)
+		. = find_heal_item(target, null, tox_heal_reagents)
+		if(.)
+			return
+
+	if(target.getOxyLoss() > damage_problem_threshold)
+		. = find_heal_item(target, null, oxy_heal_reagents)
+		if(.)
+			return
+
+	if(target.pain?.get_pain_percentage() > pain_percentage_threshold)
+		return find_heal_item(target, null, painkiller_reagents)
+
+/// Returns a usable medical item of one of item_types, or medicine containing one of reagent_ids
+/datum/human_ai_brain/proc/find_heal_item(mob/living/carbon/human/target, list/item_types, list/reagent_ids, emergency = FALSE)
+	RETURN_TYPE(/obj/item)
+
+	for(var/obj/item/heal_item as anything in equipment_map[HUMAN_AI_HEALTHITEMS])
+		if(!emergency && is_type_in_list(heal_item, emergency_heal_items))
+			continue
+
+		if(!is_type_in_list(heal_item, item_types) && !(reagent_ids && medicine_has_reagent(heal_item, reagent_ids)))
+			continue
+
+		if(heal_item.ai_can_use(tied_human, src, target))
+			return heal_item
+
+/// Returns TRUE if the pill bottle, injector or hypospray holds any of the reagents
+/datum/human_ai_brain/proc/medicine_has_reagent(obj/item/medicine, list/reagent_ids)
+	var/datum/reagents/medicine_reagents = medicine.reagents
+	if(istype(medicine, /obj/item/storage/pill_bottle))
+		var/obj/item/reagent_container/pill/pill = locate() in medicine
+		medicine_reagents = pill?.reagents
+
+	if(!medicine_reagents)
+		return FALSE
+
+	for(var/datum/reagent/reagent as anything in medicine_reagents.reagent_list)
+		if(reagent.id in reagent_ids)
+			return TRUE
+
+	return FALSE
+
+/// Returns how much of the reagent is in the target's blood, counting pills we fed it that are still being absorbed
+/datum/human_ai_brain/proc/get_active_reagent_amount(mob/living/carbon/human/target, reagent_id)
+	. = target.reagents?.get_reagent_amount(reagent_id)
+	var/list/pending = pending_ingested_reagents[REF(target)]
+	if(pending)
+		. += pending[reagent_id]
+
+/**
+ * Returns TRUE if giving the target amount units of the dose is safe
+ *
+ * The dose must not push any of its reagents over its overdose threshold. Unless stack_doses is set, it also must not be
+ * given while an earlier dose of the same reagent is still working, or alongside another painkiller, as those don't stack.
+ * More units of a reagent only make it work for longer, so the next dose waits until a third of the last one is left.
+ */
+/datum/human_ai_brain/proc/is_safe_dose(mob/living/carbon/human/target, datum/reagents/dose, amount = dose?.total_volume, stack_doses = FALSE)
+	if(!target.reagents || !dose?.total_volume || (amount <= 0))
+		return FALSE
+
+	var/dose_share = min(amount / dose.total_volume, 1)
+	for(var/datum/reagent/reagent as anything in dose.reagent_list)
+		var/dose_amount = reagent.volume * dose_share
+		var/active_amount = get_active_reagent_amount(target, reagent.id)
+		if(reagent.overdose && ((active_amount + dose_amount) > reagent.overdose))
+			return FALSE
+
+		if(stack_doses)
+			continue
+
+		if(active_amount >= dose_amount / 3)
+			return FALSE
+
+		if(reagent.id in painkiller_reagents)
+			for(var/painkiller in painkiller_reagents - reagent.id)
+				if(get_active_reagent_amount(target, painkiller) > 0)
+					return FALSE
+
+	return TRUE
+
+/// Remembers the reagents of a pill fed to the target until they reach its blood, so that another pill can't overdose it meanwhile
+/datum/human_ai_brain/proc/add_pending_reagents(mob/living/carbon/human/target, list/reagent_amounts)
+	var/target_ref = REF(target)
+	var/list/pending = pending_ingested_reagents[target_ref]
+	if(!pending)
+		pending = list()
+		pending_ingested_reagents[target_ref] = pending
+
+	for(var/reagent_id in reagent_amounts)
+		pending[reagent_id] += reagent_amounts[reagent_id]
+
+	addtimer(CALLBACK(src, PROC_REF(remove_pending_reagents), target_ref, reagent_amounts), PILL_ABSORPTION_TIME)
+
+/datum/human_ai_brain/proc/remove_pending_reagents(target_ref, list/reagent_amounts)
+	var/list/pending = pending_ingested_reagents[target_ref]
+	if(!pending)
+		return
+
+	for(var/reagent_id in reagent_amounts)
+		pending[reagent_id] -= reagent_amounts[reagent_id]
+		if(pending[reagent_id] <= 0)
+			pending -= reagent_id
+
+	if(!length(pending))
+		pending_ingested_reagents -= target_ref
+
+/// Takes the item out of our gear, uses it on the target and puts it back
+/datum/human_ai_brain/proc/apply_treatment(mob/living/carbon/human/target, obj/item/heal_item)
 	set waitfor = FALSE
 
 	healing_someone = TRUE
-	. = FALSE // if . is TRUE, some form of healing has been done
+	clear_main_hand()
+	if(!equip_item_from_equipment_map(HUMAN_AI_HEALTHITEMS, heal_item))
+		healing_someone = FALSE
+		return
 
-	// Prioritize brute, then bleed, then broken bones, then burn, then pain, then tox, then oxy.
-	if(target.getBruteLoss() > damage_problem_threshold)
-		if(brute_heal(target))
-			. = TRUE
+	sleep(short_action_delay * action_delay_mult)
+	if(QDELETED(tied_human))
+		return
 
-	if(target.is_bleeding())
-		if(bleed_heal(target))
-			. = TRUE
+	if(!QDELETED(heal_item) && tied_human.is_holding(heal_item))
+		heal_item.ai_use(tied_human, src, target)
+#if defined(TESTING) || defined(HUMAN_AI_TESTING)
+		to_chat(world, "[tied_human.name] treated [target.name] using [heal_item].")
+#endif
 
-	// Doesn't support bone-healing chems
-	if(target.has_broken_limbs())
-		if(bone_heal(target))
-			. = TRUE
+	if(QDELETED(tied_human))
+		return
 
-	if(target.getFireLoss() > damage_problem_threshold)
-		if(burn_heal(target))
-			. = TRUE
-
-	// This has the issue of the AI taking multiple painkillers if high on pain, despite them not stacking. Not worth fixing atm
-	if(target.pain.get_pain_percentage() > pain_percentage_threshold)
-		if(pain_heal(target))
-			. = TRUE
-
-	if(target.getToxLoss() > damage_problem_threshold)
-		if(tox_heal(target))
-			. = TRUE
-
-	if(target.getOxyLoss() > damage_problem_threshold)
-		if(oxy_heal(target))
-			. = TRUE
+	if(!QDELETED(heal_item) && tied_human.is_holding(heal_item))
+		if(heal_item.ai_is_spent() || !store_item(heal_item, storage_has_room(heal_item), HUMAN_AI_HEALTHITEMS))
+			tied_human.drop_held_item(heal_item)
 
 	healing_someone = FALSE
 
-/datum/human_ai_brain/proc/brute_heal(mob/living/carbon/human/target)
-	. = FALSE
-	var/obj/item/brute_heal
-	for(var/obj/item/heal_item as anything in equipment_map[HUMAN_AI_HEALTHITEMS])
-		if(is_type_in_list(heal_item, brute_heal_items) && heal_item.ai_can_use(tied_human, src, target))
-			brute_heal = heal_item
-			break
-
-	if(!brute_heal)
-		return
-
-	clear_main_hand()
-	if(!equip_item_from_equipment_map(HUMAN_AI_HEALTHITEMS, brute_heal))
-		healing_someone = FALSE
-		return
-
-	. = TRUE
-	healing_someone = TRUE
-	sleep(short_action_delay * action_delay_mult)
-	brute_heal.ai_use(tied_human, src, target)
-	if(QDELETED(brute_heal))
-		return
-
-	var/storage_slot = storage_has_room(brute_heal)
-	if(storage_slot)
-		store_item(brute_heal, storage_slot, HUMAN_AI_HEALTHITEMS)
-	else
-		tied_human.drop_held_item(brute_heal)
-#if defined(TESTING) || defined(HUMAN_AI_TESTING)
-	to_chat(world, "[tied_human.name] healed brute damage of [target.name] using [brute_heal].")
-#endif
-
-/datum/human_ai_brain/proc/bleed_heal(mob/living/carbon/human/target)
-	var/obj/item/bleed_heal
-	for(var/obj/item/heal_item as anything in equipment_map[HUMAN_AI_HEALTHITEMS])
-		if(is_type_in_list(heal_item, bleed_heal_items) && heal_item.ai_can_use(tied_human, src, target))
-			bleed_heal = heal_item
-			break
-
-	if(!bleed_heal)
-		return
-
-	clear_main_hand()
-	if(!equip_item_from_equipment_map(HUMAN_AI_HEALTHITEMS, bleed_heal))
-		healing_someone = FALSE
-		return
-
-	. = TRUE
-	healing_someone = TRUE
-	sleep(short_action_delay * action_delay_mult)
-	bleed_heal.ai_use(tied_human, src, target)
-	if(QDELETED(bleed_heal))
-		return
-
-	var/storage_slot = storage_has_room(bleed_heal)
-	if(storage_slot)
-		store_item(bleed_heal, storage_slot, HUMAN_AI_HEALTHITEMS)
-	else
-		tied_human.drop_held_item(bleed_heal)
-#if defined(TESTING) || defined(HUMAN_AI_TESTING)
-	to_chat(world, "[tied_human.name] fixed bleeding of [target.name] using [bleed_heal].")
-#endif
-
-/datum/human_ai_brain/proc/bone_heal(mob/living/carbon/human/target)
-	var/obj/item/bone_heal
-	for(var/obj/item/heal_item as anything in equipment_map[HUMAN_AI_HEALTHITEMS])
-		if(is_type_in_list(heal_item, bonebreak_heal_items) && heal_item.ai_can_use(tied_human, src, target))
-			bone_heal = heal_item
-			break
-
-	if(!bone_heal)
-		return
-
-	clear_main_hand()
-	if(!equip_item_from_equipment_map(HUMAN_AI_HEALTHITEMS, bone_heal))
-		healing_someone = FALSE
-		return
-
-	. = TRUE
-	healing_someone = TRUE
-	sleep(short_action_delay * action_delay_mult)
-	bone_heal.ai_use(tied_human, src, target)
-	if(QDELETED(bone_heal))
-		return
-
-	var/storage_slot = storage_has_room(bone_heal)
-	if(storage_slot)
-		store_item(bone_heal, storage_slot, HUMAN_AI_HEALTHITEMS)
-	else
-		tied_human.drop_held_item(bone_heal)
-#if defined(TESTING) || defined(HUMAN_AI_TESTING)
-	to_chat(world, "[tied_human.name] splinted a fracture of [target.name] using [bone_heal].")
-#endif
-
-/datum/human_ai_brain/proc/burn_heal(mob/living/carbon/human/target)
-	var/obj/item/burn_heal
-	for(var/obj/item/heal_item as anything in equipment_map[HUMAN_AI_HEALTHITEMS])
-		if(is_type_in_list(heal_item, burn_heal_items) && heal_item.ai_can_use(tied_human, src, target))
-			burn_heal = heal_item
-			break
-
-	if(!burn_heal)
-		return
-
-	clear_main_hand()
-	if(!equip_item_from_equipment_map(HUMAN_AI_HEALTHITEMS, burn_heal))
-		healing_someone = FALSE
-		return
-
-	. = TRUE
-	healing_someone = TRUE
-	sleep(short_action_delay * action_delay_mult)
-	burn_heal.ai_use(tied_human, src, target)
-	if(QDELETED(burn_heal))
-		return
-
-	var/storage_slot = storage_has_room(burn_heal)
-	if(storage_slot)
-		store_item(burn_heal, storage_slot, HUMAN_AI_HEALTHITEMS)
-	else
-		tied_human.drop_held_item(burn_heal)
-#if defined(TESTING) || defined(HUMAN_AI_TESTING)
-	to_chat(world, "[tied_human.name] healed burn damage of [target.name] using [burn_heal].")
-#endif
-
-/datum/human_ai_brain/proc/pain_heal(mob/living/carbon/human/target)
-	var/obj/item/painkiller
-	for(var/obj/item/heal_item as anything in equipment_map[HUMAN_AI_HEALTHITEMS])
-		if(is_type_in_list(heal_item, painkiller_items) && heal_item.ai_can_use(tied_human, src, target))
-			painkiller = heal_item
-			break
-
-	if(!painkiller)
-		return
-
-	clear_main_hand()
-	if(!equip_item_from_equipment_map(HUMAN_AI_HEALTHITEMS, painkiller))
-		healing_someone = FALSE
-		return
-
-	. = TRUE
-	healing_someone = TRUE
-	sleep(short_action_delay * action_delay_mult)
-	painkiller.ai_use(tied_human, src, target)
-	if(QDELETED(painkiller))
-		return
-
-	var/storage_slot = storage_has_room(painkiller)
-	if(storage_slot)
-		store_item(painkiller, storage_slot, HUMAN_AI_HEALTHITEMS)
-	else
-		tied_human.drop_held_item(painkiller)
-#if defined(TESTING) || defined(HUMAN_AI_TESTING)
-	to_chat(world, "[tied_human.name] healed pain of [target.name] using [painkiller].")
-#endif
-
-/datum/human_ai_brain/proc/tox_heal(mob/living/carbon/human/target)
-	var/obj/item/tox_heal
-	for(var/obj/item/heal_item as anything in equipment_map[HUMAN_AI_HEALTHITEMS])
-		if(is_type_in_list(heal_item, tox_heal_items) && heal_item.ai_can_use(tied_human, src, target))
-			tox_heal = heal_item
-			break
-
-	if(!tox_heal)
-		return
-
-	clear_main_hand()
-	if(!equip_item_from_equipment_map(HUMAN_AI_HEALTHITEMS, tox_heal))
-		healing_someone = FALSE
-		return
-
-	. = TRUE
-	healing_someone = TRUE
-	sleep(short_action_delay * action_delay_mult)
-	tox_heal.ai_use(tied_human, src, target)
-	if(QDELETED(tox_heal))
-		return
-
-	var/storage_slot = storage_has_room(tox_heal)
-	if(storage_slot)
-		store_item(tox_heal, storage_slot, HUMAN_AI_HEALTHITEMS)
-	else
-		tied_human.drop_held_item(tox_heal)
-#if defined(TESTING) || defined(HUMAN_AI_TESTING)
-	to_chat(world, "[tied_human.name] healed tox damage of [target.name] using [tox_heal].")
-#endif
-
-/datum/human_ai_brain/proc/oxy_heal(mob/living/carbon/human/target)
-	var/obj/item/oxy_heal
-	for(var/obj/item/heal_item as anything in equipment_map[HUMAN_AI_HEALTHITEMS])
-		if(is_type_in_list(heal_item, oxy_heal_items) && heal_item.ai_can_use(tied_human, src, target))
-			oxy_heal = heal_item
-
-	if(!oxy_heal)
-		healing_someone = FALSE
-		return
-
-	clear_main_hand()
-	if(!equip_item_from_equipment_map(HUMAN_AI_HEALTHITEMS, oxy_heal))
-		healing_someone = FALSE
-		return
-
-	. = TRUE
-	healing_someone = TRUE
-	sleep(short_action_delay * action_delay_mult)
-	oxy_heal.ai_use(tied_human, src, target)
-	if(QDELETED(oxy_heal))
-		healing_someone = FALSE
-		return
-
-	var/storage_slot = storage_has_room(oxy_heal)
-	if(storage_slot)
-		store_item(oxy_heal, storage_slot, HUMAN_AI_HEALTHITEMS)
-	else
-		tied_human.drop_held_item(oxy_heal)
-#if defined(TESTING) || defined(HUMAN_AI_TESTING)
-	to_chat(world, "[tied_human.name] healed oxygen damage of [target.name] using [oxy_heal].")
-#endif
+#undef PILL_ABSORPTION_TIME

@@ -234,12 +234,12 @@
 
 //Transport version without FPWs
 
-/obj/vehicle/multitile/apc_pmc/unarmed
+/obj/vehicle/multitile/apc/pmc/unarmed
 	interior_map = /datum/map_template/interior/apc_no_fpw
 
 //PRESET: no hardpoints
 /obj/effect/vehicle_spawner/apc_pmc/unarmed/spawn_vehicle()
-	var/obj/vehicle/multitile/apc_pmc/unarmed/APC = new (loc)
+	var/obj/vehicle/multitile/apc/pmc/unarmed/APC = new (loc)
 
 	load_misc(APC)
 	load_hardpoints(APC)
@@ -258,7 +258,7 @@
 
 //PRESET: default hardpoints, destroyed
 /obj/effect/vehicle_spawner/apc_pmc/unarmed/decrepit/spawn_vehicle()
-	var/obj/vehicle/multitile/apc_pmc/unarmed/APC = new (loc)
+	var/obj/vehicle/multitile/apc/pmc/unarmed/APC = new (loc)
 
 	load_misc(APC)
 	load_hardpoints(APC)

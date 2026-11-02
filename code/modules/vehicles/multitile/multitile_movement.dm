@@ -157,6 +157,7 @@
 // This just checks if the vehicle can physically move in the given direction
 /obj/vehicle/multitile/proc/can_move(direction)
 	var/can_move = TRUE
+	attempted_move_dir = direction
 
 	var/bound_x_tiles = bound_x / world.icon_size
 	var/bound_y_tiles = bound_y / world.icon_size

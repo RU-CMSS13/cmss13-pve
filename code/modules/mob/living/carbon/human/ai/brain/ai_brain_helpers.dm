@@ -7,6 +7,21 @@
 	if(length(out_brain))
 		return out_brain[1]
 
+/// Moves the human into the faction, with the faction group and ID card that friend-or-foe checks look at
+/mob/living/carbon/human/proc/set_faction(new_faction)
+	faction = new_faction
+	if(new_faction in FACTION_LIST_UA)
+		faction_group = FACTION_LIST_UA
+	else if(new_faction == FACTION_TWE)
+		faction_group = FACTION_LIST_TWE
+	else
+		faction_group = list(new_faction)
+
+	var/obj/item/card/id/faction_tags = wear_id
+	if(istype(faction_tags))
+		faction_tags.faction = new_faction
+		faction_tags.faction_group = faction_group
+
 /// Hacky getter proc used as part of the get_ai_brain() proc
 /datum/human_ai_brain/proc/get_ai_brain(datum/source, list/out_brain)
 	SIGNAL_HANDLER
@@ -96,16 +111,22 @@
 	if(tied_human.get_inactive_hand() == held_item)
 		tied_human.swap_hand()
 
-/// Unholsters the AI's primary weapon, dropping anything that might obstruct it.
+/// Unholsters the AI's primary weapon, putting away or dropping anything that might obstruct it.
 /datum/human_ai_brain/proc/unholster_primary()
-	if(!primary_weapon || tied_human.l_hand == primary_weapon || tied_human.r_hand == primary_weapon)
+	if(!primary_weapon || tied_human.is_holding(primary_weapon))
 		return
 
-	var/cur_hand = tied_human.get_active_hand()
-	if(cur_hand)
-		tied_human.drop_held_item(cur_hand)
+	var/obj/item/held_item = tied_human.get_active_hand()
+	if(held_item)
+		var/storage_id = storage_has_room(held_item)
+		if(!storage_id || !store_item(held_item, storage_id, get_equipment_map_type(held_item)))
+			tied_human.drop_held_item(held_item)
 
-	tied_human.u_equip(primary_weapon)
+	var/obj/item/storage/holster = primary_weapon.loc
+	if(istype(holster))
+		holster.remove_from_storage(primary_weapon, tied_human)
+	else
+		tied_human.u_equip(primary_weapon)
 	tied_human.put_in_active_hand(primary_weapon)
 
 	primary_weapon.guaranteed_delay_time = world.time
@@ -121,12 +142,19 @@
 	wield_primary()
 	sleep(max(primary_weapon?.wield_delay, short_action_delay * action_delay_mult))
 
-/// Holsters the AI's primary weapon if possible
+/// Holsters the AI's primary weapon if possible: in the suit storage, on the back or in a holster. Returns TRUE if it was put away
 /datum/human_ai_brain/proc/holster_primary()
-	if(tied_human.s_store || (tied_human.l_hand != primary_weapon && tied_human.r_hand != primary_weapon))
+	if(!primary_weapon || !tied_human.is_holding(primary_weapon))
 		return FALSE
 
-	return tied_human.equip_to_slot_if_possible(primary_weapon, WEAR_J_STORE, TRUE)
+	if(!tied_human.s_store && tied_human.equip_to_slot_if_possible(primary_weapon, WEAR_J_STORE, TRUE, disable_warning = TRUE))
+		return TRUE
+
+	if(!tied_human.back && tied_human.equip_to_slot_if_possible(primary_weapon, WEAR_BACK, TRUE, disable_warning = TRUE))
+		return TRUE
+
+	var/storage_id = storage_has_room(primary_weapon)
+	return storage_id && store_item(primary_weapon, storage_id)
 
 /// Melee system currently only supports bootknives.
 /datum/human_ai_brain/proc/unholster_melee()
