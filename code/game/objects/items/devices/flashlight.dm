@@ -735,3 +735,16 @@
 	flags_equip_slot = null
 	raillight_compatible = 0
 
+/obj/item/device/flashlight/lamp/tripod/off
+	on = 0
+
+/obj/item/device/flashlight/lamp/tripod/grey/off
+	on = 0
+
+/obj/item/device/flashlight/lantern/alt
+	name = "lantern"
+	icon_state = "tactical_lantern"
+	item_state = "tactical_lantern"
+	desc = "An expensive looking lantern."
+	light_range = 7 // luminosity when on
+	light_color = "#71cfff"

@@ -350,3 +350,15 @@
 	w_class = SIZE_MEDIUM
 	gun_type = /obj/item/weapon/gun/smg/p90/twe
 	max_rounds = 50
+
+/obj/item/ammo_magazine/smg/a_m36
+	name = "\improper A-M36 Charge Pack"
+	desc = "A one-time use, disposable high-capacity energy cell designed for the A-M36 Experimental."
+	default_ammo = /datum/ammo/bullet/smg/a_m36
+	flags_magazine = NO_FLAGS
+	caliber = "9x19mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony/smgs.dmi'
+	icon_state = "a_m36"
+	w_class = SIZE_MEDIUM
+	max_rounds = 40
+	gun_type = /obj/item/weapon/gun/smg/a_m36

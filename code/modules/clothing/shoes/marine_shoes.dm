@@ -355,3 +355,41 @@
 	name = "lizardskin boots"
 	desc = "A pair of lizardskin cowboy boots. Get your disco on, baby."
 	icon_state = "lizardskin"
+
+/obj/item/clothing/shoes/marine/corporate/lasalle_security
+	name = "brown combat boots"
+	icon_state = "lasalle_brown_boots"
+	item_state = "lasalle_brown_boots"
+	desc = "These synth-leather boots seem high quality when first worn, but quickly detoriate, especially in the environments the corporate security members these are issued to operate in. Still, better than nothing."
+
+/obj/item/clothing/shoes/silver_white
+	name = "sterile work shoes"
+	desc = "A pair of silver-white industrial work shoes designed for laboratory and cleanroom use."
+	icon_state = "silver_shoes"
+	item_state = "silver_shoes"
+
+/obj/item/clothing/shoes/marine/fireproof_boots
+	name = "HZP-12 entry-type proximity boots"
+	desc = "Thermal-insulated boots designed for use with the HZP-12 proximity suit system."
+	icon_state = "fireproof_boots"
+	item_state = "fireproof_boots"
+	armor_laser = CLOTHING_ARMOR_LOW
+	armor_energy = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_LOW
+
+/obj/item/clothing/shoes/marine/fireproof_boots/Initialize(mapload)
+	. = ..()
+
+/obj/item/clothing/shoes/veteran/pmc/lb_merc
+	name = "HIG combat boots"
+	desc = "A pair of reinforced black combat boots with distinctive blue accents, standard issued to Lasalle Bionational - Hazard Intervention Group operators."
+	icon_state = "lb_merc"
+	item_state = "lb_merc"
+
+/obj/item/clothing/shoes/veteran/pmc/lb_merc/knife
+	spawn_item_type = /obj/item/attachable/bayonet/lb
+
+/obj/item/clothing/shoes/veteran/pmc/lb_merc/Initialize()
+	. = ..()

@@ -265,3 +265,7 @@
 /obj/item/device/toner
 	name = "toner cartridge"
 	icon_state = "tonercartridge"
+
+/obj/structure/machinery/photocopier/alt
+	icon_state = "altbigscanner"
+	animate_state = "altbigscanner1"

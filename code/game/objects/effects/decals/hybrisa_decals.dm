@@ -238,3 +238,12 @@
 	icon_state = "colorable_rug"
 	layer = TURF_LAYER
 	density = FALSE
+
+/obj/effect/decal/hybrisa/checkpoint_decal/only_security
+	icon = 'icons/effects/64x64hybrisa_decals.dmi'
+	icon_state = "checkpoint_decal_only"
+
+/obj/effect/decal/hybrisa/dirt/above_turf_decal
+	icon = 'icons/effects/hybrisa_decals.dmi'
+	icon_state = "dirt"
+	layer = WALL_LAYER

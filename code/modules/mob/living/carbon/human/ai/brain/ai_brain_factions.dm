@@ -2097,3 +2097,120 @@
 	friendly_factions = list(
 		FACTION_COLONIST,
 	)
+
+/datum/human_ai_faction/lasalle_bionational
+	faction = FACTION_LASALLE_BIONATIONAL
+	friendly_factions = list(
+		FACTION_COLONIST,
+	)
+	neutral_factions = list(
+		FACTION_FREELANCER,
+		FACTION_CONTRACTOR,
+		FACTION_MERCENARY,
+		FACTION_SURVIVOR,
+	)
+	enter_combat_lines = list(
+		"Contact!",
+		"CONTACT!",
+		"Hostile sighted!",
+		"Target acquired!",
+		"Engaging!",
+		"Weapons free!",
+		"WEAPONS FREE!",
+		"Open fire!",
+		"OPEN FIRE!",
+		"Eliminate them!",
+		"No witnesses!",
+		"NO WITNESSES!",
+		"Contain the leak!",
+		"Containment protocol, engage!",
+		"Liquidate the target!",
+		"Asset compromised, neutralize!",
+		"Unauthorized personnel!",
+		"You're not supposed to be here!",
+		"The company sends its regards!",
+		"Nothing personal, just business!",
+		"Clean sweep, go!",
+		"Put them down!",
+		"Drop them!",
+		"Hostile on approach!",
+		"*warcry",
+	)
+	exit_combat_lines = list(
+		"Cease fire!",
+		"Hold fire!",
+		"Area secure.",
+		"Sector clear.",
+		"Clear!",
+		"We're clear.",
+		"Threat neutralized.",
+		"Leak contained.",
+		"Containment holding... for now.",
+		"Stay sharp, there could be more.",
+		"Sound off!",
+		"Log it for the debrief.",
+		"Handler's not going to like this...",
+		"Still no word on extraction...",
+		"Mission's not done yet.",
+		"Another mess for the cleanup crew...",
+		"Hazard pay doesn't cover this...",
+		"Check your seals, this place is crawling.",
+	)
+	squad_member_death_lines = list(
+		"Operator down!",
+		"OPERATOR DOWN!",
+		"We lost one!",
+		"Man down!",
+		"They're gone!",
+		"Shit! They're down!",
+		"Damn it!",
+		"FUCK!",
+		"Medical specialist, now!",
+		"Get the medic up here!",
+		"Mark the body for recovery!",
+		"Recover their tags!",
+		"That's another one off the payroll...",
+		"They'll pay for that!",
+		"Keep it together, keep pushing!",
+	)
+	grenade_thrown_lines = list(
+		"Frag out!",
+		"FRAG OUT!",
+		"Grenade!",
+		"GRENADE!",
+		"Throwing grenade!",
+		"Clear the blast zone!",
+		"Flushing them out!",
+		"Burn it all!",
+	)
+	reload_lines = list(
+		"Reloading!",
+		"RELOADING!",
+		"Changing mags!",
+		"Swapping magazines!",
+		"Cover me, reloading!",
+		"I'm dry!",
+		"Mag empty!",
+		"Cover me!",
+	)
+	reload_internal_mag_lines = list(
+		"Reloading!",
+		"RELOADING!",
+		"Cover me, reloading!",
+		"I'm dry!",
+		"Cover me!",
+	)
+	need_healing_lines = list(
+		"I'm hit!",
+		"I'M HIT!",
+		"Suit breach!",
+		"Armor's compromised!",
+		"Bleeding out here!",
+		"Medic!",
+		"MEDIC!",
+		"Need a medical specialist!",
+		"Injector going in!",
+		"Patch me up!",
+		"Damn it, I'm hurt!",
+		"FUCK!",
+	)

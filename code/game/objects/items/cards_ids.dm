@@ -483,3 +483,8 @@
 	icon_state = "data"
 	item_state = "red-id"
 	unacidable = 1
+
+/obj/item/card/id/silver/cl/lasalle_bionational
+	name = "corporate holo-badge"
+	desc = "A corporate holo-badge. It's a unique Corporate blue and black."
+	icon_state = "lasalle_bionational"
