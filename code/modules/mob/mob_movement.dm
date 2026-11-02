@@ -95,6 +95,12 @@
 	if(isliving(mob))
 		living_mob = mob
 
+	if(ishuman(living_mob))
+		var/mob/living/carbon/human/human = living_mob
+		if(human.is_napping)
+			human.wake_from_nap(rapid_blink = FALSE)
+			human.visible_message(SPAN_NOTICE("[human] stirs and opens their eyes."), SPAN_NOTICE("You jolt awake as you start moving."))
+
 	if(world.time < next_movement)
 		return
 	if(living_mob && living_mob.body_position == LYING_DOWN && mob.crawling)
