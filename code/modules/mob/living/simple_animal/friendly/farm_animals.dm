@@ -10,7 +10,8 @@
 	emote_hear = list("brays")
 	emote_see = list("shakes its head", "stamps a foot", "glares around")
 	speak_chance = 1
-	turns_per_move = 5
+	min_turns_per_move = 4
+	max_turns_per_move = 10
 	see_in_dark = 6
 	meat_type = /obj/item/reagent_container/food/snacks/meat
 	meat_amount = 4
@@ -101,7 +102,8 @@
 	emote_hear = list("brays")
 	emote_see = list("shakes its head")
 	speak_chance = 1
-	turns_per_move = 5
+	min_turns_per_move = 10
+	max_turns_per_move = 18
 	see_in_dark = 6
 	meat_type = /obj/item/reagent_container/food/snacks/meat
 	meat_amount = 6
@@ -178,7 +180,8 @@
 	emote_hear = list("cheeps")
 	emote_see = list("pecks at the ground","flaps its tiny wings")
 	speak_chance = 2
-	turns_per_move = 2
+	min_turns_per_move = 1
+	max_turns_per_move = 4
 	meat_type = /obj/item/reagent_container/food/snacks/meat
 	meat_amount = 1
 	response_help  = "pets the"
@@ -223,7 +226,8 @@ GLOBAL_VAR_INIT(chicken_count, 0)
 	emote_hear = list("clucks")
 	emote_see = list("pecks at the ground","flaps its wings viciously")
 	speak_chance = 2
-	turns_per_move = 3
+	min_turns_per_move = 2
+	max_turns_per_move = 6
 	meat_type = /obj/item/reagent_container/food/snacks/meat
 	meat_amount = 2
 	response_help  = "pets the"

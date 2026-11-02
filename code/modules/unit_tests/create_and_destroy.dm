@@ -17,6 +17,10 @@ GLOBAL_VAR_INIT(running_create_and_destroy, FALSE)
 		// These use walkaway() after initialization, which causes false positives
 		/obj/item/explosive/grenade/flashbang/cluster/segment,
 		/obj/item/explosive/grenade/flashbang/cluster_piece,
+		/mob/living/simple_animal/hostile/retaliate/giant_lizard,
+		/mob/living/simple_animal/hostile/retaliate/giant_lizard/bortrough,
+		/obj/effect/landmark/lizard_spawn,
+		/obj/effect/landmark/lizard_spawn/bortrough,
 		/obj/effect/fake_attacker,
 		/atom/movable/lighting_mask, //leave it alone
 		//This is meant to fail extremely loud every single time it occurs in any environment in any context, and it falsely alarms when this unit test iterates it. Let's not spawn it in.

@@ -340,6 +340,7 @@
 	var/buckle_offset_y = 0
 	var/mob_old_y = 0*/
 //RU-PVE ADDITION ENDS
+	var/allways_undense = FALSE
 
 /obj/structure/bed/chair/vehicle/Initialize()
 	. = ..()
@@ -417,8 +418,31 @@
 		if(buckle_offset_y != 0)
 			M.pixel_y = mob_old_y
 			mob_old_y = 0
+	if(allways_undense)
+		if(buckled_mob)
+			ADD_TRAIT(buckled_mob, TRAIT_UNDENSE, DOUBLE_SEATS_TRAIT)
+	else
+		for(var/obj/structure/bed/chair/vehicle/VS in get_turf(src))
+			if(VS != src)
+				//if both seats on same tile have buckled mob, we become dense, otherwise, not dense.
+				if(buckled_mob)
+					if(VS.buckled_mob)
+						REMOVE_TRAIT(buckled_mob, TRAIT_UNDENSE, DOUBLE_SEATS_TRAIT)
+						REMOVE_TRAIT(VS.buckled_mob, TRAIT_UNDENSE, DOUBLE_SEATS_TRAIT)
+					else
+						ADD_TRAIT(buckled_mob, TRAIT_UNDENSE, DOUBLE_SEATS_TRAIT)
+				else
+					if(VS.buckled_mob)
+						ADD_TRAIT(VS.buckled_mob, TRAIT_UNDENSE, DOUBLE_SEATS_TRAIT)
+					REMOVE_TRAIT(M, TRAIT_UNDENSE, DOUBLE_SEATS_TRAIT)
+				break
 
 	handle_rotation()
+
+/obj/structure/bed/chair/vehicle/unbuckle()
+	if(buckled_mob && buckled_mob.buckled == src)
+		REMOVE_TRAIT(buckled_mob, TRAIT_UNDENSE, DOUBLE_SEATS_TRAIT)
+	. = ..()
 
 //attack handling
 
@@ -574,3 +598,21 @@
 	desc = "Comfortable seat for a gunner."
 	seat = VEHICLE_GUNNER
 	required_skill = SKILL_VEHICLE_DEFAULT
+
+// Comfy Seats
+
+/obj/structure/bed/chair/vehicle/comfy
+	icon = 'icons/obj/vehicles/interiors/seats.dmi'
+	allways_undense = TRUE
+
+/obj/structure/bed/chair/vehicle/comfy/alt
+	icon_state = "alt_vehicle_seat"
+
+/obj/structure/bed/chair/vehicle/comfy/alt_1
+	icon_state = "alt1_vehicle_seat"
+
+/obj/structure/bed/chair/vehicle/comfy/alt_2
+	icon_state = "alt2_vehicle_seat"
+
+/obj/structure/bed/chair/vehicle/comfy/alt_3
+	icon_state = "alt3_vehicle_seat"

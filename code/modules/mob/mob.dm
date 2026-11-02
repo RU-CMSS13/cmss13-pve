@@ -489,7 +489,7 @@
 /mob/proc/start_pulling(atom/movable/AM, lunge, no_msg)
 	return
 
-/mob/living/start_pulling(atom/movable/clone/AM, lunge, no_msg)
+/mob/living/start_pulling(atom/movable/clone/AM, lunge, no_msg, simple_mob = FALSE)
 	if(istype(AM, /atom/movable/clone))
 		AM = AM.mstr //If AM is a clone, refer to the real target
 

@@ -432,6 +432,20 @@
 	restricted_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_ARMOR_C, ACCESSORY_SLOT_PLATE3)
 	specialty = "\improper 6B99-2 pattern"
 
+/obj/item/clothing/suit/armor/vest/UPP
+	icon_state = "upp_generic_ballistic_armor"
+	icon = 'icons/obj/items/clothing/suits/suits_by_faction/UPP.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/UPP.dmi'
+	)
+
+/obj/item/clothing/suit/armor/vest/UPP/alt
+	icon_state = "upp_ballistic_armor"
+	icon = 'icons/obj/items/clothing/suits/suits_by_faction/UPP.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/UPP.dmi'
+	)
+
 /obj/item/clothing/suit/marine/faction/upp/heavy/nostrip
 	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN|CANTSTRIP
 	desc = "An extreme sidegrade of 6B92 armor, with the intent to increase soldier's survivability as much, as possible. An ablative layers of composite armor weighting more than 100 pounds, supported by the servo-assisters in each limb, and powered by the baterries for 24 hours of estimated work. Due to the lack of powerful heat dispersion system, the suit becomes an oven to it's owner, and each step takes more and more strenght even with servo-assisters. Yet still, it is the best answer to the question of life and death. Looks like this suit is tighly bolts in with the body. You'll most likely be able to take it off yourself, but don't have hope to strip it from the deadman."

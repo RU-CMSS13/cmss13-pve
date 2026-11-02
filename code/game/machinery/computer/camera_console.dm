@@ -431,3 +431,8 @@
 	network = list(CAMERA_NET_KOROBKA, CAMERA_NET_LASER_TARGETS)
 
 #undef DEFAULT_MAP_SIZE
+
+/obj/structure/machinery/computer/cameras/colony_camera
+	name = "security cameras console"
+	desc = "Used to access the various cameras of the colony."
+	icon_state = "dark_com"

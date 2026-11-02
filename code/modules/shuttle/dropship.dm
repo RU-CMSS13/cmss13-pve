@@ -718,3 +718,47 @@
 
 /obj/structure/shuttle/part/dropship_clf/transparent/right_engine
 	icon_state = "rightengine_1"
+
+// ERT Ship
+
+/obj/structure/shuttle/part/ert
+	name = "wall"
+	icon = 'icons/turf/ert_shuttle.dmi'
+	icon_state = "stan4"
+	opacity = TRUE
+
+/obj/structure/shuttle/part/ert/ex_act(severity, direction)
+	return FALSE
+
+/obj/structure/shuttle/part/ert/transparent
+	opacity = FALSE
+
+/obj/structure/shuttle/part/ert/front_left_stan
+	icon_state = "stan20"
+
+/obj/structure/shuttle/part/ert/front_right_stan
+	icon_state = "stan25"
+
+/obj/structure/shuttle/part/ert/front_left_upp
+	icon_state = "upp20"
+
+/obj/structure/shuttle/part/ert/front_right_upp
+	icon_state = "upp25"
+
+/obj/structure/shuttle/part/ert/front_left_wy
+	icon_state = "wy20"
+
+/obj/structure/shuttle/part/ert/front_right_wy
+	icon_state = "wy25"
+
+/obj/structure/shuttle/part/ert/front_left_twe
+	icon_state = "twe20"
+
+/obj/structure/shuttle/part/ert/front_right_twe
+	icon_state = "twe25"
+
+/obj/structure/shuttle/part/ert/transparent/left_engine
+	icon_state = "leftengine_1"
+
+/obj/structure/shuttle/part/ert/transparent/right_engine
+	icon_state = "rightengine_1"

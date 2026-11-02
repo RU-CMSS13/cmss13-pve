@@ -1,0 +1,9 @@
+[
+	{
+		"type": "pick", "name": "Sekhmet Swamp Event",
+		"choices": [
+			{ "weight": 9, "type": "def", "values": { "lvevent": "none" } },
+			{ "weight": 1, "type": "def", "values": { "lvevent": "clfswamp" } }
+		]
+	}
+]

@@ -731,6 +731,21 @@
 /obj/structure/platform/stone/soro/west
 	dir = WEST
 
+// Colorable Soro Rock (immune, used for z level transitions)
+
+/obj/structure/platform/stone/soro_colorable_immune
+	name = "rock edge"
+	desc = "A solid chunk of desolate rocks. Looks like you could climb it."
+	icon_state = "colorable_strata_rock_platform"
+	explo_proof = TRUE
+
+/obj/structure/platform/stone/soro_colorable_immune/north
+	dir = NORTH
+/obj/structure/platform/stone/soro_colorable_immune/east
+	dir = EAST
+/obj/structure/platform/stone/soro_colorable_immune/west
+	dir = WEST
+
 /obj/structure/platform/stone/mineral
 	icon_state = "stone"
 
@@ -956,6 +971,18 @@
 /obj/structure/platform_decoration/stone/soro/east
 	dir = EAST
 /obj/structure/platform_decoration/stone/soro/west
+	dir = WEST
+
+/obj/structure/platform_decoration/stone/soro_colorable
+	name = "rock corner"
+	desc = "Solid chunks of desolate rocks."
+	icon_state = "colorable_strata_rock_platform_deco"
+
+/obj/structure/platform_decoration/stone/soro_colorable/north
+	dir = NORTH
+/obj/structure/platform_decoration/stone/soro_colorable/east
+	dir = EAST
+/obj/structure/platform_decoration/stone/soro_colorable/west
 	dir = WEST
 
 //TYRARGO
