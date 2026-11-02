@@ -4,7 +4,7 @@
 	desc = "A civilian grade, face-covering mask that can be connected to an air supply. Filters harmful gases from the air."
 	icon_state = "gas_alt"
 	flags_inventory = COVERMOUTH | COVEREYES | ALLOWINTERNALS | BLOCKGASEFFECT | ALLOWREBREATH | ALLOWCPR
-	flags_inv_hide = HIDEEARS|HIDEFACE|HIDELOWHAIR
+	flags_inv_hide = HIDEEARS|HIDEFACE|HIDELOWHAIR|HIDEMOUTH
 	flags_cold_protection = BODY_FLAG_HEAD
 	flags_equip_slot = SLOT_FACE|SLOT_WAIST
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
@@ -37,7 +37,7 @@
 	icon_state = "m5"
 	item_state = "m5"
 	flags_obj = OBJ_NO_HELMET_BAND|OBJ_IS_HELMET_GARB
-	flags_inv_hide = HIDEEARS|HIDEFACE|HIDEALLHAIR
+	flags_inv_hide = HIDEEARS|HIDEFACE|HIDEALLHAIR|HIDEMOUTH
 
 /obj/item/clothing/mask/gas/military/on_enter_storage(obj/item/storage/internal/helmet_internal_inventory)
 	..()
@@ -82,7 +82,7 @@
 	icon_state = "cbrn_hood"
 	item_state = "cbrn_hood"
 	flags_inventory = SPOREPROOF
-	flags_inv_hide = HIDEEARS|HIDEFACE|HIDEALLHAIR
+	flags_inv_hide = HIDEEARS|HIDEFACE|HIDEALLHAIR|HIDEMOUTH
 	item_icons = list(
 		WEAR_FACE = 'icons/mob/humans/onmob/head_1.dmi'
 	)
@@ -119,18 +119,18 @@
 	armor_rad = CLOTHING_ARMOR_LOW
 	armor_internaldamage = CLOTHING_ARMOR_NONE
 	flags_inventory = COVERMOUTH|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR
-	flags_inv_hide = HIDEFACE
+	flags_inv_hide = HIDEFACE|HIDEMOUTH
 	flags_equip_slot = SLOT_FACE
 
 /obj/item/clothing/mask/gas/pmc/balaclava
 	name = "\improper M7 pattern armored balaclava"
 	desc = "An armored balaclava designed to conceal both the identity of the operator and act as an air-filter."
 	icon_state = "pmc_balaclava"
-	flags_inv_hide = HIDEFACE|HIDEALLHAIR
+	flags_inv_hide = HIDEFACE|HIDEALLHAIR|HIDEMOUTH
 
 /obj/item/clothing/mask/gas/pmc/balaclava/twohole
 	icon_state = "pmc_balaclava_twohole"
-	flags_inv_hide = HIDEFACE|HIDEALLHAIR
+	flags_inv_hide = HIDEFACE|HIDEALLHAIR|HIDEMOUTH
 
 /obj/item/clothing/mask/gas/pmc/marsoc
 	name = "\improper SOF armored balaclava"
@@ -146,7 +146,7 @@
 	name = "\improper M8 pattern armored balaclava"
 	desc = "An armored balaclava designed to conceal both the identity of the operator and act as an air-filter. This particular suit looks like it belongs to a high-ranking officer."
 	icon_state = "officer_mask"
-	flags_inv_hide = HIDEFACE|HIDEALLHAIR
+	flags_inv_hide = HIDEFACE|HIDEALLHAIR|HIDEMOUTH
 
 /obj/item/clothing/mask/gas/bear
 	name = "tactical balaclava"
@@ -188,7 +188,7 @@
 	icon_state = "swat_merc"
 	desc = "A close-fitting mask from Chemical Solutions and Protections Ltd. Can be connected to an air supply. It is a popular choice among mercenaries and private security contractors."
 	flags_obj = OBJ_NO_HELMET_BAND|OBJ_IS_HELMET_GARB
-	flags_inv_hide = HIDEEARS|HIDEFACE|HIDEALLHAIR
+	flags_inv_hide = HIDEEARS|HIDEFACE|HIDEALLHAIR|HIDEMOUTH
 
 /obj/item/clothing/mask/gas/syndicate
 	name = "syndicate mask"
@@ -258,7 +258,7 @@
 	icon_state = "pfb"
 	item_state = "pfb"
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
-	flags_inv_hide = HIDEEARS|HIDEFACE|HIDEALLHAIR
+	flags_inv_hide = HIDEEARS|HIDEFACE|HIDEALLHAIR|HIDEMOUTH
 
 //= CLF =\\
 
@@ -269,7 +269,7 @@
 	item_state = "balaclava"
 	vision_impair = VISION_IMPAIR_NONE
 	eye_protection = EYE_PROTECTION_FLAVOR
-	flags_inv_hide = HIDEEARS|HIDEFACE
+	flags_inv_hide = HIDEEARS|HIDEFACE|HIDEMOUTH
 
 //= Security =\\
 

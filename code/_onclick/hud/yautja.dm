@@ -15,3 +15,6 @@
 		hud_used = new /datum/hud/human/yautja(src, ui_datum, ui_color, ui_alpha)
 	else
 		hud_used = new /datum/hud/human/yautja(src)
+
+/mob/living/carbon/human/yautja
+	mouth_style = "pred"

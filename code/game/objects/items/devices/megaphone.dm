@@ -49,4 +49,8 @@
 		//playsound(loc, 'sound/items/megaphone.ogg', 100, FALSE, TRUE)
 		user.langchat_long_speech(message, langchat_long_listeners, user.get_default_language())
 
+		if(ishuman(user))
+			var/mob/living/carbon/human/speaking_human = user
+			speaking_human.move_mouth_message(message)
+
 		COOLDOWN_START(src, spam_cooldown, spam_cooldown_time)

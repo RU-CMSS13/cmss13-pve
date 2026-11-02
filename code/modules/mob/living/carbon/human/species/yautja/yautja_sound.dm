@@ -21,23 +21,26 @@
 	key = "laugh1"
 	sound = 'sound/voice/pred_laugh1.ogg'
 	volume = 25
+	move_mouth = -3
 
 /datum/emote/living/carbon/human/yautja/species_sound/laugh2
 	key = "laugh2"
 	sound = 'sound/voice/pred_laugh2.ogg'
 	volume = 25
+	move_mouth = -4
 
 /datum/emote/living/carbon/human/yautja/species_sound/laugh3
 	key = "laugh3"
 	sound = 'sound/voice/pred_laugh3.ogg'
 	volume = 25
-
+	move_mouth = -4
 
 // Roar Emotes
 /datum/emote/living/carbon/human/yautja/species_sound/roar
 	key = "roar"
 	message = "roars!"
 	emote_type = EMOTE_AUDIBLE|EMOTE_VISIBLE
+	move_mouth = 3.01
 
 /datum/emote/living/carbon/human/yautja/species_sound/roar/get_sound(mob/living/user)
 	return pick('sound/voice/pred_roar1.ogg', 'sound/voice/pred_roar2.ogg')
@@ -47,6 +50,7 @@
 	sound = 'sound/voice/pred_roar3.ogg'
 	message = "roars!"
 	emote_type = EMOTE_AUDIBLE|EMOTE_VISIBLE
+	move_mouth = 3.01
 
 /datum/emote/living/carbon/human/yautja/species_sound/loudroar
 	key = "loudroar"
@@ -55,6 +59,7 @@
 	cooldown = 120 SECONDS
 	emote_type = EMOTE_AUDIBLE|EMOTE_VISIBLE
 	no_panel = TRUE
+	move_mouth = 4.01
 
 /datum/emote/living/carbon/human/yautja/species_sound/loudroar/get_sound(mob/living/user)
 	return pick('sound/voice/pred_roar4.ogg', 'sound/voice/pred_roar5.ogg')

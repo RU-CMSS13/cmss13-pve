@@ -21,6 +21,33 @@
 	if(SSticker?.mode?.hardcore)
 		hardcore = TRUE //For WO disposing of corpses
 
+	// THIS IS FOR TESTMERGE ONLY ***************************** REMOVE AFTERWARDS
+	if(ishuman_strict(src) && length(GLOB.mouth_styles_list))
+	// THIS IS FOR TESTMERGE ONLY ***************************** REMOVE AFTERWARDS
+		if(prob(50)) //toothy
+	// THIS IS FOR TESTMERGE ONLY ***************************** REMOVE AFTERWARDS
+			mouth_style = "toothy"
+	// THIS IS FOR TESTMERGE ONLY ***************************** REMOVE AFTERWARDS
+		else
+	// THIS IS FOR TESTMERGE ONLY ***************************** REMOVE AFTERWARDS
+			if(prob(50))
+	// THIS IS FOR TESTMERGE ONLY ***************************** REMOVE AFTERWARDS
+				mouth_style = "toothless"
+	// THIS IS FOR TESTMERGE ONLY ***************************** REMOVE AFTERWARDS
+			else
+	// THIS IS FOR TESTMERGE ONLY ***************************** REMOVE AFTERWARDS
+				if(prob(66))
+	// THIS IS FOR TESTMERGE ONLY ***************************** REMOVE AFTERWARDS
+					mouth_style = "diastema"
+	// THIS IS FOR TESTMERGE ONLY ***************************** REMOVE AFTERWARDS
+				else
+	// THIS IS FOR TESTMERGE ONLY ***************************** REMOVE AFTERWARDS
+					mouth_style = prob(50) ? "missing" : "rat"
+	// THIS IS FOR TESTMERGE ONLY ***************************** REMOVE AFTERWARDS
+	if(prob(33))
+	// THIS IS FOR TESTMERGE ONLY ***************************** REMOVE AFTERWARDS
+		mouth_style = "small_" + mouth_style
+
 /mob/living/carbon/human/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()
 	if (PF)
