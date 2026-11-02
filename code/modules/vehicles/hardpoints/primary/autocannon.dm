@@ -34,6 +34,9 @@
 		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 20, GLOB.damage_boost_vehicles),
 	))
 
+/obj/item/hardpoint/primary/autocannon/solo
+	allowed_seat = VEHICLE_DRIVER
+
 /obj/item/hardpoint/primary/autocannon/twe_tank
 	name = "\improper L26A2 45mm Autocannon"
 	desc = "Tosubishi Heavy Industrial Manufacturing main gun for the FV150. Its rapid fire rate and multipurpose ammunition offers stopping power against infantry, structures, and medium armor. Careful use can even disable tanks."

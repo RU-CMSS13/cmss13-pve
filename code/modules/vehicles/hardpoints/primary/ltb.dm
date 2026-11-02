@@ -37,6 +37,9 @@
 		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 300, GLOB.damage_boost_vehicles),
 	))
 
+/obj/item/hardpoint/primary/cannon/solo
+	allowed_seat = VEHICLE_DRIVER
+
 /obj/item/hardpoint/primary/cannon/wolfpack
 	px_offsets = list(
 		"1" = list(0, 0),
