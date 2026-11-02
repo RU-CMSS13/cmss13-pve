@@ -179,11 +179,10 @@ Defined in conflicts.dm of the #defines folder.
 	detaching_gub.attachments[slot] = null
 	detaching_gub.recalculate_attachment_bonuses()
 
-	for(var/X in detaching_gub.actions)
-		var/datum/action/DA = X
-		if(DA.target == src)
-			qdel(X)
-			break
+	// Some attachments have more than one action, like variable zoom scopes
+	for(var/datum/action/attachment_action as anything in detaching_gub.actions?.Copy())
+		if(attachment_action.target == src)
+			qdel(attachment_action)
 
 	if(drop_attachment)
 		forceMove(get_turf(detaching_gub))
@@ -1158,12 +1157,10 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/scope/variable_zoom/Attach(obj/item/weapon/gun/G)
 	. = ..()
-	var/mob/living/living
-	var/given_zoom_action = FALSE
-	if(living && (G == living.l_hand || G == living.r_hand))
+	var/mob/living/living = G.loc
+	if(istype(living) && (G == living.l_hand || G == living.r_hand))
 		give_action(living, /datum/action/item_action/toggle_zoom_level, src, G)
-		given_zoom_action = TRUE
-	if(!given_zoom_action)
+	else
 		new /datum/action/item_action/toggle_zoom_level(src, G)
 
 /obj/item/attachable/scope/variable_zoom/apply_scoped_buff(obj/item/weapon/gun/G, mob/living/carbon/user)
@@ -1203,9 +1200,19 @@ Defined in conflicts.dm of the #defines folder.
 
 /datum/action/item_action/toggle_zoom_level/action_activate()
 	. = ..()
-	var/obj/item/weapon/gun/G = holder_item
-	var/obj/item/attachable/scope/variable_zoom/S = G.attachments["rail"]
-	S.toggle_zoom_level()
+	var/obj/item/attachable/scope/variable_zoom/scope = target
+	if(!istype(scope))
+		return
+	scope.toggle_zoom_level()
+	update_button_icon()
+
+/datum/action/item_action/toggle_zoom_level/update_button_icon()
+	var/obj/item/attachable/scope/variable_zoom/scope = target
+	if(!istype(scope))
+		return ..()
+	action_icon_state = (scope.zoom_level == ZOOM_LEVEL_2X) ? "zoom_in" : "zoom_out"
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
 
 //other variable zoom scopes
 

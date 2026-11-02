@@ -51,10 +51,10 @@
 				place_to_throw = target_turf
 				break
 
-		if(!place_to_throw)
+		if(!place_to_throw && (length(turf_pathfind_list) >= 4))
 			place_to_throw = turf_pathfind_list[4]
 
-	else // We haven't found an enemy in range that we can throw to, so we'll just throw in a direction that doesn't have friendlies
+	if(!place_to_throw) // We haven't found an enemy in range that we can throw to, so we'll just throw in a direction that doesn't have friendlies
 		var/list/directions = list(
 			locate(tied_human.x, tied_human.y + 4, tied_human.z),
 			locate(tied_human.x + 4, tied_human.y, tied_human.z),
@@ -69,7 +69,7 @@
 						if(possible_blocker.density)
 							continue dir_loop
 
-						for(var/obj/possible_object_blocker in path)
+						for(var/obj/possible_object_blocker in possible_blocker)
 							if(possible_object_blocker.density)
 								continue dir_loop
 

@@ -5,13 +5,13 @@
 	melee_damage_lower = XENO_DAMAGE_TIER_9
 	melee_damage_upper = XENO_DAMAGE_TIER_9
 	melee_vehicle_damage = XENO_DAMAGE_TIER_7 //Queen and Ravs have extra multiplier when dealing damage in multitile_interaction.dm
-	max_health = XENO_HEALTH_TIER_9
+	max_health = XENO_HEALTH_TIER_12
 	plasma_gain = XENO_PLASMA_GAIN_TIER_9
 	plasma_max = XENO_PLASMA_TIER_3
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_8
-	armor_deflection = XENO_ARMOR_TIER_2
+	armor_deflection = XENO_ARMOR_TIER_3
 	evasion = XENO_EVASION_NONE
-	speed = XENO_SPEED_TIER_3
+	speed = XENO_SPEED_TIER_4
 	heal_standing = 0.66
 
 	tackle_min = 2
@@ -58,7 +58,7 @@
 		/datum/action/xeno_action/activable/tail_stab/ai,
 		/datum/action/xeno_action/activable/pounce/charge/ai,
 		/datum/action/xeno_action/onclick/empower/ai,
-		/datum/action/xeno_action/activable/scissor_cut,
+		/datum/action/xeno_action/activable/scissor_cut/ai,
 		/datum/action/xeno_action/onclick/tacmap,
 	)
 
@@ -72,6 +72,7 @@
 
 	ai_range = 24
 	forced_retarget_time = (3 SECONDS)
+	ai_ability_delay = 3 SECONDS
 
 // Mutator delegate for base ravager
 /datum/behavior_delegate/ravager_base
@@ -138,7 +139,7 @@
 	xeno_cooldown = 12 SECONDS
 
 /datum/action/xeno_action/activable/tail_stab/ai/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
-	return DT_PROB(ai_prob_chance, delta_time) && use_ability_async(parent.current_target)
+	return DT_PROB(ai_prob_chance, delta_time) && (get_dist(parent, parent.current_target) <= stab_range) && use_ability_async(parent.current_target)
 
 /datum/action/xeno_action/activable/pounce/charge/ai
 	default_ai_action = TRUE
@@ -146,9 +147,11 @@
 	xeno_cooldown = 16 SECONDS
 
 /datum/action/xeno_action/activable/pounce/charge/ai/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
-	if(DT_PROB(ai_prob_chance, delta_time) && (get_dist(parent, parent.current_target) <= 5))
-		var/turf/T = get_step_to(parent, parent.current_target)
-		return T?.AdjacentQuick(parent.current_target.loc) && use_ability_async(parent.current_target)
+	// It closes the distance, there is no point in it right next to the target.
+	if(get_dist(parent, parent.current_target) < 3)
+		return FALSE
+
+	return ..()
 
 /datum/action/xeno_action/onclick/empower/ai
 	default_ai_action = TRUE
@@ -156,4 +159,37 @@
 	xeno_cooldown = 20 SECONDS
 
 /datum/action/xeno_action/onclick/empower/ai/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
-	return DT_PROB(ai_prob_chance, delta_time) && (get_dist(parent, parent.current_target) <= 3) && use_ability_async(parent.current_target)
+	var/datum/behavior_delegate/ravager_base/behavior = parent.behavior_delegate
+	if(!istype(behavior))
+		return
+
+	var/targets_in_range = parent.count_ai_targets_in_range(empower_range)
+
+	// The second use counts the hostiles around us. Without enough of them for the super empower, we let it time out instead.
+	if(activated_once)
+		if(targets_in_range >= behavior.super_empower_threshold)
+			use_ability_async()
+		return
+
+	if(DT_PROB(ai_prob_chance, delta_time) && targets_in_range && get_dist(parent, parent.current_target) <= 3)
+		use_ability_async()
+
+/datum/action/xeno_action/activable/scissor_cut/ai
+	default_ai_action = TRUE
+	ai_prob_chance = 50
+
+/datum/action/xeno_action/activable/scissor_cut/ai/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
+	if(!DT_PROB(ai_prob_chance, delta_time))
+		return
+
+	// The cut only goes in a straight line, the same way use_ability() builds it.
+	var/turf/target_turf = get_turf(parent.current_target)
+	var/facing = Get_Compass_Dir(parent, target_turf)
+	var/turf/checked_turf = get_turf(parent)
+	for(var/i in 1 to 4)
+		checked_turf = get_step(checked_turf, facing)
+		if(!checked_turf || checked_turf.density)
+			return
+		if(checked_turf == target_turf)
+			use_ability_async(parent.current_target)
+			return

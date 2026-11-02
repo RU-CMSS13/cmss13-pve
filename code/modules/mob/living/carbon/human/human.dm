@@ -115,9 +115,6 @@
 			. += "Primary Objective: [html_decode(assigned_squad.primary_objective)]"
 		if(assigned_squad.secondary_objective)
 			. += "Secondary Objective: [html_decode(assigned_squad.secondary_objective)]"
-	if((job in GLOB.ROLES_USCM) || (job in GLOB.ROLES_RMCTROOP))
-		. += ""
-		. += "<a href='byond://?MapView=1'>View Tactical Map</a>"
 	if(mobility_aura)
 		. += "Active Order: MOVE"
 	if(protection_aura)
@@ -1463,6 +1460,8 @@
 	if(wear_mask && wear_mask.vision_impair)
 		tint_level += wear_mask.vision_impair
 
+	if(in_spore_cloud())
+		tint_level += VISION_IMPAIR_STRONG
 	if(tint_level > VISION_IMPAIR_STRONG)
 		tint_level = VISION_IMPAIR_STRONG
 

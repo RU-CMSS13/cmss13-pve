@@ -28,6 +28,10 @@
 	if(!(cover_without_gun || primary_weapon))
 		return
 
+	// Machinegunners and snipers hold their post instead of hiding from it
+	if(machinegunner_home || sniper_home)
+		return
+
 	COOLDOWN_START(src, cover_search_cooldown, 10 SECONDS)
 
 	var/list/turf_dict = list()

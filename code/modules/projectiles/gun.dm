@@ -2174,9 +2174,7 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 	return target
 
 /obj/item/weapon/gun/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
-	if(istype(current_mag, /obj/item/ammo_magazine/internal) && (current_mag.current_rounds <= 0) && !ai_brain.weapon_ammo_search(ai_brain.primary_weapon))
-		return FALSE
-	else if((!current_mag || (current_mag.current_rounds <= 0)) && !ai_brain.weapon_ammo_search(ai_brain.primary_weapon))
+	if(!in_chamber && (current_mag?.current_rounds <= 0) && !ai_brain.weapon_ammo_search(src))
 		return FALSE
 
 	if((flags_gun_features & GUN_WY_RESTRICTED) && !wy_allowed_check(user))

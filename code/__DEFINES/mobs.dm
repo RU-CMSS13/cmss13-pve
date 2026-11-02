@@ -111,6 +111,7 @@
 #define LEAPING (1<<4)
 #define PASSEMOTES (1<<5) //holders inside of mob that need to see emotes.
 #define CANROOT (1<<6)
+#define INCORPOREAL (1<<7)
 #define GODMODE (1<<12)
 #define FAKEDEATH (1<<13) //Replaces stuff like changeling.changeling_fakedeath
 #define RECENTSPAWN (1<<14) // Temporarily invincible via GODMODE
@@ -142,6 +143,7 @@
 #define XENO_HIVE_ZETA "xeno_hive_zeta"
 
 #define XENO_HIVE_PATHOGEN "xeno_hive_pathogen"
+#define FACTION_PATHOGEN "Pathogen Confluence"
 
 #define XENO_HIVE_TUTORIAL "xeno_hive_tutorial"
 
@@ -362,6 +364,8 @@ GLOBAL_LIST_INIT(default_xeno_onmob_icons, list(
 #define SPECIES_SYNTHETIC "Synthetic"
 #define SPECIES_MONKEY "Monkey"
 #define SPECIES_ZOMBIE "Zombie"
+#define SPECIES_PATHO_WALKER "Pathogen Walker"
+#define SPECIES_YAUTJA_MUTANT "Yautja Mutant"
 
 #define ALL_LIMBS list("head","chest","groin","l_leg","l_foot","r_leg","r_foot","l_arm","l_hand","r_arm","r_hand")
 #define MOVEMENT_LIMBS list("l_leg", "l_foot", "r_leg", "r_foot")

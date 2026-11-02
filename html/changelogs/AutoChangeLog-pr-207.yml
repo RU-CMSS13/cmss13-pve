@@ -1,0 +1,18 @@
+author: "chaos-creations"
+delete-after: True
+changes:
+  - rscadd: "Pathogen hive updated to the current PvP state: Neophyte, Conditor, Harbinger, Archon, Matriarch, Aberration and aberrant Bloodburster castes"
+  - rscadd: "New pathogen structures: blight core, cluster, sporecaster, fog pillar, recovery and plasma nodes, mycelium walls, membranes, doors and nests"
+  - rscadd: "Pathogen Walker and Yautja Mutant species, mycotoxin and concentrated blight fluid, CBRN pathogen response ERT"
+  - rscadd: "AI behaviour for every pathogen caste, two unique sets for Venator and Neophyte"
+  - rscadd: "Plasma tree structure and minimap markers for recovery nodes and plasma trees"
+  - rscadd: "Random pathogen spore sac landmarks for mappers"
+  - balance: "Archon, Aberration and Matriarch have boss-level health and armor"
+  - balance: "AI pathogen creatures wait a few seconds between abilities"
+  - balance: "Zombie claws now daze and slow"
+  - bugfix: "Create Pathogen Creatures panel no longer opens empty after Create Xenos was used"
+  - bugfix: "Dead bodies process all their reagents instead of only the first one"
+  - soundadd: "New pathogen voice, death and ability sounds"
+  - imageadd: "Sprites for the new pathogen castes, structures, action buttons and wound overlays"
+  - imageadd: "Resprited black goo zombies, also used by pathogen walkers"
+  - imageadd: "Xeno and pathogen build icons moved to their own icon file"

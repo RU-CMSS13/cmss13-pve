@@ -79,20 +79,13 @@ GLOBAL_LIST_INIT(admin_verbs_default, list(
 	/client/proc/other_records,
 	/datum/admins/proc/toggle_ai,
 	/datum/admins/proc/toggle_human_ai,
-	/datum/admins/proc/create_human_ai_patrol,
 	/client/proc/open_human_ai_management_panel,
 	/client/proc/open_human_faction_management_panel,
 	/client/proc/open_human_defense_creator_panel,
 	/client/proc/create_human_ai,
-	/client/proc/fortify_room,
 	/client/proc/make_human_ai,
-	/datum/admins/proc/create_human_ai_sniper,
-	/datum/admins/proc/create_human_ai_machinegunner,
-	/client/proc/quick_order_ai_approach,
-	/client/proc/quick_order_ai_hold_position,
 	/client/proc/place_plastic_explosives,
 	/client/proc/toggle_human_ai_tweaks,
-	/client/proc/open_human_squad_spawner_panel,
 	/client/proc/open_human_ai_spawner_panel,
 	/client/proc/toggle_barricade_creation, // Stops cades from being built
 	))
@@ -138,6 +131,7 @@ GLOBAL_LIST_INIT(admin_verbs_minor_event, list(
 	/client/proc/enable_event_mob_verbs,
 	/client/proc/force_hijack,
 	/datum/admins/proc/force_predator_round, //Force spawns a predator round.
+	/datum/admins/proc/force_pathogen_round, //Forces the round to be pathogen
 	/client/proc/adjust_predator_round,
 	/client/proc/cmd_admin_world_narrate, /*sends text to all players with no padding*/
 	/client/proc/cmd_admin_ground_narrate,
@@ -367,6 +361,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		add_verb(src, /client/proc/togglebuildmodeself)
 		add_verb(src, /client/proc/toggle_game_master)
 		add_verb(src, /client/proc/open_resin_panel)
+		add_verb(src, /client/proc/open_xeno_ai_spawner_panel) // RU-PVE ADDITION
 		add_verb(src, /client/proc/roll_dices) // RU-PVE ADDITION
 		add_verb(src, /client/proc/open_sound_panel)
 		add_verb(src, /client/proc/toggle_join_xeno)
@@ -415,6 +410,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		/client/proc/togglebuildmodeself,
 		/client/proc/toggle_game_master,
 		/client/proc/open_resin_panel,
+		/client/proc/open_xeno_ai_spawner_panel, // RU-PVE ADDITION
 		/client/proc/roll_dices, // RU-PVE ADDITION
 		/client/proc/open_sound_panel,
 		/client/proc/toggle_join_xeno,

@@ -1,0 +1,12 @@
+author: "Kugamo, Taushai"
+delete-after: True
+changes:
+  - imageadd: "New inhand sprites for the map item when looking at it"
+  - imagetweak: "Resprited map items and their inhand sprites"
+  - rscadd: "Map items can now be folded up into much smaller items, and unfolded"
+  - rscadd: "Added the tactical map: a paper map of the area of operations that shows the terrain and the announced plan, without any unit markers. It takes a few seconds to unfold."
+  - rscadd: "A compass used with an open tactical map in the other hand marks roughly where you are on it"
+  - rscadd: "Tactical maps and compasses are available in the squad prep vendors"
+  - rscdel: "Removed the \"View Tactical Map\" link from the status tab"
+  - rscadd: "Tactical maps have a \"My Notes\" tab where you can draw and place markers with a pen in your other hand"
+  - soundadd: "Added paper sounds for folding and unfolding the tactical map"

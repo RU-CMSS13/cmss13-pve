@@ -99,6 +99,7 @@
 #define PLASMA_ROYAL "royalplasma"
 
 #define BLOOD_BLIGHT "blightfluid"
+#define BLOOD_BLIGHT_ADV "strongblightfluid"
 
 // Flags for Reagent
 
@@ -135,6 +136,8 @@
 #define PROPERTY_CARDIOTOXIC "cardiotoxic"
 #define PROPERTY_NEUROTOXIC "neurotoxic"
 #define PROPERTY_HYPERMETABOLIC "hypermetabolic"
+#define PROPERTY_MYCOTOXIC "mycotoxic"
+#define PROPERTY_MYCOTAINTED "mycotainted"
 //Neutral
 #define PROPERTY_NUTRITIOUS "nutritious"
 #define PROPERTY_KETOGENIC "ketogenic"
