@@ -138,7 +138,8 @@
 			if(do_after(user, 50, INTERRUPT_ALL, BUSY_ICON_GENERIC))
 				A.uv_scanned = TRUE
 				show_blurb(user, 20, "[A.uv_onfind]", null, "CENTER,CENTER+1", "center", COLOR_GRAY, null, null, 1)
-				user.hide_hint(A)
+				for(var/mob/living/carbon/human/H in GLOB.player_list)
+					H.remove_from_order(A)
 				create_path(A)
 		else
 			balloon_alert(user, "You need more power to perform examine that close!", COLOR_WHITE)

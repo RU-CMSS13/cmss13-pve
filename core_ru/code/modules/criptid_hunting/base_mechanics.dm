@@ -11,6 +11,13 @@
 	var/uv_slogan = "..."
 	var/uv_onfind = "..."
 
+/atom/Destroy(force)
+	CAN_BE_REDEFINED(TRUE)
+	if(uv_scannable && !uv_scanned)
+		for(var/mob/living/carbon/human/H in GLOB.player_list)
+			H.remove_from_order(src)
+	. = ..()
+
 /image/hint
 /mob/living/carbon/human
 	var/list/revealed_hints = list()
@@ -31,14 +38,20 @@
 		for(var/atom/A in range(hint_visibility,src))
 			if(!(A in revealed_hints) && A.uv_scannable && !A.uv_scanned)
 				show_hint(A,"trail", 1, A.uv_slogan)
-				naturally_hinted += A
+				naturally_hinted |= A
 
 		for(var/obj/structure/criptic/clue/item/C in range(brushable_radius,src))
 			if(!(C in revealed_hints) && !C.revealed && C.covered)
 				show_hint(C, C.clue_icon_state)
-				brush_list += C
+				brush_list |= C
 
 	. = ..()
+
+/mob/living/carbon/human/proc/remove_from_order(atom/A)
+	A.uv_scannable = FALSE
+	if(A in naturally_hinted)
+		naturally_hinted -= A
+	hide_hint(A)
 
 /mob/living/carbon/human/proc/show_hint(atom/A, icon_to_show = "auspex", show_maptext = 0, maptext_text = "...")
 	if(!client || (A in revealed_hints))
@@ -350,6 +363,16 @@
 /obj/structure/criptic/clue/proc/reveal_itself()
 	revealed = TRUE
 	icon_state = "[icon_state_found]"
+
+/obj/structure/criptic/clue/Destroy()
+	CAN_BE_REDEFINED(TRUE)
+	if(map_marker)
+		for(var/obj/item/map/tactical/T in maps)
+			T.tacmap.remove_marker(map_marker)
+			maps -= T
+		if(!length(maps))
+			map_marker = null
+	. = ..()
 
 /obj/item/criptic/instrument
 	name = "paranormal phone"
@@ -791,6 +814,18 @@
 /mob/living
 	var/the_big_bad = FALSE
 
+/proc/focus_on_something(atom/A, mob/user, focus_time)
+	set waitfor = FALSE
+
+	ADD_TRAIT(user, TRAIT_IMMOBILIZED, INTERACTION_TRAIT)
+	var/x_offset = (A.x - user.x) * 32
+	var/y_offset = (A.y - user.y) * 32
+	animate(user.client, pixel_x = x_offset, pixel_y = y_offset, time = focus_time * 2, easing = CUBIC_EASING)
+	sleep((focus_time * 3))
+	animate(user.client, pixel_x = 0, pixel_y = 0, time = focus_time * 2, easing = CUBIC_EASING)
+	sleep(focus_time * 2)
+	REMOVE_TRAIT(user, TRAIT_IMMOBILIZED, INTERACTION_TRAIT)
+
 /obj/effect/temp_visual/dark_presence
 	duration = 10 SECONDS
 	icon = 'core_ru/code/modules/criptid_hunting/chaplainRitual.dmi'
@@ -821,11 +856,11 @@
 		used = TRUE
 		ADD_TRAIT(user, TRAIT_IMMOBILIZED, INTERACTION_TRAIT)
 		user.show_hint(src,"auspex", 1, "You trying to look into the eyes of the dead...")
-		if(do_after(user, 30, INTERRUPT_ALL, BUSY_ICON_BUILD))
+		if(do_after(user, 50, INTERRUPT_ALL, BUSY_ICON_BUILD))
 			var/list/possible_clues = list()
 			var/atom/clue
 			for(var/obj/structure/criptic/clue/C in orange(30,src))
-				if(!C.revealed)
+				if(!C.revealed && !C.map_marker)
 					possible_clues += C
 
 			if(!length(possible_clues))
@@ -1072,3 +1107,13 @@
 
 	remove_filter("shrine")
 	animate(src, pixel_x = 0, pixel_y = 0, time = 0, loop = 0)
+
+/obj/structure/criptic/night_shrine/Destroy()
+	CAN_BE_REDEFINED(TRUE)
+	if(map_marker)
+		for(var/obj/item/map/tactical/T in maps)
+			T.tacmap.remove_marker(map_marker)
+			maps -= T
+		if(!length(maps))
+			map_marker = null
+	. = ..()
