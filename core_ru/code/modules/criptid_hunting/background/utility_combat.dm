@@ -155,3 +155,77 @@
 	animation_flash_color(src, COLOR_RED)
 	sleep(0.5 SECONDS)
 	qdel(src)
+
+/obj/item/criptic/utility/beartrap
+	name = "beartrap"
+	desc = "Can buy you some time"
+
+	icon = 'icons/obj/items/items.dmi'
+	icon_state = "beartrap0"
+
+	w_class = SIZE_TINY
+
+/obj/item/criptic/utility/beartrap/Initialize(mapload, ...)
+	. = ..()
+	SetTransform(1.5)
+
+/obj/item/criptic/utility/beartrap/attack_hand(mob/user)
+	. = ..()
+
+	if(isturf(loc) && alpha <= 100)
+		icon_state = "beartrap0"
+		if(ishuman(user))
+			var/mob/living/carbon/human/H = user
+			H.apply_damage(10, BRUTE, "[H.get_active_hand()]")
+		animate(src, 0.5 SECONDS, easing = SINE_EASING|EASE_IN, alpha = 255, pixel_y = 5)
+		animate(0.5 SECONDS, easing = BOUNCE_EASING, pixel_y = 0)
+		return TRUE
+
+/obj/item/criptic/utility/beartrap/attack_self(mob/user)
+	. = ..()
+	pop_out()
+	user.drop_held_item(src)
+	anchored = TRUE
+
+	icon_state = "beartrap1"
+	animate(src, 0.5 SECONDS, easing = SINE_EASING|EASE_IN, alpha = 100, pixel_y = -5)
+
+/obj/item/criptic/utility/beartrap/Crossed(O)
+	. = ..()
+
+	if(isturf(loc) && alpha <= 100)
+		playsound(loc,'sound/weapons/tablehit1.ogg', 25, 1)
+		if(istype(O,/mob/living/carbon/xenomorph/criptic_wendigo))
+			var/mob/living/carbon/xenomorph/criptic_wendigo/B = O
+			if(B.the_big_bad)
+				playsound_z(SSmapping.levels_by_trait(ZTRAIT_GROUND), 'sound/voice/deep_alien_screech.ogg', volume = 30)
+				animation_flash_color(B, COLOR_RED)
+				B.Stun(2)
+
+				if(!B.fur_dropped && prob(30))
+					B.fur_dropped = TRUE
+					new /obj/item/criptic/clue_item/criptid_cloth(get_turf(B))
+
+				shake_camera(B, 2, 1)
+				for(var/mob/living/carbon/human/H in GLOB.player_list)
+					for(var/obj/item/map/tactical/T in H)
+						H.balloon_alert(H, "New point appeared on your map!", COLOR_WHITE)
+						var/turf/user_turf = get_turf(src)
+						var/turf/guess = locate( \
+							clamp(user_turf.x + rand(-3, 3), 1, world.maxx), \
+							clamp(user_turf.y + rand(-3, 3), 1, world.maxy), \
+							user_turf.z)
+						T.tacmap.add_timed_marker(guess, 6, COLOR_DARK_RED, 1 MINUTES)
+				icon_state = "beartrap0"
+				animate(src, 0.5 SECONDS, easing = SINE_EASING|EASE_IN, alpha = 255, pixel_y = 5)
+				animate(0.5 SECONDS, easing = BOUNCE_EASING, pixel_y = 0)
+				return TRUE
+		if(istype(O,/mob/living/carbon/human))
+			var/mob/living/carbon/human/H = O
+			H.Stun(0.7)
+
+			shake_camera(H, 2, 1)
+			icon_state = "beartrap0"
+			animate(src, 0.5 SECONDS, easing = SINE_EASING|EASE_IN, alpha = 255, pixel_y = 5)
+			animate(0.5 SECONDS, easing = BOUNCE_EASING, pixel_y = 0)
+			return TRUE
