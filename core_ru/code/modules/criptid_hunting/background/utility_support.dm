@@ -173,3 +173,119 @@
 
 	animation_flash_color(src, COLOR_RED)
 	balloon_alert(user, "Pack is empty!", COLOR_WHITE)
+
+/atom/movable/screen/temperature/value
+	name = "temperature"
+	desc = "temperature"
+	mouse_opacity = FALSE
+
+	plane = HUD_PLANE
+	layer = HUD_LAYER
+
+	icon = 'core_ru/code/modules/criptid_hunting/temperature_value.dmi'
+	icon_state = "value"
+
+	screen_loc = "CENTER+6,CENTER-5"
+	var/atom/movable/screen/temperature/arrow/arrow
+	var/obj/item/criptic/utility/temp_meter/meter
+
+/atom/movable/screen/temperature/value/Initialize(mapload, ...)
+	. = ..()
+	arrow = new /atom/movable/screen/temperature/arrow(src)
+
+/atom/movable/screen/temperature/value/proc/show_it(mob/player)
+	alpha = 0
+	arrow.alpha = 0
+
+	screen_loc = "CENTER+6,CENTER-6"
+	arrow.screen_loc = "CENTER+6,CENTER-6"
+
+	if(arrow in player.client.screen)
+		player.client.screen -= arrow
+	if(src in player.client.screen)
+		player.client.screen -= src
+
+	player.client.screen += src
+	player.client.screen += arrow
+
+	animate(src, alpha = 255, transform = matrix(0, 64, MATRIX_TRANSLATE), time = 0.5 SECONDS, easing = SINE_EASING | EASE_OUT, flags = ANIMATION_PARALLEL)
+	animate(arrow, alpha = 255, transform = matrix(0, 64, MATRIX_TRANSLATE), time = 0.5 SECONDS, easing = SINE_EASING | EASE_OUT, flags = ANIMATION_PARALLEL)
+
+/atom/movable/screen/temperature/value/proc/hide_it(mob/player)
+	animate(src, alpha = 0, transform = matrix(0, 0, MATRIX_TRANSLATE), time = 0.5 SECONDS, easing = SINE_EASING | EASE_IN, flags = ANIMATION_PARALLEL)
+	animate(arrow, alpha = 0, transform = matrix(0, 0, MATRIX_TRANSLATE), time = 0.5 SECONDS, easing = SINE_EASING | EASE_IN, flags = ANIMATION_PARALLEL)
+
+	player.client.screen -= src
+	player.client.screen -= arrow
+	screen_loc = "CENTER+6,CENTER-5"
+	arrow.screen_loc = "CENTER+6,CENTER-5"
+
+/atom/movable/screen/temperature/arrow
+	name = "temperature"
+	desc = "temperature"
+	mouse_opacity = FALSE
+
+	plane = HUD_PLANE
+	layer = HUD_LAYER
+
+	icon = 'core_ru/code/modules/criptid_hunting/temperature_value.dmi'
+	icon_state = "value"
+
+	screen_loc = "CENTER+6,CENTER-5"
+
+/atom/movable/screen/temperature/arrow/proc/adjust_value(value = 0)
+	animate(src, transform = matrix(10 * -value, MATRIX_ROTATE)*matrix(0, 64, MATRIX_TRANSLATE), time = 0.5 SECONDS, easing = SINE_EASING | EASE_OUT, flags = ANIMATION_PARALLEL)
+
+/obj/item/criptic/utility/temp_meter
+	name = "temperature meter"
+	desc = "For checking your surroundings"
+
+	icon = 'core_ru/code/modules/criptid_hunting/items3.dmi'
+	icon_state = "temp_meter"
+
+	w_class = SIZE_SMALL
+	var/atom/movable/screen/temperature/value/value
+	var/mob/living/current_user
+	var/lowest_temperature = 9
+
+/obj/item/criptic/utility/temp_meter/Initialize(mapload, ...)
+	. = ..()
+
+	value = new /atom/movable/screen/temperature/value(src)
+
+/obj/item/criptic/utility/temp_meter/dropped(mob/user)
+	if(current_user)
+		icon_state == "temp_meter"
+		value.hide_it(current_user)
+		current_user = null
+		STOP_PROCESSING(SSobj,src)
+
+	. = ..()
+
+/obj/item/criptic/utility/temp_meter/attack_self(mob/user)
+	. = ..()
+	if(current_user == user && icon_state == "temp_meter_active")
+		icon_state == "temp_meter"
+		value.hide_it(user)
+		current_user = null
+		STOP_PROCESSING(SSobj,src)
+		return TRUE
+
+	add_filter("active", 1, list("type" = "outline", "color" = COLOR_GREEN, "size" = 1))
+	icon_state = "temp_meter_active"
+	current_user = user
+	value.show_it(user)
+	START_PROCESSING(SSobj,src)
+
+/obj/item/criptic/utility/temp_meter/process()
+	var/list/nearby_clues = list()
+
+	for(var/obj/structure/criptic/clue/C in range(lowest_temperature, get_turf(loc)))
+		if(C.revealed)
+			continue
+		if(!C.cold)
+			continue
+		nearby_clues += C
+
+	var/clue_to_check = pick(nearby_clues)
+	value.arrow.adjust_value(get_dist(get_turf(loc),get_turf(clue_to_check)))

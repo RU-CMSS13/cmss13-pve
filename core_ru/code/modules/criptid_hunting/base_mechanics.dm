@@ -317,6 +317,7 @@
 
 	var/busy = FALSE
 	var/otherwise_revealable = FALSE
+	var/cold = FALSE
 
 /obj/structure/criptic/clue/Initialize(mapload, ...)
 	. = ..()

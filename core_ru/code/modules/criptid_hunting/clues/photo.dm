@@ -2,6 +2,7 @@
 	icon = 'core_ru/code/modules/criptid_hunting/effects_newer.dmi'
 	icon_state_found = "static"
 	mouse_opacity = FALSE
+	cold = TRUE
 
 /obj/structure/criptic/clue/photo/reveal_itself()
 	if(map_marker)
