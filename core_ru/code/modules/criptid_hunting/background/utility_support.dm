@@ -255,7 +255,7 @@
 
 /obj/item/criptic/utility/temp_meter/dropped(mob/user)
 	if(current_user)
-		icon_state == "temp_meter"
+		icon_state = "temp_meter"
 		value.hide_it(current_user)
 		current_user = null
 		STOP_PROCESSING(SSobj,src)
@@ -265,7 +265,7 @@
 /obj/item/criptic/utility/temp_meter/attack_self(mob/user)
 	. = ..()
 	if(current_user == user && icon_state == "temp_meter_active")
-		icon_state == "temp_meter"
+		icon_state = "temp_meter"
 		value.hide_it(user)
 		current_user = null
 		STOP_PROCESSING(SSobj,src)
