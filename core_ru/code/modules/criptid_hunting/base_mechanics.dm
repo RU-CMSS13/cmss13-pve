@@ -103,6 +103,8 @@
 	var/automatic_messaging_delay = 300
 
 	var/fear_the_night_gm = FALSE
+	var/use_sanity = FALSE
+	var/use_hardcore_lights = FALSE
 	var/until_dawn = 6000
 	var/list/lightturfs = list()
 
@@ -168,6 +170,7 @@
 			current_turf.set_light(1, 0, l_color=COLOR_WHITE)
 			CHECK_TICK
 
+	if(use_sanity)
 		for(var/mob/living/carbon/human/H in GLOB.player_list)
 			if(H.stat == DEAD)
 				continue
@@ -175,9 +178,13 @@
 				continue
 			H.fear_the_night = TRUE
 
+	if(use_hardcore_lights)
 		for(var/obj/item/device/flashlight/F in world)
 			if(F.on && F.needs_battery)
 				START_PROCESSING(SSobj,F)
+
+	for(var/mob/living/carbon/human/H in GLOB.player_list)
+		H.create_health()
 
 	show_mission_name()
 	show_current_progress()
