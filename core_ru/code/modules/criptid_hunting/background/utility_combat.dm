@@ -186,6 +186,7 @@
 	pop_out()
 	user.drop_held_item(src)
 	anchored = TRUE
+	pixel_x = 0
 
 	icon_state = "beartrap1"
 	animate(src, 0.5 SECONDS, easing = SINE_EASING|EASE_IN, alpha = 100, pixel_y = -5)
@@ -217,6 +218,7 @@
 							user_turf.z)
 						T.tacmap.add_timed_marker(guess, 6, COLOR_DARK_RED, 1 MINUTES)
 				icon_state = "beartrap0"
+				anchored = FALSE
 				animate(src, 0.5 SECONDS, easing = SINE_EASING|EASE_IN, alpha = 255, pixel_y = 5)
 				animate(0.5 SECONDS, easing = BOUNCE_EASING, pixel_y = 0)
 				return TRUE
@@ -224,8 +226,11 @@
 			var/mob/living/carbon/human/H = O
 			H.Stun(0.7)
 
+			H.apply_damage(10, BRUTE, pick("r_foot","l_foot"))
+
 			shake_camera(H, 2, 1)
 			icon_state = "beartrap0"
+			anchored = FALSE
 			animate(src, 0.5 SECONDS, easing = SINE_EASING|EASE_IN, alpha = 255, pixel_y = 5)
 			animate(0.5 SECONDS, easing = BOUNCE_EASING, pixel_y = 0)
 			return TRUE

@@ -20,6 +20,10 @@
 /mob/living/carbon/human/proc/do_sanity_check()
 	set waitfor = 0
 
+	var/bonus_sanity_loss = 0
+	if(health_horror_current <= 0)
+		bonus_sanity_loss += 3
+
 	var/total_light = 0
 	var/checked_tiles = 0
 	for(var/turf/open/nearby in view(1, src.loc))
@@ -38,7 +42,7 @@
 		if(!sanity_warning_shown)
 			sanity_warning_shown = TRUE
 			show_blurb(src, 5, "Darkness slowly consumes you...", null, "EAST-7,NORTH-8.5", "center", COLOR_GRAY, null, null, 1)
-		sanity_current = clamp(sanity_current - 1, 0, sanity_max)
+		sanity_current = clamp(sanity_current - (1 + bonus_sanity_loss), 0, sanity_max)
 		overlay_fullscreen_timer(2 SECONDS, 10, "darkness", /atom/movable/screen/fullscreen/true_darkness_damage)
 
 	if(sanity_current < sanity_max && average_light >= 0.5)

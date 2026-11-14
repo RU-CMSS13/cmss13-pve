@@ -103,6 +103,9 @@
 		return TRUE
 	return ..()
 
+/obj/item/device/flashlight/lamp
+	flashlight_hungriness = 3
+
 /obj/item/device/flashlight/lamp/menorah
 	needs_battery = FALSE
 
@@ -121,9 +124,6 @@
 /obj/item/device/flashlight/combat
 	battery_type = /obj/item/cell
 	flashlight_hungriness = 1
-
-/obj/item/device/flashlight/lamp
-	flashlight_hungriness = 10
 
 /obj/item/device/flashlight/tnr
 	battery_type = /obj/item/cell

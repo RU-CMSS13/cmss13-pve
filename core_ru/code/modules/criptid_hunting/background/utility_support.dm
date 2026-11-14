@@ -2,6 +2,13 @@
 	var/atom/movable/screen/health_horror/health_horror
 	var/health_horror_current = 3
 
+/mob/living/carbon/human/get_examine_text(mob/user)
+	CAN_BE_REDEFINED(TRUE)
+	. = ..()
+
+	if(health_horror_current <= 1)
+		. += SPAN_RED("Looks overstressed...")
+
 /mob/living/carbon/human/Life()
 	CAN_BE_REDEFINED(TRUE)
 	if(ishuman(src) && client)
@@ -15,6 +22,13 @@
 	if(ishuman(src) && client)
 		client.screen += health_horror
 
+/mob/living/carbon/human/movement_delay()
+	CAN_BE_REDEFINED(TRUE)
+	. = ..()
+
+	if(health_horror_current <= 0)
+		. += 2
+
 /atom/movable/screen/health_horror
 	name = "health"
 	desc = "health"
@@ -27,12 +41,33 @@
 	icon_state = "health_3"
 
 	screen_loc = "CENTER-0.8,CENTER+6.4"
+	var/crit_anim = FALSE
+	maptext_height = 128
+	maptext_width = 128
+
+	maptext_x = 10
+	maptext_y = -5
+
+/atom/movable/screen/health_horror/Initialize(mapload, ...)
+	. = ..()
+	maptext = SPAN_LANGCHAT("STRESS METER")
 
 /atom/movable/screen/health_horror/proc/change_it(new_health = 3)
 	icon_state = "health_[new_health]"
 	animate(src, transform = matrix(2, 0, MATRIX_TRANSLATE), time = 0.5, easing = EASE_IN)
 	animate(transform = matrix(-2, 0, MATRIX_TRANSLATE), time = 1)
 	animate(transform = matrix(0, 0, MATRIX_TRANSLATE), time = 0.3, easing = EASE_OUT)
+
+	if(icon_state == "health_0")
+		START_PROCESSING(SSobj,src)
+
+/atom/movable/screen/health_horror/process()
+	if(icon_state != "health_0")
+		STOP_PROCESSING(SSobj,src)
+
+	animation_flash_color(src, COLOR_RED)
+	animate(src, transform = matrix(1.2, MATRIX_SCALE), time = 3, easing = SINE_EASING|EASE_IN, flags = ANIMATION_PARALLEL)
+	animate(transform = matrix(1, MATRIX_SCALE), time = 1, easing = SINE_EASING|EASE_OUT)
 
 /atom/movable/screen/fullscreen/nvg/heal
 	alpha = 0
@@ -53,7 +88,7 @@
 /obj/item/criptic/utility/pills/healing/attack_self(mob/living/carbon/human/user)
 	. = ..()
 
-	if(user.health_horror_current <= 1)
+	if(user.health_horror_current <= 0)
 		balloon_alert(user, "Seems the damage is too severe...", COLOR_WHITE)
 		animation_flash_color(src, COLOR_RED)
 		return FALSE
@@ -72,7 +107,7 @@
 
 /obj/item/criptic/utility/pills/healing/attack(mob/living/carbon/human/M, mob/user)
 	. = ..()
-	if(M.health_horror_current <= 1)
+	if(M.health_horror_current <= 0)
 		balloon_alert(user, "Seems the damage is too severe...", COLOR_WHITE)
 		animation_flash_color(src, COLOR_RED)
 		return FALSE
@@ -433,7 +468,7 @@
 
 	w_class = SIZE_SMALL
 	var/list/obj/item/criptic/utility/pills/drug/drugs = list()
-	var/max_slots = 5
+	var/max_slots = 6
 
 /obj/item/criptic/utility/drug_storage/Initialize(mapload, ...)
 	. = ..()
@@ -485,3 +520,111 @@
 
 	animation_flash_color(src, COLOR_RED)
 	balloon_alert(user, "Storage is empty!", COLOR_WHITE)
+
+/obj/item/criptic/utility/basket
+	name = "basket"
+	desc = "For your goodies"
+
+	icon = 'core_ru/code/modules/criptid_hunting/misc.dmi'
+	icon_state = "handbasket"
+
+	w_class = SIZE_SMALL
+	var/list/obj/item/criptic/flower/flowers = list()
+	var/max_slots = 9
+
+/obj/item/criptic/utility/basket/attackby(obj/item/W, mob/user)
+	. = ..()
+
+	if(istype(W,/obj/item/criptic/flower))
+		if(length(flowers) < max_slots)
+			flowers += W
+			user.drop_held_item(W)
+			W.forceMove(src)
+			icon_state = "handbasket_full"
+		else
+			animation_flash_color(W, COLOR_RED)
+			balloon_alert(user, "Basket is full!", COLOR_WHITE)
+		return TRUE
+
+/obj/item/criptic/utility/basket/attack_self(mob/user)
+	. = ..()
+	if(length(flowers))
+		var/flower_to_remove = pick(flowers)
+		flowers -= flower_to_remove
+		user.put_in_hands(flower_to_remove)
+
+		animate(src, time = 3, easing = SINE_EASING|EASE_OUT, transform = matrix(10, MATRIX_ROTATE))
+		sleep(3)
+		animate(src, time = 3, easing = SINE_EASING|EASE_IN, transform = matrix())
+
+		if(!length(flowers))
+			icon_state = "handbasket"
+		return TRUE
+
+	animation_flash_color(src, COLOR_RED)
+	balloon_alert(user, "Basket is empty!", COLOR_WHITE)
+
+/obj/item/criptic/utility/pills/stress_reducing
+	name = "anti-stress pillcup"
+	desc = "For the times you want to shoot yourself in the face"
+
+	icon = 'core_ru/code/modules/criptid_hunting/medical.dmi'
+	icon_state = "pilltin_empty" // why tf this sprite named like that
+
+	w_class = SIZE_SMALL
+	var/can_be_used = FALSE
+
+/obj/item/criptic/utility/pills/stress_reducing/Initialize(mapload, ...)
+	. = ..()
+
+	if(can_be_used)
+		icon_state = "pilltin"
+
+/obj/item/criptic/utility/pills/stress_reducing/attack_self(mob/living/carbon/human/user)
+	. = ..()
+
+	if(user.health_horror_current >= 3)
+		balloon_alert(user, "Not the right time for this!", COLOR_WHITE)
+		animation_flash_color(src, COLOR_RED)
+		return FALSE
+
+	if(!can_be_used)
+		balloon_alert(user, "It's empty!", COLOR_WHITE)
+		animation_flash_color(src, COLOR_RED)
+		return FALSE
+
+	pop_out()
+	playsound(loc,'sound/effects/pillbottle.ogg',10,TRUE)
+	user.health_horror_current += 1
+	animation_flash_color(src, COLOR_GREEN)
+	user.overlay_fullscreen_timer(1 SECONDS, 5, "heal",/atom/movable/screen/fullscreen/nvg/heal)
+	if(user.client)
+		user.health_horror.change_it(user.health_horror_current)
+
+	sleep(0.5 SECONDS)
+	can_be_used = FALSE
+	icon_state = "pilltin_empty"
+
+/obj/item/criptic/utility/pills/stress_reducing/attack(mob/living/carbon/human/M, mob/user)
+	. = ..()
+	if(M.health_horror_current >= 3)
+		balloon_alert(user, "Not the right time for this!", COLOR_WHITE)
+		animation_flash_color(src, COLOR_RED)
+		return FALSE
+
+	if(!can_be_used)
+		balloon_alert(user, "It's empty!", COLOR_WHITE)
+		animation_flash_color(src, COLOR_RED)
+		return FALSE
+
+	pop_out()
+	playsound(loc,'sound/effects/pillbottle.ogg',10,TRUE)
+	M.health_horror_current += 1
+	animation_flash_color(src, COLOR_GREEN)
+	M.overlay_fullscreen_timer(1 SECONDS, 5, "heal", /atom/movable/screen/fullscreen/nvg/heal)
+	if(M.client)
+		M.health_horror.change_it(M.health_horror_current)
+
+	sleep(0.5 SECONDS)
+	can_be_used = FALSE
+	icon_state = "pilltin_empty"

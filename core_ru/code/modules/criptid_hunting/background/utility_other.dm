@@ -179,7 +179,7 @@
 				icon_state = "tag_active"
 				monitoring = X
 				if(ishuman(loc))
-					balloon_alert(loc, "New creature signature revealed on tracker!", COLOR_WHITE)
+					balloon_alert(loc, "New creature signature loaded into your tracker!", COLOR_WHITE)
 
 	if(monitoring)
 		if(!monitoring.signal_marked)

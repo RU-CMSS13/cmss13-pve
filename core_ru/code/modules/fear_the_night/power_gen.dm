@@ -81,7 +81,7 @@
 
 /atom/movable/screen/power_qte/Initialize()
 	. = ..()
-	transform = matrix(1.5, 1.5, MATRIX_SCALE)*matrix(rand(-96,96), rand(-96,96), MATRIX_TRANSLATE)
+	transform = matrix(1.5, MATRIX_SCALE)*matrix(rand(-96,96), rand(-96,96), MATRIX_TRANSLATE)
 	spawn(3 SECONDS)
 		end_qte(fixer)
 
