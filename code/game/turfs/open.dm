@@ -850,6 +850,19 @@
 /turf/open/gm/river/red
 	color = "#995555"
 
+/turf/open/gm/river/light_red
+	color = "#CF9797"
+
+/turf/open/gm/river/sewer
+	name = "sewer water"
+	default_name = "sewer water"
+	color = "#7D9988"
+
+/turf/open/gm/river/sewer/low
+	name = "low water"
+	default_name = "low water"
+	base_river_slowdown = 0
+
 /turf/open/gm/river/pool
 	name = "pool"
 
@@ -922,6 +935,9 @@
 /turf/open/gm/coast/south_east
 	dir = 9
 
+/turf/open/gm/coast/south_west
+	dir = 5
+
 /turf/open/gm/coast/beachcorner
 	icon_state = "beachcorner"
 
@@ -983,6 +999,10 @@
 	icon_state = "black"
 	density = TRUE
 	supports_surgery = FALSE
+
+/turf/open/gm/empty/no_density
+	name = "empty space no density"
+	density = FALSE
 
 
 
@@ -1349,6 +1369,12 @@
 
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down
 	icon_state = "rasputin3"
+
+/turf/open/shuttle/dropship/rasputin2
+	icon_state = "rasputin2"
+
+/turf/open/shuttle/dropship/rasputin11
+	icon_state = "rasputin11"
 
 /turf/open/shuttle/dropship/light_grey_bottom_left
 	icon_state = "rasputin4"
