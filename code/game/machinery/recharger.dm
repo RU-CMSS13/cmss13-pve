@@ -11,7 +11,7 @@
 	black_market_value = 35
 	var/obj/item/charging = null
 	var/percent_charge_complete = 0
-	var/list/allowed_devices = list(/obj/item/weapon/baton, /obj/item/cell, /obj/item/weapon/gun/energy, /obj/item/device/defibrillator, /obj/item/tool/portadialysis, /obj/item/clothing/suit/auto_cpr, /obj/item/smartgun_battery, /obj/item/device/helmet_visor/night_vision)
+	var/list/allowed_devices = list(/obj/item/weapon/baton, /obj/item/cell, /obj/item/weapon/gun/energy, /obj/item/device/defibrillator, /obj/item/tool/portadialysis, /obj/item/clothing/suit/auto_cpr, /obj/item/smartgun_battery, /obj/item/device/helmet_visor/night_vision,/obj/item/device/flashlight)
 
 	var/charge_amount = 1000
 
@@ -32,6 +32,12 @@
 		if(!isarea(a) || (a.power_equip == 0 && !a.unlimited_power))
 			to_chat(user, SPAN_DANGER("\The [name] blinks red as you try to insert the item!"))
 			return
+
+		if(istype(G, /obj/item/device/flashlight))
+			var/obj/item/device/flashlight/F = G
+			if(!MODE_HAS_TOGGLEABLE_FLAG(MODE_HARDCORE_LIGHTS) || !F.needs_battery || !F.battery)
+				return
+
 		if(istype(G, /obj/item/device/defibrillator))
 			var/obj/item/device/defibrillator/D = G
 			if(D.ready)
@@ -86,6 +92,19 @@
 			if(!E.cell.fully_charged())
 				E.cell.give(charge_amount)
 				percent_charge_complete = E.cell.percent()
+				update_use_power(USE_POWER_ACTIVE)
+				update_icon()
+			else
+				percent_charge_complete = 100
+				update_use_power(USE_POWER_IDLE)
+				update_icon()
+			return
+
+		if(istype(charging, /obj/item/device/flashlight))
+			var/obj/item/device/flashlight/F = charging
+			if(!F.battery.fully_charged())
+				F.battery.give(charge_amount)
+				percent_charge_complete = F.battery.percent()
 				update_use_power(USE_POWER_ACTIVE)
 				update_icon()
 			else

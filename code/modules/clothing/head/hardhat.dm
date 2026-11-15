@@ -56,6 +56,17 @@
 	if(. != CHECKS_PASSED)
 		return
 
+	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_HARDCORE_LIGHTS))
+		if(power_current <= 0)
+			balloon_alert(user, "Not enough power!", COLOR_WHITE)
+			animation_flash_color(src, COLOR_RED)
+			return
+		if(unusable)
+			balloon_alert(user, "Something wrong!", COLOR_WHITE)
+			animation_flash_color(src, COLOR_RED)
+			return FALSE
+		START_PROCESSING(SSobj,src)
+
 	set_light_on(toggle_on)
 
 	update_icon()

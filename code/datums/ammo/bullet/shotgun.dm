@@ -28,8 +28,9 @@
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
 		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
-		target.KnockDown(3.5)
-		target.Stun(2.5)
+		if(!target.the_big_bad)
+			target.KnockDown(3.5)
+			target.Stun(2.5)
 		target.Slow(5)
 	else
 		if(!isyautja(living_mob)) //Not predators.
@@ -260,8 +261,9 @@
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
 		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
-		target.KnockDown(2.5)
-		target.Stun(2.5)
+		if(!target.the_big_bad)
+			target.KnockDown(2.5)
+			target.Stun(2.5)
 		target.Slow(4)
 	else
 		if(!isyautja(living_mob)) //Not predators.
@@ -332,8 +334,9 @@
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
 		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
-		target.KnockDown(2.5)
-		target.Stun(2.5)
+		if(!target.the_big_bad)
+			target.KnockDown(2.5)
+			target.Stun(2.5)
 		target.Slow(4)
 	else
 		if(!isyautja(living_mob)) //Not predators.
@@ -391,8 +394,9 @@
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
 		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
-		target.KnockDown(5)
-		target.Stun(5)
+		if(!target.the_big_bad)
+			target.KnockDown(5)
+			target.Stun(5)
 		target.Slow(8)
 	else
 		if(!isyautja(living_mob)) //Not predators.
@@ -412,8 +416,9 @@
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
 		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
-		target.KnockDown(5)
-		target.Stun(5)
+		if(!target.the_big_bad)
+			target.KnockDown(5)
+			target.Stun(5)
 		target.Slow(8)
 	else
 		if(!isyautja(living_mob)) //Not predators.
@@ -483,8 +488,9 @@
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
 		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
-		target.KnockDown(7)
-		target.Stun(7)
+		if(!target.the_big_bad)
+			target.KnockDown(7)
+			target.Stun(7)
 		target.Slow(10)
 	else
 		if(!isyautja(living_mob)) //Not predators.
@@ -614,8 +620,9 @@
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
 		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
-		target.KnockDown(0.5) // If you ask me the KD should be left out, but players like their visual cues
-		target.Stun(0.5)
+		if(!target.the_big_bad)
+			target.KnockDown(0.5) // If you ask me the KD should be left out, but players like their visual cues
+			target.Stun(0.5)
 		target.apply_effect(2, SUPERSLOW)
 		target.apply_effect(5, SLOW)
 	else
@@ -687,8 +694,9 @@
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
 		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
-		target.KnockDown(4.5)
-		target.Stun(4.5)
+		if(!target.the_big_bad)
+			target.KnockDown(4.5)
+			target.Stun(4.5)
 		target.Slow(6)
 	else
 		if(!isyautja(living_mob)) //Not predators.

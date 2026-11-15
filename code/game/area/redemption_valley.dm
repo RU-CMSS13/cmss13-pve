@@ -118,6 +118,25 @@
 /area/redemptionvalley/valleyroof/housesix
 	name = "Redemption Valley - House Six"
 	icon_state = "green"
+/area/redemptionvalley/valleyroof/swampvillage
+	name = "Redemption Valley - Swamp Village"
+	icon_state = "green"
+/area/redemptionvalley/valleyroof/foresthouse
+	name = "Redemption Valley - House in the Forest"
+	icon_state = "green"
+/area/redemptionvalley/valleyroof/tentcamp
+	name = "Redemption Valley - Camp"
+	icon_state = "green"
+/area/redemptionvalley/valleyroof/drillsite
+	name = "Redemption Valley - Gold Hunters"
+	icon_state = "green"
+/area/redemptionvalley/valleyroof/church
+	name = "Redemption Valley - Church"
+	icon_state = "green"
+/area/redemptionvalley/valleyroof/spawn_area
+	name = "Redemption Valley - Paranormal Hunters SPAWN"
+	icon_state = "green"
+	requires_power = FALSE
 /area/redemptionvalley/valleyroof/cliffcomms
 	name = "Clifftop - T-Comms"
 	icon_state = "yellow"
