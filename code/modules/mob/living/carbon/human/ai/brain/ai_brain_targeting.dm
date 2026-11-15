@@ -15,6 +15,12 @@
 	var/requires_vision = TRUE
 	/// How often the AI looks around for enemies while it isn't fighting
 	var/target_scan_delay = 0.4 SECONDS
+	/// If TRUE, the AI is blind behind its back, is slow to notice being grabbed and can't fight back while its throat is being slit
+	var/unaware = FALSE
+	/// How long an unaware AI takes to notice an enemy grabbing it
+	var/grab_notice_delay = 3 SECONDS
+	/// When an enemy grabbed the unaware AI, 0 if nobody is grabbing it
+	var/grabbed_since = 0
 
 	COOLDOWN_DECLARE(fire_offscreen)
 	COOLDOWN_DECLARE(target_scan_cooldown)
@@ -46,6 +52,9 @@
 	// Cheapest checks first, can_target() traces a line to every candidate
 	for(var/mob/living/carbon/potential_target in view(view_distance, tied_human))
 		if(potential_target == tied_human)
+			continue
+
+		if(unaware && (get_dir(tied_human, potential_target) in rear_dirs))
 			continue
 
 		var/distance = get_dist(tied_human, potential_target)
@@ -159,6 +168,20 @@
 
 	return length(final_targets) ? pick(final_targets) : closest_target
 
+
+/// Makes an unaware AI turn on an enemy that has been grabbing it for grab_notice_delay
+/datum/human_ai_brain/proc/check_unaware_grab()
+	var/mob/living/carbon/grabber = tied_human.pulledby
+	if(!istype(grabber) || !can_target(grabber))
+		grabbed_since = 0
+		return
+
+	if(!grabbed_since)
+		grabbed_since = world.time
+		return
+
+	if((world.time - grabbed_since >= grab_notice_delay) && (current_target != grabber))
+		set_target(grabber)
 
 /// Returns TRUE if a standing ally is a few tiles behind the target, where shots that miss it fly on to
 /datum/human_ai_brain/proc/ally_behind_target(turf/start_turf, turf/target_turf, distance = 2)

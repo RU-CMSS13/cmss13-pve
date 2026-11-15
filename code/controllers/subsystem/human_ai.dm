@@ -8,6 +8,9 @@ SUBSYSTEM_DEF(human_ai)
 
 	var/ai_kill = FALSE
 
+	/// If FALSE, AI medics only treat themselves
+	var/medics_treat_allies = TRUE
+
 	/// List of current squads
 	var/list/datum/human_ai_squad/squads = list()
 
@@ -44,6 +47,16 @@ SUBSYSTEM_DEF(human_ai)
 
 	SShuman_ai.ai_kill = !SShuman_ai.ai_kill
 	message_admins("[key_name_admin(usr)] [SShuman_ai.ai_kill? "killed" : "revived"] all human AI.")
+
+/datum/admins/proc/toggle_human_ai_medics()
+	set name = "Toggle Human AI Medics"
+	set category = "Game Master.Flags"
+
+	if(!check_rights(R_DEBUG))
+		return
+
+	SShuman_ai.medics_treat_allies = !SShuman_ai.medics_treat_allies
+	message_admins("[key_name_admin(usr)] [SShuman_ai.medics_treat_allies ? "allowed" : "forbade"] human AI medics to treat their allies.")
 
 /datum/controller/subsystem/human_ai/fire(resumed = FALSE)
 	if(ai_kill)

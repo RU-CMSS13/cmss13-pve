@@ -120,7 +120,8 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	if(in_combat && (world.time >= combat_end_time))
 		exit_combat()
 
-	if(tied_human.is_mob_incapacitated())
+	// The throat slitter pins us down, an unaware AI is too surprised to fight back
+	if(tied_human.is_mob_incapacitated() || (unaware && HAS_TRAIT_FROM(tied_human, TRAIT_IMMOBILIZED, THROATSLIT_TRAIT)))
 		for(var/action in ongoing_actions)
 			qdel(action)
 		ongoing_actions.Cut()
@@ -141,6 +142,9 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	if(current_target && !ismob(current_target) && !is_object_target_valid(current_target))
 		lose_target()
 		target_turf = null
+
+	if(unaware)
+		check_unaware_grab()
 
 	// An order to fire at something takes the place of a target
 	var/atom/ordered_fire = get_ordered_fire_target()

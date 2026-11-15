@@ -274,6 +274,9 @@
 	/// If the spawned humans drop in by parachute
 	var/paradrop = FALSE
 
+	/// If the spawned AI can be snuck up on from behind and have its throat slit
+	var/spawn_unaware = FALSE
+
 	/// If clicking a human dresses it in the preset instead of spawning a new one
 	var/outfit = FALSE
 
@@ -546,6 +549,7 @@
 	data["selected_equipment"] = selected_equipment
 	data["spawn_ai"] = spawn_ai
 	data["paradrop"] = paradrop
+	data["spawn_unaware"] = spawn_unaware
 	data["outfit"] = outfit
 	data["nest_gun"] = nest_gun
 	data["nest_spare_ammo"] = nest_spare_ammo
@@ -708,6 +712,10 @@
 
 		if("toggle_paradrop")
 			paradrop = !paradrop
+			return TRUE
+
+		if("toggle_unaware")
+			spawn_unaware = !spawn_unaware
 			return TRUE
 
 		if("toggle_outfit")
@@ -1116,7 +1124,15 @@
 
 	if(spawn_ai)
 		new_human.AddComponent(/datum/component/human_ai)
+		apply_ai_options(new_human.get_ai_brain())
 	return new_human
+
+/// Gives the brain the chosen AI behaviour options
+/datum/human_ai_spawner_menu/proc/apply_ai_options(datum/human_ai_brain/brain)
+	if(!brain)
+		return
+
+	brain.unaware = spawn_unaware
 
 /// Dresses the human in the preset and applies the chosen faction, species and equipment
 /datum/human_ai_spawner_menu/proc/dress_human(mob/living/carbon/human/dressed_human, preset_path, randomise)
@@ -1180,6 +1196,7 @@
 		brain.appraise_inventory()
 	else if(spawn_ai && !dressed_human.ckey)
 		dressed_human.AddComponent(/datum/component/human_ai)
+		apply_ai_options(dressed_human.get_ai_brain())
 
 /// Spawns the whole squad around the turf as one AI squad led by its first member
 /datum/human_ai_spawner_menu/proc/spawn_squad(mob/user, turf/center)
