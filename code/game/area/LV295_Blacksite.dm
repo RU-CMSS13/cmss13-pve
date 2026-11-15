@@ -70,19 +70,47 @@
 	ceiling = CEILING_METAL
 
 /area/lv295/indoors/sublevel_1
-	name = "LV295 - Sublevel 1"
+	name = "LV295 - Sector I"
 	icon_state = "yellow"
-	minimap_color = MINIMAP_AREA_ENGI
+	minimap_color = MINIMAP_AREA_COLONY
+
+/area/lv295/indoors/sublevel_1/entrance
+	name = "LV295 - Sector I - Entrance"
+
+/area/lv295/indoors/sublevel_1/maint
+	name = "LV295 - Sector I - Maintenance"
+
+/area/lv295/indoors/sublevel_1/droms
+	name = "LV295 - Sector I - Dorms"
+
+/area/lv295/indoors/sublevel_1/kitchen
+	name = "LV295 - Sector I - Kitchen"
 
 /area/lv295/indoors/sublevel_2
 	name = "LV295 - Sublevel 2"
 	icon_state = "yellow"
 	minimap_color = MINIMAP_AREA_COMMAND
 
+/area/lv295/indoors/sublevel_r
+	name = "LV295 - Sector R"
+	icon_state = "yellow"
+	minimap_color = MINIMAP_AREA_ENGI
+
+/area/lv295/indoors/sublevel_r/reactor
+	name = "LV295 - Sector R - Reactor"
+
+/area/lv295/indoors/sublevel_r/engi
+	name = "LV295 - Sector R - Engineer Complex"
+
+/area/lv295/indoors/sublevel_r/security
+	name = "LV295 - Sector R - Security Office"
+	icon_state = "red"
+	minimap_color = MINIMAP_AREA_SEC
+
 /area/lv295/indoors/sublevel_3
 	name = "LV295 - Sublevel 3"
 	icon_state = "mechbay"
-	minimap_color = MINIMAP_AREA_SEC
+	minimap_color = MINIMAP_AREA_RESEARCH
 
 /area/lv295/indoors/sublevel_4
 	name = "LV295 - Sublevel 4"

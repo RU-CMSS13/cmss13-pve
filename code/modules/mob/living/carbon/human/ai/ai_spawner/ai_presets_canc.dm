@@ -66,6 +66,36 @@
 	desc = "A CANC Combat Android, these are illegal and should be used sparingly."
 	path = /datum/equipment_preset/synth/working_joe/upp/combat/canc
 
+/datum/human_ai_equipment_preset/canc/dog_war_rifleman
+	name = "CANC Army Reservist, Rifleman"
+	desc = "CANC Reservist rifleman, Random Rifle"
+	path = /datum/equipment_preset/canc/remnant/old
+
+/datum/human_ai_equipment_preset/canc/dog_war_medic
+	name = "CANC Army Reservist, Medic"
+	desc = "CANC Reservist Medic, SMG."
+	path = /datum/equipment_preset/canc/remnant/old/medic
+
+/datum/human_ai_equipment_preset/canc/dog_war_commando
+	name = "CANC Army Commando"
+	desc = "CANC Commando, Type-71"
+	path = /datum/equipment_preset/canc/remnant/old/commando
+
+/datum/human_ai_equipment_preset/canc/dog_war_commando_leader
+	name = "CANC Army Commando Leader"
+	desc = "CANC Commando Leader, Type-71S"
+	path = /datum/equipment_preset/canc/remnant/old/commando/leader
+
+/datum/human_ai_equipment_preset/canc/dog_war_commando_mg
+	name = "CANC Army Commando MG"
+	desc = "CANC Army Commando, Non-HEAP."
+	path = /datum/equipment_preset/canc/remnant/old/commando/machinegunner
+
+/datum/human_ai_equipment_preset/canc/dog_war_sniper
+	name = "CANC Army Commando Sniper"
+	desc = "CANC Commando Sniper, Type88"
+	path = /datum/equipment_preset/canc/remnant/old/commando/sniper
+
 /datum/human_ai_equipment_preset/canc/rifleman_snowman
 	name = "Snowman CANC Squad Rifleman"
 	desc = "CANC Remnant Force rifleman, Random Rifle"
@@ -110,3 +140,28 @@
 	name = "CANC Squad Rifleman (Uniform And Rifle, Radsuit)"
 	desc = "CANC Remnant Force rifleman, Random Rifle. (P.S. If you want to use the rest of the radsuited loadouts, to not bloat the spawn menu with them due of their rare use, use 'Add Preset' and select 'Radsuit' CANC loadouts you need)"
 	path = /datum/equipment_preset/canc/remnant/rad
+
+/datum/human_ai_equipment_preset/canc/brotherhood_rifleman
+	name = "CANC Brotherhood, Operative"
+	desc = "CANC Brotherhood operative. Actually regular black ops guy. Uses AG80 as main gun."
+	path = /datum/equipment_preset/canc/blackops
+
+/datum/human_ai_equipment_preset/canc/machinegunner/brotherhood
+	name = "CANC Brotherhood, Machinegunner"
+	desc = "CANC Brotherhood operative. Uses MG82 as main gun."
+	path = /datum/equipment_preset/canc/machinegunner/blackops
+
+/datum/human_ai_equipment_preset/canc/brotherhood_medic
+	name = "CANC Brotherhood, Medic"
+	desc = "CANC Brotherhood medic. Actually regular black ops guy. Uses AG80 as main gun."
+	path = /datum/equipment_preset/canc/medic/blackops
+
+/datum/human_ai_equipment_preset/canc/marksman_brotherhood
+	name = "CANC Brotherhood, Marksman"
+	desc = "CANC Brotherhood sniper. Uses SPP as main gun."
+	path = /datum/equipment_preset/canc/marksman/blackops
+
+/datum/human_ai_equipment_preset/canc/leader_brotherhood
+	name = "CANC Brotherhood, Team Leader"
+	desc = "CANC Brotherhood SL. Badass bro with type71s recon as main gun and m48a5 as secondary."
+	path = /datum/equipment_preset/canc/leader/blackops

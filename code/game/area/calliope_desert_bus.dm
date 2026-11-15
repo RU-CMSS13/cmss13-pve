@@ -6,6 +6,7 @@
 	can_build_special = TRUE
 	powernet_name = "ground"
 	minimap_color = MINIMAP_AREA_COLONY
+	ambience_exterior = AMBIENCE_BIGRED
 //==============================================PARENTS
 /area/calliope_route/highway
 	name = "Calliope Passage"
@@ -79,3 +80,70 @@
 /area/calliope_route/exterior_buildings/gateways
 	name = "Highway Gateways"
 	icon_state = "red"
+//===============================================OTHER
+
+//Zulu Areas (Yes I am this lazy)
+
+/area/firebase_zulu
+	name = "Master"
+	icon = 'icons/turf/area_almayer.dmi'
+	icon_state = "almayer"
+	powernet_name = "firebase_zulu"
+	sound_environment = SOUND_ENVIRONMENT_ROOM
+	soundscape_interval = 30
+	ambience_exterior = AMBIENCE_BIGRED
+
+/area/firebase_zulu/outside
+	name = "LV818 - Barrens"
+	icon_state = "lifeboat"
+
+/area/firebase_zulu/outside/compound
+	name = "LV818 - Firebase Zulu - Compound"
+
+/area/firebase_zulu/inside
+	name = "Inside-Master"
+	sound_environment = SOUND_ENVIRONMENT_ROOM
+	ceiling = CEILING_METAL
+
+/area/firebase_zulu/inside/motor_pool
+	name = "\improper Motor Pool"
+	icon_state = "workshop"
+	ceiling = CEILING_NONE
+
+/area/firebase_zulu/inside/platoonarmory
+	name = "\improper Platoon Armory"
+	icon_state = "alpha"
+
+/area/firebase_zulu/inside/platoonprep
+	name = "\improper Platoon Prep"
+	icon_state = "bravo"
+
+/area/firebase_zulu/inside/dorms
+	name = "\improper Dorms"
+	icon_state = "gruntrnr"
+
+/area/firebase_zulu/inside/hangar
+	name = "\improper Hangar"
+	icon_state = "hangar"
+
+/area/firebase_zulu/inside/shared_office
+	name = "\improper Shared Office"
+	icon_state = "alpha"
+
+/area/firebase_zulu/inside/medical
+	name = "\improper Medical"
+	icon_state = "medical"
+	ceiling = CEILING_NONE
+
+/area/firebase_zulu/inside/canteen
+	name = "\improper Canteen"
+	icon_state = "food"
+
+/area/firebase_zulu/inside/platoon_commander_rooms
+	name = "\improper Platoon Commander's Tents"
+	icon_state = "livingspace"
+	ceiling = CEILING_NONE
+
+/area/firebase_zulu/inside/engineering
+	name = "\improper Engineering"
+	icon_state = "upperengineering"

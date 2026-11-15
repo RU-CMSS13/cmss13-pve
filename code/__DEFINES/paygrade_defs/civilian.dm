@@ -39,3 +39,9 @@
 
 /// REBC, Rebel Commander "REBC"
 #define PAY_SHORT_REBC "REBC"
+
+/// FPS, Fire Protection Specialist
+#define PAY_SHORT_FPS "Fire Protection Specialist"
+
+/// FPO, Fire Protection Officer
+#define PAY_SHORT_FPO "Fire Protection Officer"

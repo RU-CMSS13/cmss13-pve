@@ -589,3 +589,12 @@
 
 /obj/item/clothing/accessory/ranks/canc/e5
 	rank_short = PAY_SHORT_CA5
+
+/obj/item/clothing/accessory/ranks/canc/e6
+	rank_short = PAY_SHORT_CA6
+
+/obj/item/clothing/accessory/ranks/canc/e7
+	rank_short = PAY_SHORT_CA7
+
+/obj/item/clothing/accessory/ranks/canc/e8
+	rank_short = PAY_SHORT_CA8

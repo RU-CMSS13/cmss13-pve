@@ -119,6 +119,11 @@
 	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_bio = CLOTHING_ARMOR_GIGAHIGHPLUS
 
+/obj/item/clothing/shoes/marine/pve_mopp/twe
+	name = "\improper CPS Mk.III boots"
+	desc = "CPS Mk.III boots excel at keeping viscera or other biological contaminants away from your feet."
+	icon_state = "marine"
+
 /obj/item/clothing/shoes/marine/pve_mopp/upp
 	name = "\improper BcH-2M boots"
 	desc = "UPP standard issue OZK boots excel at keeping viscera or other biological contaminants away from your feet."

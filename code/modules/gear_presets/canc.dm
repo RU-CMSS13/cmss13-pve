@@ -1,5 +1,5 @@
 /datum/equipment_preset/canc
-	name = "CANC Rebel"
+	name = "CANC Army"
 	languages = list(LANGUAGE_CHINESE)
 	ethnicity = CHINESE_ETHNICITY
 	flags = null
@@ -17,9 +17,10 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/canc/remnant
-	name = "CANC Rebel, Rifleman"
+	name = "CANC Army, Rifleman"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "Rifleman"
+	paygrades = list(PAY_SHORT_CA1 = JOB_PLAYTIME_TIER_0, PAY_SHORT_CA2 = JOB_PLAYTIME_TIER_1)
 
 /datum/equipment_preset/canc/remnant/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
@@ -45,7 +46,10 @@
 	//uniform
 	add_canc_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e1(new_human), WEAR_ACCESSORY)
+	if(paygrades == PAY_SHORT_CA1)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e1(new_human), WEAR_ACCESSORY)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e2(new_human), WEAR_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/canc(new_human), WEAR_JACKET)
 	//limbs
@@ -62,9 +66,9 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/canc/remnant/leader
-	name = "CANC Rebel, Unit Leader"
+	name = "CANC Army, Unit Leader"
 	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_CA4 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_CA4 = JOB_PLAYTIME_TIER_0, PAY_SHORT_CA5 = JOB_PLAYTIME_TIER_1)
 	assignment = "Unit Leader"
 	skills = /datum/skills/tl
 
@@ -89,11 +93,19 @@
 			if(3)
 				add_facewrap(new_human)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc(new_human), WEAR_HEAD)
+	var/random_hat= rand(1,3)
+	switch(random_hat)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc(new_human), WEAR_HEAD)
+		if(2,3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/cm/canc/leader(new_human), WEAR_HEAD)
 	//uniform
 	add_canc_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e4(new_human), WEAR_ACCESSORY)
+	if(paygrades == PAY_SHORT_CA4)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e4(new_human), WEAR_ACCESSORY)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e5(new_human), WEAR_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/canc(new_human), WEAR_JACKET)
 	//limbs
@@ -110,9 +122,9 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/canc/remnant/officer
-	name = "CANC Rebel, Officer"
+	name = "CANC Army, Officer"
 	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_CA5 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_CA7 = JOB_PLAYTIME_TIER_0)
 	assignment = "Officer"
 	skills = /datum/skills/lt
 
@@ -136,11 +148,11 @@
 				add_neckerchief(new_human)
 			if(3)
 				add_facewrap(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/upp/peaked/canc(new_human), WEAR_HEAD)
 	//uniform
 	add_canc_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e5(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e7(new_human), WEAR_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/canc(new_human), WEAR_JACKET)
 	//limbs
@@ -157,9 +169,9 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/canc/remnant/marksman
-	name = "CANC Rebel, Marksman"
+	name = "CANC Army, Marksman"
 	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_CA3 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_CA2 = JOB_PLAYTIME_TIER_0, PAY_SHORT_CA3 = JOB_PLAYTIME_TIER_1)
 	assignment = "Marksman"
 
 /datum/equipment_preset/canc/remnant/marksman/load_gear(mob/living/carbon/human/new_human)
@@ -193,7 +205,10 @@
 	//uniform
 	add_canc_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e3(new_human), WEAR_ACCESSORY)
+	if(paygrades == PAY_SHORT_CA2)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e2(new_human), WEAR_ACCESSORY)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e3(new_human), WEAR_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/canc(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/lw317/dmr(new_human), WEAR_J_STORE)
@@ -208,7 +223,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/lw317/ap(new_human), WEAR_IN_R_STORE)
 
 /datum/equipment_preset/canc/remnant/marksman/type88
-	name = "CANC Rebel, Marksman Type 88"
+	name = "CANC Army, Marksman Type 88"
 	flags = EQUIPMENT_PRESET_EXTRA
 	paygrades = list(PAY_SHORT_CA3 = JOB_PLAYTIME_TIER_0)
 	assignment = "Marksman"
@@ -261,7 +276,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/canc/machinegunner
-	name = "CANC Rebel, Machinegunner"
+	name = "CANC Army, Machinegunner"
 	flags = EQUIPMENT_PRESET_EXTRA
 	paygrades = list(PAY_SHORT_CA2 = JOB_PLAYTIME_TIER_0)
 	assignment = "Machinegunner"
@@ -304,7 +319,7 @@
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/mgoggles/orange(new_human), WEAR_IN_HELMET)
 
 /datum/equipment_preset/canc/machinegunner/heap
-	name = "CANC Rebel, Machinegunner (HEAP)"
+	name = "CANC Army, Machinegunner (HEAP)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "Machinegunner"
 	paygrades = list(PAY_SHORT_CA3 = JOB_PLAYTIME_TIER_0)
@@ -349,7 +364,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/canc/at
-	name = "CANC Rebel, Anti-Tank"
+	name = "CANC Army, Anti-Tank"
 	flags = EQUIPMENT_PRESET_EXTRA
 	paygrades = list(PAY_SHORT_CA2 = JOB_PLAYTIME_TIER_0)
 	assignment = "Anti-Tank Rifleman"
@@ -400,7 +415,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/canc/medic
-	name = "CANC Rebel, Medic"
+	name = "CANC Army, Medic"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "Medic"
 	skills = /datum/skills/nurse // it buggered me they have medics.. with no medic skill. At least they're now just nurses with guns
@@ -477,7 +492,7 @@
 	//uniform
 	add_civilian_uniform(new_human)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/canc(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/canc/old(new_human), WEAR_JACKET)
 	//limbs
 	var/random_civilian_shoe = rand(1,7)
 	switch(random_civilian_shoe)
@@ -519,7 +534,7 @@
 	//uniform
 	add_civilian_uniform(new_human)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/canc(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/canc/old(new_human), WEAR_JACKET)
 	//limbs
 	var/random_civilian_shoe = rand(1,7)
 	switch(random_civilian_shoe)
@@ -550,9 +565,10 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/canc/remnant/snowman
-	name = "CANC Rebel Snowman, Rifleman"
+	name = "CANC Army Snowman, Rifleman"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "Rifleman"
+	paygrades = list(PAY_SHORT_CA1 = JOB_PLAYTIME_TIER_0, PAY_SHORT_CA2 = JOB_PLAYTIME_TIER_1)
 
 /datum/equipment_preset/canc/remnant/snowman/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
@@ -570,7 +586,10 @@
 	//uniform
 	add_canc_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e1(new_human), WEAR_ACCESSORY)
+	if(paygrades == PAY_SHORT_CA1)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e1(new_human), WEAR_ACCESSORY)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e2(new_human), WEAR_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/snowman/canc(new_human), WEAR_JACKET)
 	//limbs
@@ -586,9 +605,9 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/canc/remnant/leader/snowman
-	name = "CANC Rebel Snowman, Unit Leader"
+	name = "CANC Army Snowman, Unit Leader"
 	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_CA5 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_CA4 = JOB_PLAYTIME_TIER_0, PAY_SHORT_CA5 = JOB_PLAYTIME_TIER_1)
 	assignment = "Unit Leader"
 	skills = /datum/skills/tl
 
@@ -609,7 +628,10 @@
 	//uniform
 	add_canc_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e5(new_human), WEAR_ACCESSORY)
+	if(paygrades == PAY_SHORT_CA4)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e4(new_human), WEAR_ACCESSORY)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e5(new_human), WEAR_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/snowman/canc(new_human), WEAR_JACKET)
 	//limbs
@@ -625,9 +647,9 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/canc/remnant/officer/snowman
-	name = "CANC Rebel Snowman, Officer"
+	name = "CANC Army Snowman, Officer"
 	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_CA5 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_CA7 = JOB_PLAYTIME_TIER_0)
 	assignment = "Officer"
 	skills = /datum/skills/lt
 
@@ -648,7 +670,7 @@
 	//uniform
 	add_canc_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e5(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e7(new_human), WEAR_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/snowman/canc(new_human), WEAR_JACKET)
 	//limbs
@@ -664,9 +686,9 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/canc/remnant/marksman/snowman
-	name = "CANC Rebel Snowman, Marksman"
+	name = "CANC Army Snowman, Marksman"
 	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_CA2 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_CA2 = JOB_PLAYTIME_TIER_0, PAY_SHORT_CA3 = JOB_PLAYTIME_TIER_1)
 	assignment = "Marksman"
 
 /datum/equipment_preset/canc/remnant/marksman/snowman/load_gear(mob/living/carbon/human/new_human)
@@ -687,7 +709,10 @@
 	//uniform
 	add_canc_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e2(new_human), WEAR_ACCESSORY)
+	if(paygrades == PAY_SHORT_CA2)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e2(new_human), WEAR_ACCESSORY)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e3(new_human), WEAR_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/snowman/canc(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/lw317/dmr(new_human), WEAR_J_STORE)
@@ -703,9 +728,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/mgoggles/orange(new_human), WEAR_IN_HELMET)
 
 /datum/equipment_preset/canc/remnant/marksman/type88/snowman
-	name = "CANC Rebel Snowman, Marksman Type 88"
+	name = "CANC Army Snowman, Marksman Type 88"
 	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_CA2 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_CA3 = JOB_PLAYTIME_TIER_0)
 	assignment = "Marksman"
 
 /datum/equipment_preset/canc/remnant/marksman/type88/snowman/load_gear(mob/living/carbon/human/new_human)
@@ -726,7 +751,7 @@
 	//uniform
 	add_canc_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e2(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e3(new_human), WEAR_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/snowman/canc(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/sniper/svd(new_human), WEAR_J_STORE)
@@ -744,10 +769,10 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/canc/machinegunner/snowman
-	name = "CANC Rebel Snowman, Machinegunner"
+	name = "CANC Army Snowman, Machinegunner"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "Machinegunner"
-	paygrades = list(PAY_SHORT_CA3 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_CA2 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/smartgunner
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MACHINEGUN)
 
@@ -761,7 +786,7 @@
 	//uniform
 	add_canc_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e1(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e2(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/upp, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp, WEAR_IN_BELT)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp, WEAR_IN_BELT)
@@ -779,7 +804,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/mgoggles/orange(new_human), WEAR_EYES)
 
 /datum/equipment_preset/canc/machinegunner/snowman/heap
-	name = "CANC Rebel Snowman, Machinegunner (HEAP)"
+	name = "CANC Army Snowman, Machinegunner (HEAP)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "Machinegunner"
 	paygrades = list(PAY_SHORT_CA3 = JOB_PLAYTIME_TIER_0)
@@ -816,7 +841,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/canc/at/snowman
-	name = "CANC Rebel Snowman, Anti-Tank"
+	name = "CANC Army Snowman, Anti-Tank"
 	flags = EQUIPMENT_PRESET_EXTRA
 	paygrades = list(PAY_SHORT_CA2 = JOB_PLAYTIME_TIER_0)
 	assignment = "Anti-Tank Rifleman"
@@ -858,7 +883,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/canc/medic/snowman
-	name = "CANC Rebel Snowman, Medic"
+	name = "CANC Army Snowman, Medic"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "Medic"
 	skills = /datum/skills/nurse
@@ -941,9 +966,10 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/canc/remnant/lowgear
-	name = "CANC Rebel, Rifleman, Uniformed And Pistol only"
+	name = "CANC Army, Rifleman, Uniformed And Pistol only"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "Rifleman"
+	paygrades = list(PAY_SHORT_CA1 = JOB_PLAYTIME_TIER_0, PAY_SHORT_CA2 = JOB_PLAYTIME_TIER_1)
 
 /datum/equipment_preset/canc/remnant/lowgear/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
@@ -969,7 +995,10 @@
 	//uniform
 	add_canc_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e1(new_human), WEAR_ACCESSORY)
+	if(paygrades == PAY_SHORT_CA1)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e1(new_human), WEAR_ACCESSORY)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e2(new_human), WEAR_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/webbing, WEAR_JACKET)
 	//limbs
@@ -985,9 +1014,10 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/canc/remnant/lowgear/rifle
-	name = "CANC Rebel, Rifleman, Uniformed And Rifle only"
+	name = "CANC Army, Rifleman, Uniformed And Rifle only"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "Rifleman"
+	paygrades = list(PAY_SHORT_CA1 = JOB_PLAYTIME_TIER_0, PAY_SHORT_CA2 = JOB_PLAYTIME_TIER_1)
 
 /datum/equipment_preset/canc/remnant/lowgear/rifle/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
@@ -1013,7 +1043,10 @@
 	//uniform
 	add_canc_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e1(new_human), WEAR_ACCESSORY)
+	if(paygrades == PAY_SHORT_CA1)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e1(new_human), WEAR_ACCESSORY)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e2(new_human), WEAR_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/webbing, WEAR_JACKET)
 	//limbs
@@ -1029,9 +1062,10 @@
 // RAD/CBRN
 
 /datum/equipment_preset/canc/remnant/rad
-	name = "CANC Rebel, Rifleman, Radsuit"
+	name = "CANC Army, Rifleman, Radsuit"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "Rifleman"
+	paygrades = list(PAY_SHORT_CA1 = JOB_PLAYTIME_TIER_0, PAY_SHORT_CA2 = JOB_PLAYTIME_TIER_1)
 
 /datum/equipment_preset/canc/remnant/rad/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
@@ -1049,7 +1083,10 @@
 	//uniform
 	add_canc_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e1(new_human), WEAR_ACCESSORY)
+	if(paygrades == PAY_SHORT_CA1)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e1(new_human), WEAR_ACCESSORY)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e2(new_human), WEAR_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/armoured_rad/canc, WEAR_JACKET)
 	//limbs
@@ -1064,9 +1101,9 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/canc/remnant/leader/rad
-	name = "CANC Rebel Unit Leader, Radsuit"
+	name = "CANC Army Unit Leader, Radsuit"
 	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_CA5 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_CA4 = JOB_PLAYTIME_TIER_0, PAY_SHORT_CA5 = JOB_PLAYTIME_TIER_1)
 	assignment = "Unit Leader"
 	skills = /datum/skills/tl
 
@@ -1087,7 +1124,10 @@
 	//uniform
 	add_canc_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e5(new_human), WEAR_ACCESSORY)
+	if(paygrades == PAY_SHORT_CA4)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e4(new_human), WEAR_ACCESSORY)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e5(new_human), WEAR_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/armoured_rad/canc(new_human), WEAR_JACKET)
 	//limbs
@@ -1102,9 +1142,9 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/canc/remnant/officer/rad
-	name = "CANC Rebel, Officer, Radsuit"
+	name = "CANC Army, Officer, Radsuit"
 	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_CA5 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_CA7 = JOB_PLAYTIME_TIER_0)
 	assignment = "Officer"
 	skills = /datum/skills/lt
 
@@ -1125,7 +1165,7 @@
 	//uniform
 	add_canc_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e5(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e7(new_human), WEAR_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/armoured_rad/canc(new_human), WEAR_JACKET)
 	//limbs
@@ -1140,9 +1180,9 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/canc/remnant/marksman/rad
-	name = "CANC Rebel, Marksman, Radsuit"
+	name = "CANC Army, Marksman, Radsuit"
 	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_CA2 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_CA2 = JOB_PLAYTIME_TIER_0, PAY_SHORT_CA3 = JOB_PLAYTIME_TIER_1)
 	assignment = "Marksman"
 
 /datum/equipment_preset/canc/remnant/marksman/rad/load_gear(mob/living/carbon/human/new_human)
@@ -1163,7 +1203,10 @@
 	//uniform
 	add_canc_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e2(new_human), WEAR_ACCESSORY)
+	if(paygrades == PAY_SHORT_CA2)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e2(new_human), WEAR_ACCESSORY)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e3(new_human), WEAR_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/armoured_rad/canc(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/lw317/dmr(new_human), WEAR_J_STORE)
@@ -1178,9 +1221,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/lw317/ap(new_human), WEAR_IN_R_STORE)
 
 /datum/equipment_preset/canc/remnant/marksman/type88/rad
-	name = "CANC Rebel, Marksman Type 88, Radsuit"
+	name = "CANC Army, Marksman Type 88, Radsuit"
 	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_CA2 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_CA3 = JOB_PLAYTIME_TIER_0)
 	assignment = "Marksman"
 
 /datum/equipment_preset/canc/remnant/marksman/type88/rad/load_gear(mob/living/carbon/human/new_human)
@@ -1201,7 +1244,7 @@
 	//uniform
 	add_canc_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e2(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e3(new_human), WEAR_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/armoured_rad/canc(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/sniper/svd(new_human), WEAR_J_STORE)
@@ -1218,10 +1261,10 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/canc/machinegunner/rad
-	name = "CANC Rebel, Machinegunner, Radsuit"
+	name = "CANC Army, Machinegunner, Radsuit"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "Machinegunner"
-	paygrades = list(PAY_SHORT_CA3 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_CA2 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/smartgunner
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MACHINEGUN)
 
@@ -1235,7 +1278,7 @@
 	//uniform
 	add_canc_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e1(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e2(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/upp, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp, WEAR_IN_BELT)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp, WEAR_IN_BELT)
@@ -1252,7 +1295,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/mgoggles/orange(new_human), WEAR_EYES)
 
 /datum/equipment_preset/canc/machinegunner/rad/heap
-	name = "CANC Rebel, Machinegunner, Radsuit (HEAP)"
+	name = "CANC Army, Machinegunner, Radsuit (HEAP)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "Machinegunner"
 	paygrades = list(PAY_SHORT_CA3 = JOB_PLAYTIME_TIER_0)
@@ -1288,7 +1331,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/canc/at/rad
-	name = "CANC Rebel, Anti-Tank, Radsuit"
+	name = "CANC Army, Anti-Tank, Radsuit"
 	flags = EQUIPMENT_PRESET_EXTRA
 	paygrades = list(PAY_SHORT_CA2 = JOB_PLAYTIME_TIER_0)
 	assignment = "Anti-Tank Rifleman"
@@ -1330,7 +1373,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/canc/medic/rad
-	name = "CANC Rebel, Medic, Radsuit"
+	name = "CANC Army, Medic, Radsuit"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "Medic"
 	skills = /datum/skills/nurse
@@ -1374,3 +1417,582 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/synthgraft, WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/tricordrazine, WEAR_IN_L_STORE)
 	add_canc_rifle_medic(new_human)
+
+//*****************************************************************************************************/
+//CANC BlackOps (Brotherhood)
+//*****************************************************************************************************/
+
+/datum/equipment_preset/canc/blackops
+	name = "CANC Brotherhood, Operative"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "Operative"
+	languages = list(LANGUAGE_TSL, LANGUAGE_CHINESE, LANGUAGE_ENGLISH, LANGUAGE_RUSSIAN)
+	skills = /datum/skills/brotherhood
+	paygrades = list (PAY_SHORT_CB1 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/canc/blackops/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/black/five_slot(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/kitchen/can_opener(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/balaclava, WEAR_FACE)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc/blackops(new_human), WEAR_HEAD)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/canc/blackops(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/black_vest, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/brotherhood(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/upp/folded, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/smokebomb/upp, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/smokebomb/upp, WEAR_IN_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/canc_blackops(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/ag80(new_human), WEAR_J_STORE)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/guard/canc(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown(new_human), WEAR_HANDS)
+	//belt
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp/black, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ag80, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ag80, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ag80, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ag80, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ag80, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ag80, WEAR_IN_BELT)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/pistol/large/type73, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/wy, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/t73, WEAR_IN_R_STORE)
+	if(prob(30))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/mgoggles/orange(new_human), WEAR_IN_HELMET)
+
+	var/obj/item/device/internal_implant/subdermal_armor/implant = new()
+	implant.on_implanted(new_human)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/canc/machinegunner/blackops
+	name = "CANC Brotherhood, Machinegunner"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "Operative Machinegunner"
+	languages = list(LANGUAGE_TSL, LANGUAGE_CHINESE, LANGUAGE_ENGLISH, LANGUAGE_RUSSIAN)
+	skills = /datum/skills/brotherhood
+	paygrades = list (PAY_SHORT_CB1 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/canc/machinegunner/blackops/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/black/five_slot(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/kitchen/can_opener(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/balaclava, WEAR_FACE)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc/blackops(new_human), WEAR_HEAD)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/canc/blackops(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/black_vest, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/brotherhood(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/upp/folded, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/smokebomb/upp, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/smokebomb/upp, WEAR_IN_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/canc_blackops(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/mg82(new_human), WEAR_J_STORE)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/guard/canc(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown(new_human), WEAR_HANDS)
+	//belt
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp/black, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mg82, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mg82, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mg82, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mg82, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mg82, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mg82, WEAR_IN_BELT)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/pistol/large/type73, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/wy, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/t73, WEAR_IN_R_STORE)
+	if(prob(30))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/mgoggles/orange(new_human), WEAR_IN_HELMET)
+
+	var/obj/item/device/internal_implant/subdermal_armor/implant = new()
+	implant.on_implanted(new_human)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/canc/medic/blackops
+	name = "CANC Brotherhood, Medic"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "Combat Medic"
+	languages = list(LANGUAGE_TSL, LANGUAGE_CHINESE, LANGUAGE_ENGLISH, LANGUAGE_RUSSIAN)
+	skills = /datum/skills/brotherhood/medic
+	paygrades = list(PAY_SHORT_CB2 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/canc/medic/blackops/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/black/medic/five_slot, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/roller, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer/soul, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/kitchen/can_opener, WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
+	if(new_human.disabilities & NEARSIGHTED)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health/prescription, WEAR_EYES)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/medhud/no_nvg, WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/balaclava, WEAR_FACE)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc/blackops(new_human), WEAR_HEAD)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/canc/blackops(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/black_vest, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/brotherhood(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/upp/folded, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/smokebomb/upp, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/smokebomb/upp, WEAR_IN_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/canc_blackops(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/ag80(new_human), WEAR_J_STORE)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/upp/black/full, WEAR_WAIST)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/guard/canc(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown(new_human), WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/large/wy, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ag80, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ag80, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ag80, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ag80, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medical, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/surgical_line, WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/synthgraft, WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/tricordrazine, WEAR_IN_L_STORE)
+	if(prob(30))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/mgoggles/orange(new_human), WEAR_IN_HELMET)
+
+	var/obj/item/device/internal_implant/subdermal_armor/implant = new()
+	implant.on_implanted(new_human)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/canc/marksman/blackops
+	name = "CANC Brotherhood, Marksman"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "Operative Marksman"
+	languages = list(LANGUAGE_TSL, LANGUAGE_CHINESE, LANGUAGE_ENGLISH, LANGUAGE_RUSSIAN)
+	skills = /datum/skills/brotherhood
+	paygrades = list (PAY_SHORT_CB1 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/canc/marksman/blackops/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/black/five_slot(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator/upp(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/kitchen/can_opener(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/balaclava, WEAR_FACE)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc/blackops(new_human), WEAR_HEAD)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/canc/blackops(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/black_vest, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/brotherhood(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/upp/folded, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/smokebomb/upp, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/smokebomb/upp, WEAR_IN_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/canc_blackops(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/spp(new_human), WEAR_J_STORE)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/guard/canc(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown(new_human), WEAR_HANDS)
+	//belt
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp/black, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/spp, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/spp, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/spp, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/spp, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/spp, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/spp, WEAR_IN_BELT)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/pistol/large/type73, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/wy, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/t73, WEAR_IN_R_STORE)
+	if(prob(30))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/mgoggles/orange(new_human), WEAR_IN_HELMET)
+
+	var/obj/item/device/internal_implant/subdermal_armor/implant = new()
+	implant.on_implanted(new_human)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/canc/leader/blackops
+	name = "CANC Brotherhood, Team Leader"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "Team Leader"
+	languages = list(LANGUAGE_TSL, LANGUAGE_CHINESE, LANGUAGE_ENGLISH, LANGUAGE_RUSSIAN)
+	skills = /datum/skills/brotherhood/leader
+	paygrades = list (PAY_SHORT_CB3 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/canc/leader/blackops/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/black/five_slot(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/kitchen/can_opener(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/balaclava, WEAR_FACE)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc/blackops(new_human), WEAR_HEAD)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/canc/blackops(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/black_vest, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/brotherhood(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/upp/folded, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/smokebomb/upp, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/smokebomb/upp, WEAR_IN_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/canc_blackops(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71/carbine/recon(new_human), WEAR_J_STORE)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/guard/canc(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown(new_human), WEAR_HANDS)
+	//belt
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/type47/sof/canc_blackops/m48a5, WEAR_WAIST)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/large/wy, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/rmc/full, WEAR_R_STORE)
+	if(prob(30))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/mgoggles/orange(new_human), WEAR_IN_HELMET)
+
+	var/obj/item/device/internal_implant/subdermal_armor/implant = new()
+	implant.on_implanted(new_human)
+
+//*****************************************************************************************************/
+//CANC Army Commando
+//*****************************************************************************************************/
+
+/datum/equipment_preset/canc/remnant/old/commando
+	name = "CANC Commando"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "Commando"
+	paygrades = list(PAY_SHORT_CA3 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/canc/remnant/old/commando/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/canc_monoscope(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/canc_smock(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/kitchen/can_opener(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
+	var/obj/item/facepaint/sniper/paint = new()
+	paint.paint_face(new_human, new_human)
+	qdel(paint)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc(new_human), WEAR_HEAD)
+	//uniform
+	add_canc_uniform(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e3(new_human), WEAR_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/canc(new_human), WEAR_JACKET)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/guard/canc(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown(new_human), WEAR_HANDS)
+	//pockets
+	var/pouch_type = pick(/obj/item/storage/pouch/firstaid/full/alternate, /obj/item/storage/pouch/firstaid/full)
+	new_human.equip_to_slot_or_del(new pouch_type(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/t73, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71(new_human), WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_BELT)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/canc/remnant/old/commando/leader
+	name = "CANC Commando Leader"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "Commando Leader"
+	paygrades = list(PAY_SHORT_CA6 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/canc/remnant/old/commando/leader/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/canc_monoscope(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/rto/canc(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/kitchen/can_opener(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
+	var/obj/item/facepaint/sniper/paint = new()
+	paint.paint_face(new_human, new_human)
+	qdel(paint)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/cm/canc/leader(new_human), WEAR_HEAD)
+	//uniform
+	add_canc_uniform(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e1(new_human), WEAR_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/canc(new_human), WEAR_JACKET)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/guard/canc(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown(new_human), WEAR_HANDS)
+	//pockets
+	var/pouch_type = pick(/obj/item/storage/pouch/firstaid/full/alternate, /obj/item/storage/pouch/firstaid/full)
+	new_human.equip_to_slot_or_del(new pouch_type(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/t73, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71/carbine(new_human), WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_BELT)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/canc/remnant/old/commando/machinegunner
+	name = "CANC Commando Machinegunner"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "Commando Machinegunner"
+	paygrades = list(PAY_SHORT_CA3 = JOB_PLAYTIME_TIER_0, PAY_SHORT_CA4 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/canc/remnant/old/commando/machinegunner/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/canc_monoscope(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/canc_smock(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/kitchen/can_opener(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
+	var/obj/item/facepaint/sniper/paint = new()
+	paint.paint_face(new_human, new_human)
+	qdel(paint)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc(new_human), WEAR_HEAD)
+	//uniform
+	add_canc_uniform(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
+	if(paygrades == PAY_SHORT_CA3)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e3(new_human), WEAR_ACCESSORY)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e4(new_human), WEAR_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/canc(new_human), WEAR_JACKET)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/guard/canc(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown(new_human), WEAR_HANDS)
+	//pockets
+	var/pouch_type = pick(/obj/item/storage/pouch/firstaid/full/alternate, /obj/item/storage/pouch/firstaid/full)
+	new_human.equip_to_slot_or_del(new pouch_type(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/t73, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pkp(new_human), WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/upp, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp, WEAR_IN_BELT)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/canc/remnant/old/commando/sniper
+	name = "CANC Commando Sniper"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "Commando Sniper"
+	paygrades = list(PAY_SHORT_CA3 = JOB_PLAYTIME_TIER_0, PAY_SHORT_CA4 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/canc/remnant/old/commando/sniper/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/canc_monoscope(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/canc_smock(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/kitchen/can_opener(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
+	var/obj/item/facepaint/sniper/paint = new()
+	paint.paint_face(new_human, new_human)
+	qdel(paint)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc(new_human), WEAR_HEAD)
+	//uniform
+	add_canc_uniform(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
+	if(paygrades == PAY_SHORT_CA3)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e3(new_human), WEAR_ACCESSORY)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e4(new_human), WEAR_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/canc(new_human), WEAR_JACKET)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/guard/canc(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown(new_human), WEAR_HANDS)
+	//pockets
+	var/pouch_type = pick(/obj/item/storage/pouch/firstaid/full/alternate, /obj/item/storage/pouch/firstaid/full)
+	new_human.equip_to_slot_or_del(new pouch_type(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/type47/t73, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/sniper/svd/pve(new_human), WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper/svd/pve(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper/svd/pve(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper/svd/pve(new_human), WEAR_IN_R_STORE)
+
+//*****************************************************************************************************/
+//CANC Army Reservists
+//*****************************************************************************************************/
+
+/datum/equipment_preset/canc/remnant/old
+	name = "CANC Army Reservist, Rifleman"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "Rifleman"
+	paygrades = list(PAY_SHORT_CA1 = JOB_PLAYTIME_TIER_0, PAY_SHORT_CA2 = JOB_PLAYTIME_TIER_1)
+
+/datum/equipment_preset/canc/remnant/old/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
+	var/random_yummers = pick(/obj/item/reagent_container/food/drinks/cans/food/upp/soup, /obj/item/reagent_container/food/drinks/cans/food/upp/stew, /obj/item/reagent_container/food/drinks/cans/food/upp/speck)
+	new_human.equip_to_slot_or_del(new random_yummers(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/canc(new_human), WEAR_L_EAR)
+	var/random_neckwear_canc = rand(1,4)
+	switch(random_neckwear_canc)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/neckerchief/red(new_human), WEAR_FACE)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tacticalmask/red(new_human), WEAR_FACE)
+	//head
+	var/random_headwear = rand(1, 6)
+	switch(random_headwear)
+		if(1 to 4)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc/old(new_human), WEAR_HEAD)
+		if(5)
+			var/random_hat = pick(/obj/item/clothing/head/cmcap/upp/boonie/canc, /obj/item/clothing/head/cmcap/flap/canc)
+			new_human.equip_to_slot_or_del(new random_hat(new_human), WEAR_HEAD)
+	//uniform
+	add_canc_uniform(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
+	if(paygrades == PAY_SHORT_CA1)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e1(new_human), WEAR_ACCESSORY)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e2(new_human), WEAR_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/canc/old(new_human), WEAR_JACKET)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/guard/canc(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown(new_human), WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/bruise_pack, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	add_canc_rifle_newblood(new_human)
+	if(prob(30))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/mgoggles/orange(new_human), WEAR_IN_HELMET)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/canc/remnant/old/medic
+	name = "CANC Army Reservist, Medic"
+	assignment = "Medic"
+	paygrades = list(PAY_SHORT_CA2 = JOB_PLAYTIME_TIER_0)
+	flags = EQUIPMENT_PRESET_EXTRA
+
+/datum/equipment_preset/canc/remnant/old/medic/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
+	var/random_yummers = pick(/obj/item/reagent_container/food/drinks/cans/food/upp/soup, /obj/item/reagent_container/food/drinks/cans/food/upp/stew, /obj/item/reagent_container/food/drinks/cans/food/upp/speck)
+	var/random_yummers2 = pick(/obj/item/reagent_container/food/drinks/cans/food/upp/soup, /obj/item/reagent_container/food/drinks/cans/food/upp/stew, /obj/item/reagent_container/food/drinks/cans/food/upp/speck)
+	new_human.equip_to_slot_or_del(new random_yummers(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new random_yummers2(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/roller(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/blood/saline(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/blood/saline(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/canc(new_human), WEAR_L_EAR)
+	var/random_neckwear_canc = rand(1,4)
+	switch(random_neckwear_canc)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/neckerchief/red(new_human), WEAR_FACE)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tacticalmask/red(new_human), WEAR_FACE)
+	//head
+	var/random_headwear = pick(/obj/item/clothing/head/helmet/marine/veteran/canc/old, /obj/item/clothing/head/cmcap/flap/canc)
+	new_human.equip_to_slot_or_del(new random_headwear(new_human), WEAR_HEAD)
+	//uniform
+	add_canc_uniform(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch/upp, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer/soul, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e2(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/med(new_human), WEAR_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/canc/old(new_human), WEAR_JACKET)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/guard/canc(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown(new_human), WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/advanced/bruise_pack, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/tricord/skillless, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/pps43/extended_mag(new_human), WEAR_J_STORE)
+	//belt
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/upp, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/advanced/bruise_pack, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/advanced/ointment, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/splint, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/bicaridine, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/tramadol, WEAR_IN_BELT)
+	if(prob(30))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/mgoggles/orange(new_human), WEAR_IN_HELMET)

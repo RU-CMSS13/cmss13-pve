@@ -808,7 +808,11 @@
 	frequency = CLF_FREQ
 	has_hud = FALSE //Until we get CANC stuff, this'll do
 
-
+/obj/item/device/radio/headset/distress/canc
+	name = "CANC reservist's headset"
+	desc = "A special headset used by CANC army reservists."
+	frequency = CLF_FREQ
+	has_hud = FALSE //Until we get CANC stuff, this'll do
 
 /obj/item/device/radio/headset/almayer/cia
 	name = "radio headset"

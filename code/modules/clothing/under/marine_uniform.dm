@@ -602,6 +602,13 @@
 	worn_state = "upp_boiler"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
+/obj/item/clothing/under/marine/veteran/upp/snow
+	name = "\improper UPP winter fatigues"
+	desc = "A winter variation of the UPP Armed Collective uniform. The only difference from the standard uniform is that it is worn with an uncomfortable but incredibly warm camouflage jacket over it."
+	icon_state = "upp_uniform_winter"
+	worn_state = "upp_uniform_winter"
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+
 /obj/item/clothing/under/marine/veteran/upp/pap
 	name = "\improper PaP service uniform"
 	desc = "A pair of blue-grey slacks coupled with a blue shirt, featuring venlar armor inserts at critical areas to protect from blades and low caliber ballistics."
@@ -678,6 +685,18 @@
 	has_sensor = UNIFORM_HAS_SENSORS
 	sensor_faction = FACTION_CANC
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
+
+/obj/item/clothing/under/marine/veteran/canc/blackops
+	name = "\improper Brotherhood fatigues"
+	desc = "It's a set of standard-issue Brotherhood combat fatigues featuring venlar armor inserts at critical areas to protect from blades and low caliber ballistics. The rubberized outer layer provides additional protection from chemical hazards."
+	icon_state = "canc_uniform_blackops"
+	worn_state = "canc_uniform_blackops"
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	has_sensor = UNIFORM_HAS_SENSORS
+	sensor_faction = FACTION_CANC
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
+	armor_melee = CLOTHING_ARMOR_LOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
 
 // UPP Army / Territorial Guard
 
@@ -1530,6 +1549,39 @@
 	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
 	hood_type = /obj/item/clothing/head/helmet/marine/cbrn_hood/advanced
+
+/obj/item/clothing/under/marine/cbrn/upp
+	name = "\improper HRPS-200M suit"
+	desc = "Heat-Reflecting Protective Suit 200M. It was developed and adopted by the CBRN in 2176 due to events on the planet New Siberia. Due to the difficulties in production, this model stands out only to flamethrower operators."
+	desc_lore = null
+	icon = 'icons/obj/items/clothing/uniforms/uniforms_by_faction/UPP.dmi'
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_faction/UPP.dmi',
+	)
+	icon_state = "upp_cbrn"
+	worn_state = "upp_cbrn"
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	armor_bio = CLOTHING_ARMOR_HIGH
+	armor_rad = CLOTHING_ARMOR_HIGHPLUS
+	hood_type = /obj/item/clothing/head/helmet/marine/cbrn_hood/upp
+
+/obj/item/clothing/under/marine/pve_mopp/twe
+	name = "\improper CPS Mk.III suit"
+	desc = "CPS Mk.III Suit. Developed by Blucher & Respirex Technologies for the CBRN troops of the Three World Empire. A third-generation model, it provides better protection against chemicals and radiation, as well as pistol rounds, at the cost of increased bulk and the inability to use a helmet."
+	desc_lore = null
+	icon = 'icons/obj/items/clothing/uniforms/uniforms_by_faction/TWE.dmi'
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_faction/TWE.dmi',
+	)
+	icon_state = "twe_cbrn"
+	worn_state = "twe_cbrn"
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	armor_bio = CLOTHING_ARMOR_HIGH
+	armor_rad = CLOTHING_ARMOR_HIGHPLUS
+	max_heat_protection_temperature = ARMOR_MAX_HEAT_PROT
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
 
 //=USASF & ARMY=\\
 

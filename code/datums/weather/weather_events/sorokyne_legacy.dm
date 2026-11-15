@@ -19,7 +19,7 @@
 	turf_overlay_icon_state = "strata_storm"
 
 	effect_message = "You feel the icy winds of the snowstorm chill you to the bone!"
-	damage_per_tick = 0.125
+	damage_per_tick = 0
 
 	ambience = 'sound/ambience/strata/strata_snowstorm.ogg'
 
@@ -32,7 +32,7 @@
 	turf_overlay_icon_state = "strata_blizzard"
 
 	effect_message = "You feel the winds of the blizzard sap all the warmth from your body!"
-	damage_per_tick = 0.25
+	damage_per_tick = 0.1
 
 	ambience = 'sound/ambience/strata/strata_blizzard.ogg'
 
