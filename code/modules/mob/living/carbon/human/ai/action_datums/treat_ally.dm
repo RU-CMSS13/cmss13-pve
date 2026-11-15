@@ -70,7 +70,7 @@
 	var/give_up_time
 
 /datum/ai_action/treat_ally/get_weight(datum/human_ai_brain/brain)
-	if(iszombie(brain.tied_human))
+	if(!SShuman_ai.medics_treat_allies || iszombie(brain.tied_human))
 		return 0
 
 	if(brain.healing_someone || brain.current_target || brain.hold_position)
@@ -103,7 +103,7 @@
 		return ONGOING_ACTION_UNFINISHED
 
 	var/mob/living/carbon/human/patient = brain.found_injured_ally
-	if(brain.current_target || !brain.can_treat_patient(patient) || (world.time > give_up_time))
+	if(!SShuman_ai.medics_treat_allies || brain.current_target || !brain.can_treat_patient(patient) || (world.time > give_up_time))
 		brain.rest_patient(patient)
 		return ONGOING_ACTION_COMPLETED
 

@@ -108,6 +108,7 @@ type BackendContext = {
   selected_equipment: string;
   spawn_ai: BooleanLike;
   paradrop: BooleanLike;
+  spawn_unaware: BooleanLike;
   outfit: BooleanLike;
   nest_gun: string;
   nest_spare_ammo: number;
@@ -644,6 +645,7 @@ const HumanOptions = (props) => {
     selected_equipment,
     spawn_ai,
     paradrop,
+    spawn_unaware,
   } = data;
 
   return (
@@ -699,6 +701,14 @@ const HumanOptions = (props) => {
           onClick={() => act('toggle_paradrop')}
         >
           Parachute
+        </Button.Checkbox>
+        <Button.Checkbox
+          checked={spawn_unaware}
+          disabled={!spawn_ai}
+          tooltip="Blind behind its back and slow to notice a grab, so it can be snuck up on and have its throat slit with a knife."
+          onClick={() => act('toggle_unaware')}
+        >
+          Unaware
         </Button.Checkbox>
       </Stack.Item>
       {selected_species === 'Zombie' && <ZombieOptions />}

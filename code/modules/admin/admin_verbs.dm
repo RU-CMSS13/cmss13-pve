@@ -79,6 +79,7 @@ GLOBAL_LIST_INIT(admin_verbs_default, list(
 	/client/proc/other_records,
 	/datum/admins/proc/toggle_ai,
 	/datum/admins/proc/toggle_human_ai,
+	/datum/admins/proc/toggle_human_ai_medics,
 	/client/proc/open_human_ai_management_panel,
 	/client/proc/open_human_faction_management_panel,
 	/client/proc/open_human_defense_creator_panel,
