@@ -1,3 +1,42 @@
+/datum/human_ai_brain
+	/// What the AI was ordered to fire at, an atom or a turf, until ordered_fire_until
+	var/atom/ordered_fire_target
+	/// world.time when the order to fire at ordered_fire_target runs out
+	var/ordered_fire_until = 0
+
+/// Has the AI fire at the target for a while instead of anything it sees, a turf is fired at too
+/datum/human_ai_brain/proc/order_fire_at(atom/target, duration)
+	clear_fire_order()
+	ordered_fire_target = target
+	ordered_fire_until = world.time + duration
+	if(!isturf(target))
+		RegisterSignal(target, COMSIG_PARENT_QDELETING, PROC_REF(clear_fire_order))
+	lose_target()
+	enter_combat()
+
+/datum/human_ai_brain/proc/clear_fire_order()
+	SIGNAL_HANDLER
+	if(ordered_fire_target && !isturf(ordered_fire_target))
+		UnregisterSignal(ordered_fire_target, COMSIG_PARENT_QDELETING)
+	ordered_fire_target = null
+
+/// Returns what the AI is ordered to fire at, null once the order ran out or the target died
+/datum/human_ai_brain/proc/get_ordered_fire_target()
+	if(!ordered_fire_target)
+		return
+
+	var/mob/living/living_target = ordered_fire_target
+	if((world.time > ordered_fire_until) || (istype(living_target) && (living_target.stat == DEAD)))
+		clear_fire_order()
+		return
+
+	return ordered_fire_target
+
+/// Returns the turf the AI shoots at: what it was ordered to fire at, or where its target is
+/datum/human_ai_brain/proc/get_fire_turf()
+	var/atom/ordered_target = get_ordered_fire_target()
+	return ordered_target ? get_turf(ordered_target) : target_turf
+
 /datum/ai_action/fire_at_target
 	name = "Fire At Target"
 	action_flags = ACTION_USING_HANDS
@@ -5,9 +44,6 @@
 	var/currently_firing
 
 /datum/ai_action/fire_at_target/get_weight(datum/human_ai_brain/brain)
-	if(!brain.in_combat)
-		return 0
-
 	if(brain.tried_reload)
 		return 0
 
@@ -15,6 +51,24 @@
 		return 0
 
 	if(!COOLDOWN_FINISHED(brain, stop_fire_cooldown))
+		return 0
+
+	var/atom/ordered_target = brain.get_ordered_fire_target()
+	if(ordered_target)
+		var/turf/ordered_turf = get_turf(ordered_target)
+		if((ordered_turf.z != brain.tied_human.z) || (get_dist(brain.tied_human, ordered_turf) > brain.gun_data.maximum_range))
+			return 0
+		if(!firing_line_check(brain, ordered_target, TRUE))
+			return 0
+		if(brain.should_reload())
+			return 0
+		return 10
+
+	if(!brain.in_combat)
+		return 0
+
+	// Shots aimed at another z-level fly off somewhere on ours
+	if(brain.target_turf && (brain.target_turf.z != brain.tied_human.z))
 		return 0
 
 	var/should_fire_offscreen = (brain.target_turf && !COOLDOWN_FINISHED(brain, fire_offscreen) && (brain.gun_data.maximum_range > brain.view_distance))
@@ -41,7 +95,9 @@
 	currently_firing = FALSE
 	rounds_burst_fired = 0
 
-	UnregisterSignal(brain.tied_human, COMSIG_MOB_FIRED_GUN)
+	// Gone already when the brain is being deleted
+	if(brain.tied_human)
+		UnregisterSignal(brain.tied_human, COMSIG_MOB_FIRED_GUN)
 	brain.primary_weapon?.set_target(null)
 
 /datum/ai_action/fire_at_target/trigger_action()
@@ -51,8 +107,9 @@
 	if(!primary_weapon || brain.active_grenade_found || !COOLDOWN_FINISHED(brain, stop_fire_cooldown))
 		return ONGOING_ACTION_COMPLETED
 
+	var/atom/ordered_target = brain.get_ordered_fire_target()
 	var/should_fire_offscreen = (brain.target_turf && !COOLDOWN_FINISHED(brain, fire_offscreen))
-	if(!brain.current_target && !should_fire_offscreen)
+	if(!ordered_target && !brain.current_target && !should_fire_offscreen)
 		return ONGOING_ACTION_COMPLETED
 
 	if(currently_firing || !COOLDOWN_FINISHED(brain, fire_overload_cooldown))
@@ -69,7 +126,10 @@
 			brain.set_primary_weapon(null)
 		return ONGOING_ACTION_COMPLETED
 
-	var/turf/target_turf = brain.target_turf
+	var/turf/target_turf = brain.get_fire_turf()
+	if(!target_turf || (target_turf.z != tied_human.z))
+		return ONGOING_ACTION_COMPLETED
+
 	if((get_dist(tied_human, target_turf) > gun_data.maximum_range) && !should_fire_offscreen)
 		return ONGOING_ACTION_COMPLETED
 
@@ -78,30 +138,28 @@
 
 	RegisterSignal(tied_human, COMSIG_MOB_FIRED_GUN, PROC_REF(on_gun_fire), TRUE)
 
-	// Handling point-blank through attack()
-	var/atom/movable/current_target = brain.current_target
-	if(current_target && (get_dist(tied_human, current_target) <= 1))
-		currently_firing = FALSE
-		primary_weapon.set_target(null)
-		INVOKE_ASYNC(tied_human, TYPE_PROC_REF(/mob, do_click), current_target, "", list())
-		return ONGOING_ACTION_UNFINISHED
-
+	// Adjacent targets are shot normally, do_click() only point-blanks for mobs with a client
 	primary_weapon?.set_target(target_turf)
 	primary_weapon?.start_fire(object = target_turf, bypass_checks = TRUE)
 	return ONGOING_ACTION_UNFINISHED
 
-/datum/ai_action/fire_at_target/proc/firing_line_check(datum/human_ai_brain/brain, atom/target)
+/// TRUE if nothing stops the shot and no friendly is in the way. Ordered fire may hit the wall or object it was ordered at
+/datum/ai_action/fire_at_target/proc/firing_line_check(datum/human_ai_brain/brain, atom/target, ordered = FALSE)
 	var/mob/living/carbon/tied_human = brain.tied_human
-	var/list/turf_list = get_line(get_turf(tied_human), get_turf(target))
+	var/turf/target_turf = get_turf(target)
+	var/list/turf_list = get_line(get_turf(tied_human), target_turf)
 	for(var/turf/tile in turf_list)
 		var/tile_dist = get_dist(tied_human, tile)
 		if(tile_dist > brain.view_distance)
 			continue
 
-		if(tile.density)
+		var/ordered_tile = ordered && (tile == target_turf)
+		if(tile.density && !ordered_tile)
 			return FALSE
 
 		for(var/obj/thing in tile)
+			if(ordered_tile)
+				break
 			if(!thing.unacidable || !thing.density)
 				continue
 
@@ -120,6 +178,16 @@
 			if(brain.faction_check(possible_friendly))
 				return FALSE
 
+	if(brain.ally_behind_target(get_turf(tied_human), target_turf))
+		return FALSE
+
+	// Rockets and flames hit everyone around where they land
+	var/splash_radius = brain.gun_data?.splash_radius
+	if(splash_radius)
+		for(var/mob/living/carbon/human/possible_friendly in range(splash_radius, target_turf))
+			if((possible_friendly.stat != DEAD) && brain.faction_check(possible_friendly))
+				return FALSE
+
 	return TRUE
 
 /datum/ai_action/fire_at_target/proc/on_gun_fire(datum/source, obj/item/weapon/gun/fired)
@@ -129,7 +197,8 @@
 		qdel(src)
 		return
 
-	var/turf/target_turf = brain.target_turf
+	var/atom/ordered_target = brain.get_ordered_fire_target()
+	var/turf/target_turf = brain.get_fire_turf()
 
 	var/mob/living/carbon/tied_human = brain.tied_human
 	tied_human.a_intent_change(INTENT_HARM)
@@ -149,9 +218,13 @@
 		return
 
 	var/should_fire_offscreen = (target_turf && !COOLDOWN_FINISHED(brain, fire_offscreen))
-	var/shoot_next = brain.current_target
+	var/atom/shoot_next = ordered_target || brain.current_target
 
-	if(QDELETED(brain.current_target))
+	// Checked when the action is picked, the order runs until it times out
+	if(ordered_target)
+		shoot_next = ordered_target
+
+	else if(QDELETED(brain.current_target))
 		if(!should_fire_offscreen)
 			stop_firing(brain)
 			qdel(src)
@@ -179,16 +252,13 @@
 		return
 
 	if((get_dist(tied_human, shoot_next) > gun_data.maximum_range) && !should_fire_offscreen)
-		brain.lose_target()
+		if(!ordered_target)
+			brain.lose_target()
 		stop_firing(brain)
 		qdel(src)
 		return
 
-	if(brain.current_target && (get_dist(tied_human, brain.current_target) <= 1))
-		currently_firing = FALSE
-		return
-
-	if(!firing_line_check(brain, shoot_next))
+	if(!firing_line_check(brain, shoot_next, !!ordered_target))
 		stop_firing(brain)
 		return
 
@@ -230,13 +300,13 @@
 
 	else if(brain.primary_weapon.gun_firemode == GUN_FIREMODE_SEMIAUTO)
 		currently_firing = FALSE
-		addtimer(CALLBACK(brain.primary_weapon, TYPE_PROC_REF(/obj/item/weapon/gun, start_fire), null, brain.current_target, null, null, null, TRUE), brain.primary_weapon.get_fire_delay())
+		addtimer(CALLBACK(brain.primary_weapon, TYPE_PROC_REF(/obj/item/weapon/gun, start_fire), null, ordered_target || brain.current_target, null, null, null, TRUE), brain.primary_weapon.get_fire_delay())
 
 	else if(brain.primary_weapon.gun_firemode == GUN_FIREMODE_AUTOMATIC)
 		rounds_burst_fired++
 
 	else if(brain.primary_weapon.gun_firemode == GUN_FIREMODE_BURSTFIRE)
 		currently_firing = FALSE
-		addtimer(CALLBACK(brain.primary_weapon, TYPE_PROC_REF(/obj/item/weapon/gun, start_fire), null, brain.current_target, null, null, null, TRUE), brain.primary_weapon.get_burst_fire_delay())
+		addtimer(CALLBACK(brain.primary_weapon, TYPE_PROC_REF(/obj/item/weapon/gun, start_fire), null, ordered_target || brain.current_target, null, null, null, TRUE), brain.primary_weapon.get_burst_fire_delay())
 
 	brain.primary_weapon?.set_target(shoot_next)

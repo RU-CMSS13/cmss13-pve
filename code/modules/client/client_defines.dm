@@ -147,10 +147,16 @@
 	/// Holds the human defense creator panel for this client
 	var/datum/human_defense_creator_menu/human_defense_menu
 
-	/// Holds the human squad spawner panel for this client
-	var/datum/human_squad_spawner_menu/human_squad_menu
-
-	/// Holds the human squad spawner panel for this client
+	/// Holds the human AI spawner panel for this client
 	var/datum/human_ai_spawner_menu/human_spawn_menu
+
+	/// Holds the xeno spawner panel for this client
+	var/datum/xeno_ai_spawner_menu/xeno_spawn_menu
 	/// Sets LOOC messaging cooldown
 	COOLDOWN_DECLARE(looc_cooldown)
+
+	/// An alist used to make checks for whether a render plate has been added to a client's screen faster.
+	/// render relay plate -> TRUE
+	/// This must be cleared whenever screen is cleared manually.
+	var/alist/render_plates_shown = alist()
+

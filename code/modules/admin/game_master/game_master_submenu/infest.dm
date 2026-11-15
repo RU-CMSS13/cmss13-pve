@@ -62,11 +62,17 @@
 			qdel(embryo)
 
 	if(!infesting_embryo) //else, make a new one
-		infesting_embryo = new /obj/item/alien_embryo(referenced_atom)
+		if(selected_hive == XENO_HIVE_PATHOGEN)
+			infesting_embryo = new /obj/item/alien_embryo/bloodburster(referenced_atom)
+		else
+			infesting_embryo = new /obj/item/alien_embryo(referenced_atom)
 		infesting_embryo.hivenumber = selected_hive
 
 		var/mob/living/carbon/human/infested_host = referenced_atom
 		infested_host.species?.larva_impregnated(infesting_embryo) //Yautja handling
+
+	if(selected_hive == XENO_HIVE_PATHOGEN) // An embryo made before for this hive might be a plain one
+		infesting_embryo.flags_embryo |= FLAG_EMBRYO_PATHOGEN
 
 	infesting_embryo.stage = embryo_stage
 
@@ -75,7 +81,9 @@
 		qdel(embryo)
 
 /datum/game_master_submenu/infest/proc/force_burst()
-	var/mob/living/carbon/xenomorph/larva/infesting_larva = locate() in referenced_atom //if a larva already exists, use it
+	var/mob/living/carbon/xenomorph/infesting_larva = locate(/mob/living/carbon/xenomorph/larva) in referenced_atom //if a larva already exists, use it
+	if(!infesting_larva)
+		infesting_larva = locate(/mob/living/carbon/xenomorph/bloodburster) in referenced_atom
 	if(infesting_larva)
 		infesting_larva.chest_burst(referenced_atom)
 		return
@@ -83,13 +91,18 @@
 	for(var/obj/item/alien_embryo/embryo in referenced_atom) //else if this hive's embryo already exists, convert to larva and use it
 		if(embryo.hivenumber == selected_hive)
 			embryo.become_larva()
-			infesting_larva = locate() in referenced_atom
+			infesting_larva = locate(/mob/living/carbon/xenomorph/larva) in referenced_atom
+			if(!infesting_larva)
+				infesting_larva = locate(/mob/living/carbon/xenomorph/bloodburster) in referenced_atom
 			break
 	if(infesting_larva)
 		infesting_larva.chest_burst(referenced_atom)
 		return
 
-	infesting_larva = new /mob/living/carbon/xenomorph/larva(referenced_atom, null, selected_hive) //else, make a new larva
+	var/larva_type = /mob/living/carbon/xenomorph/larva //else, make a new larva
+	if(selected_hive == XENO_HIVE_PATHOGEN)
+		larva_type = isyautja(referenced_atom) ? /mob/living/carbon/xenomorph/bloodburster/aberrant : /mob/living/carbon/xenomorph/bloodburster
+	infesting_larva = new larva_type(referenced_atom, null, selected_hive)
 	var/mob/living/carbon/human/infested_host = referenced_atom
 	infesting_larva.ckey = infested_host.ckey
 	infesting_larva.chest_burst(referenced_atom)

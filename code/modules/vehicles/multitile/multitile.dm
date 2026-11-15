@@ -402,6 +402,12 @@
 
 /obj/effect/vehicle_spawner
 	name = "Vehicle Spawner"
+	/// If set together with ai_crew_preset, the spawned vehicle is driven by vehicle AI fighting for this faction
+	var/ai_faction
+	/// Equipment preset of the human AI crew seated in the driver and gunner seats
+	var/datum/equipment_preset/ai_crew_preset
+	/// If TRUE, the vehicle AI never runs out of ammunition
+	var/ai_infinite_ammo = FALSE
 
 //Main proc which handles spawning and adding hardpoints/damaging the vehicle
 /obj/effect/vehicle_spawner/proc/spawn_vehicle()
@@ -423,6 +429,8 @@
 		V.name = name
 	if(desc)
 		V.desc = desc
+	if(ai_faction && ai_crew_preset)
+		V.enable_ai(ai_faction, ai_crew_preset, ai_infinite_ammo)
 
 //Dealing enough damage to destroy the vehicle
 /obj/effect/vehicle_spawner/proc/load_damage(obj/vehicle/multitile/V)

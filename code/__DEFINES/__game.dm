@@ -63,7 +63,6 @@
 #define MAP_BINHAI_SUPPLY_STATION "Binhai Supply Station" //UPP asteroid base
 
 #define MAP_NAVALIS "Navalis Platform 13"//multiz version
-#define MAP_NAVALIS_SINGLE "Navalis Platform 13 (singlez)" //singlez version
 
 #define GAMEMODE_WHISKEY_OUTPOST "Whiskey Outpost"
 #define GAMEMODE_HIVE_WARS "Hive Wars"
@@ -379,6 +378,8 @@
 #define WALL_MEMBRANE "membrane"
 #define WALL_THICKMEMBRANE "thickmembrane"
 #define WALL_BONE_RESIN "bone_resin"
+#define WALL_PATHOGEN "mycelium"
+#define WALL_PATHOGEN_THICK "thickmycelium"
 #define WALL_CAVE "cavewall"
 #define WALL_WOOD "wood"
 #define WALL_GOLD "gold"

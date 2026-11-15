@@ -74,7 +74,7 @@ GLOBAL_LIST_INIT(snow_recipes, list(
 			to_chat(user, "You put a new snow layer on the ground.")
 			if(istype(T,/turf/open/auto_turf/snow))
 				var/turf/open/auto_turf/snow/AT = T
-				AT.changing_layer(AT.bleed_layer += 1)
+				AT.changing_layer(AT.bleed_layer + 1)
 			else
 				T.bleed_layer++
 				T.update_icon(TRUE, FALSE)

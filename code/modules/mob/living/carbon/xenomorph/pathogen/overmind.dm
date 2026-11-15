@@ -32,10 +32,12 @@
 		return FALSE
 	if(!can_play_special_job(possible_overmind.client, XENO_CASTE_QUEEN))
 		return FALSE
+	if(ispopper(possible_overmind))
+		return FALSE
 	return TRUE
 
 /obj/effect/alien/resin/special/pylon/pathogen_core/proc/admin_request_overmind(mob/living/carbon/xenomorph/possible_overmind)
-	if(overmind_mob)
+	if(overmind_mob && !ispopper(possible_overmind))
 		return FALSE
 
 	for(var/client/admin in GLOB.admins)
@@ -45,6 +47,9 @@
 	return TRUE
 
 /obj/effect/alien/resin/special/pylon/pathogen_core/proc/make_overmind(mob/living/carbon/xenomorph/target_creature)
+	var/datum/hive_status/pathogen/confluence = linked_hive
+	if(!istype(confluence))
+		return FALSE
 	if(!istype(target_creature) || target_creature.hivenumber != XENO_HIVE_PATHOGEN)
 		return FALSE
 	if(!target_creature.client)
@@ -57,6 +62,7 @@
 	overmind_mob.forceMove(loc)
 	overmind_mob.cannot_slash = TRUE
 	overmind_mob.invisibility = 60
+	overmind_mob.anchored = TRUE
 
 	overmind_stored_stuff["plasmagen"] = overmind_mob.plasma_gain
 	overmind_stored_stuff["plasmamax"] = overmind_mob.plasma_max
@@ -81,13 +87,15 @@
 	linked_hive.add_hive_leader(overmind_mob)
 	overmind_mob.lock_evolve = TRUE
 
+
 	// Remove their abilities
 	for(var/datum/action/xeno_action/action in overmind_mob.actions)
 		action.remove_from(overmind_mob)
 
 	var/list/abilities_to_give = overmind_abilities.Copy()
 
-	if(!overmind_strengthened)
+	if(!overmind_strengthened && !SSticker.mode.is_in_endgame)
+		overmind_timer = addtimer(CALLBACK(src, PROC_REF(strengthen_overmind)), 600 SECONDS, TIMER_UNIQUE | TIMER_STOPPABLE)
 		abilities_to_give -= overmind_abilities_strong
 
 	for(var/path in abilities_to_give)
@@ -102,6 +110,21 @@
 
 	return TRUE
 
+/obj/effect/alien/resin/special/pylon/pathogen_core/proc/strengthen_overmind()
+	if(overmind_strengthened)
+		return FALSE
+	overmind_strengthened = TRUE
+	if(overmind_mob)
+		to_chat(overmind_mob, SPAN_PATHOGEN_ANNOUNCE("Your blight core has grown stronger! New abilities are now possible."))
+		to_chat(overmind_mob, SPAN_PATHOGEN_QUEEN("Along with your new powers, your heal can now be used at incredible distances."))
+
+		var/datum/action/xeno_action/activable/queen_heal/pathogen_mind/heal = get_action(overmind_mob, /datum/action/xeno_action/activable/queen_heal/pathogen_mind)
+		heal.cross_map_heal = TRUE
+
+		for(var/path in overmind_abilities_strong)
+			give_action(overmind_mob, path)
+	return TRUE
+
 /obj/effect/alien/resin/special/pylon/pathogen_core/proc/unset_overmind()
 	if(!overmind_mob)
 		return FALSE
@@ -112,6 +135,13 @@
 	overmind_mob.add_abilities()
 
 	// Removes the mob from the core
+
+	if(overmind_timer)
+		deltimer(overmind_timer)
+	overmind_timer = null
+
+	overmind_mob.current_aura = null
+	SEND_SIGNAL(overmind_mob, COMSIG_QUEEN_DISMOUNT_OVIPOSITOR)
 
 	REMOVE_TRAIT(overmind_mob, TRAIT_IMMOBILIZED, OVERMIND_TRAIT)
 	REMOVE_TRAIT(overmind_mob, TRAIT_PATHOGEN_OVERMIND, OVERMIND_TRAIT)
@@ -131,6 +161,7 @@
 	overmind_stored_stuff["aura"] = null
 
 	overmind_mob.cannot_slash = FALSE
+	overmind_mob.anchored = FALSE
 	overmind_mob.invisibility = initial(overmind_mob.invisibility)
 	overmind_mob.hive.set_living_xeno_queen(null)
 	linked_hive.remove_hive_leader(overmind_mob)
@@ -146,11 +177,13 @@
 	overmind_mob.set_resin_build_order(overmind_mob.caste.resin_build_order)
 	overmind_mob.extra_build_dist = initial(overmind_mob.extra_build_dist)
 
+	var/datum/hive_status/pathogen/confluence = linked_hive
+	confluence.last_overmind = overmind_mob.ckey
 	overmind_mob.lock_evolve = FALSE
 	overmind_mob = null
 
-	return TRUE
 
+	return TRUE
 
 /datum/action/xeno_action/onclick/exit_overmind
 	name = "Exit Overmind"
@@ -173,6 +206,8 @@
 	if(core.overmind_mob != creature)
 		return FALSE
 
-	core.unset_overmind()
+	to_chat(creature, SPAN_WARNING("Resist to cancel leaving the overmind."))
+	if(do_after(creature, 10 SECONDS, INTERRUPT_RESIST, BUSY_ICON_HOSTILE))
+		core.unset_overmind()
 
 	return ..()

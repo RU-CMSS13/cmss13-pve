@@ -62,6 +62,7 @@ SUBSYSTEM_DEF(nightmare)
 		if(root)
 			root.invoke(context)
 			log_debug("Nightmare: Resolved context [context_name]")
+		context.apply_insert_overrides()
 	for(var/context_name in contexts)
 		if(stat != NIGHTMARE_STATUS_RUNNING)
 			return TRUE // Panic Abort
@@ -83,15 +84,24 @@ SUBSYSTEM_DEF(nightmare)
 	load_file("[MC.nightmare_path]/[NIGHTMARE_FILE_BASE]", "[context_name]-[NIGHTMARE_ACT_BASE]")
 	log_debug("Nightmare: Loaded map environment {[context_name],[map_type]}")
 
-/// Returns a value from the global scenario
-/datum/controller/subsystem/nightmare/proc/get_scenario_value(name)
-	var/datum/nmcontext/context = contexts[NIGHTMARE_CTX_GLOBAL]
+/// Returns a value from the scenario of context_name, the global one by default
+/datum/controller/subsystem/nightmare/proc/get_scenario_value(name, context_name = NIGHTMARE_CTX_GLOBAL)
+	var/datum/nmcontext/context = contexts[context_name]
 	return context.get_scenario_value(name)
 
-/// Override a value from the global scenario.
-/datum/controller/subsystem/nightmare/proc/set_scenario_value(name, value)
-	var/datum/nmcontext/context = contexts[NIGHTMARE_CTX_GLOBAL]
+/// Override a value from the scenario of context_name, the global one by default
+/datum/controller/subsystem/nightmare/proc/set_scenario_value(name, value, context_name = NIGHTMARE_CTX_GLOBAL)
+	var/datum/nmcontext/context = contexts[context_name]
 	return context.set_scenario_value(name, value)
+
+/// Returns every map insert context_name could load, as list(insert id = insert data)
+/datum/controller/subsystem/nightmare/proc/get_inserts(context_name)
+	var/datum/nmcontext/context = contexts[context_name]
+	if(!context.inserts)
+		context.inserts = list()
+		var/datum/nmnode/root = roots["[context_name]-[NIGHTMARE_ACT_BASE]"]
+		root?.catalogue_inserts(context, context.inserts, list())
+	return context.inserts
 
 /// Reads a JSON file, returns a branch nmnode representing contents of file
 /datum/controller/subsystem/nightmare/proc/load_file(filename, tag)

@@ -54,3 +54,20 @@
 // Other vehicle flags
 /// Vehicle can bypass vehicle blockers, typically going further into maps than intended
 #define VEHICLE_BYPASS_BLOCKERS (1<<5)
+
+// Vehicle AI
+
+/// Vehicle AI action that uses the driver's controls
+#define VEHICLE_AI_ACTION_DRIVING (1<<0)
+/// Vehicle AI action that uses the vehicle's weapons or turret
+#define VEHICLE_AI_ACTION_GUNNING (1<<1)
+
+/// The vehicle is still driving towards its goal
+#define VEHICLE_AI_DRIVE_MOVING "moving"
+/// The vehicle has reached its goal
+#define VEHICLE_AI_DRIVE_ARRIVED "arrived"
+/// The vehicle cannot reach its goal
+#define VEHICLE_AI_DRIVE_FAILED "failed"
+
+/// The farthest the vehicle AI will pathfind from its current position
+#define VEHICLE_AI_MAX_PATHFINDING_RANGE 40

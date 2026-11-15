@@ -15,6 +15,10 @@
 /datum/nmtask/scheduler/proc/add_task(datum/nmtask/task)
 	tasks += task
 
+/datum/nmtask/scheduler/proc/remove_task(datum/nmtask/task)
+	tasks -= task
+	qdel(task)
+
 /datum/nmtask/scheduler/execute()
 	var/list/runtasks = src.tasks
 	src.tasks = list()

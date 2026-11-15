@@ -175,11 +175,6 @@ GLOBAL_LIST_INIT(whitelisted_client_procs, list(
 	else if(href_list["tacmaps_panel"])
 		GLOB.tacmap_admin_panel.tgui_interact(mob)
 
-	else if(href_list["MapView"])
-		if(isxeno(mob))
-			return
-		GLOB.uscm_tacmap_status.tgui_interact(mob)
-
 	//NOTES OVERHAUL
 	if(href_list["add_merit_info"])
 		var/key = href_list["add_merit_info"]
@@ -802,6 +797,7 @@ GLOBAL_LIST_INIT(whitelisted_client_procs, list(
 				continue
 
 		remove_from_screen(object)
+	render_plates_shown = alist()
 
 ///opens the particle editor UI for the in_atom object for this client
 /client/proc/open_particle_editor(atom/movable/in_atom)

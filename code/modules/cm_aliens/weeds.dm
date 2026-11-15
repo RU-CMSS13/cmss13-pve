@@ -224,7 +224,7 @@
 		var/turf/T = get_step(src, dirn)
 		if(!istype(T))
 			continue
-		var/is_weedable = T.is_weedable()
+		var/is_weedable = T.is_weedable
 		if(!is_weedable)
 			continue
 		if(!spread_on_semiweedable && is_weedable < FULLY_WEEDABLE)
@@ -504,7 +504,7 @@
 	flags_atom = OPENCONTAINER
 	layer = ABOVE_BLOOD_LAYER
 	plane = FLOOR_PLANE
-	var/static/staticnode
+	var/static/image/staticnode
 	var/static/image/staticnode_p
 	var/overlay_node = FALSE
 
@@ -710,6 +710,28 @@
 	icon_state = "ThickTransparentConstruct"
 
 /obj/effect/resin_construct/transparent/weak
+	icon_state = "WeakTransparentConstruct"
+
+/obj/effect/pathogen_construct
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	icon = 'icons/mob/pathogen/pathogen_effects.dmi'
+
+/obj/effect/pathogen_construct/door
+	icon_state = "DoorConstruct"
+
+/obj/effect/pathogen_construct/thickdoor
+	icon_state = "ThickDoorConstruct"
+
+/obj/effect/pathogen_construct/thick
+	icon_state = "ThickConstruct"
+
+/obj/effect/pathogen_construct/weak
+	icon_state = "WeakConstruct"
+
+/obj/effect/pathogen_construct/transparent/thick
+	icon_state = "ThickTransparentConstruct"
+
+/obj/effect/pathogen_construct/transparent/weak
 	icon_state = "WeakTransparentConstruct"
 
 #undef WEED_BASE_GROW_SPEED

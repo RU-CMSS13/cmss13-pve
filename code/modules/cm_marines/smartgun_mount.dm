@@ -495,6 +495,8 @@
 	/// How long between semi-auto shots this should wait, to reduce possible spam
 	var/semiauto_cooldown_time = 0.2 SECONDS
 	var/iff_allowed = TRUE
+	/// The ammunition that reloads the gun, for human AI gunners
+	var/obj/item/ammo_magazine/ammo_box_type = /obj/item/ammo_magazine/m56d
 
 /obj/structure/machinery/m56d_hmg/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()
@@ -807,6 +809,22 @@
 
 /obj/structure/machinery/m56d_hmg/proc/handle_outside_cone(mob/living/carbon/human/user)
 	return FALSE
+
+/// Returns TRUE if the target is within the shoot_degree cone that fire_shot() lets bullets out of
+/obj/structure/machinery/m56d_hmg/proc/in_firing_arc(atom/target)
+	var/turf/gun_turf = get_turf(src)
+	var/turf/target_turf = get_turf(target)
+	if(!gun_turf || !target_turf || (gun_turf == target_turf))
+		return FALSE
+
+	var/difference = abs(Get_Angle(gun_turf, target_turf) - dir2angle(dir))
+	if(difference > 180)
+		difference = 360 - difference
+	return difference <= shoot_degree
+
+/// Returns TRUE if a gunner can shoot at the target from this gun, turning it if the gun allows that
+/obj/structure/machinery/m56d_hmg/proc/can_aim_at(atom/target)
+	return in_firing_arc(target)
 
 /obj/structure/machinery/m56d_hmg/proc/muzzle_flash(angle) // Might as well keep this too.
 	if(isnull(angle))

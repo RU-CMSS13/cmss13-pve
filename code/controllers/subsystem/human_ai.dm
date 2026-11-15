@@ -56,7 +56,8 @@ SUBSYSTEM_DEF(human_ai)
 	while(length(current_run))
 		var/datum/human_ai_brain/brain = current_run[length(current_run)]
 		current_run.len--
-		if(!QDELETED(brain) && !brain.tied_human?.client)
+		// The dead were reset on death and have nothing to think about until revived
+		if(!QDELETED(brain) && brain.tied_human && !brain.tied_human.client && (brain.tied_human.stat != DEAD))
 			brain.process(wait * 0.1)
 
 		if(MC_TICK_CHECK)
