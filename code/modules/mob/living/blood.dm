@@ -212,6 +212,8 @@
 	if(special_blood)
 		return special_blood
 	if(caste.pathogen_creature)
+		if(caste.royal_caste)
+			return BLOOD_BLIGHT_ADV
 		return BLOOD_BLIGHT
 	if(caste.royal_caste)
 		return "xenobloodroyal"

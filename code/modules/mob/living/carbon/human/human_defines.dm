@@ -26,9 +26,10 @@
 	var/g_eyes = 0
 	var/b_eyes = 0
 
-	var/skin_color = "Pale 2" // Skin color
-	var/body_size = "Average" // Body Size
-	var/body_type = "Lean" // Body Buffness
+	var/skin_color = SKIN_COLOR_PALE2 // Skin color
+	var/body_size = BODY_SIZE_AVERAGE // Body Size
+	var/body_type = BODY_TYPE_LEAN // Body Buffness
+	var/body_presentation
 
 	//Skin color
 	var/r_skin = 0
@@ -41,7 +42,7 @@
 	var/b_type = "A+" //Player's bloodtype
 
 	var/underwear = "Boxers (Camo Conforming)" //Which underwear the player wants
-	var/undershirt = "Undershirt (Tan)" //Which undershirt the player wants.
+	var/undershirt = "Undershirt (Camo Conforming)" //Which undershirt the player wants.
 	var/backbag = 2 //Which backpack type the player has chosen. Satchel or Backpack.
 
 	var/datum/species/species //Contains icon generation and language information, set during New().
@@ -51,6 +52,7 @@
 	var/personal_faction = ""
 	var/religion = ""
 	var/accent_prefix = "" // RU PVE ADDITION
+	var/accent_glyph = "" // RU PVE ADDITION
 
 	//Equipment slots
 	var/obj/item/clothing/suit/wear_suit = null
@@ -89,6 +91,7 @@
 	var/undefibbable = FALSE //whether the human is dead and past the defibbrillation period.
 
 	var/holo_card_color = "" //which color type of holocard is printed on us
+	var/holo_card_accuracy = HOLOCARD_ACCURACY_HANDHELD // What placed this holocard on the human
 
 	var/list/obj/limb/limbs = list()
 	var/list/internal_organs_by_name = list() // so internal organs have less ickiness too
@@ -139,7 +142,7 @@
 	var/last_chew = 0
 
 	//taken from human.dm
-	hud_possible = list(HEALTH_HUD, STATUS_HUD, STATUS_HUD_OOC, STATUS_HUD_XENO_INFECTION, STATUS_HUD_XENO_CULTIST, ID_HUD, WANTED_HUD, ORDER_HUD, XENO_HOSTILE_ACID, XENO_HOSTILE_SLOW, XENO_HOSTILE_TAG, XENO_HOSTILE_FREEZE, XENO_EXECUTE, HUNTER_CLAN, HUNTER_HUD, FACTION_HUD, HOLOCARD_HUD)
+	hud_possible = list(HEALTH_HUD, STATUS_HUD, STATUS_HUD_OOC, STATUS_HUD_XENO_INFECTION, STATUS_HUD_XENO_CULTIST, ID_HUD, WANTED_HUD, ORDER_HUD, XENO_HOSTILE_ACID, XENO_HOSTILE_SLOW, XENO_HOSTILE_TAG, XENO_HOSTILE_FREEZE, XENO_EXECUTE, HUNTER_CLAN, HUNTER_HUD, FACTION_HUD, HOLOCARD_HUD, STATUS_HUD_MYCO)
 	var/embedded_flag //To check if we've need to roll for damage on movement while an item is imbedded in us.
 	var/allow_gun_usage = TRUE
 	var/melee_allowed = TRUE

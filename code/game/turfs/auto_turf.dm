@@ -11,9 +11,6 @@
 /turf/open/auto_turf/insert_self_into_baseturfs()
 	baseturfs += type
 
-/turf/open/auto_turf/is_weedable()//for da xenos
-	return FULLY_WEEDABLE
-
 /turf/open/auto_turf/get_dirt_type()
 	return DIRT_TYPE_GROUND //automatically diggable I guess
 
@@ -175,8 +172,13 @@
 	else
 		return DIRT_TYPE_GROUND
 
-/turf/open/auto_turf/snow/is_weedable()
-	return bleed_layer ? NOT_WEEDABLE : FULLY_WEEDABLE
+/turf/open/auto_turf/snow/Initialize(mapload, ...)
+	. = ..()
+	is_weedable = bleed_layer ? NOT_WEEDABLE : FULLY_WEEDABLE
+
+/turf/open/auto_turf/snow/changing_layer(new_layer)
+	. = ..()
+	is_weedable = bleed_layer ? NOT_WEEDABLE : FULLY_WEEDABLE
 
 /turf/open/auto_turf/snow/attackby(obj/item/I, mob/user)
 	//Light Stick
@@ -384,12 +386,14 @@
 	bleed_layer = 0
 
 /turf/open/auto_turf/shale/layer1
+	is_weedable = SEMI_WEEDABLE
 	icon_state = "shale_1"
 	bleed_layer = 1
 
 /turf/open/auto_turf/shale/layer1/weedable
 
 /turf/open/auto_turf/shale/layer2
+	is_weedable = SEMI_WEEDABLE
 	icon_state = "shale_2"
 	bleed_layer = 2
 

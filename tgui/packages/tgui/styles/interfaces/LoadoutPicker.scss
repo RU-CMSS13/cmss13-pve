@@ -1,0 +1,10 @@
+.theme-crtblue {
+  .LoadoutPicker {
+    .Stack--horizontal > .ItemPicker:first-of-type {
+      margin-left: 6px;
+    }
+    .Section--scrollable > .Section__rest > .Section__content {
+      overflow-y: auto;
+    }
+  }
+}

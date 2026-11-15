@@ -11,6 +11,8 @@ GLOBAL_LIST_EMPTY_TYPED(hologram_list, /mob/hologram)
 	sight = SEE_SELF
 	layer = ABOVE_FLY_LAYER
 
+	flags_atom = NO_ZFALL
+
 	var/action_icon_state = "hologram_exit"
 
 	var/mob/linked_mob
@@ -18,6 +20,18 @@ GLOBAL_LIST_EMPTY_TYPED(hologram_list, /mob/hologram)
 	var/datum/action/leave_hologram/leave_button
 	///If can be detected on motion detectors.
 	var/motion_sensed = FALSE
+
+/mob/hologram/proc/change_level()
+	var/turf/above = SSmapping.get_turf_above(loc)
+
+	if(istype(loc, /turf/open_space))
+		var/turf/below = SSmapping.get_turf_below(loc)
+		forceMove(below)
+		return
+
+	if(istype(above, /turf/open_space))
+		forceMove(above)
+		return
 
 /mob/hologram/movement_delay()
 	. = -2 // Very fast speed, so they can navigate through easily, they can't ever have movement delay whilst as a hologram
@@ -119,7 +133,6 @@ GLOBAL_LIST_EMPTY_TYPED(hologram_list, /mob/hologram)
 	return COMPONENT_CANCEL_TREE_ENTRY
 
 /mob/hologram/look_up
-	flags_atom = NO_ZFALL
 	var/view_registered = TRUE
 	var/list/view_blocker_images = list()
 
@@ -185,7 +198,7 @@ GLOBAL_LIST_EMPTY_TYPED(hologram_list, /mob/hologram)
 	var/turf/new_turf = get_step(loc, direct)
 	forceMove(new_turf)
 
-	if(!istype(new_turf, /turf/open_space))
+	if(!istransparentturf(new_turf))
 		UnregisterSignal(linked_mob, COMSIG_MOB_RESET_VIEW)
 		view_registered = FALSE
 		linked_mob.reset_view()

@@ -11,6 +11,9 @@
 #define NIGHTMARE_FILE_SCENARIO "scenario.json"
 #define NIGHTMARE_FILE_BASE "nightmare.json"
 
+/// Identifies a map insert by where and what it loads, shared by the admin menu catalogue and the mapload tasks
+#define NIGHTMARE_INSERT_ID(landmark, filepath) "[landmark]|[filepath]"
+
 // Token names for identifying related configs
 #define NIGHTMARE_ACT_SCENARIO "scenario"
 #define NIGHTMARE_ACT_BASE "base"

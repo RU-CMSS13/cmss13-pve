@@ -361,6 +361,8 @@
 	flags_obj = OBJ_ORGANIC
 	layer = DOOR_CLOSED_LAYER
 	tiles_with = list(/obj/structure/mineral_door/resin)
+	/// The resin wall placed above us on open space, if any
+	var/turf/closed/wall/resin/above/upper_wall
 
 /obj/structure/mineral_door/resin/Initialize(mapload, hive)
 	. = ..()
@@ -378,7 +380,16 @@
 	if(hivenumber == XENO_HIVE_NORMAL)
 		RegisterSignal(SSdcs, COMSIG_GLOB_GROUNDSIDE_FORSAKEN_HANDLING, PROC_REF(forsaken_handling))
 
+	var/turf/above = SSmapping.get_turf_above(loc)
+	if(istype(above, /turf/open_space))
+		above.PlaceOnTop(/turf/closed/wall/resin/above)
+		upper_wall = above
+
 /obj/structure/mineral_door/resin/flamer_fire_act(dam = BURN_LEVEL_TIER_1)
+	health -= dam
+	healthcheck()
+
+/obj/structure/mineral_door/resin/proc/take_damage(dam, mob/mob)
 	health -= dam
 	healthcheck()
 
@@ -473,6 +484,13 @@
 	..()
 
 /obj/structure/mineral_door/resin/Destroy()
+	if(istype(upper_wall) && !QDESTROYING(upper_wall))
+		upper_wall.dismantle_wall()
+	upper_wall = null
+	var/turf/above = SSmapping.get_turf_above(src)
+	while(above && istransparentturf(above))
+		above.update_vis_contents()
+		above = SSmapping.get_turf_above(above)
 	relativewall_neighbours()
 	var/turf/U = loc
 	spawn(0)
@@ -531,12 +549,27 @@
 		set_hive_data(src, XENO_HIVE_FORSAKEN)
 
 	UnregisterSignal(SSdcs, COMSIG_GLOB_GROUNDSIDE_FORSAKEN_HANDLING)
+
 /obj/structure/mineral_door/resin/thick
 	name = "thick resin door"
 	icon_state = "thick resin"
 	health = HEALTH_DOOR_XENO_THICK
 	hardness = 2
 	mineralType = "thick resin"
+
+/obj/structure/mineral_door/resin/pathogen
+	name = "mycelial door"
+	icon = 'icons/mob/pathogen/pathogen_effects.dmi'
+	icon_state = "mycelium"
+	mineralType = "mycelium"
+	hivenumber = XENO_HIVE_PATHOGEN
+
+/obj/structure/mineral_door/resin/pathogen/thick
+	name = "thick mycelial door"
+	icon_state = "thick mycelium"
+	health = HEALTH_DOOR_XENO_THICK
+	hardness = 2
+	mineralType = "thick mycelium"
 
 /obj/effect/alien/resin/acid_pillar
 	name = "acid pillar"

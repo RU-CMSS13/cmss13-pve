@@ -12,6 +12,12 @@ GLOBAL_LIST_INIT_TYPED(AI_actions, /datum/ai_action, setup_ai_actions())
 	var/name
 	var/datum/human_ai_brain/brain
 	var/action_flags = null
+	/// get_conflicts() as an assoc list of action type = TRUE, filled on the GLOB.AI_actions singleton the first time it's needed
+	var/list/cached_conflicts
+	/// If TRUE, the action stops conflicting ongoing actions that started with less weight instead of waiting for them to end
+	var/preempts_actions = FALSE
+	/// The weight this action had when it was started
+	var/started_weight = 0
 
 /// Proc to be overridden to determine what weight this action should have
 /// The reason a brain is passed in as an arg is that we have GLOB.AI_actions that are iterated through, calling get_weight() on each for every AI
@@ -32,6 +38,15 @@ GLOBAL_LIST_INIT_TYPED(AI_actions, /datum/ai_action, setup_ai_actions())
 	for(var/action_type as anything in GLOB.AI_actions)
 		if(GLOB.AI_actions[action_type].action_flags & action_flags)
 			. += action_type
+
+/// Cached get_conflicts(), as conflicts don't depend on the brain
+/datum/ai_action/proc/get_cached_conflicts(datum/human_ai_brain/brain)
+	RETURN_TYPE(/list)
+	if(isnull(cached_conflicts))
+		cached_conflicts = list()
+		for(var/action_type in get_conflicts(brain))
+			cached_conflicts[action_type] = TRUE
+	return cached_conflicts
 
 /datum/ai_action/New(datum/human_ai_brain/brain)
 	. = ..()

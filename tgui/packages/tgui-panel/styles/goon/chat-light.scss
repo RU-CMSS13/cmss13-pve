@@ -41,6 +41,14 @@ img.icon {
   vertical-align: bottom;
 }
 
+img.icon.accent_tag {
+  width: 96px;
+  height: 60px;
+  vertical-align: middle;
+  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: pixelated;
+}
+
 a {
   color: #0000ff;
 }
@@ -1239,6 +1247,15 @@ h2.alert {
   color: #ff0000;
   font-weight: bold;
   font-size: 140%;
+}
+
+.effinghighdanger {
+  color: hsl(0, 100%, 50%);
+  font-weight: bold;
+  font-size: 200%;
+
+  /*Animation*/
+  animation: glitch 0.5s infinite;
 }
 
 .xenohighdanger {

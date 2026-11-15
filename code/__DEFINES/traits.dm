@@ -245,8 +245,6 @@
 #define TRAIT_SPEC(spec_type) "t_spec_[spec_type]"
 /// If the mob won't drop items held in face slot when downed
 #define TRAIT_IRON_TEETH "t_iron_teeth"
-/// If the mob won't drop items held in face slot when downed
-#define TRAIT_HUD_SIGHT "t_hud_sight"
 /// When the mob is hiding near a wall
 #define TRAIT_WALL_HIDING "t_wall_hiding"
 
@@ -270,6 +268,10 @@
 #define TRAIT_TOOL_SIMPLE_BLOWTORCH "t_tool_simple_blowtorch"
 
 #define TRAIT_TOOL_PEN "t_tool_pen"
+
+#define TRAIT_TOOL_CAN_OPENER_EFFECTIVE "t_tool_can_opener_effective"
+#define TRAIT_TOOL_CAN_OPENER_CRUDE "t_tool_can_opener_crude"
+#define TRAIT_TOOL_UTENSIL "t_tool_utensil"
 
 /// Can lockout blackmarket from ASRS console circuits.
 #define TRAIT_TOOL_TRADEBAND "t_tool_tradeband"
@@ -397,6 +399,9 @@ GLOBAL_LIST_INIT(traits_by_type, list(
 		"TRAIT_ITEM_EAR_EXCLUSIVE" = TRAIT_ITEM_EAR_EXCLUSIVE,
 		"TRAIT_OVERRIDE_CLICKDRAG" = TRAIT_OVERRIDE_CLICKDRAG,
 		"TRAIT_ITEM_RENAME_SPECIAL" = TRAIT_ITEM_RENAME_SPECIAL,
+		"TRAIT_TOOL_CAN_OPENER_EFFECTIVE" = TRAIT_TOOL_CAN_OPENER_EFFECTIVE,
+		"TRAIT_TOOL_CAN_OPENER_CRUDE" = TRAIT_TOOL_CAN_OPENER_CRUDE,
+		"TRAIT_TOOL_UTENSIL" = TRAIT_TOOL_UTENSIL,
 	),
 	/obj/item/clothing = list(
 		"TRAIT_CLOTHING_HOOD" = TRAIT_CLOTHING_HOOD

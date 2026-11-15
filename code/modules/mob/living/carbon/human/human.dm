@@ -115,9 +115,6 @@
 			. += "Primary Objective: [html_decode(assigned_squad.primary_objective)]"
 		if(assigned_squad.secondary_objective)
 			. += "Secondary Objective: [html_decode(assigned_squad.secondary_objective)]"
-	if((job in GLOB.ROLES_USCM) || (job in GLOB.ROLES_RMCTROOP))
-		. += ""
-		. += "<a href='byond://?MapView=1'>View Tactical Map</a>"
 	if(mobility_aura)
 		. += "Active Order: MOVE"
 	if(protection_aura)
@@ -768,6 +765,7 @@
 		to_chat(user, SPAN_WARNING("[src] is too far away."))
 		return
 	if(newcolor == "none")
+		holo_card_accuracy = 0
 		if(!holo_card_color)
 			return
 		holo_card_color = null
@@ -775,7 +773,149 @@
 	else if(newcolor != holo_card_color)
 		holo_card_color = newcolor
 		to_chat(user, SPAN_NOTICE("You add a [newcolor] holo card on [src]."))
+	holo_card_accuracy = HOLOCARD_ACCURACY_MANUAL
 	hud_set_holocard()
+
+// Scans the health of a human, then assigns an appropriate holotag based on their injuries
+// Will use new_accuracy to determine both:
+//  - What injuries should be included (for example, organ damage would not show up on a handheld scan)
+//  - Whether to update a holotag to a more accurate reading, or to keep the old one
+// Manual assignments will not change the color of the holotag, but will change the recorded accuracy
+//
+// If a manual assignment or body scanner determines there are no injuries worthy of a holotag, it will reset the accuracy rating (clean slate)
+/mob/living/carbon/human/proc/auto_assign_holotag(mob/user, new_accuracy)
+	if (new_accuracy == HOLOCARD_ACCURACY_MANUAL)
+		holo_card_accuracy = HOLOCARD_ACCURACY_MANUAL
+		return
+
+	// Only handle automatic holotags if the user has the skill to
+	if (skillcheck(user, SKILL_MEDICAL, SKILL_MEDICAL_MEDIC))
+		var/tag_severity = 0
+
+		if (blood_volume < BLOOD_VOLUME_OKAY)
+			tag_severity = 2
+		else if (blood_volume < BLOOD_VOLUME_SAFE)
+			tag_severity = 1 // Severity could only ever be 0 at this point, safe to directly assign
+
+		// Overdoses are life-threatening
+		for (var/datum/reagent/reagent as anything in reagents.reagent_list)
+			if (reagent.volume > reagent.overdose && reagent.overdose != 0)
+				tag_severity = 2
+
+		// The highest holotag you can get from limbs is red, so we can safely break out of the limb loop if we find a red-worthy injury
+		for (var/obj/limb/limb as anything in limbs)
+			// Uncleaned amputations, while technically not life threatening because amputations
+			// don't bleed, cause an incredible amount of pain, usually enough to paincrit the injured human.
+			if (limb.status & LIMB_DESTROYED)
+				tag_severity = 2
+				break
+
+			// An argument could be made for cleaned and dressed amputations to be red tag, but at that point
+			// it no longer causes any pain and only applies the slowdown/missing hand, so nonlethal
+			if (limb.status & LIMB_AMPUTATED)
+				tag_severity = max(tag_severity, 1)
+
+			// Internal bleeding requires immediate surgery
+			var/internal_bleeding = FALSE
+			for(var/datum/effects/bleeding/internal/ib in limb.bleeding_effects_list)
+				tag_severity = 2
+				internal_bleeding = TRUE
+				break
+			if (internal_bleeding)
+				break
+
+			// Splinted fractures do not require immediate surgical intervention
+			// Unsplinted fractures should be handled immediately before more damage is done
+			if (limb.status & LIMB_BROKEN)
+				tag_severity = max(tag_severity, 1)
+
+/* // we dont have this
+			// Severe burns and eschars are not immediately life-threatening
+			if (limb.status & LIMB_ESCHAR)
+				tag_severity = max(tag_severity, 1)
+*/
+
+		// Check if this new scan would have had the accuracy to view organs
+		if (new_accuracy >= HOLOCARD_ACCURACY_BODYSCANNER)
+			// Heartbroken marines should be operated on IMMEDIATELY
+			var/datum/internal_organ/kidneys/heart = internal_organs_by_name["heart"]
+			if (heart.organ_status >= ORGAN_BROKEN)
+				tag_severity = 2
+			else if (heart.organ_status >= ORGAN_BRUISED)
+				tag_severity = max(tag_severity, 1)
+
+			// Ditto for ruptured lungs
+			var/datum/internal_organ/kidneys/lungs = internal_organs_by_name["lungs"]
+			if (is_lung_ruptured())
+				tag_severity = 2
+			else if (lungs.organ_status >= ORGAN_BRUISED)
+				tag_severity = max(tag_severity, 1)
+
+			// Bruised livers and kidneys will accumulate toxin damage
+			var/datum/internal_organ/kidneys/kidneys = internal_organs_by_name["kidneys"]
+			if (kidneys.organ_status >= ORGAN_BROKEN)
+				tag_severity = 2
+			else if (kidneys.organ_status >= ORGAN_BRUISED)
+				tag_severity = max(tag_severity, 1)
+
+			var/datum/internal_organ/liver/liver = internal_organs_by_name["liver"]
+			if (liver.organ_status >= ORGAN_BROKEN)
+				tag_severity = 2
+			else if (liver.organ_status >= ORGAN_BRUISED)
+				tag_severity = max(tag_severity, 1)
+
+			// Brainrot is bad
+			var/datum/internal_organ/brain/brain = internal_organs_by_name["brain"]
+			if (brain.organ_status >= ORGAN_BRUISED)
+				tag_severity = 2
+
+			// Eye damage is not nearly as bad as the previous three organs, and isn't NECESSARY to be fixed, technically
+			var/datum/internal_organ/eyes/eyes = internal_organs_by_name["eyes"]
+			if (eyes.organ_status >= ORGAN_BRUISED)
+				tag_severity = max(tag_severity, 1)
+
+		if (status_flags & PERMANENTLY_DEAD) tag_severity = 3
+
+		// For some reason, decapitated humans don't have the permanently dead tag
+		var/obj/limb/head/head
+		for (var/obj/limb/limb in src.limbs)
+			if (istype(limb, /obj/limb/head))
+				head = limb
+		if (head == null || head.status & (LIMB_DESTROYED | LIMB_AMPUTATED))
+			tag_severity = 3
+
+		if (status_flags & XENO_HOST && new_accuracy >= HOLOCARD_ACCURACY_BODYSCANNER)
+			tag_severity = 4
+
+		var/old_severity
+		// Yes, switching between strings and numbers like this is terrible and I should be using a custom define, but I don't want to touch the code already in place
+		// Technical debt schmectical debt
+		switch (holo_card_color)
+			if("", null) old_severity = 0
+			if("orange") old_severity = 1
+			if("red") old_severity = 2
+			if("black") old_severity = 3
+			if("purple") old_severity = 4 // Even if they're unrevivable, we need to get the larva out
+			else old_severity = 0
+
+		// If the scan's accuracy is equal to or greater than the previous scan, or if the severity is higher than the old severity, update the card
+		if (tag_severity > old_severity || new_accuracy >= holo_card_accuracy)
+			holo_card_accuracy = new_accuracy
+			// See previous comment
+			switch (tag_severity)
+				if (0)
+					holo_card_color = ""
+					holo_card_accuracy = HOLOCARD_ACCURACY_HANDHELD // Reset accuracy for new wounds
+				if (1)
+					holo_card_color = "orange"
+				if (2)
+					holo_card_color = "red"
+				if (3)
+					holo_card_color = "black"
+				if (4)
+					holo_card_color = "purple"
+			hud_set_holocard()
+
 
 /mob/living/carbon/human/tgui_interact(mob/user, datum/tgui/ui) // I'M SORRY, SO FUCKING SORRY
 	. = ..()
@@ -1293,13 +1433,14 @@
 	if(SEND_SIGNAL(src, COMSIG_HUMAN_UPDATE_SIGHT) & COMPONENT_OVERRIDE_UPDATE_SIGHT) return
 
 	lighting_alpha = default_lighting_alpha
-	sight &= ~(SEE_MOBS|SEE_OBJS|BLIND)
+	sight &= ~(SEE_TURFS|SEE_MOBS|SEE_OBJS|SEE_BLACKNESS|BLIND)
 
 	see_in_dark = species.darksight
 	sight |= species.flags_sight
 	process_glasses(glasses)
 
-	sight |= (SEE_BLACKNESS|SEE_TURFS)
+	if(!(sight & SEE_TURFS) && !(sight & SEE_MOBS) && !(sight & SEE_OBJS))
+		sight |= SEE_BLACKNESS
 
 	SEND_SIGNAL(src, COMSIG_HUMAN_POST_UPDATE_SIGHT)
 	sync_lighting_plane_alpha()
@@ -1319,6 +1460,8 @@
 	if(wear_mask && wear_mask.vision_impair)
 		tint_level += wear_mask.vision_impair
 
+	if(in_spore_cloud())
+		tint_level += VISION_IMPAIR_STRONG
 	if(tint_level > VISION_IMPAIR_STRONG)
 		tint_level = VISION_IMPAIR_STRONG
 
@@ -1641,6 +1784,13 @@
 			return
 	. = ..()
 
+/mob/living/carbon/human/throw_atom(atom/target, range, speed = 0, atom/thrower, spin, launch_type = NORMAL_LAUNCH, pass_flags = NO_FLAGS, list/end_throw_callbacks, list/collision_callbacks)
+	var/turf/above = SSmapping.get_turf_above(thrower)
+	if(above && above.z == target.z)
+		to_chat(thrower, SPAN_WARNING("You can't throw someone that high!"))
+		return
+	return ..()
+
 /mob/living/carbon/human/equip_to_slot_if_possible(obj/item/equipping_item, slot, ignore_delay = 1, del_on_fail = 0, disable_warning = 0, redraw_mob = 1, permanent = 0)
 
 	if(SEND_SIGNAL(src, COMSIG_HUMAN_ATTEMPTING_EQUIP, equipping_item, slot) & COMPONENT_HUMAN_CANCEL_ATTEMPT_EQUIP)
@@ -1730,6 +1880,33 @@
 			platoon = "Gamma Troop"
 	play_screen_text("<u>[SSmapping.configs[SHIP_MAP].map_name]<br></u>" + "[platoon]<br><br>" + human_manifest, alert_type)
 
+/mob/living/carbon/human/verb/important_action(msg as text)
+	set category = "IC"
+	set name = "Important Action"
+
+	do_important_action(msg)
+
+/mob/living/carbon/human/proc/do_important_action(msg)
+	msg = strip_html(msg)
+	if(!msg) return
+	usr.manual_emote("<u>[msg]</u>")
+	if(usr.client)
+		if(usr.client.prefs.muted & MUTE_PRAY)
+			to_chat(usr, SPAN_DANGER("You cannot use important action (muted)."))
+			return
+		if(src.client.handle_spam_prevention(msg,MUTE_PRAY))
+			return
+
+	var/prefix = SPAN_PURPLE("IMPORTANT ACTION: ")
+
+	msg = SPAN_BIGNOTICE("[prefix][key_name(src, 1)] [ADMIN_SM(src)] [ADMIN_JMP_USER(src)] [ADMIN_PP(src)]: [msg]")
+	log_admin(msg)
+	for(var/client/admin in GLOB.admins)
+		if(AHOLD_IS_MOD(admin.admin_holder))
+			to_chat(admin, SPAN_STAFF_IC(msg))
+			if(admin.prefs.toggles_sound & SOUND_ARES_MESSAGE)
+				admin << 'sound/machines/terminal_alert.ogg'
+
 /mob/living/carbon/human/point_to_atom(atom/A, turf/T)
 	if(isitem(A))
 		var/obj/item/item = A
@@ -1754,7 +1931,32 @@
 
 // RU PVE ADDITION
 
+#define HUMAN_AI_ACCENT_GLYPH "*"
+
 /mob/living/carbon/human/get_accent_icon()
-	if(accent_prefix && accent_prefix != "")
-		return "[icon2html('icons/accent_tags.dmi', GLOB.clients, accent_prefix)] "
-	return ""
+	var/datum/origin/speaker_origin = GLOB.origins[origin]
+	if(!speaker_origin)
+		return ""
+	var/glyph = HUMAN_AI_ACCENT_GLYPH
+	if(client || !GetComponent(/datum/component/human_ai))
+		if(!accent_glyph)
+			accent_glyph = pick(GLOB.accent_glyphs)
+		glyph = accent_glyph
+	return "<b style='color:[speaker_origin.tag_color]'>[html_encode(glyph)]</b> "
+
+#undef HUMAN_AI_ACCENT_GLYPH
+
+/mob/living/carbon/human/verb/change_accent_glyph()
+	set name = "Change Glyph"
+	set desc = "Changes the symbol shown before your name in chat."
+	set category = "IC"
+
+	var/new_glyph = tgui_input_text(src, "Enter one symbol: [jointext(GLOB.accent_glyphs, " ")]", "Change Glyph", accent_glyph, max_length = 1, encode = FALSE)
+	if(!new_glyph)
+		return
+	new_glyph = uppertext(new_glyph)
+	if(!(new_glyph in GLOB.accent_glyphs))
+		to_chat(src, SPAN_WARNING("You can't use \"[html_encode(new_glyph)]\" as a glyph."))
+		return
+	accent_glyph = new_glyph
+	to_chat(src, SPAN_NOTICE("Your glyph is now \"[html_encode(accent_glyph)]\"."))

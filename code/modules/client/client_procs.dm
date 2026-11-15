@@ -48,6 +48,7 @@ GLOBAL_LIST_INIT(whitelisted_client_procs, list(
 	/client/proc/toggle_clickdrag_override,
 	/client/proc/toggle_pb_override,
 	/client/proc/toggle_dualwield,
+	/client/proc/toggle_auto_holotag,
 	/client/proc/toggle_middle_mouse_swap_hands,
 	/client/proc/toggle_vend_item_to_hand,
 	/client/proc/switch_item_animations,
@@ -56,6 +57,7 @@ GLOBAL_LIST_INIT(whitelisted_client_procs, list(
 	/client/proc/set_eye_blur_type,
 	/client/proc/set_flash_type,
 	/client/proc/set_crit_type,
+	/client/proc/toggle_shouting_at_pointed_people,
 ))
 
 /client/proc/reduce_minute_count()
@@ -172,11 +174,6 @@ GLOBAL_LIST_INIT(whitelisted_client_procs, list(
 
 	else if(href_list["tacmaps_panel"])
 		GLOB.tacmap_admin_panel.tgui_interact(mob)
-
-	else if(href_list["MapView"])
-		if(isxeno(mob))
-			return
-		GLOB.uscm_tacmap_status.tgui_interact(mob)
 
 	//NOTES OVERHAUL
 	if(href_list["add_merit_info"])
@@ -472,6 +469,9 @@ GLOBAL_LIST_INIT(whitelisted_client_procs, list(
 	if(prefs)
 		prefs.owner = null
 		QDEL_NULL(prefs.preview_dummy)
+		QDEL_NULL(prefs.preview_front)
+		QDEL_NULL(prefs.rotate_left)
+		QDEL_NULL(prefs.rotate_right)
 
 	if(admin_holder)
 		admin_holder.owner = null
@@ -797,6 +797,7 @@ GLOBAL_LIST_INIT(whitelisted_client_procs, list(
 				continue
 
 		remove_from_screen(object)
+	render_plates_shown = alist()
 
 ///opens the particle editor UI for the in_atom object for this client
 /client/proc/open_particle_editor(atom/movable/in_atom)

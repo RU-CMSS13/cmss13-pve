@@ -75,6 +75,7 @@ FORENSIC SCANNER
 	flags_atom = FPRINT|CONDUCT
 	flags_equip_slot = SLOT_WAIST
 	flags_item = NOBLUDGEON
+	flags_human_ai = TOOL_ITEM
 	throwforce = 3
 	w_class = SIZE_SMALL
 	throw_speed = SPEED_VERY_FAST
@@ -101,6 +102,12 @@ FORENSIC SCANNER
 			last_health_display = new(M)
 		else
 			last_health_display.target_mob = M
+
+		// Handle automatic holotags
+		if (user?.client.prefs.auto_holotag >= ALWAYS_TAG_PATIENTS && istype(M, /mob/living/carbon/human))
+			var/mob/living/carbon/human/human = M
+			human.auto_assign_holotag(user, HOLOCARD_ACCURACY_HANDHELD)
+
 		SStgui.close_user_uis(user, src)
 		last_scan = last_health_display.ui_data(user, DETAIL_LEVEL_HEALTHANALYSER)
 		last_health_display.look_at(user, DETAIL_LEVEL_HEALTHANALYSER, bypass_checks = FALSE, ignore_delay = FALSE, alien = alien, associated_equipment = src)
@@ -108,6 +115,12 @@ FORENSIC SCANNER
 	playsound(src.loc, 'sound/items/healthanalyzer.ogg', 50)
 	src.add_fingerprint(user)
 	return
+
+// Human AI medics only look the patient over, attack() opens a scan window for the client of the user
+/obj/item/device/healthanalyzer/ai_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, mob/living/carbon/human/target)
+	user.visible_message(SPAN_NOTICE("[user] analyzes the vitals of [target] with [src]."), SPAN_NOTICE("You analyze the vitals of [target]."))
+	playsound(loc, 'sound/items/healthanalyzer.ogg', 50)
+	add_fingerprint(user)
 
 /obj/item/device/healthanalyzer/attack_self(mob/user)
 	..()
@@ -409,6 +422,12 @@ FORENSIC SCANNER
 				SStgui.close_user_uis(connected_from, src)
 				last_scan = last_health_display.ui_data(connected_from, DETAIL_LEVEL_HEALTHANALYSER)
 				last_health_display.look_at(connected_from, DETAIL_LEVEL_HEALTHANALYSER, bypass_checks = TRUE, ignore_delay = FALSE, alien = alien, associated_equipment = src)
+
+		// Handle automatic holotags
+		if(connected_from?.client?.prefs?.auto_holotag >= ALWAYS_TAG_PATIENTS && istype(connected_to, /mob/living/carbon/human))
+			var/mob/living/carbon/human/human = connected_to
+			human.auto_assign_holotag(connected_from, HOLOCARD_ACCURACY_HANDHELD)
+
 		src.add_fingerprint()
 		if(last_scan && record_scan_on_connect)
 			record_scan_on_connect = FALSE
@@ -468,6 +487,12 @@ FORENSIC SCANNER
 		current_beam = connected_from.beam(get_atom_on_turf(connected_to), "iv_tube", extra_x_offset_at_target = 4)
 
 /obj/item/device/healthanalyzer/soul/attack(mob/living/M, mob/living/user)
+	if(M == user)
+		if(connected_to)
+			disconnect(TRUE)
+			return
+		to_chat(user, SPAN_WARNING("You cannot connect this to yourself! You need someone else to do it for you!"))
+		return
 
 	if(connected_to == M)
 		disconnect()

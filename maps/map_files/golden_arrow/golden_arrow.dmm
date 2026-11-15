@@ -14666,7 +14666,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/cm_vending/clothing/leaderplatoon,
+/obj/structure/closet/secure_closet/platoon_sergeant,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
 "aVP" = (
@@ -16541,9 +16541,8 @@
 /obj/item/ammo_box/magazine/nade_box/flare{
 	pixel_x = 1
 	},
-/obj/item/ammo_box/magazine/m4a3/ap,
+/obj/item/ammo_box/magazine/m4a3,
 /obj/item/ammo_box/magazine/vp70,
-/obj/item/ammo_box/magazine/m44,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "dAO" = (
@@ -17622,11 +17621,8 @@
 	pixel_x = 16;
 	layer = 2.98
 	},
-/obj/item/ammo_box/magazine/m39,
-/obj/item/ammo_box/magazine/m4a3/ap,
+/obj/item/ammo_box/magazine/m4a3,
 /obj/item/ammo_box/magazine/vp70,
-/obj/item/storage/belt/gun/m39,
-/obj/item/storage/box/guncase/heavy/smg,
 /obj/item/ammo_magazine/hpr_box,
 /obj/item/ammo_magazine/hpr_box,
 /turf/open/floor/almayer,
@@ -18072,6 +18068,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 8
 	},
+/obj/structure/closet/secure_closet/platoon_sergeant,
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/supply)
 "iLR" = (
@@ -19369,6 +19366,10 @@
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
+	},
+/obj/item/clothing/head/cmcap/seegsoncap{
+	pixel_x = -1;
+	pixel_y = 16
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)

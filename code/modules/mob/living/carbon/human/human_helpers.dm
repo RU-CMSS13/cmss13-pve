@@ -9,25 +9,27 @@
 		g = "f"
 	return g
 
-/proc/get_limb_icon_name(datum/species/S, body_size, body_type, gender, limb_name, skin_color)
+/proc/get_limb_icon_name(datum/species/S, body_size, body_type, gender, limb_name, skin_color, body_presentation)
+	if(!body_presentation)
+		body_presentation = gender
 	if(S.uses_skin_color)
 		if(S.special_body_types)
 			switch(limb_name)
 				if("torso")
-					return "[skin_color]_torso_[body_size]_[body_type]"
+					return "[skin_color]_torso_[body_size]_[body_type]_[get_gender_name(body_presentation)]"
 				if("chest")
-					return "[skin_color]_torso_[body_size]_[body_type]"
+					return "[skin_color]_torso_[body_size]_[body_type]_[get_gender_name(body_presentation)]"
 				if("head")
 					return "[skin_color]_[limb_name]"
 				if("groin")
-					return "[skin_color]_[limb_name]_[body_size]"
+					return "[skin_color]_[limb_name]"
 
 		if(!S.special_body_types)
 			switch(limb_name)
 				if("torso")
-					return "[skin_color]_torso_[body_type]_[get_gender_name(gender)]"
+					return "[skin_color]_torso_[body_type]_[get_gender_name(body_presentation)]"
 				if("chest")
-					return "[skin_color]_torso_[body_type]_[get_gender_name(gender)]"
+					return "[skin_color]_torso_[body_type]_[get_gender_name(body_presentation)]"
 				if("head")
 					return "[skin_color]_[limb_name]_[get_gender_name(gender)]"
 				if("groin")
@@ -75,10 +77,10 @@
 	else
 		switch(limb_name)
 			if ("torso")
-				return "[limb_name]_[get_gender_name(gender)]"
+				return "[limb_name]_[get_gender_name(body_presentation)]"
 
 			if ("chest")
-				return "[limb_name]_[get_gender_name(gender)]"
+				return "[limb_name]_[get_gender_name(body_presentation)]"
 
 			if ("head")
 				return "[limb_name]_[get_gender_name(gender)]"
@@ -141,29 +143,14 @@
 				return null
 
 /mob/living/carbon/human/proc/set_limb_icons()
-	var/datum/skin_color/set_skin_color = GLOB.skin_color_list[skin_color]
-	var/datum/body_size/set_body_size = GLOB.body_size_list[body_size]
-	var/datum/body_type/set_body_type = GLOB.body_type_list[body_type]
+	var/datum/skin_color/set_skin_color = GLOB.skin_color_list[skin_color] || GLOB.skin_color_list[SKIN_COLOR_PALE2]
+	var/skin_color_icon = set_skin_color?.icon_name
 
-	var/skin_color_icon
-	var/body_size_icon
-	var/body_type_icon
+	var/datum/body_size/set_body_size = GLOB.body_size_list[body_size] || GLOB.body_size_list[BODY_SIZE_AVERAGE]
+	var/body_size_icon = set_body_size?.icon_name
 
-	if(!set_skin_color)
-		skin_color_icon = "pale2"
-	else
-		skin_color_icon = set_skin_color.icon_name
-
-	if(!set_body_size)
-		body_size_icon = "avg"
-	else
-		body_size_icon = set_body_size.icon_name
-
-
-	if(!set_body_type)
-		body_type_icon = "lean"
-	else
-		body_type_icon = set_body_type.icon_name
+	var/datum/body_type/set_body_type = GLOB.body_type_list[body_type] || GLOB.body_type_list[BODY_TYPE_LEAN]
+	var/body_type_icon = set_body_type?.icon_name
 
 	if(isspeciesyautja(src))
 		skin_color_icon = skin_color
@@ -171,7 +158,7 @@
 		body_type_icon = body_type
 
 	for(var/obj/limb/L as anything in limbs)
-		L.icon_name = get_limb_icon_name(species, body_size_icon, body_type_icon, gender, L.display_name, skin_color_icon)
+		L.icon_name = get_limb_icon_name(species, body_size_icon, body_type_icon, gender, L.display_name, skin_color_icon, body_presentation)
 
 /mob/living/carbon/human/can_inject(mob/user, error_msg, target_zone)
 	if(species?.flags & IS_SYNTHETIC)

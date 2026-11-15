@@ -98,7 +98,7 @@
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_9
 	accurate_range = 7
 	max_range = 10
-	damage = 30
+	damage = 20
 	damage_var_low = PROJECTILE_VARIANCE_TIER_5
 	damage_var_high = PROJECTILE_VARIANCE_TIER_5
 	penetration = ARMOR_PENETRATION_TIER_1
@@ -107,7 +107,7 @@
 
 //player-given claymore shrapnel
 /datum/ammo/bullet/shrapnel/claymore/strong
-	damage = 40
+	damage = 35
 	shrapnel_chance = 15
 
 /datum/ammo/bullet/shrapnel/claymore/strong/on_hit_mob(mob/entity, obj/projectile/bullet)

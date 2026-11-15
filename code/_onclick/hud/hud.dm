@@ -46,10 +46,7 @@
 	var/atom/movable/screen/toggle_burst
 	var/atom/movable/screen/unique_action
 
-	var/atom/movable/screen/layer_up
-	var/atom/movable/screen/layer_down
-
-	var/atom/movable/screen/roll_dice
+	var/atom/movable/screen/important_action_icon
 
 	var/atom/movable/screen/zone_sel/zone_sel
 	var/atom/movable/screen/pull_icon
@@ -153,10 +150,7 @@
 	toggle_burst = null
 	unique_action = null
 
-	layer_up = null
-	layer_down = null
-
-	roll_dice = null
+	important_action_icon = null
 
 	zone_sel = null
 	pull_icon = null
@@ -351,6 +345,16 @@
 	if(ui_color)
 		using.color = ui_color
 	hotkeybuttons += using
+
+/datum/hud/proc/draw_important_action(datum/custom_hud/ui_datum, ui_alpha, ui_color)
+	important_action_icon = new /atom/movable/screen/important_action()
+	important_action_icon.icon = ui_datum.ui_style_icon
+	important_action_icon.screen_loc = ui_datum.ui_important_action
+	if(ui_alpha)
+		important_action_icon.alpha = ui_alpha
+	if(ui_color)
+		important_action_icon.color = ui_color
+	toggleable_inventory += important_action_icon
 
 /datum/hud/proc/draw_left_hand(datum/custom_hud/ui_datum, ui_alpha, ui_color)
 	var/atom/movable/screen/inventory/inv_box = new /atom/movable/screen/inventory()

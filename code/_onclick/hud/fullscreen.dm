@@ -69,8 +69,9 @@
 				client.remove_from_screen(screen)
 
 /mob/proc/get_maximum_view_range()
+	// world.view is the "15x15" string, and callers do math with the result
 	if(!client)
-		return world.view
+		return GLOB.world_view_size
 
 	var/offset = max(abs(client.pixel_x), abs(client.pixel_y))
 	return client.view + offset / 32

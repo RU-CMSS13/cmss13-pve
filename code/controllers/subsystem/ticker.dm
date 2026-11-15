@@ -162,7 +162,6 @@ SUBSYSTEM_DEF(ticker)
 	return TRUE
 
 /datum/controller/subsystem/ticker/proc/setup()
-	to_chat(world, SPAN_BOLDNOTICE("Enjoy the game!"))
 	var/init_start = world.timeofday
 	//Create and announce mode
 	mode = config.pick_mode(GLOB.master_mode)
@@ -182,6 +181,14 @@ SUBSYSTEM_DEF(ticker)
 		GLOB.RoleAuthority.reset_roles()
 		return FALSE
 
+	// RU-PVE START
+	if(!bypass_checks && !mode.check_command_roles())
+		to_chat(world, SPAN_BOLDNOTICE("No player was found for command roles, returning to the lobby..."))
+		QDEL_NULL(mode)
+		GLOB.RoleAuthority.reset_roles()
+		return FALSE
+	// RU-PVE END
+
 	CHECK_TICK
 	if(!mode.pre_setup() && !bypass_checks)
 		QDEL_NULL(mode)
@@ -189,6 +196,7 @@ SUBSYSTEM_DEF(ticker)
 		GLOB.RoleAuthority.reset_roles()
 		return FALSE
 
+	to_chat(world, SPAN_BOLDNOTICE("Enjoy the game!")) // RU-PVE EDIT
 	CHECK_TICK
 	mode.announce()
 	if(mode.taskbar_icon)

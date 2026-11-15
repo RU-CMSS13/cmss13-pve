@@ -8,6 +8,8 @@ GLOBAL_VAR_INIT(dlooc_allowed, FALSE)
 
 GLOBAL_VAR_INIT(enter_allowed, TRUE)
 
+GLOBAL_VAR_INIT(intro_music, TRUE) // RU-PVE ADDITION
+
 GLOBAL_LIST_EMPTY(admin_log)
 GLOBAL_LIST_EMPTY(asset_log)
 

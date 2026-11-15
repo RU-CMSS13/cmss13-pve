@@ -64,6 +64,7 @@
 
 // Misc
 #define SPAN_BOLD(X) "<span class='bold'>[X]</span>"
+#define SPAN_ITALIC(X) "<span class='italic'>[X]</span>"
 #define SPAN_UNDERLINE(X) "<span class='underline'>[X]</span>"
 #define SPAN_LARGE(X) "<span class='large'>[X]</span>"
 
@@ -82,6 +83,7 @@
 #define SPAN_DANGER(X) "<span class='danger'>[X]</span>"
 #define SPAN_USERDANGER(X) "<span class='userdanger'>[X]</span>"
 #define SPAN_HIGHDANGER(X) "<span class='highdanger'>[X]</span>"
+#define SPAN_EFFINGHIGHDANGER(X) "<span class='effinghighdanger'>[X]</span>"
 
 #define SPAN_CENTERBOLD(X) "<span class='centerbold'>[X]</span>"
 

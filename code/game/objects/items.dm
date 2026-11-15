@@ -853,7 +853,7 @@ cases. Override_icon_state should be a list.*/
 	else if(user.stat || !ishuman(user))
 		to_chat(user, SPAN_WARNING("You are unable to focus through \the [zoom_device]."))
 	else if(!zoom && user.client && user.update_tint())
-		to_chat(user, SPAN_WARNING("Your welding equipment gets in the way of you looking through \the [zoom_device]."))
+		to_chat(user, SPAN_WARNING("Your vision is too obscured to look through \the [zoom_device]."))
 	else if(!zoom && user.get_active_hand() != src && !istype(src, /obj/item/clothing/mask))
 		to_chat(user, SPAN_WARNING("You need to hold \the [zoom_device] to look through it."))
 	else if(!zoom)
@@ -1121,4 +1121,8 @@ cases. Override_icon_state should be a list.*/
 	return
 
 /obj/item/proc/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
+	return FALSE
+
+/// Returns TRUE if the item is used up and a human AI should throw it away
+/obj/item/proc/ai_is_spent()
 	return FALSE

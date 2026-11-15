@@ -359,7 +359,8 @@
 	set category = "Weapons"
 	set src in usr
 	var/obj/item/attachable/scope/variable_zoom/S = attachments["rail"]
-	S.toggle_zoom_level()
+	if(istype(S))
+		S.toggle_zoom_level()
 
 /obj/item/weapon/gun/rifle/sniper/M42A/handle_starting_attachment()
 	..()

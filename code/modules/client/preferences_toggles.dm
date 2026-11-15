@@ -279,6 +279,7 @@
 		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/toggle_clickdrag_override'>Toggle Combat Click-Drag Override</a><br>",
 		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/toggle_pb_override'>Toggle Combat Point-Blank Override</a><br>",
 		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/toggle_dualwield'>Toggle Alternate-Fire Dual Wielding</a><br>",
+		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/toggle_auto_holotag'>Toggle Auto Holotags</a><br>",
 		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/toggle_middle_mouse_swap_hands'>Toggle Middle Mouse Swapping Hands</a><br>",
 		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/toggle_vend_item_to_hand'>Toggle Vendors Vending to Hands</a><br>",
 		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/switch_item_animations'>Toggle Item Animations</a><br>",
@@ -286,6 +287,7 @@
 		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/set_eye_blur_type'>Set Eye Blur Type</a><br>",
 		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/set_flash_type'>Set Flash Type</a><br>",
 		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/set_crit_type'>Set Crit Type</a><br>",
+		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/toggle_shouting_at_pointed_people'>Toggle Shouting the last name of people you point at on disarm or grab intent</a><br>",
 	)
 
 	var/dat = ""
@@ -382,6 +384,14 @@
 		to_chat(src,SPAN_BOLDNOTICE( "You will point blank targets next to you on sprite click."))
 	prefs.save_preferences()
 
+/client/proc/toggle_shouting_at_pointed_people() // Toggles whether you shout the last name of people you point at
+	prefs.toggle_prefs ^= TOGGLE_SHOUTING_AT_POINTED_PEOPLE
+	if(prefs.toggle_prefs & TOGGLE_SHOUTING_AT_POINTED_PEOPLE)
+		to_chat(src, SPAN_BOLDNOTICE("You will now shout the last name of people you point at while on disarm or grab intent."))
+	else
+		to_chat(src, SPAN_BOLDNOTICE("You will no longer shout the last name of people you point at while on disarm or grab intent."))
+	prefs.save_preferences()
+
 ///Toggle whether dual-wielding fires both guns at once or swaps between them.
 /client/proc/toggle_dualwield()
 	if(prefs.dual_wield_pref < DUAL_WIELD_NONE)
@@ -397,6 +407,25 @@
 		if(DUAL_WIELD_NONE)
 			to_chat(src, SPAN_BOLDNOTICE("Dual-wielding now has no effect on how you fire."))
 
+	prefs.save_preferences()
+
+// Toggles whether or not using a body scanner/handheld scanner applies a triage tag to patients automatically
+
+/client/proc/toggle_auto_holotag()
+	switch (prefs.auto_holotag) {
+		if(NEVER_TAG_PATIENTS)
+			prefs.auto_holotag = ALWAYS_TAG_PATIENTS
+			to_chat(src, SPAN_BOLDNOTICE("Body scanners and handheld scanners will now automatically apply holocards."))
+		if(ALWAYS_TAG_PATIENTS)
+			prefs.auto_holotag = BODYSCAN_TAG_PATIENTS
+			to_chat(src, SPAN_BOLDNOTICE("Only body scanners will automatically apply triage holocards."))
+		if(BODYSCAN_TAG_PATIENTS)
+			prefs.auto_holotag = NEVER_TAG_PATIENTS
+			to_chat(src, SPAN_BOLDNOTICE("Triage holocards will never be automatically applied by health scanning devices."))
+		else
+			// Redundancy case, if defines ever get changed
+			prefs.auto_holotag = ALWAYS_TAG_PATIENTS
+	}
 	prefs.save_preferences()
 
 /client/proc/toggle_middle_mouse_swap_hands() //Toggle whether middle click swaps your hands
@@ -671,6 +700,7 @@
 		"Xeno Status HUD" = MOB_HUD_XENO_STATUS,
 		"Faction UPP HUD" = MOB_HUD_FACTION_UPP,
 		"Faction Wey-Yu HUD" = MOB_HUD_FACTION_WY,
+		"Faction PMC HUD" = MOB_HUD_FACTION_PMC,
 		"Faction TWE HUD" = MOB_HUD_FACTION_TWE,
 		"Faction CLF HUD" = MOB_HUD_FACTION_CLF,
 		"Faction Hyperdyne HUD" = MOB_HUD_FACTION_HC,
