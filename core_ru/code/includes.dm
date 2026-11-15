@@ -8,3 +8,7 @@
 #include "pixel_shifting\pixel_shifting.dm"
 #include "pixel_shifting\pixel_shifting_items.dm"
 #include "pixel_shifting\layer_shifting.dm"
+
+#include "modules\casual\items.dm"
+#include "modules\casual\overrides.dm"
+#include "modules\casual\takedowns.dm"
