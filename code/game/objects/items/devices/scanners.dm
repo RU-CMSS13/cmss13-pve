@@ -75,6 +75,7 @@ FORENSIC SCANNER
 	flags_atom = FPRINT|CONDUCT
 	flags_equip_slot = SLOT_WAIST
 	flags_item = NOBLUDGEON
+	flags_human_ai = TOOL_ITEM
 	throwforce = 3
 	w_class = SIZE_SMALL
 	throw_speed = SPEED_VERY_FAST
@@ -114,6 +115,12 @@ FORENSIC SCANNER
 	playsound(src.loc, 'sound/items/healthanalyzer.ogg', 50)
 	src.add_fingerprint(user)
 	return
+
+// Human AI medics only look the patient over, attack() opens a scan window for the client of the user
+/obj/item/device/healthanalyzer/ai_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, mob/living/carbon/human/target)
+	user.visible_message(SPAN_NOTICE("[user] analyzes the vitals of [target] with [src]."), SPAN_NOTICE("You analyze the vitals of [target]."))
+	playsound(loc, 'sound/items/healthanalyzer.ogg', 50)
+	add_fingerprint(user)
 
 /obj/item/device/healthanalyzer/attack_self(mob/user)
 	..()

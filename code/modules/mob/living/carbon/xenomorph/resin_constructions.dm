@@ -19,8 +19,11 @@ GLOBAL_VAR_INIT(resin_lz_allowed, FALSE)
 	var/thick_hiveweed = FALSE // if this is set, the thick variants will only work on hiveweeds
 	var/can_build_on_doors = TRUE // if it can be built on a tile with an open door or not
 
+	/// Whether this construction can be built on hardy weeds or equiv, regardless of the terrain below.
+	var/override_partial_weeds = FALSE
+
 /datum/resin_construction/proc/can_build_here(turf/T, mob/living/carbon/xenomorph/X)
-	if(!istype(T) || T.is_weedable() < FULLY_WEEDABLE)
+	if(!istype(T) || T.is_weedable < FULLY_WEEDABLE)
 		to_chat(X, SPAN_WARNING("You can't do that here."))
 		return FALSE
 
@@ -102,6 +105,11 @@ GLOBAL_VAR_INIT(resin_lz_allowed, FALSE)
 		resin_wall.hivenumber = hivenumber
 		resin_wall.set_resin_builder(builder)
 		set_hive_data(resin_wall, hivenumber)
+		while(resin_wall.upper_wall)
+			resin_wall = resin_wall.upper_wall
+			resin_wall.hivenumber = hivenumber
+			resin_wall.set_resin_builder(builder)
+			set_hive_data(resin_wall, hivenumber)
 
 	return build_turf
 
@@ -136,6 +144,35 @@ GLOBAL_VAR_INIT(resin_lz_allowed, FALSE)
 	build_path_thick = /turf/closed/wall/resin/thick
 	thick_hiveweed = TRUE
 	build_animation_effect = /obj/effect/resin_construct/weak
+
+/datum/resin_construction/resin_turf/wall/pathogen
+	name = "Mycelium Wall"
+	desc = "A mycelium wall, able to block passage."
+	construction_name = "mycelium wall"
+	override_partial_weeds = TRUE
+
+	build_path = /turf/closed/wall/resin/pathogen
+	build_animation_effect = /obj/effect/pathogen_construct/weak
+
+/datum/resin_construction/resin_turf/wall/pathogen/thick
+	name = "Thick Mycelium Wall"
+	desc = "A thick mycelium wall, stronger than regular walls."
+	construction_name = "thick mycelium wall"
+	cost = XENO_RESIN_WALL_THICK_COST
+
+	build_path = /turf/closed/wall/resin/thick/pathogen
+	build_animation_effect = /obj/effect/pathogen_construct/thick
+
+/datum/resin_construction/resin_turf/wall/pathogen/overmind
+	name = "Overmind Mycelium Wall"
+	desc = "A mycelium wall, able to block passage. Constructed type depends on weeds."
+	construction_name = "overmind mycelium wall"
+	cost = XENO_RESIN_WALL_QUEEN_COST
+
+	build_path = /turf/closed/wall/resin/pathogen
+	build_path_thick = /turf/closed/wall/resin/thick/pathogen
+	thick_hiveweed = TRUE
+	build_animation_effect = /obj/effect/pathogen_construct/weak
 
 /datum/resin_construction/resin_turf/wall/reflective
 	name = "Reflective Resin Wall"
@@ -175,6 +212,35 @@ GLOBAL_VAR_INIT(resin_lz_allowed, FALSE)
 
 	build_path = /turf/closed/wall/resin/membrane/thick
 	build_animation_effect = /obj/effect/resin_construct/transparent/thick
+
+/datum/resin_construction/resin_turf/membrane/pathogen
+	name = "Mycelium Membrane"
+	desc = "Mycelium membrane that can be seen through."
+	construction_name = "mycelium membrane"
+	override_partial_weeds = TRUE
+
+	build_path = /turf/closed/wall/resin/membrane/pathogen
+	build_animation_effect = /obj/effect/pathogen_construct/transparent/weak
+
+/datum/resin_construction/resin_turf/membrane/pathogen/thick
+	name = "Thick Mycelium Membrane"
+	desc = "Strong mycelium membrane that can be seen through."
+	construction_name = "thick mycelium membrane"
+	cost = XENO_RESIN_MEMBRANE_THICK_COST
+
+	build_path = /turf/closed/wall/resin/membrane/pathogen/thick
+	build_animation_effect = /obj/effect/pathogen_construct/transparent/thick
+
+/datum/resin_construction/resin_turf/membrane/pathogen/overmind
+	name = "Overmind Mycelium Membrane"
+	desc = "Mycelium membrane that can be seen through. Constructed type depends on weeds."
+	construction_name = "overmind mycelium membrane"
+	cost = XENO_RESIN_MEMBRANE_QUEEN_COST
+
+	build_path = /turf/closed/wall/resin/membrane/pathogen
+	build_path_thick = /turf/closed/wall/resin/membrane/pathogen/thick
+	thick_hiveweed = TRUE
+	build_animation_effect = /obj/effect/pathogen_construct/transparent/weak
 
 // Resin Doors
 /datum/resin_construction/resin_obj/door
@@ -226,6 +292,36 @@ GLOBAL_VAR_INIT(resin_lz_allowed, FALSE)
 
 	build_path = /obj/structure/mineral_door/resin/thick
 	build_animation_effect = /obj/effect/resin_construct/thickdoor
+
+/datum/resin_construction/resin_obj/door/pathogen
+	name = "Mycelium Door"
+	desc = "A mycelium door that only sisters may pass."
+	construction_name = "mycelium door"
+	cost = XENO_RESIN_DOOR_COST
+	override_partial_weeds = TRUE
+
+	build_path = /obj/structure/mineral_door/resin/pathogen
+	build_animation_effect = /obj/effect/pathogen_construct/door
+
+/datum/resin_construction/resin_obj/door/pathogen/thick
+	name = "Thick Mycelium Door"
+	desc = "A thick mycelium door, which is more durable, that only sisters may pass."
+	construction_name = "thick mycelium door"
+	cost = XENO_RESIN_DOOR_THICK_COST
+
+	build_path = /obj/structure/mineral_door/resin/pathogen/thick
+	build_animation_effect = /obj/effect/pathogen_construct/thickdoor
+
+/datum/resin_construction/resin_obj/door/pathogen/overmind
+	name = "Overmind Mycelium Door"
+	desc = "A resin mycelium that only sisters may pass. Constructed type depends on weeds."
+	construction_name = "overmind mycelium door"
+	cost = XENO_RESIN_DOOR_QUEEN_COST
+
+	build_path = /obj/structure/mineral_door/resin/pathogen
+	build_path_thick = /obj/structure/mineral_door/resin/pathogen/thick
+	thick_hiveweed = TRUE
+	build_animation_effect = /obj/effect/pathogen_construct/door
 
 // Sticky Resin
 /datum/resin_construction/resin_obj/sticky_resin

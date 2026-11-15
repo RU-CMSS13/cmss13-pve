@@ -189,6 +189,7 @@
 	health_max = 230
 	display_ammo = FALSE
 	iff_allowed = FALSE
+	ammo_box_type = /obj/item/ammo_magazine/m2c
 
 	var/static/image/barrel_overheat_image
 	var/has_barrel_overlay = FALSE
@@ -483,22 +484,26 @@
 		var/viewoffset = tilesize * 1
 
 		user.reset_view(src)
-		if(dir == EAST)
-			diff_x = -16 + user_old_x
-			user.client.pixel_x = viewoffset
-			user.client.pixel_y = 0
-		if(dir == WEST)
-			diff_x = 16 + user_old_x
-			user.client.pixel_x = -viewoffset
-			user.client.pixel_y = 0
-		if(dir == NORTH)
-			diff_y = -16 + user_old_y
-			user.client.pixel_x = 0
-			user.client.pixel_y = viewoffset
-		if(dir == SOUTH)
-			diff_y = 16 + user_old_y
-			user.client.pixel_x = 0
-			user.client.pixel_y = -viewoffset
+		var/view_x = 0
+		var/view_y = 0
+		switch(dir)
+			if(EAST)
+				diff_x = -16 + user_old_x
+				view_x = viewoffset
+			if(WEST)
+				diff_x = 16 + user_old_x
+				view_x = -viewoffset
+			if(NORTH)
+				diff_y = -16 + user_old_y
+				view_y = viewoffset
+			if(SOUTH)
+				diff_y = 16 + user_old_y
+				view_y = -viewoffset
+
+		// Human AI gunners have no client to shift the view of
+		if(user.client)
+			user.client.pixel_x = view_x
+			user.client.pixel_y = view_y
 
 		animate(user, pixel_x=diff_x, pixel_y=diff_y, 0.4 SECONDS)
 	else
@@ -543,6 +548,27 @@
 	playsound(src.loc, 'sound/items/m56dauto_rotate.ogg', 25, 1)
 	to_chat(user, SPAN_NOTICE("You rotate [src], using the tripod to support your pivoting movement."))
 
+
+/// Returns TRUE if rotate_to() would be able to turn the gun towards the atom
+/obj/structure/machinery/m56d_hmg/auto/proc/can_rotate_to(atom/A)
+	var/turf/gun_turf = get_turf(src)
+	var/turf/target_turf = get_turf(A)
+	if(!gun_turf || !target_turf || (gun_turf == target_turf))
+		return FALSE
+
+	var/dx = target_turf.x - gun_turf.x
+	var/dy = target_turf.y - gun_turf.y
+	var/direction
+	if(abs(dx) < abs(dy))
+		direction = dy > 0 ? NORTH : SOUTH
+	else
+		direction = dx > 0 ? EAST : WEST
+
+	var/turf/rotate_check = get_step(gun_turf, turn(direction, 180))
+	return !rotate_check?.density
+
+/obj/structure/machinery/m56d_hmg/auto/can_aim_at(atom/target)
+	return in_firing_arc(target) || can_rotate_to(target)
 
 /obj/structure/machinery/m56d_hmg/auto/proc/disable_interaction(mob/living/user, NewLoc, direction)
 	SIGNAL_HANDLER

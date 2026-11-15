@@ -35,6 +35,8 @@
 
 	///List of saved coordinates, format of ["x", "y", "z", "comment"]
 	var/list/saved_coordinates = list()
+	/// Turfs that orbital bombardments and supply drops can't target
+	var/static/list/invalid_turfs = list(/turf/open/space, /turf/open_space, /turf/open/slippery)
 	///Currently selected UI theme
 	var/ui_theme = "crtblue"
 
@@ -822,7 +824,7 @@
 
 	var/turf/T = locate(x_coord, y_coord, z_coord)
 
-	if(isnull(T) || istype(T, /turf/open/space))
+	if(isnull(T) || is_type_in_list(T, invalid_turfs))
 		to_chat(user, "[icon2html(src, user)] [SPAN_WARNING("The target zone appears to be out of bounds. Please check coordinates.")]")
 		return
 
@@ -902,7 +904,7 @@
 		to_chat(usr, "[icon2html(src, usr)] [SPAN_WARNING("The landing zone is underground. The supply drop cannot reach here.")]")
 		return
 
-	if(istype(T, /turf/open/space) || T.density)
+	if(is_type_in_list(T, invalid_turfs) || T.density)
 		to_chat(usr, "[icon2html(src, usr)] [SPAN_WARNING("The landing zone appears to be obstructed or out of bounds. Package would be lost on drop.")]")
 		return
 

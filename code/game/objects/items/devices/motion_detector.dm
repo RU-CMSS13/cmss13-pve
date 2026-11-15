@@ -227,15 +227,22 @@
 		ping_receivers += humans
 
 	var/list/ping_candidates = SSquadtree.players_in_range(range_bounds, cur_turf.z, QTREE_EXCLUDE_OBSERVER | QTREE_SCAN_MOBS)
-	if(SSmapping.get_turf_above(cur_turf))
-		ping_candidates += SSquadtree.players_in_range(range_bounds, cur_turf.z+1, QTREE_EXCLUDE_OBSERVER | QTREE_SCAN_MOBS)
-	if(SSmapping.get_turf_below(cur_turf))
-		ping_candidates += SSquadtree.players_in_range(range_bounds, cur_turf.z-1, QTREE_EXCLUDE_OBSERVER | QTREE_SCAN_MOBS)
+	var/turf/above = SSmapping.get_turf_above(cur_turf)
+	var/turf/below = SSmapping.get_turf_below(cur_turf)
+	if(above)
+		ping_candidates += SSquadtree.players_in_range(range_bounds, above.z, QTREE_EXCLUDE_OBSERVER | QTREE_SCAN_MOBS)
+	if(below)
+		ping_candidates += SSquadtree.players_in_range(range_bounds, below.z, QTREE_EXCLUDE_OBSERVER | QTREE_SCAN_MOBS)
 
 	for(var/A in ping_candidates)
 		var/mob/living/M = A //do this to skip the unnecessary istype() check; everything in ping_candidate is a mob already
 		if(M == loc) continue //device user isn't detected
 		if(M.get_target_lock(iff_signal))
+			continue
+		if(M.status_flags & INCORPOREAL)
+			ping_count++
+			if(human_user)
+				show_blip(human_user, M, "queen_eye")
 			continue
 		if(world.time > M.l_move_time + 20)
 			continue //hasn't moved recently

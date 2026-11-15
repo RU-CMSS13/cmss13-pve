@@ -26,6 +26,8 @@
 		hivenumber = hive
 
 	set_hive_data(src, hivenumber)
+	if(hivenumber == XENO_HIVE_PATHOGEN)
+		icon = 'icons/mob/pathogen/pathogen_effects.dmi'
 
 	buckling_y = list("[NORTH]" = 27, "[SOUTH]" = -19, "[EAST]" = 3, "[WEST]" = 3)
 	buckling_x = list("[NORTH]" = 0, "[SOUTH]" = 0, "[EAST]" = 18, "[WEST]" = -17)
@@ -55,7 +57,6 @@
 		pixel_y = buckling_y["[dir]"]
 		pixel_x = buckling_x["[dir]"]
 		if(dir == SOUTH)
-			buckled_mob.plane = TURF_PLANE
 			buckled_mob.layer = ABOVE_TURF_LAYER
 			if(ishuman(current_mob))
 				var/mob/living/carbon/human/current_human = current_mob
@@ -69,7 +70,6 @@
 	REMOVE_TRAIT(current_mob, TRAIT_UNDENSE, XENO_NEST_TRAIT)
 	if(dir == SOUTH)
 		current_mob.layer = initial(current_mob.layer)
-		current_mob.plane = initial(current_mob.plane)
 		if(!ishuman(current_mob))
 			var/mob/living/carbon/human/current_human = current_mob
 			for(var/obj/limb/current_mobs_limb in current_human.limbs)
@@ -88,6 +88,9 @@
 /obj/structure/bed/nest/kseries
 	color = "#ffff80"
 	hivenumber = XENO_HIVE_K_SERIES
+
+/obj/structure/bed/nest/pathogen
+	hivenumber = XENO_HIVE_PATHOGEN
 
 /obj/structure/bed/nest/attackby(obj/item/W, mob/living/user)
 	if(istype(W, /obj/item/grab))

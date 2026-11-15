@@ -1,0 +1,4 @@
+author: "chaos-creations"
+delete-after: True
+changes:
+  - admin: "Added Nightmare Menu (Game Master - Extras): pick Nightmare scenario values, force or block individual inserts, jump to and preview inserts, run Nightmare early or disable it for the round."

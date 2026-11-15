@@ -29,6 +29,11 @@
 		var/datum/nmtask/mapload/task = new("[name] @ [landmark]", path, landmark, keep)
 		context.add_task(task)
 
+/datum/nmnode/mapload/landmark/catalogue_inserts(datum/nmcontext/context, list/inserts, list/notes, group)
+	if(!group)
+		group = (name == id) ? landmark : name
+	add_catalogue_insert(context, inserts, notes + get_notes(), group, context.get_file_path(filepath, "map"), landmark, keep)
+
 
 
 /**
@@ -44,6 +49,8 @@
 	id = "map_variations"
 	name = "Map Variations"
 	var/landmark
+	/// Matches variation files, capturing their weight and whether they keep map contents
+	var/static/regex/file_matcher = new(@"^([0-9]+)([\.\+]).*?\.dmm$", "i")
 /datum/nmnode/mapload/variations/New(list/spec)
 	. = ..()
 	if(spec["landmark"])
@@ -55,7 +62,7 @@
 	if(!. || !landmark)
 		return
 	var/dir_path = context.get_file_path(filepath, "map")
-	var/regex/matcher = new(@"^([0-9]+)([\.\+]).*?\.dmm$", "i")
+	var/regex/matcher = file_matcher
 	var/list/filelist = list()
 	var/list/weights = list()
 	var/sum = 0
@@ -78,6 +85,23 @@
 			context.add_task(task)
 			break
 
+/datum/nmnode/mapload/variations/catalogue_inserts(datum/nmcontext/context, list/inserts, list/notes, group)
+	if(!landmark)
+		return
+	notes = notes + get_notes()
+	var/dir_path = context.get_file_path(filepath, "map")
+	var/regex/matcher = file_matcher
+	var/list/weights = list()
+	var/sum = 0
+	for(var/filename in flist(dir_path))
+		if(!matcher.Find(filename))
+			continue
+		weights[filename] = text2num(matcher.group[1])
+		sum += weights[filename]
+	for(var/filename in weights)
+		matcher.Find(filename)
+		add_catalogue_insert(context, inserts, notes + "weight [weights[filename]]/[sum]", name, "[dir_path][filename]", landmark, matcher.group[2] == "+")
+
 /**
  * Similar to variations mode, but rolls all files individually rather
  * than picking one, using name for landmark. The prefix number is used
@@ -90,11 +114,13 @@
 /datum/nmnode/mapload/sprinkles
 	id = "map_sprinkle"
 	name = "Map Sprinkles"
+	/// Matches sprinkle files, capturing their chance, whether they keep map contents and their landmark
+	var/static/regex/file_matcher = new(@"^([0-9]+)([\.\+])(([^_]+)(_.*))?\.dmm$", "i")
 /datum/nmnode/mapload/sprinkles/resolve(datum/nmcontext/context, list/statsmap)
 	. = ..()
 	if(!.) return
 	var/dir_path = context.get_file_path(filepath, "map")
-	var/regex/matcher = new(@"^([0-9]+)([\.\+])(([^_]+)(_.*))?\.dmm$", "i")
+	var/regex/matcher = file_matcher
 	var/list/dircontents = flist(dir_path)
 	for(var/filename in dircontents)
 		if(!matcher.Find(filename))
@@ -108,3 +134,12 @@
 		var/keep = (matcher.group[2] == "+")
 		var/datum/nmtask/mapload/task = new("[name] @ [landmark]", "[dir_path][matcher.match]", landmark, keep)
 		context.add_task(task)
+
+/datum/nmnode/mapload/sprinkles/catalogue_inserts(datum/nmcontext/context, list/inserts, list/notes, group)
+	notes = notes + get_notes()
+	var/dir_path = context.get_file_path(filepath, "map")
+	var/regex/matcher = file_matcher
+	for(var/filename in flist(dir_path))
+		if(!matcher.Find(filename) || !matcher.group[3])
+			continue
+		add_catalogue_insert(context, inserts, notes + "[matcher.group[1]]% chance", "[name]: [filepath]", "[dir_path][filename]", matcher.group[3], matcher.group[2] == "+")

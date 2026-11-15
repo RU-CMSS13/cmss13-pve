@@ -1135,6 +1135,13 @@ and you're good to go.
 /obj/item/weapon/gun/proc/Fire(atom/target, mob/living/user, params, reflex = FALSE, dual_wield)
 	set waitfor = FALSE
 
+	// Check if watching a ladder
+	if(user.interactee && istype(user.interactee, /obj/structure/ladder))
+		var/obj/structure/ladder/ladder = user.interactee
+		if(ladder.is_watching)
+			to_chat(user, SPAN_WARNING("You can't shoot while looking from the ladder!"))
+			return NONE
+
 	if(!able_to_fire(user) || !target || !get_turf(user) || !get_turf(target) || user.contains(target))
 		return NONE
 
@@ -2167,9 +2174,7 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 	return target
 
 /obj/item/weapon/gun/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
-	if(istype(current_mag, /obj/item/ammo_magazine/internal) && (current_mag.current_rounds <= 0) && !ai_brain.weapon_ammo_search(ai_brain.primary_weapon))
-		return FALSE
-	else if((!current_mag || (current_mag.current_rounds <= 0)) && !ai_brain.weapon_ammo_search(ai_brain.primary_weapon))
+	if(!in_chamber && (current_mag?.current_rounds <= 0) && !ai_brain.weapon_ammo_search(src))
 		return FALSE
 
 	if((flags_gun_features & GUN_WY_RESTRICTED) && !wy_allowed_check(user))

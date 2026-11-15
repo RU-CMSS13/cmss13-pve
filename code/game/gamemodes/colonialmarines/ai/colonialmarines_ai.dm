@@ -24,7 +24,7 @@
 		/datum/job/marine/standard/ai = JOB_SQUAD_MARINE,
 	)
 
-	required_command_roles = list(/datum/job/command/bridge/ai, /datum/job/marine/leader, /datum/job/marine/tl)  // RU-PVE ADDITION
+	required_command_roles = list(/datum/job/command/bridge/ai, /datum/job/marine/leader)  // RU-PVE ADDITION
 
 	static_comms_amount = 0
 	requires_comms = FALSE
