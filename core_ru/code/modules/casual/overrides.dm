@@ -170,3 +170,21 @@
 		return FALSE
 
 	return TRUE
+
+/atom/proc/show_on_tacmap()
+	for(var/mob/living/carbon/human/H in GLOB.player_list)
+		for(var/obj/item/map/tactical/T in H)
+			H.balloon_alert(H, "New point appeared on your map!", COLOR_WHITE)
+			var/turf/user_turf = get_turf(src)
+			var/turf/guess = locate( \
+				clamp(user_turf.x + rand(-3, 3), 1, world.maxx), \
+				clamp(user_turf.y + rand(-3, 3), 1, world.maxy), \
+				user_turf.z)
+			T.tacmap.add_timed_marker(guess, 18, COLOR_DARK_RED, 1 MINUTES)
+
+			user_turf = get_turf(H)
+			guess = locate( \
+				clamp(user_turf.x + rand(-(12/2), 12/2), 1, world.maxx), \
+				clamp(user_turf.y + rand(-(12/2), 12/2), 1, world.maxy), \
+				user_turf.z)
+			T.tacmap.add_timed_marker(guess, 12, "#ff8c00", 1 MINUTES)
