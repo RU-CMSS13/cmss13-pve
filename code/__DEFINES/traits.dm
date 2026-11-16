@@ -163,6 +163,8 @@
 #define TRAIT_TEMPORARILY_MUTED "temporarily_muted"
 /// Mob wont get hit by stray projectiles
 #define TRAIT_NO_STRAY "trait_no_stray"
+/// Too wounded to stand, but still conscious: can crawl and slowly use things
+#define TRAIT_WOUNDED_DOWN "wounded_down"
 /// When a pathogen creature is acting as overmind.
 #define TRAIT_PATHOGEN_OVERMIND "trait_pathogen_overmind"
 
@@ -345,6 +347,7 @@ GLOBAL_LIST_INIT(traits_by_type, list(
 		"TRAIT_INCAPACITATED" = TRAIT_INCAPACITATED,
 		"TRAIT_FLOORED" = TRAIT_FLOORED,
 		"TRAIT_DAZED" = TRAIT_DAZED,
+		"TRAIT_WOUNDED_DOWN" = TRAIT_WOUNDED_DOWN,
 		"TRAIT_UNDENSE" = TRAIT_UNDENSE,
 		"TRAIT_YAUTJA_TECH" = TRAIT_YAUTJA_TECH,
 		"TRAIT_SUPER_STRONG" = TRAIT_SUPER_STRONG,
@@ -493,6 +496,10 @@ GLOBAL_LIST(trait_name_map)
 #define LYING_DOWN_TRAIT "lying-down"
 /// trait associated to a stat value or range of
 #define STAT_TRAIT "stat"
+/// trait source for being in hardcrit
+#define CRIT_TRAIT "crit"
+/// trait source for being in horrible pain
+#define PAIN_TRAIT "pain"
 /// trait effect related to the queen ovipositor
 #define OVIPOSITOR_TRAIT "ovipositor"
 /// trait associated to being held in a chokehold
