@@ -1023,3 +1023,25 @@
 
 /obj/item/weapon/gun/flamer/flammenwerfer3/deathsquad/standard
 	current_mag = /obj/item/ammo_magazine/flamer_tank/flammenwerfer
+
+/obj/item/weapon/gun/flamer/survivor
+	name = "\improper improvised flamethrower"
+	desc = "A custom made incinerator, made from repurposed welding and piping equipment."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony/flamers.dmi'
+	icon_state = "flamer"
+	item_state = "flamer"
+	accepted_ammo = list(/obj/item/ammo_magazine/flamer_tank/survivor)
+	current_mag = /obj/item/ammo_magazine/flamer_tank/survivor
+
+	attachable_allowed = list(
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/attached_gun/flamer_nozzle,
+	)
+
+/obj/item/weapon/gun/flamer/survivor/get_fire_sound()
+	var/list/fire_sounds = list(
+		'sound/weapons/surv_flamer_fire1.ogg',
+		'sound/weapons/surv_flamer_fire2.ogg',
+		'sound/weapons/surv_flamer_fire3.ogg',
+		'sound/weapons/surv_flamer_fire4.ogg')
+	return pick(fire_sounds)

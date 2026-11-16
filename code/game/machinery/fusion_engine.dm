@@ -472,6 +472,9 @@
 	power_generation_max = 100000 //100,000W at full capacity
 	original_fail_rate = 0
 
+/obj/structure/machinery/power/reactor/colony/alt
+	icon = 'icons/obj/structures/machinery/fusion_eng.dmi'
+
 #undef BUILDSTATE_FUNCTIONAL
 #undef BUILDSTATE_DAMAGE_WELD
 #undef BUILDSTATE_DAMAGE_WIRE

@@ -3507,3 +3507,120 @@
 	. = ..()
 	reagents.add_reagent("bread", 4)
 	reagents.add_reagent("sodiumchloride", 1)
+
+/obj/item/reagent_container/food/snacks/packaged_burrito
+	name = "Packaged Burrito"
+	desc = "A hard microwavable burrito. There's no time given for how long to cook it. Packaged by the Weyland-Yutani Corporation."
+	icon_state = "packaged-burrito"
+	item_state = "pburrito"
+	bitesize = 2
+	package = 1
+	flags_obj = OBJ_NO_HELMET_BAND|OBJ_IS_HELMET_GARB
+
+/obj/item/reagent_container/food/snacks/packaged_burrito/Initialize()
+	. = ..()
+	reagents.add_reagent("bread", 5)
+	reagents.add_reagent("meatprotein", 5)
+
+/obj/item/reagent_container/food/snacks/packaged_burrito/attack_self(mob/user)
+	if(package)
+		playsound(src.loc,'sound/effects/pageturn2.ogg', 15, 1)
+		to_chat(user, SPAN_NOTICE("You pull off the wrapping from the squishy burrito!"))
+		package = 0
+		user.put_in_hands(new /obj/item/trash/buritto)
+		icon_state = "open-burrito"
+		item_state = "burrito"
+		return
+	..()
+
+/obj/item/reagent_container/food/snacks/packaged_burrito/unbranded
+	desc = "A hard microwavable burrito. There's no time given for how long to cook it."
+	icon_state = "unbranded_packaged-burrito"
+	item_state = "unbranded_pburrito"
+
+/obj/item/reagent_container/food/snacks/packaged_burrito/unbranded/attack_self(mob/user)
+	if(package)
+		playsound(src.loc,'sound/effects/pageturn2.ogg', 15, 1)
+		to_chat(user, SPAN_NOTICE("You pull off the wrapping from the squishy burrito!"))
+		package = 0
+		user.put_in_hands(new /obj/item/trash/buritto/alt)
+		icon_state = "open-burrito"
+		item_state = "unbranded_burrito"
+		return
+	..()
+
+/obj/item/reagent_container/food/snacks/packaged_burrito/unbranded/Initialize()
+	. = ..()
+	reagents.add_reagent("bread", 5)
+	reagents.add_reagent("meatprotein", 5)
+
+/obj/item/reagent_container/food/snacks/packaged_burger
+	name = "Packaged Cheeseburger"
+	desc = "A soggy microwavable burger. There's no time given for how long to cook it. Packaged by the Weyland-Yutani Corporation."
+	icon_state = "burger"
+	item_state = "pburger"
+	icon = 'icons/obj/items/food/burgers.dmi'
+	bitesize = 3
+	package = 1
+
+/obj/item/reagent_container/food/snacks/packaged_burger/Initialize()
+	. = ..()
+	reagents.add_reagent("bread", 5)
+	reagents.add_reagent("meatprotein", 5)
+	reagents.add_reagent("sodiumchloride", 2)
+
+/obj/item/reagent_container/food/snacks/packaged_burger/attack_self(mob/user)
+	if(package)
+		playsound(src.loc,'sound/effects/pageturn2.ogg', 15, 1)
+		to_chat(user, SPAN_NOTICE("You pull off the wrapping from the squishy hamburger!"))
+		package = 0
+		user.put_in_hands(new /obj/item/trash/burger)
+		icon_state = "hburger"
+		item_state = "burger"
+		return
+	..()
+
+/obj/item/reagent_container/food/snacks/packaged_burger/unbranded
+	desc = "A soggy microwavable burger. There's no time given for how long to cook it."
+	icon = 'icons/obj/items/food/junkfood.dmi'
+	icon_state = "unbranded_packaged-burger"
+	item_state = "unbranded_pburger"
+
+/obj/item/reagent_container/food/snacks/packaged_burger/unbranded/attack_self(mob/user)
+	if(package)
+		playsound(src.loc,'sound/effects/pageturn2.ogg', 15, 1)
+		to_chat(user, SPAN_NOTICE("You pull off the wrapping from the squishy hamburger!"))
+		package = 0
+		user.put_in_hands(new /obj/item/trash/burger/alt)
+		icon_state = "open-burger"
+		item_state = "unbranded_burger"
+		return
+	..()
+
+/obj/item/reagent_container/food/snacks/packaged_burger/unbranded/Initialize()
+	. = ..()
+	reagents.add_reagent("bread", 5)
+	reagents.add_reagent("meatprotein", 5)
+	reagents.add_reagent("sodiumchloride", 2)
+
+/obj/item/reagent_container/food/snacks/packaged_hdogs/unbranded
+	desc = "A singular squishy, room temperature, hot dog. There's no time given for how long to cook it, so you assume its probably good to go."
+	icon_state = "unbranded_packaged-hotdog"
+	item_state = "unbranded_photdog"
+
+/obj/item/reagent_container/food/snacks/packaged_hdogs/unbranded/attack_self(mob/user)
+	if(package)
+		playsound(src.loc,'sound/effects/pageturn2.ogg', 15, 1)
+		to_chat(user, SPAN_NOTICE("You pull off the wrapping from the squishy hotdog!"))
+		package = 0
+		user.put_in_hands(new /obj/item/trash/hotdog/alt)
+		icon_state = "open-hotdog"
+		item_state = "unbranded_hotdog"
+		return
+	..()
+
+/obj/item/reagent_container/food/snacks/packaged_hdogs/unbranded/Initialize()
+	. = ..()
+	reagents.add_reagent("bread", 2)
+	reagents.add_reagent("meatprotein", 1)
+	reagents.add_reagent("sodiumchloride", 2)

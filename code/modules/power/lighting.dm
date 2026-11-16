@@ -889,3 +889,10 @@
 /obj/structure/machinery/landinglight/ds2/spoke/turn_on()
 	icon_state = initial(icon_state) + "1"
 	set_light(3)
+
+/obj/structure/machinery/landinglight/spoke
+	icon_state = "lz_spoke_light_off"
+
+/obj/structure/machinery/landinglight/spoke/turn_on()
+	icon_state = "lz_spoke_light_on"
+	set_light(3)

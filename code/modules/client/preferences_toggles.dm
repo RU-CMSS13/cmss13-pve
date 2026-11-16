@@ -704,6 +704,7 @@
 		"Faction TWE HUD" = MOB_HUD_FACTION_TWE,
 		"Faction CLF HUD" = MOB_HUD_FACTION_CLF,
 		"Faction Hyperdyne HUD" = MOB_HUD_FACTION_HC,
+		"Faction Lasalle Bionational HUD" = MOB_HUD_FACTION_LB,
 		"Faction CMB HUD"= MOB_HUD_FACTION_MARSHAL,
 		//PVE
 		"Faction US Army HUD" = MOB_HUD_FACTION_ARMY,

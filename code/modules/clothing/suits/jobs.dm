@@ -568,3 +568,15 @@
 	icon_state = "suspenders"
 	blood_overlay_type = "armor"
 	flags_armor_protection = 0
+
+/obj/item/clothing/suit/storage/CMB/trenchcoat/white
+	name = "\improper white trench-coat"
+	desc = "A worn, white, old style trench-coat. When a bum sees a dick coming, he don't stick around."
+	icon_state = "trench_white"
+	item_state = "trench_white"
+
+/obj/item/clothing/suit/storage/CMB/trenchcoat/blue
+	name = "\improper blue trench-coat"
+	desc = "A worn, blue, old style trench-coat. When a bum sees a dick coming, he don't stick around."
+	icon_state = "trench_blue"
+	item_state = "trench_blue"

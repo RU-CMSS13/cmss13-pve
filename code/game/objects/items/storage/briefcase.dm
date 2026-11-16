@@ -44,3 +44,9 @@
 	icon_state = "suitcase"
 	item_state = "suitcase"
 	force = 8
+
+/obj/item/storage/briefcase/flap
+	name = "flap-closure brown briefcase"
+	desc = "It's made of AUTHENTIC faux-leather and has a price-tag still attached. Its owner must be a real professional. This one is less rigid, made with a flap and softer leather."
+	icon_state = "briefcase_d"
+	item_state = "briefcase_d"

@@ -514,3 +514,15 @@
 	flags_inv_hide = NO_FLAGS
 	siemens_coefficient = 0.6
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS
+
+/obj/item/clothing/suit/armor/vest/seegson_security
+	name = "\improper Seegson security armor"
+	desc = "An old Seegson security armored vest that protects against some damage."
+	icon_state = "seegson_security_armor"
+	item_state = "seegson_security_armor"
+	icon = 'icons/obj/items/clothing/suits/suits_by_faction/SEEGSON.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/SEEGSON.dmi'
+	)
+	uniform_restricted = null
+

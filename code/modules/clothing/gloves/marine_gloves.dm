@@ -213,3 +213,52 @@
 	item_state = "cbrn"
 	armor_bio = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
+
+/obj/item/clothing/gloves/marine/lasalle_security
+	name = "brown combat gloves"
+	desc = "Standard issue tactical gloves used by corporate security."
+	icon_state = "lasalle_brown_gloves"
+	item_state = "lasalle_brown_gloves"
+
+/obj/item/clothing/gloves/marine/fireproof_gloves
+	name = "HZP-12 entry-type proximity gloves"
+	desc = "Thermal-insulated boots designed for use with the HZP-12 proximity suit system."
+	icon_state = "fireproof_gloves"
+	item_state = "fireproof_gloves"
+	armor_laser = CLOTHING_ARMOR_LOW
+	armor_energy = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_LOW
+	siemens_coefficient = 0
+
+/obj/item/clothing/gloves/marine/fireproof_gloves/Initialize(mapload)
+	. = ..()
+
+/obj/item/clothing/gloves/marine/insulated
+	name = "marine insulated gloves"
+	desc = "These gloves will protect the wearer from electric shock."
+	icon_state = "insulated"
+	item_state = "insulated"
+	siemens_coefficient = 0
+
+/obj/item/clothing/gloves/marine/veteran/lb_merc
+	name = "HIG combat gloves"
+	desc = "A pair of reinforced black combat gloves with distinctive blue accents, standard issued to Lasalle Bionational - Hazard Intervention Group operators."
+	icon_state = "lb_merc"
+	item_state = "lb_merc"
+
+/obj/item/clothing/gloves/marine/veteran/lb_merc/Initialize()
+	. = ..()
+
+/obj/item/clothing/gloves/marine/science_gloves
+	name = "chemical handling gloves"
+	desc = "A pair of thick protective gloves intended for handling hazardous materials, volatile compounds, and biological contaminants."
+	icon_state = "long_gloves"
+	item_state = "long_gloves"
+	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
+
+/obj/item/clothing/gloves/marine/science_gloves/yellow
+	icon_state = "long_yellow_gloves"
+	item_state = "long_yellow_gloves"

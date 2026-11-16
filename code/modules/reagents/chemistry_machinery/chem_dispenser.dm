@@ -392,3 +392,34 @@
 		return
 
 	overlays += "+onlightupp"
+
+/obj/structure/machinery/chem_dispenser/corpsman/update_icon()
+	if(stat & BROKEN)
+		icon_state = (beaker ? "mixer1_b" : "mixer0_b")
+	else if(stat & NOPOWER)
+		icon_state = (beaker ? "[base_state]1_nopower" : "[base_state]0_nopower")
+	else
+		icon_state = (beaker ? "[base_state]1" : "[base_state]0")
+
+/obj/structure/machinery/chem_dispenser/corpsman
+	name = "pressurized chemical dispenser"
+	desc = "A more basic chemical dispenser, designed for use with pressurized reagent canisters. A Wey-Yu product."
+	icon_state = "mixer0"
+	ui_title = "Chem Dispenser 4000"
+	req_skill_level = SKILL_MEDICAL_MEDIC
+	accept_beaker_only = FALSE
+	dispensable_reagents = list(
+		"bicaridine",
+		"kelotane",
+		"anti_toxin",
+		"dexalin",
+		"dexalinp",
+		"inaprovaline",
+		"adrenaline",
+		"peridaxon",
+		"tramadol",
+		"oxycodone",
+		"tricordrazine",
+	)
+
+	var/base_state = "mixer"

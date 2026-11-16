@@ -152,3 +152,7 @@
 
 	add_fingerprint(user)
 	return
+
+/obj/item/weapon/classic_baton/alt
+	icon_state = "baton_alt"
+	item_state = "classic_baton_alt"

@@ -309,3 +309,18 @@
 /obj/item/reagent_container/food/condiment/juice/milk/Initialize()
 	. = ..()
 	reagents.add_reagent("dehydrated_milk_powder", 12)
+
+/obj/item/reagent_container/food/condiment/chocolate_syrup
+	name = "\improper Chocolate Syrup bottle"
+	desc = "A bottle of Weyland-Yutani brand chocolate syrup for adding chocolate flavor to space treats, or for sipping directly from the nozzle like a little kid."
+	icon_state = "chocolate_syrup"
+	possible_transfer_amounts = list(1,5,10,15,20,60) //the thought of marines having fisticuffs because somebody drank all the chocolate syrup is beyond hilarious.
+	amount_per_transfer_from_this = 5
+	volume = 60
+
+/obj/item/reagent_container/food/condiment/chocolate_syrup/Initialize()
+	. = ..()
+	reagents.add_reagent("coco", 60)
+
+/obj/item/reagent_container/food/condiment/chocolate_syrup/on_reagent_change()
+	return //Yes, I do have my own sprite.

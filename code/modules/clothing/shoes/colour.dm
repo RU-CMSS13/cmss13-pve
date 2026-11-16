@@ -108,3 +108,8 @@
 	. = ..()
 	if(chained)
 		. += SPAN_RED("They are chained with [chained].")
+
+/obj/item/clothing/shoes/leather/fancy
+	name = "fancy leather shoes"
+	desc = "A fancy pair of leather shoes."
+	icon_state = "fancy"

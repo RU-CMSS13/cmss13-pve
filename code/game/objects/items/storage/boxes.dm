@@ -1033,3 +1033,23 @@
 /obj/item/storage/box/cheeseslices/fill_preset_inventory()
 	for(var/i in 1 to 7)
 		new /obj/item/reagent_container/food/snacks/cheesewedge/mature/kraft(src)
+
+/obj/item/storage/box/m94
+	name = "\improper M94 marking flare pack"
+	desc = "A packet of eight M94 Marking Flares. Carried by USCM soldiers to light dark areas that cannot be reached with the usual TNR Shoulder Lamp."
+	icon_state = "m94"
+	icon = 'icons/obj/items/storage/packets.dmi'
+	w_class = SIZE_MEDIUM
+	storage_slots = 8
+	max_storage_space = 8
+	can_hold = list(/obj/item/device/flashlight/flare,/obj/item/device/flashlight/flare/signal)
+
+/obj/item/storage/box/m94/fill_preset_inventory()
+	for(var/i = 1 to max_storage_space)
+		new /obj/item/device/flashlight/flare(src)
+
+/obj/item/storage/box/m94/update_icon()
+	if(!length(contents))
+		icon_state = "m94_e"
+	else
+		icon_state = "m94"

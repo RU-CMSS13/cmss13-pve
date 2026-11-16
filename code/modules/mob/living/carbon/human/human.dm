@@ -1578,6 +1578,9 @@
 /mob/living/carbon/human/neaera/Initialize(mapload)
 	. = ..(mapload, new_species = "Neaera")
 
+/mob/living/carbon/human/neaera_alt/Initialize(mapload)
+	. = ..(mapload, new_species = "Neaera")
+
 /mob/living/carbon/human/stok/Initialize(mapload)
 	. = ..(mapload, new_species = "Stok")
 
