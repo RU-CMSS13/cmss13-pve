@@ -63,6 +63,8 @@ $border-radius: Input.$border-radius !default;
   box-sizing: border-box;
   // Make sure the div and the textarea wrap words in the same way
   word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: anywhere;
   overflow: hidden;
 
   &::placeholder {
@@ -81,6 +83,8 @@ $border-radius: Input.$border-radius !default;
 .TextArea__textarea_custom {
   overflow: visible;
   white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .TextArea__nowrap {
