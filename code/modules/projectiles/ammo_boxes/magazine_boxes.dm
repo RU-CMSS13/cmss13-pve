@@ -705,6 +705,76 @@
 /obj/item/ammo_box/magazine/type71/large/ag80/heap/empty
 	empty = TRUE
 
+//-----------------------AK-82 Rifle Mag Box-----------------------
+
+/obj/item/ammo_box/magazine/ak82
+	name = "magazine box (AK82 x 10)"
+	icon_state = "base_type64"
+	flags_equip_slot = SLOT_BACK
+	overlay_ammo_type = "_type71_reg"
+	overlay_gun_type = "_ak82"
+	overlay_content = "_type71_reg"
+	num_of_magazines = 10
+	magazine_type = /obj/item/ammo_magazine/rifle/ak82
+
+/obj/item/ammo_box/magazine/ak82/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/ak82/rubber
+	name = "magazine box (AK82 Rubber x 10)"
+	overlay_ammo_type = "_type71_rubber"
+	overlay_content = "_type71_reg"
+	magazine_type = /obj/item/ammo_magazine/rifle/ak82/rubber
+
+/obj/item/ammo_box/magazine/ag80/rubber/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/ak82/ap
+	name = "magazine box (AK82 AP x 10)"
+	overlay_ammo_type = "_type71_ap"
+	overlay_content = "_type71_ap"
+	magazine_type = /obj/item/ammo_magazine/rifle/ak82/ap
+
+/obj/item/ammo_box/magazine/ak82/ap/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/ak82/heap
+	name = "magazine box (AK82 HEAP x 10)"
+	overlay_ammo_type = "_type71_heap"
+	overlay_content = "_type71_heap"
+	magazine_type = /obj/item/ammo_magazine/rifle/ak82/heap
+
+/obj/item/ammo_box/magazine/ak82/heap/empty
+	empty = TRUE
+
+
+//-----------------------LARGE AK-82 Rifle Mag Box-----------------------
+
+/obj/item/ammo_box/magazine/type71/large/ak82
+	name = "magazine box (AK82 x 32)"
+	magazine_type = /obj/item/ammo_magazine/rifle/ak82
+
+/obj/item/ammo_box/magazine/type71/large/ak82/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/type71/large/ak82/ap
+	name = "magazine box (AK82 AP x 32)"
+	overlay_ammo_type = "_aplarge"
+	overlay_content = "_aplarge"
+	magazine_type = /obj/item/ammo_magazine/rifle/ak82/ap
+
+/obj/item/ammo_box/magazine/type71/large/ak82/ap/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/type71/large/ak82/heap
+	name = "magazine box (AK82 HEAP x 32)"
+	overlay_ammo_type = "_heaplarge"
+	overlay_content = "_heaplarge"
+	magazine_type = /obj/item/ammo_magazine/rifle/ak82/heap
+
+/obj/item/ammo_box/magazine/type71/large/ak82/heap/empty
+	empty = TRUE
+
 //-----------------------AK-4047 Rifle Mag Box-----------------------
 
 /obj/item/ammo_box/magazine/ak4047
