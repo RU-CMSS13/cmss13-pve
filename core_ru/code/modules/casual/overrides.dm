@@ -188,3 +188,9 @@
 				clamp(user_turf.y + rand(-(12/2), 12/2), 1, world.maxy), \
 				user_turf.z)
 			T.tacmap.add_timed_marker(guess, 12, "#ff8c00", 1 MINUTES)
+
+/proc/force_update_to_paper_maps()
+	for(var/mob/living/carbon/human/H in GLOB.player_list)
+		for(var/obj/item/map/tactical/T in H)
+			T.tacmap.terrain_asset_keys.Cut()
+			T.tacmap.send_terrain(H)
