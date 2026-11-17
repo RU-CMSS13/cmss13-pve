@@ -2086,10 +2086,8 @@
 /obj/item/device/helmet_visor/night_vision/marine_raider,
 /obj/item/device/helmet_visor/night_vision/marine_raider,
 /obj/item/device/helmet_visor/night_vision/marine_raider,
-/obj/item/prop/helmetgarb/helmet_nvg/marsoc,
-/obj/item/prop/helmetgarb/helmet_nvg/marsoc,
-/obj/item/prop/helmetgarb/helmet_nvg/marsoc,
-/obj/item/prop/helmetgarb/helmet_nvg/marsoc,
+/obj/item/device/helmet_visor/night_vision/marine_raider,
+/obj/item/device/helmet_visor/night_vision/marine_raider,
 /turf/open/gm/dirt/brown,
 /area/new_irvine/nature_park/underground)
 "Cv" = (
